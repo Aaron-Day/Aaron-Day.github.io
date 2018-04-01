@@ -1,10 +1,210 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	  <meta charset="utf-8">
+	  <meta content="width=device-width" name="viewport">
 		<title>Aaron Day</title>
-		<link href="resources/css/style.css" type="text/css" rel="stylesheet"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+  	<link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+		<!-- Latest compiled and minified CSS (Bootstrap) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme (Bootstrap) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Font Awesome CDN -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+		<!-- My Style Sheets -->
+  	<link href="resources/css/custom.css" rel="stylesheet" type="text/css">
+		<!-- <link href="resources/css/style.css" type="text/css" rel="stylesheet"/> -->
 	</head>
 	<body>
+		<header>
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">Aaron</a>
+			    </div>
+
+	        <!-- Dropdown Menu -->
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right">
+			        <li><a href="#skills">Skills</a></li>
+			        <li><a href="#contact">Contact</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li>Web Design Samples</li>
+			            <li><a href="http://aaronday.info/Dasmotos" target="_blank">Dasmoto's Arts & Crafts</a></li>
+			            <li><a href="http://aaronday.info/MyTimes" target="_blank">My Times</a></li>
+			            <li><a href="http://aaronday.info/TeaCozy" target="_blank">Tea Cozy</a></li>
+			            <li><a href="http://aaronday.info/SecretAgentSupply" target="_blank">Secret Agent Supply</a></li>
+			            <li><a href="http://aaronday.info/TortoiseshellOptics" target="_blank">Tortoiseshell Optics</a></li>
+			            <li><a href="http://aaronday.info/ColmarAcademy" target="_blank">Colmar Academy</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li>School Projects</li>
+			            <li><a href="https://www.capamovies.com" target="_blank">CAPA Movies (Junior Project)</a></li>
+			            <li><a href="https://vertex-aviation.azurewebsites.net" target="_blank">AMMS (Senior Project)</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</header>
+
+		<main>
+			<section>
+				<div class="jumbotron jumbotron-fluid" role="presentation">
+				  <div class="container-fluid" role="presentation">
+				    <h1>Aaron Day: Software Engineer</h1>
+						<p>Senior student of software engineering technology at the Oregon Institute of Technology (OregonTech)</p>
+				  </div>
+				</div>
+			</section>
+
+			<section id="skills">
+				<div class="container-fluid" role="presentation">
+					<!-- Skills Heading -->
+					<h1 class="text-center sect-title">Technical Skills</h1>
+
+					<!-- 1x3 Bootstrap grid of skills with icons -->
+				  <div class="row" role="presentation">
+						<!-- Frontend Column -->
+				    <div class="col-sm-4 skill text-center" role="presentation">
+	            <span aria-hidden="true" class="fa fa-photo fa-5x"></span>
+	            <h3>Frontend</h3>
+	            <p>HTML5</p>
+	            <p>CSS3</p>
+	            <p>JavaScript</p>
+	            <p>Bootstrap</p>
+						</div>
+
+						<!-- Backend Column -->
+				    <div class="col-sm-4 skill text-center" role="presentation">
+	            <span aria-hidden="true" class="fa fa-cog fa-5x"></span>
+	            <h3>Backend</h3>
+	            <p>SQL</p>
+	            <p>C++</p>
+	            <p>C#</p>
+	            <p>Python</p>
+	            <p>ASP.NET</p>
+						</div>
+
+						<!-- Design Column -->
+				    <div class="col-sm-4 skill text-center" role="presentation">
+	            <span aria-hidden="true" class="fa fa-flask fa-5x"></span>
+	            <h3>Testing</h3>
+	            <p>XUnit</p>
+	            <p>NUnit</p>
+	            <p>FakeItEasy</p>
+						</div>
+				  </div>
+				</div>
+			</section>
+
+	    <!-- Portfolio: 3x3 Grid with responsive images -->
+	    <section id="portfolio">
+	      <div class="fluid-container" role="presentation">
+	        <h1 class="text-center sect-title">Web Design Portfolio</h1>
+	        <!-- Row 1 -->
+	        <div class="row" role="presentation">
+	          <!-- Project 1 -->
+	          <div class="col-sm-4" role="presentation">
+	            <img class="img-responsive" src="resources/images/dasmotos-arts_redline_thumbnail.jpg" alt="">
+	            <h4 class="text-center"><a href="http://aaronday.info/Dasmoto" target="_blank">Dasmoto's Arts & Crafts</a></h4>
+	          </div>
+	          <!-- Project 2 -->
+	          <div class="col-sm-4" role="presentation">
+	            <img class="img-responsive" src="resources/images/MyTimes_thumbnail.png" alt="">
+	            <h4 class="text-center"><a href="http://aaronday.info/MyTimes" target="_blank">My Times</a></h4>
+	          </div>
+	          <!-- Project 3 -->
+	          <div class="col-sm-4" role="presentation">
+	            <img class="img-responsive" src="resources/images/img-tea-cozy_redline_thumbnail.jpg" alt="">
+	            <h4 class="text-center"><a href="http://aaronday.info/TeaCozy" target="_blank">Tea Cozy</a></h4>
+	          </div>
+	        </div>
+	        <!-- Row 2 -->
+	        <div class="row" role="presentation">
+	          <!-- Project 4 -->
+	          <div class="col-sm-4" role="presentation">
+	            <img class="img-responsive" src="resources/images/secretagentsupply_redline_thumbnail.jpg" alt="">
+	            <h4 class="text-center"><a href="http://aaronday.info/SecretAgentSupply" target="_blank">Secret Agent Supply</a></h4>
+	          </div>
+	          <!-- Project 5 -->
+	          <div class="col-sm-4" role="presentation">
+	            <img class="img-responsive" src="resources/images/tortoiseshelloptics_redline_thumbnail.jpg" alt="">
+	            <h4 class="text-center"><a href="http://aaronday.info/TortoiseshellOptics" target="_blank">Tortoiseshell Optics</a></h4>
+	          </div>
+	          <!-- Project 6 -->
+	          <div class="col-sm-4" role="presentation">
+	            <img class="img-responsive" src="resources/images/colmar-academy-spec_thumbnail.png" alt="">
+	            <h4 class="text-center"><a href="http://aaronday.info/ColmarAcademy" target="_blank">Colmar Academy</a></h4>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
+
+	    <!-- Contact -->
+	    <section id="contact">
+	      <div class="fluid-container" role="presentation">
+	        <!-- Contact Heading -->
+	        <h1 class="text-center">Contact</h1>
+
+	        <!-- 1x3 Bootstrap grid for contact icons, with multiple column sizes for different breakpoints -->
+	        <div class="row" role="presentation">
+	          <!-- Facebook Column -->
+	          <div class="col-sm-6 col-lg-3" role="presentation">
+	            <div class="contact text-center" role="presentation">
+	              <a href="https://www.facebook.com/allday.myself" target="_blank">
+	                <span aria-hidden="true" class="fa fa-facebook fa-5x text-center"></span>
+	              </a>
+	            </div>
+	          </div>
+
+	          <!-- GitHub Column -->
+	          <div class="col-sm-6 col-lg-3">
+	            <div class="contact text-center">
+	              <a href="https://github.com/Aaron-Day" target="_blank">
+	                <span aria-hidden="true" class="fa fa-github fa-5x text-center"></span>
+	              </a>
+	            </div>
+	          </div>
+
+	          <!-- Email Column-->
+	          <div class="col-sm-6 col-lg-3">
+	            <div class="contact text-center">
+	              <a href="mailto://aaron.day@mail.com?Subject=Profile%20contact" target="_blank">
+	                <span aria-hidden="true" class="fa fa-envelope fa-5x" ></span>
+	              </a>
+	            </div>
+	          </div>
+
+	          <!-- LinkedIn Column-->
+	          <div class="col-lg-3">
+	            <div class="contact text-center">
+	              <a href="https://www.linkedin.com/in/day-aaron" target="_blank">
+	                <span aria-hidden="true" class="fa fa-linkedin fa-5x" ></span>
+	              </a>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
+		</main>
+
+		<!--
 		<h1 class="title">About <span class="green">Me</span></h1>
 		<h2 class="subtitle">Allow me to introduce myself.</h2>
 		<h1>AARON DAY</h1>
@@ -18,5 +218,16 @@
 				day-aaron</a></br>
 		<a href="http://www.capamovies.com" target="_blank">Junior Project</a></br>
 		<a href="https://vertex-aviation.azurewebsites.net" target="_blank">Senior Project</a>
+		-->
+
+		<footer class="text-right">Copyright &copy; 2018 Aaron. All rights reserved.</footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript (Bootstrap) -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
 </html>
