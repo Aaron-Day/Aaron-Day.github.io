@@ -1,51 +1,208 @@
+font-family: 'Marck Script', cursive;
+
 * {
-  background-color: lightgray;
-  font-family: Arial;
+  box-sizing: border-box;
 }
-.title {
-  overflow: hidden;
-  text-align: center;
-  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-  font-size: 70px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 500;
-  line-height: 80%;
-  text-transform: uppercase;
-  letter-spacing: -5px;
-  margin-bottom: 0px;
+
+html {
+  font-family : Helvetica,
+                Arial,
+                sans-serif;
+  font-size   : 16px;
 }
-.title:before,
-.title:after {
-  background-color: #333;
-  content: "";
+
+#islp {
   display: inline-block;
-  height: 5px;
-  position: relative;
+  height: 20rem;
+  width: 30rem;
+  background: url(../images/islp-2015.jpg);
+  background-size: 100%;
+  background-color: blue;
+}
+
+#islp:hover {
+  display: inline-block;
+  height: 20rem;
+  width: 30rem;
+  background: url(../images/islp-2015-hover.jpg);
+  background-size: 100%;
+  background-color: green;
+  transition: .5s ease;
+}
+
+#mcl {
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  height: 10rem;
+  width: 10rem;
+  background: url(../images/mcl_seal.png);
+  background-size: 100%;
+  background-color: #333;
+}
+
+.left-side h2 {
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+}
+
+#profile-pic {
+  max-width: 50%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 3px;
+  margin: 0 auto;
+}
+
+i {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: .25rem 0;
+  color: #333;
+  border-radius: 1rem;
+  margin: .25rem 0;
+  background-color: #BBB;
+  text-align: center;
   vertical-align: middle;
+}
+
+.link a {
+  color: #BBB;
+}
+
+.link:hover a {
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover i {
+  text-decoration: none;
+  color: rgb(0,127,255);
+  background-color: white;
+}
+
+.header {
+  position: relative;
+  top: 0;
+}
+
+.header h1, .header h2 {
+  padding: 0 0;
+  margin: 0 0;
+}
+
+.header hr {
+    display: block;
+    margin: 0 auto;
+    border: .125em solid #666;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: circle;
+  margin-left: 1rem;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+.left-side h2 {
+  color: #BBB;
+}
+
+.right-side h2 {
+  color: #666;
+}
+
+.box {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.main {
+  height: 100%;
+}
+
+.box, .block {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.box img, .block img {
+  max-width: 100%;
+  height: auto;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.center {
+  justify-content: center;
+}
+
+.middle {
+  align-content: center;
+}
+
+.left-side {
+  width: 25%;
+}
+
+.right-side {
+  width: 75%;
+  padding: 0 1rem;
+}
+
+.half {
   width: 50%;
 }
-.title:before {
-  right: 0.5em;
-  margin-left: -50%;
-}
-.title:after {
-  left: 0.5em;
-  margin-right: -50%;
+
+.vert {
+  flex-direction: column;
 }
 
-.subtitle {
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 0px;
+.alt {
+  background-color: #BBB;
 }
 
-.green {
-  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-  color: LimeGreen;
+article {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
 }
 
-.link {
+.left-side.main {
+  color: white;
+  background-color: #333;
+  position: fixed;
+  left: 0;
+  width: 25%;
+  text-align: right;
+}
+
+.right-side.main {
   color: black;
-  text-decoration: none;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  width: 75%;
+  padding: 0;
 }
