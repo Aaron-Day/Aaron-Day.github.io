@@ -1,0 +1,20 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Aaron Day
+N:Day;Aaron;;;
+item1.EMAIL;TYPE=INTERNET:aaron.day@mail.com
+item1.X-ABLabel:
+item2.TEL:+1.971.706.7846
+item2.X-ABLabel:
+item3.ADR:;;;Hillsboro;OR;97124;
+item3.X-ABLabel:
+item4.TITLE:Software Engineer
+item4.X-ABLabel:
+BDAY:19830706
+item5.URL:aaronday.info
+item5.X-ABLabel:
+item6.URL:linkedin.com/in/day-aaron
+item6.X-ABLabel:
+PHOTO:https://lh6.googleusercontent.com/-_CyKNozYO2I/WzK4mxV8A2I/AAAAAAAAAA
+ A/CJb4JjPLWx05mXb7CfSoIil9RgbmaEBbQCOQCEAE/photo.jpg
+END:VCARD
