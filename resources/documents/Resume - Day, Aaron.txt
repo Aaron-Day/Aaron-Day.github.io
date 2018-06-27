@@ -1,0 +1,91 @@
+AARON DAY
++1.971.706.7846
+aaron.day@mail.com
+linkedin.com/in/day-aaron
+aaronday.info
+
+SUMMARY
+
+Recent graduate of the Software Engineering Technology program at Oregon Institute of Technology (OregonTech). Received a Bachelor of Science degree in Software Engineering. Seeking an entry level position as a Software Engineer.
+Former 11 year career in army aviation, maintaining helicopters.
+I aspire to be as proficient and precise in software development as I was in aircraft maintenance.
+
+EDUCATION
+
+Bachelor of Science in Software Engineering Technology
+Minor in Applied Mathematics
+Oregon Institute of Technology (OregonTech)
+Wilsonville, Oregon
+June 2018
+
+Associate of Arts Oregon Transfer degree (AAOT)
+Chemeketa Community College
+Salem, Oregon
+June 2015
+
+Academic Recognition:
+- Magna Cum Laude
+- Phi Theta Kappa
+- Envision Global
+- National Society of Collegiate Scholars
+- President's List
+- Dean's List
+- Honor Roll
+- Rhode & Schwarz Engineering Competition 2016 1st place team in United States
+
+Senior Project - Aviation Maintenance Management System (AMMS):
+Solo Software Engineering Program Senior Project. A web-based version of the army's Unit Level Logistic Software - Aviation (Extended) [ULLS-A(E)]. This project utilizes ASP.NET Core 2.0 multi-platform development framework as well as Microsoft SQL Server to construct a full-stack aviation maintenance management program. Some of the key features include the following: user roles, aviation units, aircraft models, multiple aircraft, scheduled inspections, fault reporting, inspection tracking, maintenance actions, flight records. The software is encapsulated to allow the inclusion of additional features and software upgrades. NUnit testing framework and Log4Net event logging has been implemented to ensure proper functionality.
+
+Junior Project - Movie Inventory Management Database (CAPA Movies):
+Team based project utilizing ASP.NET Core 1.0 multi-platform development framework connected to a SQL database. Online accessible movie inventory system, which allows users to keep track of all their movies whether on digital or physical media. Provides services such as lending of physical media, owner ratings, storage location, and other notes. Pulls information from the Online Movie Database (OMDB) API to display movie posters, plot summaries, rotten tomatoes ratings, and cast listings for all user's movies. Also features multiple view and sort options for browsing inventory.
+
+WORK EXPERIENCE
+
+2010 – 2012
+L3 Vertex Aerospace
+H-60 Technical Inspector:
+Army contract field team (CFT) assignment in Afghanistan in support of all H-60 model aircraft (Blackhawk).
+- Plan, conduct, and supervise aircraft technical inspections.
+- Develop and implement quality control and ground safety programs to ensure compliance with contract specifications.
+- Evaluate personnel, including verification of skills, training and experience.
+- Perform audits and inspections of work centers and ongoing maintenance actions, procedures, equipment and facilities.
+- Examine parts and components for conformance to design specification to determine serviceability.
+- Monitor timeliness and applicability of maintenance technical data and technical library.
+- Brief and debrief pilots and crew members assigned to functional check flights.
+- Oversee aircraft weight and balance program.
+- Participate in maintenance test flights and operation checks as required.
+- Prepare evaluations, special reports, and records pertaining to aircraft maintenance repair and related activities.
+
+2008 - 2010
+Aviation Radio Inc. (ARINC)
+AIT Analyst:
+Unique Identification (UID) Subject Matter Expert (SME)
+- Identify parts that meet the DOD directive for legacy UID marking.
+- Field Tool Room Management System (TRMS) software.
+- Field Aviation Life Support Equipment (ALSE) software.
+- Field Arms Room Management System (ARMS) software.
+- Perform direct part marking using RMI and Mecco laser engravers.
+- Perform batch marking using LabeLase and Epilog laser printers.
+- Register legacy components with national UID registry.
+
+2008 - 2008
+Tennessee Department of Corrections
+Correctional Officer:
+Charles Bass Correctional Complex Annex, Central Control Correctional Officer.
+- Maintain accountability of correctional officer duty equipment for entire facility.
+- Log the movement of inmates throughout day-to-day operations.
+- Created MS Access Database to electronically track inmate assignments and movements.
+- Confirmed inmate counts matched tracking data throughout the duty shift.
+
+2001 - 2010
+United States Army
+H-60 Aircraft Mechanic:
+Aircraft mechanic for all H-60 model aircraft (Blackhawk).
+- Inspect, repair, replace, and rebuild aircraft subsystem assemblies as required in accordance with applicable technical manuals.
+- Service and lubricate aircraft and subsystems.
+- Prepare aircraft for inspections and maintenance operational checks.
+- Perform scheduled and special inspections by aircraft hours or calendar due date.
+- Diagnose and troubleshoot malfunctions in aircraft subsystems using special tools and equipment.
+- Prepare forms and records related to aircraft maintenance. Entering into the records, description of the work performed and verification the work was performed satisfactorily.
+- Perform air crewmember duties.
+- Supervise the jacking and towing of aircraft. 

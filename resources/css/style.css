@@ -29,7 +29,7 @@ html {
   background-color: green;
   transition: .5s ease;
 }
-
+/*
 #mcl {
   display: inline-block;
   position: fixed;
@@ -41,7 +41,7 @@ html {
   background-size: 100%;
   background-color: #333;
 }
-
+*/
 .left-side h2 {
   font-family: 'Special Elite', cursive;
   text-align: center;
