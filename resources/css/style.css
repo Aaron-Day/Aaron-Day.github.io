@@ -10,8 +10,23 @@ body {
   background-color : white;
 }
 
+main {
+  margin-bottom: -8rem;
+}
+
+p {
+  text-align: justify;
+}
+
+.bkgd {
+  z-index: 0;
+  position: absolute;
+  height: 12rem;
+  width: 100%;
+}
+
 header {
-  z-index  : 11;
+  z-index  : 1;
   display  : flex;
   position : relative;
   height   : 10rem;
@@ -48,7 +63,7 @@ header h2 {
 }
 
 section {
-  z-index   : 11;
+  z-index   : 1;
   display   : flex;
   position  : relative;
   margin: 2rem 0;
@@ -320,8 +335,7 @@ li {
 
 /* TOP, BOTTOM AND CURVES */
 
-.top {
-  z-index          : 10;
+.sidebar {
   position         : fixed;
   top              : 0;
   width            : 21rem;
@@ -330,99 +344,6 @@ li {
   background-color : AntiqueWhite;
 }
 
-.curve-top0 {
-  z-index          : 6;
-  position         : absolute;
-  top              : -79%;
-  left             : -79%;
-  width            : 250%;
-  height           : 100%;
-  border-radius    : 50%;
-  background-color : grey;
-}
-
-.curve-top1 {
-  z-index          : 7;
-  position         : absolute;
-  top              : -79%;
-  left             : -37%;
-  width            : 200%;
-  height           : 100%;
-  border-radius    : 50%;
-  background-color : black;
-}
-
-.curve-top2 {
-  z-index          : 8;
-  position         : absolute;
-  top              : -82%;
-  left             : -36%;
-  width            : 180%;
-  height           : 100%;
-  border-radius    : 50%;
-  background-color : grey;
-}
-
-.curve-top3 {
-  z-index          : 9;
-  position         : absolute;
-  top              : -84%;
-  left             : -33%;
-  width            : 158%;
-  height           : 100%;
-  border-radius    : 47%;
-  background-color : black;
-}
-
-.curve-bottom0 {
-  z-index          : 1;
-  position         : relative;
-  top              : -69%;
-  left             : -79%;
-  width            : 250%;
-  height           : 100%;
-  border-radius    : 50%;
-  background-color : grey;
-}
-
-.curve-bottom1 {
-  z-index          : 2;
-  position         : relative;
-  top              : -79%;
-  left             : -37%;
-  width            : 200%;
-  height           : 100%;
-  border-radius    : 50%;
-  background-color : white;
-}
-
-.curve-bottom2 {
-  z-index          : 3;
-  position         : relative;
-  top              : -82%;
-  left             : -36%;
-  width            : 180%;
-  height           : 100%;
-  border-radius    : 50%;
-  background-color : grey;
-}
-
-.curve-bottom3 {
-  z-index          : 4;
-  position         : relative;
-  top              : -84%;
-  left             : -33%;
-  width            : 158%;
-  height           : 100%;
-  border-radius    : 47%;
-  background-color : white;
-}
-
 footer {
-  display          : flex;
-  position         : relative;
-  bottom           : 0;
-  width            : 100%;
-  height           : 5rem;
-  background-color : black;
+  height           : 12rem;
 }
