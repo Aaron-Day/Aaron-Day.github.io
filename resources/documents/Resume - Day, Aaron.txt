@@ -148,7 +148,7 @@ Has the capacity to manage records for all aviation units in the army.
 Individual user accounts with multiple user roles allowing access to role-based
 maintenance tasks. Records flights, inspections, faults and maintenance actions.
 
-C# (ASP.NET Core 2.0), NUnit Testing, FakeItEasy Mocking, Log4Net Logging, Azure
+C# (ASP.NET MVC Core 2.0), NUnit Testing, FakeItEasy Mocking, Log4Net Logging, Azure
 Hosting, SQL Database.
 
 ===== MOVIE INVENTORY DATABASE (CAPA MOVIES) ===================================
@@ -160,7 +160,7 @@ information from Online Movie DataBase (OMDB) and Rotten Tomatoes. Give the
 movies a personal rating and loan physical copies of movies to your friends.
 Multiple view and sort options.
 
-C# (ASP.NET Core 1.0), xUnit Testing, Azure Hosting, SQL Database.
+C# (ASP.NET MVC Core 1.0), xUnit Testing, Azure Hosting, SQL Database.
 
 ===== ENIGMA ===================================================================
 
@@ -170,7 +170,7 @@ three of eight standard rotors, ring settings for each installed rotor, initial
 settings for rotors and up to 13 plug board cable settings. Includes keyboard,
 light board, and input/output display.
 
-C#
+C#.
 
 ===== ORTHOGONAL FREQUENCY DIVISION MULTIPLEXING (OFDM) ========================
 
@@ -184,7 +184,7 @@ time domain for transmission. Add cyclic prefixing to help with interference.
 Simulate transmission noise. Receive transmission and reverse process to obtain
 data stream.
 
-MatLab
+MatLab.
 
 ===== WEB DESIGN ===============================================================
 
@@ -206,4 +206,4 @@ interact to provide application functionality. Store information via props and
 state. Pass information to the DOM and between Components. Process JavaScript
 requests.
 
-HTML, CSS, JavaScript, jQuery, ReactJS
+HTML, CSS, JavaScript, jQuery, ReactJS.

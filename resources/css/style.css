@@ -248,7 +248,9 @@ hr {
 }
 
 .chrono-l {
-  width : 20rem;
+  width           : 20rem;
+  color           : black;
+  text-decoration : none;
 }
 
 .chrono-r {
