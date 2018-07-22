@@ -345,6 +345,25 @@ li {
   background-color : green;
 }
 
+#top {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0,0,0,.3);
+  color: white;
+  opacity: .30;
+  border-radius: 0.25rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  text-align: center;
+  line-height: 3rem;
+  z-index: 12;
+}
+
+#top:hover {
+  background-color: rgba(34,139,34,.6);
+}
+
 /* TOP, BOTTOM AND CURVES */
 
 .sidebar {

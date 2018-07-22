@@ -17,10 +17,11 @@ SUMMARY
 
 ================================================================================
 
-Graduated with high honors from Oregon Institute of Technology (OregonTech) in
-June 2018. Received a Bachelor of Science degree in Software Engineering Tech
-with a minor in Applied Mathematics. Graduated from Chemeketa Community College
-in June 2015. Received an Associate of Arts Oregon Transfer Degree.
+Seeking an entry-level software engineer position. Graduated with high honors
+from Oregon Institute of Technology (OregonTech) in June 2018. Received a
+Bachelor of Science degree in Software Engineering Technology with a minor in
+Applied Mathematics. Graduated from Chemeketa Community College in June 2015.
+Received an Associate of Arts Oregon Transfer Degree.
 
 Former career in army aviation, which lead me to develop several software
 solutions for aircraft maintenance and inspection tasks. That work was the
