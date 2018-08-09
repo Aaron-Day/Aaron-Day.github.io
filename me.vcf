@@ -3,12 +3,12 @@ VERSION:3.0
 FN:Aaron Day
 N:Day;Aaron;;Mr.;
 TITLE:Software Engineer
-PHOTO;VALUE=URI;TYPE=PNG:https://aaronday.info/resources/images/Me.png
-EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:aaron.day@mail.com
 TEL;TYPE=CELL,VOICE,MSG:+1 971 706 7846
+EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:aaron.day@mail.com
+URL;TYPE=HOME:aaronday.info
+URL;TYPE=WORK:linkedin.com/in/day-aaron
 ADR;TYPE=HOME,PREF:;;;;OR;;United States of America
 LABEL;TYPE=HOME,PREF:OR\nUnited States of America
 BDAY:19830706
-URL;TYPE=HOME:aaronday.info
-URL;TYPE=WORK:linkedin.com/in/day-aaron
+PHOTO;VALUE=URI;TYPE=PNG:http://aaronday.info/resources/images/Me.png
 END:VCARD
