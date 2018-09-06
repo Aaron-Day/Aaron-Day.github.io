@@ -5,6 +5,10 @@ html {
   font-size   : 12px;
 }
 
+h1, h2, h3, h4, h5, h6, p, li, span {
+  font-family: 'Muli', sans-serif;
+}
+
 body {
   min-width        : 400px;
   overflow-x       : hidden;
