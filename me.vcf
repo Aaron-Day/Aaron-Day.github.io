@@ -4,6 +4,7 @@ FN:Aaron Day
 N:Day;Aaron;;Mr.;
 TITLE:Software Engineer
 TEL;TYPE=CELL,VOICE,MSG:+1 971 706 7846
+TEL;TYPE=WORK,VOICE:+1 503 268 6736
 EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:aaron.day@mail.com
 URL;TYPE=HOME:aaronday.info
 URL;TYPE=WORK:linkedin.com/in/day-aaron
