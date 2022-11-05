@@ -1,0 +1,501 @@
+html {
+  font-family : "Courier New",
+                Courier,
+                monospace;
+  font-size   : 12px;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, span {
+  font-family: 'Muli', sans-serif;
+}
+
+body {
+  min-width        : 400px;
+  overflow-x       : hidden;
+  background-color : white;
+}
+
+main {
+  margin-bottom : -8rem;
+}
+
+p {
+  text-align : justify;
+}
+
+.bkgd {
+  z-index   : 0;
+  position  : absolute;
+  width     : 100%;
+  min-width : 400px;
+  height    : 12rem;
+}
+
+header {
+  z-index    : 1;
+  display    : flex;
+  position   : relative;
+  height     : 10rem;
+  color      : white;
+  text-align : center;
+}
+
+header .left img {
+  width      : 10rem;
+  height     : auto;
+  margin     : auto;
+  align-self : center;
+}
+
+header h1 {
+  font-size      : 2rem;
+  font-weight    : bold;
+  letter-spacing : 1rem;
+}
+
+header hr {
+  width            : 25rem;
+  height           : 3px;
+  margin           : 0 auto;
+  padding          : 0;
+  border           : 0;
+  background       : goldenrod;
+  background-image : linear-gradient(
+                       to right,
+                       gold,
+                       goldenrod,
+                       gold
+                     );
+}
+
+header h2 {
+  font-size      : 1.5rem;
+  letter-spacing : 0.5rem;
+}
+
+section {
+  z-index   : 1;
+  display   : flex;
+  position  : relative;
+  margin    : 2rem 0;
+  flex-grow : 0;
+}
+
+.left li {
+  margin-bottom : 1rem;
+}
+
+.box {
+  display : flex;
+}
+
+.block {
+  display : block;
+}
+
+.block,
+.box {
+  width   : 100%;
+  margin  : 0;
+  padding : 0;
+  border  : 0;
+}
+
+.block img,
+.box img {
+  max-width : 100%;
+  height    : auto;
+}
+
+.vert {
+  flex-direction : column;
+}
+
+.between {
+  justify-content : space-between;
+}
+
+.around {
+  justify-content : space-around;
+}
+
+.center {
+  justify-content : center;
+}
+
+.middle {
+  align-content : center;
+}
+
+.left i {
+  width            : 2rem;
+  height           : 2rem;
+  margin-right     : 1rem;
+  padding-top      : .35rem;
+  color            : AntiqueWhite;
+  border-radius    : 50%;
+  background-color : black;
+  text-align       : center;
+}
+
+.link {
+  margin-bottom : 2rem;
+}
+
+.link a {
+  color       : black;
+  align-items : center;
+}
+
+.link:hover a {
+  color           : rgb(0,127,255);
+  text-decoration : none;
+}
+
+.link:hover i {
+  color           : rgb(0,127,255);
+  text-decoration : none;
+}
+
+.left {
+  position : relative;
+  width    : 20rem;
+  margin   : 0 2.5rem;
+}
+
+.heading {
+  width          : 100%;
+  text-transform : uppercase;
+  font-weight    : bold;
+  letter-spacing : 0.5rem;
+}
+
+.left .heading {
+  padding    : 0 0.5rem;
+  text-align : right;
+}
+
+.left hr {
+  width            : 100%;
+  height           : 1px;
+  margin           : 0.5rem 0;
+  padding          : 0;
+  border           : 0;
+  background       : #333;
+  background-image : linear-gradient(
+                       to right,
+                       #ccc,
+                       #333,
+                       #ccc
+                     );
+}
+
+hr {
+  width      : 100%;
+  height     : 3px;
+  margin     : 0.5rem 0;
+  padding    : 0;
+  border     : 0;
+  background : #333;
+}
+
+.right .heading {
+  text-align : left;
+}
+
+.spacer {
+  width            : 3px;
+  margin-right     : 4rem;
+  margin-left      : 2rem;
+  background-color : black;
+}
+
+.spacer i {
+  width            : 2rem;
+  height           : 2rem;
+  margin-left      : -0.85rem;
+  padding-top      : .25rem;
+  border           : 2px solid black;
+  border-radius    : 50%;
+  background-color : AntiqueWhite;
+  text-align       : center;
+}
+
+.spacer img {
+  display          : flex;
+  width            : 2rem;
+  height           : 2rem;
+  margin-left      : -0.85rem;
+  border           : 2px solid black;
+  border-radius    : 50%;
+  background-color : AntiqueWhite;
+  align-self       : center;
+}
+
+.right {
+  position     : relative;
+  width        : 50%;
+  margin-right : 2rem;
+  flex-grow    : 1;
+}
+
+.logo {
+  display         : flex;
+  width           : 21rem;
+  margin-right    : 2rem;
+  align-content   : center;
+  justify-content : center;
+}
+
+.logo img {
+  align-self : center;
+}
+
+.chrono-l {
+  width : 20rem;
+}
+
+.chrono-r {
+  width         : 20%;
+  margin-bottom : 2rem;
+  flex-grow     : 1;
+}
+
+.right ul {
+  width     : 20%;
+  flex-grow : 1;
+}
+
+li {
+  display : flex;
+}
+
+.progress {
+  display          : flex;
+  width            : 10rem;
+  margin-right     : 1rem;
+  padding          : 3px;
+  border-radius    : .5rem;
+  background-color : black;
+}
+
+.progress .fill-10 {
+  width            : 10%;
+  height           : 1rem;
+  border-radius    : .5rem;
+  background-color : green;
+}
+
+.progress .fill-20 {
+  width            : 20%;
+  height           : 1rem;
+  border-radius    : .5rem;
+  background-color : green;
+}
+
+.progress .fill-30 {
+  width            : 30%;
+  height           : 1rem;
+  border-radius    : .5rem;
+  background-color : green;
+}
+
+.progress .fill-40 {
+  width            : 40%;
+  height           : 1rem;
+  border-radius    : .5rem;
+  background-color : green;
+}
+
+.progress .fill-50 {
+  width            : 50%;
+  height           : 1rem;
+  border-radius    : .5rem;
+  background-color : green;
+}
+
+.progress .fill-60 {
+  width            : 60%;
+  height           : 1rem;
+  border-radius    : .5rem;
+  background-color : green;
+}
+
+.progress .fill-70 {
+  width            : 70%;
+  height           : 1rem;
+  border-radius    : .5rem;
+  background-color : green;
+}
+
+.progress .fill-80 {
+  width            : 80%;
+  height           : 1rem;
+  border-radius    : .5rem;
+  background-color : green;
+}
+
+.progress .fill-90 {
+  width            : 90%;
+  height           : 1rem;
+  border-radius    : .5rem;
+  background-color : green;
+}
+
+.progress .fill-100 {
+  width            : 100%;
+  height           : 1rem;
+  border-radius    : .5rem;
+  background-color : green;
+}
+
+#top {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0,0,0,.3);
+  color: white;
+  opacity: .30;
+  border-radius: 0.25rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  text-align: center;
+  line-height: 3rem;
+  z-index: 12;
+}
+
+#top:hover {
+  background-color: rgba(34,139,34,.6);
+}
+
+/* TOP, BOTTOM AND CURVES */
+
+.sidebar {
+  position         : fixed;
+  top              : 0;
+  width            : 21rem;
+  height           : 100%;
+  margin           : 0 2rem;
+  background-color : AntiqueWhite;
+}
+
+footer {
+  min-width : 400px;
+  height    : 12rem;
+}
+
+/* Desktop settings */
+
+@media
+  only screen
+  and (min-width : 871px) {
+  .mobile,
+  .tablet {
+    display : none;
+  }
+}
+
+/* Tablet settings */
+
+@media
+  only screen
+  and (max-width : 870px) {
+  .desktop,
+  .mobile,
+  .spacer,
+  header .right {
+    display : none;
+  }
+
+  header {
+    color : black;
+  }
+
+  header h1 {
+    margin-top     : 3.5rem;
+    margin-bottom  : 0;
+    padding        : 0;
+    font-size      : 1.5rem;
+    letter-spacing : 0.8rem;
+  }
+
+  header h2 {
+    margin         : 0;
+    padding        : 0;
+    font-size      : 1.125rem;
+    letter-spacing : 0.2rem;
+  }
+
+  .logo {
+    position  : relative;
+    width     : 50%;
+    flex-grow : 1;
+  }
+
+  .chrono-l {
+    width : 10rem;
+  }
+}
+
+/* Mobile settings */
+
+@media
+  only screen
+  and (max-width : 620px) {
+  .desktop,
+  .left,
+  .sidebar,
+  .tablet {
+    display : none;
+  }
+
+  .mobile {
+    display : block;
+  }
+
+  section {
+    margin-left : 2rem;
+  }
+
+  nav {
+    margin : 2rem;
+  }
+
+  nav ul {
+    background-color : AntiqueWhite;
+  }
+
+  nav li {
+    display   : flex;
+    height    : 3rem;
+    border    : 1px solid black;
+    flex-grow : 1;
+  }
+
+  nav li a {
+    height          : 3rem;
+    text-align      : center;
+    flex-direction  : column;
+    justify-content : center;
+  }
+
+  nav li a:hover {
+    text-decoration : none;
+  }
+
+  .mobile span {
+    font-size      : 1.25rem;
+    font-weight    : bold;
+    letter-spacing : 0.8rem;
+  }
+}
+
+/* Min settings */
+
+@media
+  only screen
+  and (max-width : 400px) {
+  body {
+    overflow-x : scroll;
+  }
+}
