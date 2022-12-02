@@ -1,0 +1,244 @@
+﻿@page "/back";
+
+<div class="flip-card center-screen">
+    <div class="flip-card-inner">
+        <div class="flip-card-back" href="/">
+            <div id="top">
+                <svg id="logo-back" viewBox="-10 -10 120 120">
+                    <defs>
+                        <linearGradient id="linear" x1="40%" y1="60%" x2="100%" y2="0%" spreadMethod="reflect">
+                            <stop offset="0%" stop-color="#FEDB37" />
+                            <stop offset="8%" stop-color="#FDB931" />
+                            <stop offset="50%" stop-color="#D1B464" />
+                            <stop offset="92%" stop-color="#FFFFAC" />
+                            <stop offset="100%" stop-color="#5d4a1f" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur class="blur" result="coloredBlur" stdDeviation="4" />
+                            <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path fill="transparent" filter="url(#glow)" stroke="url(#linear)" stroke-width="2" d="M 32.9017 96.9856 A 50 50 0 1 1 50 100 L 50 0 L 50 50 L 1 50"></path>
+                </svg>
+                <svg id="header-box" class="end" viewBox="0 0 100 15"><rect width="100" height="15"></rect></svg>
+                <svg id="header" class="end" viewBox="0 0 100 15">
+                    <path fill="#999" d="M 0 10 A 250 250 0 0 0 100 10 200 200 0 0 1 0 4.5"></path>
+                    <path fill="black" d="M 0 4.5 A 200 200 0 0 0 100 10 L 100 0 L 0 0"></path>
+                    <path fill="#999" d="M 100 0 A 175 175 0 0 1 0 3.25 170 170 0 0 0 100 6"></path>
+                </svg>
+            </div>
+            <div id="content">
+                <ul>
+                    <li><span class="item-number">&nbsp;1</span><span class="keyword">public</span> <span class="class-name">Employee</span> GetEmployee()</li>
+                    <li><span class="item-number">&nbsp;2</span>{</li>
+                    <li><span class="item-number">&nbsp;3</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">string</span> name, email, phone, web;</li>
+                    <li><span class="item-number">&nbsp;4</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span></li>
+                    <li><span class="item-number">&nbsp;5</span>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+                    <li><span class="item-number">&nbsp;6</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// vCard 3.0</span></li>
+                    <li>
+                        <span class="item-number">&nbsp;7</span>
+                        <svg id="qr-code" viewBox="0 0 27 27">
+                            <!-- flip-card-background -->
+                            <rect width="27" height="27" fill="white"></rect>
+                            <!-- Rows between upper squares -->
+                            <!-- Row 1 -->
+                            <rect x="10" y="1" width="1" height="1" fill="black"></rect>
+                            <rect x="15" y="1" width="1" height="1" fill="black"></rect>
+                            <rect x="17" y="1" width="1" height="1" fill="black"></rect>
+                            <!-- Row 2 -->
+                            <rect x="9" y="2" width="2" height="1" fill="black"></rect>
+                            <rect x="12" y="2" width="5" height="1" fill="black"></rect>
+                            <!-- Row 3 -->
+                            <rect x="10" y="3" width="3" height="1" fill="black"></rect>
+                            <rect x="17" y="3" width="1" height="1" fill="black"></rect>
+                            <!-- Row 4 -->
+                            <rect x="9" y="4" width="2" height="1" fill="black"></rect>
+                            <rect x="12" y="4" width="1" height="1" fill="black"></rect>
+                            <rect x="14" y="4" width="2" height="1" fill="black"></rect>
+                            <!-- Row 5 -->
+                            <rect x="11" y="5" width="1" height="1" fill="black"></rect>
+                            <rect x="13" y="5" width="1" height="1" fill="black"></rect>
+                            <!-- Row 6 -->
+                            <rect x="9" y="6" width="1" height="1" fill="black"></rect>
+                            <rect x="11" y="6" width="1" height="1" fill="black"></rect>
+                            <rect x="14" y="6" width="1" height="1" fill="black"></rect>
+                            <rect x="16" y="6" width="2" height="1" fill="black"></rect>
+                            <!-- Row 7 -->
+                            <rect x="9" y="7" width="1" height="1" fill="black"></rect>
+                            <rect x="11" y="7" width="1" height="1" fill="black"></rect>
+                            <rect x="13" y="7" width="1" height="1" fill="black"></rect>
+                            <rect x="15" y="7" width="1" height="1" fill="black"></rect>
+                            <rect x="17" y="7" width="1" height="1" fill="black"></rect>
+                            <!-- Rows between upper and lower squares -->
+                            <!-- Row 1 -->
+                            <rect x="13" y="8" width="1" height="1" fill="black"></rect>
+                            <rect x="15" y="8" width="3" height="1" fill="black"></rect>
+                            <!-- Row 2 -->
+                            <rect x="1" y="9" width="5" height="1" fill="black"></rect>
+                            <rect x="7" y="9" width="5" height="1" fill="black"></rect>
+                            <rect x="13" y="9" width="4" height="1" fill="black"></rect>
+                            <rect x="18" y="9" width="1" height="1" fill="black"></rect>
+                            <rect x="20" y="9" width="1" height="1" fill="black"></rect>
+                            <rect x="22" y="9" width="1" height="1" fill="black"></rect>
+                            <rect x="24" y="9" width="1" height="1" fill="black"></rect>
+                            <!-- Row 3 -->
+                            <rect x="1" y="10" width="2" height="1" fill="black"></rect>
+                            <rect x="5" y="10" width="2" height="1" fill="black"></rect>
+                            <rect x="9" y="10" width="2" height="1" fill="black"></rect>
+                            <rect x="17" y="10" width="1" height="1" fill="black"></rect>
+                            <rect x="20" y="10" width="1" height="1" fill="black"></rect>
+                            <rect x="22" y="10" width="1" height="1" fill="black"></rect>
+                            <rect x="24" y="10" width="1" height="1" fill="black"></rect>
+                            <!-- Row 4 -->
+                            <rect x="1" y="11" width="7" height="1" fill="black"></rect>
+                            <rect x="10" y="11" width="1" height="1" fill="black"></rect>
+                            <rect x="12" y="11" width="6" height="1" fill="black"></rect>
+                            <rect x="21" y="11" width="5" height="1" fill="black"></rect>
+                            <!-- Row 5 -->
+                            <rect x="1" y="12" width="1" height="1" fill="black"></rect>
+                            <rect x="6" y="12" width="1" height="1" fill="black"></rect>
+                            <rect x="8" y="12" width="5" height="1" fill="black"></rect>
+                            <rect x="16" y="12" width="6" height="1" fill="black"></rect>
+                            <rect x="24" y="12" width="2" height="1" fill="black"></rect>
+                            <!-- Row 6 -->
+                            <rect x="2" y="13" width="1" height="1" fill="black"></rect>
+                            <rect x="4" y="13" width="1" height="1" fill="black"></rect>
+                            <rect x="7" y="13" width="1" height="1" fill="black"></rect>
+                            <rect x="10" y="13" width="1" height="1" fill="black"></rect>
+                            <rect x="12" y="13" width="1" height="1" fill="black"></rect>
+                            <rect x="18" y="13" width="2" height="1" fill="black"></rect>
+                            <rect x="21" y="13" width="3" height="1" fill="black"></rect>
+                            <rect x="25" y="13" width="1" height="1" fill="black"></rect>
+                            <!-- Row 7 -->
+                            <rect x="1" y="14" width="2" height="1" fill="black"></rect>
+                            <rect x="8" y="14" width="2" height="1" fill="black"></rect>
+                            <rect x="11" y="14" width="1" height="1" fill="black"></rect>
+                            <rect x="13" y="14" width="2" height="1" fill="black"></rect>
+                            <rect x="17" y="14" width="1" height="1" fill="black"></rect>
+                            <rect x="23" y="14" width="1" height="1" fill="black"></rect>
+                            <!-- Row 8 -->
+                            <rect x="1" y="15" width="1" height="1" fill="black"></rect>
+                            <rect x="3" y="15" width="6" height="1" fill="black"></rect>
+                            <rect x="14" y="15" width="5" height="1" fill="black"></rect>
+                            <rect x="20" y="15" width="1" height="1" fill="black"></rect>
+                            <rect x="23" y="15" width="3" height="1" fill="black"></rect>
+                            <!-- Row 9 -->
+                            <rect x="1" y="16" width="1" height="1" fill="black"></rect>
+                            <rect x="3" y="16" width="2" height="1" fill="black"></rect>
+                            <rect x="6" y="16" width="1" height="1" fill="black"></rect>
+                            <rect x="10" y="16" width="1" height="1" fill="black"></rect>
+                            <rect x="13" y="16" width="2" height="1" fill="black"></rect>
+                            <rect x="17" y="16" width="1" height="1" fill="black"></rect>
+                            <rect x="21" y="16" width="1" height="1" fill="black"></rect>
+                            <rect x="24" y="16" width="2" height="1" fill="black"></rect>
+                            <!-- Row 10 -->
+                            <rect x="1" y="17" width="1" height="1" fill="black"></rect>
+                            <rect x="3" y="17" width="1" height="1" fill="black"></rect>
+                            <rect x="5" y="17" width="3" height="1" fill="black"></rect>
+                            <rect x="9" y="17" width="3" height="1" fill="black"></rect>
+                            <rect x="13" y="17" width="1" height="1" fill="black"></rect>
+                            <rect x="15" y="17" width="1" height="1" fill="black"></rect>
+                            <rect x="17" y="17" width="7" height="1" fill="black"></rect>
+                            <rect x="25" y="17" width="1" height="1" fill="black"></rect>
+                            <!-- Row 11 -->
+                            <rect x="9" y="18" width="1" height="1" fill="black"></rect>
+                            <rect x="11" y="18" width="1" height="1" fill="black"></rect>
+                            <rect x="16" y="18" width="1" height="1" fill="black"></rect>
+                            <rect x="23" y="18" width="1" height="1" fill="black"></rect>
+                            <!-- Rows after lower square -->
+                            <!-- Row 1 -->
+                            <rect x="9" y="19" width="1" height="1" fill="black"></rect>
+                            <rect x="12" y="19" width="2" height="1" fill="black"></rect>
+                            <rect x="22" y="19" width="4" height="1" fill="black"></rect>
+                            <!-- Row 2 -->
+                            <rect x="10" y="20" width="3" height="1" fill="black"></rect>
+                            <rect x="15" y="20" width="2" height="1" fill="black"></rect>
+                            <rect x="25" y="20" width="1" height="1" fill="black"></rect>
+                            <!-- Row 3 -->
+                            <rect x="9" y="21" width="1" height="1" fill="black"></rect>
+                            <rect x="11" y="21" width="2" height="1" fill="black"></rect>
+                            <rect x="16" y="21" width="1" height="1" fill="black"></rect>
+                            <rect x="22" y="21" width="4" height="1" fill="black"></rect>
+                            <!-- Row 4 -->
+                            <rect x="9" y="22" width="2" height="1" fill="black"></rect>
+                            <rect x="13" y="22" width="3" height="1" fill="black"></rect>
+                            <rect x="17" y="22" width="5" height="1" fill="black"></rect>
+                            <rect x="24" y="22" width="2" height="1" fill="black"></rect>
+                            <!-- Row 5 -->
+                            <rect x="9" y="23" width="2" height="1" fill="black"></rect>
+                            <rect x="14" y="23" width="2" height="1" fill="black"></rect>
+                            <rect x="17" y="23" width="1" height="1" fill="black"></rect>
+                            <rect x="20" y="23" width="1" height="1" fill="black"></rect>
+                            <rect x="22" y="23" width="1" height="1" fill="black"></rect>
+                            <rect x="25" y="23" width="1" height="1" fill="black"></rect>
+                            <!-- Row 6 -->
+                            <rect x="9" y="24" width="1" height="1" fill="black"></rect>
+                            <rect x="13" y="24" width="2" height="1" fill="black"></rect>
+                            <rect x="16" y="24" width="5" height="1" fill="black"></rect>
+                            <rect x="25" y="24" width="1" height="1" fill="black"></rect>
+                            <!-- Row 7 -->
+                            <rect x="9" y="25" width="3" height="1" fill="black"></rect>
+                            <rect x="13" y="25" width="1" height="1" fill="black"></rect>
+                            <rect x="15" y="25" width="1" height="1" fill="black"></rect>
+                            <rect x="22" y="25" width="4" height="1" fill="black"></rect>
+                            <!-- Upper Left Square -->
+                            <rect x="0" y="0" width="9" height="9" fill="white"></rect>
+                            <rect x="1" y="1" width="7" height="7" fill="black"></rect>
+                            <rect x="2" y="2" width="5" height="5" fill="white"></rect>
+                            <rect x="3" y="3" width="3" height="3" fill="black"></rect>
+                            <!-- Upper Right Square -->
+                            <rect x="18" y="0" width="9" height="9" fill="white"></rect>
+                            <rect x="19" y="1" width="7" height="7" fill="black"></rect>
+                            <rect x="20" y="2" width="5" height="5" fill="white"></rect>
+                            <rect x="21" y="3" width="3" height="3" fill="black"></rect>
+                            <!-- Lower Left Square -->
+                            <rect x="0" y="18" width="9" height="9" fill="white"></rect>
+                            <rect x="1" y="19" width="7" height="7" fill="black"></rect>
+                            <rect x="2" y="20" width="5" height="5" fill="white"></rect>
+                            <rect x="3" y="21" width="3" height="3" fill="black"></rect>
+                            <!-- Lower Right Square -->
+                            <rect x="17" y="17" width="5" height="5" fill="black"></rect>
+                            <rect x="18" y="18" width="3" height="3" fill="white"></rect>
+                            <rect x="19" y="19" width="1" height="1" fill="black"></rect>
+                        </svg>
+                    </li>
+                    <li><span class="item-number">&nbsp;8</span></li>
+                    <li><span class="item-number">&nbsp;9</span></li>
+                    <li><span class="item-number">10</span></li>
+                    <li><span class="item-number">11</span></li>
+                    <li><span class="item-number">12</span></li>
+                    <li><span class="item-number">13</span></li>
+                    <li><span class="item-number">14</span></li>
+                    <li><span class="item-number">15</span></li>
+                    <li><span class="item-number">16</span></li>
+                    <li><span class="item-number">17</span></li>
+                    <li><span class="item-number">18</span>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+                    <li><span class="item-number">19</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">catch</span>(<span class="class-name">CameraScanException</span> _)</li>
+                    <li><span class="item-number">20</span>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+                    <li><span class="item-number">21</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;&nbsp;= <span class="string">"Aaron Day"</span>;</li>
+                    <li><span class="item-number">22</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email&nbsp;= <span class="string">"<a href="mailto:aaron.day@mail.com">aaron.day@mail.com</a>"</span>;</li>
+                    <li><span class="item-number">23</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phone&nbsp;= <span class="string">"<a href="tel:9717067846">971.706.7846</a>"</span>;</li>
+                    <li><span class="item-number">24</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;web&nbsp;&nbsp;&nbsp;= <span class="string">"<a href="http://aaronday.info" target="_blank">aaronday.info</a>"</span>;</li>
+                    <li><span class="item-number">25</span>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+                    <li><span class="item-number">26</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return new</span> <span class="class-name">Employee</span>(name, email, phone, web);</li>
+                    <li><span class="item-number">27</span>}</li>
+                    <li><span class="item-number">28</span></li>
+                </ul>
+            </div>
+            <div id="bottom">
+                <svg id="footer" class="end" viewBox="0 0 100 15">
+                    <path fill="#999" d="M 100 0 A 175 175 0 0 1 0 3.25 170 170 0 0 0 100 6"></path>
+                    <path fill="black" d="M 0 3.25 A 175 175 0 0 0 100 6 L 100 15 L 0 15"></path>
+                    <path fill="#999" d="M 0 10 A 250 250 0 0 0 100 10 200 200 0 0 1 0 4.5"></path>
+                </svg>
+                <svg id="footer-box" class="end" viewBox="0 0 100 15"><rect width="100" height="15"></rect></svg>
+                <span id="skills">.net &bull; c# &bull; ef &bull; sql &bull; blazor &bull; ado <br /> angular &bull; typescript &bull; html &bull; css</span>
+            </div>
+        </div>
+    </div>
+</div>
