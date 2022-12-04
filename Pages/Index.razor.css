@@ -1,15 +1,15 @@
-﻿.card {
+﻿.flip-card {
     width: clamp(350px, 87.5vw, 166.25vh); /* maintains same ratio as an actual business card */
     height: clamp(200px, 50vw, 95vh);
 }
 
-.card-inner {
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.front {
+.flip-card-front {
     background-color: black;
     color: white;
     display: flex;
@@ -17,13 +17,7 @@
     justify-content: center;
 }
 
-.back {
-    background-color: bisque;
-    color: black;
-    transform: rotateY(180deg);
-}
-
-.front {
+.flip-card-front {
     position: absolute;
     width: 100%;
     height: 100%;
