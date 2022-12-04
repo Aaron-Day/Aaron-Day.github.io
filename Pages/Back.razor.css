@@ -1,5 +1,7 @@
-﻿body {
-    background-color: #222;
+﻿.page {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(ellipse at top right, #222, #111);
 }
 
 .flip-card {
@@ -26,7 +28,6 @@
 .flip-card-back {
     background-color: white;
     color: black;
-    border: 1px solid red;
 }
 
 .flip-card-back {

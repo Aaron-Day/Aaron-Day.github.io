@@ -10,7 +10,7 @@
 }
 
 .flip-card-front {
-    background-color: black;
+    background: radial-gradient(ellipse at top right, #222, #111);
     color: white;
     display: flex;
     flex-direction: column;
