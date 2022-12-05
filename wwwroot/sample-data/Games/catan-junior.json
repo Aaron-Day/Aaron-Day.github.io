@@ -1,0 +1,302 @@
+
+        {
+            "id": "ULWQvi77f5",
+            "handle": "catan-junior",
+            "url": "https://www.boardgameatlas.com/game/ULWQvi77f5/catan-junior",
+            "edit_url": "https://www.boardgameatlas.com/game/ULWQvi77f5/edit",
+            "name": "Catan: Junior",
+            "price": "27.00",
+            "price_ca": "39.95",
+            "price_uk": "0.00",
+            "price_au": "39.95",
+            "msrp": 30,
+            "msrps": [
+                {
+                    "country": "US",
+                    "price": 30
+                },
+                {
+                    "country": "CA",
+                    "price": 0
+                },
+                {
+                    "country": "UK",
+                    "price": 0
+                }
+            ],
+            "discount": "0.10",
+            "year_published": 2011,
+            "min_players": 2,
+            "max_players": 4,
+            "player_counts": [
+                2,
+                3,
+                4
+            ],
+            "min_playtime": 30,
+            "max_playtime": 30,
+            "min_age": 5,
+            "description": "<p><strong>Catan: Junior</strong> takes place on a ring of islands where 2 to 4 players build hideouts, and the mysterious Spooky Island, where the Ghost Captain lives. Each island generates a specific resource: wood, goats, rum or swords and players can acquire gold. <br /><br />Each player starts with two pirate hideouts, then builds ships in order to expand their network. The more hideouts you build, the more resources you may receive. You use your resources to build ships, hideouts or get help from Coco the Parrot. Just watch out for the dreaded Ghost Captain!<br /><br />Be the first player to control seven pirate hideouts and you win the game!</p>",
+            "commentary": "",
+            "faq": "",
+            "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1635861914971",
+            "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1635861914971",
+            "matches_specs": null,
+            "specs": [],
+            "mechanics": [
+                {
+                    "id": "R0bGq4cAl4",
+                    "url": "https://www.boardgameatlas.com/mechanic/R0bGq4cAl4/undefined"
+                },
+                {
+                    "id": "ohABM4GjbC",
+                    "url": "https://www.boardgameatlas.com/mechanic/ohABM4GjbC/undefined"
+                }
+            ],
+            "categories": [
+                {
+                    "id": "HKaYVNIxAJ",
+                    "url": "https://www.boardgameatlas.com/category/HKaYVNIxAJ/undefined"
+                },
+                {
+                    "id": "vqZ5XzGWQD",
+                    "url": "https://www.boardgameatlas.com/category/vqZ5XzGWQD/undefined"
+                },
+                {
+                    "id": "9EIayX6n5a",
+                    "url": "https://www.boardgameatlas.com/category/9EIayX6n5a/undefined"
+                }
+            ],
+            "publishers": [
+                {
+                    "id": "7GTti1NuCH",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/7GTti1NuCH/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                },
+                {
+                    "id": "eJue6JPxqV",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/eJue6JPxqV/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                },
+                {
+                    "id": "1LE7oe5KVZ",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/1LE7oe5KVZ/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                },
+                {
+                    "id": "vJkLBDgn1j",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/vJkLBDgn1j/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                }
+            ],
+            "designers": [
+                {
+                    "id": "LCjyh7WnHd",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/designer/LCjyh7WnHd/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                }
+            ],
+            "primary_publisher": {
+                "id": "7GTti1NuCH",
+                "name": "Mayfair Games",
+                "url": "https://www.boardgameatlas.com/publisher/7GTti1NuCH/mayfair-games"
+            },
+            "primary_designer": {
+                "id": "LCjyh7WnHd",
+                "name": "Klaus Teuber",
+                "url": "https://www.boardgameatlas.com/designer/LCjyh7WnHd/klaus-teuber"
+            },
+            "developers": [],
+            "related_to": [],
+            "related_as": [],
+            "artists": [
+                "Patricia Raubo"
+            ],
+            "names": [],
+            "rules_url": "https://www.catan.com/files/downloads/catan_junior_rules_160420s.pdf",
+            "amazon_rank": 5265,
+            "cs_rating": 3.8,
+            "official_url": "https://www.catan.com/game/catan-junior#?utm_source=boardgameatlas.com&utm_medium=search&utm_campaign=bga_ads",
+            "comment_count": 0,
+            "num_user_ratings": 53,
+            "average_user_rating": 3.2169811320754715,
+            "historical_low_prices": [
+                {
+                    "country": "AU",
+                    "date": "2021-11-21T09:17:59.872Z",
+                    "price": 39.95,
+                    "isLow": true
+                },
+                {
+                    "country": "US",
+                    "date": "2022-09-22T11:36:05.872Z",
+                    "price": 27,
+                    "isLow": false
+                },
+                {
+                    "country": "UK",
+                    "date": "2022-10-15T17:54:21.246Z",
+                    "price": 23.85,
+                    "isLow": false
+                },
+                {
+                    "country": "CA",
+                    "date": "2022-10-19T06:14:06.878Z",
+                    "price": 39.95,
+                    "isLow": false
+                }
+            ],
+            "active": true,
+            "num_user_complexity_votes": 0,
+            "average_learning_complexity": 0,
+            "average_strategy_complexity": 0,
+            "visits": 624,
+            "lists": 190,
+            "mentions": 2,
+            "links": 0,
+            "plays": 245,
+            "rank": 1078,
+            "type": "game",
+            "upc": "029877030255",
+            "num_distributors": 0,
+            "trending_rank": 0,
+            "listing_clicks": 0,
+            "is_historical_low": false,
+            "skus": [
+                "029877030255",
+                "CN3025",
+                "2147865259",
+                "2148895971",
+                "43929 #0371",
+                "63113:67168",
+                "7137:7291",
+                "BG-000301-001",
+                "CNS3025",
+                "CSG1002",
+                "CSICN3025",
+                "I051_CATAN_JUNIOR_SH",
+                "MFG3025"
+            ],
+            "sku_objects": [
+                {
+                    "name": "401 Games",
+                    "sku": "029877030255"
+                },
+                {
+                    "name": "Board Game Bandit",
+                    "sku": "CN3025"
+                },
+                {
+                    "name": "Noble Knight Games",
+                    "sku": "2147865259"
+                },
+                {
+                    "name": "Noble Knight Games",
+                    "sku": "2148895971"
+                },
+                {
+                    "name": "Funagain Games",
+                    "sku": "43929 #0371"
+                },
+                {
+                    "name": "BoardGameCo",
+                    "sku": "63113:67168"
+                },
+                {
+                    "name": "BoardGameCo",
+                    "sku": "7137:7291"
+                },
+                {
+                    "name": "Meeples and Milkshakes",
+                    "sku": "BG-000301-001"
+                },
+                {
+                    "name": "Macronova Games",
+                    "sku": "CNS3025"
+                },
+                {
+                    "name": "Board's Edge Games",
+                    "sku": "CSG1002"
+                },
+                {
+                    "name": "Legendesque",
+                    "sku": "CSICN3025"
+                },
+                {
+                    "name": "Gameology",
+                    "sku": "I051_CATAN_JUNIOR_SH"
+                },
+                {
+                    "name": "Miniature Market",
+                    "sku": "MFG3025"
+                }
+            ],
+            "players": "2-4",
+            "playtime": "30",
+            "msrp_text": "$30.00",
+            "price_text": "$27.00",
+            "tags": [
+                "Catan Junior Printing",
+                "Catan Junior board game",
+                "Catan Junior",
+                "Catan Junior Version",
+                "CATAN JUNIOR",
+                "Catan Junior 1st Printing",
+                "Catan Junior 2nd Printing",
+                "Catan: Junior",
+                "Catan Junior Game"
+            ],
+            "images": {
+                "thumb": "https://d2k4q26owzy373.cloudfront.net/40x40/games/uploaded/1635861914971",
+                "small": "https://d2k4q26owzy373.cloudfront.net/150x150/games/uploaded/1635861914971",
+                "medium": "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1635861914971",
+                "large": "https://d2k4q26owzy373.cloudfront.net/700x700/games/uploaded/1635861914971",
+                "original": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1635861914971"
+            },
+            "description_preview": "  Catan: Junior  takes place on a ring of islands where 2 to 4 players build hideouts, and the mysterious Spooky Island, where the Ghost Captain lives. Each island generates a specific resource: wood, goats, rum or swords and players can acquire gold.   Each player starts with two pirate hideouts, then builds ships in order to expand their network. The more hideouts you build, the more resources you may receive. You use your resources to build ships, hideouts or get help from Coco the Parrot. Just watch out for the dreaded Ghost Captain!  Be the first player to control seven pirate hideouts and you win the game! "
+        }

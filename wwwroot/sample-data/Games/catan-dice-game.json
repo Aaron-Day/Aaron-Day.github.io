@@ -1,0 +1,397 @@
+
+        {
+            "id": "gnv8PYIV3A",
+            "handle": "catan-dice-game",
+            "url": "https://www.boardgameatlas.com/game/gnv8PYIV3A/catan-dice-game",
+            "edit_url": "https://www.boardgameatlas.com/game/gnv8PYIV3A/edit",
+            "name": "Catan Dice Game",
+            "price": "11.99",
+            "price_ca": "15.95",
+            "price_uk": "10.33",
+            "price_au": "19.95",
+            "msrp": 13,
+            "msrps": [
+                {
+                    "country": "CA",
+                    "price": 0
+                },
+                {
+                    "country": "UK",
+                    "price": 0
+                },
+                {
+                    "country": "US",
+                    "price": 13
+                }
+            ],
+            "discount": "0.08",
+            "year_published": 2007,
+            "min_players": 1,
+            "max_players": 4,
+            "player_counts": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "min_playtime": 15,
+            "max_playtime": 15,
+            "min_age": 7,
+            "description": "<p>Discover, explore, and settle Catan anywhere, anytime - even by yourself! In the <strong>Catan Dice Game</strong>, players build settlements, roads, cities, and knights like the popular <em>Catan</em> board game, but on a smaller scale with embossed dice and a scoring pad. Challenge the odds and discover a fresh way to master <em>Catan</em>!</p>",
+            "commentary": "",
+            "faq": "",
+            "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1545159442951",
+            "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1545159442951",
+            "matches_specs": null,
+            "specs": [],
+            "mechanics": [
+                {
+                    "id": "R0bGq4cAl4",
+                    "url": "https://www.boardgameatlas.com/mechanic/R0bGq4cAl4/undefined"
+                },
+                {
+                    "id": "UHdPUeuqyZ",
+                    "url": "https://www.boardgameatlas.com/mechanic/UHdPUeuqyZ/undefined"
+                },
+                {
+                    "id": "lA3KUtVFCy",
+                    "url": "https://www.boardgameatlas.com/mechanic/lA3KUtVFCy/undefined"
+                }
+            ],
+            "categories": [
+                {
+                    "id": "mavSOM8vjH",
+                    "url": "https://www.boardgameatlas.com/category/mavSOM8vjH/undefined"
+                }
+            ],
+            "publishers": [
+                {
+                    "id": "RY4XltbNAz",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/RY4XltbNAz/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                },
+                {
+                    "id": "r2R8bUHIRD",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/r2R8bUHIRD/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                },
+                {
+                    "id": "9GlpSO4zcy",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/9GlpSO4zcy/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                },
+                {
+                    "id": "SXnhc3S9lv",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/SXnhc3S9lv/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                },
+                {
+                    "id": "Dtrwc4ldq3",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/Dtrwc4ldq3/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                },
+                {
+                    "id": "1TaoBxZ3GH",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/1TaoBxZ3GH/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                },
+                {
+                    "id": "UMssR9EGlp",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/publisher/UMssR9EGlp/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                }
+            ],
+            "designers": [
+                {
+                    "id": "LCjyh7WnHd",
+                    "num_games": null,
+                    "score": 9999999,
+                    "game": {},
+                    "url": "https://www.boardgameatlas.com/designer/LCjyh7WnHd/undefined",
+                    "images": {
+                        "thumb": null,
+                        "small": null,
+                        "medium": null,
+                        "large": null,
+                        "original": null
+                    }
+                }
+            ],
+            "primary_publisher": {
+                "id": "RY4XltbNAz",
+                "name": "KOSMOS",
+                "url": "https://www.boardgameatlas.com/publisher/RY4XltbNAz/kosmos"
+            },
+            "primary_designer": {
+                "id": "LCjyh7WnHd",
+                "name": "Klaus Teuber",
+                "url": "https://www.boardgameatlas.com/designer/LCjyh7WnHd/klaus-teuber"
+            },
+            "developers": [],
+            "related_to": [],
+            "related_as": [],
+            "artists": [
+                "Volkan Baga",
+                "Tanja Donner",
+                "Michaela Kienle",
+                "Harald Lieske",
+                "Michael Menzel",
+                "Klaus Teuber"
+            ],
+            "names": [],
+            "rules_url": null,
+            "official_url": null,
+            "comment_count": 0,
+            "num_user_ratings": 53,
+            "average_user_rating": 2.6981132075471703,
+            "historical_low_prices": [
+                {
+                    "country": "AU",
+                    "date": "2021-09-29T04:08:21.249Z",
+                    "price": 19.95,
+                    "isLow": false
+                },
+                {
+                    "country": "CA",
+                    "date": "2022-09-01T21:54:19.164Z",
+                    "price": 15.95,
+                    "isLow": false
+                },
+                {
+                    "country": "US",
+                    "date": "2022-09-18T00:08:39.870Z",
+                    "price": 11.2,
+                    "isLow": false
+                },
+                {
+                    "country": "UK",
+                    "date": "2022-11-06T02:19:13.074Z",
+                    "price": 10.33,
+                    "isLow": false
+                }
+            ],
+            "active": true,
+            "num_user_complexity_votes": 2,
+            "average_learning_complexity": 2.5,
+            "average_strategy_complexity": 1.5,
+            "visits": 407,
+            "lists": 224,
+            "mentions": 1,
+            "links": 0,
+            "plays": 277,
+            "rank": 1337,
+            "type": "game",
+            "sku": "CNS3120",
+            "upc": "029877031207",
+            "num_distributors": 4,
+            "trending_rank": 0,
+            "listing_clicks": 0,
+            "is_historical_low": false,
+            "skus": [
+                "CRDHS-64E4211D",
+                "CN3120",
+                "SWZ05",
+                "SWL02",
+                "CN3109",
+                "002987703120701300",
+                "029877031207",
+                "85867",
+                "21883",
+                "2148650168",
+                "MDGCA02222",
+                "2148800781",
+                "2148886839",
+                "58842:62112",
+                "BG-001650-001",
+                "CATAN_DICE_SS",
+                "CSICN3120",
+                "MFG3120",
+                "CN3120-FS",
+                "MFG3108",
+                "MFG3109"
+            ],
+            "sku_objects": [
+                {
+                    "name": "Card Haus",
+                    "sku": "CRDHS-64E4211D"
+                },
+                {
+                    "name": "401 Games",
+                    "sku": "CN3120"
+                },
+                {
+                    "name": "Apt to Game",
+                    "sku": "SWZ05"
+                },
+                {
+                    "name": "Apt to Game",
+                    "sku": "SWL02"
+                },
+                {
+                    "name": "Apt to Game",
+                    "sku": "CN3109"
+                },
+                {
+                    "name": "Imaginaire Shop",
+                    "sku": "002987703120701300"
+                },
+                {
+                    "name": "Arctic Board Game",
+                    "sku": "029877031207"
+                },
+                {
+                    "name": "Game Shack Inc.",
+                    "sku": "85867"
+                },
+                {
+                    "name": "Hanabee",
+                    "sku": "21883"
+                },
+                {
+                    "name": "Noble Knight Games",
+                    "sku": "2148650168"
+                },
+                {
+                    "name": "Mr. Dice Guy",
+                    "sku": "MDGCA02222"
+                },
+                {
+                    "name": "Noble Knight Games",
+                    "sku": "2148800781"
+                },
+                {
+                    "name": "Noble Knight Games",
+                    "sku": "2148886839"
+                },
+                {
+                    "name": "BoardGameCo",
+                    "sku": "58842:62112"
+                },
+                {
+                    "name": "Meeples and Milkshakes",
+                    "sku": "BG-001650-001"
+                },
+                {
+                    "name": "Gameology",
+                    "sku": "CATAN_DICE_SS"
+                },
+                {
+                    "name": "Game Nerdz",
+                    "sku": "CSICN3120"
+                },
+                {
+                    "name": "Miniature Market",
+                    "sku": "MFG3120"
+                },
+                {
+                    "name": "Boardlandia",
+                    "sku": "CN3120-FS"
+                },
+                {
+                    "name": "Miniature Market",
+                    "sku": "MFG3108"
+                },
+                {
+                    "name": "Miniature Market",
+                    "sku": "MFG3109"
+                }
+            ],
+            "players": "1-4",
+            "playtime": "15",
+            "msrp_text": "$13.00",
+            "price_text": "$11.99",
+            "tags": [
+                "Catan Dice Game",
+                "Catan het dobbelspel",
+                "Catan Telepesei: Kockajáték",
+                "Catan: Das Würfelspiel",
+                "I Coloni di Catan: Gioco di Dadi",
+                "Los Colonos de Catán: El juego de dados",
+                "De Kolonisten van Catan: Het Dobbelspel",
+                "Naseljenci otoka Catan: Igra s kockami",
+                "Osadníci z Katanu: Kostková hra",
+                "Osadnicy z Catanu: Gra Kościana",
+                "Die Siedler von Catan: Das Würfelspiel",
+                "Οι Άποικοι του Κατάν: Με ζάρια",
+                "Колонизаторы на кубиках",
+                "Catan Dice Game Clamshell Edition",
+                "Catan Dice Game Blister Pack",
+                "CATAN The Dice Game",
+                "Catan - Dice Game",
+                "Catan The Dice Game",
+                "Catan Dice",
+                "Catan Dice Game Deluxe",
+                "CATAN DICE GAME ENGLISH"
+            ],
+            "images": {
+                "thumb": "https://d2k4q26owzy373.cloudfront.net/40x40/games/uploaded/1545159442951",
+                "small": "https://d2k4q26owzy373.cloudfront.net/150x150/games/uploaded/1545159442951",
+                "medium": "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1545159442951",
+                "large": "https://d2k4q26owzy373.cloudfront.net/700x700/games/uploaded/1545159442951",
+                "original": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1545159442951"
+            },
+            "description_preview": " Discover, explore, and settle Catan anywhere, anytime - even by yourself! In the  Catan Dice Game , players build settlements, roads, cities, and knights like the popular  Catan  board game, but on a smaller scale with embossed dice and a scoring pad. Challenge the odds and discover a fresh way to master  Catan ! "
+        }
