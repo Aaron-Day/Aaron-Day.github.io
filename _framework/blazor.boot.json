@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Aaron-Day.github.io.dll": "sha256-Nfgj429Xv0y\/DjUlRXz1awaSA+iF88kjSdu1YXMC1Xg=",
+      "Aaron-Day.github.io.dll": "sha256-MtEG7XgIR327IOT4f7VoBebCvIQLtUDV0kOm8v946kk=",
       "Microsoft.AspNetCore.Components.dll": "sha256-Xo6aSyKPA5OqRBBL\/vRZLnsHCzp4vAuwJ5V6b5KYjvM=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-8NVvJdAr2Fx3IA1oUpVcOPnfS+fvXFYC0f\/O6K4NNFI=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-c9Jj3AbOglZYOJpVEqaHDRX0gJ3TUeN0Z+a1cOlhXEk=",

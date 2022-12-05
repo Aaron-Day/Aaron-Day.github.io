@@ -10,5 +10,5 @@ URL;TYPE=WORK:linkedin.com/in/day-aaron
 ADR;TYPE=HOME,PREF:;;;;OR;;United States of America
 LABEL;TYPE=HOME,PREF:OR\nUnited States of America
 BDAY:19830706
-PHOTO;VALUE=URI;TYPE=PNG:http://aaronday.info/images/Me.png
+PHOTO;VALUE=URI;TYPE=PNG:https://www.aaronday.info/images/Me.png
 END:VCARD
