@@ -1,0 +1,36 @@
+﻿@page "/"
+
+<PageTitle>Aaron Day</PageTitle>
+
+<div class="flip-card center-screen">
+    <div class="flip-card-inner">
+        <a href="/back">
+            <div class="flip-card-front">
+                <svg viewBox="-10 -10 120 120">
+                    <defs>
+                        <linearGradient id="linear" x1="40%" y1="60%" x2="100%" y2="0%" spreadMethod="reflect">
+                            <stop offset="0%" stop-color="#FEDB37" />
+                            <stop offset="8%" stop-color="#FDB931" />
+                            <stop offset="50%" stop-color="#D1B464" />
+                            <stop offset="92%" stop-color="#FFFFAC" />
+                            <stop offset="100%" stop-color="#5d4a1f" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur class="blur" result="coloredBlur" stdDeviation="4" />
+                            <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path fill="transparent" filter="url(#glow)" stroke="url(#linear)" stroke-width="2" d="M 32.9017 96.9856 A 50 50 0 1 1 50 100 L 50 0 L 50 50 L 1 50"></path>
+                </svg>
+                <h1>Aaron Day</h1>
+                <div class="hr"></div>
+                <h2>Software Engineer</h2>
+            </div>
+        </a>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 BEGIN:VCARD
 VERSION:3.0
 FN:Aaron Day
-N:Day;Aaron;;Mr.;
+N:Day;Aaron;;;
 TITLE:Software Engineer
 TEL;TYPE=CELL,VOICE,MSG:+1 971 706 7846
 EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:aaron.day@mail.com
