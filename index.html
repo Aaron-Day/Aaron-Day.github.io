@@ -3,17 +3,29 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Aaron-Day.github.io</title>
+    <title>Aaron Day</title>
     <base href="/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet" />
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link href="Aaron-Day.github.io.styles.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="app">Loading...</div>
+    <div id="app">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
