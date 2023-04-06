@@ -7,10 +7,10 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Aaron-Day.github.io.dll": "sha256-U2EZb6d3ob40egI\/ESUJh2xFk7MGBMAooM10IkFXgko=",
+      "Aaron-Day.github.io.dll": "sha256-b3ivsFh6eaQ3YUE11a6iCs6kwVs+Aq7715sRZH16JYk=",
       "Mapster.Core.dll": "sha256-t4scC57orK9Pzk+stzDyapVp1P7RjVmaEkumPBlVL5c=",
       "Mapster.dll": "sha256-ru7A\/3AB6xrsWcoz+YngxJVJl5vCMYweQzhp7gIfuqA=",
-      "Microsoft.AspNetCore.Components.dll": "sha256-FoMoXfXs3ECBG2A9+d9ikuszT5tnfKhby59c0ipDAZQ=",
+      "Microsoft.AspNetCore.Components.dll": "sha256-rGqUy81KE31CJwRUjhiykzxQHhfr1MgtjCvGGvrbLzs=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-BN66Go69XGu+hPTEOZLVBqVobHGRXTtuvQp9qGGpHi8=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-UmBNW046bLlFYUgZluaE8q251xpHaH5g6ibFCEH7nQI=",
       "Microsoft.CSharp.dll": "sha256-h1SY5SeZ644AXScIInSnUDnGSdGXc84RXhM1J4iCmSo=",
@@ -43,7 +43,7 @@
       "System.Reflection.Emit.dll": "sha256-cLI7lse6g1Ul0JgnjME8K7R\/buJgXyOgaFKH+be4Fe4=",
       "System.Reflection.Emit.ILGeneration.dll": "sha256-4a9N8\/38TkHOkcAn8A2+7nvFZ5lvzQ4BgI3qc3Dagf4=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-5IU6GUX8qOctLAYHuQ7clOc3ohNJ6aky7koryZ5i6W8=",
-      "System.Runtime.dll": "sha256-oGymiMwgp+qwMo6ieYCzWrWlQhRo2J2rmkAoxa3KlG0=",
+      "System.Runtime.dll": "sha256-9Sum6yWME7hQBsNHsJkitRer7Fwwcqg4RKMPJ8WFkn0=",
       "System.Text.Encodings.Web.dll": "sha256-hs\/1MGaOn5yuY2CFNcNLQTgIsa8iiwgwCUwWiYnhRsM=",
       "System.Text.Json.dll": "sha256-6DwrF3r4JTXxd7Y1rmqb3LtPHvtRicn8wF+h6U+UMcU="
     },
