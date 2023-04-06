@@ -227,44 +227,44 @@ svg > *[b-8zhztuvrim] {
     overflow: hidden;
 }
 
-.product-card .card .card-content[b-f8io170f1f] {
-    padding: 5px;
-}
+    .product-card .card .card-content[b-f8io170f1f] {
+        padding: 5px;
+    }
 
-.product-card .card .price[b-f8io170f1f] {
-    width: 70px;
-    height: 70px;
-    font-weight: 600;
-    font-size: 1.45rem;
-    line-height: 70px;
-    margin: 10px;
-    position: absolute;
-    top: 0;
-    letter-spacing: 0;
-}
+    .product-card .card .price[b-f8io170f1f] {
+        width: 70px;
+        height: 70px;
+        font-weight: 600;
+        font-size: 1.45rem;
+        line-height: 70px;
+        margin: 10px;
+        position: absolute;
+        top: 0;
+        letter-spacing: 0;
+    }
 
 .product-card ul.card-action-buttons[b-f8io170f1f] {
     margin: -18px 7px 0 0;
     text-align: right;
 }
 
-.product-card ul.card-action-buttons li[b-f8io170f1f] {
-    display: inline-block;
-    padding-left: 7px;
-}
+    .product-card ul.card-action-buttons li[b-f8io170f1f] {
+        display: inline-block;
+        padding-left: 7px;
+    }
 
 .product[b-f8io170f1f] {
     width: 20%;
     padding: 10px;
 }
 
-.product .card[b-f8io170f1f] {
-    margin: 0;
-}
+    .product .card[b-f8io170f1f] {
+        margin: 0;
+    }
 
-.product .card .card-content[b-f8io170f1f] {
-    padding: 5px 10px;
-}
+        .product .card .card-content[b-f8io170f1f] {
+            padding: 5px 10px;
+        }
 
 .line-clamp-4[b-f8io170f1f] {
     line-height: 1.15em;
@@ -280,6 +280,13 @@ svg > *[b-8zhztuvrim] {
 .card-image[b-f8io170f1f] {
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
+    padding: 5px;
+}
+
+.card-image img[b-f8io170f1f] {
+    width: 100%;
+    height: 270px; /* Increase the height slightly */
+    object-fit: contain;
 }
 
 .card-subtitle[b-f8io170f1f] {
@@ -291,6 +298,55 @@ svg > *[b-8zhztuvrim] {
 .card-subtitle-item > i[b-f8io170f1f] {
     font-size: 1rem;
     vertical-align: middle;
+}
+
+/* Add the following styles */
+
+.game-grid[b-f8io170f1f] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-card[b-f8io170f1f] {
+    flex: 0 0 calc(25% - 40px);
+    max-width: calc(25% - 40px);
+    margin: 10px;
+}
+
+    .game-card .card[b-f8io170f1f] {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+.card-content[b-f8io170f1f] {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media queries for responsive design */
+
+@media screen and (max-width: 1200px) {
+    .game-card[b-f8io170f1f] {
+        flex: 0 0 calc(33.333% - 40px);
+        max-width: calc(33.333% - 40px);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .game-card[b-f8io170f1f] {
+        flex: 0 0 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .game-card[b-f8io170f1f] {
+        flex: 0 0 calc(100% - 40px);
+        max-width: calc(100% - 40px);
+    }
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-b235frtndp] {
