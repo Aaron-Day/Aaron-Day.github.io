@@ -47,4 +47,9 @@ public partial class Games : ComponentBase
 
         return filtered.OrderBy(g => g.Handle).ToList();
     }
+
+    protected static void ToggleDescriptionExpansion(Game game)
+    {
+        game.Expanded = !game.Expanded;
+    }
 }

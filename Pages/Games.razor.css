@@ -48,11 +48,10 @@
 }
 
 .line-clamp-4 {
+    line-height: 1.15em;
+    max-height: calc(4 * 1.15em);
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    /* truncate to 4 lines */
-    -webkit-line-clamp: 4;
+    position: relative;
 }
 
 .card-header {

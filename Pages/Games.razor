@@ -41,13 +41,14 @@ else
                                 <div class="row">
                                     <div class="col s12">
                                         <span style="font-weight: bold;">Description:</span><br />
-                                        <p class="line-clamp-4">
+                                        <p class="line-clamp-4" style="@(game.Expanded ? "max-height: none;" : "")">
                                         @if (game.Description is not null)
                                         {
                                             @((MarkupString)game.Description)
                                         }
                                         </p>
                                     </div>
+                                    <a href="javascript:void(0)" @onclick="() => ToggleDescriptionExpansion(game)">@game.ExpandedText</a>
                                 </div>
                                 <div class="row">
                                 @if(game.Mechanics is not null && game.Mechanics.Count > 0)

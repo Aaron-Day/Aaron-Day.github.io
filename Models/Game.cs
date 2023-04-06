@@ -9,4 +9,6 @@ public class Game : GameBase
     public long BggId { get; set; } = -1;
     public string Upc { get; set; } = string.Empty;
     public List<string> Expansions { get; set; } = new();
+    public bool Expanded { get; set; } = false;
+    public string ExpandedText => Expanded ? "Show less" : "Show more";
 }
