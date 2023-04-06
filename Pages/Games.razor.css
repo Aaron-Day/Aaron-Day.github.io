@@ -8,44 +8,44 @@
     overflow: hidden;
 }
 
-.product-card .card .card-content {
-    padding: 5px;
-}
+    .product-card .card .card-content {
+        padding: 5px;
+    }
 
-.product-card .card .price {
-    width: 70px;
-    height: 70px;
-    font-weight: 600;
-    font-size: 1.45rem;
-    line-height: 70px;
-    margin: 10px;
-    position: absolute;
-    top: 0;
-    letter-spacing: 0;
-}
+    .product-card .card .price {
+        width: 70px;
+        height: 70px;
+        font-weight: 600;
+        font-size: 1.45rem;
+        line-height: 70px;
+        margin: 10px;
+        position: absolute;
+        top: 0;
+        letter-spacing: 0;
+    }
 
 .product-card ul.card-action-buttons {
     margin: -18px 7px 0 0;
     text-align: right;
 }
 
-.product-card ul.card-action-buttons li {
-    display: inline-block;
-    padding-left: 7px;
-}
+    .product-card ul.card-action-buttons li {
+        display: inline-block;
+        padding-left: 7px;
+    }
 
 .product {
     width: 20%;
     padding: 10px;
 }
 
-.product .card {
-    margin: 0;
-}
+    .product .card {
+        margin: 0;
+    }
 
-.product .card .card-content {
-    padding: 5px 10px;
-}
+        .product .card .card-content {
+            padding: 5px 10px;
+        }
 
 .line-clamp-4 {
     line-height: 1.15em;
@@ -61,6 +61,13 @@
 .card-image {
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
+    padding: 5px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 270px; /* Increase the height slightly */
+    object-fit: contain;
 }
 
 .card-subtitle {
@@ -72,4 +79,53 @@
 .card-subtitle-item > i {
     font-size: 1rem;
     vertical-align: middle;
+}
+
+/* Add the following styles */
+
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-card {
+    flex: 0 0 calc(25% - 40px);
+    max-width: calc(25% - 40px);
+    margin: 10px;
+}
+
+    .game-card .card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media queries for responsive design */
+
+@media screen and (max-width: 1200px) {
+    .game-card {
+        flex: 0 0 calc(33.333% - 40px);
+        max-width: calc(33.333% - 40px);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .game-card {
+        flex: 0 0 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .game-card {
+        flex: 0 0 calc(100% - 40px);
+        max-width: calc(100% - 40px);
+    }
 }
