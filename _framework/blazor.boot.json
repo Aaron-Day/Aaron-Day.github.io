@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Aaron-Day.github.io.dll": "sha256-PilWLGzg21vvrYZZFhAArcVqgLVziZIpVlv0atDP0QY=",
+      "Aaron-Day.github.io.dll": "sha256-b1sTQUE+MREOijyL9pgvkrS4JLoRQ1RUz8Jelr8Eqtw=",
       "Mapster.Core.dll": "sha256-t4scC57orK9Pzk+stzDyapVp1P7RjVmaEkumPBlVL5c=",
       "Mapster.dll": "sha256-ru7A\/3AB6xrsWcoz+YngxJVJl5vCMYweQzhp7gIfuqA=",
       "Microsoft.AspNetCore.Components.dll": "sha256-rGqUy81KE31CJwRUjhiykzxQHhfr1MgtjCvGGvrbLzs=",
