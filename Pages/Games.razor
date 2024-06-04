@@ -12,13 +12,60 @@
 }
 else
 {
-    <h3>Filters:</h3>
-    <p>
-        <input @bind="NameFilter" @oninput="() => StateHasChanged()" placeholder="name" />
-        <input @bind="AgeFilter" @oninput="() => StateHasChanged()" placeholder="age" />
-        <input @bind="PlaytimeFilter" @oninput="() => StateHasChanged()" placeholder="time" />
-        <input @bind="PlayersFilter" @oninput="() => StateHasChanged()" placeholder="players" />
-    </p>
+    <button @onclick="ToggleFilterDialog">Filters</button>
+    @if(showFilterDialog)
+    {
+        <div class="filter-dialog">
+            <h3>Filters:</h3>
+            <!-- Add your filter fields here -->
+            <p>
+                <input @bind="NameFilter" @bind:event="oninput" placeholder="name" />
+                <input @bind="AgeFilter" @bind:event="oninput" placeholder="age" />
+                <input @bind="PlaytimeFilter" @bind:event="oninput" placeholder="time" />
+                <input @bind="PlayersFilter" @bind:event="oninput" placeholder="players" />
+            </p>
+            <!-- Add tag filters for mechanics -->
+            <h4>Mechanics:</h4>
+            <!-- Add the toggle switch for "Any" or "All" filter mode -->
+            <div class="filter-mode-toggle">
+                <div class="toggle-container">
+                    <span>Any</span>
+                    <label class="switch">
+                        <input type="checkbox" @bind="MatchAllMechanicsTags" />
+                        <span class="slider round"></span>
+                    </label>
+                    <span>All</span>
+                </div>
+            </div>
+            <div>
+                @foreach(string mechanic in UniqueMechanics)
+                {
+                    <button class="chip @(MechanicsFilter.Contains(mechanic) ? "selected" : "")" @onclick="() => ToggleMechanicTag(mechanic)">@mechanic</button>
+                }
+            </div>
+
+            <!-- Add tag filters for categories -->
+            <h4>Categories:</h4>
+            <!-- Add the toggle switch for "Any" or "All" filter mode -->
+            <div class="filter-mode-toggle">
+                <div class="toggle-container">
+                    <span>Any</span>
+                    <label class="switch">
+                        <input type="checkbox" @bind="MatchAllCategoriesTags" />
+                        <span class="slider round"></span>
+                    </label>
+                    <span>All</span>
+                </div>
+            </div>
+            <div>
+                @foreach(string category in UniqueCategories)
+                {
+                    <button class="chip @(CategoriesFilter.Contains(category) ? "selected" : "")" @onclick="() => ToggleCategoryTag(category)">@category</button>
+                }
+            </div>
+            <button @onclick="ToggleFilterDialog">Close</button>
+        </div>
+    }
     <div class="body">
         <div class="game-grid">
             @foreach(Game game in FilteredGames)

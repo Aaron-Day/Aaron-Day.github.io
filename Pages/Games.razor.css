@@ -8,44 +8,44 @@
     overflow: hidden;
 }
 
-    .product-card .card .card-content {
-        padding: 5px;
-    }
+.product-card .card .card-content {
+    padding: 5px;
+}
 
-    .product-card .card .price {
-        width: 70px;
-        height: 70px;
-        font-weight: 600;
-        font-size: 1.45rem;
-        line-height: 70px;
-        margin: 10px;
-        position: absolute;
-        top: 0;
-        letter-spacing: 0;
-    }
+.product-card .card .price {
+    width: 70px;
+    height: 70px;
+    font-weight: 600;
+    font-size: 1.45rem;
+    line-height: 70px;
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    letter-spacing: 0;
+}
 
 .product-card ul.card-action-buttons {
     margin: -18px 7px 0 0;
     text-align: right;
 }
 
-    .product-card ul.card-action-buttons li {
-        display: inline-block;
-        padding-left: 7px;
-    }
+.product-card ul.card-action-buttons li {
+    display: inline-block;
+    padding-left: 7px;
+}
 
 .product {
     width: 20%;
     padding: 10px;
 }
 
-    .product .card {
-        margin: 0;
-    }
+.product .card {
+    margin: 0;
+}
 
-        .product .card .card-content {
-            padding: 5px 10px;
-        }
+.product .card .card-content {
+    padding: 5px 10px;
+}
 
 .line-clamp-4 {
     line-height: 1.15em;
@@ -95,16 +95,98 @@
     margin: 10px;
 }
 
-    .game-card .card {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
+.game-card .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
 .card-content {
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+.chip {
+    display: inline-block;
+    padding: 0 12px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 16px;
+    background-color: #e4e4e4;
+    margin: 5px;
+}
+
+.chip.selected {
+    background-color: #4285f4;
+    color: white;
+}
+
+.filter-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; /* Update this line */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    height: 14px;
+    border-radius: 7px;
+    transform: translateY(-50%); /* Add this line */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 1px;
+    top: 0; /* Update this line */
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    transform: translateY(-50%); /* Add this line */
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 /* Media queries for responsive design */
