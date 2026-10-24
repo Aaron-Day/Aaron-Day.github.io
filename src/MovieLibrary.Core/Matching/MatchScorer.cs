@@ -12,6 +12,19 @@ public sealed record MatchResult(int? TmdbId, double Confidence, MatchOutcome Ou
 
 public static class MatchScorer
 {
+    // Weights sum to 0.95, not 1.00: popularity is deliberately NOT part of the score.
+    // It orders candidates only, so identical evidence always yields the same outcome.
+    // A score of exactly 1.0 therefore means a human override from the Overrides tab.
+    private const double RuntimeWeight = 0.40;
+    private const double DirectorWeight = 0.30;
+    private const double TitleWeight = 0.15;
+    private const double YearWeight = 0.10;
+
+    /// <summary>Runtime counts as a match within this many minutes either way.</summary>
+    private const int RuntimeToleranceMinutes = 2;
+
+    // Every weight and threshold must stay a multiple of 0.0001, or Math.Round(x, 4) below
+    // starts truncating (0.03125 would silently become 0.0312) and the boundary tests lie.
     public const double AcceptThreshold = 0.75;
     public const double FlagThreshold = 0.45;
 
@@ -30,6 +43,9 @@ public static class MatchScorer
             .ThenBy(x => x.Candidate.TmdbId)
             .First();
 
+        // Idempotent given ScoreOne already rounds. Kept deliberately: three float defects
+        // have surfaced in this file, and making the threshold depend on a non-local
+        // invariant inside ScoreOne is how a fourth arrives. Do not "simplify" this away.
         var rounded = Math.Round(best.Score, 4);
 
         var outcome = rounded >= AcceptThreshold ? MatchOutcome.Accepted
@@ -48,16 +64,20 @@ public static class MatchScorer
     {
         var score = 0d;
 
-        if (c.RuntimeMinutes is { } rt && Math.Abs(rt - runtimeMinutes) <= 2) score += 0.40;
+        if (c.RuntimeMinutes is { } rt && Math.Abs(rt - runtimeMinutes) <= RuntimeToleranceMinutes) score += RuntimeWeight;
 
         if (c.Directors.Any(d => TitleNormalizer.NameTokens(d) is { Count: > 0 } t
                                  && t.IsSubsetOf(wantedDirectors)))
-            score += 0.30;
+            score += DirectorWeight;
 
-        if (TitleNormalizer.Normalize(c.Title).Value == title.Value) score += 0.15;
+        if (TitleNormalizer.Normalize(c.Title).Value == title.Value) score += TitleWeight;
 
-        if (title.YearHint is { } y && c.Year == y) score += 0.10;
+        if (title.YearHint is { } y && c.Year == y) score += YearWeight;
 
+        // Sums of decimal-looking weights are not exact doubles: 0.30 + 0.15 is
+        // 0.44999999999999996, and 0.40 + 0.15 differs from 0.30 + 0.15 + 0.10 although both
+        // are 0.55. Unrounded, the first silently fell below the Flagged threshold and the
+        // second always outranked the third, so the popularity tie-break never ran.
         return Math.Round(score, 4);
     }
 }

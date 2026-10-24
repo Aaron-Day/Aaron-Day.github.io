@@ -170,4 +170,46 @@ public class MatchScorerBoundaryTests
         Assert.Equal(1, directorAndTitle.TmdbId);
         Assert.Equal(0.45, directorAndTitle.Confidence);
     }
+
+    /// <remarks>
+    /// Null runtime is the NORMAL case, not an edge case: TMDB search results carry no
+    /// runtime, so every candidate looks like this until Task 12 enriches the leaders with
+    /// a details lookup. Nothing covered it.
+    /// </remarks>
+    [Fact]
+    public void NullRuntimeSimplyScoresNoRuntimePoints()
+    {
+        var candidate = new MovieCandidate(1, "Alien", 1979, null, ["Ridley Scott"], 1.0);
+        var r = MatchScorer.Score(
+            TitleNormalizer.Normalize("Alien"), 117, "Ridley Scott", [candidate]);
+
+        Assert.Equal(0.45, r.Confidence);          // director 0.30 + title 0.15, no runtime
+        Assert.Equal(MatchOutcome.Flagged, r.Outcome);
+        Assert.Equal(1, r.TmdbId);
+    }
+
+    [Fact]
+    public void NullYearSimplyScoresNoYearPoints()
+    {
+        var candidate = new MovieCandidate(1, "Alien", null, 117, ["Ridley Scott"], 1.0);
+        var r = MatchScorer.Score(
+            TitleNormalizer.Normalize("Alien (1979)"), 117, "Ridley Scott", [candidate]);
+
+        Assert.Equal(0.85, r.Confidence);          // runtime + director + title, no year
+        Assert.Equal(MatchOutcome.Accepted, r.Outcome);
+    }
+
+    /// <remarks>
+    /// Pins that title comparison runs through TitleNormalizer rather than a bare
+    /// ToLowerInvariant: only the former folds the accent.
+    /// </remarks>
+    [Fact]
+    public void TitleComparisonIsFoldedNotMerelyLowercased()
+    {
+        var candidate = new MovieCandidate(1, "Amélie", null, null, [], 1.0);
+        var r = MatchScorer.Score(
+            TitleNormalizer.Normalize("Amelie"), 122, "Jean-Pierre Jeunet", [candidate]);
+
+        Assert.Equal(0.15, r.Confidence);          // title only; accent folded away
+    }
 }
