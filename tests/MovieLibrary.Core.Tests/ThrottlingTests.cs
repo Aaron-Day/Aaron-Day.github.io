@@ -115,4 +115,22 @@ public class ThrottlingTests
         for (var i = 0; i < 10_000; i++) Assert.True(budget.TryConsume());
         Assert.False(budget.IsExhausted);
     }
+
+    /// <remarks>
+    /// Pins the `while` in Evict. With `if` (evict at most one per call) every other limiter
+    /// test still passes: BurstsAreLegal... has 40 stale entries meeting 40 Records that each
+    /// evict one, so the end state coincides. This sequence deliberately exceeds the limit
+    /// (43 records) so more than one entry must age out at once.
+    /// </remarks>
+    [Fact]
+    public void EvictDrainsEveryExpiredEntryNotJustOne()
+    {
+        var limiter = new SlidingWindowRateLimiter(40, TimeSpan.FromSeconds(10));
+        for (var i = 0; i < 3; i++) limiter.Record(T0);
+        for (var i = 0; i < 40; i++) limiter.Record(T0.AddSeconds(5));
+
+        // At T0+10 all three T0 entries age out together, leaving exactly 40 at T0+5,
+        // whose oldest frees at T0+15.
+        Assert.Equal(TimeSpan.FromSeconds(5), limiter.DelayBefore(T0.AddSeconds(10)));
+    }
 }

@@ -1,6 +1,9 @@
 namespace MovieLibrary.Core.Throttling;
 
-/// <summary>Per-run ceiling on outbound TMDB requests. Zero means unlimited.</summary>
+/// <summary>
+/// Per-run ceiling on outbound TMDB requests. Zero <em>or negative</em> means unlimited.
+/// Not thread-safe.
+/// </summary>
 public sealed class RequestBudget(int max)
 {
     public int Used { get; private set; }
