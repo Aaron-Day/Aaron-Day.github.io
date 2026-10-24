@@ -41,10 +41,10 @@ public static class CsvParser
             }
         }
 
-        if (field.Length > 0 || row.Count > 0)
+        if (field.Length > 0 || row.Count > 0 || fieldStarted)
         {
             row.Add(field.ToString());
-            if (row.Count > 1 || row[0].Length > 0) rows.Add([.. row]);
+            if (row.Count > 1 || row[0].Length > 0 || fieldStarted) rows.Add([.. row]);
         }
 
         return rows;

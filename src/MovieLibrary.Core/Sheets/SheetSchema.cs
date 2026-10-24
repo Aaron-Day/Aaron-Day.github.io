@@ -13,6 +13,9 @@ public static class SheetSchema
     public static IReadOnlyList<string> Overrides { get; } =
         ["Title", "Runtime", "TmdbId", "Note"];
 
+    // Trim() does not strip U+FEFF, so a BOM on the first header cell would abort every import.
+    private static string Clean(string cell) => cell.Trim().TrimStart('\uFEFF').Trim();
+
     /// <summary>
     /// Expected headers must appear as a prefix of the actual row; trailing
     /// unnamed columns are tolerated because the real export has one.
@@ -26,7 +29,7 @@ public static class SheetSchema
 
         for (var i = 0; i < expected.Count; i++)
         {
-            if (!string.Equals(expected[i], actualHeader[i].Trim(), StringComparison.OrdinalIgnoreCase))
+            if (!string.Equals(expected[i], Clean(actualHeader[i]), StringComparison.OrdinalIgnoreCase))
                 throw new SheetSchemaException(
                     $"Tab '{tabName}' header mismatch at column {i + 1}: expected '{expected[i]}', " +
                     $"got '{actualHeader[i]}'. Google silently returns the first sheet when a tab " +

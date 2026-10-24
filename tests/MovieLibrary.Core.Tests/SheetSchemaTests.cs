@@ -24,7 +24,25 @@ public class SheetSchemaTests
     }
 
     [Fact]
+    public void ToleratesAUtf8BomOnTheFirstHeaderCell()
+    {
+        string[] withBom = ["\uFEFFTitle", "Runtime", "Directors", "PurchaseInfo", "Genres", ""];
+        SheetSchema.Validate("Movies", SheetSchema.Movies, withBom);   // must not throw
+    }
+
+    [Fact]
     public void RejectsTruncatedHeader()
         => Assert.Throws<SheetSchemaException>(
             () => SheetSchema.Validate("Overrides", SheetSchema.Overrides, ["Title", "Runtime"]));
+
+    [Fact]
+    public void WrongTabMessageExplainsTheGoogleFallback()
+    {
+        // The hint is the whole point of this exception; without this assertion it
+        // could be deleted and every existing test would still pass.
+        string[] moviesHeader = ["Title", "Runtime", "Directors", "PurchaseInfo", "Genres", ""];
+        var ex = Assert.Throws<SheetSchemaException>(
+            () => SheetSchema.Validate("Shows", SheetSchema.Shows, moviesHeader));
+        Assert.Contains("first sheet", ex.Message);
+    }
 }
