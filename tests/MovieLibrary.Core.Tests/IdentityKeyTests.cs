@@ -43,4 +43,70 @@ public class IdentityKeyTests
     public void SeriesKeyIgnoresCaseAndPunctuation()
         => Assert.Equal(IdentityKey.ForSeries(TitleNormalizer.Normalize("NCIS: Los Angeles")),
                         IdentityKey.ForSeries(TitleNormalizer.Normalize("ncis los angeles")));
+
+    // Golden values were derived INDEPENDENTLY of this code, by hand-writing the documented
+    // hash input and hashing it with two other tools:
+    //   printf 'film|alien|117|ridley scott' | sha1sum
+    //   python -c "import hashlib; print(hashlib.sha1(b'film|alien|117|ridley scott').hexdigest())"
+    // If either golden test fails, the cache contract changed and every cached entry is
+    // invalidated. Re-derive the expected value independently; do NOT paste in whatever the
+    // code now produces, or this test pins nothing.
+    private const string ExpectedAlienKey = "87670b0ff5ec8209179b5a6ca174aa38ea7a61e5";
+    private const string ExpectedNcisLaKey = "1c1cd2a6dc513639168a1f895a50792236ae37e5";
+
+    [Fact]
+    public void FilmKeyIsAStableGoldenValue()
+    {
+        // Pins the exact hash input format: "film|{Value}|{runtime}|{directors}".
+        var key = IdentityKey.ForFilm(
+            TitleNormalizer.Normalize("Alien"), 117,
+            TitleNormalizer.NormalizeDirectors("Ridley Scott"));
+
+        Assert.Equal(40, key.Length);
+        Assert.Matches("^[0-9a-f]{40}$", key);
+        Assert.Equal(ExpectedAlienKey, key);
+    }
+
+    [Fact]
+    public void SeriesKeyIsAStableGoldenValue()
+        // Pins the exact hash input format: "series|{Value}".
+        => Assert.Equal(ExpectedNcisLaKey,
+                        IdentityKey.ForSeries(TitleNormalizer.Normalize("NCIS: Los Angeles")));
+
+    [Fact]
+    public void RuntimeAloneChangesTheKey()
+        => Assert.NotEqual(Film("Aladdin", 129, "Guy Ritchie"), Film("Aladdin", 91, "Guy Ritchie"));
+
+    [Fact]
+    public void DirectorsAloneChangeTheKey()
+        => Assert.NotEqual(Film("Aladdin", 100, "Guy Ritchie"), Film("Aladdin", 100, "Ron Clements"));
+
+    [Fact]
+    public void TitleAloneChangesTheKey()
+        => Assert.NotEqual(Film("Alien", 117, "Ridley Scott"), Film("Aliens", 117, "Ridley Scott"));
+
+    [Fact]
+    public void FilmAndSeriesKeysNeverCollide()
+    {
+        // Identical normalized names.
+        var name = TitleNormalizer.Normalize("Alien");
+        Assert.NotEqual(
+            IdentityKey.ForFilm(name, 117, TitleNormalizer.NormalizeDirectors("Ridley Scott")),
+            IdentityKey.ForSeries(name));
+
+        // Worst case: a series whose Value equals a film's whole hash tail. Only the
+        // "film|" / "series|" prefixes keep these apart.
+        var crafted = new NormalizedTitle("alien|117|ridley scott", "alien|117|ridley scott", null);
+        Assert.NotEqual(
+            IdentityKey.ForFilm(name, 117, TitleNormalizer.NormalizeDirectors("Ridley Scott")),
+            IdentityKey.ForSeries(crafted));
+    }
+
+    [Theory]
+    [InlineData("Alien", "ALIEN")]
+    [InlineData("Amélie", "Amelie")]
+    [InlineData("Airplane!", "Airplane")]
+    [InlineData("Se7en", "Se7en.")]
+    public void FilmKeyFoldsCaseAccentsAndPunctuation(string plain, string variant)
+        => Assert.Equal(Film(plain, 100, "Some Director"), Film(variant, 100, "Some Director"));
 }

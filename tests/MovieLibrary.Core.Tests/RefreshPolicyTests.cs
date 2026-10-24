@@ -28,4 +28,20 @@ public class RefreshPolicyTests
         Assert.False(RefreshPolicy.NegativeExpired(Now.AddDays(-29), Now));
         Assert.True(RefreshPolicy.NegativeExpired(Now.AddDays(-31), Now));
     }
+
+    [Fact]
+    public void NeedsRefreshIsFalseAtExactlyTheWindow()
+        => Assert.False(RefreshPolicy.NeedsRefresh(Now.AddDays(-150), Now));
+
+    [Fact]
+    public void NeedsRefreshIsTrueJustPastTheWindow()
+        => Assert.True(RefreshPolicy.NeedsRefresh(Now.AddDays(-150).AddTicks(-1), Now));
+
+    [Fact]
+    public void NegativeExpiredIsFalseAtExactlyTheRetry()
+        => Assert.False(RefreshPolicy.NegativeExpired(Now.AddDays(-30), Now));
+
+    [Fact]
+    public void NegativeExpiredIsTrueJustPastTheRetry()
+        => Assert.True(RefreshPolicy.NegativeExpired(Now.AddDays(-30).AddTicks(-1), Now));
 }
