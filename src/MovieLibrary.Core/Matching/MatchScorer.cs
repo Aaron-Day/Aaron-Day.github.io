@@ -22,27 +22,29 @@ public static class MatchScorer
         if (candidates.Count == 0) return new MatchResult(null, 0d, MatchOutcome.Unmatched);
 
         var wantedDirectors = TitleNormalizer.NameTokens(rawDirectors);
-        var maxPopularity = candidates.Max(c => c.Popularity);
 
         var best = candidates
-            .Select(c => (Candidate: c, Score: ScoreOne(c, title, runtimeMinutes, wantedDirectors, maxPopularity)))
+            .Select(c => (Candidate: c, Score: ScoreOne(c, title, runtimeMinutes, wantedDirectors)))
             .OrderByDescending(x => x.Score)
+            .ThenByDescending(x => x.Candidate.Popularity)
             .ThenBy(x => x.Candidate.TmdbId)
             .First();
 
-        var outcome = best.Score >= AcceptThreshold ? MatchOutcome.Accepted
-                    : best.Score >= FlagThreshold   ? MatchOutcome.Flagged
+        var rounded = Math.Round(best.Score, 4);
+
+        var outcome = rounded >= AcceptThreshold ? MatchOutcome.Accepted
+                    : rounded >= FlagThreshold   ? MatchOutcome.Flagged
                     : MatchOutcome.Unmatched;
 
         return new MatchResult(
             outcome == MatchOutcome.Unmatched ? null : best.Candidate.TmdbId,
-            Math.Round(best.Score, 4),
+            rounded,
             outcome);
     }
 
     private static double ScoreOne(
         MovieCandidate c, NormalizedTitle title, int runtimeMinutes,
-        IReadOnlySet<string> wantedDirectors, double maxPopularity)
+        IReadOnlySet<string> wantedDirectors)
     {
         var score = 0d;
 
@@ -55,8 +57,6 @@ public static class MatchScorer
         if (TitleNormalizer.Normalize(c.Title).Value == title.Value) score += 0.15;
 
         if (title.YearHint is { } y && c.Year == y) score += 0.10;
-
-        if (maxPopularity > 0) score += 0.05 * (c.Popularity / maxPopularity);
 
         return score;
     }
