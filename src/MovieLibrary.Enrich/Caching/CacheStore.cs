@@ -3,6 +3,17 @@ using MovieLibrary.Core.Caching;
 
 namespace MovieLibrary.Enrich.Caching;
 
+/// <summary>
+/// The on-disk enrichment cache: an <c>index.json</c> of <see cref="CacheEntry"/> records plus payload files.
+/// </summary>
+/// <remarks>
+/// <para><b>Not thread-safe. Call it sequentially.</b> <see cref="Resolve"/> is not a pure read: an alias hit
+/// writes the new key back into the dictionary. Concurrent calls race, and iterating
+/// <see cref="Entries"/> (a live view, not a copy) while calling <see cref="Resolve"/> throws
+/// <see cref="InvalidOperationException"/>. Snapshot first: <c>store.Entries.ToList()</c>.</para>
+/// <para><see cref="SaveAsync"/> truncates <c>index.json</c> in place and is not atomic. A crash mid-write
+/// loses the cache and the next run rebuilds it at full API cost; acceptable for a single-user tool.</para>
+/// </remarks>
 public sealed class CacheStore(string rootPath)
 {
     private static readonly JsonSerializerOptions Options =
