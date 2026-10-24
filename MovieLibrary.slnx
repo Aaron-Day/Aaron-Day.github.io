@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MovieLibrary/MovieLibrary.Client/MovieLibrary.Client.csproj" />
+  <Project Path="MovieLibrary/MovieLibrary/MovieLibrary.csproj" />
+</Solution>

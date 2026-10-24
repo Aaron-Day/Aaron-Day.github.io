@@ -452,3 +452,23 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# ---------------------------------------------------------------
+# MovieLibrary project-specific
+# ---------------------------------------------------------------
+
+# Agent / tooling scratch
+.claude/
+.superpowers/
+
+# Design docs, specs and mockups (kept locally, not in the repo)
+docs/
+
+# Generated catalog data — rebuilt by MovieLibrary.Enrich on every deploy.
+# The TMDB match cache in enrich-cache/ IS committed and must not be ignored.
+src/MovieLibrary.Web/wwwroot/data/
+
+# Local secrets for running the enrich tool outside CI
+.env
+*.local.json
+appsettings.Local.json
