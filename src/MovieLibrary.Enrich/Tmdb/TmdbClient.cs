@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Text.Json;
@@ -8,8 +9,16 @@ using MovieLibrary.Core.Tmdb;
 namespace MovieLibrary.Enrich.Tmdb;
 
 /// <summary>
-/// Thin TMDB client: budget first, then rate limit, then send with backoff.
+/// Thin TMDB client: budget first, then rate limit, then send with backoff. Transport faults,
+/// timeouts, a malformed body, 429 and 5xx are retried; 404 is a null result; any other status,
+/// and a caller-requested cancellation, are not retried.
 /// </summary>
+/// <param name="http">
+/// <see cref="HttpClient.BaseAddress"/> must be set <b>with a trailing slash</b>
+/// (<c>https://api.themoviedb.org/</c>); requests use relative URLs, so without a base address the
+/// first call throws <see cref="InvalidOperationException"/> and without the slash the path is
+/// resolved against the wrong directory.
+/// </param>
 /// <param name="clock">
 /// Must be monotonic: <see cref="SlidingWindowRateLimiter"/> requires a non-decreasing
 /// <c>now</c>. Production callers pass a fixed UTC base plus <c>Stopwatch.Elapsed</c>,
@@ -23,7 +32,14 @@ public sealed class TmdbClient(
     Func<DateTimeOffset> clock)
 {
     private const int MaxAttempts = 5;
-    private readonly TmdbAuthMode _mode = TmdbAuth.Detect(token);
+
+    // An unbounded Retry-After silently stalls a run (TMDB could send 3600), and past ~49.7 days
+    // Task.Delay throws. Anything the server asks for beyond this is capped.
+    private static readonly TimeSpan MaxRetryWait = TimeSpan.FromSeconds(60);
+
+    // Trimmed once so that auth-mode detection and what goes on the wire agree on one string.
+    private readonly string _token = (token ?? string.Empty).Trim();
+    private readonly TmdbAuthMode _mode = TmdbAuth.Detect((token ?? string.Empty).Trim());
 
     public bool BudgetExhausted { get; private set; }
 
@@ -91,7 +107,10 @@ public sealed class TmdbClient(
 
     /// <summary>
     /// Single choke point: budget first, then rate limit, then send with backoff.
-    /// Returns null when the budget is spent so callers stop cleanly.
+    /// Returns null when the budget is spent so callers stop cleanly, and for a 404.
+    /// Every attempt, retries included, passes budget -> DelayBefore -> wait -> Record.
+    /// Throws <see cref="HttpRequestException"/> for a non-retryable status or once the retries
+    /// are spent; transport faults and bad bodies surface as its <c>InnerException</c>.
     /// </summary>
     private async Task<JsonDocument?> GetAsync(string path, CancellationToken ct)
     {
@@ -103,30 +122,52 @@ public sealed class TmdbClient(
             if (delay > TimeSpan.Zero) await Task.Delay(delay, ct);
             limiter.Record(clock());
 
-            var url = path;
-            if (_mode == TmdbAuthMode.QueryKey)
-                url += (path.Contains('?') ? "&" : "?") + $"api_key={Uri.EscapeDataString(token)}";
+            HttpRequestException failure;
+            TimeSpan? retryAfter = null;
+            var retryable = true;
+            try
+            {
+                using var req = CreateRequest(path);
+                using var res = await http.SendAsync(req, ct);
+                retryAfter = res.Headers.RetryAfter?.Delta;
 
-            using var req = new HttpRequestMessage(HttpMethod.Get, url);
-            if (_mode == TmdbAuthMode.BearerToken)
-                req.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                if (res.IsSuccessStatusCode)
+                    return JsonDocument.Parse(await res.Content.ReadAsStringAsync(ct));
 
-            using var res = await http.SendAsync(req, ct);
+                if (res.StatusCode == HttpStatusCode.NotFound) return null;
 
-            if (res.IsSuccessStatusCode)
-                return JsonDocument.Parse(await res.Content.ReadAsStringAsync(ct));
+                retryable = res.StatusCode == HttpStatusCode.TooManyRequests || (int)res.StatusCode >= 500;
+                failure = new HttpRequestException(
+                    $"TMDB {(int)res.StatusCode} for {path}", null, res.StatusCode);
+            }
+            catch (Exception ex) when (
+                (ex is HttpRequestException or TaskCanceledException or JsonException)
+                && !ct.IsCancellationRequested)
+            {
+                // A reset connection, a timeout, or a 200 carrying a proxy or captive-portal page.
+                // A cancellation the caller asked for is excluded and propagates untouched.
+                failure = new HttpRequestException($"TMDB request for {path} failed: {ex.Message}", ex);
+            }
 
-            if (res.StatusCode == HttpStatusCode.NotFound) return null;
+            if (!retryable || attempt == MaxAttempts) throw failure;
 
-            var retryable = res.StatusCode == HttpStatusCode.TooManyRequests || (int)res.StatusCode >= 500;
-            if (!retryable || attempt == MaxAttempts)
-                throw new HttpRequestException($"TMDB {(int)res.StatusCode} for {path}");
-
-            var wait = res.Headers.RetryAfter?.Delta
-                       ?? TimeSpan.FromSeconds(Math.Pow(2, attempt - 1));
+            var wait = retryAfter ?? TimeSpan.FromSeconds(Math.Pow(2, attempt - 1));
+            if (wait > MaxRetryWait) wait = MaxRetryWait;
             if (wait > TimeSpan.Zero) await Task.Delay(wait, ct);
         }
 
-        return null;
+        throw new UnreachableException(); // the final attempt always returns or throws above
+    }
+
+    private HttpRequestMessage CreateRequest(string path)
+    {
+        var url = path;
+        if (_mode == TmdbAuthMode.QueryKey)
+            url += (path.Contains('?') ? "&" : "?") + $"api_key={Uri.EscapeDataString(_token)}";
+
+        var req = new HttpRequestMessage(HttpMethod.Get, url);
+        if (_mode == TmdbAuthMode.BearerToken)
+            req.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _token);
+        return req;
     }
 }
