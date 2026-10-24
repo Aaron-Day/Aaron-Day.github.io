@@ -54,7 +54,14 @@ public sealed class CacheStore(string rootPath)
     public void Put(CacheEntry entry) => _byKey[entry.Key] = entry;
 
     /// <summary>Exact key, then a ±2-minute alias on the same normalized title. Null means fetch.</summary>
-    /// <param name="normalizedTitle">The folded <c>Value</c> from <c>TitleNormalizer</c>, not <c>Cleaned</c>.</param>
+    /// <param name="key">Content identity key from <c>IdentityKey.ForFilm</c> or <c>ForSeries</c>.</param>
+    /// <param name="normalizedTitle">
+    /// The folded <c>Value</c> from <c>TitleNormalizer</c>, never <c>Cleaned</c>. The alias scan
+    /// compares this for equality; passing <c>Cleaned</c> would silently stop every alias from
+    /// matching, turning each re-encode into a fresh API call.
+    /// </param>
+    /// <param name="runtimeMinutes">Runtime of the row being resolved, for the ±2-minute alias.</param>
+    /// <param name="now">Caller-supplied clock, so expiry is deterministic in tests.</param>
     public CacheEntry? Resolve(string key, string normalizedTitle, int runtimeMinutes, DateTimeOffset now)
     {
         if (_byKey.TryGetValue(key, out var exact)) return Usable(exact, now) ? exact : null;
