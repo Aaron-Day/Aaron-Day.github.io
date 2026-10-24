@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Text.Json;
 using MovieLibrary.Core.Caching;
 using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Matching;
@@ -33,15 +34,16 @@ public sealed record StoredMovie(DateTimeOffset FetchedUtc, TmdbMovie? Movie);
 /// <para><b>Order.</b> Rows run in folded-title order (ordinal), not sheet order, so a budgeted run is resumed the
 /// same way every time. <see cref="MoviePipelineResult.Records"/> comes out in that order too.</para>
 /// <para><b>Cost.</b> An uncached film costs one search, one details call for each of the three most popular
-/// candidates, and one credits call for each of those whose runtime is within tolerance (when none is, for the one named
-/// like the film, else the most popular): about 5 requests. The matched film's details are reused for its record, not refetched.</para>
+/// candidates, and one credits call for each of those whose runtime is within tolerance plus the one named like
+/// the film (when none agrees and none is named, the most popular): about 5 requests. The matched film's details
+/// are reused for its record, not refetched.</para>
 /// <para><b>Budget.</b> A budget trip mid-row makes that row's lookup incomplete: an exhausted client's empty or
 /// partial answer is indistinguishable from "TMDB has no such film". The scored result is still used for this
 /// run, but it is never cached, so the next run redoes the row instead of suppressing the film for 30 days.</para>
 /// <para><b>Freshness.</b> A stored payload older than <see cref="RefreshPolicy.Window"/> is refetched, whatever the
 /// index says. If it cannot be (budget spent) the stale copy is used for this run rather than a blank card.</para>
 /// <para><b>Failures.</b> TMDB failures arrive as <see cref="HttpRequestException"/> and are not caught here; a
-/// malformed sheet runtime throws <see cref="FormatException"/>. The cache index lives in memory until the
+/// malformed sheet runtime throws <see cref="FormatException"/> before any request is made. The cache index lives in memory until the
 /// caller saves it, so a caller that wants the work kept across a failure must call
 /// <see cref="CacheStore.SaveAsync"/> in a <c>finally</c>.</para>
 /// </remarks>
@@ -57,16 +59,19 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
         var now = clock();
 
         // Stable order so a budgeted run resumes predictably rather than arbitrarily.
+        // Runtime breaks title ties, so two cuts of one film do not depend on the sheet's row order
+        // (Apple's export order is not stable). Parsing it here also means a malformed runtime fails
+        // before any request is spent, instead of partway through the run.
         var ordered = rows
-            .Select(r => (Row: r, Title: TitleNormalizer.Normalize(r.Title)))
+            .Select(r => (Row: r, Title: TitleNormalizer.Normalize(r.Title), Runtime: RuntimeParser.FilmMinutes(r.Runtime)))
             .OrderBy(x => x.Title.Value, StringComparer.Ordinal)
+            .ThenBy(x => x.Runtime)
             .ToList();
 
-        foreach (var (row, title) in ordered)
+        foreach (var (row, title, runtime) in ordered)
         {
             ct.ThrowIfCancellationRequested();
 
-            var runtime = RuntimeParser.FilmMinutes(row.Runtime);
             var directors = TitleNormalizer.NormalizeDirectors(row.Directors);
             var key = IdentityKey.ForFilm(title, runtime, directors);
 
@@ -165,19 +170,18 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
         if (enriched.Count == 0) return new Enrichment(candidates, details);
 
         var wantsCredits = enriched
-            .Select(c => c.RuntimeMinutes is { } rt
-                         && Math.Abs(rt - sheetRuntime) <= MatchScorer.RuntimeToleranceMinutes)
+            .Select(c => MatchScorer.RuntimeAgrees(c.RuntimeMinutes, sheetRuntime))
             .ToArray();
 
-        // When no runtime agrees (it is missing, or the sheet is wrong) the director is the only
-        // signal left, so one candidate still gets its credits: the one named exactly like the film
-        // (folded on both sides), else the most popular. Popularity alone would spend that call on a
-        // sequel or a documentary and leave the real film, ranked lower, with no director to score.
-        if (!wantsCredits.Contains(true))
-        {
-            var named = enriched.FindIndex(c => TitleNormalizer.Normalize(c.Title).Value == title.Value);
-            wantsCredits[named >= 0 ? named : 0] = true;
-        }
+        // The candidate named exactly like the film (folded on both sides) always gets its credits,
+        // whether or not its runtime agrees. An edition cut is routinely listed on TMDB at a very
+        // different length, and a decoy that happens to land within tolerance must not be the only
+        // candidate whose director is known. That costs one extra request only when the named film
+        // is not already a runtime passer. When nothing agrees and nothing is named, the most
+        // popular is the last resort, so a director signal survives a missing or wrong runtime.
+        var named = enriched.FindIndex(c => TitleNormalizer.Normalize(c.Title).Value == title.Value);
+        if (named >= 0) wantsCredits[named] = true;
+        else if (!wantsCredits.Contains(true)) wantsCredits[0] = true;
 
         for (var i = 0; i < enriched.Count; i++)
         {
@@ -206,7 +210,9 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             return fresh;
         }
 
-        var stored = await cache.ReadPayloadAsync<StoredMovie>(path, ct);
+        StoredMovie? stored;
+        try { stored = await cache.ReadPayloadAsync<StoredMovie>(path, ct); }
+        catch (JsonException) { stored = null; } // a write cut short: refetch and overwrite it rather than fail every later run
         if (stored?.Movie is not null && !RefreshPolicy.NeedsRefresh(stored.FetchedUtc, now))
             return stored.Movie;
 

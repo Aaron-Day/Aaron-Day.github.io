@@ -78,13 +78,17 @@ public sealed class CacheStore(string rootPath)
     /// <param name="normalizedTitle">
     /// The folded <c>Value</c> from <c>TitleNormalizer</c>, never <c>Cleaned</c>. The alias scan
     /// compares this for equality; passing <c>Cleaned</c> would silently stop every alias from
-    /// matching, turning each re-encode into a fresh API call.
+    /// matching, turning each re-encode into a fresh API call. An empty title never aliases.
     /// </param>
     /// <param name="runtimeMinutes">Runtime of the row being resolved, for the ±2-minute alias.</param>
     /// <param name="now">Caller-supplied clock, so expiry is deterministic in tests.</param>
     public CacheEntry? Resolve(string key, string normalizedTitle, int runtimeMinutes, DateTimeOffset now)
     {
         if (_byKey.TryGetValue(key, out var exact)) return Usable(exact, now) ? exact : null;
+
+        // A title that folds to "" (a pure parenthetical or pure punctuation) names no film, so two of
+        // them are not the same film just because their runtimes are close.
+        if (normalizedTitle.Length == 0) return null;
 
         var alias = _byKey.Values.FirstOrDefault(e =>
             string.Equals(e.NormalizedTitle, normalizedTitle, StringComparison.Ordinal) &&

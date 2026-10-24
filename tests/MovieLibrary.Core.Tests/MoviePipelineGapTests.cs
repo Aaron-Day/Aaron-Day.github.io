@@ -451,28 +451,73 @@ public class MoviePipelineGapTests
         Assert.Equal(cold.ReviewQueue, warm.ReviewQueue); // ...and still asks a human to look
     }
 
-    [Fact]
-    public async Task ACandidateTwoMinutesOffGetsItsCreditsButOneThreeMinutesOffDoesNot()
+    // Candidate 1 is the more popular and 3 minutes off the sheet's 98; candidate 2 is 2 minutes off.
+    // Whichever of them carries the film's name is the one the title rule sends credits to anyway, so the
+    // two tests below swap the name to pin each side of the +/-2 gate on its own.
+    private static Dictionary<string, string> PairRoutes(string title1, string title2) => new()
     {
-        // The same +/-2 the scorer credits for runtime: a 100-minute film against the sheet's 98 can
-        // still be confirmed by its director, while a 101-minute decoy is not worth a request.
+        ["/3/search/movie"] = $$"""
+            {"results":[{"id":1,"title":"{{title1}}","release_date":"1996-03-08","popularity":80},
+                        {"id":2,"title":"{{title2}}","release_date":"1996-03-08","popularity":30}]}
+            """,
+        ["/3/movie/1"] = $$"""{"id":1,"title":"{{title1}}","runtime":101}""",
+        ["/3/movie/2"] = $$"""{"id":2,"title":"{{title2}}","runtime":100,"release_date":"1996-03-08"}""",
+        ["/3/movie/1/credits"] = """{"crew":[{"job":"Director","name":"Someone Else"}]}""",
+        ["/3/movie/2/credits"] = """{"crew":[{"job":"Director","name":"Joel Coen"}]}""",
+    };
+
+    private static IEnumerable<string> CreditsPaths(TestPipeline.Harness h)
+        => Paths(h).Where(p => p.EndsWith("/credits"));
+
+    [Fact]
+    public async Task ACandidateTwoMinutesOffStillGetsItsCreditsWhenADecoyCarriesTheFilmsName()
+    {
+        // The decoy (101 min) is the one named "Fargo", so a gate narrowed below 2 leaves nobody passing,
+        // sends the single credits call to the decoy, and the real film (100 min) never gets a director.
+        var h = TestPipeline.Create(0, Routes(PairRoutes("Fargo", "Fargo Redux")));
+
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+
+        Assert.Equal(["/3/movie/1/credits", "/3/movie/2/credits"], CreditsPaths(h));
+        var r = Assert.Single(result.Records);
+        Assert.Equal((2, 0.70), (r.I, r.Mc)); // runtime 0.40 + director 0.30, no title match
+    }
+
+    [Fact]
+    public async Task ACandidateThreeMinutesOffGetsNoCreditsUnlessItIsNamedLikeTheFilm()
+    {
+        var h = TestPipeline.Create(0, Routes(PairRoutes("Fargo X", "Fargo Redux")));
+
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+
+        Assert.Equal(["/3/movie/2/credits"], CreditsPaths(h)); // the 101-minute decoy is not worth a request
+        Assert.Equal((2, 0.70), (result.Records[0].I, result.Records[0].Mc));
+    }
+
+    [Fact]
+    public async Task TheFilmNamedLikeTheSheetGetsItsCreditsEvenWhenADecoyAgreesOnRuntime()
+    {
+        // An edition cut: TMDB lists the real film at 120 minutes against the sheet's 98, while a decoy
+        // happens to land within tolerance. Credits for the runtime passer alone would leave the real
+        // film at 0.15 against the decoy's 0.40: Unmatched. With its director it reaches 0.45.
         var h = TestPipeline.Create(0, Routes(new()
         {
             ["/3/search/movie"] = """
-                {"results":[{"id":1,"title":"Fargo X","release_date":"1996-03-08","popularity":80},
+                {"results":[{"id":1,"title":"Fargo Redux","release_date":"2010-01-01","popularity":90},
                             {"id":2,"title":"Fargo","release_date":"1996-03-08","popularity":30}]}
                 """,
-            ["/3/movie/1"] = """{"id":1,"title":"Fargo X","runtime":101}""",
-            ["/3/movie/2"] = """{"id":2,"title":"Fargo","runtime":100,"release_date":"1996-03-08"}""",
+            ["/3/movie/1"] = """{"id":1,"title":"Fargo Redux","runtime":99}""",
+            ["/3/movie/2"] = """{"id":2,"title":"Fargo","runtime":120,"release_date":"1996-03-08"}""",
             ["/3/movie/1/credits"] = """{"crew":[{"job":"Director","name":"Someone Else"}]}""",
             ["/3/movie/2/credits"] = """{"crew":[{"job":"Director","name":"Joel Coen"}]}""",
         }));
 
         var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
 
-        Assert.Equal(["/3/movie/2/credits"], Paths(h).Where(p => p.EndsWith("/credits")));
+        Assert.Equal(["/3/movie/1/credits", "/3/movie/2/credits"], CreditsPaths(h));
         var r = Assert.Single(result.Records);
-        Assert.Equal((2, 0.85), (r.I, r.Mc));
+        Assert.Equal((2, 0.45), (r.I, r.Mc)); // director 0.30 + title 0.15
+        Assert.Contains("Flagged", result.ReviewQueue.Single());
     }
 
     [Fact]
@@ -564,5 +609,69 @@ public class MoviePipelineGapTests
         await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
 
         Assert.Equal(["/3/movie/1/credits"], Paths(h).Where(p => p.EndsWith("/credits")));
+    }
+
+    [Theory]
+    [InlineData("")]                           // File.Create ran, the write never did
+    [InlineData("{\"fetchedUtc\":\"2026-10-2")] // killed mid-write
+    public async Task ATruncatedPayloadIsRefetchedInsteadOfFailingEveryLaterRun(string damaged)
+    {
+        var h = TestPipeline.Create(0, req => req.RequestUri!.AbsolutePath == "/3/movie/275"
+            ? TestPipeline.Json(FargoDetails("Fresh"))
+            : throw new Xunit.Sdk.XunitException($"Unexpected request: {req.RequestUri}"));
+        h.Cache.Put(new CacheEntry(FargoKey, 275, 0.85, TestPipeline.Now, false, "fargo", 98));
+        Directory.CreateDirectory(Path.Combine(h.CacheDir, "movies"));
+        await File.WriteAllTextAsync(Path.Combine(h.CacheDir, "movies", "275.json"), damaged);
+
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+
+        Assert.Equal("Fresh", Assert.Single(result.Records).Ov);
+        Assert.Equal(["/3/movie/275"], Paths(h));
+        var repaired = await h.Cache.ReadPayloadAsync<StoredMovie>("movies/275.json", CancellationToken.None);
+        Assert.Equal("Fresh", repaired!.Movie!.Overview); // overwritten, so the next run is served from disk
+    }
+
+    [Fact]
+    public async Task TwoFilmsWhoseTitlesFoldToNothingAreNeverAliasedToEachOther()
+    {
+        var h = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
+            ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
+        SheetRow[] rows = [Row("!!!", "1:35:00", "X"), Row("???", "1:36:00", "X")];
+
+        await h.Pipeline.RunAsync(rows, NoOverrides, CancellationToken.None);
+        var cold = h.Handler.Requests.Count;
+        await h.Pipeline.RunAsync(rows, NoOverrides, CancellationToken.None);
+
+        Assert.Equal(["!!!", "???"], Searches(h).Take(2)); // the 96-minute one is not "the same film" as the 95
+        Assert.Equal(2, cold);
+        Assert.Equal(cold, h.Handler.Requests.Count); // yet each still hits its own exact cache entry
+    }
+
+    [Fact]
+    public async Task CutsOfOneFilmAreProcessedInRuntimeOrderWhateverTheSheetOrder()
+    {
+        SheetRow[] sheetOrder = [Row("Halloween", "1:45:00", "X"), Row("Halloween", "1:31:00", "X")];
+        var a = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
+            ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
+        var b = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
+            ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
+
+        var first = await a.Pipeline.RunAsync(sheetOrder, NoOverrides, CancellationToken.None);
+        var second = await b.Pipeline.RunAsync([.. sheetOrder.Reverse()], NoOverrides, CancellationToken.None);
+
+        Assert.Equal([91, 105], first.Records.Select(r => r.Rt));
+        Assert.Equal([91, 105], second.Records.Select(r => r.Rt));
+    }
+
+    [Fact]
+    public async Task AMalformedRuntimeFailsBeforeAnyRequestIsSpent()
+    {
+        var h = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
+            ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
+
+        await Assert.ThrowsAsync<FormatException>(() => h.Pipeline.RunAsync(
+            [Row("A", "1:30:00", "X"), Row("B", "not a runtime", "X")], NoOverrides, CancellationToken.None));
+
+        Assert.Empty(h.Handler.Requests); // "A" sorts first and would otherwise have been searched
     }
 }

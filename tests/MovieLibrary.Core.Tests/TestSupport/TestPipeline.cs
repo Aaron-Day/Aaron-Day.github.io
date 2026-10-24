@@ -14,8 +14,8 @@ namespace MovieLibrary.Core.Tests;
 /// </summary>
 internal static class TestPipeline
 {
-    /// <summary>The pipeline plus the two things a test may want to inspect after a run.</summary>
-    public sealed record Harness(MoviePipeline Pipeline, CacheStore Cache, StubHandler Handler);
+    /// <summary>The pipeline plus what a test may want to inspect or tamper with: the cache, the requests, its directory.</summary>
+    public sealed record Harness(MoviePipeline Pipeline, CacheStore Cache, StubHandler Handler, string CacheDir);
 
     public static readonly DateTimeOffset Now = new(2026, 10, 24, 12, 0, 0, TimeSpan.Zero);
 
@@ -78,7 +78,7 @@ internal static class TestPipeline
         lock (TempDirs) TempDirs.Add(dir);
         var cache = new CacheStore(dir);
 
-        return new Harness(new MoviePipeline(tmdb, cache, clock), cache, handler);
+        return new Harness(new MoviePipeline(tmdb, cache, clock), cache, handler, dir);
     }
 
     public static bool IsSearch(HttpRequestMessage req) => req.RequestUri!.AbsolutePath == "/3/search/movie";

@@ -21,7 +21,7 @@ public static class MatchScorer
     private const double YearWeight = 0.10;
 
     /// <summary>Runtime counts as a match within this many minutes either way.</summary>
-    public const int RuntimeToleranceMinutes = 2;
+    private const int RuntimeToleranceMinutes = 2;
 
     // Every weight and threshold must stay a multiple of 0.0001, or Math.Round(x, 4) below
     // starts truncating (0.03125 would silently become 0.0312) and the boundary tests lie.
@@ -58,13 +58,21 @@ public static class MatchScorer
             outcome);
     }
 
+    /// <summary>
+    /// Whether a candidate's runtime counts as a match for the sheet's: within the tolerance either way,
+    /// inclusive. A candidate with no runtime never agrees. Shared with the pipeline's credits gate so the
+    /// two cannot drift apart.
+    /// </summary>
+    public static bool RuntimeAgrees(int? candidateMinutes, int sheetMinutes)
+        => candidateMinutes is { } rt && Math.Abs(rt - sheetMinutes) <= RuntimeToleranceMinutes;
+
     private static double ScoreOne(
         MovieCandidate c, NormalizedTitle title, int runtimeMinutes,
         IReadOnlySet<string> wantedDirectors)
     {
         var score = 0d;
 
-        if (c.RuntimeMinutes is { } rt && Math.Abs(rt - runtimeMinutes) <= RuntimeToleranceMinutes) score += RuntimeWeight;
+        if (RuntimeAgrees(c.RuntimeMinutes, runtimeMinutes)) score += RuntimeWeight;
 
         if (c.Directors.Any(d => TitleNormalizer.NameTokens(d) is { Count: > 0 } t
                                  && t.IsSubsetOf(wantedDirectors)))
