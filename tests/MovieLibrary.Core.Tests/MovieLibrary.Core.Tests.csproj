@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\MovieLibrary.Core\MovieLibrary.Core.csproj" />
+    <ProjectReference Include="..\..\src\MovieLibrary.Enrich\MovieLibrary.Enrich.csproj" />
   </ItemGroup>
 
 </Project>
