@@ -38,8 +38,12 @@ public sealed class TmdbClient(
     private static readonly TimeSpan MaxRetryWait = TimeSpan.FromSeconds(60);
 
     // Trimmed once so that auth-mode detection and what goes on the wire agree on one string.
-    private readonly string _token = (token ?? string.Empty).Trim();
-    private readonly TmdbAuthMode _mode = TmdbAuth.Detect((token ?? string.Empty).Trim());
+    // Trimmed once: Detect and the send must agree on the exact same string, or a token
+    // with stray whitespace could be classified one way and transmitted another.
+    private static string Clean(string? raw) => (raw ?? string.Empty).Trim();
+
+    private readonly string _token = Clean(token);
+    private readonly TmdbAuthMode _mode = TmdbAuth.Detect(Clean(token));
 
     public bool BudgetExhausted { get; private set; }
 

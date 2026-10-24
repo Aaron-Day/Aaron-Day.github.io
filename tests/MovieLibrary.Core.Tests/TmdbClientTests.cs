@@ -162,7 +162,7 @@ public class TmdbClientTests
         var client = new TmdbClient(http, "eyJ.a.b", limiter, new RequestBudget(0), () => T0);
         using var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(100));
 
-        await Assert.ThrowsAnyAsync<OperationCanceledException>(
+        await AssertThrowsFast.AnyAsync<OperationCanceledException>(
             () => client.SearchMoviesAsync("X", null, cts.Token));
 
         Assert.Single(handler.Requests); // the retry was still waiting on the limiter
@@ -215,7 +215,13 @@ public class TmdbClientTests
     }
 
     [Fact]
-    public async Task RecordsTheTimeAfterTheWaitNotTheTimeBeforeIt()
+    /// <remarks>
+    /// Pins that Record takes a FRESH clock read rather than reusing the one DelayBefore saw.
+    /// It does NOT prove Record runs after Task.Delay — the limiter is empty here so the wait
+    /// is zero, and a virtual clock cannot observe real waiting. Moving Record above the
+    /// Task.Delay would still pass. Renaming would be churn; this comment is the honest scope.
+    /// </remarks>
+    public async Task RecordsAFreshClockReadNotTheOneDelayBeforeSaw()
     {
         var t = T0;
         var limiter = new SlidingWindowRateLimiter(1, TimeSpan.FromSeconds(10));
@@ -240,7 +246,7 @@ public class TmdbClientTests
         await client.SearchMoviesAsync("First", null, guard.Token);
         using var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(100));
 
-        await Assert.ThrowsAnyAsync<OperationCanceledException>(
+        await AssertThrowsFast.AnyAsync<OperationCanceledException>(
             () => client.SearchMoviesAsync("Second", null, cts.Token));
 
         Assert.Single(handler.Requests); // the second call never went out
@@ -284,7 +290,7 @@ public class TmdbClientTests
     {
         var (client, handler) = Build("eyJ.a.b", _ => Status(HttpStatusCode.ServiceUnavailable));
 
-        var ex = await Assert.ThrowsAsync<HttpRequestException>(
+        var ex = await AssertThrowsFast.Async<HttpRequestException>(
             () => client.SearchMoviesAsync("X", null, CancellationToken.None));
 
         Assert.Equal(HttpStatusCode.ServiceUnavailable, ex.StatusCode);
@@ -296,7 +302,7 @@ public class TmdbClientTests
     {
         var (client, handler) = Build("eyJ.a.b", _ => Status(HttpStatusCode.Unauthorized));
 
-        var ex = await Assert.ThrowsAsync<HttpRequestException>(
+        var ex = await AssertThrowsFast.Async<HttpRequestException>(
             () => client.SearchMoviesAsync("X", null, CancellationToken.None));
 
         Assert.Equal(HttpStatusCode.Unauthorized, ex.StatusCode);
@@ -364,7 +370,7 @@ public class TmdbClientTests
     {
         var (client, handler) = Build("eyJ.a.b", _ => NotJson200());
 
-        var ex = await Assert.ThrowsAsync<HttpRequestException>(
+        var ex = await AssertThrowsFast.Async<HttpRequestException>(
             () => client.SearchMoviesAsync("X", null, CancellationToken.None));
 
         Assert.IsAssignableFrom<System.Text.Json.JsonException>(ex.InnerException);
@@ -381,7 +387,7 @@ public class TmdbClientTests
             throw new TaskCanceledException();
         });
 
-        await Assert.ThrowsAnyAsync<OperationCanceledException>(
+        await AssertThrowsFast.AnyAsync<OperationCanceledException>(
             () => client.SearchMoviesAsync("X", null, cts.Token));
 
         Assert.Single(handler.Requests);
@@ -401,7 +407,7 @@ public class TmdbClientTests
             throw new TaskCanceledException();
         });
 
-        await Assert.ThrowsAnyAsync<OperationCanceledException>(
+        await AssertThrowsFast.AnyAsync<OperationCanceledException>(
             () => client.SearchMoviesAsync("X", null, cts.Token));
 
         Assert.Equal(5, handler.Requests.Count);
@@ -420,7 +426,7 @@ public class TmdbClientTests
         });
         using var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(100));
 
-        await Assert.ThrowsAnyAsync<OperationCanceledException>(
+        await AssertThrowsFast.AnyAsync<OperationCanceledException>(
             () => client.SearchMoviesAsync("X", null, cts.Token));
 
         Assert.Single(handler.Requests);
@@ -439,4 +445,24 @@ public class TmdbClientTests
         Assert.EndsWith("&api_key=0123456789abcdef0123456789abcdef",
             v3Handler.Requests.Single().RequestUri!.Query);
     }
+}
+
+/// <summary>
+/// Wraps xUnit's async throw assertions with a hard timeout.
+/// <para>
+/// Several of these tests drive one-hour or clamped-60s waits. Under a mutant that drops the
+/// CancellationToken from a Task.Delay, the awaited call never completes and the test BLOCKS
+/// rather than fails — one of them for a full hour. A hung suite is nearly as bad as a passing
+/// one, so every async throw assertion here fails fast instead.
+/// </para>
+/// </summary>
+internal static class AssertThrowsFast
+{
+    private static readonly TimeSpan Limit = TimeSpan.FromSeconds(5);
+
+    public static async Task<T> AnyAsync<T>(Func<Task> action) where T : Exception
+        => await Assert.ThrowsAnyAsync<T>(() => action().WaitAsync(Limit));
+
+    public static async Task<T> Async<T>(Func<Task> action) where T : Exception
+        => await Assert.ThrowsAsync<T>(() => action().WaitAsync(Limit));
 }
