@@ -33,8 +33,8 @@ public sealed record StoredMovie(DateTimeOffset FetchedUtc, TmdbMovie? Movie);
 /// <para><b>Order.</b> Rows run in folded-title order (ordinal), not sheet order, so a budgeted run is resumed the
 /// same way every time. <see cref="MoviePipelineResult.Records"/> comes out in that order too.</para>
 /// <para><b>Cost.</b> An uncached film costs one search, one details call for each of the three most popular
-/// candidates, and one credits call for each of those whose runtime is within tolerance (for the most popular
-/// alone when none is): about 5 requests. The matched film's details are reused for its record, not refetched.</para>
+/// candidates, and one credits call for each of those whose runtime is within tolerance (when none is, for the one named
+/// like the film, else the most popular): about 5 requests. The matched film's details are reused for its record, not refetched.</para>
 /// <para><b>Budget.</b> A budget trip mid-row makes that row's lookup incomplete: an exhausted client's empty or
 /// partial answer is indistinguishable from "TMDB has no such film". The scored result is still used for this
 /// run, but it is never cached, so the next run redoes the row instead of suppressing the film for 30 days.</para>
@@ -106,7 +106,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             else
             {
                 var candidates = await tmdb.SearchMoviesAsync(title.Cleaned, title.YearHint, ct);
-                var enrichment = await EnrichCandidatesAsync(candidates, runtime, ct);
+                var enrichment = await EnrichCandidatesAsync(candidates, title, runtime, ct);
                 var match = MatchScorer.Score(title, runtime, row.Directors, enrichment.Candidates);
 
                 tmdbId = match.TmdbId;
@@ -144,7 +144,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
         IReadOnlyList<MovieCandidate> Candidates, IReadOnlyDictionary<int, TmdbMovie> Details);
 
     private async Task<Enrichment> EnrichCandidatesAsync(
-        IReadOnlyList<MovieCandidate> candidates, int sheetRuntime, CancellationToken ct)
+        IReadOnlyList<MovieCandidate> candidates, NormalizedTitle title, int sheetRuntime, CancellationToken ct)
     {
         // Runtime and director carry 0.70 of the score but search results hold neither. Details
         // (which carry the runtime) are fetched for the three most popular candidates. Credits
@@ -170,8 +170,14 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             .ToArray();
 
         // When no runtime agrees (it is missing, or the sheet is wrong) the director is the only
-        // signal left, so the single most popular candidate still gets its credits.
-        if (!wantsCredits.Contains(true)) wantsCredits[0] = true;
+        // signal left, so one candidate still gets its credits: the one named exactly like the film
+        // (folded on both sides), else the most popular. Popularity alone would spend that call on a
+        // sequel or a documentary and leave the real film, ranked lower, with no director to score.
+        if (!wantsCredits.Contains(true))
+        {
+            var named = enriched.FindIndex(c => TitleNormalizer.Normalize(c.Title).Value == title.Value);
+            wantsCredits[named >= 0 ? named : 0] = true;
+        }
 
         for (var i = 0; i < enriched.Count; i++)
         {

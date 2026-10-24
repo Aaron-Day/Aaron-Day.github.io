@@ -514,4 +514,55 @@ public class MoviePipelineGapTests
         await h.Cache.WritePayloadAsync("movies/275.json",
             new StoredMovie(TestPipeline.Now.AddDays(-200), stale), CancellationToken.None);
     }
+
+    [Fact]
+    public async Task WhenNoRuntimeAgreesTheCandidateNamedLikeTheFilmGetsTheCreditsEvenIfLessPopular()
+    {
+        // TMDB has the real film at the wrong runtime and ranks it below a making-of and a spin-off, so
+        // nothing is within tolerance of the sheet's 98 minutes. The one credits call must go to the
+        // candidate whose folded title equals the sheet's ("WALL·E" and "Wall-E" both fold to "wall e"),
+        // not the most popular, or the director never gets to flag the real film.
+        var h = TestPipeline.Create(0, Routes(new()
+        {
+            ["/3/search/movie"] = """
+                {"results":[{"id":10,"title":"Wall-E: Making Of","release_date":"2008-06-27","popularity":90},
+                            {"id":11,"title":"Escape to Wall-E Land","release_date":"2009-01-01","popularity":60},
+                            {"id":12,"title":"WALL·E","release_date":"2008-06-27","popularity":30}]}
+                """,
+            ["/3/movie/10"] = """{"id":10,"title":"Wall-E: Making Of","runtime":20}""",
+            ["/3/movie/11"] = """{"id":11,"title":"Escape to Wall-E Land","runtime":45}""",
+            ["/3/movie/12"] = """{"id":12,"title":"WALL·E","runtime":70,"release_date":"2008-06-27"}""",
+            ["/3/movie/10/credits"] = """{"crew":[{"job":"Director","name":"Someone Else"}]}""",
+            ["/3/movie/11/credits"] = """{"crew":[{"job":"Director","name":"Someone Else"}]}""",
+            ["/3/movie/12/credits"] = """{"crew":[{"job":"Director","name":"Andrew Stanton"}]}""",
+        }));
+
+        var result = await h.Pipeline.RunAsync(
+            [Row("Wall-E", "1:38:00", "Andrew Stanton")], NoOverrides, CancellationToken.None);
+
+        Assert.Equal(["/3/movie/12/credits"], Paths(h).Where(p => p.EndsWith("/credits")));
+        var r = Assert.Single(result.Records);
+        Assert.Equal((12, 0.45), (r.I, r.Mc)); // director 0.30 + title 0.15
+        Assert.Contains("Flagged", result.ReviewQueue.Single());
+    }
+
+    [Fact]
+    public async Task WhenNoRuntimeAgreesAndNoCandidateIsNamedLikeTheFilmTheMostPopularGetsTheCredits()
+    {
+        var h = TestPipeline.Create(0, Routes(new()
+        {
+            ["/3/search/movie"] = """
+                {"results":[{"id":1,"title":"Fargo X","release_date":"1996-03-08","popularity":90},
+                            {"id":2,"title":"Fargo Y","release_date":"1997-01-01","popularity":10}]}
+                """,
+            ["/3/movie/1"] = """{"id":1,"title":"Fargo X","runtime":140}""",
+            ["/3/movie/2"] = """{"id":2,"title":"Fargo Y","runtime":70}""",
+            ["/3/movie/1/credits"] = """{"crew":[{"job":"Director","name":"Joel Coen"}]}""",
+            ["/3/movie/2/credits"] = """{"crew":[{"job":"Director","name":"Joel Coen"}]}""",
+        }));
+
+        await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+
+        Assert.Equal(["/3/movie/1/credits"], Paths(h).Where(p => p.EndsWith("/credits")));
+    }
 }
