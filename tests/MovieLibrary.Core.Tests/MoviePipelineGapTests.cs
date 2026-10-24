@@ -674,4 +674,45 @@ public class MoviePipelineGapTests
 
         Assert.Empty(h.Handler.Requests); // "A" sorts first and would otherwise have been searched
     }
+
+    private static Dictionary<string, string> NamedRoutes(params (int Id, int Pop, int Runtime, string Director)[] films)
+    {
+        var routes = new Dictionary<string, string>
+        {
+            ["/3/search/movie"] = "{\"results\":[" + string.Join(",", films.Select(f =>
+                $"{{\"id\":{f.Id},\"title\":\"Fargo\",\"release_date\":\"1996-03-08\",\"popularity\":{f.Pop}}}")) + "]}",
+        };
+        foreach (var f in films)
+        {
+            routes[$"/3/movie/{f.Id}"] = $"{{\"id\":{f.Id},\"title\":\"Fargo\",\"runtime\":{f.Runtime},\"release_date\":\"1996-03-08\"}}";
+            routes[$"/3/movie/{f.Id}/credits"] = $"{{\"crew\":[{{\"job\":\"Director\",\"name\":\"{f.Director}\"}}]}}";
+        }
+        return routes;
+    }
+
+    [Fact]
+    public async Task EveryCandidateNamedLikeTheFilmGetsItsCreditsSoARemakeCanBeToldApartByDirector()
+    {
+        // Two films called Fargo, neither within tolerance of the sheet's 98 minutes. Only the director
+        // separates them, and it is the LESS popular one that is right, so crediting the first (or the
+        // last) named candidate alone would leave one of them blind.
+        var h = TestPipeline.Create(0, Routes(NamedRoutes((1, 80, 120, "Noah Hawley"), (2, 30, 70, "Joel Coen"))));
+
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+
+        Assert.Equal(["/3/movie/1/credits", "/3/movie/2/credits"], CreditsPaths(h));
+        var r = Assert.Single(result.Records);
+        Assert.Equal((2, 0.45), (r.I, r.Mc)); // director 0.30 + title 0.15
+    }
+
+    [Fact]
+    public async Task ThreeCandidatesNamedLikeTheFilmCostNoMoreThanTheExistingWorstCase()
+    {
+        var h = TestPipeline.Create(0, Routes(NamedRoutes((1, 80, 120, "A"), (2, 50, 70, "B"), (3, 30, 140, "Joel Coen"))));
+
+        await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+
+        Assert.Equal(3, CreditsPaths(h).Count());
+        Assert.Equal(7, h.Handler.Requests.Count); // 1 search + 3 details + 3 credits: the same ceiling as three runtime passers
+    }
 }

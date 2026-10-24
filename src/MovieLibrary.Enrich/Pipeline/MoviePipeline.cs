@@ -34,7 +34,7 @@ public sealed record StoredMovie(DateTimeOffset FetchedUtc, TmdbMovie? Movie);
 /// <para><b>Order.</b> Rows run in folded-title order (ordinal), not sheet order, so a budgeted run is resumed the
 /// same way every time. <see cref="MoviePipelineResult.Records"/> comes out in that order too.</para>
 /// <para><b>Cost.</b> An uncached film costs one search, one details call for each of the three most popular
-/// candidates, and one credits call for each of those whose runtime is within tolerance plus the one named like
+/// candidates, and one credits call for each of those whose runtime is within tolerance plus every one named like
 /// the film (when none agrees and none is named, the most popular): about 5 requests. The matched film's details
 /// are reused for its record, not refetched.</para>
 /// <para><b>Budget.</b> A budget trip mid-row makes that row's lookup incomplete: an exhausted client's empty or
@@ -173,15 +173,23 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             .Select(c => MatchScorer.RuntimeAgrees(c.RuntimeMinutes, sheetRuntime))
             .ToArray();
 
-        // The candidate named exactly like the film (folded on both sides) always gets its credits,
+        // Every candidate named exactly like the film (folded on both sides) gets its credits,
         // whether or not its runtime agrees. An edition cut is routinely listed on TMDB at a very
-        // different length, and a decoy that happens to land within tolerance must not be the only
-        // candidate whose director is known. That costs one extra request only when the named film
-        // is not already a runtime passer. When nothing agrees and nothing is named, the most
-        // popular is the last resort, so a director signal survives a missing or wrong runtime.
-        var named = enriched.FindIndex(c => TitleNormalizer.Normalize(c.Title).Value == title.Value);
-        if (named >= 0) wantsCredits[named] = true;
-        else if (!wantsCredits.Contains(true)) wantsCredits[0] = true;
+        // different length, a decoy that happens to land within tolerance must not be the only
+        // candidate whose director is known, and two films that share a name (a remake) can only be
+        // told apart by director. There are at most three candidates here, so this adds at most two
+        // requests to the typical one. When nothing agrees and nothing is named, the most popular is
+        // the last resort, so a director signal survives a missing or wrong runtime.
+        var anyNamed = false;
+        for (var i = 0; i < enriched.Count; i++)
+        {
+            if (!MatchScorer.TitleAgrees(enriched[i].Title, title)) continue;
+
+            wantsCredits[i] = true;
+            anyNamed = true;
+        }
+
+        if (!anyNamed && !wantsCredits.Contains(true)) wantsCredits[0] = true;
 
         for (var i = 0; i < enriched.Count; i++)
         {

@@ -66,6 +66,13 @@ public static class MatchScorer
     public static bool RuntimeAgrees(int? candidateMinutes, int sheetMinutes)
         => candidateMinutes is { } rt && Math.Abs(rt - sheetMinutes) <= RuntimeToleranceMinutes;
 
+    /// <summary>
+    /// Whether a candidate's title names the same film as the sheet's: equal once both are folded.
+    /// Shared with the pipeline's credits gate for the same reason as <see cref="RuntimeAgrees"/>.
+    /// </summary>
+    public static bool TitleAgrees(string candidateTitle, NormalizedTitle sheetTitle)
+        => TitleNormalizer.Normalize(candidateTitle).Value == sheetTitle.Value;
+
     private static double ScoreOne(
         MovieCandidate c, NormalizedTitle title, int runtimeMinutes,
         IReadOnlySet<string> wantedDirectors)
@@ -78,7 +85,7 @@ public static class MatchScorer
                                  && t.IsSubsetOf(wantedDirectors)))
             score += DirectorWeight;
 
-        if (TitleNormalizer.Normalize(c.Title).Value == title.Value) score += TitleWeight;
+        if (TitleAgrees(c.Title, title)) score += TitleWeight;
 
         if (title.YearHint is { } y && c.Year == y) score += YearWeight;
 
