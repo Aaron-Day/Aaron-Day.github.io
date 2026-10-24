@@ -109,4 +109,21 @@ public class IdentityKeyTests
     [InlineData("Se7en", "Se7en.")]
     public void FilmKeyFoldsCaseAccentsAndPunctuation(string plain, string variant)
         => Assert.Equal(Film(plain, 100, "Some Director"), Film(variant, 100, "Some Director"));
+
+    /// <remarks>
+    /// Pins Encoding.UTF8 in IdentityKey. Every other golden folds to ASCII, so swapping
+    /// UTF8 for ASCII or Latin1 survived the whole suite. Under ASCII a non-Latin title
+    /// becomes "?" characters, and two different foreign titles would hash identically and
+    /// collide in the cache. No such title exists in the current export; this is insurance.
+    /// Derived independently via SHA-1 of: film|千と千尋の神隠し|125|hayao miyazaki
+    /// </remarks>
+    [Fact]
+    public void NonLatinTitleKeyIsAStableGoldenValue()
+    {
+        var key = IdentityKey.ForFilm(
+            new NormalizedTitle("千と千尋の神隠し", "千と千尋の神隠し", null), 125,
+            TitleNormalizer.NormalizeDirectors("Hayao Miyazaki"));
+
+        Assert.Equal("c9dd6b21e7c65d0443958432b79105ebb86c5a5a", key);
+    }
 }
