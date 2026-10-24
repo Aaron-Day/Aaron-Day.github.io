@@ -112,4 +112,59 @@ public class TmdbClientTests
         Assert.Single(results);
         Assert.Equal(2, handler.Requests.Count);
     }
+
+    // Amendment 2 (D, E): pins for the 404 handling and the per-attempt limiter pair.
+
+    private static HttpResponseMessage TooManyRequestsRetryAfterZero()
+    {
+        var r = new HttpResponseMessage(HttpStatusCode.TooManyRequests);
+        r.Headers.Add("Retry-After", "0");
+        return r;
+    }
+
+    [Fact]
+    public async Task MissingResourceReturnsNullAndIsNotRetried()
+    {
+        var (client, handler) = Build("eyJ.a.b", _ => new HttpResponseMessage(HttpStatusCode.NotFound));
+
+        var season = await client.GetSeasonAsync(1399, 99, CancellationToken.None);
+
+        Assert.Null(season);
+        Assert.Single(handler.Requests);
+    }
+
+    [Fact]
+    public async Task EveryAttemptIncludingRetriesIsRecordedWithTheRateLimiter()
+    {
+        var calls = 0;
+        var limiter = new SlidingWindowRateLimiter(2, TimeSpan.FromSeconds(10));
+        var handler = new StubHandler(_ =>
+            ++calls == 1 ? TooManyRequestsRetryAfterZero() : Json("""{"results":[]}"""));
+        var http = new HttpClient(handler) { BaseAddress = new Uri("https://api.themoviedb.org/") };
+        var client = new TmdbClient(http, "eyJ.a.b", limiter, new RequestBudget(0), () => T0);
+
+        await client.SearchMoviesAsync("X", null, CancellationToken.None); // 429, then 200
+
+        Assert.Equal(2, handler.Requests.Count);
+        // Both attempts were recorded at T0, so a 2-per-window limiter is now full.
+        Assert.True(limiter.DelayBefore(T0) > TimeSpan.Zero);
+    }
+
+    [Fact]
+    public async Task RetryWaitsForTheRateLimiterBeforeSending()
+    {
+        var calls = 0;
+        // One request per hour with a frozen clock: the retry must be told to wait ~1h.
+        var limiter = new SlidingWindowRateLimiter(1, TimeSpan.FromHours(1));
+        var handler = new StubHandler(_ =>
+            ++calls == 1 ? TooManyRequestsRetryAfterZero() : Json("""{"results":[]}"""));
+        var http = new HttpClient(handler) { BaseAddress = new Uri("https://api.themoviedb.org/") };
+        var client = new TmdbClient(http, "eyJ.a.b", limiter, new RequestBudget(0), () => T0);
+        using var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(100));
+
+        await Assert.ThrowsAnyAsync<OperationCanceledException>(
+            () => client.SearchMoviesAsync("X", null, cts.Token));
+
+        Assert.Single(handler.Requests); // the retry was still waiting on the limiter
+    }
 }
