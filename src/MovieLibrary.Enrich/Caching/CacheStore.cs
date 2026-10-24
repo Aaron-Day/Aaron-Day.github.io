@@ -12,12 +12,22 @@ namespace MovieLibrary.Enrich.Caching;
 /// <see cref="Entries"/> (a live view, not a copy) while calling <see cref="Resolve"/> throws
 /// <see cref="InvalidOperationException"/>. Snapshot first: <c>store.Entries.ToList()</c>.</para>
 /// <para><see cref="SaveAsync"/> truncates <c>index.json</c> in place and is not atomic. A crash mid-write
-/// loses the cache and the next run rebuilds it at full API cost; acceptable for a single-user tool.</para>
+/// leaves a truncated file, and <see cref="LoadAsync"/> does NOT recover from it: it throws
+/// <see cref="InvalidDataException"/> naming the file. Delete <c>index.json</c> (or restore it from git) and the
+/// next run rebuilds the cache at full API cost; acceptable for a single-user tool, but callers must let the
+/// exception reach the operator rather than swallow it.</para>
+/// <para>The <c>relativePath</c> given to <see cref="ReadPayloadAsync{T}"/> and <see cref="WritePayloadAsync{T}"/>
+/// must be a trusted, caller-constructed value (for example <c>movies/{tmdbId}.json</c>). It is joined to the
+/// cache root without any containment check.</para>
 /// </remarks>
 public sealed class CacheStore(string rootPath)
 {
-    private static readonly JsonSerializerOptions Options =
-        new() { WriteIndented = true, PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+    private static readonly JsonSerializerOptions Options = new()
+    {
+        WriteIndented = true,
+        NewLine = "\n", // deterministic across OS: the cache is committed and CI (Linux) and dev (Windows) both write it
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+    };
 
     private readonly Dictionary<string, CacheEntry> _byKey = new(StringComparer.Ordinal);
 
@@ -29,8 +39,18 @@ public sealed class CacheStore(string rootPath)
     {
         if (!File.Exists(IndexPath)) return;
 
-        await using var stream = File.OpenRead(IndexPath);
-        var entries = await JsonSerializer.DeserializeAsync<List<CacheEntry>>(stream, Options, ct);
+        List<CacheEntry>? entries;
+        try
+        {
+            await using var stream = File.OpenRead(IndexPath);
+            entries = await JsonSerializer.DeserializeAsync<List<CacheEntry>>(stream, Options, ct);
+        }
+        catch (JsonException ex)
+        {
+            throw new InvalidDataException(
+                $"The cache index '{IndexPath}' could not be read (truncated by a crash mid-save?). " +
+                "Delete it to force a full refetch, or restore it from git.", ex);
+        }
 
         _byKey.Clear();
         foreach (var e in entries ?? []) _byKey[e.Key] = e;

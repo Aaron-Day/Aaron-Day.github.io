@@ -214,4 +214,88 @@ public class CacheStoreTests : IDisposable
 
         Assert.Equal(3, lines.Count(l => l.TrimStart().StartsWith("\"key\"", StringComparison.Ordinal)));
     }
+
+    // ---- Review amendment 2: round-trip, newlines, paths, corrupt index. ----
+
+    // Production only ever alias-resolves against a DESERIALIZED store, and alias matching reads
+    // NormalizedTitle and RuntimeMinutes. If either stopped serializing, every re-encode would cost
+    // a fresh API call. This test also pins `Key = key` in the write-back: without it the copy keeps
+    // the source's key, SaveAsync writes two records sharing a "key", and LoadAsync collapses them,
+    // so the alias vanishes across runs.
+    [Fact]
+    public async Task AliasFieldsSurviveARoundTripAndTheNewKeyIsPersisted()
+    {
+        // Deliberately not UTC: DateTimeOffset equality ignores the offset, so it is asserted separately.
+        var fetched = Now.ToOffset(TimeSpan.FromHours(2));
+        var store = New();
+        store.Put(Entry("k1", "alien", 117, fetched));
+        Assert.NotNull(store.Resolve("k-different", "alien", 118, Now)); // forces the alias write-back
+        await store.SaveAsync(CancellationToken.None);
+
+        var reloaded = New();
+        await reloaded.LoadAsync(CancellationToken.None);
+
+        var persisted = Assert.Single(reloaded.Entries, e => e.Key == "k-different");
+        Assert.Equal(Entry("k-different", "alien", 118, fetched), persisted);
+        Assert.Equal(fetched.Offset, persisted.FetchedUtc.Offset);
+
+        // The alias fields came back from disk, so a further drifted runtime still aliases.
+        Assert.NotNull(reloaded.Resolve("k-new", "alien", 119, Now));
+    }
+
+    // System.Text.Json indents with Environment.NewLine. enrich-cache/ is committed from Linux CI and
+    // from Windows dev machines; without a fixed newline the whole file diffs on every alternation.
+    [Fact]
+    public async Task IndexAndPayloadsAreWrittenWithLfNewlinesOnEveryOs()
+    {
+        var store = New();
+        store.Put(Entry("k1", "alien", 117, Now));
+        await store.SaveAsync(CancellationToken.None);
+        await store.WritePayloadAsync("movies/348.json", new { id = 348, title = "Alien" }, CancellationToken.None);
+
+        foreach (var file in new[] { "index.json", Path.Combine("movies", "348.json") })
+        {
+            var text = await File.ReadAllTextAsync(Path.Combine(_dir, file));
+            Assert.Contains("\n", text);
+            Assert.DoesNotContain("\r\n", text);
+        }
+    }
+
+    // A crash mid-save truncates index.json. LoadAsync must say WHICH file is bad, not surface a
+    // bare JsonException from deep inside the serializer.
+    [Fact]
+    public async Task ACorruptIndexFailsAsInvalidDataNamingTheFile()
+    {
+        Directory.CreateDirectory(_dir);
+        var path = Path.Combine(_dir, "index.json");
+        await File.WriteAllTextAsync(path, "[{\"key\": \"k1\", \"tmdbId\": 3"); // cut off mid-record
+
+        var ex = await Assert.ThrowsAsync<InvalidDataException>(
+            () => New().LoadAsync(CancellationToken.None));
+
+        Assert.Contains(path, ex.Message);
+        Assert.IsAssignableFrom<JsonException>(ex.InnerException);
+    }
+
+    // PayloadsRoundTripByRelativePath passes even if rootPath is dropped from BOTH methods (they
+    // would then write to and read from the current directory), so each is pinned on its own.
+    [Fact]
+    public async Task WritePayloadAsyncPlacesTheFileUnderTheCacheRoot()
+    {
+        var store = New();
+        await store.WritePayloadAsync("movies/348.json", new { id = 348 }, CancellationToken.None);
+        Assert.True(File.Exists(Path.Combine(_dir, "movies", "348.json")));
+    }
+
+    [Fact]
+    public async Task ReadPayloadAsyncReadsFromUnderTheCacheRoot()
+    {
+        Directory.CreateDirectory(Path.Combine(_dir, "movies"));
+        await File.WriteAllTextAsync(Path.Combine(_dir, "movies", "7.json"), "{\"id\":7}");
+
+        var back = await New().ReadPayloadAsync<Dictionary<string, int>>(
+            "movies/7.json", CancellationToken.None);
+
+        Assert.Equal(7, back!["id"]);
+    }
 }
