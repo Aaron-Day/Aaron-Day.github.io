@@ -468,6 +468,11 @@ docs/
 # The TMDB match cache in enrich-cache/ IS committed and must not be ignored.
 src/MovieLibrary.Web/wwwroot/data/
 
+# Synthetic fixtures for UI development: full-size catalogs built from the
+# Sheet alone, no TMDB calls. Regenerate with `dotnet run --project
+# src/MovieLibrary.Enrich -- --fixtures`. Never deployed, never committed.
+dev-data/
+
 # Local secrets for running the enrich tool outside CI
 .env
 *.local.json

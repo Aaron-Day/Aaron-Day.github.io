@@ -1,4 +1,10 @@
 <Solution>
-  <Project Path="MovieLibrary/MovieLibrary.Client/MovieLibrary.Client.csproj" />
-  <Project Path="MovieLibrary/MovieLibrary/MovieLibrary.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/MovieLibrary.Core/MovieLibrary.Core.csproj" />
+    <Project Path="src/MovieLibrary.Enrich/MovieLibrary.Enrich.csproj" />
+    <Project Path="src/MovieLibrary.Web/MovieLibrary.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MovieLibrary.Core.Tests/MovieLibrary.Core.Tests.csproj" />
+  </Folder>
 </Solution>
