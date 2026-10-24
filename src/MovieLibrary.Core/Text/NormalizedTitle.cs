@@ -1,3 +1,3 @@
 namespace MovieLibrary.Core.Text;
 
-public sealed record NormalizedTitle(string Value, int? YearHint);
+public sealed record NormalizedTitle(string Value, string Cleaned, int? YearHint);

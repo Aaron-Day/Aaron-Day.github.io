@@ -6,8 +6,9 @@ namespace MovieLibrary.Core.Text;
 
 public static class TitleNormalizer
 {
-    private static readonly string[] EditionWords =
-        ["unrated", "uncut", "edition", "version", "cut", "remastered", "extended", "ultimate", "theatrical"];
+    private static readonly HashSet<string> EditionWords = new(StringComparer.OrdinalIgnoreCase)
+        { "unrated", "uncut", "edition", "version", "cut", "remastered",
+          "extended", "ultimate", "theatrical" };
 
     private static readonly Regex TrailingParen = new(@"\s*\(([^()]*)\)\s*$", RegexOptions.Compiled);
 
@@ -23,15 +24,17 @@ public static class TitleNormalizer
             if (!m.Success) break;
             var inner = m.Groups[1].Value.Trim();
 
-            if (inner.Length == 4 && int.TryParse(inner, out var y) && y is >= 1870 and <= 2200)
+            if (inner.Length == 4
+                && int.TryParse(inner, NumberStyles.None, CultureInfo.InvariantCulture, out var y)
+                && y is >= 1870 and <= 2200)
                 year ??= y;
-            else if (!EditionWords.Any(w => inner.Contains(w, StringComparison.OrdinalIgnoreCase)))
+            else if (!IsEdition(inner))
                 break; // a meaningful parenthetical, e.g. a real subtitle — keep it
 
             text = text[..m.Index];
         }
 
-        return new NormalizedTitle(Fold(text), year);
+        return new NormalizedTitle(Fold(text), text, year);
     }
 
     public static string NormalizeDirectors(string raw)
@@ -41,6 +44,9 @@ public static class TitleNormalizer
         => Fold(raw).Split(' ', StringSplitOptions.RemoveEmptyEntries)
                     .Where(t => t != "and")
                     .ToHashSet(StringComparer.Ordinal);
+
+    private static bool IsEdition(string inner) =>
+        Fold(inner).Split(' ', StringSplitOptions.RemoveEmptyEntries).Any(EditionWords.Contains);
 
     private static string Fold(string input)
     {
