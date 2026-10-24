@@ -17,6 +17,13 @@ public sealed record MoviePipelineResult(
     bool StoppedOnBudget);
 
 /// <summary>
+/// A film's TMDB details as stored in <c>movies/{id}.json</c>, stamped with when they were fetched so a
+/// payload ages out on its own clock. The index entry cannot stand in for it: an override has none, and a
+/// payload can outlive the entry that first pointed at it.
+/// </summary>
+public sealed record StoredMovie(DateTimeOffset FetchedUtc, TmdbMovie? Movie);
+
+/// <summary>
 /// Resolves every sheet row to a <see cref="MovieRecord"/>: override first, then the cache, then a TMDB
 /// search. Every row is emitted, matched or not. An unmatched film comes from sheet data alone with
 /// <c>I == 0</c> and <c>Mc == 0</c>; dropping it would silently under-report the library.
@@ -25,9 +32,14 @@ public sealed record MoviePipelineResult(
 /// <para><b>Sequential.</b> <see cref="CacheStore"/> is not thread-safe and <c>Resolve</c> mutates it on an alias hit.</para>
 /// <para><b>Order.</b> Rows run in folded-title order (ordinal), not sheet order, so a budgeted run is resumed the
 /// same way every time. <see cref="MoviePipelineResult.Records"/> comes out in that order too.</para>
-/// <para><b>Budget.</b> If the request budget runs out while a row is being looked up, that row is left
-/// unresolved and NOT cached: an exhausted client's empty or partial answer is indistinguishable from
-/// "TMDB has no such film", and caching it would suppress the film for 30 days.</para>
+/// <para><b>Cost.</b> An uncached film costs one search, one details call for each of the three most popular
+/// candidates, and one credits call for each of those whose runtime is within tolerance (for the most popular
+/// alone when none is): about 5 requests. The matched film's details are reused for its record, not refetched.</para>
+/// <para><b>Budget.</b> A budget trip mid-row makes that row's lookup incomplete: an exhausted client's empty or
+/// partial answer is indistinguishable from "TMDB has no such film". The scored result is still used for this
+/// run, but it is never cached, so the next run redoes the row instead of suppressing the film for 30 days.</para>
+/// <para><b>Freshness.</b> A stored payload older than <see cref="RefreshPolicy.Window"/> is refetched, whatever the
+/// index says. If it cannot be (budget spent) the stale copy is used for this run rather than a blank card.</para>
 /// <para><b>Failures.</b> TMDB failures arrive as <see cref="HttpRequestException"/> and are not caught here; a
 /// malformed sheet runtime throws <see cref="FormatException"/>. The cache index lives in memory until the
 /// caller saves it, so a caller that wants the work kept across a failure must call
@@ -60,6 +72,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
 
             int? tmdbId = null;
             var confidence = 0d;
+            TmdbMovie? fresh = null;   // the chosen film's details, when this run's search already fetched them
             string? reviewNote = null; // why a human should look at this row, when one should
 
             if (overrides.TryGetValue(title.Value, out var forced))
@@ -73,7 +86,12 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
                 // ours. Only the answer (TmdbId, Confidence) is meaningful here.
                 tmdbId = hit.TmdbId;
                 confidence = hit.Confidence;
+
+                // A flagged match is still waiting for a human, so it must not drop out of the queue
+                // the moment it is cached. Accepted matches start at AcceptThreshold; overrides are 1.0.
                 if (tmdbId is null) reviewNote = "unmatched";
+                else if (confidence < MatchScorer.AcceptThreshold)
+                    reviewNote = Describe(MatchOutcome.Flagged, confidence, tmdbId);
             }
             else if (string.IsNullOrWhiteSpace(title.Cleaned))
             {
@@ -88,33 +106,29 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             else
             {
                 var candidates = await tmdb.SearchMoviesAsync(title.Cleaned, title.YearHint, ct);
-                var enriched = await EnrichCandidatesAsync(candidates, ct);
+                var enrichment = await EnrichCandidatesAsync(candidates, runtime, ct);
+                var match = MatchScorer.Score(title, runtime, row.Directors, enrichment.Candidates);
 
-                // BudgetExhausted flips inside the call that hits the ceiling, so it can only be
-                // read AFTER the lookups. An exhausted client returns the same empty or
-                // half-enriched result as "TMDB has no such film"; scoring and caching it would
-                // write a false negative that suppresses the film for 30 days.
-                if (tmdb.BudgetExhausted)
-                {
-                    reviewNote = "not resolved, request budget spent";
-                }
-                else
-                {
-                    var match = MatchScorer.Score(title, runtime, row.Directors, enriched);
+                tmdbId = match.TmdbId;
+                confidence = match.Confidence;
+                if (tmdbId is { } matched) enrichment.Details.TryGetValue(matched, out fresh);
 
-                    tmdbId = match.TmdbId;
-                    confidence = match.Confidence;
-
+                // BudgetExhausted flips inside the call that hits the ceiling, so it can only be read
+                // AFTER the lookups. An exhausted client returns the same empty or half-enriched result
+                // as "TMDB has no such film". That result is still used for this run (the requests are
+                // already paid for) but must never be cached: it would suppress the film for 30 days.
+                var complete = !tmdb.BudgetExhausted;
+                if (complete)
                     cache.Put(new CacheEntry(key, tmdbId, confidence, now,
                                              Negative: tmdbId is null, title.Value, runtime));
 
-                    if (match.Outcome != MatchOutcome.Accepted)
-                        reviewNote = $"{match.Outcome} at {confidence.ToString("0.00", CultureInfo.InvariantCulture)}, " +
-                                     $"id {tmdbId?.ToString() ?? "none"}";
-                }
+                if (match.Outcome != MatchOutcome.Accepted)
+                    reviewNote = !complete && tmdbId is null
+                        ? "not resolved, request budget spent"
+                        : Describe(match.Outcome, confidence, tmdbId);
             }
 
-            records.Add(await BuildRecordAsync(row, title, runtime, tmdbId, confidence, ct));
+            records.Add(await BuildRecordAsync(row, title, runtime, tmdbId, confidence, fresh, now, ct));
             if (reviewNote is not null)
                 review.Add($"{row.Title} ({row.Runtime}, {row.Directors}) → {reviewNote}");
         }
@@ -122,37 +136,88 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
         return new MoviePipelineResult(records, review, tmdb.RequestsUsed, tmdb.BudgetExhausted);
     }
 
-    private async Task<IReadOnlyList<MovieCandidate>> EnrichCandidatesAsync(
-        IReadOnlyList<MovieCandidate> candidates, CancellationToken ct)
+    private static string Describe(MatchOutcome outcome, double confidence, int? tmdbId)
+        => $"{outcome} at {confidence.ToString("0.00", CultureInfo.InvariantCulture)}, " +
+           $"id {tmdbId?.ToString(CultureInfo.InvariantCulture) ?? "none"}";
+
+    private sealed record Enrichment(
+        IReadOnlyList<MovieCandidate> Candidates, IReadOnlyDictionary<int, TmdbMovie> Details);
+
+    private async Task<Enrichment> EnrichCandidatesAsync(
+        IReadOnlyList<MovieCandidate> candidates, int sheetRuntime, CancellationToken ct)
     {
-        // Runtime and director carry 0.70 of the score but search results hold neither,
-        // so the leading few candidates get a details and credits lookup.
+        // Runtime and director carry 0.70 of the score but search results hold neither. Details
+        // (which carry the runtime) are fetched for the three most popular candidates. Credits
+        // (the directors) cost the same again, so they are fetched only where they can still
+        // matter: runtime alone rules out most candidates, and director is a confirmation.
+        var details = new Dictionary<int, TmdbMovie>();
         var enriched = new List<MovieCandidate>();
 
         foreach (var c in candidates.OrderByDescending(c => c.Popularity).Take(3))
         {
             if (tmdb.BudgetExhausted) break;
 
-            var details = await tmdb.GetMovieAsync(c.TmdbId, ct);
-            var directors = await tmdb.GetDirectorsAsync(c.TmdbId, ct);
-            enriched.Add(c with { RuntimeMinutes = details?.Runtime, Directors = directors });
+            var movie = await tmdb.GetMovieAsync(c.TmdbId, ct);
+            if (movie is not null) details[c.TmdbId] = movie;
+            enriched.Add(c with { RuntimeMinutes = movie?.Runtime });
         }
 
-        return enriched.Count > 0 ? enriched : candidates;
+        if (enriched.Count == 0) return new Enrichment(candidates, details);
+
+        var wantsCredits = enriched
+            .Select(c => c.RuntimeMinutes is { } rt
+                         && Math.Abs(rt - sheetRuntime) <= MatchScorer.RuntimeToleranceMinutes)
+            .ToArray();
+
+        // When no runtime agrees (it is missing, or the sheet is wrong) the director is the only
+        // signal left, so the single most popular candidate still gets its credits.
+        if (!wantsCredits.Contains(true)) wantsCredits[0] = true;
+
+        for (var i = 0; i < enriched.Count; i++)
+        {
+            if (!wantsCredits[i] || tmdb.BudgetExhausted) continue;
+
+            var directors = await tmdb.GetDirectorsAsync(enriched[i].TmdbId, ct);
+            enriched[i] = enriched[i] with { Directors = directors };
+        }
+
+        return new Enrichment(enriched, details);
+    }
+
+    /// <summary>
+    /// The film's details for its record. Details fetched this run are the freshest there are and replace
+    /// the stored copy. Otherwise the stored copy is used while it is inside the refresh window, and
+    /// refetched once it is not. If it cannot be refetched, a stale copy still beats a blank card.
+    /// </summary>
+    private async Task<TmdbMovie?> LoadDetailsAsync(
+        int id, TmdbMovie? fresh, DateTimeOffset now, CancellationToken ct)
+    {
+        var path = $"movies/{id}.json";
+
+        if (fresh is not null)
+        {
+            await cache.WritePayloadAsync(path, new StoredMovie(now, fresh), ct);
+            return fresh;
+        }
+
+        var stored = await cache.ReadPayloadAsync<StoredMovie>(path, ct);
+        if (stored?.Movie is not null && !RefreshPolicy.NeedsRefresh(stored.FetchedUtc, now))
+            return stored.Movie;
+
+        if (!tmdb.BudgetExhausted && await tmdb.GetMovieAsync(id, ct) is { } fetched)
+        {
+            await cache.WritePayloadAsync(path, new StoredMovie(now, fetched), ct);
+            return fetched;
+        }
+
+        return stored?.Movie;
     }
 
     private async Task<MovieRecord> BuildRecordAsync(
         SheetRow row, NormalizedTitle title, int runtime,
-        int? tmdbId, double confidence, CancellationToken ct)
+        int? tmdbId, double confidence, TmdbMovie? fresh, DateTimeOffset now, CancellationToken ct)
     {
-        var details = tmdbId is { } id ? await cache.ReadPayloadAsync<TmdbMovie>($"movies/{id}.json", ct) : null;
-
-        if (details is null && tmdbId is { } fetchId && !tmdb.BudgetExhausted)
-        {
-            details = await tmdb.GetMovieAsync(fetchId, ct);
-            if (details is not null)
-                await cache.WritePayloadAsync($"movies/{fetchId}.json", details, ct);
-        }
+        var details = tmdbId is { } id ? await LoadDetailsAsync(id, fresh, now, ct) : null;
 
         int? year = details?.ReleaseDate is { Length: >= 4 } d && int.TryParse(d[..4], out var y)
             ? y : title.YearHint;

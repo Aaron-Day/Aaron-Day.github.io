@@ -61,21 +61,24 @@ internal static class TestPipeline
     public static MoviePipeline WithBudget(int budget)
         => Create(budget, req => IsSearch(req) ? Json(EmptyResults) : NotFound()).Pipeline;
 
-    public static Harness Create(int budget, Func<HttpRequestMessage, HttpResponseMessage> respond)
+    /// <param name="clock">Defaults to the frozen <see cref="Now"/>; pass a mutable one to age the cache.</param>
+    public static Harness Create(
+        int budget, Func<HttpRequestMessage, HttpResponseMessage> respond, Func<DateTimeOffset>? clock = null)
     {
+        clock ??= () => Now;
         var handler = new StubHandler(respond);
         var http = new HttpClient(handler) { BaseAddress = new Uri("https://api.themoviedb.org/") };
 
         // Frozen clock, so a generous limiter: a tight one would make the stub run wait in real time.
         var tmdb = new TmdbClient(http, "eyJ.stub.token",
             new SlidingWindowRateLimiter(100_000, TimeSpan.FromSeconds(1)),
-            new RequestBudget(budget), () => Now);
+            new RequestBudget(budget), clock);
 
         var dir = Path.Combine(Path.GetTempPath(), "ml-pipeline-" + Guid.NewGuid());
         lock (TempDirs) TempDirs.Add(dir);
         var cache = new CacheStore(dir);
 
-        return new Harness(new MoviePipeline(tmdb, cache, () => Now), cache, handler);
+        return new Harness(new MoviePipeline(tmdb, cache, clock), cache, handler);
     }
 
     public static bool IsSearch(HttpRequestMessage req) => req.RequestUri!.AbsolutePath == "/3/search/movie";

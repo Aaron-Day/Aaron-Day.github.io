@@ -21,7 +21,7 @@ public static class MatchScorer
     private const double YearWeight = 0.10;
 
     /// <summary>Runtime counts as a match within this many minutes either way.</summary>
-    private const int RuntimeToleranceMinutes = 2;
+    public const int RuntimeToleranceMinutes = 2;
 
     // Every weight and threshold must stay a multiple of 0.0001, or Math.Round(x, 4) below
     // starts truncating (0.03125 would silently become 0.0312) and the boundary tests lie.
