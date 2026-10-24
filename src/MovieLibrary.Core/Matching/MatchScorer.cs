@@ -58,6 +58,6 @@ public static class MatchScorer
 
         if (title.YearHint is { } y && c.Year == y) score += 0.10;
 
-        return score;
+        return Math.Round(score, 4);
     }
 }

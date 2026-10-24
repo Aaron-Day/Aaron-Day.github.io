@@ -128,6 +128,25 @@ public class MatchScorerBoundaryTests
         Assert.Equal(alone.Confidence, withRival.Confidence);
     }
 
+    // runtime + title and director + title + year are both 0.55 in decimal, but as doubles they are
+    // 0.55 and 0.5499999999999999. Unless ScoreOne rounds, the first always outranks the second and
+    // the popularity / TmdbId tie-breaks never run.
+    [Theory]
+    [InlineData(1,   500, 1, 2, 2)]   // popularity decides in favour of the float-smaller sum
+    [InlineData(500, 1,   1, 2, 1)]   // and in favour of the float-larger one
+    [InlineData(1,   1,   2, 1, 1)]   // equal popularity: lowest TmdbId, which is the float-smaller sum
+    [InlineData(1,   1,   1, 2, 1)]   // equal popularity: lowest TmdbId, which is the float-larger sum
+    public void MathematicallyEqualScoresTieAndPopularityThenDecides(
+        double runtimeTitlePop, double directorTitleYearPop,
+        int runtimeTitleId, int directorTitleYearId, int expectedId)
+    {
+        var r = Score(
+            Cand(runtimeTitleId, runtime: true, title: true, pop: runtimeTitlePop),
+            Cand(directorTitleYearId, director: true, title: true, year: true, pop: directorTitleYearPop));
+        Assert.Equal(0.55, r.Confidence);
+        Assert.Equal(expectedId, r.TmdbId);
+    }
+
     [Fact]
     public void PopularityNeverOutweighsAHigherScore()
     {
