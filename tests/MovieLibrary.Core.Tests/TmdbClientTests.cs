@@ -235,7 +235,9 @@ public class TmdbClientTests
     {
         var limiter = new SlidingWindowRateLimiter(1, TimeSpan.FromHours(1));
         var (client, handler) = BuildWith("eyJ.a.b", _ => Json("""{"results":[]}"""), limiter, () => T0);
-        await client.SearchMoviesAsync("First", null, CancellationToken.None);
+        // The guard turns "the first call wrongly waits an hour" into a 5 s failure, not a hang.
+        using var guard = new CancellationTokenSource(TimeSpan.FromSeconds(5));
+        await client.SearchMoviesAsync("First", null, guard.Token);
         using var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(100));
 
         await Assert.ThrowsAnyAsync<OperationCanceledException>(
