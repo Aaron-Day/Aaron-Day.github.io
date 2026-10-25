@@ -69,7 +69,11 @@ public sealed record StoredSeason(DateTimeOffset FetchedUtc, TmdbSeason? Season)
 /// the index says. If it cannot be (budget spent, or TMDB no longer finds the series) the cached id and the
 /// stale copy are kept for this run rather than a blank one, and a lost series is queued for review.
 /// A series payload has no by-id endpoint, so refreshing it repeats the search and details calls.</para>
-/// <para><b>Failures.</b> TMDB failures arrive as <see cref="HttpRequestException"/> and are not caught. The cache
+/// <para><b>Failures.</b> None of these are caught here. Transport faults, a bad status and a body that is not JSON
+/// arrive as <see cref="HttpRequestException"/>. A series or season body that parses but whose typed members have
+/// the wrong shape throws <see cref="System.Text.Json.JsonException"/> out of <c>Deserialize</c>, unwrapped, because
+/// that happens after the request layer has returned. This pipeline reads no credits, so the credits-shape
+/// <see cref="InvalidDataException"/> that films can raise does not arise here. The cache
 /// index lives in memory until the caller saves it, so a caller that wants the work kept across a failure must
 /// call <see cref="CacheStore.SaveAsync"/> in a <c>finally</c>.</para>
 /// </remarks>
