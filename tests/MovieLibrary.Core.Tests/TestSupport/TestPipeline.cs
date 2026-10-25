@@ -12,7 +12,7 @@ namespace MovieLibrary.Core.Tests;
 /// <see cref="HttpClient"/> is backed by a <see cref="StubHandler"/>, so nothing here can reach the
 /// network. The cache is a real <see cref="CacheStore"/> on a throwaway temp directory.
 /// </summary>
-internal static class TestPipeline
+internal static partial class TestPipeline
 {
     /// <summary>The pipeline plus what a test may want to inspect or tamper with: the cache, the requests, its directory.</summary>
     public sealed record Harness(MoviePipeline Pipeline, CacheStore Cache, StubHandler Handler, string CacheDir);
