@@ -1,10 +1,24 @@
+using System.Globalization;
+
 namespace MovieLibrary.Enrich.Config;
 
+/// <remarks>
+/// <b>The token never prints.</b> A record's generated ToString writes every member, and a stray log line on a
+/// public repository's Actions run is world-readable, so ToString is overridden to redact <see cref="Token"/>.
+/// <b>Empty is absent.</b> An unset Actions variable arrives as an empty string, so an empty or blank environment
+/// variable or flag value counts as not given. <b>A budget below zero is an error</b>: RequestBudget reads anything
+/// at or under 0 as unlimited, so a typo such as <c>--max-requests -5</c> would turn a 40-request run into thousands.
+/// </remarks>
 public sealed record EnrichOptions(
     string SheetId, string Token, int MaxRequests,
     string CacheRoot, string OutputRoot, bool Fixtures, bool ForceRefresh)
 {
     public const string DefaultSheetId = "1gkDwOi5-Gvm48WkYz8noYUb5i6QjfQSDLpEDYV5QlHk";
+
+    public override string ToString()
+        => $"EnrichOptions {{ SheetId = {SheetId}, Token = {(Token.Length == 0 ? "<none>" : "<redacted>")}, " +
+           $"MaxRequests = {MaxRequests}, CacheRoot = {CacheRoot}, OutputRoot = {OutputRoot}, " +
+           $"Fixtures = {Fixtures}, ForceRefresh = {ForceRefresh} }}";
 
     public static EnrichOptions Load(string[] args, IDictionary<string, string> env)
     {
@@ -16,10 +30,16 @@ public sealed record EnrichOptions(
                   ?? Get(env, "MAX_REQUESTS_PER_RUN")
                   ?? "40";
 
+        var requests = int.TryParse(max, NumberStyles.Integer, CultureInfo.InvariantCulture, out var m) ? m : 40;
+        if (requests < 0)
+            throw new ArgumentException(
+                $"The request limit must be 0 (unlimited) or more, not {requests}. " +
+                "Use --max-requests 0 to ask for no limit on purpose.");
+
         return new EnrichOptions(
             SheetId: Flag(args, "--sheet-id") ?? Get(env, "SHEET_ID") ?? DefaultSheetId,
             Token: fixtures ? string.Empty : Get(env, "TMDB_TOKEN") ?? string.Empty,
-            MaxRequests: int.TryParse(max, out var m) ? m : 40,
+            MaxRequests: requests,
             CacheRoot: Flag(args, "--cache") ?? "enrich-cache",
             OutputRoot: Flag(args, "--out")
                         ?? (fixtures ? "dev-data" : "src/MovieLibrary.Web/wwwroot/data"),
@@ -29,12 +49,22 @@ public sealed record EnrichOptions(
 
     // IDictionary<,> has no GetValueOrDefault extension (only IReadOnlyDictionary<,> does).
     private static string? Get(IDictionary<string, string> env, string key)
-        => env.TryGetValue(key, out var value) ? value : null;
+        => env.TryGetValue(key, out var value) && !string.IsNullOrWhiteSpace(value) ? value : null;
 
+    /// <summary>The value of <c>--name value</c> or <c>--name=value</c>, the first of either form; empty counts as absent.</summary>
     private static string? Flag(string[] args, string name)
     {
-        var i = Array.IndexOf(args, name);
-        return i >= 0 && i + 1 < args.Length ? args[i + 1] : null;
+        for (var i = 0; i < args.Length; i++)
+        {
+            string? value;
+            if (args[i] == name) value = i + 1 < args.Length ? args[i + 1] : null;
+            else if (args[i].StartsWith(name + "=", StringComparison.Ordinal)) value = args[i][(name.Length + 1)..];
+            else continue;
+
+            return string.IsNullOrWhiteSpace(value) ? null : value;
+        }
+
+        return null;
     }
 
     /// <summary>Reads a gitignored .env for local runs. CI supplies real environment variables.</summary>

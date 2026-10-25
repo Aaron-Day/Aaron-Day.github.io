@@ -108,6 +108,121 @@ public class EnrichOptionsTests : IDisposable
         Assert.Equal(40, o.MaxRequests);
     }
 
+    // ---- the token never reaches a log; bad budgets and empty values are caught -------------
+
+    [Fact]
+    public void ToStringNeverPrintsTheTokenSoALogLineCannotLeakIt()
+    {
+        const string token = "eyJhbGciOiJIUzI1NiJ9.live-secret-value.signature";
+        var o = Load(["--max-requests", "7", "--cache", "my-cache"], ("TMDB_TOKEN", token), ("SHEET_ID", "my-sheet"));
+
+        var text = o.ToString();
+
+        Assert.DoesNotContain(token, text);
+        Assert.DoesNotContain("live-secret-value", text);
+        Assert.DoesNotContain("eyJ", text);
+        Assert.DoesNotContain("live-secret-value", $"{o}");
+        Assert.DoesNotContain("live-secret-value", string.Format("{0}", o));
+        Assert.DoesNotContain("live-secret-value", (o with { MaxRequests = 1 }).ToString());
+        // and it is still useful for debugging: everything else is there
+        Assert.Contains("my-sheet", text);
+        Assert.Contains("my-cache", text);
+        Assert.Contains("7", text);
+        Assert.Contains("<redacted>", text);
+    }
+
+    [Fact]
+    public void ToStringSaysWhenThereIsNoTokenRatherThanPrintingNothing()
+    {
+        Assert.Contains("<none>", Load(["--fixtures"], ("TMDB_TOKEN", "eyJ.a.b")).ToString());
+        Assert.Contains("<none>", Load([]).ToString());
+    }
+
+    [Theory]
+    [InlineData("--max-requests", "-5")]
+    [InlineData("--max-requests=-5", null)]
+    [InlineData("--max-requests", "-1")]
+    public void ANegativeRequestLimitIsRejectedBecauseTheBudgetWouldReadItAsUnlimited(string first, string? second)
+    {
+        var ex = Assert.Throws<ArgumentException>(() => Load(second is null ? [first] : [first, second]));
+
+        Assert.Contains("--max-requests 0", ex.Message);       // says how to ask for unlimited on purpose
+    }
+
+    [Fact]
+    public void ANegativeRequestLimitFromTheEnvironmentIsRejectedToo()
+        => Assert.Throws<ArgumentException>(() => Load([], ("MAX_REQUESTS_PER_RUN", "-3")));
+
+    [Fact]
+    public void TheEqualsFormOfAFlagIsReadSoAnIntendedZeroIsNotSilentlyFortyInstead()
+    {
+        var o = Load(["--max-requests=0", "--sheet-id=eq-sheet", "--cache=eq-cache", "--out=eq-out"],
+                     ("MAX_REQUESTS_PER_RUN", "99"));
+
+        Assert.Equal(0, o.MaxRequests);
+        Assert.Equal("eq-sheet", o.SheetId);
+        Assert.Equal("eq-cache", o.CacheRoot);
+        Assert.Equal("eq-out", o.OutputRoot);
+        Assert.Equal(7, Load(["--max-requests=7"]).MaxRequests);
+        Assert.Equal("a=b", Load(["--sheet-id=a=b"]).SheetId);   // only the first = splits
+    }
+
+    [Fact]
+    public void WhenAFlagIsGivenTwiceTheFirstWinsInEitherForm()
+    {
+        Assert.Equal(3, Load(["--max-requests", "3", "--max-requests=9"]).MaxRequests);
+        Assert.Equal(3, Load(["--max-requests=3", "--max-requests", "9"]).MaxRequests);
+    }
+
+    [Theory]
+    [InlineData("SHEET_ID")]
+    [InlineData("MAX_REQUESTS_PER_RUN")]
+    [InlineData("TMDB_TOKEN")]
+    [InlineData("FORCE_REFRESH")]
+    public void AnEmptyOrBlankEnvironmentVariableIsAbsentNotAnEmptyOverride(string name)
+    {
+        foreach (var blank in new[] { "", "   " })
+        {
+            var o = Load([], (name, blank));
+
+            Assert.Equal(EnrichOptions.DefaultSheetId, o.SheetId);     // an unset Actions variable arrives as ""
+            Assert.Equal(40, o.MaxRequests);
+            Assert.Equal(string.Empty, o.Token);
+            Assert.False(o.ForceRefresh);
+        }
+    }
+
+    [Theory]
+    [InlineData("--sheet-id")]
+    [InlineData("--cache")]
+    [InlineData("--out")]
+    public void AnEmptyFlagValueIsAbsentInBothFormsSoTheDefaultAppliesNotAnEmptyPath(string flag)
+    {
+        foreach (var args in new[] { new[] { flag, "" }, [flag + "="], [flag, "  "] })
+        {
+            var o = Load(args);
+
+            Assert.Equal(EnrichOptions.DefaultSheetId, o.SheetId);
+            Assert.Equal("enrich-cache", o.CacheRoot);
+            Assert.Equal("src/MovieLibrary.Web/wwwroot/data", o.OutputRoot);
+        }
+    }
+
+    [Fact]
+    public void AFlagThatOnlyStartsWithAKnownNameIsNotThatFlag()
+    {
+        var o = Load(["--outdated=zzz", "--cache-old=zzz", "--sheet-identity=zzz", "--max-requests-extra=9"]);
+
+        Assert.Equal("src/MovieLibrary.Web/wwwroot/data", o.OutputRoot);
+        Assert.Equal("enrich-cache", o.CacheRoot);
+        Assert.Equal(EnrichOptions.DefaultSheetId, o.SheetId);
+        Assert.Equal(40, o.MaxRequests);
+    }
+
+    [Fact]
+    public void AnEmptyFlagValueFallsBackToTheEnvironmentValueNotStraightToTheDefault()
+        => Assert.Equal("env-sheet", Load(["--sheet-id="], ("SHEET_ID", "env-sheet")).SheetId);
+
     // ---- ReadEnvironment ---------------------------------------------------------------
 
     private string EnvFile(params string[] lines)

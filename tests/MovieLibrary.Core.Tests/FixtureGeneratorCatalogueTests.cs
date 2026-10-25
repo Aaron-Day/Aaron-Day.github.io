@@ -120,16 +120,22 @@ public class FixtureGeneratorCatalogueTests : IDisposable
             new SheetRow("Season 1, Episode 2: Next", "44:00:00", "", "", "Drama", name),
         }).ToList();
 
-    // "iqelaitl" hashes to exactly int.MinValue under the generator's unchecked h * 31 + c, the one
-    // value Math.Abs cannot negate. Found by search; the first test proves the claim so it cannot rot.
+    // "iqelaitl" hashes to exactly int.MinValue under the generator's unchecked h * 31 + c, the one value
+    // Math.Abs cannot negate. Found by search. The claim is proved through the generator, never by copying its
+    // formula (a copy cannot fail when the original changes): the generator masks that hash to seed 0, and a
+    // film with seed 0 gets exactly these values, worked out by hand from Seed and Pick. If the hash is ever
+    // changed this title stops being the overflowing one and THIS test fails, rather than the guard rotting.
     private const string IntMinValueTitle = "iqelaitl";
 
     [Fact]
-    public void TheOverflowingTitleReallyHashesToIntMinValue()
+    public void TheOverflowingTitleStillHasSeedZeroWhichIsWhatMakesItTheOverflowGuard()
     {
-        var h = 17;
-        foreach (var c in IntMinValueTitle) h = unchecked(h * 31 + c);
-        Assert.Equal(int.MinValue, h);
+        var film = Films([Film(IntMinValueTitle)]).Single();
+
+        Assert.Equal(986_808, film.I);
+        Assert.Equal(2019, film.Y);
+        Assert.Equal(6.5, film.Vote);
+        Assert.Equal("Everything changes after a single, unremarkable decision.", film.Ov);
     }
 
     [Fact]
@@ -145,13 +151,23 @@ public class FixtureGeneratorCatalogueTests : IDisposable
 
     // ---- identity ------------------------------------------------------------------------
 
-    // "aaaa" and "dauh" are different titles whose ids collide under a plain 900,000 + seed % 90,000.
+    // "em" and "je" are different titles that draw the same id offset (found by search), so the second must step
+    // past the first. That is asserted through the ids themselves, so the pair cannot quietly stop colliding.
     [Fact]
-    public void FilmIdsAreUniqueEvenForRepeatedTitlesAndCollidingHashes()
+    public void AFilmWhoseIdDrawCollidesStepsToTheNextFreeId()
+    {
+        var pair = Films([Film("em"), Film("je")]);
+
+        Assert.Equal(960_983, pair[0].I);
+        Assert.Equal(960_984, pair[1].I);
+    }
+
+    [Fact]
+    public void FilmIdsAreUniqueEvenForRepeatedTitlesAndCollidingDraws()
     {
         var rows = Library();
-        rows.Add(Film("aaaa"));
-        rows.Add(Film("dauh"));
+        rows.Add(Film("em"));
+        rows.Add(Film("je"));
         rows.Add(Film("Aladdin", runtime: "1:30:00"));
         rows.Add(Film("Aladdin", runtime: "2:08:00"));      // the real sheet has same-titled films
 
@@ -163,10 +179,11 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     [Fact]
     public void ShowIdsAreUniqueEvenWhenTwoSeriesNamesCollide()
     {
-        var (_, shows) = FixtureGenerator.Build([], EpisodeRows("aaaa", "dauh", "Alias"));
+        var (_, shows) = FixtureGenerator.Build([], EpisodeRows("em", "je", "Alias"));
 
         Assert.Equal(3, shows.Select(s => s.I).Distinct().Count());
         Assert.All(shows, s => Assert.True(s.I >= 800_000));
+        Assert.Equal(shows.Single(s => s.T == "em").I + 1, shows.Single(s => s.T == "je").I);   // they did collide
     }
 
     [Fact]
@@ -228,6 +245,33 @@ public class FixtureGeneratorCatalogueTests : IDisposable
             Assert.Equal(m.G.Length, m.G.Distinct().Count());
             Assert.All(m.G, id => Assert.True(FixtureGenerator.Genres.ContainsKey(id), $"genre {id} has no name"));
         });
+    }
+
+    // Year, vote, overview and id used to be seed % 55, % 60, % 5 and % 90,000: 5 divides all four, so within any one
+    // overview every film shared a year, a vote and an id residue. Each now has its own salt.
+    [Fact]
+    public void YearVoteOverviewAndIdAreIndependentOfOneAnother()
+    {
+        var films = Films();
+
+        Assert.All(films.GroupBy(m => m.Ov), sameOverview =>
+        {
+            Assert.Equal(5, sameOverview.Select(m => m.Y!.Value % 5).Distinct().Count());
+            Assert.Equal(5, sameOverview.Select(m => (int)Math.Round(m.Vote * 10) % 5).Distinct().Count());
+            Assert.Equal(5, sameOverview.Select(m => m.I % 5).Distinct().Count());
+        });
+        Assert.Equal(25, films.Select(m => (m.Y!.Value % 5, (int)Math.Round(m.Vote * 10) % 5)).Distinct().Count());
+        Assert.Equal(25, films.Select(m => (m.Y!.Value % 5, m.I % 5)).Distinct().Count());
+        Assert.Equal(25, films.Select(m => ((int)Math.Round(m.Vote * 10) % 5, m.I % 5)).Distinct().Count());
+    }
+
+    [Fact]
+    public void ASeriesFirstYearAndIdAreIndependentOfOneAnother()
+    {
+        var rows = Library(600).Select(r => new SheetRow("Season 1, Episode 1: Pilot", "44:00:00", "", "", "Drama", r.Title)).ToList();
+        var shows = FixtureGenerator.Build([], rows).Item2;
+
+        Assert.Equal(25, shows.Select(s => (s.FirstYear!.Value % 5, s.I % 5)).Distinct().Count());
     }
 
     [Fact]
@@ -487,30 +531,37 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     }
 
     [Fact]
-    public void UnnumberedEpisodesFormSeasonOneAndAreNumberedInOrder()
+    public void UnnumberedEpisodesFormSeasonZeroAndAreNumberedInNameOrder()
     {
         var zulu = FixtureGenerator.Build([], MixedRows()).Item2.Single(s => s.T == "Zulu");
 
         var season = Assert.Single(zulu.Seasons, s => s.Owned > 0);
         var owned = season.Eps.Where(e => e.O).ToArray();
-        Assert.Equal(1, season.N);
+        Assert.Equal(0, season.N);              // TvPipeline's "unplaced episodes" group
         Assert.Equal([1, 2], owned.Select(e => e.E));
         Assert.Equal(["A Standalone Special", "Another Special"], owned.Select(e => e.T));
         Assert.Equal(2, season.Owned);
     }
 
     [Fact]
-    public void EpisodeRuntimesComeFromTheSheetAndEveryOwnedEpisodeHasAnOverviewAndAirDate()
+    public void EpisodeRuntimesComeFromTheSheetAndEveryPlacedEpisodeHasAnOverviewAndAirDate()
     {
         var (_, shows) = FixtureGenerator.Build([], MixedRows());
 
         // "44:50:59" is Sheets coercion of 44m50s, and a plain "23:04" is 23 minutes.
         Assert.All(shows.Single(s => s.T == "alias").Seasons.SelectMany(s => s.Eps), e => Assert.Equal(44, e.Rt));
-        Assert.All(shows.Single(s => s.T == "Zulu").Seasons.SelectMany(s => s.Eps), e => Assert.Equal(23, e.Rt));
-        Assert.All(shows.SelectMany(s => s.Seasons).SelectMany(s => s.Eps), e =>
+        Assert.All(shows.Single(s => s.T == "Zulu").Seasons.Where(s => s.N > 0).SelectMany(s => s.Eps), e => Assert.Equal(23, e.Rt));
+        Assert.All(shows.SelectMany(s => s.Seasons).Where(s => s.N > 0).SelectMany(s => s.Eps), e =>
         {
             Assert.False(string.IsNullOrWhiteSpace(e.Ov));
             Assert.NotNull(e.Air);
+        });
+        // Rows no TMDB episode claimed (season 0) carry no runtime, overview or date, as in TvPipeline.
+        Assert.All(shows.SelectMany(s => s.Seasons).Where(s => s.N == 0).SelectMany(s => s.Eps), e =>
+        {
+            Assert.Null(e.Rt);
+            Assert.Null(e.Ov);
+            Assert.Null(e.Air);
         });
     }
 
