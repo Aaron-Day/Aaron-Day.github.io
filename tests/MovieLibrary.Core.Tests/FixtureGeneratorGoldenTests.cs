@@ -92,8 +92,8 @@ public class FixtureGeneratorGoldenTests
         return Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(json))).ToLowerInvariant();
     }
 
-    // Measured over 287,525 characters of JSON (48 series: numbered, bare, mixed, padded and fully owned); the same in separate processes and under every culture below.
-    private const string Golden = "61bfa75cd9a9a1d1ed860a5d0bf781552a07e0053b281108c0855025021f6abe";
+    // Measured over 286,871 characters of JSON (48 series: numbered, bare, mixed, padded and fully owned); the same in separate processes and under every culture below.
+    private const string Golden = "8b802f1a492d3ece8999be925bb0ddb891ec8e3a6497e05350be520a4a412170";
 
     [Fact]
     public void TheWholeOutputOfAFixedInputHasThisSha256InEveryProcess()

@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Text.Json;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Enrich.Emit;
 
@@ -72,22 +73,30 @@ public class FixtureGeneratorRealismTests
     }
 
     /// <summary>
-    /// Where TvPipeline puts the owned rows when TMDB claims none of them: a numbered row keeps its season and number
-    /// (the same episode twice is one, the first name in ordinal order), and every bare or season-0 row goes to season
-    /// 0, the "unplaced" group, in ordinal name order and numbered from 1. Written out here independently of the generator.
+    /// The numbered rows keep their season and number whatever TMDB does (the same numbered episode twice is one, the
+    /// first name in ordinal order). Written out here independently of the generator.
     /// </summary>
-    private static List<(int Season, int Episode, string Name)> Placed(IEnumerable<OwnedRow> rows)
-    {
-        var all = rows.ToList();
-        var numbered = all.Where(r => r.Season >= 1)
-            .GroupBy(r => (r.Season!.Value, r.Episode!.Value))
-            .Select(g => g.OrderBy(r => r.Name, StringComparer.Ordinal).First())
-            .Select(r => (r.Season!.Value, r.Episode!.Value, r.Name));
-        var unplaced = all.Where(r => r.Season is null or 0)
-            .OrderBy(r => r.Name, StringComparer.Ordinal).ThenBy(r => r.Episode)
-            .Select((r, i) => (0, i + 1, r.Name));
+    private static List<(int Season, int Episode, string Name)> NumberedPlaced(IEnumerable<OwnedRow> rows)
+        => [.. rows.Where(r => r.Season >= 1)
+                   .GroupBy(r => (r.Season!.Value, r.Episode!.Value))
+                   .Select(g => g.OrderBy(r => r.Name, StringComparer.Ordinal).First())
+                   .Select(r => (r.Season!.Value, r.Episode!.Value, r.Name))];
 
-        return [.. numbered.Concat(unplaced).OrderBy(x => x.Item1).ThenBy(x => x.Item2)];
+    /// <summary>How a series' bare rows fared against the invented TMDB list: all claimed a slot, some did, none did.</summary>
+    private enum Match { Full, Mixed, Unplaced }
+
+    private static List<(ShowRecord Show, Match Match, int Bare, int Residue)> BareSeries()
+    {
+        var (rows, ledger) = SeriesLibrary();
+        return [.. FixtureGenerator.Build([], rows).Item2
+            .Select(show => (Show: show, Rows: ledger.Where(o => o.Series == show.T).ToList()))
+            .Where(x => x.Rows.Any(o => o.Season is null))
+            .Select(x =>
+            {
+                var bare = x.Rows.Count(o => o.Season is null);
+                var residue = x.Show.Seasons.Where(z => z.N == 0).Sum(z => z.Owned) - x.Rows.Count(o => o.Season == 0);
+                return (x.Show, residue == 0 ? Match.Full : residue == bare ? Match.Unplaced : Match.Mixed, bare, residue);
+            })];
     }
 
     /// <summary>The 122-series Sheet rows, for tests elsewhere that want a realistic library.</summary>
@@ -109,18 +118,23 @@ public class FixtureGeneratorRealismTests
         Assert.Equal(122, shows.Count);
         foreach (var show in shows)
         {
-            var expected = Placed(ownedRows.Where(o => o.Series == show.T));
-            var actual = show.Seasons
-                .SelectMany(s => s.Eps.Where(e => e.O).Select(e => (s.N, e.E, e.T)))
-                .OrderBy(x => x.N).ThenBy(x => x.E).ToList();
+            var mine = ownedRows.Where(o => o.Series == show.T).ToList();
+            var numbered = NumberedPlaced(mine);
+            var owned = show.Seasons.SelectMany(s => s.Eps.Where(e => e.O).Select(e => (s.N, e.E, e.T))).ToList();
 
-            Assert.Equal(expected, actual);                  // nothing owned is lost, nothing unowned is claimed
+            // A numbered row stays at its season and number...
+            var rest = owned.ToList();
+            foreach (var n in numbered) Assert.True(rest.Remove(n), $"{show.T}: S{n.Season}E{n.Episode} {n.Name} is not owned");
+
+            // ...and every bare or season-0 row is owned exactly once, wherever it landed. Nothing is lost or invented.
+            Assert.Equal(mine.Where(o => o.Season is null or 0).Select(o => o.Name).Order(StringComparer.Ordinal),
+                         rest.Select(x => x.T).Order(StringComparer.Ordinal));
             Assert.All(show.Seasons, s =>
             {
                 Assert.Equal(s.Eps.Count(e => e.O), s.Owned);
                 Assert.Equal(s.Eps.Length, s.Total);
             });
-            Assert.Equal(expected.Count, show.OwnedEpisodes);
+            Assert.Equal(owned.Count, show.OwnedEpisodes);
             Assert.Equal(show.Seasons.Sum(s => s.Total), show.TotalEpisodes);
         }
     }
@@ -553,26 +567,92 @@ public class FixtureGeneratorRealismTests
 
     // ---- E. rows with no season: TvPipeline's "unplaced" group, season 0 ---------------------
 
-    [Fact]
-    public void ABareNamedRowIsAnOwnedEpisodeOfSeasonZeroNumberedInOrdinalNameOrder()
+    private static List<ShowRecord> SpecialsSeries()
     {
-        var rows = new[] { "Zeta", "Alpha", "Alpha", "beta", "Season 0, Episode 5: Middle" }
-            .Select(t => new SheetRow(t, "23:04", "", "", "Comedy", "Specials")).ToList();
+        var rows = Enumerable.Range(0, 80).SelectMany(i =>
+            new[] { "Zeta", "Alpha", "Alpha", "beta", "Season 0, Episode 5: Middle" }
+                .Select(t => new SheetRow(t, "23:04", "", "", "Comedy", $"Specials {i}"))).ToList();
 
-        var show = Assert.Single(FixtureGenerator.Build([], rows).Item2);
-        var zero = Assert.Single(show.Seasons, s => s.N == 0);
+        return [.. FixtureGenerator.Build([], rows).Item2];
+    }
 
-        Assert.Equal(["Alpha", "Alpha", "Middle", "Zeta", "beta"], zero.Eps.Select(e => e.T));   // ordinal: capitals first
-        Assert.Equal([1, 2, 3, 4, 5], zero.Eps.Select(e => e.E));
-        Assert.Equal((5, 5), (zero.Owned, zero.Total));
-        Assert.All(zero.Eps, e =>
+    [Fact]
+    public void BareRowsNoTmdbEpisodeClaimsStayInSeasonZeroInOrdinalNameOrderWithNothingElse()
+    {
+        var unplaced = SpecialsSeries().Where(s => s.Seasons.Where(x => x.N > 0).All(x => x.Owned == 0)).ToList();
+
+        Assert.NotEmpty(unplaced);                                  // the "none of the names is on TMDB" shape
+        Assert.Contains(unplaced, s => s.OwnedEpisodes < s.TotalEpisodes && s.Seasons.Any(x => x.N > 0 && x.Owned == 0));   // TMDB still lists seasons to reveal
+        Assert.Contains(unplaced, s => s.OwnedEpisodes == s.TotalEpisodes);                                             // or the owner has it all
+        Assert.All(unplaced, show =>
         {
-            Assert.True(e.O);
-            Assert.Null(e.Air);                 // nothing claimed it, so TMDB gave it no date, runtime, overview or still
-            Assert.Null(e.Rt);
-            Assert.Null(e.Ov);
-            Assert.Null(e.S);
+            var zero = Assert.Single(show.Seasons, s => s.N == 0);
+
+            Assert.Equal(["Alpha", "Alpha", "Middle", "Zeta", "beta"], zero.Eps.Select(e => e.T));   // ordinal: capitals first
+            Assert.Equal([1, 2, 3, 4, 5], zero.Eps.Select(e => e.E));
+            Assert.Equal((5, 5), (zero.Owned, zero.Total));
+            Assert.All(zero.Eps, e =>
+            {
+                Assert.True(e.O);
+                Assert.Null(e.Air);             // nothing claimed it, so TMDB gave it no date, runtime, overview or still
+                Assert.Null(e.Rt);
+                Assert.Null(e.Ov);
+                Assert.Null(e.S);
+            });
         });
+    }
+
+    [Fact]
+    public void BareRowsThatClaimASlotLeaveSeasonZeroWithOnlyTheRowsNoTmdbEpisodeCouldClaim()
+    {
+        // "Season 0, Episode 5: Middle" can never claim (TMDB's specials are not fetched), so it is the whole residue
+        // of a series whose four bare names were all found.
+        var matched = SpecialsSeries().Where(s => s.Seasons.Single(x => x.N == 0).Owned == 1).ToList();
+
+        Assert.NotEmpty(matched);
+        Assert.All(matched, show =>
+        {
+            Assert.Equal(["Middle"], show.Seasons.Single(x => x.N == 0).Eps.Select(e => e.T));
+            var claimed = show.Seasons.Where(x => x.N > 0).SelectMany(x => x.Eps).Where(e => e.O).ToList();
+
+            Assert.Equal(["Alpha", "Alpha", "Zeta", "beta"], claimed.Select(e => e.T).Order(StringComparer.Ordinal));
+        });
+        // The invented TMDB list holds more than the owner has: some claimed season is only partly owned.
+        Assert.Contains(matched, s => s.Seasons.Any(x => x.N > 0 && x.Owned > 0 && x.Owned < x.Total));
+    }
+
+    [Fact]
+    public void AMatchedExtraInASeriesWithNumberedRowsClaimsAScatteredSlotNotTheFirstFreeOne()
+    {
+        var rows = Enumerable.Range(0, 80).SelectMany(i => Enumerable.Range(1, 3)
+            .SelectMany(season => Enumerable.Range(1, 10).Select(e =>
+                new SheetRow($"Season {season}, Episode {e}: Owned {season}-{e}", "44:00:00", "", "", "Drama", $"Scatter {i}")))
+            .Concat(new[] { "Extra A", "Extra B" }.Select(t => new SheetRow(t, "44:00:00", "", "", "Drama", $"Scatter {i}"))))
+            .ToList();
+
+        var shows = FixtureGenerator.Build([], rows).Item2;
+
+        // A claimed episode with a lower-numbered unowned one beside it, and a claim in season 2 while season 1 still has
+        // unowned episodes left: neither can happen if claims simply fill the first free slots.
+        Assert.Contains(shows, s => s.Seasons.Where(x => x.N is 1 or 2).Any(x =>
+            x.Eps.Any(e => e.O && e.T.StartsWith("Extra") && x.Eps.Any(u => !u.O && u.E < e.E))));
+        Assert.Contains(shows, s => s.Seasons.Single(x => x.N == 2).Eps.Any(e => e.O && e.T.StartsWith("Extra"))
+                                    && s.Seasons.Single(x => x.N == 1).Eps.Any(e => !e.O));
+    }
+
+    [Fact]
+    public void ABareRowNeverClaimsAnEpisodeOfTheLatestNumberedSeasonSoItStaysIncomplete()
+    {
+        var rows = Enumerable.Range(0, 60).SelectMany(i => Enumerable.Range(1, 8)
+            .Select(e => new SheetRow($"Season 1, Episode {e}: Owned {e}", "44:00:00", "", "", "Drama", $"Extras {i}"))
+            .Concat(new[] { "Extra A", "Extra B", "Extra C" }.Select(t => new SheetRow(t, "44:00:00", "", "", "Drama", $"Extras {i}"))))
+            .ToList();
+
+        var shows = FixtureGenerator.Build([], rows).Item2;
+
+        // Season 1 is the only, so the latest, numbered season: nothing may be claimed in it.
+        Assert.All(shows, show => Assert.Equal(8, show.Seasons.Single(s => s.N == 1).Owned));
+        Assert.All(shows, show => Assert.Equal(["Extra A", "Extra B", "Extra C"], show.Seasons.Single(s => s.N == 0).Eps.Select(e => e.T)));
     }
 
     [Fact]
@@ -601,39 +681,93 @@ public class FixtureGeneratorRealismTests
     }
 
     [Fact]
-    public void SeasonZeroIsOnlyTheOwnedRowsAndIsTheCommonShape()
+    public void SeasonZeroIsOnlyTheUnclaimedResidueAndAMinorityOfOwnedEpisodes()
     {
         var shows = Shows();
         var withZero = shows.Where(s => s.Seasons.Any(x => x.N == 0)).ToList();
+        var inZero = shows.Sum(s => s.Seasons.Where(x => x.N == 0).Sum(x => x.Owned));
 
-        Assert.InRange(withZero.Count / (double)shows.Count, 0.45, 0.80);        // 65 of the real 122 have no numbered row
+        Assert.InRange(inZero / (double)shows.Sum(s => s.OwnedEpisodes), 0.05, 0.35);   // a minority, not the majority
+        Assert.InRange(withZero.Count / (double)shows.Count, 0.20, 0.75);               // of a real share of the series
+        Assert.Contains(shows, s => s.Seasons.All(x => x.N > 0));                       // some have none at all
         Assert.All(withZero.SelectMany(s => s.Seasons.Where(x => x.N == 0)), z =>
         {
             Assert.Equal(z.Owned, z.Total);                                      // nothing is ever invented in it
             Assert.Equal(Enumerable.Range(1, z.Total), z.Eps.Select(e => e.E));
+            Assert.Equal(z.Eps.Select(e => e.T).Order(StringComparer.Ordinal), z.Eps.Select(e => e.T));   // ordinal name order
             Assert.All(z.Eps, e => { Assert.True(e.O); Assert.Null(e.Air); Assert.Null(e.Rt); Assert.Null(e.Ov); Assert.Null(e.S); });
         });
     }
 
     [Fact]
-    public void ABareOnlySeriesIsStillPaddedWithSeasonsTheOwnerHasNoEpisodeOf()
+    public void BareRowsMatchTheInventedTmdbListFullyMostlyOrNotAtAllAndTheRateVariesPerSeries()
     {
-        var shows = Shows();
-        var bareOnly = shows.Where(s => s.Seasons.Where(x => x.Owned > 0).All(x => x.N == 0)).ToList();
-        var padded = bareOnly.Where(s => s.OwnedEpisodes < s.TotalEpisodes).ToList();
-        var full = bareOnly.Where(s => s.OwnedEpisodes == s.TotalEpisodes).ToList();
+        var series = BareSeries();
+        var full = series.Where(x => x.Match == Match.Full).ToList();
+        var mixed = series.Where(x => x.Match == Match.Mixed).ToList();
+        var unplaced = series.Where(x => x.Match == Match.Unplaced).ToList();
 
-        Assert.True(bareOnly.Count > shows.Count / 3, "bare-only series should be a large share");
-        Assert.NotEmpty(padded);
         Assert.NotEmpty(full);
-        Assert.All(full, s => Assert.Equal([0], s.Seasons.Select(x => x.N)));
-        Assert.All(padded, s =>
+        Assert.NotEmpty(mixed);
+        Assert.NotEmpty(unplaced);
+        Assert.True(mixed.Count > full.Count && mixed.Count > unplaced.Count, "most series should be mixed");
+        Assert.InRange(full.Count / (double)series.Count, 0.15, 0.45);
+        Assert.InRange(unplaced.Count / (double)series.Count, 0.03, 0.20);              // a few
+        Assert.True(mixed.Select(x => (int)Math.Round(10.0 * x.Residue / x.Bare)).Distinct().Count() >= 4,
+                    "the unmatched share should differ from series to series, not be one global ratio");
+        Assert.All(full, x => Assert.DoesNotContain(x.Show.Seasons, z => z.N == 0 && z.Owned > 0 && z.Eps.Any(e => e.T.StartsWith("Episode name"))));
+    }
+
+    [Fact]
+    public void ARowThatClaimsASlotIsOwnedInItsSeasonWithFullSyntheticMetadata()
+    {
+        var (rows, ledger) = SeriesLibrary();
+        var claimedTotal = 0;
+
+        foreach (var show in FixtureGenerator.Build([], rows).Item2)
         {
-            Assert.Equal(0, s.Seasons[0].N);
-            Assert.True(s.Seasons.Length >= 2);
-            Assert.Equal(Enumerable.Range(1, s.Seasons.Length - 1), s.Seasons.Skip(1).Select(x => x.N));
-            Assert.All(s.Seasons.Skip(1), x => Assert.Equal(0, x.Owned));
-        });
+            var bareNames = ledger.Where(o => o.Series == show.T && o.Season is null).Select(o => o.Name).ToHashSet();
+            var claimed = show.Seasons.Where(s => s.N > 0).SelectMany(s => s.Eps.Where(e => e.O && bareNames.Contains(e.T))).ToList();
+
+            claimedTotal += claimed.Count;
+            Assert.All(claimed, e =>
+            {
+                Assert.NotNull(e.Air);
+                Assert.Equal(44, e.Rt);
+                Assert.False(string.IsNullOrWhiteSpace(e.Ov));
+                Assert.Null(e.S);               // never an image, as everywhere else
+            });
+        }
+
+        Assert.True(claimedTotal > 1000, $"only {claimedTotal} bare rows claimed a slot");
+    }
+
+    [Fact]
+    public void TheInventedTmdbSeasonsOfASeriesWithNoNumberedRowAreSensiblySizedAndSpreadOutTheUnownedOnes()
+    {
+        var (rows, ledger) = SeriesLibrary();
+        var bareOnly = FixtureGenerator.Build([], rows).Item2
+            .Where(s => ledger.Where(o => o.Series == s.T).All(o => o.Season is null) && s.Seasons.Any(x => x.N > 0 && x.Owned > 0))
+            .ToList();
+
+        Assert.True(bareOnly.Count > 20, $"only {bareOnly.Count} bare-only series claimed anything");
+        Assert.All(bareOnly.SelectMany(s => s.Seasons.Where(x => x.N > 0)), x => Assert.InRange(x.Total, 1, 29));
+        Assert.All(bareOnly.Where(s => s.Seasons.Count(x => x.N > 0 && x.Owned > 0) > 1),
+                   s => Assert.All(s.Seasons.Where(x => x.N > 0), x => Assert.True(x.Total >= 6, $"{s.T} S{x.N} has {x.Total}")));
+        // unowned episodes sit among the owned ones, not in a block at the end
+        Assert.Contains(bareOnly, s => s.Seasons.Any(x => x.N > 0 && x.Owned > 0 && x.Eps.Any(e => !e.O && e.E < x.Eps.Where(o => o.O).Max(o => o.E))));
+    }
+
+    [Fact]
+    public void WhichRowsClaimASlotDoesNotDependOnTheOrderOfTheSheetRows()
+    {
+        var rows = SeriesRows();
+        static string Run(IEnumerable<SheetRow> r) => JsonSerializer.Serialize(FixtureGenerator.Build([], [.. r]).Item2);
+
+        var expected = Run(rows);
+
+        Assert.Equal(expected, Run(rows.AsEnumerable().Reverse()));
+        Assert.Equal(expected, Run(rows.OrderBy(r => r.Title, StringComparer.Ordinal)));
     }
 
     // ---- F. a complete season beside an incomplete one ---------------------------------------

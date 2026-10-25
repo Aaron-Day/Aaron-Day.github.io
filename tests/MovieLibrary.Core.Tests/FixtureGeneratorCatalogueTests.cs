@@ -531,16 +531,15 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     }
 
     [Fact]
-    public void UnnumberedEpisodesFormSeasonZeroAndAreNumberedInNameOrder()
+    public void UnnumberedRowsAreOwnedEpisodesExactlyOnceWhereverTheyLand()
     {
         var zulu = FixtureGenerator.Build([], MixedRows()).Item2.Single(s => s.T == "Zulu");
 
-        var season = Assert.Single(zulu.Seasons, s => s.Owned > 0);
-        var owned = season.Eps.Where(e => e.O).ToArray();
-        Assert.Equal(0, season.N);              // TvPipeline's "unplaced episodes" group
-        Assert.Equal([1, 2], owned.Select(e => e.E));
-        Assert.Equal(["A Standalone Special", "Another Special"], owned.Select(e => e.T));
-        Assert.Equal(2, season.Owned);
+        // Each bare name either claims a slot in a season or is left in season 0; that is a draw (see
+        // FixtureGeneratorRealismTests), so only "owned, once" is asserted here.
+        var owned = zulu.Seasons.SelectMany(s => s.Eps.Where(e => e.O)).Select(e => e.T).Order(StringComparer.Ordinal);
+        Assert.Equal(["A Standalone Special", "Another Special"], owned);
+        Assert.Equal(2, zulu.OwnedEpisodes);
     }
 
     [Fact]

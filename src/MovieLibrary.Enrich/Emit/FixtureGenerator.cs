@@ -25,11 +25,15 @@ namespace MovieLibrary.Enrich.Emit;
 /// owner skipped is a wholly unowned season (Owned 0, six to twenty-four unowned episodes) among the owned ones, and
 /// a big-gap series may list up to three more past the last. The owned-only season list must drop these; the full
 /// list shows them.</para>
-/// <para><b>Placement follows TvPipeline.</b> A row with no season (or season 0) is an owned episode of season 0, the
-/// "unplaced" group, in ordinal name order and numbered from 1, with no date, runtime or overview and never padded; over
-/// half of the real series have no numbered row at all. The same numbered episode listed twice is one. A series with no
-/// numbered season is still given at least one wholly unowned TMDB season (unless it is the fully owned shape). Some
-/// few-missing and half-missing series mix: early seasons the owner has all of beside a latest season he has part of.</para>
+/// <para><b>Placement follows TvPipeline.</b> A bare-named row (no season) is matched by name against the series' TMDB
+/// list, and a row that finds an episode CLAIMS it: it comes out owned in that episode's true season with a date, runtime
+/// and overview. Only a name TMDB does not list falls through to season 0, the "unplaced" group: ordinal name order,
+/// numbered from 1, no date, runtime or overview, never padded. Nobody knows the real match rate, so the fixtures cover
+/// the range, drawn per series: three in ten fully matched (no season 0), six in ten matching 55 to 90 percent of their
+/// names, one in ten matching none. Season 0 therefore holds a minority of owned episodes. A series with no numbered row
+/// gets an invented TMDB list for its claimed rows; a series with numbered rows lets its matching extras claim unowned
+/// slots of the numbered seasons (never the latest). The same numbered episode listed twice is one. Some few-missing and
+/// half-missing series mix: early seasons the owner has all of beside a latest season he has part of.</para>
 /// <para><b>Collections, taglines, air dates.</b> A collection holds two to five films that are neighbours in ordinal
 /// title order, named after the first of them, so the "other films in this collection" view has films to show. About
 /// four films in five get a synthetic tagline and the rest none, so both layouts are exercised. Every episode, owned
@@ -113,7 +117,9 @@ public static class FixtureGenerator
                       SaltTaglineChance = 9, SaltTaglineText = 10, SaltCollectionSize = 11,
                       SaltSeriesShape = 12, SaltSeasonTail = 13, SaltAirStart = 14, SaltEpisodeTitle = 15,
                       SaltTrailingSeasons = 16, SaltUnownedSeasonSize = 17, SaltYear = 18, SaltVote = 19,
-                      SaltOverview = 20, SaltId = 21, SaltFirstYear = 22, SaltSeasonComplete = 23, SaltMixedSeries = 24;
+                      SaltOverview = 20, SaltId = 21, SaltFirstYear = 22, SaltSeasonComplete = 23, SaltMixedSeries = 24,
+                      SaltMatchShape = 25, SaltMatchRate = 26, SaltRowMatch = 27, SaltClaimOrder = 28, SaltSlotRank = 29,
+                      SaltClaimSeasonSize = 30;
 
     // Obviously synthetic, from a few words to a sentence that must wrap, because the tagline is a laid-out field.
     private static readonly string[] Taglines =
@@ -289,13 +295,93 @@ public static class FixtureGenerator
     }
 
     /// <summary>
+    /// Does a bare-named row find an episode of the same name in this series' TMDB list? A real run asks that of each
+    /// name, and the answer depends on how well Apple's titles agree with TMDB's, which nobody knows yet. So the rate is
+    /// drawn per series: three in ten series are matched in full (no unmatched rows), six in ten match 55 to 90 percent
+    /// of their names (each name decided by its own hash, so row order never matters), one in ten matches none.
+    /// </summary>
+    private static bool Claims(int seriesSeed, string rowName)
+    {
+        var kind = Pick(seriesSeed, SaltMatchShape, 10);
+        if (kind <= 2) return true;
+        if (kind == 9) return false;
+        return Pick(Seed(rowName), SaltRowMatch, 100) < 55 + Pick(seriesSeed, SaltMatchRate, 36);
+    }
+
+    /// <summary>
+    /// A series with numbered rows: its matching bare rows claim episodes TMDB lists and the owner would not otherwise
+    /// have, scattered over the unowned slots of the numbered seasons except the latest (which stays incomplete). A bare
+    /// row with no free slot left is unmatched. Returns those; the seasons are updated in place.
+    /// </summary>
+    private static List<string> ClaimSlots(List<SeasonRecord> seasons, List<string> claimers, int latest, string name)
+    {
+        var slots = seasons.Where(s => s.N != latest)
+            .SelectMany(s => s.Eps.Where(e => !e.O).Select(e => (Season: s.N, e.E)))
+            .OrderBy(c => Pick(Seed($"{name}/{c.Season}/{c.E}"), SaltSlotRank, int.MaxValue)).ThenBy(c => c.Season).ThenBy(c => c.E)
+            .Take(claimers.Count).OrderBy(c => c.Season).ThenBy(c => c.E).ToList();
+        var order = claimers.OrderBy(n => Pick(Seed(n), SaltClaimOrder, int.MaxValue)).ThenBy(n => n, StringComparer.Ordinal).ToList();
+        var claimed = slots.Zip(order).ToDictionary(x => x.First, x => x.Second);
+
+        for (var i = 0; i < seasons.Count; i++)
+        {
+            var season = seasons[i];
+            var eps = season.Eps.Select(e => claimed.TryGetValue((season.N, e.E), out var who) ? e with { T = who, O = true } : e).ToArray();
+            seasons[i] = season with { Owned = eps.Count(e => e.O), Eps = eps };
+        }
+
+        return order.Skip(slots.Count).ToList();
+    }
+
+    /// <summary>
+    /// A series with no numbered row has no TMDB list to claim from, so one is invented: the matching bare rows plus a
+    /// shape-sized number of unowned episodes (none when the series is fully owned), in seasons of 6 to 24 episodes. The
+    /// rows take a pseudo-random subset of the slots, so unowned episodes sit among the owned ones, and the final episode
+    /// of the final season is never claimed, so the latest season is incomplete.
+    /// </summary>
+    private static List<SeasonRecord> ClaimedSeasons(
+        string name, int shape, int bareCount, List<string> claimers, DateTime start, int runtime)
+    {
+        var unowned = shape > 0 ? MissingTail(shape, bareCount, Seed($"{name}/claims")) : 0;
+        var sizes = new List<int>();
+        for (var left = claimers.Count + unowned; left > 0;)
+        {
+            var size = Math.Min(left, 6 + Pick(Seed($"{name}/{sizes.Count + 1}"), SaltClaimSeasonSize, 19));
+            sizes.Add(size);
+            left -= size;
+        }
+
+        if (sizes.Count > 1 && sizes[^1] < 6)
+        {
+            sizes[^2] += sizes[^1];
+            sizes.RemoveAt(sizes.Count - 1);
+        }
+
+        var all = sizes.SelectMany((size, k) => Enumerable.Range(1, size).Select(e => (Season: k + 1, E: e))).ToList();
+        var eligible = unowned > 0 ? all[..^1] : all;
+        var order = claimers.OrderBy(n => Pick(Seed(n), SaltClaimOrder, int.MaxValue)).ThenBy(n => n, StringComparer.Ordinal).ToList();
+        var claimed = eligible
+            .OrderBy(c => Pick(Seed($"{name}/{c.Season}/{c.E}"), SaltSlotRank, int.MaxValue)).ThenBy(c => c.Season).ThenBy(c => c.E)
+            .Take(claimers.Count).OrderBy(c => c.Season).ThenBy(c => c.E)
+            .Zip(order).ToDictionary(x => x.First, x => x.Second);
+
+        return [.. sizes.Select((size, k) =>
+        {
+            var eps = Enumerable.Range(1, size).Select(e => claimed.TryGetValue((k + 1, e), out var who)
+                ? new EpisodeRecord(e, who, true, AirDate(start, k + 1, e), runtime, null, Sentences[Seed(who) % Sentences.Length])
+                : UnownedEpisode(name, k + 1, e, start, runtime)).ToArray();
+            return new SeasonRecord(k + 1, eps.Count(x => x.O), eps.Length, eps);
+        })];
+    }
+
+    /// <summary>
     /// The seasons of one series. The Sheet's rows are the owned episodes and keep their numbers. TMDB would also
     /// list every number the owner does not have, so a padded season is the contiguous list 1..N, N being the
     /// highest owned number plus a seeded tail: a number the owner skipped is an unowned episode among the owned
-    /// ones, not a hole. Rows with no season, or season 0, are placed as TvPipeline.Place places an owned row that
-    /// no TMDB episode claims: season 0, the "unplaced" group, in ordinal name order and numbered from 1, with no
-    /// date, runtime or overview, and never padded. The same numbered episode listed twice is one (the first name
-    /// in ordinal order). A few-missing or half-missing series may mix: some of its early seasons are complete (the
+    /// ones, not a hole. A bare-named row (no season) is matched against the invented TMDB list as TvPipeline.Place
+    /// matches it against the real one: if it finds an episode it CLAIMS it, so it is owned in its true season with a
+    /// date, runtime and overview (see Claims for how often); a name nothing claims, and any row numbered season 0, is
+    /// the residue, season 0, the "unplaced" group: ordinal name order, numbered from 1, no date, runtime or overview,
+    /// never padded. The same numbered episode listed twice is one (the first name in ordinal order). A few-missing or half-missing series may mix: some of its early seasons are complete (the
     /// owner has all of them) and the latest owned season never is; a big-gap series never does. Seasons work the same way: a padded series lists every season from 1 to its last owned one,
     /// so a season the owner skipped is a wholly unowned season (Owned 0) among the owned ones, and a big-gap series
     /// may list a few more past the last. A fully owned series is left exactly as the Sheet has it.
@@ -307,16 +393,10 @@ public static class FixtureGenerator
         var shape = Pick(seed, SaltSeriesShape, 10);
         var start = new DateTime(firstYear, 1, 1).AddDays(Pick(seed, SaltAirStart, 300));
 
-        var unplaced = parsed.Where(p => p.Season is null or 0)
-            .OrderBy(p => p.Name, StringComparer.Ordinal).ThenBy(p => p.Episode)
-            .Select((p, i) => new EpisodeRecord(i + 1, p.Name, true, null, null, null, null))
-            .ToArray();
-        var seasons = new List<SeasonRecord>();
-        if (unplaced.Length > 0) seasons.Add(new SeasonRecord(0, unplaced.Length, unplaced.Length, unplaced));
-
         var numbered = parsed.Where(p => p.Season >= 1).GroupBy(p => p.Season!.Value).OrderBy(g => g.Key).ToList();
         var lastNumbered = numbered.Count == 0 ? 0 : numbered[^1].Key;
         var mixed = shape is >= 1 and <= 8 && Pick(seed, SaltMixedSeries, 2) == 0;
+        var seasons = new List<SeasonRecord>();
 
         seasons.AddRange(numbered
             .Select(s =>
@@ -343,11 +423,26 @@ public static class FixtureGenerator
                 return new SeasonRecord(s.Key, owned.Count, ordered.Length, ordered);
             }));
 
-        if (shape == 0) return [.. seasons];
+        // Bare rows: the ones that find a TMDB episode of their name claim it; the rest are unmatched.
+        var claimers = parsed.Where(p => p.Season is null && Claims(seed, p.Name)).Select(p => p.Name).ToList();
+        var unmatched = parsed.Where(p => p.Season is 0 || (p.Season is null && !Claims(seed, p.Name))).ToList();
+        if (claimers.Count > 0 && numbered.Count > 0)
+            unmatched.AddRange(ClaimSlots(seasons, claimers, lastNumbered, name).Select(n => new ParsedEpisodeTitle(null, null, n)));
+        else if (claimers.Count > 0)
+            seasons.AddRange(ClaimedSeasons(name, shape, parsed.Count(p => p.Season is null), claimers, start, runtime));
 
-        // A series whose rows carry no season has no numbered anchor, but TMDB still lists at least one season.
-        var held = numbered.Select(g => g.Key).ToHashSet();
-        var lastSeason = Math.Max(1, Math.Min(lastNumbered, MaxFilledSeasonNumber) + TrailingSeasons(shape, seed));
+        var unplaced = unmatched
+            .OrderBy(p => p.Name, StringComparer.Ordinal).ThenBy(p => p.Episode)
+            .Select((p, i) => new EpisodeRecord(i + 1, p.Name, true, null, null, null, null))
+            .ToArray();
+        if (unplaced.Length > 0) seasons.Add(new SeasonRecord(0, unplaced.Length, unplaced.Length, unplaced));
+
+        if (shape == 0) return [.. seasons.OrderBy(x => x.N)];
+
+        // A series with no season to hang on (every row unmatched) still has TMDB seasons to reveal: at least one.
+        var held = seasons.Select(x => x.N).ToHashSet();
+        var latest = seasons.Count == 0 ? 0 : seasons.Max(x => x.N);
+        var lastSeason = Math.Max(1, Math.Min(latest, MaxFilledSeasonNumber) + TrailingSeasons(shape, seed));
         return [.. seasons
             .Concat(Enumerable.Range(1, lastSeason).Where(n => !held.Contains(n))
                               .Select(n => UnownedSeason(name, n, start, runtime)))
