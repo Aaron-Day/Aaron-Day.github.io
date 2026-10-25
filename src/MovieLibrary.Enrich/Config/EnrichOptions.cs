@@ -1,16 +1,18 @@
 using System.Globalization;
+using System.Text.Json.Serialization;
 
 namespace MovieLibrary.Enrich.Config;
 
 /// <remarks>
 /// <b>The token never prints.</b> A record's generated ToString writes every member, and a stray log line on a
-/// public repository's Actions run is world-readable, so ToString is overridden to redact <see cref="Token"/>.
+/// public repository's Actions run is world-readable, so ToString is overridden to redact <see cref="Token"/> and the
+/// property is ignored by System.Text.Json, the other way a whole record gets written to a log.
 /// <b>Empty is absent.</b> An unset Actions variable arrives as an empty string, so an empty or blank environment
 /// variable or flag value counts as not given. <b>A budget below zero is an error</b>: RequestBudget reads anything
 /// at or under 0 as unlimited, so a typo such as <c>--max-requests -5</c> would turn a 40-request run into thousands.
 /// </remarks>
 public sealed record EnrichOptions(
-    string SheetId, string Token, int MaxRequests,
+    string SheetId, [property: JsonIgnore] string Token, int MaxRequests,
     string CacheRoot, string OutputRoot, bool Fixtures, bool ForceRefresh)
 {
     public const string DefaultSheetId = "1gkDwOi5-Gvm48WkYz8noYUb5i6QjfQSDLpEDYV5QlHk";

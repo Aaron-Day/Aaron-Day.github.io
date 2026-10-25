@@ -542,19 +542,77 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         Assert.Equal(2, zulu.OwnedEpisodes);
     }
 
+    private static SheetRow Disagree(string series, string genre, string runtime, int e)
+        => new($"Season 1, Episode {e}: Ep {e}", runtime, "", "", genre, series);
+
+    [Fact]
+    public void RowsThatDisagreeAboutASeriesAreResolvedByTheMostCommonValueWhateverTheirOrder()
+    {
+        // The pipeline takes the most common spelling, genre and (here) runtime, so a re-export that reorders Apple's
+        // rows cannot change the series. The minority view comes first, so taking the first row would be wrong.
+        var rows = new List<SheetRow>
+        {
+            Disagree(" quiz show", "Comedy", "30:00:00", 1),
+            Disagree("Quiz Show", "Drama", "44:00:00", 2), Disagree("Quiz Show", "Drama", "44:00:00", 3),
+            Disagree("Quiz Show", "Drama", "44:00:00", 4), Disagree("QUIZ SHOW", "Comedy", "30:00:00", 5),
+        };
+
+        var forward = FixtureGenerator.Build([], rows).Item2.Single();
+        var backward = FixtureGenerator.Build([], [.. rows.AsEnumerable().Reverse()]).Item2.Single();
+
+        Assert.Equal("Quiz Show", forward.T);
+        Assert.Equal("quiz-show", forward.Slug);
+        Assert.Equal("Drama", forward.Ag);
+        Assert.Equal([44], forward.Seasons.SelectMany(s => s.Eps).Where(e => e.Rt is not null).Select(e => e.Rt!.Value).Distinct());
+        Assert.Equal(JsonSerializer.Serialize(forward), JsonSerializer.Serialize(backward));
+    }
+
+    [Fact]
+    public void ARowWithAnUnreadableRuntimeIsSkippedUnlessNoRowIsReadable()
+    {
+        var good = new SheetRow("Season 1, Episode 1: A", "44:00:00", "", "", "Drama", "Run");
+        var bad = new SheetRow("Season 1, Episode 2: B", "not a runtime", "", "", "Drama", "Run");
+
+        foreach (var order in new[] { new[] { bad, good }, [good, bad] })
+        {
+            var show = FixtureGenerator.Build([], order).Item2.Single();
+
+            Assert.Equal([44], show.Seasons.SelectMany(s => s.Eps).Where(e => e.Rt is not null).Select(e => e.Rt!.Value).Distinct());
+        }
+
+        Assert.Throws<FormatException>(() => FixtureGenerator.Build([], [bad]));
+    }
+
+    [Fact]
+    public void WhenRowsDisagreeEvenlyTheTieGoesToTheOrdinalFirstSpellingAndGenreAndTheShorterRuntime()
+    {
+        var rows = new List<SheetRow>
+        {
+            Disagree("beta", "Drama", "44:00:00", 1), Disagree("Beta", "Comedy", "30:00:00", 2),
+        };
+
+        foreach (var order in new[] { rows, [.. rows.AsEnumerable().Reverse()] })
+        {
+            var show = FixtureGenerator.Build([], order).Item2.Single();
+
+            Assert.Equal("Beta", show.T);                   // 'B' sorts before 'b'
+            Assert.Equal("Comedy", show.Ag);                // 'C' before 'D'
+            Assert.Equal([30], show.Seasons.SelectMany(s => s.Eps).Where(e => e.Rt is not null).Select(e => e.Rt!.Value).Distinct());
+        }
+    }
+
     [Fact]
     public void EpisodeRuntimesComeFromTheSheetAndEveryPlacedEpisodeHasAnOverviewAndAirDate()
     {
         var (_, shows) = FixtureGenerator.Build([], MixedRows());
 
         // "44:50:59" is Sheets coercion of 44m50s, and a plain "23:04" is 23 minutes.
-        Assert.All(shows.Single(s => s.T == "alias").Seasons.SelectMany(s => s.Eps), e => Assert.Equal(44, e.Rt));
-        Assert.All(shows.Single(s => s.T == "Zulu").Seasons.Where(s => s.N > 0).SelectMany(s => s.Eps), e => Assert.Equal(23, e.Rt));
+        // An owned numbered row TMDB does not list (a few, drawn per episode) has nothing but its title, as in TvPipeline.
+        static bool Unlisted(EpisodeRecord e) => e.O && e.Air is null && e.Rt is null && e.Ov is null && e.S is null;
+        Assert.All(shows.Single(s => s.T == "alias").Seasons.SelectMany(s => s.Eps), e => Assert.True(e.Rt == 44 || Unlisted(e)));
+        Assert.All(shows.Single(s => s.T == "Zulu").Seasons.Where(s => s.N > 0).SelectMany(s => s.Eps), e => Assert.True(e.Rt == 23 || Unlisted(e)));
         Assert.All(shows.SelectMany(s => s.Seasons).Where(s => s.N > 0).SelectMany(s => s.Eps), e =>
-        {
-            Assert.False(string.IsNullOrWhiteSpace(e.Ov));
-            Assert.NotNull(e.Air);
-        });
+            Assert.True(Unlisted(e) || (e.Air is not null && !string.IsNullOrWhiteSpace(e.Ov))));
         // Rows no TMDB episode claimed (season 0) carry no runtime, overview or date, as in TvPipeline.
         Assert.All(shows.SelectMany(s => s.Seasons).Where(s => s.N == 0).SelectMany(s => s.Eps), e =>
         {

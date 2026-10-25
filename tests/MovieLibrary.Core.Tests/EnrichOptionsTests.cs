@@ -1,3 +1,4 @@
+using System.Text.Json;
 using MovieLibrary.Enrich.Config;
 
 namespace MovieLibrary.Core.Tests;
@@ -129,6 +130,27 @@ public class EnrichOptionsTests : IDisposable
         Assert.Contains("my-cache", text);
         Assert.Contains("7", text);
         Assert.Contains("<redacted>", text);
+    }
+
+    [Fact]
+    public void SerialisingTheOptionsNeverWritesTheTokenEither()
+    {
+        var o = Load([], ("TMDB_TOKEN", "eyJhbGciOiJIUzI1NiJ9.live-secret-value.signature"), ("SHEET_ID", "my-sheet"));
+
+        var outputs = new[]
+        {
+            JsonSerializer.Serialize(o),
+            JsonSerializer.Serialize<object>(o),
+            JsonSerializer.Serialize(o, new JsonSerializerOptions { WriteIndented = true, IncludeFields = true }),
+            JsonSerializer.Serialize(o, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }),
+        };
+
+        Assert.All(outputs, json =>
+        {
+            Assert.DoesNotContain("live-secret-value", json);
+            Assert.DoesNotContain("token", json, StringComparison.OrdinalIgnoreCase);     // not even the property name
+            Assert.Contains("my-sheet", json);                                              // the rest is still written
+        });
     }
 
     [Fact]

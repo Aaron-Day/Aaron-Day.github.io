@@ -8,8 +8,8 @@ namespace MovieLibrary.Enrich.Emit;
 
 /// <summary>
 /// Builds a full-size catalog from the Sheet alone, with zero TMDB calls, so UI
-/// work is never gated on enrichment progress. Synthetic values are derived from
-/// a hash of the title, making every run byte-identical.
+/// work is never gated on enrichment progress. Synthetic values are derived from a
+/// stable hash (<see cref="Seed"/>) of the title or name, each field with its own salt, making every run byte-identical.
 /// </summary>
 /// <remarks>
 /// <para>Real from the Sheet: title, runtime, directors, the Apple genre (<c>Ag</c>) and purchase bundle. Everything
@@ -31,13 +31,16 @@ namespace MovieLibrary.Enrich.Emit;
 /// numbered from 1, no date, runtime or overview, never padded. Nobody knows the real match rate, so the fixtures cover
 /// the range, drawn per series: three in ten fully matched (no season 0), six in ten matching 55 to 90 percent of their
 /// names, one in ten matching none. Season 0 therefore holds a minority of owned episodes. A series with no numbered row
-/// gets an invented TMDB list for its claimed rows; a series with numbered rows lets its matching extras claim unowned
-/// slots of the numbered seasons (never the latest). The same numbered episode listed twice is one. Some few-missing and
-/// half-missing series mix: early seasons the owner has all of beside a latest season he has part of.</para>
+/// gets an invented TMDB list (at most 20 seasons) for its claimed rows; a series with numbered rows lets its matching
+/// extras claim unowned slots of its numbered seasons, and when those run out its latest season grows, always leaving one
+/// episode unowned in a padded series. The same numbered episode listed twice is one. A few owned numbered episodes are
+/// ones TMDB does not list: owned, with nothing but a title. Some few-missing and half-missing series mix: early seasons
+/// the owner has all of beside a latest season he has part of. Series spelling, genre and runtime are what most of a
+/// series' rows say, ties ordinal, because Apple does not keep its export order stable.</para>
 /// <para><b>Collections, taglines, air dates.</b> A collection holds two to five films that are neighbours in ordinal
 /// title order, named after the first of them, so the "other films in this collection" view has films to show. About
-/// four films in five get a synthetic tagline and the rest none, so both layouts are exercised. Every episode, owned
-/// or not, has an ISO air date that ascends through its season.</para>
+/// four films in five get a synthetic tagline and the rest none, so both layouts are exercised. Every episode TMDB lists,
+/// owned or not, has an ISO air date that ascends through its season.</para>
 /// <para><b>No image path is ever produced</b> (<c>P</c>, <c>B</c>, cast <c>P</c>, episode stills): with no path the
 /// UI cannot request an image, so fixture data cannot cause a single HTTP request.</para>
 /// <para><b>Match confidence.</b> A film is <c>0.95</c>. The best an algorithmic match can score is 0.95, so
@@ -119,7 +122,7 @@ public static class FixtureGenerator
                       SaltTrailingSeasons = 16, SaltUnownedSeasonSize = 17, SaltYear = 18, SaltVote = 19,
                       SaltOverview = 20, SaltId = 21, SaltFirstYear = 22, SaltSeasonComplete = 23, SaltMixedSeries = 24,
                       SaltMatchShape = 25, SaltMatchRate = 26, SaltRowMatch = 27, SaltClaimOrder = 28, SaltSlotRank = 29,
-                      SaltClaimSeasonSize = 30;
+                      SaltClaimSeasonSize = 30, SaltUnlisted = 31;
 
     // Obviously synthetic, from a few words to a sentence that must wrap, because the tagline is a laid-out field.
     private static readonly string[] Taglines =
@@ -148,6 +151,12 @@ public static class FixtureGenerator
 
     // The same guard for seasons: one mistyped "Season 2000000000" must not become two billion fixture seasons.
     private const int MaxFilledSeasonNumber = 30;
+
+    // An invented TMDB list (for a series with no numbered row) has at most this many seasons of at most 24 episodes,
+    // and a series with numbered rows grows its latest season by at most this many to hold extra claimed rows.
+    private const int MaxInventedSeasons = 20;
+    private const int MaxInventedSlots = MaxInventedSeasons * 24;
+    private const int MaxAppendedSlots = 30;
 
     /// <summary>
     /// A hash of the text that is the same in every process, on every machine and under every culture, because the
@@ -309,41 +318,120 @@ public static class FixtureGenerator
     }
 
     /// <summary>
-    /// A series with numbered rows: its matching bare rows claim episodes TMDB lists and the owner would not otherwise
-    /// have, scattered over the unowned slots of the numbered seasons except the latest (which stays incomplete). A bare
-    /// row with no free slot left is unmatched. Returns those; the seasons are updated in place.
+    /// The slots a set of claimers take: ranked by a hash of series, season and number, then put back in order. Which
+    /// slots are chosen is fixed by names and numbers alone, never by the order of the Sheet's rows, and the hash is
+    /// <see cref="Seed"/>, which is the same in every process.
     /// </summary>
-    private static List<string> ClaimSlots(List<SeasonRecord> seasons, List<string> claimers, int latest, string name)
-    {
-        var slots = seasons.Where(s => s.N != latest)
-            .SelectMany(s => s.Eps.Where(e => !e.O).Select(e => (Season: s.N, e.E)))
+    private static List<(int Season, int E)> PickSlots(string name, IEnumerable<(int Season, int E)> candidates, int count)
+        => [.. candidates
             .OrderBy(c => Pick(Seed($"{name}/{c.Season}/{c.E}"), SaltSlotRank, int.MaxValue)).ThenBy(c => c.Season).ThenBy(c => c.E)
-            .Take(claimers.Count).OrderBy(c => c.Season).ThenBy(c => c.E).ToList();
-        var order = claimers.OrderBy(n => Pick(Seed(n), SaltClaimOrder, int.MaxValue)).ThenBy(n => n, StringComparer.Ordinal).ToList();
+            .Take(count).OrderBy(c => c.Season).ThenBy(c => c.E)];
+
+    /// <summary>The order claimers are dealt slots in: a hash of the name, ties ordinal, so row order never matters.</summary>
+    private static List<string> ClaimOrder(IEnumerable<string> claimers)
+        => [.. claimers.OrderBy(n => Pick(Seed(n), SaltClaimOrder, int.MaxValue)).ThenBy(n => n, StringComparer.Ordinal)];
+
+    /// <summary>An episode a bare row claimed: owned, carrying the row's name and a TMDB-style date, runtime and overview.</summary>
+    private static EpisodeRecord ClaimedEpisode(string who, int season, int number, DateTime start, int runtime)
+        => new(number, who, true, AirDate(start, season, number), runtime, null, Sentences[Seed(who) % Sentences.Length]);
+
+    /// <summary>
+    /// An owned numbered row whose season and episode TMDB does not list is added owned with nothing but its title: no
+    /// date, runtime, still or overview (TvPipeline.Place). A few episodes are drawn that way, so the state is reachable.
+    /// </summary>
+    private static bool Unlisted(string name, int season, int number)
+        => Pick(Seed($"{name}/{season}/{number}/unlisted"), SaltUnlisted, 40) == 0;
+
+    private static T MostCommon<T>(IEnumerable<T> values, IComparer<T> ties) where T : notnull
+        => values.GroupBy(v => v).OrderByDescending(g => g.Count()).ThenBy(g => g.Key, ties).First().Key;
+
+    /// <summary>
+    /// A series' episode runtime: the most common among its rows (ties: the shorter), so the order of Apple's rows, which
+    /// is not stable, cannot change it. A row that cannot be read is skipped; a series with none readable still throws.
+    /// </summary>
+    private static int SeriesRuntime(IReadOnlyList<SheetRow> rows)
+    {
+        var minutes = new List<int>();
+        foreach (var row in rows)
+        {
+            try { minutes.Add(RuntimeParser.EpisodeMinutes(row.Runtime)); }
+            catch (FormatException) { }
+        }
+
+        return minutes.Count > 0 ? MostCommon(minutes, Comparer<int>.Default) : RuntimeParser.EpisodeMinutes(rows[0].Runtime);
+    }
+
+    /// <summary>
+    /// A series with numbered rows: its matching bare rows claim episodes TMDB lists and the owner would not otherwise
+    /// have, scattered over the unowned slots of the numbered seasons. A padded series' latest numbered season keeps its
+    /// highest unowned episode, so it stays incomplete. If the extras outnumber the free slots, TMDB's latest season runs
+    /// longer than the owner's rows and grows to hold them (up to a limit). Returns the extras still without a slot, which
+    /// are unmatched; the seasons are updated in place.
+    /// </summary>
+    private static List<string> ClaimSlots(
+        List<SeasonRecord> seasons, List<string> claimers, int latest, string name, bool padded, DateTime start, int runtime)
+    {
+        var kept = padded
+            ? seasons.Where(s => s.N == latest).SelectMany(s => s.Eps.Where(e => !e.O)).Select(e => e.E).DefaultIfEmpty(-1).Max()
+            : -1;
+        var free = seasons.SelectMany(s => s.Eps.Where(e => !e.O && !(s.N == latest && e.E == kept)).Select(e => (Season: s.N, e.E)));
+        var slots = PickSlots(name, free, claimers.Count);
+        var order = ClaimOrder(claimers);
         var claimed = slots.Zip(order).ToDictionary(x => x.First, x => x.Second);
+
+        var lastEpisode = seasons.Where(s => s.N == latest).Select(s => s.Eps.Max(e => e.E)).DefaultIfEmpty(int.MaxValue).Max();
+        var grown = lastEpisode <= MaxFilledEpisodeNumber ? order.Skip(slots.Count).Take(MaxAppendedSlots).ToList() : [];
 
         for (var i = 0; i < seasons.Count; i++)
         {
             var season = seasons[i];
-            var eps = season.Eps.Select(e => claimed.TryGetValue((season.N, e.E), out var who) ? e with { T = who, O = true } : e).ToArray();
-            seasons[i] = season with { Owned = eps.Count(e => e.O), Eps = eps };
+            var eps = season.Eps.Select(e => claimed.TryGetValue((season.N, e.E), out var who) ? e with { T = who, O = true } : e);
+            if (season.N == latest)
+                eps = eps.Concat(grown.Select((who, k) => ClaimedEpisode(who, season.N, lastEpisode + 1 + k, start, runtime)));
+
+            var all = eps.ToArray();
+            seasons[i] = season with { Owned = all.Count(e => e.O), Total = all.Length, Eps = all };
         }
 
-        return order.Skip(slots.Count).ToList();
+        return order.Skip(slots.Count + grown.Count).ToList();
     }
 
     /// <summary>
     /// A series with no numbered row has no TMDB list to claim from, so one is invented: the matching bare rows plus a
-    /// shape-sized number of unowned episodes (none when the series is fully owned), in seasons of 6 to 24 episodes. The
-    /// rows take a pseudo-random subset of the slots, so unowned episodes sit among the owned ones, and the final episode
-    /// of the final season is never claimed, so the latest season is incomplete.
+    /// shape-sized number of unowned episodes (none when the series is fully owned), in seasons of 6 to 24 episodes, at
+    /// most <see cref="MaxInventedSeasons"/> of them: a series with hundreds of bare rows does not invent hundreds of
+    /// seasons, and the rows beyond what such a list holds are unmatched. The rows take a pseudo-random subset of the
+    /// slots, so unowned episodes sit among the owned ones, and the final episode of a padded list is never claimed, so
+    /// the latest season is incomplete. Returns the seasons and the unmatched rows.
     /// </summary>
-    private static List<SeasonRecord> ClaimedSeasons(
+    private static (List<SeasonRecord> Seasons, List<string> Unmatched) ClaimedSeasons(
         string name, int shape, int bareCount, List<string> claimers, DateTime start, int runtime)
     {
-        var unowned = shape > 0 ? MissingTail(shape, bareCount, Seed($"{name}/claims")) : 0;
+        var order = ClaimOrder(claimers);
+        var room = MaxInventedSlots - (shape > 0 ? 1 : 0);
+        var kept = order.Take(room).ToList();
+        var unowned = shape > 0 ? Math.Min(MissingTail(shape, bareCount, Seed($"{name}/claims")), MaxInventedSlots - kept.Count) : 0;
+        var sizes = SeasonSizes(name, kept.Count + unowned);
+
+        var all = sizes.SelectMany((size, k) => Enumerable.Range(1, size).Select(e => (Season: k + 1, E: e))).ToList();
+        var claimed = PickSlots(name, unowned > 0 ? all[..^1] : all, kept.Count).Zip(kept).ToDictionary(x => x.First, x => x.Second);
+
+        var seasons = sizes.Select((size, k) =>
+        {
+            var eps = Enumerable.Range(1, size).Select(e => claimed.TryGetValue((k + 1, e), out var who)
+                ? ClaimedEpisode(who, k + 1, e, start, runtime)
+                : UnownedEpisode(name, k + 1, e, start, runtime)).ToArray();
+            return new SeasonRecord(k + 1, eps.Count(x => x.O), eps.Length, eps);
+        }).ToList();
+
+        return (seasons, order.Skip(room).ToList());
+    }
+
+    /// <summary>Season lengths for an invented list: 6 to 24 each, a short last one merged back, at most 20 seasons.</summary>
+    private static List<int> SeasonSizes(string name, int total)
+    {
         var sizes = new List<int>();
-        for (var left = claimers.Count + unowned; left > 0;)
+        for (var left = total; left > 0;)
         {
             var size = Math.Min(left, 6 + Pick(Seed($"{name}/{sizes.Count + 1}"), SaltClaimSeasonSize, 19));
             sizes.Add(size);
@@ -356,21 +444,11 @@ public static class FixtureGenerator
             sizes.RemoveAt(sizes.Count - 1);
         }
 
-        var all = sizes.SelectMany((size, k) => Enumerable.Range(1, size).Select(e => (Season: k + 1, E: e))).ToList();
-        var eligible = unowned > 0 ? all[..^1] : all;
-        var order = claimers.OrderBy(n => Pick(Seed(n), SaltClaimOrder, int.MaxValue)).ThenBy(n => n, StringComparer.Ordinal).ToList();
-        var claimed = eligible
-            .OrderBy(c => Pick(Seed($"{name}/{c.Season}/{c.E}"), SaltSlotRank, int.MaxValue)).ThenBy(c => c.Season).ThenBy(c => c.E)
-            .Take(claimers.Count).OrderBy(c => c.Season).ThenBy(c => c.E)
-            .Zip(order).ToDictionary(x => x.First, x => x.Second);
+        if (sizes.Count <= MaxInventedSeasons) return sizes;
 
-        return [.. sizes.Select((size, k) =>
-        {
-            var eps = Enumerable.Range(1, size).Select(e => claimed.TryGetValue((k + 1, e), out var who)
-                ? new EpisodeRecord(e, who, true, AirDate(start, k + 1, e), runtime, null, Sentences[Seed(who) % Sentences.Length])
-                : UnownedEpisode(name, k + 1, e, start, runtime)).ToArray();
-            return new SeasonRecord(k + 1, eps.Count(x => x.O), eps.Length, eps);
-        })];
+        // Drew too many short seasons: the same episodes spread evenly over the fewest seasons of at most 24.
+        var count = (total + 23) / 24;
+        return [.. Enumerable.Range(0, count).Select(k => total / count + (k < total % count ? 1 : 0))];
     }
 
     /// <summary>
@@ -408,9 +486,10 @@ public static class FixtureGenerator
                 var holeFree = taken.Max() <= MaxFilledEpisodeNumber && Enumerable.Range(1, taken.Max()).All(taken.Contains);
                 var complete = mixed && s.Key != lastNumbered && holeFree && Pick(seasonSeed, SaltSeasonComplete, 3) != 0;
 
-                var eps = owned.Select(o => new EpisodeRecord(
-                    o.Number, o.Name, true, AirDate(start, s.Key, o.Number), runtime, null,
-                    Sentences[Seed(o.Name) % Sentences.Length])).ToList();
+                var eps = owned.Select(o => Unlisted(name, s.Key, o.Number)
+                    ? new EpisodeRecord(o.Number, o.Name, true, null, null, null, null)
+                    : new EpisodeRecord(o.Number, o.Name, true, AirDate(start, s.Key, o.Number), runtime, null,
+                                        Sentences[Seed(o.Name) % Sentences.Length])).ToList();
 
                 if (shape > 0 && !complete)
                 {
@@ -427,9 +506,14 @@ public static class FixtureGenerator
         var claimers = parsed.Where(p => p.Season is null && Claims(seed, p.Name)).Select(p => p.Name).ToList();
         var unmatched = parsed.Where(p => p.Season is 0 || (p.Season is null && !Claims(seed, p.Name))).ToList();
         if (claimers.Count > 0 && numbered.Count > 0)
-            unmatched.AddRange(ClaimSlots(seasons, claimers, lastNumbered, name).Select(n => new ParsedEpisodeTitle(null, null, n)));
+            unmatched.AddRange(ClaimSlots(seasons, claimers, lastNumbered, name, shape > 0, start, runtime)
+                .Select(n => new ParsedEpisodeTitle(null, null, n)));
         else if (claimers.Count > 0)
-            seasons.AddRange(ClaimedSeasons(name, shape, parsed.Count(p => p.Season is null), claimers, start, runtime));
+        {
+            var (invented, leftover) = ClaimedSeasons(name, shape, parsed.Count(p => p.Season is null), claimers, start, runtime);
+            seasons.AddRange(invented);
+            unmatched.AddRange(leftover.Select(n => new ParsedEpisodeTitle(null, null, n)));
+        }
 
         var unplaced = unmatched
             .OrderBy(p => p.Name, StringComparer.Ordinal).ThenBy(p => p.Episode)
@@ -486,21 +570,22 @@ public static class FixtureGenerator
         var shows = showRows
             .Where(r => !string.IsNullOrWhiteSpace(r.Series))
             .GroupBy(r => r.Series.Trim(), StringComparer.OrdinalIgnoreCase)
-            .OrderBy(g => g.Key, StringComparer.Ordinal)
+            .Select(g => (Name: MostCommon(g.Select(r => r.Series.Trim()), StringComparer.Ordinal), Rows: g.ToList()))
+            .OrderBy(g => g.Name, StringComparer.Ordinal)
             .Select(g =>
             {
-                var showSeed = Seed(g.Key);
+                var showSeed = Seed(g.Name);
                 var firstYear = 1990 + Pick(showSeed, SaltFirstYear, 35);
-                var seasons = BuildSeasons(g.Key, firstYear, RuntimeParser.EpisodeMinutes(g.First().Runtime),
-                                           g.Select(r => EpisodeTitleParser.Parse(r.Title)));
+                var seasons = BuildSeasons(g.Name, firstYear, SeriesRuntime(g.Rows),
+                                           g.Rows.Select(r => EpisodeTitleParser.Parse(r.Title)));
 
                 return new ShowRecord(
                     I: ClaimId(showIds, 800_000 + Pick(showSeed, SaltId, 90_000)),
-                    T: g.Key,
-                    Slug: Slug.From(g.Key),
+                    T: g.Name,
+                    Slug: Slug.From(g.Name),
                     P: null,
                     FirstYear: firstYear,
-                    Ag: g.First().Genre,
+                    Ag: MostCommon(g.Rows.Select(r => r.Genre), StringComparer.Ordinal),
                     Seasons: seasons,
                     OwnedEpisodes: seasons.Sum(s => s.Owned),
                     TotalEpisodes: seasons.Sum(s => s.Total),
