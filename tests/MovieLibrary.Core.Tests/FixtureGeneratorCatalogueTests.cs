@@ -27,12 +27,12 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         ["Road", "City", "Garden", "Letter", "Harbor", "Mirror", "Season", "Promise", "Station",
          "Crown", "Orchard", "Bridge", "Kingdom", "Echo", "Witness", "Machine", "Island", "Tower"];
 
-    private static SheetRow Film(string title, string genre = "Comedy", string runtime = "1:30:00",
+    internal static SheetRow Film(string title, string genre = "Comedy", string runtime = "1:30:00",
                                  string directors = "Some Director", string purchase = "")
         => new(title, runtime, directors, purchase, genre, "");
 
     /// <summary>1,457 distinct, plausible titles from a fixed seed, with the Sheet's nine Apple genres.</summary>
-    private static List<SheetRow> Library(int count = 1457)
+    internal static List<SheetRow> Library(int count = 1457)
     {
         var rng = new Random(15);
         var seen = new HashSet<string>(StringComparer.Ordinal);
@@ -83,7 +83,6 @@ public class FixtureGeneratorCatalogueTests : IDisposable
             Assert.Equal(Math.Round(m.Vote, 1), m.Vote);
             Assert.InRange(m.I, 900_000, 999_999);
             Assert.False(string.IsNullOrWhiteSpace(m.Ov));
-            Assert.Null(m.Tag);
         });
     }
 
@@ -103,7 +102,7 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     [Fact]
     public void EverySyntheticFilmHasNoPosterOrBackdropSoNoImageRequestCanBeMade()
     {
-        var (movies, shows) = FixtureGenerator.Build(Library(), EpisodeRows("Alias", "Frasier"));
+        var (movies, shows) = FixtureGenerator.Build(Library(), FixtureGeneratorRealismTests.SeriesRows());
 
         Assert.All(movies, m => { Assert.Null(m.P); Assert.Null(m.B); });
         Assert.All(shows, s =>
@@ -141,7 +140,7 @@ public class FixtureGeneratorCatalogueTests : IDisposable
             [new SheetRow($"Season 1, Episode 1: {IntMinValueTitle}", "44:00:00", "", "", "Drama", IntMinValueTitle)]);
 
         Assert.Equal(IntMinValueTitle, Assert.Single(movies).T);
-        Assert.Equal(IntMinValueTitle, Assert.Single(shows).Seasons.Single().Eps.Single().T);
+        Assert.Equal(IntMinValueTitle, Assert.Single(shows).Seasons.Single().Eps.Single(e => e.O).T);
     }
 
     // ---- identity ------------------------------------------------------------------------
@@ -183,7 +182,9 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         Assert.Equal(alone.Vote, amongOthers.Vote);
         Assert.Equal(alone.G, amongOthers.G);
         Assert.Equal(alone.Cast, amongOthers.Cast);
-        Assert.Equal(alone.Col, amongOthers.Col);
+        Assert.Equal(alone.Tag, amongOthers.Tag);
+        // Not Col: a collection is a run of neighbours in title order, so a film's collection depends on the
+        // sheet around it by design (see FixtureGeneratorRealismTests).
     }
 
     [Fact]
@@ -340,14 +341,14 @@ public class FixtureGeneratorCatalogueTests : IDisposable
 
     // ---- collections ---------------------------------------------------------------------
 
+    // How many films a collection holds, how it is named and how its members are chosen are pinned in
+    // FixtureGeneratorRealismTests; this keeps the overall share.
     [Fact]
-    public void RoughlyAQuarterOfFilmsBelongToACollectionNamedTheWayTmdbNamesThem()
+    public void RoughlyAQuarterOfFilmsBelongToACollection()
     {
         var films = Films();
-        var withCollection = films.Where(m => m.Col is not null).ToList();
 
-        Assert.InRange(withCollection.Count / (double)films.Count, 0.22, 0.28);
-        Assert.All(withCollection, m => Assert.Equal($"{m.T} Collection", m.Col));
+        Assert.InRange(films.Count(m => m.Col is not null) / (double)films.Count, 0.22, 0.28);
         Assert.Contains(films, m => m.Col is null);
     }
 
@@ -357,7 +358,7 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     public void TwoRunsOverTheSameSheetProduceIdenticalRecords()
     {
         var rows = Library();
-        var shows = EpisodeRows("Alias", "Frasier");
+        var shows = FixtureGeneratorRealismTests.SeriesRows();
 
         Assert.Equal(Run(rows, shows), Run(rows, shows));
     }
@@ -381,7 +382,7 @@ public class FixtureGeneratorCatalogueTests : IDisposable
 
     private async Task<string> WriteCatalogAsync(string folder)
     {
-        var (movies, shows) = FixtureGenerator.Build(Library(), EpisodeRows("Alias", "Frasier"));
+        var (movies, shows) = FixtureGenerator.Build(Library(), FixtureGeneratorRealismTests.SeriesRows());
         var meta = new CatalogMeta(
             "2026-01-01T00:00:00Z", movies.Count, shows.Count, shows.Sum(s => s.TotalEpisodes),
             FixtureGenerator.Genres.ToDictionary(g => g.Key.ToString(CultureInfo.InvariantCulture), g => g.Value),
@@ -431,6 +432,14 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         });
         Assert.Contains(films, f => f.TryGetProperty("col", out _));
         Assert.Contains(films, f => !f.TryGetProperty("col", out _));
+        Assert.Contains(films, f => f.TryGetProperty("tag", out _));
+
+        var episodes = Directory.EnumerateFiles(Path.Combine(root, "tv"), "*.json")
+            .SelectMany(f => JsonDocument.Parse(File.ReadAllText(f)).RootElement.GetProperty("seasons").EnumerateArray())
+            .SelectMany(season => season.GetProperty("eps").EnumerateArray())
+            .ToList();
+        Assert.Contains(episodes, e => !e.GetProperty("o").GetBoolean() && e.TryGetProperty("air", out _));
+        Assert.All(episodes, e => Assert.False(e.TryGetProperty("s", out _)));
     }
 
     // ---- shows ---------------------------------------------------------------------------
@@ -462,15 +471,19 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     {
         var alias = FixtureGenerator.Build([], MixedRows()).Item2.Single(s => s.T == "alias");
 
+        // Only the owned episodes are the Sheet's; the rest are padding (pinned in FixtureGeneratorRealismTests).
+        var owned = alias.Seasons.Select(s => s.Eps.Where(e => e.O).ToArray()).ToArray();
+
         Assert.Equal([1, 2], alias.Seasons.Select(s => s.N));
-        Assert.Equal([2, 1], alias.Seasons.Select(s => s.Eps.Length));
-        Assert.Equal(["Truth Be Told", "So It Begins"], alias.Seasons[0].Eps.Select(e => e.T));
-        Assert.Equal([1, 2], alias.Seasons[0].Eps.Select(e => e.E));
-        Assert.Equal(["The Telling"], alias.Seasons[1].Eps.Select(e => e.T));
-        Assert.Equal([1], alias.Seasons[1].Eps.Select(e => e.E));
-        Assert.All(alias.Seasons, s => { Assert.Equal(s.Eps.Length, s.Owned); Assert.Equal(s.Eps.Length, s.Total); });
+        Assert.Equal([2, 1], owned.Select(o => o.Length));
+        Assert.Equal(["Truth Be Told", "So It Begins"], owned[0].Select(e => e.T));
+        Assert.Equal([1, 2], owned[0].Select(e => e.E));
+        Assert.Equal(["The Telling"], owned[1].Select(e => e.T));
+        Assert.Equal([1], owned[1].Select(e => e.E));
+        Assert.Equal([2, 1], alias.Seasons.Select(s => s.Owned));
+        Assert.All(alias.Seasons, s => Assert.Equal(s.Eps.Length, s.Total));
         Assert.Equal(3, alias.OwnedEpisodes);
-        Assert.Equal(3, alias.TotalEpisodes);
+        Assert.Equal(alias.Seasons.Sum(s => s.Total), alias.TotalEpisodes);
     }
 
     [Fact]
@@ -479,13 +492,15 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         var zulu = FixtureGenerator.Build([], MixedRows()).Item2.Single(s => s.T == "Zulu");
 
         var season = Assert.Single(zulu.Seasons);
+        var owned = season.Eps.Where(e => e.O).ToArray();
         Assert.Equal(1, season.N);
-        Assert.Equal([1, 2], season.Eps.Select(e => e.E));
-        Assert.Equal(["A Standalone Special", "Another Special"], season.Eps.Select(e => e.T));
+        Assert.Equal([1, 2], owned.Select(e => e.E));
+        Assert.Equal(["A Standalone Special", "Another Special"], owned.Select(e => e.T));
+        Assert.Equal(2, season.Owned);
     }
 
     [Fact]
-    public void EpisodeRuntimesComeFromTheSheetAndEveryEpisodeIsOwned()
+    public void EpisodeRuntimesComeFromTheSheetAndEveryOwnedEpisodeHasAnOverviewAndAirDate()
     {
         var (_, shows) = FixtureGenerator.Build([], MixedRows());
 
@@ -494,9 +509,8 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         Assert.All(shows.Single(s => s.T == "Zulu").Seasons.SelectMany(s => s.Eps), e => Assert.Equal(23, e.Rt));
         Assert.All(shows.SelectMany(s => s.Seasons).SelectMany(s => s.Eps), e =>
         {
-            Assert.True(e.O);
             Assert.False(string.IsNullOrWhiteSpace(e.Ov));
-            Assert.Null(e.Air);
+            Assert.NotNull(e.Air);
         });
     }
 
