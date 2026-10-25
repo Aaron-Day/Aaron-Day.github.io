@@ -107,8 +107,11 @@ public sealed class TmdbClient(
         var first = doc.RootElement.GetProperty("results").EnumerateArray().FirstOrDefault();
         if (first.ValueKind == JsonValueKind.Undefined) return null;
 
-        return await GetAsAsync<TmdbSeries>($"3/tv/{first.GetProperty("id").GetInt32()}", ct);
+        return await GetSeriesAsync(first.GetProperty("id").GetInt32(), ct);
     }
+
+    public async Task<TmdbSeries?> GetSeriesAsync(int id, CancellationToken ct)
+        => await GetAsAsync<TmdbSeries>($"3/tv/{id}", ct);
 
     public async Task<TmdbSeason?> GetSeasonAsync(int seriesId, int season, CancellationToken ct)
         => await GetAsAsync<TmdbSeason>($"3/tv/{seriesId}/season/{season}", ct);

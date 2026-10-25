@@ -38,6 +38,10 @@ public sealed record StoredSeason(DateTimeOffset FetchedUtc, TmdbSeason? Season)
 /// <para><b>Order.</b> Series run in name order (ordinal) so a budgeted run resumes the same way every time.
 /// Nothing depends on the order of the Sheet rows, which Apple does not keep stable: a series' name is its most
 /// common spelling in the Sheet and its genre its most common genre, ties broken ordinally.</para>
+/// <para><b>Overrides.</b> A series whose <see cref="OverrideKey"/> is in the overrides map takes that TMDB id
+/// without a search, is <c>Mc</c> 1.0 (a human confirmed it, the only way to earn that unchecked) and gets no
+/// review line. Only its details (one request, by id) and seasons are fetched. An override beats a cached
+/// guess, and is not written to the index.</para>
 /// <para><b>Is it the right show?</b> TMDB's first search result is only a guess. The search carries the Sheet
 /// name's trailing year as <c>first_air_date_year</c>, and the result's name is folded and compared with the
 /// Sheet's. An exact match is <c>Mc</c> 1.0; any other name is 0.5 and goes to the review queue naming both
@@ -71,7 +75,17 @@ public sealed record StoredSeason(DateTimeOffset FetchedUtc, TmdbSeason? Season)
 /// </remarks>
 public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeOffset> clock)
 {
-    public async Task<TvPipelineResult> RunAsync(IReadOnlyList<SheetRow> rows, CancellationToken ct)
+    private static readonly IReadOnlyDictionary<string, int> NoOverrides = new Dictionary<string, int>();
+
+    public Task<TvPipelineResult> RunAsync(IReadOnlyList<SheetRow> rows, CancellationToken ct)
+        => RunAsync(rows, NoOverrides, ct);
+
+    /// <param name="seriesOverrides">
+    /// TMDB ids a human has confirmed, keyed by <see cref="OverrideKey"/>. An overridden series is never
+    /// searched, takes the id as given, and is <c>Mc</c> 1.0 with no review line.
+    /// </param>
+    public async Task<TvPipelineResult> RunAsync(
+        IReadOnlyList<SheetRow> rows, IReadOnlyDictionary<string, int> seriesOverrides, CancellationToken ct)
     {
         var now = clock();
         var review = new List<string>();
@@ -99,7 +113,7 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
             ct.ThrowIfCancellationRequested();
 
             var owned = group.Select(r => EpisodeTitleParser.Parse(r.Title)).ToList();
-            var series = await ResolveSeriesAsync(name, now, ct);
+            var series = await ResolveSeriesAsync(name, seriesOverrides, now, ct);
             foreach (var note in series.Notes) review.Add($"{name} → {note}");
 
             var loaded = series is { Id: { } id, Details: { } details }
@@ -126,6 +140,17 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
 
         return new TvPipelineResult(shows, review, tmdb.BudgetExhausted);
     }
+
+    /// <summary>
+    /// The key a series is looked up under in the overrides map and in the cache: the folded name with a
+    /// trailing year folded back in, so <c>X</c> and <c>X (2020)</c> are different series.
+    /// </summary>
+    public static string OverrideKey(string seriesName) => KeyOf(TitleNormalizer.Normalize(seriesName));
+
+    private static string KeyOf(NormalizedTitle title)
+        => title.YearHint is { } year
+            ? $"{title.Value} {year.ToString(CultureInfo.InvariantCulture)}"
+            : title.Value;
 
     private static void EnsureSlugsAreUsable(IEnumerable<(string Name, string Slug)> series)
     {
@@ -168,15 +193,17 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
     /// Cache first (a fresh negative included), then TMDB. Returns what is known about the series, and the
     /// review notes for a human to look at.
     /// </summary>
-    private async Task<SeriesLookup> ResolveSeriesAsync(string name, DateTimeOffset now, CancellationToken ct)
+    private async Task<SeriesLookup> ResolveSeriesAsync(
+        string name, IReadOnlyDictionary<string, int> overrides, DateTimeOffset now, CancellationToken ct)
     {
         var title = TitleNormalizer.Normalize(name);
 
         // Normalize moves a trailing year into YearHint, leaving "X" and "X (2020)" with one folded Value and so
         // one cache identity. Put the year back so they stay two series.
-        var keyed = title.YearHint is { } year
-            ? title with { Value = $"{title.Value} {year.ToString(CultureInfo.InvariantCulture)}" }
-            : title;
+        var keyed = title with { Value = KeyOf(title) };
+
+        // A human-confirmed id beats the search and the cache alike, and is never second-guessed.
+        if (overrides.TryGetValue(keyed.Value, out var forcedId)) return await ResolveOverrideAsync(forcedId, now, ct);
 
         var key = IdentityKey.ForSeries(keyed);
         var hit = cache.Resolve(key, keyed.Value, 0, now);
@@ -238,6 +265,34 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
 
         var (staleConfidence, staleNotes) = Judge(title, stale);
         return new SeriesLookup(knownId, stale, staleConfidence, [.. reasons, .. staleNotes]);
+    }
+
+    /// <summary>
+    /// An overridden series: the id is a human's, so it is not searched for, not cached in the index and
+    /// not judged (<c>Mc</c> 1.0, no review line). Its details are still needed for the poster and the season
+    /// count, by id, on the same stamped payload as any other series.
+    /// </summary>
+    private async Task<SeriesLookup> ResolveOverrideAsync(int id, DateTimeOffset now, CancellationToken ct)
+    {
+        var path = $"tv/{id}/series.json";
+        var stored = await ReadAsync<StoredSeries>(path, ct);
+
+        if (stored?.Series is { } current && !RefreshPolicy.NeedsRefresh(stored.FetchedUtc, now))
+            return new SeriesLookup(id, current, 1d, []);
+
+        if (!tmdb.BudgetExhausted && await tmdb.GetSeriesAsync(id, ct) is { } fetched)
+        {
+            await cache.WritePayloadAsync(path, new StoredSeries(now, fetched), ct);
+            return new SeriesLookup(id, fetched, 1d, []);
+        }
+
+        // No fresh details. An aged copy still beats none. With nothing at all, the id stands alone: a spent
+        // budget will be retried, and an id TMDB does not know is a typo worth telling the user about.
+        if (stored?.Series is { } aged) return new SeriesLookup(id, aged, 1d, []);
+
+        return new SeriesLookup(id, null, 1d, [tmdb.BudgetExhausted
+            ? "series details unavailable, request budget spent"
+            : $"override id {id} is not a series TMDB knows"]);
     }
 
     private async Task<T?> ReadAsync<T>(string path, CancellationToken ct) where T : class
