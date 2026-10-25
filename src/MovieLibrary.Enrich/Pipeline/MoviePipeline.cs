@@ -15,14 +15,18 @@ public sealed record MoviePipelineResult(
     IReadOnlyList<MovieRecord> Records,
     IReadOnlyList<string> ReviewQueue,
     int RequestsUsed,
-    bool StoppedOnBudget);
+    bool StoppedOnBudget,
+    IReadOnlyDictionary<int, string> Genres);
 
 /// <summary>
 /// A film's TMDB details as stored in <c>movies/{id}.json</c>, stamped with when they were fetched so a
 /// payload ages out on its own clock. The index entry cannot stand in for it: an override has none, and a
-/// payload can outlive the entry that first pointed at it.
+/// payload can outlive the entry that first pointed at it. <c>Movie.Genres</c> and <see cref="Cast"/> are kept here
+/// because nothing else retains them: <c>Cast == null</c> means "never recorded" (fetched when a request can be spared),
+/// while an empty list means TMDB has none.
 /// </summary>
-public sealed record StoredMovie(DateTimeOffset FetchedUtc, TmdbMovie? Movie);
+public sealed record StoredMovie(
+    DateTimeOffset FetchedUtc, TmdbMovie? Movie, IReadOnlyList<TmdbCastMember>? Cast = null);
 
 /// <summary>
 /// Resolves every sheet row to a <see cref="MovieRecord"/>: override first, then the cache, then a TMDB
@@ -36,7 +40,9 @@ public sealed record StoredMovie(DateTimeOffset FetchedUtc, TmdbMovie? Movie);
 /// <para><b>Cost.</b> An uncached film costs one search, one details call for each of the three most popular
 /// candidates, and one credits call for each of those whose runtime is within tolerance plus every one named like
 /// the film (when none agrees and none is named, the most popular): about 5 requests. The matched film's details
-/// are reused for its record, not refetched.</para>
+/// and its credits (genres, top-billed cast) are reused for its record, not refetched: the cast comes out of the same
+/// credits response that gave the directors. A payload past its refresh window, and a film named by an override,
+/// take details, genres and cast from one <c>append_to_response=credits</c> request.</para>
 /// <para><b>Budget.</b> A budget trip mid-row makes that row's lookup incomplete: an exhausted client's empty or
 /// partial answer is indistinguishable from "TMDB has no such film". The scored result is still used for this
 /// run, but it is never cached, so the next run redoes the row instead of suppressing the film for 30 days.</para>
@@ -49,6 +55,9 @@ public sealed record StoredMovie(DateTimeOffset FetchedUtc, TmdbMovie? Movie);
 /// </remarks>
 public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeOffset> clock)
 {
+    /// <summary>How many top-billed cast members a film keeps.</summary>
+    public const int CastLimit = 4;
+
     public async Task<MoviePipelineResult> RunAsync(
         IReadOnlyList<SheetRow> rows,
         IReadOnlyDictionary<string, int> overrides,
@@ -56,6 +65,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
     {
         var records = new List<MovieRecord>(rows.Count);
         var review = new List<string>();
+        var genreNames = new SortedDictionary<int, string>();   // only ids a record actually carries
         var now = clock();
 
         // Stable order so a budgeted run resumes predictably rather than arbitrarily.
@@ -78,6 +88,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             int? tmdbId = null;
             var confidence = 0d;
             TmdbMovie? fresh = null;   // the chosen film's details, when this run's search already fetched them
+            IReadOnlyList<TmdbCastMember>? freshCast = null; // and its cast, when the credits gate fetched them
             string? reviewNote = null; // why a human should look at this row, when one should
 
             if (overrides.TryGetValue(title.Value, out var forced))
@@ -116,7 +127,11 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
 
                 tmdbId = match.TmdbId;
                 confidence = match.Confidence;
-                if (tmdbId is { } matched) enrichment.Details.TryGetValue(matched, out fresh);
+                if (tmdbId is { } matched)
+                {
+                    enrichment.Details.TryGetValue(matched, out fresh);
+                    enrichment.Cast.TryGetValue(matched, out freshCast);
+                }
 
                 // BudgetExhausted flips inside the call that hits the ceiling, so it can only be read
                 // AFTER the lookups. An exhausted client returns the same empty or half-enriched result
@@ -133,12 +148,12 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
                         : Describe(match.Outcome, confidence, tmdbId);
             }
 
-            records.Add(await BuildRecordAsync(row, title, runtime, tmdbId, confidence, fresh, now, ct));
+            records.Add(await BuildRecordAsync(row, title, runtime, tmdbId, confidence, fresh, freshCast, genreNames, now, ct));
             if (reviewNote is not null)
                 review.Add($"{row.Title} ({row.Runtime}, {row.Directors}) → {reviewNote}");
         }
 
-        return new MoviePipelineResult(records, review, tmdb.RequestsUsed, tmdb.BudgetExhausted);
+        return new MoviePipelineResult(records, review, tmdb.RequestsUsed, tmdb.BudgetExhausted, genreNames);
     }
 
     private static string Describe(MatchOutcome outcome, double confidence, int? tmdbId)
@@ -146,7 +161,9 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
            $"id {tmdbId?.ToString(CultureInfo.InvariantCulture) ?? "none"}";
 
     private sealed record Enrichment(
-        IReadOnlyList<MovieCandidate> Candidates, IReadOnlyDictionary<int, TmdbMovie> Details);
+        IReadOnlyList<MovieCandidate> Candidates,
+        IReadOnlyDictionary<int, TmdbMovie> Details,
+        IReadOnlyDictionary<int, IReadOnlyList<TmdbCastMember>> Cast);
 
     private async Task<Enrichment> EnrichCandidatesAsync(
         IReadOnlyList<MovieCandidate> candidates, NormalizedTitle title, int sheetRuntime, CancellationToken ct)
@@ -156,6 +173,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
         // (the directors) cost the same again, so they are fetched only where they can still
         // matter: runtime alone rules out most candidates, and director is a confirmation.
         var details = new Dictionary<int, TmdbMovie>();
+        var cast = new Dictionary<int, IReadOnlyList<TmdbCastMember>>();
         var enriched = new List<MovieCandidate>();
 
         foreach (var c in candidates.OrderByDescending(c => c.Popularity).Take(3))
@@ -167,7 +185,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             enriched.Add(c with { RuntimeMinutes = movie?.Runtime });
         }
 
-        if (enriched.Count == 0) return new Enrichment(candidates, details);
+        if (enriched.Count == 0) return new Enrichment(candidates, details, cast);
 
         var wantsCredits = enriched
             .Select(c => MatchScorer.RuntimeAgrees(c.RuntimeMinutes, sheetRuntime))
@@ -195,49 +213,81 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
         {
             if (!wantsCredits[i] || tmdb.BudgetExhausted) continue;
 
-            var directors = await tmdb.GetDirectorsAsync(enriched[i].TmdbId, ct);
-            enriched[i] = enriched[i] with { Directors = directors };
+            // The same single request also carries the cast. Keep it: it is paid for, and the stored payload
+            // cannot recover it later.
+            var credits = await tmdb.GetCreditsAsync(enriched[i].TmdbId, CastLimit, ct);
+            enriched[i] = enriched[i] with { Directors = credits?.Directors ?? [] };
+            if (credits is not null) cast[enriched[i].TmdbId] = credits.Cast;
         }
 
-        return new Enrichment(enriched, details);
+        return new Enrichment(enriched, details, cast);
     }
 
     /// <summary>
-    /// The film's details for its record. Details fetched this run are the freshest there are and replace
+    /// The film's details and cast for its record. Details fetched this run are the freshest there are and replace
     /// the stored copy. Otherwise the stored copy is used while it is inside the refresh window, and
-    /// refetched once it is not. If it cannot be refetched, a stale copy still beats a blank card.
+    /// refetched (details, genres and cast in one request) once it is not. If it cannot be refetched, a stale
+    /// copy still beats a blank card.
     /// </summary>
-    private async Task<TmdbMovie?> LoadDetailsAsync(
-        int id, TmdbMovie? fresh, DateTimeOffset now, CancellationToken ct)
+    /// <remarks>
+    /// <c>Cast == null</c> in a payload means "never recorded" (credits skipped by the gate, or a budget trip), and
+    /// is fetched once when a request can be spared. <c>[]</c> means TMDB has none, and is not asked for again.
+    /// </remarks>
+    private async Task<StoredMovie?> LoadDetailsAsync(
+        int id, TmdbMovie? fresh, IReadOnlyList<TmdbCastMember>? freshCast, DateTimeOffset now, CancellationToken ct)
     {
         var path = $"movies/{id}.json";
+        StoredMovie current;
+        var changed = true;
 
         if (fresh is not null)
         {
-            await cache.WritePayloadAsync(path, new StoredMovie(now, fresh), ct);
-            return fresh;
+            current = new StoredMovie(now, fresh, freshCast);
         }
-
-        StoredMovie? stored;
-        try { stored = await cache.ReadPayloadAsync<StoredMovie>(path, ct); }
-        catch (JsonException) { stored = null; } // a write cut short: refetch and overwrite it rather than fail every later run
-        if (stored?.Movie is not null && !RefreshPolicy.NeedsRefresh(stored.FetchedUtc, now))
-            return stored.Movie;
-
-        if (!tmdb.BudgetExhausted && await tmdb.GetMovieAsync(id, ct) is { } fetched)
+        else
         {
-            await cache.WritePayloadAsync(path, new StoredMovie(now, fetched), ct);
-            return fetched;
+            StoredMovie? stored;
+            try { stored = await cache.ReadPayloadAsync<StoredMovie>(path, ct); }
+            catch (JsonException) { stored = null; } // a write cut short: refetch and overwrite it rather than fail every later run
+
+            if (stored?.Movie is not null && !RefreshPolicy.NeedsRefresh(stored.FetchedUtc, now))
+            {
+                current = stored;
+                changed = false;
+            }
+            else if (!tmdb.BudgetExhausted && await tmdb.GetMovieWithCreditsAsync(id, CastLimit, ct) is { } fetched)
+            {
+                current = new StoredMovie(now, fetched.Movie, fetched.Cast);
+            }
+            else
+            {
+                return stored;
+            }
         }
 
-        return stored?.Movie;
+        if (current.Cast is null && !tmdb.BudgetExhausted)
+        {
+            var credits = await tmdb.GetCreditsAsync(id, CastLimit, ct);
+            if (credits is not null || !tmdb.BudgetExhausted) // null and still within budget: TMDB has none
+            {
+                current = current with { Cast = credits?.Cast ?? [] };
+                changed = true;
+            }
+        }
+
+        if (changed) await cache.WritePayloadAsync(path, current, ct);
+        return current;
     }
 
     private async Task<MovieRecord> BuildRecordAsync(
         SheetRow row, NormalizedTitle title, int runtime,
-        int? tmdbId, double confidence, TmdbMovie? fresh, DateTimeOffset now, CancellationToken ct)
+        int? tmdbId, double confidence, TmdbMovie? fresh, IReadOnlyList<TmdbCastMember>? freshCast,
+        SortedDictionary<int, string> genreNames, DateTimeOffset now, CancellationToken ct)
     {
-        var details = tmdbId is { } id ? await LoadDetailsAsync(id, fresh, now, ct) : null;
+        var stored = tmdbId is { } id ? await LoadDetailsAsync(id, fresh, freshCast, now, ct) : null;
+        var details = stored?.Movie;
+        var genres = details?.Genres ?? [];
+        foreach (var genre in genres) genreNames.TryAdd(genre.Id, genre.Name);
 
         int? year = details?.ReleaseDate is { Length: >= 4 } d && int.TryParse(d[..4], out var y)
             ? y : title.YearHint;
@@ -249,13 +299,13 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             Rt: runtime,
             P: details?.PosterPath,
             B: details?.BackdropPath,
-            G: [],
+            G: [.. genres.Select(g => g.Id)],
             Ag: row.Genre,
             Vote: details?.VoteAverage ?? 0d,
             Dir: row.Directors.Split('&', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries),
             Ov: details?.Overview,
             Tag: details?.Tagline,
-            Cast: [],
+            Cast: [.. (stored?.Cast ?? []).Select(m => new CastMember(m.Name, m.Character ?? string.Empty, m.ProfilePath))],
             Col: null,
             Own: string.IsNullOrWhiteSpace(row.PurchaseInfo) ? null : row.PurchaseInfo,
             // An unmatched film is always 0, even when its best candidate scored a little: the

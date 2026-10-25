@@ -221,12 +221,12 @@ public class CatalogWriterGapTests : IDisposable
         using var doc = await ReadAsync("meta.json");
         var root = doc.RootElement;
         Assert.Equal(
-            new[] { "builtUtc", "movieCount", "showCount", "episodeCount", "genres", "attribution", "reviewQueue" },
+            new[] { "builtUtc", "movieCount", "showCount", "totalEpisodeCount", "genres", "attribution", "reviewQueue" },
             Names(root));
         Assert.Equal("2026-10-23T04:05:06Z", root.GetProperty("builtUtc").GetString());
         Assert.Equal(1457, root.GetProperty("movieCount").GetInt32());
         Assert.Equal(122, root.GetProperty("showCount").GetInt32());
-        Assert.Equal(13850, root.GetProperty("episodeCount").GetInt32());
+        Assert.Equal(13850, root.GetProperty("totalEpisodeCount").GetInt32());
         Assert.Equal("Action", root.GetProperty("genres").GetProperty("28").GetString());
         Assert.Equal("Science Fiction", root.GetProperty("genres").GetProperty("878").GetString());
         Assert.Equal(queue, root.GetProperty("reviewQueue").EnumerateArray().Select(e => e.GetString()));

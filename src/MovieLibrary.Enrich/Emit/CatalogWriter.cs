@@ -27,32 +27,90 @@ public sealed class CatalogWriter(string outputRoot)
         int SeasonCount, int OwnedEpisodes, int TotalEpisodes, double Mc);
 
     /// <summary>
-    /// Writes movies.json, shows.json, tv/{slug}.json and meta.json under the output root. Slugs must already be
-    /// unique and filename-safe (<c>TvPipeline</c> throws before any request otherwise); this class does not
-    /// re-check, so a duplicate would silently overwrite. Files from earlier runs are not deleted: a series that
-    /// was renamed or dropped keeps its old tv file until the folder is cleared (CI starts from a clean checkout).
+    /// Writes movies.json, shows.json, tv/{slug}.json and meta.json under the output root, all or nothing. Every
+    /// file is first written beside its destination as <c>*.writing</c>; only when all of them are complete are they
+    /// moved into place. A run that throws or is cancelled therefore leaves the previous catalog exactly as it was
+    /// (never a truncated <c>movies.json</c>, never new movies beside old shows), and a first run leaves no files.
+    /// Once every file is staged the moves are not cancellable: finishing the publish beats leaving it half done.
     /// </summary>
+    /// <remarks>
+    /// Slugs name files, so they are checked here too, before anything is written (<c>TvPipeline</c> checks them
+    /// first, before it spends a request): a clash would otherwise surface late, as a failed move after other files
+    /// had already been published. Files from earlier runs are not deleted: a series that was renamed or dropped
+    /// keeps its old tv file until the folder is cleared (CI starts from a clean checkout). Only <c>*.writing</c>
+    /// files, abandoned by a run that was killed, are swept.
+    /// </remarks>
+    /// <exception cref="InvalidDataException">
+    /// <see cref="CatalogMeta.Attribution"/> is not exactly <see cref="CatalogMeta.TmdbAttribution"/>, or a series slug
+    /// cannot name a file or repeats another's. Nothing is written.
+    /// </exception>
     public async Task WriteAsync(
         IReadOnlyList<MovieRecord> movies,
         IReadOnlyList<ShowRecord> shows,
         CatalogMeta meta,
         CancellationToken ct)
     {
+        if (!string.Equals(meta.Attribution, CatalogMeta.TmdbAttribution, StringComparison.Ordinal))
+            throw new InvalidDataException(
+                "The attribution sentence is fixed by TMDB's terms and may not be changed. Pass " +
+                "CatalogMeta.TmdbAttribution; nothing was written.");
+
+        EnsureSlugsAreUsable(shows);
+
         Directory.CreateDirectory(outputRoot);
         Directory.CreateDirectory(Path.Combine(outputRoot, "tv"));
 
-        await WriteJsonAsync("movies.json", movies, ct);
+        foreach (var abandoned in Directory.EnumerateFiles(outputRoot, "*" + TempSuffix, SearchOption.AllDirectories))
+            File.Delete(abandoned);
 
-        var index = shows.Select(s => new ShowIndexEntry(
-            s.I, s.T, s.Slug, s.P, s.FirstYear, s.Ag,
-            NumberedSeasons(s), s.OwnedEpisodes, s.TotalEpisodes, s.Mc)).ToList();
+        var staged = new List<(string Temp, string Final)>();
+        try
+        {
+            await StageAsync("movies.json", movies, staged, ct);
 
-        await WriteJsonAsync("shows.json", index, ct);
+            var index = shows.Select(s => new ShowIndexEntry(
+                s.I, s.T, s.Slug, s.P, s.FirstYear, s.Ag,
+                NumberedSeasons(s), s.OwnedEpisodes, s.TotalEpisodes, s.Mc)).ToList();
+
+            await StageAsync("shows.json", index, staged, ct);
+
+            foreach (var show in shows)
+                await StageAsync(Path.Combine("tv", $"{show.Slug}.json"), show, staged, ct);
+
+            await StageAsync("meta.json", meta, staged, ct);
+
+            while (staged.Count > 0)
+            {
+                File.Move(staged[0].Temp, staged[0].Final, overwrite: true);
+                staged.RemoveAt(0);
+            }
+        }
+        finally
+        {
+            foreach (var (temp, _) in staged) File.Delete(temp); // a no-op for a file never created
+        }
+    }
+
+    private const string TempSuffix = ".writing";
+
+    private static void EnsureSlugsAreUsable(IReadOnlyList<ShowRecord> shows)
+    {
+        // Case-insensitive: "Alias" and "alias" are one file on Windows and macOS.
+        var seen = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
         foreach (var show in shows)
-            await WriteJsonAsync(Path.Combine("tv", $"{show.Slug}.json"), show, ct);
+        {
+            var slug = show.Slug;
+            if (string.IsNullOrWhiteSpace(slug) || slug != slug.Trim() || slug is "." or ".."
+                || slug.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0 || slug.IndexOfAny(['/', '\\']) >= 0)
+                throw new InvalidDataException(
+                    $"The series '{show.T}' has the slug '{slug}', which cannot name a file under data/tv. Nothing was written.");
 
-        await WriteJsonAsync("meta.json", meta, ct);
+            if (!seen.TryAdd(slug, show.T))
+                throw new InvalidDataException(
+                    $"The series '{seen[slug]}' and '{show.T}' both have the slug '{slug}', so one would replace the other's " +
+                    "data/tv file. Nothing was written.");
+        }
     }
 
     /// <summary>
@@ -61,9 +119,14 @@ public sealed class CatalogWriter(string outputRoot)
     /// </summary>
     private static int NumberedSeasons(ShowRecord show) => show.Seasons.Count(season => season.N > 0);
 
-    private async Task WriteJsonAsync<T>(string relativePath, T payload, CancellationToken ct)
+    private async Task StageAsync<T>(
+        string relativePath, T payload, List<(string Temp, string Final)> staged, CancellationToken ct)
     {
-        await using var stream = File.Create(Path.Combine(outputRoot, relativePath));
+        var final = Path.Combine(outputRoot, relativePath);
+        var temp = final + TempSuffix;
+        staged.Add((temp, final)); // before the write, so a failure part-way still cleans it up
+
+        await using var stream = new FileStream(temp, FileMode.Create, FileAccess.Write, FileShare.None);
         await JsonSerializer.SerializeAsync(stream, payload, Options, ct);
     }
 }
