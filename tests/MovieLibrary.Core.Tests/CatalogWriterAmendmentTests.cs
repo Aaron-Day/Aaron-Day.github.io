@@ -84,16 +84,19 @@ public class CatalogWriterAmendmentTests : IDisposable
     }
 
     [Fact]
-    public async Task ANewCatalogIsPublishedAllOrNothingNotFileByFile()
+    public async Task AFailureWhileWritingAnyFileLeavesEveryOldFileUntouched()
     {
         await WriteAsync([Film(348, "Alien")], [Series("alias")]);
-        var oldMovies = await File.ReadAllBytesAsync(Path.Combine(_dir, "movies.json"));
+        var before = Snapshot();
 
-        // movies.json serializes fine; the failure comes later, in a series file. A site that served the new
-        // movies.json beside the old shows.json would point at films and series that do not match.
-        await Assert.ThrowsAnyAsync<Exception>(() => WriteAsync([Film(999, "Other")], [Series("alias", mc: double.NaN)]));
+        // The series file is staged first and is fine (and differs from the old one: mc 0.5 against 1); movies.json
+        // then fails to serialize. Had files been moved into place as they were written, the new series file would
+        // already have replaced the old. Staging is all-or-nothing; the move phase is covered in CatalogWriterMoveTests.
+        await Assert.ThrowsAnyAsync<Exception>(() => WriteAsync([Film(999, "Other", double.NaN)], [Series("alias", mc: 0.5)]));
 
-        Assert.Equal(oldMovies, await File.ReadAllBytesAsync(Path.Combine(_dir, "movies.json")));
+        var after = Snapshot();
+        Assert.Equal(before.Keys, after.Keys);
+        foreach (var (file, bytes) in before) Assert.Equal(bytes, after[file]);
     }
 
     [Fact]

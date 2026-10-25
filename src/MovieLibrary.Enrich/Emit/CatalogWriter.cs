@@ -6,6 +6,16 @@ namespace MovieLibrary.Enrich.Emit;
 
 public sealed class CatalogWriter(string outputRoot)
 {
+    private readonly Action<string, string> _move = (temp, final) => File.Move(temp, final, overwrite: true);
+    private readonly TimeSpan _retryDelay = TimeSpan.FromMilliseconds(100);
+
+    /// <summary>Test seam: lets a test fail or watch the move phase, which a real disk cannot do portably.</summary>
+    internal CatalogWriter(string outputRoot, Action<string, string> move, TimeSpan retryDelay) : this(outputRoot)
+    {
+        _move = move;
+        _retryDelay = retryDelay;
+    }
+
     /// <summary>
     /// Minified: these files are downloaded by every visitor. No <c>NewLine</c> is set, unlike
     /// <c>CacheStore</c> whose indented index is committed: minified output holds no line break at all
@@ -27,18 +37,24 @@ public sealed class CatalogWriter(string outputRoot)
         int SeasonCount, int OwnedEpisodes, int TotalEpisodes, double Mc);
 
     /// <summary>
-    /// Writes movies.json, shows.json, tv/{slug}.json and meta.json under the output root, all or nothing. Every
-    /// file is first written beside its destination as <c>*.writing</c>; only when all of them are complete are they
-    /// moved into place. A run that throws or is cancelled therefore leaves the previous catalog exactly as it was
-    /// (never a truncated <c>movies.json</c>, never new movies beside old shows), and a first run leaves no files.
-    /// Once every file is staged the moves are not cancellable: finishing the publish beats leaving it half done.
+    /// Writes movies.json, shows.json, tv/{slug}.json and meta.json under the output root.
     /// </summary>
     /// <remarks>
-    /// Slugs name files, so they are checked here too, before anything is written (<c>TvPipeline</c> checks them
+    /// <para><b>What is guaranteed, and what is not.</b> Each file is published atomically: it is written beside its
+    /// destination as <c>*.writing</c> and moved into place, so a reader never sees a truncated file. The
+    /// <i>staging</i> phase is all-or-nothing: if any file fails to serialize, or the run is cancelled, nothing has been
+    /// published and the previous catalog is exactly as it was (a first run leaves no files). The <i>move</i> phase is
+    /// not atomic across files. It is best-effort ordered, with a bounded retry on <see cref="IOException"/>, so that
+    /// a partial failure degrades safely: series files move first, then <c>movies.json</c> and <c>shows.json</c>, and
+    /// <c>meta.json</c> last. If a move still fails after its retries the index therefore never names a series file
+    /// that is not there yet, and <c>meta.json</c> is the commit marker: a build is complete only when it carries
+    /// this run's <c>builtUtc</c>. A caller that sees the exception must not publish the folder. Once everything is
+    /// staged the moves ignore <c>ct</c>: finishing beats stopping half way.</para>
+    /// <para>Slugs name files, so they are checked here too, before anything is written (<c>TvPipeline</c> checks them
     /// first, before it spends a request): a clash would otherwise surface late, as a failed move after other files
     /// had already been published. Files from earlier runs are not deleted: a series that was renamed or dropped
     /// keeps its old tv file until the folder is cleared (CI starts from a clean checkout). Only <c>*.writing</c>
-    /// files, abandoned by a run that was killed, are swept.
+    /// files, abandoned by a run that was killed, are swept.</para>
     /// </remarks>
     /// <exception cref="InvalidDataException">
     /// <see cref="CatalogMeta.Attribution"/> is not exactly <see cref="CatalogMeta.TmdbAttribution"/>, or a series slug
@@ -66,6 +82,10 @@ public sealed class CatalogWriter(string outputRoot)
         var staged = new List<(string Temp, string Final)>();
         try
         {
+            // Staging order is publishing order: series files first, then the index, and meta.json last.
+            foreach (var show in shows)
+                await StageAsync(Path.Combine("tv", $"{show.Slug}.json"), show, staged, ct);
+
             await StageAsync("movies.json", movies, staged, ct);
 
             var index = shows.Select(s => new ShowIndexEntry(
@@ -74,14 +94,11 @@ public sealed class CatalogWriter(string outputRoot)
 
             await StageAsync("shows.json", index, staged, ct);
 
-            foreach (var show in shows)
-                await StageAsync(Path.Combine("tv", $"{show.Slug}.json"), show, staged, ct);
-
             await StageAsync("meta.json", meta, staged, ct);
 
             while (staged.Count > 0)
             {
-                File.Move(staged[0].Temp, staged[0].Final, overwrite: true);
+                await MoveWithRetryAsync(staged[0].Temp, staged[0].Final);
                 staged.RemoveAt(0);
             }
         }
@@ -92,6 +109,28 @@ public sealed class CatalogWriter(string outputRoot)
     }
 
     private const string TempSuffix = ".writing";
+    private const int MoveAttempts = 3;
+
+    /// <summary>
+    /// On Windows a move is usually refused for a moment, not for good: an antivirus scan, a search indexer or a dev
+    /// server holds a handle. Three attempts with a growing pause; anything that is not an <see cref="IOException"/>
+    /// is not transient and is not retried.
+    /// </summary>
+    private async Task MoveWithRetryAsync(string temp, string final)
+    {
+        for (var attempt = 1; ; attempt++)
+        {
+            try
+            {
+                _move(temp, final);
+                return;
+            }
+            catch (IOException) when (attempt < MoveAttempts)
+            {
+                await Task.Delay(_retryDelay * attempt);
+            }
+        }
+    }
 
     private static void EnsureSlugsAreUsable(IReadOnlyList<ShowRecord> shows)
     {

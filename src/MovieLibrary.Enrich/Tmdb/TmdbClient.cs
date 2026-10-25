@@ -84,25 +84,21 @@ public sealed class TmdbClient(
     /// <summary>
     /// One credits request, read in full: the directors (the scorer needs them) and the top
     /// <paramref name="castLimit"/> billed cast (the record keeps them). Throwing the cast away after paying for
-    /// it is what made it unrecoverable from the cache. Null for a 404 or an exhausted budget.
+    /// it is what made it unrecoverable from the cache. Null for a 404 or an exhausted budget. A member that cannot
+    /// be read is skipped: this sits in the scoring path, and one odd entry must not abort a seed.
     /// </summary>
     public async Task<TmdbCredits?> GetCreditsAsync(int movieId, int castLimit, CancellationToken ct)
     {
         using var doc = await GetAsync($"3/movie/{movieId}/credits", ct);
         if (doc is null) return null;
 
-        var directors = (IReadOnlyList<string>)[.. doc.RootElement.GetProperty("crew").EnumerateArray()
-            .Where(c => c.TryGetProperty("job", out var j) && j.GetString() == "Director")
-            .Select(c => c.GetProperty("name").GetString() ?? "")
-            .Where(n => n.Length > 0)];
-
-        return new TmdbCredits(directors, TopBilledCast(doc.RootElement, castLimit));
+        return new TmdbCredits(Directors(doc.RootElement), TopBilledCast(doc.RootElement, castLimit));
     }
 
     /// <summary>
-    /// Details (with genres) and the top-billed cast in a single request, for the paths that never saw the
-    /// credits during a search: a payload past its refresh window and a film named by an override. A body with
-    /// no <c>credits</c> object gives an empty cast rather than a second request.
+    /// Details (with genres and collection) and the top-billed cast in a single request, for the paths that never saw
+    /// the credits during a search: a payload past its refresh window and a film named by an override. A body with no
+    /// usable <c>credits</c> object gives an empty cast rather than a second request or an exception.
     /// </summary>
     public async Task<TmdbMovieWithCast?> GetMovieWithCreditsAsync(int id, int castLimit, CancellationToken ct)
     {
@@ -118,24 +114,46 @@ public sealed class TmdbClient(
         return new TmdbMovieWithCast(movie, cast);
     }
 
+    /// <summary>A string property, or null when it is absent, null, or not a string (GetString would throw on a number).</summary>
+    private static string? StringOf(JsonElement obj, string name)
+        => obj.ValueKind == JsonValueKind.Object && obj.TryGetProperty(name, out var v) && v.ValueKind == JsonValueKind.String
+            ? v.GetString()
+            : null;
+
+    private static IReadOnlyList<string> Directors(JsonElement credits)
+    {
+        if (credits.ValueKind != JsonValueKind.Object
+            || !credits.TryGetProperty("crew", out var crew) || crew.ValueKind != JsonValueKind.Array)
+            return [];
+
+        return [.. crew.EnumerateArray()
+            .Where(c => StringOf(c, "job") == "Director")
+            .Select(c => StringOf(c, "name") ?? "")
+            .Where(n => n.Length > 0)];
+    }
+
     /// <summary>TMDB lists the whole cast, hundreds of people for a big film; billing is its <c>order</c> field.</summary>
     private static IReadOnlyList<TmdbCastMember> TopBilledCast(JsonElement credits, int limit)
     {
-        if (limit <= 0 || !credits.TryGetProperty("cast", out var cast) || cast.ValueKind != JsonValueKind.Array)
+        if (limit <= 0 || credits.ValueKind != JsonValueKind.Object
+            || !credits.TryGetProperty("cast", out var cast) || cast.ValueKind != JsonValueKind.Array)
             return [];
 
         return [.. cast.EnumerateArray()
             .Select((member, position) => (Member: member, Position: position))
-            .Where(x => x.Member.TryGetProperty("name", out var n) && !string.IsNullOrWhiteSpace(n.GetString()))
-            .OrderBy(x => x.Member.TryGetProperty("order", out var o) && o.ValueKind == JsonValueKind.Number
-                ? o.GetInt32() : int.MaxValue)
+            .Where(x => !string.IsNullOrWhiteSpace(StringOf(x.Member, "name")))
+            .OrderBy(x => BillingOrder(x.Member))
             .ThenBy(x => x.Position)
             .Take(limit)
             .Select(x => new TmdbCastMember(
-                x.Member.GetProperty("name").GetString()!.Trim(),
-                x.Member.TryGetProperty("character", out var c) ? c.GetString() : null,
-                x.Member.TryGetProperty("profile_path", out var p) ? p.GetString() : null))];
+                StringOf(x.Member, "name")!.Trim(), StringOf(x.Member, "character"), StringOf(x.Member, "profile_path")))];
     }
+
+    /// <summary>A missing or non-integer order sorts last; the array position then keeps TMDB's own sequence.</summary>
+    private static int BillingOrder(JsonElement member)
+        => member.TryGetProperty("order", out var o) && o.ValueKind == JsonValueKind.Number && o.TryGetInt32(out var n)
+            ? n
+            : int.MaxValue;
 
     public Task<TmdbSeries?> SearchSeriesAsync(string name, CancellationToken ct)
         => SearchSeriesAsync(name, null, ct);

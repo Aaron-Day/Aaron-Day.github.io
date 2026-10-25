@@ -18,6 +18,11 @@ public sealed record TmdbCredits(IReadOnlyList<string> Directors, IReadOnlyList<
 /// <summary>A film's details and its top-billed cast from one <c>append_to_response=credits</c> request.</summary>
 public sealed record TmdbMovieWithCast(TmdbMovie Movie, IReadOnlyList<TmdbCastMember> Cast);
 
+/// <summary>The series a film belongs to ("Halloween Collection"), as the details response names it.</summary>
+public sealed record TmdbCollection(
+    [property: JsonPropertyName("id")] int Id,
+    [property: JsonPropertyName("name")] string? Name);
+
 public sealed record TmdbMovie(
     [property: JsonPropertyName("id")] int Id,
     [property: JsonPropertyName("title")] string Title,
@@ -28,7 +33,8 @@ public sealed record TmdbMovie(
     [property: JsonPropertyName("vote_average")] double VoteAverage,
     [property: JsonPropertyName("poster_path")] string? PosterPath,
     [property: JsonPropertyName("backdrop_path")] string? BackdropPath,
-    [property: JsonPropertyName("genres")] IReadOnlyList<TmdbGenre>? Genres = null);
+    [property: JsonPropertyName("genres")] IReadOnlyList<TmdbGenre>? Genres = null,
+    [property: JsonPropertyName("belongs_to_collection")] TmdbCollection? BelongsToCollection = null);
 
 public sealed record TmdbSeries(
     [property: JsonPropertyName("id")] int Id,

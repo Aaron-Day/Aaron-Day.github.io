@@ -288,6 +288,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
         var details = stored?.Movie;
         var genres = details?.Genres ?? [];
         foreach (var genre in genres) genreNames.TryAdd(genre.Id, genre.Name);
+        var collection = details?.BelongsToCollection?.Name?.Trim();
 
         int? year = details?.ReleaseDate is { Length: >= 4 } d && int.TryParse(d[..4], out var y)
             ? y : title.YearHint;
@@ -306,7 +307,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             Ov: details?.Overview,
             Tag: details?.Tagline,
             Cast: [.. (stored?.Cast ?? []).Select(m => new CastMember(m.Name, m.Character ?? string.Empty, m.ProfilePath))],
-            Col: null,
+            Col: string.IsNullOrEmpty(collection) ? null : collection,
             Own: string.IsNullOrWhiteSpace(row.PurchaseInfo) ? null : row.PurchaseInfo,
             // An unmatched film is always 0, even when its best candidate scored a little: the
             // scorer reports that sub-threshold score, but no match was made.
