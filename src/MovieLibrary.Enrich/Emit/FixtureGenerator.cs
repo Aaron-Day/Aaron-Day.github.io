@@ -20,7 +20,11 @@ namespace MovieLibrary.Enrich.Emit;
 /// owner lacks (<c>O</c> false, titled "Fixture episode N: ..."): at the numbers the owner skipped, and past the last
 /// one. The shape is seeded per series so a library has them all: about one in ten fully owned (the reveal toggle
 /// shows nothing extra), most missing a few, some about half, and some missing two thirds or more. Without this
-/// every series would be fully owned and the owned-only view with its reveal toggle could not be built or reviewed.</para>
+/// every series would be fully owned and the owned-only view with its reveal toggle could not be built or reviewed.
+/// Seasons follow the same rule: a padded series lists every season from 1 to its last owned one, so a season the
+/// owner skipped is a wholly unowned season (Owned 0, six to twenty-four unowned episodes) among the owned ones, and
+/// a big-gap series may list up to three more past the last. The owned-only season list must drop these; the full
+/// list shows them.</para>
 /// <para><b>Collections, taglines, air dates.</b> A collection holds two to five films that are neighbours in ordinal
 /// title order, named after the first of them, so the "other films in this collection" view has films to show. About
 /// four films in five get a synthetic tagline and the rest none, so both layouts are exercised. Every episode, owned
@@ -102,7 +106,8 @@ public static class FixtureGenerator
     private const int SaltCollection = 1, SaltGenre = 2, SaltSecondGenreChance = 3, SaltSecondGenre = 4,
                       SaltCastStart = 5, SaltCastStride = 6, SaltRoleStart = 7, SaltRoleStride = 8,
                       SaltTaglineChance = 9, SaltTaglineText = 10, SaltCollectionSize = 11,
-                      SaltSeriesShape = 12, SaltSeasonTail = 13, SaltAirStart = 14, SaltEpisodeTitle = 15;
+                      SaltSeriesShape = 12, SaltSeasonTail = 13, SaltAirStart = 14, SaltEpisodeTitle = 15,
+                      SaltTrailingSeasons = 16, SaltUnownedSeasonSize = 17;
 
     // Obviously synthetic, from a few words to a sentence that must wrap, because the tagline is a laid-out field.
     private static readonly string[] Taglines =
@@ -128,6 +133,9 @@ public static class FixtureGenerator
     // A season is padded up to its highest owned number, but never past this: one mistyped "Episode 2000000000"
     // on the Sheet must not become two billion fixture episodes.
     private const int MaxFilledEpisodeNumber = 200;
+
+    // The same guard for seasons: one mistyped "Season 2000000000" must not become two billion fixture seasons.
+    private const int MaxFilledSeasonNumber = 30;
 
     private static int Seed(string s)
     {
@@ -245,11 +253,36 @@ public static class FixtureGenerator
         return start.AddDays(Math.Min(days, 36_500)).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
     }
 
+    /// <summary>How many whole seasons TMDB would list past the owner's last: none for most, up to three for a big gap.</summary>
+    private static int TrailingSeasons(int shape, int seriesSeed)
+        => shape <= 6 ? 0
+         : shape <= 8 ? Pick(seriesSeed, SaltTrailingSeasons, 2)
+         : 1 + Pick(seriesSeed, SaltTrailingSeasons, 3);
+
+    /// <summary>An episode TMDB lists and the owner does not have: a synthetic title, the series' runtime, no still.</summary>
+    private static EpisodeRecord UnownedEpisode(string name, int season, int number, DateTime start, int runtime)
+    {
+        var title = $"Fixture episode {number}: " +
+                    UnownedTitleStems[Pick(Seed($"{name}/{season}/{number}"), SaltEpisodeTitle, UnownedTitleStems.Length)];
+        return new EpisodeRecord(number, title, false, AirDate(start, season, number), runtime, null,
+                                 Sentences[Seed(title) % Sentences.Length]);
+    }
+
+    /// <summary>A season TMDB lists and the owner has no episode of: six to twenty-four unowned episodes, Owned 0.</summary>
+    private static SeasonRecord UnownedSeason(string name, int season, DateTime start, int runtime)
+    {
+        var count = 6 + Pick(Seed($"{name}/{season}"), SaltUnownedSeasonSize, 19);
+        var eps = Enumerable.Range(1, count).Select(n => UnownedEpisode(name, season, n, start, runtime)).ToArray();
+        return new SeasonRecord(season, 0, eps.Length, eps);
+    }
+
     /// <summary>
     /// The seasons of one series. The Sheet's rows are the owned episodes and keep their numbers. TMDB would also
     /// list every number the owner does not have, so a padded season is the contiguous list 1..N, N being the
     /// highest owned number plus a seeded tail: a number the owner skipped is an unowned episode among the owned
-    /// ones, not a hole. A fully owned series is left exactly as the Sheet has it.
+    /// ones, not a hole. Seasons work the same way: a padded series lists every season from 1 to its last owned one,
+    /// so a season the owner skipped is a wholly unowned season (Owned 0) among the owned ones, and a big-gap series
+    /// may list a few more past the last. A fully owned series is left exactly as the Sheet has it.
     /// </summary>
     private static SeasonRecord[] BuildSeasons(string name, int firstYear, int runtime, IEnumerable<ParsedEpisodeTitle> rows)
     {
@@ -257,7 +290,7 @@ public static class FixtureGenerator
         var shape = Pick(seed, SaltSeriesShape, 10);
         var start = new DateTime(firstYear, 1, 1).AddDays(Pick(seed, SaltAirStart, 300));
 
-        return [.. rows
+        var seasons = rows
             .GroupBy(p => p.Season ?? 1)
             .OrderBy(s => s.Key)
             .Select(s =>
@@ -273,18 +306,23 @@ public static class FixtureGenerator
                 if (shape > 0)
                 {
                     var top = Math.Min(taken.Max(), MaxFilledEpisodeNumber) + MissingTail(shape, owned.Count, seasonSeed);
-                    eps.AddRange(Enumerable.Range(1, top).Where(n => !taken.Contains(n)).Select(n =>
-                    {
-                        var title = $"Fixture episode {n}: " +
-                                    UnownedTitleStems[Pick(Seed($"{name}/{s.Key}/{n}"), SaltEpisodeTitle, UnownedTitleStems.Length)];
-                        return new EpisodeRecord(n, title, false, AirDate(start, s.Key, n), runtime, null,
-                                                 Sentences[Seed(title) % Sentences.Length]);
-                    }));
+                    eps.AddRange(Enumerable.Range(1, top).Where(n => !taken.Contains(n))
+                                           .Select(n => UnownedEpisode(name, s.Key, n, start, runtime)));
                 }
 
                 var ordered = eps.OrderBy(e => e.E).ToArray();
                 return new SeasonRecord(s.Key, owned.Count, ordered.Length, ordered);
-            })];
+            })
+            .ToList();
+
+        if (shape == 0) return [.. seasons];
+
+        var held = seasons.Select(x => x.N).ToHashSet();
+        var lastSeason = Math.Min(held.Max(), MaxFilledSeasonNumber) + TrailingSeasons(shape, seed);
+        return [.. seasons
+            .Concat(Enumerable.Range(1, lastSeason).Where(n => !held.Contains(n))
+                              .Select(n => UnownedSeason(name, n, start, runtime)))
+            .OrderBy(x => x.N)];
     }
 
     public static (IReadOnlyList<MovieRecord> Movies, IReadOnlyList<ShowRecord> Shows) Build(

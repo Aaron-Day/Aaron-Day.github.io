@@ -17,17 +17,20 @@ public class FixtureGeneratorRealismTests
     /// <summary>
     /// 122 series (the real count), one to four seasons each, eight to twenty-four owned episodes per season. A
     /// third of the seasons are ones the owner bought episode by episode, so a few numbers in the middle are
-    /// missing. The rows are shuffled, because Apple does not keep the export in order.
+    /// missing, and about one series in six with several seasons has only its later ones (the owner skipped season 1).
+    /// The rows are shuffled, because Apple does not keep the export in order.
     /// </summary>
     private static (List<SheetRow> Rows, List<OwnedRow> Owned) SeriesLibrary(int count = 122)
     {
         var rng = new Random(122);
+        var later = new Random(6);          // apart from rng, so deciding who skips season 1 moves nobody else
         var rows = new List<SheetRow>();
         var owned = new List<OwnedRow>();
 
         foreach (var series in FixtureGeneratorCatalogueTests.Library(count).Select(r => r.Title))
         {
             var seasons = rng.Next(1, 5);
+            var firstOwned = later.Next(6) == 0 && seasons >= 2 ? 2 : 1;
             for (var season = 1; season <= seasons; season++)
             {
                 var perSeason = rng.Next(8, 25);
@@ -37,7 +40,7 @@ public class FixtureGeneratorRealismTests
 
                 for (var e = 1; e <= perSeason; e++)
                 {
-                    if (skipped.Contains(e)) continue;
+                    if (skipped.Contains(e) || season < firstOwned) continue;
                     var name = $"Episode name {season}-{e}";
                     rows.Add(new SheetRow($"Season {season}, Episode {e}: {name}", "44:50:59", "", "", "Drama", series));
                     owned.Add(new OwnedRow(series, season, e, name));
@@ -130,13 +133,17 @@ public class FixtureGeneratorRealismTests
         return [.. FixtureGenerator.Build([], rows).Item2];
     }
 
+    // With ten owned a season: fully owned is 0, a few missing 1-4, about half 5-10, a large gap 20-31.
+    private static int Band(int gap) => gap switch
+    {
+        0 => 0, >= 1 and <= 4 => 1, >= 5 and <= 10 => 2, >= 20 and <= 31 => 3, _ => -1,
+    };
+
     [Fact]
     public void TheMissingCountOfASeasonFollowsTheShapeOfItsSeries()
     {
-        var gaps = TenEpisodeSeasons().Select(s => s.Seasons.Select(x => x.Total - x.Owned).ToList()).ToList();
-
-        // With ten owned a season: fully owned is 0, a few missing 1-4, about half 5-10, a large gap 20-31.
-        static int Band(int gap) => gap switch { 0 => 0, >= 1 and <= 4 => 1, >= 5 and <= 10 => 2, >= 20 and <= 31 => 3, _ => -1 };
+        var gaps = TenEpisodeSeasons()
+            .Select(s => s.Seasons.Where(x => x.Owned > 0).Select(x => x.Total - x.Owned).ToList()).ToList();
 
         Assert.All(gaps, g =>
         {
@@ -182,7 +189,7 @@ public class FixtureGeneratorRealismTests
         foreach (var show in shows.Where(s => s.OwnedEpisodes < s.TotalEpisodes))
             Assert.All(show.Seasons, s => Assert.Equal(Enumerable.Range(1, s.Total), s.Eps.Select(e => e.E)));
 
-        Assert.Contains(seasons, s => s.Eps.Any(e => !e.O && e.E < s.Eps.Where(o => o.O).Max(o => o.E)));
+        Assert.Contains(seasons, s => s.Owned > 0 && s.Eps.Any(e => !e.O && e.E < s.Eps.Where(o => o.O).Max(o => o.E)));
     }
 
     [Fact]
@@ -198,7 +205,7 @@ public class FixtureGeneratorRealismTests
         Assert.NotEmpty(padded);
         Assert.All(padded, show =>
         {
-            var eps = show.Seasons.Single().Eps;
+            var eps = show.Seasons.Single(x => x.N == 1).Eps;
             Assert.True(eps.Length > 6);
             Assert.Equal([1, 2, 3, 4, 5, 6], eps.Take(6).Select(e => e.E));
             Assert.Equal([true, true, false, false, true, true], eps.Take(6).Select(e => e.O));
@@ -275,8 +282,14 @@ public class FixtureGeneratorRealismTests
 
             var starts = show.Seasons.OrderBy(s => s.N)
                 .Select(s => DateTime.ParseExact(s.Eps[0].Air!, "yyyy-MM-dd", CultureInfo.InvariantCulture)).ToList();
-            Assert.Equal(show.FirstYear, starts[0].Year);
-            startDays.Add((starts[0].Month, starts[0].Day));
+            // A series that opens at season 2 (the owner skipped season 1, so it is fully owned and nothing is
+            // invented before it) airs its first listed episode a year after FirstYear.
+            if (show.Seasons.Any(s => s.N == 1))
+            {
+                var seasonOne = DateTime.ParseExact(show.Seasons.Single(s => s.N == 1).Eps[0].Air!, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                Assert.Equal(show.FirstYear, seasonOne.Year);
+                startDays.Add((seasonOne.Month, seasonOne.Day));
+            }
             for (var i = 1; i < starts.Count; i++) Assert.True(starts[i] > starts[i - 1], $"{show.T}: a later season starts later");
         }
 
@@ -379,5 +392,109 @@ public class FixtureGeneratorRealismTests
         Assert.True(tags.Min(t => t.Length) <= 20, $"shortest tagline is {tags.Min(t => t.Length)}");
         Assert.True(tags.Max(t => t.Length) >= 100, $"longest tagline is {tags.Max(t => t.Length)}");
         Assert.True(tags.Distinct().Count() >= 4);
+    }
+
+    // ---- D. seasons the owner has no episode of -----------------------------------------------
+
+    [Fact]
+    public void ASubsetOfSeriesHaveSeasonsTheOwnerHasNoEpisodeOf()
+    {
+        var shows = Shows();
+        var unowned = shows.SelectMany(s => s.Seasons).Where(x => x.Owned == 0).ToList();
+        var withUnowned = shows.Count(s => s.Seasons.Any(x => x.Owned == 0));
+
+        Assert.InRange(withUnowned / (double)shows.Count, 0.10, 0.45);          // a subset, not most
+        Assert.Contains(shows, s => s.Seasons.All(x => x.Owned > 0));            // and series with none at all
+        Assert.Contains(shows, s => s.Seasons.All(x => x.Owned == x.Total));     // the fully owned ones
+        Assert.All(unowned, x =>
+        {
+            Assert.InRange(x.Total, 6, 24);
+            Assert.Equal(x.Total, x.Eps.Length);
+            Assert.Equal(Enumerable.Range(1, x.Total), x.Eps.Select(e => e.E));
+            Assert.All(x.Eps, e =>
+            {
+                Assert.False(e.O);
+                Assert.StartsWith("Fixture episode ", e.T);
+                Assert.Null(e.S);
+                Assert.Equal(44, e.Rt);
+                Assert.False(string.IsNullOrWhiteSpace(e.Ov));
+                Assert.NotNull(e.Air);
+            });
+        });
+        Assert.True(unowned.Select(x => x.Total).Distinct().Count() >= 8, "unowned seasons should differ in length");
+    }
+
+    [Fact]
+    public void SeasonsRunInNumberOrderAndAPaddedSeriesListsEverySeasonFromOne()
+    {
+        var shows = Shows();
+
+        Assert.All(shows, s => Assert.Equal(s.Seasons.Select(x => x.N).OrderBy(n => n), s.Seasons.Select(x => x.N)));
+        Assert.All(shows.Where(s => s.OwnedEpisodes < s.TotalEpisodes),
+                   s => Assert.Equal(Enumerable.Range(1, s.Seasons.Length), s.Seasons.Select(x => x.N)));
+    }
+
+    [Fact]
+    public void AnUnownedSeasonCanSitBeforeAnOwnedOneAndAnotherAfterIt()
+    {
+        var shows = Shows();
+
+        Assert.Contains(shows, s => s.Seasons.Any(x => x.Owned == 0 && s.Seasons.Any(y => y.Owned > 0 && y.N > x.N)));
+        Assert.Contains(shows, s => s.Seasons.Any(x => x.Owned == 0 && s.Seasons.Any(y => y.Owned > 0 && y.N < x.N)));
+    }
+
+    [Fact]
+    public void ASeasonTheOwnerSkippedIsAnUnownedSeasonBeforeTheOwnedOnes()
+    {
+        var rows = Enumerable.Range(0, 60)
+            .SelectMany(i => Enumerable.Range(1, 6).Select(e =>
+                new SheetRow($"Season 3, Episode {e}: Owned {e}", "44:00:00", "", "", "Drama", $"Series {i}")))
+            .ToList();
+
+        var shows = FixtureGenerator.Build([], rows).Item2;
+        var plain = shows.Where(s => s.Seasons.Length == 1).ToList();
+        var padded = shows.Where(s => s.Seasons.Length > 1).ToList();
+
+        Assert.NotEmpty(plain);                                                  // fully owned: left as the Sheet has it
+        Assert.NotEmpty(padded);
+        Assert.All(plain, s => { Assert.Equal(3, s.Seasons[0].N); Assert.Equal(s.OwnedEpisodes, s.TotalEpisodes); });
+        Assert.All(padded, s =>
+        {
+            Assert.Equal([1, 2, 3], s.Seasons.Take(3).Select(x => x.N));
+            Assert.Equal([0, 0, 6], s.Seasons.Take(3).Select(x => x.Owned));
+            Assert.All(s.Seasons.Take(2), x => Assert.True(x.Total > 0 && x.Eps.All(e => !e.O)));
+            Assert.All(s.Seasons.Skip(3), x => Assert.Equal(0, x.Owned));       // any after the last owned one
+        });
+    }
+
+    [Fact]
+    public void TrailingUnownedSeasonsFollowTheShapeOfTheSeries()
+    {
+        var shows = TenEpisodeSeasons();                              // three owned seasons each, 1 to 3
+        var byBand = shows
+            .GroupBy(s => Band(s.Seasons.First(x => x.Owned > 0).Total - 10))
+            .ToDictionary(g => g.Key, g => g.Select(s => s.Seasons.Length - 3).ToList());
+
+        Assert.Equal([0], byBand[0].Distinct());                      // fully owned: nothing added
+        Assert.Equal([0], byBand[1].Distinct());                      // a few missing episodes: no missing seasons
+        Assert.Equal([0, 1], byBand[2].Distinct().Order());           // about half: perhaps one
+        Assert.Equal([1, 2, 3], byBand[3].Distinct().Order());        // a large gap: one to three
+        Assert.All(shows, s => Assert.Equal(Enumerable.Range(1, s.Seasons.Length), s.Seasons.Select(x => x.N)));
+    }
+
+    [Fact]
+    public void AnAbsurdSeasonNumberOnTheSheetDoesNotBalloonTheSeries()
+    {
+        var rows = Enumerable.Range(0, 40).SelectMany(i => new[]
+        {
+            new SheetRow("Season 1, Episode 1: Pilot", "44:00:00", "", "", "Drama", $"Series {i}"),
+            new SheetRow("Season 2000000000, Episode 1: Typo", "44:00:00", "", "", "Drama", $"Series {i}"),
+        }).ToList();
+
+        var shows = FixtureGenerator.Build([], rows).Item2;
+
+        Assert.All(shows, s => Assert.InRange(s.Seasons.Length, 2, 40));
+        Assert.All(shows.SelectMany(s => s.Seasons).SelectMany(x => x.Eps), e => Assert.NotNull(e.Air));
+        Assert.Contains(shows, s => s.Seasons.Length > 2);               // the padded shape was exercised
     }
 }

@@ -140,7 +140,7 @@ public class FixtureGeneratorCatalogueTests : IDisposable
             [new SheetRow($"Season 1, Episode 1: {IntMinValueTitle}", "44:00:00", "", "", "Drama", IntMinValueTitle)]);
 
         Assert.Equal(IntMinValueTitle, Assert.Single(movies).T);
-        Assert.Equal(IntMinValueTitle, Assert.Single(shows).Seasons.Single().Eps.Single(e => e.O).T);
+        Assert.Equal(IntMinValueTitle, Assert.Single(shows).Seasons.Single(s => s.Owned > 0).Eps.Single(e => e.O).T);
     }
 
     // ---- identity ------------------------------------------------------------------------
@@ -472,15 +472,15 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         var alias = FixtureGenerator.Build([], MixedRows()).Item2.Single(s => s.T == "alias");
 
         // Only the owned episodes are the Sheet's; the rest are padding (pinned in FixtureGeneratorRealismTests).
-        var owned = alias.Seasons.Select(s => s.Eps.Where(e => e.O).ToArray()).ToArray();
+        var owned = alias.Seasons.Where(s => s.Owned > 0).Select(s => s.Eps.Where(e => e.O).ToArray()).ToArray();
 
-        Assert.Equal([1, 2], alias.Seasons.Select(s => s.N));
+        Assert.Equal([1, 2], alias.Seasons.Where(s => s.Owned > 0).Select(s => s.N));
         Assert.Equal([2, 1], owned.Select(o => o.Length));
         Assert.Equal(["Truth Be Told", "So It Begins"], owned[0].Select(e => e.T));
         Assert.Equal([1, 2], owned[0].Select(e => e.E));
         Assert.Equal(["The Telling"], owned[1].Select(e => e.T));
         Assert.Equal([1], owned[1].Select(e => e.E));
-        Assert.Equal([2, 1], alias.Seasons.Select(s => s.Owned));
+        Assert.Equal([2, 1], alias.Seasons.Select(s => s.Owned).Where(n => n > 0));
         Assert.All(alias.Seasons, s => Assert.Equal(s.Eps.Length, s.Total));
         Assert.Equal(3, alias.OwnedEpisodes);
         Assert.Equal(alias.Seasons.Sum(s => s.Total), alias.TotalEpisodes);
@@ -491,7 +491,7 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     {
         var zulu = FixtureGenerator.Build([], MixedRows()).Item2.Single(s => s.T == "Zulu");
 
-        var season = Assert.Single(zulu.Seasons);
+        var season = Assert.Single(zulu.Seasons, s => s.Owned > 0);
         var owned = season.Eps.Where(e => e.O).ToArray();
         Assert.Equal(1, season.N);
         Assert.Equal([1, 2], owned.Select(e => e.E));
