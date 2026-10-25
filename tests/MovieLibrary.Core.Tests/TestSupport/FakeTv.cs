@@ -19,6 +19,12 @@ internal sealed record FakeShow(int Id, string Name, FakeSeason[] Seasons)
     /// <summary>What TMDB reports as <c>number_of_seasons</c>. Defaults to the highest season actually served.</summary>
     public int? ReportedSeasons { get; init; }
 
+    /// <summary>The query that finds this show, when it is not simply <see cref="Name"/> (TMDB's name for it differs from the Sheet's).</summary>
+    public string? SearchAs { get; init; }
+
+    /// <summary>The <c>first_air_date_year</c> a search must carry to find this show. Null: the search must carry none.</summary>
+    public int? SearchYear { get; init; }
+
     public int SeasonCount => ReportedSeasons ?? (Seasons.Length == 0 ? 0 : Seasons.Max(s => s.Number));
 }
 
@@ -35,7 +41,7 @@ internal sealed class FakeTv
     private static readonly Regex Season = new(@"^/3/tv/(\d+)/season/(\d+)$", RegexOptions.CultureInvariant);
 
     private readonly Dictionary<int, FakeShow> _byId = [];
-    private readonly Dictionary<string, FakeShow> _byName = new(StringComparer.Ordinal);
+    private readonly Dictionary<(string Query, int? Year), FakeShow> _byQuery = [];
 
     /// <summary>Answers a search that no registered show names, so a test need not spell the series out.</summary>
     public FakeShow? AnyQuery { get; init; }
@@ -43,7 +49,7 @@ internal sealed class FakeTv
     public FakeTv Add(FakeShow show)
     {
         _byId[show.Id] = show;
-        _byName[show.Name] = show;
+        _byQuery[(show.SearchAs ?? show.Name, show.SearchYear)] = show;
         return this;
     }
 
@@ -53,7 +59,8 @@ internal sealed class FakeTv
 
         if (path == "/3/search/tv")
         {
-            var show = _byName.GetValueOrDefault(QueryValue(req.RequestUri, "query")) ?? AnyQuery;
+            var year = QueryValue(req.RequestUri, "first_air_date_year");
+            var show = _byQuery.GetValueOrDefault((QueryValue(req.RequestUri, "query"), year.Length == 0 ? null : int.Parse(year))) ?? AnyQuery;
             return show is null
                 ? TestPipeline.Json(TestPipeline.EmptyResults)
                 : TestPipeline.Json(JsonSerializer.Serialize(new

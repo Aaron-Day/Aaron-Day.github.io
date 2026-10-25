@@ -35,7 +35,13 @@ public sealed record StoredSeason(DateTimeOffset FetchedUtc, TmdbSeason? Season)
 /// <para><b>Sequential.</b> <see cref="CacheStore"/> is not thread-safe and <c>Resolve</c> mutates it on an alias
 /// hit. Only <c>Resolve</c> and <c>Put</c> are used, and only the returned entry's <c>TmdbId</c> and
 /// <c>Confidence</c> are read (an alias hit returns the source entry, whose key and runtime are not ours).</para>
-/// <para><b>Order.</b> Series run in name order (ordinal) so a budgeted run resumes the same way every time.</para>
+/// <para><b>Order.</b> Series run in name order (ordinal) so a budgeted run resumes the same way every time.
+/// Nothing depends on the order of the Sheet rows, which Apple does not keep stable: a series' name is its most
+/// common spelling in the Sheet and its genre its most common genre, ties broken ordinally.</para>
+/// <para><b>Is it the right show?</b> TMDB's first search result is only a guess. The search carries the Sheet
+/// name's trailing year as <c>first_air_date_year</c>, and the result's name is folded and compared with the
+/// Sheet's. An exact match is <c>Mc</c> 1.0; any other name is 0.5 and goes to the review queue naming both
+/// names and the TMDB id. Rows without a series name are skipped and counted in one review line.</para>
 /// <para><b>Slugs.</b> Every series' slug is checked before the first request. Two series that share one, or a
 /// slug that is empty or starts with a hyphen, throw <see cref="InvalidDataException"/>: they would otherwise
 /// overwrite each other's <c>data/tv/{slug}.json</c> without a sound.</para>
@@ -56,7 +62,8 @@ public sealed record StoredSeason(DateTimeOffset FetchedUtc, TmdbSeason? Season)
 /// seasons keeps the series and the seasons already fetched, each stored with its own stamp, and the next run
 /// fetches only the rest.</para>
 /// <para><b>Freshness.</b> A stored payload older than <see cref="RefreshPolicy.Window"/> is refetched whatever
-/// the index says. If it cannot be (budget spent) the stale copy is used for this run rather than a blank one.
+/// the index says. If it cannot be (budget spent, or TMDB no longer finds the series) the cached id and the
+/// stale copy are kept for this run rather than a blank one, and a lost series is queued for review.
 /// A series payload has no by-id endpoint, so refreshing it repeats the search and details calls.</para>
 /// <para><b>Failures.</b> TMDB failures arrive as <see cref="HttpRequestException"/> and are not caught. The cache
 /// index lives in memory until the caller saves it, so a caller that wants the work kept across a failure must
@@ -67,27 +74,33 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
     public async Task<TvPipelineResult> RunAsync(IReadOnlyList<SheetRow> rows, CancellationToken ct)
     {
         var now = clock();
+        var review = new List<string>();
+
+        var blank = rows.Count(r => string.IsNullOrWhiteSpace(r.Series));
+        if (blank > 0) review.Add($"{blank} row(s) have no series name and were skipped");
 
         var allSeries = rows
             .Where(r => !string.IsNullOrWhiteSpace(r.Series))
             .GroupBy(r => r.Series.Trim(), StringComparer.OrdinalIgnoreCase)
-            .OrderBy(g => g.Key, StringComparer.Ordinal)
-            .Select(g => (Name: g.Key, Slug: Slug.From(g.Key), Rows: g.ToList()))
+            .Select(g => (Name: MostCommon(g.Select(r => r.Series.Trim())),
+                          Genre: MostCommon(g.Select(r => r.Genre)),
+                          Rows: g.ToList()))
+            .OrderBy(s => s.Name, StringComparer.Ordinal)
+            .Select(s => (s.Name, Slug: Slug.From(s.Name), s.Genre, s.Rows))
             .ToList();
 
         // Before a single request is spent: a bad slug means two shows sharing one output file.
         EnsureSlugsAreUsable(allSeries.Select(s => (s.Name, s.Slug)));
 
         var shows = new List<ShowRecord>(allSeries.Count);
-        var review = new List<string>();
 
-        foreach (var (name, slug, group) in allSeries)
+        foreach (var (name, slug, genre, group) in allSeries)
         {
             ct.ThrowIfCancellationRequested();
 
             var owned = group.Select(r => EpisodeTitleParser.Parse(r.Title)).ToList();
             var series = await ResolveSeriesAsync(name, now, ct);
-            if (series.Note is not null) review.Add($"{name} → {series.Note}");
+            foreach (var note in series.Notes) review.Add($"{name} → {note}");
 
             var loaded = series is { Id: { } id, Details: { } details }
                 ? await LoadSeasonsAsync(id, details, now, ct)
@@ -104,7 +117,7 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
                 Slug: slug,
                 P: series.Details?.PosterPath,
                 FirstYear: YearOf(series.Details?.FirstAirDate),
-                Ag: group[0].Genre,
+                Ag: genre,
                 Seasons: placement.Seasons,
                 OwnedEpisodes: placement.Seasons.Sum(s => s.Owned),
                 TotalEpisodes: placement.Seasons.Sum(s => s.Total),
@@ -132,11 +145,28 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
         }
     }
 
-    private sealed record SeriesLookup(int? Id, TmdbSeries? Details, double Confidence, string? Note);
+    private sealed record SeriesLookup(int? Id, TmdbSeries? Details, double Confidence, IReadOnlyList<string> Notes);
 
     /// <summary>
-    /// Cache first (a fresh negative included), then TMDB. Returns what is known about the series, and a
-    /// review note when a human should look.
+    /// TMDB's search gives its first result, which is only a guess. The same folded name as the Sheet's is a
+    /// match (1.0); any other name is still used but is 0.5 and queued for review, naming both.
+    /// </summary>
+    private static (double Confidence, IReadOnlyList<string> Notes) Judge(NormalizedTitle sheet, TmdbSeries found)
+    {
+        if (string.Equals(TitleNormalizer.Normalize(found.Name).Value, sheet.Value, StringComparison.Ordinal))
+            return (1d, []);
+
+        return (0.5d, [$"matched TMDB \"{found.Name}\" (id {found.Id}), which is not the same name; override it if wrong"]);
+    }
+
+    private static string MostCommon(IEnumerable<string> values)
+        => values.GroupBy(v => v, StringComparer.Ordinal)
+                 .OrderByDescending(g => g.Count()).ThenBy(g => g.Key, StringComparer.Ordinal)
+                 .First().Key;
+
+    /// <summary>
+    /// Cache first (a fresh negative included), then TMDB. Returns what is known about the series, and the
+    /// review notes for a human to look at.
     /// </summary>
     private async Task<SeriesLookup> ResolveSeriesAsync(string name, DateTimeOffset now, CancellationToken ct)
     {
@@ -152,7 +182,7 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
         var hit = cache.Resolve(key, keyed.Value, 0, now);
 
         // A fresh negative is an answer, not a miss. Searching again would spend a request every run.
-        if (hit is { TmdbId: null }) return new SeriesLookup(null, null, 0d, "series not found");
+        if (hit is { TmdbId: null }) return new SeriesLookup(null, null, 0d, ["series not found"]);
 
         TmdbSeries? stale = null;
         if (hit is { TmdbId: { } cachedId })
@@ -161,38 +191,53 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
             if (stored?.Series is { } kept)
             {
                 if (!RefreshPolicy.NeedsRefresh(stored.FetchedUtc, now))
-                    return new SeriesLookup(cachedId, kept, hit.Confidence, null);
+                {
+                    var (confidence, notes) = Judge(title, kept);
+                    return new SeriesLookup(cachedId, kept, confidence, notes);
+                }
 
-                stale = kept; // aged out: refetch, and fall back to this only if the budget cannot
+                stale = kept; // aged out: refetch, and fall back to this if TMDB cannot be asked or has lost it
             }
         }
 
         if (!tmdb.BudgetExhausted)
         {
-            var found = await tmdb.SearchSeriesAsync(name, ct);
+            var found = await tmdb.SearchSeriesAsync(title.Cleaned, title.YearHint, ct);
             if (found is not null)
             {
-                cache.Put(new CacheEntry(key, found.Id, 1d, now, Negative: false, keyed.Value, 0));
+                var (confidence, notes) = Judge(title, found);
+                cache.Put(new CacheEntry(key, found.Id, confidence, now, Negative: false, keyed.Value, 0));
                 await cache.WritePayloadAsync($"tv/{found.Id}/series.json", new StoredSeries(now, found), ct);
-                return new SeriesLookup(found.Id, found, 1d, null);
+                return new SeriesLookup(found.Id, found, confidence, notes);
             }
 
             // BudgetExhausted flips inside the call that hits the ceiling, so it can only be read AFTER the
             // call. A refused request returns the same null as "TMDB has no such series" and must never be
-            // cached as one: it would suppress the series for 30 days.
-            if (!tmdb.BudgetExhausted)
+            // cached as one: it would suppress the series for 30 days. Neither may an empty answer overwrite
+            // an id we already hold (below).
+            if (!tmdb.BudgetExhausted && hit is null)
             {
                 cache.Put(new CacheEntry(key, null, 0d, now, Negative: true, keyed.Value, 0));
-                return new SeriesLookup(null, null, 0d, "series not found");
+                return new SeriesLookup(null, null, 0d, ["series not found"]);
             }
         }
 
-        // The budget is spent. Keep whatever the cache already knew; otherwise the series stays unresolved
-        // for this run and nothing is written, so the next run redoes it.
-        return hit is { TmdbId: { } knownId }
-            ? new SeriesLookup(knownId, stale, hit.Confidence,
-                               stale is null ? "series details unavailable, request budget spent" : null)
-            : new SeriesLookup(null, null, 0d, "not resolved, request budget spent");
+        // No fresh answer. Without a known id the series stays unresolved for this run and nothing is written,
+        // so the next run redoes it.
+        if (hit is not { TmdbId: { } knownId })
+            return new SeriesLookup(null, null, 0d, ["not resolved, request budget spent"]);
+
+        // With one, keep it. The index entry is left alone: a refused or empty lookup is not a reason to forget
+        // a series TMDB gave us, and the next run asks again.
+        var reason = tmdb.BudgetExhausted
+            ? (stale is null ? "series details unavailable, request budget spent" : null)
+            : $"TMDB no longer finds this series; keeping its cached id {knownId}";
+        List<string> reasons = reason is null ? [] : [reason];
+
+        if (stale is null) return new SeriesLookup(knownId, null, hit.Confidence, reasons);
+
+        var (staleConfidence, staleNotes) = Judge(title, stale);
+        return new SeriesLookup(knownId, stale, staleConfidence, [.. reasons, .. staleNotes]);
     }
 
     private async Task<T?> ReadAsync<T>(string path, CancellationToken ct) where T : class

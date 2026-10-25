@@ -39,7 +39,12 @@ public class TvPipelineGapTests
     private static List<string> Searches(TestPipeline.TvHarness h)
         => [.. h.Handler.Requests
             .Where(r => r.RequestUri!.AbsolutePath == "/3/search/tv")
-            .Select(r => Uri.UnescapeDataString(r.RequestUri!.Query["?query=".Length..]))];
+            .Select(r => Uri.UnescapeDataString(r.RequestUri!.Query["?query=".Length..].Split('&')[0]))];
+
+    private static List<string> SearchQueries(TestPipeline.TvHarness h)
+        => [.. h.Handler.Requests
+            .Where(r => r.RequestUri!.AbsolutePath == "/3/search/tv")
+            .Select(r => r.RequestUri!.Query)];
 
     private static string Payload(TestPipeline.TvHarness h, string fileName)
         => Directory.GetFiles(h.CacheDir, fileName, SearchOption.AllDirectories).Single();
@@ -401,9 +406,9 @@ public class TvPipelineGapTests
     {
         var h = Harness(Tmdb(
             Show(10, "The Biggest Loser", (1, ["A"])),
-            Show(20, "The Biggest Loser (2020)", (1, ["B"])),
+            Show(20, "The Biggest Loser", (1, ["B"])) with { SearchYear = 2020 },
             Show(30, "dune", (1, ["C"])),
-            Show(40, "dune (2021)", (1, ["D"]))));
+            Show(40, "dune", (1, ["D"])) with { SearchYear = 2021 }));
 
         var result = await h.Pipeline.RunAsync([
             Ep("A", "The Biggest Loser"), Ep("B", "The Biggest Loser (2020)"),
@@ -416,6 +421,9 @@ public class TvPipelineGapTests
         Assert.Equal([10, 20, 30, 40], result.Shows.Select(s => s.I));
         Assert.Equal(4, Searches(h).Count);
         Assert.Equal(4, h.Cache.Entries.Count);
+        // TMDB calls all four by the plain name, so the year in the Sheet name must not count against them.
+        Assert.Equal([1d, 1d, 1d, 1d], result.Shows.Select(s => s.Mc));
+        Assert.Empty(result.ReviewQueue);
     }
 
     // ---- the cache: warm runs, negatives, and the budget (Task 11 and 12 contracts) ----------------
@@ -707,5 +715,193 @@ public class TvPipelineGapTests
         var show = Assert.Single(result.Shows);
         Assert.Equal(200, show.I);
         Assert.Equal(["New One", "New Two"], Assert.Single(show.Seasons).Eps.Select(e => e.T));
+    }
+
+    // ---- fix pass: A (is it the right show), B (order), C (lost series), D (blank series) ----------
+
+    private static SheetRow Row(string title, string series, string genre)
+        => new(title, "44:00:00", "", series + ": The Complete Series", genre, series);
+
+    [Fact]
+    public async Task AMatchThatIsTheSameNameOnceFoldedIsFullConfidenceAndSilent()
+    {
+        // The Sheet has no colon and no capitals; folding makes it the same name as TMDB has.
+        var h = Harness(Tmdb(Show(456, "NCIS: Los Angeles", (1, ["A"])) with { SearchAs = "ncis los angeles" }));
+
+        var result = await h.Pipeline.RunAsync([Ep("A", "ncis los angeles")], Ct);
+
+        var show = Assert.Single(result.Shows);
+        Assert.Equal(456, show.I);
+        Assert.Equal(1d, show.Mc);
+        Assert.Equal(1d, Assert.Single(h.Cache.Entries).Confidence);
+        Assert.Empty(result.ReviewQueue);
+    }
+
+    [Fact]
+    public async Task AMatchUnderADifferentNameIsAGuessAndTheReviewQueueNamesBoth()
+    {
+        var h = Harness(Tmdb(
+            Show(1, "Alias", (1, ["A"])),
+            Show(2996, "The Office (UK)", (1, ["B"])) with { SearchAs = "The Office" }));
+
+        var result = await h.Pipeline.RunAsync(
+            [Ep("A", "Alias"), Ep("B", "The Office"), Ep("C", "Nothing Known")], Ct);
+
+        // Mc is not a constant: 1.0 for a name match, 0.5 for a guess, 0 for no match.
+        Assert.Equal(["Alias", "Nothing Known", "The Office"], result.Shows.Select(s => s.T));
+        Assert.Equal([1d, 0d, 0.5d], result.Shows.Select(s => s.Mc));
+        Assert.Equal([1, 0, 2996], result.Shows.Select(s => s.I)); // the guess is still used
+
+        var guess = Assert.Single(h.Cache.Entries, e => e.TmdbId == 2996);
+        Assert.Equal(0.5d, guess.Confidence);
+        Assert.False(guess.Negative);
+
+        Assert.Equal(2, result.ReviewQueue.Count);
+        var line = Assert.Single(result.ReviewQueue, l => l.Contains("The Office"));
+        Assert.Contains("The Office (UK)", line); // the name TMDB has
+        Assert.Contains("2996", line);            // the id to paste
+        Assert.Contains(result.ReviewQueue, l => l.Contains("Nothing Known") && l.Contains("not found"));
+    }
+
+    [Fact]
+    public async Task AGuessStaysAGuessAndStaysInTheReviewQueueOnAWarmRun()
+    {
+        var h = Harness(Tmdb(Show(2996, "The Office (UK)", (1, ["B"])) with { SearchAs = "The Office" }));
+        SheetRow[] rows = [Ep("B", "The Office")];
+
+        var first = await h.Pipeline.RunAsync(rows, Ct);
+        h.Handler.Requests.Clear();
+        var second = await h.Pipeline.RunAsync(rows, Ct);
+
+        Assert.Empty(h.Handler.Requests);
+        Assert.Equal(0.5d, Assert.Single(second.Shows).Mc);
+        Assert.Equal(first.ReviewQueue, second.ReviewQueue);
+        Assert.Single(second.ReviewQueue);
+    }
+
+    [Fact]
+    public async Task TheSearchCarriesTheTrailingYearOfTheSheetNameInsteadOfTheParenthetical()
+    {
+        var h = Harness(Tmdb(
+            Show(10, "The Biggest Loser", (1, ["A"])),
+            Show(20, "The Biggest Loser", (1, ["B"])) with { SearchYear = 2020 }));
+
+        var result = await h.Pipeline.RunAsync(
+            [Ep("A", "The Biggest Loser"), Ep("B", "The Biggest Loser (2020)")], Ct);
+
+        Assert.Equal(
+            ["?query=The%20Biggest%20Loser", "?query=The%20Biggest%20Loser&first_air_date_year=2020"],
+            SearchQueries(h));
+        Assert.Equal([10, 20], result.Shows.Select(s => s.I));
+    }
+
+    [Fact]
+    public async Task TheSeriesNameTakesTheMostFrequentCasingWhateverTheRowOrder()
+    {
+        FakeTv Backend() => new() { AnyQuery = Show(1, "Alias", (1, ["A", "B", "C"])) };
+        SheetRow[] majority = [
+            Ep("Season 1, Episode 1: A", "ALIAS"), Ep("Season 1, Episode 2: B", "Alias"),
+            Ep("Season 1, Episode 3: C", "Alias")];
+        SheetRow[] tie = [Ep("Season 1, Episode 1: A", "alias"), Ep("Season 1, Episode 2: B", "ALIAS")];
+
+        foreach (var rows in new[] { majority, [.. majority.Reverse()] })
+            Assert.Equal("Alias", Assert.Single((await Harness(Backend()).Pipeline.RunAsync(rows, Ct)).Shows).T);
+
+        // Equal counts: ordinal order, so the capitals win.
+        foreach (var rows in new[] { tie, [.. tie.Reverse()] })
+            Assert.Equal("ALIAS", Assert.Single((await Harness(Backend()).Pipeline.RunAsync(rows, Ct)).Shows).T);
+    }
+
+    [Fact]
+    public async Task TheGenreTakesTheMostFrequentValueWhateverTheRowOrder()
+    {
+        FakeTv Backend() => new() { AnyQuery = Show(1, "Alias", (1, ["A", "B", "C"])) };
+        SheetRow[] majority = [Row("A", "Alias", "Drama"), Row("B", "Alias", "Comedy"), Row("C", "Alias", "Comedy")];
+        SheetRow[] tie = [Row("A", "Alias", "Drama"), Row("B", "Alias", "Comedy")];
+
+        foreach (var rows in new[] { majority, [.. majority.Reverse()] })
+            Assert.Equal("Comedy", Assert.Single((await Harness(Backend()).Pipeline.RunAsync(rows, Ct)).Shows).Ag);
+
+        // Equal counts: ordinal order.
+        foreach (var rows in new[] { tie, [.. tie.Reverse()] })
+            Assert.Equal("Comedy", Assert.Single((await Harness(Backend()).Pipeline.RunAsync(rows, Ct)).Shows).Ag);
+    }
+
+    [Fact]
+    public async Task AStaleSeriesThatTmdbNoLongerFindsKeepsItsCachedIdAndIsQueuedForReview()
+    {
+        SheetRow[] rows = [Ep("Season 1, Episode 1: A", "Alias")];
+        var first = Harness(Tmdb(Show(456, "Alias", (1, ["A", "B"]))));
+        await first.Pipeline.RunAsync(rows, Ct);
+        Age(Payload(first, "series.json"), TestPipeline.Now, PastTheWindow);
+
+        // The re-search finds nothing, with the budget intact: that is not "the budget ran out".
+        var second = Harness(Tmdb(), shareCacheWith: first);
+        var result = await second.Pipeline.RunAsync(rows, Ct);
+
+        Assert.Equal(["/3/search/tv"], Paths(second));
+        var show = Assert.Single(result.Shows);
+        Assert.Equal(456, show.I);
+        Assert.Equal(1d, show.Mc);
+        Assert.Equal(2, show.TotalEpisodes); // the stale payload still says one season, and it is on disk
+        var entry = Assert.Single(second.Cache.Entries);
+        Assert.False(entry.Negative);
+        Assert.Equal(456, entry.TmdbId);
+        Assert.Contains(result.ReviewQueue, l => l.Contains("Alias") && l.Contains("456"));
+    }
+
+    [Fact]
+    public async Task AStaleGuessThatTmdbNoLongerFindsIsStillAGuess()
+    {
+        SheetRow[] rows = [Ep("Season 1, Episode 1: A", "The Office")];
+        var first = Harness(Tmdb(Show(2996, "The Office (UK)", (1, ["A"])) with { SearchAs = "The Office" }));
+        await first.Pipeline.RunAsync(rows, Ct);
+        Age(Payload(first, "series.json"), TestPipeline.Now, PastTheWindow);
+
+        var second = Harness(Tmdb(), shareCacheWith: first);
+        var result = await second.Pipeline.RunAsync(rows, Ct);
+
+        Assert.Equal(0.5d, Assert.Single(result.Shows).Mc); // judged from the stale payload, still a guess
+        Assert.Equal(0.5d, Assert.Single(second.Cache.Entries).Confidence);
+        Assert.Equal(2, result.ReviewQueue.Count); // the name mismatch and the lost series, both naming it
+        Assert.All(result.ReviewQueue, l => Assert.Contains("The Office", l));
+        Assert.Contains(result.ReviewQueue, l => l.Contains("The Office (UK)"));
+        Assert.Contains(result.ReviewQueue, l => l.Contains("no longer finds") && l.Contains("2996"));
+    }
+
+    [Fact]
+    public async Task ASeriesWhosePayloadIsGoneAndWhomTmdbNoLongerFindsKeepsItsCachedIdAndConfidence()
+    {
+        SheetRow[] rows = [Ep("Season 1, Episode 1: A", "The Office")];
+        var first = Harness(Tmdb(Show(2996, "The Office (UK)", (1, ["A", "B"])) with { SearchAs = "The Office" }));
+        await first.Pipeline.RunAsync(rows, Ct);
+        File.Delete(Payload(first, "series.json"));
+
+        var second = Harness(Tmdb(), shareCacheWith: first);
+        var result = await second.Pipeline.RunAsync(rows, Ct);
+
+        var show = Assert.Single(result.Shows);
+        Assert.Equal(2996, show.I);
+        Assert.Equal(0.5d, show.Mc); // the index entry remembers it was a guess
+        Assert.Equal(1, show.OwnedEpisodes); // no details to hang on, so the owned row stands alone
+        var entry = Assert.Single(second.Cache.Entries);
+        Assert.False(entry.Negative);
+        Assert.Equal(2996, entry.TmdbId);
+        Assert.Contains(result.ReviewQueue, l => l.Contains("The Office") && l.Contains("2996"));
+    }
+
+    [Fact]
+    public async Task RowsWithNoSeriesNameAreCountedInOneReviewLine()
+    {
+        var h = Harness(Tmdb(Show(456, "Alias", (1, ["A"]))));
+
+        var result = await h.Pipeline.RunAsync([
+            Ep("A", "Alias"),
+            new SheetRow("x", "44:00:00", "", "p", "Drama", ""),
+            new SheetRow("y", "44:00:00", "", "p", "Drama", "   "),
+            new SheetRow("z", "44:00:00", "", "p", "Drama", "")], Ct);
+
+        Assert.Single(result.Shows);
+        Assert.Equal(["3 row(s) have no series name and were skipped"], result.ReviewQueue);
     }
 }

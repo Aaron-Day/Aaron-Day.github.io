@@ -89,9 +89,19 @@ public sealed class TmdbClient(
             .Where(n => n.Length > 0)];
     }
 
-    public async Task<TmdbSeries?> SearchSeriesAsync(string name, CancellationToken ct)
+    public Task<TmdbSeries?> SearchSeriesAsync(string name, CancellationToken ct)
+        => SearchSeriesAsync(name, null, ct);
+
+    /// <param name="firstAirYear">
+    /// When given, TMDB is asked for series whose first air date falls in that year, which is what tells
+    /// "The Biggest Loser" (2004) from "The Biggest Loser" (2020). Mirrors the year on <see cref="SearchMoviesAsync"/>.
+    /// </param>
+    public async Task<TmdbSeries?> SearchSeriesAsync(string name, int? firstAirYear, CancellationToken ct)
     {
-        using var doc = await GetAsync($"3/search/tv?query={Uri.EscapeDataString(name)}", ct);
+        var path = $"3/search/tv?query={Uri.EscapeDataString(name)}" +
+                   (firstAirYear is { } y ? $"&first_air_date_year={y}" : string.Empty);
+
+        using var doc = await GetAsync(path, ct);
         if (doc is null) return null;
 
         var first = doc.RootElement.GetProperty("results").EnumerateArray().FirstOrDefault();
