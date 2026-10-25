@@ -154,7 +154,7 @@ public class MoviePipelineAmendment2Tests
         var byPath = new Dictionary<string, string>
         {
             ["/3/movie/1"] = """{"id":1,"title":"Alpha","runtime":90,"release_date":"2000-01-01"}""",
-            ["/3/movie/1/credits"] = """{"crew":null,"cast":[null,5,{"name":7,"order":"x"}]}""",   // nothing in it is usable
+            ["/3/movie/1/credits"] = """{"crew":[null,5,{"job":"Director","name":7}],"cast":[null,5,{"name":7,"order":"x"}]}""",   // no member of it is usable
             ["/3/movie/2"] = """{"id":2,"title":"Bravo","runtime":100,"release_date":"2001-01-01"}""",
             ["/3/movie/2/credits"] = """{"crew":[{"job":"Director","name":"Dir B"}],"cast":[{"name":"Good Actor","order":0}]}""",
         };
@@ -176,5 +176,42 @@ public class MoviePipelineAmendment2Tests
         var bravo = result.Records.Single(r => r.T == "Bravo");
         Assert.Equal(2, bravo.I);
         Assert.Equal(["Good Actor"], bravo.Cast.Select(c => c.N));
+    }
+
+    [Fact]
+    public async Task ACreditsContainerOfTheWrongShapeStopsTheRunAndCachesNothingForThatFilm()
+    {
+        // The run stops instead of recording a blank cast ("TMDB has none") that the cache would keep for five months.
+        var h = TestPipeline.Create(0, Routes(new Dictionary<string, string>
+        {
+            ["/3/search/movie"] = """{"results":[{"id":275,"title":"Fargo","release_date":"1996-03-08","popularity":30}]}""",
+            ["/3/movie/275"] = Details(),
+            ["/3/movie/275/credits"] = """{"cast":[{"name":"Frances McDormand","order":0}],"crew":null}""",
+        }));
+
+        var ex = await Assert.ThrowsAsync<InvalidDataException>(
+            () => h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None));
+
+        Assert.Contains("film 275", ex.Message);
+        Assert.Null(await h.Cache.ReadPayloadAsync<StoredMovie>("movies/275.json", CancellationToken.None));
+    }
+
+    [Fact]
+    public async Task ARefreshWhoseCreditsChangedShapeLeavesTheStoredCastIntact()
+    {
+        var h = TestPipeline.Create(0, OnlyAnswers("/3/movie/275", Details(Halloween + """,  "credits":"gone" """)));
+        var seededAt = TestPipeline.Now.AddDays(-200);
+        h.Cache.Put(new CacheEntry(FargoKey, 275, 0.85, TestPipeline.Now, false, "fargo", 98));
+        await h.Cache.WritePayloadAsync("movies/275.json",
+            new StoredMovie(seededAt, new TmdbMovie(275, "Fargo", "Old", null, 98, "1996-03-08", 7.5, "/old.jpg", null),
+                            [new TmdbCastMember("Old Actor", "Old Role", null)]),
+            CancellationToken.None);
+
+        await Assert.ThrowsAsync<InvalidDataException>(
+            () => h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None));
+
+        var stored = await h.Cache.ReadPayloadAsync<StoredMovie>("movies/275.json", CancellationToken.None);
+        Assert.Equal(seededAt, stored!.FetchedUtc);                       // not overwritten by the failed refresh
+        Assert.Equal(["Old Actor"], stored.Cast!.Select(c => c.Name));    // and not replaced by []
     }
 }

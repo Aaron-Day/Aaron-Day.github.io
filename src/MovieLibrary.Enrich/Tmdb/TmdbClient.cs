@@ -84,22 +84,33 @@ public sealed class TmdbClient(
     /// <summary>
     /// One credits request, read in full: the directors (the scorer needs them) and the top
     /// <paramref name="castLimit"/> billed cast (the record keeps them). Throwing the cast away after paying for
-    /// it is what made it unrecoverable from the cache. Null for a 404 or an exhausted budget. A member that cannot
-    /// be read is skipped: this sits in the scoring path, and one odd entry must not abort a seed.
+    /// it is what made it unrecoverable from the cache. Null for a 404 or an exhausted budget.
+    /// <para>A <i>member</i> that cannot be read (not an object, no usable <c>name</c>, a mistyped <c>order</c>) is
+    /// skipped: this sits in the scoring path, and one odd entry must not abort a seed.</para>
+    /// <para>A <i>container</i> of the wrong shape is a different thing. A body that is not an object, or a
+    /// <c>cast</c> or <c>crew</c> that is present but not an array, means TMDB changed the response for every film, and
+    /// the pipeline would cache the empty result as "TMDB has none" for five months. It throws instead.</para>
     /// </summary>
+    /// <exception cref="InvalidDataException">The body, <c>cast</c> or <c>crew</c> has the wrong shape. The cast is not
+    /// read when <paramref name="castLimit"/> is 0 or less, so its shape is not checked then.</exception>
     public async Task<TmdbCredits?> GetCreditsAsync(int movieId, int castLimit, CancellationToken ct)
     {
         using var doc = await GetAsync($"3/movie/{movieId}/credits", ct);
         if (doc is null) return null;
 
-        return new TmdbCredits(Directors(doc.RootElement), TopBilledCast(doc.RootElement, castLimit));
+        RequireObject(doc.RootElement, movieId);
+        return new TmdbCredits(
+            Directors(doc.RootElement, movieId), TopBilledCast(doc.RootElement, castLimit, movieId));
     }
 
     /// <summary>
     /// Details (with genres and collection) and the top-billed cast in a single request, for the paths that never saw
     /// the credits during a search: a payload past its refresh window and a film named by an override. A body with no
-    /// usable <c>credits</c> object gives an empty cast rather than a second request or an exception.
+    /// <c>credits</c> property at all (TMDB omits it without <c>append_to_response</c>) gives an empty cast rather than
+    /// a second request or an exception. A <c>credits</c> that is present but not an object, or whose <c>cast</c> is
+    /// present but not an array, throws: see <see cref="GetCreditsAsync"/>.
     /// </summary>
+    /// <exception cref="InvalidDataException">The <c>credits</c> value or its <c>cast</c> has the wrong shape.</exception>
     public async Task<TmdbMovieWithCast?> GetMovieWithCreditsAsync(int id, int castLimit, CancellationToken ct)
     {
         using var doc = await GetAsync($"3/movie/{id}?append_to_response=credits", ct);
@@ -108,9 +119,12 @@ public sealed class TmdbClient(
         var movie = doc.RootElement.Deserialize<TmdbMovie>();
         if (movie is null) return null;
 
-        var cast = doc.RootElement.TryGetProperty("credits", out var credits)
-            ? TopBilledCast(credits, castLimit)
-            : [];
+        IReadOnlyList<TmdbCastMember> cast = [];
+        if (doc.RootElement.TryGetProperty("credits", out var credits))
+        {
+            RequireObject(credits, id);
+            cast = TopBilledCast(credits, castLimit, id);
+        }
         return new TmdbMovieWithCast(movie, cast);
     }
 
@@ -120,11 +134,36 @@ public sealed class TmdbClient(
             ? v.GetString()
             : null;
 
-    private static IReadOnlyList<string> Directors(JsonElement credits)
+    /// <summary>
+    /// The credits object itself, checked once by each caller before <see cref="Directors"/> and
+    /// <see cref="TopBilledCast"/> read it. Callers pass what TMDB sent for <c>credits</c>, so anything but an object
+    /// is a changed response, not a film with no credits.
+    /// </summary>
+    private static void RequireObject(JsonElement credits, int movieId)
     {
-        if (credits.ValueKind != JsonValueKind.Object
-            || !credits.TryGetProperty("crew", out var crew) || crew.ValueKind != JsonValueKind.Array)
-            return [];
+        if (credits.ValueKind != JsonValueKind.Object) throw ShapeChanged(movieId, "credits", credits, "an object");
+    }
+
+    /// <summary>
+    /// The <c>cast</c> or <c>crew</c> array of a credits object: null when the property is absent, an exception when it
+    /// is present as anything but an array. Absent is not the same as mistyped: a credits object with no <c>cast</c>
+    /// yields no cast, as it always has.
+    /// </summary>
+    private static JsonElement? ArrayOf(JsonElement credits, string name, int movieId)
+    {
+        if (!credits.TryGetProperty(name, out var value)) return null;
+        if (value.ValueKind != JsonValueKind.Array) throw ShapeChanged(movieId, $"credits.{name}", value, "an array");
+        return value;
+    }
+
+    private static InvalidDataException ShapeChanged(int movieId, string field, JsonElement actual, string expected)
+        => new($"TMDB sent the credits of film {movieId} with '{field}' as {actual.ValueKind.ToString().ToLowerInvariant()}, " +
+               $"not {expected}. A container that changes shape changes for every film, and caching the empty result " +
+               "would hide it for months, so the run stops here.");
+
+    private static IReadOnlyList<string> Directors(JsonElement credits, int movieId)
+    {
+        if (ArrayOf(credits, "crew", movieId) is not { } crew) return [];
 
         return [.. crew.EnumerateArray()
             .Where(c => StringOf(c, "job") == "Director")
@@ -133,11 +172,9 @@ public sealed class TmdbClient(
     }
 
     /// <summary>TMDB lists the whole cast, hundreds of people for a big film; billing is its <c>order</c> field.</summary>
-    private static IReadOnlyList<TmdbCastMember> TopBilledCast(JsonElement credits, int limit)
+    private static IReadOnlyList<TmdbCastMember> TopBilledCast(JsonElement credits, int limit, int movieId)
     {
-        if (limit <= 0 || credits.ValueKind != JsonValueKind.Object
-            || !credits.TryGetProperty("cast", out var cast) || cast.ValueKind != JsonValueKind.Array)
-            return [];
+        if (limit <= 0 || ArrayOf(credits, "cast", movieId) is not { } cast) return [];
 
         return [.. cast.EnumerateArray()
             .Select((member, position) => (Member: member, Position: position))

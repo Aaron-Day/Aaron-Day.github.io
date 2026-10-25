@@ -122,17 +122,6 @@ public class CatalogWriterMoveTests : IDisposable
     }
 
     [Fact]
-    public async Task OnlyAnIOExceptionIsRetried()
-    {
-        var spy = new MoveSpy(_dir, (name, _) => name == "movies.json" ? new InvalidOperationException("not transient") : null);
-        await V1Async();
-
-        await Assert.ThrowsAsync<InvalidOperationException>(() => V2Async(spy));
-
-        Assert.Equal(1, spy.Attempts["movies.json"]);
-    }
-
-    [Fact]
     public async Task AFailedIndexMoveLeavesTheNewSeriesPublishedAndTheOldIndexAndMetaInPlace()
     {
         await V1Async();
@@ -178,5 +167,144 @@ public class CatalogWriterMoveTests : IDisposable
         Assert.True(File.Exists(Path.Combine(_dir, "shows.json")));
         AssertTheIndexOnlyNamesSeriesThatExist();
         Assert.Empty(Leftovers());
+    }
+
+    // ---- which faults are retried (fix pass 3) ----
+
+    [Fact]
+    public async Task OnlyAnIOExceptionOrAnUnauthorizedAccessIsRetried()
+    {
+        var spy = new MoveSpy(_dir, (name, _) => name == "movies.json" ? new InvalidOperationException("not a file fault") : null);
+        await V1Async();
+
+        await Assert.ThrowsAsync<InvalidOperationException>(() => V2Async(spy));
+
+        Assert.Equal(1, spy.Attempts["movies.json"]);
+    }
+
+    [Fact]
+    public async Task AnUnauthorizedAccessIsRetriedBecauseThatIsWhatWindowsThrowsForAHeldDestination()
+    {
+        var spy = new MoveSpy(_dir, (name, attempt) => name == Alias && attempt == 1 ? new UnauthorizedAccessException("held destination") : null);
+        await V1Async();
+
+        await V2Async(spy);
+
+        Assert.Equal(2, spy.Attempts[Alias]);
+        Assert.Equal(5, spy.Done.Count);
+        Assert.Empty(Leftovers());
+    }
+
+    [Fact]
+    public async Task AnUnauthorizedAccessThatNeverClearsIsTriedThreeTimesAndThenSurfaces()
+    {
+        var spy = new MoveSpy(_dir, (name, _) => name == "shows.json" ? new UnauthorizedAccessException("read-only") : null);
+        await V1Async();
+
+        await Assert.ThrowsAsync<UnauthorizedAccessException>(() => V2Async(spy));
+
+        Assert.Equal(3, spy.Attempts["shows.json"]);
+    }
+
+    [Theory]
+    [InlineData(typeof(FileNotFoundException))]
+    [InlineData(typeof(DirectoryNotFoundException))]
+    [InlineData(typeof(PathTooLongException))]
+    public async Task AFaultThatWaitingCannotFixSurfacesAtOnce(Type type)
+    {
+        // All three are IOExceptions, so a plain catch would sleep through three attempts before reporting them.
+        var spy = new MoveSpy(_dir, (name, _) => name == "movies.json" ? (Exception)Activator.CreateInstance(type, "permanent")! : null);
+        await V1Async();
+
+        await Assert.ThrowsAsync(type, () => V2Async(spy));
+
+        Assert.Equal(1, spy.Attempts["movies.json"]);
+    }
+
+    // ---- real handles, no injected faults ----
+    // Windows refuses to replace a file that is open (measured: UnauthorizedAccessException for a held destination,
+    // IOException for a held source); Linux renames over it. These assert that the write succeeds, never how many
+    // attempts it took, so they hold on both, and on Linux they pass without exercising the retry.
+
+    private const int HoldMs = 150;
+
+    [Fact]
+    public async Task ADestinationHeldOpenForAMomentIsWaitedOutAndTheCatalogPublishes()
+    {
+        var oldAlias = Series("alias", 10);
+        await new CatalogWriter(_dir).WriteAsync([Film(1)], [oldAlias], Meta(1, 1), default);
+        // The most permissive sharing there is: Windows still refuses to replace the file.
+        var held = new FileStream(Path.Combine(_dir, Alias), FileMode.Open, FileAccess.Read, FileShare.ReadWrite | FileShare.Delete);
+        var release = Task.Run(async () => { await Task.Delay(HoldMs); held.Dispose(); });
+
+        try
+        {
+            // 200 ms before the second attempt, 400 ms more before a third: the hold ends well before either could give up.
+            await new CatalogWriter(_dir, (temp, final) => File.Move(temp, final, overwrite: true), TimeSpan.FromMilliseconds(200))
+                .WriteAsync([Film(2)], [Series("alias", 99), Series("new-series", 11)], Meta(1, 2), default);
+        }
+        finally { await release; }
+
+        Assert.Contains("\"i\":99", System.Text.Encoding.UTF8.GetString(Bytes(Alias)));
+        Assert.Contains("Film 2", System.Text.Encoding.UTF8.GetString(Bytes("movies.json")));
+        Assert.True(File.Exists(Path.Combine(_dir, NewSeries)));
+        Assert.Empty(Leftovers());
+    }
+
+    [Fact]
+    public async Task ASourceHeldOpenForAMomentIsWaitedOutAndTheCatalogPublishes()
+    {
+        await V1Async();
+        FileStream? held = null;
+        Task? release = null;
+
+        void MoveWhileTheTempIsHeld(string temp, string final)
+        {
+            if (held is null)   // the first move of the run: some scanner has the new file open
+            {
+                held = new FileStream(temp, FileMode.Open, FileAccess.Read, FileShare.Read);
+                var h = held;
+                release = Task.Run(async () => { await Task.Delay(HoldMs); h.Dispose(); });
+            }
+            File.Move(temp, final, overwrite: true);
+        }
+
+        try
+        {
+            await new CatalogWriter(_dir, MoveWhileTheTempIsHeld, TimeSpan.FromMilliseconds(200))
+                .WriteAsync([Film(2)], [Series("alias", 10), Series("new-series", 11)], Meta(1, 2), default);
+        }
+        finally { if (release is not null) await release; }
+
+        Assert.Contains("Film 2", System.Text.Encoding.UTF8.GetString(Bytes("movies.json")));
+        Assert.True(File.Exists(Path.Combine(_dir, NewSeries)));
+        Assert.Empty(Leftovers());
+    }
+
+    // ---- cleanup must not mask the real failure ----
+
+    [Fact]
+    public async Task ATempThatCannotBeDeletedNeitherHidesTheRealFailureNorStopsTheCleanup()
+    {
+        await V1Async();
+        FileStream? held = null;
+
+        void FailWhileHoldingItsTemp(string temp, string final)
+        {
+            // Pin the first temp, so that the cleanup's delete of it throws on Windows (the first temp is the first one
+            // the cleanup meets, which is what shows whether the rest are still deleted after it).
+            held ??= new FileStream(temp, FileMode.Open, FileAccess.Read, FileShare.Read);
+            throw new IOException("the real failure");
+        }
+
+        try
+        {
+            var ex = await Assert.ThrowsAsync<IOException>(() => new CatalogWriter(_dir, FailWhileHoldingItsTemp, TimeSpan.Zero)
+                .WriteAsync([Film(2)], [Series("alias", 10), Series("new-series", 11)], Meta(1, 2), default));
+
+            Assert.Equal("the real failure", ex.Message);
+            Assert.All(Leftovers(), left => Assert.Equal(held!.Name, left));   // nothing but the pinned temp (on Linux, not even that)
+        }
+        finally { held?.Dispose(); }
     }
 }

@@ -5,9 +5,12 @@ using MovieLibrary.Enrich.Tmdb;
 namespace MovieLibrary.Core.Tests;
 
 /// <summary>
-/// Task 14 amendment G. The credits parse now sits in the scoring path, so a member it cannot read must be
-/// skipped, not allowed to abort a seed that has already spent thousands of requests. None of these shapes is
-/// modelled by the stubs elsewhere, and the parse has never seen a real TMDB response.
+/// Task 14 amendment G, and the ruling that completed it. The credits parse sits in the scoring path, so one
+/// <i>member</i> it cannot read is skipped, not allowed to abort a seed that has already spent thousands of requests.
+/// A <i>container</i> of the wrong shape (credits not an object, cast or crew present but not an array) is the opposite
+/// case: it is wrong for every film, and an empty result would be cached for five months as "TMDB has none", so it
+/// throws. A container that is simply absent stays empty. None of these shapes is modelled by the stubs elsewhere, and
+/// the parse has never seen a real TMDB response.
 /// </summary>
 public class TmdbClientCreditsRobustnessTests
 {
@@ -22,28 +25,26 @@ public class TmdbClientCreditsRobustnessTests
                               new RequestBudget(0), () => T0);
     }
 
-    [Fact]
-    public async Task ACreditsObjectThatIsNullLeavesTheMovieAndAnEmptyCast()
-    {
-        var both = await Client("""{"id":275,"title":"Fargo","runtime":98,"credits":null}""")
-            .GetMovieWithCreditsAsync(275, 4, CancellationToken.None);
+    // ---- containers: a wrong shape is a changed response, not a film with no credits ----
 
-        Assert.Equal(275, both!.Movie.Id);
-        Assert.Empty(both.Cast);
+    private static void AssertNamesTheFilmAndTheField(InvalidDataException ex, string film, string field)
+    {
+        Assert.Contains($"film {film}", ex.Message);
+        Assert.Contains($"'{field}'", ex.Message);
     }
 
     [Theory]
+    [InlineData("null")]
     [InlineData("[]")]
     [InlineData("\"credits\"")]
     [InlineData("5")]
     [InlineData("true")]
-    public async Task ACreditsValueThatIsNotAnObjectGivesAnEmptyCast(string credits)
+    public async Task ACreditsValueThatIsNotAnObjectThrowsInsteadOfGivingAnEmptyCast(string credits)
     {
-        var both = await Client($$"""{"id":275,"title":"Fargo","credits":{{credits}}}""")
-            .GetMovieWithCreditsAsync(275, 4, CancellationToken.None);
+        var ex = await Assert.ThrowsAsync<InvalidDataException>(() =>
+            Client($$"""{"id":275,"title":"Fargo","credits":{{credits}}}""").GetMovieWithCreditsAsync(275, 4, CancellationToken.None));
 
-        Assert.Equal(275, both!.Movie.Id);
-        Assert.Empty(both.Cast);
+        AssertNamesTheFilmAndTheField(ex, "275", "credits");
     }
 
     [Theory]
@@ -51,13 +52,37 @@ public class TmdbClientCreditsRobustnessTests
     [InlineData("{}")]
     [InlineData("\"cast\"")]
     [InlineData("7")]
-    public async Task ACastThatIsNotAnArrayGivesAnEmptyCastAndKeepsTheDirectors(string cast)
+    [InlineData("true")]
+    public async Task ACastThatIsNotAnArrayThrowsInsteadOfGivingAnEmptyCast(string cast)
     {
-        var credits = await Client($$"""{"cast":{{cast}},"crew":[{"job":"Director","name":"Joel Coen"}]}""")
-            .GetCreditsAsync(275, 4, CancellationToken.None);
+        var ex = await Assert.ThrowsAsync<InvalidDataException>(() =>
+            Client($$"""{"cast":{{cast}},"crew":[{"job":"Director","name":"Joel Coen"}]}""").GetCreditsAsync(275, 4, CancellationToken.None));
 
-        Assert.Empty(credits!.Cast);
-        Assert.Equal(["Joel Coen"], credits.Directors);
+        AssertNamesTheFilmAndTheField(ex, "275", "credits.cast");
+    }
+
+    [Theory]
+    [InlineData("null")]
+    [InlineData("{}")]
+    [InlineData("\"cast\"")]
+    public async Task ACastThatIsNotAnArrayThrowsOnTheAppendToResponsePathToo(string cast)
+    {
+        var ex = await Assert.ThrowsAsync<InvalidDataException>(() =>
+            Client($$$"""{"id":275,"title":"Fargo","credits":{"cast":{{{cast}}},"crew":[]}}""").GetMovieWithCreditsAsync(275, 4, CancellationToken.None));
+
+        AssertNamesTheFilmAndTheField(ex, "275", "credits.cast");
+    }
+
+    [Theory]
+    [InlineData("""{"id":275,"title":"Fargo"}""")]                          // no credits at all: TMDB omits it without append_to_response
+    [InlineData("""{"id":275,"title":"Fargo","credits":{}}""")]             // a credits object with neither array
+    [InlineData("""{"id":275,"title":"Fargo","credits":{"crew":[]}}""")]    // no cast array
+    public async Task AbsenceIsNotAMistypeAndStillGivesAnEmptyCast(string body)
+    {
+        var both = await Client(body).GetMovieWithCreditsAsync(275, 4, CancellationToken.None);
+
+        Assert.Equal(275, both!.Movie.Id);
+        Assert.Empty(both.Cast);
     }
 
     [Fact]
@@ -100,15 +125,58 @@ public class TmdbClientCreditsRobustnessTests
 
     [Theory]
     [InlineData("""{"cast":[]}""")]
-    [InlineData("""{"crew":null}""")]
-    [InlineData("""{"crew":"x"}""")]
-    [InlineData("""{"crew":{}}""")]
-    [InlineData("""[]""")]
-    public async Task CreditsWithNoUsableCrewGiveNoDirectorsInsteadOfThrowing(string body)
+    [InlineData("""{}""")]
+    public async Task CreditsWithNoCrewPropertyGiveNoDirectorsInsteadOfThrowing(string body)
     {
         var credits = await Client(body).GetCreditsAsync(275, 4, CancellationToken.None);
 
         Assert.Empty(credits!.Directors);
+    }
+
+    [Theory]
+    [InlineData("null")]
+    [InlineData("\"x\"")]
+    [InlineData("{}")]
+    [InlineData("5")]
+    public async Task ACrewThatIsNotAnArrayThrowsInsteadOfGivingNoDirectors(string crew)
+    {
+        // Directors carry 0.30 of the match score: emptying them silently would weaken matching for every film.
+        var ex = await Assert.ThrowsAsync<InvalidDataException>(() =>
+            Client($$"""{"cast":[],"crew":{{crew}}}""").GetCreditsAsync(275, 4, CancellationToken.None));
+
+        AssertNamesTheFilmAndTheField(ex, "275", "credits.crew");
+    }
+
+    [Theory]
+    [InlineData("[]")]
+    [InlineData("null")]
+    [InlineData("\"x\"")]
+    [InlineData("7")]
+    public async Task ACreditsBodyThatIsNotAnObjectThrows(string body)
+    {
+        var ex = await Assert.ThrowsAsync<InvalidDataException>(() =>
+            Client(body).GetCreditsAsync(275, 4, CancellationToken.None));
+
+        AssertNamesTheFilmAndTheField(ex, "275", "credits");
+    }
+
+    [Fact]
+    public async Task GetDirectorsThrowsOnAWronglyShapedCrewToo()
+    {
+        var ex = await Assert.ThrowsAsync<InvalidDataException>(() =>
+            Client("""{"crew":"x"}""").GetDirectorsAsync(275, CancellationToken.None));
+
+        AssertNamesTheFilmAndTheField(ex, "275", "credits.crew");
+    }
+
+    [Fact]
+    public async Task TheCastIsNotCheckedWhenNoCastWasAskedFor()
+    {
+        // GetDirectorsAsync reads no cast, so a changed cast loses it nothing, and it must not stop a directors-only call.
+        var directors = await Client("""{"cast":null,"crew":[{"job":"Director","name":"Joel Coen"}]}""")
+            .GetDirectorsAsync(275, CancellationToken.None);
+
+        Assert.Equal(["Joel Coen"], directors);
     }
 
     [Fact]

@@ -44,12 +44,16 @@ public sealed class CatalogWriter(string outputRoot)
     /// destination as <c>*.writing</c> and moved into place, so a reader never sees a truncated file. The
     /// <i>staging</i> phase is all-or-nothing: if any file fails to serialize, or the run is cancelled, nothing has been
     /// published and the previous catalog is exactly as it was (a first run leaves no files). The <i>move</i> phase is
-    /// not atomic across files. It is best-effort ordered, with a bounded retry on <see cref="IOException"/>, so that
-    /// a partial failure degrades safely: series files move first, then <c>movies.json</c> and <c>shows.json</c>, and
-    /// <c>meta.json</c> last. If a move still fails after its retries the index therefore never names a series file
-    /// that is not there yet, and <c>meta.json</c> is the commit marker: a build is complete only when it carries
-    /// this run's <c>builtUtc</c>. A caller that sees the exception must not publish the folder. Once everything is
-    /// staged the moves ignore <c>ct</c>: finishing beats stopping half way.</para>
+    /// not atomic across files. It is best-effort ordered, with a bounded retry (see <c>MoveWithRetryAsync</c>), so
+    /// that a partial failure leaves no dangling reference: series files move first, then <c>movies.json</c> and
+    /// <c>shows.json</c>, and <c>meta.json</c> last. If a move still fails after its retries the index therefore
+    /// never names a series file that is not there yet, and <c>meta.json</c> is the commit marker: a build is
+    /// complete only when it carries this run's <c>builtUtc</c>. That is all the order guarantees. It does <b>not</b>
+    /// make the folder consistent: after a failure in the series phase the old <c>shows.json</c> still carries the
+    /// old episode and season counts beside <c>tv/*.json</c> files that are new and may disagree with them, and
+    /// after a failure in the index phase <c>movies.json</c> may be new beside an old <c>shows.json</c>. A caller
+    /// that sees the exception must not publish the folder. Once everything is staged the moves ignore <c>ct</c>:
+    /// finishing beats stopping half way.</para>
     /// <para>Slugs name files, so they are checked here too, before anything is written (<c>TvPipeline</c> checks them
     /// first, before it spends a request): a clash would otherwise surface late, as a failed move after other files
     /// had already been published. Files from earlier runs are not deleted: a series that was renamed or dropped
@@ -104,7 +108,9 @@ public sealed class CatalogWriter(string outputRoot)
         }
         finally
         {
-            foreach (var (temp, _) in staged) File.Delete(temp); // a no-op for a file never created
+            // Best effort, one file at a time: a temp that is still held open makes its delete throw, and that must
+            // neither replace the exception already in flight nor stop the deletes after it.
+            foreach (var (temp, _) in staged) TryDelete(temp);
         }
     }
 
@@ -112,10 +118,22 @@ public sealed class CatalogWriter(string outputRoot)
     private const int MoveAttempts = 3;
 
     /// <summary>
-    /// On Windows a move is usually refused for a moment, not for good: an antivirus scan, a search indexer or a dev
-    /// server holds a handle. Three attempts with a growing pause; anything that is not an <see cref="IOException"/>
-    /// is not transient and is not retried.
+    /// A move is sometimes refused for a moment, not for good: an antivirus scan, a search indexer or a dev server
+    /// holds a handle. Three attempts with a pause that grows (100 ms, then 200 ms), so a hold shorter than about
+    /// 300 ms is waited out and a longer one surfaces. What is retried is decided by <see cref="MayBeTransient"/>.
     /// </summary>
+    /// <remarks>
+    /// <b>Measured</b> on Windows 11 (10.0.26300), .NET 10, with <c>File.Move(temp, final, overwrite: true)</c> and a
+    /// real handle held by the same process. A held <i>destination</i> throws <see cref="UnauthorizedAccessException"/>
+    /// (0x80070005) whatever share mode the holder opened it with, <c>FileShare.ReadWrite | FileShare.Delete</c>
+    /// included. A held <i>source</i> throws <see cref="IOException"/> (0x80070020, a sharing violation), unless the
+    /// holder shared <c>Delete</c>, in which case the move succeeds. Both are retried. A separate process holding the
+    /// handle was not tried, and Linux was not measured: there a rename over an open file is expected to succeed, so
+    /// neither case arises.
+    /// <see cref="UnauthorizedAccessException"/> is also what Windows throws for causes that will not clear: a
+    /// read-only destination, or a directory standing where the file should go (both measured). Its type cannot tell
+    /// those from a held handle, so they are retried too and surface after the same 300 ms.
+    /// </remarks>
     private async Task MoveWithRetryAsync(string temp, string final)
     {
         for (var attempt = 1; ; attempt++)
@@ -125,11 +143,32 @@ public sealed class CatalogWriter(string outputRoot)
                 _move(temp, final);
                 return;
             }
-            catch (IOException) when (attempt < MoveAttempts)
+            catch (Exception ex) when (attempt < MoveAttempts && MayBeTransient(ex))
             {
                 await Task.Delay(_retryDelay * attempt);
             }
         }
+    }
+
+    /// <summary>
+    /// <see cref="UnauthorizedAccessException"/> and <see cref="IOException"/>, except the three <see cref="IOException"/>
+    /// subtypes that say the path itself is wrong (<see cref="FileNotFoundException"/>,
+    /// <see cref="DirectoryNotFoundException"/>, <see cref="PathTooLongException"/>): waiting cannot fix those, so they
+    /// surface at once. Nothing else is retried. Other permanent <see cref="IOException"/>s are not told apart: an
+    /// over-long file name, for one, arrives as a plain <see cref="IOException"/> (0x8007007B, measured) and costs the
+    /// full pause before it surfaces.
+    /// </summary>
+    private static bool MayBeTransient(Exception ex) => ex switch
+    {
+        FileNotFoundException or DirectoryNotFoundException or PathTooLongException => false,
+        IOException or UnauthorizedAccessException => true,
+        _ => false
+    };
+
+    private static void TryDelete(string path)
+    {
+        try { File.Delete(path); }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException) { /* leave it for the next run's sweep */ }
     }
 
     private static void EnsureSlugsAreUsable(IReadOnlyList<ShowRecord> shows)

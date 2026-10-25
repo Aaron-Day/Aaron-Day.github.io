@@ -48,9 +48,14 @@ public sealed record StoredMovie(
 /// run, but it is never cached, so the next run redoes the row instead of suppressing the film for 30 days.</para>
 /// <para><b>Freshness.</b> A stored payload older than <see cref="RefreshPolicy.Window"/> is refetched, whatever the
 /// index says. If it cannot be (budget spent) the stale copy is used for this run rather than a blank card.</para>
-/// <para><b>Failures.</b> TMDB failures arrive as <see cref="HttpRequestException"/> and are not caught here; a
-/// malformed sheet runtime throws <see cref="FormatException"/> before any request is made. The cache index lives in memory until the
-/// caller saves it, so a caller that wants the work kept across a failure must call
+/// <para><b>Failures.</b> None of these are caught here. Transport faults, a bad status and a body that is not JSON
+/// arrive as <see cref="HttpRequestException"/>. A details body that parses but whose typed members have the wrong
+/// shape (<c>genres</c>, <c>belongs_to_collection</c>) throws <see cref="System.Text.Json.JsonException"/> out of
+/// <c>Deserialize</c>, unwrapped, because that happens after the request layer has returned. Credits whose
+/// <c>cast</c> or <c>crew</c> container has the wrong shape throw <see cref="InvalidDataException"/>, so a changed
+/// TMDB response stops the run instead of caching a blank cast; a single unreadable cast member is skipped instead.
+/// A malformed sheet runtime throws <see cref="FormatException"/> before any request is made. The cache index lives in
+/// memory until the caller saves it, so a caller that wants the work kept across a failure must call
 /// <see cref="CacheStore.SaveAsync"/> in a <c>finally</c>.</para>
 /// </remarks>
 public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeOffset> clock)
