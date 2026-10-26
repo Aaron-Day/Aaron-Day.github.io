@@ -37,6 +37,9 @@ public sealed record StoredMovie(
 /// <para><b>Sequential.</b> <see cref="CacheStore"/> is not thread-safe and <c>Resolve</c> mutates it on an alias hit.</para>
 /// <para><b>Order.</b> Rows run in folded-title order (ordinal), not sheet order, so a budgeted run is resumed the
 /// same way every time. <see cref="MoviePipelineResult.Records"/> comes out in that order too.</para>
+/// <para><b>Overrides.</b> A film whose <see cref="OverrideKey"/> (folded title, year, runtime minutes) is in the overrides
+/// map takes that TMDB id without a search, at <c>Mc</c> 1.0. The key is not the folded title alone: the library has 37
+/// titles shared by 76 films, and a title-only key retargeted every one of them at once.</para>
 /// <para><b>Cost.</b> An uncached film costs one search, one details call for each of the three most popular
 /// candidates, and one credits call for each of those whose runtime is within tolerance plus every one named like
 /// the film (when none agrees and none is named, the most popular): about 5 requests. The matched film's details
@@ -62,6 +65,24 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
 {
     /// <summary>How many top-billed cast members a film keeps.</summary>
     public const int CastLimit = 4;
+
+    /// <summary>
+    /// The key a film is looked up under in the overrides map: its folded title with any trailing year, exactly as
+    /// <see cref="TvPipeline.OverrideKey"/> keys a series, then <c>|</c> and its runtime in whole minutes as
+    /// <see cref="RuntimeParser.FilmMinutes"/> reads it, so <c>Halloween (2018)</c> at 1:46:07 is <c>halloween 2018|106</c>.
+    /// </summary>
+    /// <remarks>
+    /// Neither the year nor the runtime is enough alone. <c>Overboard (1987)</c> and <c>Overboard (2018)</c> both run 112
+    /// minutes and only the year parts them; the two <c>Aladdin</c>s, <c>Dune</c>s and <c>Captain America</c> editions
+    /// carry no year and only the runtime does. The minutes are exact, with no tolerance window: a window of plus or minus
+    /// two would merge Captain America's 124 and 125 back into one key. The price is that a re-export which shifts a
+    /// runtime by a minute stops an override applying, which the Sheets client reports as a note.
+    /// </remarks>
+    public static string OverrideKey(string title, int runtimeMinutes)
+        => OverrideKey(TitleNormalizer.Normalize(title), runtimeMinutes);
+
+    internal static string OverrideKey(NormalizedTitle title, int runtimeMinutes)
+        => $"{TvPipeline.KeyOf(title)}|{runtimeMinutes.ToString(CultureInfo.InvariantCulture)}";
 
     public async Task<MoviePipelineResult> RunAsync(
         IReadOnlyList<SheetRow> rows,
@@ -96,7 +117,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             IReadOnlyList<TmdbCastMember>? freshCast = null; // and its cast, when the credits gate fetched them
             string? reviewNote = null; // why a human should look at this row, when one should
 
-            if (overrides.TryGetValue(title.Value, out var forced))
+            if (overrides.TryGetValue(OverrideKey(title, runtime), out var forced))
             {
                 tmdbId = forced;
                 confidence = 1d;

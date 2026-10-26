@@ -188,7 +188,7 @@ public class MoviePipelineCastAndGenreTests
     {
         var h = TestPipeline.Create(0, OnlyAnswers("/3/movie/275", FargoWithCredits));
 
-        var result = await h.Pipeline.RunAsync([Fargo], new Dictionary<string, int> { ["fargo"] = 275 },
+        var result = await h.Pipeline.RunAsync([Fargo], new Dictionary<string, int> { [MoviePipeline.OverrideKey("Fargo", 98)] = 275 },
                                                CancellationToken.None);
 
         Assert.Single(h.Handler.Requests);
@@ -236,7 +236,7 @@ public class MoviePipelineCastAndGenreTests
 
         var result = await h.Pipeline.RunAsync(
             [new SheetRow("Aaa", "1:30:00", "X", "", "Drama", ""), Fargo],
-            new Dictionary<string, int> { ["aaa"] = 1 }, CancellationToken.None);
+            new Dictionary<string, int> { [MoviePipeline.OverrideKey("Aaa", 90)] = 1 }, CancellationToken.None);
 
         Assert.True(result.StoppedOnBudget);
         Assert.Empty(result.Records.Single(r => r.T == "Fargo").Cast);

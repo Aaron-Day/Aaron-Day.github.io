@@ -206,4 +206,104 @@ public class GoogleSheetClientTests
         // and the same client is fine with a live token, so the failure above was the token
         Assert.Single(await client.FetchMoviesAsync("sheet", Ct));
     }
+
+    // ---- a web page where the CSV should be ------------------------------------------------------------
+
+    private const string HtmlPage =
+        "<!DOCTYPE html><html><head><title>Sign in - Google Accounts</title></head><body>Sign in</body></html>";
+
+    private static HttpResponseMessage Response(string body, string mediaType)
+        => new(HttpStatusCode.OK) { Content = new StringContent(body, System.Text.Encoding.UTF8, mediaType) };
+
+    private static Task Fetch(GoogleSheetClient client, string tab) => tab switch
+    {
+        "Movies" => client.FetchMoviesAsync("sheet", Ct),
+        "Shows" => client.FetchShowsAsync("sheet", Ct),
+        _ => client.FetchOverridesAsync("sheet", Ct),
+    };
+
+    [Theory]
+    [InlineData("Movies", "text/html", HtmlPage)]
+    [InlineData("Shows", "text/html", HtmlPage)]
+    [InlineData("Overrides", "text/html", HtmlPage)]
+    [InlineData("Movies", "text/csv", HtmlPage)]                       // the type lies, the body does not
+    [InlineData("Shows", "text/csv", "  \r\n" + HtmlPage)]            // leading whitespace
+    [InlineData("Movies", "text/html", "")]                            // the type alone is enough
+    [InlineData("Overrides", "TEXT/HTML", "")]                          // and its case does not matter
+    public async Task AWebPageInsteadOfCsvSaysTheSheetMayNoLongerBeShared(string tab, string mediaType, string body)
+    {
+        var client = BuildWithHandler(_ => Response(body, mediaType)).Client;
+
+        var ex = await Assert.ThrowsAsync<SheetAccessException>(() => Fetch(client, tab));
+
+        Assert.Contains("shared", ex.Message);
+        Assert.Contains($"'{tab}'", ex.Message);
+        Assert.DoesNotContain("<", ex.Message);               // the page is not echoed back
+        Assert.DoesNotContain("Sign in", ex.Message);
+        Assert.DoesNotContain("still named", ex.Message);       // and the misleading tab-name advice is gone
+    }
+
+    [Theory]
+    [InlineData("Movies")]
+    [InlineData("Shows")]
+    [InlineData("Overrides")]
+    public async Task ABomInFrontOfAWebPageDoesNotHideIt(string tab)
+    {
+        // BuildWithBom leaves a BOM that survives decoding (a single one is dropped before the client sees it).
+        var client = BuildWithBom(HtmlPage);
+
+        await Assert.ThrowsAsync<SheetAccessException>(() => Fetch(client, tab));
+    }
+
+    [Theory]
+    [InlineData("Movies")]
+    [InlineData("Shows")]
+    [InlineData("Overrides")]
+    public async Task ACsvBodyThatMerelyMentionsMarkupIsNotAWebPage(string tab)
+    {
+        // Only a body that STARTS with markup is a page; a header cell is data.
+        var header = tab switch
+        {
+            "Movies" => MoviesHeader, "Shows" => ShowsHeader, _ => OverridesHeader,
+        };
+        var client = BuildWithHandler(_ => Response(header + "\"<b>Bold</b>\",\"1:30:00\",\"7\",\"x\",\"y\"\n", "text/csv")).Client;
+
+        var ex = await Record.ExceptionAsync(() => Fetch(client, tab));
+
+        Assert.IsNotType<SheetAccessException>(ex);
+    }
+
+    [Fact]
+    public async Task TheSheetIsFetchedAnonymously()
+    {
+        var (client, handler) = BuildWithHandler(req => Csv(
+            req.RequestUri!.Query.EndsWith("sheet=Movies") ? MoviesCsv
+            : req.RequestUri!.Query.EndsWith("sheet=Shows") ? ShowsCsv : OverridesHeader));
+
+        await client.FetchMoviesAsync("sheet", Ct);
+        await client.FetchShowsAsync("sheet", Ct);
+        await client.FetchOverridesAsync("sheet", Ct);
+
+        Assert.Equal(3, handler.Requests.Count);
+        foreach (var request in handler.Requests)
+        {
+            Assert.Null(request.Headers.Authorization);
+            Assert.False(request.Headers.Contains("Authorization"));
+            Assert.False(request.Headers.Contains("X-Goog-Api-Key"));
+            Assert.False(request.Headers.Contains("Cookie"));
+            var url = request.RequestUri!.PathAndQuery.ToLowerInvariant();
+            Assert.DoesNotContain("key=", url);
+            Assert.DoesNotContain("token", url);
+            Assert.Equal(string.Empty, request.RequestUri!.UserInfo);
+        }
+    }
+
+    [Fact]
+    public async Task AResponseWithNoContentTypeIsStillReadAsCsv()
+    {
+        var client = BuildWithHandler(_ => new HttpResponseMessage(HttpStatusCode.OK)
+            { Content = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(MoviesCsv)) }).Client;
+
+        Assert.Equal("The A-Team", Assert.Single(await client.FetchMoviesAsync("sheet", Ct)).Title);
+    }
 }

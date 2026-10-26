@@ -42,15 +42,19 @@ internal static partial class TestPipeline
     /// TMDB knows <paramref name="tmdbId"/> (details only) but any search throws, so a pipeline that
     /// searches when it should not fails the test instead of quietly taking a different path.
     /// </summary>
-    public static MoviePipeline ThatFailsIfSearched(int tmdbId)
+    public static MoviePipeline ThatFailsIfSearched(int tmdbId) => ThatFailsIfSearched(new[] { tmdbId });
+
+    /// <summary>As above, for a library where several films are overridden: TMDB knows each of <paramref name="tmdbIds"/>.</summary>
+    public static MoviePipeline ThatFailsIfSearched(params int[] tmdbIds)
         => Create(budget: 0, req =>
         {
             if (IsSearch(req))
                 throw new Xunit.Sdk.XunitException($"Unexpected TMDB search: {req.RequestUri}");
 
-            return req.RequestUri!.AbsolutePath == $"/3/movie/{tmdbId}"
+            var id = tmdbIds.FirstOrDefault(i => req.RequestUri!.AbsolutePath == $"/3/movie/{i}");
+            return id != 0
                 ? Json($$"""
-                    {"id":{{tmdbId}},"title":"Stub film","overview":"Stub overview.","tagline":"Stub tagline.",
+                    {"id":{{id}},"title":"Stub film","overview":"Stub overview.","tagline":"Stub tagline.",
                      "runtime":91,"release_date":"1978-10-25","vote_average":7.5,
                      "poster_path":"/poster.jpg","backdrop_path":"/backdrop.jpg"}
                     """)

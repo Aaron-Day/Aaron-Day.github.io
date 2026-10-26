@@ -140,7 +140,7 @@ public class MoviePipelineAmendment2Tests
     {
         var h = TestPipeline.Create(0, OnlyAnswers("/3/movie/275", Details(Halloween + EmptyCredits)));
 
-        var result = await h.Pipeline.RunAsync([Fargo], new Dictionary<string, int> { ["fargo"] = 275 }, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], new Dictionary<string, int> { [MoviePipeline.OverrideKey("Fargo", 98)] = 275 }, CancellationToken.None);
 
         Assert.Single(h.Handler.Requests);
         Assert.Equal("Halloween Collection", Assert.Single(result.Records).Col);

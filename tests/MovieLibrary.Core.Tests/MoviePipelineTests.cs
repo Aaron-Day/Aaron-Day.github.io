@@ -28,7 +28,7 @@ public class MoviePipelineTests
     public async Task OverrideSkipsSearchEntirely()
     {
         var pipeline = TestPipeline.ThatFailsIfSearched(tmdbId: 948);
-        var overrides = new Dictionary<string, int> { ["halloween"] = 948 };
+        var overrides = new Dictionary<string, int> { [MoviePipeline.OverrideKey("Halloween", 91)] = 948 };
 
         var result = await pipeline.RunAsync(
             [Row("Halloween", "1:31:00", "John Carpenter")], overrides, CancellationToken.None);

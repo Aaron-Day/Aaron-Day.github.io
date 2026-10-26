@@ -6,37 +6,73 @@ using MovieLibrary.Enrich.Sheets;
 
 namespace MovieLibrary.Core.Tests;
 
+/// <summary>Shared by the three Overrides test classes.</summary>
+internal static class OverrideCsv
+{
+    public const string Header = GoogleSheetClientTests.OverridesHeader;
+
+    public static Task<SheetOverrides> Fetch(string body)
+        => GoogleSheetClientTests.Build(body).FetchOverridesAsync("sheet", CancellationToken.None);
+
+    public static string Line(string title, string runtime, string id, string note = "")
+        => $"\"{title}\",\"{runtime}\",\"{id}\",\"{note}\"\n";
+
+    public static List<string> Pairs(IReadOnlyDictionary<string, int> map)
+        => [.. map.OrderBy(kv => kv.Key, StringComparer.Ordinal).Select(kv => $"{kv.Key}={kv.Value}")];
+}
+
 /// <summary>
-/// The Overrides tab. Two things here are easy to get wrong and both look fine in a demo:
-/// the film pipeline and the TV pipeline look an override up under DIFFERENT keys (the TV one keeps a
-/// trailing year, the film one drops it), and Google answers an unknown tab with the FIRST sheet and HTTP 200,
-/// never an error. So the client returns two maps, and a missing tab is recognised by what comes back.
+/// The Overrides tab: which map a row goes to and under what key, and how a missing tab is told from a present one.
+/// Two things here are easy to get wrong and both look fine in a demo. The film pipeline and the TV pipeline look
+/// an override up under DIFFERENT keys (a series by name and year, a film by name, year and runtime minutes), and
+/// Google answers an unknown tab with the FIRST sheet and HTTP 200, never an error. So the client returns two maps,
+/// and a missing tab is recognised by what comes back. Rows that cannot be applied are in
+/// <see cref="GoogleSheetClientOverrideRowTests"/>, and rows that match nothing in <see cref="GoogleSheetClientUnmatchedTests"/>.
 /// </summary>
 public class GoogleSheetClientOverridesTests
 {
     private static readonly CancellationToken Ct = CancellationToken.None;
 
-    private const string Header = GoogleSheetClientTests.OverridesHeader;
-
-    private static Task<SheetOverrides> Fetch(string body)
-        => GoogleSheetClientTests.Build(body).FetchOverridesAsync("sheet", Ct);
-
+    private const string Header = OverrideCsv.Header;
+    private static Task<SheetOverrides> Fetch(string body) => OverrideCsv.Fetch(body);
     private static string Line(string title, string runtime, string id, string note = "")
-        => $"\"{title}\",\"{runtime}\",\"{id}\",\"{note}\"\n";
-
-    private static List<string> Pairs(IReadOnlyDictionary<string, int> map)
-        => [.. map.OrderBy(kv => kv.Key, StringComparer.Ordinal).Select(kv => $"{kv.Key}={kv.Value}")];
+        => OverrideCsv.Line(title, runtime, id, note);
+    private static List<string> Pairs(IReadOnlyDictionary<string, int> map) => OverrideCsv.Pairs(map);
 
     // ---- two maps, two keys ---------------------------------------------------------------------------
 
     [Fact]
-    public async Task AFilmOverrideIsKeyedByTheNormalizedTitleWithoutItsYear()
+    public async Task AFilmOverrideIsKeyedByTitleYearAndRuntimeMinutes()
     {
         var o = await Fetch(Header + Line("Halloween (1978)", "1:31:00", "948"));
 
-        Assert.Equal(["halloween=948"], Pairs(o.Films));
+        Assert.Equal(["halloween 1978|91=948"], Pairs(o.Films));
+        Assert.Equal(MoviePipeline.OverrideKey("Halloween (1978)", 91), Assert.Single(o.Films).Key);
         Assert.Empty(o.Series);
         Assert.Empty(o.Notes);
+    }
+
+    [Fact]
+    public async Task AFilmWithNoYearIsKeyedByTitleAndMinutes()
+    {
+        var o = await Fetch(Header + Line("Aladdin", "2:09:10", "11"));
+
+        Assert.Equal(["aladdin|129=11"], Pairs(o.Films));
+    }
+
+    [Theory]
+    [InlineData("1:31:00", 91)]
+    [InlineData("1:31:59", 91)]    // truncated, as FilmMinutes reads a sheet row
+    [InlineData("1:32:00", 92)]
+    [InlineData("0:01:00", 1)]
+    [InlineData("0:00:59", 0)]
+    [InlineData("10:00:00", 600)]
+    public async Task TheRuntimeInTheKeyIsWholeMinutesTruncated(string runtime, int minutes)
+    {
+        var o = await Fetch(Header + Line("Alias", runtime, "4490"));
+
+        Assert.Equal([$"alias|{minutes}=4490"], Pairs(o.Films));
+        Assert.Empty(o.Series);
     }
 
     [Fact]
@@ -71,23 +107,45 @@ public class GoogleSheetClientOverridesTests
 
         Assert.Equal(["alias=4490"], Pairs(o.Series));
         Assert.Empty(o.Films);
+        Assert.Empty(o.Notes);
     }
 
-    [Theory]
-    [InlineData("1:31:00")]
-    [InlineData("0:00:01")]   // the smallest non-zero runtime is still a film
-    [InlineData("0:01:00")]
-    [InlineData("9")]         // one character is not blank
-    [InlineData("-0")]        // not a zero either: only digits count
-    [InlineData("91")]
-    [InlineData("n/a")]       // anything else, however odd, is a film: only blank or zero is a series
-    [InlineData("1:xx:00")]
-    public async Task AnyOtherRuntimeMeansAFilm(string runtime)
-    {
-        var o = await Fetch(Header + Line("Alias", runtime, "4490"));
+    // ---- same name, different thing: nothing may collide ------------------------------------------------
 
-        Assert.Equal(["alias=4490"], Pairs(o.Films));
-        Assert.Empty(o.Series);
+    [Fact]
+    public async Task ThreeHalloweensAreThreeOverrides()
+    {
+        // Two carry no year and are told apart by runtime, the third by its year (and runtime).
+        var o = await Fetch(Header
+            + Line("Halloween", "1:30:47", "948")
+            + Line("Halloween", "1:50:18", "949")
+            + Line("Halloween (2018)", "1:46:07", "424"));
+
+        Assert.Equal(["halloween 2018|106=424", "halloween|110=949", "halloween|90=948"], Pairs(o.Films));
+        Assert.Empty(o.Notes);   // three films, not three disagreeing rows
+    }
+
+    [Fact]
+    public async Task TheTwoOverboardsRunTheSameMinutesAndAreToldApartByYear()
+    {
+        var o = await Fetch(Header
+            + Line("Overboard (1987)", "1:52:17", "21")
+            + Line("Overboard (2018)", "1:52:18", "22"));
+
+        Assert.Equal(["overboard 1987|112=21", "overboard 2018|112=22"], Pairs(o.Films));
+        Assert.Empty(o.Notes);
+    }
+
+    [Fact]
+    public async Task TwoEditionsOneMinuteApartAreTwoOverrides()
+    {
+        var o = await Fetch(Header
+            + Line("Captain America: The First Avenger", "2:05:15", "1771")
+            + Line("Captain America: The First Avenger", "2:04:09", "1771"));
+
+        Assert.Equal(["captain america the first avenger|124=1771", "captain america the first avenger|125=1771"],
+                     Pairs(o.Films));
+        Assert.Empty(o.Notes);   // one film in two editions: the same id twice is right, and not a conflict
     }
 
     [Fact]
@@ -97,7 +155,7 @@ public class GoogleSheetClientOverridesTests
             + Line("Halloween", "1:31:00", "948")
             + Line("Halloween", "", "111"));
 
-        Assert.Equal(["halloween=948"], Pairs(o.Films));
+        Assert.Equal(["halloween|91=948"], Pairs(o.Films));
         Assert.Equal(["halloween=111"], Pairs(o.Series));
         Assert.Empty(o.Notes);   // different namespaces, so not even a conflict
     }
@@ -114,6 +172,12 @@ public class GoogleSheetClientOverridesTests
     }
 
     // ---- the maps are what the real pipelines look up -------------------------------------------------
+
+    private static SheetRow Episode(string title, string series)
+        => new(title, "44:00:00", "", series + ": The Complete Series", "Drama", series);
+
+    private static SheetRow Film(string title, string runtime)
+        => new(title, runtime, "John Carpenter", "", "Horror", "");
 
     [Fact]
     public async Task TheSeriesMapResolvesAYearSuffixedSeriesInTheRealTvPipeline()
@@ -134,19 +198,37 @@ public class GoogleSheetClientOverridesTests
     }
 
     [Fact]
-    public async Task TheFilmMapResolvesAYearSuffixedFilmInTheRealMoviePipeline()
+    public async Task TheFilmMapResolvesFilmsOfOneTitleToTheirOwnIdsInTheRealMoviePipeline()
     {
-        var o = await Fetch(Header + Line("Halloween (1978)", "1:31:00", "948"));
-        var pipeline = TestPipeline.ThatFailsIfSearched(tmdbId: 948);
+        var o = await Fetch(Header
+            + Line("Halloween", "1:30:47", "948")
+            + Line("Halloween", "1:50:18", "949")
+            + Line("Halloween (2018)", "1:46:07", "424"));
+        var pipeline = TestPipeline.ThatFailsIfSearched(948, 949, 424);
 
         var result = await pipeline.RunAsync(
-            [new SheetRow("Halloween (1978)", "1:31:00", "John Carpenter", "", "Horror", "")], o.Films, Ct);
+            [Film("Halloween", "1:30:47"), Film("Halloween", "1:50:18"), Film("Halloween (2018)", "1:46:07")],
+            o.Films, Ct);
 
-        Assert.Equal(948, Assert.Single(result.Records).I);
+        // a search would have thrown; each row has the id of ITS override
+        Assert.Equal(new Dictionary<int, int> { [90] = 948, [110] = 949, [106] = 424 },
+                     result.Records.ToDictionary(r => r.Rt, r => r.I));
     }
 
-    private static SheetRow Episode(string title, string series)
-        => new(title, "44:00:00", "", series + ": The Complete Series", "Drama", series);
+    [Fact]
+    public async Task TheFilmMapSeparatesTwoFilmsThatRunTheSameMinutesByYear()
+    {
+        var o = await Fetch(Header
+            + Line("Overboard (1987)", "1:52:17", "21")
+            + Line("Overboard (2018)", "1:52:18", "22"));
+        var pipeline = TestPipeline.ThatFailsIfSearched(21, 22);
+
+        var result = await pipeline.RunAsync(
+            [Film("Overboard (1987)", "1:52:17"), Film("Overboard (2018)", "1:52:18")], o.Films, Ct);
+
+        Assert.Equal(new Dictionary<string, int> { ["Overboard (1987)"] = 21, ["Overboard (2018)"] = 22 },
+                     result.Records.ToDictionary(r => r.T, r => r.I));
+    }
 
     // ---- the Overrides tab may not exist yet: three cases, told apart by what comes back --------------
 
@@ -170,6 +252,21 @@ public class GoogleSheetClientOverridesTests
     }
 
     [Fact]
+    public async Task CaseOne_TheRealHeaderOnlyTabIsHealthy_NotMissingAndNotAnError()
+    {
+        // Verified against the live sheet: HTTP 200, text/csv, 33 bytes, no BOM, no trailing newline, the header
+        // as row 1 and nothing else. The tab exists, so there is nothing to report: a note here would be noise.
+        const string live = "\"Title\",\"Runtime\",\"TmdbId\",\"Note\"";
+        Assert.Equal(33, live.Length);
+
+        var o = await Fetch(live);
+
+        Assert.Empty(o.Films);
+        Assert.Empty(o.Series);
+        Assert.Empty(o.Notes);
+    }
+
+    [Fact]
     public async Task CaseTwo_AnEmptyBodyMeansTheTabIsMissing()
         => AssertTabNotFoundNote(await Fetch(""));
 
@@ -184,6 +281,7 @@ public class GoogleSheetClientOverridesTests
     [Fact]
     public async Task CaseTwo_GoogleFallingBackToTheMoviesSheetMeansTheTabIsMissing()
     {
+        // This is the real shape: HTTP 200, text/csv, the Movies header with its trailing unnamed column.
         // The third Movies column is Directors. A body that is wrongly parsed as overrides would turn this
         // into an override, so the rows carry a number there on purpose.
         var movies = GoogleSheetClientTests.MoviesHeader
@@ -214,22 +312,25 @@ public class GoogleSheetClientOverridesTests
         var o = await GoogleSheetClientTests.BuildWithBom(Header + Line("Halloween", "1:31:00", "948"))
             .FetchOverridesAsync("sheet", Ct);
 
-        Assert.Equal(["halloween=948"], Pairs(o.Films));
+        Assert.Equal(["halloween|91=948"], Pairs(o.Films));
         Assert.Empty(o.Notes);
     }
 
     [Theory]
-    [InlineData("\"Title\",\"Runtime\",\"Id\",\"Note\"\n")]                // a misspelt TmdbId
-    [InlineData("\"Title\",\"Runtime\"\n")]                                  // too few columns
-    [InlineData("\"Name\",\"Year\",\"Rating\",\"Comment\"\n")]               // some other sheet entirely
-    [InlineData("\"\",\"Runtime\",\"TmdbId\",\"Note\"\n")]   // the first header cell is missing
-    [InlineData("<!DOCTYPE html><html><head><title>Sign in</title></head></html>\n")]
-    [InlineData("\"\",\"\",\"\",\"\"\n\"Title\",\"Runtime\",\"TmdbId\",\"Note\"\n")] // header on row 2, not row 1
-    public async Task CaseThree_AHeaderThatMatchesNothingKnownThrows(string body)
+    [InlineData("\"Title\",\"Runtime\",\"Id\",\"Note\"\n", "column 3", "expected 'TmdbId', got 'Id'")]   // a misspelt TmdbId
+    [InlineData("\"Title\",\"Runtime\"\n", "returned 2 columns", "at least 4")]                         // too few columns
+    [InlineData("\"Name\",\"Year\",\"Rating\",\"Comment\"\n", "column 1", "expected 'Title', got 'Name'")]  // another sheet
+    [InlineData("\"\",\"Runtime\",\"TmdbId\",\"Note\"\n", "column 1", "expected 'Title', got ''")]    // first cell missing
+    [InlineData("\"\",\"\",\"\",\"\"\n\"Title\",\"Runtime\",\"TmdbId\",\"Note\"\n", "column 1", "expected 'Title', got ''")] // header on row 2
+    [InlineData("\"Note\",\"TmdbId\",\"Runtime\",\"Title\"\n", "column 1", "expected 'Title', got 'Note'")] // reordered
+    public async Task CaseThree_AHeaderThatMatchesNothingKnownThrowsAndSaysWhatWasWrong(
+        string body, string where, string what)
     {
         var ex = await Assert.ThrowsAsync<SheetSchemaException>(() => Fetch(body));
 
-        Assert.Contains("Overrides", ex.Message);
+        Assert.Contains("'Overrides'", ex.Message);
+        Assert.Contains(where, ex.Message);
+        Assert.Contains(what, ex.Message);
     }
 
     [Theory]
@@ -254,134 +355,5 @@ public class GoogleSheetClientOverridesTests
 
         Assert.Equal("/spreadsheets/d/abc-123_X/gviz/tq?tqx=out:csv&sheet=Overrides",
                      Assert.Single(handler.Requests).RequestUri!.PathAndQuery);
-    }
-
-    // ---- a row that cannot be applied must say so, not vanish -----------------------------------------
-
-    [Theory]
-    [InlineData("")]
-    [InlineData("abc")]
-    [InlineData("0")]
-    [InlineData("-5")]
-    [InlineData("948.5")]
-    [InlineData("12 34")]
-    [InlineData("99999999999")]
-    [InlineData("+948")]
-    [InlineData("1,234")]
-    public async Task ARowWhoseTmdbIdIsNotAPositiveWholeNumberIsSkippedWithANote(string id)
-    {
-        var o = await Fetch(Header
-            + Line("Alias", "", id, "my note")
-            + Line("Halloween", "1:31:00", "948"));
-
-        Assert.Equal(["halloween=948"], Pairs(o.Films));   // the good row is still applied
-        Assert.Empty(o.Series);
-        var note = Assert.Single(o.Notes);
-        Assert.Contains("row 2", note);
-        Assert.Contains("'Alias'", note);
-        Assert.Contains($"TmdbId '{id}'", note);   // the owner sees what was read, not just that it was wrong
-    }
-
-    [Fact]
-    public async Task TheTmdbIdIsTrimmed()
-    {
-        var o = await Fetch(Header + Line("Halloween", "1:31:00", "  948 "));
-
-        Assert.Equal(["halloween=948"], Pairs(o.Films));
-        Assert.Empty(o.Notes);
-    }
-
-    [Theory]
-    [InlineData("", "1:31:00")]
-    [InlineData("   ", "")]
-    [InlineData("(2020)", "")]          // nothing left once the year is peeled off
-    [InlineData("(Extended)", "1:31:00")]
-    public async Task ARowWithAnIdButNoUsableTitleIsSkippedWithANote(string title, string runtime)
-    {
-        var o = await Fetch(Header + Line(title, runtime, "55") + Line("Alias", "", "4490"));
-
-        Assert.Empty(o.Films);
-        Assert.Equal(["alias=4490"], Pairs(o.Series));
-        var note = Assert.Single(o.Notes);
-        Assert.Contains("row 2", note);
-        Assert.Contains("title", note);
-    }
-
-    [Theory]
-    [InlineData("Alias", "", "", "")]
-    [InlineData("", "1:31:00", "", "")]
-    [InlineData("", "", "55", "")]
-    [InlineData("", "", "", "just a note")]
-    public async Task ARowWithAnythingInItsFourNamedCellsIsNotPadding(
-        string title, string runtime, string id, string note)
-    {
-        var o = await Fetch(Header + Line(title, runtime, id, note));
-
-        Assert.Empty(o.Films);
-        Assert.Empty(o.Series);
-        Assert.Contains("row 2", Assert.Single(o.Notes));
-    }
-
-    [Fact]
-    public async Task PaddingRowsAreSkippedSilently()
-    {
-        var o = await Fetch(Header
-            + Line("", "", "")
-            + "\"\",\"\",\"\",\"\",\"stray\"\n"   // only the unnamed column is filled
-            + Line("Halloween", "1:31:00", "948"));
-
-        Assert.Equal(["halloween=948"], Pairs(o.Films));
-        Assert.Empty(o.Notes);
-    }
-
-    [Fact]
-    public async Task NotesNameTheSheetRowSoTheOwnerCanFindIt()
-    {
-        var o = await Fetch(Header
-            + Line("Halloween", "1:31:00", "948")
-            + Line("Alias", "", "oops")
-            + Line("Heat", "2:50:00", "949")
-            + Line("Lost", "", "nope"));
-
-        Assert.Equal(2, o.Notes.Count);
-        Assert.Contains("row 3", o.Notes[0]);   // the header is row 1
-        Assert.Contains("row 5", o.Notes[1]);
-    }
-
-    [Fact]
-    public async Task TwoRowsForOneKeyWithDifferentIdsConflictSoTheLaterWinsLoudly()
-    {
-        // The pipelines key a film by folded title alone, so these two cannot point at different ids.
-        // That limit is old; what must not happen is one row silently losing to the other.
-        var o = await Fetch(Header
-            + Line("Halloween", "1:31:00", "948")
-            + Line("Halloween (2018)", "1:46:00", "424"));
-
-        Assert.Equal(["halloween=424"], Pairs(o.Films));
-        var note = Assert.Single(o.Notes);
-        Assert.Contains("row 3", note);
-        Assert.Contains("948", note);
-        Assert.Contains("424", note);
-        Assert.Contains("film", note);
-    }
-
-    [Fact]
-    public async Task ASeriesConflictIsReportedToo()
-    {
-        var o = await Fetch(Header + Line("Alias", "", "1") + Line("Alias", "", "2"));
-
-        Assert.Equal(["alias=2"], Pairs(o.Series));
-        Assert.Contains("series", Assert.Single(o.Notes));
-    }
-
-    [Fact]
-    public async Task ARepeatedRowWithTheSameIdIsNotAConflict()
-    {
-        var o = await Fetch(Header + Line("Alias", "", "7") + Line("Alias", "", "7")
-            + Line("Heat", "2:50:00", "9") + Line("Heat", "2:50:00", "9"));
-
-        Assert.Equal(["alias=7"], Pairs(o.Series));
-        Assert.Equal(["heat=9"], Pairs(o.Films));
-        Assert.Empty(o.Notes);
     }
 }

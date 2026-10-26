@@ -246,7 +246,7 @@ public class MoviePipelineGapTests
         var pipeline = TestPipeline.ThatFailsIfSearched(tmdbId: 948);
 
         var result = await pipeline.RunAsync([Row("Halloween", "1:31:00", "John Carpenter")],
-            new Dictionary<string, int> { ["halloween"] = 948 }, CancellationToken.None);
+            new Dictionary<string, int> { [MoviePipeline.OverrideKey("Halloween", 91)] = 948 }, CancellationToken.None);
 
         Assert.Equal(1d, Assert.Single(result.Records).Mc);
     }
@@ -366,7 +366,7 @@ public class MoviePipelineGapTests
         var h = TestPipeline.Create(0, req => req.RequestUri!.AbsolutePath == "/3/movie/948"
             ? TestPipeline.Json($$"""{"id":948,"title":"Halloween","overview":"{{overview}}"}""")
             : throw new Xunit.Sdk.XunitException($"Unexpected request: {req.RequestUri}"), () => now);
-        var overrides = new Dictionary<string, int> { ["halloween"] = 948 };
+        var overrides = new Dictionary<string, int> { [MoviePipeline.OverrideKey("Halloween", 91)] = 948 };
         SheetRow[] rows = [Row("Halloween", "1:31:00", "John Carpenter")];
 
         var first = await h.Pipeline.RunAsync(rows, overrides, CancellationToken.None);
@@ -529,7 +529,7 @@ public class MoviePipelineGapTests
         await SeedFargoWithAStalePayload(h);
 
         var result = await h.Pipeline.RunAsync([Row("Aaa", "1:30:00", "X"), Fargo],
-            new Dictionary<string, int> { ["aaa"] = 1 }, CancellationToken.None);
+            new Dictionary<string, int> { [MoviePipeline.OverrideKey("Aaa", 90)] = 1 }, CancellationToken.None);
 
         Assert.True(result.StoppedOnBudget);
         var fargo = result.Records.Single(r => r.T == "Fargo");

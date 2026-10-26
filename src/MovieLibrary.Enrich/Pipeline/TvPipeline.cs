@@ -151,7 +151,7 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
     /// </summary>
     public static string OverrideKey(string seriesName) => KeyOf(TitleNormalizer.Normalize(seriesName));
 
-    private static string KeyOf(NormalizedTitle title)
+    internal static string KeyOf(NormalizedTitle title)
         => title.YearHint is { } year
             ? $"{title.Value} {year.ToString(CultureInfo.InvariantCulture)}"
             : title.Value;
