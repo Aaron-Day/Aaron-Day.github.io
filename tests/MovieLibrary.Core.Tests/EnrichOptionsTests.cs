@@ -126,6 +126,20 @@ public class EnrichOptionsTests : IDisposable
         Assert.Equal(0, Load(["--force-refresh", "--max-requests", "0"]).MaxRequests);
     }
 
+    /// <summary>
+    /// The refusal is about truncating the committed cache index, and a fixture run cannot: it makes no requests and
+    /// returns before the cache is ever loaded or saved (<c>EnrichRun.RunCoreAsync</c>). Refusing it would be a guard
+    /// firing where its own reason does not reach, and would answer a harmless pair of flags with a budget lecture.
+    /// </summary>
+    [Fact]
+    public void AFixtureRunIsNotRefusedForForcingARefreshItCannotSpendAnythingOn()
+    {
+        var fromFlag = Load(["--fixtures", "--force-refresh"]);                       // the budget defaults to 40
+        Assert.True(fromFlag.ForceRefresh);
+        Assert.True(fromFlag.Fixtures);
+        Assert.True(Load(["--fixtures"], ("FORCE_REFRESH", "true")).ForceRefresh);    // and the environment route
+    }
+
     [Theory]
     [InlineData("--sheet-id")]
     [InlineData("--cache")]

@@ -46,7 +46,9 @@ public sealed record EnrichOptions(
         // CacheStore resolves through the index, so recovering costs about 7,000 requests, and enrich-cache/ is
         // committed, so the truncated index is what gets pushed. There is no flag to force-refresh a subset, so the
         // combination has no legitimate use: it is refused here, before anything is fetched or written.
-        if (force && requests > 0)
+        // Not a fixture run: it makes no requests and returns before the cache is ever loaded or saved
+        // (EnrichRun.RunCoreAsync), so there is nothing for it to truncate and nothing to refuse.
+        if (force && !fixtures && requests > 0)
             throw new ArgumentException(
                 "--force-refresh re-fetches the whole library, which needs thousands of requests, but the budget is " +
                 $"{requests}. A forced run that stops on its budget replaces the committed cache index with only the " +
