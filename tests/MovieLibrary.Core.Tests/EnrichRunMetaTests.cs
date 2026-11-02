@@ -143,6 +143,57 @@ public class EnrichRunMetaTests
         Assert.Empty(doc.RootElement.GetProperty("genres").EnumerateObject());
     }
 
+    /// <summary>
+    /// And it must not fire on a budget stop. A film can be matched without its details ever loading - an Overrides
+    /// row forces an id with no lookup, and a cache-index hit whose payload file is gone resolves to null - so a run
+    /// that spends its budget can hold matched films that contributed no genre name. That is an ordinary budget stop,
+    /// the normal development path, and failing it would be the guard firing where its own reason does not reach.
+    /// Nothing is risked: a budget-stopped run is never deployable, so no blank facet can reach the site this way.
+    /// </summary>
+    [Fact]
+    public async Task ABudgetStoppedRunIsNotFailedByAForcedFilmThatNeverLoadedItsGenres()
+    {
+        using var h = Library();
+        h.MoviesCsv = RunLibrary.Movies(("Alien", "1:56:00", "Ridley Scott", "Sci-Fi"),
+                                        ("Brazil", "2:22:00", "Terry Gilliam", "Sci-Fi"));
+        h.ShowsCsv = GoogleSheetClientTests.ShowsHeader;
+        h.OverridesCsv = RunLibrary.Overrides(("Brazil", "2:22:00", "948"));
+        h.Options = h.Options with { MaxRequests = 1 };
+        h.Tmdb = req => req.RequestUri!.AbsolutePath == "/3/search/movie"
+            ? TestPipeline.Json(TestPipeline.EmptyResults)
+            : TestPipeline.NotFound();
+
+        var result = await h.RunAsync();
+
+        Assert.Equal(0, result.ExitCode);                           // an ordinary budget stop, not a fatal error
+        Assert.True(result.StoppedOnBudget);
+        Assert.False(result.Deployable);                            // which is what keeps the empty facet off the site
+        Assert.DoesNotContain("not one genre name came back", h.Err.ToString());
+        Assert.True(h.Wrote("meta.json"));
+        Assert.Equal(948, h.IdsByTitle("movies.json")["Brazil"]);   // matched, and it never loaded a genre
+        using var doc = h.Json("meta.json");
+        Assert.Empty(doc.RootElement.GetProperty("genres").EnumerateObject());
+    }
+
+    /// <summary>
+    /// The review queue names the owner's own problem rows, and <c>meta.json</c> is served publicly from the site, so
+    /// the lines go to the job summary he reads and the published field stays empty. The field itself is kept so the
+    /// data contract does not change shape for the web app.
+    /// </summary>
+    [Fact]
+    public async Task TheOwnersReviewNotesReachTheSummaryAndNeverThePublishedMetaFile()
+    {
+        using var h = Library();
+        h.OverridesCsv = RunLibrary.Overrides(("A Film That Is Not On The Sheet", "1:40:00", "550"));
+
+        var result = await h.RunAsync();
+
+        Assert.Equal(0, result.ExitCode);
+        Assert.Contains(h.ReviewQueue(), l => l.Contains("A Film That Is Not On The Sheet", StringComparison.Ordinal));
+        Assert.Contains("Needs review", h.Summary);
+        Assert.Empty(h.PublishedReviewQueue());
+    }
+
     /// <summary>And it cannot fire on a fixture run, whose genre table is FixtureGenerator's own and never empty.</summary>
     [Fact]
     public async Task AFixtureRunIsNotStoppedByTheGuardBecauseItsOwnGenreTableIsNeverEmpty()

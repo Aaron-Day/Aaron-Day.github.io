@@ -99,7 +99,27 @@ internal sealed class RunHarness : IDisposable
             .ToDictionary(e => e.GetProperty("t").GetString()!, e => e.GetProperty("i").GetInt32());
     }
 
+    /// <summary>
+    /// The review queue as the owner sees it: the job summary's "Needs review" list. It is deliberately NOT read from
+    /// <c>meta.json</c>, which publishes an empty list because that file is served publicly and the queue names the
+    /// owner's own problem rows (see the remark on <c>EnrichRun.PublishAsync</c>). The summary is the only place the
+    /// lines appear, so it is the only place a test can assert them.
+    /// </summary>
     public string[] ReviewQueue()
+    {
+        var lines = Summary.ReplaceLineEndings().Split(Environment.NewLine).ToList();
+        var start = lines.FindIndex(l => l.StartsWith("### Needs review", StringComparison.Ordinal));
+        if (start < 0) return [];
+
+        return [.. lines.Skip(start + 1)
+            .TakeWhile(l => !l.StartsWith("##", StringComparison.Ordinal))
+            .Where(l => l.StartsWith("- ", StringComparison.Ordinal))
+            .Select(l => l[2..])
+            .Where(l => !l.StartsWith("...and ", StringComparison.Ordinal))];
+    }
+
+    /// <summary>What <c>meta.json</c> actually carries, for the tests that pin it staying empty.</summary>
+    public string[] PublishedReviewQueue()
     {
         using var doc = Json("meta.json");
         return [.. doc.RootElement.GetProperty("reviewQueue").EnumerateArray().Select(e => e.GetString()!)];

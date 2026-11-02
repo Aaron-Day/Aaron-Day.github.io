@@ -286,6 +286,13 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
     }
 
     /// <summary>Checks the genre table, builds <c>meta.json</c>'s content and writes everything. Returns what to report.</summary>
+    /// <remarks>
+    /// <c>meta.reviewQueue</c> is published <b>empty on purpose</b>, and the field is kept so the data contract does
+    /// not change shape for the web app. The queue names the owner's own problem rows - a title that failed to match,
+    /// the runtime his sheet has for it, an override that no longer matches anything - and <c>meta.json</c> is served
+    /// publicly from the site, so it is reported where he actually reads it (the Actions job summary, via
+    /// <see cref="JobReport.ReviewQueue"/>) and nowhere else. The owner chose this; do not "fix" it by filling it in.
+    /// </remarks>
     private async Task<JobReport> PublishAsync(Catalogue c, CancellationToken ct)
     {
         _phase = Phase.Publishing;
@@ -309,9 +316,15 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         // facet - one of the three approved layouts - a blank panel site-wide, deployed, with the payloads that caused
         // it cached for five months. Task 14 made the same call for a changed `credits` shape: a field that vanishes
         // stops the run rather than publishing silent gaps.
-        // It cannot false-positive. A fixture run is handed FixtureGenerator.Genres, which is never empty (19 names
-        // over the real library), and a run that stopped on the budget before matching anything has matched.Count 0.
-        if (matched.Count > 0 && c.Genres.Count == 0)
+        // A budget-stopped run is exempt, and must be. A film can be matched without its details ever loading - an
+        // Overrides row forces an id without a lookup, and a cache-index hit whose payload file is gone resolves to
+        // null - so once the budget is spent there can be matched films that contributed no genre name at all. That is
+        // an ordinary budget stop, which Step C calls the normal development path, and failing it would be this guard
+        // firing where its own reason does not reach. Nothing is risked by the exemption: a budget-stopped run is
+        // never deployable, so a blank facet cannot reach the site through it.
+        // Otherwise it cannot false-positive: a fixture run is handed FixtureGenerator.Genres, which is never empty
+        // (19 names over the real library), and a run that matched nothing at all has matched.Count 0.
+        if (!c.StoppedOnBudget && matched.Count > 0 && c.Genres.Count == 0)
             throw new FatalRunException(
                 $"FATAL: {matched.Count} film(s) matched on TMDB, but not one genre name came back.",
                 "The genre facet would be empty for the whole library, so nothing was written. TMDB has changed or " +
@@ -324,7 +337,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
             TotalEpisodeCount: c.Shows.Sum(s => s.TotalEpisodes),
             Genres: GenreMap.ForMeta(c.Genres),
             Attribution: CatalogMeta.TmdbAttribution,
-            ReviewQueue: [.. c.Review],
+            ReviewQueue: [],                      // deliberately empty: see the remark on this method
             OwnedEpisodeCount: c.Shows.Sum(s => s.OwnedEpisodes));
 
         try
