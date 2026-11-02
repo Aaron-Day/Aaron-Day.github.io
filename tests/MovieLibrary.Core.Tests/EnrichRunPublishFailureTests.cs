@@ -188,4 +188,113 @@ public class EnrichRunPublishFailureTests
         Assert.DoesNotContain("Shows tab", h.Err.ToString());
         Assert.False(h.Wrote("meta.json"));
     }
+
+    // ---- finding 3: staging and moving are different failures -----------------------------------------
+
+    /// <summary>A directory standing where movies.json.writing must go: the staging phase cannot open its stream.</summary>
+    private static void BlockTheStagingPhase(RunHarness h)
+    {
+        Directory.CreateDirectory(h.OutDir);
+        Directory.CreateDirectory(Path.Combine(h.OutDir, "movies.json.writing"));
+    }
+
+    /// <summary>
+    /// Staging is all-or-nothing, so a failure in it published nothing and the previous build is exactly as it was.
+    /// The verdict is the same as for a failed move - exit 1, not deployable - but the diagnosis is not, and the
+    /// move phase's wording sends the owner to inspect and clear a folder that is coherent and untouched.
+    /// </summary>
+    [Fact]
+    public async Task AStagingFailureSaysNothingWasPublishedAndLeavesThePreviousBuildWhereItWas()
+    {
+        using var h = FargoRun();
+        Directory.CreateDirectory(h.OutDir);
+        await File.WriteAllTextAsync(Path.Combine(h.OutDir, "meta.json"), "PREVIOUS-GOOD-BUILD");
+        BlockTheStagingPhase(h);
+
+        var result = await h.RunAsync();
+
+        Assert.Equal(1, result.ExitCode);
+        Assert.False(result.Deployable);
+        var err = h.Err.ToString();
+        Assert.StartsWith("FATAL: the catalogue could not be written", err);
+        Assert.Contains("Nothing was published", err);
+        Assert.Contains("still holds the previous build", err);
+        Assert.Contains(h.OutDir, err);
+        Assert.Contains("deployable=false", h.GitHubOutput);
+        Assert.Equal("PREVIOUS-GOOD-BUILD", await File.ReadAllTextAsync(Path.Combine(h.OutDir, "meta.json")));
+    }
+
+    [Fact]
+    public async Task TheTwoPublishFailuresGetDifferentDiagnoses()
+    {
+        using var staging = FargoRun();
+        BlockTheStagingPhase(staging);
+        using var moving = FargoRun();
+        moving.Writer = FailingMoves(moving, new IOException("sharing violation"));
+
+        await staging.RunAsync();
+        await moving.RunAsync();
+
+        Assert.Contains("Nothing was published", staging.Err.ToString());
+        Assert.DoesNotContain("partly published", staging.Err.ToString());
+        Assert.Contains("partly published", moving.Err.ToString());
+        Assert.DoesNotContain("Nothing was published", moving.Err.ToString());
+    }
+
+    /// <summary>Both are on the summary page too, where the owner looks first.</summary>
+    [Fact]
+    public async Task TheStagingFailureIsOnTheJobSummaryAsWhatItIs()
+    {
+        using var h = FargoRun();
+        BlockTheStagingPhase(h);
+
+        await h.RunAsync();
+
+        Assert.Contains("FAILED", h.Summary);
+        Assert.Contains("Nothing was published", h.Summary);
+        Assert.DoesNotContain("partly published", h.Summary);
+    }
+
+    // ---- finding 4: the writer's other data error is not the Shows tab's fault ------------------------
+
+    /// <summary>
+    /// The writer raises <c>InvalidDataException</c> for a slug, which is a title on the Shows tab, and its own
+    /// <c>AttributionException</c> for a sentence that was changed, which is a code change to revert. Thrown here
+    /// through the move seam because <c>EnrichRun</c> always passes the constant, so the guard itself cannot be
+    /// reached from a run: what is pinned is which advice the type is given.
+    /// </summary>
+    [Fact]
+    public async Task AChangedAttributionSentenceIsNotBlamedOnTheShowsTab()
+    {
+        using var h = FargoRun();
+        h.Writer = FailingMoves(h, new CatalogWriter.AttributionException("the sentence was changed"));
+
+        var result = await h.RunAsync();
+
+        Assert.Equal(1, result.ExitCode);
+        var err = h.Err.ToString();
+        Assert.Contains("the sentence was changed", err);
+        Assert.Contains("CatalogMeta.TmdbAttribution", err);
+        Assert.Contains("code change", err);
+        Assert.DoesNotContain("Shows tab", err);                 // the slug advice
+        Assert.DoesNotContain("Overrides row", err);
+        Assert.DoesNotContain("   at ", err);                    // not a stack trace
+        Assert.False(h.Wrote("meta.json"));
+    }
+
+    /// <summary>And the slug advice is still the slug advice.</summary>
+    [Fact]
+    public async Task ASlugClashAndAChangedSentenceGetDifferentAdvice()
+    {
+        using var slug = TwoSeriesOneFile();
+        using var sentence = FargoRun();
+        sentence.Writer = FailingMoves(sentence, new CatalogWriter.AttributionException("the sentence was changed"));
+
+        await slug.RunAsync();
+        await sentence.RunAsync();
+
+        Assert.Contains("Shows tab", slug.Err.ToString());
+        Assert.DoesNotContain("Shows tab", sentence.Err.ToString());
+        Assert.DoesNotContain("CatalogMeta.TmdbAttribution", slug.Err.ToString());
+    }
 }

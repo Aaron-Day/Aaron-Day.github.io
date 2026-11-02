@@ -8,4 +8,10 @@ namespace MovieLibrary.Enrich.Run;
 /// Exit 0 <b>and</b> a complete, real catalogue. False for a budget-stopped run (written for local preview only), for a
 /// fixture run (synthetic data), and for every failure.
 /// </param>
-public sealed record RunResult(int ExitCode, bool StoppedOnBudget, bool Deployable);
+/// <param name="CacheSaved">
+/// The TMDB cache was saved, or there was nothing worth saving. It never moves <see cref="Deployable"/>: a catalogue
+/// that was published is sound whatever happened to the cache (see <c>EnrichRun.RunAgainstTmdbAsync</c>). It is
+/// reported so the workflow can act on it, because a runner that loses its cache loses it on every run and re-spends
+/// the whole request budget each time.
+/// </param>
+public sealed record RunResult(int ExitCode, bool StoppedOnBudget, bool Deployable, bool CacheSaved);

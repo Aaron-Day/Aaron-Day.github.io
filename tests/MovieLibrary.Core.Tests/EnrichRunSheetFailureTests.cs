@@ -130,4 +130,61 @@ public class EnrichRunSheetFailureTests
         Assert.DoesNotContain("eyJ.stub.token", h.Summary);
         Assert.Contains("[redacted]", h.Err.ToString());
     }
+
+    // ---- a timeout is not a failed request, and not a cancellation --------------------------------
+
+    /// <summary>
+    /// Neither <c>HttpClient</c> sets a <c>Timeout</c>, so both carry the 100-second default, and a timeout surfaces
+    /// as <c>TaskCanceledException</c> on the client's own token rather than as a failed request. <c>TmdbClient</c>
+    /// normalises its own; the Sheet client does not, so without an arm of its own a Sheet that is merely slow lands
+    /// in the catch-all and the owner reads a stack trace instead of where to look.
+    /// </summary>
+    [Fact]
+    public async Task ASheetRequestThatTimesOutGetsTheGoogleAdviceAndNotAStackTrace()
+    {
+        using var h = new RunHarness();
+        h.MoviesCsv = RunLibrary.Movies(RunLibrary.Fargo);
+        h.SheetOverride = _ => throw new TaskCanceledException(
+            "The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing.");
+
+        var result = await h.RunAsync();
+
+        Assert.Equal(1, result.ExitCode);
+        var err = h.Err.ToString();
+        Assert.Contains("timed out", err);
+        Assert.Contains("Google Sheets", err);
+        Assert.Contains("SHEET_ID", err);
+        Assert.Contains("link can view", err);
+        Assert.DoesNotContain("Cancelled.", err);                  // not the caller stopping the run
+        Assert.DoesNotContain("   at ", err);                      // not a stack trace
+        Assert.DoesNotContain("TaskCanceledException", err);
+        AssertNothingSpentOrWritten(h);
+    }
+
+    /// <summary>
+    /// The same exception type, the opposite words: a run the caller stopped keeps its own path, because the cache it
+    /// saved on the way out is what makes the re-run cheap and the owner needs to be told that, not told to check a
+    /// Sheet that is fine.
+    /// </summary>
+    [Fact]
+    public async Task ACallerCancellationDuringTheSheetFetchIsStillReportedAsCancelled()
+    {
+        using var h = new RunHarness();
+        using var cts = new CancellationTokenSource();
+        h.SheetOverride = _ => { cts.Cancel(); throw new TaskCanceledException("stopped by the caller"); };
+
+        var result = await h.RunAsync(cts.Token);
+
+        Assert.Equal(1, result.ExitCode);
+        Assert.Contains("Cancelled.", h.Err.ToString());
+        Assert.DoesNotContain("timed out", h.Err.ToString());
+    }
+
+    [Fact]
+    public void ThePhaseDecidesWhichTimeoutAdviceIsGiven()
+    {
+        Assert.Contains("SHEET_ID", MovieLibrary.Enrich.Run.EnrichRun.DescribeTimeout(sheet: true));
+        Assert.DoesNotContain("SHEET_ID", MovieLibrary.Enrich.Run.EnrichRun.DescribeTimeout(sheet: false));
+        Assert.Contains("TMDB", MovieLibrary.Enrich.Run.EnrichRun.DescribeTimeout(sheet: false));
+    }
 }

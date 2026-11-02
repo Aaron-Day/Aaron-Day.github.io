@@ -213,4 +213,114 @@ public class EnrichCliTests
             foreach (var dir in new[] { outDir, cacheDir }) if (Directory.Exists(dir)) Directory.Delete(dir, true);
         }
     }
+
+    // ---- finding 2: --force-refresh cannot be combined with a budget --------------------------------
+
+    /// <summary>
+    /// A forced run never loads the committed index and <c>CacheStore.SaveAsync</c> replaces it whole, so one that
+    /// stops on its budget leaves the index holding only the 2% it managed to re-resolve - and <c>enrich-cache/</c> is
+    /// committed, so that is what gets pushed. Refused before anything is fetched or written: the seeded index is
+    /// still there, byte for byte.
+    /// </summary>
+    [Fact]
+    public async Task AForcedRefreshUnderABudgetIsRefusedBeforeItCanTruncateTheCommittedIndex()
+    {
+        var cacheDir = TempDir();
+        var handler = NoNetwork();
+        try
+        {
+            var seed = new MovieLibrary.Enrich.Caching.CacheStore(cacheDir);
+            seed.Put(new MovieLibrary.Core.Caching.CacheEntry("kept", 275, 0.9, RunHarness.T0, false, "fargo", 98));
+            await seed.SaveAsync(Ct);
+            var index = Path.Combine(cacheDir, "index.json");
+            var before = await File.ReadAllTextAsync(index);
+            var stderr = new StringWriter();
+            var env = new Dictionary<string, string> { ["TMDB_TOKEN"] = "eyJ.stub.token" };
+
+            var exit = await EnrichCli.MainAsync(["--force-refresh", "--cache", cacheDir], env,
+                                                 new StringWriter(), stderr, Ct, handler);
+
+            Assert.Equal(1, exit);                                  // the default budget of 40 is still a budget
+            Assert.Contains("FATAL", stderr.ToString());
+            Assert.Contains("--max-requests 0", stderr.ToString());
+            Assert.Empty(handler.Requests);
+            Assert.Equal(before, await File.ReadAllTextAsync(index));
+        }
+        finally { if (Directory.Exists(cacheDir)) Directory.Delete(cacheDir, true); }
+    }
+
+    /// <summary>The CI dispatch path: FORCE_REFRESH=true, and the budget never named at all.</summary>
+    [Fact]
+    public async Task TheSameRefusalCoversTheDispatchPathWhereTheBudgetDefaultsSilently()
+    {
+        var handler = NoNetwork();
+        var stderr = new StringWriter();
+        var env = new Dictionary<string, string> { ["TMDB_TOKEN"] = "eyJ.stub.token", ["FORCE_REFRESH"] = "true" };
+
+        var exit = await EnrichCli.MainAsync([], env, new StringWriter(), stderr, Ct, handler);
+
+        Assert.Equal(1, exit);
+        Assert.Contains("FATAL", stderr.ToString());
+        Assert.Contains("--max-requests 0", stderr.ToString());
+        Assert.Empty(handler.Requests);
+    }
+
+    // ---- finding 9: the two things Program used to do inline ----------------------------------------
+
+    /// <summary>
+    /// The first Ctrl+C asks the run to stop and is swallowed, so the <c>finally</c> that saves the TMDB cache gets to
+    /// run; the second is not swallowed and kills the process.
+    /// </summary>
+    [Fact]
+    public void TheFirstCtrlCStopsTheRunAndTheSecondKillsTheProcess()
+    {
+        using var cancel = new CancellationTokenSource();
+
+        Assert.True(EnrichCli.RequestStop(cancel));
+        Assert.True(cancel.IsCancellationRequested);
+        Assert.False(EnrichCli.RequestStop(cancel));
+    }
+
+    /// <summary>
+    /// The window between <c>MainAsync</c> returning and the process exiting: the <c>using</c> has disposed the
+    /// source, and <c>Cancel</c> on a disposed one throws on the handler thread, where nothing catches it. It would
+    /// turn a run that had already written <c>$GITHUB_OUTPUT</c> into a crash exit code.
+    /// </summary>
+    [Fact]
+    public void ACtrlCAfterTheRunIsOverDoesNotThrowOnTheHandlerThread()
+    {
+        var cancel = new CancellationTokenSource();
+        cancel.Dispose();
+
+        Assert.True(EnrichCli.RequestStop(cancel));
+    }
+
+    /// <summary>
+    /// An unreadable <c>.env</c> is reported like every other bad input, instead of crashing the top-level statements
+    /// in <c>Program</c>, which have no handler around them, with a bare stack trace.
+    /// </summary>
+    [Fact]
+    public void AnUnreadableEnvFileIsAFatalLineNotAStackTrace()
+    {
+        var stderr = new StringWriter();
+
+        var env = EnrichCli.TryReadEnvironment(stderr, () => throw new IOException("the file is in use"));
+
+        Assert.Null(env);
+        Assert.Contains("FATAL", stderr.ToString());
+        Assert.Contains("the file is in use", stderr.ToString());
+        Assert.Contains(".env", stderr.ToString());                 // and which file it was
+        Assert.DoesNotContain("   at ", stderr.ToString());
+    }
+
+    [Fact]
+    public void AReadableEnvironmentComesStraightBackAndSaysNothing()
+    {
+        var stderr = new StringWriter();
+
+        var env = EnrichCli.TryReadEnvironment(stderr, () => new Dictionary<string, string> { ["SHEET_ID"] = "s" });
+
+        Assert.Equal("s", env?["SHEET_ID"]);
+        Assert.Equal(string.Empty, stderr.ToString());
+    }
 }

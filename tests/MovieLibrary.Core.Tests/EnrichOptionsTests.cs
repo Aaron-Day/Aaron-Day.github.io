@@ -88,10 +88,42 @@ public class EnrichOptionsTests : IDisposable
     [Fact]
     public void ForceRefreshComesFromEitherTheFlagOrTheEnvironment()
     {
-        Assert.True(Load(["--force-refresh"]).ForceRefresh);
-        Assert.True(Load([], ("FORCE_REFRESH", "true")).ForceRefresh);
+        Assert.True(Load(["--force-refresh", "--max-requests", "0"]).ForceRefresh);
+        Assert.True(Load(["--max-requests", "0"], ("FORCE_REFRESH", "true")).ForceRefresh);
         Assert.False(Load([], ("FORCE_REFRESH", "false")).ForceRefresh);
         Assert.False(Load([]).ForceRefresh);
+    }
+
+    /// <summary>
+    /// A full refresh of this library needs thousands of requests. Under a budget it re-resolves the first few films
+    /// and then replaces the committed index with only those: a forced run never loads the old one, and SaveAsync is a
+    /// whole-file replace. There is no flag to force-refresh a subset, so the combination has no use and is refused.
+    /// </summary>
+    [Theory]
+    [InlineData("40")]
+    [InlineData("1")]
+    public void AForcedRefreshUnderABudgetIsRejectedWhicheverWayTheBudgetArrived(string budget)
+    {
+        var fromFlag = Assert.Throws<ArgumentException>(() => Load(["--force-refresh", "--max-requests", budget]));
+        var fromEnv = Assert.Throws<ArgumentException>(() => Load(["--force-refresh"], ("MAX_REQUESTS_PER_RUN", budget)));
+
+        Assert.Contains("--max-requests 0", fromFlag.Message);      // says how to do what was meant
+        Assert.Contains("--max-requests 0", fromEnv.Message);
+    }
+
+    [Fact]
+    public void TheRefusalCoversTheCiPathWhereNeitherSideIsNamedAtAll()
+        // FORCE_REFRESH=true on a manual dispatch, with the budget left at its silent default of 40: the dangerous one.
+        => Assert.Contains("--max-requests 0",
+               Assert.Throws<ArgumentException>(() => Load([], ("FORCE_REFRESH", "true"))).Message);
+
+    [Fact]
+    public void AForcedRefreshWithNoBudgetAtAllIsTheOneLegitimateCombination()
+    {
+        Assert.True(Load(["--force-refresh", "--max-requests", "0"]).ForceRefresh);
+        Assert.True(Load(["--force-refresh", "--max-requests=0"]).ForceRefresh);
+        Assert.True(Load(["--force-refresh"], ("MAX_REQUESTS_PER_RUN", "0")).ForceRefresh);
+        Assert.Equal(0, Load(["--force-refresh", "--max-requests", "0"]).MaxRequests);
     }
 
     [Theory]

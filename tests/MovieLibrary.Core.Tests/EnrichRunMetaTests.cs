@@ -97,16 +97,64 @@ public class EnrichRunMetaTests
         Assert.NotEmpty(await h.SavedCacheAsync());                 // what was paid for is kept
     }
 
+    /// <summary>
+    /// The per-id check above is structurally unable to see this one: no genres means no ids to name, so it has
+    /// nothing to compare. An absent or renamed <c>genres</c> key is null rather than an error, so this is the shape a
+    /// changed TMDB response arrives in - and the genre facet, one of the three approved layouts, would go blank for
+    /// the whole library, be deployed, and keep the payloads that caused it for five months.
+    /// </summary>
     [Fact]
-    public async Task ARunWhereNoFilmCarriesAGenreHasNothingToName()
+    public async Task FilmsThatMatchedWithNotOneGenreNameStopTheRunRatherThanPublishAnEmptyFacet()
     {
         using var h = Library(details: """{"id":275,"title":"Fargo","runtime":98}""");
 
         var result = await h.RunAsync();
 
+        Assert.Equal(1, result.ExitCode);
+        Assert.False(result.Deployable);
+        Assert.Contains("FATAL", h.Err.ToString());
+        Assert.Contains("not one genre name came back", h.Err.ToString());
+        Assert.Contains("genre facet", h.Err.ToString());
+        Assert.False(h.Wrote("meta.json"));
+        Assert.False(h.Wrote("movies.json"));
+        Assert.Contains("deployable=false", h.GitHubOutput);
+        Assert.NotEmpty(await h.SavedCacheAsync());                 // what was paid for is kept
+    }
+
+    /// <summary>
+    /// The guard is on films TMDB matched, so it cannot fire on a first run that spent its budget before it resolved
+    /// anything: that catalogue has no genre ids either, and it is the normal development path.
+    /// </summary>
+    [Fact]
+    public async Task ARunThatMatchedNoFilmAtAllIsNotStoppedByItsEmptyGenreTable()
+    {
+        using var h = Library();
+        h.MoviesCsv = RunLibrary.Movies(("Zzyzx Road", "1:30:00", "Nobody", "Drama"));
+        h.ShowsCsv = GoogleSheetClientTests.ShowsHeader;
+        h.Tmdb = req => req.RequestUri!.AbsolutePath == "/3/search/movie"
+            ? TestPipeline.Json(TestPipeline.EmptyResults)
+            : TestPipeline.NotFound();
+
+        var result = await h.RunAsync();
+
         Assert.Equal(0, result.ExitCode);
+        Assert.Equal(0, h.IdsByTitle("movies.json")["Zzyzx Road"]);
         using var doc = h.Json("meta.json");
         Assert.Empty(doc.RootElement.GetProperty("genres").EnumerateObject());
+    }
+
+    /// <summary>And it cannot fire on a fixture run, whose genre table is FixtureGenerator's own and never empty.</summary>
+    [Fact]
+    public async Task AFixtureRunIsNotStoppedByTheGuardBecauseItsOwnGenreTableIsNeverEmpty()
+    {
+        using var h = Library();
+        h.Options = h.Options with { Fixtures = true, Token = "" };
+
+        var result = await h.RunAsync();
+
+        Assert.Equal(0, result.ExitCode);
+        using var doc = h.Json("meta.json");
+        Assert.NotEmpty(doc.RootElement.GetProperty("genres").EnumerateObject());
     }
 
     [Fact]

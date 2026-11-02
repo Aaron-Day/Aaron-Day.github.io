@@ -17,6 +17,23 @@ public sealed class CatalogWriter(string outputRoot)
     }
 
     /// <summary>
+    /// True once <see cref="WriteAsync"/> has begun moving staged files into place. Until then nothing is published, so
+    /// a failure leaves the previous build exactly as it was; from then on the folder may mix new and stale files. Only
+    /// this class can tell those apart, and they send whoever has to clean up to opposite ends of the problem, so it
+    /// says which. <c>EnrichRun</c> picks its wording from this; the verdict (do not deploy, exit 1) is the same either
+    /// way. One writer per run: it is never reset.
+    /// </summary>
+    public bool MovesBegan { get; private set; }
+
+    /// <summary>
+    /// The attribution sentence was not <see cref="CatalogMeta.TmdbAttribution"/>. It has a type of its own because it
+    /// is a developer error, where the <see cref="InvalidDataException"/>s raised here are operator ones: a caller
+    /// that blames all of them on the Shows tab sends the owner to fix a title that is not wrong. It cannot derive
+    /// from <see cref="InvalidDataException"/>, which is sealed, so callers list it beside that one.
+    /// </summary>
+    public sealed class AttributionException(string message) : InvalidOperationException(message);
+
+    /// <summary>
     /// Minified: these files are downloaded by every visitor. No <c>NewLine</c> is set, unlike
     /// <c>CacheStore</c> whose indented index is committed: minified output holds no line break at all
     /// (string values escape theirs), so it is byte-identical on Windows and Linux. The default encoder is
@@ -60,9 +77,12 @@ public sealed class CatalogWriter(string outputRoot)
     /// keeps its old tv file until the folder is cleared (CI starts from a clean checkout). Only <c>*.writing</c>
     /// files, abandoned by a run that was killed, are swept.</para>
     /// </remarks>
+    /// <exception cref="AttributionException">
+    /// <see cref="CatalogMeta.Attribution"/> is not exactly <see cref="CatalogMeta.TmdbAttribution"/>. Nothing is
+    /// written.
+    /// </exception>
     /// <exception cref="InvalidDataException">
-    /// <see cref="CatalogMeta.Attribution"/> is not exactly <see cref="CatalogMeta.TmdbAttribution"/>, or a series slug
-    /// cannot name a file or repeats another's. Nothing is written.
+    /// A series slug cannot name a file or repeats another's. Nothing is written.
     /// </exception>
     public async Task WriteAsync(
         IReadOnlyList<MovieRecord> movies,
@@ -71,7 +91,7 @@ public sealed class CatalogWriter(string outputRoot)
         CancellationToken ct)
     {
         if (!string.Equals(meta.Attribution, CatalogMeta.TmdbAttribution, StringComparison.Ordinal))
-            throw new InvalidDataException(
+            throw new AttributionException(
                 "The attribution sentence is fixed by TMDB's terms and may not be changed. Pass " +
                 "CatalogMeta.TmdbAttribution; nothing was written.");
 
@@ -99,6 +119,9 @@ public sealed class CatalogWriter(string outputRoot)
             await StageAsync("shows.json", index, staged, ct);
 
             await StageAsync("meta.json", meta, staged, ct);
+
+            // Nothing above this line is published. From here on a failure can leave some files moved and some not.
+            MovesBegan = true;
 
             while (staged.Count > 0)
             {

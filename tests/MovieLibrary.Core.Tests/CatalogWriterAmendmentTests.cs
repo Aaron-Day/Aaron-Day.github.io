@@ -54,7 +54,8 @@ public class CatalogWriterAmendmentTests : IDisposable
     [InlineData("")]
     public async Task AnAttributionThatIsNotTheConstantIsRefusedAndNothingIsWritten(string wrong)
     {
-        await Assert.ThrowsAsync<InvalidDataException>(() => WriteAsync([Film(348, "Alien")], [Series("alias")], Meta(wrong)));
+        await Assert.ThrowsAsync<CatalogWriter.AttributionException>(
+            () => WriteAsync([Film(348, "Alien")], [Series("alias")], Meta(wrong)));
 
         Assert.Empty(AllFiles());
     }
@@ -65,6 +66,19 @@ public class CatalogWriterAmendmentTests : IDisposable
         await WriteAsync([Film(348, "Alien")], [], Meta(CatalogMeta.TmdbAttribution));
 
         Assert.Contains("meta.json", AllFiles());
+    }
+
+    /// <summary>
+    /// The writer's two guards are different kinds of mistake, and whoever catches one has to be able to tell them
+    /// apart: a slug comes from a title on the Sheet, and the attribution sentence comes from the code. Only the
+    /// attribution one has a type of its own - <see cref="InvalidDataException"/> is sealed, so it cannot be a subtype
+    /// of it and a caller has to name both.
+    /// </summary>
+    [Fact]
+    public async Task OnlyTheAttributionGuardHasATypeOfItsOwn_ASlugIsStillAPlainDataError()
+    {
+        await Assert.ThrowsAsync<CatalogWriter.AttributionException>(() => WriteAsync([], [], Meta("reworded")));
+        await Assert.ThrowsAsync<InvalidDataException>(() => WriteAsync([], [Series("alias"), Series("alias")]));
     }
 
     // ---- D: atomic writes ----

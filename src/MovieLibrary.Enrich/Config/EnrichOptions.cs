@@ -10,6 +10,8 @@ namespace MovieLibrary.Enrich.Config;
 /// <b>Empty is absent.</b> An unset Actions variable arrives as an empty string, so an empty or blank environment
 /// variable or flag value counts as not given. <b>A budget below zero is an error</b>: RequestBudget reads anything
 /// at or under 0 as unlimited, so a typo such as <c>--max-requests -5</c> would turn a 40-request run into thousands.
+/// <b>A forced refresh under a budget is an error too</b>: it would replace the committed cache index with the handful
+/// of entries a budget-stopped run managed to fetch. See <see cref="Load"/>.
 /// </remarks>
 public sealed record EnrichOptions(
     string SheetId, [property: JsonIgnore] string Token, int MaxRequests,
@@ -37,6 +39,19 @@ public sealed record EnrichOptions(
             throw new ArgumentException(
                 $"The request limit must be 0 (unlimited) or more, not {requests}. " +
                 "Use --max-requests 0 to ask for no limit on purpose.");
+
+        // A full refresh of this library needs well over 1,500 requests. Under a budget it re-resolves the first few
+        // films and then saves, and CacheStore.SaveAsync is File.Create - a full replace, not a merge. A forced run
+        // never loaded the committed index, so those few entries become the whole of it. The payload files survive but
+        // CacheStore resolves through the index, so recovering costs about 7,000 requests, and enrich-cache/ is
+        // committed, so the truncated index is what gets pushed. There is no flag to force-refresh a subset, so the
+        // combination has no legitimate use: it is refused here, before anything is fetched or written.
+        if (force && requests > 0)
+            throw new ArgumentException(
+                "--force-refresh re-fetches the whole library, which needs thousands of requests, but the budget is " +
+                $"{requests}. A forced run that stops on its budget replaces the committed cache index with only the " +
+                "entries it managed to fetch, and every other film and series then costs a full lookup again. Pass " +
+                "--max-requests 0 to force-refresh the whole library, or drop --force-refresh.");
 
         return new EnrichOptions(
             SheetId: Flag(args, "--sheet-id") ?? Get(env, "SHEET_ID") ?? DefaultSheetId,

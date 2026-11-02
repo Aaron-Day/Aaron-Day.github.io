@@ -1,15 +1,11 @@
-using MovieLibrary.Enrich.Config;
 using MovieLibrary.Enrich.Run;
 
-// A shell. The work is in EnrichCli and EnrichRun, where a test can reach it.
-//
-// Ctrl+C asks the run to stop instead of killing it, so the finally that saves the TMDB cache gets to run: a full seed
-// takes tens of minutes and every response in it was paid for. A second Ctrl+C kills the process as usual.
+// A shell. The work is in EnrichCli and EnrichRun, where a test can reach it, and so are the two things this file used
+// to do itself: Ctrl+C, and reading the environment.
 using var cancel = new CancellationTokenSource();
-Console.CancelKeyPress += (_, e) =>
-{
-    e.Cancel = !cancel.IsCancellationRequested;
-    cancel.Cancel();
-};
+Console.CancelKeyPress += (_, e) => e.Cancel = EnrichCli.RequestStop(cancel);
 
-return await EnrichCli.MainAsync(args, EnrichOptions.ReadEnvironment(), Console.Out, Console.Error, cancel.Token);
+var env = EnrichCli.TryReadEnvironment(Console.Error);
+if (env is null) return 1;
+
+return await EnrichCli.MainAsync(args, env, Console.Out, Console.Error, cancel.Token);

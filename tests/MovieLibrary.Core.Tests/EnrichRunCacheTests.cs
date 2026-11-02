@@ -190,4 +190,62 @@ public class EnrichRunCacheTests
         Assert.Contains("TMDB rejected the credential", h.Err.ToString());
         Assert.Contains("cache could not be saved", h.Err.ToString());
     }
+
+    // ---- the lost cache has to reach the deploy gate, not just the summary page -----------------------
+
+    /// <summary>
+    /// The exit code and <c>deployable</c> deliberately do not move for a lost cache, which left a line on a summary
+    /// page as the only durable sign of it. A runner with a disk or permissions problem loses its cache on every run
+    /// and re-spends the whole budget each time, and nothing forces anyone to read that page.
+    /// </summary>
+    [Fact]
+    public async Task ACacheThatCannotBeSavedIsOnTheOutputsFileWhereTheWorkflowCanActOnIt()
+    {
+        using var h = Films(2);
+        MakeTheIndexUnwritable(h);
+
+        await h.RunAsync();
+
+        Assert.Contains("cache_saved=false", h.GitHubOutput);
+        Assert.Contains("deployable=true", h.GitHubOutput);         // and it is still not a reason to withhold it
+    }
+
+    /// <summary>The healthy run must say so, or the key means nothing to read.</summary>
+    [Fact]
+    public async Task ARunThatSavedItsCacheSaysCacheSavedTrue()
+    {
+        using var h = Films(2);
+
+        await h.RunAsync();
+
+        Assert.Contains("cache_saved=true", h.GitHubOutput);
+        Assert.DoesNotContain("cache_saved=false", h.GitHubOutput);
+    }
+
+    /// <summary>It is written on every outcome, the failures included, like the other two keys.</summary>
+    [Fact]
+    public async Task ARunThatFailedAndAlsoLostItsCacheSaysSoOnTheOutputsFile()
+    {
+        using var h = Films(2);
+        MakeTheIndexUnwritable(h);
+        h.Tmdb = _ => new HttpResponseMessage(System.Net.HttpStatusCode.Unauthorized);
+
+        await h.RunAsync();
+
+        Assert.Contains("cache_saved=false", h.GitHubOutput);
+        Assert.Contains("deployable=false", h.GitHubOutput);
+    }
+
+    /// <summary>A failure that never reached the cache lost nothing, so the key stays true and says only one thing.</summary>
+    [Fact]
+    public async Task AFailureBeforeTheCacheWasEverTouchedStillSaysCacheSavedTrue()
+    {
+        using var h = Films(2);
+        h.SheetOverride = _ => new HttpResponseMessage(System.Net.HttpStatusCode.NotFound);
+
+        await h.RunAsync();
+
+        Assert.Contains("cache_saved=true", h.GitHubOutput);
+        Assert.Contains("deployable=false", h.GitHubOutput);
+    }
 }

@@ -127,4 +127,41 @@ public class EnrichRunBudgetTests
         Assert.False(result.Deployable);
         Assert.True(h.Wrote("shows.json"));
     }
+
+    /// <summary>
+    /// A run can spend its budget in the film phase and then fail in the series phase. It is still a run that stopped
+    /// on the budget, and the flag on the outputs file is what Task 18 reads.
+    /// </summary>
+    [Fact]
+    public async Task ARunThatStoppedOnTheBudgetAndThenFailedStillReportsTheStop()
+    {
+        using var h = ThreeFilms(budget: 1);
+        h.ShowsCsv = RunLibrary.Shows(
+            ("Season 1, Episode 1: Pilot", "Mr. Robot", "Drama"),
+            ("Season 1, Episode 1: Pilot", "Mr Robot", "Drama"));   // one slug for two series: fatal, before any request
+
+        var result = await h.RunAsync();
+
+        Assert.Equal(1, result.ExitCode);
+        Assert.True(result.StoppedOnBudget);
+        Assert.False(result.Deployable);
+        Assert.Contains("stopped_on_budget=true", OutputLines(h));
+        Assert.Contains("deployable=false", OutputLines(h));
+    }
+
+    /// <summary>And a failure with budget to spare must not claim a stop that never happened.</summary>
+    [Fact]
+    public async Task AFailureWithBudgetLeftOverReportsNoStop()
+    {
+        using var h = ThreeFilms(budget: 0);
+        h.ShowsCsv = RunLibrary.Shows(
+            ("Season 1, Episode 1: Pilot", "Mr. Robot", "Drama"),
+            ("Season 1, Episode 1: Pilot", "Mr Robot", "Drama"));
+
+        var result = await h.RunAsync();
+
+        Assert.Equal(1, result.ExitCode);
+        Assert.False(result.StoppedOnBudget);
+        Assert.Contains("stopped_on_budget=false", OutputLines(h));
+    }
 }

@@ -64,4 +64,36 @@ public class EnrichRunReportingTests
 
         Assert.Equal(string.Empty, h.Err.ToString());
     }
+
+    /// <summary>A console that fails the moment the summary is printed. By then the catalogue is already on disk.</summary>
+    private sealed class FailsOnTheSummary : StringWriter
+    {
+        public override void WriteLine(string? value)
+        {
+            if (value is not null && value.StartsWith("## Enrichment run", StringComparison.Ordinal))
+                throw new InvalidOperationException("the console went away");
+            base.WriteLine(value);
+        }
+    }
+
+    /// <summary>
+    /// Writing the summary is caught whatever it throws, not only for the two file exceptions. Anything that escapes
+    /// reaches the catch-all, which exits 1 saying "Nothing was written." - after a catalogue that was published in
+    /// full, and with deployable=false already on the outputs file.
+    /// </summary>
+    [Fact]
+    public async Task AnUnexpectedFailureWritingTheSummaryDoesNotChangeTheVerdictOnAPublishedCatalogue()
+    {
+        using var h = Fargo();
+        var services = h.Services() with { Out = new FailsOnTheSummary() };
+
+        var result = await new MovieLibrary.Enrich.Run.EnrichRun(h.Options, services).RunAsync(CancellationToken.None);
+
+        Assert.Equal(0, result.ExitCode);
+        Assert.True(result.Deployable);
+        Assert.True(h.Wrote("meta.json"));
+        Assert.Contains("deployable=true", h.GitHubOutput);
+        Assert.Contains("WARNING: could not write the job summary", h.Err.ToString());
+        Assert.DoesNotContain("Nothing was written", h.Err.ToString());
+    }
 }
