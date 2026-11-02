@@ -49,6 +49,14 @@ public sealed class TmdbClient(
 
     public int RequestsUsed => budget.Used;
 
+    /// <summary>
+    /// Cast members skipped as unreadable (not an object, or no usable <c>name</c>) across every credits response this client
+    /// has read. One odd member is skipped by design, so a run is not lost to it; the count is how that stays visible.
+    /// A TMDB change that renames <c>name</c> skips every member of every film, which is thousands here and zero on a
+    /// healthy run. A cast that is not read (a <c>castLimit</c> of 0) or is absent counts nothing.
+    /// </summary>
+    public int CastMembersSkipped { get; private set; }
+
     public async Task<IReadOnlyList<MovieCandidate>> SearchMoviesAsync(
         string title, int? year, CancellationToken ct)
     {
@@ -172,13 +180,17 @@ public sealed class TmdbClient(
     }
 
     /// <summary>TMDB lists the whole cast, hundreds of people for a big film; billing is its <c>order</c> field.</summary>
-    private static IReadOnlyList<TmdbCastMember> TopBilledCast(JsonElement credits, int limit, int movieId)
+    private IReadOnlyList<TmdbCastMember> TopBilledCast(JsonElement credits, int limit, int movieId)
     {
         if (limit <= 0 || ArrayOf(credits, "cast", movieId) is not { } cast) return [];
 
-        return [.. cast.EnumerateArray()
+        var members = cast.EnumerateArray()
             .Select((member, position) => (Member: member, Position: position))
-            .Where(x => !string.IsNullOrWhiteSpace(StringOf(x.Member, "name")))
+            .ToList();
+        var readable = members.Where(x => !string.IsNullOrWhiteSpace(StringOf(x.Member, "name"))).ToList();
+        CastMembersSkipped += members.Count - readable.Count;
+
+        return [.. readable
             .OrderBy(x => BillingOrder(x.Member))
             .ThenBy(x => x.Position)
             .Take(limit)
