@@ -30,6 +30,13 @@ public static class JobSummary
                           "It is for building the site locally and is never deployed.")
               .AppendLine();
 
+        if (r.CacheSaveError is not null)
+            sb.AppendLine($"> **The TMDB cache was not saved.** {r.CacheSaveError} The catalogue itself was published " +
+                          "and is sound, so it is not withheld. Check the runner's disk and permissions: the next run " +
+                          "pays for those responses again, and under the default budget it stops early and produces an " +
+                          "incomplete catalogue, which is never deployed.")
+              .AppendLine();
+
         sb.AppendLine($"- Films: **{N(r.Films)}**");
         sb.AppendLine($"- Series: **{N(r.Series)}** ({N(r.TotalEpisodes)} episodes listed, {N(r.OwnedEpisodes)} owned)");
         sb.AppendLine(r.Fixtures

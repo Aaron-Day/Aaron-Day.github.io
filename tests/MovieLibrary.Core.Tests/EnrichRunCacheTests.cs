@@ -130,20 +130,51 @@ public class EnrichRunCacheTests
     private static void MakeTheIndexUnwritable(RunHarness h)
         => Directory.CreateDirectory(Path.Combine(h.CacheDir, "index.json"));      // a directory where the file should go
 
+    /// <summary>
+    /// A lost cache costs requests on a later run, not correctness, so it must not withhold a catalogue that was
+    /// published in full. Failing the run would do real harm: the re-run starts from the same index the save could not
+    /// replace and pays for every response again.
+    /// </summary>
     [Fact]
-    public async Task ACacheThatCannotBeSavedFailsTheRunEvenThoughTheCatalogueWasWritten()
+    public async Task ACacheThatCannotBeSavedStillDeploysTheCatalogueItPublished()
     {
         using var h = Films(2);
         MakeTheIndexUnwritable(h);
 
         var result = await h.RunAsync();
 
-        Assert.Equal(1, result.ExitCode);
-        Assert.False(result.Deployable);
-        Assert.Contains("cache could not be saved", h.Err.ToString());
-        Assert.Equal(1, h.Err.ToString().Split("cache could not be saved").Length - 1);   // once, not once as FATAL and once as ALSO
-        Assert.Contains("deployable=false", h.GitHubOutput);
+        Assert.Equal(0, result.ExitCode);
+        Assert.True(result.Deployable);
         Assert.True(h.Wrote("meta.json"));
+        Assert.Contains("deployable=true", h.GitHubOutput);
+    }
+
+    /// <summary>Not failing the run is exactly why it has to be loud: once on the console, once where the owner reads.</summary>
+    [Fact]
+    public async Task ACacheThatCannotBeSavedIsReportedOnTheConsoleAndTheSummary()
+    {
+        using var h = Films(2);
+        MakeTheIndexUnwritable(h);
+
+        await h.RunAsync();
+
+        Assert.Contains("WARNING: the cache could not be saved", h.Err.ToString());
+        Assert.Equal(1, h.Err.ToString().Split("cache could not be saved").Length - 1);   // once, not once as WARNING and once as ALSO
+        Assert.Contains("The TMDB cache was not saved.", h.Summary);
+        Assert.Contains("cache could not be saved", h.Summary);
+    }
+
+    /// <summary>The healthy run must not carry the banner, or it stops meaning anything.</summary>
+    [Fact]
+    public async Task ARunThatSavesItsCacheSaysNothingAboutTheCache()
+    {
+        using var h = Films(2);
+
+        var result = await h.RunAsync();
+
+        Assert.Equal(0, result.ExitCode);
+        Assert.DoesNotContain("cache", h.Summary, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("WARNING", h.Err.ToString());
     }
 
     [Fact]

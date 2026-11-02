@@ -179,10 +179,15 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
             if (saveError is not null && !completed) services.Error.WriteLine($"ALSO: {saveError}");
         }
 
+        // The catalogue is sound: the writer publishes in order with meta.json last, so a published run published all of
+        // it. Losing this run's new cache entries costs requests later, not correctness, and failing here would withhold
+        // a good catalogue AND make the re-run pay for every response again. The next run protects itself: refetching
+        // under the default budget stops early, and a budget-stopped catalogue is already never deployable.
         if (saveError is not null)
-            throw new FatalRunException($"FATAL: {saveError}",
-                "The catalogue itself was written, but this run is marked failed so the lost cache is not missed. " +
-                "Fix the cause and re-run.");
+        {
+            services.Error.WriteLine($"WARNING: {saveError}");
+            report = report with { CacheSaveError = saveError };
+        }
 
         return await ConcludeAsync(report);
     }
