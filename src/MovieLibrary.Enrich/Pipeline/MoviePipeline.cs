@@ -38,8 +38,8 @@ public sealed record StoredMovie(
 /// <para><b>Order.</b> Rows run in folded-title order (ordinal), not sheet order, so a budgeted run is resumed the
 /// same way every time. <see cref="MoviePipelineResult.Records"/> comes out in that order too.</para>
 /// <para><b>Overrides.</b> A film whose <see cref="OverrideKey"/> (folded title, year, runtime minutes) is in the overrides
-/// map takes that TMDB id without a search, at <c>Mc</c> 1.0. The key is not the folded title alone: the library has 37
-/// titles shared by 76 films, and a title-only key retargeted every one of them at once.</para>
+/// map takes that TMDB id without a search, at <c>Mc</c> 1.0. The key is not the folded title alone: films share titles
+/// (remakes, editions, re-releases), and a title-only key retargets every one of them at once.</para>
 /// <para><b>Cost.</b> An uncached film costs one search, one details call for each of the three most popular
 /// candidates, and one credits call for each of those whose runtime is within tolerance plus every one named like
 /// the film (when none agrees and none is named, the most popular): about 5 requests. The matched film's details
@@ -122,7 +122,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
                 tmdbId = forced;
                 confidence = 1d;
             }
-            else if (cache.Resolve(key, title.Value, runtime, now) is { } hit)
+            else if (cache.Resolve(key, title.Value, runtime, directors, now) is { } hit)
             {
                 // On an alias hit this is the SOURCE entry, so its Key and RuntimeMinutes are not
                 // ours. Only the answer (TmdbId, Confidence) is meaningful here.
@@ -166,7 +166,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
                 var complete = !tmdb.BudgetExhausted;
                 if (complete)
                     cache.Put(new CacheEntry(key, tmdbId, confidence, now,
-                                             Negative: tmdbId is null, title.Value, runtime));
+                                             Negative: tmdbId is null, title.Value, runtime, directors));
 
                 if (match.Outcome != MatchOutcome.Accepted)
                     reviewNote = !complete && tmdbId is null

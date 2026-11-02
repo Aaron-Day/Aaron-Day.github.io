@@ -13,16 +13,20 @@ public class CacheStoreTests : IDisposable
 
     private CacheStore New() => new(_dir);
 
+    // What TitleNormalizer.NormalizeDirectors returns for "Ridley Scott". Every entry here is the same film's
+    // re-encodes, so they share it; CacheStoreAliasDirectorTests pins what happens when directors differ.
+    private const string Director = "ridley scott";
+
     private static CacheEntry Entry(string key, string title, int runtime, DateTimeOffset fetched,
                                     int? id = 348, bool negative = false)
-        => new(key, id, 0.9, fetched, negative, title, runtime);
+        => new(key, id, 0.9, fetched, negative, title, runtime, Director);
 
     [Fact]
     public void ExactKeyHitsWithoutAlias()
     {
         var store = New();
         store.Put(Entry("k1", "alien", 117, Now));
-        Assert.Equal(348, store.Resolve("k1", "alien", 117, Now)!.TmdbId);
+        Assert.Equal(348, store.Resolve("k1", "alien", 117, Director, Now)!.TmdbId);
     }
 
     [Fact]
@@ -31,7 +35,7 @@ public class CacheStoreTests : IDisposable
         var store = New();
         store.Put(Entry("k1", "alien", 117, Now));
         // A re-encode shifted the runtime, so the computed key differs.
-        Assert.Equal(348, store.Resolve("k-different", "alien", 118, Now)!.TmdbId);
+        Assert.Equal(348, store.Resolve("k-different", "alien", 118, Director, Now)!.TmdbId);
     }
 
     [Fact]
@@ -39,7 +43,7 @@ public class CacheStoreTests : IDisposable
     {
         var store = New();
         store.Put(Entry("k-guy", "aladdin", 129, Now));
-        Assert.Null(store.Resolve("k-ron", "aladdin", 91, Now)); // 38 minutes apart
+        Assert.Null(store.Resolve("k-ron", "aladdin", 91, Director, Now)); // 38 minutes apart
     }
 
     [Fact]
@@ -47,7 +51,7 @@ public class CacheStoreTests : IDisposable
     {
         var store = New();
         store.Put(Entry("k1", "alien", 117, Now.AddDays(-151)));
-        Assert.Null(store.Resolve("k1", "alien", 117, Now));
+        Assert.Null(store.Resolve("k1", "alien", 117, Director, Now));
     }
 
     [Fact]
@@ -56,13 +60,13 @@ public class CacheStoreTests : IDisposable
         var store = New();
         store.Put(Entry("k1", "obscure", 95, Now.AddDays(-10), id: null, negative: true));
 
-        var hit = store.Resolve("k1", "obscure", 95, Now);
+        var hit = store.Resolve("k1", "obscure", 95, Director, Now);
         Assert.NotNull(hit);
         Assert.True(hit!.Negative);
 
         var stale = New();
         stale.Put(Entry("k2", "obscure", 95, Now.AddDays(-31), id: null, negative: true));
-        Assert.Null(stale.Resolve("k2", "obscure", 95, Now));
+        Assert.Null(stale.Resolve("k2", "obscure", 95, Director, Now));
     }
 
     [Fact]
@@ -74,7 +78,7 @@ public class CacheStoreTests : IDisposable
 
         var reloaded = New();
         await reloaded.LoadAsync(CancellationToken.None);
-        Assert.Equal(348, reloaded.Resolve("k1", "alien", 117, Now)!.TmdbId);
+        Assert.Equal(348, reloaded.Resolve("k1", "alien", 117, Director, Now)!.TmdbId);
     }
 
     [Fact]
@@ -116,7 +120,7 @@ public class CacheStoreTests : IDisposable
     {
         var store = New();
         store.Put(Entry("k1", "alien", 117, Now));
-        Assert.Null(store.Resolve("k-other", "aliens", 117, Now)); // same runtime, different film
+        Assert.Null(store.Resolve("k-other", "aliens", 117, Director, Now)); // same runtime, different film
     }
 
     // B. TMDB forbids caching beyond six months; the alias path must not serve an expired entry.
@@ -125,7 +129,7 @@ public class CacheStoreTests : IDisposable
     {
         var store = New();
         store.Put(Entry("k1", "alien", 117, Now.AddDays(-151)));
-        Assert.Null(store.Resolve("k-different", "alien", 118, Now)); // alias candidate, but stale
+        Assert.Null(store.Resolve("k-different", "alien", 118, Director, Now)); // alias candidate, but stale
     }
 
     // C. Positives use the five-month window. Sixty days is past the 30-day negative retry.
@@ -134,7 +138,7 @@ public class CacheStoreTests : IDisposable
     {
         var store = New();
         store.Put(Entry("k1", "alien", 117, Now.AddDays(-60)));
-        Assert.NotNull(store.Resolve("k1", "alien", 117, Now));
+        Assert.NotNull(store.Resolve("k1", "alien", 117, Director, Now));
     }
 
     // D. The alias write-back: the new key must afterwards resolve EXACTLY. The second lookup
@@ -145,10 +149,10 @@ public class CacheStoreTests : IDisposable
         var store = New();
         store.Put(Entry("k1", "alien", 117, Now));
 
-        Assert.NotNull(store.Resolve("k-different", "alien", 118, Now));
+        Assert.NotNull(store.Resolve("k-different", "alien", 118, Director, Now));
 
         Assert.Equal(2, store.Entries.Count);
-        var exact = store.Resolve("k-different", "no-such-title", 999, Now);
+        var exact = store.Resolve("k-different", "no-such-title", 999, Director, Now);
         Assert.NotNull(exact);
         Assert.Equal(348, exact!.TmdbId);
     }
@@ -161,7 +165,7 @@ public class CacheStoreTests : IDisposable
         store.Put(Entry("k1", "alien", 117, Now, id: 111));
         store.Put(Entry("k1", "alien", 117, Now, id: 348));
 
-        Assert.Equal(348, store.Resolve("k1", "alien", 117, Now)!.TmdbId);
+        Assert.Equal(348, store.Resolve("k1", "alien", 117, Director, Now)!.TmdbId);
         Assert.Single(store.Entries);
     }
 
@@ -191,7 +195,7 @@ public class CacheStoreTests : IDisposable
         {
             var store = New();
             store.Put(Entry("k1", "alien", 117, Now));
-            return store.Resolve("k-probe", "alien", queryRuntime, Now);
+            return store.Resolve("k-probe", "alien", queryRuntime, Director, Now);
         }
 
         Assert.NotNull(Probe(119)); // +2: a longer query matches a shorter entry
@@ -229,7 +233,7 @@ public class CacheStoreTests : IDisposable
         var fetched = Now.ToOffset(TimeSpan.FromHours(2));
         var store = New();
         store.Put(Entry("k1", "alien", 117, fetched));
-        Assert.NotNull(store.Resolve("k-different", "alien", 118, Now)); // forces the alias write-back
+        Assert.NotNull(store.Resolve("k-different", "alien", 118, Director, Now)); // forces the alias write-back
         await store.SaveAsync(CancellationToken.None);
 
         var reloaded = New();
@@ -240,7 +244,7 @@ public class CacheStoreTests : IDisposable
         Assert.Equal(fetched.Offset, persisted.FetchedUtc.Offset);
 
         // The alias fields came back from disk, so a further drifted runtime still aliases.
-        Assert.NotNull(reloaded.Resolve("k-new", "alien", 119, Now));
+        Assert.NotNull(reloaded.Resolve("k-new", "alien", 119, Director, Now));
     }
 
     // System.Text.Json indents with Environment.NewLine. enrich-cache/ is committed from Linux CI and

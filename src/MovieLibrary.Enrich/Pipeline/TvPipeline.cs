@@ -81,6 +81,14 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
 {
     private static readonly IReadOnlyDictionary<string, int> NoOverrides = new Dictionary<string, int>();
 
+    /// <summary>
+    /// A series has no directors, so it is cached with none and looked up with none. <see cref="CacheStore.Resolve"/>
+    /// never aliases a row that has none: a series key is a pure function of its name, so there is no second entry to
+    /// alias to, and the one thing an alias could do here is hand a series the id of a film that shares its folded
+    /// title and runs two minutes or less.
+    /// </summary>
+    private const string NoDirectors = "";
+
     public Task<TvPipelineResult> RunAsync(IReadOnlyList<SheetRow> rows, CancellationToken ct)
         => RunAsync(rows, NoOverrides, ct);
 
@@ -210,7 +218,7 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
         if (overrides.TryGetValue(keyed.Value, out var forcedId)) return await ResolveOverrideAsync(forcedId, now, ct);
 
         var key = IdentityKey.ForSeries(keyed);
-        var hit = cache.Resolve(key, keyed.Value, 0, now);
+        var hit = cache.Resolve(key, keyed.Value, 0, NoDirectors, now);
 
         // A fresh negative is an answer, not a miss. Searching again would spend a request every run.
         if (hit is { TmdbId: null }) return new SeriesLookup(null, null, 0d, ["series not found"]);
@@ -237,7 +245,7 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
             if (found is not null)
             {
                 var (confidence, notes) = Judge(title, found);
-                cache.Put(new CacheEntry(key, found.Id, confidence, now, Negative: false, keyed.Value, 0));
+                cache.Put(new CacheEntry(key, found.Id, confidence, now, Negative: false, keyed.Value, 0, NoDirectors));
                 await cache.WritePayloadAsync($"tv/{found.Id}/series.json", new StoredSeries(now, found), ct);
                 return new SeriesLookup(found.Id, found, confidence, notes);
             }
@@ -248,7 +256,7 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
             // an id we already hold (below).
             if (!tmdb.BudgetExhausted && hit is null)
             {
-                cache.Put(new CacheEntry(key, null, 0d, now, Negative: true, keyed.Value, 0));
+                cache.Put(new CacheEntry(key, null, 0d, now, Negative: true, keyed.Value, 0, NoDirectors));
                 return new SeriesLookup(null, null, 0d, ["series not found"]);
             }
         }

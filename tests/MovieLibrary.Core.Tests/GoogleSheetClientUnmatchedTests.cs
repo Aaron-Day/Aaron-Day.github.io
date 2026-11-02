@@ -24,6 +24,12 @@ public class GoogleSheetClientUnmatchedTests
     private static readonly SheetRow[] NoFilms = [];
     private static readonly SheetRow[] NoEpisodes = [];
 
+    // A note that can never be silenced would be noise: the only way to quiet a stale row is to delete it, so say so.
+    private const string FilmGone = "If the film has left your library, delete this row, or this note will come back on every run.";
+    private const string SeriesGone = "If the series has left your library, delete this row, or this note will come back on every run.";
+
+    private static int At(string note, string text) => note.IndexOf(text, StringComparison.Ordinal);
+
     [Fact]
     public async Task OverridesThatMatchASheetRowGetNoNote()
     {
@@ -57,7 +63,8 @@ public class GoogleSheetClientUnmatchedTests
         Assert.Contains("title, its year in brackets if it has one, and its runtime to the minute", note);
         Assert.Contains("'Halloween' 1:31:12 (91 min); 'Halloween' 1:50:18 (110 min)", note);   // closest, in sheet order
         Assert.DoesNotContain("Heat", note);                             // a different title is not close
-        Assert.EndsWith("Copy the Title and Runtime from the Movies tab exactly.", note);   // what to do about it
+        Assert.Contains("Copy the Title and Runtime from the Movies tab exactly.", note);   // what to do about it
+        Assert.EndsWith(FilmGone, note);                                                    // and how to quiet it
     }
 
     [Fact]
@@ -123,7 +130,8 @@ public class GoogleSheetClientUnmatchedTests
         Assert.Contains("its name and its year in brackets if it has one", note);
         Assert.Contains("Closest on the sheet: 'The Biggest Loser'.", note);       // once, not twice
         Assert.DoesNotContain("Office", note);
-        Assert.EndsWith("Copy the name from the Series column of the Shows tab exactly.", note);   // what to do about it
+        Assert.Contains("Copy the name from the Series column of the Shows tab exactly.", note);   // what to do about it
+        Assert.EndsWith(SeriesGone, note);                                                         // and how to quiet it
     }
 
     [Fact]
@@ -295,5 +303,89 @@ public class GoogleSheetClientUnmatchedTests
 
         Assert.Contains("matches no series", note);
         Assert.Contains("Closest on the sheet: 'The Biggest Loser (2020)'.", note);
+    }
+
+    // ---- the remedy points the way that would help, not the opposite way -------------------------------
+
+    [Fact]
+    public async Task ASeriesOverridePastedWithItsShowsRuntimeIsToldToClearTheRuntime()
+    {
+        // The Shows tab's runtime is h:mm:ss too, so it reads as a 44-hour film and the row is filed as a film override.
+        // Telling the owner to copy the runtime from the Movies tab would send them after a film that does not exist.
+        var o = await Fetch(Header + Line("The Office", "44:00:00", "2316"));
+
+        var note = Assert.Single(o.WithUnmatchedNotes(NoFilms, [Episode("The Office")]).Notes);
+
+        Assert.Contains("matches no film on the Movies tab", note);
+        Assert.Contains("The Shows tab has a series by that name", note);
+        Assert.Contains("clear its Runtime cell", note);
+        Assert.True(At(note, "clear its Runtime cell") >= 0
+                    && At(note, "clear its Runtime cell") < At(note, "copy the Title and Runtime from the Movies tab"),
+                    "the series remedy comes first; the film remedy is only the fallback");
+        Assert.EndsWith(FilmGone, note);
+    }
+
+    [Fact]
+    public async Task AFilmOverrideLeftWithoutARuntimeIsToldToCopyTheRuntimeFromTheMoviesTab()
+    {
+        // A blank Runtime marks a series, so the row is filed as one. Telling the owner to copy the name from the
+        // Shows tab would send them after a series that does not exist.
+        var o = await Fetch(Header + Line("Halloween", "", "948"));
+
+        var note = Assert.Single(o.WithUnmatchedNotes(
+            [Film("Halloween", "1:30:47"), Film("Halloween", "1:50:18")], [Episode("The Office")]).Notes);
+
+        Assert.Contains("matches no series on the Shows tab", note);
+        Assert.Contains("The Movies tab has a film by that title", note);
+        Assert.Contains("copy the Runtime from the Movies tab", note);
+        Assert.True(At(note, "copy the Runtime from the Movies tab") >= 0
+                    && At(note, "copy the Runtime from the Movies tab") < At(note, "copy the name from the Series column"),
+                    "the film remedy comes first; the series remedy is only the fallback");
+        Assert.EndsWith(SeriesGone, note);
+    }
+
+    [Fact]
+    public async Task WithNothingOnTheSheetToGoByTheFilmNoteStillSaysWhatToDoForASeries()
+    {
+        var o = await Fetch(Header + Line("Halloween", "1:30:47", "948"));
+
+        var note = Assert.Single(o.WithUnmatchedNotes([Film("Heat", "2:50:00")], [Episode("The Office")]).Notes);
+
+        Assert.DoesNotContain("The Shows tab has a series by that name", note);
+        Assert.Contains("Copy the Title and Runtime from the Movies tab exactly. " +
+                        "(A series takes no Runtime: if this row is for one, clear its Runtime cell.)", note);
+    }
+
+    [Fact]
+    public async Task WithNothingOnTheSheetToGoByTheSeriesNoteStillSaysWhatToDoForAFilm()
+    {
+        var o = await Fetch(Header + Line("Alias", "", "4490"));
+
+        var note = Assert.Single(o.WithUnmatchedNotes([Film("Heat", "2:50:00")], [Episode("The Office")]).Notes);
+
+        Assert.DoesNotContain("The Movies tab has a film by that title", note);
+        Assert.Contains("Copy the name from the Series column of the Shows tab exactly. " +
+                        "(A blank Runtime marks a series; for a film, copy its Title and Runtime from the Movies tab.)", note);
+    }
+
+    [Fact]
+    public async Task AFilmThatHasLeftTheLibraryIsToldToDeleteTheRowSinceNothingElseQuietsTheNote()
+    {
+        var o = await Fetch(Header + Line("Heat", "2:50:00", "949"));
+
+        var note = Assert.Single(o.WithUnmatchedNotes([Film("Alien", "1:57:00")], NoEpisodes).Notes);
+
+        Assert.EndsWith(FilmGone, note);
+        Assert.Single(o.WithUnmatchedNotes([Film("Alien", "1:57:00")], NoEpisodes).Notes);   // and it does come back
+    }
+
+    [Fact]
+    public async Task ASeriesThatHasLeftTheLibraryIsToldToDeleteTheRowToo()
+    {
+        var o = await Fetch(Header + Line("Lost", "", "77"));
+
+        var note = Assert.Single(o.WithUnmatchedNotes(NoFilms, [Episode("The Office")]).Notes);
+
+        Assert.EndsWith(SeriesGone, note);
     }
 }

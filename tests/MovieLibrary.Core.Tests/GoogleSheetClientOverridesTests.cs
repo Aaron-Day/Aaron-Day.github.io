@@ -239,6 +239,8 @@ public class GoogleSheetClientOverridesTests
         var note = Assert.Single(o.Notes);
         Assert.Contains("'Overrides' tab was not found", note);
         Assert.Contains("no overrides were applied", note);
+        // The remedy is what the owner acts on, so it is pinned whole: the tab's name and every column it needs.
+        Assert.EndsWith("Add a tab named 'Overrides' with the columns Title, Runtime, TmdbId, Note.", note);
     }
 
     [Fact]
