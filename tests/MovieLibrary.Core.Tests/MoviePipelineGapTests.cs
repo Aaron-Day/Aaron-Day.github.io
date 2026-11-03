@@ -514,7 +514,8 @@ public class MoviePipelineGapTests
 
         var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
 
-        Assert.Equal(["/3/movie/1/credits", "/3/movie/2/credits"], CreditsPaths(h));
+        // Both, and the named film first: it is enriched first now, being the one named like the sheet.
+        Assert.Equal(["/3/movie/2/credits", "/3/movie/1/credits"], CreditsPaths(h));
         var r = Assert.Single(result.Records);
         Assert.Equal((2, 0.45), (r.I, r.Mc)); // director 0.30 + title 0.15
         Assert.Contains("Flagged", result.ReviewQueue.Single());
@@ -714,5 +715,94 @@ public class MoviePipelineGapTests
 
         Assert.Equal(3, CreditsPaths(h).Count());
         Assert.Equal(7, h.Handler.Requests.Count); // 1 search + 3 details + 3 credits: the same ceiling as three runtime passers
+    }
+
+    // ---- The candidates the pass enriches: which ones, and how many ----
+
+    private static IEnumerable<string> DetailPaths(TestPipeline.Harness h)
+        => Paths(h).Where(p => p.StartsWith("/3/movie/", StringComparison.Ordinal)
+                               && !p.EndsWith("/credits", StringComparison.Ordinal));
+
+    private static Dictionary<string, string> CandidateRoutes(
+        params (int Id, string Title, int Pop, int Runtime, string Director)[] films)
+    {
+        var routes = new Dictionary<string, string>
+        {
+            ["/3/search/movie"] = "{\"results\":[" + string.Join(",", films.Select(f =>
+                $"{{\"id\":{f.Id},\"title\":\"{f.Title}\",\"release_date\":\"1996-03-08\",\"popularity\":{f.Pop}}}")) + "]}",
+        };
+
+        foreach (var f in films)
+        {
+            routes[$"/3/movie/{f.Id}"] =
+                $"{{\"id\":{f.Id},\"title\":\"{f.Title}\",\"runtime\":{f.Runtime},\"release_date\":\"1996-03-08\"}}";
+            routes[$"/3/movie/{f.Id}/credits"] = $"{{\"crew\":[{{\"job\":\"Director\",\"name\":\"{f.Director}\"}}]}}";
+        }
+
+        return routes;
+    }
+
+    /// <remarks>
+    /// The defect this kills: candidates were enriched in popularity order and cut to the first three, so for
+    /// a title TMDB has many of, an exact match on title, runtime AND director was never fetched and so never
+    /// scored. Home Alone, Batman, Spider-Man, Seven and Transformers were all of them this, every one cached
+    /// as a film TMDB does not have. The cost is unchanged: three details and one credits, as before.
+    /// </remarks>
+    [Fact]
+    public async Task TheCandidateNamedLikeTheFilmIsEnrichedFirstHoweverUnpopular()
+    {
+        var h = TestPipeline.Create(0, Routes(CandidateRoutes(
+            (1, "Fargo Rock City", 90, 120, "Someone Else"),
+            (2, "Fargo Documentary", 80, 150, "Someone Else"),
+            (3, "Fargo Returns", 70, 130, "Someone Else"),
+            (4, "Fargo", 10, 98, "Joel Coen"))));
+
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+
+        Assert.Equal(["/3/movie/4", "/3/movie/1", "/3/movie/2"], DetailPaths(h));
+        Assert.Equal((4, 0.85), (result.Records[0].I, result.Records[0].Mc));
+        Assert.Empty(result.ReviewQueue);
+        Assert.Equal(5, h.Handler.Requests.Count); // 1 search + 3 details + 1 credits
+    }
+
+    /// <remarks>
+    /// Ranking is not enough on its own: TMDB's title for a film is often not the sheet's (Se7en against the
+    /// row's Seven), and then nothing separates the real film from the decoys until its runtime is fetched. So
+    /// the pass keeps paying past the floor while nothing it has agrees on runtime - runtime being 0.40 of the
+    /// score and the one signal a search result cannot carry - and stops the moment something does.
+    /// </remarks>
+    [Fact]
+    public async Task ThePassKeepsGoingPastTheFloorUntilACandidateAgreesOnRuntime()
+    {
+        var h = TestPipeline.Create(0, Routes(CandidateRoutes(
+            (1, "Fargo Alpha", 90, 120, "Someone Else"),
+            (2, "Fargo Beta", 80, 130, "Someone Else"),
+            (3, "Fargo Gamma", 70, 140, "Someone Else"),
+            (4, "Fargo Delta", 60, 150, "Someone Else"),
+            (5, "Fa7go", 50, 98, "Joel Coen"),
+            (6, "Fargo Zeta", 40, 160, "Someone Else"))));
+
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+
+        // The first three are the whole of what the old pass saw, and none of them agrees on anything.
+        Assert.Equal(["/3/movie/1", "/3/movie/2", "/3/movie/3", "/3/movie/4", "/3/movie/5"], DetailPaths(h));
+        Assert.Equal(["/3/movie/5/credits"], CreditsPaths(h));
+        Assert.Equal((5, 0.70), (result.Records[0].I, result.Records[0].Mc)); // runtime 0.40 + director 0.30
+    }
+
+    [Fact]
+    public async Task ThePassStopsAtTheCeilingHoweverManyCandidatesTmdbReturns()
+    {
+        // Fifteen decoys, none named like the film and none within tolerance of its 98 minutes: there is
+        // nothing to find, and the run must not spend a whole budget finding that out.
+        var h = TestPipeline.Create(0, Routes(CandidateRoutes(
+            [.. Enumerable.Range(1, 15).Select(i => (i, $"Fargo {i}", 100 - i, 120 + i, "Someone Else"))])));
+
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+
+        Assert.Equal(MoviePipeline.DetailCeiling, DetailPaths(h).Count());
+        Assert.Equal(["/3/movie/1/credits"], CreditsPaths(h)); // the last resort, as before: the best-ranked
+        Assert.Equal((0, 0d), (result.Records[0].I, result.Records[0].Mc));
+        Assert.Contains("Unmatched", result.ReviewQueue.Single());
     }
 }

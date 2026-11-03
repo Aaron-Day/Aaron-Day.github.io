@@ -41,9 +41,12 @@ public sealed record StoredMovie(
 /// <para><b>Overrides.</b> A film whose <see cref="OverrideKey"/> (folded title, year, runtime minutes) is in the overrides
 /// map takes that TMDB id without a search, at <c>Mc</c> 1.0. The key is not the folded title alone: films share titles
 /// (remakes, editions, re-releases), and a title-only key retargets every one of them at once.</para>
-/// <para><b>Cost.</b> An uncached film costs one search, one details call for each of the three most popular
-/// candidates, and one credits call for each of those whose runtime is within tolerance plus every one named like
-/// the film (when none agrees and none is named, the most popular): about 5 requests. The matched film's details
+/// <para><b>Cost.</b> An uncached film costs one search, one details call for each of the first
+/// <see cref="DetailFloor"/> candidates in the order <c>Rank</c> puts them, and one credits call for each of those
+/// whose runtime is within tolerance plus every one named like the film (when none agrees and none is named, the
+/// best-ranked): about 5 requests. A film where none of those agrees on runtime keeps going to
+/// <see cref="DetailCeiling"/> candidates, which is the only way the right film is found when it is neither
+/// popular nor named exactly as the sheet names it, and costs up to about 21. The matched film's details
 /// and its credits (genres, top-billed cast) are reused for its record, not refetched: the cast comes out of the same
 /// credits response that gave the directors. A payload past its refresh window, and a film named by an override,
 /// take details, genres and cast from one <c>append_to_response=credits</c> request.</para>
@@ -71,6 +74,18 @@ public sealed class MoviePipeline(
 {
     /// <summary>How many top-billed cast members a film keeps.</summary>
     public const int CastLimit = 4;
+
+    /// <summary>
+    /// How many candidates are enriched before the pass is content with what it has: the cost every film
+    /// that already resolves goes on paying, and no more.
+    /// </summary>
+    internal const int DetailFloor = 3;
+
+    /// <summary>
+    /// And how many it will enrich while nothing it has seen can win. TMDB answers a search with 20 results
+    /// and is never paged here, so this is a ceiling on the extra cost, not a page size.
+    /// </summary>
+    internal const int DetailCeiling = 10;
 
     /// <summary>
     /// The key a film is looked up under in the overrides map: its folded title with any trailing year, exactly as
@@ -205,16 +220,26 @@ public sealed class MoviePipeline(
         IReadOnlyList<MovieCandidate> candidates, NormalizedTitle title, int sheetRuntime, CancellationToken ct)
     {
         // Runtime and director carry 0.70 of the score but search results hold neither. Details
-        // (which carry the runtime) are fetched for the three most popular candidates. Credits
-        // (the directors) cost the same again, so they are fetched only where they can still
-        // matter: runtime alone rules out most candidates, and director is a confirmation.
+        // (which carry the runtime) are fetched in Rank's order. Credits (the directors) cost the same
+        // again, so they are fetched only where they can still matter: runtime alone rules out most
+        // candidates, and director is a confirmation.
         var details = new Dictionary<int, TmdbMovie>();
         var cast = new Dictionary<int, IReadOnlyList<TmdbCastMember>>();
         var enriched = new List<MovieCandidate>();
 
-        foreach (var c in candidates.OrderByDescending(c => c.Popularity).Take(3))
+        foreach (var c in Rank(candidates, title))
         {
-            if (tmdb.BudgetExhausted) break;
+            if (tmdb.BudgetExhausted || enriched.Count == DetailCeiling) break;
+
+            // Past the floor, keep paying only while nothing enriched so far agrees on runtime. Runtime is
+            // 0.40 of the score and the one signal a search result cannot carry, so a pass that has not
+            // found one has no candidate that can be accepted, whatever its director turns out to be. This
+            // is where the films that scored 0.0 were lost: with the list cut to three by popularity, an
+            // exact match on title, runtime AND director was never fetched, so it was never scored. Home
+            // Alone, Batman, Spider-Man, Seven and Transformers were all of them this.
+            if (enriched.Count >= DetailFloor
+                && enriched.Any(e => MatchScorer.RuntimeAgrees(e.RuntimeMinutes, sheetRuntime)))
+                break;
 
             var movie = await tmdb.GetMovieAsync(c.TmdbId, ct);
             if (movie is not null) details[c.TmdbId] = movie;
@@ -231,9 +256,9 @@ public sealed class MoviePipeline(
         // whether or not its runtime agrees. An edition cut is routinely listed on TMDB at a very
         // different length, a decoy that happens to land within tolerance must not be the only
         // candidate whose director is known, and two films that share a name (a remake) can only be
-        // told apart by director. There are at most three candidates here, so this adds at most two
-        // requests to the typical one. When nothing agrees and nothing is named, the most popular is
-        // the last resort, so a director signal survives a missing or wrong runtime.
+        // told apart by director. The usual pass holds three candidates, so this adds at most two
+        // requests to the typical one. When nothing agrees and nothing is named, the best-ranked
+        // candidate is the last resort, so a director signal survives a missing or wrong runtime.
         var anyNamed = false;
         for (var i = 0; i < enriched.Count; i++)
         {
@@ -258,6 +283,24 @@ public sealed class MoviePipeline(
 
         return new Enrichment(enriched, details, cast);
     }
+
+    /// <summary>
+    /// The order candidates are enriched in: the ones TMDB names exactly as the sheet does first, then the
+    /// ones released in the year the sheet's title hints at, then the most popular.
+    /// </summary>
+    /// <remarks>
+    /// Popularity alone decided this, and popularity is the one signal the scorer refuses to score. For a
+    /// title as common as Batman or Home Alone it ranks sequels, documentaries and same-named unrelated films
+    /// above the film itself, and the pass then never fetched the runtime that would have settled it. Ordering
+    /// on the signals the scorer DOES use costs nothing: both are already in the search result. OrderBy is
+    /// stable, so candidates that tie keep TMDB's own relevance order.
+    /// </remarks>
+    private static IEnumerable<MovieCandidate> Rank(
+        IReadOnlyList<MovieCandidate> candidates, NormalizedTitle title)
+        => candidates
+            .OrderByDescending(c => MatchScorer.TitleAgrees(c.Title, title))
+            .ThenByDescending(c => title.YearHint is { } y && c.Year == y)
+            .ThenByDescending(c => c.Popularity);
 
     /// <summary>
     /// The film's details and cast for its record. Details fetched this run are the freshest there are and replace

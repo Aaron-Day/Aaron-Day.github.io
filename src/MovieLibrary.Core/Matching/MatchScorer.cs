@@ -68,7 +68,8 @@ public static class MatchScorer
 
     /// <summary>
     /// Whether a candidate's title names the same film as the sheet's: equal once both are folded.
-    /// Shared with the pipeline's credits gate for the same reason as <see cref="RuntimeAgrees"/>.
+    /// Shared with the pipeline's credits gate and with the order it enriches candidates in, for the same
+    /// reason as <see cref="RuntimeAgrees"/>.
     /// </summary>
     public static bool TitleAgrees(string candidateTitle, NormalizedTitle sheetTitle)
         => TitleNormalizer.Normalize(candidateTitle).Value == sheetTitle.Value;
@@ -81,8 +82,7 @@ public static class MatchScorer
 
         if (RuntimeAgrees(c.RuntimeMinutes, runtimeMinutes)) score += RuntimeWeight;
 
-        if (c.Directors.Any(d => TitleNormalizer.NameTokens(d) is { Count: > 0 } t
-                                 && t.IsSubsetOf(wantedDirectors)))
+        if (c.Directors.Any(d => PersonName.Agrees(d, wantedDirectors)))
             score += DirectorWeight;
 
         if (TitleAgrees(c.Title, title)) score += TitleWeight;
