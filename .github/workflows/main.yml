@@ -11,6 +11,20 @@ on:
         description: 'TMDB requests this run (0 = unlimited)'
         required: false
         default: '40'
+      # Deliberately NO force-refresh input, though the design spec still describes one.
+      # EnrichOptions.Load refuses --force-refresh with a non-zero budget, because a forced run never loads
+      # the committed index and SaveAsync replaces it whole, so one that stops on its budget leaves the index
+      # holding only the fraction it re-fetched. An input defaulting to the 40 above would therefore exit 1 on
+      # its first use. If it is ever wanted, it has to set max-requests to 0 in the same dispatch.
+
+# One run at a time. Two runs enriching at once spend the budget twice on the SAME titles, and the second
+# cache push is then a non-fast-forward that is rejected, throwing that run's requests away with a git error
+# that reads as unrelated. A push landing during the Monday cron is enough to cause it. Never
+# cancel-in-progress: cancelling a run mid-enrich is precisely how a spent budget is wasted, and queueing
+# means the second run checks out after the first has pushed its cache, so it starts from the fuller index.
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -48,7 +62,7 @@ jobs:
       # CacheStore.SaveAsync has truncated index.json in place without finishing it, and committing that
       # would overwrite the committed index that CacheStore's own docs name as the way to restore it.
       - name: Commit cache growth
-        if: always() && steps.enrich.outputs.cache_saved == 'true'
+        if: always() && steps.enrich.outputs.cache_saved == 'true' && github.ref_type == 'branch'
         env:
           # The push needs an explicit refspec: actions/checkout can leave HEAD detached, and a bare
           # `git push` then has no branch to send. ref_name is the branch the run was triggered on (master
@@ -71,27 +85,40 @@ jobs:
       - name: Warn that the TMDB cache was not saved
         if: always() && steps.enrich.outputs.cache_saved == 'false'
         run: |
-          echo "::warning title=TMDB cache not saved::enrich-cache/ is unchanged from what is committed, so the next run re-spends this run's TMDB requests. The job summary says why."
+          echo "::warning title=TMDB cache not saved::This run's TMDB responses were not banked, so the next run pays for them again. enrich-cache/ was deliberately NOT committed: the index may be half-written, and the committed copy is what it would be restored from. The job summary says why."
+
+      # A skipped deploy has to be visible. The gate below leaves the job GREEN with a clean check mark,
+      # which is right for a budget stop but means a run that quietly stopped updating the live site looks
+      # exactly like one that updated it - and the only trace is inside a job summary nobody opens. Cache
+      # entries expire at five months, so the weekly cron on the default 40-request budget will land here
+      # roughly twice a year. This also catches the case where enrich exits 0 but wrote no outputs at all
+      # (its $GITHUB_OUTPUT write failed and was swallowed as advisory), where every gated step skips.
+      # A bare echo cannot fail the job, so the run stays green while saying what happened.
+      - name: Warn that the deploy was skipped
+        if: always() && steps.enrich.outcome == 'success' && steps.enrich.outputs.deployable != 'true'
+        run: |
+          echo "::warning title=Deploy skipped::The catalogue was not complete, so the live site was left as it was (stopped_on_budget=${{ steps.enrich.outputs.stopped_on_budget }}). Re-run with max-requests 0 to finish the library. The job summary says what is missing."
 
       # The deploy gate. `deployable` is true only for a complete, real catalogue: it is false for a
       # budget-stopped run (films carry sheet data only and series collapse to season 0), for --fixtures,
       # and for every failure. A gated-off run leaves these steps skipped and the job green, which a budget
       # stop - the normal development path - should be. `!cancelled()` rather than the implied success() so
       # that a cache push losing a race does not also withhold a sound catalogue.
-      - name: Publish
+      # One step, not three. Given the same `if` on each, none of them depended on the one before it: a
+      # `dotnet publish` that failed AFTER it began copying static web assets would leave a real
+      # release/wwwroot/index.html behind, the next two steps would succeed on it, and the deploy would
+      # publish a partial site. GitHub runs `run:` scripts under `bash -e`, so folding them makes the whole
+      # publish succeed or fail as one thing.
+      - name: Publish the site
+        id: publish
         if: ${{ !cancelled() && steps.enrich.outputs.deployable == 'true' }}
-        run: dotnet publish src/MovieLibrary.Web -c Release -o release --nologo
-
-      - name: Copy index.html to 404.html for deep links
-        if: ${{ !cancelled() && steps.enrich.outputs.deployable == 'true' }}
-        run: cp release/wwwroot/index.html release/wwwroot/404.html
-
-      - name: Add .nojekyll so _framework is served
-        if: ${{ !cancelled() && steps.enrich.outputs.deployable == 'true' }}
-        run: touch release/wwwroot/.nojekyll
+        run: |
+          dotnet publish src/MovieLibrary.Web -c Release -o release --nologo
+          cp release/wwwroot/index.html release/wwwroot/404.html   # deep links: Pages serves 404.html, which reboots the app
+          touch release/wwwroot/.nojekyll                          # without it Pages hides _framework/
 
       - name: Deploy to gh-pages
-        if: ${{ !cancelled() && steps.enrich.outputs.deployable == 'true' }}
+        if: ${{ !cancelled() && steps.publish.outcome == 'success' }}
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

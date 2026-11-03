@@ -33,16 +33,25 @@ public class TmdbAttributionTests
         Assert.Equal(1, occurrences);
     }
 
+    /// <summary>
+    /// The sentence must be one run of text, not words with markup threaded through them. A <c>&lt;br&gt;</c> or a
+    /// <c>&lt;span&gt;</c> inside it still renders the same words, so the test above would still pass, but it breaks
+    /// TMDB's wording requirement and splits the sentence into fragments for a screen reader.
+    /// </summary>
     [Fact]
     public void TheAttributionSentenceIsOneUnbrokenRunOfText()
     {
         var html = File.ReadAllText(Path.Combine(WwwRoot(), "index.html"));
-        var start = html.IndexOf(CatalogMeta.TmdbAttribution, StringComparison.Ordinal);
 
-        Assert.True(start >= 0, "the sentence is missing or has been altered");
-        // No markup inside it: a <br> or a <span> would still render the words but breaks TMDB's wording requirement
-        // and splits the sentence for a screen reader.
-        Assert.DoesNotContain("<", CatalogMeta.TmdbAttribution);
+        // The paragraph's own content, read from the file rather than from the constant: asserting about the
+        // constant would be a tautology that no edit to index.html could ever fail.
+        var open = html.IndexOf("<p>", html.IndexOf("<footer", StringComparison.Ordinal), StringComparison.Ordinal);
+        Assert.True(open >= 0, "the footer has no <p> holding the attribution");
+        var close = html.IndexOf("</p>", open, StringComparison.Ordinal);
+        Assert.True(close > open, "the attribution paragraph is not closed");
+
+        var inner = html[(open + 3)..close].Trim();
+        Assert.Equal(CatalogMeta.TmdbAttribution, inner);
     }
 
     /// <summary>
