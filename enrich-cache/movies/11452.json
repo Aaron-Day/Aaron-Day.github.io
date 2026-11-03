@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 11452,
+    "title": "National Lampoon\u0027s Van Wilder",
+    "overview": "Van Wilder has been attending college for far too many years and is scared to graduate, but Van\u2019s father eventually realizes what is going on. When he stops paying his son\u0027s tuition fees, Van must come up with the money if he wants to stay in college, so he and his friends come up with a great fund-raising idea \u2013 throwing parties. However, when the college magazine finds out and reporter Gwen is sent to do a story on Van Wilder, things get a little complicated.",
+    "tagline": "Don\u0027t graduate. Celebrate.",
+    "runtime": 92,
+    "release_date": "2002-03-29",
+    "vote_average": 6.181,
+    "poster_path": "/4IvM4qnzlo62oLmS54FtyRt54ze.jpg",
+    "backdrop_path": "/kvSQgjq2arVzfFVTvmiQc2Nl1XQ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 43220,
+      "name": "National Lampoon\u0027s Van Wilder Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ryan Reynolds",
+      "character": "Van Wilder",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Tara Reid",
+      "character": "Gwen Pearson",
+      "profile_path": "/c2RYIMfmDGjIxTJT3MMsabutA5o.jpg"
+    },
+    {
+      "name": "Tim Matheson",
+      "character": "Vance Wilder Sr.",
+      "profile_path": "/6oexiiYLJYXU6NjIhzlpA3mqYGF.jpg"
+    },
+    {
+      "name": "Kal Penn",
+      "character": "Taj Mahal Badalandabad",
+      "profile_path": "/yICM1JcxKbEpaqTUreY0yFMIc8W.jpg"
+    }
+  ]
+}

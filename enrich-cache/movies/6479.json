@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 6479,
+    "title": "I Am Legend",
+    "overview": "Robert Neville is a scientist who was unable to stop the spread of the terrible virus that was incurable and man-made. Immune, Neville is now the last human survivor in what is left of New York City and perhaps the world. For three years, Neville has faithfully sent out daily radio messages, desperate to find any other survivors who might be out there. But he is not alone.",
+    "tagline": "The last man on Earth is not alone.",
+    "runtime": 101,
+    "release_date": "2007-12-12",
+    "vote_average": 7.225,
+    "poster_path": "/fhbiz5BsGUVEZmzPP72SoPlbMz0.jpg",
+    "backdrop_path": "/ePgD1cwmklyrFBjl6z96IuixuSY.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 945984,
+      "name": "I Am Legend Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Robert Neville",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Alice Braga",
+      "character": "Anna Montez",
+      "profile_path": "/d9JdgvUiqyWuGQLmozNfGZOpIBz.jpg"
+    },
+    {
+      "name": "Charlie Tahan",
+      "character": "Ethan",
+      "profile_path": "/isCdDBAxrSOjugK3HjgESi6rXcn.jpg"
+    },
+    {
+      "name": "Dash Mihok",
+      "character": "Alpha Male",
+      "profile_path": "/jnruNUJv57nNtO66SR3oJ5tQuM5.jpg"
+    }
+  ]
+}

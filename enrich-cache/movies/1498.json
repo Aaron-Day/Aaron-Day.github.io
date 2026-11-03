@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 1498,
+    "title": "Teenage Mutant Ninja Turtles",
+    "overview": "A quartet of humanoid turtles, trained by their mentor in Ninjutsu, must learn to work together to face the menace of Shredder and the Foot Clan.",
+    "tagline": "Hey dude, this is NO cartoon.",
+    "runtime": 93,
+    "release_date": "1990-03-30",
+    "vote_average": 6.707,
+    "poster_path": "/shfAU6xIIEAEtsloIT3n9Fscz2E.jpg",
+    "backdrop_path": "/qXM08jXRwlT9rm10iAC2uoq0Kn.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1582,
+      "name": "Teenage Mutant Ninja Turtles Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brian Tochi",
+      "character": "Leonardo (voice)",
+      "profile_path": "/oFmxzHpo3bw9wn8yx5fNCt9xTC7.jpg"
+    },
+    {
+      "name": "Josh Pais",
+      "character": "Raphael (voice) / Passenger In Cab",
+      "profile_path": "/uH90fGfLLzYCX02yOW3kH4LMO7n.jpg"
+    },
+    {
+      "name": "Corey Feldman",
+      "character": "Donatello (voice)",
+      "profile_path": "/9n5xDsrBFY0AFESmXOJEzEj4ezx.jpg"
+    },
+    {
+      "name": "Robbie Rist",
+      "character": "Michelangelo (voice)",
+      "profile_path": "/xaDQBCyjEOtgsto7xTiVRP0PsKe.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 14564,
+    "title": "Rings",
+    "overview": "Julia becomes worried about her boyfriend Holt when he explores the dark urban legend of a mysterious videotape said to kill the watcher seven days after viewing. She sacrifices herself to save her boyfriend and in doing so makes a horrifying discovery: there is a \u0022movie within the movie\u0022 that no one has ever seen before.",
+    "tagline": "First you watch it. Then you die.",
+    "runtime": 102,
+    "release_date": "2017-02-01",
+    "vote_average": 5.03,
+    "poster_path": "/yp4CDOVpVmNwiPoZKQeFCpW8CFo.jpg",
+    "backdrop_path": "/a4r8xcRwTgKIUKdWtxFXyxTZLeN.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 14563,
+      "name": "The Ring Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Matilda Lutz",
+      "character": "Julia",
+      "profile_path": "/yqeYvGgDvrhvn5lP6fuRE1ImQXv.jpg"
+    },
+    {
+      "name": "Alex Roe",
+      "character": "Holt Anthony",
+      "profile_path": "/n3EVRACN3XEuOzrWK3TTn791gWo.jpg"
+    },
+    {
+      "name": "Johnny Galecki",
+      "character": "Gabriel Brown",
+      "profile_path": "/5zTHvvKpR9VUkzHxGnbrdB51Kyc.jpg"
+    },
+    {
+      "name": "Vincent D\u0027Onofrio",
+      "character": "Galen Burke",
+      "profile_path": "/qkyiLolEqYMGH25xD4sFIXAjZQB.jpg"
+    }
+  ]
+}

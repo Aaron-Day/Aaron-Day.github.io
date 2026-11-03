@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 141,
+    "title": "Donnie Darko",
+    "overview": "After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a large bunny rabbit that manipulates him to commit a series of crimes.",
+    "tagline": "28 days, 6 hours, 42 minutes, 12 seconds... that is when the world will end.",
+    "runtime": 114,
+    "release_date": "2001-01-19",
+    "vote_average": 7.761,
+    "poster_path": "/j2AtZFsflxiluaNtajMTI0Avm8C.jpg",
+    "backdrop_path": "/msCHK5Kh1YbdZ0zPJ2nzPUhhSN9.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 178106,
+      "name": "Darko Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jake Gyllenhaal",
+      "character": "Donnie Darko",
+      "profile_path": "/ct2Gh2sJSxd4yaMrSsqSt1HpIC3.jpg"
+    },
+    {
+      "name": "Jena Malone",
+      "character": "Gretchen Ross",
+      "profile_path": "/kGwV9iLmfUxJ6a73ehr0QvAnc8C.jpg"
+    },
+    {
+      "name": "James Duval",
+      "character": "Frank",
+      "profile_path": "/vvasxKKPnxv2qOoXTnaXW3ecGLO.jpg"
+    },
+    {
+      "name": "Drew Barrymore",
+      "character": "Karen Pomeroy",
+      "profile_path": "/8qvMFslwrC3w1OwJYqE3mHPvffr.jpg"
+    }
+  ]
+}

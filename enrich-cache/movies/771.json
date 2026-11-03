@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 771,
+    "title": "Home Alone",
+    "overview": "Eight-year-old Kevin McCallister makes the most of the situation after his family unwittingly leaves him behind when they go on Christmas vacation. When thieves try to break into his home, he puts up a fight like no other.",
+    "tagline": "A family comedy without the family.",
+    "runtime": 103,
+    "release_date": "1990-11-16",
+    "vote_average": 7.47,
+    "poster_path": "/onTSipZ8R3bliBdKfPtsDuHTdlL.jpg",
+    "backdrop_path": "/ih2xVgeMS8R5WUetYE8Mr9hVTlB.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9888,
+      "name": "Home Alone Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Macaulay Culkin",
+      "character": "Kevin",
+      "profile_path": "/5We9Y4zUJ5TUnRgfmkzWQx0mLIF.jpg"
+    },
+    {
+      "name": "Joe Pesci",
+      "character": "Harry",
+      "profile_path": "/pEHQoL8yOndOq59iXlgsOpUTcTk.jpg"
+    },
+    {
+      "name": "Daniel Stern",
+      "character": "Marv",
+      "profile_path": "/939oerf8bJPrqT2a0N0oGuM1bjn.jpg"
+    },
+    {
+      "name": "John Heard",
+      "character": "Peter",
+      "profile_path": "/zjhcxrCFK4q0C1gtVmeN8FeqCw0.jpg"
+    }
+  ]
+}

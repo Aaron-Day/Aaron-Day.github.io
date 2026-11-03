@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 35320,
+    "title": "School of Life",
+    "overview": "At Fallbrook Middle School, the annual student-elected Teacher of the Year award is held. And every year for the last 43 years Norman Warner or most fondly called Stormin\u0027 Norman Warner has won the award. Now that he has died, the burden of carrying the legacy falls into the hands of Matt Warner, the son of the late Norman Warner who has always lived in the shadow of his father.",
+    "tagline": "This School Rocks!",
+    "runtime": 111,
+    "release_date": "2005-02-19",
+    "vote_average": 6.4,
+    "poster_path": "/6v3lhMJLKQEsIpQRM56pU0FMwzW.jpg",
+    "backdrop_path": "/allvJZKXH3PVzXcQVpmM3TUMSrf.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "David Paymer",
+      "character": "Matt Warner",
+      "profile_path": "/owoOdDFgXpls1OFKwmQ104Nkl5.jpg"
+    },
+    {
+      "name": "Ryan Reynolds",
+      "character": "Mr. D",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Kate Vernon",
+      "character": "Elli Warner",
+      "profile_path": "/2fQ8XIYZOElhsYqlqCB6QHJ1MHW.jpg"
+    },
+    {
+      "name": "Andrew Robb",
+      "character": "Dylan Warner",
+      "profile_path": "/aHQqbNsBIaLqEiyXTTUyMtP7H1l.jpg"
+    }
+  ]
+}

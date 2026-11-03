@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 841,
+    "title": "Dune",
+    "overview": "In the year 10,191, the most precious substance in the universe is the spice Melange. The spice extends life. The spice expands consciousness. The spice is vital to space travel.  The spice exists on only one planet in the entire universe, the vast desert planet Arrakis, also known as Dune.  Its native inhabitants, the Fremen, have long held a prophecy that a man would come, a messiah who would lead them to true freedom.",
+    "tagline": "A world beyond your experience, beyond your imagination.",
+    "runtime": 136,
+    "release_date": "1984-12-14",
+    "vote_average": 6.195,
+    "poster_path": "/4kJmUCE7mkVJjXa7A0g2rY4IGTm.jpg",
+    "backdrop_path": "/5wJ2tckpvwcxGCAgZiccodwEJpf.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kyle MacLachlan",
+      "character": "Paul Atreides",
+      "profile_path": "/7gNyx8fYAUdOp2jpCEH3dyFbeV.jpg"
+    },
+    {
+      "name": "Francesca Annis",
+      "character": "Lady Jessica",
+      "profile_path": "/rtbYkuenkq8Kfc5LwzWYtVD3eNH.jpg"
+    },
+    {
+      "name": "Patrick Stewart",
+      "character": "Gurney Halleck",
+      "profile_path": "/ufqtnLh3JJjPbEgxEag3MM5nZyv.jpg"
+    },
+    {
+      "name": "Linda Hunt",
+      "character": "Shadout Mapes",
+      "profile_path": "/leiVNArKBQTmE5ROovNJWiW9kfk.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 296099,
+    "title": "Vacation",
+    "overview": "Hoping to bring his family closer together and to recreate his childhood vacation for his own kids, a grown up Rusty Griswold takes his wife and their two sons on a cross-country road trip to the coolest theme park in America, Walley World. Needless to say, things don\u0027t go quite as planned.",
+    "tagline": "What could go wrong?",
+    "runtime": 99,
+    "release_date": "2015-07-28",
+    "vote_average": 6.3,
+    "poster_path": "/z79MzBerDAW2EOQZCobFTO4dJ7P.jpg",
+    "backdrop_path": "/6y5ALiAai1JbLRb7ZlydNwEPu5a.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ed Helms",
+      "character": "Rusty Griswold",
+      "profile_path": "/gPZ8tZaNQGAc3KZRIPp9rgGbEnN.jpg"
+    },
+    {
+      "name": "Christina Applegate",
+      "character": "Debbie Griswold",
+      "profile_path": "/ncWS3iguCMCQ53ewacGpMGA6MHv.jpg"
+    },
+    {
+      "name": "Skyler Gisondo",
+      "character": "James Griswold",
+      "profile_path": "/4oywya1Roukq6FJFuWjU5z61WUg.jpg"
+    },
+    {
+      "name": "Steele Stebbins",
+      "character": "Kevin Griswold",
+      "profile_path": "/i6eQFLLcAGaSddfmKDCX7nCPnog.jpg"
+    }
+  ]
+}

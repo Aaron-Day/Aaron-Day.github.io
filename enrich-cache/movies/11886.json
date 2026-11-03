@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 11886,
+    "title": "Robin Hood",
+    "overview": "With King Richard off to the Crusades, Prince John and his slithering minion, Sir Hiss, set about taxing Nottingham\u0027s citizens with support from the corrupt sheriff - and staunch opposition by the wily Robin Hood and his band of merry men.",
+    "tagline": "Meet Robin Hood and his MERRY MENagerie!",
+    "runtime": 83,
+    "release_date": "1973-11-08",
+    "vote_average": 7.312,
+    "poster_path": "/x9AvkYek0bGdxQSZ8W3lAjGrREm.jpg",
+    "backdrop_path": "/3WeFPoPVIGgMumjgLn0EPIfq53A.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Brian Bedford",
+      "character": "Robin Hood - A Fox (voice)",
+      "profile_path": "/lL7c7sizLGEK2WKnVxM3HHZ8AXr.jpg"
+    },
+    {
+      "name": "Phil Harris",
+      "character": "Little John - A Bear (voice)",
+      "profile_path": "/rmwonhlAdVHs2D2u7kGOYqLiMT1.jpg"
+    },
+    {
+      "name": "Andy Devine",
+      "character": "Friar Tuck - A Badger (voice)",
+      "profile_path": "/rBCv7cszfbo2dkQbGxxff9xTppL.jpg"
+    },
+    {
+      "name": "Monica Evans",
+      "character": "Maid Marian - A Vixen (voice)",
+      "profile_path": "/7EAFFrRFGn2CdGerkiKlKVixUD.jpg"
+    }
+  ]
+}

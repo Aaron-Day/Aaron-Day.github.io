@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 17898,
+    "title": "Silver Bullet",
+    "overview": "The small city of Tarker\u0027s Mills is startled by a series of sadistic murders. The population fears the work of a maniac, but sightings of a mysterious, hairy creature soon spread. People lock themselves up at night, but there\u0027s one boy who\u0027s still outside\u2026",
+    "tagline": "It started in May. In a small town. And every month after that whenever the moon was full...It came back.",
+    "runtime": 95,
+    "release_date": "1985-10-10",
+    "vote_average": 6.693,
+    "poster_path": "/52CvWYuJyWcMTPvsfcmsxaVHi7f.jpg",
+    "backdrop_path": "/dRKPz3iZiuYpgdfbBQ3Af6Wo63R.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Gary Busey",
+      "character": "Uncle Red",
+      "profile_path": "/8H7Hlv6b7ZoK4jZKeLnc2i4pfPL.jpg"
+    },
+    {
+      "name": "Everett McGill",
+      "character": "Reverend Lowe",
+      "profile_path": "/nc3IMwRItjFzScYdJWR7MT9p5cW.jpg"
+    },
+    {
+      "name": "Tovah Feldshuh",
+      "character": "Older Jane (voice)",
+      "profile_path": "/c0VOkTP88UneW37YOBebtBhMHYF.jpg"
+    },
+    {
+      "name": "Megan Follows",
+      "character": "Jane Coslaw",
+      "profile_path": "/b51laNa6sqSpLrYCUpW7hcsbZio.jpg"
+    }
+  ]
+}

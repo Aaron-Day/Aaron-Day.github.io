@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T23:27:45.2504363+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "A Dissertation on the American Justice System by People Who Have Never Been Inside a Courtroom, Let Alone Know Anything About the Law, but Have Seen Way Too Many Legal Thrillers.",
+        "overview": "Jay sues the Quick Stop--and Dante--after slipping on Randal\u0027s spilled soda.",
+        "air_date": "2000-05-31",
+        "runtime": 22,
+        "still_path": "/6x4TUyim5OvCA0fJ4deggsLUdu1.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Clipshow Wherein Dante and Randal Are Locked in the Freezer and Remember Some of the Great Moments in Their Lives",
+        "overview": "The guys take a clip-filled trip down memory lane after getting locked in the Quick Stop\u0027s freezer.",
+        "air_date": "2000-06-07",
+        "runtime": 22,
+        "still_path": "/o0HyQ8ylUeDnije8ClR09CtqjhH.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Leonardo Leonardo Returns and Dante Has an Important Decision to Make",
+        "overview": "Leonardo Leonardo opens a shop across from the Quick Stop, putting the business in danger.",
+        "air_date": "2002-12-22",
+        "runtime": 22,
+        "still_path": "/iEBijQCmaogPjzSQguHLIoqGmuk.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Leonardo Is Caught in the Grip of an Outbreak of Randal\u2019s Imagination and Patrick Swayze either Does or Doesn\u0027t Work in the New Pet Store",
+        "overview": "The government descends on the Quick Stop after Leonardo is suspected of contracting a deadly virus from a monkey at a nearby pet store.",
+        "air_date": "2002-12-22",
+        "runtime": 22,
+        "still_path": "/wx7MQ8ygF4xEYdDCAYOqKRUgb2A.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Dante \u0026 Randal \u0026 Jay \u0026 Silent Bob \u0026 a Bunch of New Characters \u0026 Lando Take Part in a Whole Bunch of Movie Parodies Including, but Not Exclusive To, the Bad News Bears, the Last Starfighter, Indiana Jones \u0026 the Temple of Doom, Plus a High School Reunion",
+        "overview": "Dante becomes a coach for Leonardo\u0027s little-league team.",
+        "air_date": "2002-12-22",
+        "runtime": 22,
+        "still_path": "/3CRZIOAXr14Kec4rpPeB4967Q1k.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Last Episode Ever!",
+        "overview": "The guys\u0027 day slacking off at the Quick Stop is derailed by a spoof of \u0022The Matrix,\u0022 a carnival riot and a trip through the minds of their illustrators.",
+        "air_date": "2002-12-22",
+        "runtime": 22,
+        "still_path": "/xhbjqZWbMaHKGdvm9M46JN0crRV.jpg"
+      }
+    ]
+  }
+}

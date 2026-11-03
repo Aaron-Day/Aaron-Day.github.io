@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 245891,
+    "title": "John Wick",
+    "overview": "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
+    "tagline": "Don\u0027t set him off.",
+    "runtime": 101,
+    "release_date": "2014-10-16",
+    "vote_average": 7.468,
+    "poster_path": "/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg",
+    "backdrop_path": "/ff2ti5DkA9UYLzyqhQfI2kZqEuh.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 404609,
+      "name": "John Wick Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "John Wick",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Michael Nyqvist",
+      "character": "Viggo Tarasov",
+      "profile_path": "/d9nGt8MloJwosRbGp10gaeHExcZ.jpg"
+    },
+    {
+      "name": "Alfie Allen",
+      "character": "Iosef Tarasov",
+      "profile_path": "/aF3SyXNd2JfktnYkUvC1tsFHJDu.jpg"
+    },
+    {
+      "name": "Willem Dafoe",
+      "character": "Marcus",
+      "profile_path": "/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg"
+    }
+  ]
+}

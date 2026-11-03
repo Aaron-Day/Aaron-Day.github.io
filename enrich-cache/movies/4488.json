@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 4488,
+    "title": "Friday the 13th",
+    "overview": "Camp counselors are stalked and murdered by an unknown assailant while trying to reopen a summer camp that was the site of a child\u0027s drowning.",
+    "tagline": "They were warned...They are doomed...And on Friday the 13th, nothing will save them.",
+    "runtime": 95,
+    "release_date": "1980-05-09",
+    "vote_average": 6.402,
+    "poster_path": "/uGGpnWHOmWTARVN9wbC1nPxNgps.jpg",
+    "backdrop_path": "/edVRp9npNwQwJtD05KyZlzp1J2p.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9735,
+      "name": "Friday the 13th Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Adrienne King",
+      "character": "Alice",
+      "profile_path": "/igRfRtDEogoLzCXkX833atJCzC2.jpg"
+    },
+    {
+      "name": "Jeannine Taylor",
+      "character": "Marcie",
+      "profile_path": "/afYTyL7S5IzL8zyTBOViZtBcVFD.jpg"
+    },
+    {
+      "name": "Robbi Morgan",
+      "character": "Annie",
+      "profile_path": "/7VvXVy7n14IS5tr96mDa3ELyi7P.jpg"
+    },
+    {
+      "name": "Kevin Bacon",
+      "character": "Jack",
+      "profile_path": "/rjX2Oz3tCZMfSwOoIAyEhdtXnTE.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 34544,
+    "title": "The A-Team",
+    "overview": "A man who loves when a plan comes together, Col. Hannibal Smith leads a close-knit team of elite operatives and Iraq War veterans. Framed for a crime they didn\u0027t commit, Smith and his men, Capt. H.M. \u2018Howling Mad\u2019 Murdock , Sgt. Bosco \u2018B.A.\u2019 Baracus, and Lt. Templeton \u2018Faceman\u2019 Peck, break out and go rogue, using their special talents to clear their names and find the perpetrator. Hot on their trail is Capt. Charissa Sosa, who was once involved with a member of Smith\u0027s team and has sworn to capture them, no matter what it takes.",
+    "tagline": "There is no plan B.",
+    "runtime": 117,
+    "release_date": "2010-06-09",
+    "vote_average": 6.421,
+    "poster_path": "/bkAWEx5g5tvRPjtDQyvIZ7LRxQm.jpg",
+    "backdrop_path": "/puAUfSiVrQO2DPKOobHFjqVcXPt.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Liam Neeson",
+      "character": "Hannibal",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Bradley Cooper",
+      "character": "Face",
+      "profile_path": "/5Dhy50qOMOHfR1NZifKIfffjV9X.jpg"
+    },
+    {
+      "name": "Jessica Biel",
+      "character": "Charisa Sosa",
+      "profile_path": "/u5DzbWKvAzS0M4ZhYqpUR9MZr2M.jpg"
+    },
+    {
+      "name": "Quinton \u0027Rampage\u0027 Jackson",
+      "character": "B.A. Baracus",
+      "profile_path": "/1FcZPbXNJRAUJTN2U6choOgaq51.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 7553,
+    "title": "Waiting...",
+    "overview": "Young employees at Shenaniganz restaurant collectively stave off boredom and adulthood with their antics.",
+    "tagline": "What happens in the kitchen ends up on the plate.",
+    "runtime": 94,
+    "release_date": "2005-10-07",
+    "vote_average": 6.203,
+    "poster_path": "/h3NJDiaaliUH35ApXPu8PFKZwWz.jpg",
+    "backdrop_path": "/jaegX6b1InnSSUAagdr0NE2ABBS.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 93731,
+      "name": "Waiting Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ryan Reynolds",
+      "character": "Monty",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Anna Faris",
+      "character": "Serena",
+      "profile_path": "/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+    },
+    {
+      "name": "Justin Long",
+      "character": "Dean",
+      "profile_path": "/7TGXeHw4o86IBm6xknQotpludXK.jpg"
+    },
+    {
+      "name": "David Koechner",
+      "character": "Dan",
+      "profile_path": "/fpTTe1ow3EdfRJ8PZgBJmpeghMS.jpg"
+    }
+  ]
+}

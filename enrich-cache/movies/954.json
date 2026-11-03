@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 954,
+    "title": "Mission: Impossible",
+    "overview": "When Ethan Hunt, the leader of a crack espionage team whose perilous operation has gone awry with no explanation, discovers that a mole has penetrated the CIA, he\u0027s surprised to learn that he\u0027s the prime suspect. To clear his name, Hunt now must ferret out the real double agent and, in the process, even the score.",
+    "tagline": "Expect the impossible.",
+    "runtime": 111,
+    "release_date": "1996-05-22",
+    "vote_average": 7.033,
+    "poster_path": "/l5uxY5m5OInWpcExIpKG6AR3rgL.jpg",
+    "backdrop_path": "/sra8XnL96OyLHENcglmZJg6HA8z.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87359,
+      "name": "Mission: Impossible Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Ethan Hunt",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Jon Voight",
+      "character": "Jim Phelps",
+      "profile_path": "/oxLsItDwLddXu8YYJCfkddYNejL.jpg"
+    },
+    {
+      "name": "Emmanuelle B\u00E9art",
+      "character": "Claire",
+      "profile_path": "/hiMo05virLdlhCBzTPXThoMYMZ1.jpg"
+    },
+    {
+      "name": "Henry Czerny",
+      "character": "Kittridge",
+      "profile_path": "/zOWZzRmliKf9032IOOq0a3jXhVv.jpg"
+    }
+  ]
+}

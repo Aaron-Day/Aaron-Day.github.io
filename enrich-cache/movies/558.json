@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 558,
+    "title": "Spider-Man 2",
+    "overview": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by the evil Doc Ock. In the meantime, Parker still can\u0027t act on his feelings for Mary Jane Watson, a girl he\u0027s loved since childhood. A certain anger begins to brew in his best friend Harry Osborn as well...",
+    "tagline": "There\u0027s a hero in all of us.",
+    "runtime": 127,
+    "release_date": "2004-06-25",
+    "vote_average": 7.341,
+    "poster_path": "/aGuvNAaaZuWXYQQ6N2v7DeuP6mB.jpg",
+    "backdrop_path": "/6al048Lat3eLVQOuKtc9h6Tu94d.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 556,
+      "name": "Spider-Man Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tobey Maguire",
+      "character": "Spider-Man / Peter Parker",
+      "profile_path": "/s6PwSvq6gC7PGEjIku69tPbvR8M.jpg"
+    },
+    {
+      "name": "Kirsten Dunst",
+      "character": "Mary Jane Watson",
+      "profile_path": "/yhLKGjuiMMdbGnFrR8AREkCZcVF.jpg"
+    },
+    {
+      "name": "James Franco",
+      "character": "Harry Osborn",
+      "profile_path": "/bjmAntHGiibLZixH8nTNVBzaFQn.jpg"
+    },
+    {
+      "name": "Alfred Molina",
+      "character": "Doc Ock / Otto Octavius",
+      "profile_path": "/nJo91Czesn6z0d0pkfbDoVZY3sg.jpg"
+    }
+  ]
+}

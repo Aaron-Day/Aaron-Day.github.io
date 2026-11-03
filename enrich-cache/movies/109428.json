@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 109428,
+    "title": "Evil Dead",
+    "overview": "Mia, a drug addict, is determined to kick the habit. To that end, she asks her brother, David, his girlfriend, Natalie and their friends Olivia and Eric to accompany her to their family\u0027s remote forest cabin to help her through withdrawal. Eric finds a mysterious Book of the Dead at the cabin and reads aloud from it, awakening an ancient demon. All hell breaks loose when the malevolent entity possesses Mia.",
+    "tagline": "The most terrifying film you will ever experience.",
+    "runtime": 91,
+    "release_date": "2013-04-05",
+    "vote_average": 6.675,
+    "poster_path": "/1gDV0Lm9y8ufIKzyf0h0GBgb9Zj.jpg",
+    "backdrop_path": "/6RDgtEBzjuF7W25DVziXRABchpX.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jane Levy",
+      "character": "Mia",
+      "profile_path": "/iYyWPOOpZgAqZK6IddSaD4R9QW3.jpg"
+    },
+    {
+      "name": "Shiloh Fernandez",
+      "character": "David",
+      "profile_path": "/ug0p4QtE1Am7JySNClm7u8iISOB.jpg"
+    },
+    {
+      "name": "Lou Taylor Pucci",
+      "character": "Eric",
+      "profile_path": "/25lfbMJruSG5Kmv1zdKfMyrZWB9.jpg"
+    },
+    {
+      "name": "Jessica Lucas",
+      "character": "Olivia",
+      "profile_path": "/nYS2J93VapM1GW5UdqMFqCxVMUv.jpg"
+    }
+  ]
+}

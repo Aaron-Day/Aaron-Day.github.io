@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 36657,
+    "title": "X-Men",
+    "overview": "Two mutants, Rogue and Wolverine, come to a private academy for their kind whose resident superhero team, the X-Men, must oppose a terrorist organization with similar powers.",
+    "tagline": "Trust a few. Fear the rest.",
+    "runtime": 104,
+    "release_date": "2000-07-13",
+    "vote_average": 7.024,
+    "poster_path": "/bRDAc4GogyS9ci3ow7UnInOcriN.jpg",
+    "backdrop_path": "/3QUVzbcNyfGe3ocWkYAT8emK8Co.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 748,
+      "name": "X-Men Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Hugh Jackman",
+      "character": "Logan / Wolverine",
+      "profile_path": "/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Patrick Stewart",
+      "character": "Xavier",
+      "profile_path": "/ufqtnLh3JJjPbEgxEag3MM5nZyv.jpg"
+    },
+    {
+      "name": "Ian McKellen",
+      "character": "Magneto",
+      "profile_path": "/5cnnnpnJG6TiYUSS7qgJheUZgnv.jpg"
+    },
+    {
+      "name": "Famke Janssen",
+      "character": "Jean Grey",
+      "profile_path": "/uvZGwNsLqe9NyA57Qlt46IkO8Bd.jpg"
+    }
+  ]
+}

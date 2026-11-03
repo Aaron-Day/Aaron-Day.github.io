@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 10591,
+    "title": "The Girl Next Door",
+    "overview": "Exceptionally ambitious high schooler Matthew has aspirations for a career in politics when he falls in love with his gorgeous 19-year-old neighbor, Danielle. But Matthew\u0027s bright future is jeopardized when he finds Danielle was once a porn star. As Danielle\u0027s past catches up with her, Matthew\u0027s love for her forces him to re-evaluate his goals.",
+    "tagline": "Matt never saw her coming... but all his friends had!",
+    "runtime": 110,
+    "release_date": "2004-04-09",
+    "vote_average": 6.8,
+    "poster_path": "/5mVyFHSY2rSsNgD4NfEwV82HigU.jpg",
+    "backdrop_path": "/qvcOovScPoRalRxDy50rYSYFree.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Emile Hirsch",
+      "character": "Matthew Kidman",
+      "profile_path": "/NQjX6KjtDDyLnvbxhrU9xQWaYJ.jpg"
+    },
+    {
+      "name": "Elisha Cuthbert",
+      "character": "Danielle",
+      "profile_path": "/qvBpzq3BjIexYKoJD8kpcT0JrTE.jpg"
+    },
+    {
+      "name": "Timothy Olyphant",
+      "character": "Kelly",
+      "profile_path": "/ccQzw9I1BYBv0HHVJr4cvAWjtkI.jpg"
+    },
+    {
+      "name": "Christopher Rodriguez Marquette",
+      "character": "Eli",
+      "profile_path": "/8AL7UPXM4sVkOMgTHIxNdRi2SXP.jpg"
+    }
+  ]
+}

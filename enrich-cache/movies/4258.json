@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 4258,
+    "title": "Scary Movie 5",
+    "overview": "Home with their newly-formed family, happy parents Dan and Jody are haunted by sinister, paranormal activities. Determined to expel the insidious force, they install security cameras and discover their family is being stalked by an evil dead demon.",
+    "tagline": "Evil is coming. Bring protection.",
+    "runtime": 86,
+    "release_date": "2013-04-11",
+    "vote_average": 4.777,
+    "poster_path": "/vBqLLxE6GaAPhO6v9EFvFbLZ7Ap.jpg",
+    "backdrop_path": "/2eW8VlLXjUq4OKk8SYf5KTr91Kv.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 4246,
+      "name": "Scary Movie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ashley French",
+      "character": "Jody",
+      "profile_path": "/ot6ib67jxvKVG1JCBl0ROPGtdeP.jpg"
+    },
+    {
+      "name": "Simon Rex",
+      "character": "Dan",
+      "profile_path": "/swlyh3YQoaB4OAgVi6NSdojVeyZ.jpg"
+    },
+    {
+      "name": "Gracie Whitton",
+      "character": "Kathy",
+      "profile_path": "/cEgu8iE46cGQuCujUJX9tWl69f3.jpg"
+    },
+    {
+      "name": "Ava Kolker",
+      "character": "Lily",
+      "profile_path": "/9Zu0rhZH0TOmnlR6iZPGoNs8zdb.jpg"
+    }
+  ]
+}

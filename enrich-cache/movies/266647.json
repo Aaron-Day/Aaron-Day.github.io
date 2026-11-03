@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 266647,
+    "title": "Pan",
+    "overview": "Living a bleak existence at a London orphanage, 12-year-old Peter finds himself whisked away to the fantastical world of Neverland. Adventure awaits as he meets new friend James Hook and the warrior Tiger Lily. They must band together to save Neverland from the ruthless pirate Blackbeard. Along the way, the rebellious and mischievous boy discovers his true destiny, becoming the hero forever known as Peter Pan.",
+    "tagline": "Every legend has a beginning.",
+    "runtime": 111,
+    "release_date": "2015-09-24",
+    "vote_average": 5.956,
+    "poster_path": "/w8i0mZR7MEL7c3bXSsuYg7VJsew.jpg",
+    "backdrop_path": "/fACoy2VWw9lz1UbqrgtbIcSYi5e.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Levi Miller",
+      "character": "Peter Pan",
+      "profile_path": "/5ovVnN2ffAWzwhZQKZWZWUgf6tZ.jpg"
+    },
+    {
+      "name": "Garrett Hedlund",
+      "character": "James Hook",
+      "profile_path": "/9zec61HuFJgiUEzPSt0NfPIj0Xv.jpg"
+    },
+    {
+      "name": "Hugh Jackman",
+      "character": "Blackbeard",
+      "profile_path": "/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Rooney Mara",
+      "character": "Tiger Lily",
+      "profile_path": "/zT6UyHFHEQ9RcKykplWCycKBnoS.jpg"
+    }
+  ]
+}

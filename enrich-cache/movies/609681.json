@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 609681,
+    "title": "The Marvels",
+    "overview": "When her duties send her to an anomalous wormhole linked to a Kree revolutionary, Carol\u0027s powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol\u0027s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+    "tagline": "Higher. Further. Faster. Together.",
+    "runtime": 105,
+    "release_date": "2023-11-08",
+    "vote_average": 5.896,
+    "poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+    "backdrop_path": "/feSiISwgEpVzR1v3zv2n2AU4ANJ.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 623911,
+      "name": "Captain Marvel Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brie Larson",
+      "character": "Carol Danvers / Captain Marvel",
+      "profile_path": "/xSGvMwNNJcEQvVcjiIUTyxyMfkZ.jpg"
+    },
+    {
+      "name": "Teyonah Parris",
+      "character": "Monica Rambeau",
+      "profile_path": "/iGvBTOi0y2fbBVwgnBRXgY0IXDY.jpg"
+    },
+    {
+      "name": "Iman Vellani",
+      "character": "Kamala Khan / Ms. Marvel",
+      "profile_path": "/oBpOjLAH8heYNNJZN1Z5jVQhAKC.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Nick Fury",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    }
+  ]
+}

@@ -120,6 +120,16 @@
     "normalizedDirectors": "dennis dugan"
   },
   {
+    "key": "01c8f4d61aaba5e41bdfcd2776ee5906b73959c6",
+    "tmdbId": null,
+    "confidence": 0.4,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "seven",
+    "runtimeMinutes": 126,
+    "normalizedDirectors": "david fincher"
+  },
+  {
     "key": "01d39f4878600d6b18633c780f78473b4e61b7b1",
     "tmdbId": 8367,
     "confidence": 0.45,
@@ -140,6 +150,16 @@
     "normalizedDirectors": "andrew davis"
   },
   {
+    "key": "02604542e3b437407c7d84ce7ed5eb17403549ee",
+    "tmdbId": 9799,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "the fast and the furious",
+    "runtimeMinutes": 106,
+    "normalizedDirectors": "cohen rob"
+  },
+  {
     "key": "029f7119b910d5d79f7b5ee3b84030aef0e5f6c4",
     "tmdbId": 15088,
     "confidence": 0.7,
@@ -158,6 +178,16 @@
     "normalizedTitle": "the matrix resurrections",
     "runtimeMinutes": 148,
     "normalizedDirectors": "lana wachowski"
+  },
+  {
+    "key": "02fed501b84bfc16706d97f7c644f174abb3369d",
+    "tmdbId": 1375,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "rocky v",
+    "runtimeMinutes": 104,
+    "normalizedDirectors": "avildsen g john"
   },
   {
     "key": "033ddd56805acf8b61f33ab734bcccb2b2c3468f",
@@ -238,6 +268,16 @@
     "normalizedTitle": "teenage mutant ninja turtles 1987",
     "runtimeMinutes": 0,
     "normalizedDirectors": ""
+  },
+  {
+    "key": "04de0dd4d0ae6e298ccf79371443ec0e05bb6829",
+    "tmdbId": null,
+    "confidence": 0,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "wes craven presents dracula iii legacy",
+    "runtimeMinutes": 90,
+    "normalizedDirectors": "lussier patrick"
   },
   {
     "key": "04e43a163709595f7777e2203fd9289ed7358794",
@@ -328,6 +368,16 @@
     "normalizedTitle": "inferno",
     "runtimeMinutes": 121,
     "normalizedDirectors": "howard ron"
+  },
+  {
+    "key": "06475474433b316f31e054ac9a8d5dbb8081883f",
+    "tmdbId": null,
+    "confidence": 0,
+    "fetchedUtc": "2026-11-03T23:27:45.2504363+00:00",
+    "negative": true,
+    "normalizedTitle": "the biggest loser 2020",
+    "runtimeMinutes": 0,
+    "normalizedDirectors": ""
   },
   {
     "key": "0669ad804b2a74beb4de70d776c16ce12314eb2d",
@@ -580,6 +630,16 @@
     "normalizedDirectors": ""
   },
   {
+    "key": "0abe05e4638012ce801fa091dc107012fdcd1c70",
+    "tmdbId": 7553,
+    "confidence": 0.95,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "waiting",
+    "runtimeMinutes": 93,
+    "normalizedDirectors": "mckittrick rob"
+  },
+  {
     "key": "0ae36db78374cb667c9a1b3096d32c057bc7874c",
     "tmdbId": 118340,
     "confidence": 0.85,
@@ -678,6 +738,16 @@
     "normalizedTitle": "kill bill volume 2",
     "runtimeMinutes": 136,
     "normalizedDirectors": "quentin tarantino"
+  },
+  {
+    "key": "0cdfe167399b096bca0a8452708f73fefd2cbf61",
+    "tmdbId": 11452,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "national lampoon s van wilder",
+    "runtimeMinutes": 92,
+    "normalizedDirectors": "becker walt"
   },
   {
     "key": "0cfb1078b0227d05c37d59553a2498fed51cad1c",
@@ -1030,6 +1100,16 @@
     "normalizedDirectors": "david gordon green"
   },
   {
+    "key": "13d8fba0a27b41eb461ce7de27a3f0a24883a5f6",
+    "tmdbId": 36657,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "x men",
+    "runtimeMinutes": 104,
+    "normalizedDirectors": "bryan singer"
+  },
+  {
     "key": "13e7839174b2c368900d05af8d9be7bdf2e7b762",
     "tmdbId": 480042,
     "confidence": 0.45,
@@ -1068,6 +1148,16 @@
     "normalizedTitle": "the switch",
     "runtimeMinutes": 101,
     "normalizedDirectors": "gordon josh speck will"
+  },
+  {
+    "key": "1473c4238906e4f77b43dd9b366972afe0dbf0fb",
+    "tmdbId": 245891,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "john wick",
+    "runtimeMinutes": 101,
+    "normalizedDirectors": "chad stahelski"
   },
   {
     "key": "14961444e37a2ccd6f1e26522be2698ec7b26e10",
@@ -1520,6 +1610,16 @@
     "normalizedDirectors": "coogler ryan"
   },
   {
+    "key": "1ccefc2eaff9f10296022b6ecb9fe57f366d65f1",
+    "tmdbId": 39513,
+    "confidence": 0.55,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "paul",
+    "runtimeMinutes": 109,
+    "normalizedDirectors": "greg mottola"
+  },
+  {
     "key": "1cd7dc7399cc06e73a7cc8e4f3cd3ba30d98906d",
     "tmdbId": 11211,
     "confidence": 0.85,
@@ -1538,6 +1638,16 @@
     "normalizedTitle": "friday the 13th part vi jason lives",
     "runtimeMinutes": 87,
     "normalizedDirectors": "mcloughlin tom"
+  },
+  {
+    "key": "1cff835930266c625e0c291148cb4d50e2bd08e7",
+    "tmdbId": null,
+    "confidence": 0,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "halo 4 forward unto dawn",
+    "runtimeMinutes": 91,
+    "normalizedDirectors": "hendler stewart"
   },
   {
     "key": "1d2de4c665a7bdf063f9df30b59a11977d92a122",
@@ -1678,6 +1788,16 @@
     "normalizedTitle": "who framed roger rabbit",
     "runtimeMinutes": 103,
     "normalizedDirectors": "robert zemeckis"
+  },
+  {
+    "key": "1ef5651d06dc3ed540d2cfeb735ed7a4cbc45411",
+    "tmdbId": 8844,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "jumanji",
+    "runtimeMinutes": 104,
+    "normalizedDirectors": "joe johnston"
   },
   {
     "key": "1f17c837cf44caddb55f19643568f204078add0f",
@@ -1940,6 +2060,16 @@
     "normalizedDirectors": "christopher guest"
   },
   {
+    "key": "23b0c40cdb3bc60296d8abad704efb3b570f61bd",
+    "tmdbId": 266647,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "pan",
+    "runtimeMinutes": 111,
+    "normalizedDirectors": "joe wright"
+  },
+  {
     "key": "23c6c428c2e25af046fbcb0b7864c52b5778f611",
     "tmdbId": 36557,
     "confidence": 0.85,
@@ -2088,6 +2218,16 @@
     "normalizedTitle": "rush hour 2",
     "runtimeMinutes": 90,
     "normalizedDirectors": "brett ratner"
+  },
+  {
+    "key": "2550731b7b1c30ae3233cb54a69a7e0f6f7e3383",
+    "tmdbId": 296099,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "vacation",
+    "runtimeMinutes": 99,
+    "normalizedDirectors": "daley francis goldstein john jonathan"
   },
   {
     "key": "2591e379885321f095920062be6638b14707e3f9",
@@ -2348,6 +2488,16 @@
     "normalizedTitle": "the lost world jurassic park",
     "runtimeMinutes": 128,
     "normalizedDirectors": "spielberg steven"
+  },
+  {
+    "key": "2942b4676fe137a06fb968c1be2dff2acacd5515",
+    "tmdbId": 954,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "mission impossible",
+    "runtimeMinutes": 110,
+    "normalizedDirectors": "brian de palma"
   },
   {
     "key": "295ee4c12ce2ba09f199d482c0790417aadeb96f",
@@ -2890,6 +3040,16 @@
     "normalizedDirectors": "donner richard"
   },
   {
+    "key": "310d596d708bf3dbc5138763a507d608a131a494",
+    "tmdbId": null,
+    "confidence": 0.3,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "mario puzo s the godfather coda the death of michael corleone",
+    "runtimeMinutes": 157,
+    "normalizedDirectors": "coppola ford francis"
+  },
+  {
     "key": "311b4aafa596852ac46945576a2e117ee8cf3d0e",
     "tmdbId": 284052,
     "confidence": 0.95,
@@ -3398,6 +3558,16 @@
     "normalizedTitle": "free guy",
     "runtimeMinutes": 115,
     "normalizedDirectors": "levy shawn"
+  },
+  {
+    "key": "39faae73f0e0bce8bb02408e9ae28456305c1a2d",
+    "tmdbId": 70160,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "the hunger games",
+    "runtimeMinutes": 142,
+    "normalizedDirectors": "gary ross"
   },
   {
     "key": "3a4ffe2db27f6e9274408f2db32cf2fe4e12e1ee",
@@ -4480,6 +4650,16 @@
     "normalizedDirectors": "clyde geronimi hamilton jackson luske wilfred"
   },
   {
+    "key": "4c18320144b52c7ac0c3ca5e9c13ac03b92a5ebd",
+    "tmdbId": 1738,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "next",
+    "runtimeMinutes": 96,
+    "normalizedDirectors": "lee tamahori"
+  },
+  {
     "key": "4c6781490b1c883e0a7ed2c6b2db7d6fc91a3ea3",
     "tmdbId": 675353,
     "confidence": 0.85,
@@ -4528,6 +4708,16 @@
     "normalizedTitle": "the godfather",
     "runtimeMinutes": 175,
     "normalizedDirectors": "coppola ford francis"
+  },
+  {
+    "key": "4d1f840b7d3215c242c3183915b4cef1a3cf28b9",
+    "tmdbId": null,
+    "confidence": 0,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "illumination presents dr seuss the grinch",
+    "runtimeMinutes": 86,
+    "normalizedDirectors": "cheney mosier scott yarrow"
   },
   {
     "key": "4d4db57c0ce0dde1005199c46d6e2d1abb68be9d",
@@ -4618,6 +4808,16 @@
     "normalizedTitle": "kung fu panda 2",
     "runtimeMinutes": 90,
     "normalizedDirectors": "jennifer nelson yuh"
+  },
+  {
+    "key": "4ef5215bd050e1c169ab8029ddfd728d05e16b1b",
+    "tmdbId": 841,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "dune",
+    "runtimeMinutes": 136,
+    "normalizedDirectors": "david lynch"
   },
   {
     "key": "4f23b9cd62aed8f252d27037006b359f4ae3b605",
@@ -5110,6 +5310,16 @@
     "normalizedDirectors": "mcgrath tom"
   },
   {
+    "key": "57b35bba492e93907e71ed0e98f7b745f13d5d8e",
+    "tmdbId": 331,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "jurassic park iii",
+    "runtimeMinutes": 92,
+    "normalizedDirectors": "joe johnston"
+  },
+  {
     "key": "57c331bb1dcdae778aac7120cb802536119696a7",
     "tmdbId": 912649,
     "confidence": 0.85,
@@ -5270,6 +5480,16 @@
     "normalizedDirectors": "cameron cody kris pearn"
   },
   {
+    "key": "5b573b3c696355bd59133b51a611618c0a34ef2f",
+    "tmdbId": 2082,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "halloween",
+    "runtimeMinutes": 110,
+    "normalizedDirectors": "rob zombie"
+  },
+  {
     "key": "5b8dbeac7407957c8f34dedff57c5be1121816d6",
     "tmdbId": 114150,
     "confidence": 0.85,
@@ -5348,6 +5568,16 @@
     "normalizedTitle": "battleship",
     "runtimeMinutes": 131,
     "normalizedDirectors": "berg peter"
+  },
+  {
+    "key": "5ca0290589e2ccf56c98c52364670e20acfe8f73",
+    "tmdbId": null,
+    "confidence": 0.4,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "the divergent series allegiant",
+    "runtimeMinutes": 120,
+    "normalizedDirectors": "robert schwente"
   },
   {
     "key": "5cb404379a2cc6319ba7b834461df012604c7c3c",
@@ -5650,6 +5880,16 @@
     "normalizedDirectors": "greutert kevin"
   },
   {
+    "key": "611e5453a578e2f010021a203016de99e0b6f822",
+    "tmdbId": 10591,
+    "confidence": 0.95,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "the girl next door",
+    "runtimeMinutes": 109,
+    "normalizedDirectors": "greenfield luke"
+  },
+  {
     "key": "613024283a5c1745814e16ca7b5938604be73b60",
     "tmdbId": 156022,
     "confidence": 0.85,
@@ -5800,6 +6040,26 @@
     "normalizedDirectors": "barry sonnenfeld"
   },
   {
+    "key": "6358d728961c61b8e226abafd2fceb35770f343b",
+    "tmdbId": 13207,
+    "confidence": 0.55,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "friday the 13th",
+    "runtimeMinutes": 105,
+    "normalizedDirectors": "marcus nispel"
+  },
+  {
+    "key": "638e1e804547d11c5d2497ca7f3fa9e0a3c089fc",
+    "tmdbId": null,
+    "confidence": 0.4,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "wall e",
+    "runtimeMinutes": 98,
+    "normalizedDirectors": "andrew stanton"
+  },
+  {
     "key": "63b506103aebcaa935113f8014e0155499f1a64b",
     "tmdbId": 2789,
     "confidence": 0.45,
@@ -5888,6 +6148,16 @@
     "normalizedTitle": "paranormal activity",
     "runtimeMinutes": 86,
     "normalizedDirectors": "oren peli"
+  },
+  {
+    "key": "64cefccba1e6c8f4c5befc343af22025d53632d4",
+    "tmdbId": 4488,
+    "confidence": 0.95,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "friday the 13th",
+    "runtimeMinutes": 95,
+    "normalizedDirectors": "cunningham s sean"
   },
   {
     "key": "64f130bb5ecfbdc4c959d37c8641503cb185105a",
@@ -6180,6 +6450,16 @@
     "normalizedDirectors": "christopher lord miller phil"
   },
   {
+    "key": "69844f195c01d025ba2a63e2cb29ec18b07b07a8",
+    "tmdbId": null,
+    "confidence": 0,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "wes craven presents dracula ii ascension",
+    "runtimeMinutes": 85,
+    "normalizedDirectors": "lussier patrick"
+  },
+  {
     "key": "69962e68c1b84be50f9186c3d90971dc20c611fd",
     "tmdbId": 209112,
     "confidence": 0.45,
@@ -6208,6 +6488,16 @@
     "normalizedTitle": "thunderball",
     "runtimeMinutes": 130,
     "normalizedDirectors": "terence young"
+  },
+  {
+    "key": "69c8b8161dfaa13a805c3073ee78ae476bee0f87",
+    "tmdbId": 2,
+    "confidence": 1,
+    "fetchedUtc": "2026-11-03T23:27:45.2504363+00:00",
+    "negative": false,
+    "normalizedTitle": "clerks",
+    "runtimeMinutes": 0,
+    "normalizedDirectors": ""
   },
   {
     "key": "69f4dbc4a53ca665b5eea710c3652bb85205af60",
@@ -7240,6 +7530,16 @@
     "normalizedDirectors": "brian fee"
   },
   {
+    "key": "7a84e0aece8ecfc4167b6339f59fb8d871fca140",
+    "tmdbId": 1498,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "teenage mutant ninja turtles",
+    "runtimeMinutes": 93,
+    "normalizedDirectors": "barron steve"
+  },
+  {
     "key": "7a8b8aea187e5638ae1cefd1ef9a1b94defd4984",
     "tmdbId": 85,
     "confidence": 0.7,
@@ -7700,6 +8000,16 @@
     "normalizedDirectors": "baird stuart"
   },
   {
+    "key": "80a503937c1744167dc7b8fe57c073c65498f667",
+    "tmdbId": null,
+    "confidence": 0.3,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "star wars a new hope",
+    "runtimeMinutes": 124,
+    "normalizedDirectors": "george lucas"
+  },
+  {
     "key": "80abd35e6f6e1d49b5fa2019d08d85b48a9e4447",
     "tmdbId": 10756,
     "confidence": 0.85,
@@ -7830,6 +8140,16 @@
     "normalizedDirectors": "brad john lasseter lewis"
   },
   {
+    "key": "82eaad61a1a799f5c67e51a94170cb46b5d7f118",
+    "tmdbId": null,
+    "confidence": 0,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "halo the fall of reach",
+    "runtimeMinutes": 64,
+    "normalizedDirectors": "ian kirby"
+  },
+  {
     "key": "833c21e24e9e32293ac609f8b5aa71cf89c64be7",
     "tmdbId": 4547,
     "confidence": 0.85,
@@ -7938,6 +8258,26 @@
     "normalizedTitle": "around the world in 80 days",
     "runtimeMinutes": 120,
     "normalizedDirectors": "coraci frank"
+  },
+  {
+    "key": "84bc9e3e265778aec9a708e08305c3bccae512de",
+    "tmdbId": 4258,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "scary movie 5",
+    "runtimeMinutes": 88,
+    "normalizedDirectors": "lee malcolm"
+  },
+  {
+    "key": "84c2cb4c84e97f9f454c79f60011e375c8d6061e",
+    "tmdbId": 64635,
+    "confidence": 0.55,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "total recall",
+    "runtimeMinutes": 130,
+    "normalizedDirectors": "len wiseman"
   },
   {
     "key": "851dab426171179f29e73232562f1fc14d56caad",
@@ -8260,6 +8600,16 @@
     "normalizedDirectors": "brooks mel"
   },
   {
+    "key": "8a016bb3b5bf684d6dd3f06354635f272875fcaa",
+    "tmdbId": 17898,
+    "confidence": 0.7,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "stephen king s silver bullet",
+    "runtimeMinutes": 94,
+    "normalizedDirectors": "attias daniel"
+  },
+  {
     "key": "8a083e904347dace514d2d63883d132dcc92303a",
     "tmdbId": 13387,
     "confidence": 0.85,
@@ -8370,6 +8720,16 @@
     "normalizedDirectors": "chris columbus"
   },
   {
+    "key": "8add2ae46f5c25f5be501d45fd1de0de91869c1d",
+    "tmdbId": null,
+    "confidence": 0.3,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "superman the movie",
+    "runtimeMinutes": 151,
+    "normalizedDirectors": "donner richard"
+  },
+  {
     "key": "8ae18483da63bfa7e2818c2ab503f06845d0db53",
     "tmdbId": 2770,
     "confidence": 0.85,
@@ -8428,6 +8788,16 @@
     "normalizedTitle": "elysium",
     "runtimeMinutes": 109,
     "normalizedDirectors": "blomkamp neill"
+  },
+  {
+    "key": "8bf90c6ec7cb70ddf1306a3c3d7874bb333954f0",
+    "tmdbId": null,
+    "confidence": 0.15,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "joker put on a happy face",
+    "runtimeMinutes": 11,
+    "normalizedDirectors": "unknown"
   },
   {
     "key": "8c00e7d1f999c215b5657133ed49631ed63ea5e6",
@@ -8658,6 +9028,16 @@
     "normalizedTitle": "american pie presents the book of love",
     "runtimeMinutes": 93,
     "normalizedDirectors": "john putch"
+  },
+  {
+    "key": "8f4cc5de3b6ed0a36ce01c2ec57d7757cf9b5947",
+    "tmdbId": 277,
+    "confidence": 0.55,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "underworld",
+    "runtimeMinutes": 133,
+    "normalizedDirectors": "len wiseman"
   },
   {
     "key": "8f4ed19e0705a0c1f66618f0a5c8a1a8745a6626",
@@ -9070,6 +9450,16 @@
     "normalizedDirectors": "mcg"
   },
   {
+    "key": "96b51101b11e7a411ed96b8bae78e7b06048c417",
+    "tmdbId": 6479,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "i am legend",
+    "runtimeMinutes": 103,
+    "normalizedDirectors": "francis lawrence"
+  },
+  {
     "key": "96e62a659c36df9dc0e6fed05338dc33ceaaa78a",
     "tmdbId": 2080,
     "confidence": 0.85,
@@ -9178,6 +9568,16 @@
     "normalizedTitle": "evan almighty",
     "runtimeMinutes": 95,
     "normalizedDirectors": "shadyac tom"
+  },
+  {
+    "key": "98f8f55b1210feb7b37735e73fcbaab4d35ad3e4",
+    "tmdbId": 141,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "donnie darko",
+    "runtimeMinutes": 113,
+    "normalizedDirectors": "kelly richard"
   },
   {
     "key": "99006c57b844d1412a1a1ce5258652e3ca6609d6",
@@ -9560,6 +9960,16 @@
     "normalizedDirectors": "gaghan stephen"
   },
   {
+    "key": "9faabcedffabf3081bede5ef601167a7c1c77af6",
+    "tmdbId": 109428,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "evil dead",
+    "runtimeMinutes": 91,
+    "normalizedDirectors": "alvarez fede"
+  },
+  {
     "key": "9fb1107e6d4f2a2f4db0e13aeb36cdee04723343",
     "tmdbId": 15969,
     "confidence": 0.7,
@@ -9638,6 +10048,16 @@
     "normalizedTitle": "small soldiers",
     "runtimeMinutes": 110,
     "normalizedDirectors": "dante joe"
+  },
+  {
+    "key": "a09d5b6a4dd558f946b34eae91dc38d63295a1be",
+    "tmdbId": 34544,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "the a team",
+    "runtimeMinutes": 119,
+    "normalizedDirectors": "carnahan joe"
   },
   {
     "key": "a0c85c7239a67449d9299ee22f998ab74f0bbd63",
@@ -9788,6 +10208,16 @@
     "normalizedTitle": "resident evil afterlife",
     "runtimeMinutes": 96,
     "normalizedDirectors": "anderson paul s w"
+  },
+  {
+    "key": "a4897ab5394d544fa528c210582bb0c990752c0e",
+    "tmdbId": 34636,
+    "confidence": 0.7,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "neverending story ii",
+    "runtimeMinutes": 89,
+    "normalizedDirectors": "george miller"
   },
   {
     "key": "a55123670516c214db5c7a04ee6d05c02dbe55fd",
@@ -9958,6 +10388,16 @@
     "normalizedTitle": "team america world police",
     "runtimeMinutes": 97,
     "normalizedDirectors": "parker trey"
+  },
+  {
+    "key": "a8eb1ad701cd5887b635a97440978d58a610015d",
+    "tmdbId": 9552,
+    "confidence": 0.45,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "the exorcist",
+    "runtimeMinutes": 132,
+    "normalizedDirectors": "friedkin william"
   },
   {
     "key": "a8f56bf6784cf5a3d954c0b63c54552e9aaf2579",
@@ -10340,6 +10780,16 @@
     "normalizedDirectors": "c miller steven"
   },
   {
+    "key": "af5dac249e7ef524ef141601e392bbc4c15af85c",
+    "tmdbId": 51497,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "fast five",
+    "runtimeMinutes": 131,
+    "normalizedDirectors": "justin lin"
+  },
+  {
     "key": "af7afe17daa56f47c343b50b97824b5e26dac160",
     "tmdbId": 36669,
     "confidence": 0.85,
@@ -10700,6 +11150,16 @@
     "normalizedDirectors": ""
   },
   {
+    "key": "b47554450334af37fb7875936323893bf121ff62",
+    "tmdbId": null,
+    "confidence": 0.3,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "stephen king s graveyard shift",
+    "runtimeMinutes": 86,
+    "normalizedDirectors": "ralph s singleton"
+  },
+  {
     "key": "b4a4ced46a848ff24aaff9e62dd64b8e51e6d38a",
     "tmdbId": 10200,
     "confidence": 0.95,
@@ -10998,6 +11458,16 @@
     "normalizedTitle": "the penguins of madagascar",
     "runtimeMinutes": 0,
     "normalizedDirectors": ""
+  },
+  {
+    "key": "ba2a349933e9b3d80d58b8a172436c539642dc58",
+    "tmdbId": 1858,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "transformers",
+    "runtimeMinutes": 143,
+    "normalizedDirectors": "bay michael"
   },
   {
     "key": "ba4b0ac5f803017244e87a21a745c0eae2d45dd5",
@@ -11428,6 +11898,16 @@
     "normalizedTitle": "alien resurrection",
     "runtimeMinutes": 108,
     "normalizedDirectors": "jean jeunet pierre"
+  },
+  {
+    "key": "c25ce2230746f51e8194f09055de8e9e43d10abb",
+    "tmdbId": 7978,
+    "confidence": 0.55,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "the wolfman",
+    "runtimeMinutes": 119,
+    "normalizedDirectors": "joe johnston"
   },
   {
     "key": "c288842525ccea43514887a6008279cf856321a6",
@@ -12560,6 +13040,16 @@
     "normalizedDirectors": "robert schwentke"
   },
   {
+    "key": "d2ef712b3e029ccf6f6b7fa32cdc3b919eeabad2",
+    "tmdbId": 558,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "spider man 2",
+    "runtimeMinutes": 127,
+    "normalizedDirectors": "raimi sam"
+  },
+  {
     "key": "d33059a0eb491251f1f7f531ad93dba71d18e98a",
     "tmdbId": 605,
     "confidence": 1,
@@ -13120,6 +13610,26 @@
     "normalizedDirectors": "quentin tarantino"
   },
   {
+    "key": "dc128aac3daac46d963baad42a1518819c0c98ba",
+    "tmdbId": 929,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "godzilla",
+    "runtimeMinutes": 138,
+    "normalizedDirectors": "emmerich roland"
+  },
+  {
+    "key": "dc6c2a538ff87faae1ad5643ffe6bedc8b9a1ca3",
+    "tmdbId": 771,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "home alone",
+    "runtimeMinutes": 103,
+    "normalizedDirectors": "chris columbus"
+  },
+  {
     "key": "dc7a4de734ae827669c93ebc60a31385f108e22d",
     "tmdbId": 19994,
     "confidence": 0.85,
@@ -13128,6 +13638,16 @@
     "normalizedTitle": "jennifer s body",
     "runtimeMinutes": 107,
     "normalizedDirectors": "karyn kusama"
+  },
+  {
+    "key": "dc9f0d4243747a15fcb9e15c2c5d397380ae9b5c",
+    "tmdbId": null,
+    "confidence": 0.3,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "star wars the empire strikes back",
+    "runtimeMinutes": 127,
+    "normalizedDirectors": "irvin kershner"
   },
   {
     "key": "dccfaf6f0a679c560ad5e136a12e3f9034247abd",
@@ -13240,6 +13760,16 @@
     "normalizedDirectors": "david leitch"
   },
   {
+    "key": "de0d79c5321d7a4de53a96b2d9ed14440357d108",
+    "tmdbId": 11886,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "robin hood",
+    "runtimeMinutes": 83,
+    "normalizedDirectors": "reitherman wolfgang"
+  },
+  {
     "key": "de12c832e0c3b56416ca0d9137a8ec9e41bdd92c",
     "tmdbId": 19273,
     "confidence": 0.45,
@@ -13268,6 +13798,16 @@
     "normalizedTitle": "an all dogs christmas carol",
     "runtimeMinutes": 73,
     "normalizedDirectors": "gary paul sabella selvaggio"
+  },
+  {
+    "key": "def2c14f7bd2d7cd2d473a06f4808a71c61d081d",
+    "tmdbId": 14564,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "rings",
+    "runtimeMinutes": 102,
+    "normalizedDirectors": "f gutierrez javier"
   },
   {
     "key": "def56037c20e836dfe7f6ae91898234431135c8a",
@@ -13940,6 +14480,16 @@
     "normalizedDirectors": "corey leterrier louis yuen"
   },
   {
+    "key": "eb52ed504449af6ed2b75c04aeda739bb9608572",
+    "tmdbId": null,
+    "confidence": 0.4,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "monty python s life of brian",
+    "runtimeMinutes": 93,
+    "normalizedDirectors": "monty python"
+  },
+  {
     "key": "eb8a5594cf4b712897ff591352799aebd8bf0119",
     "tmdbId": 1893,
     "confidence": 0.7,
@@ -14018,6 +14568,16 @@
     "normalizedTitle": "family guy",
     "runtimeMinutes": 0,
     "normalizedDirectors": ""
+  },
+  {
+    "key": "ecc5f8f54423bdadcc42cff1480185adbfcffdd8",
+    "tmdbId": null,
+    "confidence": 0.15,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "how the grinch stole christmas",
+    "runtimeMinutes": 75,
+    "normalizedDirectors": "charles jones m"
   },
   {
     "key": "ecc9bb32353745281c5026f6cf04648ca0b6461c",
@@ -14170,6 +14730,16 @@
     "normalizedDirectors": "emmerich roland"
   },
   {
+    "key": "f04f7758f5e8d2ec763a5eebc673daa0bc4ddb97",
+    "tmdbId": 35320,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "school of life",
+    "runtimeMinutes": 111,
+    "normalizedDirectors": "dear william"
+  },
+  {
     "key": "f0dc7cce71e38715383b99bb2f85bcc1efab48ef",
     "tmdbId": 406994,
     "confidence": 0.85,
@@ -14208,6 +14778,16 @@
     "normalizedTitle": "agent cody banks",
     "runtimeMinutes": 102,
     "normalizedDirectors": "harald zwart"
+  },
+  {
+    "key": "f112136208adf81d40fbc2e936ecb173a86ec6bb",
+    "tmdbId": 228161,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "home",
+    "runtimeMinutes": 94,
+    "normalizedDirectors": "johnson tim"
   },
   {
     "key": "f12b49e9c4807282e577d2c8606e532a748a2010",
@@ -14670,6 +15250,16 @@
     "normalizedDirectors": "bjorn mans marlind stein"
   },
   {
+    "key": "f846b522e4f5a4bfdf09800e92d07108abefc87b",
+    "tmdbId": 557,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "spider man",
+    "runtimeMinutes": 121,
+    "normalizedDirectors": "raimi sam"
+  },
+  {
     "key": "f86044107717e35c3df09011f5fd1b3a364e820e",
     "tmdbId": 19885,
     "confidence": 1,
@@ -14738,6 +15328,16 @@
     "normalizedTitle": "the fate of the furious",
     "runtimeMinutes": 135,
     "normalizedDirectors": "f gary gray"
+  },
+  {
+    "key": "f9a94a65714c70b2ae8c0c3160478ba899e73249",
+    "tmdbId": 609681,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": false,
+    "normalizedTitle": "the marvels",
+    "runtimeMinutes": 105,
+    "normalizedDirectors": "dacosta nia"
   },
   {
     "key": "f9adb5c039a3ca6c5c2236797f5b0bc1b4ee1191",
@@ -15058,6 +15658,16 @@
     "normalizedTitle": "star wars the last jedi",
     "runtimeMinutes": 152,
     "normalizedDirectors": "johnson rian"
+  },
+  {
+    "key": "fe049bea091d784ac36ecfd42d5b60ece531f582",
+    "tmdbId": null,
+    "confidence": 0,
+    "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+    "negative": true,
+    "normalizedTitle": "stargate origins catherine",
+    "runtimeMinutes": 104,
+    "normalizedDirectors": "bryce mercedes morgan"
   },
   {
     "key": "fe103c6fa278c0ce9a4e4b026dae8e5021ad2062",

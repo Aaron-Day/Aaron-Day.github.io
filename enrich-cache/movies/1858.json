@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 1858,
+    "title": "Transformers",
+    "overview": "Young teenager Sam Witwicky becomes involved in the ancient struggle between two extraterrestrial factions of transforming robots \u2013 the heroic Autobots and the evil Decepticons. Sam holds the clue to unimaginable power and the Decepticons will stop at nothing to retrieve it.",
+    "tagline": "Their war. Our world.",
+    "runtime": 144,
+    "release_date": "2007-06-27",
+    "vote_average": 6.853,
+    "poster_path": "/lkZ9gqCEjzX85lKR6Jjd1uGAXNp.jpg",
+    "backdrop_path": "/iCDMBi6WLjUBnt24dNwHqqF81UL.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8650,
+      "name": "Transformers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Shia LaBeouf",
+      "character": "Sam Witwicky",
+      "profile_path": "/egvlIdeizCkSkuHVoDuuduIThFA.jpg"
+    },
+    {
+      "name": "Megan Fox",
+      "character": "Mikaela Banes",
+      "profile_path": "/9khvk5svs81TLqIGlI3ZJqYtqaY.jpg"
+    },
+    {
+      "name": "Mark Ryan",
+      "character": "Bumblebee (voice)",
+      "profile_path": "/9I0mFMnJJutVwVsCJhh3PtfqtFv.jpg"
+    },
+    {
+      "name": "Peter Cullen",
+      "character": "Optimus Prime (voice)",
+      "profile_path": "/9Snf4fBUkk5MrAjqtNtgZRJYJbj.jpg"
+    }
+  ]
+}

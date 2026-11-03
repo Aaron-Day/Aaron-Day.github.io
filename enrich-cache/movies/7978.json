@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 7978,
+    "title": "The Wolfman",
+    "overview": "Lawrence Talbot, an American man on a visit to Victorian London to make amends with his estranged father, gets bitten by a werewolf and, after a moonlight transformation, leaves him with a savage hunger for flesh.",
+    "tagline": "When the moon is full, the legend comes to life.",
+    "runtime": 103,
+    "release_date": "2010-02-10",
+    "vote_average": 5.906,
+    "poster_path": "/fQqPoAHvHicie1ttuiV2q0yv9V7.jpg",
+    "backdrop_path": "/kTDunJrHYsH6o1wmD6iT4wXkuHo.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Benicio del Toro",
+      "character": "Lawrence Talbot",
+      "profile_path": "/aYomJWx0B2B8ra6Rmgt8lr0XCrw.jpg"
+    },
+    {
+      "name": "Anthony Hopkins",
+      "character": "Sir John Talbot",
+      "profile_path": "/iaf7SHSkGDpnyrDh1Jolilwk2TD.jpg"
+    },
+    {
+      "name": "Emily Blunt",
+      "character": "Gwen Conliffe",
+      "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+    },
+    {
+      "name": "Hugo Weaving",
+      "character": "Inspector Francis Abberline",
+      "profile_path": "/lSC8Et0PYi5zeQb3IpPkFje7hgR.jpg"
+    }
+  ]
+}

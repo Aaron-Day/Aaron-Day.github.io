@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 9799,
+    "title": "The Fast and the Furious",
+    "overview": "Dominic Toretto is a Los Angeles street racer suspected of masterminding a series of big-rig hijackings. When undercover cop Brian O\u0027Conner infiltrates Toretto\u0027s iconoclastic crew, he falls for Toretto\u0027s sister and must choose a side: the gang or the LAPD.",
+    "tagline": "If you have what it takes, you can have it all.",
+    "runtime": 106,
+    "release_date": "2001-06-22",
+    "vote_average": 7.026,
+    "poster_path": "/gqY0ITBgT7A82poL9jv851qdnIb.jpg",
+    "backdrop_path": "/jY9ef5nqY4xIIMu3yzW3qamUCoi.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9485,
+      "name": "The Fast and the Furious Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Paul Walker",
+      "character": "Brian O\u0027Conner",
+      "profile_path": "/q2PLqKHYCs35HR7QybaNPH3JT96.jpg"
+    },
+    {
+      "name": "Vin Diesel",
+      "character": "Dominic Toretto",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Michelle Rodriguez",
+      "character": "Letty Ortiz",
+      "profile_path": "/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
+    },
+    {
+      "name": "Jordana Brewster",
+      "character": "Mia Toretto",
+      "profile_path": "/ceL0zxeVbWfCfhoIDZIE1NYqBWb.jpg"
+    }
+  ]
+}

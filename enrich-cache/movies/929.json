@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 929,
+    "title": "Godzilla",
+    "overview": "French nuclear tests irradiate an iguana into a giant monster that viciously attacks freighter ships in the Pacific Ocean. A team of experts, including Niko Tatopoulos, conclude that the oversized reptile is the culprit. Before long, the giant lizard is loose in Manhattan as the US military races to destroy the monster before it reproduces and it\u0027s spawn takes over the world.",
+    "tagline": "Size does matter.",
+    "runtime": 138,
+    "release_date": "1998-05-20",
+    "vote_average": 5.663,
+    "poster_path": "/xJVl1I95StraYAwaNbBkVoWE2qA.jpg",
+    "backdrop_path": "/vjzhl4sQg4GUcZZrV64OQNVdmZe.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matthew Broderick",
+      "character": "Dr. Niko Tatopoulos",
+      "profile_path": "/papqFgpyroZJEqd7WvuNGN8ti2k.jpg"
+    },
+    {
+      "name": "Jean Reno",
+      "character": "Philippe Roach\u00E9",
+      "profile_path": "/mw0EZJYz3kiFq9fNxsML773gotF.jpg"
+    },
+    {
+      "name": "Maria Pitillo",
+      "character": "Audrey Timmonds",
+      "profile_path": "/e2RqURksoCGa9fBqqMtOuY7pDk5.jpg"
+    },
+    {
+      "name": "Hank Azaria",
+      "character": "Victor \u0027Animal\u0027 Palotti",
+      "profile_path": "/yFDw4b0jucuFWNnGcBPfpYUtn16.jpg"
+    }
+  ]
+}

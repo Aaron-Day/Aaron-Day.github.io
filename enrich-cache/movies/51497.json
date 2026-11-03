@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 51497,
+    "title": "Fast Five",
+    "overview": "Former cop Brian O\u0027Conner partners with ex-con Dom Toretto on the opposite side of the law. Since Brian and Mia Toretto broke Dom out of custody, they\u0027ve blown across many borders to elude authorities. Now backed into a corner in Rio de Janeiro, they must pull one last job in order to gain their freedom.",
+    "tagline": "Get the fifth gear.",
+    "runtime": 131,
+    "release_date": "2011-04-20",
+    "vote_average": 7.246,
+    "poster_path": "/gEfQjjQwY7fh5bI4GlG0RrBu7Pz.jpg",
+    "backdrop_path": "/tQN9JEQ4N4aqej7O6AkQtt0dLpt.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9485,
+      "name": "The Fast and the Furious Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vin Diesel",
+      "character": "Dominic Toretto",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Paul Walker",
+      "character": "Brian O\u0027Conner",
+      "profile_path": "/q2PLqKHYCs35HR7QybaNPH3JT96.jpg"
+    },
+    {
+      "name": "Jordana Brewster",
+      "character": "Mia Toretto",
+      "profile_path": "/ceL0zxeVbWfCfhoIDZIE1NYqBWb.jpg"
+    },
+    {
+      "name": "Tyrese Gibson",
+      "character": "Roman Pearce",
+      "profile_path": "/jxoy4fbXNKFQtBdK73cLXEz3ufS.jpg"
+    }
+  ]
+}

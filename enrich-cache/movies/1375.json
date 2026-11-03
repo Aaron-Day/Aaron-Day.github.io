@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 1375,
+    "title": "Rocky V",
+    "overview": "A lifetime of taking shots has ended Rocky\u2019s career, and a crooked accountant has left him broke. Inspired by the memory of his trainer, however, Rocky finds glory in training and takes on an up-and-coming boxer.",
+    "tagline": "In Russia, he fought the greatest fight of his life. Now...where does a champion go when he takes off the gloves?",
+    "runtime": 104,
+    "release_date": "1990-11-16",
+    "vote_average": 5.776,
+    "poster_path": "/qCARerjCFZOEeLiVdomhwRYlDSn.jpg",
+    "backdrop_path": "/2TIzE3Ekpbl8Eb0Y6pYxVLXQF4A.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1575,
+      "name": "Rocky Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Robert \u0027Rocky\u0027 Balboa",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Talia Shire",
+      "character": "Adrianna \u0027Adrian\u0027 Balboa",
+      "profile_path": "/oktJmlLeyYKBCWPNjHskDwAfjct.jpg"
+    },
+    {
+      "name": "Burt Young",
+      "character": "Paulie Pennino",
+      "profile_path": "/6QWnsSbjYog0D6hkPhg7Frty54D.jpg"
+    },
+    {
+      "name": "Richard Gant",
+      "character": "George Washington Duke",
+      "profile_path": "/arzIWXn3wvkIbOtXt2i5kge3snx.jpg"
+    }
+  ]
+}

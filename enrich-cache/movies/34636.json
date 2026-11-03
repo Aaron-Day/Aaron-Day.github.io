@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:26:24.9293382+00:00",
+  "movie": {
+    "id": 34636,
+    "title": "The NeverEnding Story II: The Next Chapter",
+    "overview": "Once again, Bastian is transported to the world of Fantasia which he recently managed to save from destruction. However, the land is now being destroyed by an evil sorceress, Xayide, so he must join up with Atreyu and face the Emptiness once more.",
+    "tagline": "Begin an all new adventure as a young boy returns to a world of wonder on the wings of his imagination.",
+    "runtime": 90,
+    "release_date": "1990-10-25",
+    "vote_average": 5.802,
+    "poster_path": "/5QfUCbgKzWzjHO5X4ANsDmuTxNQ.jpg",
+    "backdrop_path": "/22328gc644F4pZn30nWPPUo4I93.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91430,
+      "name": "The NeverEnding Story Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jonathan Brandis",
+      "character": "Bastian Bux",
+      "profile_path": "/fjUTC2SoSImb7qkJ5JUl0aQZDiK.jpg"
+    },
+    {
+      "name": "Kenny Morrison",
+      "character": "Atreyu",
+      "profile_path": "/xr6UwL1daWK7RT2h6qq6J3aOpjc.jpg"
+    },
+    {
+      "name": "Clarissa Burt",
+      "character": "Xayide",
+      "profile_path": "/AiXdUtlYX9QZrDUz9r8tU26QpmN.jpg"
+    },
+    {
+      "name": "John Wesley Shipp",
+      "character": "Barney",
+      "profile_path": "/rFSYEKK5X5j662RvDq1Q5azsQ6I.jpg"
+    }
+  ]
+}
