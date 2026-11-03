@@ -92,9 +92,14 @@ public class MatchScorerBoundaryTests
     [InlineData("David Zucker, Jerry Zucker & Jim Abrahams", "Jerry Zucker", 0.30)]
     [InlineData("David Zucker, Jerry Zucker & Jim Abrahams", "David Zucker", 0.30)]
     [InlineData("Jerry Zucker", "David Zucker", 0.0)]      // shares a surname only
-    [InlineData("Jerry Zucker", "Jerry Zucker Jr", 0.0)]   // an extra token is not a subset
+    [InlineData("Jerry Zucker", "Jerry Zucker Jr", 0.0)]   // a word the row does not have at all
     [InlineData("Jerry Zucker", "", 0.0)]                  // a blank TMDB director never matches
-    public void DirectorMatchNeedsAllOfTheTmdbNamesTokensInTheRow(string row, string tmdbDirector, double expected)
+    // The row's own spelling against TMDB's shorter one, which is PersonName's whole reason for existing.
+    // Pinned here so the weight it earns is the same 0.30 as a word-for-word match, not a discounted one.
+    [InlineData("Juan Antonio Bayona", "J. A. Bayona", 0.30)]
+    [InlineData("Callan Brunker", "Cal Brunker", 0.30)]
+    [InlineData("Pedro Bayona", "J. A. Bayona", 0.0)]
+    public void DirectorMatchTakesTheRowsNamesOrAShorterWritingOfThem(string row, string tmdbDirector, double expected)
     {
         var r = MatchScorer.Score(TitleNormalizer.Normalize("Same Title"), 100, row,
             [new MovieCandidate(1, "Other Words", 2001, 150, [tmdbDirector], 1.0)]);

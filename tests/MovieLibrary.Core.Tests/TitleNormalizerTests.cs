@@ -15,8 +15,75 @@ public class TitleNormalizerTests
     [InlineData("Anchorman 2: The Legend Continues (Unrated)", "anchorman 2 the legend continues")]
     [InlineData("Foo (Extended-Cut)", "foo")]     // hyphen-joined: pins Fold() inside IsEdition
     [InlineData("Foo (Unrated, Uncut)", "foo")]   // comma-joined
+    [InlineData("I Am Legend (Alternate Ending)", "i am legend")]
+    [InlineData("Clerks (Uncensored)", "clerks")]
     public void StripsEditionsAndFoldsPunctuation(string raw, string expected)
         => Assert.Equal(expected, TitleNormalizer.Normalize(raw).Value);
+
+    /// <remarks>
+    /// Apple writes an edition after a colon as readily as in brackets, and the query and the identity key
+    /// carried the whole of it: "Scary Movie 5: Unrated Version" was searched for verbatim, found nothing, and
+    /// was cached as a film TMDB does not have. All five of these are the owner's own rows.
+    /// </remarks>
+    [Theory]
+    [InlineData("Scary Movie 5: Unrated Version", "scary movie 5")]
+    [InlineData("Donnie Darko: Anniversary Special Edition", "donnie darko")]
+    [InlineData("The Exorcist: Extended Director's Cut", "the exorcist")]
+    [InlineData("How the Grinch Stole Christmas: The Ultimate Edition", "how the grinch stole christmas")]
+    [InlineData("National Lampoon's Van Wilder: The Unrated Version", "national lampoon s van wilder")]
+    public void StripsAnEditionWrittenAfterAColon(string raw, string expected)
+        => Assert.Equal(expected, TitleNormalizer.Normalize(raw).Value);
+
+    /// <remarks>
+    /// The suffix peel is the loose one - a parenthetical is already marked off by its brackets, a subtitle is
+    /// not - so it needs EVERY word to be an edition word or filler. One ordinary word keeps the subtitle.
+    /// Blade Runner is the case that matters: "The Final Cut" reads like an edition and is how TMDB titles the
+    /// film, so stripping it would lose the match it looks like it would win.
+    /// </remarks>
+    [Theory]
+    [InlineData("Star Wars: A New Hope", "star wars a new hope")]
+    [InlineData("Captain America: The First Avenger", "captain america the first avenger")]
+    [InlineData("Blade Runner: The Final Cut", "blade runner the final cut")]
+    [InlineData("Dracula II: Ascension", "dracula ii ascension")]
+    [InlineData("Halo 4: Forward Unto Dawn", "halo 4 forward unto dawn")]
+    public void KeepsASubtitleThatIsNotAnEditionPhrase(string raw, string expected)
+        => Assert.Equal(expected, TitleNormalizer.Normalize(raw).Value);
+
+    /// <remarks>
+    /// Apple's export brackets a re-release year with square brackets and the edition with round ones, in that
+    /// order. Reading only the round pair left "friday the 13th uncut version 1980" as the search query and as
+    /// the identity key, so the film could not be found and the miss was cached.
+    /// </remarks>
+    [Theory]
+    [InlineData("Friday the 13th (Uncut Version) [1980]", "friday the 13th", 1980)]
+    [InlineData("Dawn of the Dead (Unrated) [2004]", "dawn of the dead", 2004)]
+    [InlineData("Total Recall (Director's Cut) [2012]", "total recall", 2012)]
+    [InlineData("Foo [2016]", "foo", 2016)]
+    [InlineData("Foo [Unrated]", "foo", null)]
+    public void PeelsSquareBracketsAsWellAsRoundOnes(string raw, string value, int? year)
+    {
+        var r = TitleNormalizer.Normalize(raw);
+        Assert.Equal(value, r.Value);
+        Assert.Equal(year, r.YearHint);
+    }
+
+    [Fact]
+    public void KeepsASquareBracketThatIsNeitherYearNorEdition()
+        => Assert.Equal("foo sequel", TitleNormalizer.Normalize("Foo [Sequel]").Value);
+
+    [Fact]
+    public void CleanedDropsTheEditionSuffixSoTheSearchQueryDoesToo()
+    {
+        var r = TitleNormalizer.Normalize("Scary Movie 5: Unrated Version");
+        Assert.Equal("Scary Movie 5", r.Cleaned);
+    }
+
+    [Fact]
+    public void NamePartsKeepTheOrderTheNameWasWrittenIn()
+    {
+        Assert.Equal(["juan", "antonio", "bayona"], TitleNormalizer.NameParts("Juan Antonio Bayona"));
+        Assert.Equal(["j", "a", "bayona"], TitleNormalizer.NameParts("J. A. Bayona"));
+    }
 
     [Theory]
     [InlineData("The Accountant (2016)", "the accountant", 2016)]
