@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+  "movie": {
+    "id": 590969,
+    "title": "Armstrong",
+    "overview": "Dramatic, moving and deeply human, ARMSTRONG offers the definitive life story of Neil Armstrong: from his childhood in Ohio to his first steps on the Moon, and beyond.",
+    "tagline": "",
+    "runtime": 100,
+    "release_date": "2019-07-12",
+    "vote_average": 7.3,
+    "poster_path": "/2rksE4dbgoNMv0T3ba8zqWlftnP.jpg",
+    "backdrop_path": "/huYeheVFudkDKegGR6FWbXWFL3W.jpg",
+    "genres": [
+      {
+        "id": 99,
+        "name": "Documentary"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Neil Armstrong",
+      "character": "Self (archive footage)",
+      "profile_path": "/qFvQ2fS9RTGnOgWIUGSWaB6qWsO.jpg"
+    },
+    {
+      "name": "Harrison Ford",
+      "character": "Narrator (voice)",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Dave Scott",
+      "character": "Himself",
+      "profile_path": null
+    },
+    {
+      "name": "Christopher Kraft",
+      "character": "Himself",
+      "profile_path": null
+    }
+  ]
+}

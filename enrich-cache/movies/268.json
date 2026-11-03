@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+  "movie": {
+    "id": 268,
+    "title": "Batman",
+    "overview": "Having witnessed his parents\u0027 brutal murder as a child, millionaire philanthropist Bruce Wayne fights crime in Gotham City disguised as Batman, a costumed hero who strikes fear into the hearts of villains. But when a deformed madman known as \u0027The Joker\u0027 seizes control of Gotham\u0027s criminal underworld, Batman must face his most ruthless nemesis ever while protecting both his identity and his love interest, reporter Vicki Vale.",
+    "tagline": "Justice is always darkest before the dawn.",
+    "runtime": 126,
+    "release_date": "1989-06-21",
+    "vote_average": 7.234,
+    "poster_path": "/cij4dd21v2Rk2YtUQbV5kW69WB2.jpg",
+    "backdrop_path": "/rhc7OF7tC9HPu0X8DBKQJzaGRbu.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 120794,
+      "name": "Batman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael Keaton",
+      "character": "Batman / Bruce Wayne",
+      "profile_path": "/tYSja1KByFnZ4Hkp3stPqkKHnNL.jpg"
+    },
+    {
+      "name": "Jack Nicholson",
+      "character": "Joker / Jack Napier",
+      "profile_path": "/6h12pZsgj3WWjMtykUgfLkLEBWz.jpg"
+    },
+    {
+      "name": "Kim Basinger",
+      "character": "Vicki Vale",
+      "profile_path": "/iqQ4o2sRna7J1Z9KkB9Avp9CIsk.jpg"
+    },
+    {
+      "name": "Robert Wuhl",
+      "character": "Alexander Knox",
+      "profile_path": "/hs8jxnVGOytAhwM9Y7Rab69ijdW.jpg"
+    }
+  ]
+}

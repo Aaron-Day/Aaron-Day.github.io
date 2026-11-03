@@ -2500,6 +2500,16 @@
     "normalizedDirectors": "chris miller"
   },
   {
+    "key": "2c39ff7baa80843682a604b799fdfe54160c2606",
+    "tmdbId": 268,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+    "negative": false,
+    "normalizedTitle": "batman",
+    "runtimeMinutes": 126,
+    "normalizedDirectors": "burton tim"
+  },
+  {
     "key": "2c4695e2c84e1a284dceb85f5f1b1b84f2f81643",
     "tmdbId": 53182,
     "confidence": 0.85,
@@ -6218,6 +6228,16 @@
     "normalizedTitle": "knives out",
     "runtimeMinutes": 130,
     "normalizedDirectors": "johnson rian"
+  },
+  {
+    "key": "6a39848a988b23c1e6b7156d1ddadb6b97a80050",
+    "tmdbId": 2280,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+    "negative": false,
+    "normalizedTitle": "big",
+    "runtimeMinutes": 104,
+    "normalizedDirectors": "marshall penny"
   },
   {
     "key": "6a50de0db3d6ee61796bb80fff8b0ee4d711f8ec",
@@ -12330,6 +12350,16 @@
     "normalizedDirectors": "spielberg steven"
   },
   {
+    "key": "cfd38735b513442a721637a5f85f5df4c1e29d9b",
+    "tmdbId": 299537,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+    "negative": false,
+    "normalizedTitle": "captain marvel",
+    "runtimeMinutes": 124,
+    "normalizedDirectors": "anna boden fleck ryan"
+  },
+  {
     "key": "cfe3e26ab658be4fb27fd5d3d34d3fae32fb82bf",
     "tmdbId": 38757,
     "confidence": 0.85,
@@ -12928,6 +12958,16 @@
     "normalizedTitle": "teenage mutant ninja turtles",
     "runtimeMinutes": 101,
     "normalizedDirectors": "jonathan liebesman"
+  },
+  {
+    "key": "d9ef4596806ea0042e9fe6d94cd177ff002e75a9",
+    "tmdbId": 194662,
+    "confidence": 0.7,
+    "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+    "negative": false,
+    "normalizedTitle": "birdman",
+    "runtimeMinutes": 119,
+    "normalizedDirectors": "alejandro gonzalez inarritu"
   },
   {
     "key": "d9efc1530877b182b67157ae4af40ba88b394d24",
@@ -13740,6 +13780,16 @@
     "normalizedDirectors": "kelsey mann"
   },
   {
+    "key": "e851227207b2e8a1621c23c0e13494ba7f3dd793",
+    "tmdbId": 590969,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+    "negative": false,
+    "normalizedTitle": "armstrong",
+    "runtimeMinutes": 99,
+    "normalizedDirectors": "david fairhead"
+  },
+  {
     "key": "e855e3144395d77d51300eb7359d2039f8524ddb",
     "tmdbId": 299534,
     "confidence": 0.85,
@@ -14078,6 +14128,16 @@
     "normalizedTitle": "jason bourne",
     "runtimeMinutes": 123,
     "normalizedDirectors": "greengrass paul"
+  },
+  {
+    "key": "efd1dbacb6b7faa07baea8e94df514bfc7ac7415",
+    "tmdbId": 924,
+    "confidence": 0.55,
+    "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+    "negative": false,
+    "normalizedTitle": "dawn of the dead",
+    "runtimeMinutes": 109,
+    "normalizedDirectors": "snyder zack"
   },
   {
     "key": "efdade3adec9891fa7dd62df33e3e0a277505b0f",

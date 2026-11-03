@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+  "movie": {
+    "id": 2280,
+    "title": "Big",
+    "overview": "When a young boy makes a wish at a carnival machine to be big, he wakes up the following morning to find that it has been granted and his body has grown older overnight, but he is still the same 13-year-old boy inside. Now he must learn how to cope with the unfamiliar world of grown-ups, including getting a job and having his first romantic encounter with a woman.",
+    "tagline": "Have you ever had a really big secret?",
+    "runtime": 104,
+    "release_date": "1988-06-03",
+    "vote_average": 7.194,
+    "poster_path": "/eWhCDJiwxvx3YXkAFRiHjimnF0j.jpg",
+    "backdrop_path": "/bi9ihIMB9DoXs7odkS5oKkHoK2o.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Josh",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Elizabeth Perkins",
+      "character": "Susan",
+      "profile_path": "/t9Cfx8R8hxB1Od46s9CXJMwwNTA.jpg"
+    },
+    {
+      "name": "Robert Loggia",
+      "character": "MacMillan",
+      "profile_path": "/mRSUgJnfprCNw83pyVfpfW7ryfK.jpg"
+    },
+    {
+      "name": "John Heard",
+      "character": "Paul",
+      "profile_path": "/zjhcxrCFK4q0C1gtVmeN8FeqCw0.jpg"
+    }
+  ]
+}

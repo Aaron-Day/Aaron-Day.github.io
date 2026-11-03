@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+  "movie": {
+    "id": 299537,
+    "title": "Captain Marvel",
+    "overview": "The story follows Carol Danvers as she becomes one of the universe\u2019s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
+    "tagline": "Higher. Further. Faster.",
+    "runtime": 124,
+    "release_date": "2019-03-06",
+    "vote_average": 6.767,
+    "poster_path": "/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+    "backdrop_path": "/qAzYK4YPSWDc7aa4R43LcwRIAyb.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 623911,
+      "name": "Captain Marvel Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brie Larson",
+      "character": "Carol Danvers / Vers / Captain Marvel",
+      "profile_path": "/xSGvMwNNJcEQvVcjiIUTyxyMfkZ.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Nick Fury",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Ben Mendelsohn",
+      "character": "Talos / Keller",
+      "profile_path": "/pA9mu9D2IolVA0v2Yo0tJm6uUyI.jpg"
+    },
+    {
+      "name": "Jude Law",
+      "character": "Yon-Rogg",
+      "profile_path": "/6UadpSbfC39WMChAcdnNunzwDxv.jpg"
+    }
+  ]
+}

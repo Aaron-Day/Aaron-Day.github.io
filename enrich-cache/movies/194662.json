@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+  "movie": {
+    "id": 194662,
+    "title": "Birdman or (The Unexpected Virtue of Ignorance)",
+    "overview": "A fading actor best known for his portrayal of a popular superhero attempts to mount a comeback by appearing in a Broadway play. As opening night approaches, his attempts to become more altruistic, rebuild his career, and reconnect with friends and family prove more difficult than expected.",
+    "tagline": "How did we end up here?",
+    "runtime": 120,
+    "release_date": "2014-10-17",
+    "vote_average": 7.434,
+    "poster_path": "/rHUg2AuIuLSIYMYFgavVwqt1jtc.jpg",
+    "backdrop_path": "/s0OrExdg7i3RLR7oqzHRk4q2kL4.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Michael Keaton",
+      "character": "Riggan",
+      "profile_path": "/tYSja1KByFnZ4Hkp3stPqkKHnNL.jpg"
+    },
+    {
+      "name": "Emma Stone",
+      "character": "Sam",
+      "profile_path": "/ak2Y9wOI3wi2pNQU6OWSvVvWPj5.jpg"
+    },
+    {
+      "name": "Zach Galifianakis",
+      "character": "Jake",
+      "profile_path": "/qsDfoUlRnXHUiqZeBPWHzmgmKGX.jpg"
+    },
+    {
+      "name": "Edward Norton",
+      "character": "Mike",
+      "profile_path": "/8nytsqL59SFJTVYVrN72k6qkGgJ.jpg"
+    }
+  ]
+}

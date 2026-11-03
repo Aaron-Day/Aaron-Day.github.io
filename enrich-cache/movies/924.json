@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T23:24:24.8895436+00:00",
+  "movie": {
+    "id": 924,
+    "title": "Dawn of the Dead",
+    "overview": "A group of survivors take refuge in a shopping mall after the world is taken over by aggressive, flesh-eating zombies.",
+    "tagline": "When there\u0027s no more room in Hell, the dead will walk the Earth.",
+    "runtime": 101,
+    "release_date": "2004-03-19",
+    "vote_average": 7.094,
+    "poster_path": "/ttquyxStEEctzghtA2f4PUGprDr.jpg",
+    "backdrop_path": "/c1bejD7jTTf8qSUkcv32Gmv8N50.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sarah Polley",
+      "character": "Ana",
+      "profile_path": "/qcdT6y6QEjaERHPUBC07YGKgR6k.jpg"
+    },
+    {
+      "name": "Ving Rhames",
+      "character": "Kenneth",
+      "profile_path": "/tOVDvu1EQP78AwaUw6uh1wN818E.jpg"
+    },
+    {
+      "name": "Jake Weber",
+      "character": "Michael",
+      "profile_path": "/z1RTh4qvyMFha8nKd5Uw1dKwkZz.jpg"
+    },
+    {
+      "name": "Michael Kelly",
+      "character": "C.J.",
+      "profile_path": "/6MI8HhX1GWbcrWG8DiHffzmqaVm.jpg"
+    }
+  ]
+}
