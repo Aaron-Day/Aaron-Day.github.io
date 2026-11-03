@@ -28,16 +28,70 @@ jobs:
       - name: Test
         run: dotnet test --nologo --verbosity normal
 
+      # Writes the catalogue to src/MovieLibrary.Web/wwwroot/data/ (gitignored; the publish below picks it
+      # up from the working tree) and grows enrich-cache/ (committed). It exits 0 whenever a catalogue was
+      # written, a spent request budget included, so the exit code cannot be the deploy gate: the gate is
+      # the `deployable` output this step appends to $GITHUB_OUTPUT on every outcome. The step also writes
+      # its own Markdown job summary.
+      - name: Enrich catalog from TMDB
+        id: enrich
+        env:
+          TMDB_TOKEN: ${{ secrets.TMDB_TOKEN }}
+          # Empty on push and schedule, and the tool then applies its own default of 40. Deliberately not
+          # `|| '40'`: the unlimited seeding run is dispatched with '0', which `|| '40'` could discard.
+          MAX_REQUESTS_PER_RUN: ${{ github.event.inputs.max-requests }}
+        run: dotnet run --project src/MovieLibrary.Enrich -c Release
+
+      # Every TMDB response this run paid for is already in enrich-cache/ (the tool saves it in a finally),
+      # so this runs after a failed or cancelled run too - that is when it matters most. It is conditioned
+      # on cache_saved rather than on the job's status: when the tool reports it could NOT save the cache,
+      # CacheStore.SaveAsync has truncated index.json in place without finishing it, and committing that
+      # would overwrite the committed index that CacheStore's own docs name as the way to restore it.
+      - name: Commit cache growth
+        if: always() && steps.enrich.outputs.cache_saved == 'true'
+        env:
+          # The push needs an explicit refspec: actions/checkout can leave HEAD detached, and a bare
+          # `git push` then has no branch to send. ref_name is the branch the run was triggered on (master
+          # for push and schedule), passed through the environment rather than interpolated into the script.
+          TARGET_BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- enrich-cache
+          if git diff --cached --quiet -- enrich-cache; then
+            echo "No cache growth to commit."
+            exit 0
+          fi
+          git commit -m "chore(enrich): grow the TMDB match cache [skip ci]"
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH"
+
+      # Not part of the deploy gate: a catalogue that was published is sound whatever happened to the cache.
+      # But a runner that cannot save it re-spends the whole request budget on every run, and the step above
+      # was skipped, so it is said here as well as in the job summary.
+      - name: Warn that the TMDB cache was not saved
+        if: always() && steps.enrich.outputs.cache_saved == 'false'
+        run: |
+          echo "::warning title=TMDB cache not saved::enrich-cache/ is unchanged from what is committed, so the next run re-spends this run's TMDB requests. The job summary says why."
+
+      # The deploy gate. `deployable` is true only for a complete, real catalogue: it is false for a
+      # budget-stopped run (films carry sheet data only and series collapse to season 0), for --fixtures,
+      # and for every failure. A gated-off run leaves these steps skipped and the job green, which a budget
+      # stop - the normal development path - should be. `!cancelled()` rather than the implied success() so
+      # that a cache push losing a race does not also withhold a sound catalogue.
       - name: Publish
+        if: ${{ !cancelled() && steps.enrich.outputs.deployable == 'true' }}
         run: dotnet publish src/MovieLibrary.Web -c Release -o release --nologo
 
       - name: Copy index.html to 404.html for deep links
+        if: ${{ !cancelled() && steps.enrich.outputs.deployable == 'true' }}
         run: cp release/wwwroot/index.html release/wwwroot/404.html
 
       - name: Add .nojekyll so _framework is served
+        if: ${{ !cancelled() && steps.enrich.outputs.deployable == 'true' }}
         run: touch release/wwwroot/.nojekyll
 
       - name: Deploy to gh-pages
+        if: ${{ !cancelled() && steps.enrich.outputs.deployable == 'true' }}
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
