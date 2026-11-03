@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+  "movie": {
+    "id": 1100988,
+    "title": "28 Years Later",
+    "overview": "Twenty-eight years after the Rage virus outbreak, a heavily-defended island survives connected to the mainland by a single causeway. When one of the group leaves the island into the dark heart of the mainland, he discovers secrets, wonders, and horrors that have mutated not only the infected but other survivors as well.",
+    "tagline": "Time didn\u0027t heal anything.",
+    "runtime": 115,
+    "release_date": "2025-06-18",
+    "vote_average": 6.602,
+    "poster_path": "/n5FygjEppOvac6yEaowi26nTyw3.jpg",
+    "backdrop_path": "/6WqqEjiycNvDLjbEClM1zCwIbDD.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1565,
+      "name": "28 Days/Weeks/Years Later Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Aaron Taylor-Johnson",
+      "character": "Jamie",
+      "profile_path": "/pFtHhih2XEaFaD3qOFyQW6q83br.jpg"
+    },
+    {
+      "name": "Alfie Williams",
+      "character": "Spike",
+      "profile_path": "/3F46vn64Ya20rwtvTFVnqAK2LuI.jpg"
+    },
+    {
+      "name": "Ralph Fiennes",
+      "character": "Dr. Kelson",
+      "profile_path": "/tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg"
+    },
+    {
+      "name": "Jodie Comer",
+      "character": "Isla",
+      "profile_path": "/AfsBpnfw0E2h8NZK4zkFcOjYlEb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+  "movie": {
+    "id": 4951,
+    "title": "10 Things I Hate About You",
+    "overview": "On the first day at his new school, Cameron instantly falls for Bianca, the gorgeous girl of his dreams. The only problem is that Bianca is forbidden to date until her ill-tempered, completely un-dateable older sister Kat goes out, too. In an attempt to solve his problem, Cameron singles out the only guy who could possibly be a match for Kat: a mysterious bad boy with a nasty reputation of his own.",
+    "tagline": "How do I loathe thee? Let me count the ways.",
+    "runtime": 97,
+    "release_date": "1999-03-30",
+    "vote_average": 7.6,
+    "poster_path": "/ujERk3aKABXU3NDXOAxEQYTHe9A.jpg",
+    "backdrop_path": "/yvPbncYhMu9FfTjDhq0N5lgnVkO.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1477103,
+      "name": "10 Things I Hate About... Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Heath Ledger",
+      "character": "Patrick Verona",
+      "profile_path": "/p2z2bURSg7nuMsN9P2s61e2RvNz.jpg"
+    },
+    {
+      "name": "Julia Stiles",
+      "character": "Katarina Stratford",
+      "profile_path": "/okcblz7pqeapHorLvxtxd3iNNic.jpg"
+    },
+    {
+      "name": "Joseph Gordon-Levitt",
+      "character": "Cameron James",
+      "profile_path": "/z2FA8js799xqtfiFjBTicFYdfk.jpg"
+    },
+    {
+      "name": "Larisa Oleynik",
+      "character": "Bianca Stratford",
+      "profile_path": "/i3W6ztn8kTKAaZoLS77Tz9GhP7C.jpg"
+    }
+  ]
+}

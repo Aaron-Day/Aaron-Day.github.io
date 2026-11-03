@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+  "movie": {
+    "id": 187017,
+    "title": "22 Jump Street",
+    "overview": "After making their way through high school (twice), big changes are in store for officers Schmidt and Jenko when they go deep undercover at a local college. But when Jenko meets a kindred spirit on the football team, and Schmidt infiltrates the bohemian art major scene, they begin to question their partnership. Now they don\u0027t have to just crack the case - they have to figure out if they can have a mature relationship. If these two overgrown adolescents can grow from freshmen into real men, college might be the best thing that ever happened to them.",
+    "tagline": "They\u0027re not 21 anymore.",
+    "runtime": 112,
+    "release_date": "2014-06-05",
+    "vote_average": 6.827,
+    "poster_path": "/850chzYHYbT3IISl6Q7dbBuFP2B.jpg",
+    "backdrop_path": "/kdyYOwpKvvD2fSbwfnMM2YPAzfq.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 212562,
+      "name": "Jump Street Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jonah Hill",
+      "character": "Schmidt",
+      "profile_path": "/cymlWttB83MsAGR2EkTgANtjeRH.jpg"
+    },
+    {
+      "name": "Channing Tatum",
+      "character": "Jenko",
+      "profile_path": "/4TpgnS6l8YUXSne9Av9nda6mjxY.jpg"
+    },
+    {
+      "name": "Peter Stormare",
+      "character": "The Ghost",
+      "profile_path": "/1rtpuUqBV29jDc1huUhtjGDbEwn.jpg"
+    },
+    {
+      "name": "Wyatt Russell",
+      "character": "Zook",
+      "profile_path": "/zIldBzXdBWskPZB7x35G2hYEVDo.jpg"
+    }
+  ]
+}

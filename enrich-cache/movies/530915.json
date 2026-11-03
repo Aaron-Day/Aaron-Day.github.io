@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+  "movie": {
+    "id": 530915,
+    "title": "1917",
+    "overview": "At the height of the First World War, two young British soldiers must cross enemy territory and deliver a message that will stop a deadly attack on hundreds of soldiers.",
+    "tagline": "Time is the enemy.",
+    "runtime": 119,
+    "release_date": "2019-12-25",
+    "vote_average": 7.983,
+    "poster_path": "/iZf0KyrE25z1sage4SYFLCCrMi9.jpg",
+    "backdrop_path": "/2lBOQK06tltt8SQaswgb8d657Mv.jpg",
+    "genres": [
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "George MacKay",
+      "character": "Lance Corporal Schofield",
+      "profile_path": "/wnDAg1CyCbBCklQAZ9I1dj5X6QY.jpg"
+    },
+    {
+      "name": "Dean-Charles Chapman",
+      "character": "Lance Corporal Blake",
+      "profile_path": "/xIVxI2ECxxN5J2XNkHPjRax0IHc.jpg"
+    },
+    {
+      "name": "Mark Strong",
+      "character": "Captain Smith",
+      "profile_path": "/3cNmatYsoifytg7TfQhI1EHow3v.jpg"
+    },
+    {
+      "name": "Andrew Scott",
+      "character": "Lieutenant Leslie",
+      "profile_path": "/4F8XpjyQCvtuu21WFm5d8RF5Rl.jpg"
+    }
+  ]
+}

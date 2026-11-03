@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+  "movie": {
+    "id": 3021,
+    "title": "1408",
+    "overview": "A man who specializes in debunking paranormal occurrences checks into the fabled room 1408 at the Dolphin Hotel. Soon after settling in, he confronts genuine terror.",
+    "tagline": "The Dolphin Hotel invites you to stay in any of its stunning rooms. Except one.",
+    "runtime": 104,
+    "release_date": "2007-06-22",
+    "vote_average": 6.698,
+    "poster_path": "/yE9MCW7ZNxSw5SC1TMqm51pMBIV.jpg",
+    "backdrop_path": "/a4ZupLMg23auAw8e1j1K39PCO6z.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "John Cusack",
+      "character": "Mike Enslin",
+      "profile_path": "/aCwCx6JU7Jxbg6Q1ygcnLY750le.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Gerald Olin",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Mary McCormack",
+      "character": "Lilly Enslin",
+      "profile_path": "/e2brLtFCfgLdOp356bcEyRzQkoJ.jpg"
+    },
+    {
+      "name": "Jasmine Jessica Anthony",
+      "character": "Katie",
+      "profile_path": "/7dx1ee9dRaSI1zT0DVxVw5fli5Y.jpg"
+    }
+  ]
+}

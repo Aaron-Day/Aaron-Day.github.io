@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+  "movie": {
+    "id": 76203,
+    "title": "12 Years a Slave",
+    "overview": "In the pre-Civil War United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery. Facing cruelty as well as unexpected kindnesses Solomon struggles not only to stay alive, but to retain his dignity. In the twelfth year of his unforgettable odyssey, Solomon\u2019s chance meeting with a Canadian abolitionist will forever alter his life.",
+    "tagline": "The extraordinary true story of Solomon Northup.",
+    "runtime": 134,
+    "release_date": "2013-10-18",
+    "vote_average": 7.928,
+    "poster_path": "/xdANQijuNrJaw1HA61rDccME4Tm.jpg",
+    "backdrop_path": "/4Bb1kMIfrT2tYRZ9M6Jhqy6gkeF.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chiwetel Ejiofor",
+      "character": "Solomon Northup",
+      "profile_path": "/kq5DDnqqofoRI0t6ddtRlsJnNPT.jpg"
+    },
+    {
+      "name": "Michael Fassbender",
+      "character": "Edwin Epps",
+      "profile_path": "/xvbnUiB2ZBR3QIt595OzNy657Vw.jpg"
+    },
+    {
+      "name": "Lupita Nyong\u0027o",
+      "character": "Patsey",
+      "profile_path": "/y40Wu1T742kynOqtwXASc5Qgm49.jpg"
+    },
+    {
+      "name": "Benedict Cumberbatch",
+      "character": "William Ford",
+      "profile_path": "/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg"
+    }
+  ]
+}

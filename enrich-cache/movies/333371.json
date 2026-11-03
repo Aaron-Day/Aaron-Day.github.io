@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+  "movie": {
+    "id": 333371,
+    "title": "10 Cloverfield Lane",
+    "overview": "After a catastrophic car crash, a young woman wakes up in a survivalist\u0027s underground bunker, where he claims to have saved her from an apocalyptic attack that has left the outside world uninhabitable.",
+    "tagline": "Monsters come in many forms.",
+    "runtime": 104,
+    "release_date": "2016-03-10",
+    "vote_average": 7.012,
+    "poster_path": "/q8A39vcBDruhvoDTJd6L8a4lnTi.jpg",
+    "backdrop_path": "/dMERTVrObB7TkRVIFmcndR2sZFH.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "John Goodman",
+      "character": "Howard",
+      "profile_path": "/yyYqoyKHO7hE1zpgEV2XlqYWcNV.jpg"
+    },
+    {
+      "name": "Mary Elizabeth Winstead",
+      "character": "Michelle",
+      "profile_path": "/vQn6IGsClpyhV6KTba9EDqSK7e2.jpg"
+    },
+    {
+      "name": "John Gallagher Jr.",
+      "character": "Emmett",
+      "profile_path": "/e4eEg5lH6Yk0OkpieUoUYdzl2Ui.jpg"
+    },
+    {
+      "name": "Douglas M. Griffin",
+      "character": "Driver",
+      "profile_path": "/nCq4E6erWLPxC5woxQJu46mqyr.jpg"
+    }
+  ]
+}

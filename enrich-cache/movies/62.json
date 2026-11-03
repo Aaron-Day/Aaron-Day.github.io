@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+  "movie": {
+    "id": 62,
+    "title": "2001: A Space Odyssey",
+    "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world\u0027s most advanced super computer.",
+    "tagline": "An epic drama of adventure and exploration.",
+    "runtime": 149,
+    "release_date": "1968-04-02",
+    "vote_average": 8.04,
+    "poster_path": "/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg",
+    "backdrop_path": "/w5IDXtifKntw0ajv2co7jFlTQDM.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 4438,
+      "name": "The Space Odyssey Series"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keir Dullea",
+      "character": "Dr. David Bowman",
+      "profile_path": "/5QyrGWxujX8XA3Ny3M8D18TWupi.jpg"
+    },
+    {
+      "name": "Gary Lockwood",
+      "character": "Dr. Frank Poole",
+      "profile_path": "/1tfGE7RW8GgCLEFFJUXETq9Td1T.jpg"
+    },
+    {
+      "name": "William Sylvester",
+      "character": "Dr. Heywood Floyd",
+      "profile_path": "/4NaExzBKqv4GPEfJ2w7S16MYS2y.jpg"
+    },
+    {
+      "name": "Douglas Rain",
+      "character": "HAL 9000 (voice)",
+      "profile_path": "/wCjNcbW1u9cYc7jzlV5FPKqXGNF.jpg"
+    }
+  ]
+}

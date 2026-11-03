@@ -1,0 +1,92 @@
+[
+  {
+    "key": "41c83b939b8169f0820b3a9bec4ab2e7931dd0aa",
+    "tmdbId": 530915,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+    "negative": false,
+    "normalizedTitle": "1917",
+    "runtimeMinutes": 118,
+    "normalizedDirectors": "mendes sam"
+  },
+  {
+    "key": "47abc6b70554cb6f3a6ef0dbc7511376afd37bb1",
+    "tmdbId": 584,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+    "negative": false,
+    "normalizedTitle": "2 fast 2 furious",
+    "runtimeMinutes": 107,
+    "normalizedDirectors": "john singleton"
+  },
+  {
+    "key": "66257a8ecf95c8e9e9c0550f400d983172b941d1",
+    "tmdbId": 3021,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+    "negative": false,
+    "normalizedTitle": "1408",
+    "runtimeMinutes": 104,
+    "normalizedDirectors": "hafstrom mikael"
+  },
+  {
+    "key": "696080e5fa299c12721d076820b411182bd5d111",
+    "tmdbId": 64688,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+    "negative": false,
+    "normalizedTitle": "21 jump street",
+    "runtimeMinutes": 109,
+    "normalizedDirectors": "christopher lord miller phil"
+  },
+  {
+    "key": "710ea404f278a3a949438018e0b926ff96632377",
+    "tmdbId": 62,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+    "negative": false,
+    "normalizedTitle": "2001 a space odyssey",
+    "runtimeMinutes": 148,
+    "normalizedDirectors": "kubrick stanley"
+  },
+  {
+    "key": "7289a98401b172896a97d4cf9b27a492fac63e8e",
+    "tmdbId": 333371,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+    "negative": false,
+    "normalizedTitle": "10 cloverfield lane",
+    "runtimeMinutes": 103,
+    "normalizedDirectors": "dan trachtenberg"
+  },
+  {
+    "key": "93c64a2f0c7bc480eabc18a008a938f033b411c8",
+    "tmdbId": 187017,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+    "negative": false,
+    "normalizedTitle": "22 jump street",
+    "runtimeMinutes": 112,
+    "normalizedDirectors": "christopher lord miller phil"
+  },
+  {
+    "key": "993cf9f0ffe68f6aa8233ce14a39bc5465e9c848",
+    "tmdbId": 76203,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+    "negative": false,
+    "normalizedTitle": "12 years a slave",
+    "runtimeMinutes": 134,
+    "normalizedDirectors": "mcqueen steve"
+  },
+  {
+    "key": "f0fbc934571ca4b41e7e985e18a09cb0be31bc56",
+    "tmdbId": 4951,
+    "confidence": 0.85,
+    "fetchedUtc": "2026-11-03T02:17:02.4768063+00:00",
+    "negative": false,
+    "normalizedTitle": "10 things i hate about you",
+    "runtimeMinutes": 97,
+    "normalizedDirectors": "gil junger"
+  }
+]
