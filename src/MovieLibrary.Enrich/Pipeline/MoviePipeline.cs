@@ -7,6 +7,7 @@ using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Parsing;
 using MovieLibrary.Core.Text;
 using MovieLibrary.Enrich.Caching;
+using MovieLibrary.Enrich.Reporting;
 using MovieLibrary.Enrich.Tmdb;
 
 namespace MovieLibrary.Enrich.Pipeline;
@@ -61,7 +62,12 @@ public sealed record StoredMovie(
 /// memory until the caller saves it, so a caller that wants the work kept across a failure must call
 /// <see cref="CacheStore.SaveAsync"/> in a <c>finally</c>.</para>
 /// </remarks>
-public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeOffset> clock)
+/// <param name="progress">
+/// Told how far the pass has got as each row finishes, for the caller's periodic progress line. Optional, and the pass
+/// does nothing with it but count: a seeding run is 40 to 70 minutes long and this is the only sign it is moving.
+/// </param>
+public sealed class MoviePipeline(
+    TmdbClient tmdb, CacheStore cache, Func<DateTimeOffset> clock, IProgress<PassProgress>? progress = null)
 {
     /// <summary>How many top-billed cast members a film keeps.</summary>
     public const int CastLimit = 4;
@@ -104,6 +110,7 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             .ThenBy(x => x.Runtime)
             .ToList();
 
+        var done = 0;
         foreach (var (row, title, runtime) in ordered)
         {
             ct.ThrowIfCancellationRequested();
@@ -177,6 +184,9 @@ public sealed class MoviePipeline(TmdbClient tmdb, CacheStore cache, Func<DateTi
             records.Add(await BuildRecordAsync(row, title, runtime, tmdbId, confidence, fresh, freshCast, genreNames, now, ct));
             if (reviewNote is not null)
                 review.Add($"{row.Title} ({row.Runtime}, {row.Directors}) → {reviewNote}");
+
+            // After the record, so the count means rows FINISHED. The reporter decides which of these to print.
+            progress?.Report(new PassProgress { Done = ++done, Total = ordered.Count });
         }
 
         return new MoviePipelineResult(records, review, tmdb.RequestsUsed, tmdb.BudgetExhausted, genreNames);

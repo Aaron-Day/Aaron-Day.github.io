@@ -161,9 +161,15 @@ public class EnrichRunOverrideWiringTests
     public async Task ADriftedSeriesOverrideIsNotedToo()
     {
         using var h = new RunHarness();
+        // A film row, because a real run has to have one: a Movies tab that comes back with its header and no rows is
+        // now refused outright (EnrichRun.RequireAFilmLibrary), and this test is about the series side.
+        h.MoviesCsv = RunLibrary.Movies(("Heat", "2:51:00", "Michael Mann", "Crime"));
         h.ShowsCsv = RunLibrary.Shows(("Season 1, Episode 1: Pilot", "The Office", "Comedy"));
         h.OverridesCsv = RunLibrary.Overrides(("The Office (US)", "", "2316"));
-        h.Tmdb = new FakeTv { AnyQuery = new FakeShow(2316, "The Office", [new FakeSeason(1, ["Pilot"])]) }.Respond;
+        var tv = new FakeTv { AnyQuery = new FakeShow(2316, "The Office", [new FakeSeason(1, ["Pilot"])]) };
+        h.Tmdb = req => req.RequestUri!.AbsolutePath == "/3/search/movie"
+            ? TestPipeline.Json(TestPipeline.EmptyResults)
+            : tv.Respond(req);
 
         await h.RunAsync();
 

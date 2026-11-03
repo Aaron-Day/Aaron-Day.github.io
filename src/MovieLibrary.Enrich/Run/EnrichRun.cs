@@ -36,6 +36,16 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
 {
     private enum Phase { Starting, Sheet, Cache, Films, Series, Publishing }
 
+    /// <summary>
+    /// How many titles between progress lines in each pass. Chosen for the real library (1,457 films, 122 series): about
+    /// fifteen lines and about seven over a 40-to-70-minute seed, which is a readable trickle rather than a log nobody
+    /// can read. They go to stdout only; the job summary is not affected by them.
+    /// </summary>
+    internal const int FilmsPerProgressLine = 100;
+
+    /// <inheritdoc cref="FilmsPerProgressLine"/>
+    internal const int SeriesPerProgressLine = 20;
+
     private Phase _phase = Phase.Starting;
 
     /// <summary>
@@ -59,7 +69,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
 
     /// <summary>Everything the publish step needs, from either source.</summary>
     private sealed record Catalogue(
-        IReadOnlyList<MovieRecord> Movies, IReadOnlyList<ShowRecord> Shows, IReadOnlyList<string> Review,
+        IReadOnlyList<MovieRecord> Movies, IReadOnlyList<ShowRecord> Shows, ReviewQueue Review,
         IReadOnlyDictionary<int, string> Genres, int RequestsUsed, bool StoppedOnBudget, int CastMembersSkipped, bool Fixtures);
 
     public async Task<RunResult> RunAsync(CancellationToken ct)
@@ -154,10 +164,13 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         {
             Say("Fixture mode: synthesising a full catalogue, no TMDB calls.");
             var (movies, shows) = FixtureGenerator.Build(movieRows, showRows);
-            var synthetic = new Catalogue(movies, shows, [], FixtureGenerator.Genres,
+            var synthetic = new Catalogue(movies, shows, ReviewQueue.Empty, FixtureGenerator.Genres,
                                           RequestsUsed: 0, StoppedOnBudget: false, CastMembersSkipped: 0, Fixtures: true);
             return await ConcludeAsync(await PublishAsync(synthetic, ct));
         }
+
+        // Everything below this line is a real run: the fixture branch above has already returned.
+        RequireAFilmLibrary(movieRows);
 
         // FetchOverridesAsync cannot see the sheet rows, so a second call adds a note for every override that matches
         // none. Without it a drifted override says nothing: it simply stops applying.
@@ -181,6 +194,37 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
             string.Join("; ", bad.Select(r => $"'{r.Title}' (runtime '{r.Runtime}')")) + ".",
             "A film runtime is written h:mm:ss, such as 1:31:00. Fix the Runtime cell on the Movies tab, then re-run. " +
             "Nothing was spent or written.");
+    }
+
+    /// <summary>
+    /// A Movies tab that came back with its header and no rows at all. The Sheet client only refuses a body with
+    /// nothing in it whatsoever (<c>GoogleSheetClient.FetchAsync</c>), so a renamed tab, a sharing change or a partial
+    /// response from Google arrives here as a perfectly valid empty library - and then publishes as one: an empty
+    /// <c>movies.json</c>, <c>deployable=true</c>, exit 0, and the live site loses its whole film library behind a
+    /// green check mark. Neither genre guard can catch it, because both are about matched films and there are none.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>Zero, not a percentage.</b> One film is a legitimate library and this must not second-guess the
+    /// owner's Sheet. A drop floor would be better still - the cache index count is a free prior for "how big was
+    /// this library last time" - but the zero case is the catastrophic one and is free.</para>
+    /// <para><b>What can reach it.</b> Only a real, non-fixture run with a readable Movies tab: the fixture branch
+    /// has returned above, so a synthetic catalogue (never deployed, and legitimately empty for an empty Sheet)
+    /// cannot trip it, and a tab that failed validation threw a <c>SheetSchemaException</c> before this. It runs
+    /// before the first TMDB request, so no budget state exists yet to misread; and a budget stop could not fire it
+    /// in any case, because every Sheet row is emitted whether or not it was resolved (<c>MoviePipeline</c>: "Every
+    /// row is emitted, matched or not"), so a spent budget cannot turn a real library into zero films. The one state
+    /// that fires it is a Movies tab with no data rows.</para>
+    /// </remarks>
+    private static void RequireAFilmLibrary(IReadOnlyList<SheetRow> movieRows)
+    {
+        if (movieRows.Count > 0) return;
+
+        throw new FatalRunException(
+            "FATAL: the Movies tab has a header row but no films.",
+            "Publishing that would replace the site's entire film library with an empty one, so nothing was written " +
+            "and nothing was spent. The likely causes are a renamed or moved 'Movies' tab, a change to the Sheet's " +
+            "sharing, or an export that ran while the tab was empty. Open the Sheet, check the 'Movies' tab still " +
+            "holds the Apple TV export, then re-run: the TMDB cache is untouched, so a good re-run costs nothing extra.");
     }
 
     private async Task<RunResult> RunAgainstTmdbAsync(
@@ -256,8 +300,15 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         return new Catalogue(
             movieResult.Records,
             tvResult.Shows,
-            // The owner's own corrections failing come first: they are not a doubtful match, they are a mistake to fix.
-            [.. overrides.Notes, .. movieResult.ReviewQueue, .. tvResult.ReviewQueue],
+            // Three lists of the same type, so they are named: see ReviewQueue. The summary prints them in this
+            // order - the owner's own corrections failing first, because they are not a doubtful match but a
+            // mistake to fix - under one label each, and caps each one separately.
+            new ReviewQueue
+            {
+                OverrideNotes = overrides.Notes,
+                Films = movieResult.ReviewQueue,
+                Series = tvResult.ReviewQueue,
+            },
             movieResult.Genres,
             tmdb.RequestsUsed,
             movieResult.StoppedOnBudget || tvResult.StoppedOnBudget,
@@ -275,15 +326,22 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         SheetOverrides overrides, CancellationToken ct)
     {
         _phase = Phase.Films;
-        var movieResult = await new MoviePipeline(tmdb, cache, services.Now)
+        var movieResult = await new MoviePipeline(tmdb, cache, services.Now, Progress("films", FilmsPerProgressLine, tmdb))
             .RunAsync(movieRows, overrides.Films, ct);
 
         _phase = Phase.Series;
-        var tvResult = await new TvPipeline(tmdb, cache, services.Now)
+        var tvResult = await new TvPipeline(tmdb, cache, services.Now, Progress("series", SeriesPerProgressLine, tmdb))
             .RunAsync(showRows, overrides.Series, ct);
 
         return (movieResult, tvResult);
     }
+
+    /// <summary>
+    /// A pass's progress line. The request count is read when the line is printed, not when this is built, so the
+    /// number is the run's own at that moment - which is what says whether a long quiet stretch is moving or stuck.
+    /// </summary>
+    private PassReporter Progress(string noun, int every, TmdbClient tmdb)
+        => new(noun, every, () => tmdb.RequestsUsed, Say);
 
     /// <summary>Checks the genre table, builds <c>meta.json</c>'s content and writes everything. Returns what to report.</summary>
     /// <remarks>
@@ -376,7 +434,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
             TotalEpisodes: meta.TotalEpisodeCount, OwnedEpisodes: c.Shows.Sum(s => s.OwnedEpisodes),
             RequestsUsed: c.RequestsUsed, MaxRequests: options.MaxRequests,
             StoppedOnBudget: c.StoppedOnBudget, Fixtures: c.Fixtures,
-            ReviewQueue: c.Review,
+            Review: c.Review,
             MatchedFilms: matched.Count,
             FilmsWithEmptyCast: matched.Count(m => m.Cast.Length == 0),
             CastMembersSkipped: c.CastMembersSkipped);
@@ -393,8 +451,10 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         var result = new RunResult(0, report.StoppedOnBudget, Deployable: !report.StoppedOnBudget && !report.Fixtures,
                                    CacheSaved: _cacheSaved);
 
+        // Redacted() applies the token rule to both forms; EmitAsync sends the whole report to stdout and the capped
+        // page to the step summary. They were one string, and the lines the page dropped then existed nowhere at all.
         await TryAsync(() => JobSummary.EmitAsync(
-            Redact(JobSummary.Build(report)), services.Out, services.StepSummaryPath, CancellationToken.None));
+            JobSummary.Build(report).Redacted(Redact), services.Out, services.StepSummaryPath, CancellationToken.None));
         await WriteOutputsAsync(result);
         return result;
     }
@@ -408,7 +468,8 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         var result = new RunResult(1, StoppedOnBudget: _tmdb?.BudgetExhausted ?? false,
                                    Deployable: false, CacheSaved: _cacheSaved);
         await TryAsync(() => JobSummary.EmitAsync(
-            Redact(JobSummary.BuildFailure(headline, advice)), TextWriter.Null, services.StepSummaryPath, CancellationToken.None));
+            JobSummary.BuildFailure(headline, advice).Redacted(Redact), TextWriter.Null, services.StepSummaryPath,
+            CancellationToken.None));
         await WriteOutputsAsync(result);
         return result;
     }

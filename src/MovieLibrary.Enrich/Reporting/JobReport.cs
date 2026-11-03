@@ -4,6 +4,10 @@ namespace MovieLibrary.Enrich.Reporting;
 /// Everything the job summary prints, by name. A record rather than a long positional list: most of these are ints, and
 /// two exchanged ints would compile and print the wrong number in the one place the owner reads.
 /// </summary>
+/// <param name="Review">
+/// The lines a human has to look at, in their three groups. Grouped rather than flat so the summary can label and cap
+/// each group on its own: see <see cref="ReviewQueue"/>.
+/// </param>
 /// <param name="MatchedFilms">Films TMDB identified (<c>I != 0</c>). The denominator for the empty-cast count.</param>
 /// <param name="FilmsWithEmptyCast">Matched films whose record has no cast at all.</param>
 /// <param name="CastMembersSkipped">Cast members this run's TMDB responses carried that were skipped as unreadable.</param>
@@ -14,6 +18,6 @@ namespace MovieLibrary.Enrich.Reporting;
 public sealed record JobReport(
     int Films, int Series, int TotalEpisodes, int OwnedEpisodes,
     int RequestsUsed, int MaxRequests, bool StoppedOnBudget, bool Fixtures,
-    IReadOnlyList<string> ReviewQueue,
+    ReviewQueue Review,
     int MatchedFilms, int FilmsWithEmptyCast, int CastMembersSkipped,
     string? CacheSaveError = null);

@@ -291,6 +291,150 @@ public class EnrichOptionsTests : IDisposable
     public void AnEmptyFlagValueFallsBackToTheEnvironmentValueNotStraightToTheDefault()
         => Assert.Equal("env-sheet", Load(["--sheet-id="], ("SHEET_ID", "env-sheet")).SheetId);
 
+    // ---- boolean flags: the =true spelling, and nonsense refused ------------------------
+
+    /// <summary>
+    /// The value flags take both <c>--flag value</c> and <c>--flag=value</c>, so <c>--fixtures=true</c> is a natural
+    /// spelling - and it used to mean no fixture flag at all. That run went live: it read the token, spent the default
+    /// 40 real requests and wrote over the deployed data folder instead of dev-data. It is the only way a typo can
+    /// spend the owner's budget.
+    /// </summary>
+    [Theory]
+    [InlineData("--fixtures=true")]
+    [InlineData("--fixtures=True")]
+    [InlineData("--fixtures=TRUE")]
+    public void TheEqualsTrueSpellingOfFixturesIsAFixtureRun(string arg)
+    {
+        var o = Load([arg], ("TMDB_TOKEN", "eyJ.a.b"));
+
+        Assert.True(o.Fixtures);
+        Assert.Equal("dev-data", o.OutputRoot);        // not the deployed folder
+        Assert.Equal(string.Empty, o.Token);           // and it cannot authenticate a request
+    }
+
+    [Theory]
+    [InlineData("--fixtures=false")]
+    [InlineData("--fixtures=FALSE")]
+    public void TheEqualsFalseSpellingIsNotAFixtureRun(string arg)
+    {
+        var o = Load([arg]);
+
+        Assert.False(o.Fixtures);
+        Assert.Equal("src/MovieLibrary.Web/wwwroot/data", o.OutputRoot);
+    }
+
+    [Fact]
+    public void TheBareFlagIsStillAFixtureRun() => Assert.True(Load(["--fixtures"]).Fixtures);
+
+    [Fact]
+    public void ForceRefreshTakesTheEqualsSpellingToo()
+    {
+        Assert.True(Load(["--force-refresh=true", "--max-requests=0"]).ForceRefresh);
+        Assert.False(Load(["--force-refresh=false"]).ForceRefresh);
+    }
+
+    [Theory]
+    [InlineData("true")]
+    [InlineData("True")]
+    [InlineData("TRUE")]
+    [InlineData(" true ")]
+    public void TheForceRefreshEnvironmentVariableIsReadWhateverItsCase(string raw)
+        => Assert.True(Load(["--max-requests=0"], ("FORCE_REFRESH", raw)).ForceRefresh);
+
+    /// <summary>
+    /// A value that is neither true nor false is refused, not guessed at. Read as true, <c>--fixtures=0</c> writes
+    /// synthetic data where the real catalogue goes; read as false, it spends the real budget. Being loud costs a run
+    /// that exits before it fetches anything.
+    /// </summary>
+    [Theory]
+    [InlineData("--fixtures=yes")]
+    [InlineData("--fixtures=0")]
+    [InlineData("--fixtures=1")]
+    [InlineData("--fixtures=")]
+    [InlineData("--force-refresh=yes")]
+    [InlineData("--force-refresh=no")]
+    public void ABooleanFlagGivenSomethingThatIsNotTrueOrFalseIsRefused(string arg)
+    {
+        var ex = Assert.Throws<ArgumentException>(() => Load([arg]));
+
+        Assert.Contains("must be true or false", ex.Message);
+        Assert.Contains(arg.Split('=')[0], ex.Message);          // and names which flag it was
+    }
+
+    [Fact]
+    public void AnUnreadableForceRefreshEnvironmentValueIsRefusedRatherThanReadAsFalse()
+    {
+        var ex = Assert.Throws<ArgumentException>(() => Load([], ("FORCE_REFRESH", "1")));
+
+        Assert.Contains("FORCE_REFRESH must be true or false, not '1'", ex.Message);
+        Assert.Contains("FORCE_REFRESH=true", ex.Message);       // how to write what was meant
+    }
+
+    /// <summary>
+    /// The flag beats the environment, the same way <c>--sheet-id</c> and <c>--max-requests</c> do. Saying
+    /// <c>--force-refresh=false</c> out loud and getting a forced refresh because an Actions variable is still set
+    /// would be the worst of both.
+    /// </summary>
+    [Fact]
+    public void AnExplicitBooleanFlagWinsOverTheEnvironment()
+    {
+        Assert.False(Load(["--force-refresh=false"], ("FORCE_REFRESH", "true")).ForceRefresh);
+        Assert.True(Load(["--force-refresh=true", "--max-requests=0"], ("FORCE_REFRESH", "false")).ForceRefresh);
+    }
+
+    [Fact]
+    public void AFlagThatOnlyStartsWithABooleanFlagsNameIsNotThatFlag()
+    {
+        var o = Load(["--fixtures-only=true", "--force-refreshing=true"]);
+
+        Assert.False(o.Fixtures);
+        Assert.False(o.ForceRefresh);
+    }
+
+    // ---- the token as it was pasted -----------------------------------------------------
+
+    /// <summary>
+    /// The secret is pasted by hand into GitHub's UI, so a <c>Bearer </c> prefix or a pair of quotes comes with it.
+    /// Uncleaned, <c>TmdbAuth.Detect</c>'s <c>StartsWith("eyJ")</c> test fails, the v4 token is sent as a v3
+    /// <c>api_key</c> query value, and the run dies on request one with a 401 whose advice names the secret but not
+    /// what is wrong with it.
+    /// </summary>
+    [Theory]
+    [InlineData("Bearer eyJhbGciOiJIUzI1NiJ9.body.sig")]
+    [InlineData("bearer eyJhbGciOiJIUzI1NiJ9.body.sig")]
+    [InlineData("BEARER eyJhbGciOiJIUzI1NiJ9.body.sig")]
+    [InlineData("\"eyJhbGciOiJIUzI1NiJ9.body.sig\"")]
+    [InlineData("'eyJhbGciOiJIUzI1NiJ9.body.sig'")]
+    [InlineData("\"Bearer eyJhbGciOiJIUzI1NiJ9.body.sig\"")]
+    [InlineData("Bearer  eyJhbGciOiJIUzI1NiJ9.body.sig")]
+    [InlineData("  eyJhbGciOiJIUzI1NiJ9.body.sig  ")]
+    [InlineData("eyJhbGciOiJIUzI1NiJ9.body.sig\"")]
+    public void APastedBearerPrefixOrQuoteIsStrippedFromTheToken(string pasted)
+        => Assert.Equal("eyJhbGciOiJIUzI1NiJ9.body.sig", Load([], ("TMDB_TOKEN", pasted)).Token);
+
+    [Theory]
+    [InlineData("eyJhbGciOiJIUzI1NiJ9.body.sig")]                 // a v4 read access token
+    [InlineData("0123456789abcdef0123456789abcdef")]              // a v3 api key
+    public void ACleanlyPastedCredentialIsHandedOnExactlyAsItIs(string pasted)
+        => Assert.Equal(pasted, Load([], ("TMDB_TOKEN", pasted)).Token);
+
+    /// <summary>
+    /// Nothing but a prefix or quotes is not a credential, and counts as no token at all - which the run then reports
+    /// as "TMDB_TOKEN is not set", before fetching anything.
+    /// </summary>
+    [Theory]
+    [InlineData("Bearer ")]
+    [InlineData("\"\"")]
+    [InlineData("''")]
+    public void AValueThatIsNothingButAPrefixOrQuotesCountsAsNoTokenAtAll(string pasted)
+        => Assert.Equal(string.Empty, Load([], ("TMDB_TOKEN", pasted)).Token);
+
+    [Fact]
+    public void TheWordBearerInsideATokenIsNotTouched()
+        // Only a leading "Bearer " goes. A credential is base64url or hex, so this cannot arise - but a rule that
+        // rewrote the middle of a secret would be a bad rule.
+        => Assert.Equal("eyJ.Bearer.sig", Load([], ("TMDB_TOKEN", "eyJ.Bearer.sig")).Token);
+
     // ---- ReadEnvironment ---------------------------------------------------------------
 
     private string EnvFile(params string[] lines)

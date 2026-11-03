@@ -54,6 +54,38 @@ public class EnrichRunMetaTests
         Assert.Equal(1, meta.GetProperty("ownedEpisodeCount").GetInt32());     // only the one the Sheet has
     }
 
+    /// <summary>
+    /// <c>totalEpisodeCount</c> is not "what TMDB lists": it is what the catalogue carries, which includes season 0 -
+    /// the owned Apple rows TMDB did not list, which <c>TvPipeline</c> keeps rather than drops - and the synthetic
+    /// numbered extras. The arithmetic is the right choice (owned must never exceed total, and a season-0 row is
+    /// genuinely owned) and only the doc comment was ever wrong about it, so this pins the number, not the prose.
+    /// </summary>
+    [Fact]
+    public async Task TheTotalEpisodeCountIncludesOwnedRowsTmdbNeverListed()
+    {
+        using var h = new RunHarness();
+        h.MoviesCsv = RunLibrary.Movies(RunLibrary.Fargo);
+        h.ShowsCsv = RunLibrary.Shows(
+            ("Season 1, Episode 1: Pilot", "The Office", "Comedy"),
+            ("A Deleted Scene", "The Office", "Comedy"));              // bare-named, and on no TMDB season
+        var films = RunLibrary.FargoOnly();
+        var tv = new FakeTv { AnyQuery = new FakeShow(2316, "The Office", [new FakeSeason(1, ["Pilot", "Diversity Day"])]) };
+        h.Tmdb = req => req.RequestUri!.AbsolutePath.StartsWith("/3/search/tv", StringComparison.Ordinal)
+                        || req.RequestUri.AbsolutePath.StartsWith("/3/tv/", StringComparison.Ordinal)
+            ? tv.Respond(req)
+            : films(req);
+
+        await h.RunAsync();
+
+        using var doc = h.Json("meta.json");
+        // TMDB listed two; the unplaced owned row is kept at season 0, so the total is three and owned is two.
+        Assert.Equal(3, doc.RootElement.GetProperty("totalEpisodeCount").GetInt32());
+        Assert.Equal(2, doc.RootElement.GetProperty("ownedEpisodeCount").GetInt32());
+        Assert.True(doc.RootElement.GetProperty("ownedEpisodeCount").GetInt32()
+                    <= doc.RootElement.GetProperty("totalEpisodeCount").GetInt32(),
+            "owned can never exceed total, which is the reason the arithmetic is this way round");
+    }
+
     [Fact]
     public async Task TheAttributionIsTmdbsFixedSentence()
     {

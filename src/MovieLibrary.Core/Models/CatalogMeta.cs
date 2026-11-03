@@ -3,7 +3,13 @@ namespace MovieLibrary.Core.Models;
 /// <summary>
 /// The contents of <c>data/meta.json</c>.
 /// </summary>
-/// <param name="TotalEpisodeCount">Every episode TMDB lists across the library's series, owned or not.</param>
+/// <param name="TotalEpisodeCount">
+/// Every episode the library's series carry, owned or not: the sum of <c>ShowRecord.TotalEpisodes</c>. That is TMDB's
+/// listing <i>plus</i> season 0 and the synthetic numbered extras - the owned Apple rows TMDB did not list, which
+/// <c>TvPipeline</c> keeps rather than drops. So it is not purely "what TMDB lists": owned can never exceed total, and
+/// a season-0 row is genuinely owned. <c>CatalogWriter.NumberedSeasons</c> makes the opposite call for the per-series
+/// season count, and says there why.
+/// </param>
 /// <param name="OwnedEpisodeCount">
 /// Only the episodes in the library. Optional so existing callers compile; left out of the JSON when null
 /// rather than written as a false zero.

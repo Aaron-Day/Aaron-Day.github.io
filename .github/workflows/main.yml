@@ -32,10 +32,15 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      # Third-party actions are pinned to commit SHAs, not to the mutable vN tags they also publish. This repository
+      # is public and this job has `contents: write` with the TMDB secret in scope, so a tag repointed at new code -
+      # by the owner of that action, or by anyone who takes over the account - would run with write access to master
+      # and to gh-pages on the next push. A SHA cannot be repointed. The comment is the human-readable version the
+      # SHA was the tip of; bump both together when updating, after reading the release notes.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
         with:
           dotnet-version: '10.0.x'
 
@@ -119,7 +124,7 @@ jobs:
 
       - name: Deploy to gh-pages
         if: ${{ !cancelled() && steps.publish.outcome == 'success' }}
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4.9.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages

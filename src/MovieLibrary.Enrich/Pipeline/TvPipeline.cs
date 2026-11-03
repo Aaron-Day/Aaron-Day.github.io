@@ -6,6 +6,7 @@ using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Parsing;
 using MovieLibrary.Core.Text;
 using MovieLibrary.Enrich.Caching;
+using MovieLibrary.Enrich.Reporting;
 using MovieLibrary.Enrich.Tmdb;
 
 namespace MovieLibrary.Enrich.Pipeline;
@@ -77,7 +78,13 @@ public sealed record StoredSeason(DateTimeOffset FetchedUtc, TmdbSeason? Season)
 /// index lives in memory until the caller saves it, so a caller that wants the work kept across a failure must
 /// call <see cref="CacheStore.SaveAsync"/> in a <c>finally</c>.</para>
 /// </remarks>
-public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeOffset> clock)
+/// <param name="progress">
+/// Told how far the pass has got as each series finishes, for the caller's periodic progress line. Optional, and the
+/// pass does nothing with it but count. The total is the number of distinct series, which only this pass knows: the
+/// Sheet's rows are episodes.
+/// </param>
+public sealed class TvPipeline(
+    TmdbClient tmdb, CacheStore cache, Func<DateTimeOffset> clock, IProgress<PassProgress>? progress = null)
 {
     private static readonly IReadOnlyDictionary<string, int> NoOverrides = new Dictionary<string, int>();
 
@@ -119,6 +126,7 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
         EnsureSlugsAreUsable(allSeries.Select(s => (s.Name, s.Slug)));
 
         var shows = new List<ShowRecord>(allSeries.Count);
+        var done = 0;
 
         foreach (var (name, slug, genre, group) in allSeries)
         {
@@ -148,6 +156,9 @@ public sealed class TvPipeline(TmdbClient tmdb, CacheStore cache, Func<DateTimeO
                 OwnedEpisodes: placement.Seasons.Sum(s => s.Owned),
                 TotalEpisodes: placement.Seasons.Sum(s => s.Total),
                 Mc: series.Confidence));
+
+            // After the record, so the count means series FINISHED. The reporter decides which of these to print.
+            progress?.Report(new PassProgress { Done = ++done, Total = allSeries.Count });
         }
 
         return new TvPipelineResult(shows, review, tmdb.BudgetExhausted);
