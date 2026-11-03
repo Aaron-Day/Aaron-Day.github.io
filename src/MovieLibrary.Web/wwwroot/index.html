@@ -29,6 +29,19 @@
         <a href="." class="reload">Reload</a>
         <span class="dismiss">🗙</span>
     </div>
+    <!-- TMDB attribution. The sentence is fixed verbatim by TMDB's API terms and must match
+         MovieLibrary.Core.Models.CatalogMeta.TmdbAttribution exactly. CatalogWriter enforces that
+         constant for the catalogue JSON, and TmdbAttributionTests enforces it for THIS copy, so a
+         reworded sentence here fails the build rather than quietly breaking the licence.
+         Do not reword, truncate, split across elements, or insert <br>/<span> into it.
+         This is the app's single contentinfo landmark: do not add a top-level <footer> inside #app
+         or MainLayout. No heading here, by design. No ARIA here, by design: alt="" prunes the logo
+         from the accessibility tree because the sentence beside it already names TMDB. -->
+    <footer class="attribution">
+        <img src="tmdb-logo.svg" alt="" width="489" height="35" />
+        <p>This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</p>
+    </footer>
+
     <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
 </body>
 

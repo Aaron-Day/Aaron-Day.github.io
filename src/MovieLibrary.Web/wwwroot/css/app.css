@@ -113,3 +113,104 @@ code {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+/* ===========================================================================
+   TMDB attribution footer
+   ---------------------------------------------------------------------------
+   TMDB's terms require (a) the sentence verbatim and (b) the TMDB logo to be
+   LESS PROMINENT than MovieLibrary's own branding (.navbar-brand, 1.1rem, in a
+   sticky sidebar that is on screen the whole time). Prominence is reduced on
+   the LOGO, through scale and placement. It is NEVER reduced by dimming the
+   required sentence: as a logotype the mark is exempt from SC 1.4.3 and 1.4.5,
+   and being neither a UI component nor needed to understand the content it is
+   outside SC 1.4.11 too, so no contrast minimum applies to it at all. The
+   sentence is ordinary body prose and needs 4.5:1, with no large-text relief
+   at this size.
+   =========================================================================== */
+
+/* Sticky-footer scaffold. Required, not cosmetic: both children of #app are
+   absolutely positioned (.loading-progress, .loading-progress-text), so #app
+   has ZERO flow height while the WASM payload downloads. Without this the
+   footer paints at the top of the viewport, above the spinner, and then jumps
+   to the bottom on boot - the legal notice presented as the page's primary
+   content on exactly the slow connections where it is on screen longest.
+   #blazor-error-ui is position:fixed and the <script> is display:none, so
+   neither takes part in this flex layout. */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;   /* dvh where supported, so mobile browser chrome is accounted for */
+}
+
+#app {
+    flex: 1 0 auto;       /* fills the gap, pushing the footer to the bottom */
+}
+
+.attribution {
+    display: flex;
+    flex-wrap: wrap;              /* collapses to one column at 320px: SC 1.4.10 Reflow */
+    align-items: center;
+    gap: 0.75rem 1rem;            /* row-gap column-gap */
+    /* The 3.5rem bottom clears #blazor-error-ui, which is position:fixed, bottom:0,
+       z-index:1000 and would otherwise sit exactly where this sentence is read.
+       Unconditional on purpose: Blazor toggles that element's display inline, so a
+       :has() conditional would depend on a style this file cannot see. */
+    padding: 1rem 1.5rem 3.5rem;
+    /* A border, not a background tint: under forced-colors a border is re-coloured to
+       CanvasText and survives, while a tint flattens to Canvas and takes the grouping
+       cue with it. */
+    border-top: 1px solid #dee2e6;
+}
+
+/* The legally required sentence. Subordinate in SIZE, never in CONTRAST. */
+.attribution p {
+    flex: 1 1 18rem;              /* forces its own line at 320px */
+    max-width: 68ch;
+    margin: 0;                    /* beats reboot's p { margin-bottom: 1rem } */
+    font-size: 0.875rem;          /* 14px at the default root, and in rem so it honours the
+                                     reader's own browser font size, not only page zoom. Still
+                                     "normal" text: the 3:1 large-text allowance begins at 24px,
+                                     or 18.66px bold. Do not go below 0.8125rem. */
+    line-height: 1.5;             /* unitless, so a user text-spacing override cannot clip it
+                                     (SC 1.4.12). No fixed height, no overflow: hidden. */
+    color: #52585e;               /* 7.20:1 on #fff - AA and AAA - and still 6.72:1 if a #f7f7f7
+                                     tint is added later. Do NOT substitute: #6c757d is 4.69:1 on
+                                     white but 4.38:1 FAIL over that tint, #777 4.48:1 FAIL,
+                                     #888 3.54:1 FAIL, #999 2.85:1 FAIL, #aaa 2.32:1 FAIL. Do NOT
+                                     soften with opacity or rgba(): rgba(33,37,41,.6) composites
+                                     to 4.19:1 FAIL. Do NOT add .text-muted - it ships
+                                     !important and would win. */
+}
+
+.attribution img {
+    flex: 0 0 auto;               /* the row must not squash it */
+    /* 10rem, not 5rem. TMDB's horizontal wordmark is viewBox 489.04 x 35.4, a 13.8:1
+       ratio, so 5rem would render it 5.8px tall - illegible, and TMDB's terms are about
+       DISPLAYING the mark. At 10rem it is 11.6px tall, still plainly subordinate to the
+       1.1rem .navbar-brand. */
+    width: 10rem;
+    max-width: 100%;              /* Bootstrap 5 reboot does not set this */
+    height: auto;                 /* exactly ONE axis fixed here. With the valid integer width
+                                     and height ATTRIBUTES on the <img>, the UA derives
+                                     aspect-ratio from them and reserves the box before the SVG
+                                     loads: no shift, no distortion. CSS aspect-ratio is not
+                                     needed and would duplicate a ratio that already lives in the
+                                     attributes and the viewBox - a silent distortion bug the day
+                                     the asset is swapped. */
+    max-height: 2rem;             /* guard only; never binds for the wordmark. If the logo looks
+                                     letterboxed, a tall or square variant has been dropped in:
+                                     fix it by LOWERING width, not by accepting the letterbox. */
+    object-fit: contain;          /* if the guard ever binds, letterbox - never stretch a trademark */
+}
+
+/* Deliberately NO forced-colors backplate and NO `color-scheme: light only`, both of
+   which this project's accessibility review recommended for TMDB's NAVY mark (#0d253f),
+   which goes to 1.21:1 on a #121212 canvas. This asset is a different variant: a light
+   mint-to-blue gradient (#90cea1 -> #3cbec9 -> #00b3e5) on transparency. Because
+   forced-color-adjust does not reach inside <img> content, it renders as authored in
+   either mode - and a light gradient is MORE visible on a dark canvas, not less, so a
+   white plate behind it would simply be a bright box in high-contrast black. The same
+   reasoning retires the Chrome Auto Dark Theme risk: auto-dark cannot make a mint-to-blue
+   wordmark disappear. Re-add both the day this asset is swapped for a dark variant.
+   No transition, animation or transform is used here, so no prefers-reduced-motion block
+   is needed. Keep it that way. */
