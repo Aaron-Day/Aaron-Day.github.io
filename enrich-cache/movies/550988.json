@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 550988,
+    "title": "Free Guy",
+    "overview": "A bank teller discovers he is actually a background player in an open-world video game, and decides to become the hero of his own story. Now, in a world where there are no limits, he is determined to be the guy who saves his world his way before it\u0027s too late.",
+    "tagline": "Life\u0027s too short to be a background character.",
+    "runtime": 115,
+    "release_date": "2021-08-11",
+    "vote_average": 7.424,
+    "poster_path": "/dxraF0qPr1OEgJk17ltQTO84kQF.jpg",
+    "backdrop_path": "/rOJb0yQOCny0bPjg8bCLw8DyAD7.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ryan Reynolds",
+      "character": "Guy",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Jodie Comer",
+      "character": "Millie Rusk / Molotovgirl",
+      "profile_path": "/AfsBpnfw0E2h8NZK4zkFcOjYlEb.jpg"
+    },
+    {
+      "name": "Lil Rel Howery",
+      "character": "Buddy",
+      "profile_path": "/9MDi35Fy6ym7SYbO3B04vf1vBnm.jpg"
+    },
+    {
+      "name": "Joe Keery",
+      "character": "Keys",
+      "profile_path": "/ayIAVLMfZGEGIFwAo3pPnY7p59.jpg"
+    }
+  ]
+}

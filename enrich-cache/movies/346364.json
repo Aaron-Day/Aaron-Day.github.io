@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 346364,
+    "title": "It",
+    "overview": "In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.",
+    "tagline": "You\u0027ll float too.",
+    "runtime": 135,
+    "release_date": "2017-09-06",
+    "vote_average": 7.2,
+    "poster_path": "/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+    "backdrop_path": "/qVGpxnjrGlHaSTCqTQI6viBDSfp.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 477962,
+      "name": "It Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jaeden Martell",
+      "character": "Bill Denbrough",
+      "profile_path": "/29lQhfMR4nLUJROKq76x93NXPw1.jpg"
+    },
+    {
+      "name": "Jeremy Ray Taylor",
+      "character": "Ben Hanscom",
+      "profile_path": "/czfmzjsDrGqIvDA3kkq62h9RCA1.jpg"
+    },
+    {
+      "name": "Sophia Lillis",
+      "character": "Beverly Marsh",
+      "profile_path": "/4jUkLBBhGnFi6LymePzWVw4oVFa.jpg"
+    },
+    {
+      "name": "Finn Wolfhard",
+      "character": "Richie Tozier",
+      "profile_path": "/vgjd34eWfVL6GsLHwiwcAsjWLmo.jpg"
+    }
+  ]
+}

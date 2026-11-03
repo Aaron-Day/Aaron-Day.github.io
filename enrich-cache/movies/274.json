@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 274,
+    "title": "The Silence of the Lambs",
+    "overview": "Clarice Starling is a top student at the FBI\u0027s training academy.  Jack Crawford wants Clarice to interview Dr. Hannibal Lecter, a brilliant psychiatrist who is also a violent psychopath, serving life behind bars for various acts of murder and cannibalism.  Crawford believes that Lecter may have insight into a case and that Starling, as an attractive young woman, may be just the bait to draw him out.",
+    "tagline": "To enter the mind of a killer she must challenge the mind of a madman.",
+    "runtime": 119,
+    "release_date": "1991-02-14",
+    "vote_average": 8.345,
+    "poster_path": "/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg",
+    "backdrop_path": "/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9743,
+      "name": "The Hannibal Lecter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jodie Foster",
+      "character": "Clarice Starling",
+      "profile_path": "/5emVgsLFlU6SmeBIFsF2Y7aqwtG.jpg"
+    },
+    {
+      "name": "Anthony Hopkins",
+      "character": "Dr. Hannibal Lecter",
+      "profile_path": "/iaf7SHSkGDpnyrDh1Jolilwk2TD.jpg"
+    },
+    {
+      "name": "Scott Glenn",
+      "character": "Jack Crawford",
+      "profile_path": "/8DHORod2l6ZFS9KR0gNAAM3WZfI.jpg"
+    },
+    {
+      "name": "Ted Levine",
+      "character": "Jame Gumb",
+      "profile_path": "/451KSkowLW6M2Au0wBKZZcidgGm.jpg"
+    }
+  ]
+}

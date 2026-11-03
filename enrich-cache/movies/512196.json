@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 512196,
+    "title": "Happy Death Day 2U",
+    "overview": "Collegian Tree Gelbman wakes up in horror to learn that she\u0027s stuck in a parallel universe. Her boyfriend Carter is now with someone else, and her friends and fellow students seem to be completely different versions of themselves. When Tree discovers that Carter\u0027s roommate has been altering time, she finds herself once again the target of a masked killer. When the psychopath starts to go after her inner circle, Tree soon realizes that she must die over and over again to save everyone.",
+    "tagline": "Death makes a killer comeback.",
+    "runtime": 100,
+    "release_date": "2019-02-13",
+    "vote_average": 6.318,
+    "poster_path": "/4tdnePOkOOzwuGPEOAHp8UA4vqx.jpg",
+    "backdrop_path": "/bU1n7bkDviEqwfKFTbjQ8BFrqEN.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 526380,
+      "name": "Happy Death Day Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jessica Rothe",
+      "character": "Theresa \u0027Tree\u0027 Gelbman",
+      "profile_path": "/oItPXy56W0Y5taqIMZilRtnPDMn.jpg"
+    },
+    {
+      "name": "Israel Broussard",
+      "character": "Carter Davis",
+      "profile_path": "/cSmPXUMjUgodorabkAHJ4IMWFz7.jpg"
+    },
+    {
+      "name": "Charles Aitken",
+      "character": "Gregory Butler",
+      "profile_path": "/96viVHXRXd76fUYhUufq1JTjX0T.jpg"
+    },
+    {
+      "name": "Ruby Modine",
+      "character": "Lori Spengler",
+      "profile_path": "/tGeZmJOzO5gEeetkc6WIpJM3mj6.jpg"
+    }
+  ]
+}

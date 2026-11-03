@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1624,
+    "title": "Liar Liar",
+    "overview": "Forced by his son\u0027s birthday wish, fast-talking attorney and habitual liar Fletcher Reede must tell the truth for the next 24 hours.",
+    "tagline": "Trust me.",
+    "runtime": 86,
+    "release_date": "1997-03-21",
+    "vote_average": 6.722,
+    "poster_path": "/p1habYSdC7oD3WygQ5lynU5G5rV.jpg",
+    "backdrop_path": "/nuDMG0uTaiWFVD6XfHPruum5JOL.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jim Carrey",
+      "character": "Fletcher Reede",
+      "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+    },
+    {
+      "name": "Maura Tierney",
+      "character": "Audrey Reede",
+      "profile_path": "/4BCrwdHdC4iRSDimvkoYaXg2qki.jpg"
+    },
+    {
+      "name": "Justin Cooper",
+      "character": "Max Reede",
+      "profile_path": "/61qQPDArLSjydncUKeBz2D4lXRl.jpg"
+    },
+    {
+      "name": "Cary Elwes",
+      "character": "Jerry",
+      "profile_path": "/9UszBdQJ9PmyBydIeIBxlStozhW.jpg"
+    }
+  ]
+}

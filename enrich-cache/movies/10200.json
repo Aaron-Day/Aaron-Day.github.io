@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10200,
+    "title": "The Day the Earth Stood Still",
+    "overview": "A representative of an alien race that went through drastic evolution to survive its own climate change, Klaatu comes to Earth to assess whether humanity can prevent the environmental damage they have inflicted on their own planet. When barred from speaking to the United Nations, he decides humankind shall be exterminated so the planet can survive.",
+    "tagline": "We thought the Earth was ours. We were wrong.",
+    "runtime": 104,
+    "release_date": "2008-12-10",
+    "vote_average": 5.669,
+    "poster_path": "/vBgFSYmG5tb7GsZ3tHR0WNaWaxA.jpg",
+    "backdrop_path": "/nIxFtd6gcmGGvFxyb1z3mt46CrN.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Klaatu",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Jennifer Connelly",
+      "character": "Helen Benson",
+      "profile_path": "/wdmcJagSRJ65AuJ4IUCzuHAdvgy.jpg"
+    },
+    {
+      "name": "Jaden Smith",
+      "character": "Jacob Benson",
+      "profile_path": "/aXCn1kRjs4sZS55xSrdmjbht7SM.jpg"
+    },
+    {
+      "name": "Jon Hamm",
+      "character": "Michael Granier",
+      "profile_path": "/mrXE5fZbEDPc7BEE5G21J6qrwzi.jpg"
+    }
+  ]
+}

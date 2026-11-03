@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11364,
+    "title": "Regarding Henry",
+    "overview": "After being shot, a lawyer loses his memory and must relearn speech and mobility, but he has a loving family to support him.",
+    "tagline": "The story of a man who had everything, but found something more.",
+    "runtime": 108,
+    "release_date": "1991-07-10",
+    "vote_average": 6.5,
+    "poster_path": "/1gyViKAIpy1jAcM3B17iXNbiHrh.jpg",
+    "backdrop_path": "/8QZMXIjksrlIQ5BZLtVpUnhh09Z.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "Henry Turner",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Annette Bening",
+      "character": "Sarah Turner",
+      "profile_path": "/kGslMAWcpv8MKzODhDRDkFE0uX7.jpg"
+    },
+    {
+      "name": "Bill Nunn",
+      "character": "Bradley, Physical Therapist",
+      "profile_path": "/trxNvS6g5yvwbXzx2LK6JqutE5z.jpg"
+    },
+    {
+      "name": "Rebecca Miller",
+      "character": "Linda",
+      "profile_path": "/s0jjPvcX4i8yd7IiBuvnrJ7FbT3.jpg"
+    }
+  ]
+}

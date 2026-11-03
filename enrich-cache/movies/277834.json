@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 277834,
+    "title": "Moana",
+    "overview": "In Ancient Polynesia, when a terrible curse incurred by Maui reaches an impetuous Chieftain\u0027s daughter\u0027s island, she answers the Ocean\u0027s call to seek out the demigod to set things right.",
+    "tagline": "The ocean is calling.",
+    "runtime": 107,
+    "release_date": "2016-10-13",
+    "vote_average": 7.565,
+    "poster_path": "/m5MDZOIFEFlxGiLuAzWzFSsWcye.jpg",
+    "backdrop_path": "/qLVNZFHYUR6Li64He67SWl6BHQe.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1241984,
+      "name": "Moana Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Auli\u02BBi Cravalho",
+      "character": "Moana (voice)",
+      "profile_path": "/vEroqcnM2g6yY7qXDAie7hx2Cyp.jpg"
+    },
+    {
+      "name": "Dwayne Johnson",
+      "character": "Maui (voice)",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Rachel House",
+      "character": "Gramma Tala (voice)",
+      "profile_path": "/2LCQF7Bn0I91o17GGkox0ZhhbE7.jpg"
+    },
+    {
+      "name": "Temuera Morrison",
+      "character": "Chief Tui (voice)",
+      "profile_path": "/qGGYYjLMfuWmywgVixsu88PIbJn.jpg"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Emissary",
+        "overview": "Stardate: 46379.1.  Commander Benjamin Sisko and a new crew of Starfleet and Bajoran officers take command of an abandoned Cardassian space station and make an incredible discovery that will change the galaxy and Sisko\u0027s future.\n\nA new crew is assigned to a former Cardassian space station: Deep Space Nine. It is a joint Federation/Bajoran force, with Commander Sisko in charge, but his life is dramatically changed when he is declared the Emissary to the Prophets by a Bajoran priest.",
+        "air_date": "1993-01-03",
+        "runtime": 90,
+        "still_path": "/hk25csniZk7ROMSP2JtWyCRcbVu.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Past Prologue",
+        "overview": "Stardate: Unknown.  Kira finds her loyalties divided when a Bajoran extremist wanted by the Cardassians comes to the station with questionable intentions.",
+        "air_date": "1993-01-10",
+        "runtime": 45,
+        "still_path": "/sA5UPqDByqxbgXNBtTmMPQnGk1X.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "A Man Alone",
+        "overview": "Stardate: 46421.5.  When the return of a man Odo sent to prison years earlier leads to his murder aboard the station, Odo becomes the prime suspect and a target for harassment.",
+        "air_date": "1993-01-17",
+        "runtime": 45,
+        "still_path": "/9dJiQ6Z5LWsbeHCEZ5tf3P278Zd.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Babel",
+        "overview": "Stardate: 46423.7.  A deadly virus created by the Bajorans 18 years earlier inadvertently breaks loose aboard the station, and prompts a race against the clock to find a cure.",
+        "air_date": "1993-01-24",
+        "runtime": 45,
+        "still_path": "/6EgzraenXd92uCpvq0geqntgQmb.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Captive Pursuit",
+        "overview": "Stardate: Unknown.  When O\u0027Brien befriends the station\u0027s first visitor from the Gamma Quadrant, he learns that the mysterious alien is on the run from determined pursuers.",
+        "air_date": "1993-01-31",
+        "runtime": 45,
+        "still_path": "/3gwSLCGIIDJbluuTmLSYBsU7i5v.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Q-Less",
+        "overview": "Stardate: 46531.2.  Vash arrives from the Gamma Quadrant as Q plagues the station and an unknown force threatens to destroy it.",
+        "air_date": "1993-02-07",
+        "runtime": 45,
+        "still_path": "/dW06k7yyZwqz0uEexasvV4oMVOI.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Dax",
+        "overview": "Stardate: 46910.1.  Jadzia Dax is charged with a murder that her symbiont\u0027s previous host Curzon allegedly committed. Now an extradition hearing may decide whether Jadzia can be held responsible for the actions of a previous life.",
+        "air_date": "1993-02-14",
+        "runtime": 45,
+        "still_path": "/aFA4xwLyUmXO4HjxnyOXrzisOoX.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Passenger",
+        "overview": "Stardate: Unknown.  A dangerous killer dies in an apparent accident, but the security officer providing his transport to prison believes the criminal\u0027s consciousness may have yet survived.",
+        "air_date": "1993-02-21",
+        "runtime": 45,
+        "still_path": "/o0rkc2FS6hcm2ZnTSdNPO22cmFv.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Move Along Home",
+        "overview": "The Wadi from the Gamma Quadrant are to make first contact and decide to visit DS9. When they catch Quark cheating they let him off by playing a special game.",
+        "air_date": "1993-03-14",
+        "runtime": 45,
+        "still_path": "/xZzhrOZ8086f3fCKh4bjQylddbl.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Nagus",
+        "overview": "Stardate: Unknown.  Grand Nagus Zek, the leader of Ferengi society, comes to DS9 to oversee the introduction of a Ferengi business presence in the Gamma Quadrant and announce Quark as his successor.",
+        "air_date": "1993-03-21",
+        "runtime": 45,
+        "still_path": "/iWALHJvM8PLkOjkzv4DK8SCB6zK.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Vortex",
+        "overview": "Stardate: Unknown.  A wanted man from the Gamma Quadrant with questionable motives reveals to Odo stories about other \u0022Changelings,\u0022 which may hold clues to Odo\u0027s mysterious origin.",
+        "air_date": "1993-04-18",
+        "runtime": 45,
+        "still_path": "/8lBkSOW0eySJQ1TW21jDv6D4or3.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Battle Lines",
+        "overview": "Stardate: Unknown.  Sisko, Kira, and Bashir take Kai Opaka through the wormhole for a brief excursion in the Gamma Quadrant. But when they crash-land on a desolate planet, they find a divided, warring penal colony where no one ever dies.",
+        "air_date": "1993-04-25",
+        "runtime": 45,
+        "still_path": "/tF7roCnfMbl4kvESW4ozdLc7dR.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Storyteller",
+        "overview": "Stardate: 46729.1.  When O\u0027Brien and Bashir beam down to a Bajoran village, the community selects O\u0027Brien as their next Sirah - expecting him to save them from a menacing entity.",
+        "air_date": "1993-05-02",
+        "runtime": 45,
+        "still_path": "/yR9MDiXaTfd05epSeobZhkrG9GC.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Progress",
+        "overview": "Stardate: 46844.3.  Kira finds herself in a difficult moral situation when her job demands she force an adamant Bajoran man from his home in the name of progress.",
+        "air_date": "1993-05-09",
+        "runtime": 45,
+        "still_path": "/z3CQXUr2ThnNFGqyO77bJGJjeov.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "If Wishes Were Horses",
+        "overview": "Stardate: 46853.2.  The DS9 crew\u0027s own imaginations cause mysterious beings with unknown intentions to appear on the station.",
+        "air_date": "1993-05-16",
+        "runtime": 45,
+        "still_path": "/1tbQDLBrMm2ZKUhQz6r0D2yfMkM.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Forsaken",
+        "overview": "Stardate: 46925.1.  Odo and Lwaxanna Troi come to a mutual understanding when a computer malfunction causes them to become trapped in a turbolift.",
+        "air_date": "1993-05-23",
+        "runtime": 45,
+        "still_path": "/nWa5IcNz26LHbXUQPkcrleuTtqg.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Dramatis Personae",
+        "overview": "Stardate: 46922.3.  An alien \u0022telepathic matrix\u0022 causes the DS9 crew to re-enact an ancient power struggle, leading Kira to attempt mutiny and overthrow Sisko.",
+        "air_date": "1993-05-30",
+        "runtime": 45,
+        "still_path": "/hYw540bz9NhVUTAr0Pkf6vU1DpG.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Duet",
+        "overview": "A Cardassian suffering from Kalla-Nohra, a disease that indicates he served in a labor camp, visits DS9. Kira is determined to convict him as a war criminal.",
+        "air_date": "1993-06-13",
+        "runtime": 45,
+        "still_path": "/uPtxEtR8AzrvxImfYqCNNYqDhRU.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "In the Hands of the Prophets",
+        "overview": "Stardate: Unknown.  The Federation and Bajoran people of DS9 fall into conflict when a Bajoran religious extremist comes to the station and challenges the secular teachings of Keiko O\u0027Brien\u0027s school.",
+        "air_date": "1993-06-20",
+        "runtime": 43,
+        "still_path": "/6D48CO6Bpm7WpFcXUdeINgXz5kk.jpg"
+      }
+    ]
+  }
+}

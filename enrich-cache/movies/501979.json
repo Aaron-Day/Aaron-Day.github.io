@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 501979,
+    "title": "Bill \u0026 Ted Face the Music",
+    "overview": "Yet to fulfill their rock and roll destiny, the stakes are higher than ever for the now middle-aged Bill and Ted who set out on a new adventure when a visitor from the future warns them that only their song can save life as we know it.",
+    "tagline": "The future awaits.",
+    "runtime": 92,
+    "release_date": "2020-08-27",
+    "vote_average": 5.9,
+    "poster_path": "/4V2nTPfeB59TcqJcUfQ9ziTi7VN.jpg",
+    "backdrop_path": "/ceVaixg5VUfx8j0N81FT0hRayRm.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91746,
+      "name": "Bill \u0026 Ted Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Ted",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Alex Winter",
+      "character": "Bill",
+      "profile_path": "/7wPi7qrHrsqy1VJ2wQTatIwKjHH.jpg"
+    },
+    {
+      "name": "Kristen Schaal",
+      "character": "Kelly",
+      "profile_path": "/s3LSHVTx8gxHP2twYsXEGa8JbLl.jpg"
+    },
+    {
+      "name": "Samara Weaving",
+      "character": "Thea",
+      "profile_path": "/ngVKl0sxrut5PPMAIDsfXrVjA1R.jpg"
+    }
+  ]
+}

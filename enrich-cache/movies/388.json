@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 388,
+    "title": "Inside Man",
+    "overview": "When an armed, masked gang enter a Manhattan bank, lock the doors and take hostages, the detective assigned to effect their release enters negotiations preoccupied with corruption charges he is facing.",
+    "tagline": "It looked like the perfect bank robbery. But you can\u2019t judge a crime by its cover.",
+    "runtime": 129,
+    "release_date": "2006-03-17",
+    "vote_average": 7.409,
+    "poster_path": "/ffMUgkDZICNiyaws1Jkv8qG8uFW.jpg",
+    "backdrop_path": "/tOkSenL74N23O4S7wjJSUHz7Aeh.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 631194,
+      "name": "Inside Man Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "Keith Frazier",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Clive Owen",
+      "character": "Dalton Russell",
+      "profile_path": "/xlWpuLgwxMnZEVgV9OID1TkUNtP.jpg"
+    },
+    {
+      "name": "Jodie Foster",
+      "character": "Madeleine White",
+      "profile_path": "/5emVgsLFlU6SmeBIFsF2Y7aqwtG.jpg"
+    },
+    {
+      "name": "Christopher Plummer",
+      "character": "Arthur Case",
+      "profile_path": "/u0YBwss0ebEUp8sjRtQKnK2wZdR.jpg"
+    }
+  ]
+}

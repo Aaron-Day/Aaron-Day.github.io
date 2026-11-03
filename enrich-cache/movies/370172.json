@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 370172,
+    "title": "No Time to Die",
+    "overview": "Bond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
+    "tagline": "The mission that changes everything begins\u2026",
+    "runtime": 163,
+    "release_date": "2021-09-29",
+    "vote_average": 7.338,
+    "poster_path": "/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg",
+    "backdrop_path": "/x9td0NQha0t44K2qgcMipLOGjVi.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Craig",
+      "character": "James Bond",
+      "profile_path": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
+    },
+    {
+      "name": "L\u00E9a Seydoux",
+      "character": "Madeleine",
+      "profile_path": "/4q6xqqWLLleQrFjeqeYYV8B0fwE.jpg"
+    },
+    {
+      "name": "Rami Malek",
+      "character": "Lyutsifer Safin",
+      "profile_path": "/8ykTeTRSYd2MKF5uLBvD93X5KMJ.jpg"
+    },
+    {
+      "name": "Lashana Lynch",
+      "character": "Nomi",
+      "profile_path": "/ypNxRag9uJ5nzPAN2um3amQK340.jpg"
+    }
+  ]
+}

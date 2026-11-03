@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 305470,
+    "title": "Power Rangers",
+    "overview": "Five ordinary teens must become something extraordinary when they learn that their small town of Angel Grove \u2014 and the world \u2014 is on the verge of being obliterated by an alien threat. Chosen by destiny, our heroes quickly discover they are the only ones who can save the planet. But to do so, they will have to overcome their real-life issues and before it\u2019s too late, band together as the Power Rangers.",
+    "tagline": "Together we are more.",
+    "runtime": 124,
+    "release_date": "2017-03-23",
+    "vote_average": 6.238,
+    "poster_path": "/bKYKyyIv5YnisxjZtDreWtYA386.jpg",
+    "backdrop_path": "/z6UzOfIURK7n5MthpcYpFnqMNc0.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dacre Montgomery",
+      "character": "Jason (Red Ranger)",
+      "profile_path": "/v5zhoNq2RgnUEtSLAFLOPLTJWCT.jpg"
+    },
+    {
+      "name": "RJ Cyler",
+      "character": "Billy (Blue Ranger)",
+      "profile_path": "/9baPsx4DJn2vy7AOfcfEe6IH5JN.jpg"
+    },
+    {
+      "name": "Ludi Lin",
+      "character": "Zack (Black Ranger)",
+      "profile_path": "/9Ila4K8POeuVWRO9hzyekFjvCDk.jpg"
+    },
+    {
+      "name": "Naomi Scott",
+      "character": "Kimberly (Pink Ranger)",
+      "profile_path": "/knSGMaEaH6CZaYw7GQpvxyJcsz7.jpg"
+    }
+  ]
+}

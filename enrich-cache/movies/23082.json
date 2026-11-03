@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 23082,
+    "title": "The Invention of Lying",
+    "overview": "Set in a world where the concept of lying doesn\u0027t exist, a loser changes his lot when he invents lying and uses it to get ahead.",
+    "tagline": "In a world where everyone can only tell the truth... This guy can lie.",
+    "runtime": 100,
+    "release_date": "2009-10-02",
+    "vote_average": 6.217,
+    "poster_path": "/clP8tDZeM9jgnqmu4VBClBDpLtS.jpg",
+    "backdrop_path": "/8ZlxM5IYLtg2KnRl1IoS83mlxt0.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ricky Gervais",
+      "character": "Mark Bellison",
+      "profile_path": "/z293wonhuF0aYQtg1ROOSl1LObf.jpg"
+    },
+    {
+      "name": "Jennifer Garner",
+      "character": "Anna McDoogles",
+      "profile_path": "/eiX083VOa0RCGSgwENZgVi5MgDi.jpg"
+    },
+    {
+      "name": "Louis C.K.",
+      "character": "Greg Kleinschmidt",
+      "profile_path": "/1ii770zdeX62UFGawTmNr2vddYb.jpg"
+    },
+    {
+      "name": "Rob Lowe",
+      "character": "Brad Kessler",
+      "profile_path": "/uY0u865QqHqT0YBtwdBXFfVI6Hr.jpg"
+    }
+  ]
+}

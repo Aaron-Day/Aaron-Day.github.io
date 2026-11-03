@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9595,
+    "title": "Hot Shots!",
+    "overview": "The gang that created Airplane! and The Naked Gun sets its sights on Top Gun in this spoof. Topper Harley is a talented but unstable fighter pilot with an axe to grind: clearing the family name. His mission is to avenge his father and save a mission sabotaged by greedy weapons manufacturers. He also gets involved in a relationship with Ramada Thompson, a woman with an unusually talented stomach. Hot Shots! makes fun of a variety of other films, from Dances with Wolves to The Fabulous Baker Boys.",
+    "tagline": "The mother of all movies.",
+    "runtime": 85,
+    "release_date": "1991-07-31",
+    "vote_average": 6.584,
+    "poster_path": "/koLIB5263emHxewmwgBBK26vjeS.jpg",
+    "backdrop_path": "/4RriqSJFCQkYpRhxFnQGh3sxZYY.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 52988,
+      "name": "Hot Shots! Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Charlie Sheen",
+      "character": "Topper Harley / Rhett Butler / Superman",
+      "profile_path": "/48GB5aISoibd9IYXBO40jrSgFRl.jpg"
+    },
+    {
+      "name": "Cary Elwes",
+      "character": "Kent Gregory",
+      "profile_path": "/9UszBdQJ9PmyBydIeIBxlStozhW.jpg"
+    },
+    {
+      "name": "Valeria Golino",
+      "character": "Ramada Thompson / Scarlett O\u0027Hara / Lois Lane",
+      "profile_path": "/bLw0lNPEhICtbTLtnTswamefN7C.jpg"
+    },
+    {
+      "name": "Lloyd Bridges",
+      "character": "Admiral Benson",
+      "profile_path": "/lO4HWxYvneC0dMFckK2WrKPZa9o.jpg"
+    }
+  ]
+}

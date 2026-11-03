@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 78,
+    "title": "Blade Runner",
+    "overview": "In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way to extend their short life spans.",
+    "tagline": "Man has made his match ...now it\u0027s his problem.",
+    "runtime": 118,
+    "release_date": "1982-06-25",
+    "vote_average": 7.936,
+    "poster_path": "/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg",
+    "backdrop_path": "/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 422837,
+      "name": "Blade Runner Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "Deckard",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Rutger Hauer",
+      "character": "Batty",
+      "profile_path": "/xyag0LbjocTwx2Ht7B3RofvCNMT.jpg"
+    },
+    {
+      "name": "Sean Young",
+      "character": "Rachael",
+      "profile_path": "/yfJADYt6xYPpg1g7Z7TTW0bcL2s.jpg"
+    },
+    {
+      "name": "Edward James Olmos",
+      "character": "Gaff",
+      "profile_path": "/yleTij2PUEgaMLw8xYbLAt7UqIo.jpg"
+    }
+  ]
+}

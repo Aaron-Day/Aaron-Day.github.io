@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 15653,
+    "title": "An Extremely Goofy Movie",
+    "overview": "It\u0027s all extreme sports and a life of freedom as Max sets off for college -- but Goofy misses Max so much he loses his job and goes to finish college alongside Max and his friends. But as Goofy tries to get closer to Max, both must go to the extreme to learn how to live their own lives together.",
+    "tagline": "Shredding onto video. Leap day 2000.",
+    "runtime": 79,
+    "release_date": "2000-02-29",
+    "vote_average": 6.464,
+    "poster_path": "/qr5Q3S7HC16XHQBqE4ZsJJvgUDU.jpg",
+    "backdrop_path": "/2XoHSRRhwSdv42suJMJBgEyWy5b.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 410261,
+      "name": "A Goofy Movie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bill Farmer",
+      "character": "Goofy (voice)",
+      "profile_path": "/lhezx68R12s5Bsv7d77BrQb7tWA.jpg"
+    },
+    {
+      "name": "Jason Marsden",
+      "character": "Max (voice)",
+      "profile_path": "/53aVh2ka0b4ZyR8dO8hBTQxQ9hc.jpg"
+    },
+    {
+      "name": "Jeff Bennett",
+      "character": "Bradley Uppercrust / Unemployment Lady / Chuck  (voice)",
+      "profile_path": "/6Fq3Q1e0Oz0j2J2fnFSl7fKCHd9.jpg"
+    },
+    {
+      "name": "Jim Cummings",
+      "character": "Pete (voice)",
+      "profile_path": "/c0sQPRCM5Ri3F4gVyxPr4AcPmIq.jpg"
+    }
+  ]
+}

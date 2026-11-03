@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10684,
+    "title": "Courage Under Fire",
+    "overview": "A US Army officer, who made a \u0022friendly fire\u0022 mistake that was covered up, has been reassigned to a desk job. He is tasked to investigate a female chopper commander\u0027s worthiness to be awarded the Medal of Honor. At first all seems in order. But then he begins to notice inconsistencies between the testimonies of the witnesses...",
+    "tagline": "A medal for honor. A search for justice. A battle for truth.",
+    "runtime": 116,
+    "release_date": "1996-07-04",
+    "vote_average": 6.56,
+    "poster_path": "/vDJurMJkrx049AiXa3DJx5Zx7a4.jpg",
+    "backdrop_path": "/sWaKmnieGBGSrstaPLopH4m1A3K.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "Lieutenant Colonel Nathaniel Serling",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Meg Ryan",
+      "character": "Captain Karen Emma Walden",
+      "profile_path": "/pxfTSfJ4yJWq52uomSWKzigngOa.jpg"
+    },
+    {
+      "name": "Lou Diamond Phillips",
+      "character": "Staff Sergeant John Monfriez",
+      "profile_path": "/yqGZwaGe8XgoxfO7zmx7weGBaXZ.jpg"
+    },
+    {
+      "name": "Michael Moriarty",
+      "character": "Brigadier General Hershberg",
+      "profile_path": "/2EY162LDxpVVG6g10lm70uxkNJp.jpg"
+    }
+  ]
+}

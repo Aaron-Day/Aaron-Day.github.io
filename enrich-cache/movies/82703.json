@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 82703,
+    "title": "Mr. Peabody \u0026 Sherman",
+    "overview": "A young boy and his dog, who happens to have a genius-level IQ, spring into action when their time-machine is stolen and moments in history begin to be changed.",
+    "tagline": "History is catching up with them.",
+    "runtime": 92,
+    "release_date": "2014-02-07",
+    "vote_average": 6.746,
+    "poster_path": "/hPcImYndWESKHzT2GHVCDsUxzYg.jpg",
+    "backdrop_path": "/bJKoNFCLC0C3viZtsvP4lSDDXNO.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ty Burrell",
+      "character": "Mr. Peabody (voice)",
+      "profile_path": "/4dwlnG1dcEPAf2cjNsYbYJn5E8Y.jpg"
+    },
+    {
+      "name": "Max Charles",
+      "character": "Sherman (voice)",
+      "profile_path": "/wVnQgfJ1M7gfJhRSFrAfKZwxNip.jpg"
+    },
+    {
+      "name": "Ariel Winter",
+      "character": "Penny Peterson (voice)",
+      "profile_path": "/1h0XaXnieP5CdTAeRGuALBJmD4R.jpg"
+    },
+    {
+      "name": "Allison Janney",
+      "character": "Ms. Grunion (voice)",
+      "profile_path": "/AnpevvFjyFPRL3vDGo7o1Woina1.jpg"
+    }
+  ]
+}

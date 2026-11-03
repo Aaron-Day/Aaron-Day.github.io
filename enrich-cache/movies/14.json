@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 14,
+    "title": "American Beauty",
+    "overview": "Lester Burnham, a depressed suburban father in a mid-life crisis, decides to turn his hectic life around after developing an infatuation with his daughter\u0027s attractive friend.",
+    "tagline": "... look closer",
+    "runtime": 122,
+    "release_date": "1999-09-15",
+    "vote_average": 7.998,
+    "poster_path": "/wby9315QzVKdW9BonAefg8jGTTb.jpg",
+    "backdrop_path": "/2ndw55F40IkALzWyjCCza3M6nqM.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kevin Spacey",
+      "character": "Lester Burnham",
+      "profile_path": "/nPrUZDEbGQe6jwpVbHKJCXsMd7r.jpg"
+    },
+    {
+      "name": "Annette Bening",
+      "character": "Carolyn Burnham",
+      "profile_path": "/kGslMAWcpv8MKzODhDRDkFE0uX7.jpg"
+    },
+    {
+      "name": "Thora Birch",
+      "character": "Jane Burnham",
+      "profile_path": "/xJ6Bb3C8f0ior5LlWdNzxlb8cgV.jpg"
+    },
+    {
+      "name": "Wes Bentley",
+      "character": "Ricky Fitts",
+      "profile_path": "/voD93lzFZrr9xfAggwFcPRBi84i.jpg"
+    }
+  ]
+}

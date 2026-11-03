@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1367,
+    "title": "Rocky II",
+    "overview": "After Rocky goes the distance with champ Apollo Creed, both try to put the fight behind them and move on. Rocky settles down with Adrian but can\u0027t put his life together outside the ring, while Creed seeks a rematch to restore his reputation. Soon enough, the \u0022Master of Disaster\u0022 and the \u0022Italian Stallion\u0022 are set on a collision course for a climactic battle that is brutal and unforgettable.",
+    "tagline": "Once he fought for a dream. Now he\u0027s fighting for love!",
+    "runtime": 119,
+    "release_date": "1979-06-15",
+    "vote_average": 7.297,
+    "poster_path": "/nMaiiu0CzT77U4JZkUYV7KqdAjK.jpg",
+    "backdrop_path": "/78jvhi792WFjk1zSwqpfDOudO78.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1575,
+      "name": "Rocky Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Robert \u0027Rocky\u0027 Balboa",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Talia Shire",
+      "character": "Adrianna \u0027Adrian\u0027 Balboa",
+      "profile_path": "/oktJmlLeyYKBCWPNjHskDwAfjct.jpg"
+    },
+    {
+      "name": "Burt Young",
+      "character": "Paulie Pennino",
+      "profile_path": "/6QWnsSbjYog0D6hkPhg7Frty54D.jpg"
+    },
+    {
+      "name": "Carl Weathers",
+      "character": "Apollo Creed",
+      "profile_path": "/oUwtC5hEbcIZv53WPerZ9HhlSJR.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 295693,
+    "title": "The Boss Baby",
+    "overview": "A story about how a new baby\u0027s arrival impacts a family, told from the point of view of a delightfully unreliable narrator, a wildly imaginative 7 year old named Tim.",
+    "tagline": "Born leader.",
+    "runtime": 97,
+    "release_date": "2017-03-23",
+    "vote_average": 6.45,
+    "poster_path": "/9MsQJKe4cUAGxc7R2NGaFQLqOPc.jpg",
+    "backdrop_path": "/8280R0bDR1FusPyThAOmAcSC4nu.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 519457,
+      "name": "The Boss Baby Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Miles Bakshi",
+      "character": "Tim (voice)",
+      "profile_path": "/writlmLfEtdqhRwCuwMbmDi6qWu.jpg"
+    },
+    {
+      "name": "Alec Baldwin",
+      "character": "Boss Baby (voice)",
+      "profile_path": "/hzKy7x574eeUS3wt1R3yvWBRpeR.jpg"
+    },
+    {
+      "name": "Jimmy Kimmel",
+      "character": "Dad (voice)",
+      "profile_path": "/nBe0ByVL5hpPUby6rlU6DELgJ8Z.jpg"
+    },
+    {
+      "name": "Lisa Kudrow",
+      "character": "Mom (voice)",
+      "profile_path": "/ziatnwJRiBJIcc8jlk6xoClhfOy.jpg"
+    }
+  ]
+}

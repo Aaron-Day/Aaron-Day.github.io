@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Star Gazer",
+        "overview": "Starfleet must once again call on legendary Jean-Luc Picard after members of his former crew \u2013 Crist\u00F3bal Rios, Seven of Nine, Raffi Musiker, and Dr. Agnes Jurati \u2013 discover an anomaly in space that threatens the galaxy.",
+        "air_date": "2022-03-03",
+        "runtime": 56,
+        "still_path": "/5cYyAtHU2b8Q1sFBHmrShq2Kt7r.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Penance",
+        "overview": "Picard finds himself transported to an alternate timeline in the year 2400 where his longtime nemesis, Q, has orchestrated one final \u201Ctrial.\u201D Picard searches for his trusted crew as he attempts to find the cause of this dystopian future.",
+        "air_date": "2022-03-10",
+        "runtime": 55,
+        "still_path": "/57yHV15XvSjG4S4l0p8rAcUJDvf.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Assimilation",
+        "overview": "Picard and the crew travel back to 2024 Los Angeles in search of the \u201CWatcher,\u201D who can help them identify the point at which time diverged. Seven, Raffi and Rios venture out into an unfamiliar world 400 years in their past, while Picard and Jurati attempt to gather information from an unlikely, and dangerous, ally.",
+        "air_date": "2022-03-17",
+        "runtime": 48,
+        "still_path": "/ltgEjwQgBw8z74YuzYRtkqPas2X.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Watcher",
+        "overview": "With time running out to save the future, Picard takes matters into his own hands and seeks out an old friend for help. Meanwhile, Rios ends up on the wrong side of the law and Jurati makes a deal with the Borg Queen.",
+        "air_date": "2022-03-24",
+        "runtime": 46,
+        "still_path": "/qpZkqzieMpj4V9jBBEAL6n8eo1r.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Fly Me to the Moon",
+        "overview": "Picard discovers an important person from his past may be integral to the divergence in the timeline. Q continues his manipulation of the timeline, taking an interest in Dr. Adam Soong. Seven and Raffi attempt a daring rescue of Rios, while Jurati faces the consequences of her deal with the Borg Queen.",
+        "air_date": "2022-03-31",
+        "runtime": 42,
+        "still_path": "/zKhTKB2DmyblTQSV2xPzkCGnf7j.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Two of One",
+        "overview": "With the help of Tallinn, Picard and the crew infiltrate a gala on the eve of a joint space mission, to protect one of the astronauts they believe to be integral to the restoration of the timeline \u2013 Renee Picard. Kore makes a startling discovery about her father\u2019s work.",
+        "air_date": "2022-04-07",
+        "runtime": 39,
+        "still_path": "/4QLGsKNNtbseXZ2L8LekmUr3e3w.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Monsters",
+        "overview": "Tallinn ventures inside Picard\u2019s subconscious mind to help wake him from a coma and face both his darkest secrets and deepest fears. Seven and Raffi go in search of Jurati whom they fear has succumbed to the monster inside. Rios struggles to hide the truth of who he really is from Teresa.",
+        "air_date": "2022-04-14",
+        "runtime": 47,
+        "still_path": "/dpzzgoaZZiuqqXvqIKufKna0n4j.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Mercy",
+        "overview": "With time running out before the launch of the Europa Mission, Picard and Guinan must free themselves from FBI custody. Seven and Raffi come face-to-face with Jurati and the horror of what she\u0027s become.",
+        "air_date": "2022-04-21",
+        "runtime": 49,
+        "still_path": "/rTHm0e67rRREIQ0pPiqWNHOBJbU.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Hide and Seek",
+        "overview": "Picard and his crew fight for their lives as they come under attack from a new incarnation of an old enemy. But to survive, Picard must first face the ghosts of his past. Seven and Raffi have a final showdown with Jurati.",
+        "air_date": "2022-04-28",
+        "runtime": 50,
+        "still_path": "/bPlCGYO9qBkEEKilUodbXw4ehOu.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Farewell",
+        "overview": "With just hours until the Europa launch, Picard and the crew find themselves in a race against time to save the future.",
+        "air_date": "2022-05-05",
+        "runtime": 49,
+        "still_path": "/gCcEaWxnvTsHvAqHqbIBz2uyHT9.jpg"
+      }
+    ]
+  }
+}

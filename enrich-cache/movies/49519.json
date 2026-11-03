@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 49519,
+    "title": "The Croods",
+    "overview": "The prehistoric Croods family live in a particularly dangerous moment in time. Patriarch Grug, his mate Ugga, teenage daughter Eep, son Thunk, and feisty Gran gather food by day and huddle together in a cave at night. When a more evolved caveman named Guy arrives on the scene, Grug is distrustful, but it soon becomes apparent that Guy is correct about the impending destruction of their world.",
+    "tagline": "The journey begins.",
+    "runtime": 99,
+    "release_date": "2013-03-15",
+    "vote_average": 6.951,
+    "poster_path": "/27zvjVOtOi5ped1HSlJKNsKXkFH.jpg",
+    "backdrop_path": "/wFN8llYh215M8i2fqWAcPV8CSyL.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 464577,
+      "name": "The Croods Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Nicolas Cage",
+      "character": "Grug (voice)",
+      "profile_path": "/y1RtezurZYveYkVNRht7CwEgSYY.jpg"
+    },
+    {
+      "name": "Emma Stone",
+      "character": "Eep (voice)",
+      "profile_path": "/ak2Y9wOI3wi2pNQU6OWSvVvWPj5.jpg"
+    },
+    {
+      "name": "Ryan Reynolds",
+      "character": "Guy (voice)",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Catherine Keener",
+      "character": "Ugga (voice)",
+      "profile_path": "/n4CTwGszs6cwS1wJRlDQ5Mlh7Ex.jpg"
+    }
+  ]
+}

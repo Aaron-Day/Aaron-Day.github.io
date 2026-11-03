@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8845,
+    "title": "Under Siege",
+    "overview": "A disgruntled ex-CIA operative, his assistant and their assembled group of terrorists seize a battleship with nuclear blackmail in mind. They\u0027ve planned for every contingency but ignore the ship\u0027s cook, former Navy SEAL Casey Ryback\u2014an error that could be fatal.",
+    "tagline": "In 1992 a battleship\u0027s been sabotaged by nuclear pirates out to steal its warheads. Now, surrounded by terrorists, a lone man stands with a deadly plan of attack.",
+    "runtime": 102,
+    "release_date": "1992-10-08",
+    "vote_average": 6.303,
+    "poster_path": "/7tzVzgGKhLsQoiyDh2tiGcPeTpH.jpg",
+    "backdrop_path": "/ihBDaN7OwT7D9DVri8SmxCnuRLB.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 112399,
+      "name": "Under Siege Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steven Seagal",
+      "character": "Casey Ryback",
+      "profile_path": "/fGNIEpn3JqOckY3ahnJX9x3qA94.jpg"
+    },
+    {
+      "name": "Tommy Lee Jones",
+      "character": "William Strannix",
+      "profile_path": "/mCiZNRAzbnPojJEZwVZWLw9kzxR.jpg"
+    },
+    {
+      "name": "Gary Busey",
+      "character": "Commander Krill",
+      "profile_path": "/8H7Hlv6b7ZoK4jZKeLnc2i4pfPL.jpg"
+    },
+    {
+      "name": "Erika Eleniak",
+      "character": "Jordan Tate",
+      "profile_path": "/lu9RKtMCHRZIzLJzWieiku0LSYU.jpg"
+    }
+  ]
+}

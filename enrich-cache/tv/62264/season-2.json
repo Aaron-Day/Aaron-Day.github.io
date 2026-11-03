@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Home",
+        "overview": "Ash, Pablo and Kelly, summoned back to Ash\u0027s hometown by Ruby, form an unusual alliance. Once there, Ash\u0027s father and the local pub dwellers give the returning son a chilly reception.",
+        "air_date": "2016-10-02",
+        "runtime": 34,
+        "still_path": "/vREjbRFJf5qx3bUKb9uewi377nm.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Morgue",
+        "overview": "Pablo\u0027s grasp on reality is tested when Ruby reveals the Necronomicon has gifted him with premonitions. Meanwhile, in the morgue, Ash and Kelly discover Brock\u0027s date might not be the warm body he\u0027s banking on.",
+        "air_date": "2016-10-09",
+        "runtime": 27,
+        "still_path": "/2xnQLwOESCutqyPcQ19Bcl3uW0i.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Last Call",
+        "overview": "Local teens raise hell when they steal the Delta from Brock\u0027s house. Ash and his best buddy Chet devise a plan to throw a party at the bar, lure the thieves in, and get the Delta and the Necronomicon back .",
+        "air_date": "2016-10-16",
+        "runtime": 30,
+        "still_path": "/mR0sHllcXWrCaMCj1rpjZG2VuCL.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "DUI",
+        "overview": "Ash goes on the hunt for his beloved Delta, but suddenly becomes the hunted. Meanwhile, Ruby and Kelly engage in a battle with the evil spawn while Pablo suffers from a new Necronomicon condition.",
+        "air_date": "2016-10-23",
+        "runtime": 28,
+        "still_path": "/4pvZQhr2xtOVNKdWjCh2kUQTkDZ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Confinement",
+        "overview": "Ruby, Kelly and Pablo must break Ash out of jail after the Sheriff brings him up on charges.",
+        "air_date": "2016-10-30",
+        "runtime": 28,
+        "still_path": "/63QLZmCi6lZvfQt2aHVxEmd5cY1.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Trapped Inside",
+        "overview": "An angry mob corners Ash and the team in Brock\u0027s house while Ruby attempts to summon the spell to send Baal back to hell; Ash proves to the townsfolk that he is not a murderer, but a hero.",
+        "air_date": "2016-11-06",
+        "runtime": 29,
+        "still_path": "/7yt9EEqzJJNv6iowgiQr9KRA1Ya.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Delusion",
+        "overview": "Ash wakes up in an asylum, and a seemingly helpful doctor tries desperately to get him to admit his horrific acts so his healing can begin.",
+        "air_date": "2016-11-13",
+        "runtime": 29,
+        "still_path": "/2HZpiFAK1yznmVkINm6oOtZiyU4.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Ashy Slashy",
+        "overview": "Ruby, Kelly and Pablo go to look for Ash and Baal in an abandoned asylum and encounter some crazy characters. They are all players in Baal\u0027s attempt to break Ash and find the Necronomicon. But did his plan work?",
+        "air_date": "2016-11-20",
+        "runtime": 28,
+        "still_path": "/9BIO2tsdrV5JJBOOpzncxvyXDvm.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Home Again",
+        "overview": "Ash, distraught about losing Pablo is determined to bring him back! Ruby and Kelly tag along to make sure Young Ash never sees the Necronomicon. But the butterfly effect they create is something no one can believe!",
+        "air_date": "2016-12-04",
+        "runtime": 28,
+        "still_path": "/uPgVizNFm4VJoo9fl2cHot5Who2.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Second Coming",
+        "overview": "Ash, Ruby and Kelly battle the past to secure a future where Pablo is alive and the world is safe from evil, but the family from hell has other plans.",
+        "air_date": "2016-12-11",
+        "runtime": 33,
+        "still_path": "/vzFox17tszap1dvxYAujZmqGjk.jpg"
+      }
+    ]
+  }
+}

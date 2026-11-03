@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10489,
+    "title": "Cujo",
+    "overview": "A friendly St. Bernard named \u0022Cujo\u0022 contracts rabies and conducts a reign of terror on a small American town.",
+    "tagline": "Now, there\u0027s a new name for terror.",
+    "runtime": 93,
+    "release_date": "1983-08-10",
+    "vote_average": 6.189,
+    "poster_path": "/uNBt2YxrQdyOjnm2rDQ5QiCmQ0K.jpg",
+    "backdrop_path": "/8MHv31RHBbyvBiC4AjJx6opebTm.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dee Wallace",
+      "character": "Donna Trenton",
+      "profile_path": "/gVnwovXGgGcny8LJ3w9j3I9xTE7.jpg"
+    },
+    {
+      "name": "Danny Pintauro",
+      "character": "Tad Trenton",
+      "profile_path": "/k3Bfzb3RCJTxkUi7cc8uM2qo32s.jpg"
+    },
+    {
+      "name": "Daniel Hugh Kelly",
+      "character": "Vic Trenton",
+      "profile_path": "/bueEXd57jY2PWZUC1nRRBmIE2Ou.jpg"
+    },
+    {
+      "name": "Christopher Stone",
+      "character": "Steve Kemp",
+      "profile_path": "/lADf31ArTbNXkbpfkPYs5imJmkX.jpg"
+    }
+  ]
+}

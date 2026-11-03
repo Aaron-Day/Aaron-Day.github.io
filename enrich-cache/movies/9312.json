@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9312,
+    "title": "Mortal Kombat",
+    "overview": "For nine generations an evil sorcerer has been victorious in hand-to-hand battle against his mortal enemies. If he wins a tenth Mortal Kombat tournament, desolation and evil will reign over the multiverse forever. To save Earth, three warriors must overcome seemingly insurmountable odds, their own inner demons, and superhuman foes.",
+    "tagline": "Nothing in this world has prepared you for this.",
+    "runtime": 101,
+    "release_date": "1995-08-18",
+    "vote_average": 5.915,
+    "poster_path": "/9YhpvhhvLrtL1wlwEfpVL16GI9d.jpg",
+    "backdrop_path": "/dfU9xyEEyLxvZ5unTn05Whm9Lce.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9818,
+      "name": "Mortal Kombat Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robin Shou",
+      "character": "Liu Kang",
+      "profile_path": "/cnL8HqBowYu9ssTkShDfEmxTgdZ.jpg"
+    },
+    {
+      "name": "Cary-Hiroyuki Tagawa",
+      "character": "Shang Tsung",
+      "profile_path": "/5F8MQ4J4qIqUwGIfcWN4osrTUtP.jpg"
+    },
+    {
+      "name": "Linden Ashby",
+      "character": "Johnny Cage",
+      "profile_path": "/l1Px1Nw9rMA2p3yBYj51JjOneQB.jpg"
+    },
+    {
+      "name": "Bridgette Wilson",
+      "character": "Sonya Blade",
+      "profile_path": "/cnupaYpuHkkXDEHgyd1CsWpTf84.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 68718,
+    "title": "Django Unchained",
+    "overview": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+    "tagline": "Life, liberty, and the pursuit of vengeance.",
+    "runtime": 165,
+    "release_date": "2012-12-25",
+    "vote_average": 8.194,
+    "poster_path": "/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
+    "backdrop_path": "/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jamie Foxx",
+      "character": "Django Freeman",
+      "profile_path": "/zD8Nsy4Xrghp7WunwpCj5JKBPeU.jpg"
+    },
+    {
+      "name": "Christoph Waltz",
+      "character": "Dr. King Schultz",
+      "profile_path": "/jMvLGCVXLaBqjRLf5olyvEucZob.jpg"
+    },
+    {
+      "name": "Leonardo DiCaprio",
+      "character": "Calvin J. Candie",
+      "profile_path": "/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
+    },
+    {
+      "name": "Kerry Washington",
+      "character": "Broomhilda von Shaft",
+      "profile_path": "/zgyjYlxmHG6Ntbg16JcTp8Vu8M3.jpg"
+    }
+  ]
+}

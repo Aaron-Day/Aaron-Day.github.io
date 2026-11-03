@@ -1,0 +1,224 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Higher Power",
+        "overview": "Walker must fight to protect the reincarnation of a Buddhist monk.",
+        "air_date": "1996-09-21",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 2,
+        "name": "Patriot",
+        "overview": "After the leader of a white-supremacist group is arrested, they retaliate by taking over a minority-owned television station.",
+        "air_date": "1996-09-28",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 3,
+        "name": "Ghost Rider",
+        "overview": "A dead child\u0027s spirit assists Walker to discover who murdered him eight years ago.",
+        "air_date": "1996-10-05",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 4,
+        "name": "The Brotherhood",
+        "overview": "Walker takes on a trio of Vigilante Cops,who decided to take the law into their own hands.This is especially so,since these Killer Cops have executed a friend of Walkers,who was innocent of rape.",
+        "air_date": "1996-10-12",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 5,
+        "name": "Plague",
+        "overview": "A Cherokee reservation\u0027s inhabitants are in danger from risky, experimental practices at a nearby dairy farm.",
+        "air_date": "1996-10-19",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 6,
+        "name": "Redemption",
+        "overview": "Alex\u0027s estranged father is hired to represent a crime figure in a trial she is prosecuting.",
+        "air_date": "1996-10-26",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 7,
+        "name": "Codename: Dragonfly",
+        "overview": "A military helicopter with stealth capabilities has been stolen to be utilized by a drug cartel. The thief turns out to be an ex-Marine and old comrade of Walker\u0027s who left him for dead in Vietnam.",
+        "air_date": "1996-11-02",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 8,
+        "name": "A Silent Cry",
+        "overview": "Walker searches Dallas nightclubs to seek out who raped a friend\u0027s daughter with the help of a mickey slipped in her drink.",
+        "air_date": "1996-11-09",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 9,
+        "name": "Swan Song",
+        "overview": "Walker and Cahill head to the mountains of Utah to track down the crashed remains of a plane that was used during a daring bank robbery in 1988\u2014which resulted in the death of one of Walker\u0027s friends\u2014unawares a survior remains and has turned cannibal.",
+        "air_date": "1996-11-16",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 10,
+        "name": "Cyclone",
+        "overview": "As a cyclone approaches, kidnappers demand $10 million for a buried bus full of children.",
+        "air_date": "1996-11-23",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 11,
+        "name": "Lucky",
+        "overview": "A homeless man\u0027s dog helps Walker track down the source of an attack on a priest. Meanwhile, Alex and C.D. put on a charity Thanksgiving dinner.",
+        "air_date": "1996-11-30",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 12,
+        "name": "The Deadliest Man Alive",
+        "overview": "The world\u0027s most deadly assassin who has left a trail of blood in history (and may even be involved in the JFK assassination), The Viper, is in town. Walker is informed and recruited by Interpol Agent Draper who\u0027s hunting the Viper now for nearly 25 years. Since the killer is in town to carry out another assassination - the target could be the visiting Israeli Ambassador - it\u0027s up to Walker to find and eliminate the Viper before he hits once again.",
+        "air_date": "1996-12-14",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 13,
+        "name": "A Ranger\u0027s Christmas",
+        "overview": "Walker tells the story of the Old West\u0027s Hayes Cooper, a Scrooge-like Texas Ranger who finally learned to have Christmas spirit.",
+        "air_date": "1996-12-21",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 14,
+        "name": "Mayday",
+        "overview": "After surviving a plane crash that was supposed to kill him and an important witness, Walker must protect the witness from hit men coming to make sure they\u0027re dead.",
+        "air_date": "1997-01-11",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 15,
+        "name": "Last Hope",
+        "overview": "A troubled teen endangers everybody at Ranger Camp by stealing a money bag from drug dealers.",
+        "air_date": "1997-01-18",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 16,
+        "name": "Full Contact",
+        "overview": "Walker clears the name of a young martial artist framed for murder, then trains him for a kickboxing tournament championship.",
+        "air_date": "1997-02-01",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 17,
+        "name": "The 99th Ranger",
+        "overview": "An abused lady nearly quits becoming a Texas Ranger following threats from her ex-husband.",
+        "air_date": "1997-02-08",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 18,
+        "name": "Devil\u0027s Turf",
+        "overview": "When a mix of steroids and meth starts killing high schoolers, Walkers seeks the source of the deadly combination.",
+        "air_date": "1997-02-15",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 19,
+        "name": "Days Past",
+        "overview": "Vince Pike, the man who shot Walker\u0027s fiancee ten years earlier, manages to get an early release from prison. For Walker painful memories about the time with Ellen return. While he survived an attack by Pike\u0027s men back then, Ellen died. And now Walker seeks justice - and Pike a destroyed Walker when he wants to go after the persons in his life. First C.D., then Trivette, and finally Alex ...",
+        "air_date": "1997-02-22",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 20,
+        "name": "Trial of LaRue",
+        "overview": "Victor La Rue has been declared fit for trial. During the course of the hearing, La Rue manages to subdue the bailiffs and get their guns. He then demands that Walker come here but Walker is out chasing down some criminals. So while La Rue taunts Alex.",
+        "air_date": "1997-03-08",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 21,
+        "name": "Heart of the Dragon",
+        "overview": "Walker protects a young man who has a jade dragon that a Chinese gang believes has magical power.",
+        "air_date": "1997-04-05",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 22,
+        "name": "The Neighborhood",
+        "overview": "Walker helps a ten-year-old severely wounded in a drive-by to end violence in her community.",
+        "air_date": "1997-04-26",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 23,
+        "name": "A Father\u0027s Image",
+        "overview": "Ranger Hunt goes undercover to stop a crime boss from raising his ten-year-old son to take over the family business.",
+        "air_date": "1997-05-03",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 24,
+        "name": "Sons of Thunder (1)",
+        "overview": "Thunder Malloy, a preacher, who is a friend of Walker\u0027s dies and his wife and sons are left to fend for themselves. Trent, the eldest son, who is also a former student of Walker\u0027s, who years ago, had a disagreement with his father, when he chose to join the Army as oppose to following his father\u0027s footsteps, decides to leave the Army and come home to help his mother and siblings. Walker tries to get him to maybe be a cop but Trent does not want to carry a gun. For the moment he works as a security guard.  Walker is also working a case involving someone who is gunning cops, and it seems that one his targets is Trent\u0027s friend Carlos Sandoval.",
+        "air_date": "1997-05-04",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 25,
+        "name": "Sons of Thunder (2)",
+        "overview": "As Trent tries to help out his family, and reconnect with his siblings especially his brother, Tommy, who felt that Trent deserted them. Walker tries to see if there is some kind of connection all the cops that were killed. Trivette gets a call from a cop, who has some info he would like to give him but asks that they meet in his place, when Trivette goes there, the killer has already killed the cop and shoots Trivette. Carlos was visiting Trent when the killer tries to kill Carlos but Trent saves him. After giving a decription of the man, Carlos thinks that it\u0027s a Metro cop named Rod Barkley. While Alex checks on him, Walker asks Carlos to explain who is this guy is and why is he killing all these cops. A few years ago, Carlos, the other cops and Barkley were chasing this motorist who was speeding. When he stopped, Barkley then proceeded to beat him up, eventually the other cops had to pull Barkley off the boy. When all of the other cops stated that there was no reason justifying Bark",
+        "air_date": "1997-05-04",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 26,
+        "name": "Texas vs. Cahill",
+        "overview": "The next morning Tony is found dead at Alex\u0027s beside and she is arrested for suspicion of murder. She reveals to Walker that Tony came to her last night with evidence that would turn the case around before she passed out. Her father Gordon Cahill returns to defend her in court.\n\nAlex is put in a womens prison where the convicts want to get revenge against her for putting them in there, but she is saved by a woman named Alfre Grimes who was put in because of a mistake. Meanwhile Walker and Trivette learn from Tony\u0027s sister, Mollie, that he had falling out with Tillman, and with Gordon\u0027s help they suspect Tillman is behind the murder - because if the prosecuting attorney is having an affair with the defense attorney and the defense attorney ends up dead then Lane Tillman would go free because there would be no second trial.\n\nThen Mollie gets a letter from Tony and",
+        "air_date": "1997-05-10",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 27,
+        "name": "Rookie",
+        "overview": "Joey Prado just graduated from the academy with the best marks since Walker. One of his first assignments is to go undercover as a drug dealer. Along the way, he reunites with his childhood friend Vic Solano.",
+        "air_date": "1997-05-17",
+        "runtime": 60,
+        "still_path": null
+      }
+    ]
+  }
+}

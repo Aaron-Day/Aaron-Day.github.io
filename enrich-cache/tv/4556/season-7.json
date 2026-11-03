@@ -1,0 +1,96 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "My Own Worst Enemy",
+        "overview": "In the aftermath of their near-indiscretion, Elliot realizes she doesn\u0027t want to be with Keith, and J.D. resolves to stop sabotaging himself.\n\nMeanwhile, Dr. Cox and Turk find a patient they both like who is in danger of being discharged.",
+        "air_date": "2007-10-25",
+        "runtime": 24,
+        "still_path": "/p0c1I9PtYUX2rSa7hKPz0mDHj3e.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "My Hard Labor",
+        "overview": "Kim goes into labor, and J.D. struggles to decide if he should tell her what he really thinks of their relationship. Turk, desperate to do something not baby-related, races to beat a video game before Carla discovers him. And Dr. Cox searches for someone he trusts enough to give his daughter a shot.",
+        "air_date": "2007-11-01",
+        "runtime": 24,
+        "still_path": "/pfhPQyMf9ibfhg8fJ84zGzd3qOx.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "My Inconvenient Truth",
+        "overview": "J.D\u0027s brother Dan returns and delivers a few home truths to his little brother. In the meantime, Elliot and Dr. Cox debate over the morals of their practice and the staff of Sacred Heart find the Janitor\u0027s behavior rather odd after he watches \u0022An Inconvenient Truth\u0022.",
+        "air_date": "2007-11-08",
+        "runtime": 24,
+        "still_path": "/fy3rZG1WTJ9RQyykwojp4lbXbSv.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "My Identity Crisis",
+        "overview": "Turk tries to assure a worried Carla that their daughter will acknowledge her Latin heritage. Meanwhile the Janitor challenges J.D. to identify everyone in the hospital, when it is discovered that he uses nicknames, because he doesn\u0027t know the people\u0027s actual names. If J.D. can\u0027t name all of them, he must take up the mop for a day. Elsewhere, Dr. Cox realizes that he is lonely without his wife and children.",
+        "air_date": "2007-11-15",
+        "runtime": 24,
+        "still_path": "/luEX7qleZaF8w6AxCm8vsfaRvTO.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "My Growing Pains",
+        "overview": "The Sacred Heart staff has to deal with their inner child, when J.D. and Turk remember their first prank, Dr. Cox has a ten year old Leukemia patient and Dr. Kelso celebrates his birthday.",
+        "air_date": "2007-11-29",
+        "runtime": 24,
+        "still_path": "/4rQHdLnETDgqIy9vBiRaKWFQo0T.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "My Number One Doctor",
+        "overview": "Though Elliot boasts that through private practice she gets to get to know her patients, nobody seems to care. Carla is amazed at how the Janitor was able to score such an attractive girlfriend. The doctors are improving their services to get a higher ranking on a website and although J.D. appears nonchalant initially, he is elated when he is ranked #1.",
+        "air_date": "2007-12-06",
+        "runtime": 24,
+        "still_path": "/uEWlIXYlJdTDR7NvivxZUnIRF1t.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "My Bad Too",
+        "overview": "J.D.\u0027s teenage burn patient gives him a hard decision to make when he wants to go to his high school graduation. Turk doesn\u0027t want Carla to find out that he secretly learned Spanish. And to address Dr. Kelso\u0027s weight gain, Dr. Cox makes a game out of stealing his breakfast.",
+        "air_date": "2008-04-10",
+        "runtime": 24,
+        "still_path": "/oUeRhWIfkDuw3JgOdG8qkeAH4Gn.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "My Manhood",
+        "overview": "When Dr. Kelso tells the Janitor that nobody cares what he thinks, he starts a newspaper called \u0022The Janitorial\u0022 to prove him wrong. J.D. and Turk fight over their manhood issues, while Dr. Kelso is too proud to ask for help about one of his problems.",
+        "air_date": "2008-04-17",
+        "runtime": 24,
+        "still_path": "/qaMw4zkBeCrx4TJJSq6LwvmaRDf.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "My Dumb Luck",
+        "overview": "Dr. Cox had a patient that he hadn\u0027t been able to diagnose for two years, and he is back again.\n\nDr. Kelso has to face a retirement board when his true age is revealed. Elliot and Carla try to find enough people in favor of Dr. Kelso to keep him as Chief of Medicine.",
+        "air_date": "2008-04-24",
+        "runtime": 24,
+        "still_path": "/5wk98hbucz66Q9thiEDAcRlCCwq.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "My Waste of Time",
+        "overview": "Elliot and J.D. discover a major change in their relationship, when they spend time together looking for a former patient.\n\nDr. Cox contemplates his new job title, when Ted refuses to do the majority of his work, whilst Carla and Turk talk about the possibility of a second baby. Meanwhile, the Janitor claims Dr. Kelso\u0027s abandoned office for the brain trust.",
+        "air_date": "2008-05-01",
+        "runtime": 24,
+        "still_path": "/o5gvR0JLjb8nXIEmCrr31KNpdBP.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "My Princess",
+        "overview": "After a hard day of work, Dr. Cox has the burden to tell his son Jack a good night story, so he disguises his hard day as a fairy tale about the little village Sacred Heartlia with Carla and Turk as the two-headed witch Turla, Elliot as the princess and J.D. as the village idiot.\n\nOther people featuring are the Janitor as the giant, Keith as the prince, Dr. Kelso as the dark lord Oslek, Ted as his hunchback and of course Dr. Cox as the brave knight.",
+        "air_date": "2008-05-08",
+        "runtime": 24,
+        "still_path": "/jA9wpatHhZJOsUe3qJXMjFngY77.jpg"
+      }
+    ]
+  }
+}

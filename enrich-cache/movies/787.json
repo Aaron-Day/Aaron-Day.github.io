@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 787,
+    "title": "Mr. \u0026 Mrs. Smith",
+    "overview": "A husband and wife struggle to keep their marriage alive until they realize they are both secretly working as assassins. Now, their respective assignments require them to kill each other.",
+    "tagline": "\u0027Til death do us part.",
+    "runtime": 120,
+    "release_date": "2005-06-07",
+    "vote_average": 6.697,
+    "poster_path": "/kjD700RtyhveN3ZbOnSvUSne0Qj.jpg",
+    "backdrop_path": "/tgDSUwWMgypgmcBhRs9u30RLPNC.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Angelina Jolie",
+      "character": "Jane Smith",
+      "profile_path": "/bXNxIKcJ5cNNW8QFrBPWcfTSu9x.jpg"
+    },
+    {
+      "name": "Brad Pitt",
+      "character": "John Smith",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "Vince Vaughn",
+      "character": "Eddie",
+      "profile_path": "/qImHvsd7SFJh46Ujx50xUfkeMNz.jpg"
+    },
+    {
+      "name": "Adam Brody",
+      "character": "Benjamin Danz",
+      "profile_path": "/qKBWrohBYegm6AAaLrtxEqqouIK.jpg"
+    }
+  ]
+}

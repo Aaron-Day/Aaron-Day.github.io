@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 50546,
+    "title": "Just Go with It",
+    "overview": "While romancing Palmer, a much younger schoolteacher, plastic surgeon Danny Maccabee enlists his loyal assistant Katherine to pretend to be his soon to be ex-wife, in order to cover up a careless lie. When more lies backfire, Katherine\u0027s kids become involved, and everyone heads off for a weekend in Hawaii that will change all their lives.",
+    "tagline": "Sometimes you need a girl, to get the girl.",
+    "runtime": 117,
+    "release_date": "2011-02-10",
+    "vote_average": 6.704,
+    "poster_path": "/5nr4n667HD80Wr7dYmqhIYi6CHN.jpg",
+    "backdrop_path": "/xoYEe7RvAHWC59Jbo1tdktB4v2a.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Danny Maccabee",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Jennifer Aniston",
+      "character": "Katherine Murphy",
+      "profile_path": "/PBSCmHDFdCMBhjx0EbXpTw4Z94.jpg"
+    },
+    {
+      "name": "Brooklyn Decker",
+      "character": "Palmer Dodge",
+      "profile_path": "/x3JWepaXTopE9k0g87Q9diRM5Nc.jpg"
+    },
+    {
+      "name": "Nicole Kidman",
+      "character": "Devlin Adams",
+      "profile_path": "/4KSQDodyBtTDMaREYgMdWD1LbH1.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8488,
+    "title": "Hitch",
+    "overview": "Dating coach Alex \u0027Hitch\u0027 Hitchens mentors a bumbling client, Albert, who hopes to win the heart of the glamorous Allegra Cole. While Albert makes progress, Hitch faces his own romantic setbacks when proven techniques fail to work on Sara Melas, a tabloid reporter digging for dirt on Allegra Cole\u0027s love life. When Sara discovers Hitch\u0027s connection to Albert \u2013 now Allegra\u0027s boyfriend \u2013 it threatens to destroy both relationships.",
+    "tagline": "The cure for the common man.",
+    "runtime": 118,
+    "release_date": "2005-02-11",
+    "vote_average": 6.582,
+    "poster_path": "/x3W9H3nhGQbWSlyI8Amp2F6Z6cz.jpg",
+    "backdrop_path": "/a6tIX4fGgp60w2d9pqYRbFM91ne.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Hitch",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Eva Mendes",
+      "character": "Sara",
+      "profile_path": "/4xptMw7AjNamFgfGt75sHaT0wsI.jpg"
+    },
+    {
+      "name": "Kevin James",
+      "character": "Albert",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    },
+    {
+      "name": "Amber Valletta",
+      "character": "Allegra",
+      "profile_path": "/6KSsLN9XFucycN5yw4FGeByHrVx.jpg"
+    }
+  ]
+}

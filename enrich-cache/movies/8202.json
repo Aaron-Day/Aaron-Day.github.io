@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8202,
+    "title": "\u00C6on Flux",
+    "overview": "400 years into the future, disease has wiped out the majority of the world\u0027s population, except one walled city, Bregna, ruled by a congress of scientists. When \u00C6on Flux, the top operative in the underground \u0027Monican\u0027 rebellion, is sent on a mission to kill a government leader, she uncovers a world of secrets.",
+    "tagline": "The perfect world meets the perfect assassin.",
+    "runtime": 93,
+    "release_date": "2005-11-30",
+    "vote_average": 5.637,
+    "poster_path": "/5958Nt4QX6aRSUdQnvNw8wqjTJQ.jpg",
+    "backdrop_path": "/uTqxyztRGHSq96JYhByyNFuqqld.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Charlize Theron",
+      "character": "\u00C6on Flux",
+      "profile_path": "/gd7ShD0yt4bsR2STeQ19KQ6hvXL.jpg"
+    },
+    {
+      "name": "Marton Csokas",
+      "character": "Trevor Goodchild",
+      "profile_path": "/gmeUY7FR0bFLdu7Ma5kvpH3Gt6B.jpg"
+    },
+    {
+      "name": "Jonny Lee Miller",
+      "character": "Oren Goodchild",
+      "profile_path": "/otCQdDtnrMvZ5tPC62zLx0SaXeR.jpg"
+    },
+    {
+      "name": "Sophie Okonedo",
+      "character": "Sithandra",
+      "profile_path": "/tG5XragN8l5Npg6viwEmvVKwt2r.jpg"
+    }
+  ]
+}

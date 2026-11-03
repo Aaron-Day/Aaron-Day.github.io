@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 114150,
+    "title": "Pitch Perfect",
+    "overview": "College student Beca knows she does not want to be part of a clique, but that\u0027s exactly where she finds herself after arriving at her new school. Thrust in among mean gals, nice gals and just plain weird gals, Beca finds that the only thing they have in common is how well they sing together. She takes the women of the group out of their comfort zone of traditional arrangements and into a world of amazing harmonic combinations in a fight to the top of college music competitions.",
+    "tagline": "Get pitch slapped.",
+    "runtime": 112,
+    "release_date": "2012-09-28",
+    "vote_average": 7.262,
+    "poster_path": "/gsFoJk9g8W3zgaipRrrURk7LbiF.jpg",
+    "backdrop_path": "/2sE6hrwfn9IV7eDlMvpIb9q1EWy.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 306031,
+      "name": "Pitch Perfect Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anna Kendrick",
+      "character": "Beca Mitchell",
+      "profile_path": "/i2HIJQcBsUQ3o9HwEeDwou45D60.jpg"
+    },
+    {
+      "name": "Anna Camp",
+      "character": "Aubrey Posen",
+      "profile_path": "/32H0SJbTK3tvLVgf3X1aiaUdcxe.jpg"
+    },
+    {
+      "name": "Brittany Snow",
+      "character": "Chloe Beale",
+      "profile_path": "/uSQW2E7caOaXHBbvL2jdzGbwDwH.jpg"
+    },
+    {
+      "name": "Skylar Astin",
+      "character": "Jesse Swanson",
+      "profile_path": "/dx6xbrerLNKHbUSOdTI68h7qrE3.jpg"
+    }
+  ]
+}

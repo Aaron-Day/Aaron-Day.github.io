@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 59108,
+    "title": "Tower Heist",
+    "overview": "A luxury condo manager leads a staff of workers to seek payback on the Wall Street swindler who defrauded them. With only days until the billionaire gets away with the perfect crime, the unlikely crew of amateur thieves enlists the help of petty crook Slide to steal the $20 million they\u2019re sure is hidden in the penthouse.",
+    "tagline": "It\u0027s not just a robbery. It\u0027s payback.",
+    "runtime": 104,
+    "release_date": "2011-11-02",
+    "vote_average": 6.12,
+    "poster_path": "/jQrroNwP8hbFiUlNMs20emauwPE.jpg",
+    "backdrop_path": "/7BtEvieL4QRNW3j7OAw6Zv2CDap.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Stiller",
+      "character": "Josh Kovacs",
+      "profile_path": "/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg"
+    },
+    {
+      "name": "Eddie Murphy",
+      "character": "Slide",
+      "profile_path": "/qgjMfefsKwSYsyCaIX46uyOXIpy.jpg"
+    },
+    {
+      "name": "Casey Affleck",
+      "character": "Charlie Gibbs",
+      "profile_path": "/304ilSygaCRWykoBWAL67TOw8g9.jpg"
+    },
+    {
+      "name": "Alan Alda",
+      "character": "Arthur Shaw",
+      "profile_path": "/a5tOOHdsrKSabKwdzDOYqeTp446.jpg"
+    }
+  ]
+}

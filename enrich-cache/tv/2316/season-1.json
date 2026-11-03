@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "A documentary crew arrives at the offices of Dunder Mifflin to observe the employees and learn about modern management. Manager Michael Scott tries to paint a happy picture, while sales rep Jim fights with his nemesis Dwight and flirts with receptionist Pam.",
+        "air_date": "2005-03-24",
+        "runtime": 24,
+        "still_path": "/axt2TV2b3FAs1ZEg1mdKV1ZJnfW.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Diversity Day",
+        "overview": "A consultant arrives to teach the staff about tolerance and diversity but Michael insists on imparting his own knowledge. Meanwhile, Jim struggles to keep hold of a lucrative contract extension.",
+        "air_date": "2005-03-29",
+        "runtime": 22,
+        "still_path": "/frHasw3YEEkpNlDNzHZpFjJWwhk.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Health Care",
+        "overview": "Michael doesn\u0027t want to upset the staff so he gets Dwight to pass on news about the company\u0027s reduced health provisions. Fed up with his nosiness, Jim and Pam pretend they are suffering from a variety of conditions including Ebola, Mad Cow Disease, spontaneous dentohydroplosion, hotdog fingers, nano-robot infection...",
+        "air_date": "2005-04-05",
+        "runtime": 23,
+        "still_path": "/b92iKLwxKRGBjKQ2R5k7L9kCPPo.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Alliance",
+        "overview": "Michael arranges a morale-boosting birthday party for Meredith and is determined to come up with the funniest message in her card. Dwight wants a pact with Jim to fight the downsizing, and Michael regrets showing off when Oscar asks for sponsorship for a charity walk being undertaken by his nephew, who has cerebral palsy.",
+        "air_date": "2005-04-12",
+        "runtime": 22,
+        "still_path": "/9nZh7ikeLZfFYnYs6yf8Nc36fu.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Basketball",
+        "overview": "The office staff play a basketball game against the warehouse workers in which Jim shows off to impress Pam and upstage her fiancee who is on the opposing team.",
+        "air_date": "2005-04-19",
+        "runtime": 23,
+        "still_path": "/2retmsI3vrQupspr9i2ZB21PhhN.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Hot Girl",
+        "overview": "A woman who comes to the office to sell purses gets the male members of staff excited. She rejects Dwight\u0027s advances, but Michael reckons he\u0027s still in with a chance.",
+        "air_date": "2005-04-26",
+        "runtime": 23,
+        "still_path": "/qZJcuMRsXV8fI3dif0OUH6Wu4KQ.jpg"
+      }
+    ]
+  }
+}

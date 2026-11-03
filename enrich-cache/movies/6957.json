@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 6957,
+    "title": "The 40 Year-Old Virgin",
+    "overview": "Andy Stitzer has a pleasant life with a nice apartment and a job stamping invoices at an electronics store. But at age 40, there\u0027s one thing Andy hasn\u0027t done, and it\u0027s really bothering his sex-obsessed male co-workers: Andy is still a virgin. Determined to help Andy get laid, the guys make it their mission to de-virginize him. But it all seems hopeless until Andy meets small business owner Trish, a single mom.",
+    "tagline": "Better late than never.",
+    "runtime": 116,
+    "release_date": "2005-08-11",
+    "vote_average": 6.4,
+    "poster_path": "/mVeoqL37gzhMXQVpONi9DGOQ3tZ.jpg",
+    "backdrop_path": "/3Wej7JW8Ikrzbm6h0lmSdeOYMmu.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Steve Carell",
+      "character": "Andy Stitzer",
+      "profile_path": "/sSxw69G0znJuettMYGDCAXfSwSY.jpg"
+    },
+    {
+      "name": "Catherine Keener",
+      "character": "Trish Piedmont",
+      "profile_path": "/n4CTwGszs6cwS1wJRlDQ5Mlh7Ex.jpg"
+    },
+    {
+      "name": "Paul Rudd",
+      "character": "David",
+      "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+    },
+    {
+      "name": "Romany Malco",
+      "character": "Jay",
+      "profile_path": "/q5f1rvnTGDnxsNCSSZoYXYDbu0I.jpg"
+    }
+  ]
+}

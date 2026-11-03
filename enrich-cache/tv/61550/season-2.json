@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Lady in the Lake",
+        "overview": "Peggy moves to the City of Angels to help Chief Daniel Sousa at the West Coast Strategic Scientific Reserve (SSR) investigate a bizarre homicide involving an alleged killer and Isodyne Energy, and reunites with some familiar faces.",
+        "air_date": "2016-01-19",
+        "runtime": 44,
+        "still_path": "/3hNiCe5KlN6qlo9jQ8MQ5yDFzTd.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A View in the Dark",
+        "overview": "Peggy discovers her murder investigation has huge ramifications that can destroy her career, as well as everyone near and dear to her.",
+        "air_date": "2016-01-19",
+        "runtime": 44,
+        "still_path": "/jxUM2kCsOgRadlHafiQEOKrwuEQ.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Better Angels",
+        "overview": "Peggy\u2019s search for the truth about Zero Matter puts her on a collision course with her superiors as Howard Stark barnstorms in.",
+        "air_date": "2016-01-26",
+        "runtime": 44,
+        "still_path": "/uX0EbFSYk3hdjBnyVmYrfZjeyTI.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Smoke and Mirrors",
+        "overview": "Agent Carter and the SSR learn there\u2019s more than just a pretty face behind Hollywood star Whitney Frost, Peggy\u2019s most dangerous foe yet.",
+        "air_date": "2016-02-02",
+        "runtime": 44,
+        "still_path": "/rMYdS2hCRZJGN6XyfBEbm1pHcNA.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Atomic Job",
+        "overview": "As Jarvis\u0027 precision and quick-thinking skills are put to the ultimate test, Peggy must find a way to stop an atomic explosion that threatens to destroy all of California.",
+        "air_date": "2016-02-09",
+        "runtime": 43,
+        "still_path": "/zAhkmTbDavzdIyzPItRsW2sXYB5.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Life of the Party",
+        "overview": "When Agent Peggy Carter realizes she cannot save Wilkes on her own, she turns to her most unexpected adversary for help, while Whitney makes a move to control the deadly Zero Matter.",
+        "air_date": "2016-02-16",
+        "runtime": 44,
+        "still_path": "/iYNWyvDaAXW9hQOoXNkTsPGykcg.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Monsters",
+        "overview": "As Agent Carter plots a rescue mission, Whitney Frost hunts for even more dark power, and Jarvis learns not to make promises he cannot keep.",
+        "air_date": "2016-02-16",
+        "runtime": 43,
+        "still_path": "/7uerDH5SL2M36stk78Sw4dmo6r2.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Edge of Mystery",
+        "overview": "Peggy and Sousa propose a trade with Whitney Frost, while the SSR gets help from Howard Stark that may be the key to eliminating Zero Matter.",
+        "air_date": "2016-02-23",
+        "runtime": 43,
+        "still_path": "/bqXqTMux3XLq0p2vG7uVRWrlsj3.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "A Little Song and Dance",
+        "overview": "Peggy desperately tries to save Dr. Wilkes with a dangerous plan to stop Whitney Frost. But Thompson makes a surprising move that could destroy them all.",
+        "air_date": "2016-02-23",
+        "runtime": 43,
+        "still_path": "/AmLIYUE0NlikvZMYN1Hl7RV88Kn.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Hollywood Ending",
+        "overview": "Peggy needs Howard Stark to eliminate Zero Matter as they are faced with a mission none of them could come back from.",
+        "air_date": "2016-03-01",
+        "runtime": 42,
+        "still_path": "/ylGaVxAjqkjTEygsNTyVJcuL2l.jpg"
+      }
+    ]
+  }
+}

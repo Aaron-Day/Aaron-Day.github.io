@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11319,
+    "title": "The Rescuers",
+    "overview": "Two agents of the mouse-run International Rescue Aid Society search for a little orphan girl kidnapped by sinister treasure hunters.",
+    "tagline": "Two tiny agents vs. the world\u0027s wickedest woman in a dazzling animated adventure!",
+    "runtime": 78,
+    "release_date": "1977-06-22",
+    "vote_average": 6.792,
+    "poster_path": "/9jpDjrRyvv9Nw0piXOpHHQTfxw9.jpg",
+    "backdrop_path": "/dSlofjxxcTSLmnH6602WsSSELU5.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 57971,
+      "name": "The Rescuers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bob Newhart",
+      "character": "Bernard (voice)",
+      "profile_path": "/tJUSKC5991cOgk6K7OTLJCzxHni.jpg"
+    },
+    {
+      "name": "Eva Gabor",
+      "character": "Miss Bianca (voice)",
+      "profile_path": "/gApDSJixCnXin3LYmAbMx7Ly4VV.jpg"
+    },
+    {
+      "name": "Geraldine Page",
+      "character": "Madame Medusa (voice)",
+      "profile_path": "/5G8uNYzNtEMBSnOUUs6ms1JcOJj.jpg"
+    },
+    {
+      "name": "Joe Flynn",
+      "character": "Mr. Snoops (voice)",
+      "profile_path": "/km1TY2ieAp51uKLDBNUEANvUmaq.jpg"
+    }
+  ]
+}

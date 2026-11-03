@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 522162,
+    "title": "Midway",
+    "overview": "The story of the Battle of Midway, and the leaders and soldiers who used their instincts, fortitude and bravery to overcome massive odds.",
+    "tagline": "One battle turned the tide of war.",
+    "runtime": 138,
+    "release_date": "2019-11-06",
+    "vote_average": 7.099,
+    "poster_path": "/hj8pyoNnynGeJTAbl7jcLZO8Uhx.jpg",
+    "backdrop_path": "/5xegGPhCSVMKbyh6zeT6Th0BWLB.jpg",
+    "genres": [
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ed Skrein",
+      "character": "Lieutenant Richard \u0027Dick\u0027 Best",
+      "profile_path": "/btJvbQbWf3ciYM4SM5tMWSJEkXX.jpg"
+    },
+    {
+      "name": "Patrick Wilson",
+      "character": "Rear Admiral Edwin T. Layton",
+      "profile_path": "/oym6H2QD9esk4yABjCHaUoNAOa8.jpg"
+    },
+    {
+      "name": "Woody Harrelson",
+      "character": "Admiral Chester W. Nimitz",
+      "profile_path": "/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg"
+    },
+    {
+      "name": "Luke Evans",
+      "character": "Commander Wade McClusky",
+      "profile_path": "/qUkYJcrDc4M0LHNYASs30luFvw0.jpg"
+    }
+  ]
+}

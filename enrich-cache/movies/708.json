@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 708,
+    "title": "The Living Daylights",
+    "overview": "After a defecting Russian general reveals a plot to assassinate foreign spies, James Bond is assigned a secret mission to dispatch the new head of the KGB to prevent an escalation of tensions between the Soviet Union and the West.",
+    "tagline": "The new James Bond...living on the edge.",
+    "runtime": 130,
+    "release_date": "1987-06-29",
+    "vote_average": 6.554,
+    "poster_path": "/1oRlmWX9hewpn2B44wawBjHd7dx.jpg",
+    "backdrop_path": "/ebaq0ecL1Tu39rIExfHwE4ToFl2.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Timothy Dalton",
+      "character": "James Bond",
+      "profile_path": "/rKYQd6ihqWiOaCHEDrvgV2VPtAo.jpg"
+    },
+    {
+      "name": "Maryam D\u0027Abo",
+      "character": "Kara Milovy",
+      "profile_path": "/AwcD84CIlQ0HaLRX3AqlmunYzgE.jpg"
+    },
+    {
+      "name": "Joe Don Baker",
+      "character": "Brad Whitaker",
+      "profile_path": "/7AEqsKLyAO3tt9bUufdirU1xXo8.jpg"
+    },
+    {
+      "name": "Art Malik",
+      "character": "Kamran Shah",
+      "profile_path": "/hZmb9wWsteP21QA29PHEk6NlOh3.jpg"
+    }
+  ]
+}

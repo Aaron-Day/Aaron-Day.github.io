@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Heirs of the Dragon",
+        "overview": "Viserys hosts a tournament to celebrate the birth of his second child. Rhaenyra welcomes her uncle Daemon back to the Red Keep.",
+        "air_date": "2022-08-21",
+        "runtime": 66,
+        "still_path": "/3oumSnkavc4pcMFvPbgWDUTclNb.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Rogue Prince",
+        "overview": "Princess Rhaenyra dives deep into the prophecies about House Targaryen while confronting a realm that resists the idea of a woman on the Iron Throne, and Prince Daemon, embittered over being passed over as the heir to Westeros, prepares to go to war.",
+        "air_date": "2022-08-28",
+        "runtime": 54,
+        "still_path": "/vJfVCJ3ZgVUfbUZBoeHdLVeJzjL.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Second of His Name",
+        "overview": "Daemon and the Sea Snake battle the Crabfeeder. The realm celebrates Aegon\u0027s second nameday. Rhaenyra faces the prospect of marriage.",
+        "air_date": "2022-09-04",
+        "runtime": 63,
+        "still_path": "/fP1HCPFgwfXCcGHhjhgf0sndWAH.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "King of the Narrow Sea",
+        "overview": "Daemon returns to court after the successful completion of the battle. Princess Rhaenyra must deal with potential suitors in order to keep her line of succession.",
+        "air_date": "2022-09-11",
+        "runtime": 62,
+        "still_path": "/mW2a20R8VZqENHAmz47x21FCoYV.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "We Light the Way",
+        "overview": "Daemon visits his wife in the Vale. Viserys and Rhaenyra broker agreements with the Valeryons. Alicent seeks the truth about the princess.",
+        "air_date": "2022-09-18",
+        "runtime": 60,
+        "still_path": "/8kgv0QAfICMGPqDD2dQvO9TR3AD.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Princess and the Queen",
+        "overview": "Ten years later. Rhaenyra navigates Alicent\u0027s continued speculation about her children, while Daemon and Laena weigh an offer in Pentos.",
+        "air_date": "2022-09-25",
+        "runtime": 67,
+        "still_path": "/lcBTDoCkBTJAdi8VagMQdzB6RYi.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Driftmark",
+        "overview": "As the families gather on Driftmark for a funeral, Viserys calls for an end to infighting and Alicent demands justice.",
+        "air_date": "2022-10-02",
+        "runtime": 59,
+        "still_path": "/4Lt8XaiyEkcSx0SRhn4GvhrzjHS.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Lord of the Tides",
+        "overview": "Six years later. With the Driftmark succession suddenly critical, Rhaenyra attempts to strike a bargain with Rhaenys.",
+        "air_date": "2022-10-09",
+        "runtime": 67,
+        "still_path": "/usZEKEHEn8o8FTBW7ksY2raH1zQ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Green Council",
+        "overview": "While Alicent enlists Cole and Aemond to track down Aegon, Otto gathers the great houses of Westeros to affirm their allegiance.",
+        "air_date": "2022-10-16",
+        "runtime": 58,
+        "still_path": "/9p0vHFLhh35dk9LvtSzzz6l5dAE.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Black Queen",
+        "overview": "Mourning a tragic death, Rhaenyra tries to hold the kingdom together and Daemon prepares for war.",
+        "air_date": "2022-10-23",
+        "runtime": 59,
+        "still_path": "/yt0vxevGHtSug3xxxEGCAk2XY1i.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 28032,
+    "title": "Thumbelina",
+    "overview": "Born of a flower and growing to only a couple of inches tall, poor Thumbelina is worried she\u0027ll never meet someone her own size, until she happens to catch the eye of Prince Cornelius of the Fairies. Just as soon as she finds love, however, it\u0027s torn away when she\u0027s kidnapped by Ms. Toad. Now Thumbelina has to escape Ms. Toad\u0027s grasp and search for Prince Cornelius. Luckily, there\u0027s a whole city of animals willing to help.",
+    "tagline": "Follow your heart and nothing is impossible.",
+    "runtime": 87,
+    "release_date": "1994-03-30",
+    "vote_average": 6.5,
+    "poster_path": "/eBvSSfwAKgcjF4eyaeNSzTCpfaF.jpg",
+    "backdrop_path": "/jhxmxSNBNCAKtHeJnJhWpkOOI7d.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jodi Benson",
+      "character": "Thumbelina (voice)",
+      "profile_path": "/4mxtuq3mXLZwPKbI7t0KFxf0PRW.jpg"
+    },
+    {
+      "name": "Gino Conforti",
+      "character": "Jacquimo (voice)",
+      "profile_path": "/u1eyPOCnqApU2WmLbAQJZhfygM8.jpg"
+    },
+    {
+      "name": "Barbara Cook",
+      "character": "Mother (voice)",
+      "profile_path": "/xAHve15jOy0hKr2eBwPENpU7etr.jpg"
+    },
+    {
+      "name": "Will Ryan",
+      "character": "Hero / Reverend Rat (voice)",
+      "profile_path": "/qRkyGcSju2VmEb7RTBM3Wpa0rvI.jpg"
+    }
+  ]
+}

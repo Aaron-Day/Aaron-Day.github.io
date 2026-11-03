@@ -1,0 +1,216 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Evolution",
+        "overview": "Stardate: 43125.8. A system-wide computer malfunction places the crew of the U.S.S. Enterprise in grave danger while they are escorting a scientist to a star in the process of exploding.",
+        "air_date": "1989-09-25",
+        "runtime": 46,
+        "still_path": "/A11EFKgifRteVHS4ejLiedDGJbe.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Ensigns of Command",
+        "overview": "Stardate: 43133.3. A human colony is forced to evacuate a planet when the original inhabitants return and threaten the colonists with annihilation if they do not leave within four days.",
+        "air_date": "1989-10-02",
+        "runtime": 46,
+        "still_path": "/rnqUppIYQ69b96Q5NNS3XFHeyh9.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Survivors",
+        "overview": "Stardate: 43152.4. The Enterprise discovers a planet that has had all life eradicated, except for two mysterious residents and their home, which has been left in perfect condition.",
+        "air_date": "1989-10-09",
+        "runtime": 46,
+        "still_path": "/69NQq8GDmv4hWPHLn4hkUyt9xAH.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Who Watches the Watchers",
+        "overview": "Stardate: 43173.5. An away team inadvertently breaks the Prime Directive and reveal themselves to a primitive culture on Mintaka III, causing the inhabitants believe that Captain Picard is a God.",
+        "air_date": "1989-10-16",
+        "runtime": 46,
+        "still_path": "/1kyhDFxlzu9bV91d0OA6Rzwg8ld.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Bonding",
+        "overview": "Worf and Wesley must help a 12 year old boy cope with the death of his mother; an archaeologist killed during an away mission to a deserted planet.",
+        "air_date": "1989-10-23",
+        "runtime": 46,
+        "still_path": "/wpzXuTkkRTRaEy41WZxb44r77eT.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Booby Trap",
+        "overview": "Stardate: 43205.6. While investigating an ancient ship left adrift in space, the Enterprise accidentally trips the ancient booby trap that disabled the old vessel over 1000 years ago.",
+        "air_date": "1989-10-30",
+        "runtime": 46,
+        "still_path": "/1HCseDMup6JfjOAEOEuFVxQYl8f.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Enemy",
+        "overview": "Stardate:43349.2. A blind Geordie is trapped on a hazardous planet with a paranoid and severely injured Romulan. In orbit, a Romulan Warbird is preventing the Enterprise from attempting a rescue mission.",
+        "air_date": "1989-11-06",
+        "runtime": 46,
+        "still_path": "/xMHNrM5kWpcXMjdRkdSM7GqccKh.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Price",
+        "overview": "Stardate: 43385.6. The Enterprise hosts the negotiations for the rights to a newly discovered, stable wormhole to the Delta Quadrant. One of the negotiators, Devinoni Ral, becomes attracted to Deanna Troi, but he holds a dubious secret.",
+        "air_date": "1989-11-13",
+        "runtime": 46,
+        "still_path": "/39XGqwNYnRTXfVH4sOHkslaj4P0.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Vengeance Factor",
+        "overview": "Stardate: 43421.9. The Enterprise crew tries to mend the relationship between a race known as the Acamarians and a faction known as the Gatherers.",
+        "air_date": "1989-11-20",
+        "runtime": 46,
+        "still_path": "/sUxTRNgsZuxfrXtAVhLblcQSyoo.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Defector",
+        "overview": "Stardate: 43462.5. A defecting Romulan warns the Federation about an impending attack by the Romulans, who are secretly establishing bases within the Neutral Zone.",
+        "air_date": "1990-01-01",
+        "runtime": 46,
+        "still_path": "/dhVqwIoQpeMxZEgMir2nOdDOerq.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Hunted",
+        "overview": "Stardate: 43489.2. A potentially new member of the Federation enlists the help of the Enterprise to track down a wanted criminal who has a reputation for his excessive violence. However, the fugitive\u0027s actions may not be of his own will.",
+        "air_date": "1990-01-08",
+        "runtime": 46,
+        "still_path": "/ady9Vbwbu5GyxABGbqHTbP8t6l1.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The High Ground",
+        "overview": "Stardate: 43510.7. Dr. Crusher is abducted by a group of terrorists while delivering crucial medical supplies to a planet ravaged by civil war.",
+        "air_date": "1990-01-29",
+        "runtime": 46,
+        "still_path": "/yjWeK36ehANV2NYIcnA3sgawhun.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "D\u00E9j\u00E0 Q",
+        "overview": "Stardate: 43539.1. A Calamarian starts attacking the Enterprise while seeking revenge on a powerless Q.",
+        "air_date": "1990-02-05",
+        "runtime": 46,
+        "still_path": "/lVhkvjaFyicnMdSBoGjPf0sNzIj.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "A Matter of Perspective",
+        "overview": "Stardate: 43610.4. Riker is accused of murder when a scientist is killed in an explosion. Picard must recreate the recent events in the holodeck to prove his commander\u0027s innocence.",
+        "air_date": "1990-02-12",
+        "runtime": 46,
+        "still_path": "/kDkZ9OhpFNUMHqSHbrfzF5slzPc.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Yesterday\u0027s Enterprise",
+        "overview": "Stardate: 43625.2. A rift in the space/time continuum brings the U.S.S. Enterprise - C forward into the 24th Century, and alters the timeline. In this future, the Federation is at war with the Klingons, Tasha Yar is on the bridge, Worf did not join the Federation, and only Guinan\u0027s unique perception of reality may restore the timeline.",
+        "air_date": "1990-02-19",
+        "runtime": 46,
+        "still_path": "/v7e4iJ6oCzIcyReUpO4fZOLuI3F.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Offspring",
+        "overview": "Stardate: 43657.0. Data becomes a father when he creates a Soong-type android in the form of a daughter named Lal. Issues are complicated when Lal starts showing signs of a more evolved consciousness, including the ability to feel emotions, which attracts the attention of Starfleet scientists who want to take her away from Data and examine her advanced systems.",
+        "air_date": "1990-03-12",
+        "runtime": 46,
+        "still_path": "/eCFXkP3KkoazNGyRxc58X3ZnmP6.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Sins of the Father",
+        "overview": "Stardate: 43685.2. Worf is reunited with his long-lost brother when their father is charged with treason for helping the Romulans. Together they make an appeal to the Klingon High Council to challenge the charges, and have them revoked.",
+        "air_date": "1990-03-19",
+        "runtime": 46,
+        "still_path": "/sguEYhepkqAwrqBU3RZNEg2mVMl.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Allegiance",
+        "overview": "Stardate: 43714.1. Picard is secretly abducted and switched with an alien double. The crews\u0027 suspicions are raised when he starts exhibiting unusual behaviour, and is relieved of command.",
+        "air_date": "1990-03-26",
+        "runtime": 46,
+        "still_path": "/rPgQupEFENqMp1T4lsUdrVf8sZm.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Captain\u0027s Holiday",
+        "overview": "Stardate: 43745.2. While on vacation on Risa, Captain Picard encounters two Vorgons from the 27th Century who claim they are searching for a powerful weapon hidden somewhere on the planet.",
+        "air_date": "1990-04-02",
+        "runtime": 46,
+        "still_path": "/u7yth2Ykam7bbgylLdmjolJEfPE.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Tin Man",
+        "overview": "Stardate: 43779.3. The Enterprise encounters a \u0027living\u0027 ship in the Neutral Zone, and risks breaking the Romulan Federation alliance in order to bring it into contact with a Betazoid emissary.",
+        "air_date": "1990-04-23",
+        "runtime": 46,
+        "still_path": "/dt1GaGhKvuxONrVo63bWPSAJxZB.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Hollow Pursuits",
+        "overview": "Stardate: 43807.4. A nervous and insecure officer, Lt. Reginald Barclay, places the Enterprise in great danger when he neglects his duties in Engineering, and instead spends his time acting out his fantasies on the holodeck.",
+        "air_date": "1990-04-30",
+        "runtime": 46,
+        "still_path": "/7xmOy0WoU1j9bXGvfyMLEmRRCCi.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Most Toys",
+        "overview": "Stardate: 43872.2. The crew are shattered by the apparent death of Data in a shuttle explosion, and are prevented from carrying out a detailed investigation when Starfleet gives them orders for a new mission elsewhere. However, the crew don\u0027t realize that he was actually abducted and placed on display as part of a collection of rare and valuable items held by a disreputable character.",
+        "air_date": "1990-05-07",
+        "runtime": 46,
+        "still_path": "/5UMsRJMxzep7ixDsxdWqRPmZ25a.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Sarek",
+        "overview": "Stardate: 43917.4. Spock\u0027s Vulcan father, Sarek, boards the Enterprise to negotiate political relations with the Legaran. However, Sarek has contract Bendii syndrome, which causes a Vulcan to gradually lose control, and become overpowered with emotions.",
+        "air_date": "1990-05-14",
+        "runtime": 46,
+        "still_path": "/u2kqYrx1S4OwayDbM7ZGnY7OQiV.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "M\u00E9nage \u00E0 Troi",
+        "overview": "Stardate: 43930.7. Riker and Deanna, both on shoreleave, are unexpectedly joined by Deanna\u0027s mother, Lwaxana, on Betazed. Shortly, all three are kidnapped by the Ferengi who want to study Lwaxana\u0027s telepathic abilities.",
+        "air_date": "1990-05-28",
+        "runtime": 46,
+        "still_path": "/zUn96lmkSsNBSZsAiQAcZROZttj.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Transfigurations",
+        "overview": "Stardate: 43957.2. Dr. Crusher becomes attracted to an injured alien with mysterious powers, who is being tracked down by his government like a wanted criminal.",
+        "air_date": "1990-06-04",
+        "runtime": 46,
+        "still_path": "/q9MBiryuttIxZepRPJBkVoaRVCq.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "The Best of Both Worlds (1)",
+        "overview": "Stardate: 43989.1  An Starfleet expert on the Borg, Lt. Cmdr. Shelby, is assigned to the Enterprise to investigate the disappearance of a Federation colony. Picard is abducted by the Borg and assimilated into the Collective, which forces Riker to attempt a rescue mission.",
+        "air_date": "1990-06-18",
+        "runtime": 46,
+        "still_path": "/n2rpDKMHU3wZTNFawrsANW5JYEs.jpg"
+      }
+    ]
+  }
+}

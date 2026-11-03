@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36557,
+    "title": "Casino Royale",
+    "overview": "Le Chiffre, a banker to the world\u0027s terrorists, is scheduled to participate in a high-stakes poker game in Montenegro, where he intends to use his winnings to establish his financial grip on the terrorist market. M sends Bond\u2014on his maiden mission as a 00 Agent\u2014to attend this game and prevent Le Chiffre from winning. With the help of Vesper Lynd and Felix Leiter, Bond enters the most important poker game in his already dangerous career.",
+    "tagline": "Everyone has a past. Every legend has a beginning.",
+    "runtime": 144,
+    "release_date": "2006-11-14",
+    "vote_average": 7.58,
+    "poster_path": "/lMrxYKKhd4lqRzwUHAy5gcx9PSO.jpg",
+    "backdrop_path": "/klJMCIblHLFwCuGjKz7tyOpekIC.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Craig",
+      "character": "James Bond",
+      "profile_path": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
+    },
+    {
+      "name": "Eva Green",
+      "character": "Vesper Lynd",
+      "profile_path": "/vwjOWfUeDk5fQr8jraKlR1Yfxxq.jpg"
+    },
+    {
+      "name": "Mads Mikkelsen",
+      "character": "Le Chiffre",
+      "profile_path": "/AsX4bdvZ8UCayWTmAf9lAqOA8V7.jpg"
+    },
+    {
+      "name": "Judi Dench",
+      "character": "M",
+      "profile_path": "/cpna5VGvAxuKuC31xJPBKy9zbnv.jpg"
+    }
+  ]
+}

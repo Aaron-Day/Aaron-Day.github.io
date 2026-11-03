@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 72105,
+    "title": "Ted",
+    "overview": "John Bennett, a man whose childhood wish of bringing his teddy bear to life came true, now must decide between keeping the relationship with the bear or his girlfriend, Lori.",
+    "tagline": "Ted is coming.",
+    "runtime": 107,
+    "release_date": "2012-06-29",
+    "vote_average": 6.458,
+    "poster_path": "/1QVZXQQHCEIj8lyUhdBYd2qOYtq.jpg",
+    "backdrop_path": "/hkAVgWvAMmM8tj9CDEvGqMdNQBE.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 266672,
+      "name": "Ted Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mark Wahlberg",
+      "character": "John Bennett",
+      "profile_path": "/1Oc3XSLyb8hxmjmlgFENu582Kqw.jpg"
+    },
+    {
+      "name": "Mila Kunis",
+      "character": "Lori Collins",
+      "profile_path": "/cJAHQWX9hVadDFx5WTSBIW0VjvP.jpg"
+    },
+    {
+      "name": "Seth MacFarlane",
+      "character": "Ted (voice)",
+      "profile_path": "/8oQJqM51Z0Qtdb7sE6ZfX1peNCB.jpg"
+    },
+    {
+      "name": "Joel McHale",
+      "character": "Rex",
+      "profile_path": "/7iwIiaYhIPaiAyiaZOc2Gl1ZAY4.jpg"
+    }
+  ]
+}

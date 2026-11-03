@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 462,
+    "title": "Erin Brockovich",
+    "overview": "A twice-divorced mother of three who sees an injustice, takes on the bad guy and wins -- with a little help from her push-up bra. Erin goes to work for an attorney and comes across medical records describing illnesses clustered in one nearby town. She starts investigating and soon exposes a monumental cover-up.",
+    "tagline": "She brought a small town to its feet and a huge company to its knees.",
+    "runtime": 131,
+    "release_date": "2000-03-17",
+    "vote_average": 7.429,
+    "poster_path": "/eMs20iUQyZVs05Ck7Q0LNnRsstr.jpg",
+    "backdrop_path": "/3HmLKhahTxX2ALTWlagr92pZrU7.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Julia Roberts",
+      "character": "Erin Brockovich",
+      "profile_path": "/fQacAdIa1WUNChQ6FgEko13eqOA.jpg"
+    },
+    {
+      "name": "Albert Finney",
+      "character": "Ed Masry",
+      "profile_path": "/v77sxrIQvkPmiqE4bODGocXgDTl.jpg"
+    },
+    {
+      "name": "Aaron Eckhart",
+      "character": "George",
+      "profile_path": "/u5JjnRMr9zKEVvOP7k3F6gdcwT6.jpg"
+    },
+    {
+      "name": "Marg Helgenberger",
+      "character": "Donna Jensen",
+      "profile_path": "/wPfXSAsk1l9Ry2sqN1Ei8GwjI9E.jpg"
+    }
+  ]
+}

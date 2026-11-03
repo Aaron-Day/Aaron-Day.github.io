@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 926,
+    "title": "Galaxy Quest",
+    "overview": "For four years, the courageous crew of the NSEA Protector \u2014  Commander Peter Quincy Taggart, Lieutenant Tawny Madison, and Doctor Lazarus \u2014 set off on a thrilling and often dangerous mission in space... until their series was cancelled! Now, twenty years later, aliens under attack have mistaken the Galaxy Quest television transmissions for \u0022historical documents\u0022 and beam up the crew of has-been actors to save the universe. With no script, no director, and no clue, the actors must turn in the performances of their lives.",
+    "tagline": "A comedy of galactic proportions.",
+    "runtime": 102,
+    "release_date": "1999-12-25",
+    "vote_average": 7.1,
+    "poster_path": "/fZXSwgZknp81vmciTb86rw0MejV.jpg",
+    "backdrop_path": "/yzQ0mkz1OUJKtUK1NWp53jiGcaJ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tim Allen",
+      "character": "Jason Nesmith",
+      "profile_path": "/k8XPNHBO459FaqkqqM4tfX5GMKk.jpg"
+    },
+    {
+      "name": "Sigourney Weaver",
+      "character": "Gwen DeMarco",
+      "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+    },
+    {
+      "name": "Alan Rickman",
+      "character": "Alexander Dane",
+      "profile_path": "/1EearzPgXkmYFKvECfWNrctIFT9.jpg"
+    },
+    {
+      "name": "Tony Shalhoub",
+      "character": "Fred Kwan",
+      "profile_path": "/1zfBSuAmOr1xXjNg4WzFWPm5B0Z.jpg"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 6978,
+    "title": "Big Trouble in Little China",
+    "overview": "Truck driver Jack Burton gets embroiled in a supernatural battle when his best friend Wang Chi\u0027s green-eyed fianc\u00E9e is kidnapped by henchmen of the sorcerer Lo Pan, who must marry a girl with green eyes in order to return to the human realm.",
+    "tagline": "Jack Burton\u0027s in for some serious trouble and you\u0027re in for some serious fun.",
+    "runtime": 100,
+    "release_date": "1986-05-30",
+    "vote_average": 7.207,
+    "poster_path": "/gI2Qs1yTTj3NcESJyttCkbmJ4k9.jpg",
+    "backdrop_path": "/mAxA5ltgqNXLXlm7PO5XrWSo9U1.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kurt Russell",
+      "character": "Jack Burton",
+      "profile_path": "/6g1d98oH4miG4k0ZiZWmF3Dt0bO.jpg"
+    },
+    {
+      "name": "Kim Cattrall",
+      "character": "Gracie Law",
+      "profile_path": "/6X6x8gLSOWxwhoquIi37769m0k0.jpg"
+    },
+    {
+      "name": "Dennis Dun",
+      "character": "Wang Chi",
+      "profile_path": "/kVem07C5bxKI4g88RkWUDsQ9BRO.jpg"
+    },
+    {
+      "name": "James Hong",
+      "character": "David Lo Pan",
+      "profile_path": "/v3lfw5aHOy0paOCx6WHiSnwzbH0.jpg"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 8,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Week 1",
+        "overview": "The 16 players have been chosen and head to The Biggest Loser Ranch. The theme this season is second chances. The contestants are happy to finally meet Bob and Jillian, but are a little surprised when the bus drops them off at the beach to meet with Ali first.",
+        "air_date": "2009-09-15",
+        "runtime": 90,
+        "still_path": "/d73LnArRMrpxRHIFslgFSK4hVPx.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Biggest Loser: Couples Season 8 Episode 2",
+        "overview": "",
+        "air_date": "2009-09-22",
+        "runtime": 90,
+        "still_path": "/rWmJfCdjBtUF5wVtOjMkVVUvKeT.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Week 3",
+        "overview": "Tracey tries to protect herself and Coach Mo by making controversial decisions that end up antagonizing the other players and frustrating her trainers. A temptation gives one player control of the game and the Challenge offers immunity. When two teams fall below the yellow line, one team sacrifices itself for the other.",
+        "air_date": "2009-09-29",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 4,
+        "name": "Week 4",
+        "overview": "A contestant gets frustrated because medical conditions prevent them from working out at full capacity. The contestants are shocked when they find out the kitchen is off limits and learn why it\u0027s off limits. One team gets an amazing prize during a pop challenge about calories. Jillian and Bob help contestants learn how to make healthy choices when eating out by taking them to a restaurant. The contestants endurance is challenged before weigh in.",
+        "air_date": "2009-10-06",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 5,
+        "name": "Season 8, Episode 5",
+        "overview": "This is the week the contestants are split into Bob\u0027s Blue team and Jillian\u0027s Black team. Alison tells the contestants that the winner of the temptation challenge will pick which players go to which team. The winner picks the new teams and splits up old teams; another player is sent home.",
+        "air_date": "2009-10-13",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 6,
+        "name": "Week 6",
+        "overview": "The two teams dig for a buried treasure on the beach. As a final result of the challenge, one team is sent home with loved ones while the other team stays at the ranch to train with their trainer.",
+        "air_date": "2009-10-20",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 7,
+        "name": "Week Seven",
+        "overview": "Derek Jeter gives and inspirational talk to the contestants about the importance of team work before they participate in a baseball challenge. Chef Curtis Stone makes a health Mediterranean meal for the winner of the challenge; at the weigh in a contestant breaks a Biggest Loser record.",
+        "air_date": "2009-10-27",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 8,
+        "name": "Week Eight",
+        "overview": "The players travel to Washington DC and get a tour of the White House. They meet the White House chef for the tour, and they are shown Michelle Obama\u0027s garden where she grows vegetables to eat in the White House. The contestants help to pick and prepare vegetables, then eat them at lunch. The weigh-in is held at the steps of the Lincoln Memorial.",
+        "air_date": "2009-11-03",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 9,
+        "name": "Week 9",
+        "overview": "Ali reveals to the contestants that two people will be going home, but there\u0027s a second twist. In addition to the yellow line, there will also be a red line. Whoever falls below the red line will be automatically eliminated and sent home prior to the voting. This causes tension between two players.",
+        "air_date": "2009-11-10",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 10,
+        "name": "Week 10",
+        "overview": "This week is makeover week, and each contestant is made over with the assistance of Tim Gunn and Tabatha Coffey. They then give speeches designed to inspire and motivate others.",
+        "air_date": "2009-11-17",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 11,
+        "name": "Week 11",
+        "overview": "Investment guru Suze Orman, makes a guest appearance on the show to advise the contestants and to administer a quiz. She says she is there to help them find the balance between health and wealth. She tells them that obesity is a very expensive disease. She asks them financial questions relating to health and weight.",
+        "air_date": "2009-11-24",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 12,
+        "name": "Week 12",
+        "overview": "The contestants all go home for 60 days, in which they have to find time to balance time with their families, their jobs, and find time to work out. Each player gets a phone call from either Bob or Jillian, explaining that they are going to run a marathon.",
+        "air_date": "2009-12-01",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 13,
+        "name": "Season 8 Finale",
+        "overview": "The wait is finally over! The live finale has arrived. Who will win that $100,000 prize?",
+        "air_date": "2009-12-08",
+        "runtime": 90,
+        "still_path": null
+      }
+    ]
+  }
+}

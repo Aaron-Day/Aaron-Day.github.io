@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10327,
+    "title": "Legally Blonde 2: Red, White \u0026 Blonde",
+    "overview": "Now a rising young lawyer, Elle Woods is about to make partner at her firm, but when she finds out her dog\u0027s relatives are being used as cosmetic test subjects, she heads to Washington D.C. to fight for animal rights.",
+    "tagline": "Bigger. Bolder. Blonder.",
+    "runtime": 95,
+    "release_date": "2003-07-02",
+    "vote_average": 5.721,
+    "poster_path": "/4kC0UGTuJgFnlZq2ZM6OiY7nuY8.jpg",
+    "backdrop_path": "/jmf9dLoKVDDwEB2cb0OJ9fEGbHy.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86024,
+      "name": "Legally Blonde Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Reese Witherspoon",
+      "character": "Elle Woods",
+      "profile_path": "/mfjunuTHrd0wnh8UG1ImMN9FSws.jpg"
+    },
+    {
+      "name": "Sally Field",
+      "character": "Victoria Rudd",
+      "profile_path": "/iMeq1j9Xwvaf6PbTJ0FQz69fpuA.jpg"
+    },
+    {
+      "name": "Regina King",
+      "character": "Grace Rossiter",
+      "profile_path": "/fEIz0ljk9CBrp3AitM5nwjfoGVu.jpg"
+    },
+    {
+      "name": "Jennifer Coolidge",
+      "character": "Paulette",
+      "profile_path": "/hcpbV0dY4ZJxmZi1WcAWe8euqV2.jpg"
+    }
+  ]
+}

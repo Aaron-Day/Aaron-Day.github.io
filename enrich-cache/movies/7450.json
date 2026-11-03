@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7450,
+    "title": "Titan A.E.",
+    "overview": "A young man finds out that he holds the key to restoring hope and ensuring survival for the human race, while an alien species called the Drej are bent on mankind\u0027s destruction.",
+    "tagline": "Get ready for the human race.",
+    "runtime": 95,
+    "release_date": "2000-06-16",
+    "vote_average": 6.635,
+    "poster_path": "/el2iHk3LTJWfEnwrvcRkvWY501G.jpg",
+    "backdrop_path": "/t0VWB5Kc5o38w5YYgzReArrGiZ8.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matt Damon",
+      "character": "Cale (voice)",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    },
+    {
+      "name": "Bill Pullman",
+      "character": "Korso (voice)",
+      "profile_path": "/AlLhgmcX5zh3frPT82OSPY9gqXO.jpg"
+    },
+    {
+      "name": "Drew Barrymore",
+      "character": "Akima (voice)",
+      "profile_path": "/8qvMFslwrC3w1OwJYqE3mHPvffr.jpg"
+    },
+    {
+      "name": "John Leguizamo",
+      "character": "Gune (voice)",
+      "profile_path": "/kwYCdxTlDh9zauUCg4mp2XTCQTw.jpg"
+    }
+  ]
+}

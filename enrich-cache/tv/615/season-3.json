@@ -1,0 +1,128 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Honking",
+        "overview": "When the inheritance Bender claims in the Old Country isn\u0027t quite what he expected, the Planet Express crew has to find the source of an age-old curse.",
+        "air_date": "2000-11-05",
+        "runtime": 22,
+        "still_path": "/eS3NW1cGT5UFu2c5SVL3uOciKsG.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "War Is the H-Word",
+        "overview": "Fry and Bender enlist in the army to get a soldiers discount for bubblegum. When they are called to fight a war on a planet of bouncing ball aliens, Leela disguises herself as man to enlist with them. Bender is eventually sent to parley with the enemy, but this turns out to be a ploy.",
+        "air_date": "2000-11-26",
+        "runtime": 22,
+        "still_path": "/pbBmkmURo6HiFTzZTuQrIHPUztl.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Cryonic Woman",
+        "overview": "Fry is reunited with his old girlfriend from the 20th Century, but she doesn\u0027t adapt to the 31st century as well as he has. Convincing Fry to return to the cryogenic chamber, they awaken in a barren wasteland and struggle to make a place for themselves.",
+        "air_date": "2000-12-03",
+        "runtime": 22,
+        "still_path": "/yu38WFGuP3gW2byOHQs8HrR7PfW.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Parasites Lost",
+        "overview": "When Fry becomes infested with parasitic worms that make him stronger and smarter, he finally finds the perfect way to profess his feelings to Leela. Meanwhile, the rest of the crew goes on a journey into Fry\u0027s body to eradicate the worms.",
+        "air_date": "2001-01-21",
+        "runtime": 22,
+        "still_path": "/xfnxyzdRzSVCRjTIL7gwevm1bIS.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Amazon Women in the Mood",
+        "overview": "A double-date for Kif, Amy, Zapp, and Leela ends in disaster when their orbiting restaurant crashes on planet Amazonia. The hulking female inhabitants of the planet take their male captives to the omniscient Femputer, who orders Fry, Zapp, and Kif to death by \u0022snu-snu\u0022.",
+        "air_date": "2001-02-04",
+        "runtime": 22,
+        "still_path": "/sDmJieqa4SeuiFe2YWqO27fwSdE.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Bendless Love",
+        "overview": "Bender\u0027s urge to bend prompts Professor Farnsworth to send him on a rehabilitation visit to a steel factory, where he falls in love with a shapely fem-bot named Angleyne. But Bender\u0027s old rival Flexo and the intrusion of the Robot Mafia threaten to throw a wrench into the proceedings.",
+        "air_date": "2001-02-11",
+        "runtime": 22,
+        "still_path": "/suBEtxw08LijS5szYlFygRcUxtC.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Day the Earth Stood Stupid",
+        "overview": "Earth is invaded by super-intelligent flying brains, who sap the Earth\u0027s populace of their intelligence. Leela is taken to Nibbler\u0027s home planet Eternia, where the Nibblonians explain that only one human is immune to the brains\u0027 powers - Fry.",
+        "air_date": "2001-02-18",
+        "runtime": 22,
+        "still_path": "/d2jlCAzegweOByXwssslxGnMO6B.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "That\u0027s Lobstertainment!",
+        "overview": "Dr. Zoidberg reunites with his uncle, silent hologram star Harold Zoid, and the two of them set out to make a movie together. They cast the temperamental Calculon in the lead role, who demands an Oscar for his performance, but the movie doesn\u0027t go over well with audiences.",
+        "air_date": "2001-02-25",
+        "runtime": 22,
+        "still_path": "/gTQQIilN1YCWGF8UMEmWVYjY5d7.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Birdbot of Ice-Catraz",
+        "overview": "A sober Bender crashes a dark matter tanker on Pluto, threatening the penguin reserve nearby. Leela helps out in the clean-up, but when the penguins begin mating out of control, drastic action must be taken to thin the herd.",
+        "air_date": "2001-03-04",
+        "runtime": 22,
+        "still_path": "/sb16d5WY1JRKF573E35bGgg2PgC.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Luck of the Fryrish",
+        "overview": "After a string of bad luck, Fry ventures into the decaying ruins of Old New York to regain his lucky seven-leaf clover from his childhood, only to find that his brother Yancy Fry had stolen not only the clover, but Fry\u0027s identity as well. Fry sets out to exhume his brother\u0027s body, but discovers the startling truth about Yancy instead.",
+        "air_date": "2001-03-11",
+        "runtime": 22,
+        "still_path": "/q7nNMARWhfaSUdvLdoivzk11jmm.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Cyber House Rules",
+        "overview": "Leela meets up with her former orphanarium playmate Adlai Atkins, now a plastic surgeon, who offers to grant Leela surgery that will give her two eyes. Meanwhile, Bender adopts twelve orphans in order to collect $1200 in government stipends.",
+        "air_date": "2001-04-01",
+        "runtime": 22,
+        "still_path": "/yPzujVMvh8XNelPpsTOS3mynrt3.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Insane in the Mainframe",
+        "overview": "Accused of robbing a bank, Fry and Bender plead insanity and are both sent to a robot insane asylum. While Bender and his buddy Roberto plan an escape, Fry is brainwashed into thinking that he is a robot.",
+        "air_date": "2001-04-08",
+        "runtime": 22,
+        "still_path": "/z8TDfjc1JcrRXORIHDmIvdr2U64.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Bendin\u0027 in the Wind",
+        "overview": "When Bender is paralyzed in a tragic can opener accident, he discovers his musical washboard skills and goes on tour as a member of Beck\u0027s folk-rock band, acting as a voice for broken robots everywhere. Fry, Leela, Amy, and Zoidberg tag along in Fry\u0027s antique 1960s VW Van.",
+        "air_date": "2001-04-22",
+        "runtime": 22,
+        "still_path": "/uweh3WB6iKRw1X82IrXRy6tQ92g.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Time Keeps On Slippin\u0027",
+        "overview": "While creating a team of mutants to play the Harlem Globetrotters, the Professor accidentally causes a disruption in time that threatens the existence of the universe. Meanwhile, Fry tries to win an unreceptive Leela\u0027s heart.",
+        "air_date": "2001-05-06",
+        "runtime": 22,
+        "still_path": "/fLeQeTNgLxVhE8jO2aEjI9lHmqo.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "I Dated a Robot",
+        "overview": "Fry discovers the ability to download any celebrity onto a blank robot, and chooses to download Lucy Liu, with whom he falls madly in love. Repulsed by this disgusting display of human/robot love, Leela, Bender, and Zoidberg set out to shut down Nappster.com and put an end to illegal celebrity downloads forever.",
+        "air_date": "2001-05-13",
+        "runtime": 22,
+        "still_path": "/ayvhtQnh7j7MnTCoysoSDcOYraz.jpg"
+      }
+    ]
+  }
+}

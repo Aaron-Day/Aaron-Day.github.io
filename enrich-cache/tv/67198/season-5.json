@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Red Directive",
+        "overview": "Captain Burnham and the U.S.S. Discovery are sent to retrieve a mysterious 800-year-old Romulan vessel; until the artifact hidden inside is stolen, leading to an epic chase. Meanwhile, Saru is offered the position of a lifetime, and Tilly\u0027s efforts to help pull her into a tangled web of secrecy.",
+        "air_date": "2024-04-04",
+        "runtime": 60,
+        "still_path": "/z7kLGr1712Dn2R0upkwom8uwOiI.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Under the Twin Moons",
+        "overview": "On Saru\u0027s last mission as Captain Burnham\u0027s Number One, the team ventures to a seemingly abandoned planet to hunt for what might be the greatest treasure in the galaxy.",
+        "air_date": "2024-04-04",
+        "runtime": 53,
+        "still_path": "/9pHRNAnU7ZsKV03KvHKkWWX9c0i.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Jinaal",
+        "overview": "On Trill, Captain Burnham, Book, and Culber must pass a dangerous test to prove themselves worthy of the next clue. Adira reconnects with Gray and Saru\u2019s first day as ambassador is complicated by his engagement to T\u0027Rina.",
+        "air_date": "2024-04-11",
+        "runtime": 56,
+        "still_path": "/kYGXUqpl0t3hAhDquNH2w4EenBC.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Face the Strange",
+        "overview": "On the way to the next clue, the U.S.S. Discovery is sabotaged by a mysterious weapon, leaving Captain Burnham, Rayner, and Stamets as the only crew members who can possibly save the ship in time.",
+        "air_date": "2024-04-18",
+        "runtime": 52,
+        "still_path": "/pENjqE8fsJ9bRBDSnEfg6grOWRx.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Mirrors",
+        "overview": "Captain Burnham and Book journey into extradimensional space in search of the next clue to the location of the Progenitors\u0027 power. Meanwhile, Rayner navigates his first mission in command of the U.S.S. Discovery, and Culber opens up to Tilly.",
+        "air_date": "2024-04-25",
+        "runtime": 57,
+        "still_path": "/vImFwnOzxUIW6BLeiGK6bdwMcci.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Whistlespeak",
+        "overview": "While undercover in a pre-warp society, Captain Burnham is forced to consider breaking the Prime Directive when a local tradition threatens Tilly\u0027s life. Meanwhile, Culber tries to connect with Stamets, and Adira steps up when Rayner assigns them a position on the bridge.",
+        "air_date": "2024-05-02",
+        "runtime": 57,
+        "still_path": "/8nbdPt39oHxwyfXIateH0RnV2lL.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Erigah",
+        "overview": "With Moll and L\u0027ak finally in custody, the Federation is pulled into a diplomatic and ethical firestorm when the Breen arrive and demand they be handed over. Meanwhile, a frustrated Book looks for ways to help as Tilly, Adira, and Reno work to decipher the latest clue.",
+        "air_date": "2024-05-09",
+        "runtime": 55,
+        "still_path": "/eIAY8UsRg7Xvc29iB0CeSepYSbj.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Labyrinths",
+        "overview": "When Captain Burnham is trapped within a \u201Cmindscape\u201D designed to test her worthiness to retrieve the Progenitor\u0027s powerful technology, Book, Rayner, and the crew of the U.S.S. Discovery must hold off the Breen long enough for her to escape.",
+        "air_date": "2024-05-16",
+        "runtime": 58,
+        "still_path": "/diBlrAs4ilHSzTP3tFxondgzd1L.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Lagrange Point",
+        "overview": "After Moll and the Breen capture a mysterious structure that contains the Progenitors\u0027 power, Captain Burnham must lead a covert mission to retrieve it before the Breen figure out how to use it.",
+        "air_date": "2024-05-23",
+        "runtime": 47,
+        "still_path": "/298Fa4J9B457VbXLwFf1LZoly9M.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Life, Itself",
+        "overview": "Trapped inside a mysterious alien portal that defies familiar rules of time, space, and gravity, Captain Burnham must fight Moll \u2013 and the environment itself \u2013 in order to locate the Progenitors\u0027 technology and secure it for the Federation. Meanwhile, Book puts himself in harm\u0027s way to help Burnham survive and Rayner leads the U.S.S. Discovery in an epic winner-takes-all battle against Breen forces.",
+        "air_date": "2024-05-30",
+        "runtime": 86,
+        "still_path": "/nQjaT3qeFtuENIop3jfSoQynrcT.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 46195,
+    "title": "Rio",
+    "overview": "Captured by smugglers when he was just a hatchling, a macaw named Blu never learned to fly and lives a happily domesticated life in Minnesota with his human friend, Linda. Blu is thought to be the last of his kind, but when word comes that Jewel, a lone female, lives in Rio de Janeiro, Blu and Linda go to meet her. Animal smugglers kidnap Blu and Jewel, but the pair soon escape and begin a perilous adventure back to freedom -- and Linda.",
+    "tagline": "1 out of every 8 Americans is afraid of flying. Most of them don\u0027t have feathers.",
+    "runtime": 96,
+    "release_date": "2011-04-03",
+    "vote_average": 6.777,
+    "poster_path": "/4nJxhUknKV8Gqdhov8pU1YWDYfb.jpg",
+    "backdrop_path": "/3vxlXdwBKztOJdgiZ2Qwasl9FY4.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 229932,
+      "name": "Rio Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jesse Eisenberg",
+      "character": "Blu (voice)",
+      "profile_path": "/2ojZrkt5rdkUi857WSeCatxXdGS.jpg"
+    },
+    {
+      "name": "Anne Hathaway",
+      "character": "Jewel (voice)",
+      "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
+    },
+    {
+      "name": "Leslie Mann",
+      "character": "Linda (voice)",
+      "profile_path": "/x3OS9RL3qsv50kzRtpR2OhbuTkr.jpg"
+    },
+    {
+      "name": "Jane Lynch",
+      "character": "Alice / Goose (voice)",
+      "profile_path": "/nye6D17ZfCHQzr9faYZYyz1CPsZ.jpg"
+    }
+  ]
+}

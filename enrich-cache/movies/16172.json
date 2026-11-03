@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 16172,
+    "title": "Simply Irresistible",
+    "overview": "After her mother\u0027s death, mediocre chef Amanda Shelton is having trouble attracting customers to her family\u0027s restaurant. While shopping for ingredients, she is given a magical crab by mysterious Gene O\u0027Reilly. Afterward, Amanda\u0027s dishes suddenly become excellent, inducing strong emotional reactions in everyone who eats them. Tom Bartlett, who is preparing to open his own eatery, tries her cooking and falls in love.",
+    "tagline": "Magic opened up their hearts... Love did the rest.",
+    "runtime": 95,
+    "release_date": "1999-02-05",
+    "vote_average": 5.5,
+    "poster_path": "/zFsqqPQUz69wPaLBqQeiGbGiW7J.jpg",
+    "backdrop_path": "/qIDYvZBLYLuWtKnSgq1okHU3Nt8.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sarah Michelle Gellar",
+      "character": "Amanda Shelton",
+      "profile_path": "/xKe52w4tpv61ohz9iz75wNdzcwZ.jpg"
+    },
+    {
+      "name": "Sean Patrick Flanery",
+      "character": "Tom Bartlett",
+      "profile_path": "/aHQtxIjMEDWdXqvFJplx0Kcwdn6.jpg"
+    },
+    {
+      "name": "Dylan Baker",
+      "character": "Jonathan Bendel",
+      "profile_path": "/4mw6xj8Aj3ixjjeUj9pZdZPTbvz.jpg"
+    },
+    {
+      "name": "Patricia Clarkson",
+      "character": "Lois McNally",
+      "profile_path": "/rHHM9G83fpBAcFathbSyV4Tot5j.jpg"
+    }
+  ]
+}

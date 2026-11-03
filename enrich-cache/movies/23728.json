@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 23728,
+    "title": "Our Man Flint",
+    "overview": "When scientists use eco-terrorism to impose their will on the world by affecting extremes in the weather, Intelligence Chief Cramden calls in top agent Derek Flint.",
+    "tagline": "The ORIGINAL man of mystery!",
+    "runtime": 108,
+    "release_date": "1966-01-16",
+    "vote_average": 6.446,
+    "poster_path": "/rd2jKIqFfJ8LgZEaBpAvLL44G10.jpg",
+    "backdrop_path": "/dQbZRSQLmWlaU3TNVmBj72M1TBg.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 167456,
+      "name": "Our Man Flint Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "James Coburn",
+      "character": "Derek Flint",
+      "profile_path": "/9GApjInyrVvjnTAr652C1aViPqZ.jpg"
+    },
+    {
+      "name": "Lee J. Cobb",
+      "character": "Cramden",
+      "profile_path": "/yxMxBvM0PZwu7YXQamG0kFwt9DZ.jpg"
+    },
+    {
+      "name": "Gila Golan",
+      "character": "Gila",
+      "profile_path": "/43IrJOrSQUrbBtxWKswwlPfnLQR.jpg"
+    },
+    {
+      "name": "Edward Mulhare",
+      "character": "Malcolm Rodney",
+      "profile_path": "/eu18hWkcfG0R2Hkhqu9cQ89MmNg.jpg"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 538207,
+    "title": "We Die Young",
+    "overview": "Lucas, a 14-year-old boy inducted into the gang life in Washington D.C., is determined that his 10-year-old brother won\u0027t follow the same path. When an Afghanistan war veteran comes into the neighborhood, an opportunity arises.",
+    "tagline": "Every life is worth saving.",
+    "runtime": 93,
+    "release_date": "2019-05-09",
+    "vote_average": 6.8,
+    "poster_path": "/1rvsmRHfjIalt2LBDrEkyKFOQgo.jpg",
+    "backdrop_path": "/srEsK6LPJSMd0LndDIzxtBEiKNS.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jean-Claude Van Damme",
+      "character": "Daniel",
+      "profile_path": "/7DP3bm3MS0qa0L8tBLHGebbCu6H.jpg"
+    },
+    {
+      "name": "David Casta\u00F1eda",
+      "character": "Rincon",
+      "profile_path": "/tJL5BxRPjs0kezIKzjJHUGPUVmi.jpg"
+    },
+    {
+      "name": "Joana Metrass",
+      "character": "Anna",
+      "profile_path": "/aNEJywsvEUk3qVQm8OiUEb3fOn8.jpg"
+    },
+    {
+      "name": "Elijah Rodriguez",
+      "character": "Lucas",
+      "profile_path": "/mktEdTn775j5xMu8Py2A38U70L3.jpg"
+    }
+  ]
+}

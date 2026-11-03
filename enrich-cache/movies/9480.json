@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9480,
+    "title": "Daredevil",
+    "overview": "By day, blind attorney Matt Murdock toils for justice in Hell\u0027s Kitchen. By night, he\u0027s Daredevil, The Man Without Fear - a powerful, masked vigilante stalking the dark streets with an uncanny \u0022radar sense\u0022 that allows him to \u0022see\u0022 with superhuman capabilities. But when the love of his life, fiery Elektra Natchios, is targeted by New York City\u0027s ruthless Kingpin of crime and his deadly assassin Bullseye, Daredevil may be about to meet his match.",
+    "tagline": "When the streets have gone to Hell, have faith in the devil.",
+    "runtime": 103,
+    "release_date": "2003-02-14",
+    "vote_average": 5.306,
+    "poster_path": "/oCDBwSkntYamuw8VJIxMRCtDBmi.jpg",
+    "backdrop_path": "/e7jIX02GiSwsgkU5lMpeKjwq2Zc.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Affleck",
+      "character": "Matt Murdock / Daredevil",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Jennifer Garner",
+      "character": "Elektra",
+      "profile_path": "/eiX083VOa0RCGSgwENZgVi5MgDi.jpg"
+    },
+    {
+      "name": "Colin Farrell",
+      "character": "Bullseye",
+      "profile_path": "/5FdalJbrbZ5UCsED5rFrXpvbqJa.jpg"
+    },
+    {
+      "name": "Michael Clarke Duncan",
+      "character": "Kingpin / Fisk",
+      "profile_path": "/3RX8OBqt3gbvFwKYZqiom4O3Ta6.jpg"
+    }
+  ]
+}

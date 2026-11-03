@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 8,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Odyssey",
+        "overview": "Green Arrow calls upon fellow heroes Black Canary and Aquaman to locate the missing Clark Kent, last seen in the Arctic. The Martian Manhunter also joins in to help out.",
+        "air_date": "2008-09-18",
+        "runtime": 42,
+        "still_path": "/x5bGA9qLdIsaucrQrdSiek4Oqmw.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Plastique",
+        "overview": "Chloe invites an injured 15-year-old to move in with her. Meanwhile, Clark experiences his first day of work with Lois.",
+        "air_date": "2008-09-25",
+        "runtime": 42,
+        "still_path": "/suo5eySDxram13IQLXQQHNDxjXM.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Toxic",
+        "overview": "When Oliver is poisoned, he starts having flashbacks to the period when he gained his archery skills... and met Tess. Meanwhile, Chloe has to make a decision which surprises Clark.",
+        "air_date": "2008-10-02",
+        "runtime": 42,
+        "still_path": "/7l2JgnKbuVOZ1z5k4AzO0il6OoD.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Instinct",
+        "overview": "Tess and her team perform tests on the crystal she retrieved from the Arctic, causing it to send a beam of light into the universe; the beam of light triggers the arrival of Maxima, a queen from another planet looking for her soul mate.",
+        "air_date": "2008-10-09",
+        "runtime": 43,
+        "still_path": "/z5SCxvz9CEJV8D6YMxfsDUQBpJu.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Committed",
+        "overview": "A heartbroken psychotic wearing a watch jeweled with kryptonite abducts Chloe and Jimmy and subjects them to a polygraph; while searching for them, Clark and Lois pose as a couple.",
+        "air_date": "2008-10-16",
+        "runtime": 42,
+        "still_path": "/iMddIxenizRuwhEwkjp7TuDS9sq.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Prey",
+        "overview": "Clark believes a recent attack in a theater may be the work of a serial killer; Davis fears that his blackouts could mean that he is the killer.",
+        "air_date": "2008-10-23",
+        "runtime": 42,
+        "still_path": "/fcgdZBsoUGFcnqxh7uqvS6BM4dq.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Identity",
+        "overview": "Jimmy catches a red and blue blur on film when he takes a picture of Clark saving Lois from a mugger; after Tess decides to run the picture on the front page of the Daily Planet, Clark fears his identity will be discovered.",
+        "air_date": "2008-10-30",
+        "runtime": 42,
+        "still_path": "/mB0RXF6CGZUZiNbg8bvP8Ntew10.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Bloodline",
+        "overview": "Clark receives a package containing the crystal that Tess found in the Arctic; the crystal activates, sending Clark and Lois to the Phantom Zone, where they run into Kara (Laura Vandervoort); Zod\u0027s wife, Faora, takes over Lois\u0027 body.",
+        "air_date": "2008-11-06",
+        "runtime": 42,
+        "still_path": "/g4z69AZz62wihAyHFRn6ZCDFsT5.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Abyss",
+        "overview": "Clark takes Chloe to the Fortress of Solitude so Jor-El can heal her after Brainiac replaces her memories with Kryptonian code.",
+        "air_date": "2008-11-13",
+        "runtime": 42,
+        "still_path": "/d8bX6TDYjclLKQt9PceOY8mRirG.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Bride",
+        "overview": "Unexpected guests crash Chloe and Jimmy\u0027s wedding; Oliver thinks he has found Lex and sets out to confront him, but he is shocked to find Lana instead; Lois and Clark grow closer.",
+        "air_date": "2008-11-20",
+        "runtime": 42,
+        "still_path": "/bnRiEEMhJHvha0x6prPNUgLN5v7.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Legion",
+        "overview": "The Persuader attacks Clark; Chloe, as Brainiac, tells Davis he is Doomsday and that he was created to destroy the \u0022other Kryptonian\u0022 and the world.",
+        "air_date": "2009-01-15",
+        "runtime": 42,
+        "still_path": "/hzyBWDFFXUCB0JtrHH3isVGjYFy.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Bulletproof",
+        "overview": "Clark learns that John Jones was shot while working as a police officer; Lana tells Tess that Lex isn\u0027t the man she thinks he is, forcing Tess to re-evaluate her position as head of Luthercorp.",
+        "air_date": "2009-01-22",
+        "runtime": 42,
+        "still_path": "/dFzoJsVlLQLRdZdSLZFAy91ln6t.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Power",
+        "overview": "Clark discovers that Lana is missing; Tess reveals what really happened to Lana when she woke up from her Brainiac-induced coma; Tess is shocked by what she discovers in a secret LuthorCorp facility.",
+        "air_date": "2009-01-29",
+        "runtime": 42,
+        "still_path": "/gs0nfIwaq0oJDKKhD835uMsYnUp.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Requiem",
+        "overview": "An explosion at LutherCorp injures Oliver and kills all the board members.",
+        "air_date": "2009-02-05",
+        "runtime": 42,
+        "still_path": "/7mNR9WxDDVLn6HMfmrW6M6cYXu8.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Infamous",
+        "overview": "Linda Lake returns to Metropolis and threatens to expose Clark\u2019s secret unless he promises to give her exclusive information on the red-blue blur so she can become a star reporter again. Refusing to be blackmailed, Clark tells Lois his secret and asks her to write his story for The Daily Planet.",
+        "air_date": "2009-03-12",
+        "runtime": 42,
+        "still_path": "/w3517rKSh8sonFSjkG6ueaOxglJ.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Turbulence",
+        "overview": "Tess invites Clark to a press conference in New York but when an explosion rocks the private jet they are on, Clark must figure out how to save them without Tess learning his secret. Unbeknown to Clark, Tess orchestrated the explosion to get Clark to reveal his powers. Meanwhile, Davis discovers a surprising way to control the monster within.",
+        "air_date": "2009-03-19",
+        "runtime": 42,
+        "still_path": "/ztaS8CGDWw5BKy33v83lQqlGOIq.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Hex",
+        "overview": "At Chloe\u2019s birthday party, a mysterious magician named Zatanna grants Chloe\u2019s wish to be more like Lois and switches the two into each other\u2019s bodies. Zatanna searches for her father\u2019s book of spells so she can conjure up his spirit but not before also granting Clark his deepest wish.",
+        "air_date": "2009-03-26",
+        "runtime": 42,
+        "still_path": "/sfGCoUy4je5UdoH4lzLq5DE5IGY.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Eternal",
+        "overview": "Tess tries to kill Davis by blowing up his truck. However, after he escapes, she realizes she needs help to destroy him and turns to Clark. Tess reveals Davis\u0027 secret childhood with the Luthors and hints that she knows Clark\u0027s true identity. Meanwhile, Davis runs to Chloe for help.",
+        "air_date": "2009-04-02",
+        "runtime": 42,
+        "still_path": "/1nl1qJRuzY92RTkNZD2zhDXUG1J.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Stiletto",
+        "overview": "Lois believes that she needs a big story to secure her reputation as a star reporter but the red/blue blur continues to elude her. However, after Chloe is mugged, Lois steps in to fend off one of the attackers and uses the opportunity to pretend a new superhero, Stiletto, has come to town and is giving exclusives to Lois. Clark is concerned Lois will hurt herself pretending to be a superhero but after he is captured by thugs with kryptonite, Lois steps in to save the day.",
+        "air_date": "2009-04-23",
+        "runtime": 42,
+        "still_path": "/ahe7kT3utyQNVvcBL0jYbqTluc5.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Beast",
+        "overview": "Clark discovers that Davis is still alive and confronts Chloe about protecting him. Oliver discovers Jimmy breaking into Chloe\u2019s apartment, but things get rapidly worse after Davis jumps from the shadows and attacks both of them.",
+        "air_date": "2009-04-30",
+        "runtime": 42,
+        "still_path": "/7IGaMcsrFmSaFS8zuYSmEYqk61w.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Injustice",
+        "overview": "Chloe returns and begs Clark to kill Davis, claiming he can no longer keep the beast under control.  Tess has assembled a team of meteor freaks, including Plastique, to track down Davis so Clark can kill him.  However, things get out of hand once Tess\u2019 team discovers she is double-crossing them.",
+        "air_date": "2009-05-07",
+        "runtime": 42,
+        "still_path": "/kzBPktZCWkBwKXqZzgFXsEAPGGi.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Doomsday",
+        "overview": "Oliver tells Clark he must kill Davis, as Doomsday is a serious threat and must be stopped at all costs.  However, Clark struggles with taking a human life, so the Green Arrow and his team decide to take matters into their own hands.  Lois takes on Tess, but the fight takes a shocking turn.  Meanwhile, Chloe gets caught in the middle of Oliver and Clark\u2019s battle over killing Davis.",
+        "air_date": "2009-05-14",
+        "runtime": 43,
+        "still_path": "/kgLmrdqtoikzTBaZrn6Cize7Eqq.jpg"
+      }
+    ]
+  }
+}

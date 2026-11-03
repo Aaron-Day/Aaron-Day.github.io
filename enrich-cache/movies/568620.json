@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 568620,
+    "title": "Snake Eyes: G.I. Joe Origins",
+    "overview": "After saving the life of their heir apparent, tenacious loner Snake Eyes is welcomed into an ancient Japanese clan called the Arashikage where he is taught the ways of the ninja warrior. But, when secrets from his past are revealed, Snake Eyes\u0027 honor and allegiance will be tested \u2013 even if that means losing the trust of those closest to him.",
+    "tagline": "Every warrior has a beginning.",
+    "runtime": 121,
+    "release_date": "2021-07-21",
+    "vote_average": 6.4,
+    "poster_path": "/uIXF0sQGXOxQhbaEaKOi2VYlIL0.jpg",
+    "backdrop_path": "/2OFg5p9yarI5zZsUWKCRgBgPctj.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Henry Golding",
+      "character": "Snake Eyes",
+      "profile_path": "/zWZDvqMInsficgm4o3W2cRJ6tmn.jpg"
+    },
+    {
+      "name": "Andrew Koji",
+      "character": "Tommy / Storm Shadow",
+      "profile_path": "/oU53nWLQ6wFHzERwSi1fD53LxZB.jpg"
+    },
+    {
+      "name": "Haruka Abe",
+      "character": "Akiko",
+      "profile_path": "/20RHE6uojb2dF1emNszF0fJOErV.jpg"
+    },
+    {
+      "name": "\u00DArsula Corber\u00F3",
+      "character": "The Baroness",
+      "profile_path": "/cmH8Z459tw9YkR61QfxlCSlZw9P.jpg"
+    }
+  ]
+}

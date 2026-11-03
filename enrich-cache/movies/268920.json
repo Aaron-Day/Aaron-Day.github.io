@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 268920,
+    "title": "Hot Pursuit",
+    "overview": "Straight-arrow policewoman Cooper is excited and thrilled about her next assignment. Her task is to escort Daniella Riva, a wisecracking Colombian beauty, from San Antonio to Dallas so both she and her husband can testify against a drug lord. Plans go awry when Mr. Riva gets ambushed, leaving Daniella a widow. Cooper and her witness must now use their wits to escape from crooked cops and murderous gunmen, while not killing each other in the process.",
+    "tagline": "Armed and sort of dangerous.",
+    "runtime": 87,
+    "release_date": "2015-05-08",
+    "vote_average": 5.7,
+    "poster_path": "/lobNOBHuJQCP9ZYAf86MBMwRrmZ.jpg",
+    "backdrop_path": "/iRaWDcGpKCynIXpCewle2YwQffL.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Reese Witherspoon",
+      "character": "Officer Rose \u0027Coop\u0027 Cooper",
+      "profile_path": "/mfjunuTHrd0wnh8UG1ImMN9FSws.jpg"
+    },
+    {
+      "name": "Sof\u00EDa Vergara",
+      "character": "Daniella Riva",
+      "profile_path": "/l79eVtn6bSOaiq7R0UGu60foMrK.jpg"
+    },
+    {
+      "name": "John Carroll Lynch",
+      "character": "Captain Emmett",
+      "profile_path": "/cIx1HYFOHmfeAGRDBJwdFK9ZMIM.jpg"
+    },
+    {
+      "name": "Robert Kazinsky",
+      "character": "Randy",
+      "profile_path": "/nYWfalUgOSnc8VLIrFMnBwmI1QG.jpg"
+    }
+  ]
+}

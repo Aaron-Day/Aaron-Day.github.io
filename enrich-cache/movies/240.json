@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 240,
+    "title": "The Godfather Part II",
+    "overview": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.",
+    "tagline": "The rise and fall of the Corleone empire.",
+    "runtime": 202,
+    "release_date": "1974-12-20",
+    "vote_average": 8.572,
+    "poster_path": "/8a1lJs7mFyGhGhZZDT1azJUoQiZ.jpg",
+    "backdrop_path": "/pGzqRKrYeK4LogoysNro0vG8d8N.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 230,
+      "name": "The Godfather Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Al Pacino",
+      "character": "Don Michael Corleone",
+      "profile_path": "/m8HAAjq1T75JypKk0v1FFQn4ysZ.jpg"
+    },
+    {
+      "name": "Robert Duvall",
+      "character": "Tom Hagen",
+      "profile_path": "/3tcKxC5Sc3DJ6XPDKKC2EAomEWn.jpg"
+    },
+    {
+      "name": "Diane Keaton",
+      "character": "Kay Corleone",
+      "profile_path": "/A8B3BsFgbmw2WEmJuQX38qeU9eR.jpg"
+    },
+    {
+      "name": "Robert De Niro",
+      "character": "Vito Corleone",
+      "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+    }
+  ]
+}

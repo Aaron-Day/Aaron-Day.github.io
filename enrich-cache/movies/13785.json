@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13785,
+    "title": "Best in Show",
+    "overview": "The tension is palpable, the excitement is mounting and the heady scent of competition is in the air as hundreds of eager contestants from across America prepare to take part in what is undoubtedly one of the greatest events of their lives -- the Mayflower Dog Show. The canine contestants and their owners are as wondrously diverse as the great country that has bred them.",
+    "tagline": "Some pets deserve a little more respect than others.",
+    "runtime": 91,
+    "release_date": "2000-09-29",
+    "vote_average": 6.883,
+    "poster_path": "/qkYBCMN26SxkQww4gLxUXQm5vr4.jpg",
+    "backdrop_path": "/itVxHnmzMJbfHhX3rbzCuyI9mfB.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Bob Balaban",
+      "character": "Dr. Theodore W. Millbank, III",
+      "profile_path": "/qceORed11dvRnxQjVGexPvgF5Xu.jpg"
+    },
+    {
+      "name": "Jennifer Coolidge",
+      "character": "Sherri Ann Cabot",
+      "profile_path": "/hcpbV0dY4ZJxmZi1WcAWe8euqV2.jpg"
+    },
+    {
+      "name": "Christopher Guest",
+      "character": "Harlan Pepper",
+      "profile_path": "/ofLhsKLZ4YAet8XIsNj7oA3blgh.jpg"
+    },
+    {
+      "name": "John Michael Higgins",
+      "character": "Scott Donlan",
+      "profile_path": "/1McAEXIhRW2Q3LJsX3os90UXcJz.jpg"
+    }
+  ]
+}

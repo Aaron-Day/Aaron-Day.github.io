@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 767,
+    "title": "Harry Potter and the Half-Blood Prince",
+    "overview": "As Lord Voldemort tightens his grip on both the Muggle and wizarding worlds, Hogwarts is no longer a safe haven. Harry suspects perils may even lie within the castle, but Dumbledore is more intent upon preparing him for the final battle fast approaching. Even as the decisive showdown looms, romance blossoms for Harry, Ron, Hermione and their classmates. Love is in the air, but danger lies ahead and Hogwarts may never be the same again",
+    "tagline": "Dark secrets revealed.",
+    "runtime": 153,
+    "release_date": "2009-07-15",
+    "vote_average": 7.683,
+    "poster_path": "/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
+    "backdrop_path": "/mITJS77BV4TSqdFB5FPGBc7JKXj.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1241,
+      "name": "Harry Potter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Radcliffe",
+      "character": "Harry Potter",
+      "profile_path": "/uUFfo8RANo7tuckB6AZAnESne55.jpg"
+    },
+    {
+      "name": "Rupert Grint",
+      "character": "Ron Weasley",
+      "profile_path": "/iFlkpTaOF6fGLqxz8b0PhI0i0zN.jpg"
+    },
+    {
+      "name": "Emma Watson",
+      "character": "Hermione Granger",
+      "profile_path": "/mf0OANvWYSzU1d8yggrhyw8IbIz.jpg"
+    },
+    {
+      "name": "Jim Broadbent",
+      "character": "Horace Slughorn",
+      "profile_path": "/jTyvGwwR1NFpvgDhcmuWZCM241w.jpg"
+    }
+  ]
+}

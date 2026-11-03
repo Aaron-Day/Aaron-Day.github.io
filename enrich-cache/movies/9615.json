@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9615,
+    "title": "The Fast and the Furious: Tokyo Drift",
+    "overview": "In order to avoid a jail sentence, Sean Boswell heads to Tokyo to live with his military father. In a low-rent section of the city, Sean gets caught up in the underground world of drift racing",
+    "tagline": "On the streets of Tokyo, speed needs no translation.",
+    "runtime": 104,
+    "release_date": "2006-06-03",
+    "vote_average": 6.565,
+    "poster_path": "/46xqGOwHbh2TH2avWSw3SMXph4E.jpg",
+    "backdrop_path": "/dMARcKLrv0T7kVJ4iQR3vqTTdtT.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9485,
+      "name": "The Fast and the Furious Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Lucas Black",
+      "character": "Sean Boswell",
+      "profile_path": "/w2oImwC4Y0RDtyvaKGTCFCKsvwh.jpg"
+    },
+    {
+      "name": "Nathalie Kelley",
+      "character": "Neela",
+      "profile_path": "/wawAz251CPJelmOVwTeNvjrYnqO.jpg"
+    },
+    {
+      "name": "Sung Kang",
+      "character": "Han Lue",
+      "profile_path": "/ox4ti0WmpJoN19n3iYJ2T2vHP5f.jpg"
+    },
+    {
+      "name": "Shad Moss",
+      "character": "Twinkie",
+      "profile_path": "/xsvJmcOQiocYcKtRmfiQbjzVrVw.jpg"
+    }
+  ]
+}

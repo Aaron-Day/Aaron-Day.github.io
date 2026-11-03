@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 402,
+    "title": "Basic Instinct",
+    "overview": "Catherine, a novelist with an insatiable sexual appetite, becomes a prime suspect when her boyfriend is brutally murdered -- a crime she had described in her latest story.",
+    "tagline": "A brutal murder. A brilliant killer. A cop who can\u0027t resist the danger.",
+    "runtime": 128,
+    "release_date": "1992-03-20",
+    "vote_average": 6.954,
+    "poster_path": "/76Ts0yoHk8kVQj9MMnoMixhRWoh.jpg",
+    "backdrop_path": "/7FRraud59N3s10bbf9bfYjvwx3v.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86336,
+      "name": "Basic Instinct Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael Douglas",
+      "character": "Detective Nick Curran",
+      "profile_path": "/kVYGPIZowzXLEQfAGUNOqKjAbBb.jpg"
+    },
+    {
+      "name": "Sharon Stone",
+      "character": "Catherine Tramell",
+      "profile_path": "/tVeUIOBzbbYuXNvi4jGxiF1ESwM.jpg"
+    },
+    {
+      "name": "George Dzundza",
+      "character": "Gus",
+      "profile_path": "/wmnQQn0dFygl90M2N8tlWlpGHzV.jpg"
+    },
+    {
+      "name": "Jeanne Tripplehorn",
+      "character": "Dr. Beth Garner",
+      "profile_path": "/q7D9MDnMVc5PAm99853gszHwJy7.jpg"
+    }
+  ]
+}

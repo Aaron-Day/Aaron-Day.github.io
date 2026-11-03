@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 524434,
+    "title": "Eternals",
+    "overview": "The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind\u2019s most ancient enemy, the Deviants.",
+    "tagline": "In the beginning...",
+    "runtime": 156,
+    "release_date": "2021-11-03",
+    "vote_average": 6.742,
+    "poster_path": "/lFByFSLV5WDJEv3KabbdAF959F2.jpg",
+    "backdrop_path": "/c6H7Z4u73ir3cIoCteuhJh7UCAR.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Gemma Chan",
+      "character": "Sersi",
+      "profile_path": "/stTKj4iNauhqlVmZ6XAsFsvcMCY.jpg"
+    },
+    {
+      "name": "Richard Madden",
+      "character": "Ikaris",
+      "profile_path": "/9QQFfVZ6PLe3WVmOL56wGNOnbGL.jpg"
+    },
+    {
+      "name": "Angelina Jolie",
+      "character": "Thena",
+      "profile_path": "/bXNxIKcJ5cNNW8QFrBPWcfTSu9x.jpg"
+    },
+    {
+      "name": "Salma Hayek Pinault",
+      "character": "Ajak",
+      "profile_path": "/3j8MpAjyopkAc8mbNiDeXyqBmcS.jpg"
+    }
+  ]
+}

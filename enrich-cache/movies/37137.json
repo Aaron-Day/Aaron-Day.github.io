@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 37137,
+    "title": "The Naked Gun 2\u00BD: The Smell of Fear",
+    "overview": "Bumbling lieutenant Frank Drebin is out to foil the big boys in the energy industry, who intend to suppress technology that will put them out of business.",
+    "tagline": "If you see only one movie this year... you ought to get out more often.",
+    "runtime": 85,
+    "release_date": "1991-06-28",
+    "vote_average": 6.8,
+    "poster_path": "/v9niLQWVzVPB1cP1ThNdEaLZG1Q.jpg",
+    "backdrop_path": "/kCW0C3Bv5IsasICx3StdNEejfB5.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 37139,
+      "name": "The Naked Gun Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Leslie Nielsen",
+      "character": "Lt. Frank Drebin",
+      "profile_path": "/rMz3ZUmFE7lQCP51Ql7IcMHJIUZ.jpg"
+    },
+    {
+      "name": "Priscilla Presley",
+      "character": "Jane Spencer",
+      "profile_path": "/AkHLzziAPK1NVI5lfELYt6u0kRP.jpg"
+    },
+    {
+      "name": "George Kennedy",
+      "character": "Ed Hocken",
+      "profile_path": "/fIVmcPEcPmh0Rbx4mYf9aneCmDe.jpg"
+    },
+    {
+      "name": "O. J. Simpson",
+      "character": "Nordberg",
+      "profile_path": "/3q6XMf1L5zCApoUsiAMoFS9ADXY.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 105864,
+    "title": "The Good Dinosaur",
+    "overview": "An epic journey into the world of dinosaurs where an Apatosaurus named Arlo makes an unlikely human friend.",
+    "tagline": "A single kindness can change everything.",
+    "runtime": 93,
+    "release_date": "2015-11-14",
+    "vote_average": 6.756,
+    "poster_path": "/8RSkxOO80btfKjyiC5ZiTaCHIT8.jpg",
+    "backdrop_path": "/cF3H9pyUF6dsvqlYUcH0TyBAMTG.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Raymond Ochoa",
+      "character": "Arlo (voice)",
+      "profile_path": "/bsX4yaqlI7am1dhKkJ0eeRj0ugx.jpg"
+    },
+    {
+      "name": "Frances McDormand",
+      "character": "Momma (voice)",
+      "profile_path": "/gBkoteKZshmQXEyEoyT6WE7N0tF.jpg"
+    },
+    {
+      "name": "Jeffrey Wright",
+      "character": "Poppa (voice)",
+      "profile_path": "/yGcuHGW4glqRpOPxgiCvjcren7F.jpg"
+    },
+    {
+      "name": "Steve Zahn",
+      "character": "Thunderclap (voice)",
+      "profile_path": "/rwrPdKGwXnByxUVMxMf8Y7oswi3.jpg"
+    }
+  ]
+}

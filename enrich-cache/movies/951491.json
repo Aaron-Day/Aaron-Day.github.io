@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 951491,
+    "title": "Saw X",
+    "overview": "Between the events of \u0027Saw\u0027 and \u0027Saw II\u0027, a sick and desperate John Kramer travels to Mexico for a risky and experimental medical procedure in hopes of a miracle cure for his cancer, only to discover the entire operation is a scam to defraud the most vulnerable. Armed with a newfound purpose, the infamous serial killer returns to his work, turning the tables on the con artists in his signature visceral way through devious, deranged, and ingenious traps.",
+    "tagline": "Witness the return of Jigsaw.",
+    "runtime": 118,
+    "release_date": "2023-09-27",
+    "vote_average": 7.142,
+    "poster_path": "/u7Lp1Hi8aBS73jv4KRMIv5aK4ax.jpg",
+    "backdrop_path": "/uUJp5I4IbzuhdUiEx4R9OAoFpbz.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 656,
+      "name": "Saw Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tobin Bell",
+      "character": "John Kramer",
+      "profile_path": "/wyyfG5Pml4G1Y3Aw873LIe32wsl.jpg"
+    },
+    {
+      "name": "Shawnee Smith",
+      "character": "Amanda Young",
+      "profile_path": "/s2Ouz4b7xqDH72aU48TSW5zS40v.jpg"
+    },
+    {
+      "name": "Synn\u00F8ve Macody Lund",
+      "character": "Cecilia Pederson",
+      "profile_path": "/1tZzyfHjmn3EmlyQtYoaNmvexqd.jpg"
+    },
+    {
+      "name": "Steven Brand",
+      "character": "Parker Sears",
+      "profile_path": "/oWkitw5jzILwb775CVGjsqMSrqz.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 312221,
+    "title": "Creed",
+    "overview": "The former World Heavyweight Champion Rocky Balboa serves as a trainer and mentor to Adonis Johnson, the son of his late friend and former rival Apollo Creed.",
+    "tagline": "Your legacy is more than a name.",
+    "runtime": 133,
+    "release_date": "2015-11-25",
+    "vote_average": 7.408,
+    "poster_path": "/1BfTsk5VWuw8FCocAhCyqnRbEzq.jpg",
+    "backdrop_path": "/kODNw6GJNdgldUMEhKPlCw8wQCr.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 553717,
+      "name": "Creed Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael B. Jordan",
+      "character": "Adonis Johnson",
+      "profile_path": "/sMBpav8cK7t7Nk0yf4tuNOqNUyW.jpg"
+    },
+    {
+      "name": "Sylvester Stallone",
+      "character": "Rocky Balboa",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Tessa Thompson",
+      "character": "Bianca",
+      "profile_path": "/19ze60jXlb2j7dXc2UpA3MujXA8.jpg"
+    },
+    {
+      "name": "Phylicia Rash\u0101d",
+      "character": "Mary Anne Creed",
+      "profile_path": "/o0sQd9JvPsxRq7BJLOeP6ASsh5Q.jpg"
+    }
+  ]
+}

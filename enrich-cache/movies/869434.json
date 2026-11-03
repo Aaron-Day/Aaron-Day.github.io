@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 869434,
+    "title": "Unknown Dimension: The Story of Paranormal Activity",
+    "overview": "A deep dive into the making of the Paranormal Activity films with first time ever interviews with cast and crew, never-before-seen footage from the movies, and a preview of the seventh installment in the franchise.",
+    "tagline": "",
+    "runtime": 94,
+    "release_date": "2021-10-29",
+    "vote_average": 6.6,
+    "poster_path": "/10a5miRZ8FMNCiPC8PIc0sAdBlk.jpg",
+    "backdrop_path": "/dtzNRRjus5fGOMZBs91AMJWvfMN.jpg",
+    "genres": [
+      {
+        "id": 99,
+        "name": "Documentary"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jason Blum",
+      "character": "Self",
+      "profile_path": "/oOsdVzSXyj1L1mKN3d2QcF01hkc.jpg"
+    },
+    {
+      "name": "Oren Peli",
+      "character": "Self",
+      "profile_path": "/mNj3nStQ55K5M1woWo6F5dpDpb9.jpg"
+    },
+    {
+      "name": "Katie Featherston",
+      "character": "Self",
+      "profile_path": "/mdbMy2B70PiFp0ckLo6WhSLDbR2.jpg"
+    },
+    {
+      "name": "Micah Sloat",
+      "character": "Self",
+      "profile_path": "/gF7ndGTcfBo7FMCaycY4ZTxAwxJ.jpg"
+    }
+  ]
+}

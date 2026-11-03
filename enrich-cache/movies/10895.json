@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10895,
+    "title": "Pinocchio",
+    "overview": "When the gentle woodcarver Geppetto builds a marionette to be his substitute son, a benevolent fairy brings the toy to life. The puppet, named Pinocchio, is not yet a human boy. He must earn the right to be real by proving that he is brave, truthful, and unselfish.",
+    "tagline": "When you wish upon a star, your dreams come true.",
+    "runtime": 88,
+    "release_date": "1940-02-23",
+    "vote_average": 7.116,
+    "poster_path": "/bnZJrLRnoQHpzEJdka1KYfsAF3N.jpg",
+    "backdrop_path": "/ikpwuaK0yzNhXO24OeB7cKulhZE.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dickie Jones",
+      "character": "Pinocchio / Alexander (voice) (uncredited)",
+      "profile_path": "/ingaYYtcJZoiMtfXNTgABzPl5nu.jpg"
+    },
+    {
+      "name": "Cliff Edwards",
+      "character": "Jiminy Cricket (voice) (uncredited)",
+      "profile_path": "/cplAl2NjSDuoHvSJ87kf8Yh2cdK.jpg"
+    },
+    {
+      "name": "Christian Rub",
+      "character": "Geppetto (voice) (uncredited)",
+      "profile_path": "/rtoMrNp0Dn1PdxfJGCXybE5HY3u.jpg"
+    },
+    {
+      "name": "Evelyn Venable",
+      "character": "The Blue Fairy (voice) (uncredited)",
+      "profile_path": "/dWPBOYhga647qXS6BdRZTrKmyHm.jpg"
+    }
+  ]
+}

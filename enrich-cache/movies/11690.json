@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11690,
+    "title": "Bloodsport",
+    "overview": "An American Army Major goes AWOL to Hong Kong for an outlawed martial arts contest called the Kumite.",
+    "tagline": "The true story of an American ninja.",
+    "runtime": 92,
+    "release_date": "1988-02-26",
+    "vote_average": 7.075,
+    "poster_path": "/kndxR9TRK0kJ5hxzDprRSS80F2W.jpg",
+    "backdrop_path": "/aSA7RuKmCQBnYKn70GYPi6ckgoY.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 36694,
+      "name": "Bloodsport Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jean-Claude Van Damme",
+      "character": "Frank Dux",
+      "profile_path": "/7DP3bm3MS0qa0L8tBLHGebbCu6H.jpg"
+    },
+    {
+      "name": "Donald Gibb",
+      "character": "Ray Jackson",
+      "profile_path": "/3SGqGltQ6J0LUJ84DZTdWSMh8O8.jpg"
+    },
+    {
+      "name": "Leah Ayres",
+      "character": "Janice",
+      "profile_path": "/pj3NBBJgXg7oWwsAgSk1GNR7fwB.jpg"
+    },
+    {
+      "name": "Norman Burton",
+      "character": "Helmer",
+      "profile_path": "/c7lnmgfMHoimYSiHUQ15FKCLF8V.jpg"
+    }
+  ]
+}

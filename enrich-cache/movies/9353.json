@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9353,
+    "title": "Nacho Libre",
+    "overview": "Ignacio, a disrespected cook at a Mexican monastery, can barely afford to feed the orphans who live there. Inspired by a local wrestling hero, he decides to moonlight as the not-so-famous Luchador \u0022Nacho Libre\u0022 to earn money for the monastery -- not to mention the admiration of beautiful nun Sister Encarnaci\u00F3n.",
+    "tagline": "He\u0027s nacho average hero.",
+    "runtime": 92,
+    "release_date": "2006-06-16",
+    "vote_average": 6.549,
+    "poster_path": "/kh7B91bMl2lZ0mH9WhPfaNUIEQH.jpg",
+    "backdrop_path": "/nNCleqiADKVMKWDC5G7hjYcVCmv.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jack Black",
+      "character": "Ignacio / Nacho",
+      "profile_path": "/rtCx0fiYxJVhzXXdwZE2XRTfIKE.jpg"
+    },
+    {
+      "name": "Ana de la Reguera",
+      "character": "Sister Encarnaci\u00F3n",
+      "profile_path": "/nEacV1wuUHV6eUyErGBhniJ85JY.jpg"
+    },
+    {
+      "name": "H\u00E9ctor Jim\u00E9nez",
+      "character": "Esqueleto",
+      "profile_path": "/i6Q6G8HWLof7zXNbTgvpI6MuC3P.jpg"
+    },
+    {
+      "name": "Darius Rose",
+      "character": "Chancho",
+      "profile_path": null
+    }
+  ]
+}

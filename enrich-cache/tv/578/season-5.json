@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "High Exposure",
+        "overview": "Two rock climbers in possession of a large stolen diamond are killed, and Don and the team hunt for the murderers; Charlie considers whether he should have his FBI clearance reinstated.",
+        "air_date": "2008-10-03",
+        "runtime": 41,
+        "still_path": "/1WuSbiSrsrkCbcMZ2PO5EOG0WUk.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Decoy Effect",
+        "overview": "The team investigates an increase in ATM kidnappings when a woman who was abducted and forced to withdraw money is murdered; Charlie meets the investigator who will decide the fate of his FBI security clearance.",
+        "air_date": "2008-10-10",
+        "runtime": 44,
+        "still_path": "/1Uqiz31rD70CtmuJsASmYz8iDDh.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Blowback",
+        "overview": "When eight people, including two police officers, are gunned down in a coffee shop, Don and his team uncover a trail of blackmail, corruption and romance; McGowan expands his investigation of Charlie and Don.",
+        "air_date": "2008-10-17",
+        "runtime": 43,
+        "still_path": "/ySOqGWLTsCuqrBLzdeNb876P6u2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Jack of All Trades",
+        "overview": "Don\u0027s team helps Agent Bloom, a veteran with the FBI, track down a con man who has eluded Bloom for years. Meanwhile, the final decision on Charlie\u0027s clearance is handed down, and it doesn\u0027t just affect Charlie. Don\u0027s job is on the line as well.",
+        "air_date": "2008-10-24",
+        "runtime": 44,
+        "still_path": "/7hk4ZvUwQ7auT7y6dZpsG9TVvJT.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Scan Man",
+        "overview": "The team investigates a crew stealing high-end goods from a shipping service; Don questions his faith in the FBI when one of his men is killed on duty.",
+        "air_date": "2008-10-31",
+        "runtime": 41,
+        "still_path": "/jm5xskHrDx7Xw8IfTzFvyeEzJGt.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Magic Show",
+        "overview": "Don and the team investigate when a magician mysteriously vanishes during an illusion.",
+        "air_date": "2008-11-07",
+        "runtime": 42,
+        "still_path": "/jqt8Ze755JNco2CakAZVLQ1EgT4.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Charlie Don\u0027t Surf",
+        "overview": "One of Don and Charlie\u0027s friends dies in what is deemed an accident. Not convinced, the brothers investigate further and uncover something shocking.",
+        "air_date": "2008-11-14",
+        "runtime": 43,
+        "still_path": "/9k0Oc7R3CV4MEP7JdZFbJtVSTDa.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Thirty Six Hours",
+        "overview": "When a passenger train collides with a freight train David (Alimi Ballard), Don, and Colby are called in to help rescue survivors and to investigate the cause of the crash",
+        "air_date": "2008-11-21",
+        "runtime": 42,
+        "still_path": "/d8zwZUrafbp0ibGPerA1TbKlcm5.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Conspiracy Theory",
+        "overview": "The team sifts through various rumors about a controversial charity organization to find the guilty party after its office building is bombed.",
+        "air_date": "2008-12-05",
+        "runtime": 41,
+        "still_path": "/6KtaExsReJk89pmyINwTWGB8qLG.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Frienemies",
+        "overview": "Charlie is forced to turn to his arch rival for help when a vigilante group goes after a career criminal.",
+        "air_date": "2008-12-19",
+        "runtime": 43,
+        "still_path": "/osSxBDp4goYlTbV1NNORvfOXsQ3.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Arrow of Time",
+        "overview": "Don turns to his newly found religious beliefs when he is forced to deal with an escaped criminal who is bent on seeking revenge.",
+        "air_date": "2009-01-09",
+        "runtime": 44,
+        "still_path": "/54TydjlxLHG81YPIcnas2CMBkSq.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Jacked",
+        "overview": "Don and his team must race to save the hostages being held on a hijacked bus.",
+        "air_date": "2009-01-16",
+        "runtime": 42,
+        "still_path": "/hc23wiPqlsuO7rzbXpBGESLBTWm.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Trouble in Chinatown",
+        "overview": "A feud between Chinese gangs leads to the kidnapping of an undercover agent and the reappearance of Samuel Kraft.",
+        "air_date": "2009-01-23",
+        "runtime": 43,
+        "still_path": "/fCAR3LM0ubs1ATiu4c8ey6VK4L3.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Sneakerhead",
+        "overview": "The team searches for a pair of limited edition sneakers after they are stolen from a foreign ambassador.",
+        "air_date": "2009-02-06",
+        "runtime": 43,
+        "still_path": "/olZXR4QPJI6DodMwIedykLdZogS.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Guilt Trip",
+        "overview": "When a case against a weapons smuggler falls apart, the team takes a closer look at the jury that heard the case, searching for signs of jury tampering.",
+        "air_date": "2009-02-13",
+        "runtime": 43,
+        "still_path": "/sp59CMXwjlNAJZ1rfxHdfOHJZJf.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Cover Me",
+        "overview": "Charlie puts together a plan to stop a dangerous drug from hitting the streets of LA. Will his plan work? Or will it cost the life of one of Don\u0027s agents?",
+        "air_date": "2009-02-27",
+        "runtime": 42,
+        "still_path": "/lFAiekmMjLKmfV5CNGOhENvgHCN.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "First Law",
+        "overview": "The team\u0027s number one suspect in the death of a scientist is a super computer.",
+        "air_date": "2009-03-06",
+        "runtime": 44,
+        "still_path": "/owTHkfNHR4PFv9wFq9eX4wpdl61.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "12:01 A.M.",
+        "overview": "The team gets a last minute tip that could exonerate a dangerous mob boss who is about to be executed; Charlie tries to help the CalSci basketball team break their losing streak.",
+        "air_date": "2009-03-13",
+        "runtime": 42,
+        "still_path": "/aOAPWl19wJVnKzMzZzFFqr2I97A.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Animal Rites",
+        "overview": "The investigation into a professor\u0027s death takes a dangerous turn when the team finds their lead suspect has ties to a radical animal rights group.",
+        "air_date": "2009-04-10",
+        "runtime": 41,
+        "still_path": "/jsSPJqRtHLGTngQ99GfbfUITDOP.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Fifth Man",
+        "overview": "Don\u0027s life hangs in the balance after he is injured during a raid while investigating a series of home invasions.",
+        "air_date": "2009-04-24",
+        "runtime": 44,
+        "still_path": "/jjpVpZNZpxSiVnUJQfv4dFjQRrH.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Disturbed",
+        "overview": "Feeling guilty over the stabbing, Charlie puts his attention on finding a serial killer using math theories to help the team solve the case before another life is taken.",
+        "air_date": "2009-05-01",
+        "runtime": 44,
+        "still_path": "/rIU6SN6ILZJL8DHyvHDPo0z9EaH.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Greatest Hits",
+        "overview": "Don and the team are sent to look into a series of bank robberies and soon name former FBI Agent Roger Bloom as their lead suspect.",
+        "air_date": "2009-05-08",
+        "runtime": 43,
+        "still_path": "/h8d2TxrGO4W7cw9LBn0RUkK3l4c.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Angels and Devils",
+        "overview": "When Amita is abducted, Don and the team\u2019s frantic search for her leads them to the delusional head of a cult, but it is up to a distraught Charlie to discover what the suspect\u2019s bizarre plans for her are.",
+        "air_date": "2009-05-15",
+        "runtime": 44,
+        "still_path": "/eTYHszZyQ1vXvG9h1B0dPo381M5.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 13,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Beginnings (1)",
+        "overview": "Two street kids are pursued by the S.P.D., a space patrol from the future whose job it is to protect Earth from evil aliens.",
+        "air_date": "2005-02-05",
+        "runtime": 22,
+        "still_path": "/gQk5jmwejJI8uGJpdfHQJM0iUDx.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Beginnings (2)",
+        "overview": "Jack and Z must decide whether or not to join the S.P.D. Emperor Gruumm sets his sights on Earth.",
+        "air_date": "2005-02-05",
+        "runtime": 22,
+        "still_path": "/2C71jfvQRCPSTX5yk1nw6DZkFgn.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Confronted",
+        "overview": "Jack lets being the leader go to his head. Gruumm lures the A Squad Rangers into space.",
+        "air_date": "2005-02-12",
+        "runtime": 22,
+        "still_path": "/uKuIJZo55sa5ptnvphsd7rV7pg7.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Walls",
+        "overview": "Sky\u0027s refusal to accept Jack as the leader of the Rangers results in a victory for Gruumm.",
+        "air_date": "2005-02-19",
+        "runtime": 22,
+        "still_path": "/6JNwgks7qQUZo90lRgih4inLrx8.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Dogged",
+        "overview": "Syd is the only one that believes R.I.C., the robotic dog, can still be a valuable asset to S.P.D.",
+        "air_date": "2005-02-26",
+        "runtime": 22,
+        "still_path": "/q2Yor0LB16tDvOllK1JilymLkss.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "A-Bridged",
+        "overview": "The other Rangers are skeptical of Bridge\u0027s unusual investigative methods.",
+        "air_date": "2005-03-05",
+        "runtime": 22,
+        "still_path": "/rMOgQIMjCP4G0mqKfrKFuFTOMId.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Sam (1)",
+        "overview": "Mora uses a young boy with special powers in a plot to capture people and turn them into dolls.",
+        "air_date": "2005-03-12",
+        "runtime": 22,
+        "still_path": "/g0GBrOkFv8B4Ht9WF3dfWC9JJpR.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Sam (2)",
+        "overview": "Z befriends Sam, and teaches him to use his special powers for the good of mankind.",
+        "air_date": "2005-03-19",
+        "runtime": 22,
+        "still_path": "/f92OBU48xDi59NvSJ5bnC3Vxqa7.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Idol",
+        "overview": "Sky\u0027s loyalty to an old friend is put to the test when it is suspected that he is working for Gruumm.",
+        "air_date": "2005-04-02",
+        "runtime": 22,
+        "still_path": "/tqo0t61JNpAaBIvBBUdKLBz8NDt.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Stakeout",
+        "overview": "Syd is angry with Jack when she makes him work on her birthday.",
+        "air_date": "2005-04-09",
+        "runtime": 22,
+        "still_path": "/kHSfKKikcnUsWzSXTwWlgc0909H.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Shadow (1)",
+        "overview": "Cruger must face the demons of his past when an old enemy returns.",
+        "air_date": "2005-04-16",
+        "runtime": 22,
+        "still_path": "/8Dco8pcnmGhPCE7YRuhoIB1IaE.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Shadow (2)",
+        "overview": "Cruger is challenged by an old foe and must overcome his reluctance to fight.",
+        "air_date": "2005-04-23",
+        "runtime": 22,
+        "still_path": "/v4AzwVukb8Xd1KQ2Bs9wXW581C4.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Abandoned",
+        "overview": "Cruger refuses to help the Rangers fight Dracel; Gruumm goes after the Stone of Evil.",
+        "air_date": "2005-04-30",
+        "runtime": 22,
+        "still_path": "/jcdH21BWXdDXoYgolQwxL74PStB.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Wired (1)",
+        "overview": "A new recruit has SPD buzzing; Gruumm looks for a second in command.",
+        "air_date": "2005-05-07",
+        "runtime": 22,
+        "still_path": "/vlgujWegSk8hTtseJgsTPmtehAN.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Wired (2)",
+        "overview": "The teens must find Sophie before Valko uses her to control Gorodon.",
+        "air_date": "2005-05-14",
+        "runtime": 22,
+        "still_path": "/akdE9yKT8axCvNRlWL1XndXyMIa.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Boom",
+        "overview": "Trouble results when Boom tells his visiting parents that he is a Power Ranger.",
+        "air_date": "2005-05-21",
+        "runtime": 22,
+        "still_path": "/4Jhe4IQDAZnW3y0OXzMMVYiXdBZ.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Recognition",
+        "overview": "A dangerous alien criminal switches bodies with Sky.",
+        "air_date": "2005-06-04",
+        "runtime": 22,
+        "still_path": "/zTVEfbfbpgkyvy53o7JGctP0ew6.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Samurai",
+        "overview": "Gruumm brings a noble warrior from the past and tricks him into battling the Rangers.",
+        "air_date": "2005-06-11",
+        "runtime": 22,
+        "still_path": "/yyFar9Pip0VaEMdbN6QfkKrS74d.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Dismissed",
+        "overview": "Cruger is relieved from duty when he clashes with the tough SPD Supreme Commander.",
+        "air_date": "2005-06-18",
+        "runtime": 22,
+        "still_path": "/a1vg08gJhQdG77waZDl6k52DLKK.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Perspective",
+        "overview": "The Rangers relate the capture of a criminal to Cruger, but they all have their own unique version of the story.",
+        "air_date": "2005-06-25",
+        "runtime": 22,
+        "still_path": "/8Lz0Tod8pz6HDGc0KMPHwUW4gHV.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Messenger (1)",
+        "overview": "The cadets get a message from the future that today is the day that they will lose the battle of Earth to the Troobians.",
+        "air_date": "2005-07-10",
+        "runtime": 22,
+        "still_path": "/tfYl3vXyZizbmYy6R8GBWZ4xSGi.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Messenger (2)",
+        "overview": "A mysterious Ranger from the future comes to help the Rangers in their hour of need.",
+        "air_date": "2005-07-16",
+        "runtime": 22,
+        "still_path": "/7MvlY02ROQXTld0wzVFRP3JLUxf.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Zapped",
+        "overview": "Morgana grants real power to a washed-up magician in her latest attempt to destroy the Rangers.",
+        "air_date": "2005-07-25",
+        "runtime": 22,
+        "still_path": "/cNdRAKjd8jzwXffAO0gFFnyQgZm.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Reflection (1)",
+        "overview": "Sky must interrogate a notorious criminal when aliens that SPD has already captured attack the Rangers.",
+        "air_date": "2005-08-12",
+        "runtime": 22,
+        "still_path": "/wORbBUUyF5Zwx9LtkQ8dR4yDHeC.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Reflection (2)",
+        "overview": "Sky must face off with the criminal who was responsible for the loss of his father.",
+        "air_date": "2005-08-12",
+        "runtime": 22,
+        "still_path": "/wHlbHw4aGWY4PR8Yaw8aoTsT5hB.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "S.W.A.T. (1)",
+        "overview": "Piggy and friends steal SPD technology; the Rangers are sent to Zentor to train for SWAT mode.",
+        "air_date": "2005-08-15",
+        "runtime": 22,
+        "still_path": "/yTpKRc0B4cFAJTIfQZRHuYWCU0y.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "S.W.A.T. (2)",
+        "overview": "Under the command of a tough drill sergeant, the Rangers must learn to work as a team before they can earn a powerful new weapons\u0027 technology.",
+        "air_date": "2005-08-22",
+        "runtime": 22,
+        "still_path": "/Aa8KKH9yvp9RVzpnRuOxcY2D0AO.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Robotpalooza",
+        "overview": "The Rangers nearly reach their breaking point when both Gruumm and Broodwing send robot after robot to attack the city.",
+        "air_date": "2005-08-29",
+        "runtime": 22,
+        "still_path": "/838hjhd59lm6OxObj7F6OPeNZRg.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Impact",
+        "overview": "Jack and Sky embark on a dangerous mission to stop an incoming meteor from destroying Earth.",
+        "air_date": "2005-09-23",
+        "runtime": 22,
+        "still_path": "/nP0p9GMASWQVLyCmfinizgLujUZ.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Katastrophe",
+        "overview": "Convinced that the Rangers no longer need her, Kat takes a top-level position at SPD Headquarters.",
+        "air_date": "2005-09-26",
+        "runtime": 22,
+        "still_path": "/j9LZtUloyyM74vBf1O5X1VOpWi9.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Missing",
+        "overview": "Bridge is captured and the other Rangers must use all their skills to find him before he is destroyed.",
+        "air_date": "2005-10-03",
+        "runtime": 22,
+        "still_path": "/cHBkoz5eUnPbRIA1MrOip0z8HAh.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "History",
+        "overview": "Broodwing brings the Dino Rangers from the past to fight on the side of evil.",
+        "air_date": "2005-10-11",
+        "runtime": 22,
+        "still_path": "/35BRSZ479ZNkx7eihAFr6jhrYQT.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "Badge",
+        "overview": "Cruger\u0027s old rival teams up with Broodwing to take down the Rangers one by one.",
+        "air_date": "2005-10-17",
+        "runtime": 22,
+        "still_path": "/5Dlkg6TUvnzGaIjmm8hPYPGF8hN.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Insomnia",
+        "overview": "The teens grapple with failure after Cruger hails the A squad.",
+        "air_date": "2005-10-28",
+        "runtime": 22,
+        "still_path": "/nPt45rVScb5zLN44JfwBHsl6OjW.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Resurrection",
+        "overview": "Jack needs to decide what he really wants to do with his life and the Rangers are dealt a shocking revelation.",
+        "air_date": "2005-11-04",
+        "runtime": 22,
+        "still_path": "/jxOOBFczxIaDDBk1VIlykzAdBF1.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "Endings (1)",
+        "overview": "With Cruger captured, the A Squad is sent by Gruumm to finish off the Rangers.",
+        "air_date": "2005-11-07",
+        "runtime": 22,
+        "still_path": "/qd20c5EFrDD4t00i4Xq0MkJieUP.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "Endings (2)",
+        "overview": "Omni descends to Earth and Gruumm makes his last stand against the Rangers.",
+        "air_date": "2005-11-14",
+        "runtime": 22,
+        "still_path": "/1xr0osbc1bYQPaK7dNBMr57Q9A8.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "Wormhole",
+        "overview": "Gruumm takes The Terror to the past in an attempt to defeat Earth before SPD was formed.",
+        "air_date": "2006-02-02",
+        "runtime": 22,
+        "still_path": "/rrsulysyktJeh7O2ldL9q3QoizV.jpg"
+      }
+    ]
+  }
+}

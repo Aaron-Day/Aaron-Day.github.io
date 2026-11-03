@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 345942,
+    "title": "Henchmen",
+    "overview": "When a new recruit joins the Union of Evil, he is assigned to a motley crew of blue-collar workers led by fallen henchmen Hank. But when \u201CThe Kid\u201D accidentally steals the ultimate weapon, Hank must break his \u201Crisk nothing\u201D code to save the boy he\u2019s befriended, even if it means becoming the one thing he has always avoided\u2026 being a hero.",
+    "tagline": "Proudly serving evil from 9 to 5",
+    "runtime": 89,
+    "release_date": "2018-12-07",
+    "vote_average": 6.4,
+    "poster_path": "/ddbcOYQaDbxH5R42DlrK7txVbIG.jpg",
+    "backdrop_path": "/3kcTsIUyi4UfAjQCTxwNYbcgcbf.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Thomas Middleditch",
+      "character": "Lester (voice)",
+      "profile_path": "/2c15BQ6DWSiDSBTRjvdsp8X4AAe.jpg"
+    },
+    {
+      "name": "James Marsden",
+      "character": "Hank (voice)",
+      "profile_path": "/lf7OnfKZnMgNh9b98764tqSocGK.jpg"
+    },
+    {
+      "name": "Rosario Dawson",
+      "character": "Jolene (voice)",
+      "profile_path": "/siTzOI810a0K46wv1TORXMw5N7J.jpg"
+    },
+    {
+      "name": "Alfred Molina",
+      "character": "Baron Blackout (voice)",
+      "profile_path": "/nJo91Czesn6z0d0pkfbDoVZY3sg.jpg"
+    }
+  ]
+}

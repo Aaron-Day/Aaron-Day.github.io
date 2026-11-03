@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 347126,
+    "title": "God\u0027s Not Dead 2",
+    "overview": "When a high school teacher is asked a question in class about Jesus, her reasoned response lands her in deep trouble and could expel God from the public square once and for all.",
+    "tagline": "",
+    "runtime": 121,
+    "release_date": "2016-04-01",
+    "vote_average": 6.2,
+    "poster_path": "/xsRYqQJv6t0f4J6DYeYraM9uKKT.jpg",
+    "backdrop_path": "/j1X0A0tDagEdtG1vmOjvT5hTf82.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 409343,
+      "name": "God\u0027s Not Dead Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jesse Metcalfe",
+      "character": "Tom Endler",
+      "profile_path": "/qZR4VAB2t0qawkH88Wv3K7y67nM.jpg"
+    },
+    {
+      "name": "Robin Givens",
+      "character": "Principal Kinney",
+      "profile_path": "/nDDfpWNsIciwWWQ3R32QbPnfdjO.jpg"
+    },
+    {
+      "name": "Melissa Joan Hart",
+      "character": "Grace Wesley",
+      "profile_path": "/slpAK9Ak1Bvi4FJCLeCdtwPZc3D.jpg"
+    },
+    {
+      "name": "Brad Heller",
+      "character": "School Attorney",
+      "profile_path": "/awxgAvLqRnFBQIzzhmHA79yzJSM.jpg"
+    }
+  ]
+}

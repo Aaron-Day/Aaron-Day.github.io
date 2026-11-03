@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 137094,
+    "title": "Jack Ryan: Shadow Recruit",
+    "overview": "Jack Ryan, as a young covert CIA analyst, uncovers a Russian plot to crash the U.S. economy with a terrorist attack.",
+    "tagline": "Trust no one.",
+    "runtime": 105,
+    "release_date": "2014-01-15",
+    "vote_average": 6.127,
+    "poster_path": "/m7HcLUodrD4lM4s0Hui1tzO2pjO.jpg",
+    "backdrop_path": "/6KaCzcVKsdxlsTIq35xAix5U3Nb.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chris Pine",
+      "character": "Jack Ryan",
+      "profile_path": "/vSe6sIsdtcoqBhuWRXynahFg8Vf.jpg"
+    },
+    {
+      "name": "Keira Knightley",
+      "character": "Cathy Muller",
+      "profile_path": "/bRC1B2VwV0wK3ElciFAK6QZf2wD.jpg"
+    },
+    {
+      "name": "Kevin Costner",
+      "character": "William Harper",
+      "profile_path": "/bykmxJHLfbFM3NT05RZXhx8YTzF.jpg"
+    },
+    {
+      "name": "Kenneth Branagh",
+      "character": "Viktor Cherevin",
+      "profile_path": "/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
+    }
+  ]
+}

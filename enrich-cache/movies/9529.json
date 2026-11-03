@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9529,
+    "title": "Candyman",
+    "overview": "The Candyman, a murderous soul with a hook for a hand, is accidentally summoned to reality by a skeptic grad student researching the monster\u0027s myth.",
+    "tagline": "We dare you to say his name five times.",
+    "runtime": 100,
+    "release_date": "1992-10-16",
+    "vote_average": 6.673,
+    "poster_path": "/jQtgkgDZE7egMq532sOt83DnT83.jpg",
+    "backdrop_path": "/l0JgqFNxeMb1OoHq1CzdYC3Y5J8.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 98580,
+      "name": "Candyman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Virginia Madsen",
+      "character": "Helen Lyle",
+      "profile_path": "/2u72BF7i189nAcX1kEJLjGMsb0c.jpg"
+    },
+    {
+      "name": "Tony Todd",
+      "character": "Candyman",
+      "profile_path": "/cNUIRoewwiLi8JxyA1J2zb1z5SN.jpg"
+    },
+    {
+      "name": "Xander Berkeley",
+      "character": "Trevor Lyle",
+      "profile_path": "/oBoKGfngGGZmSVGFslphYjc23WO.jpg"
+    },
+    {
+      "name": "Kasi Lemmons",
+      "character": "Bernadette Walsh",
+      "profile_path": "/7iiZTyu8TnN242AS9m3LcrwVuzz.jpg"
+    }
+  ]
+}

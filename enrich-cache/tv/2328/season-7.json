@@ -1,0 +1,368 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Quasar Quest (1)",
+        "overview": "An adventurous young man embarks on an epic adventure in space when he sneaks aboard the massive space colony Terra Venture.",
+        "air_date": "1999-02-06",
+        "runtime": 22,
+        "still_path": "/nPVEPeALreIhyweCRJ583HWENo8.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Quasar Quest (2)",
+        "overview": "The Galaxy Rangers are born as five heroes unite to protect the planet Mirinoi from the villain Furio.",
+        "air_date": "1999-02-13",
+        "runtime": 22,
+        "still_path": "/aDoCVRviQIriR1qQtoxOSgj6ARQ.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Race to the Rescue",
+        "overview": "The Rangers befriend the Galactabeasts - five enormous animals that help them defend Terra Venture from the forces of the evil Scorpius.",
+        "air_date": "1999-02-20",
+        "runtime": 22,
+        "still_path": "/hpYyFw3nMx0nuSfpJblAYpmVZbp.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Rookie in Red",
+        "overview": "Leo adjusts to his responsibilities as a member of the GSA when he forgets to properly lock a weapon storage room on Terra Venture.",
+        "air_date": "1999-02-27",
+        "runtime": 22,
+        "still_path": "/5vT4hlmNeeEODO73xYuVAS9winH.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Homesick",
+        "overview": "A homesick boy who misses Earth helps the Rangers during Furio\u0027s sleeping gas attack on Terra Venture.",
+        "air_date": "1999-03-06",
+        "runtime": 22,
+        "still_path": "/q6EEGjBxmMpwoohQwJWEKFoWLFN.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Lights of Orion",
+        "overview": "The shape-changing monster Mutantrum poses as Mike to lure Leo to the legendary Lights of Orion.",
+        "air_date": "1999-03-13",
+        "runtime": 22,
+        "still_path": "/golNJMnD4l3qiZgZ8rmFM5t3LqU.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Double Duty",
+        "overview": "Battling the Wisewizard, Kendrix meets an actress on a movie set who looks exactly like her.",
+        "air_date": "1999-03-20",
+        "runtime": 22,
+        "still_path": "/oOmKq7DOZ8hM0mHkcK8VvZxywlb.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Blue Crush",
+        "overview": "Kai is smitten by a pretty girl but has little time for romance as the Quake Maker monster attacks Terra Venture with Earthquakes.",
+        "air_date": "1999-03-27",
+        "runtime": 22,
+        "still_path": "/rmWWeevE4G8Ume5cAxoGOSIeS5F.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Magna Defender",
+        "overview": "The heroic Magna Defender renews his feud with Scorpius\u0027 new general Treacheron.",
+        "air_date": "1999-04-03",
+        "runtime": 22,
+        "still_path": "/x2MxV92l85X7ANRYhd7RlEzffDU.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Sunflower Search",
+        "overview": "Seeking vengeance for his son, the Magna Defender battles the Fish Face monster on Terra Venture",
+        "air_date": "1999-04-10",
+        "runtime": 22,
+        "still_path": "/imuyZkHPTYkIGBI40cA7mPw2Ti7.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Silent Sleep",
+        "overview": "Leo and the Magna Defender are forced to work together when the Chillyfish monster freezes the people of Terra Venture.",
+        "air_date": "1999-04-17",
+        "runtime": 22,
+        "still_path": "/gKLqZeJRPEoWNmdqQxhfcQ3rUwM.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Orion Rising",
+        "overview": "Kendrix and Maya work to escape from a force field created by the monster Destruxo before he can find the Lights of Orion.",
+        "air_date": "1999-05-01",
+        "runtime": 22,
+        "still_path": "/5z8fdROM9O0V6hIdaj98CYdJT37.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Orion Returns",
+        "overview": "It\u0027s a three-way race between the Power Rangers, the Magna Defender, and Destruxo as the Lights of Orion return.",
+        "air_date": "1999-05-08",
+        "runtime": 22,
+        "still_path": "/5OydhFeZk4vzL9WOGVhO1vHWPEG.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Shark Attack",
+        "overview": "Treacheron turns on Trakeena as the Power Rangers must fight the Shark Brothers without Leo.",
+        "air_date": "1999-05-15",
+        "runtime": 22,
+        "still_path": "/vjLTmGcrbIzUsLewHLcIzLXguba.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Redemption Day",
+        "overview": "The Magna Defender struggles to overcome his regrets of the past while protecting Terra Venture.",
+        "air_date": "1999-05-22",
+        "runtime": 22,
+        "still_path": "/ssxKZZrTpOP6YS1yExgbxfigBlT.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Destined for Greatness",
+        "overview": "Mike returns to Terra Venture and searches for a new role to fight against the Skelekron monster.",
+        "air_date": "1999-09-25",
+        "runtime": 22,
+        "still_path": "/pyiHxKnheyM6MeVM52fFOw4KBbc.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Stolen Beauty",
+        "overview": "Trakeena worries about losing her beauty when her father Scorpius wants her to become a full insect like him.",
+        "air_date": "1999-10-02",
+        "runtime": 22,
+        "still_path": "/qyBpJKF5nBrwcidOIO2pBP8Sz3k.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Rescue Mission",
+        "overview": "Commander Stanton sends a boarding party to investigate a derelict spaceship with a dangerous secret.",
+        "air_date": "1999-10-09",
+        "runtime": 22,
+        "still_path": "/aSrkl3hhPNUjPyNxiJIZmhP8dRH.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Lost Galactabeasts (1)",
+        "overview": "The treacherous Deviot assists Scorpius by unleashing three lost Galactabeasts to attack Terra Venture.",
+        "air_date": "1999-10-16",
+        "runtime": 22,
+        "still_path": "/3dy6jN5YIrpWxTt4Ylg67YihwyY.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Lost Galactabeasts (2)",
+        "overview": "The Rangers struggle to free the lost Galactabeasts from Deviot.",
+        "air_date": "1999-10-22",
+        "runtime": 22,
+        "still_path": "/h034RwFXmtTYZW3a22HMy91BAUw.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Heir to the Throne",
+        "overview": "While Trakeena makes new allies on Onyx, Deviot plots against Scorpius.",
+        "air_date": "1999-10-23",
+        "runtime": 22,
+        "still_path": "/ylZlNubBy9Vm5y3rLMWwJauAMzy.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "An Evil Game",
+        "overview": "Seeking vengeance, Trakeena captures Leo while Deviot plots against her.",
+        "air_date": "1999-10-25",
+        "runtime": 22,
+        "still_path": "/h034RwFXmtTYZW3a22HMy91BAUw.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Memories of Mirinoi",
+        "overview": "Maya\u0027s best friend from her home world Shondra arrives on Terra Venture, but Kendrix suspects Shondra may not be who she claims.",
+        "air_date": "1999-10-26",
+        "runtime": 22,
+        "still_path": "/gUhIRBgB5BG4Su0bodUTYgV2msx.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Green Courage",
+        "overview": "Trakeena blackmails Terra Venture into sending their best engineer to repair the Scorpion Stinger\u0027s engines.",
+        "air_date": "1999-10-27",
+        "runtime": 22,
+        "still_path": "/y4yMDpl5ehF3SGy2Zy373U3xAde.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Blue to the Test",
+        "overview": "Kai suspects Commander Stanton is under mind control when he orders Terra Venture steered into the course of a nearby star.",
+        "air_date": "1999-10-28",
+        "runtime": 22,
+        "still_path": "/p54h6mm4BgwXtzBVmU1zAQrNiB0.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Mean Wheels Mantis",
+        "overview": "Leo, Damon, and Kai race the Motor Mantis monster on motorcycles, the prize: Kendrix and Maya!",
+        "air_date": "1999-10-29",
+        "runtime": 22,
+        "still_path": "/xazAdocdbnCTk5I0KHoRXbf2Atl.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Loyax\u2019 Last Battle",
+        "overview": "Deviot sends the honorable warrior Loyax to destroy the Rangers, but when he meets Maya he questions the honor in his ways.",
+        "air_date": "1999-11-01",
+        "runtime": 22,
+        "still_path": "/1dhWEwYqWg6QObUOtzJqcCoP7fY.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "A Red Romance",
+        "overview": "Leo struggles to earn the approval of the brother of the girl he wants to date while trying to save her from Trakeena\u0027s latest monster.",
+        "air_date": "1999-11-02",
+        "runtime": 22,
+        "still_path": "/fvBNT3aWTkH1PUd6s6XkEiF5M4d.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "The Chameliac Warrior",
+        "overview": "The Rangers fight the Chameliac Warrior to save their Galactabeasts.",
+        "air_date": "1999-11-03",
+        "runtime": 22,
+        "still_path": "/aynWCfMA97PjTc09PNZEf4zWCGC.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "To the Tenth Power",
+        "overview": "Deviot enlists the Psycho Rangers to capture the Galaxy Rangers, prompting Andros and the Space Rangers to travel to Terra Venture to help.",
+        "air_date": "1999-11-04",
+        "runtime": 22,
+        "still_path": "/denRySNxy3dZee2WKjTou3PFup.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "The Power of Pink",
+        "overview": "The Space Rangers and Galaxy Rangers unite to help Kendrix against the Pink Psycho Ranger.",
+        "air_date": "1999-11-05",
+        "runtime": 22,
+        "still_path": "/e4YtPUPwbKzfjVPT7MiMBPdHqH2.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Protect the Quasar Saber",
+        "overview": "Karone once again assumes the role of Astronema as she risks her life to save the Pink Quasar Saber from falling into the hands of evil.",
+        "air_date": "1999-11-08",
+        "runtime": 22,
+        "still_path": "/4H1RFvHenzsM5r7JrOGBkjfI5On.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "Facing the Past",
+        "overview": "Karone struggles to overcome her evil past as Astronema while adjusting to being the new Pink Galaxy Ranger.",
+        "air_date": "1999-11-09",
+        "runtime": 22,
+        "still_path": "/sJP3kfOAltzEDgdQaFdKAmOtuHl.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Turn Up the Volume",
+        "overview": "Damon competes against an unscrupulous rival for the position of head mechanic on Terra Venture.",
+        "air_date": "1999-11-10",
+        "runtime": 22,
+        "still_path": "/l4rjTvqnpOWiJjpjBzlFz9OT8kX.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Enter the Lost Galaxy",
+        "overview": "The Terra Venture discovers the fabled Lost Galaxy",
+        "air_date": "1999-11-11",
+        "runtime": 22,
+        "still_path": "/kkFz12l76PuKTphuRUDkdye5Kmi.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "Beware the Mutiny",
+        "overview": "The Rangers are welcomed to the Lost Galaxy by a scheming space pirate named Captain Mutiny.",
+        "air_date": "1999-11-12",
+        "runtime": 22,
+        "still_path": "/9h0XnmJfyG31iGM4f9azE1B6Ige.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "Grunchor on the Loose",
+        "overview": "The Rangers battle the enormous Grunchor monster that has burrowed inside Terra Venture",
+        "air_date": "1999-11-15",
+        "runtime": 22,
+        "still_path": "/pLwxlHBKQVGQJf7dj4LEKQkbsQN.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "Until Sunset",
+        "overview": "Captured by Deviot, Leo and Damon reminisce over their adventures up until now.",
+        "air_date": "1999-11-16",
+        "runtime": 22,
+        "still_path": "/2APghZdBpG65fqmsIbSSRlbkUkR.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "Dream Battle",
+        "overview": "Captain Mutiny\u0027s sorceress Hexuba uses her magic to cause the Power Rangers to fall into a deep restless sleep.",
+        "air_date": "1999-11-17",
+        "runtime": 22,
+        "still_path": "/ztMcVxd2bOqOPYh7J5nL98gv9WC.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "Hexuba\u2019s Graveyard",
+        "overview": "Hexuba uses her magic to resurrect defeated monsters to battle the Power Rangers.",
+        "air_date": "1999-11-18",
+        "runtime": 22,
+        "still_path": "/s0A3hRQD7UVCHZskoGXoxlbmgWY.jpg"
+      },
+      {
+        "episode_number": 41,
+        "name": "Raise the Titanisaur",
+        "overview": "Captain Mutiny unleashes the gargantuan Titanisaur on Terra Venture, the greatest threat the Rangers have faced yet.",
+        "air_date": "1999-11-19",
+        "runtime": 22,
+        "still_path": "/gYFjxh9mm12HOpXFlndOt0BVfj.jpg"
+      },
+      {
+        "episode_number": 42,
+        "name": "Escape the Lost Galaxy",
+        "overview": "Mike sacrifices to help Terra Venture escape the Lost Galaxy.",
+        "air_date": "1999-12-03",
+        "runtime": 22,
+        "still_path": "/5NvBhprzhKhY7grvVakISp1CJga.jpg"
+      },
+      {
+        "episode_number": 43,
+        "name": "Journey\u2019s End (1)",
+        "overview": "Terra Venture discovers a lush green planet to colonize as Trakeena merges with Deviot to become stronger than ever.",
+        "air_date": "1999-12-16",
+        "runtime": 22,
+        "still_path": "/zWcDZzUM9ixXX7CHd3atPW8ZZFp.jpg"
+      },
+      {
+        "episode_number": 44,
+        "name": "Journey\u2019s End (2)",
+        "overview": "The Rangers work to evacuate the crew of Terra Venture as Trakeena launches her final assault.",
+        "air_date": "1999-12-17",
+        "runtime": 22,
+        "still_path": "/l9OiqM06KuA6dFmCecMZs4wV0ua.jpg"
+      },
+      {
+        "episode_number": 45,
+        "name": "Journey\u2019s End (3)",
+        "overview": "Trapped on a desolate Moon in the ruins of Terra Venture, Leo faces Trakeena all alone.",
+        "air_date": "1999-12-18",
+        "runtime": 22,
+        "still_path": "/jRQvYMQsarccGEIkoZdBZajTbmL.jpg"
+      }
+    ]
+  }
+}

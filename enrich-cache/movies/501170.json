@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 501170,
+    "title": "Doctor Sleep",
+    "overview": "Still scarred by the trauma he endured as a child at the Overlook Hotel, Dan Torrance faces the ghosts of the past when he meets Abra, a courageous teen who desperately needs his help -- and who possesses a powerful extrasensory ability called the \u0022shine\u0022.",
+    "tagline": "Return to the Overlook.",
+    "runtime": 152,
+    "release_date": "2019-10-30",
+    "vote_average": 7.152,
+    "poster_path": "/p69QzIBbN06aTYqRRiCOY1emNBh.jpg",
+    "backdrop_path": "/ap6Zc5NDOfbZaMhkRDyghbGeLf0.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 530064,
+      "name": "The Shining Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ewan McGregor",
+      "character": "Danny Torrance",
+      "profile_path": "/q2UDxfwWnmXTB7khOUF3J9puBVP.jpg"
+    },
+    {
+      "name": "Rebecca Ferguson",
+      "character": "Rose the Hat",
+      "profile_path": "/ty8ZPzaCBBlqIr5qzpOXI24iC8j.jpg"
+    },
+    {
+      "name": "Kyliegh Curran",
+      "character": "Abra Stone",
+      "profile_path": "/cVXqQWI46Dg518IRNYURw3N3Ewd.jpg"
+    },
+    {
+      "name": "Cliff Curtis",
+      "character": "Billy Freeman",
+      "profile_path": "/dfaElGoyJWseFWxXwEMLL9WTi7V.jpg"
+    }
+  ]
+}

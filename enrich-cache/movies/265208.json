@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 265208,
+    "title": "Wild Card",
+    "overview": "When a Las Vegas bodyguard with lethal skills and a gambling problem gets in trouble with the mob, he has one last play\u2026 and it\u0027s all or nothing.",
+    "tagline": "Never bet against a man with a killer hand.",
+    "runtime": 92,
+    "release_date": "2015-01-14",
+    "vote_average": 5.718,
+    "poster_path": "/zN80Tlly8oMpKbVJv2TfRIj8dHG.jpg",
+    "backdrop_path": "/9Xna1fmRkTyAfMSonokrwblYXUS.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jason Statham",
+      "character": "Nick Wild",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Michael Angarano",
+      "character": "Cyrus Kinnick",
+      "profile_path": "/q4SOVndGsnCmSZKBllLaJCNM72c.jpg"
+    },
+    {
+      "name": "Dominik Garcia",
+      "character": "Holly",
+      "profile_path": "/m1VLT5Ax1ksHyJLpDfEe4dbOcPn.jpg"
+    },
+    {
+      "name": "Milo Ventimiglia",
+      "character": "Danny DeMarco",
+      "profile_path": "/9yFPsQCYi9sbPQ0xJGtoAF4Ar6v.jpg"
+    }
+  ]
+}

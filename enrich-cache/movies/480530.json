@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 480530,
+    "title": "Creed II",
+    "overview": "Between personal obligations and training for his next big fight against an opponent with ties to his family\u0027s past, Adonis Creed is up against the challenge of his life.",
+    "tagline": "There\u0027s more to lose than a title.",
+    "runtime": 130,
+    "release_date": "2018-11-21",
+    "vote_average": 7.033,
+    "poster_path": "/v3QyboWRoA4O9RbcsqH8tJMe8EB.jpg",
+    "backdrop_path": "/9il7qNbeYnPMYlutsVYDsj4hRyb.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 553717,
+      "name": "Creed Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael B. Jordan",
+      "character": "Adonis Johnson",
+      "profile_path": "/sMBpav8cK7t7Nk0yf4tuNOqNUyW.jpg"
+    },
+    {
+      "name": "Sylvester Stallone",
+      "character": "Rocky Balboa",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Tessa Thompson",
+      "character": "Bianca",
+      "profile_path": "/19ze60jXlb2j7dXc2UpA3MujXA8.jpg"
+    },
+    {
+      "name": "Wood Harris",
+      "character": "Tony \u0027Little Duke\u0027 Evers",
+      "profile_path": "/v3puIl2KncqUd6amDyD1Y0crzkF.jpg"
+    }
+  ]
+}

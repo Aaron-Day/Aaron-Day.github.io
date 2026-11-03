@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9798,
+    "title": "Enemy of the State",
+    "overview": "When the videotape of the murder of a congressman unknowingly ends up in the hands of labor lawyer and dedicated family man Robert Clayton Dean, he is framed for the murder. With the help of the mysterious Brill, Dean attempts to throw the NSA off his trail and prove his innocence.",
+    "tagline": "It\u0027s not paranoia if they\u0027re really after you.",
+    "runtime": 132,
+    "release_date": "1998-11-20",
+    "vote_average": 7.081,
+    "poster_path": "/x9pXrMKLsBGGOFyyZ0Gwt9YpVub.jpg",
+    "backdrop_path": "/lPLTLCBn39Wiy1RPQLB9xOKyF2v.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Robert Clayton Dean",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Gene Hackman",
+      "character": "Brill",
+      "profile_path": "/zDlv9vXjnRsvwNI0bARG0uOt5CJ.jpg"
+    },
+    {
+      "name": "Jon Voight",
+      "character": "Reynolds",
+      "profile_path": "/oxLsItDwLddXu8YYJCfkddYNejL.jpg"
+    },
+    {
+      "name": "Regina King",
+      "character": "Carla Dean",
+      "profile_path": "/fEIz0ljk9CBrp3AitM5nwjfoGVu.jpg"
+    }
+  ]
+}

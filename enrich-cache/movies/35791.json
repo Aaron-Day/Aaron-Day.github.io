@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 35791,
+    "title": "Resident Evil: Afterlife",
+    "overview": "In a world ravaged by a virus infection, turning its victims into the Undead, Alice continues on her journey to find survivors and lead them to safety. Her deadly battle with the Umbrella Corporation reaches new heights, but Alice gets some unexpected help from an old friend. A new lead that promises a safe haven from the Undead takes them to Los Angeles, but when they arrive the city is overrun by thousands of Undead - and Alice and her comrades are about to step into a deadly trap.",
+    "tagline": "Experience a new dimension of evil.",
+    "runtime": 97,
+    "release_date": "2010-09-01",
+    "vote_average": 6.065,
+    "poster_path": "/qZHDnt8bnsD2cSJfIbjWbCkIq3G.jpg",
+    "backdrop_path": "/8AvzydMm6vKICPOUuUG2KIW2on.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 17255,
+      "name": "Resident Evil Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Milla Jovovich",
+      "character": "Alice",
+      "profile_path": "/usWnHCzbADijULREZYSJ0qfM00y.jpg"
+    },
+    {
+      "name": "Ali Larter",
+      "character": "Claire Redfield",
+      "profile_path": "/5qaQFxx8Az83ycd4LHyQ39HXaEJ.jpg"
+    },
+    {
+      "name": "Kim Coates",
+      "character": "Bennett",
+      "profile_path": "/brhVd2vTTBJNpM2ZrOFc6SnXCAd.jpg"
+    },
+    {
+      "name": "Shawn Roberts",
+      "character": "Albert Wesker",
+      "profile_path": "/uTuz1fSq0iYyNsqfSUdvSdHQd87.jpg"
+    }
+  ]
+}

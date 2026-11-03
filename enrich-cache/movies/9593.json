@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9593,
+    "title": "Last Action Hero",
+    "overview": "After his father\u0027s death, a young boy finds solace in action movies featuring an indestructible cop. Given a magic ticket by a theater manager, he is transported into the film and teams up with the cop to stop a villain who escapes into the real world.",
+    "tagline": "This isn\u0027t the movies anymore.",
+    "runtime": 131,
+    "release_date": "1993-06-18",
+    "vote_average": 6.492,
+    "poster_path": "/vkhEaWAv5j3qgrOGp3BgMeiYPKj.jpg",
+    "backdrop_path": "/bumIpNTKmLY380bruTgIDTrXfpZ.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Jack Slater / Self",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Austin O\u0027Brien",
+      "character": "Danny Madigan",
+      "profile_path": "/IQypQEGa3HNv5Eg5PxcKt3BnaL.jpg"
+    },
+    {
+      "name": "Bridgette Wilson",
+      "character": "Whitney / Meredith",
+      "profile_path": "/cnupaYpuHkkXDEHgyd1CsWpTf84.jpg"
+    },
+    {
+      "name": "F. Murray Abraham",
+      "character": "John Practice",
+      "profile_path": "/p2RYVGdrcP0m70BkkiKcwyrDeim.jpg"
+    }
+  ]
+}

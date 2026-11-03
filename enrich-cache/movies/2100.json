@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2100,
+    "title": "The Last Castle",
+    "overview": "A court-martialed general rallies together 1200 inmates to rise against the system that put him away.",
+    "tagline": "A castle can only have one king.",
+    "runtime": 131,
+    "release_date": "2001-10-19",
+    "vote_average": 7.165,
+    "poster_path": "/pYnUfauPVK6g8IRO2REYl4TUZ2p.jpg",
+    "backdrop_path": "/mYnCnyGxdtXo2PDhhyFT0er9sp5.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Robert Redford",
+      "character": "Lt. Gen. Eugene Irwin",
+      "profile_path": "/m5ayL8ASLdaaFYzqJZNYvrKRuhD.jpg"
+    },
+    {
+      "name": "James Gandolfini",
+      "character": "Col. Winter",
+      "profile_path": "/vhtsFJZcfHdeDkFBoWMDzOS6xrP.jpg"
+    },
+    {
+      "name": "Mark Ruffalo",
+      "character": "Yates",
+      "profile_path": "/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg"
+    },
+    {
+      "name": "Delroy Lindo",
+      "character": "Gen. Wheeler",
+      "profile_path": "/fmnE0pLaQPrWFlRHsHWehq2L8fq.jpg"
+    }
+  ]
+}

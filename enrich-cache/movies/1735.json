@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1735,
+    "title": "The Mummy: Tomb of the Dragon Emperor",
+    "overview": "Archaeologist Rick O\u0027Connell travels to China, pitting him against an emperor from the 2,000-year-old Han dynasty who\u0027s returned from the dead to pursue a quest for world domination. This time, O\u0027Connell enlists the help of his wife and son to quash the so-called \u0027Dragon Emperor\u0027 and his abuse of supernatural power.",
+    "tagline": "A new evil awakens.",
+    "runtime": 112,
+    "release_date": "2008-07-01",
+    "vote_average": 5.525,
+    "poster_path": "/A3acM1lX5PNWQa6r5qeMAJOxbnT.jpg",
+    "backdrop_path": "/W034dd7w2malON26KWyZm4y37W.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1733,
+      "name": "The Mummy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brendan Fraser",
+      "character": "Rick O\u0027Connell",
+      "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg"
+    },
+    {
+      "name": "Maria Bello",
+      "character": "Evelyn O\u0027Connell",
+      "profile_path": "/it1f5mxiGIWO0DzTBfwtLTjphZb.jpg"
+    },
+    {
+      "name": "John Hannah",
+      "character": "Jonathan Carnahan",
+      "profile_path": "/8GzJhaZrChZpv84SU4vAsvsR3cl.jpg"
+    },
+    {
+      "name": "Luke Ford",
+      "character": "Alex O\u0027Connell",
+      "profile_path": "/u40f3Q26n44yUrfxN4ZKjm9WGUn.jpg"
+    }
+  ]
+}

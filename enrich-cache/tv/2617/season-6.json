@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Crazy Love",
+        "overview": "Jean-Luc celebrates a lonely birthday; Dana tutors Rich and romance blossoms.",
+        "air_date": "1997-03-07",
+        "runtime": 22,
+        "still_path": "/bMguqFZbtx9bNa7pC2KECIWo3Y7.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Road Trip",
+        "overview": "JT, Rich and Dana take a trip to Mexico and wind up in jail; Jean-Luc takes driving lessons from Carol.",
+        "air_date": "1997-03-14",
+        "runtime": 22,
+        "still_path": "/o6nRUGnrZH5AfyZ9YsSjEENUNuv.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Sex, Lies and Videotape",
+        "overview": "19-Year-old JT dates a 29-year-old woman with an ulterior motive; Mark and his buddies are caught watching an adult video.",
+        "air_date": "1997-03-21",
+        "runtime": 22,
+        "still_path": "/tPsDWZKP7oy27BPMgjKYfrO2C4X.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Just Say Maybe",
+        "overview": "Al is tempted to toke at a rock concert; Carol\u0027s married friend Patti is tempted by Jean-Luc.",
+        "air_date": "1997-03-28",
+        "runtime": 22,
+        "still_path": "/ffrwlnxeFWHUKY09qYZd1fohq8.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The \u0022L\u0022 Word",
+        "overview": "Rich tries not to be jealous when Dana\u0027s old boyfriend arrives; Frank and Jean-Luc go on a disastrous camping trip.",
+        "air_date": "1997-04-04",
+        "runtime": 22,
+        "still_path": "/wrw1yqZbKNjIBzYUCQwv2lgdwrz.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "She\u0027s the One",
+        "overview": "JT finds romance with a female tow-truck operator, but his fear of commitment may stall the courtship.",
+        "air_date": "1997-04-11",
+        "runtime": 22,
+        "still_path": "/mDpJ2ubriJ6Fy81UQpDPFzlwgC6.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Independence Day",
+        "overview": "JT moves out of the house--and into Jean-Luc\u0027s. Meanwhile, Carol tries to spend more time with the girls.",
+        "air_date": "1997-04-18",
+        "runtime": 22,
+        "still_path": "/iv70B1YbaJhAgcckvHVzeKjmG3f.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Reality Bites",
+        "overview": "Carol and Jean-Luc vie for Lilly\u0027s attentions; JT and Rich are evicted from their new apartment by their new landlord--Frank.",
+        "air_date": "1997-04-25",
+        "runtime": 22,
+        "still_path": "/aavaGghZxtyKqhkXCq6Z5mGBw2V.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Locket Man",
+        "overview": "Rich\u0027s gift to Dana turns out out be a locket he\u0027d given another girl years earlier; meanwhile, Frank begins to feel his age.",
+        "air_date": "1997-05-02",
+        "runtime": 22,
+        "still_path": "/g2Sxsj51fm4Gs5rs5M7l7IeHo7n.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "How the West Was Won",
+        "overview": "Frank falls asleep in front of the TV, prompting a dream of the Old West in which he\u0027s a drunken sheriff.",
+        "air_date": "1997-05-09",
+        "runtime": 22,
+        "still_path": "/eVzywo8pc6CECeeLw3VqjfO2Tky.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Absolutely Fabio",
+        "overview": "Jean-Luc gets to cut Fabio\u0027s hair; Carol bets Dana that she can\u0027t supervise a children\u0027s birthday party.",
+        "air_date": "1997-05-16",
+        "runtime": 22,
+        "still_path": "/c4eSxBngJzVh66OTYfI29HubiQW.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Loose Lips",
+        "overview": "Mark\u0027s big date backfires and makes him the laughingstock of the school; Karen\u0027s collagen injections make her lips huge.",
+        "air_date": "1997-05-23",
+        "runtime": 22,
+        "still_path": "/cp1aCKnUhkVYQNRaUeyLAFjJlO8.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Big Date",
+        "overview": "Al has a date with the pizza guy; Dana, Rich, JT and Sam go to a concert in Chicago; and Jean-Luc dumps his lenses.",
+        "air_date": "1997-05-30",
+        "runtime": 22,
+        "still_path": "/yaH5pmvZs01zpulu3WHszSczvl0.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Future Shock",
+        "overview": "Rich and Dana feel matrimonial pressure after attending a friend\u0027s wedding; Jean-Luc and Frank get zonked on homemade medicine.",
+        "air_date": "1997-06-06",
+        "runtime": 22,
+        "still_path": "/11OtqX52YUftZq7FGjQkPIgSwb6.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Show Me the Money",
+        "overview": "Frank and his buddy challenge Carol and Jean-Luc to a bowling contest; JT and Rich fancy themselves sports agents.",
+        "air_date": "1997-06-13",
+        "runtime": 22,
+        "still_path": "/2Lnpv6201wTGwaaVNCvYOKrccJa.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "It Didn\u0027t Happen One Night",
+        "overview": "Karen\u0027s ego takes a hit when the boy she\u0027s after goes for Al instead. Meanwhile, Carol and Dana crave attention from Frank and Rich.",
+        "air_date": "1997-06-20",
+        "runtime": 22,
+        "still_path": "/uCrbEcMDlrYwnkr1jGfZrv6DTnl.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Macho Man",
+        "overview": "Sam beats JT at every game they play, causing him to question his manhood and the future of their relationship.",
+        "air_date": "1997-06-27",
+        "runtime": 22,
+        "still_path": "/bXiyTKkbCNh8zSfFnY4pcEhwyE3.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Ain\u0027t Misbehavin\u0027",
+        "overview": "JT is jealous when Sam finds a roommate; meanwhile, Jean-Luc is in trouble with taxes, so Frank and Carol try to help.",
+        "air_date": "1997-07-04",
+        "runtime": 22,
+        "still_path": "/qBroxLyk86jdp2pvE2aNSzeFoMb.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Facts of Life",
+        "overview": "Frank and Carol tell Lilly about the facts of life, she then tells her kindergarten classmates; JT and Rich play the horses.",
+        "air_date": "1997-07-11",
+        "runtime": 22,
+        "still_path": "/vEDq5WMt6Dsc0JII3zgZNarwntU.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Talking Trash",
+        "overview": "Frank\u0027s birthday gift to Carol is a dud; Rich teams with a cheerleader for a science contest.",
+        "air_date": "1997-07-18",
+        "runtime": 22,
+        "still_path": "/anvk6B5Slsi8cwOxeGd8WmaB8cr.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Walk Like a Man",
+        "overview": "Mark is embarrassed by Carol\u0027s cheering at his basketball games; Rich takes heat from JT for kowtowing to Dana.",
+        "air_date": "1997-07-25",
+        "runtime": 22,
+        "still_path": "/i5yw9vpyllSRLfCpOMwvYi90vge.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Shear Madness",
+        "overview": "Jean-Luc panics when he discovers he\u0027ll be cutting the First Lady\u0027s hair; Frank finds a guy for Al.",
+        "air_date": "1997-08-01",
+        "runtime": 22,
+        "still_path": "/xDd6rzp0iD7fuedl5mJOrh4eGpV.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Kissing Game",
+        "overview": "Carol fixes up Jean-Luc with a blind date; the kids use the salon as a make-out parlor.",
+        "air_date": "1997-08-08",
+        "runtime": 22,
+        "still_path": "/xPGG0OYXOjoyVU9KcNpICnLmHXR.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Bonjour Jean-Luc",
+        "overview": "Carol introduces Jean-Luc to Frank, who dislikes him immediately; JT tries to learn to dance.",
+        "air_date": "1997-08-15",
+        "runtime": 22,
+        "still_path": "/4tDyjs6cvsufwJabdyUBh5IVZoo.jpg"
+      }
+    ]
+  }
+}

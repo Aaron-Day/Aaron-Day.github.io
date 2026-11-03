@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 15969,
+    "title": "The Return of Jafar",
+    "overview": "The evil Jafar escapes from the magic lamp as an all-powerful genie, ready to plot his revenge against Aladdin. From battling elusive villains atop winged horses, to dodging flames inside an exploding lava pit, it\u0027s up to Aladdin - with Princess Jasmine and the outrageously funny Genie by his side - to save the kingdom once and for all.",
+    "tagline": "The Aladdin adventure continues...",
+    "runtime": 69,
+    "release_date": "1994-12-15",
+    "vote_average": 6.23,
+    "poster_path": "/7SC793qtORB6YL4mu0F5o3hfjDQ.jpg",
+    "backdrop_path": "/mOOJm3tamy9iHg2mOEA77CM6ufZ.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86027,
+      "name": "Aladdin Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Gilbert Gottfried",
+      "character": "Iago (voice)",
+      "profile_path": "/hkkAgJD0HKcuyd8EuvhyN5vHcDQ.jpg"
+    },
+    {
+      "name": "Scott Weinger",
+      "character": "Aladdin (voice)",
+      "profile_path": "/5EvrWMz2xi3hOkrEMNGH2Rts2jz.jpg"
+    },
+    {
+      "name": "Linda Larkin",
+      "character": "Princess Jasmine (voice)",
+      "profile_path": "/uN35v1Z374JvfdnDJBVmvnB2JNQ.jpg"
+    },
+    {
+      "name": "Jonathan Freeman",
+      "character": "Jafar (voice)",
+      "profile_path": "/ceyXr2JHuB32l74sFuzgMGGVLGQ.jpg"
+    }
+  ]
+}

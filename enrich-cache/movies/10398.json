@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10398,
+    "title": "Double Jeopardy",
+    "overview": "Libby Parsons, wrongly convicted of her husband Nick\u0027s murder, thinks he is still alive. She survives the long years in prison with two burning desires sustaining her -- finding her son and solving the mystery that destroyed her once-happy life. Standing between her and her quest, however, is her parole officer, Travis Lehman. Libby poses a challenge to the cynical officer, one that forces him to face up to his own failings while pitting him against his superior and law enforcement colleagues, as she plunges into a desperate fight for justice, survival, and revenge.",
+    "tagline": "Murder isn\u0027t always a crime.",
+    "runtime": 105,
+    "release_date": "1999-09-24",
+    "vote_average": 6.637,
+    "poster_path": "/dPd9QvEeMQpgHO6iLB1LqALTZl.jpg",
+    "backdrop_path": "/fk4NXhazfRKtQaVEV9IPeM7OIVH.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tommy Lee Jones",
+      "character": "Travis Lehman",
+      "profile_path": "/mCiZNRAzbnPojJEZwVZWLw9kzxR.jpg"
+    },
+    {
+      "name": "Ashley Judd",
+      "character": "Libby Parsons",
+      "profile_path": "/5771ZxVIs5rQbI1SV8TOlAFcF15.jpg"
+    },
+    {
+      "name": "Benjamin Weir",
+      "character": "Four-Year-Old Matty Parsons",
+      "profile_path": "/pKxlKfkvyiYGHfIzPC4Ame1ZWHT.jpg"
+    },
+    {
+      "name": "Jay Brazeau",
+      "character": "Bobby Long",
+      "profile_path": "/sfZmnOv1Nd6jqeks5QtsW2Co3uH.jpg"
+    }
+  ]
+}

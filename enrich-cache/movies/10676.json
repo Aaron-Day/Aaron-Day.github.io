@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10676,
+    "title": "Halloween III: Season of the Witch",
+    "overview": "After a terrified toy salesman is mysteriously attacked and brought to the hospital clutching the year\u0027s most popular Halloween mask, Dr. Daniel Challis sets out to investigate the strange events and finds himself thrust into a nightmarish conspiracy.",
+    "tagline": "The night no one comes home.",
+    "runtime": 98,
+    "release_date": "1982-10-22",
+    "vote_average": 5.258,
+    "poster_path": "/WABfdeaThFYXCySGIOvRNv2sSW.jpg",
+    "backdrop_path": "/eyOKqtgNeEEIp7zYMHnpISpsaS3.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91361,
+      "name": "Halloween Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Atkins",
+      "character": "Daniel Challis",
+      "profile_path": "/HUgpbwK0k9ITvsofuUNloroakT.jpg"
+    },
+    {
+      "name": "Stacey Nelkin",
+      "character": "Ellie Grimbridge",
+      "profile_path": "/8nL3GuQG9C0pQtR0ggf69Anjjd5.jpg"
+    },
+    {
+      "name": "Dan O\u0027Herlihy",
+      "character": "Conal Cochran",
+      "profile_path": "/cNVYyDPBgBy3aP61Zk3DJfHBK16.jpg"
+    },
+    {
+      "name": "Michael Currie",
+      "character": "Rafferty",
+      "profile_path": "/nnvyIQQTScFkUgsSR9GmxsFgLXY.jpg"
+    }
+  ]
+}

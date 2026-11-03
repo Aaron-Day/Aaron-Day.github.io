@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9820,
+    "title": "The Parent Trap",
+    "overview": "Hallie Parker and Annie James are identical twins who were separated at a young age due to their parents\u0027 divorce. Unbeknownst to their parents, the girls are sent to the same summer camp, where they meet, discover the truth about their relationship, and come up with a plan to switch places in an effort to reunite their mother and father.",
+    "tagline": "Twice the Fun, Double the Trouble.",
+    "runtime": 128,
+    "release_date": "1998-07-28",
+    "vote_average": 7.222,
+    "poster_path": "/p4dGmi8u9W0HHyVXcgWPoiFfKTF.jpg",
+    "backdrop_path": "/hz6NQHZG9vAdSpwG1qeTCKHupO3.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Lindsay Lohan",
+      "character": "Hallie Parker / Annie James",
+      "profile_path": "/hwgyUEM7UuKTVhFcFoorx72pn1j.jpg"
+    },
+    {
+      "name": "Dennis Quaid",
+      "character": "Nick Parker",
+      "profile_path": "/lMaDAJHzsKH7U3dln2B3kY3rOhE.jpg"
+    },
+    {
+      "name": "Natasha Richardson",
+      "character": "Elizabeth James",
+      "profile_path": "/eQNhOUDQY4NZD2cbaUpltLxrcG.jpg"
+    },
+    {
+      "name": "Elaine Hendrix",
+      "character": "Meredith Blake",
+      "profile_path": "/ajnxlCCO0IYQeaL2KOJwjFWkFG0.jpg"
+    }
+  ]
+}

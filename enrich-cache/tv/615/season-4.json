@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Roswell That Ends Well",
+        "overview": "A spacetime accident leaves the Planet Express crew stranded in Roswell, New Mexico in the year 1947, where a shattered Bender is mistaken for UFO debris and Zoidberg is captured as an alien specimen. Leela and the professor work to get everybody home, while Fry tries to keep his accident-prone grandfather alive.",
+        "air_date": "2001-12-09",
+        "runtime": 22,
+        "still_path": "/yUEOJQozaXt1dvdWmLZ36uYxQRG.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Tale of Two Santas",
+        "overview": "A Planet Express mission to Robot Santa\u0027s colony on Neptune leaves the murderous robot trapped in the frozen sea, and Bender takes over as Santa, vowing to bring peace and goodwill to Xmas again. But when Bender is mistaken for the real Robot Santa, he is arrested and sentenced to death.",
+        "air_date": "2001-12-23",
+        "runtime": 22,
+        "still_path": "/gzHWmv6oOvxtSfkDT2meTDIZDdT.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Anthology of Interest II",
+        "overview": "When the Professor fine tunes his \u0022What-If\u0022 machine, Bender discovers what it would be like if he were human, Fry discovers what it would be like if life were more like a video game, and Leela discovers what it would be like if she found her true home.",
+        "air_date": "2002-01-06",
+        "runtime": 22,
+        "still_path": "/nx2M8r63adyAv6wWZdpRbUemspl.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Love and Rocket",
+        "overview": "As Valentine\u0027s Day approaches, Bender\u0027s romance with the Planet Express ship puts the crew in jeopardy.",
+        "air_date": "2002-02-10",
+        "runtime": 22,
+        "still_path": "/jSY6INlTUtLLAnnzvVk1WG4V3MK.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Leela\u0027s Homeworld",
+        "overview": "Leela finally learns the truth about her parents and her own identity.",
+        "air_date": "2002-02-17",
+        "runtime": 22,
+        "still_path": "/oNxC7eXG13uJPc1u3WZFYMotuJO.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Where the Buggalo Roam",
+        "overview": "When Amy\u0027s parents\u0027 ranch is hit by a dust storm that blows away their herd of buggalo, Kif sets out to prove his masculinity by rounding up the herd, only to become entangled with the native Martians.",
+        "air_date": "2002-03-03",
+        "runtime": 22,
+        "still_path": "/y0psJqkYDQDQxwFy8XPjHqOH11y.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "A Pharaoh to Remember",
+        "overview": "Bender fears that nobody will remember him after he dies, and sees his chance for immortality when the crew is enslaved on the planet Osiris 4. Posing as the planet\u0027s new pharaoh, Bender orders a humongous statue built in his honor, and quickly goes mad with power.",
+        "air_date": "2002-03-10",
+        "runtime": 22,
+        "still_path": "/pCZfALvW2o498KArwfi0GR1eVYH.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Godfellas",
+        "overview": "Bender is accidentally shot out of the ship\u0027s torpedo tube and becomes lost in space. Floating through the ethereal darkness, Bender becomes inhabited with tiny alien life forms, but has trouble playing God to their unyielding prayers.",
+        "air_date": "2002-03-17",
+        "runtime": 22,
+        "still_path": "/jMkyLIOsaSX9UFvUHg1hk31Qzaz.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Future Stock",
+        "overview": "With Planet Express in financial trouble, Fry nominates a flashy businessman from the 1980s to replace Professor Farnsworth as CEO of the company.",
+        "air_date": "2002-03-17",
+        "runtime": 22,
+        "still_path": "/1OZgpWcDDOM5uAYTLj1owrnkC6r.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "A Leela of Her Own",
+        "overview": "Leela endeavors to become the first female blernsball player, but her lack of depth perception hinders her skills. Nevertheless, she becomes the pitcher for the New New York Mets, purely for her novelty value.",
+        "air_date": "2002-04-07",
+        "runtime": 22,
+        "still_path": "/w4UtFed1ej217dj8yyWrTa3SPTy.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "30% Iron Chef",
+        "overview": "Bender, insulted by the reception his terrible cooking receives, runs away and joins a space hobo camp, where he apprentices with a legendary former TV chef. Meanwhile, Dr. Zoidberg accidentally destroys Professor Farnsworth\u0027s prized ship-in-a-bottle and frames Fry.",
+        "air_date": "2002-04-14",
+        "runtime": 22,
+        "still_path": "/qECcd4iENLqtHsmPw2ywpaxnc6R.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Where No Fan Has Gone Before",
+        "overview": "The crew is pitted against the original Star Trek cast to win the devotion of an energy creature.",
+        "air_date": "2002-04-21",
+        "runtime": 22,
+        "still_path": "/5tmNMy5PStVbxuG6HiTZI6HFswG.jpg"
+      }
+    ]
+  }
+}

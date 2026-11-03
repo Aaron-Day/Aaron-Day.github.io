@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 438148,
+    "title": "Minions: The Rise of Gru",
+    "overview": "A fanboy of a supervillain supergroup known as the Vicious 6, Gru hatches a plan to become evil enough to join them, with the backup of his followers, the Minions.",
+    "tagline": "A villain will rise.",
+    "runtime": 87,
+    "release_date": "2022-06-29",
+    "vote_average": 7.258,
+    "poster_path": "/4dBDk1LPdvdhcZdjQBmdXwiVKUA.jpg",
+    "backdrop_path": "/wZS4xSfPtk1NPQnx9zsT5R2WhCu.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 544669,
+      "name": "Minions Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Carell",
+      "character": "Gru (voice)",
+      "profile_path": "/sSxw69G0znJuettMYGDCAXfSwSY.jpg"
+    },
+    {
+      "name": "Pierre Coffin",
+      "character": "The Minions (voice)",
+      "profile_path": "/eAA9uWRqHlm1LT3nZfXb7UuPfVb.jpg"
+    },
+    {
+      "name": "Alan Arkin",
+      "character": "Wild Knuckles (voice)",
+      "profile_path": "/AoMhBzvWMy8bAz14KdbQ30SF0RZ.jpg"
+    },
+    {
+      "name": "Taraji P. Henson",
+      "character": "Belle Bottom (voice)",
+      "profile_path": "/jUU2X9mDwJaAniEmJOfvImBS9qb.jpg"
+    }
+  ]
+}

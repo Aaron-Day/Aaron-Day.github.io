@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 161,
+    "title": "Ocean\u0027s Eleven",
+    "overview": "Less than 24 hours into his parole, charismatic thief Danny Ocean is already rolling out his next plan: In one night, Danny\u0027s hand-picked crew of specialists will attempt to steal more than $150 million from three Las Vegas casinos. But to score the cash, Danny risks his chances of reconciling with ex-wife, Tess.",
+    "tagline": "Are you in or out?",
+    "runtime": 116,
+    "release_date": "2001-12-07",
+    "vote_average": 7.467,
+    "poster_path": "/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg",
+    "backdrop_path": "/ncoqdHs1poUaBqyKic9YI8ai7MP.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 304,
+      "name": "Ocean\u0027s Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "George Clooney",
+      "character": "Danny Ocean",
+      "profile_path": "/dt0a7DT0SQeHb7NpURD6ifyEzsN.jpg"
+    },
+    {
+      "name": "Brad Pitt",
+      "character": "Rusty Ryan",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "Andy Garcia",
+      "character": "Terry Benedict",
+      "profile_path": "/9EivXoBlczZcFBet96WOoFbDsfF.jpg"
+    },
+    {
+      "name": "Matt Damon",
+      "character": "Linus Caldwell",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    }
+  ]
+}

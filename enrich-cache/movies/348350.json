@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 348350,
+    "title": "Solo: A Star Wars Story",
+    "overview": "Through a series of daring escapades deep within a dark and dangerous criminal underworld, Han Solo meets his mighty future copilot Chewbacca and encounters the notorious gambler Lando Calrissian.",
+    "tagline": "Never tell him the odds.",
+    "runtime": 135,
+    "release_date": "2018-05-15",
+    "vote_average": 6.552,
+    "poster_path": "/4oD6VEccFkorEBTEDXtpLAaz0Rl.jpg",
+    "backdrop_path": "/y9jGaGNn1dQDhPkhMumXaLize73.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Alden Ehrenreich",
+      "character": "Han Solo",
+      "profile_path": "/vOLiUSDT8rubu0J2YKwBkOL0K6V.jpg"
+    },
+    {
+      "name": "Joonas Suotamo",
+      "character": "Chewbacca",
+      "profile_path": "/7RkDUL2W8ujHfztSLRqfwjhETqF.jpg"
+    },
+    {
+      "name": "Woody Harrelson",
+      "character": "Tobias Beckett",
+      "profile_path": "/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg"
+    },
+    {
+      "name": "Emilia Clarke",
+      "character": "Qi\u0027ra",
+      "profile_path": "/iFY6t7Ux9r70WB7Sp0TTVz6eGtm.jpg"
+    }
+  ]
+}

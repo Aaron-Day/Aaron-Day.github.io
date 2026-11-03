@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Active Measures",
+        "overview": "Callen embarks on a secret project, leaving Sam and the entire team in the dark. After Hetty demands his operation be shut down, the team is tasked with locating Callen before he finds himself in over his head.",
+        "air_date": "2015-09-21",
+        "runtime": 45,
+        "still_path": "/pBlShmz6y8FRX5xytfKHNB0itg3.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Citadel",
+        "overview": "DEA agent Talia Del Campo turns to the NCIS: Los Angeles team for help after her partner is murdered. Also, after Kensi grows suspicious that Deeks is hiding something, he surprises her by introducing her to his mother.",
+        "air_date": "2015-09-28",
+        "runtime": 45,
+        "still_path": "/uUuO2HpnZ9TbqQk4bsahbU2Yl6v.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Driving Miss Diaz",
+        "overview": "A 20-year-old Peruvian massacre is investigated after a famous fashion model, believed to be one of the survivors, becomes a potential target. Kensi goes undercover as the model\u0027s assistant, while Deeks poses as her chauffeur.",
+        "air_date": "2015-10-05",
+        "runtime": 45,
+        "still_path": "/juT3E5ikGdZAMICr6STqbueFYOY.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Command \u0026 Control",
+        "overview": "Callen and Sam are forced to work on their day off when they mysteriously receive a cell phone and the caller threatens the lives of innocent people if they don\u2019t do exactly what he says.",
+        "air_date": "2015-10-12",
+        "runtime": 45,
+        "still_path": "/8FzyWQuXP8gfySe8USGJgUKvev2.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Blame It on Rio",
+        "overview": "NCIS Special Agent DiNozzo partners with the NCIS: Los Angeles team to search the city after his prisoner escapes custody on a flight from Singapore to Los Angeles.",
+        "air_date": "2015-10-19",
+        "runtime": 45,
+        "still_path": "/ddAShef0p7WSJxFB5WVLCGXSywD.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Unspoken",
+        "overview": "The NCIS team searches for Sam\u2019s former partner, Ruiz, who disappears during an undercover operation to buy a deadly explosive.",
+        "air_date": "2015-11-02",
+        "runtime": 45,
+        "still_path": "/6T1FhRyjnLykHSL2IicikrSKwao.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "An Unlocked Mind",
+        "overview": "After a former Department of Defense employee reveals government secrets to a cult, The Church of the Unlocked Mind, Kensi and Deeks go undercover in order to protect him. Meanwhile, the team must prevent the church from selling the secrets to a Chinese spy.",
+        "air_date": "2015-11-09",
+        "runtime": 45,
+        "still_path": "/5qCJkuAb5wAQHxIfrvDhPnvyBnO.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Long Goodbye",
+        "overview": "The team searches for Jada (Ella Thomas), the woman Sam led to asylum in the United States four years ago, after she goes missing. Also, Kensi goes undercover with DEA Agent Talia Del Campo (Mercedes Mason).",
+        "air_date": "2015-11-16",
+        "runtime": 45,
+        "still_path": "/pXx1XRPORNWTOBcscrQ6GdTrZtn.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Defectors",
+        "overview": "The team searches for a missing teenage girl who is feared to have been recruited by a terrorist organization,",
+        "air_date": "2015-11-23",
+        "runtime": 45,
+        "still_path": "/srrnUBbbe7jWa82na7zLUfINtmS.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Internal Affairs",
+        "overview": "Deeks is arrested and interrogated in connection with the murder of his former partner, while the team tries to prove his innocence.",
+        "air_date": "2015-12-07",
+        "runtime": 45,
+        "still_path": "/AkMpR9yqJPjVnlJgTS74flT8BGK.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Cancel Christmas",
+        "overview": "When a suspected North Korean spy is poisoned and hit by a truck carrying Christmas trees, the team must search for who is responsible for smuggling spies into the country. Also, Deeks and Kensi try to find a way to include their mothers in their Christmas plans, and Hetty notices that Granger isn\u2019t feeling the holiday cheer.",
+        "air_date": "2015-12-14",
+        "runtime": 45,
+        "still_path": "/nhSKXwLzxfpQTvntKoxih23ZakC.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Core Values",
+        "overview": "Kensi and Deeks go undercover at a decommissioned nuclear power plant as the team investigates the radiation poisoning of a Gunnery Sergeant moonlighting as a security guard there.",
+        "air_date": "2016-01-04",
+        "runtime": 45,
+        "still_path": "/k112BIb0dT8O5zjm5LOpMmfjMH.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Angels \u0026 Daemons",
+        "overview": "The team investigates the murder of tech entrepreneur turned venture capitalist who secretly developed a daemon, a background computer program that allows for undetectable data collection.",
+        "air_date": "2016-01-18",
+        "runtime": 45,
+        "still_path": "/eav0wiaDJqKtSOR5ZsdZvCv08UJ.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Come Back",
+        "overview": "When Kensi and Deeks announce to the team they are moving in together, coincidentally, Hetty assigns them to protection detail for Jack, Kensi\u2019s ex-fianc\u00E9, who is in possession of a list containing important contacts in Afghanistan that people are willing to kill to get their hands on.",
+        "air_date": "2016-01-25",
+        "runtime": 45,
+        "still_path": "/uu5yHm7sXhZiulZK93CzEuSZIh2.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Matryoshka (1)",
+        "overview": "In order to locate Arkady in Russia, the NCIS team goes undercover with his daughter, Anna, at a gala in Los Angeles to gain access to the Russian Consul General\u2019s computer.",
+        "air_date": "2016-02-08",
+        "runtime": 45,
+        "still_path": "/iqnDwjY3f7nz7csCUl13fCh65KV.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Matryoshka, Part 2",
+        "overview": "While they\u2019re in Russia, Callen, Sam and Anna craft a plan to break Anna\u2019s father and his CIA agent companion out of prison. Also, Special Agent G. Callen finally learns what the \u201CG\u201D in his name stands for, and in Los Angeles, Kensi and Deeks take Eric into the field on an assignment.",
+        "air_date": "2016-02-22",
+        "runtime": 45,
+        "still_path": "/pLtbSji6sXr38SBBOLywJFGcrv7.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Revenge Deferred",
+        "overview": "After extensive surveillance footage of Sam\u2019s family is found in Africa, Sam and Callen fly there to determine who is responsible and for what purpose. Also, Sam\u2019s family is moved from their home to a safe house.",
+        "air_date": "2016-02-29",
+        "runtime": 45,
+        "still_path": "/mq79nUHx8UdnMr2DZWmINm3BtHq.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Exchange Rate",
+        "overview": "When a convicted Cuban spy escapes U.S. custody just before he is set to return to his country in a prisoner exchange, the team is shocked to learn that Anna helped him break out. Also, Deeks admits to Kensi that he thinks she is too messy.",
+        "air_date": "2016-03-14",
+        "runtime": 45,
+        "still_path": "/sYAuFCq8i0FfeHLfezhk5gpvciy.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Seventh Child",
+        "overview": "Callen and the team try to save a child in imminent danger who has been brainwashed by a terrorist cell. Also, Deeks and Kensi discuss having children.",
+        "air_date": "2016-03-21",
+        "runtime": 45,
+        "still_path": "/qPA19wjuPT6joJaknRy7lhkzHRQ.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Seoul Man",
+        "overview": "While assigned to protective details for the commander of the Pacific Command, the team searches for a North Korean spy.",
+        "air_date": "2016-03-28",
+        "runtime": 45,
+        "still_path": "/aaKF57LPauuyFDzraFIuT345LLS.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Head of the Snake",
+        "overview": "After Operational Psychologist Nate Getz fails to check in with Hetty while working undercover on a mission linking organized crime to terrorism, the team learns he is working with an infamous crime leader,",
+        "air_date": "2016-04-11",
+        "runtime": 45,
+        "still_path": "/e5RhUEicvFsvOO6PbxipYlKCt70.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Granger, O.",
+        "overview": "As Granger escorts Jennifer Kim back to Los Angeles, he interrogates her regarding a North Korean spy and she admits to knowing he is her father.",
+        "air_date": "2016-04-18",
+        "runtime": 45,
+        "still_path": "/lGMpp3ZTBmk2eoroV3lWTHCU2zV.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Where There\u0027s Smoke...",
+        "overview": "Sam and Callen go undercover as firefighters when top secret information about suspected terrorists is stolen from a secure Department of Defense container at the site of a fire.",
+        "air_date": "2016-04-25",
+        "runtime": 45,
+        "still_path": "/xCFpRfptE7mDayvFip9aeyqW2TH.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Talion",
+        "overview": "Sam receives a distress code from Aiden saying that his school is being taken over by an extremist group.",
+        "air_date": "2016-05-02",
+        "runtime": 45,
+        "still_path": "/o1LJd7QBaHQD2thbAw715AdHq91.jpg"
+      }
+    ]
+  }
+}

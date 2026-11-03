@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 640146,
+    "title": "Ant-Man and the Wasp: Quantumania",
+    "overview": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope\u0027s parents Janet van Dyne and Hank Pym, and Scott\u0027s daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
+    "tagline": "Witness the beginning of a new dynasty.",
+    "runtime": 125,
+    "release_date": "2023-02-15",
+    "vote_average": 6.196,
+    "poster_path": "/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg",
+    "backdrop_path": "/m8JTwHFwX7I7JY5fPe4SjqejWag.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 422834,
+      "name": "Ant-Man Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Paul Rudd",
+      "character": "Scott Lang / Ant-Man",
+      "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+    },
+    {
+      "name": "Evangeline Lilly",
+      "character": "Hope Van Dyne / The Wasp",
+      "profile_path": "/pJHX2jd7ytre3NQbF9nlyWUqxH3.jpg"
+    },
+    {
+      "name": "Michael Douglas",
+      "character": "Dr. Hank Pym",
+      "profile_path": "/kVYGPIZowzXLEQfAGUNOqKjAbBb.jpg"
+    },
+    {
+      "name": "Michelle Pfeiffer",
+      "character": "Janet Van Dyne",
+      "profile_path": "/8qwNMFzmM3BxGKIj1iIqiHHBpx3.jpg"
+    }
+  ]
+}

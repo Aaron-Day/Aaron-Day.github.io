@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 30,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Bart\u0027s Not Dead",
+        "overview": "Bart takes a dare, and ends up in the hospital. To cover for himself and Homer, he says he went to Heaven and met Jesus. Christian producers offer the Simpsons a movie deal, which Homer takes. But Bart can\u0027t deal with the guilt and comes clean to Marge after the movie is finished.",
+        "air_date": "2018-09-30",
+        "runtime": 22,
+        "still_path": "/k2TgeCBuVwbmKlUAUpVWQWFZHZi.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Heartbreak Hotel",
+        "overview": "Marge and Homer\u0027s marriage is tested when they travel to a tropical island to compete for a million dollars on Marge\u0027s favorite reality competition show.",
+        "air_date": "2018-10-07",
+        "runtime": 23,
+        "still_path": "/ptSpOzlJjIjxB5dYWLIAOQbKhRs.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "My Way or the Highway to Heaven",
+        "overview": "God and St. Peter contemplate what merits a soul getting into heaven, while citizens of Springfield remember their divine encounters.",
+        "air_date": "2018-10-14",
+        "runtime": 23,
+        "still_path": "/2vyF5BPLxpgobQEhhmtqtd05cUM.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Treehouse of Horror XXIX",
+        "overview": "Homer wins an oyster-eating contest against the mythical Cthulhu, Springfield is overrun by plant body-snatchers, Lisa finally snaps and Mr. Burns opens a retirement home with some Jurassic upgrades.",
+        "air_date": "2018-10-21",
+        "runtime": 23,
+        "still_path": "/w5eZjHkmtwH5MIVvqPJdhcIcPhI.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Baby You Can\u0027t Drive My Car",
+        "overview": "A self-driving car company comes to Springfield, poaching all of the power plant employees with their fun work environment.",
+        "air_date": "2018-11-04",
+        "runtime": 22,
+        "still_path": "/neWBHLIc5f7rjC3kzRnU6qkKtwm.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "From Russia Without Love",
+        "overview": "On a mission to play hardcore pranks, Bart, Nelson and Milhouse get Moe a mail-order bride on the Dark Web.",
+        "air_date": "2018-11-11",
+        "runtime": 23,
+        "still_path": "/cV48w9UdTWnu8f25sgIWR4DZHuP.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Werking Mom",
+        "overview": "Marge wants a job, and stumbles into becoming a plastic food storage container-selling drag queen. Meanwhile, Lisa tries to make the world better in the style of \u0022Amelie\u0022",
+        "air_date": "2018-11-18",
+        "runtime": 23,
+        "still_path": "/cs3eIgwcS4y5i1TPkr3iKDpCpsK.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Krusty the Clown",
+        "overview": "Homer finds his calling as a TV recapper, but his harsh grading causes a brawl with Krusty. After almost killing Homer, Krusty hides out at a real circus, and finds happiness there.",
+        "air_date": "2018-11-25",
+        "runtime": 23,
+        "still_path": "/vKKVUt42eV0IdvQWNBGh5z95eTJ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Daddicus Finch",
+        "overview": "Lisa and Homer\u0027s bond gets stronger when they start spending real quality time together, and Bart feels neglected. So Marge tries to help Homer balance his attention between the kids.",
+        "air_date": "2018-12-02",
+        "runtime": 22,
+        "still_path": "/7wSmQvOGoPr9vdsLtOjNKwAwS6X.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "\u0027Tis the 30th Season",
+        "overview": "After a failed Black Friday shopping spree, Marge is determined to fix Christmas; Homer and the kids surprise Marge with a vacation to a Florida resort.",
+        "air_date": "2018-12-09",
+        "runtime": 22,
+        "still_path": "/97fbw6FwJq0LazFbozPyt1iw8Yj.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Mad About the Toy",
+        "overview": "When Marge and Homer leave Grampa to baby-sit the kids, some little green army men trigger a PTSD episode, sending the family on a journey to Grampa\u0027s past and the time period when he was a post-war toy model.",
+        "air_date": "2019-01-06",
+        "runtime": 23,
+        "still_path": "/8XJNuVuQx9qCEeo84lntqRbEiSJ.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Girl on the Bus",
+        "overview": "When Lisa spots a new best friend from the window of the bus, she gets a taste of what life could be like with a different, more cultured family.",
+        "air_date": "2019-01-13",
+        "runtime": 23,
+        "still_path": "/7qBQ2r1ca0f8FzR1MRCrx9Q9wKU.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "I\u0027m Dancing as Fat as I Can",
+        "overview": "Homer angers Marge by binging their favorite show without her, and has to pick up a new skill in order to make amends. Meanwhile, Bart prepares to compete in \u0022Krusty\u0027s Holiday Trample\u0022.",
+        "air_date": "2019-02-10",
+        "runtime": 23,
+        "still_path": "/sD2lPwmb2oCcAHWldLzA6WqwAjb.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Clown Stays in the Picture",
+        "overview": "Krusty reveals the untold story of his past in his movie \u0022The Sands of Space\u0022. While working as personal assistants on the movie, Bart and Lisa learn about the early years of their parents\u0027 relationship.",
+        "air_date": "2019-02-17",
+        "runtime": 23,
+        "still_path": "/yDDOFAE3wNlLBWnGnYoQPHkdbFn.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "101 Mitigations",
+        "overview": "Comic Book Guy sues Homer for joyriding in his car. Meanwhile, Guillermo del Toro saves Mr. Burns from his troubles with the law.",
+        "air_date": "2019-03-03",
+        "runtime": 22,
+        "still_path": "/iAdPnKvGlnEl20kd176tPyK2yiL.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "I Want You (She\u0027s So Heavy)",
+        "overview": "When a romantic night ends in injury, Marge recovers by taking up kite boarding while Homer bonds with his hallucinated hernia; Lisa attempts to fix her parents\u0027 strained relationship by seeking advice from an unlikely source.",
+        "air_date": "2019-03-10",
+        "runtime": 22,
+        "still_path": "/kQHlrY7UWw2wRhuLNhfoICpNHdY.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "E My Sports",
+        "overview": "As Bart begins to excel in video game competitions, Homer discovers a passion for coaching him; Lisa attempts to bring Homer back to reality, but the plan causes chaos.",
+        "air_date": "2019-03-17",
+        "runtime": 23,
+        "still_path": "/zwcAAzFpwluxKVoCnJsJVrWy5W1.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Bart vs. Itchy \u0026 Scratchy",
+        "overview": "Krusty releases an all-female reboot of \u201CItchy and Scratchy,\u201D so Bart and his crew of all-male friends decide to boycott the show. After Bart\u2019s friends turn on him for laughing at the reboot, Bart joins a woke group of sixth-grade girls who commit crimes against patriarchy.",
+        "air_date": "2019-03-24",
+        "runtime": 23,
+        "still_path": "/nRgIQnpf3UhgLthPeaT8bGTXrVF.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Girl\u0027s in the Band",
+        "overview": "Homer works extra shifts at the plant so Lisa can play in the Capitol City Philharmonic.",
+        "air_date": "2019-03-31",
+        "runtime": 22,
+        "still_path": "/yRiaUW9NTkHYJ5vpbfh5i4lhiTi.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "I\u0027m Just a Girl Who Can\u0027t Say D\u0027oh",
+        "overview": "Marge becomes director of Springfield\u0027s local theater, armed with Lisa\u0027s script resembling \u0022Hamilton\u0022; Homer joins a baby class with Maggie, and he takes a liking to supervisor Chloe.",
+        "air_date": "2019-04-07",
+        "runtime": 22,
+        "still_path": "/c8n0HOtLNSXxozCn6rOuEkwXHPz.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "D\u0027oh Canada",
+        "overview": "Lisa is mistakenly given political asylum in Canada during a family trip to Niagara Falls.",
+        "air_date": "2019-04-28",
+        "runtime": 22,
+        "still_path": "/qDzMMbIPypCDIrz1WrtqPyrLInh.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Woo-Hoo Dunnit?",
+        "overview": "The documentary crime series \u0022Dateline: Springfield\u0022 goes in-depth to solve the case of Lisa\u2019s missing college fund.",
+        "air_date": "2019-05-05",
+        "runtime": 23,
+        "still_path": "/u8mWExRiHXBippM1nzc8ExZljPX.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Crystal Blue-Haired Persuasion",
+        "overview": "Marge starts a business selling healing crystals to the naive mothers of Springfield when Homer\u2019s work cuts children\u2019s health-care benefits, leading Marge to use the crystals as a cheaper solution for Bart\u2019s ADD.",
+        "air_date": "2019-05-12",
+        "runtime": 22,
+        "still_path": "/vVRxO1waRD0YREWfd8rcrudcJ8o.jpg"
+      }
+    ]
+  }
+}

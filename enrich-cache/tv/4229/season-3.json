@@ -1,0 +1,296 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Streaky Clean",
+        "overview": "Dexter creates a device to keep his clothes clean.",
+        "air_date": "2001-11-16",
+        "runtime": 7,
+        "still_path": "/RONHp6DV8P5vh7FwBCVkuQpOgw.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Dad Cartoon",
+        "overview": "Dad decides to give the car a retouch.",
+        "air_date": "2001-11-16",
+        "runtime": 7,
+        "still_path": "/qpZW5krAD5N3nXb6B9SAXkjsKoV.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Sole Brother",
+        "overview": "After a failed mutation experiment, Dexter becomes Dee Dee\u0027s foot.",
+        "air_date": "2001-11-16",
+        "runtime": 7,
+        "still_path": "/5eXrGYmj7UDw7z4raJvMuDjerq4.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Mind Over Chatter",
+        "overview": "Dexter uses a device to listen to what Dad is thinking, but the experiment backfires and everyone else can hear what Dexter is thinking.",
+        "air_date": "2001-11-16",
+        "runtime": 7,
+        "still_path": "/6vkVKprUxueUG232GVoipDj2HdA.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "A Quackor Cartoon",
+        "overview": "Quackor returns to battle Monkey in Dexter\u0027s Lab.",
+        "air_date": "2001-11-16",
+        "runtime": 7,
+        "still_path": "/r0BYwKQDxpM3rufLRxprJEshvox.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Momdark",
+        "overview": "Mandark disguises as Mom in order to get into Dexter\u0027s Lab.",
+        "air_date": "2001-11-16",
+        "runtime": 7,
+        "still_path": "/kzZMw2QIMMaBFZZ1IXXs4pJAu5A.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Copping an Attitude",
+        "overview": "Because of his exceptional grades Dexter\u0027s school and parents have decided that he can go to college. At first Dexter is happy to be there so he can fill his mind with college knowledge, but in the end the students influence on Dexter allows him to do college pranks sending him a one way ticket back to Huber Elementary School.",
+        "air_date": "2001-11-30",
+        "runtime": 9,
+        "still_path": "/A0a34lQKPYLREmi1VRgPMUFYiaM.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "A Failed Lab Experiment",
+        "overview": "Dexter creates a device taht doesn\u0027t work the way he wanted.",
+        "air_date": "2001-11-30",
+        "runtime": 4,
+        "still_path": "/xtVN0u2FfbwYaL1Nv7aCxNqxQYA.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Grand Daddy of All Inventions",
+        "overview": "Dexter\u0027s mom takes him to his grandpa\u0027s house. At first he thinks it\u0027s going to be a boring day until he discovers that his grandpa has a secret lab!",
+        "air_date": "2001-11-30",
+        "runtime": 9,
+        "still_path": "/59zFzTuOLPQMqXxhnb6VFD3BApg.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Poppa Wheely",
+        "overview": "It\u0027s career day and Dexter is ashamed of his Dad so he creates a Dad that looks more like him.",
+        "air_date": "2002-01-18",
+        "runtime": 9,
+        "still_path": "/xOW5tOWfJRJJ24Eet5laZRRyXKh.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "A Mom Cartoon",
+        "overview": "Mom spends a day at the supermarket.",
+        "air_date": "2002-01-18",
+        "runtime": 4,
+        "still_path": "/JjNLxoZ5g43rQc4mqe5wAqxU5z.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Mock Side of the Moon",
+        "overview": "Dexter travels to the moon and finds aliens that are planning to come to Earth to take everything.",
+        "air_date": "2002-01-18",
+        "runtime": 9,
+        "still_path": "/n0NwZ29Oqgqar8q1aqo4JpXin9i.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "If Memory Serves",
+        "overview": "Fearing that his memory might be limited, Dexter uses a device to save all his memories.",
+        "air_date": "2002-02-22",
+        "runtime": 9,
+        "still_path": "/hBFLNmwQ1PwnFqIeHCpCe5OrNhA.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "A Mandark Cartoon",
+        "overview": "Mandark plans another scheme to get rid of Dexter.",
+        "air_date": "2002-02-22",
+        "runtime": 4,
+        "still_path": "/6NAnFf9kerQPfAYJZDbUiHRaenR.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Tele Trauma",
+        "overview": "Tired of missing his favorite TV shows because of studying, Dexter creates a special helmet that absorbs all the TV info.",
+        "air_date": "2002-02-22",
+        "runtime": 9,
+        "still_path": "/rQaXfWwwvuw4XCu8rY33YdpXRyb.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "A Boy Named Sue",
+        "overview": "How did a young child called Susan became the being now known as Mandark? Born to free spirits, and with a passionate determination to harness the forces of science for his own ends, this is his story...",
+        "air_date": "2002-03-29",
+        "runtime": 11,
+        "still_path": "/jAyMw3GZtrRdtRalDQEa9RlfASt.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Lab on the Run",
+        "overview": "Two robots escape from Dexter\u0027s lab in order to have a better life.",
+        "air_date": "2002-03-29",
+        "runtime": 11,
+        "still_path": "/6iKataHxkbZXIZSvVHdlkeAMWvh.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Dos Boot",
+        "overview": "Mandark gets in Dexters computer raving havok, so Dexter must stop him.",
+        "air_date": "2002-06-07",
+        "runtime": 9,
+        "still_path": "/3IaGEj7rvRf8avbC0WoE9FNjP14.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "A Dee Dee Cartoon",
+        "overview": "After being kicked out of Dexter\u0027s Lab (AGAIN) She goes and plays in her \u0022\u0022lab\u0022\u0022.",
+        "air_date": "2002-06-07",
+        "runtime": 4,
+        "still_path": "/2VEaAPkNv7w3B3pcF7dN3emckXE.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Would You Like That In The Can",
+        "overview": "A girl accidentally takes Dexter\u0027s lunchbox, so Dexter and his friend must go into the girls bathroom to get it.",
+        "air_date": "2002-06-07",
+        "runtime": 9,
+        "still_path": "/kwKUlYjatGuU9ep6eUOdwDGqFWg.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "That Magic Moment",
+        "overview": "Dexter\u0027s Magic Uncle Ferger \u0027O Reiley pays a visit.",
+        "air_date": "2002-06-14",
+        "runtime": 9,
+        "still_path": "/zcWjh4zL6WiobFasmSBEz8dTrUu.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "A Silent Cartoon",
+        "overview": "Dexter is trying to build his lab blue, but Dee Dee keeps making it pink.",
+        "air_date": "2002-06-14",
+        "runtime": 4,
+        "still_path": "/cnmdEvGjJSMAjAGZhKBICEkWgqk.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Opposites Attract",
+        "overview": "Dexter creates a magnetic field to keep Dee Dee away from him.",
+        "air_date": "2002-06-14",
+        "runtime": 8,
+        "still_path": "/f3Uo5WAtX0stIqhZRGzUiuW7kjk.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Comic Relief",
+        "overview": "Dexter creates a special device that lets him create his own life-like superhero comic... along with his sister villian \u0022\u0022Deestructa\u0022\u0022.",
+        "air_date": "2002-06-21",
+        "runtime": 9,
+        "still_path": "/9shS4uJHpd9D80N9haCXgSGj2l5.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "A Third Dad Cartoon",
+        "overview": "Dad goes with the kids to play some golf.",
+        "air_date": "2002-06-21",
+        "runtime": 4,
+        "still_path": "/mVtyNPP7CLzjywDzdM4C40N2zO0.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "RoboDexo 3000",
+        "overview": "Dexter creates the ultimate robot (RoboDexo 3000) to replace his previous 200 model.",
+        "air_date": "2002-06-21",
+        "runtime": 9,
+        "still_path": "/sGbPTvllgF6oURJutLwVYTbj6hy.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Glove at First Sight",
+        "overview": "Mom and Dad recall the moments that got them together.",
+        "air_date": "2002-06-28",
+        "runtime": 9,
+        "still_path": "/AvZDMQeV2g5SC5z2xme2M77z0GI.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "A Mom \u0026 Dad Cartoon",
+        "overview": "Mom and Dad are having a discussion while playing scrabble, a discussion that Dexter and Dee Dee don\u0027t interpretate the right way.",
+        "air_date": "2002-06-28",
+        "runtime": 4,
+        "still_path": "/e4L2zQaTahjISVSQUtomhlcHaCs.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Smells Like Victory",
+        "overview": "The U.S. army invades Dexter\u0027s lab and Dexter fights them, each side thinking the other is a troop of aliens.",
+        "air_date": "2002-06-28",
+        "runtime": 9,
+        "still_path": "/scHds2Vu0TNiFpFltkvQTKOlShM.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Oh, Brother",
+        "overview": "Dexter uses his newest creation to turn Dee Dee into a boy, but the male version of Dee Dee (Doo Dee) is not as cool as Dexter it would.",
+        "air_date": "2002-07-05",
+        "runtime": 9,
+        "still_path": "/i3IpYbQ0wxzI7b4ni0yCqhhSu6u.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Another Dad Cartoon",
+        "overview": "While Mom, Dexter and Dee Dee are out shopping, Dad decides to spend the afternoon dancing... like Tom Cruise in Risky Business.",
+        "air_date": "2002-07-05",
+        "runtime": 3,
+        "still_path": "/fBdskAoLtqvXkI1KWzKyrB5hIUp.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Bar Exam",
+        "overview": "Dexter must pass a physical bar exam if he wants to pass P.E.",
+        "air_date": "2002-07-05",
+        "runtime": 9,
+        "still_path": "/u1iRpHIGquoKYO6suAQavlGZ8Gk.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "Jeepers, Creepers, Where is Peepers?",
+        "overview": "Dexter and Koosy must save Peepers, otherwise the whole land of Koz will disappear.",
+        "air_date": "2002-07-12",
+        "runtime": 11,
+        "still_path": "/aR1P5DaVaa005Ai2obVcxLM1f9p.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Go, Dexter Family, Go!",
+        "overview": "Dexter and his family are kidnapped by aliens, Dexter leads his family in an escape attempt, but when Dexter is captured once more, Mom, Dad, and Dee-Dee attempt to save him.",
+        "air_date": "2002-07-12",
+        "runtime": 11,
+        "still_path": "/opCc3XuSqj3n9t40IXf0XN7Gqr9.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Scare Tactics",
+        "overview": "Dexter and Dad watch a late night horror movie and spend a scary night in their house.",
+        "air_date": "2002-09-20",
+        "runtime": 9,
+        "still_path": "/1uCT3iC6slY4j8y5jKehtTBmHJV.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "My Dad vs. Your Dad",
+        "overview": "Both Dexter and Mandark\u0027s fathers intercede during another of Dexter and Mandark\u0027s petty squabbles, but their effort to get along with one another backfire, and the two also soon engage in a heated fight.",
+        "air_date": "2002-09-20",
+        "runtime": 9,
+        "still_path": "/kQ4opNUzEfUbnjFDT7jEgWAjhRj.jpg"
+      }
+    ]
+  }
+}

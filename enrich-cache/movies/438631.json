@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 438631,
+    "title": "Dune",
+    "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet\u0027s exclusive supply of the most precious resource in existence - a commodity capable of unlocking humanity\u0027s greatest potential - only those who can conquer their fear will survive.",
+    "tagline": "It begins.",
+    "runtime": 155,
+    "release_date": "2021-09-15",
+    "vote_average": 7.786,
+    "poster_path": "/v1tRXZ4JtD2Iv6fjkPvT4GiwslV.jpg",
+    "backdrop_path": "/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 726871,
+      "name": "Dune Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Timoth\u00E9e Chalamet",
+      "character": "Paul Atreides",
+      "profile_path": "/dFxpwRpmzpVfP1zjluH68DeQhyj.jpg"
+    },
+    {
+      "name": "Rebecca Ferguson",
+      "character": "Lady Jessica Atreides",
+      "profile_path": "/ty8ZPzaCBBlqIr5qzpOXI24iC8j.jpg"
+    },
+    {
+      "name": "Oscar Isaac",
+      "character": "Duke Leto Atreides",
+      "profile_path": "/dW5U5yrIIPmMjRThR9KT2xH6nTz.jpg"
+    },
+    {
+      "name": "Jason Momoa",
+      "character": "Duncan Idaho",
+      "profile_path": "/3troAR6QbSb6nUFMDu61YCCWLKa.jpg"
+    }
+  ]
+}

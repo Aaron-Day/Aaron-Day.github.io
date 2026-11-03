@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 818,
+    "title": "Austin Powers in Goldmember",
+    "overview": "The world\u0027s most shagadelic spy continues his fight against Dr. Evil. This time, the diabolical doctor and his clone, Mini-Me, team up with a new foe\u2014\u002770s kingpin Goldmember. While pursuing the team of villains to stop them from world domination, Austin gets help from his dad and an old girlfriend.",
+    "tagline": "The grooviest movie of the summer has a secret, baby!",
+    "runtime": 94,
+    "release_date": "2002-07-26",
+    "vote_average": 6.024,
+    "poster_path": "/n8V61f1v7idya4WJzGEJNoIp9iL.jpg",
+    "backdrop_path": "/kuPpElzfYnzsCye0hF8EbJSrvwo.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1006,
+      "name": "Austin Powers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mike Myers",
+      "character": "Austin Powers / Dr. Evil / Goldmember / Fat Bastard",
+      "profile_path": "/gjfDl52Kk02MPgUYFjs9bOy33OY.jpg"
+    },
+    {
+      "name": "Beyonc\u00E9",
+      "character": "Foxxy Cleopatra",
+      "profile_path": "/2HbjNtiCtmbArEnELuDFU7knaVK.jpg"
+    },
+    {
+      "name": "Seth Green",
+      "character": "Scott Evil",
+      "profile_path": "/l4No5Eu6j0U80hCIkaSn17AOWrj.jpg"
+    },
+    {
+      "name": "Michael York",
+      "character": "Basil Exposition",
+      "profile_path": "/ha9Nh8We778sUg8QyDE1IRATzDY.jpg"
+    }
+  ]
+}

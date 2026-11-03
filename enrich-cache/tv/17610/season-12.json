@@ -1,0 +1,152 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 12,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Bear",
+        "overview": "When a Russian bomber goes missing while flying over U.S. soil, Callen and Sam must track it down in the desert and secure its weapons and intel before the Russians on board destroy the plane. Meanwhile, Hetty gives Nell a cryptic assignment.",
+        "air_date": "2020-11-08",
+        "runtime": 45,
+        "still_path": "/AhzrsZjzhoQqTtlzwOd9ocXVp3D.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "War Crimes",
+        "overview": "As the trial begins of a Chief Petty Officer who Callen and Sam arrested for war crimes last year, the NCIS team is called to help find the missing star witness.",
+        "air_date": "2020-11-15",
+        "runtime": 45,
+        "still_path": "/xCuyeOF0dnb6VQpYMek3T5bF5eM.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Angry Karen",
+        "overview": "When Nell sends Sam to meet an informant who plans to blow the whistle on a military secret, Hanna\u0027s life is in danger when the man tries to run him down and kill him. Also, Kensi and Deeks debate whether or not to buy their first house.",
+        "air_date": "2020-11-22",
+        "runtime": 45,
+        "still_path": "/vAjgKMlTSdTDiwD7SSp1MXUoPq7.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Cash Flow",
+        "overview": "The body of a murdered Navy reservist is found by thieves in the midst of a robbery and NCIS must work with the burglars to find the killer. Also, Kensi and Deeks struggle to decide if they are ready to make the leap and buy a house.",
+        "air_date": "2020-12-06",
+        "runtime": 45,
+        "still_path": "/oEQty1563JfKjrld7nkMDJVoaAr.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Raising the Dead",
+        "overview": "In order to get intel on a matter of national security, Kensi must come face-to-face with a sociopath who has been obsessed with her since she put him in jail years ago. Also, though Deeks is desperate to keep Kensi safe, he is forced to leave NCIS.",
+        "air_date": "2020-12-06",
+        "runtime": 45,
+        "still_path": "/h7XMJOU5jpQAnKPQUpEuHZPpSnn.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "If The Fates Allow",
+        "overview": "Before Christmas, Hetty assigns Callen the case of his former foster brother and his wife who, upon reentry into the U.S., are framed for smuggling drugs across the border in her oxygen tanks. Also, Deeks is struggling with losing his job at NCIS.",
+        "air_date": "2020-12-13",
+        "runtime": 45,
+        "still_path": "/cHAtDbtuue7boccYJGuEStdqk2U.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Overdue",
+        "overview": "The NCIS team\u0027s murder investigation of a man who sold military information leads to the abduction of a doctor whose cutting edge neurotechnology could be developed into advanced weaponry. Team members are interviewed by FLETC to see if Deeks would make a good NCIS agent. Callen tries to have an important talk with Arkady.",
+        "air_date": "2021-01-03",
+        "runtime": 45,
+        "still_path": "/erUurNC8XCa0taeWjd6oGcWO3bC.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Love Kills",
+        "overview": "When NCIS investigates the murder of a man about to reveal the source of a massive counterfeiting operation, an old acquaintance becomes their prime suspect and reveals the true reason for her return. Also, Deeks struggles during training to become an official NCIS agent",
+        "air_date": "2021-01-10",
+        "runtime": 45,
+        "still_path": "/mcHnCbtSPa2qGGraumffSD1wUD1.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "A Fait Accompli",
+        "overview": "While NCIS must track down an organized crime leader who is trying to buy stolen defense technology, Callen goes to Anna to ask the ultimate question. Also, Deeks is kicked out of NCIS training only to find that Hetty has a life-changing surprise for him.",
+        "air_date": "2021-01-17",
+        "runtime": 45,
+        "still_path": "/daXCbjmJ8LkV98Cv6lhoonj7cP5.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Frogman\u2019s Daughter",
+        "overview": "When Sam\u2019s daughter Kam is kidnapped after leading citywide protests he will stop at nothing to find her. Also  Deeks rejoins NCIS and Callen searches for answers about Anna",
+        "air_date": "2021-02-14",
+        "runtime": 45,
+        "still_path": "/4rtMTNdHiYsug20FBpTPYz32Ajn.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Russia, Russia, Russia",
+        "overview": "When Callen goes to the National Counterterrorism Center on the pretext of interrogating a Russian asset from the crashed plane case he investigated months earlier, the tables are turned and he is detained, accused of being a Russian agent.",
+        "air_date": "2021-02-21",
+        "runtime": 45,
+        "still_path": "/vd6iG64aTtfkG33MbvEx8ti53KP.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Can\u0027t Take My Eyes Off You (I)",
+        "overview": "After Callen receives a cryptic message from Hetty, he tracks down the person tailing him, bringing him to a remote location teeming with Russians\u2026 and face to face with Anna.",
+        "air_date": "2021-02-28",
+        "runtime": 45,
+        "still_path": "/axt2JDJaRUgd7ZlL1dCrBOtqmJR.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Red Rover, Red Rover (II)",
+        "overview": "To rescue Joelle from further torture by the Russians, Callen and NCIS must offer up Anna as bait to Katya. Also, Callen finally discovers who accused him of being a Russian spy.",
+        "air_date": "2021-03-28",
+        "runtime": 45,
+        "still_path": "/2PyU0u0gQgTC4a1ItBexSdDeF0t.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Noble Maidens (III)",
+        "overview": "Callen and the team discover that Anna is being held by a group with ties to Anna\u0027s upbringing and must rescue her before she is forcibly returned to Russia. Also, Admiral Kilbride makes Nell a serious offer.",
+        "air_date": "2021-04-04",
+        "runtime": 45,
+        "still_path": "/6JUrIW9BOWcCYALHuu7dfzD49Hv.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Imposter Syndrome",
+        "overview": "NCIS obtains a hard drive containing a realistic deep fake video of a deceased terrorist and must retrieve the dangerous technology behind it. However, when the team\u2019s comms are highjacked during their mission, they find that one of their own has been a victim of its potential.",
+        "air_date": "2021-05-02",
+        "runtime": 45,
+        "still_path": "/plEsB6TZPZ5HcNE8n807pYKjXdx.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Signs of Change",
+        "overview": "When military grade technology is stolen, a deaf engineer, Sienna Marchione, who always wanted to serve her country, and the only member of her team to survive the theft, helps Kensi and NCIS track down the tech before it\u2019s taken out of the country.",
+        "air_date": "2021-05-09",
+        "runtime": 45,
+        "still_path": "/uldg0HLI0obJVwS79IbbzyrqSu0.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Through the Looking Glass",
+        "overview": "When a Naval Intelligence Officer is tortured and murdered, NCIS must work with Joelle, who informs them that other CIA operatives are being killed in the same way. Also, Kensi receives a threatening postcard from David Kessler, the sociopath who is obsessed with her.",
+        "air_date": "2021-05-16",
+        "runtime": 45,
+        "still_path": "/qc7IGNAIJlx3mzw5LtdnukCZfh4.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "A Tale of Two Igors",
+        "overview": "Deeks is kidnapped by an associate of Kirkin\u2019s in need of his help and NCIS investigates the shooting of a militarized dolphin equipped with a Russian microchip. Also, Beale makes Nell an interesting offer and Hetty returns.",
+        "air_date": "2021-05-23",
+        "runtime": 45,
+        "still_path": "/4TUB0IV9M95W9O9KiQp3MeDmCbi.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Search and Rescue (2)",
+        "overview": "Lt. Colonel John Sheppard and his team are trapped under the rubble of Michael\u0027s facility in order to rescue Teyla Emmagan. As Colonel Samantha Carter launches a team to rescue the rescuers, little do they know that Michael Kenmore is also searching the planet for the survivors.",
+        "air_date": "2008-07-10",
+        "runtime": 44,
+        "still_path": "/var6z9TNNQDlRy2iZDhYLw34vZv.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Seed",
+        "overview": "When a mysterious alien organism takes Dr. Jennifer Keller as its host, the newly revived Dr. Carson Beckett and the crew desperately search for a serum to save her from the evolving intruder before it can infiltrate Atlantis. In the meantime, Richard Woolsey officially joins the team, having been chosen as Colonel Samantha Carter\u0027s replacement to lead the Atlantis expedition.",
+        "air_date": "2008-07-17",
+        "runtime": 44,
+        "still_path": "/eo45HMtAo8y2GcEYY8WCG79gYWG.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Broken Ties",
+        "overview": "Ronon Dex is captured by Tyre, who wants to hand him to the Wraith in order to maintain his role in their circle. However, when the deal turns sour, and Tyre is left for dead, the Atlantis expedition persuade him to take back their friend. Meanwhile, The Wraith turn Ronon into a Wraith worshipper.",
+        "air_date": "2008-07-24",
+        "runtime": 43,
+        "still_path": "/nub2TM6YgzwG2ix7pdAtdGbKvLk.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Daedalus Variations",
+        "overview": "The Atlantis expedition mysteriously finds the Daedalus, abandoned and drifting in space. When Lt. Colonel John Sheppard\u0027s team come to investigate, the ship mysteriously disappears. They soon discover that the ship is actually an alternate Daedalus from a Alternate reality, and the team must find a way back to their Universe or risk being stranded forever in an unfamiliar reality.",
+        "air_date": "2008-07-31",
+        "runtime": 44,
+        "still_path": "/vCm3ygYfdgNDHhEh5FBmTvo7d2r.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Ghost in the Machine",
+        "overview": "While on a mission, Lt. Colonel John Sheppard\u0027s team inadvertently brings a mysterious entity to Atlantis. They soon learn that the entity is nothing more than Dr. Elizabeth Weir, who was thought to have been killed after her capture by the Asurans.",
+        "air_date": "2008-08-14",
+        "runtime": 44,
+        "still_path": "/qXs3MHkxhBZ0w7gbZRAMVG67GAa.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Shrine",
+        "overview": "Dr. Rodney McKay is infected with the Pegasus equivalent of Alzheimer\u0027s disease, known as Second Childhood, a common illness among the elderly in the galaxy. The only way to save him is a shrine on Talus. The downside is that it has turned into a Wraith outpost.",
+        "air_date": "2008-08-21",
+        "runtime": 44,
+        "still_path": "/mqP50YA2mEpN5jFng9J8u1tI8WW.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Whispers",
+        "overview": "Dr. Carson Beckett is called in to help a team investigating a lab that once belonged to Michael Kenmore. But soon, they realize that a group of experiments that even Michael couldn\u0027t control are hellbent on killing the team.",
+        "air_date": "2008-09-04",
+        "runtime": 44,
+        "still_path": "/uWqSEmtcfP4xHW6nZFIaNaMal8O.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Queen",
+        "overview": "The Atlantis expedition has a plan to remove the Wraith\u0027s dependence on feeding to use an experimental gene therapy from Michael\u0027s database. However, in order to convince the Primary, the Wraith leader, Teyla Emmagan must pose as a Hive Queen.",
+        "air_date": "2008-09-11",
+        "runtime": 44,
+        "still_path": "/9xsfZbjq74Mf5Wr7d8nlVbFbM72.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Tracker",
+        "overview": "Dr. Jennifer Keller is kidnapped by a runner named Kiryk. While Dr. Rodney McKay and Ronon Dex tracks them, Kiryk takes Keller to a seriously injured young girl. She must do it fast, since the Wraith have found him, and are hunting them down.",
+        "air_date": "2008-09-18",
+        "runtime": 44,
+        "still_path": "/plcWnWHl5x0Z4eWC6LDLBeHBdq2.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "First Contact (1)",
+        "overview": "Dr. Daniel Jackson arrives in Atlantis to investigate a hidden lab left behind by the rogue Ancient scientist Janus. Their discovery has attracted the attention of a mysterious group of aliens, who infiltrate the city. Meanwhile, \u0022Todd\u0022 and a delegation arrive on the Daedalus to bring forward Dr. Jennifer Keller\u0027s gene therapy.",
+        "air_date": "2008-09-25",
+        "runtime": 44,
+        "still_path": "/2lTrzzwz0PRxsuz064e1TUmVCo9.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Lost Tribe (2)",
+        "overview": "As Dr. Rodney McKay and Dr. Daniel Jackson is held prisoner by the Vanir, they make a startling discovery about who they really are. Meanwhile, \u0022Todd\u0022 and his Wraith hijack the Daedalus to find and destroy those who activated the Attero device. The Travelers arrive and Lt. Colonel John Sheppard must help them get to the planet before \u0022Todd\u0022 uncovers a way to discover the device for good, even if it means sacrificing McKay and Jackson\u0027s lives to do so.",
+        "air_date": "2008-10-09",
+        "runtime": 44,
+        "still_path": "/3HOnPDHun7QGbgjgyeUyl9ki9hd.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Outsiders",
+        "overview": "Dr. Carson Beckett, now a traveling doctor in Pegasus comes across a planet, where some of the villagers are refugees from Balar, a planet infected with the Hoffan drug, and destroyed by the Wraith. However, the Wraith arrive on the planet and gives the village an ultimatum, hand over the Balarians, or face destruction of the entire civilization.",
+        "air_date": "2008-10-16",
+        "runtime": 44,
+        "still_path": "/6JIaBmrshwerKUgeEwQya5xyaoP.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Inquisition",
+        "overview": "Lt. Colonel John Sheppard\u0027s team is invited by the Coalition of Planets in order to form an alliance. However, the team is misled and is faced to stand trial, for their alleged crimes against the Pegasus galaxy. Their best chance of freedom, is the experiences of Richard Woolsey.",
+        "air_date": "2008-10-19",
+        "runtime": 44,
+        "still_path": "/h8mmGwmN8IzOtjtfEU3SXEZ8JRx.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Prodigal",
+        "overview": "Michael Kenmore has infiltrated Atlantis with an army of his Hybrids, and closes off Stargate Operations and the surrounded levels to prevent anyone from taking it back. His plan; take Teyla Emmagan and her child to perfect his Hybrids, and to destroy the base when they\u0027re done. Meanwhile, Lt. Colonel John Sheppard, Dr. Rodney McKay and a team try to take back the city before Michael leaves with what he wants.",
+        "air_date": "2008-11-06",
+        "runtime": 44,
+        "still_path": "/7aeq1BQPlaGy1PYLFtZVq78x8dz.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Remnants",
+        "overview": "While being evaluated by the International Oversight Advisory, Richard Woolsey meets a beautiful scientist new to Atlantis, who is not what she appears. Meanwhile, Lt. Colonel John Sheppard is captured and tortured by an enemy he thought he\u0027d killed several years ago: his sworn enemy, Genii Commander Acastus Kolya.",
+        "air_date": "2008-11-13",
+        "runtime": 44,
+        "still_path": "/5POqY827Xja9SlFjKoEPSQzsJRA.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Brain Storm",
+        "overview": "Dr. Rodney McKay reluctantly returns to Earth to witness the triumph of his rival Dr. Malcolm Tunney, but must help shut down a deadly weather device when the new technology goes horribly awry.",
+        "air_date": "2008-11-20",
+        "runtime": 44,
+        "still_path": "/m8uoVz23nOUhJdVJ5atnIRQ1rLq.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Infection",
+        "overview": "After a Wraith Hive Ship shows up over Atlantis transmitting a distress call, Lt. Colonel John Sheppard\u0027s team discovers that its crew has been stricken with a disease they helped create.",
+        "air_date": "2008-12-04",
+        "runtime": 44,
+        "still_path": "/1SZPUEdezXxJUWk54O5WZMDLzOf.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Identity",
+        "overview": "Dr. Jennifer Keller\u0027s body is inadvertently taken over by a cunning thief, Neeva Casol. While Neeva tries to escape Atlantis, Keller finds herself imprisoned with a death sentence on another planet, forcing the team into a race against time to return Keller to her original body before she is put to death.",
+        "air_date": "2008-12-11",
+        "runtime": 44,
+        "still_path": "/q8z8V6fnnuhzVN6MwFHXgUML5Hc.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Vegas",
+        "overview": "In the city of Las Vegas in an alternate reality, police Detective John Sheppard investigates a series of bizarre murders where each body appears to have desiccated. He is soon called to Area 51, where Dr. Rodney McKay explains the situation.",
+        "air_date": "2008-12-18",
+        "runtime": 44,
+        "still_path": "/zF8U8a3uHnAuB3OxY4y5maGdbyj.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Enemy at the Gate",
+        "overview": "\u0022Todd\u0022 informs the Atlantis expedition that a rogue group of Wraith has acquired several Zero Point Modules to power a Super-hive, and wants it destroyed. However, after the Daedalus is disabled, they learn that the ship is heading straight for Earth, and they must stop it before it gets there.",
+        "air_date": "2009-01-08",
+        "runtime": 43,
+        "still_path": "/tAfBKzGz33CaPJsUCRABS9WHF4L.jpg"
+      }
+    ]
+  }
+}

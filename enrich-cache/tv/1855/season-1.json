@@ -1,0 +1,128 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Caretaker",
+        "overview": "Stardate: 48315.6. The USS Voyager, led by Captain Kathryn Janeway, is sent into the dangerous Badlands in pursuit of a Maquis ship, only for both ships to find themselves 70,000 light years from home in the uncharted Delta Quadrant.",
+        "air_date": "1995-01-16",
+        "runtime": 92,
+        "still_path": "/o4YZxBYdVLswbGTF1s3NCgkRkbh.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Parallax",
+        "overview": "Stardate: 48439.7. As the Maquis crewmembers begin to integrate themselves into the Starfleet crew, Voyager becomes trapped in a quantum singularity.",
+        "air_date": "1995-01-23",
+        "runtime": 46,
+        "still_path": "/hnJ47U5G1PwWbVjDYnL09Ir3PWX.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Time and Again",
+        "overview": "Stardate: Unknown. After being hit by the shockwave of a devastating planet-wide explosion, Voyager investigates. While on the surface, Janeway and Paris are accidentally \u0027shifted\u0027 one day into the past.",
+        "air_date": "1995-01-30",
+        "runtime": 46,
+        "still_path": "/ynUy7THjRMD0HmdzxV8BToYS1V1.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Phage",
+        "overview": "Stardate: 48532.4. During an away mission, Neelix is attacked and his lungs are surgically removed. His only hope for survival is if the crew of Voyager can get them back.",
+        "air_date": "1995-02-06",
+        "runtime": 46,
+        "still_path": "/sBRnt6h7C1uUq6IIcmBp3HlLU8i.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Cloud",
+        "overview": "Stardate: 48546.2. Janeway tries to figure out what her dynamic with the crew should be while all stuck in the Delta Quadrant together. Voyager tries to harvest omicron particles to refuel the ship, but inadvertently injures a spacefaring organism.",
+        "air_date": "1995-02-13",
+        "runtime": 46,
+        "still_path": "/tLDHB2bqCVME1Ii4Qvz54TStNoj.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Eye of the Needle",
+        "overview": "Stardate: 48579.4. The discovery of a wormhole leading to the Alpha Quadrant elates the crew, however, their only contact within range is a skeptical and paranoid Romulan.",
+        "air_date": "1995-02-20",
+        "runtime": 46,
+        "still_path": "/epaIB06XusPUeosfH2NwfHN38vp.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Ex Post Facto",
+        "overview": "Stardate: Unknown. Tom Paris is accused of a murder he claims he did not commit. His sentence is to re-live the last few moments of his victim\u0027s life every 14 hours through a memory transplant.",
+        "air_date": "1995-02-27",
+        "runtime": 46,
+        "still_path": "/d6UuOw5RbEvtFbivWaABiTZErwz.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Emanations",
+        "overview": "Stardate: 48623.5. A transporter accident swaps Harry Kim with a dying woman from another dimension. Harry finds himself among aliens who believe he\u2019s returned from their afterlife, while the woman, expecting paradise, wakes up on the Voyager.",
+        "air_date": "1995-03-13",
+        "runtime": 46,
+        "still_path": "/yweYJYsM2WNN3DnGfceICzfX3Tk.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Prime Factors",
+        "overview": "Stardate: 48642.5. The Voyager crew are offered luxurious shore leave by the advanced and gregarious Sikarians, who have a device that could send Voyager 40,000 light years closer to home. However, Sikarian law strictly prohibits sharing their technology with others.",
+        "air_date": "1995-03-20",
+        "runtime": 46,
+        "still_path": "/3PAic27Yj8cCti7minJrm1vehT0.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "State of Flux",
+        "overview": "Stardate: 48658.2. When stolen Federation technology is found on a severely damaged Kazon Nistrim ship, Seska becomes the prime suspect. The evidence is further reinforced when questions arise regarding her true heritage.",
+        "air_date": "1995-04-10",
+        "runtime": 46,
+        "still_path": "/HUc3qzArETzOFwFvbTQZSXMFv1.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Heroes and Demons",
+        "overview": "Stardate: 48693.2. Harry Kim disappears from the holodeck during his holo-novel, \u0022Beowulf.\u0022 According to the characters, he died at the hands of a mystical beast known as \u0022Grendel\u0022. When Chakotay and Tuvok also disappear, the Doctor is transferred to the holodeck to investigate.",
+        "air_date": "1995-04-24",
+        "runtime": 46,
+        "still_path": "/fecKOFAWG5nChLDwlcUwvfjqUR1.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Cathexis",
+        "overview": "Stardate: 48734.2. After Chakotay and Tuvok are injured in a shuttle accident, a non-corporeal life form begins to wreak havoc on Voyager by infiltrating the minds of the crew and altering the ship\u0027s systems one by one.",
+        "air_date": "1995-05-01",
+        "runtime": 46,
+        "still_path": "/dPDHy8t0oAbbJT7VOmKo03pqBgU.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Faces",
+        "overview": "Stardate: 48784.2. The Vidiians capture Paris, Torres and Durst while on an away mission. Torres is taken to a lab and \u0027split\u0027 into two people: one human, and one Klingon.",
+        "air_date": "1995-05-08",
+        "runtime": 46,
+        "still_path": "/gVE4rEyLnaote2VESMc8k7XKFUV.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Jetrel",
+        "overview": "Stardate: 48832.1. The inventor of a weapon that slaughtered Neelix\u2019s people contacts Neelix to warn of a fatal disease he may have contracted as a side effect.",
+        "air_date": "1995-05-15",
+        "runtime": 46,
+        "still_path": "/1o3UnylZN2BiVDygCUh4qBb83Qb.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Learning Curve",
+        "overview": "Stardate: 48846.5. In order to bring some rebellious Maquis crewmembers into line, Tuvok gives them a Starfleet Academy crash course. Meanwhile, the crew investigate a series of failures affecting the Voyager\u2019s bio-neural systems.",
+        "air_date": "1995-05-22",
+        "runtime": 46,
+        "still_path": "/7nfLh1IpwKlSZ38sqE8m1gjErrS.jpg"
+      }
+    ]
+  }
+}

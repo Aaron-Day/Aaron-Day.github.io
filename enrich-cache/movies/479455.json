@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 479455,
+    "title": "Men in Black: International",
+    "overview": "The Men in Black have always protected the Earth from the scum of the universe. In this new adventure, they tackle their biggest, most global threat to date: a mole in the Men in Black organization.",
+    "tagline": "The world\u0027s not going to save itself.",
+    "runtime": 115,
+    "release_date": "2019-06-12",
+    "vote_average": 5.894,
+    "poster_path": "/dPrUPFcgLfNbmDL8V69vcrTyEfb.jpg",
+    "backdrop_path": "/2FYzxgLNuNVwncilzUeCGbOQzP7.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chris Hemsworth",
+      "character": "Agent H",
+      "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    },
+    {
+      "name": "Tessa Thompson",
+      "character": "Agent M",
+      "profile_path": "/19ze60jXlb2j7dXc2UpA3MujXA8.jpg"
+    },
+    {
+      "name": "Kumail Nanjiani",
+      "character": "Pawny (voice)",
+      "profile_path": "/9EyrK1Cv7ey1h1GgmsVAOn45w6G.jpg"
+    },
+    {
+      "name": "Rebecca Ferguson",
+      "character": "Riza",
+      "profile_path": "/ty8ZPzaCBBlqIr5qzpOXI24iC8j.jpg"
+    }
+  ]
+}

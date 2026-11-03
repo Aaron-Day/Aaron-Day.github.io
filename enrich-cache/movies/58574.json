@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 58574,
+    "title": "Sherlock Holmes: A Game of Shadows",
+    "overview": "There is a new criminal mastermind at large (Professor Moriarty) and not only is he Holmes\u2019 intellectual equal, but his capacity for evil and lack of conscience may give him an advantage over the detective.",
+    "tagline": "The game is afoot.",
+    "runtime": 129,
+    "release_date": "2011-11-22",
+    "vote_average": 7.147,
+    "poster_path": "/y1MYZkwhZK6L0Jy4YMuPktzDOfn.jpg",
+    "backdrop_path": "/lWNASscWXn32Asr9vkB1wq6cKvD.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 102322,
+      "name": "Sherlock Holmes Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robert Downey Jr.",
+      "character": "Sherlock Holmes",
+      "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+    },
+    {
+      "name": "Jude Law",
+      "character": "Dr. John Watson",
+      "profile_path": "/6UadpSbfC39WMChAcdnNunzwDxv.jpg"
+    },
+    {
+      "name": "Noomi Rapace",
+      "character": "Madam Simza Heron",
+      "profile_path": "/m0J6ZqEyNljqF1DXBoC9DcMStHP.jpg"
+    },
+    {
+      "name": "Jared Harris",
+      "character": "Professor James Moriarty",
+      "profile_path": "/r9nIq0jPz1oBm4WwtlZhqlsX8p0.jpg"
+    }
+  ]
+}

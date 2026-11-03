@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9502,
+    "title": "Kung Fu Panda",
+    "overview": "Chosen by prophecy but doubted by all, Po is an unlikely choice for the mystical title of the Dragon Warrior\u2014a clumsy panda thrust into the world of kung fu as a deadly enemy threatens the Valley of Peace. Under reluctant guidance by Master Shifu and the Furious Five, Po must embrace who he is to unlock the power that no scroll can teach.",
+    "tagline": "Prepare for awesomeness.",
+    "runtime": 90,
+    "release_date": "2008-06-04",
+    "vote_average": 7.344,
+    "poster_path": "/wWt4JYXTg5Wr3xBW2phBrMKgp3x.jpg",
+    "backdrop_path": "/qdthf9WrRDSaIkGVQGhhJ9pz1hn.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 77816,
+      "name": "Kung Fu Panda Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jack Black",
+      "character": "Po (voice)",
+      "profile_path": "/rtCx0fiYxJVhzXXdwZE2XRTfIKE.jpg"
+    },
+    {
+      "name": "Dustin Hoffman",
+      "character": "Shifu (voice)",
+      "profile_path": "/yFjTzJHE6AFbwQifOlnNDzmiwlq.jpg"
+    },
+    {
+      "name": "Angelina Jolie",
+      "character": "Tigress (voice)",
+      "profile_path": "/bXNxIKcJ5cNNW8QFrBPWcfTSu9x.jpg"
+    },
+    {
+      "name": "Ian McShane",
+      "character": "Tai Lung (voice)",
+      "profile_path": "/rteBJYNgD1yGsHg2HGZAIrYHz1t.jpg"
+    }
+  ]
+}

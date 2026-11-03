@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 15789,
+    "title": "A Goofy Movie",
+    "overview": "Goofy\u2019s teenage son Max is desperate to impress his crush and fit in at school. After well-meaning but ignorant Goofy suddenly whisks him away on a cross-country road trip\u2014messing up Max\u2019s first date plans in the process\u2014Goofy\u2019s old-school parenting and Max\u2019s desire for independence lead to a vacation of hilarious mishaps, as they both learn to see eye to eye and listen to each other.",
+    "tagline": "It\u0027s hard to be cool when your Dad is Goofy.",
+    "runtime": 78,
+    "release_date": "1995-04-05",
+    "vote_average": 7.043,
+    "poster_path": "/bycmMhO3iIoEDzP768sUjq2RV4T.jpg",
+    "backdrop_path": "/Sb2cLe2xW5OATkZZJBbGrB6qjl.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 410261,
+      "name": "A Goofy Movie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bill Farmer",
+      "character": "Goofy (voice)",
+      "profile_path": "/lhezx68R12s5Bsv7d77BrQb7tWA.jpg"
+    },
+    {
+      "name": "Jason Marsden",
+      "character": "Max (voice)",
+      "profile_path": "/53aVh2ka0b4ZyR8dO8hBTQxQ9hc.jpg"
+    },
+    {
+      "name": "Aaron Lohr",
+      "character": "Max Goof (singing voice)",
+      "profile_path": null
+    },
+    {
+      "name": "Jim Cummings",
+      "character": "Pete (voice)",
+      "profile_path": "/c0sQPRCM5Ri3F4gVyxPr4AcPmIq.jpg"
+    }
+  ]
+}

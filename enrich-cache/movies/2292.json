@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2292,
+    "title": "Clerks",
+    "overview": "Convenience and video store clerks Dante and Randal are sharp-witted, potty-mouthed and bored out of their minds. So in between needling customers, the counter jockeys play hockey on the roof, visit a funeral home and deal with their love lives.",
+    "tagline": "Just because they serve you doesn\u0027t mean they like you.",
+    "runtime": 92,
+    "release_date": "1994-10-19",
+    "vote_average": 7.364,
+    "poster_path": "/9IiSgiq4h4siTIS9H3o4nZ3h5L9.jpg",
+    "backdrop_path": "/sjfbZVKRGh84lNxhqvuhdvovh18.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 182813,
+      "name": "Clerks Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brian O\u0027Halloran",
+      "character": "Dante",
+      "profile_path": "/c8bhTxVxhN4DMrJeCnu5usutbY5.jpg"
+    },
+    {
+      "name": "Jeff Anderson",
+      "character": "Randal",
+      "profile_path": "/edwQlYwAWWHQC9um89c5CQpFYof.jpg"
+    },
+    {
+      "name": "Marilyn Ghigliotti",
+      "character": "Veronica",
+      "profile_path": "/p5YjbNAVMW8M0rsvxFLVKl897BX.jpg"
+    },
+    {
+      "name": "Lisa Spoonauer",
+      "character": "Caitlin",
+      "profile_path": "/5z9CWgy6SzpU8gzvCdAdyqk6YXl.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 6488,
+    "title": "Arachnophobia",
+    "overview": "A large spider from the jungles of South America is accidentally transported in a crate with a dead body to America where it mates with a local spider. Soon after, the residents of a small California town disappear as the result of spider bites from the deadly spider offspring. It\u0027s up to a couple of doctors with the help of an insect exterminator to annihilate these eight legged freaks.",
+    "tagline": "Eight legs, two fangs and an attitude.",
+    "runtime": 109,
+    "release_date": "1990-07-20",
+    "vote_average": 6.461,
+    "poster_path": "/kGKBlytAKCGXwcAzpMFYcjvnIdQ.jpg",
+    "backdrop_path": "/w1PDaPJuW3D1TfSxesY7nGZZYS7.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jeff Daniels",
+      "character": "Ross Jennings",
+      "profile_path": "/r0mkZJZnTSJO3HJRsMW5HtszxE8.jpg"
+    },
+    {
+      "name": "Harley Jane Kozak",
+      "character": "Molly Jennings",
+      "profile_path": "/9BMCJq4owniBRXkf8y8kEN12JTS.jpg"
+    },
+    {
+      "name": "John Goodman",
+      "character": "Delbert McClintock",
+      "profile_path": "/yyYqoyKHO7hE1zpgEV2XlqYWcNV.jpg"
+    },
+    {
+      "name": "Julian Sands",
+      "character": "Dr. James Atherton",
+      "profile_path": "/8TYtEyKZle2B3cUYT7FBM9HJRtZ.jpg"
+    }
+  ]
+}

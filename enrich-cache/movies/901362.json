@@ -1,0 +1,66 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 901362,
+    "title": "Trolls Band Together",
+    "overview": "When Branch\u0027s brother, Floyd, is kidnapped for his musical talents by a pair of nefarious pop-star villains, Branch and Poppy embark on a harrowing and emotional journey to reunite the other brothers and rescue Floyd from a fate even worse than pop-culture obscurity.",
+    "tagline": "There are some new trolls on the block.",
+    "runtime": 91,
+    "release_date": "2023-10-12",
+    "vote_average": 7.249,
+    "poster_path": "/3ySgD2xwasTHOK6R9bNZiEwKgYo.jpg",
+    "backdrop_path": "/mDW6z7I6de6JbUgPOkAEZwKbg7G.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 489724,
+      "name": "The Trolls Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Justin Timberlake",
+      "character": "Branch (voice)",
+      "profile_path": "/6Yk5t9RwkdkAT8Qv45934Eez2CA.jpg"
+    },
+    {
+      "name": "Anna Kendrick",
+      "character": "Poppy (voice)",
+      "profile_path": "/i2HIJQcBsUQ3o9HwEeDwou45D60.jpg"
+    },
+    {
+      "name": "Camila Cabello",
+      "character": "Viva (voice)",
+      "profile_path": "/oXScbfmhbNk3Qf8cqpHjQjdMAhe.jpg"
+    },
+    {
+      "name": "Eric Andr\u00E9",
+      "character": "John Dory (voice)",
+      "profile_path": "/e9XlcFnZQiBSQ1vISQVyTOrkIaq.jpg"
+    }
+  ]
+}

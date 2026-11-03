@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1771,
+    "title": "Captain America: The First Avenger",
+    "overview": "During World War II, Steve Rogers is a sickly man from Brooklyn who\u0027s transformed into super-soldier Captain America to aid in the war effort. Rogers must stop the Red Skull \u2013 Adolf Hitler\u0027s ruthless head of weaponry, and the leader of an organization that intends to use a mysterious device of untold powers for world domination.",
+    "tagline": "The one who never gives up awakens.",
+    "runtime": 124,
+    "release_date": "2011-07-22",
+    "vote_average": 7.013,
+    "poster_path": "/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg",
+    "backdrop_path": "/yFuKvT4Vm3sKHdFY4eG6I4ldAnn.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131295,
+      "name": "Captain America Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Evans",
+      "character": "Captain America / Steve Rogers",
+      "profile_path": "/3bOGNsHlrswhyW79uvIHH1V43JI.jpg"
+    },
+    {
+      "name": "Hayley Atwell",
+      "character": "Peggy Carter",
+      "profile_path": "/x57wXHexIjD2ywly9cRA4rov7cu.jpg"
+    },
+    {
+      "name": "Sebastian Stan",
+      "character": "James Buchanan \u0027Bucky\u0027 Barnes",
+      "profile_path": "/v20RLWst39klatsqUgSrwHxhwee.jpg"
+    },
+    {
+      "name": "Tommy Lee Jones",
+      "character": "Colonel Chester Phillips",
+      "profile_path": "/mCiZNRAzbnPojJEZwVZWLw9kzxR.jpg"
+    }
+  ]
+}

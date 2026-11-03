@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 111,
+    "title": "Scarface",
+    "overview": "After getting a green card in exchange for assassinating a Cuban government official, Tony Montana stakes a claim on the drug trade in Miami. Viciously murdering anyone who stands in his way, Tony eventually becomes the biggest drug lord in the state, controlling nearly all the cocaine that comes through Miami. But increased pressure from the police, wars with Colombian drug cartels and his own drug-fueled paranoia serve to fuel the flames of his eventual downfall.",
+    "tagline": "He loved the American Dream. With a vengeance.",
+    "runtime": 170,
+    "release_date": "1983-12-09",
+    "vote_average": 8.154,
+    "poster_path": "/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg",
+    "backdrop_path": "/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Al Pacino",
+      "character": "Tony Montana",
+      "profile_path": "/m8HAAjq1T75JypKk0v1FFQn4ysZ.jpg"
+    },
+    {
+      "name": "Steven Bauer",
+      "character": "Manny Ray",
+      "profile_path": "/eMSeKPgfilE2v5VcmwSt5pxbp0x.jpg"
+    },
+    {
+      "name": "Michelle Pfeiffer",
+      "character": "Elvira",
+      "profile_path": "/8qwNMFzmM3BxGKIj1iIqiHHBpx3.jpg"
+    },
+    {
+      "name": "Mary Elizabeth Mastrantonio",
+      "character": "Gina",
+      "profile_path": "/vbZ1E557K5oj34xLHR5ErO8wPCi.jpg"
+    }
+  ]
+}

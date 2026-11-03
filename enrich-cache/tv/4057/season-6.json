@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Longest Night",
+        "overview": "The BAU team closes in on the serial killer as he continues his murder spree throughout Los Angeles - with Detective Spicer\u0027s kidnapped daughter as his hostage - in the conclusion of last season\u0027s cliffhanger.",
+        "air_date": "2010-09-22",
+        "runtime": 42,
+        "still_path": "/7Du190T9a3orOs6nUcTxc1LPfDS.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "JJ",
+        "overview": "While JJ attempts to reunite a family whose daughter has mysteriously disappeared, her BAU family braces for the loss of one of their own.",
+        "air_date": "2010-09-29",
+        "runtime": 42,
+        "still_path": "/lR3MkBxrZuK0KIn31QpqljciJgS.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Remembrance of Things Past",
+        "overview": "When several women in Herndon, Virginia, are found murdered in a similar manner, SSA David Rossi reopens an unsolved cold case that has haunted him for a quarter of a century because he believes the original killer, who is suffering from Alzheimer\u0027s Disease, might have returned.",
+        "air_date": "2010-10-06",
+        "runtime": 42,
+        "still_path": "/7kK1MF0NNxGhyWgawHix1pP8muB.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Compromising Positions",
+        "overview": "The team searches for a serial killer who is preying on married couples; Hotchner looks to a team member to fill JJ\u0027s vacant role.",
+        "air_date": "2010-10-13",
+        "runtime": 42,
+        "still_path": "/rFdYhiAETqJmsUXlPluvSkzW0hX.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Safe Haven",
+        "overview": "The team pursues a serial killer targeting families in the Midwest; Morgan receives a visit from Ellie after she runs away from her foster family.",
+        "air_date": "2010-10-20",
+        "runtime": 42,
+        "still_path": "/oJYmh48vIZiC89OeEkHI6Zbmosx.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Devil\u0027s Night",
+        "overview": "The team searches for a killer who has struck the past three years during Detroit\u0027s raucous pre-Halloween celebrations.",
+        "air_date": "2010-10-27",
+        "runtime": 42,
+        "still_path": "/3igpG2Z85KaU2m7NZrkTG2m6z2M.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Middle Man",
+        "overview": "The BAU must catch a group of serial killers that is killing exotic dancers and leaving their bodies in the cornfields of Indiana.",
+        "air_date": "2010-11-03",
+        "runtime": 42,
+        "still_path": "/6GaJisHdQ5DDpyZxGtlrVJBa2uf.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Reflection of Desire",
+        "overview": "The BAU becomes involved in the search for a kidnapped woman in the nation\u0027s capital after the body of a second kidnap victim is found in a Georgetown alley.",
+        "air_date": "2010-11-10",
+        "runtime": 42,
+        "still_path": "/v0Xar4wYxyvyvlRELmk13MWNUPl.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Into the Woods",
+        "overview": "When an 8-year-old is found murdered on the Appalachian Trail, the BAU team goes deep into its forests in search of a man lurking in the wilderness who is targeting children.",
+        "air_date": "2010-11-17",
+        "runtime": 42,
+        "still_path": "/92qsE4HixfJwMBuj61EsVS19pYH.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "What Happens at Home...",
+        "overview": "The BAU searches inside a gated New Mexico community for a killer targeting women, and Hotchner looks to an FBI cadet with a unique past for help with the investigation.",
+        "air_date": "2010-12-08",
+        "runtime": 42,
+        "still_path": "/kCi1NPugvcOsJrGnpTqxj8xG5Cl.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "25 to Life",
+        "overview": "Morgan suggests that a man has been rehabilitated and aids in his parole, but later regrets his decision when the man murders someone days after being released.",
+        "air_date": "2010-12-15",
+        "runtime": 42,
+        "still_path": "/ttJR8scfexJUl8tJ6oweoToTEEP.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Corazon",
+        "overview": "A series of bizarre, ritualistic murders brings the team to Miami; Reid experiences hallucinations and blinding headaches.",
+        "air_date": "2011-01-19",
+        "runtime": 42,
+        "still_path": "/5IUsHDwwpD7xFzNiYQq8wvSsQFq.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Thirteenth Step",
+        "overview": "The BAU hits the road to track down a pair of young lovers on an interstate murder spree. Also, Prentiss hears frightening news from her former boss at Interpol.",
+        "air_date": "2011-01-26",
+        "runtime": 42,
+        "still_path": "/ky32TBjFhdVUfvHsZf1uAEgA4pV.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Sense Memory",
+        "overview": "The team investigates unusual murders in Los Angeles, and more information about Prentiss\u0027 past arises.",
+        "air_date": "2011-02-09",
+        "runtime": 42,
+        "still_path": "/cXDpR2bdRxxnPI6q3Z8lnxe5or6.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Today I Do",
+        "overview": "The BAU is called to upstate New York to investigate mysterious disappearances. Also, Prentiss gets some disturbing news about one of her former Interpol colleagues.",
+        "air_date": "2011-02-16",
+        "runtime": 42,
+        "still_path": "/q9oGPQsn5n9eX1XZDA85mBtgXXp.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Coda",
+        "overview": "Prentiss enlists two former friends from Interpol to track down an old enemy, as Reid discovers clues that could help the BAU locate the parents of an autistic boy.",
+        "air_date": "2011-02-23",
+        "runtime": 42,
+        "still_path": "/29atL3uzXWW7LJ7TXfZ1RJfvfb2.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Valhalla",
+        "overview": "After a series of murders, Prentiss becomes suspicious of a former nemesis, and fears for the safety of her team.",
+        "air_date": "2011-03-02",
+        "runtime": 42,
+        "still_path": "/hEHbfwBoduiQe3VIM7ql3uLbLFm.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Lauren",
+        "overview": "As Prentiss faces off against Ian Doyle, JJ receives a call and returns to help them find Prentiss and capture Doyle before it\u0027s too late.",
+        "air_date": "2011-03-16",
+        "runtime": 42,
+        "still_path": "/kLhFJvaIHrKAVPXQISPGmalb9yR.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "With Friends Like These...",
+        "overview": "The BAU travels to Portland to investigate a suspected gang of murderers targeting a new victim each night.",
+        "air_date": "2011-03-30",
+        "runtime": 42,
+        "still_path": "/nioierZccURSh06TIo2vCchLTni.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Hanley Waters",
+        "overview": "The BAU members investigate targeted killings in Tampa as they cope with their feelings about losing Emily Prentiss.",
+        "air_date": "2011-04-06",
+        "runtime": 42,
+        "still_path": "/q8IkKkEmuhU5KbzZlmqJ6BHIAPo.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Stranger",
+        "overview": "The BAU hunts a stalker in San Diego who is targeting college students. Meanwhile, the team comes under Strauss\u0027 scrutiny in the wake of the loss of Prentiss.",
+        "air_date": "2011-04-13",
+        "runtime": 42,
+        "still_path": "/sfeum9Y0hVQPyceGnj9OsWmGHmd.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Out of the Light",
+        "overview": "The BAU is called to a North Carolina resort town after a woman is found badly injured and another woman is missing. On arrival, the team discovers these two women are not the only victims.",
+        "air_date": "2011-05-04",
+        "runtime": 42,
+        "still_path": "/997cSXgBBZXzsDhXvCUo0gBiHZt.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Big Sea",
+        "overview": "When the BAU is called to Florida after bodies are discovered buried in the ocean floor off the Jacksonville coast, the case hits home for Morgan because his aunt fears her missing daughter could be one of the victims.",
+        "air_date": "2011-05-11",
+        "runtime": 42,
+        "still_path": "/ms7HQzI8fhTFPR0cLGYjE7yStOP.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Supply and Demand",
+        "overview": "As the BAU searches for a suspected human trafficking ring when the bodies of two missing persons are found in the trunk of a car, Unit Chief Aaron Hotchner intimates there could be changes within the team due to budget cuts as Jennifer \u0022JJ\u0022 Jareau returns to the FBI. The team is also assisted by SSA Andi Swan, the head of the Domestic Trafficking Task Force.",
+        "air_date": "2011-05-18",
+        "runtime": 42,
+        "still_path": "/3LRE7Pg2JDRzvSlmTXkH8bxNSW4.jpg"
+      }
+    ]
+  }
+}

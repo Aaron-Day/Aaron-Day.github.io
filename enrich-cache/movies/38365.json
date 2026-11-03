@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 38365,
+    "title": "Grown Ups",
+    "overview": "After their high school basketball coach passes away, five good friends and former teammates reunite for a Fourth of July holiday weekend.",
+    "tagline": "Boys will be boys. . . some longer than others.",
+    "runtime": 102,
+    "release_date": "2010-06-24",
+    "vote_average": 6.439,
+    "poster_path": "/cQGM5k1NtU85n4TUlrOrwijSCcm.jpg",
+    "backdrop_path": "/kARonxQpuSZdFraTKlCThWOBCtu.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 180546,
+      "name": "Grown Ups Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Lenny Feder",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Kevin James",
+      "character": "Eric Lamonsoff",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    },
+    {
+      "name": "Chris Rock",
+      "character": "Kurt McKenzie",
+      "profile_path": "/5lILFeBvX3sC0EfbHhrvMEc7bPD.jpg"
+    },
+    {
+      "name": "David Spade",
+      "character": "Marcus Higgins",
+      "profile_path": "/8tv638lAMLmYh8bSLICqPzbW3tv.jpg"
+    }
+  ]
+}

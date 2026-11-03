@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The New Deal",
+        "overview": "Coulson and the Agents of S.H.I.E.L.D. are thrust backward in time and stranded in 1931 New York City. With the all-new Zephyr set to time-jump at any moment, the team must hurry to find out exactly what happened. If they fail, it would mean disaster for the past, present and future of the world.",
+        "air_date": "2020-05-27",
+        "runtime": 45,
+        "still_path": "/gsqIC0yTTZNxxNIvf0NSsRDRHJy.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Know Your Onions",
+        "overview": "With the identity of the timeline-unraveling \u0022thread\u0022 revealed, the team\u0027s mission to protect him at all costs leads each agent to question their own values. Is preserving the future of the world as they know it worth the destruction they could prevent?",
+        "air_date": "2020-06-03",
+        "runtime": 44,
+        "still_path": "/7ed2hlNWrER2KounC5fS3hOeRP9.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Alien Commies from the Future!",
+        "overview": "A surprise leap forward in time has stranded Enoch in 1931 and landed the team in yet another unfamiliar decade. Now, in order to stop the Chronicoms from launching their newest future-dismantling plan, the agents will have to infiltrate one of S.H.I.E.L.D.\u2019s most secure bases. They won\u2019t be able to succeed without help from a familiar face or two.",
+        "air_date": "2020-06-10",
+        "runtime": 44,
+        "still_path": "/6iuYwXFN3GCEf14cgVmBAwWciyF.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Out of the Past",
+        "overview": "It was just another average morning on July 22, 1955, when Agent Phil Coulson realized the importance of that day in the S.H.I.E.L.D. history books. With a chip on his shoulder and a genre-bending glitch in his system, he\u2019d set into motion a chain of events that would hopefully preserve the timeline as we know it and ensure those pesky Chronicoms get the ending they deserve. What could go wrong?",
+        "air_date": "2020-06-17",
+        "runtime": 44,
+        "still_path": "/vU0L4g7i319csEbfsV4CtdXCRea.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "A Trout in the Milk",
+        "overview": "After a bumpy landing in the disco decade, the team \u2013 Daniel Sousa in tow \u2013 reunites with more than one familiar face at the S.H.I.E.L.D. hangout and discovers exactly how to dismantle the Chronicoms\u2019 latest plan. But when they get too close for comfort, the Zephyr unexpectedly leaps forward again, this time to a date pivotal to not only the future of S.H.I.E.L.D. but to the future of Director Mack as well.",
+        "air_date": "2020-06-24",
+        "runtime": 43,
+        "still_path": "/bjbbEiSrgmNlggY2NK97yspV6yq.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Adapt or Die",
+        "overview": "The stakes are higher than ever when, after blowing their cover and damaging the Zephyr in the process, the team must scramble to rescue Mack\u2019s parents, save S.H.I.E.L.D. from a Chronicom infestation, and fix the ship \u2026 all before the next time-jump. Meanwhile, Daisy and Sousa find themselves at a disadvantage against a power hungry Nathaniel Malick and his goons, and Coulson will have to do the thing he does best in order to save the future.",
+        "air_date": "2020-07-01",
+        "runtime": 44,
+        "still_path": "/470yUzMw7xH5qMI5yqbxCpwKyds.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Totally Excellent Adventures of Mack and The D",
+        "overview": "After being unexpectedly stranded in 1982, Mack retreats to his childhood home to process the death of his parents, while Deke gets to work scouting a chart-topping group of new agents. With no idea if or when the team is coming back for them, time seems to finally be on their side \u2026 at least until the killer robots show up.",
+        "air_date": "2020-07-08",
+        "runtime": 45,
+        "still_path": "/vFZLLNUqFqdppOQXrxIP9ed7osD.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "After, Before",
+        "overview": "With the Zephyr\u2019s time drive malfunctioning, the team is quite literally hurling toward disaster and Yo-Yo may be their only hope. The only problem? To get her powers back, she\u2019ll need to enlist the help of an old adversary and revisit part of her past long hidden away.",
+        "air_date": "2020-07-15",
+        "runtime": 44,
+        "still_path": "/38edv27e4dIa7RsobJDE9FrmynP.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "As I Have Always Been",
+        "overview": "A time storm ravages the Zephyr, propelling it toward destruction while simultaneously forcing Daisy and Coulson to relive their failed attempts to save the team over and over, until they find a solution or are swallowed by the storm. Making it to their next destination will take trust, courage and sacrifice from everyone on board, but it will all come down to having enough time.",
+        "air_date": "2020-07-22",
+        "runtime": 44,
+        "still_path": "/gf7hv0W9YmCQbjYcWaX3OjmY9bd.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Stolen",
+        "overview": "After Enoch\u2019s sacrifice propelled them out of the time storm, the team arrives back in 1983 where Nathaniel and Kora are hard at work building an army of hand-selected anarchist Inhumans at Afterlife. When the agents split up to cover more ground, Daisy is tasked with protecting Jiaying and is compelled to confront her mother for the first time since her death; while the others quickly learn they\u2019ll need to face yet another supercharged former enemy in order to stop Malick.",
+        "air_date": "2020-07-29",
+        "runtime": 43,
+        "still_path": "/hQa82CMnJcXjRJYQmjqXo8qH5PA.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Brand New Day",
+        "overview": "With the help of Kora on the inside, Sibyl and Nathaniel continue their fight to shape a dark new future for S.H.I.E.L.D., managing to stay one step ahead of the agents along the way. If the team is going to turn this one around, they\u2019ll have to get creative, and maybe even a little out of this world.",
+        "air_date": "2020-08-05",
+        "runtime": 44,
+        "still_path": "/moduxusarIDsIYkKdnnPEr0Ixnh.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The End Is at Hand",
+        "overview": "With their backs against the wall and Nathaniel and Sibyl edging ever closer to eliminating S.H.I.E.L.D. from the history books, the agents must rely on their strengths to outsmart and outlast the Chronicoms. This is their most important fight, and it will take the help of friends and teammates, past and present, to survive.",
+        "air_date": "2020-08-12",
+        "runtime": 44,
+        "still_path": "/bsuafDfrPQbE1m3QkRBTArpaCSI.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "What We\u0027re Fighting For",
+        "overview": "With their backs against the wall and Nathaniel and Sibyl edging ever closer to eliminating S.H.I.E.L.D. from the history books, the agents must rely on their strengths to outsmart and outlast the Chronicoms. This is their most important fight, and it will take the help of friends and teammates, past and present, to survive.",
+        "air_date": "2020-08-12",
+        "runtime": 45,
+        "still_path": "/n7FQx95PN1EYgzoXkKx8sbeQc41.jpg"
+      }
+    ]
+  }
+}

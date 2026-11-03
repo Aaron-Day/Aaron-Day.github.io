@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 140607,
+    "title": "Star Wars: The Force Awakens",
+    "overview": "Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.",
+    "tagline": "Every generation has a story.",
+    "runtime": 136,
+    "release_date": "2015-12-15",
+    "vote_average": 7.239,
+    "poster_path": "/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg",
+    "backdrop_path": "/8BTsTfln4jlQrLXUBquXJ0ASQy9.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10,
+      "name": "Star Wars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daisy Ridley",
+      "character": "Rey",
+      "profile_path": "/A8QZBHZjlbWDiUXBvCTk4Zv5oBs.jpg"
+    },
+    {
+      "name": "John Boyega",
+      "character": "Finn",
+      "profile_path": "/3153CfpgZQXTzCY0i74WpJumMQe.jpg"
+    },
+    {
+      "name": "Oscar Isaac",
+      "character": "Poe Dameron",
+      "profile_path": "/dW5U5yrIIPmMjRThR9KT2xH6nTz.jpg"
+    },
+    {
+      "name": "Adam Driver",
+      "character": "Kylo Ren",
+      "profile_path": "/b5w381C8Z33D1iF30KT4k8tJNsk.jpg"
+    }
+  ]
+}

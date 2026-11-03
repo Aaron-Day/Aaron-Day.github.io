@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 569094,
+    "title": "Spider-Man: Across the Spider-Verse",
+    "overview": "After reuniting with Gwen Stacy, Brooklyn\u2019s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse\u0027s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+    "tagline": "It\u0027s how you wear the mask that matters.",
+    "runtime": 140,
+    "release_date": "2023-05-31",
+    "vote_average": 8.348,
+    "poster_path": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "backdrop_path": "/kVd3a9YeLGkoeR50jGEXM6EqseS.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 573436,
+      "name": "Spider-Man: Spider-Verse Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Shameik Moore",
+      "character": "Miles Morales (voice)",
+      "profile_path": "/ovUKfVOwJ7CadEHaG3NDsfA5xRq.jpg"
+    },
+    {
+      "name": "Hailee Steinfeld",
+      "character": "Gwen Stacy (voice)",
+      "profile_path": "/qDInsG0cxWNxS1X4t59TBZ5S6x5.jpg"
+    },
+    {
+      "name": "Oscar Isaac",
+      "character": "Miguel O\u0027Hara (voice)",
+      "profile_path": "/dW5U5yrIIPmMjRThR9KT2xH6nTz.jpg"
+    },
+    {
+      "name": "Brian Tyree Henry",
+      "character": "Jeff Morales (voice)",
+      "profile_path": "/2MsJh0bpyzwvOUnXOltHp3j85Pb.jpg"
+    }
+  ]
+}

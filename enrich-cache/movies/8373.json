@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8373,
+    "title": "Transformers: Revenge of the Fallen",
+    "overview": "Sam Witwicky leaves the Autobots behind for a normal life. But when his mind is filled with cryptic symbols, the Decepticons target him and he is dragged back into the Transformers\u0027 war.",
+    "tagline": "Revenge is coming.",
+    "runtime": 150,
+    "release_date": "2009-06-19",
+    "vote_average": 6.23,
+    "poster_path": "/pLBb0whOzVDtJvyD4DPeQyQNOqp.jpg",
+    "backdrop_path": "/bH1bhjn37uA1zOPvyHbzJSvza7v.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8650,
+      "name": "Transformers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Shia LaBeouf",
+      "character": "Sam Witwicky",
+      "profile_path": "/egvlIdeizCkSkuHVoDuuduIThFA.jpg"
+    },
+    {
+      "name": "Megan Fox",
+      "character": "Mikaela Banes",
+      "profile_path": "/9khvk5svs81TLqIGlI3ZJqYtqaY.jpg"
+    },
+    {
+      "name": "Peter Cullen",
+      "character": "Optimus Prime (voice)",
+      "profile_path": "/9Snf4fBUkk5MrAjqtNtgZRJYJbj.jpg"
+    },
+    {
+      "name": "Hugo Weaving",
+      "character": "Megatron (voice)",
+      "profile_path": "/lSC8Et0PYi5zeQb3IpPkFje7hgR.jpg"
+    }
+  ]
+}

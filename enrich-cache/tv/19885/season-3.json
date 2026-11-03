@@ -1,0 +1,32 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Empty Hearse",
+        "overview": "Two years on from reports of his Reichenbach Fall demise, Sherlock resurfaces as London comes under threat of a huge terrorist attack. John, though, has mixed feelings about his friend\u0027s shocking return.",
+        "air_date": "2014-01-01",
+        "runtime": 87,
+        "still_path": "/zXsOogQ8BVyvWUR2zgs6NBxkReX.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Sign of Three",
+        "overview": "Sherlock faces his biggest challenge of all \u2013 delivering a Best Man\u2019s speech on John\u2019s wedding day! But all isn\u2019t quite as it seems. Mortal danger stalks the reception \u2013 and someone might not make it to the happy couple\u2019s first dance. Sherlock must thank the bridesmaids, solve the case and stop a killer. ",
+        "air_date": "2014-01-05",
+        "runtime": 87,
+        "still_path": "/ca3ayuzXGpxpALFlcsVsXTQau9G.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "His Last Vow",
+        "overview": "A case of stolen letters leads Sherlock Holmes into a long conflict with Charles Augustus Magnussen, the Napoleon of blackmail, and the one man he truly hates. But how do you tackle a foe who knows the personal weakness of every person of importance in the Western world?",
+        "air_date": "2014-01-12",
+        "runtime": 90,
+        "still_path": "/5phdYWQXMwn9cBUPzUt1Z3oie4K.jpg"
+      }
+    ]
+  }
+}

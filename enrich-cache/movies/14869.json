@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 14869,
+    "title": "G.I. Joe: The Rise of Cobra",
+    "overview": "From the Egyptian desert to deep below the polar ice caps, the elite G.I. JOE team uses the latest in next-generation spy and military equipment to fight the corrupt arms dealer Destro and the growing threat of the mysterious Cobra organization to prevent them from plunging the world into chaos.",
+    "tagline": "When all else fails, they don\u0027t.",
+    "runtime": 118,
+    "release_date": "2009-08-03",
+    "vote_average": 5.78,
+    "poster_path": "/mc9b25IAprHfsaOz0wTshOwGHcY.jpg",
+    "backdrop_path": "/jE5wVBRCGQzjHjvFUcYwGS4x0ux.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 135468,
+      "name": "G.I. Joe (Live-Action) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Adewale Akinnuoye-Agbaje",
+      "character": "Heavy Duty",
+      "profile_path": "/zdtwVtVmmm7VzYfu8xH7mbuTvrH.jpg"
+    },
+    {
+      "name": "Christopher Eccleston",
+      "character": "McCullen / Destro",
+      "profile_path": "/v6ezjezzDo6xP2wlONO5ZzBciwl.jpg"
+    },
+    {
+      "name": "Lee Byung-hun",
+      "character": "Storm Shadow",
+      "profile_path": "/5p5LDbZtnKhXDZL5227ExukbnRo.jpg"
+    },
+    {
+      "name": "Joseph Gordon-Levitt",
+      "character": "The Doctor / Rex",
+      "profile_path": "/z2FA8js799xqtfiFjBTicFYdfk.jpg"
+    }
+  ]
+}

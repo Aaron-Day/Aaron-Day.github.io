@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 5236,
+    "title": "Kiss Kiss Bang Bang",
+    "overview": "A petty thief posing as an actor is brought to Los Angeles for an unlikely audition and finds himself in the middle of a murder investigation along with his high school dream girl and a detective who\u0027s been training him for his upcoming role...",
+    "tagline": "Sex. Murder. Mystery. Welcome to the party.",
+    "runtime": 103,
+    "release_date": "2005-09-14",
+    "vote_average": 7.153,
+    "poster_path": "/aWfjIkpENFX6Uw82pET7EQ6jnrd.jpg",
+    "backdrop_path": "/kKdBNPXfjENj3wG5qtiCrZ2wflp.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Robert Downey Jr.",
+      "character": "Harry Lockhart",
+      "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+    },
+    {
+      "name": "Val Kilmer",
+      "character": "Gay Perry",
+      "profile_path": "/j2bJH6rxZkJJt8tHsBFMOxIVZdE.jpg"
+    },
+    {
+      "name": "Michelle Monaghan",
+      "character": "Harmony Faith Lane",
+      "profile_path": "/z5j4HVHEYf1RR9eiz1QkcxaSExZ.jpg"
+    },
+    {
+      "name": "Corbin Bernsen",
+      "character": "Harlan Dexter",
+      "profile_path": "/zkftLlEO5fmKmcKienRKw9Gx0U9.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 181812,
+    "title": "Star Wars: The Rise of Skywalker",
+    "overview": "The surviving Resistance faces the First Order once again as the journey of Rey, Finn and Poe Dameron continues. With the power and knowledge of generations behind them, the final battle begins.",
+    "tagline": "The saga concludes.",
+    "runtime": 142,
+    "release_date": "2019-12-18",
+    "vote_average": 6.241,
+    "poster_path": "/db32LaOibwEliAmSL2jjDF6oDdj.jpg",
+    "backdrop_path": "/auJKGst3vXpJozHZh4nMFs0xWIU.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10,
+      "name": "Star Wars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Carrie Fisher",
+      "character": "General Leia Organa",
+      "profile_path": "/of4yHmryKPy92eeskUQ7MRmjC3l.jpg"
+    },
+    {
+      "name": "Mark Hamill",
+      "character": "Luke Skywalker",
+      "profile_path": "/zMQ93JTLW8KxusKhOlHFZhih3YQ.jpg"
+    },
+    {
+      "name": "Daisy Ridley",
+      "character": "Rey",
+      "profile_path": "/A8QZBHZjlbWDiUXBvCTk4Zv5oBs.jpg"
+    },
+    {
+      "name": "Adam Driver",
+      "character": "Kylo Ren / Ben Solo",
+      "profile_path": "/b5w381C8Z33D1iF30KT4k8tJNsk.jpg"
+    }
+  ]
+}

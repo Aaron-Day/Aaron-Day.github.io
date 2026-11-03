@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 338967,
+    "title": "Zombieland: Double Tap",
+    "overview": "Columbus, Tallahassee, Wichita, and Little Rock move to the American heartland as they face off against evolved zombies, fellow survivors, and the growing pains of the snarky makeshift family.",
+    "tagline": "",
+    "runtime": 99,
+    "release_date": "2019-10-09",
+    "vote_average": 6.89,
+    "poster_path": "/dtRbVsUb5O12WWO54SRpiMtHKC0.jpg",
+    "backdrop_path": "/e7tMI0zVKJB2TS74TaBifIZIkCp.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 537982,
+      "name": "Zombieland Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jesse Eisenberg",
+      "character": "Columbus",
+      "profile_path": "/2ojZrkt5rdkUi857WSeCatxXdGS.jpg"
+    },
+    {
+      "name": "Woody Harrelson",
+      "character": "Tallahassee",
+      "profile_path": "/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg"
+    },
+    {
+      "name": "Emma Stone",
+      "character": "Wichita",
+      "profile_path": "/ak2Y9wOI3wi2pNQU6OWSvVvWPj5.jpg"
+    },
+    {
+      "name": "Abigail Breslin",
+      "character": "Little Rock",
+      "profile_path": "/1MQMfcb3fuN0lC1egdaOnHcTlm8.jpg"
+    }
+  ]
+}

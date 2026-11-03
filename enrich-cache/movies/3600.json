@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 3600,
+    "title": "I Still Know What You Did Last Summer",
+    "overview": "Ever since killing the Fisherman one year ago, Julie James is still haunted by images of him after her. When her best friend Karla wins free tickets to the Bahamas, Julie finds this a perfect opportunity to finally relax. But someone is waiting for her. Someone who she thought was dead. Someone who is out again for revenge.",
+    "tagline": "Someone is dying for a second chance.",
+    "runtime": 100,
+    "release_date": "1998-11-13",
+    "vote_average": 5.352,
+    "poster_path": "/eg3d6hvTaOmW3lNErFfutBmWmAR.jpg",
+    "backdrop_path": "/gF1BbDac7ONryE5jezRzXVe31Ud.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 3601,
+      "name": "I Know What You Did Last Summer Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jennifer Love Hewitt",
+      "character": "Julie James",
+      "profile_path": "/kRySMLtckE7tl6136y0yzFYpUfE.jpg"
+    },
+    {
+      "name": "Freddie Prinze Jr.",
+      "character": "Ray Bronson",
+      "profile_path": "/8V9yNBjCNRBKROyjCLKLJGcCBdG.jpg"
+    },
+    {
+      "name": "Matthew Settle",
+      "character": "Will Benson",
+      "profile_path": "/69D3JqJslcqJ1lqwcet2zGRAr7n.jpg"
+    },
+    {
+      "name": "Brandy Norwood",
+      "character": "Karla Wilson",
+      "profile_path": "/ie1IH8LQI3aGzke4FoYRbcdHv88.jpg"
+    }
+  ]
+}

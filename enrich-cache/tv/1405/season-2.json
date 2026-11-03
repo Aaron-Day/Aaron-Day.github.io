@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "It\u0027s Alive!",
+        "overview": "Dexter finds himself unable to kill again after the harrowing conclusion to The Ice Truck Killer case, and strays from his personal code with disastrous results; Debra returns to work but may not be ready.",
+        "air_date": "2007-09-30",
+        "runtime": 53,
+        "still_path": "/2jtzefZ7yIcaZoJxcOkuM4YEBHU.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Waiting to Exhale",
+        "overview": "Dexter remains on the trail of a dangerous new victim, while the traumatized Debra loses control on the job and a high-profile FBI agent arrives in Miami to investigate a newly discovered serial killer, The Bay Harbor Butcher.",
+        "air_date": "2007-10-07",
+        "runtime": 56,
+        "still_path": "/ha7i2p27VVdWY9wN9bkpQvmPmFv.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "An Inconvenient Lie",
+        "overview": "Dexter\u0027s sudden inability to deceive has him pursuing a slick liar as his next victim, while Rita believes he\u0027s concealing a drug problem and forces him into a 12-step program where he meets Lila, a seductive new woman.",
+        "air_date": "2007-10-14",
+        "runtime": 52,
+        "still_path": "/nhddI1zisRZtGUxJIZwKGFhDqoz.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "See-Through",
+        "overview": "Rita finds herself threatened by Dexter\u0027s sexy new Narcotics Anonymous sponsor Lila, and stressed by a visit from her estranged mother, while Dexter tries to throw the dogged, intelligent FBI Agent Lundy off his bloody trail.",
+        "air_date": "2007-10-21",
+        "runtime": 53,
+        "still_path": "/omBmf4Gxu8HPpnciDs6dUTYAiN3.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Dark Defender",
+        "overview": "Dexter gets the surprise of his life when he learns that one of his mother\u0027s murderers is alive and still in Florida. He confronts the killer as part of his recovery from addiction\u2014but he also discovers that old impulses die hard.",
+        "air_date": "2007-10-28",
+        "runtime": 56,
+        "still_path": "/nEWrXNNIhOCx5AGy7PZonRXjtCN.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Dex, Lies, and Videotape",
+        "overview": "A new copycat killer openly mimics and claims to be inspired by \u0022The Bay Harbor Butcher,\u0022 driving the annoyed Dexter into the arms of Lila, a development that could spell the end of his relationship with Rita.",
+        "air_date": "2007-11-04",
+        "runtime": 53,
+        "still_path": "/tB4fuDRHzQTRlfszvMAoNxgoKz6.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "That Night, a Forest Grew",
+        "overview": "A written manifesto from \u0022The Bay Harbor Butcher\u0022 sends the task force in charge of capturing him into chaos, which is part of Dexter\u0027s plan for keeping Lundy off his trail.",
+        "air_date": "2007-11-11",
+        "runtime": 55,
+        "still_path": "/nwgxVpwiReDOtnBg0dMA9L4rcI8.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Morning Comes",
+        "overview": "Dexter decides that Lila is becoming too attached, decides \u0022recovery\u0022 isn\u0027t working for him, and pays another visit to his mother\u0027s killer; Debra, Batista and Lundy find a clue that points to The Bay Harbor Butcher being right under their noses.",
+        "air_date": "2007-11-18",
+        "runtime": 49,
+        "still_path": "/15WfX35RWngveAdYNCsruo12tpa.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Resistance Is Futile",
+        "overview": "Dexter tries to distance himself from Lila, but discovers she is not so willing to let go of their relationship; Lundy\u0027s manhunt makes Dexter nervous as he tries to stay one step ahead.",
+        "air_date": "2007-11-25",
+        "runtime": 50,
+        "still_path": "/gL34Xku1eO413hIcqWrnb69yw0r.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "There\u0027s Something About Harry",
+        "overview": "Dexter turns the tables on Doakes, but the triumph is short-lived when the sergeant reveals a life-changing secret that shakes his foundation; The Bay Harbor Butcher task force feel they are zeroing in on their man.",
+        "air_date": "2007-12-02",
+        "runtime": 55,
+        "still_path": "/8PMgRRi6NysXyXSypwdaJiomiCM.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Left Turn Ahead",
+        "overview": "Dexter dodges bullets both figurative and real as he is forced to decide the fates of those he cares about most; Lila attempts to blackmail Dexter and makes a startling discovery that changes the nature of their relationship.",
+        "air_date": "2007-12-09",
+        "runtime": 51,
+        "still_path": "/echl9nui9uAPgjX8sqU0vfNYmvh.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The British Invasion",
+        "overview": "Special Agent Lundy and the FBI finally settle the case of the Bay Harbor Butcher, but the heat\u0027s not entirely off Dexter as the flames literally close in.",
+        "air_date": "2007-12-16",
+        "runtime": 51,
+        "still_path": "/4uOSnM1yV7azULevXV29lcCNXAt.jpg"
+      }
+    ]
+  }
+}

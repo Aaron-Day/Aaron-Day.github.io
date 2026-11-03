@@ -1,0 +1,216 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Apocalypse Rising",
+        "overview": "Stardate: Unknown. With the war between Klingons and Federation intensifying, Sisko must make a plan to expose Gowron as a changeling. Odo is still having trouble with becoming a solid.",
+        "air_date": "1996-09-30",
+        "runtime": 45,
+        "still_path": "/1ppOYB9rDqJ73njTuxJplg7anHQ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Ship",
+        "overview": "Stardate: 50049.3. The crew find a crashed Jem\u2019Hadar ship and work to repair it and capture it for the Federation, but are confronted by a Dominion force determined to recover the ship\u2019s cargo.",
+        "air_date": "1996-10-07",
+        "runtime": 45,
+        "still_path": "/tIiRTJqqpYf06vIvRU4ojgt98Vi.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Looking for par\u0027Mach in All the Wrong Places",
+        "overview": "Stardate: Unknown. While Worf helps Quark to pursue his former wife Grilka, O\u0027Brien and Kira grow uncomfortably close to each other.",
+        "air_date": "1996-10-14",
+        "runtime": 45,
+        "still_path": "/697XVXjBn7nDveNKx9WEuMTSzDn.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Nor the Battle to the Strong",
+        "overview": "Stardate: Unknown. Jake, reporting from the front lines, sees what war truly is.",
+        "air_date": "1996-10-21",
+        "runtime": 45,
+        "still_path": "/pzddqDgjNNAF5j1wjxxSy1mzDEH.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Assignment",
+        "overview": "Stardate: Unknown. An alien entity has possessed Keiko\u0027s body and is holding it hostage until O\u0027Brien completes an assignment for it.",
+        "air_date": "1996-10-28",
+        "runtime": 45,
+        "still_path": "/3vvZAmtKjjdy5CVklXnWdQQ1HAV.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Trials and Tribble-ations",
+        "overview": "Stardate: 4523.7. In this celebration of the 30th anniversary of The Original Series, the disgraced Klingon spy Darvin travels back in time to undo his century-old defeat by James Kirk. The DS9 crew must track him down and stop him, while blending in with the crew of the original Enterprise NCC-1701.",
+        "air_date": "1996-11-04",
+        "runtime": 45,
+        "still_path": "/tbgD6o9iV2rd1xjLTl7blQKTYJy.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Let He Who Is Without Sin...",
+        "overview": "Stardate: Unknown. While vacationing on Risa, Worf and Dax meet a group of fundamentalist protesters who claim that the Federation has gone soft.",
+        "air_date": "1996-11-11",
+        "runtime": 45,
+        "still_path": "/48U4QwkEu2r9TX4haRDZz9tG4Lg.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Things Past",
+        "overview": "Stardate: Unknown. Sisko, Dax, Odo and Garak find themselves in the past when the Cardassians controlled the station, and a crime that Odo investigated may be the key.",
+        "air_date": "1996-11-18",
+        "runtime": 45,
+        "still_path": "/eXRQpxgWJOj7Y9QOQPOhy8brL93.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Ascent",
+        "overview": "Stardate: Unknown. When Odo and Quark crash land, they must put aside their differences to climb a mountain to signal for help. Jake and Nog try to be roommates, but their different styles clash.",
+        "air_date": "1996-11-25",
+        "runtime": 45,
+        "still_path": "/sGxLZgRwt7fVzELbrNm2A4NFtoY.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Rapture",
+        "overview": "Stardate: Unknown. After a brain injury, Sisko begins experiencing powerful visions through time. He dives fully into the role of the Emissary, while becoming obsessed with finding a legendary Bajoran ruin.",
+        "air_date": "1996-12-30",
+        "runtime": 45,
+        "still_path": "/tdvn0LcytpUBGa88opfsg69jcPS.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Darkness and the Light",
+        "overview": "Stardate: 50416.2. A mysterious assassin begins wiping out all the members of Kira\u0027s old resistance cell.",
+        "air_date": "1997-01-06",
+        "runtime": 45,
+        "still_path": "/x61iRrxrxY2a58aNCXY0GOZNzLl.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Begotten",
+        "overview": "Stardate: Unknown. The discovery of an infant Changeling gives Odo a chance to put right the trauma of his own upbringing, while his \u201Cfather\u201D Dr. Mora insists on a more clinical approach.",
+        "air_date": "1997-01-27",
+        "runtime": 45,
+        "still_path": "/cNiSP76CaUsNW5fNC2MExxCEqvQ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "For the Uniform",
+        "overview": "Stardate: 50485.2. When the traitorous Eddington returns, Sisko will go to any lengths to capture him.",
+        "air_date": "1997-02-03",
+        "runtime": 45,
+        "still_path": "/dAJB2ZjCGjNddotlZoH9H8doqPL.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "In Purgatory\u0027s Shadow (1)",
+        "overview": "Stardate: Unknown. A coded message from the Gamma Quadrant leads Garak to believe his mentor, Enabran Tain, is still alive. He and Worf seek him out, only to discover something much worse: a Dominion invasion fleet poised to attack the Alpha Quadrant.",
+        "air_date": "1997-02-10",
+        "runtime": 45,
+        "still_path": "/cQcB4akgmGqnKYmkQfYRCcOBfwJ.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "By Inferno\u0027s Light (2)",
+        "overview": "Stardate: 50564.2. The station readies for a Dominion attack. Worf and Garak meet some unexpected friends in a Dominion Prison camp.",
+        "air_date": "1997-02-17",
+        "runtime": 45,
+        "still_path": "/pO9QuzJDk21y8TYdpZerLHY47ie.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Doctor Bashir, I Presume?",
+        "overview": "Stardate: Unknown. Dr. Bashir is selected to be the model for the next-generation of Emergency Medical Hologram (EMH). But he balks when his parents are invited to the station to be interviewed by the EMH programmer, Dr. Zimmerman. There is a dark secret in his family that he\u0027s afraid that his parents will reveal.",
+        "air_date": "1997-02-24",
+        "runtime": 45,
+        "still_path": "/se7QRiZ2hesPKaILEq6TnpbXEty.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "A Simple Investigation",
+        "overview": "Odo helps a woman hiding on the station from organized criminals, but quickly develops a personal interest in the case.",
+        "air_date": "1997-03-31",
+        "runtime": 45,
+        "still_path": "/ogrKBBVyJ84t7aAzPEQdB0BlEcF.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Business As Usual",
+        "overview": "Stardate: Unknown. Quark must wrestle with his conscience when he becomes involved with arms merchants.",
+        "air_date": "1997-04-07",
+        "runtime": 45,
+        "still_path": "/1xBPs6BMhARwT3hAMprQAN4qvLR.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Ties of Blood and Water",
+        "overview": "Stardate: 50712.2. When a Cardassian official that thinks of Kira as his daughter is dying, he agrees to reveal all he knows to her. But the experience dredges up Kira\u0027s memories of her own father\u0027s death.",
+        "air_date": "1997-04-14",
+        "runtime": 45,
+        "still_path": "/41BF391KFtUZqd2pLnZrKVMFebF.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Ferengi Love Songs",
+        "overview": "Stardate: Unknown. Quark doesn\u0027t know whether to be panicked or overjoyed when he learns that his mother is the new lover of the Grand Nagus.",
+        "air_date": "1997-04-21",
+        "runtime": 45,
+        "still_path": "/ktFqNqUWEtvT1aw4VlVSMXZs3ed.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Soldiers of the Empire",
+        "overview": "Stardate: Unknown. Dax and Worf accompany Martok on his first command since being held by the Dominion. But the ship they are given hasn\u0027t seen victory in months and the crew is near mutinous.",
+        "air_date": "1997-04-28",
+        "runtime": 45,
+        "still_path": "/nkd2Gvst3Wy5l826s5pVpRgkvpj.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Children of Time",
+        "overview": "Stardate: 50814.2. The DS9 crew discovers a colony that, due to a time travel accident, turns out to be inhabited by the crew\u0027s own descendants.",
+        "air_date": "1997-05-05",
+        "runtime": 45,
+        "still_path": "/uRn9ULvvZqkuafu4JBCN1YpHA0z.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Blaze of Glory",
+        "overview": "Stardate: Unknown. Sisko learns that the Maquis are planning a devastating attack on Cardassia, and must rely on the traitor Eddington to help him prevent it.",
+        "air_date": "1997-05-12",
+        "runtime": 45,
+        "still_path": "/2wEHLvSAOgL7xEeQKCaRARpMHm3.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Empok Nor",
+        "overview": "Stardate: Unknown. While salvaging components from DS9\u0027s sister station, the crew run afoul of a \u0022surprise\u0022 left behind by the Cardassians.",
+        "air_date": "1997-05-19",
+        "runtime": 45,
+        "still_path": "/3GCTPqHfq2aH1HrMdsmw0hsp9KH.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "In the Cards",
+        "overview": "Stardate: 50929.4. Jake has his heart set on a vintage Willie Mays baseball card as a present to cheer up his father, whose spirits are flagging from the ongoing conflict.",
+        "air_date": "1997-06-09",
+        "runtime": 45,
+        "still_path": "/1YiQz4nptIV7F3a6Z3t6YNVc2Rs.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Call to Arms",
+        "overview": "Stardate: 50975.2. Sisko decides to mine the wormhole to prevent further Dominion ships crossing into the Alpha Quadrant. This provokes an attack by the Dominion and the Cardassians, and a desperate last stand on Deep Space Nine.",
+        "air_date": "1997-06-16",
+        "runtime": 45,
+        "still_path": "/uaOGx8dRsEaK0HaqocZQVOhuvrU.jpg"
+      }
+    ]
+  }
+}

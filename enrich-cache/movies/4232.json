@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4232,
+    "title": "Scream",
+    "overview": "A year after the murder of her mother, a teenage girl is terrorized by a masked killer who targets her and her friends by using scary movies as part of a deadly game.",
+    "tagline": "Someone has taken their love of scary movies one step too far. Solving this mystery is going to be murder.",
+    "runtime": 112,
+    "release_date": "1996-12-20",
+    "vote_average": 7.439,
+    "poster_path": "/lr9ZIrmuwVmZhpZuTCW8D9g0ZJe.jpg",
+    "backdrop_path": "/4w6nQYAY0eb7B0VVRDXilXcgAUV.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2602,
+      "name": "Scream Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Neve Campbell",
+      "character": "Sidney",
+      "profile_path": "/zQzNg6Kiufj2VCltprI6jilNtl3.jpg"
+    },
+    {
+      "name": "Skeet Ulrich",
+      "character": "Billy",
+      "profile_path": "/moyTBJUTl82PaAhm8aHGwlvKr7r.jpg"
+    },
+    {
+      "name": "Rose McGowan",
+      "character": "Tatum",
+      "profile_path": "/cWggkWqhs5IIuSHxjoRuxlze1C9.jpg"
+    },
+    {
+      "name": "Matthew Lillard",
+      "character": "Stuart",
+      "profile_path": "/mIEKAfe0iC41RDXibbTy48LtNOi.jpg"
+    }
+  ]
+}

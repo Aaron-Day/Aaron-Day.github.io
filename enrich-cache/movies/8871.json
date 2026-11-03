@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8871,
+    "title": "How the Grinch Stole Christmas",
+    "overview": "The Grinch decides to rob Whoville of Christmas - but a dash of kindness from little Cindy Lou Who and her family may be enough to melt his heart...",
+    "tagline": "You better watch out!",
+    "runtime": 105,
+    "release_date": "2000-11-17",
+    "vote_average": 6.784,
+    "poster_path": "/1WZbbPApEivA421gCOluuzMMKCk.jpg",
+    "backdrop_path": "/sy0vo1cmpKqwPRiMUiJ45jyLsX7.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1738568,
+      "name": "How the Grinch Stole Christmas Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jim Carrey",
+      "character": "Grinch",
+      "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+    },
+    {
+      "name": "Taylor Momsen",
+      "character": "Cindy Lou Who",
+      "profile_path": "/u0RWIWMVaUNFYnDflWIJGJ3fzWt.jpg"
+    },
+    {
+      "name": "Jeffrey Tambor",
+      "character": "Mayor Augustus Maywho",
+      "profile_path": "/e4IkxsEo5O4oUWrIpXlEhWa6lqB.jpg"
+    },
+    {
+      "name": "Christine Baranski",
+      "character": "Martha May Whovier",
+      "profile_path": "/q6Zi3BYlmoim1JXXMGgRVS5C87x.jpg"
+    }
+  ]
+}

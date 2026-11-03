@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 204082,
+    "title": "Homefront",
+    "overview": "Phil Broker, a retired DEA agent, leads a quiet life with his daughter Maddy, until a school bullying incident draws them into a conflict with Morgan \u201CGator\u201D Bodine, a local crime boss.",
+    "tagline": "How far would you go to protect your home?",
+    "runtime": 100,
+    "release_date": "2013-11-12",
+    "vote_average": 6.944,
+    "poster_path": "/v55tfjL3QGeabkXAMXPb4olwjL0.jpg",
+    "backdrop_path": "/kT8orKwz2bmRdHBLnG44yucYtFy.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jason Statham",
+      "character": "Phil Broker",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "James Franco",
+      "character": "Morgan \u0027Gator\u0027 Bodine",
+      "profile_path": "/bjmAntHGiibLZixH8nTNVBzaFQn.jpg"
+    },
+    {
+      "name": "Izabela Vidovic",
+      "character": "Maddy Broker",
+      "profile_path": "/kG8Gp7BJZfKt4GP8cmYNOmrNyxV.jpg"
+    },
+    {
+      "name": "Kate Bosworth",
+      "character": "Cassie Bodine Klum",
+      "profile_path": "/ezaM2jsyrxXWVFN1SbH3UfAgZaG.jpg"
+    }
+  ]
+}

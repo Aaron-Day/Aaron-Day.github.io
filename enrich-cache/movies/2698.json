@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2698,
+    "title": "Evan Almighty",
+    "overview": "God contacts Junior Congressman Evan Baxter and tells him to build an ark in preparation for a great flood.",
+    "tagline": "A comedy of biblical proportions.",
+    "runtime": 96,
+    "release_date": "2007-06-09",
+    "vote_average": 5.59,
+    "poster_path": "/blI1ioXbgJWOJ3PbcBuSV65Ebwu.jpg",
+    "backdrop_path": "/yVwCXQzSZvg9H0YBXvzPfSs6Vqx.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 124949,
+      "name": "Almighty Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Carell",
+      "character": "Evan Baxter",
+      "profile_path": "/sSxw69G0znJuettMYGDCAXfSwSY.jpg"
+    },
+    {
+      "name": "Morgan Freeman",
+      "character": "God",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    },
+    {
+      "name": "Lauren Graham",
+      "character": "Joan Baxter",
+      "profile_path": "/3leQVZnthAZwngH7HAD6T7qfsVu.jpg"
+    },
+    {
+      "name": "Johnny Simmons",
+      "character": "Dylan Baxter",
+      "profile_path": "/51LZiAAI3ZW4vabNOQnd3weYgUm.jpg"
+    }
+  ]
+}

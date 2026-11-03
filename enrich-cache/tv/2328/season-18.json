@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 18,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Team Unites",
+        "overview": "Mike figures out the hard way what it means to be a Samurai Ranger after a Nighlok attacks him and his friends.",
+        "air_date": "2011-02-07",
+        "runtime": 22,
+        "still_path": "/f3PYKXvv4DYasDuSLVxFSEMttIk.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Deal With a Nighlok",
+        "overview": "The Rangers step in when a devious Nighlok tricks a young boy into giving up on his baseball dreams.",
+        "air_date": "2011-02-13",
+        "runtime": 22,
+        "still_path": "/wd4DN9F8qF8g3136hP8XMNdDXvg.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Day Off",
+        "overview": "Struggling to master a secret power disc, Jayden foregoes a trip with the others to an amusement park where the rest of the team encounters the evil Nighlok Dreadhead.",
+        "air_date": "2011-02-20",
+        "runtime": 22,
+        "still_path": "/yHUBjntg7lUB48B9eptYs9BbUgd.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Sticks and Stones",
+        "overview": "When a Nighlok who uses insults as a physical weapon attacks the Rangers, only Emily is unaffected. To help her teammates, she explains how difficult events in life become an opportunity to grow stronger.",
+        "air_date": "2011-02-27",
+        "runtime": 22,
+        "still_path": "/uvzZnuU6KMxRZhwe0z1yahuFBs7.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "A Fish Out of Water",
+        "overview": "Kevin is assigned the crucial task of catching the elusive SwordfishZord in order to save the other Rangers who have been incapacitated by the stench of the Nighlok Yamiror\u0027s breath.",
+        "air_date": "2011-03-06",
+        "runtime": 22,
+        "still_path": "/p6IW9THU6fsLmu0AWksClIZn6rt.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "There Go the Brides",
+        "overview": "Dayu crosses into the mortal world to cause misery by kidnapping brides on their wedding day.",
+        "air_date": "2011-03-13",
+        "runtime": 22,
+        "still_path": "/iqaYVWkcaSuoRwexZ3XAUSpAvTP.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "I\u0027ve Got a Spell on Blue",
+        "overview": "A Nighlok uses mind control powers to force Kevin to fight against his fellow Rangers.",
+        "air_date": "2011-03-20",
+        "runtime": 22,
+        "still_path": "/wruXPo4crvw2aGehN6bRCSoZybs.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Forest for the Trees",
+        "overview": "After Mike goes rogue in battle, Mentor takes Mike\u0027s Samuraizer away until he learns a deeper lesson about the nature of the Green Ranger\u0027s Symbol Power.",
+        "air_date": "2011-03-27",
+        "runtime": 22,
+        "still_path": "/inwUw5GU0pXdiAKXB9VmhMaxQ2V.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Test of the Leader",
+        "overview": "A Nighlok is sent to stop the Red Ranger from using his special power to seal Master Xandred in the Netherworld forever, but their duel is interrupted by the mysterious Deker.",
+        "air_date": "2011-04-10",
+        "runtime": 22,
+        "still_path": "/vid6Yw1jsYUhpshl6OnBv2syg98.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Jayden\u0027s Challenge",
+        "overview": "Jayden leaves the Shiba house hoping to keep the other Rangers out of harm\u0027s way, but when a powerful Nighlok attacks, Jayden finally accepts the fact that he needs his team to fulfill his role as the leader of the Samurai Rangers.",
+        "air_date": "2011-04-17",
+        "runtime": 22,
+        "still_path": "/yloRIX5Y4fz6mx4fotrrxV9N3v6.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Unexpected Arrival",
+        "overview": "A traveling fisherman named Antonio arrives and claims to be the sixth Samurai Ranger.",
+        "air_date": "2011-04-30",
+        "runtime": 22,
+        "still_path": "/zUqwUfTrp0sEUVvx0RNE0DG62Ut.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Room for One More",
+        "overview": "Jayden\u0027s childhood friend and self-made Samurai Antonio struggles to be accepted by the team as the Gold Ranger.",
+        "air_date": "2011-05-07",
+        "runtime": 22,
+        "still_path": "/fD6duPM1CsmWOATRBlMatKUsZ5z.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Blue and the Gold",
+        "overview": "As Antonio attempts to gain Kevin\u0027s respect as a true Samurai, Octoroo devises a plan to create a stronger portal between the Netherworld and Earth via a secret ancient well.",
+        "air_date": "2011-05-14",
+        "runtime": 22,
+        "still_path": "/fpKZMei92jo3p2w5hZVsqWi9Bkz.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Team Spirit",
+        "overview": "The Rangers must defeat the evil Splitface who steals people\u0027s spirits including the Yellow Rangers before they fall into an eternal sleep.",
+        "air_date": "2011-05-21",
+        "runtime": 22,
+        "still_path": "/dhBwIjux9qRupvvNK6rDSl2OHFW.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Tengen Gate",
+        "overview": "Jayden is poisoned by Octoroo during his attempt to discover the Red Ranger\u0027s sealing symbol, which can lock away Master Xandred forever.",
+        "air_date": "2011-05-28",
+        "runtime": 22,
+        "still_path": "/aGWjQ5txF8ra33B7PjubmqtDxuD.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Boxed In",
+        "overview": "With Jayden kidnapped by Deker, the other Rangers must summon the strength to fight a mutant Nighlok without their leader.",
+        "air_date": "2011-06-04",
+        "runtime": 22,
+        "still_path": "/toKI8PTrwkIlTYGtic0eLX2aBIX.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Broken Dreams",
+        "overview": "When the Gold and Pink Ranger fall under the spell of a dream-inducing Nighlok, the other Rangers must enter the Dream World to save them.",
+        "air_date": "2011-10-01",
+        "runtime": 22,
+        "still_path": "/2getP1q9eHligcksAAq06J4b3lL.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Ultimate Duel",
+        "overview": "The Rangers try to finish off the dream monster Rhinosnorus while Jayden and Deker finally face off in their ultimate duel.",
+        "air_date": "2011-10-08",
+        "runtime": 22,
+        "still_path": "/595K9vbneUV5KUiwzhRdZMJu4I8.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Origins (1)",
+        "overview": "As invasions from the Netherworld increase, the Red Ranger unites a new team of Samurai Rangers to meet the rising threat.",
+        "air_date": "2011-10-15",
+        "runtime": 22,
+        "still_path": "/cw4p4VGRGZcdS37F2IyKiWCI0R0.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Origins (2)",
+        "overview": "As the teens continue their transition into their new secret lives as Samurai Rangers, Emily reveals a surprising truth about herself.",
+        "air_date": "2011-10-22",
+        "runtime": 22,
+        "still_path": "/yVtaVEr3ZlHX3Zk9tsSp7s9sMrU.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Party Monsters",
+        "overview": "Halloween is every Nighlok\u0027s favorite day of the year so the creepiest creatures from the Netherworld are just dying to get into the scariest party ever and trade war stories about their battles with the Samurai Power Rangers.",
+        "air_date": "2011-10-29",
+        "runtime": 22,
+        "still_path": "/wsAk3Wv92rcb7h1mvsxuU6m7CC9.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Clash of the Red Rangers",
+        "overview": "The Samurai Rangers team up with the mysterious RPM Ranger Red to fight off dual threats from Master Xandred\u0027s Mooger army and a robotic supervillain from the RPM Ranger\u0027s dimension.",
+        "air_date": "2011-11-26",
+        "runtime": 47,
+        "still_path": "/ljUG1mDfCSs9j8CTxeu7Kqt21dy.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Christmas Together, Friends Forever",
+        "overview": "Twas the night before Christmas and all through the Shiba House the teens reflect on their first year together as a team and as friends.",
+        "air_date": "2011-12-10",
+        "runtime": 22,
+        "still_path": "/tntvpnRMZ02VI2jh8GstfhC6Tq7.jpg"
+      }
+    ]
+  }
+}

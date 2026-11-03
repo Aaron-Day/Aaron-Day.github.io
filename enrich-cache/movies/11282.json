@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11282,
+    "title": "Harold \u0026 Kumar Go to White Castle",
+    "overview": "Nerdy accountant Harold and his irrepressible friend, Kumar, get stoned watching television and find themselves utterly bewitched by a commercial for White Castle. Convinced there must be one nearby, the two set out on a late-night odyssey that takes them deep into New Jersey. Somehow, the boys manage to run afoul of rednecks, cops and even a car-stealing Neil Patrick Harris before getting anywhere near their beloved sliders.",
+    "tagline": "Fast food. High times.",
+    "runtime": 88,
+    "release_date": "2004-07-02",
+    "vote_average": 6.585,
+    "poster_path": "/5vO7R4xYlDipTp8gzfRbWegO8eb.jpg",
+    "backdrop_path": "/dzloVSv0FGM8fs4L5w9yV60p0PT.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 30663,
+      "name": "Harold \u0026 Kumar Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "John Cho",
+      "character": "Harold Lee",
+      "profile_path": "/4Lar4uy8gk78cEocq6ERPRFWt3e.jpg"
+    },
+    {
+      "name": "Kal Penn",
+      "character": "Kumar Patel",
+      "profile_path": "/yICM1JcxKbEpaqTUreY0yFMIc8W.jpg"
+    },
+    {
+      "name": "Paula Garc\u00E9s",
+      "character": "Maria",
+      "profile_path": "/ukwCVnfSp5qYGbdXHVeCwOXiZyu.jpg"
+    },
+    {
+      "name": "Neil Patrick Harris",
+      "character": "Neil Patrick Harris",
+      "profile_path": "/r2twLWLwDpKJ7JyhWsD1YsL7rJV.jpg"
+    }
+  ]
+}

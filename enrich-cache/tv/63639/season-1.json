@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Dulcinea",
+        "overview": "In the outer solar system near Saturn, James Holden and the crew of the ice-freighter Canterbury, investigate a distress call from a mysterious derelict ship, the Scopuli. On Ceres Station, Detective Miller begins an off the book investigation of a missing heiress, Julie Mao.",
+        "air_date": "2015-12-14",
+        "runtime": 48,
+        "still_path": "/j4WEC9Jh4AyXF8ynpX3pz633tse.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Big Empty",
+        "overview": "Holden and crew are trapped in badly damaged shuttle. On Ceres, Miller uncovers clues about Julie Mao. On Earth, Chrisjen Avasarala questions a terrorist.",
+        "air_date": "2015-12-15",
+        "runtime": 46,
+        "still_path": "/cJ3dfsoU9ya5WtGWthqo1eKR2pT.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Remember the Cant",
+        "overview": "Holden and the crew are taken prisoner by the Martian Congressional Republic Navy. Miller deals with unhappy rioters. Avasarala plays politics and gets severely burned.",
+        "air_date": "2015-12-22",
+        "runtime": 46,
+        "still_path": "/ilbyFabDjcrll6iEWh504XxXgUh.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "CQB",
+        "overview": "Holden and crew find themselves in the middle of a desperate battle while still aboard the Martian battleship. Miller\u2019s partner, Havelock, goes missing.",
+        "air_date": "2015-12-29",
+        "runtime": 45,
+        "still_path": "/fz0aHoispvkJjqG9V5BAwq8hg5q.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Back to the Butcher",
+        "overview": "Holden finds an unlikely ally. Miller\u2019s obsession with Mao intensifies.",
+        "air_date": "2016-01-05",
+        "runtime": 45,
+        "still_path": "/sbIjBub8sNsX36o1XbUItEB52jJ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Rock Bottom",
+        "overview": "Miller gains valuable information from a hidden data cube. Holden and his crew learn their host\u2019s agenda.",
+        "air_date": "2016-01-12",
+        "runtime": 45,
+        "still_path": "/8R83eWCg73feoYxGcMMubv3YHfl.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Windmills",
+        "overview": "Holden and his crew face a Martian military blockade. Miller finds a new reason to forge ahead. Avasarala visits Holden\u2019s family.",
+        "air_date": "2016-01-19",
+        "runtime": 44,
+        "still_path": "/udji6M9o8oAjYoCMNPQ5bIh4NK6.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Salvage",
+        "overview": "A derelict vessel holds a potentially devastating secret. Holden and his crew cross paths with Miller on Eros. Avasarala receives bad news.",
+        "air_date": "2016-01-26",
+        "runtime": 44,
+        "still_path": "/ylkmP4XzH0fQJBgWXhL552D3Zue.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Critical Mass",
+        "overview": "Julie\u0027s origin story ends up revealing her trajectory. Holden and Miller work together as they take a look at a strange emergency happening on Eros.",
+        "air_date": "2016-02-02",
+        "runtime": 42,
+        "still_path": "/jk8hLEIh2JGqxKsA47KcYIhs2Bo.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Leviathan Wakes",
+        "overview": "Avasarala uncovers a game-changing secret while the future of the human race might be in Holden and Miller\u0027s hands.",
+        "air_date": "2016-02-02",
+        "runtime": 44,
+        "still_path": "/9v2JpysRCA4xaS3gbOHT11IVMgd.jpg"
+      }
+    ]
+  }
+}

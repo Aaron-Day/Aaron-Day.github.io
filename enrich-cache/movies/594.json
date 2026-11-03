@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 594,
+    "title": "The Terminal",
+    "overview": "An Eastern European tourist unexpectedly finds himself stranded in JFK airport, and must take up temporary residence there.",
+    "tagline": "Life is waiting.",
+    "runtime": 128,
+    "release_date": "2004-06-17",
+    "vote_average": 7.355,
+    "poster_path": "/cPB3ZMM4UdsSAhNdS4c7ps5nypY.jpg",
+    "backdrop_path": "/zywtNiaZ9r7azrcNdl2j0jOgrkw.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Viktor Navorski",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Catherine Zeta-Jones",
+      "character": "Amelia Warren",
+      "profile_path": "/2fAo0jWy8zPl9jgR4DH5nLyL8Xa.jpg"
+    },
+    {
+      "name": "Stanley Tucci",
+      "character": "Frank Dixon",
+      "profile_path": "/q4TanMDI5Rgsvw4SfyNbPBh4URr.jpg"
+    },
+    {
+      "name": "Chi McBride",
+      "character": "Mulroy",
+      "profile_path": "/cesCeJZ5gSywA9lTYReB5uhkfek.jpg"
+    }
+  ]
+}

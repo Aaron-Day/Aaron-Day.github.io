@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9778,
+    "title": "Serendipity",
+    "overview": "Although already in relationships, two strangers realize they have genuine chemistry after a chance encounter \u2013 but part company soon after. Years later, they each yearn to reunite, despite being destined for the altar. But to give true love a chance, they have to find one another again.",
+    "tagline": "Can once in a lifetime happen twice?",
+    "runtime": 90,
+    "release_date": "2001-10-05",
+    "vote_average": 6.986,
+    "poster_path": "/4jS66Qmq2Ru5S2YzHVknGd4xJyT.jpg",
+    "backdrop_path": "/sBecqcXgrLRiwufYr6apGnYA70k.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "John Cusack",
+      "character": "Jonathan Trager",
+      "profile_path": "/aCwCx6JU7Jxbg6Q1ygcnLY750le.jpg"
+    },
+    {
+      "name": "Kate Beckinsale",
+      "character": "Sara Thomas",
+      "profile_path": "/aoIQJzrWRtq9mOeaPadzpUCAaVd.jpg"
+    },
+    {
+      "name": "Molly Shannon",
+      "character": "Eve",
+      "profile_path": "/5ZTbNpJtDRU4ZCH24nJvFRxaqAD.jpg"
+    },
+    {
+      "name": "Jeremy Piven",
+      "character": "Dean Kansky",
+      "profile_path": "/pBD1jcAZiDrHWcFpJtBtqLRD4gR.jpg"
+    }
+  ]
+}

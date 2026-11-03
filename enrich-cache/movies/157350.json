@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 157350,
+    "title": "Divergent",
+    "overview": "In a world divided into factions based on personality types, Tris learns that she\u0027s been classified as Divergent and won\u0027t fit in. When she discovers a plot to destroy Divergents, Tris and the mysterious Four must find out what makes Divergents dangerous before it\u0027s too late.",
+    "tagline": "What makes you different makes you dangerous.",
+    "runtime": 140,
+    "release_date": "2014-03-14",
+    "vote_average": 6.9,
+    "poster_path": "/aNh4Q3iuPKDMPi2SL7GgOpiLukX.jpg",
+    "backdrop_path": "/bgkFOoXEQMRjKkCvgoj7smdGbuh.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 283579,
+      "name": "Divergent Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Shailene Woodley",
+      "character": "Tris",
+      "profile_path": "/gL2NvHKW9wAH3qkZuJ76ULUiArB.jpg"
+    },
+    {
+      "name": "Theo James",
+      "character": "Four",
+      "profile_path": "/g4yeW1EgIpyht0fy1stv7EXUmPC.jpg"
+    },
+    {
+      "name": "Ashley Judd",
+      "character": "Natalie",
+      "profile_path": "/5771ZxVIs5rQbI1SV8TOlAFcF15.jpg"
+    },
+    {
+      "name": "Jai Courtney",
+      "character": "Eric",
+      "profile_path": "/6vEaNwbOKov6yzQx15CdtrqfK3L.jpg"
+    }
+  ]
+}

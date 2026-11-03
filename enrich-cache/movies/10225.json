@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10225,
+    "title": "Jason Lives - Friday the 13th Part VI",
+    "overview": "Tommy Jarvis, tormented by the fear that maybe Jason isn\u0027t really dead, unwittingly resurrects the mass murderer for another bloody rampage.",
+    "tagline": "Kill or be killed.",
+    "runtime": 86,
+    "release_date": "1986-08-01",
+    "vote_average": 6.287,
+    "poster_path": "/6vdUpHvkspQonXBdWcLWW5ciEPJ.jpg",
+    "backdrop_path": "/93tvkTtV6tQQiYhxhij9tuODNOq.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9735,
+      "name": "Friday the 13th Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Thom Mathews",
+      "character": "Tommy",
+      "profile_path": "/x1F6jwzwCFs2CgnGM50XV9lj08M.jpg"
+    },
+    {
+      "name": "Jennifer Cooke",
+      "character": "Megan",
+      "profile_path": "/6GhWtRLnhcuKpYIDSaeQoK5I1pE.jpg"
+    },
+    {
+      "name": "David Kagen",
+      "character": "Sheriff Garris",
+      "profile_path": "/rSWoYVqOYjjcDobBAmqRrDXDfCV.jpg"
+    },
+    {
+      "name": "Ren\u00E9e Jones",
+      "character": "Sissy",
+      "profile_path": "/exnjrndaoty1AwwBRjlTQkQsAUQ.jpg"
+    }
+  ]
+}

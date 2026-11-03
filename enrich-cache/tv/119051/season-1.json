@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Wednesday\u0027s Child Is Full of Woe",
+        "overview": "When a deliciously wicked prank gets Wednesday expelled, her parents ship her off to Nevermore Academy, the boarding school where they fell in love.",
+        "air_date": "2022-11-23",
+        "runtime": 60,
+        "still_path": "/vaoNDFmj7DQH7PpAy9YWgLVylPP.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Woe Is the Loneliest Number",
+        "overview": "The sheriff questions Wednesday about the night\u0027s strange happenings. Later, Wednesday faces off against a fierce rival in the cutthroat Poe Cup race.",
+        "air_date": "2022-11-23",
+        "runtime": 49,
+        "still_path": "/nSGdaI0sDBqgMMuskIKNNT1KbS8.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Friend or Woe",
+        "overview": "Wednesday stumbles on a secret society. During Outreach Day, Nevermore\u0027s outcasts mingle with Jericho\u0027s normies in Pilgrim World. Fudge, anyone?",
+        "air_date": "2022-11-23",
+        "runtime": 49,
+        "still_path": "/yikI4l7vKK4LkfFEIa5dXaqO97s.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Woe What a Night",
+        "overview": "Wednesday asks Xavier to the Rave\u0027N dance, sparking Tyler\u0027s jealousy \u2014 but Thing\u0027s got something up his sleeve. Meanwhile, Eugene stakes out the cave.",
+        "air_date": "2022-11-23",
+        "runtime": 50,
+        "still_path": "/wV2de1W3td4zxaW97HATfktHjfd.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "You Reap What You Woe",
+        "overview": "During Parents Weekend, Wednesday digs into her family\u0027s past \u2014 and accidentally gets her dad arrested. Enid feels the pressure to \u0022wolf out.\u0022",
+        "air_date": "2022-11-23",
+        "runtime": 53,
+        "still_path": "/j3Tx4CXDhzOV103TuTwz461EdjF.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Quid Pro Woe",
+        "overview": "Wednesday\u0027s friends throw her a surprise birthday party. They mean well... but she\u0027d much rather mark the miserable occasion by solving the murders.",
+        "air_date": "2022-11-23",
+        "runtime": 51,
+        "still_path": "/cPHlYQ00832jS7IDqfHS7RWTz2k.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "If You Don\u0027t Woe Me by Now",
+        "overview": "Kooky Uncle Fester pays a visit and shares his theory about the monster. Wednesday begrudgingly agrees to a date with Tyler at Crackstone\u0027s crypt.",
+        "air_date": "2022-11-23",
+        "runtime": 48,
+        "still_path": "/aEmccS7KyFPQMAnuQ2C5sbyn5fc.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "A Murder of Woes",
+        "overview": "Wednesday lands in trouble with Principal Weems, but that\u0027s just the start of her problems. To fight an ancient evil, she\u0027ll need all her friends\u2019 help.",
+        "air_date": "2022-11-23",
+        "runtime": 53,
+        "still_path": "/3b42P1FuxWC9JXVIfnKAUUuq0zP.jpg"
+      }
+    ]
+  }
+}

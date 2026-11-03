@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 817,
+    "title": "Austin Powers: The Spy Who Shagged Me",
+    "overview": "When diabolical genius Dr. Evil travels back in time to steal superspy Austin Powers\u0027s \u2018mojo,\u2019 Austin must return to the swingin\u0027 \u002760s himself - with the help of American agent, Felicity Shagwell - to stop the dastardly plan. Once there, Austin faces off against Dr. Evil\u0027s army of minions to try to save the world in his own unbelievably groovy way.",
+    "tagline": "First he fought for the Crown. Now he\u0027s fighting for the Family Jewels.",
+    "runtime": 95,
+    "release_date": "1999-06-08",
+    "vote_average": 6.322,
+    "poster_path": "/jiF7UShERJFn5RtgfBK2lIJrOTc.jpg",
+    "backdrop_path": "/xI1tAzzUk2v9nON6DLAHzcOLK42.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1006,
+      "name": "Austin Powers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mike Myers",
+      "character": "Austin Powers / Dr. Evil / Fat Bastard",
+      "profile_path": "/gjfDl52Kk02MPgUYFjs9bOy33OY.jpg"
+    },
+    {
+      "name": "Heather Graham",
+      "character": "Felicity Shagwell",
+      "profile_path": "/avYdNkeg1oTvmrNJbFDcTlBCkKs.jpg"
+    },
+    {
+      "name": "Verne Troyer",
+      "character": "Mini-Me",
+      "profile_path": "/iNjzleUvrnhN4PDuuJerF2SCFfn.jpg"
+    },
+    {
+      "name": "Michael York",
+      "character": "Basil Exposition",
+      "profile_path": "/ha9Nh8We778sUg8QyDE1IRATzDY.jpg"
+    }
+  ]
+}

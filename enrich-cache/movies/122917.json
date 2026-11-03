@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 122917,
+    "title": "The Hobbit: The Battle of the Five Armies",
+    "overview": "Following Smaug\u0027s attack on Laketown, Bilbo and the dwarves try to defend Erebor\u0027s mountain of treasure from others who claim it: the men of the ruined Laketown and the elves of Mirkwood. Meanwhile an army of Orcs led by Azog the Defiler is marching on Erebor, fueled by the rise of the dark lord Sauron. Dwarves, elves and men must unite, and the hope for Middle-Earth falls into Bilbo\u0027s hands.",
+    "tagline": "Will you follow me... one last time?",
+    "runtime": 144,
+    "release_date": "2014-12-10",
+    "vote_average": 7.341,
+    "poster_path": "/xT98tLqatZPQApyRmlPL12LtiWp.jpg",
+    "backdrop_path": "/3UbaCMmqOd7mca4Y5DOzY2ZVTyX.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 121938,
+      "name": "The Hobbit Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ian McKellen",
+      "character": "Gandalf the Grey",
+      "profile_path": "/5cnnnpnJG6TiYUSS7qgJheUZgnv.jpg"
+    },
+    {
+      "name": "Martin Freeman",
+      "character": "Bilbo Baggins",
+      "profile_path": "/nrO54AzrxiNgCjBUOSz6ebyxDZY.jpg"
+    },
+    {
+      "name": "Richard Armitage",
+      "character": "Thorin Oakenshield",
+      "profile_path": "/oNoKjTOUNUiJ01UNQSCQDkt5EHi.jpg"
+    },
+    {
+      "name": "Orlando Bloom",
+      "character": "Legolas",
+      "profile_path": "/lwQoA0qJTCZ6l2FH6PjmhRQjiaB.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2022,
+    "title": "Mr. Deeds",
+    "overview": "When Longfellow Deeds, a small-town pizzeria owner and poet, inherits $40 billion from his deceased uncle, he quickly begins rolling in a different kind of dough. Moving to the big city, Deeds finds himself besieged by opportunists all gunning for their piece of the pie. Babe, a television tabloid reporter, poses as an innocent small-town girl to do an expos\u00E9 on Deeds.",
+    "tagline": "Don\u0027t let the fancy clothes fool you.",
+    "runtime": 97,
+    "release_date": "2002-06-28",
+    "vote_average": 5.935,
+    "poster_path": "/7gGk3pkpRsNlJ4PrJgEfgY9PG43.jpg",
+    "backdrop_path": "/7P3VyWQTnZOYIQnk5seM0YQ9ucg.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Longfellow Deeds",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Winona Ryder",
+      "character": "Babe Bennett",
+      "profile_path": "/8RVrlgtua8b53wmK7oZAAkm0N5O.jpg"
+    },
+    {
+      "name": "John Turturro",
+      "character": "Emilio Lopez",
+      "profile_path": "/6O9W9cJW0kCqMzYeLupV9oH0ftn.jpg"
+    },
+    {
+      "name": "Allen Covert",
+      "character": "Marty",
+      "profile_path": "/7n3euonyxM0wOGfk0T50pgHo06v.jpg"
+    }
+  ]
+}

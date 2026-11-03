@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 453395,
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "overview": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
+    "tagline": "Enter a new dimension of Strange.",
+    "runtime": 126,
+    "release_date": "2022-05-04",
+    "vote_average": 7.2,
+    "poster_path": "/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg",
+    "backdrop_path": "/AdyJH8kDm8xT8IKTlgpEC15ny4u.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 618529,
+      "name": "Doctor Strange Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Benedict Cumberbatch",
+      "character": "Doctor Stephen Strange",
+      "profile_path": "/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg"
+    },
+    {
+      "name": "Xochitl Gomez",
+      "character": "America Chavez",
+      "profile_path": "/q39DOx44YHrGF1h88R9HxRNZS3.jpg"
+    },
+    {
+      "name": "Elizabeth Olsen",
+      "character": "Wanda Maximoff / The Scarlet Witch",
+      "profile_path": "/vXz0E5lQKZS1RnlmcHSGbdR0CzG.jpg"
+    },
+    {
+      "name": "Chiwetel Ejiofor",
+      "character": "Baron Mordo",
+      "profile_path": "/kq5DDnqqofoRI0t6ddtRlsJnNPT.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9532,
+    "title": "Final Destination",
+    "overview": "After a teenager has a terrifying vision of him and his friends dying in a plane crash, he prevents the accident only to have Death hunt them down, one by one.",
+    "tagline": "No accidents. No coincidences. No escapes. You can\u0027t cheat death.",
+    "runtime": 98,
+    "release_date": "2000-03-17",
+    "vote_average": 6.65,
+    "poster_path": "/1mXhlQMnlfvJ2frxTjZSQNnA9Vp.jpg",
+    "backdrop_path": "/7isarjYDEKZ5t1CgcvbuqEUby8P.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8864,
+      "name": "Final Destination Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Devon Sawa",
+      "character": "Alex Browning",
+      "profile_path": "/yvMbpZ0UFQ1IBwlWm8quCA6fNc5.jpg"
+    },
+    {
+      "name": "Ali Larter",
+      "character": "Clear Rivers",
+      "profile_path": "/5qaQFxx8Az83ycd4LHyQ39HXaEJ.jpg"
+    },
+    {
+      "name": "Kerr Smith",
+      "character": "Carter Horton",
+      "profile_path": "/2XHffxdkDVhaETNi6ajSntQ40du.jpg"
+    },
+    {
+      "name": "Kristen Cloke",
+      "character": "Valerie Lewton",
+      "profile_path": "/9MTNs9kMX6OTR6SJwMkwG3EVTsN.jpg"
+    }
+  ]
+}

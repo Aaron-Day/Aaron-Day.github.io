@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Identity",
+        "overview": "Callen returns back to the NCIS Office of Special Projects to solve a kidnapping case.",
+        "air_date": "2009-09-22",
+        "runtime": 43,
+        "still_path": "/yHEGO6g6v9j8eTwdC2kuzpyI90.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Only Easy Day",
+        "overview": "A case involving the murder of a drug dealer turns personal for Special Agent Sam Hanna when he discovers his former Navy Seal comrades are involved.",
+        "air_date": "2009-09-29",
+        "runtime": 43,
+        "still_path": "/x0SS2II4m1T7nC30YghMxlKabIh.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Predator",
+        "overview": "The team is assigned to track down a missing unmanned aerial vehicle (UAV) after it is compromised during a training exercise killing a marine before it disappears.",
+        "air_date": "2009-10-06",
+        "runtime": 42,
+        "still_path": "/w3pUuXANJLp1MFL7iln4AYdrkM4.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Search and Destroy",
+        "overview": "The NCIS team searches Los Angeles for the lead suspect of a murdered Iraqi businessman, a former Marine who had been hired by a private security firm to protect him.",
+        "air_date": "2009-10-13",
+        "runtime": 43,
+        "still_path": "/a9hH1IazEinKLrKwSusktnWSi37.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Killshot",
+        "overview": "When a United States citizen of North Korean descent is murdered, the secrets to classified software are thought to be lost until NCIS uncovers a suspect from Director Vance\u0027s past.",
+        "air_date": "2009-10-20",
+        "runtime": 43,
+        "still_path": "/kvNgD5Wmf9hv3h5x8WfAtjlninE.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Keepin\u0027 It Real",
+        "overview": "The NCIS team must find a motive when they discover the body of a marine who had been living a double life as a wealthy bachelor.",
+        "air_date": "2009-11-03",
+        "runtime": 44,
+        "still_path": "/k10vaqTRhhpc6osOpWXmW5BZ2KI.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Pushback",
+        "overview": "Following the murder of a Russian woman, the NCIS team uncovers evidence that answers who and why Callen was shot six months ago.",
+        "air_date": "2009-11-10",
+        "runtime": 44,
+        "still_path": "/aRAe42AtWsMCQWAPSLFHXDqTGRF.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Ambush",
+        "overview": "While Hetty is attending a Senate hearing in D.C., the investigation of a murdered Marine Lance Corporal leads the NCIS team to stolen anti-tank missiles and a dangerous militia group.",
+        "air_date": "2009-11-17",
+        "runtime": 42,
+        "still_path": "/8KwMaueFRTgFIFq6lYTvQmA6969.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Random on Purpose",
+        "overview": "Forensic scientist Abby Sciuto joins the Los Angeles NCIS team when a murder case resembles the pattern for a serial killer she has been tracking.",
+        "air_date": "2009-11-24",
+        "runtime": 44,
+        "still_path": "/d7ChgHsu6cobDo7cHLHT3j77Bd1.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Brimstone",
+        "overview": "As the courtyard is being transformed with holiday decorations, the NCIS team races to solve the murder of a Marine by an exploding cell phone and to find the remaining men of his former EOD (explosive ordnance disposal) unit before another deadly explosion kills someone else.",
+        "air_date": "2009-12-15",
+        "runtime": 44,
+        "still_path": "/9TiKvW4iPWWm4hyGawNu9OdQ9W3.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Breach",
+        "overview": "The death of a Petty Officer leads the NCIS team to a teenager in Sam\u0027s life. Meanwhile, Hetty is concerned about the effect that the workload is having on the team.",
+        "air_date": "2010-01-05",
+        "runtime": 44,
+        "still_path": "/rD0NawFijzlUDtNh1bbolPNxgTo.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Past Lives",
+        "overview": "The murder of a recently released convict forces Callen to go undercover solo as an old alias, while Sam and the LA team track him from a distance.",
+        "air_date": "2010-01-12",
+        "runtime": 44,
+        "still_path": "/4tJxgtoBRKsmIFuwSYctaojYciO.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Missing",
+        "overview": "The team rushes to a crime scene after receiving an \u0022agent needs assistance\u0022 page and learns that one of their own is in peril.",
+        "air_date": "2010-01-26",
+        "runtime": 43,
+        "still_path": "/jogPQGQ6dbTdpkS21jRC2EyG35E.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "LD50",
+        "overview": "A crime scene poses a national security risk when the LA team discovers the location was used to create a deadly toxin which is now missing.",
+        "air_date": "2010-02-02",
+        "runtime": 44,
+        "still_path": "/7HdPr5ESwEiC54htazPQyRxAcju.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Bank Job",
+        "overview": "While opening a safety deposit box at a local bank, NCIS Special Agent Kensi Blye is shot after three armed assailants enter and hold everyone in the building hostage.",
+        "air_date": "2010-02-09",
+        "runtime": 44,
+        "still_path": "/m04EgJsOMT6Os2RblJ7YyK99VWo.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Chinatown",
+        "overview": "The death of a lieutenant commander appears to be suicide but the NCIS team uncovers evidence corresponding to murder. Also, Operational Psychologist Nate Getz joins Special Agent Kensi Blye in the field.",
+        "air_date": "2010-03-02",
+        "runtime": 42,
+        "still_path": "/n4JppEo3ls94JmNwnMAx8WisUZ4.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Full Throttle",
+        "overview": "After a sailor is killed during an underground street race, the NCIS team determines that his car had been sabotaged and contained confidential Navy equipment. Meanwhile, Callen is forced to take traffic school.",
+        "air_date": "2010-03-09",
+        "runtime": 44,
+        "still_path": "/ipQbZAv3GW6IMv10vze6a4IBksu.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Blood Brothers",
+        "overview": "The investigation of a drive-by shooting has the NCIS team searching Los Angeles for the dead marine\u0027s younger brother who may be the next target and the one with the answers.",
+        "air_date": "2010-03-16",
+        "runtime": 43,
+        "still_path": "/rTWZV43bIta0M6wEEPQhqFRBdSE.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Hand-to-Hand",
+        "overview": "When an undercover operation has the NCIS team investigating a MMA gym and its fighters, Sam Hanna is tasked with donning gloves and entering the cage for a one-on-one fight.",
+        "air_date": "2010-04-06",
+        "runtime": 44,
+        "still_path": "/o1qXfm7WoeoDdFrC1LwDoEkNZGz.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Fame",
+        "overview": "NCIS investigates the murder of a Navy officer entangled in the world of Hollywood glitz and glamour as the team is joined at Hetty\u0027s request by LAPD liaison Marty Deeks.",
+        "air_date": "2010-04-27",
+        "runtime": 44,
+        "still_path": "/ySDwVgLG2O1a6IByest6e1IjBr9.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Found",
+        "overview": "The NCIS team races to save one of their own when they receive video evidence of Special Agent Dominic Vail being held hostage months after he was kidnapped.",
+        "air_date": "2010-05-04",
+        "runtime": 44,
+        "still_path": "/gJ1j2kxq2b5HjNEEpPMtiPQJ7EW.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Hunted",
+        "overview": "The NCIS team is on the hunt for a terrorist who escaped Army custody during a secretive transfer in Los Angeles.",
+        "air_date": "2010-05-11",
+        "runtime": 43,
+        "still_path": "/i8f84Nymz565h01KCNyo2GkKiMC.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Burned",
+        "overview": "After Callen\u0027s cover is blown and compromises the unit, the NCIS team races to find out who is behind the security breach.",
+        "air_date": "2010-05-18",
+        "runtime": 43,
+        "still_path": "/tocput3mdOsHgd60T0FwMdLuBMx.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Callen, G",
+        "overview": "Callen races against a ruthless adversary to locate a woman who knows the whereabouts of a forgotten fortune earmarked to fund a new war in the Middle East - and also holds the tantalizing key to his unknown past.",
+        "air_date": "2010-05-25",
+        "runtime": 44,
+        "still_path": "/xq0tvH724oACfynXcRtKjz5EbJ5.jpg"
+      }
+    ]
+  }
+}

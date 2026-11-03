@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 764,
+    "title": "The Evil Dead",
+    "overview": "In 1979, a group of college students find a Sumerian Book of the Dead in an old wilderness cabin they\u0027ve rented for a weekend getaway.",
+    "tagline": "The ultimate experience in gruelling terror.",
+    "runtime": 85,
+    "release_date": "1983-01-16",
+    "vote_average": 7.265,
+    "poster_path": "/54C1qdaiSijIU5NeNb4WsPJdNkG.jpg",
+    "backdrop_path": "/onq6lsJLX8ay5iwxEbKX3qJKeO9.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1960,
+      "name": "Evil Dead Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bruce Campbell",
+      "character": "Ash",
+      "profile_path": "/p9335ljr7luOWsfwZSOlsIzFJKE.jpg"
+    },
+    {
+      "name": "Ellen Sandweiss",
+      "character": "Cheryl",
+      "profile_path": "/m0IWMfRtY7djjvXWsn9tK7Gh1dQ.jpg"
+    },
+    {
+      "name": "Richard DeManincor",
+      "character": "Scott",
+      "profile_path": "/wUU9Axate8lhMYTxxE4OUwbTR2E.jpg"
+    },
+    {
+      "name": "Betsy Baker",
+      "character": "Linda",
+      "profile_path": "/gzNmo9G6Q1TMwlqwshFBR1B6Qbt.jpg"
+    }
+  ]
+}

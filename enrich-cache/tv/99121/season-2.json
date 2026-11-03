@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "They Started It",
+        "overview": "Walker realizes his life is at risk and confronts Captain James who confesses to him the real reason Micki went undercover. The Davidsons\u0027 return home sets Abeline on edge as there is dark history between the two families.",
+        "air_date": "2021-10-28",
+        "runtime": 45,
+        "still_path": "/bbj4wbcfqm2bKLpUVeUwmvenXGo.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The One Who Got Away",
+        "overview": "Walker has concerns over Micki going too deep undercover and wants to keep a close eye on her and the possible new informant. Captain James and the new District Attorney work together trying to close the case to bring Micki home. Stella and Colton Davidson team up to solve a mystery while under the watchful eye of Trey and come across an interesting obstacle on their way home.",
+        "air_date": "2021-11-04",
+        "runtime": 45,
+        "still_path": "/lIZf5JkVzBjOo9mUCf5N9aowEEv.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Barn Burner",
+        "overview": "Walker invites Gale Davidson to participate in the chili cookoff at the Side Step to try and make amends after years of their families feuding, however Abby isn\u0027t too pleased with the gesture. Micki and Trey work on reconciling their relationship when she comes home after her deep undercover operation.",
+        "air_date": "2021-11-11",
+        "runtime": 45,
+        "still_path": "/4EHjDDH301FwVM4X1yJEF2oH2Wj.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "It\u0027s Not What You Think",
+        "overview": "Walker tells his family about the surveillance cameras in their home and partners with Denise to lure out whoever is watching them. Liam doesn\u0027t trust Denise, or her husband Dan, which frustrates Walker who is trying to mend the rift between the families. Micki continues to deal with the ramifications of her time undercover.",
+        "air_date": "2021-11-18",
+        "runtime": 45,
+        "still_path": "/vCpvj5wQPLjli4neCkwOv12h3e0.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Partners and Third Wheels",
+        "overview": "Tensions run high when Walker and Liam investigate a cold case together. Micki, still on desk duty, is working through her grief while slowly easing her way back into the field. Trey tags along for a fishing trip and gets a lesson on love. August makes a discovery that could lead to answers about the feud between The Walkers and The Davidsons.",
+        "air_date": "2021-12-02",
+        "runtime": 45,
+        "still_path": "/bCsccPH2Db9vo9MoElVLstYUrip.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Douglas Fir",
+        "overview": "Micki comes clean to Trey about her past and they question what it means for them in the future. After a heartbreaking talk, Micki realizes it might be time to start a new chapter. Meanwhile, Walker and Liam put their differences aside and agree to trust each other when Denise asks them to investigate a case. Bonham dresses up as Santa Claus for the annual holiday party.",
+        "air_date": "2021-12-09",
+        "runtime": 45,
+        "still_path": "/gmAKhjIbgX208kDoWv2Wpu3XLRe.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Where Do We Go from Here",
+        "overview": "Things are still tense between Walker and Liam after Liam called in a false warrant on Dan Miller. However, things take a turn for the worse when Captain James informs the brothers that Serano\u2019s lawyers are using Liam\u2019s mistake as a way to set the criminal free, putting the entire Walker family in danger.",
+        "air_date": "2022-01-13",
+        "runtime": 45,
+        "still_path": "/hzOFHWPC9QkAUTnb63riC34bQSr.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Two Points for Honesty",
+        "overview": "While setting up protective detail on Trey, Captain James is shot and left in critical condition. Walker takes on the role of interim Captain and turns to an unlikely source for help.",
+        "air_date": "2022-01-20",
+        "runtime": 45,
+        "still_path": "/4DJfWOiFBM7j6qe0imHuvt64cc5.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Sucker Punch",
+        "overview": "When he hears that Serano is out on bail, Dan panics and asks Liam for help. Liam doesn\u0027t trust Dan but Dan makes him a tempting offer that would put Serano behind bars for good. There is just a small catch - Liam can\u0027t tell Walker  what\u0027s going on. Meanwhile, Geri decides to have an open mic night at the Side Step and encourages August to hit the stage.",
+        "air_date": "2022-01-27",
+        "runtime": 45,
+        "still_path": "/iriRgZS6x710R2WbroVtonDNWMj.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Nudge",
+        "overview": "A feisty officer Perez mistakes Cordell for a suspect. Trey offers to help Liam with a project. Meanwhile, Colton is struggling with his feelings for Stella.",
+        "air_date": "2022-03-03",
+        "runtime": 45,
+        "still_path": "/mz92Ex90eP9tIF6VbbIWNg5bLkL.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Boundaries",
+        "overview": "When confronted by the Davidsons, Liam shares an old land survey which could spell trouble for the Walker family, and Bonham reveals one truth from the past while covering up another. Meanwhile, Cordell has news of his own he would like to share with the family if he can get the chance.",
+        "air_date": "2022-03-10",
+        "runtime": 45,
+        "still_path": "/vZZjvIbsuvkKxR1JRVaPMIh2VhH.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Common Ground",
+        "overview": "Cordell reaches a breaking point with Denise who sets her sights on revenge and the tensions between the Walker and Davidson families finally hit a fever pitch.",
+        "air_date": "2022-03-31",
+        "runtime": 45,
+        "still_path": "/ragchqckDACpuTsIZvIRp05iLhw.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "One Good Thing",
+        "overview": "While Geri does her best to keep the Walker family\u2019s collective chins up, Walker and Cassie look for any clues to help Bonham in his hour of need.",
+        "air_date": "2022-04-07",
+        "runtime": 45,
+        "still_path": "/mY5DdbL2qrARRP9Ns82Gw1CWFMs.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "No Such Thing as Fair Play",
+        "overview": "Cordell and the Walker family carry on with a day at the Rangers fair, but it\u0027s not all fun and games when Cassie  runs into familiar faces from her past. Meanwhile, Abeline attempts to clear the air with Geri and Colton tries a new approach with Stella.",
+        "air_date": "2022-04-14",
+        "runtime": 45,
+        "still_path": "/aO3vokTGqChF53wJfgg1ZJrCU9B.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Bygones",
+        "overview": "Cordell needs the help of someone from his past, but can they be trusted? Meanwhile, Trey shows James and August a new way to deal with some of life\u0027s frustrations.",
+        "air_date": "2022-04-28",
+        "runtime": 45,
+        "still_path": "/mqZVah0CMJzhmuc7IzLQLmo04tG.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Champagne Problems",
+        "overview": "The Walkers pull out all the stops to celebrate Abeline and Bonham\u0027s anniversary. Cassie finds a piece of her past and Cordell needs a favor from Geri.",
+        "air_date": "2022-05-05",
+        "runtime": 42,
+        "still_path": "/tHswG614QDFsAxNx7ChJWTCRfWD.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Torn",
+        "overview": "Twyla is tapped to assist the Rangers on a case as she and Cordell are beginning to grow closer. Meanwhile Stella re-evaluates her feelings for Todd and Colton while Geri extends an olive branch to Denise.",
+        "air_date": "2022-06-02",
+        "runtime": 43,
+        "still_path": "/v4DOfRmNQk9oEs9dQCi31mATgop.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Search and Rescue",
+        "overview": "Cordell and James make a shocking discovery. Meanwhile, Stella and August have a traumatic afternoon and Liam takes a concern to the Davidson\u2019s door.",
+        "air_date": "2022-06-09",
+        "runtime": 40,
+        "still_path": "/sZTFl6DJyIGyPgQ26BceMj2KrUu.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "A Matter of Miles",
+        "overview": "Stella and Colton plan a Walker / Davidson family dinner. Meanwhile, Liam gets an unlikely ally when trying to prove that the Davidson\u0027s were up to no good on the day Cordell raced for the ranch and Cassie vows to learn the truth about the last case her previous partner was working on.",
+        "air_date": "2022-06-16",
+        "runtime": 41,
+        "still_path": "/1368O2YfRu9DHAxKPXueezHPuu5.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Something\u0027s Missing",
+        "overview": "Gale coming clean to Geri about the past forces Cordell to relive a part of his he\u0027d buried long ago, and Trey considers Captain James\u0027 latest offer.",
+        "air_date": "2022-06-23",
+        "runtime": 43,
+        "still_path": "/tRJbiTJYQA5gfEHrqzZH1Szdm5U.jpg"
+      }
+    ]
+  }
+}

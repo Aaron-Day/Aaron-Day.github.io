@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1497,
+    "title": "Teenage Mutant Ninja Turtles II: The Secret of the Ooze",
+    "overview": "The Turtles and the Shredder battle once again, this time for the last cannister of the ooze that created the Turtles, which Shredder wants to create an army of new mutants. Meanwhile Splinter is coming... to a decision.",
+    "tagline": "Back by bodacious demand.",
+    "runtime": 88,
+    "release_date": "1991-03-22",
+    "vote_average": 6.232,
+    "poster_path": "/Hyvvz9Z3le1is8a0EeFJQm0aSC.jpg",
+    "backdrop_path": "/8VGaEXbTOGeWGW7IvzOf1j2rjet.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1582,
+      "name": "Teenage Mutant Ninja Turtles Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brian Tochi",
+      "character": "Leonardo (voice)",
+      "profile_path": "/oFmxzHpo3bw9wn8yx5fNCt9xTC7.jpg"
+    },
+    {
+      "name": "Laurie Faso",
+      "character": "Raphael (voice)",
+      "profile_path": "/m6Jx8gmTf3GJvoVxRa9xLrzVQRj.jpg"
+    },
+    {
+      "name": "Robbie Rist",
+      "character": "Michelangelo (voice)",
+      "profile_path": "/xaDQBCyjEOtgsto7xTiVRP0PsKe.jpg"
+    },
+    {
+      "name": "Adam Carl",
+      "character": "Donatello (voice)",
+      "profile_path": "/51h9sgUIa3U72gnCcrxKE8v58w6.jpg"
+    }
+  ]
+}

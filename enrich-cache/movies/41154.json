@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 41154,
+    "title": "Men in Black 3",
+    "overview": "Agents J and K are back...in time. J has seen some inexplicable things in his 15 years with the Men in Black, but nothing, not even aliens, perplexes him as much as his wry, reticent partner. But when K\u0027s life and the fate of the planet are put at stake, Agent J will have to travel back in time to put things right. J discovers that there are secrets to the universe that K never told him - secrets that will reveal themselves as he teams up with the young Agent K to save his partner, the agency, and the future of humankind.",
+    "tagline": "Back in time.",
+    "runtime": 106,
+    "release_date": "2012-05-23",
+    "vote_average": 6.551,
+    "poster_path": "/90DdoEStzeObs96fsYf4GG544iN.jpg",
+    "backdrop_path": "/5AhpUb8CAP0jZ4Wrn7AsRUYjZxB.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86055,
+      "name": "Men in Black Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Agent J",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Tommy Lee Jones",
+      "character": "Agent K",
+      "profile_path": "/mCiZNRAzbnPojJEZwVZWLw9kzxR.jpg"
+    },
+    {
+      "name": "Josh Brolin",
+      "character": "Young Agent K",
+      "profile_path": "/7QpneI3HoZCCDVPyWx3p3t7yeo7.jpg"
+    },
+    {
+      "name": "Jemaine Clement",
+      "character": "Boris The Animal",
+      "profile_path": "/6eiNbeurpHb2fxIeT0RrJ0wRI25.jpg"
+    }
+  ]
+}

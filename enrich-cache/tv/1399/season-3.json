@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Valar Dohaeris",
+        "overview": "Jon is tested by the wildling king; Tyrion asks for his reward; Dany sails to Slaver\u0027s Bay.",
+        "air_date": "2013-03-31",
+        "runtime": 55,
+        "still_path": "/3pyS7xz9mprX4OuOCfV261CnGfR.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Dark Wings, Dark Words",
+        "overview": "Sansa says too much. Shae asks Tyrion for a favor. Jaime finds a way to pass the time, while Arya encounters the Brotherhood Without Banners.",
+        "air_date": "2013-04-07",
+        "runtime": 58,
+        "still_path": "/ydrupjqBj6M68pUwJNJ5rbGmm1O.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Walk of Punishment",
+        "overview": "Tyrion shoulders new responsibilities. Jon is taken to the Fist of the First Men. Daenerys meets with the slavers. Jaime strikes a deal with his captors.",
+        "air_date": "2013-04-14",
+        "runtime": 53,
+        "still_path": "/i39Itkd76DOXxek0blIO6rI6zsa.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "And Now His Watch Is Ended",
+        "overview": "The Night\u0027s Watch takes stock. Varys meets his better. Arya is taken to the commander of the Brotherhood. Dany exchanges a chain for a whip.",
+        "air_date": "2013-04-21",
+        "runtime": 54,
+        "still_path": "/veYx7AoKhxC8Pz8EThNpoOxeSGX.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Kissed by Fire",
+        "overview": "The Hound is judged by the gods. Jaime is judged by men. Jon proves himself. Robb is betrayed. Tyrion learns the cost of weddings.",
+        "air_date": "2013-04-28",
+        "runtime": 58,
+        "still_path": "/w0K3DtYweVJdpRLg33CRLtwCXjp.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Climb",
+        "overview": "Four Houses consider make-or-break alliances. Jon and the Wildlings face a daunting climb.",
+        "air_date": "2013-05-05",
+        "runtime": 54,
+        "still_path": "/eJQ5vnNrlM28fpInn6uGM0xUZRX.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Bear and the Maiden Fair",
+        "overview": "Dany exchanges gifts in Yunkai; Brienne faces a formidable foe in Harrenhal.",
+        "air_date": "2013-05-12",
+        "runtime": 58,
+        "still_path": "/nNuLiw1TnQMNJ8B3ijN2D6jyAfc.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Second Sons",
+        "overview": "Dany meets the Titan\u0027s Bastard; King\u0027s Landing hosts a royal wedding.",
+        "air_date": "2013-05-19",
+        "runtime": 57,
+        "still_path": "/x3sJ9URXLn9hb6WAqqNhVJQGPut.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Rains of Castamere",
+        "overview": "House Frey joins forces with House Tully. Jon faces his most difficult test yet.",
+        "air_date": "2013-06-02",
+        "runtime": 51,
+        "still_path": "/8Cvg7NkvDPckIwPKWcyS25YcoSh.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Mhysa",
+        "overview": "Joffrey challenges Tywin. Dany waits to see if she is a conqueror or a liberator.",
+        "air_date": "2013-06-09",
+        "runtime": 63,
+        "still_path": "/wJbEFBLyogHR1GoxfDXNIoP4k1w.jpg"
+      }
+    ]
+  }
+}

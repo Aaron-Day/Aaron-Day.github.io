@@ -1,0 +1,120 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Brother",
+        "overview": "After answering a distress signal from the U.S.S. Enterprise, the U.S.S. Discovery welcomes aboard Captain Christopher Pike and begins a new mission to investigate the meaning behind seven mysterious red signals. Michael Burnham grapples with her past growing up on Vulcan with her foster parents and brother Spock.",
+        "air_date": "2019-01-17",
+        "runtime": 61,
+        "still_path": "/bNzSxkuTqbVp9WBOfk8JD50YGca.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "New Eden",
+        "overview": "A new signal appears, prompting Stamets\u0027 emotional return to the mycelial network and leading Burnham, Pike and Owosekun to a pre-warp planet, where they face a complex ethical dilemma. Tilly\u0027s overeagerness lands her in trouble but when the planet - and Discovery\u0027s landing party - are threatened, her curiosity may be the one thing that can save them.",
+        "air_date": "2019-01-24",
+        "runtime": 44,
+        "still_path": "/h9ZYhEnqvJSwuv6cKIxVSR2gN1o.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Point of Light",
+        "overview": "A surprise visitor to the U.S.S. Discovery brings shocking news about Spock and dredges up past regrets for Burnham. Following the asteroid incident, Tilly struggles to keep a grip on her reality. L\u0027Rell\u0027s authority on Qo\u0027noS is threatened.",
+        "air_date": "2019-01-31",
+        "runtime": 49,
+        "still_path": "/8bIaq84ymAVLOX3fw5CmxyvX2oi.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "An Obol for Charon",
+        "overview": "A mysterious sphere threatens the U.S.S. Discovery even as May, in her original form, implements a plan that puts Tilly\u0027s life in danger. Saru and Burnham\u0027s bond grows when Saru is forced to acknowledge a deeply unsettling Kelpien truth. Pike receives new intel on Spock from a loyal friend.",
+        "air_date": "2019-02-07",
+        "runtime": 51,
+        "still_path": "/5QgW74tBHmJfOKLX0TfoxB8xbtn.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Saints of Imperfection",
+        "overview": "Burnham and the crew navigate a dangerous alien landscape in a race against time to save Tilly\u0027s life, but Stamets is not at all prepared for what they find in the process. Section 31 is assigned to help track down Spock, much to Pike\u0027s dismay.",
+        "air_date": "2019-02-14",
+        "runtime": 52,
+        "still_path": "/hNvtDxwd9S0BV5bmFKeCOUzyRXy.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Sound of Thunder",
+        "overview": "When a new signal appears over Saru\u0027s home planet, Burnham, Saru and the crew embark on a perilous mission that puts Saru in danger and raises questions about the Red Angel\u0027s intentions. Hugh struggles to come to terms with his new reality.",
+        "air_date": "2019-02-21",
+        "runtime": 56,
+        "still_path": "/p7LJCMh8HSHBTdNZpDOecjQYZcL.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Light and Shadows",
+        "overview": "Burnham goes to Vulcan in search of Spock, where she unearths surprising family secrets. In researching what is left of the Red Angel\u0027s signal over Kaminar, Pike and Tyler end up in battle with time itself. Georgiou has a few tricks up her sleeve for Leland and Section 31.",
+        "air_date": "2019-02-28",
+        "runtime": 40,
+        "still_path": "/7r3lfBzO8qzrx5hn8NIolNQMGlO.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "If Memory Serves",
+        "overview": "Spock and Burnham head to Talos IV, where the process of healing Spock forces the siblings to confront their troubled past. Stamets desperately tries to reconnect with Hugh, while Tyler struggles to shed the crew\u0027s suspicions of him due to his past as Voq.",
+        "air_date": "2019-03-07",
+        "runtime": 54,
+        "still_path": "/lIENcSDSG0O663pPRgwQ3VvqJxT.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Project Daedalus",
+        "overview": "When the Discovery crew infiltrates Section 31\u0027s headquarters, suspicions arise that the crew may have a traitor in their midst. Burnham tries to help Spock but her efforts don\u0027t go as planned.",
+        "air_date": "2019-03-14",
+        "runtime": 52,
+        "still_path": "/xUkQYXYUk0EZyVIsyh48kWAHylX.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Red Angel",
+        "overview": "Burnham is stunned when she learns her ties to Section 31 run deeper than she ever fathomed. Armed with the identity of the Red Angel, the U.S.S. Discovery goes to work on its most critical mission to date.",
+        "air_date": "2019-03-21",
+        "runtime": 48,
+        "still_path": "/v4qsjzl7EMsVKBxa87oImMu0dGz.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Perpetual Infinity",
+        "overview": "Burnham receives the reunion she\u0027s been longing for, but it doesn\u0027t go quite as she imagined. Georgiou and Tyler sense a disturbing change in Leland.",
+        "air_date": "2019-03-28",
+        "runtime": 49,
+        "still_path": "/t7VeyVHVOe3qRIcXxPmQtqrcQCk.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Through the Valley of Shadows",
+        "overview": "A fourth signal leads the U.S.S. Discovery to a world where Pike is forced to make a life-changing choice. Burnham and Spock investigate a Section 31 ship gone rogue, leading to a discovery with catastrophic consequences.",
+        "air_date": "2019-04-04",
+        "runtime": 46,
+        "still_path": "/dSt1LPNujIxf46q44oeMxqcZxs6.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Such Sweet Sorrow (1)",
+        "overview": "When the U.S.S. Discovery\u0027s crucial mission does not go according to plan, Burnham realizes what must ultimately be done. The crew prepares for the battle of a lifetime as Leland\u0027s Control ships get closer.",
+        "air_date": "2019-04-11",
+        "runtime": 48,
+        "still_path": "/pZ3OHIftkO3tUfjhuEuIcibvLcv.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Such Sweet Sorrow (2)",
+        "overview": "The U.S.S. Discovery battles against Control in a fight not only for their lives but for the future, with a little help from some unexpected friends. Spock and Burnham discern vital new connections between the red signals while Burnham faces one of life\u2019s harshest truths: the right decisions are often the hardest to make.",
+        "air_date": "2019-04-18",
+        "runtime": 64,
+        "still_path": "/t7ixATvA11S1EiE1bxalC7aiiR9.jpg"
+      }
+    ]
+  }
+}

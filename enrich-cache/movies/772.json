@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 772,
+    "title": "Home Alone 2: Lost in New York",
+    "overview": "Instead of flying to Florida with his folks, Kevin ends up alone in New York, where he gets a hotel room with his dad\u0027s credit card\u2014despite problems from a clerk and meddling bellboy. But when Kevin runs into his old nemeses, the Wet Bandits, he\u0027s determined to foil their plans to rob a toy store on Christmas Eve.",
+    "tagline": "He\u0027s up past his bedtime in the city that never sleeps.",
+    "runtime": 120,
+    "release_date": "1992-11-15",
+    "vote_average": 6.796,
+    "poster_path": "/uuitWHpJwxD1wruFl2nZHIb4UGN.jpg",
+    "backdrop_path": "/8fnYJPoXxwAN4valDLgz2whMGTH.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9888,
+      "name": "Home Alone Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Macaulay Culkin",
+      "character": "Kevin",
+      "profile_path": "/5We9Y4zUJ5TUnRgfmkzWQx0mLIF.jpg"
+    },
+    {
+      "name": "Joe Pesci",
+      "character": "Harry",
+      "profile_path": "/pEHQoL8yOndOq59iXlgsOpUTcTk.jpg"
+    },
+    {
+      "name": "Daniel Stern",
+      "character": "Marv",
+      "profile_path": "/939oerf8bJPrqT2a0N0oGuM1bjn.jpg"
+    },
+    {
+      "name": "Catherine O\u0027Hara",
+      "character": "Kate",
+      "profile_path": "/gI2RyymLJ9ZrhEyJSD5EqSvFpCX.jpg"
+    }
+  ]
+}

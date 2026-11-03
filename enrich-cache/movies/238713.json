@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 238713,
+    "title": "Spy",
+    "overview": "A desk-bound CIA analyst volunteers to go undercover to infiltrate the world of a deadly arms dealer, and prevent diabolical global disaster.",
+    "tagline": "She\u0027s a risk they had to take.",
+    "runtime": 120,
+    "release_date": "2015-05-06",
+    "vote_average": 6.828,
+    "poster_path": "/vPBmfMHxQvRRNGYD5S5ko2KnX56.jpg",
+    "backdrop_path": "/eHEGPHKHTVhWdXzBQcrTATz9M0I.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Melissa McCarthy",
+      "character": "Susan Cooper",
+      "profile_path": "/yl0qva0O4u92fvtItakdvKmKrW9.jpg"
+    },
+    {
+      "name": "Rose Byrne",
+      "character": "Raina Boyanov",
+      "profile_path": "/wR8YZlrewVW2FixRBrJcxaXU3R1.jpg"
+    },
+    {
+      "name": "Jason Statham",
+      "character": "Rick Ford",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Jude Law",
+      "character": "Bradley Fine",
+      "profile_path": "/6UadpSbfC39WMChAcdnNunzwDxv.jpg"
+    }
+  ]
+}

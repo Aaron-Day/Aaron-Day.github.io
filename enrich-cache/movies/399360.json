@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 399360,
+    "title": "Alpha",
+    "overview": "In the prehistoric past, Keda, a young and inexperienced hunter, struggles to return home after being separated from his tribe when bison hunting goes awry. On his way back he will find an unexpected ally.",
+    "tagline": "Leaders are born from survival",
+    "runtime": 97,
+    "release_date": "2018-08-17",
+    "vote_average": 6.574,
+    "poster_path": "/afdZAIcAQscziqVtsEoh2PwsYTW.jpg",
+    "backdrop_path": "/Gn7CHQKw5rgQrnVQhvGnlOaD8F.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kodi Smit-McPhee",
+      "character": "Keda",
+      "profile_path": "/sesCWba9NwPDYDZzbVLs7OgLOti.jpg"
+    },
+    {
+      "name": "J\u00F3hannes Haukur J\u00F3hannesson",
+      "character": "Tau",
+      "profile_path": "/oqZftP0WS1rD5NFpR7vLp6JU52I.jpg"
+    },
+    {
+      "name": "Marcin Kowalczyk",
+      "character": "Sigma",
+      "profile_path": "/1u2WBIluwaiUkHJ8ocH7vU2L2xu.jpg"
+    },
+    {
+      "name": "Jens Hult\u00E9n",
+      "character": "Xi",
+      "profile_path": "/iw8oSLUaKl0zjjwRHXkpeGmtAfk.jpg"
+    }
+  ]
+}

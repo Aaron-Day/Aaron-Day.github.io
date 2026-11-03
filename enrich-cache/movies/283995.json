@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 283995,
+    "title": "Guardians of the Galaxy Vol. 2",
+    "overview": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill\u0027s true parentage.",
+    "tagline": "You only get one chance to save the galaxy twice.",
+    "runtime": 137,
+    "release_date": "2017-04-25",
+    "vote_average": 7.608,
+    "poster_path": "/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
+    "backdrop_path": "/aJn9XeesqsrSLKcHfHP4u5985hn.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 284433,
+      "name": "Guardians of the Galaxy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Pratt",
+      "character": "Peter Quill / Star-Lord",
+      "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Zoe Salda\u00F1a",
+      "character": "Gamora",
+      "profile_path": "/vQBwmsSOAd0JDaEcZ5p43J9xzsY.jpg"
+    },
+    {
+      "name": "Dave Bautista",
+      "character": "Drax",
+      "profile_path": "/snk6JiXOOoRjPtHU5VMoy6qbd32.jpg"
+    },
+    {
+      "name": "Vin Diesel",
+      "character": "Baby Groot (voice)",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    }
+  ]
+}

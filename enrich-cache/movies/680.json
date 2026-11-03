@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 680,
+    "title": "Pulp Fiction",
+    "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster\u0027s moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+    "tagline": "You won\u2019t know the facts until you\u2019ve seen the fiction.",
+    "runtime": 154,
+    "release_date": "1994-09-10",
+    "vote_average": 8.481,
+    "poster_path": "/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+    "backdrop_path": "/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "John Travolta",
+      "character": "Vincent Vega",
+      "profile_path": "/ap8eEYfBKTLixmVVpRlq4NslDD5.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Jules Winnfield",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Uma Thurman",
+      "character": "Mia Wallace",
+      "profile_path": "/sBgAZWi3o4FsnaTvnTNtK6jpQcF.jpg"
+    },
+    {
+      "name": "Bruce Willis",
+      "character": "Butch Coolidge",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    }
+  ]
+}

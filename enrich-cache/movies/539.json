@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 539,
+    "title": "Psycho",
+    "overview": "When larcenous real estate clerk Marion Crane goes on the lam with a wad of cash and hopes of starting a new life, she ends up at the notorious Bates Motel, where manager Norman Bates cares for his housebound mother.",
+    "tagline": "A new and altogether different screen excitement!!!",
+    "runtime": 109,
+    "release_date": "1960-06-22",
+    "vote_average": 8.404,
+    "poster_path": "/yz4QVqPx3h1hD1DfqqQkCq3rmxW.jpg",
+    "backdrop_path": "/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 119674,
+      "name": "Psycho Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anthony Perkins",
+      "character": "Norman Bates",
+      "profile_path": "/7FipKwmg2woHNvt5ATeXLBirHXs.jpg"
+    },
+    {
+      "name": "Janet Leigh",
+      "character": "Marion Crane",
+      "profile_path": "/2dv9IqJEx31RSoH7xAHlJZXF5uB.jpg"
+    },
+    {
+      "name": "Vera Miles",
+      "character": "Lila Crane",
+      "profile_path": "/9PDTsJnBfrAlvVPOBBFS3ehN8lD.jpg"
+    },
+    {
+      "name": "John Gavin",
+      "character": "Sam Loomis",
+      "profile_path": "/n8vlG1PRtNzv6vlwjTNK7UnoKr0.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11072,
+    "title": "Blazing Saddles",
+    "overview": "Crafty railroad worker Bart becomes the first Black sheriff of Rock Ridge, a frontier town about to be destroyed in order to make way for a new railroad. Initially, the citizens of Rock Ridge harbor a racial bias toward their new protector. However, they warm to him after realizing that Bart and his perpetually drunk gunfighter friend Jim are their only defense against a wave of thugs sent to rid the town of its population.",
+    "tagline": "...or never give a saga an even break!",
+    "runtime": 93,
+    "release_date": "1974-02-07",
+    "vote_average": 7.2,
+    "poster_path": "/vNw1gOEDdYTDeNMuuq8OmiEHrfH.jpg",
+    "backdrop_path": "/syUzOlwPqM8pGRhUxPOnmrcGcHb.jpg",
+    "genres": [
+      {
+        "id": 37,
+        "name": "Western"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Cleavon Little",
+      "character": "Bart",
+      "profile_path": "/z7zbiyLGMPocD2fvD9zMSoBSJVi.jpg"
+    },
+    {
+      "name": "Gene Wilder",
+      "character": "Jim",
+      "profile_path": "/mwwOSWS2m8ArpiUKnoxVVyT8fND.jpg"
+    },
+    {
+      "name": "Slim Pickens",
+      "character": "Taggart",
+      "profile_path": "/8UwvsZe0frSzCoyC8KGSfjAaZBf.jpg"
+    },
+    {
+      "name": "Harvey Korman",
+      "character": "Hedley Lamarr",
+      "profile_path": "/cE5X1OAa6iDOo3JKj9uM8kHwQQI.jpg"
+    }
+  ]
+}

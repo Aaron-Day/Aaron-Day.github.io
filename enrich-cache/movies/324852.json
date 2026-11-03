@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 324852,
+    "title": "Despicable Me 3",
+    "overview": "Gru and his wife Lucy must stop former \u002780s child star Balthazar Bratt from achieving world domination.",
+    "tagline": "Oh brother.",
+    "runtime": 90,
+    "release_date": "2017-06-15",
+    "vote_average": 6.467,
+    "poster_path": "/e72KCMHNkbZ6USRJmABeqwmaJ5n.jpg",
+    "backdrop_path": "/ftRkFtAGuHngHnLiOxktq0aCVMF.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86066,
+      "name": "Despicable Me Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Carell",
+      "character": "Gru / Dru (voice)",
+      "profile_path": "/sSxw69G0znJuettMYGDCAXfSwSY.jpg"
+    },
+    {
+      "name": "Kristen Wiig",
+      "character": "Lucy (voice)",
+      "profile_path": "/gEKYhc3HvNxWhxneVfeePu0rTm.jpg"
+    },
+    {
+      "name": "Trey Parker",
+      "character": "Balthazar Bratt (voice)",
+      "profile_path": "/3tJe8t90lrcQzXj9cRcpW9wmj2c.jpg"
+    },
+    {
+      "name": "Miranda Cosgrove",
+      "character": "Margo (voice)",
+      "profile_path": "/qIGeoyXEVu1LxTH34TWx1YSHyQr.jpg"
+    }
+  ]
+}

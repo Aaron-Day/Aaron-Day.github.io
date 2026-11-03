@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 526896,
+    "title": "Morbius",
+    "overview": "Dangerously ill with a rare blood disorder, and determined to save others suffering his same fate, Dr. Michael Morbius attempts a desperate gamble. What at first appears to be a radical success soon reveals itself to be a remedy potentially worse than the disease.",
+    "tagline": "A new Marvel legend arrives.",
+    "runtime": 105,
+    "release_date": "2022-03-30",
+    "vote_average": 5.89,
+    "poster_path": "/Av8Z2jZhEm1FLkFzMThzz9hndJF.jpg",
+    "backdrop_path": "/jzWT0zd8U77fqWg5WgUfYaMzSFz.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jared Leto",
+      "character": "Dr. Michael Morbius",
+      "profile_path": "/ca3x0OfIKbJppZh8S1Alx3GfUZO.jpg"
+    },
+    {
+      "name": "Matt Smith",
+      "character": "Milo",
+      "profile_path": "/wxMdHj4UA6LgIU5MiA7CKySZeVU.jpg"
+    },
+    {
+      "name": "Adria Arjona",
+      "character": "Martine Bancroft",
+      "profile_path": "/hzu7OqTmNCT1xdCdmwBSf2yJvaO.jpg"
+    },
+    {
+      "name": "Jared Harris",
+      "character": "Dr. Emil Nicholas",
+      "profile_path": "/r9nIq0jPz1oBm4WwtlZhqlsX8p0.jpg"
+    }
+  ]
+}

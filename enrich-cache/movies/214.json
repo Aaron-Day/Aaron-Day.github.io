@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 214,
+    "title": "Saw III",
+    "overview": "Jigsaw has disappeared. Along with his new apprentice Amanda, the puppet-master behind the cruel, intricate games that have terrified a community and baffled police has once again eluded capture and vanished. While city detectives scramble to locate him, Doctor Lynn Denlon and Jeff Reinhart are unaware that they are about to become the latest pawns on his vicious chessboard.",
+    "tagline": "Suffering? You haven\u0027t seen anything yet...",
+    "runtime": 108,
+    "release_date": "2006-10-26",
+    "vote_average": 6.419,
+    "poster_path": "/4iO9n24Rb10peXV0JH2EldIOrAp.jpg",
+    "backdrop_path": "/qx8Pb3nVnHLBizI9792pbRN5nnm.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 656,
+      "name": "Saw Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tobin Bell",
+      "character": "Jigsaw / John",
+      "profile_path": "/wyyfG5Pml4G1Y3Aw873LIe32wsl.jpg"
+    },
+    {
+      "name": "Shawnee Smith",
+      "character": "Amanda",
+      "profile_path": "/s2Ouz4b7xqDH72aU48TSW5zS40v.jpg"
+    },
+    {
+      "name": "Angus Macfadyen",
+      "character": "Jeff",
+      "profile_path": "/yUuA7U3lw6yM0Eb6mD83qYeevH2.jpg"
+    },
+    {
+      "name": "Bahar Soomekh",
+      "character": "Lynn",
+      "profile_path": "/pexK8WSgJFunUFizBlvGEz8ez9U.jpg"
+    }
+  ]
+}

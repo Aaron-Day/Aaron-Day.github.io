@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 378236,
+    "title": "The Emoji Movie",
+    "overview": "Gene, a multi-expressional emoji, sets out on a journey to become a normal emoji.",
+    "tagline": "An adventure beyond words.",
+    "runtime": 86,
+    "release_date": "2017-07-23",
+    "vote_average": 5.359,
+    "poster_path": "/60bTx5z9zL1AqCjZ0gmWoRMJ6Bb.jpg",
+    "backdrop_path": "/kTrgxhRSj2sun89bDbnGCPBiey6.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "T.J. Miller",
+      "character": "Gene (voice)",
+      "profile_path": "/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg"
+    },
+    {
+      "name": "James Corden",
+      "character": "Hi-5 (voice)",
+      "profile_path": "/xGB0gfZ48M27gQjjL7inJIh1Pqj.jpg"
+    },
+    {
+      "name": "Anna Faris",
+      "character": "Jailbreak (voice)",
+      "profile_path": "/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+    },
+    {
+      "name": "Maya Rudolph",
+      "character": "Smiler (voice)",
+      "profile_path": "/bpEVMFMyHEQ8wLdii9WKB279w8p.jpg"
+    }
+  ]
+}

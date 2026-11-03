@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 15,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Mystery of Nan Madol",
+        "overview": "Giorgio Tsoukalos and David Childress explore the mysterious chain of manmade islets in Micronesia\u0027s Nan Madol; built from 250 million tons of volcanic rock, there are local legends that strange visitors floated the massive rocks through the air.",
+        "air_date": "2020-01-25",
+        "runtime": 42,
+        "still_path": "/n15WaFMfoh9Ekj4AtWeFElzBzHk.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Relics of Roswell",
+        "overview": "In 1947, the U.S. military collects debris from what they claim is a crashed weather balloon outside of Roswell, N.M.; new evidence may prove that the wreckage belonged to an alien spacecraft and that remnants may have been overlooked.",
+        "air_date": "2020-02-01",
+        "runtime": 42,
+        "still_path": "/41K3igM2jSPAlwlSbraXoPG9FPK.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Destination Chile",
+        "overview": "The Chilean government questions whether new footage from a Navy helicopter indicates a connection to geoglyphs in the Atacama Desert.",
+        "air_date": "2020-02-08",
+        "runtime": 42,
+        "still_path": "/67RENbAEslSlnJepraTU30n8wty.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Real Men in Black",
+        "overview": "An investigation into the rumors that the U.S. government is working covertly with space aliens to create alien-human hybrids.",
+        "air_date": "2020-02-15",
+        "runtime": 42,
+        "still_path": "/wWR09WuAhh7XNg7JyGoMvwatPnA.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Mystery of the Stone Giants",
+        "overview": "From Egypt to Easter Island, towering figures built by ancient man stand watch over the Earth. Are these stone giants simply a testament to humanity\u0027s past or could they depict visitors from another world\u0027 And do they serve a technological purpose that modern man is just now unlocking\u0027",
+        "air_date": "2020-02-22",
+        "runtime": 42,
+        "still_path": "/cLEM7lYv82MeBDfIz15RXz1jmx4.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The World Before Time",
+        "overview": "Shocking new evidence reveals that advanced civilizations might have existed on Earth tens of thousands of years ago. Is it possible that a technologically advanced society thrived on Earth then\u2019 And did they leave behind a record that they lived alongside extraterrestrial beings\u2019",
+        "air_date": "2020-02-29",
+        "runtime": 42,
+        "still_path": "/kX3uODy8nA9ap5FoCCFx353zvtL.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "They Came from The Pleiades",
+        "overview": "In numerous ancient cultures throughout the world, stories were told of ancestors that came to Earth from the Pleiades star cluster, but could new scientific findings reveal that humankind\u0027s true origins lie not on Earth but 400 light years away.",
+        "air_date": "2020-03-07",
+        "runtime": 42,
+        "still_path": "/wKoBh9DBPmvR0xh6UsmWHvTnJ8j.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Immortality Machine",
+        "overview": "In the Mojave Desert, there is a structure built to bestow everlasting life and according to the architect, the blueprint was provided by an extraterrestrial visitor known as the Integratron, could it actually provide the key to immortality.",
+        "air_date": "2020-03-14",
+        "runtime": 42,
+        "still_path": "/5HhOXyKQM0Zvx22roLlPUP8xjZk.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Shapeshifters",
+        "overview": "Accounts of creatures that can shape shift from one form into another can be found, but could similarities between the ancient stories and modern-day alien abduction accounts reveal that shape shifters are real and have come to Earth.",
+        "air_date": "2020-03-21",
+        "runtime": 42,
+        "still_path": "/9sds5IQtcIGyZ9K0IbVbn1QZo0C.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Mystery of Skinwalker Ranch",
+        "overview": "Nestled within a remote valley in Utah, is a ranch that some believe is a hotbed of strange, inexplicable phenomena including terrifying creatures, paranormal apparitions and lights in the sky. Could the bizarre activity have a connection to an alien entity known as the Skinwalker\u0027",
+        "air_date": "2020-03-28",
+        "runtime": 42,
+        "still_path": "/As4BK36ARfBpxLogj8ShYlWDZ6F.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Ultimate Guide to UFOs",
+        "overview": "UFO witnesses have reported a wide variety of objects in Earth\u0027s skies--and not only in modern times, but for centuries. What might we learn from examining their shapes, sizes, and the way they maneuver\u0027 Could they offer important clues about other intelligent life in our galaxy\u0027",
+        "air_date": "2020-04-11",
+        "runtime": 42,
+        "still_path": "/a0lACNB2ip2IKRnuuDjlSLzmkYA.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Aliens and the Presidents",
+        "overview": "The White House has consistently denied having any knowledge of alien craft visiting Earth, but presidential encounters with UFOs and other strange phenomena can be found going all the way back to George Washington. Is it possible that extraterrestrials have been monitoring\u2013and even influencing\u2013America\u2019s presidents\u2019",
+        "air_date": "2020-04-18",
+        "runtime": 42,
+        "still_path": "/wPWOpPMd4c604fQOCQgOzdMENzd.jpg"
+      }
+    ]
+  }
+}

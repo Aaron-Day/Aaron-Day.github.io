@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 59967,
+    "title": "Looper",
+    "overview": "In the year 2044, time travel has not yet been invented but in 30 years it will have been. When the mob wants to get rid of someone, they will send their target into the past where a looper, a hired gun, like Joe is waiting to mop up. Joe is getting rich and life is good until the day the mob decides to close the loop, sending back Joe\u0027s future self for assassination.",
+    "tagline": "Hunted by your future, haunted by your past.",
+    "runtime": 118,
+    "release_date": "2012-09-26",
+    "vote_average": 6.918,
+    "poster_path": "/sNjL6SqErDBE8OUZlrDLkexfsCj.jpg",
+    "backdrop_path": "/4GPCnwvTbsDleH5QIOyDLMsK8a2.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Joseph Gordon-Levitt",
+      "character": "Joe",
+      "profile_path": "/z2FA8js799xqtfiFjBTicFYdfk.jpg"
+    },
+    {
+      "name": "Bruce Willis",
+      "character": "Old Joe",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Emily Blunt",
+      "character": "Sara",
+      "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+    },
+    {
+      "name": "Paul Dano",
+      "character": "Seth",
+      "profile_path": "/gOD5bO0hKnzzJm7sJeGeEJjfBBw.jpg"
+    }
+  ]
+}

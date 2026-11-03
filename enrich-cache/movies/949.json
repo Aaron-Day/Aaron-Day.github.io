@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 949,
+    "title": "Heat",
+    "overview": "Obsessive master thief Neil McCauley leads a top-notch crew on various daring heists throughout Los Angeles while determined detective Vincent Hanna pursues him without rest. Each man recognizes and respects the ability and the dedication of the other even though they are aware their cat-and-mouse game may end in violence.",
+    "tagline": "A Los Angeles crime saga.",
+    "runtime": 170,
+    "release_date": "1995-12-15",
+    "vote_average": 7.947,
+    "poster_path": "/umSVjVdbVwtx5ryCA2QXL44Durm.jpg",
+    "backdrop_path": "/uI22JkEMediWyiRqhllNqeeGtW0.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1048282,
+      "name": "Heat Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Al Pacino",
+      "character": "Lt. Vincent Hanna",
+      "profile_path": "/m8HAAjq1T75JypKk0v1FFQn4ysZ.jpg"
+    },
+    {
+      "name": "Robert De Niro",
+      "character": "Neil McCauley",
+      "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+    },
+    {
+      "name": "Val Kilmer",
+      "character": "Chris Shiherlis",
+      "profile_path": "/j2bJH6rxZkJJt8tHsBFMOxIVZdE.jpg"
+    },
+    {
+      "name": "Jon Voight",
+      "character": "Nate",
+      "profile_path": "/oxLsItDwLddXu8YYJCfkddYNejL.jpg"
+    }
+  ]
+}

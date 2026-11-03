@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9614,
+    "title": "Happy Gilmore",
+    "overview": "Failed hockey player-turned-golf whiz Happy Gilmore \u2014 whose unconventional approach and antics on the green courts the ire of rival Shooter McGavin \u2014 is determined to win a PGA tournament so he can save his granny\u0027s house with the prize money. Meanwhile, an attractive tour publicist tries to soften Happy\u0027s image.",
+    "tagline": "He doesn\u0027t play golf... he destroys it.",
+    "runtime": 92,
+    "release_date": "1996-02-16",
+    "vote_average": 6.679,
+    "poster_path": "/4RnCeRzvI1xk5tuNWjpDKzSnJDk.jpg",
+    "backdrop_path": "/As7NuiDRM4EO7LlJn2u8JWWsABp.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1263259,
+      "name": "Happy Gilmore Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Happy Gilmore",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Julie Bowen",
+      "character": "Virginia",
+      "profile_path": "/5ewqnbPAY0EzZObGHIKU4VsCanD.jpg"
+    },
+    {
+      "name": "Christopher McDonald",
+      "character": "Shooter",
+      "profile_path": "/gK1XhbfD9Xd8s3VXRPpgDCluyZp.jpg"
+    },
+    {
+      "name": "Frances Bay",
+      "character": "Grandma",
+      "profile_path": "/1mtcINBBbvb7E4ySgOr86u34XLJ.jpg"
+    }
+  ]
+}

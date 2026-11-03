@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1124,
+    "title": "The Prestige",
+    "overview": "A mysterious story of two magicians whose intense rivalry leads them on a life-long battle for supremacy -- full of obsession, deceit and jealousy with dangerous and deadly consequences.",
+    "tagline": "Are you watching closely?",
+    "runtime": 131,
+    "release_date": "2006-10-19",
+    "vote_average": 8.212,
+    "poster_path": "/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
+    "backdrop_path": "/yaExZh6qE2cfyK3o4kAMEq0mkgy.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Hugh Jackman",
+      "character": "Robert Angier",
+      "profile_path": "/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Christian Bale",
+      "character": "Alfred Borden",
+      "profile_path": "/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg"
+    },
+    {
+      "name": "Michael Caine",
+      "character": "Cutter",
+      "profile_path": "/bVZRMlpjTAO2pJK6v90buFgVbSW.jpg"
+    },
+    {
+      "name": "Piper Perabo",
+      "character": "Julia McCullough",
+      "profile_path": "/5XrzISDEox0KubRDzJU668Oxmxy.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36647,
+    "title": "Blade",
+    "overview": "The Daywalker known as \u0022Blade\u0022 - a half-vampire, half-mortal man - becomes the protector of humanity against an underground army of vampires.",
+    "tagline": "Against an army of Immortals, one warrior must draw first blood.",
+    "runtime": 121,
+    "release_date": "1998-08-21",
+    "vote_average": 6.86,
+    "poster_path": "/oWT70TvbsmQaqyphCZpsnQR7R32.jpg",
+    "backdrop_path": "/7NKfxJrQn053UJeLftlx4m4NTzo.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 735,
+      "name": "Blade Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Wesley Snipes",
+      "character": "Blade",
+      "profile_path": "/oOjRfYKQOBS6XsRyXaZktmSQBph.jpg"
+    },
+    {
+      "name": "Stephen Dorff",
+      "character": "Deacon Frost",
+      "profile_path": "/bhlM1xNzBvc8jTw42YloUKlGTCL.jpg"
+    },
+    {
+      "name": "Kris Kristofferson",
+      "character": "Whistler",
+      "profile_path": "/efD2Uu8QYBN7ZWSFa79mm3Pkk4L.jpg"
+    },
+    {
+      "name": "N\u0027Bushe Wright",
+      "character": "Karen",
+      "profile_path": "/jSXuSko6tZQ69LfJEMmNLiXEOS8.jpg"
+    }
+  ]
+}

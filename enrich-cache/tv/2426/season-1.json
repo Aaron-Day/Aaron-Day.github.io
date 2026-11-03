@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "City of",
+        "overview": "Angel moves to L.A. where he meets up with Cordelia, another Sunnydale transplant who comes to work for him, and Doyle, a half-demon who gets visions of people in trouble.",
+        "air_date": "1999-10-05",
+        "runtime": 45,
+        "still_path": "/uxB4Y5ifDlC5F7YhGiM3we53lc0.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Lonely Heart",
+        "overview": "Angel, with the aid of a new friend, tracks a serial killer whose hunting ground is L.A.\u0027s single bars.",
+        "air_date": "1999-10-12",
+        "runtime": 45,
+        "still_path": "/dp5cn61wyjHKq1wUYpRIo5PHWbY.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "In the Dark",
+        "overview": "Spike follows Oz to L.A. and enlists the help of a demented vampire to regain a mystical relic from Angel.",
+        "air_date": "1999-10-19",
+        "runtime": 43,
+        "still_path": "/4N3FhnYzBQkvfEoVHbzhCx1Djm2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "I Fall to Pieces",
+        "overview": "A desperate young woman pleads for Angel\u0027s help, as her disembodied stalker grows more violent. Meanwhile Doyle goes to work with Melissa.",
+        "air_date": "1999-10-26",
+        "runtime": 43,
+        "still_path": "/dd3IGyDrkieXErFj5gMnODq9XXs.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Rm w/a Vu",
+        "overview": "Cordelia finds a perfect apartment, but it\u0027s got just one flaw: it\u0027s haunted. Meanwhile, Doyle flees the phantoms of his past.",
+        "air_date": "1999-11-02",
+        "runtime": 44,
+        "still_path": "/6qdjyTaBGcyxNGz4B9k6xXQNMo3.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Sense \u0026 Sensitivity",
+        "overview": "Kate\u0027s temper buys her a trip to sensitivity training, which has a strange effect on her... and those around her.",
+        "air_date": "1999-11-09",
+        "runtime": 43,
+        "still_path": "/fmi7idVYAKFODz7C86UGMsSp9E3.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Bachelor Party",
+        "overview": "Doyle\u0027s past love comes to town, but her new fianc\u00E9 has other plans for him. Doyle gets a vision of Buffy.",
+        "air_date": "1999-11-16",
+        "runtime": 45,
+        "still_path": "/7Dnn5hcCJqqXS6QRjoJrgukEfnw.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "I Will Remember You",
+        "overview": "Old feelings are rekindled when Buffy comes to L.A. to visit Angel. Buffy and Angel are attacked by a Mohra demon, and together they slay it",
+        "air_date": "1999-11-23",
+        "runtime": 45,
+        "still_path": "/rX9dVrJEFAQM4E2omexMeCZLL1d.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Hero",
+        "overview": "Doyle is presented with an opportunity for atonement when a band of frightened refugees seek his help.",
+        "air_date": "1999-11-30",
+        "runtime": 44,
+        "still_path": "/j8Et733XdAuFXrc5X0JGV5H1aqu.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Parting Gifts",
+        "overview": "Angel and Cordelia, still coping with the death of their friend, are aided by an old friend in the pursuit of a demon bounty.",
+        "air_date": "1999-12-14",
+        "runtime": 43,
+        "still_path": "/ifyAEEnhsd0L8M8JTaoov3CNcfE.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Somnambulist",
+        "overview": "When a killer stalks the L.A. streets using a mark that Angelus once used, Angel must face the possibility that he is committing the murders in his sleep.",
+        "air_date": "2000-01-18",
+        "runtime": 43,
+        "still_path": "/bhDlKbNCdou839rHa5QhUitMvf2.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Expecting",
+        "overview": "After a one-night stand goes bad, Cordelia wakes up to find herself extremely pregnant with something extremely unnatural.",
+        "air_date": "2000-01-25",
+        "runtime": 41,
+        "still_path": "/dB71jWcUFdDpxpLPGZOvVJoq7Ec.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "She",
+        "overview": "Angel forms tenuous truce with a warrior demon in order to save refugees from another dimension.",
+        "air_date": "2000-02-08",
+        "runtime": 42,
+        "still_path": "/q36LLs4dsp1wHtTS9xRYZzIfbsu.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "I\u0027ve Got You Under My Skin",
+        "overview": "A troubled family enlists Angel and Wesley to help them exorcise their resident demon.",
+        "air_date": "2000-02-15",
+        "runtime": 42,
+        "still_path": "/ljjbyMc9kPDVR1dpVCt2BqSbnxz.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Prodigal",
+        "overview": "Angel\u0027s conflict with Kate and her dad stirs up memories of his own father.",
+        "air_date": "2000-02-22",
+        "runtime": 39,
+        "still_path": "/wHdYjVkjgjxKfBSpF8eB3qTtEj.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Ring",
+        "overview": "In pursuit of a missing man, Angel becomes enslaved to an underground-fighting ring.",
+        "air_date": "2000-02-29",
+        "runtime": 41,
+        "still_path": "/ouBh0eLKSdxpVZG9iCY3LGXAneN.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Eternity",
+        "overview": "When an embattled celebrity enlists Angel to protect her from a stalker, her interest in Angel could cost him his soul.",
+        "air_date": "2000-04-04",
+        "runtime": 42,
+        "still_path": "/qoGJCUyOfx1LWbaDCT8COQO9o0K.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Five by Five (1)",
+        "overview": "Rogue slayer Faith comes to town, and when she partners up with Wolfram and Hart, Angel\u0027s life is in danger.",
+        "air_date": "2000-04-25",
+        "runtime": 41,
+        "still_path": "/jwZUAD8CSOmWt339c2rS1mFafPJ.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Sanctuary (2)",
+        "overview": "Everyone, including Buffy Summers, is out to get Faith, and Angel is the only man who can stop them.",
+        "air_date": "2000-05-02",
+        "runtime": 40,
+        "still_path": "/8CrakK1j0ufqHoDYAcVPaMd5zPl.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "War Zone",
+        "overview": "When Angel tracks down a millionaire\u0027s blackmailer, he gets caught in the middle of a gang war between street kids and vampires.",
+        "air_date": "2000-05-09",
+        "runtime": 40,
+        "still_path": "/qORdzonEXc1JlBgDSwALNHWxxKU.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Blind Date",
+        "overview": "Angel must break into Wolfram and Hart to prevent an assassin from carrying out her deadly mission.",
+        "air_date": "2000-05-16",
+        "runtime": 42,
+        "still_path": "/mO3TaUo8OLCL8kakWE8Le7HUYbJ.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "To Shanshu in L.A.",
+        "overview": "Wolfram and Hart raise a powerful new foe to strike down Angel and those close to him.",
+        "air_date": "2000-05-23",
+        "runtime": 41,
+        "still_path": "/sNDwRuaEwV4qSdcWTBFJpjI2ftV.jpg"
+      }
+    ]
+  }
+}

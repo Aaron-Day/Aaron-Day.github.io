@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9078,
+    "title": "The Sword in the Stone",
+    "overview": "Wart is a young boy who aspires to be a knight\u0027s squire. On a hunting trip he falls in on Merlin, a powerful but amnesiac wizard who has plans for him beyond mere squiredom. He starts by trying to give him an education, believing that once one has an education, one can go anywhere. Needless to say, it doesn\u0027t quite work out that way.",
+    "tagline": "Tired of living in a Medieval mess... Merlin uses all his magic powers to change a scrawny little boy into a legendary hero!",
+    "runtime": 79,
+    "release_date": "1963-12-25",
+    "vote_average": 7.2,
+    "poster_path": "/7lyeeuhGAJSNXYEW34S8mJ1bwI8.jpg",
+    "backdrop_path": "/uMe6McFXAPEhkasGVlaLTOuhfnl.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sebastian Cabot",
+      "character": "The Narrator/Sir Ector (voice)",
+      "profile_path": "/uAgoTmwvabGX00LnYyDfyL7TPUP.jpg"
+    },
+    {
+      "name": "Karl Swenson",
+      "character": "Merlin (voice)",
+      "profile_path": "/36uUxu4K8WQi8oZJMsciKzu15kS.jpg"
+    },
+    {
+      "name": "Junius Matthews",
+      "character": "Archimedes the Owl (voice)",
+      "profile_path": "/wfMbR7I6xjzO8n1y0wv0rRop4Fc.jpg"
+    },
+    {
+      "name": "Martha Wentworth",
+      "character": "Madam Mim / Old Lady Squirrel (voice)",
+      "profile_path": "/81Et3nBlWFANlWsP4D8BAFXwI0b.jpg"
+    }
+  ]
+}

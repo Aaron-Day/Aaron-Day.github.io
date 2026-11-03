@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "To help capture a serial rapist-turned-killer, FBI Special Agent Don Eppes recruits his genius brother Charlie, who uses a mathematical equation to identify the killer\u0027s point of origin by working back from the crime scene locations.",
+        "air_date": "2005-01-23",
+        "runtime": 43,
+        "still_path": "/d7KROIXntIGt3VSGwddmzIpRZqj.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Uncertainty Principle",
+        "overview": "Charlie accurately predicts where a band of bank robbers will strike next.  But when Don and his team confront them, a massive shoot-out occurs leaving four people, including an officer, dead.  The outcome disturbs Charlie and he retreats into the family garage to work out an unsolvable math problem that he also plunged into after his mother became ill a year earlier.  But Don needs his brother\u0027s help and tries to get Charlie to return to the case.",
+        "air_date": "2005-01-28",
+        "runtime": 43,
+        "still_path": "/pPYPdi1FO58MryJFvUgujFhBW4M.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Vector",
+        "overview": "Various people in the L.A. area with seemingly nothing in common start to become extremely sick and die on the same day. Don fears bioterrorists may have released a deadly virus into the environment. While he tries to discover whether anyone is behind the outbreak, Charlie tries to locate the point of origin.",
+        "air_date": "2005-02-04",
+        "runtime": 42,
+        "still_path": "/sA1Aa5fWWup0xc09bFaDLqy7sqK.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Structural Corruption",
+        "overview": "After an engineering student at CalSci is found dead from an apparent suicide, Charlie convinces Don to launch an investigation after he reads the student\u0027s thesis that asserted that the architecturally magnificent Cole Center in Los Angeles is structurally unstable. Although reluctant at first, Don and his FBI agents discover that the student\u0027s findings were correct and uncover a dangerous and surprising conspiracy. Meanwhile, Alan prepares for a first date and convinces Don and Terry to join them, hoping they might rekindle their old romance.",
+        "air_date": "2005-02-11",
+        "runtime": 44,
+        "still_path": "/hibGKVtWuGMh9azrhYU6IcD1c7t.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Prime Suspect",
+        "overview": "When a five-year-old girl is kidnapped from her birthday party, Don and Terry lead the investigation, but must rely on Charlie\u0027s help because the girl\u0027s father, Ethan, is also a mathematician. Charlie realizes the kidnapper\u0027s motive when Ethan reveals he is close to solving Riemann\u0027s Hypothesis, a difficult math problem.  If solved, the solution could not only earn him $1 million, but could break the code for internet security and unlock the world\u0027s biggest financial secret.",
+        "air_date": "2005-02-18",
+        "runtime": 41,
+        "still_path": "/ex4dBXma7rmbV6K0I4k2iPwgLPs.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Sabotage",
+        "overview": "While consulting with the NTSB at the scene of the wreck, Don learns that this tragedy is one of a series of recreated accidents involving railroad negligence. As is the pattern with the previous train wrecks, an undecipherable numerical code is left at the site, which Don recruits Charlie to solve. By breaking the code, Charlie is able to establish that this accident was a recreation of a deadly wreck that left only one survivor several years ago. Don\u0027s investigation leads him and his team to a dangerous standoff with their suspect, who has surprising ties to the railway system.",
+        "air_date": "2005-02-25",
+        "runtime": 40,
+        "still_path": "/unPD8PZ7ESfgNimh30HwdX9LNA8.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Counterfeit Reality",
+        "overview": "Don learns that counterfeiters are at work producing small-denomination bills, and that they have taken an artist hostage to draw the images for the fake money.  If the missing woman isn\u0027t located soon, Don fears that she will be killed when her work is finished on the phony cash.  The counterfeiters have already murdered at least five people, two of whom stole money from them.  The case is made more difficult for Don when his former lover, now a Secret Service agent, is assigned to it.",
+        "air_date": "2005-03-11",
+        "runtime": 41,
+        "still_path": "/4vRniRw1vopEInBu7tDrNFmNxw0.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Identity Crisis",
+        "overview": "A man wanted for stock fraud is found garroted in his apartment, and the crime is eerily similar to a murder committed a year earlier, a case in which Don closed when an ex-con confessed.  Now, Don must re-investigate the old case to determine if he put an innocent man in jail.  He asks Charlie to go over the evidence to see if he missed anything the first time around.",
+        "air_date": "2005-04-01",
+        "runtime": 42,
+        "still_path": "/cKbSKECKkQ4jLwYNzXlRQ4dt5mc.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Sniper Zero",
+        "overview": "The city is in a panic as a sniper goes on a shooting spree and randomly kills several people, including a postal worker.  The investigation reveals that more than one shooter is at work.  As Charlie works the case, he\u0027s frustrated by a sniper expert Don brings in to help out.",
+        "air_date": "2005-04-15",
+        "runtime": 41,
+        "still_path": "/6vtXp0htTVnCm2AoH7nSD4Qhe0j.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Dirty Bomb",
+        "overview": "A truck carrying radioactive material is stolen, and the thieves threaten to set off a dirty bomb in L.A. in 12 hours if they aren\u0027t paid $20 million.  While Don attempts to track down the truck, Charlie tries to come up with the most likely location where the bomb may be detonated to inflict the most damage to the population.",
+        "air_date": "2005-04-22",
+        "runtime": 42,
+        "still_path": "/5XYQekMfckqDZps1cnZJ0RCcLvY.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Sacrifice",
+        "overview": "A senior computer-science researcher working on a classified government project is found murdered in his Hollywood Hills home and data has been stolen from his computer.  The investigation reveals the victim was going through a bitter divorce and was trying to keep his wife from getting his money.  Charlie also learns the project on which the man was working might have involved baseball.",
+        "air_date": "2005-04-29",
+        "runtime": 40,
+        "still_path": "/uGvMfNNuuBVjAGPbGsxcPBdlqke.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Noisy Edge",
+        "overview": "Don and Agent Weston of the NTSB investigate eyewitness accounts of a mysterious unidentified object flying dangerously close to downtown Los Angeles that has raised concern of a terrorist attack. After Charlie is recruited to help with the investigation, it is discovered that the flying object is part of a new technology that could revolutionize air travel. But the investigation takes a turn when they learn that the lead engineer is found murdered.",
+        "air_date": "2005-05-06",
+        "runtime": 41,
+        "still_path": "/ts1vQwsVZzkfTDqDzYV7ay5V556.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Man Hunt",
+        "overview": "A dangerous felon escapes when a prison bus crashes and the FBI has reason to fear he\u0027s intent on revenge against the witness whose testimony put him in jail.  However, finding the elusive killer proves to be a complicated challenge.  Don teams up with Agent Billy Cooper,  his former partner from the FBI\u0027s Fugitive Recovery Division, and Alan worries that Don\u0027s going to return to a more dark and obsessive time in his career.",
+        "air_date": "2005-05-13",
+        "runtime": 42,
+        "still_path": "/4lTLNitLY9KV5iK6QTlOQv71Zq.jpg"
+      }
+    ]
+  }
+}

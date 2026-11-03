@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 138843,
+    "title": "The Conjuring",
+    "overview": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse. Forced to confront a powerful entity, the Warrens find themselves caught in the most terrifying case of their lives.",
+    "tagline": "Based on the true case files of the Warrens.",
+    "runtime": 112,
+    "release_date": "2013-07-18",
+    "vote_average": 7.546,
+    "poster_path": "/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+    "backdrop_path": "/ecKQlAEG95k62SMGhvX83oEqANK.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 313086,
+      "name": "The Conjuring Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vera Farmiga",
+      "character": "Lorraine Warren",
+      "profile_path": "/5Vs7huBmTKftwlsc2BPAntyaQYj.jpg"
+    },
+    {
+      "name": "Patrick Wilson",
+      "character": "Ed Warren",
+      "profile_path": "/oym6H2QD9esk4yABjCHaUoNAOa8.jpg"
+    },
+    {
+      "name": "Lili Taylor",
+      "character": "Carolyn Perron",
+      "profile_path": "/vWcMUi3QyvCr3QuFbjtwyPx7WtU.jpg"
+    },
+    {
+      "name": "Ron Livingston",
+      "character": "Roger Perron",
+      "profile_path": "/pr5CjWnkaf5WKTIYh8wtNufjmyb.jpg"
+    }
+  ]
+}

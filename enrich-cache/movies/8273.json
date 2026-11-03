@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8273,
+    "title": "American Wedding",
+    "overview": "With high school a distant memory, Jim and Michelle are getting married \u2014 and in a hurry, since Jim\u0027s grandmother is sick and wants to see him walk down the aisle \u2014 prompting Stifler to throw the ultimate bachelor party. And Jim\u0027s dad is reliable as ever, doling out advice no one wants to hear.",
+    "tagline": "Forever hold your piece.",
+    "runtime": 103,
+    "release_date": "2003-08-01",
+    "vote_average": 6.228,
+    "poster_path": "/pCO3lJv2PzPkJty29APxCVSjyoE.jpg",
+    "backdrop_path": "/qW703anWHFXulRTKWOckAg9i70K.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2806,
+      "name": "American Pie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Biggs",
+      "character": "Jim Levenstein",
+      "profile_path": "/3nRgOQylYbNuDiddtNoh8uWTz5P.jpg"
+    },
+    {
+      "name": "Molly Cheek",
+      "character": "Jim\u0027s Mom",
+      "profile_path": "/bwMisp1ui901ZLrkwIDlHaXmpLR.jpg"
+    },
+    {
+      "name": "Alyson Hannigan",
+      "character": "Michelle Flaherty",
+      "profile_path": "/bO16z8rAzZWdjCga8dcbJ2AFAh2.jpg"
+    },
+    {
+      "name": "January Jones",
+      "character": "Cadence Flaherty",
+      "profile_path": "/9HYdabnECNzUPG9QcO9qLnZZG8h.jpg"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Those Kinds of Things",
+        "overview": "Dexter Morgan attends his 20th high school reunion to hunt a former Prom King; Homicide\u0027s investigation into a gruesome, faith-based murder causes Dexter to ask some spiritual questions and consider his son\u0027s legacy; solid in her relationship with Quinn and her role as detective, Debra becomes an unexpected hero.",
+        "air_date": "2011-10-02",
+        "runtime": 53,
+        "still_path": "/3J0Swm0EUVur5vL8NddP2iYlZRS.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Once Upon a Time...",
+        "overview": "To solve a mysterious and macabre murder, Homicide brings in Brother Sam, a minister with a criminal past whom Dexter recognizes as a fellow killer that might have found a cover even better than his own; now a local hero, Debra is surprised by two life-changing proposals.",
+        "air_date": "2011-10-09",
+        "runtime": 53,
+        "still_path": "/5jm0bu5yAOEDpUuwGYmyvEeaO0.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Smokey and the Bandit",
+        "overview": "Dexter is confronted with a sobering glimpse of his own potential future when a serial killer from his past makes a startling reappearance; Debra is uncomfortable in her new job; Travis struggles to keep his mentor happy, as he and Gellar prepare a new twisted tableau, ensuring Debra\u0027s next task will be a daunting one.",
+        "air_date": "2011-10-16",
+        "runtime": 50,
+        "still_path": "/zEYmKykAr8cjTuzvNJS7O8Qzb1u.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "A Horse of a Different Color",
+        "overview": "Much to his own surprise, an emergency with Harrison and a new tableau from Gellar and Travis has Dexter leaning on Brother Sam and an unexpected winged messenger for support as he questions the idea of faith; with proof of a religiously motivated killer, Homicide hunts for a zealot, with Debra giving her first official press conference.",
+        "air_date": "2011-10-23",
+        "runtime": 52,
+        "still_path": "/s4RtEYi17L5Q1ltZo2GJVhtniKZ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Angel of Death",
+        "overview": "With the help of his newfound friend Brother Sam, Dexter wonders if there is light within him to counter the darkness, while the search for the Doomsday Killers takes him in a new direction; Batista and Quinn pay a visit to the university where Professor Gellar taught; due to departmental regulations following the shooting, Debra is forced to begin therapy.",
+        "air_date": "2011-10-30",
+        "runtime": 51,
+        "still_path": "/nqEs9ZNXzwDpTJyGqQ4DLEERuUT.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Just Let Go",
+        "overview": "Dexter is caught up in a very personal case that awakens the needs of his Dark Passenger; Debra feels overwhelmed by her new Lieutenant duties, made all the more complicated when she finds out Quinn slept with a witness in the Doomsday case.",
+        "air_date": "2011-11-06",
+        "runtime": 54,
+        "still_path": "/xkagSIG0cWXfzwI1QO1B4d8YrLy.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Nebraska",
+        "overview": "Dexter finds himself teamed up with a fellow Dark Passenger when he takes a road trip to Nebraska to tie up some loose ends from the past; Debra deals with the complications of her promotion as she leads the Doomsday investigation.",
+        "air_date": "2011-11-13",
+        "runtime": 52,
+        "still_path": "/1QSX0cANrmBaSh33vW5BElbfuE2.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Sin of Omission",
+        "overview": "Dexter uses lessons he learned from Brother Sam to follow up on some new leads in the Doomsday investigation; Debra butts heads with Captain LaGuerta over the case of a dead call girl.",
+        "air_date": "2011-11-20",
+        "runtime": 52,
+        "still_path": "/bqNoJcR57Of84oXnrUO9ljzjnpJ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Get Gellar",
+        "overview": "Dexter receives help from an unexpected source while hunting The Doomsday Killers and staying one step ahead of Homicide; Debra discovers something new about herself in therapy.",
+        "air_date": "2011-11-27",
+        "runtime": 50,
+        "still_path": "/6PwAsx7Lkn8qngruabjK0zl9Wlr.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Ricochet Rabbit",
+        "overview": "Dexter tries to figure out The Doomsday Killers\u0027 next victim before it\u0027s too late; Debra has a strong reaction to a crime scene, which leads her to the realization that she leans too heavily on her brother.\u0022",
+        "air_date": "2011-12-04",
+        "runtime": 49,
+        "still_path": "/vMNxVlrjnNDvdangm2w3ZS8o8NM.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Talk to the Hand",
+        "overview": "Dexter finds that in order to catch The Doomsday Killers, he must create a macabre tableau of his own; Debra\u0027s battle with LaGuerta over the case of the dead call girl boils over, and her therapist makes an unnerving suggestion.",
+        "air_date": "2011-12-11",
+        "runtime": 48,
+        "still_path": "/cTvPiVOaxZ6IQFOUZr0elDHqpW8.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "This Is the Way the World Ends",
+        "overview": "Dexter and Homicide race against a lunar eclipse to catch the Doomsday Killers before their final gruesome act. Meanwhile, Debra struggles with a new emotional reality.",
+        "air_date": "2011-12-18",
+        "runtime": 51,
+        "still_path": "/j2L0qniodfmIV3KcT0Wnll5yMII.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 486589,
+    "title": "Red Shoes and the Seven Dwarfs",
+    "overview": "Princes who have been turned into Dwarfs seek the red shoes of a lady in order to break the spell, although it will not be easy.",
+    "tagline": "Your true self is the fairest of them all",
+    "runtime": 92,
+    "release_date": "2019-07-25",
+    "vote_average": 7.668,
+    "poster_path": "/MBiKqTsouYqAACLYNDadsjhhC0.jpg",
+    "backdrop_path": "/nN4Gs3vZAOJ1D6FRtrwbU9VGYwU.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ahn So-yi",
+      "character": "Snow / Red Shoes (voice)",
+      "profile_path": "/ouF5daoh8AKa9yeWtlgc1wSdixb.jpg"
+    },
+    {
+      "name": "Shin Yong-woo",
+      "character": "Merlin (voice)",
+      "profile_path": "/7URwQCgtOOX0KHHVONS11GrH39F.jpg"
+    },
+    {
+      "name": "Jun Jin-ah",
+      "character": "Regina (voice)",
+      "profile_path": null
+    },
+    {
+      "name": "Jeong Jae-heon",
+      "character": "Average (voice)",
+      "profile_path": "/4Ecyr45VJED3Js1MJz1Ufyu5Duj.jpg"
+    }
+  ]
+}

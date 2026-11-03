@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 17047,
+    "title": "Agent Cody Banks 2: Destination London",
+    "overview": "With all-new gadgets, high-flying action, exciting chases and a wisecracking new handler, Derek (Anthony Anderson), Cody has to retrieve the device before the world\u0027s leaders fall under the evil control of a diabolical villain.",
+    "tagline": "Adventure is an attitude.",
+    "runtime": 100,
+    "release_date": "2004-03-12",
+    "vote_average": 5.624,
+    "poster_path": "/zlAltvp84rYVTYs3kdemqHBaiat.jpg",
+    "backdrop_path": "/dkCeC92reZFKnZDspABZVpk0RLW.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91427,
+      "name": "Agent Cody Banks Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Frankie Muniz",
+      "character": "Cody Banks",
+      "profile_path": "/tBckW8eJHv4vz8B3DJYH1rLAtyN.jpg"
+    },
+    {
+      "name": "Anthony Anderson",
+      "character": "Derek Bowman",
+      "profile_path": "/reO1OjwFdtXmiO4LMDaBj6eatzK.jpg"
+    },
+    {
+      "name": "Hannah Spearritt",
+      "character": "Emily Sommers",
+      "profile_path": "/2RCwvSXDElYkDevVgg0bAUSLLyO.jpg"
+    },
+    {
+      "name": "Alfie Allen",
+      "character": "Berkhamp on Double Bass",
+      "profile_path": "/aF3SyXNd2JfktnYkUvC1tsFHJDu.jpg"
+    }
+  ]
+}

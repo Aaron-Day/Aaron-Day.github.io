@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 81796,
+    "title": "Lockout",
+    "overview": "Set in the near future, Lockout follows a falsely convicted ex-government agent , whose one chance at obtaining freedom lies in the dangerous mission of rescuing the President\u0027s daughter from rioting convicts at an outer space maximum security prison.",
+    "tagline": "Take no prisoners.",
+    "runtime": 95,
+    "release_date": "2012-04-12",
+    "vote_average": 5.934,
+    "poster_path": "/i5QfNIcg6hc327IWUerea0EczP4.jpg",
+    "backdrop_path": "/iN68wpJYwZ6NwQwYMlrPNtJUBxM.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Guy Pearce",
+      "character": "Snow",
+      "profile_path": "/vTqk6Nh3WgqPubkS23eOlMAwmwa.jpg"
+    },
+    {
+      "name": "Maggie Grace",
+      "character": "Emilie Warnock",
+      "profile_path": "/fEZSGno4ooPgFjuGzE7ogsWEHsh.jpg"
+    },
+    {
+      "name": "Vincent Regan",
+      "character": "Alex",
+      "profile_path": "/7VHu79GciN5QlQTmWdBS86eE2mu.jpg"
+    },
+    {
+      "name": "Joseph Gilgun",
+      "character": "Hydell",
+      "profile_path": "/A8wFwzX8ejdfgeNG7OPbz87ZCrs.jpg"
+    }
+  ]
+}

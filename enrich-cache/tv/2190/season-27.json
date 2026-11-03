@@ -1,0 +1,48 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 27,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Sermon on the \u0027Mount",
+        "overview": "When the residents of South Park face their possible demise, Jesus returns to give them an important message.",
+        "air_date": "2025-07-23",
+        "runtime": 23,
+        "still_path": "/vNqPN3m4wbsZMAlQpr3y7DzrQ8J.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Got a Nut",
+        "overview": "Kyle and Wendy are fed up with someone spewing hate at South Park Elementary, and surprisingly it\u0027s not Cartman. Meanwhile Mr. Mackey gets fired.",
+        "air_date": "2025-08-06",
+        "runtime": 23,
+        "still_path": "/jbCV3I5zonEDSnRyDuhYs0Zvjzy.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Sickofancy",
+        "overview": "Sharon helps Randy come down from his Ketamine bender and the Marsh family sells Tegridy Farms.",
+        "air_date": "2025-08-20",
+        "runtime": 23,
+        "still_path": "/9QMHnZ7HpA82GbEXgpO5yKNJCdx.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Wok Is Dead",
+        "overview": "Everyone at Fox News celebrates as their wildest dreams come true.",
+        "air_date": "2025-09-03",
+        "runtime": 23,
+        "still_path": "/duN5FwI1GFF3z6i3CuamUH64vVC.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Conflict of Interest",
+        "overview": "Kyle and Cartman are at odds when a prediction markets app gets popular with their fellow students.",
+        "air_date": "2025-09-24",
+        "runtime": 23,
+        "still_path": "/a2Bu07vny4PJQjpH73RU5WmQY37.jpg"
+      }
+    ]
+  }
+}

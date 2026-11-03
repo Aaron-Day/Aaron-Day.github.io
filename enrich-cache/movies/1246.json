@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1246,
+    "title": "Rocky Balboa",
+    "overview": "When he loses a highly publicized virtual boxing match to ex-champ Rocky Balboa, reigning heavyweight titleholder Mason Dixon retaliates by challenging the Italian Stallion to a 10-round exhibition bout. To the surprise of his son and friends, Rocky agrees to come out of retirement and face an opponent who\u0027s faster, stronger and thirty years his junior. Rocky takes on Dixon in what will become the greatest fight in boxing history!",
+    "tagline": "It ain\u0027t over \u0027til it\u0027s over.",
+    "runtime": 102,
+    "release_date": "2006-12-20",
+    "vote_average": 6.887,
+    "poster_path": "/byBlJvZwCqgtIwrZNv0pyE974jC.jpg",
+    "backdrop_path": "/fsJn2mPXMhauXsEpNTtFqDdjSQt.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1575,
+      "name": "Rocky Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Robert \u0027Rocky\u0027 Balboa",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Burt Young",
+      "character": "Paulie Pennino",
+      "profile_path": "/6QWnsSbjYog0D6hkPhg7Frty54D.jpg"
+    },
+    {
+      "name": "Antonio Tarver",
+      "character": "Mason \u0027The Line\u0027 Dixon",
+      "profile_path": "/r8E2Fw6mu3g4del7uadNmPft53o.jpg"
+    },
+    {
+      "name": "Geraldine Hughes",
+      "character": "Marie",
+      "profile_path": "/kBatdBpLl7h1vYnCOw6hRkjbspF.jpg"
+    }
+  ]
+}

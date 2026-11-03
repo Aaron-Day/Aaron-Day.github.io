@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 861,
+    "title": "Total Recall",
+    "overview": "Construction worker Douglas Quaid\u0027s obsession with the planet Mars leads him to visit Rekall, a virtual vacation company that manufactures memories. When something goes wrong during Quaid\u0027s memory implant procedure, his life turns upside down, leading him to question what is reality and what isn\u0027t.",
+    "tagline": "Get ready for the ride of your life.",
+    "runtime": 113,
+    "release_date": "1990-06-01",
+    "vote_average": 7.332,
+    "poster_path": "/wVbeL6fkbTKSmNfalj4VoAUUqJv.jpg",
+    "backdrop_path": "/x2wOlXuK4NzPDQ0OBZiJjNNOp6Y.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Quaid",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Rachel Ticotin",
+      "character": "Melina",
+      "profile_path": "/ihLzHGkgQcpUX26K5AtfG8VuYGB.jpg"
+    },
+    {
+      "name": "Sharon Stone",
+      "character": "Lori",
+      "profile_path": "/tVeUIOBzbbYuXNvi4jGxiF1ESwM.jpg"
+    },
+    {
+      "name": "Michael Ironside",
+      "character": "Richter",
+      "profile_path": "/mzHmxtKcMJjDqWxKd67mKQJFW1B.jpg"
+    }
+  ]
+}

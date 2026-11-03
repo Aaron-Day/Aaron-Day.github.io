@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 562,
+    "title": "Die Hard",
+    "overview": "High above the city of L.A. a team of terrorists has seized a building, taken hostages, and declared war. One man has manages to escape... An off-duty cop hiding somewhere inside. He\u0027s alone, tired... and the only chance anyone has got.",
+    "tagline": "40 stories of sheer adventure!",
+    "runtime": 132,
+    "release_date": "1988-07-15",
+    "vote_average": 7.817,
+    "poster_path": "/7Bjd8kfmDSOzpmhySpEhkUyK2oH.jpg",
+    "backdrop_path": "/bvk2AAH64lP2YZs02Q3jskfHT8j.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1570,
+      "name": "Die Hard Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bruce Willis",
+      "character": "John McClane",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Alan Rickman",
+      "character": "Hans Gruber",
+      "profile_path": "/1EearzPgXkmYFKvECfWNrctIFT9.jpg"
+    },
+    {
+      "name": "Alexander Godunov",
+      "character": "Karl",
+      "profile_path": "/ubA1t1Rj3dpDZkgli5D17Py0OPh.jpg"
+    },
+    {
+      "name": "Bonnie Bedelia",
+      "character": "Holly Gennaro McClane",
+      "profile_path": "/c8ou1b6MHAFYXv49LmKFBnHIozt.jpg"
+    }
+  ]
+}

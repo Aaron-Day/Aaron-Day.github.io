@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11895,
+    "title": "Police Academy 6: City Under Siege",
+    "overview": "Our favourite police men are called together to deal with a gang who rob banks and jewelers. Using their various talents as well as their extraordinary luck, the crooks stand no chance against our men and women in blue.",
+    "tagline": "The Grads are going undercover in the city to unmask the mastermind of crime.",
+    "runtime": 84,
+    "release_date": "1989-03-09",
+    "vote_average": 5.1,
+    "poster_path": "/gRFJ3xLewH1rwEplZBfKS4vGpFV.jpg",
+    "backdrop_path": "/fVuhshAl0izxOaWSqNOHLQUcoPM.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9338,
+      "name": "Police Academy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bubba Smith",
+      "character": "Hightower",
+      "profile_path": "/ew7CpCLyD4FP1zqgtxUV8jDg8cX.jpg"
+    },
+    {
+      "name": "David Graf",
+      "character": "Tackleberry",
+      "profile_path": "/oAVx2Ea0qrND2wn78m2wQtGGlz1.jpg"
+    },
+    {
+      "name": "Michael Winslow",
+      "character": "Jones",
+      "profile_path": "/uSRS2MOI1fNFAdvUgrhatBvfsvv.jpg"
+    },
+    {
+      "name": "Leslie Easterbrook",
+      "character": "Callahan",
+      "profile_path": "/cgivmDAMFWTMGKGr12Z0HjEcBgN.jpg"
+    }
+  ]
+}

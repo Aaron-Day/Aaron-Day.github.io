@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1584,
+    "title": "The School of Rock",
+    "overview": "Fired from his band and hard up for cash, guitarist and vocalist Dewey Finn finagles his way into a job as a fifth-grade substitute teacher at a private school, where he secretly begins teaching his straight-A students the finer points of rock \u0027n\u0027 roll and the power of sticking it to the man. But as the school\u2019s stern principal closes in and the Battle of the Bands looms, Dewey must risk everything to prove that rock \u0027n\u0027 roll can change lives.",
+    "tagline": "He just landed the gig of his life: 5th grade.",
+    "runtime": 110,
+    "release_date": "2003-10-03",
+    "vote_average": 7.092,
+    "poster_path": "/zXLXaepIBvFVLU25DH3wv4IPSbe.jpg",
+    "backdrop_path": "/k5MTAtE9CCi5TWA84qaFMYv3ajB.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jack Black",
+      "character": "Dewey Finn",
+      "profile_path": "/rtCx0fiYxJVhzXXdwZE2XRTfIKE.jpg"
+    },
+    {
+      "name": "Joan Cusack",
+      "character": "Rosalie Mullins",
+      "profile_path": "/59UIeHZFYrKyP20lXqijtfTXglO.jpg"
+    },
+    {
+      "name": "Mike White",
+      "character": "Ned Schneebly",
+      "profile_path": "/eJpW9GKmWh0W7enmjjZQ8MIEzoI.jpg"
+    },
+    {
+      "name": "Sarah Silverman",
+      "character": "Patty Di Marco",
+      "profile_path": "/g5G711XyVokJm2RoItpkaHa8mkQ.jpg"
+    }
+  ]
+}

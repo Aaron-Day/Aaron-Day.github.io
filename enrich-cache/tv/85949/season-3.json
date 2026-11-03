@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Next Generation",
+        "overview": "After receiving a cryptic, urgent distress call from Dr. Beverly Crusher, Admiral Jean-Luc Picard enlists help from generations old and new to embark on one final adventure: a daring mission that will change Starfleet, and his old crew forever.",
+        "air_date": "2023-02-16",
+        "runtime": 54,
+        "still_path": "/fNqxIaorxkC7gnyMqMFGMqNzMFB.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Disengage",
+        "overview": "Aided by Seven of Nine and the crew of the U.S.S. Titan, Picard makes a shocking discovery that will alter his life forever \u2013 and puts him on a collision course with the most cunning enemy he\u2019s ever encountered. Meanwhile, Raffi races to track a catastrophic weapon \u2013 and collides with a familiar ally.",
+        "air_date": "2023-02-23",
+        "runtime": 50,
+        "still_path": "/xZX5x1OVz6uMxx5jg2yDqor1PZe.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Seventeen Seconds",
+        "overview": "Picard grapples with an explosive, life-altering revelation, while the Titan and her crew try to outmaneuver a relentless Vadic in a lethal game of nautical cat and mouse. Meanwhile, Raffi and Worf uncover a nefarious plot from a vengeful enemy Starfleet has long since forgotten.",
+        "air_date": "2023-03-02",
+        "runtime": 56,
+        "still_path": "/xsvXThami3UIO48r3CsoBmRfYVB.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "No Win Scenario",
+        "overview": "With time running out, Picard, Riker and crew must confront the sins of their past and heal fresh wounds, while the Titan, dead in the water, drifts helplessly toward certain destruction within a mysterious space anomaly.",
+        "air_date": "2023-03-09",
+        "runtime": 58,
+        "still_path": "/b5J9q6byFSTnsrbnGu2mtULHm31.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Imposters",
+        "overview": "Caught by Starfleet and facing court martial, paranoia grows as Picard struggles to uncover whether a prodigal crewman from his past has returned as an ally \u2013 or an enemy hellbent on destroying them all.",
+        "air_date": "2023-03-16",
+        "runtime": 55,
+        "still_path": "/3xEOIVFQIuo93Wd71xvDf5CiLDv.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Bounty",
+        "overview": "Now on the run, Picard and the skeleton crew of the U.S.S. Titan must break into Starfleet\u0027s most top-secret facility to expose a plot that could destroy the Federation. Picard must turn to the only soul in the galaxy who can help: an old friend.",
+        "air_date": "2023-03-23",
+        "runtime": 53,
+        "still_path": "/tUPFKtRIf8F9i2svf3LE5bqR9Ax.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Dominion",
+        "overview": "Crippled, cornered, and out of options, Picard stages a gambit to trap Vadic and reveal her true motive \u2013 a gamble that puts the Titan in the crosshairs and forces Picard and Beverly to question every moral code they\u2019ve ever held.",
+        "air_date": "2023-03-30",
+        "runtime": 47,
+        "still_path": "/uZgKNVPOYtOhn5VTJrYXSPdKbHv.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Surrender",
+        "overview": "Vadic forces Picard to make an impossible choice: deliver what he can never give... or watch his crew perish. Their only salvation lies in the mind of an old friend and old foe.",
+        "air_date": "2023-04-06",
+        "runtime": 53,
+        "still_path": "/fMgCEUa1H1f0VmUfVSgcRU1MpEA.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "V\u00F5x",
+        "overview": "A devastating revelation about Jack alters the course of Picard\u2019s life forever \u2013 and uncovers a truth that threatens every soul in the Federation. The final battle begins as Picard and his crew race to save the galaxy from annihilation \u2013 but not without a gut-wrenching cost.",
+        "air_date": "2023-04-13",
+        "runtime": 48,
+        "still_path": "/oMAZoWEZQ2OKCKpL26PmUw6NMZM.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Last Generation",
+        "overview": "In a desperate last stand, Jean-Luc Picard and generations of crews both old and new fight together to save the galaxy from the greatest threat they\u2019ve ever faced.",
+        "air_date": "2023-04-20",
+        "runtime": 63,
+        "still_path": "/47WcAv4SUpUrgvI2hQ92p8ZJbXK.jpg"
+      }
+    ]
+  }
+}

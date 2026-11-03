@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7446,
+    "title": "Tropic Thunder",
+    "overview": "A group of self-absorbed actors set out to make the most expensive war film ever. When budgets skyrocket and schedules fall far behind, the director tries to save the production by leading his cast into the jungles of Southeast Asia, where they inadvertently encounter real danger.",
+    "tagline": "Get some.",
+    "runtime": 107,
+    "release_date": "2008-08-09",
+    "vote_average": 6.73,
+    "poster_path": "/zAurB9mNxfYRoVrVjAJJwGV3sPg.jpg",
+    "backdrop_path": "/4pLi4QMm0MZ9TSoF3l8qQmY9HNO.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Stiller",
+      "character": "Tugg Speedman",
+      "profile_path": "/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg"
+    },
+    {
+      "name": "Robert Downey Jr.",
+      "character": "Kirk Lazarus",
+      "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+    },
+    {
+      "name": "Jack Black",
+      "character": "Jeff Portnoy",
+      "profile_path": "/rtCx0fiYxJVhzXXdwZE2XRTfIKE.jpg"
+    },
+    {
+      "name": "Jay Baruchel",
+      "character": "Kevin Sandusky",
+      "profile_path": "/1GYJeQzPcY9Pfmc3FFsBwClkCv7.jpg"
+    }
+  ]
+}

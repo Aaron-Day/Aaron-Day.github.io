@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 39538,
+    "title": "Contagion",
+    "overview": "As an epidemic of a lethal airborne virus - that kills within days - rapidly grows, the worldwide medical community races to find a cure and control the panic that spreads faster than the virus itself.",
+    "tagline": "Nothing spreads like fear.",
+    "runtime": 106,
+    "release_date": "2011-09-08",
+    "vote_average": 6.66,
+    "poster_path": "/qL0IooP0bjXy0KXl9KEyPo22ll0.jpg",
+    "backdrop_path": "/bdmyvEdrmnj7J3RWaKXEOwYggRv.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Marion Cotillard",
+      "character": "Leonora Orantes",
+      "profile_path": "/biitzOF0GffIqFYLyOPkoiaOngQ.jpg"
+    },
+    {
+      "name": "Matt Damon",
+      "character": "Mitch Emhoff",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    },
+    {
+      "name": "Laurence Fishburne",
+      "character": "Ellis Cheever",
+      "profile_path": "/2GbXERENPpl5MmlqOLlPVaVtifD.jpg"
+    },
+    {
+      "name": "Jude Law",
+      "character": "Alan Krumwiede",
+      "profile_path": "/6UadpSbfC39WMChAcdnNunzwDxv.jpg"
+    }
+  ]
+}

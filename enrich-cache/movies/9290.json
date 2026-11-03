@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9290,
+    "title": "Crocodile Dundee in Los Angeles",
+    "overview": "After settling in the tiny Australian town of Walkabout Creek with his significant other and his young son, Mick \u0022Crocodile\u0022 Dundee is thrown for a loop when a prestigious Los Angeles newspaper offers his honey a job. The family migrates back to the United States, and Croc and son soon find themselves learning some lessons about American life -- many of them inadvertent",
+    "tagline": "He heard there was wildlife in L.A. He didn\u0027t know how wild.",
+    "runtime": 95,
+    "release_date": "2001-04-12",
+    "vote_average": 5.2,
+    "poster_path": "/hwt6iJjPuXRDKJON5s9G9pdfPbu.jpg",
+    "backdrop_path": "/nkAqmS6JgZG0ERm6tPo1MsmaFVy.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9332,
+      "name": "Crocodile Dundee Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Paul Hogan",
+      "character": "Michael J. \u0027Crocodile\u0027 Dundee",
+      "profile_path": "/1QQURn65Q2yeDCaGIaLktd6kUPx.jpg"
+    },
+    {
+      "name": "Linda Kozlowski",
+      "character": "Sue Charleton",
+      "profile_path": "/38jMpI4xsicdENV8a3K89NnXmTo.jpg"
+    },
+    {
+      "name": "Jere Burns",
+      "character": "Arnan Rothman",
+      "profile_path": "/nAWNCtD4DDOIAR63zVA4XZ4C8eg.jpg"
+    },
+    {
+      "name": "Jonathan Banks",
+      "character": "Milos Drubnik",
+      "profile_path": "/bswk26L13PvY4iMTwUTAsepXCLv.jpg"
+    }
+  ]
+}

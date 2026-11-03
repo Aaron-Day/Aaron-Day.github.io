@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9489,
+    "title": "You\u0027ve Got Mail",
+    "overview": "Book superstore magnate Joe Fox and independent book shop owner Kathleen Kelly fall in love in the anonymity of the Internet\u2014both blissfully unaware that he\u0027s trying to put her out of business.",
+    "tagline": "Someone you pass on the street may already be the love of your life.",
+    "runtime": 119,
+    "release_date": "1998-12-18",
+    "vote_average": 6.712,
+    "poster_path": "/rJLUSpmdxSMqqEsyzeCni3vy1ca.jpg",
+    "backdrop_path": "/9lYpkcO7WuruOXB2mn8ppC6Ecaq.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Meg Ryan",
+      "character": "Kathleen Kelly",
+      "profile_path": "/pxfTSfJ4yJWq52uomSWKzigngOa.jpg"
+    },
+    {
+      "name": "Tom Hanks",
+      "character": "Joe Fox",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Greg Kinnear",
+      "character": "Frank Navasky",
+      "profile_path": "/iJezGc9XjY0DFPs00SypkuKImFK.jpg"
+    },
+    {
+      "name": "Parker Posey",
+      "character": "Patricia Eden",
+      "profile_path": "/yoFt75JfGUqQ6EV8qN6fckQuElk.jpg"
+    }
+  ]
+}

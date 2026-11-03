@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Exile on Main St.",
+        "overview": "Just as Hank is released from a 72 hour jail period for assault he is picked up by Charlie and dragged off to show the recent events of F\u0026P with Mia becoming public and dropped into a meeting with a young actress that wants to capitalize on the publicity, and make a movie out of F\u0026P. whom which he later re-enacts F\u0026P in her hotel room. The episode ends with Hank hearing from his lawyer that the assault charges have been dropped and he is then arrested for statutory rape.",
+        "air_date": "2011-01-09",
+        "runtime": 28,
+        "still_path": "/t2TcWrGLmJmIedwJwNMS79jZqj3.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Suicide Solution",
+        "overview": "Hank is told he faces 3 years in prison because the DA wants to make an example of him. There are signs Marcy is pregnant. Hank tries to fix things with Becca. The episode ends as Hank high on drugs and liquor writes a letter to Becca and then passes out.",
+        "air_date": "2011-01-16",
+        "runtime": 28,
+        "still_path": "/1bP3186InnZlp85W6nCd7DAISkv.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Home Sweet Home",
+        "overview": "Hank takes advantage of the misperception that he tried to commit suicide and moves back home with Karen and Becca, but his daughter knows the truth; Charlie sets out to reach a sexual benchmark while a wealthy producer pursues Marcy.",
+        "air_date": "2011-01-23",
+        "runtime": 28,
+        "still_path": "/9wnaBpxwpx5ZQNJN0EsV1izyElk.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Monkey Business",
+        "overview": "Hank Moody is notified by his attorney Abby that he will be going to trial for statutory rape. But not before Hank hands the completed F\u0026P script to Charlie, who promptly drags him to a meeting with the Director, producer Stu Beggs and eccentric financier Zig Samitaur, setting off a chain of events that leads to Hank and Charlie having to explain why there\u2019s a dead billionaire in the bathroom.",
+        "air_date": "2011-01-30",
+        "runtime": 28,
+        "still_path": "/rceixvnVv11auuCT5rxfjvA6zvZ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Freeze-Frame",
+        "overview": "After a personal grooming mishap, Charlie discovers that his vasectomy was botched and that Marcy\u0027s baby could be his; Hank\u0027s relationship with lawyer Abby gets more personal but a good deed yields a compromising photo that could ruin Hank\u0027s life.",
+        "air_date": "2011-02-06",
+        "runtime": 28,
+        "still_path": "/64l1bjjRDlLuktSpDUEQnl0O8nL.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Lawyers, Guns and Money",
+        "overview": "A sensational photo derails Hank\u0027s case and threatens to destroy his movie project until his sincere love for Becca rescues his career, while Karen resuscitates her ex-husband\u0027s relationship with his beautiful lawyer.",
+        "air_date": "2011-02-13",
+        "runtime": 28,
+        "still_path": "/dswPNKiO7rYfVFjfIU6kYbdiBUa.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Recused",
+        "overview": "Forced by her relationship with Hank to recuse herself as his lawyer, Abby pitches the case to a senior partner on the golf course; Hank is dismayed by Karen\u0027s growing relationship with artist Ben; Marcy and Stu ask Charlie to help them pitch a TV project.",
+        "air_date": "2011-02-20",
+        "runtime": 28,
+        "still_path": "/pnEgBrRRIuHFJ4cyqAvnBBxngHV.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Lights, Camera, Asshole",
+        "overview": "Hank takes a gig rewriting dialogue on a zombie sequel but threatens his job when he hooks up with a sexy woman with close ties to the film\u0027s female lead; Marcy tells Stu she\u0027s pregnant but not that the baby may be Charlie\u0027s.",
+        "air_date": "2011-02-27",
+        "runtime": 28,
+        "still_path": "/vbksPVAXhBehy5r2A95BY2pAQz3.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Another Perfect Day",
+        "overview": "Evicted from his apartment, Hank moves back in with Karen and Becca while he prepares for his trial and teaches his daughter to drive; while Karen\u0027s out on a date with Ben, Becca and Pearl steal the Porsche and wreck it.",
+        "air_date": "2011-03-06",
+        "runtime": 28,
+        "still_path": "/sYdvvFf8hb5JSpjb1FZqhLEYjc9.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Trial",
+        "overview": "A nervous Hank discovers that he\u0027s got good reason to panic when his trial turns into an all-out character assassination, with even friendly witnesses Charlie and Karen unable to portray him as anything other than a drunken, oversexed lout.",
+        "air_date": "2011-03-13",
+        "runtime": 28,
+        "still_path": "/80POKvoaHcAOvOtD4BTxcjn18nw.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Last Supper",
+        "overview": "Found guilty of statutory rape, Hank buys a used Porsche and considers fleeing from Los Angeles, but instead enjoys one last night in the company of his friends and family.",
+        "air_date": "2011-03-20",
+        "runtime": 28,
+        "still_path": "/xKGbNMuieOs7DfQhcR30N23r4aV.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "...And Justice for All",
+        "overview": "As Hank awaits sentencing, the lines between his real life and the movie based on his life blur as the film\u0027s star hits on his ex-wife and he feels stirrings of passion for the actress hired to play Karen.",
+        "air_date": "2011-03-27",
+        "runtime": 28,
+        "still_path": "/k0JJdOg6YMBA4wPcKDpTFs1u56h.jpg"
+      }
+    ]
+  }
+}

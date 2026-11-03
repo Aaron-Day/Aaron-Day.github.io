@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Girl Meets World",
+        "overview": "When Maya leads a rebellion in class, Riley joins in to try to be like her - much to her father, Cory\u0027s, dismay.",
+        "air_date": "2014-06-27",
+        "runtime": 23,
+        "still_path": "/vJmSggFqKXD6BN3SoMQj2w0S4mA.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Girl Meets Boy",
+        "overview": "In an attempt to get the students in his class to stop texting and communicate in person, Cory gives them a homework assignment that teaches them how to communicate face to face, ultimately sparking a real connection between Riley and Lucas.",
+        "air_date": "2014-07-11",
+        "runtime": 23,
+        "still_path": "/m2JY5YS5DK3MHF1lVzF7BhC28Cz.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Girl Meets Sneak Attack",
+        "overview": "Riley becomes jealous when another girl flirts with Lucas, so she enlists Maya and Farkle\u0027s help to learn how to flirt too.",
+        "air_date": "2014-07-18",
+        "runtime": 23,
+        "still_path": "/xaCQqrLIDUws22AeyXERw4RoVzU.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Girl Meets Father",
+        "overview": "Cory struggles with Riley growing up when he learns she\u0027d rather go to the school dance then participate in their yearly tradition of riding the Coney Island roller coaster. Simultaneously, he is dealing with the outcome of giving Maya an \u0022F.\u0022",
+        "air_date": "2014-07-25",
+        "runtime": 23,
+        "still_path": "/r6bkBgSplmilfyakpDJ4JRCwbY8.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Girl Meets the Truth",
+        "overview": "After Cory teaches a lesson on truth, Riley and Maya struggle with whether or not it was right to lie to Farkle and tell him he\u2019s a good actor and if Maya should keep the locket she found, even though it doesn\u0027t belong to her.",
+        "air_date": "2014-08-01",
+        "runtime": 23,
+        "still_path": "/dWnewo9Q886VKO2VXgJMp3K1tJ7.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Girl Meets Popular",
+        "overview": "Riley is surprised when she gets invited to a party that doesn\u2019t include Maya. However, once she arrives, she soon learns it\u2019s a party filled with unpopular classmates.",
+        "air_date": "2014-08-08",
+        "runtime": 23,
+        "still_path": "/waxLuAHm6UIOO3NlKteD3uB1Zbm.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Girl Meets Maya\u0027s Mother",
+        "overview": "When Maya\u2019s artwork is featured at a school event, Riley sees it as an opportunity to help Maya mend her relationship with her mother. Meanwhile, Cory and Topanga get a surprise visit from their childhood friend Minkus.",
+        "air_date": "2014-08-15",
+        "runtime": 23,
+        "still_path": "/pJrizavpcZpSPS9FciaN66RWSMB.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Girl Meets Smackle",
+        "overview": "When Smackle, a debate champion from another school who happens to have a crush on Farkle, realizes that he only sees her as an academic rival, she enlists Maya and Riley to give her a makeover.",
+        "air_date": "2014-09-12",
+        "runtime": 23,
+        "still_path": "/vHcjj6pCk1oBu2gTUaM3qYGVv3u.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Girl Meets 1961",
+        "overview": "Cory gives the class a living-history assignment that takes the four friends back to New York City in 1961.",
+        "air_date": "2014-09-19",
+        "runtime": 23,
+        "still_path": "/pme7AFURkWaxiI8V54ogIGqdsR5.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Girl Meets Crazy Hat",
+        "overview": "Cory divides his class into two fake companies for a lesson, one driven by profits and the other by making people happy. Meanwhile, Riley and Maya encounter a lady in the subway who is quite different than they first perceive her to be.",
+        "air_date": "2014-09-26",
+        "runtime": 23,
+        "still_path": "/hSbGSj5FcT5Wav5f8KYG1tpBzl4.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Girl Meets World: of Terror",
+        "overview": "The kids face a trilogy of terror when Riley has a sleepover at Maya\u0027s with her Gammy Hart and pet ferret. Auggie confronts the monster under his bed, and Farkle tackles his most terrifying fear yet - playing softball.",
+        "air_date": "2014-10-02",
+        "runtime": 23,
+        "still_path": "/gCo4NIbtTR8uqL7REN7RXr4xTIz.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Girl Meets the Forgotten",
+        "overview": "When the kids are assigned a special lesson on appreciation, Riley and Maya are forced to work in the school cafeteria while Lucas and Farkle are assigned janitorial duty.",
+        "air_date": "2014-10-10",
+        "runtime": 23,
+        "still_path": "/13tT0LxzJJdjinxal3eUglBdJmh.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Girl Meets Flaws",
+        "overview": "A classmate teases Farkle for being different and not fitting in with the crowd.",
+        "air_date": "2014-10-17",
+        "runtime": 23,
+        "still_path": "/tnAx81C4o3iWz38m6xy33Fi2VfM.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Girl Meets Friendship",
+        "overview": "When Cory teaches his class about various forms of government, Lucas, Riley and Farkle decide to run against each other for 7th-grade class president.",
+        "air_date": "2014-11-21",
+        "runtime": 23,
+        "still_path": "/3OUYTaQk3ght9TTgDYYG7xmtY2I.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Girl Meets Brother",
+        "overview": "Cory and Topanga are going out to celebrate their anniversary and decide to let Riley babysit Auggie for the first time. She enlists Maya\u0027s help, which leads Auggie to rebel against the girls.",
+        "air_date": "2014-11-28",
+        "runtime": 23,
+        "still_path": "/bu1GGwolO32JFeZMbDAKOPmcqkt.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Girl Meets Home for the Holidays",
+        "overview": "The Matthews clan hosts holiday dinner; Riley\u0027s grandparents and her Uncle Joshua come over, while Topanga stresses about her cooking skills; Corey\u0027s best friend Shawn sees his likeness in Maya and bonds with Riley.",
+        "air_date": "2014-12-05",
+        "runtime": 23,
+        "still_path": "/pVKbDksBYq6UVRNiEjpylfZXN4i.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Girl Meets Game Night",
+        "overview": "Riley invites her friends along to join the traditional Matthews\u0027 Family Game Night, and Maya is excited to learn Riley\u0027s Uncle Josh is joining as well.",
+        "air_date": "2015-01-09",
+        "runtime": 23,
+        "still_path": "/7F98vlKfyXGvj38JiNlvhTotEJ6.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Girl Meets Master Plan",
+        "overview": "Maya is celebrating her 14th birthday with Riley and the Matthews but is struggling with the fact that her mom probably won\u0027t be able to join them. Meanwhile, Cory and Riley devise a plan to setup Maya\u0027s mom with Shawn when he pays a visit.",
+        "air_date": "2015-01-16",
+        "runtime": 23,
+        "still_path": "/isU6PH2aS2ulcdKkw7qGK4qc7KS.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Girl Meets Farkle\u0027s Choice",
+        "overview": "Farkle has to choose between Riley and Maya as dates to an awards ceremony that he attends annually. Meanwhile, Topanga, Cory, and Auggie have a book club with Auggie\u0027s girlfriend, Ava.",
+        "air_date": "2015-02-06",
+        "runtime": 23,
+        "still_path": "/hzQnE5DKtzOHrYPaUuKxwnEcQSN.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Girl Meets First Date",
+        "overview": "Cory agrees to let Lucas take Riley on a date but only if Maya and Farkle go with them as chaperones.",
+        "air_date": "2015-03-27",
+        "runtime": 23,
+        "still_path": "/gIjhZEAILohK8v4WELmzsgW9mbd.jpg"
+      }
+    ]
+  }
+}

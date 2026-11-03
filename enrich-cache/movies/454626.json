@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 454626,
+    "title": "Sonic the Hedgehog",
+    "overview": "Powered with incredible speed, Sonic The Hedgehog embraces his new home on Earth. That is, until Sonic sparks the attention of super-uncool evil genius Dr. Robotnik. Now it\u2019s super-villain vs. super-sonic in an all-out race across the globe to stop Robotnik from using Sonic\u2019s unique power for world domination.",
+    "tagline": "A whole new speed of hero.",
+    "runtime": 99,
+    "release_date": "2020-02-12",
+    "vote_average": 7.264,
+    "poster_path": "/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg",
+    "backdrop_path": "/stmYfCUGd8Iy6kAMBr6AmWqx8Bq.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 720879,
+      "name": "Sonic the Hedgehog Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Schwartz",
+      "character": "Sonic (voice)",
+      "profile_path": "/hWEQe66jXUAGVhbU5dy8s0IrrAQ.jpg"
+    },
+    {
+      "name": "James Marsden",
+      "character": "Tom Wachowski",
+      "profile_path": "/lf7OnfKZnMgNh9b98764tqSocGK.jpg"
+    },
+    {
+      "name": "Tika Sumpter",
+      "character": "Maddie Wachowski",
+      "profile_path": "/1zTXufyuQFPXVthryH7KVoZAfb7.jpg"
+    },
+    {
+      "name": "Jim Carrey",
+      "character": "Dr. Robotnik",
+      "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+    }
+  ]
+}

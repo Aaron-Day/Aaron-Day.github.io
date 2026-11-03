@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10837,
+    "title": "DuckTales: The Movie - Treasure of the Lost Lamp",
+    "overview": "With his nephews and niece, everyone\u0027s favorite rich uncle, Scrooge McDuck, treks from his mansion home in Duckburg in search of the long-lost loot of the thief Collie Baba. But finding the goods isn\u0027t quite what it\u0027s \u0022quacked\u0022 up to be! Their thrilling adventure leads to comical chaos, magical mayhem, and a lesson about what is far more valuable than money, gold and jewels.",
+    "tagline": "",
+    "runtime": 74,
+    "release_date": "1990-08-03",
+    "vote_average": 6.698,
+    "poster_path": "/tXya1Z9SC51kNOHsFxRqL1GIBua.jpg",
+    "backdrop_path": "/rpFJFmZplfOp2JzpmsWzmX72hJK.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Alan Young",
+      "character": "Scrooge (voice)",
+      "profile_path": "/9sMQDRksfRxXysHCSP98S8Z9mf8.jpg"
+    },
+    {
+      "name": "Terence McGovern",
+      "character": "Launchpad (voice)",
+      "profile_path": "/85ceNcXJd4XE0elNSxzHVCCKwuV.jpg"
+    },
+    {
+      "name": "Russi Taylor",
+      "character": "Huey / Dewey / Louie / Webby (voice)",
+      "profile_path": "/r79GVF7LyBExJP7cRMob8QQZ6IU.jpg"
+    },
+    {
+      "name": "Richard Libertini",
+      "character": "Dijon (voice)",
+      "profile_path": "/tpkGxVaGzAiY8kWmCWyeV2bjeNB.jpg"
+    }
+  ]
+}

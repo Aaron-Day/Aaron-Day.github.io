@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Eden",
+        "overview": "Clarke struggles to survive on a desolate, scorched earth while her friends in space come across a long-awaited beacon of hope.",
+        "air_date": "2018-04-24",
+        "runtime": 42,
+        "still_path": "/Ahst3NzymbNKYTwshDDyrMiEjKW.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Red Queen",
+        "overview": "Octavia is forced to take guidance from an unlikely ally when the future of the bunker and all those inside it is jeopardized.",
+        "air_date": "2018-05-01",
+        "runtime": 42,
+        "still_path": "/2zSkahpr2DKiXeZAopFSZDsGt50.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Sleeping Giants",
+        "overview": "Bellamy leads the charge investigating a potential way home. Meanwhile, Clarke and Madi deal with the new, uncertain threat to their home.",
+        "air_date": "2018-05-08",
+        "runtime": 43,
+        "still_path": "/aBvOleQMesFd7XYLC6Bj3rnYmmG.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Pandora\u0027s Box",
+        "overview": "Our Heroes are forced to rely on the help of Shallow Valley\u0027s dangerous new inhabitants in order to save some of their own, with surprising results.",
+        "air_date": "2018-05-15",
+        "runtime": 42,
+        "still_path": "/68x5ebjUNyWkPRrM6NWYtsdL4rl.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Shifting Sands",
+        "overview": "Octavia leads her people towards Shallow Valley against the advice of Clarke and Bellamy. Meanwhile, Kane and Abby adjust to a new set of challenges.",
+        "air_date": "2018-05-22",
+        "runtime": 42,
+        "still_path": "/vnL9EBCBq5l37qzHYhNUdyBkxUA.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Exit Wounds",
+        "overview": "Kane\u0027s attempt to prove himself useful tests Wonkru\u0027s allegiance to Octavia. Madi faces an unexpected threat inside Wonkru, forcing Clarke to make an unlikely ally.",
+        "air_date": "2018-06-05",
+        "runtime": 42,
+        "still_path": "/fhz3Fq7mkP37Yb1MeF9inKigq0R.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Acceptable Losses",
+        "overview": "Clarke and Bellamy make a startling discovery about Wonkru\u2019s battle plans as Echo risks her friendship with Raven to complete her mission.",
+        "air_date": "2018-06-19",
+        "runtime": 42,
+        "still_path": "/7M85pUFfGK4D68hnsNR9HjAA8pt.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "How We Get to Peace",
+        "overview": "Clarke\u2019s determination to protect Madi puts Bellamy  in an impossible position.",
+        "air_date": "2018-06-26",
+        "runtime": 42,
+        "still_path": "/ib60yXJAMOn2zlAIPFRyPVNDGop.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Sic Semper Tyrannis",
+        "overview": "The growing fractures in Wonkru threaten to explode once and for all. Meanwhile, in Shadow Valley, Murphy starts a fire, unleashing catastrophic results.",
+        "air_date": "2018-07-10",
+        "runtime": 42,
+        "still_path": "/yUPUVgNzVGnYhZkDPdGNEyB7Jcj.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Warriors Will",
+        "overview": "Monty strives to show Wonkru an alternative to war, and to the valley itself. Meanwhile, Abby\u2019s health continues to deteriorate, along with McCreary\u2019s patience.",
+        "air_date": "2018-07-17",
+        "runtime": 42,
+        "still_path": "/uc8Tbtha9vHZreKsOLtlsd2eZve.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Dark Year",
+        "overview": "As Clarke races to save Abby, she learns more about the trials and tribulations Wonkru faced in the bunker, and the impossible decisions they were forced to make in the dark year.",
+        "air_date": "2018-07-24",
+        "runtime": 42,
+        "still_path": "/hmYvmwSajYG4c4qjl00Lq3ULJo5.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Damocles (1)",
+        "overview": "Octavia leads her people into war. While behind enemy lines, our heroes must overcome their differences to save Wonkru from extinction.",
+        "air_date": "2018-07-31",
+        "runtime": 42,
+        "still_path": "/pDa9pNpMkTWBj1QfObo3BECj4J8.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Damocles (2)",
+        "overview": "Clarke and her friends must risk everything to fight one last battle for survival, only to glimpse an even darker threat to the last living valley on Earth.",
+        "air_date": "2018-08-07",
+        "runtime": 42,
+        "still_path": "/J4FtYgQpMMbvgri0klysNo9jM7.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9273,
+    "title": "Ace Ventura: When Nature Calls",
+    "overview": "Summoned from an ashram in Tibet, Ace finds himself on a perilous journey into the jungles of Africa to find Shikaka, the missing sacred animal of the friendly Wachati tribe. He must accomplish this before the wedding of the Wachati\u0027s Princess to the prince of the warrior Wachootoos. If Ace fails, the result will be a vicious tribal war.",
+    "tagline": "New animals. New adventures. Same hair.",
+    "runtime": 90,
+    "release_date": "1995-11-10",
+    "vote_average": 6.343,
+    "poster_path": "/wcinCf1ov2D6M3P7BBZkzQFOiIb.jpg",
+    "backdrop_path": "/h5Y9T4OoFpMrONhVBZvN2X2DfAB.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 3167,
+      "name": "Ace Ventura Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jim Carrey",
+      "character": "Ace Ventura",
+      "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+    },
+    {
+      "name": "Ian McNeice",
+      "character": "Fulton Greenwall",
+      "profile_path": "/v5WuiYuKmKxWZRDn3XnGJh7nCUC.jpg"
+    },
+    {
+      "name": "Simon Callow",
+      "character": "Vincent Cadby",
+      "profile_path": "/no6qlnMrWeUzSt1FjD2Vf9x992e.jpg"
+    },
+    {
+      "name": "Maynard Eziashi",
+      "character": "Ouda",
+      "profile_path": "/uiZlyHSzHYky13m7d19a41KMWLZ.jpg"
+    }
+  ]
+}

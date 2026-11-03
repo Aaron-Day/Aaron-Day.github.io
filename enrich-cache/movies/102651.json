@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 102651,
+    "title": "Maleficent",
+    "overview": "A beautiful, pure-hearted young woman, Maleficent has an idyllic life growing up in a peaceable forest kingdom, until one day when an invading army threatens the harmony of the land. She rises to be the land\u0027s fiercest protector, but she ultimately suffers a ruthless betrayal \u2013 an act that begins to turn her heart into stone. Bent on revenge, Maleficent faces an epic battle with the invading King\u0027s successor and, as a result, places a curse upon his newborn infant Aurora. As the child grows, Maleficent realizes that Aurora holds the key to peace in the kingdom \u2013 and to Maleficent\u0027s true happiness as well.",
+    "tagline": "Don\u0027t believe the fairy tale.",
+    "runtime": 97,
+    "release_date": "2014-05-28",
+    "vote_average": 7.089,
+    "poster_path": "/ik8PugpL41s137RAWEGTAWu0dPo.jpg",
+    "backdrop_path": "/xjotE7aFdZ0D8aGriYjFOtDayct.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531331,
+      "name": "Maleficent Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Angelina Jolie",
+      "character": "Maleficent",
+      "profile_path": "/bXNxIKcJ5cNNW8QFrBPWcfTSu9x.jpg"
+    },
+    {
+      "name": "Elle Fanning",
+      "character": "Aurora",
+      "profile_path": "/hGL46Q5bkVkQbKAT0SrXcV6ZvRg.jpg"
+    },
+    {
+      "name": "Imelda Staunton",
+      "character": "Knotgrass",
+      "profile_path": "/tABRYOHUQeaUCAqrelJV5ZHjl1W.jpg"
+    },
+    {
+      "name": "Sharlto Copley",
+      "character": "Stefan",
+      "profile_path": "/em89OJJvBRX7kNJJPASmNKQujsC.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 673,
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "overview": "Year three at Hogwarts means new fun and new challenges as Harry learns the delicate art of approaching a Hippogriff, transforming shape-shifting Boggarts into hilarity and even turning back time. But the term also brings danger: soul-sucking Dementors hover over the school, an ally of the accursed He-Who-Cannot-Be-Named lurks within the castle walls, and fearsome wizard Sirius Black escapes Azkaban. And Harry will confront them all.",
+    "tagline": "Something wicked this way comes.",
+    "runtime": 141,
+    "release_date": "2004-05-31",
+    "vote_average": 8.014,
+    "poster_path": "/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
+    "backdrop_path": "/htmYEfH7TQgzsXHCnNXxmoYKQtL.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1241,
+      "name": "Harry Potter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Radcliffe",
+      "character": "Harry Potter",
+      "profile_path": "/uUFfo8RANo7tuckB6AZAnESne55.jpg"
+    },
+    {
+      "name": "Rupert Grint",
+      "character": "Ron Weasley",
+      "profile_path": "/iFlkpTaOF6fGLqxz8b0PhI0i0zN.jpg"
+    },
+    {
+      "name": "Emma Watson",
+      "character": "Hermione Granger",
+      "profile_path": "/mf0OANvWYSzU1d8yggrhyw8IbIz.jpg"
+    },
+    {
+      "name": "Robbie Coltrane",
+      "character": "Rubeus Hagrid",
+      "profile_path": "/kK4YIz7SUdhbPndApdi12CsZ43K.jpg"
+    }
+  ]
+}

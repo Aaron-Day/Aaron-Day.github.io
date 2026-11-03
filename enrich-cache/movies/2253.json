@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2253,
+    "title": "Valkyrie",
+    "overview": "Wounded in Africa during World War II, Nazi Col. Claus von Stauffenberg returns to his native Germany and joins the Resistance in a daring plan to create a shadow government and assassinate Adolf Hitler. When events unfold so that he becomes a central player, he finds himself tasked with both leading the coup and personally killing the F\u00FChrer.",
+    "tagline": "Many saw evil. They dared to stop it.",
+    "runtime": 121,
+    "release_date": "2008-12-25",
+    "vote_average": 6.963,
+    "poster_path": "/8eoRtXswC8IQDsqW7iJWO56NhAv.jpg",
+    "backdrop_path": "/1F7cnW3Tf8IDJO64MxtuPhHDcQp.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Claus Schenk Graf von Stauffenberg",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Kenneth Branagh",
+      "character": "Henning von Tresckow",
+      "profile_path": "/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
+    },
+    {
+      "name": "Bill Nighy",
+      "character": "Friedrich Olbricht",
+      "profile_path": "/ixFI2YCGNGJfwlpI8iyhvVZRg8C.jpg"
+    },
+    {
+      "name": "Terence Stamp",
+      "character": "Ludwig Beck",
+      "profile_path": "/ept9urkuhPbGndVXkERw39R9oid.jpg"
+    }
+  ]
+}

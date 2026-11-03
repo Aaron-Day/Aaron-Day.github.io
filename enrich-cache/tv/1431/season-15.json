@@ -1,0 +1,152 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 15,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The CSI Effect",
+        "overview": "Finlay must deal with a bomb planted in her car. Russell gets a call from someone claiming to be the Gig Harbor killer.",
+        "air_date": "2014-09-28",
+        "runtime": 43,
+        "still_path": "/rXkELiQIrvzJlqvz71YEGCLCJ8S.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Buzz Kill",
+        "overview": "The CSI team investigates a robbery and fatal shooting at a medical marijuana shop.",
+        "air_date": "2014-10-05",
+        "runtime": 43,
+        "still_path": "/8BXdgwaovVfdwY78UQ5NSJM9zG.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Bad Blood",
+        "overview": "Sara and Greg are quarantined after responding to a crime scene that\u2019s contaminated with a deadly pathogen.",
+        "air_date": "2014-10-12",
+        "runtime": 43,
+        "still_path": "/3sONRFs1kfEOY8g6g577Jfbve6W.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Book of Shadows",
+        "overview": "A chemistry teacher\u0027s science experiment goes horribly wrong.",
+        "air_date": "2014-10-19",
+        "runtime": 43,
+        "still_path": "/are5gFsOW5Kv69Jaodwtl0wOqbd.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Girls Gone Wilder",
+        "overview": "Morgan, Sara and Fin try to relax at a forensics conference when a mass shooting occurs on site.",
+        "air_date": "2014-11-09",
+        "runtime": 42,
+        "still_path": "/cgeOLhbalGqpcttPyPaLGXxYVa.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Twin Paradox",
+        "overview": "Frustration mounts for the CSI team as another victim surfaces who is linked to the Gig Harbor Killer.",
+        "air_date": "2014-11-16",
+        "runtime": 43,
+        "still_path": "/qYjhg2YtisoRctfNNZLS5suPfCc.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Road to Recovery",
+        "overview": "The CSI team take a look into the death of a woman who has been drinking and taking drugs in a pool at a rehab facility.",
+        "air_date": "2014-11-23",
+        "runtime": 42,
+        "still_path": "/eSJgAQnFTZ6erFmFiIfYlVAVHEb.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Rubbery Homicide",
+        "overview": "The CSI team find themselves taking a look into the kinky world of \u201Crubber dolls\u201D as they investigate the murder of a man stabbed in an alley.",
+        "air_date": "2014-11-30",
+        "runtime": 43,
+        "still_path": "/mFfPS70ATVbBtzOsmButNlOYojc.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Let\u0027s Make a Deal",
+        "overview": "The CSI team investigates a murder at Clark County jail after an inmate stumbles upon a body while running away from officers.",
+        "air_date": "2014-12-07",
+        "runtime": 43,
+        "still_path": "/mQPpLrbYggGJpqCPPFzgCBOSa6M.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Dead Rails",
+        "overview": "The CSI team investigates the bizarre death of a man who was killed not once, but twice.",
+        "air_date": "2014-12-14",
+        "runtime": 42,
+        "still_path": "/9c3nXa89zMm72syais1u410SxUV.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Angle of Attack",
+        "overview": "The CSIs\u0027 investigation of the victim of an apparent hit and run leads them into the world of aeronautics.",
+        "air_date": "2014-12-21",
+        "runtime": 43,
+        "still_path": "/qVNhOH9REQF6O4e3gI0A5F8PbzR.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Dead Woods",
+        "overview": "The CSI team reopens a 10-year-old murder/suicide case when the sole survivor claims her accused father was innocent.",
+        "air_date": "2014-12-28",
+        "runtime": 43,
+        "still_path": "/hfGankRtQZ0j4XeAIisimx0cils.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Greater Good",
+        "overview": "The CSI team continues their investigation into the kidnappings and murders of young women when they learn their main suspect, Jared Briscoe, is released from jail due to lack of evidence.",
+        "air_date": "2015-01-04",
+        "runtime": 44,
+        "still_path": "/oy30HrX6xTk2yyo1wtNH2vxEEap.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Merchants of Menace",
+        "overview": "The CSI team investigates a homicide at a convention for people who collect macabre murder memorabilia.",
+        "air_date": "2015-01-25",
+        "runtime": 43,
+        "still_path": "/vE0df3W81JS3v1OCbJwMtKmwFwz.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Hero to Zero",
+        "overview": "The CSI team investigates the murder of a young victim dressed as a superhero.",
+        "air_date": "2015-01-25",
+        "runtime": 44,
+        "still_path": "/vbhma4SXybDjFRlDFx1zEfpJ5hj.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Last Ride",
+        "overview": "The CSI team investigates a death involving a vintage Rolls Royce and a chrome-covered victim.",
+        "air_date": "2015-01-27",
+        "runtime": 43,
+        "still_path": "/pJnWS2MxlIFsDIsAdFzjtyICORO.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Under My Skin",
+        "overview": "The CSI team investigates a murder with ties to two teenaged kidnapped girls.",
+        "air_date": "2015-02-15",
+        "runtime": 42,
+        "still_path": "/yb92uR3ZbubMdoXeaV8vtZkKTbx.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The End Game",
+        "overview": "The CSI unit faces the final showdown with the Gig Harbor killer whose motives are finally revealed. Meanwhile, Nick Stokes makes a decision that will affect the entire team moving forward.",
+        "air_date": "2015-02-15",
+        "runtime": 43,
+        "still_path": "/nqwhOYpGyppa7yqQXdb1tTFpcin.jpg"
+      }
+    ]
+  }
+}

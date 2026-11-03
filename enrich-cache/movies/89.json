@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 89,
+    "title": "Indiana Jones and the Last Crusade",
+    "overview": "In 1938, an art collector appeals to eminent archaeologist Dr. Indiana Jones to embark on a search for the Holy Grail. Indy learns that a medieval historian has vanished while searching for it, and the missing man is his own father, Dr. Henry Jones Sr.. He sets out to rescue his father by following clues in the old man\u0027s notebook, which his father had mailed to him before he went missing. Indy arrives in Venice, where he enlists the help of a beautiful academic, Dr. Elsa Schneider, along with Marcus Brody and Sallah. Together they must stop the Nazis from recovering the power of eternal life and taking over the world!",
+    "tagline": "Have the adventure of your life keeping up with the Joneses.",
+    "runtime": 127,
+    "release_date": "1989-05-24",
+    "vote_average": 7.858,
+    "poster_path": "/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg",
+    "backdrop_path": "/7KGdTzKux4fp5sW7hUM33NWqBU1.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 84,
+      "name": "Indiana Jones Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "Indiana Jones",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Sean Connery",
+      "character": "Professor Henry Jones",
+      "profile_path": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+      "name": "Denholm Elliott",
+      "character": "Marcus Brody",
+      "profile_path": "/qqgkT4QMMUbiFztfcUVLPYRXAxD.jpg"
+    },
+    {
+      "name": "Alison Doody",
+      "character": "Elsa",
+      "profile_path": "/q5CpMFAjLP40JHgwS6qWku6arSC.jpg"
+    }
+  ]
+}

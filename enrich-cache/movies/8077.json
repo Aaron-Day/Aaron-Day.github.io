@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8077,
+    "title": "Alien\u00B3",
+    "overview": "After escaping with Newt and Hicks from the alien planet, Ripley crash lands on Fiorina 161, a prison planet and host to a correctional facility. Unfortunately, although Newt and Hicks do not survive the crash, a more unwelcome visitor does. The prison does not allow weapons of any kind, and with aid being a long time away, the prisoners must simply survive in any way they can.",
+    "tagline": "3 times the suspense. 3 times the danger. 3 times the terror",
+    "runtime": 114,
+    "release_date": "1992-05-22",
+    "vote_average": 6.389,
+    "poster_path": "/xh5wI0UoW7DfS1IyLy3d2CgrCEP.jpg",
+    "backdrop_path": "/lU0zVj8KcQVkPczdGGraYGiRC72.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8091,
+      "name": "Alien Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sigourney Weaver",
+      "character": "Ripley",
+      "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+    },
+    {
+      "name": "Charles S. Dutton",
+      "character": "Dillon",
+      "profile_path": "/eNLs4JLILqSY50Tq5QMkrlBxD0H.jpg"
+    },
+    {
+      "name": "Charles Dance",
+      "character": "Clemens",
+      "profile_path": "/28ElvRC5ftOSzZBFM0cn4XrwH36.jpg"
+    },
+    {
+      "name": "Paul McGann",
+      "character": "Golic",
+      "profile_path": "/4NAtQI30CAaJuQRiot9twe7J9t9.jpg"
+    }
+  ]
+}

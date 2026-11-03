@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9360,
+    "title": "Anaconda",
+    "overview": "A \u0027National Geographic\u0027 film crew is taken hostage by an insane hunter, who takes them along on his quest to capture the world\u0027s largest \u2014 and deadliest \u2014 snake.",
+    "tagline": "When you can\u0027t breathe, you can\u0027t scream.",
+    "runtime": 90,
+    "release_date": "1997-04-11",
+    "vote_average": 5.291,
+    "poster_path": "/33NysOnLpLZY0ewHTcfpalzAsRG.jpg",
+    "backdrop_path": "/e2oO1FPwMiDEi119rJJspYI6TiG.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 105995,
+      "name": "Anaconda Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jennifer Lopez",
+      "character": "Terri Flores",
+      "profile_path": "/aTUyQzZ9w6EJq5VXWX3C2ewZTAF.jpg"
+    },
+    {
+      "name": "Ice Cube",
+      "character": "Danny Rich",
+      "profile_path": "/9EghwabQ1wIQT4oN69qtPlzqGn4.jpg"
+    },
+    {
+      "name": "Jon Voight",
+      "character": "Paul Serone",
+      "profile_path": "/oxLsItDwLddXu8YYJCfkddYNejL.jpg"
+    },
+    {
+      "name": "Eric Stoltz",
+      "character": "Dr. Steven Cale",
+      "profile_path": "/idFuM00MeVmwGAiqvDaJcBiLAmD.jpg"
+    }
+  ]
+}

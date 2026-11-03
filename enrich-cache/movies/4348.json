@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4348,
+    "title": "Pride \u0026 Prejudice",
+    "overview": "A story of love and life among the landed English gentry during the Georgian era. Mr. Bennet is a gentleman living in Hertfordshire with his overbearing wife and five daughters, but if he dies their house will be inherited by a distant cousin whom they have never met, so the family\u0027s future happiness and security is dependent on the daughters making good marriages.",
+    "tagline": "Sometimes the last person on earth you want to be with is the one person you can\u0027t be without.",
+    "runtime": 128,
+    "release_date": "2005-09-16",
+    "vote_average": 8.052,
+    "poster_path": "/o8UhmEbWPHmTUxP0lMuCoqNkbB3.jpg",
+    "backdrop_path": "/1Onam6oWyFAUCcoxtdWkACtEiNr.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Keira Knightley",
+      "character": "Elizabeth Bennet",
+      "profile_path": "/bRC1B2VwV0wK3ElciFAK6QZf2wD.jpg"
+    },
+    {
+      "name": "Matthew Macfadyen",
+      "character": "Mr. Darcy",
+      "profile_path": "/sFaIfkykJdftwrc3BdEfpdg2mYW.jpg"
+    },
+    {
+      "name": "Brenda Blethyn",
+      "character": "Mrs. Bennet",
+      "profile_path": "/mxENo8tEvN0998PrNidYkN4wGGO.jpg"
+    },
+    {
+      "name": "Rosamund Pike",
+      "character": "Jane Bennet",
+      "profile_path": "/8ObNklHDi2hjdz0ayzJFB9jtqzm.jpg"
+    }
+  ]
+}

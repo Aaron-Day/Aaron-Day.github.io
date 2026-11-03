@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 487186,
+    "title": "Halo: Nightfall",
+    "overview": "Set between the events of Halo 4 and Halo 5: Guardians\u2026 Halo: Nightfall tells the dramatic story of legendary man hunter and Naval Intelligence Officer Jameson Locke and his team as they are caught in a horrific biological attack while investigating terrorist activity on the distant colony world of Sedra. As they unravel a plot that draws them to an ancient, hellish artifact, they will be forced to fight for their survival, question everything and ultimately choose between their loyalty and their lives.",
+    "tagline": "Survival Is A Choice",
+    "runtime": 119,
+    "release_date": "2014-02-05",
+    "vote_average": 6.8,
+    "poster_path": "/liLQ8EFzHN06eFZ9KQMDK6cmGaK.jpg",
+    "backdrop_path": "/jAXel5sHK1bnv9lL1U4HOkdxuD9.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Mike Colter",
+      "character": "Jameson Locke",
+      "profile_path": "/9LG9AzoY2ak6M2kwhKlGkLOUUot.jpg"
+    },
+    {
+      "name": "Alexis Rodney",
+      "character": "Arris",
+      "profile_path": "/neKWhXFdb6b2ckg4UJORaxDruab.jpg"
+    },
+    {
+      "name": "Alexander Bhat",
+      "character": "Estrin",
+      "profile_path": "/oSsLhbq7yQN3f60A92WmMn92eo.jpg"
+    },
+    {
+      "name": "Sarah Armstrong",
+      "character": "Jordan Gaines",
+      "profile_path": "/r5BZfJbUx6HhtNF1j0V0HpM3M9g.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 321612,
+    "title": "Beauty and the Beast",
+    "overview": "A live-action adaptation of Disney\u0027s version of the classic tale of a cursed prince and a beautiful young woman who helps him break the spell.",
+    "tagline": "Be our guest.",
+    "runtime": 129,
+    "release_date": "2017-03-16",
+    "vote_average": 6.973,
+    "poster_path": "/hKegSKIDep2ewJWPUQD7u0KqFIp.jpg",
+    "backdrop_path": "/uU1Mt4JWhDvl4vKb3AfxNsorkoM.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Emma Watson",
+      "character": "Belle",
+      "profile_path": "/mf0OANvWYSzU1d8yggrhyw8IbIz.jpg"
+    },
+    {
+      "name": "Dan Stevens",
+      "character": "Beast",
+      "profile_path": "/fFsgginZKH527o38ZfdDxuzx7Ew.jpg"
+    },
+    {
+      "name": "Luke Evans",
+      "character": "Gaston",
+      "profile_path": "/qUkYJcrDc4M0LHNYASs30luFvw0.jpg"
+    },
+    {
+      "name": "Josh Gad",
+      "character": "LeFou",
+      "profile_path": "/17iKlfWZBDTAucqjkhRKHr9xjIz.jpg"
+    }
+  ]
+}

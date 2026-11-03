@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 522931,
+    "title": "Hitman\u0027s Wife\u0027s Bodyguard",
+    "overview": "The world\u2019s most lethal odd couple \u2013 bodyguard Michael Bryce and hitman Darius Kincaid \u2013 are back on another life-threatening mission. Still unlicensed and under scrutiny, Bryce is forced into action by Darius\u0027s even more volatile wife, the infamous international con artist Sonia Kincaid. As Bryce is driven over the edge by his two most dangerous protectees, the trio get in over their heads in a global plot and soon find that they are all that stand between Europe and a vengeful and powerful madman.",
+    "tagline": "Hit me baby, one more time.",
+    "runtime": 117,
+    "release_date": "2021-06-14",
+    "vote_average": 6.625,
+    "poster_path": "/6zwGWDpY8Zu0L6W4SYWERBR8Msw.jpg",
+    "backdrop_path": "/bjIPzixuWnOzxDG25WaXKuy9lYZ.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 608101,
+      "name": "The Hitman\u0027s Bodyguard Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ryan Reynolds",
+      "character": "Michael Bryce",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Darius Kincaid",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Salma Hayek Pinault",
+      "character": "Sonia Kincaid",
+      "profile_path": "/3j8MpAjyopkAc8mbNiDeXyqBmcS.jpg"
+    },
+    {
+      "name": "Antonio Banderas",
+      "character": "Aristotle Papdopolous",
+      "profile_path": "/lpzfDt22374NPhOXZpUq74e9mfw.jpg"
+    }
+  ]
+}

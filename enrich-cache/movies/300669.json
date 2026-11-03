@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 300669,
+    "title": "Don\u0027t Breathe",
+    "overview": "A group of teens break into a blind man\u0027s home thinking they\u0027ll get away with the perfect crime. They\u0027re wrong.",
+    "tagline": "This house looked like an easy target, until they found what was inside.",
+    "runtime": 89,
+    "release_date": "2016-06-08",
+    "vote_average": 7.02,
+    "poster_path": "/dSxHyPZ2nipSfvdft4IhQKjk5eZ.jpg",
+    "backdrop_path": "/3mIVOqDbYeucnw09TpjgHvSjXfu.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 748919,
+      "name": "Don\u0027t Breathe Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Stephen Lang",
+      "character": "The Blind Man",
+      "profile_path": "/gnO5VfkDgA2fsHweD0622LUY3Hu.jpg"
+    },
+    {
+      "name": "Jane Levy",
+      "character": "Rocky",
+      "profile_path": "/iYyWPOOpZgAqZK6IddSaD4R9QW3.jpg"
+    },
+    {
+      "name": "Dylan Minnette",
+      "character": "Alex",
+      "profile_path": "/acjK192xObchDXIHv17OjE5FkK0.jpg"
+    },
+    {
+      "name": "Daniel Zovatto",
+      "character": "Money",
+      "profile_path": "/oDD8ioAU8w7Lhp92DpU9lU1XkXX.jpg"
+    }
+  ]
+}

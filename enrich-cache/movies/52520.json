@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 52520,
+    "title": "Underworld: Awakening",
+    "overview": "Having escaped years of imprisonment, vampire warrioress Selene finds herself in a changed world where humans have discovered the existence of both Vampire and Lycan clans and are conducting an all-out war to eradicate both immortal species. Now Selene must battle the humans and a frightening new breed of super Lycans to ensure the death dealers\u0027 survival.",
+    "tagline": "Vengeance Returns",
+    "runtime": 88,
+    "release_date": "2012-01-19",
+    "vote_average": 6.335,
+    "poster_path": "/jN0uuc8U6M3sTg9zEaliJV60Stf.jpg",
+    "backdrop_path": "/wJJJS5ey53DqJ3cTuu7GFJsRsWu.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2326,
+      "name": "Underworld Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kate Beckinsale",
+      "character": "Selene",
+      "profile_path": "/aoIQJzrWRtq9mOeaPadzpUCAaVd.jpg"
+    },
+    {
+      "name": "Stephen Rea",
+      "character": "Dr. Jacob Lane",
+      "profile_path": "/n52WDwObYghPTfV1TZ1EOVIWUGS.jpg"
+    },
+    {
+      "name": "Michael Ealy",
+      "character": "Detective Sebastian",
+      "profile_path": "/rOaJMKiy2JcwhRuJZ977kOvFQRS.jpg"
+    },
+    {
+      "name": "Theo James",
+      "character": "David",
+      "profile_path": "/g4yeW1EgIpyht0fy1stv7EXUmPC.jpg"
+    }
+  ]
+}

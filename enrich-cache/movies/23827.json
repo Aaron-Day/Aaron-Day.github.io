@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 23827,
+    "title": "Paranormal Activity",
+    "overview": "After a young, middle-class couple moves into what seems like a typical suburban house, they become increasingly disturbed by a presence that may or may not be demonic, but is certainly the most active in the middle of the night.",
+    "tagline": "What happens when you sleep?",
+    "runtime": 86,
+    "release_date": "2009-09-25",
+    "vote_average": 6.061,
+    "poster_path": "/tmclkEpjeo4Zu564gf3KrwIOuKw.jpg",
+    "backdrop_path": "/wfCdJ0MD1hYJzlaHulolNw5pYtR.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 41437,
+      "name": "Paranormal Activity Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Katie Featherston",
+      "character": "Katie Featherston",
+      "profile_path": "/mdbMy2B70PiFp0ckLo6WhSLDbR2.jpg"
+    },
+    {
+      "name": "Micah Sloat",
+      "character": "Micah Sloat",
+      "profile_path": "/gF7ndGTcfBo7FMCaycY4ZTxAwxJ.jpg"
+    },
+    {
+      "name": "Mark Fredrichs",
+      "character": "The Psychic",
+      "profile_path": "/dvNrTOC79mPEKY7XkxN8xOOIn3a.jpg"
+    },
+    {
+      "name": "Amber Armstrong",
+      "character": "Amber",
+      "profile_path": "/uZKP5k8V4x1omPOWYTReqJyAFOT.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 567609,
+    "title": "Ready or Not",
+    "overview": "A young bride\u0027s wedding night turns into her worst nightmare when her ridiculously rich in-laws force her to play a gruesome game of hide-and-seek.",
+    "tagline": "A killer game of hide and seek.",
+    "runtime": 96,
+    "release_date": "2019-08-21",
+    "vote_average": 7.097,
+    "poster_path": "/oJD9KQFoObZmxAS1je56SIFVNJt.jpg",
+    "backdrop_path": "/oJ1MIABA0WF0a7MDVQnnMvBdex8.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1267164,
+      "name": "Ready or Not Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Samara Weaving",
+      "character": "Grace",
+      "profile_path": "/ngVKl0sxrut5PPMAIDsfXrVjA1R.jpg"
+    },
+    {
+      "name": "Adam Brody",
+      "character": "Daniel",
+      "profile_path": "/qKBWrohBYegm6AAaLrtxEqqouIK.jpg"
+    },
+    {
+      "name": "Mark O\u0027Brien",
+      "character": "Alex",
+      "profile_path": "/8ckgltvlife4BBJcBpHEQWXfQ9p.jpg"
+    },
+    {
+      "name": "Henry Czerny",
+      "character": "Tony",
+      "profile_path": "/zOWZzRmliKf9032IOOq0a3jXhVv.jpg"
+    }
+  ]
+}

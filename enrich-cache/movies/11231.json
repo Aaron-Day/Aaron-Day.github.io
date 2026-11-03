@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11231,
+    "title": "The Next Karate Kid",
+    "overview": "Mr. Miyagi decides to take Julie, a troubled teenager, under his wing after he learns that she blames herself for her parents\u0027 demise and struggles to adjust with her grandmother and fellow pupils.",
+    "tagline": "It\u0027s ancient wisdom against teenage spunk. 1,000 years of karate tradition is about to get a kick in the pants.",
+    "runtime": 107,
+    "release_date": "1994-07-18",
+    "vote_average": 5.393,
+    "poster_path": "/wI3gCi9w1cuUJCiwhviAy46we9Q.jpg",
+    "backdrop_path": "/kgqgbPB2snzVlkMkQjYAvmF1hkc.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8580,
+      "name": "The Karate Kid Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Pat Morita",
+      "character": "Miyagi",
+      "profile_path": "/dwnjbEvhKRanS5xTaI1NkZ98aM9.jpg"
+    },
+    {
+      "name": "Hilary Swank",
+      "character": "Julie Pierce",
+      "profile_path": "/uin6aAehUGpPCiJCaSjZG8B7M7d.jpg"
+    },
+    {
+      "name": "Michael Ironside",
+      "character": "Dugan",
+      "profile_path": "/mzHmxtKcMJjDqWxKd67mKQJFW1B.jpg"
+    },
+    {
+      "name": "Constance Towers",
+      "character": "Louisa",
+      "profile_path": "/7zuktmfwrpZQ9h3Q7wYddZxnOaz.jpg"
+    }
+  ]
+}

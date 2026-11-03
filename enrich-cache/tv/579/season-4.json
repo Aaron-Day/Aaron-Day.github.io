@@ -1,0 +1,128 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Back to Basics",
+        "overview": "The contestants start off their weight-loss journey by being dropped off in the middle of the desert, while their trainers standby about a mile away from them. The first two to reach their trainers will become the team captains, allowing them to pick their five teammates. However, this means the six remaining contestants have to be sent home, but Jillian Michaels returns to let them in on a little secret.",
+        "air_date": "2007-09-11",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 2,
+        "name": "The Secret Black Team is Revealed!",
+        "overview": "Bob and Kim prepare their teams for this week\u0027s challenge: racing up the stairs of a 10-story building. With immunity as the prize, both teams will have to do their best. Meanwhile, the secret black team, trained by Jillian Michaels, is finally revealed to the other contestants, who will join them in competing for the title of \u0022The Biggest Loser\u0022 and $250,000.",
+        "air_date": "2007-09-18",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 3,
+        "name": "The Pressure of Temptation",
+        "overview": "When the teams are put in a room full of tempting, unhealthy foods, they will have to decide in four minutes if it is worth it or not to eat the most calories in order to win a three-pound pass which can be used to their advantage at the weigh-in. In the challenge, the contestants will compete in three different 100-meter heats against a yellow team formed by three kids, where the winning team will win a phone call home.",
+        "air_date": "2007-09-25",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 4,
+        "name": "Bidding Wars",
+        "overview": "Another food temptation this week puts the trainers to the test instead of the contestants. Should Bob, Kim or Jillian give in to the temptation, it will give their team a 15-second advantage in the physical challenge. The challenge consists of the contestants running up and down a hill to reach their team flag in the fastest time. However, there is one catch: the teams will have to outbid each other with a faster time in hopes that someone will wager lower and lose, which will end up knocking out a team.",
+        "air_date": "2007-10-02",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 5,
+        "name": "Surprise Getaway",
+        "overview": "Alison surprises all three teams with an exotic getaway vacation, but they soon learn that they will be faced with temptations and challenges unlike any they have faced at the campus. Later, after the weigh-in, those who lost will try to forge an alliance with the others before deciding who to vote off.",
+        "air_date": "2007-10-09",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 6,
+        "name": "Lively Beach Competition",
+        "overview": "",
+        "air_date": "2007-10-16",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 7,
+        "name": "Weigh-In Shocker",
+        "overview": "",
+        "air_date": "2007-10-23",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 8,
+        "name": "Most Emotional Elimination So Far of the Season",
+        "overview": "",
+        "air_date": "2007-10-30",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 9,
+        "name": "Biggest Losers Go Green",
+        "overview": "",
+        "air_date": "2007-11-06",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 10,
+        "name": "A Taste of Home",
+        "overview": "",
+        "air_date": "2007-11-13",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 11,
+        "name": "Memorable Makeovers",
+        "overview": "",
+        "air_date": "2007-11-20",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 12,
+        "name": "Viewers Choose the Challenge",
+        "overview": "",
+        "air_date": "2007-11-27",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 13,
+        "name": "A Slice of Temptation",
+        "overview": "",
+        "air_date": "2007-12-04",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 14,
+        "name": "Five Remaining Players Compete for Spot on Finale",
+        "overview": "",
+        "air_date": "2007-12-11",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 15,
+        "name": "\u0022Biggest Loser\u0022 Revealed in Season Finale!",
+        "overview": "",
+        "air_date": "2007-12-18",
+        "runtime": 90,
+        "still_path": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13335,
+    "title": "Harold \u0026 Kumar Escape from Guantanamo Bay",
+    "overview": "Having satisfied their urge for White Castle, Harold and Kumar jump on a plane to catch up with Harold\u0027s love interest, who\u0027s headed for the Netherlands. But the pair must change their plans when Kumar is accused of being a terrorist. Rob Corddry also stars in this wild comedy sequel that follows the hapless stoners\u0027 misadventures as they try to avoid being captured by the Department of Homeland Security.",
+    "tagline": "This time they\u0027re running from the joint.",
+    "runtime": 101,
+    "release_date": "2008-04-25",
+    "vote_average": 6.324,
+    "poster_path": "/gmXKlm8c8O7JEISYP4WiWq2x3We.jpg",
+    "backdrop_path": "/6purgydDOA74TsuAF0VJpp1hFYw.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 30663,
+      "name": "Harold \u0026 Kumar Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "John Cho",
+      "character": "Harold Lee",
+      "profile_path": "/4Lar4uy8gk78cEocq6ERPRFWt3e.jpg"
+    },
+    {
+      "name": "Kal Penn",
+      "character": "Kumar Patel",
+      "profile_path": "/yICM1JcxKbEpaqTUreY0yFMIc8W.jpg"
+    },
+    {
+      "name": "Neil Patrick Harris",
+      "character": "Neil Patrick Harris",
+      "profile_path": "/r2twLWLwDpKJ7JyhWsD1YsL7rJV.jpg"
+    },
+    {
+      "name": "Rob Corddry",
+      "character": "Ron Fox",
+      "profile_path": "/AjCLr5ZjP6iiP8D6SHQVCZ720nA.jpg"
+    }
+  ]
+}

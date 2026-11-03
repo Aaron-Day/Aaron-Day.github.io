@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2080,
+    "title": "X-Men Origins: Wolverine",
+    "overview": "After seeking to live a normal life after 200 years, Logan sets out to avenge a death by undergoing the mutant Weapon X program and becoming Wolverine.",
+    "tagline": "Witness the origin.",
+    "runtime": 107,
+    "release_date": "2009-04-28",
+    "vote_average": 6.299,
+    "poster_path": "/yj8LbTju1p7CUJg7US2unSBk33s.jpg",
+    "backdrop_path": "/p4GzAzjlL7lXIVGvayg7zvzGTSi.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 453993,
+      "name": "The Wolverine Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Hugh Jackman",
+      "character": "Logan / Wolverine",
+      "profile_path": "/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Liev Schreiber",
+      "character": "Victor Creed",
+      "profile_path": "/26G7QjSb5ZazgWb9XB2X6SwcILQ.jpg"
+    },
+    {
+      "name": "Danny Huston",
+      "character": "Stryker",
+      "profile_path": "/mNz9t7MNANopavbLgcsZMMQBJ0u.jpg"
+    },
+    {
+      "name": "Lynn Collins",
+      "character": "Kayla Silverfox",
+      "profile_path": "/ajPwDxFs3D0gbsaphHyB0ufWc3V.jpg"
+    }
+  ]
+}

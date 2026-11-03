@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "Detective Sherlock Holmes, along with his sober companion, Dr. Joan Watson, uses his uncanny ability to read people and analyze crimes to assist the NYPD on some of their more difficult cases. In the season premiere, Holmes consults on a home invasion that resulted in murder.",
+        "air_date": "2012-09-27",
+        "runtime": 46,
+        "still_path": "/14PEsYWrZGYaQONPxQHaHjqufK5.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "While You Were Sleeping",
+        "overview": "Sherlock uses his powers of deduction to consult on the murder of a young man who is shot upon entering his apartment. Meanwhile, Watson has dinner with her ex-boyfriend, Ty Morstan.",
+        "air_date": "2012-10-04",
+        "runtime": 43,
+        "still_path": "/emORiIHbzChPTk6nmrNdzssW3DF.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Child Predator",
+        "overview": "Sherlock and Watson consult on a child abduction case involving a serial killer who is nicknamed \u0022The Balloon Man,\u0022 because he leaves a signature batch of balloons at each of his crime scenes.",
+        "air_date": "2012-10-18",
+        "runtime": 43,
+        "still_path": "/pJG7Edkc94e9eAfJFqVNsZ29hcG.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Rat Race",
+        "overview": "When Sherlock investigates what appears to be a series of murders at a top Wall Street firm, he may himself fall foul of a sociopathic slayer. Joan is set up on a blind date and shows investigative instincts.",
+        "air_date": "2012-10-25",
+        "runtime": 43,
+        "still_path": "/jBQLTkbBftKHBgRB49eWlmyHDPQ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Lesser Evils",
+        "overview": "Sherlock tries to determine who has been killing weak and terminal patients at a hospital, making it look like they died of natural causes. Meanwhile, Sherlock learns more about Joan\u2019s decision to walk away from her surgical career.",
+        "air_date": "2012-11-01",
+        "runtime": 43,
+        "still_path": "/4t3LjZucO4UxEAgQn6FvXl14WQU.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Flight Risk",
+        "overview": "Joan is invited to dinner with Sherlock\u0027s father. Meanwhile, Sherlock investigates the crash of a small jet, unraveling a mystery beyond a simple accident.",
+        "air_date": "2012-11-08",
+        "runtime": 43,
+        "still_path": "/2T1gvpASsIpoNWioZ6jNugaZzBw.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "One Way to Get Off",
+        "overview": "Sherlock assists with a double homicide that has the same M.O. as a series of murders that took place 13 years ago. Meanwhile, after being frozen out by Sherlock, Watson visits his old rehab center in order to learn more about the mysterious man in her care.",
+        "air_date": "2012-11-15",
+        "runtime": 43,
+        "still_path": "/xeLuXHwLto29ANIhloBxPywJZki.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Long Fuse",
+        "overview": "While investigating an explosion that kills two people, Sherlock discovers a crime that\u2019s been lying dormant for years. Meanwhile, Watson encourages Sherlock to finally pick a sponsor.",
+        "air_date": "2012-11-29",
+        "runtime": 43,
+        "still_path": "/2oV7Y8Dgjnano1kQH8a3hgDVXZ6.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "You Do It to Yourself",
+        "overview": "Sherlock uses his trademark deductive reasoning skills to find the killer of a college professor. Meanwhile, Watson gets a call from a former lover who needs her help in disproving hit-and-run charges.",
+        "air_date": "2012-12-06",
+        "runtime": 43,
+        "still_path": "/rVIZySNRiXZknVl9vkoiVTtfmU9.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Leviathan",
+        "overview": "Sherlock is called in to investigate when a supposedly uncrackable bank vault called \u201CThe Leviathan\u201D is breached. Meanwhile, Joan is pleasantly surprised when Sherlock meets her family and defends her choice to become a sober companion.",
+        "air_date": "2012-12-13",
+        "runtime": 43,
+        "still_path": "/bpx29i8wwqsQvECiCBJ3lhKrvoG.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Dirty Laundry",
+        "overview": "Sherlock and Joan investigate the murder of the general manager of a high-end Manhattan hotel whose body is found inside an industrial laundry machine. Meanwhile, since Joan\u2019s time with Sherlock is almost up, he offers her an apprenticeship.",
+        "air_date": "2013-01-03",
+        "runtime": 43,
+        "still_path": "/gLyxzCfSlPgDAJGMKA2JYRmUeHT.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "M.",
+        "overview": "Sherlock is reunited with \u201CM.\u201D a British criminal who appears to have followed Sherlock to New York. Meanwhile, Joan has reservations about leaving Sherlock and taking on a new client.",
+        "air_date": "2013-01-10",
+        "runtime": 43,
+        "still_path": "/oHk0yhde4She7LfqeRQ6CDF1Dgv.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Red Team",
+        "overview": "While on suspension from the NYPD, Sherlock investigates a suspicious hit-and-run accident involving a conspiracy theorist. Meanwhile, Watson tries to broker peace between Sherlock and Gregson.",
+        "air_date": "2013-01-31",
+        "runtime": 43,
+        "still_path": "/p6U7G49ivy1f66BQmvReXR75A20.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Deductionist",
+        "overview": "Sherlock pursues Martin Ennis, an unpredictable criminal, before he strikes again. During the investigation, Sherlock is forced to work alongside Kathryn Drummond, the FBI profiler who literally wrote the book on Ennis. Meanwhile, Watson faces eviction from her apartment.",
+        "air_date": "2013-02-03",
+        "runtime": 43,
+        "still_path": "/jwrYKPqfzXVKMRRhbAAW1OyfgOw.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "A Giant Gun, Filled with Drugs",
+        "overview": "When Sherlock\u0027s ex-drug dealer, Rhys, comes around for help, Watson is concerned about Sherlock\u0027s sobriety after Rhys implies that Sherlock on drugs made a better detective.",
+        "air_date": "2013-02-07",
+        "runtime": 43,
+        "still_path": "/89t4SCHanYug6w9NwZ6zWhNIdju.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Details",
+        "overview": "Sherlock investigates what he believes will be an open-and-shut case after Detective Bell is attacked. However, the case takes an unexpected turn when the suspected assailant is found dead. Meanwhile, Sherlock encourages Joan to learn self-defense.",
+        "air_date": "2013-02-14",
+        "runtime": 42,
+        "still_path": "/vIIq5HRCSuDSAHIFzg5wKD8Qdoz.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Possibility Two",
+        "overview": "Sherlock investigates a case involving a wealthy philanthropist who believes his incurable illness was given to him on purpose. Meanwhile, Sherlock tries to teach Joan his deductive skills by sending her to a suspicious dry cleaning establishment.",
+        "air_date": "2013-02-21",
+        "runtime": 43,
+        "still_path": "/fBF2ewxEEg8pCh1w22a2kUg3R5H.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "D\u00E9j\u00E0 Vu All Over Again",
+        "overview": "Joan investigates her first solo case when a wife disappears. The missing woman left behind a tear-filled video that mentions a murder on a subway platform. While Joan searches for the vanished lady, Sherlock probes the murder.",
+        "air_date": "2013-03-14",
+        "runtime": 43,
+        "still_path": "/oPtDBI8e3gec3GceS25kVi1HEeU.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Snow Angels",
+        "overview": "Sherlock and Joan try to prevent the largest cash vault in the U.S. from being robbed during a deadly blizzard. Meanwhile, Holmes gives shelter to Ms. Hudson, a transgender woman who is recovering from her latest breakup.",
+        "air_date": "2013-04-04",
+        "runtime": 43,
+        "still_path": "/bqI1vY9GnfnilI9ZlCLwmEeY13s.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Dead Man\u0027s Switch",
+        "overview": "Sherlock and Joan hunt for the accomplice of a murdered blackmailer who targeted families of rape victims. Meanwhile, Sherlock resists celebrating his first year of sobriety.",
+        "air_date": "2013-04-25",
+        "runtime": 43,
+        "still_path": "/iSxHUrY5aAVu5uLwaewJxzKohis.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "A Landmark Story",
+        "overview": "Sherlock resumes his hunt for Moriarty when Sebastian Moran reveals that a man who was thought to be dead from a heart attack was actually on the list of intended victims from Moriarty.",
+        "air_date": "2013-05-02",
+        "runtime": 43,
+        "still_path": "/3IoJKzUdcs6Rx5b7JLaMmgSOcxF.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Risk Management",
+        "overview": "Sherlock agrees to take a case from a man claiming to be Moriarty, hoping it will bring him closer to finding his nemesis. Meanwhile, Gregson encourages Joan to give up the dangerous line of work she has chosen and go back to being a sober companion.",
+        "air_date": "2013-05-09",
+        "runtime": 43,
+        "still_path": "/jbupqujmpOPhKqRdajFshTDVIad.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Woman (1)",
+        "overview": "As Sherlock reels at the reappearance of his former lover, Irene Adler, a series of flashbacks unravel the tumultuous events that led to his downfall into addiction. Meanwhile, he and Joan once again find themselves in the crosshairs of the enigmatic Moriarty.",
+        "air_date": "2013-05-16",
+        "runtime": 43,
+        "still_path": "/xrIzpErFfWv3uTyZaeZuMeJRMTh.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Heroine (2)",
+        "overview": "As Sherlock reels at the reappearance of his former lover, Irene Adler, a series of flashbacks unravel the tumultuous events that led to his downfall into addiction. Meanwhile, he and Joan once again find themselves in the crosshairs of the enigmatic Moriarty.",
+        "air_date": "2013-05-16",
+        "runtime": 44,
+        "still_path": "/ygAyvA8yGexnBWMl3MNciAAPN0G.jpg"
+      }
+    ]
+  }
+}

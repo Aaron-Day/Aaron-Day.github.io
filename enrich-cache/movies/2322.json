@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2322,
+    "title": "Sneakers",
+    "overview": "When shadowy U.S. intelligence agents blackmail a reformed computer hacker and his eccentric team of security experts into stealing a code-breaking \u0027black box\u0027 from a Soviet-funded genius, they uncover a bigger conspiracy. Now, he and his \u0027sneakers\u0027 must save themselves and the world economy by retrieving the box from their blackmailers.",
+    "tagline": "We could tell you what it\u0027s about. But then, of course, we\u0027d have to kill you.",
+    "runtime": 125,
+    "release_date": "1992-09-09",
+    "vote_average": 6.9,
+    "poster_path": "/l2pIGwCvpZEpBuMb55YBl6A04Jv.jpg",
+    "backdrop_path": "/smK3ud9IKSLVuRXdKauJ9p0DwNB.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Robert Redford",
+      "character": "Bishop",
+      "profile_path": "/m5ayL8ASLdaaFYzqJZNYvrKRuhD.jpg"
+    },
+    {
+      "name": "Sidney Poitier",
+      "character": "Crease",
+      "profile_path": "/fhMiCe3ScxBGKEX6Y6flEJm7iHd.jpg"
+    },
+    {
+      "name": "David Strathairn",
+      "character": "Whistler",
+      "profile_path": "/w5YM2cGefPnkoyIXCi2UrCQW53r.jpg"
+    },
+    {
+      "name": "Dan Aykroyd",
+      "character": "Mother",
+      "profile_path": "/iVMmeVJx8IpCEjlGBZWzIWvX5Qo.jpg"
+    }
+  ]
+}

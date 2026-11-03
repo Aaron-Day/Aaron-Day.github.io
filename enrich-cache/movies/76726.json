@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 76726,
+    "title": "Chronicle",
+    "overview": "Three high school students make an incredible discovery, leading to their developing uncanny powers beyond their understanding. As they learn to control their abilities and use them to their advantage, their lives start to spin out of control, and their darker sides begin to take over.",
+    "tagline": "What are you capable of?",
+    "runtime": 84,
+    "release_date": "2012-02-01",
+    "vote_average": 6.873,
+    "poster_path": "/kdyrdFIt29FUmLIKvedAc2j4rpo.jpg",
+    "backdrop_path": "/rgNzvSagnlc32TuMEBa529QFIig.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dane DeHaan",
+      "character": "Andrew Detmer",
+      "profile_path": "/uwl0WKqHj6ahsriOEPLks84T70j.jpg"
+    },
+    {
+      "name": "Alex Russell",
+      "character": "Matt Garetty",
+      "profile_path": "/6ICuiVBMCCY2phrHXpXftoKHqM2.jpg"
+    },
+    {
+      "name": "Michael B. Jordan",
+      "character": "Steve Montgomery",
+      "profile_path": "/sMBpav8cK7t7Nk0yf4tuNOqNUyW.jpg"
+    },
+    {
+      "name": "Michael Kelly",
+      "character": "Richard Detmer",
+      "profile_path": "/6MI8HhX1GWbcrWG8DiHffzmqaVm.jpg"
+    }
+  ]
+}

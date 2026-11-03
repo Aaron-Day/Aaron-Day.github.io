@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 573435,
+    "title": "Bad Boys: Ride or Die",
+    "overview": "After their late former Captain is framed, Lowrey and Burnett try to clear his name, only to end up on the run themselves.",
+    "tagline": "Miami\u0027s finest are now its most wanted.",
+    "runtime": 116,
+    "release_date": "2024-06-05",
+    "vote_average": 7.306,
+    "poster_path": "/oGythE98MYleE6mZlGs5oBGkux1.jpg",
+    "backdrop_path": "/3q01ACG0MWm0DekhvkPFCXyPZSu.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 14890,
+      "name": "Bad Boys Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Mike Lowrey",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Martin Lawrence",
+      "character": "Marcus Burnett",
+      "profile_path": "/y3SQzIPUPJpdueb1DkbTYph68nk.jpg"
+    },
+    {
+      "name": "Vanessa Hudgens",
+      "character": "Kelly",
+      "profile_path": "/lZQPTRoJLgfsARWdpxQid2dDzhr.jpg"
+    },
+    {
+      "name": "Alexander Ludwig",
+      "character": "Dorn",
+      "profile_path": "/3KpzKT4iGhNivSISQMe6EwpAmCi.jpg"
+    }
+  ]
+}

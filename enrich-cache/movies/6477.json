@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 6477,
+    "title": "Alvin and the Chipmunks",
+    "overview": "A struggling songwriter named Dave Seville finds success when he comes across a trio of singing chipmunks: mischievous leader Alvin, brainy Simon, and chubby, impressionable Theodore.",
+    "tagline": "The original entourage.",
+    "runtime": 92,
+    "release_date": "2007-12-13",
+    "vote_average": 5.848,
+    "poster_path": "/3s3WvpKPXXeKAPketDDqiQTi20S.jpg",
+    "backdrop_path": "/lKkkogTlIQT8o83GFQZZ3CA9MzB.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 167613,
+      "name": "Alvin and the Chipmunks Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Lee",
+      "character": "Dave",
+      "profile_path": "/64tEXo3xR9IFXsIJKSlJ2LUrrEA.jpg"
+    },
+    {
+      "name": "David Cross",
+      "character": "Ian",
+      "profile_path": "/aYsbAtUu5oWk1p8RY31k3w5Emul.jpg"
+    },
+    {
+      "name": "Cameron Richardson",
+      "character": "Claire",
+      "profile_path": "/g5Ib7uSd7CKNXbDAs67AyeqTNvZ.jpg"
+    },
+    {
+      "name": "Jane Lynch",
+      "character": "Gail",
+      "profile_path": "/nye6D17ZfCHQzr9faYZYyz1CPsZ.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7326,
+    "title": "Juno",
+    "overview": "Faced with an unplanned pregnancy, sixteen year old high-schooler, Juno MacGuff, makes an unusual decision regarding her unborn child.",
+    "tagline": "A comedy about growing up\u2026 and the bumps along the way.",
+    "runtime": 96,
+    "release_date": "2007-12-05",
+    "vote_average": 7.061,
+    "poster_path": "/jNIn2tVhpvFD6P9IojldI3mNYcn.jpg",
+    "backdrop_path": "/sRXMmeNHTSWRYdDz3zaHNyyPJ0u.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Elliot Page",
+      "character": "Juno MacGuff",
+      "profile_path": "/nXO8DE4biVXY4UDYP0NdIY1zvXS.jpg"
+    },
+    {
+      "name": "Michael Cera",
+      "character": "Paulie Bleeker",
+      "profile_path": "/qjhNKsw0OLyZQgK4srhelBafcCf.jpg"
+    },
+    {
+      "name": "Jennifer Garner",
+      "character": "Vanessa Loring",
+      "profile_path": "/eiX083VOa0RCGSgwENZgVi5MgDi.jpg"
+    },
+    {
+      "name": "Jason Bateman",
+      "character": "Mark Loring",
+      "profile_path": "/8e6mt0vGjPo6eW52gqRuXy5YnfN.jpg"
+    }
+  ]
+}

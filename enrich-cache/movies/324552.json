@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 324552,
+    "title": "John Wick: Chapter 2",
+    "overview": "John Wick is forced out of retirement by a former associate looking to seize control of a shadowy international assassins\u2019 guild. Bound by a blood oath to aid him, Wick travels to Rome and does battle against some of the world\u2019s most dangerous killers.",
+    "tagline": "Never stab the devil in the back!",
+    "runtime": 122,
+    "release_date": "2017-02-08",
+    "vote_average": 7.347,
+    "poster_path": "/hXWBc0ioZP3cN4zCu6SN3YHXZVO.jpg",
+    "backdrop_path": "/Aa9Lx6gotP0szl9tlt5SPCN08oF.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 404609,
+      "name": "John Wick Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "John Wick",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Common",
+      "character": "Cassian",
+      "profile_path": "/eggJAnJxpn8wYraX7ea5svETB54.jpg"
+    },
+    {
+      "name": "Laurence Fishburne",
+      "character": "Bowery King",
+      "profile_path": "/2GbXERENPpl5MmlqOLlPVaVtifD.jpg"
+    },
+    {
+      "name": "Riccardo Scamarcio",
+      "character": "Santino D\u0027Antonio",
+      "profile_path": "/s3ZAW6QA6yZaOx9wmAZfGZ1Z8BP.jpg"
+    }
+  ]
+}

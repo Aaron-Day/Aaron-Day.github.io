@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 38319,
+    "title": "Your Highness",
+    "overview": "A fantasy movie about an arrogant, lazy prince and his more heroic brother who must complete a quest in order to save their father\u0027s kingdom.",
+    "tagline": "Get your quest on.",
+    "runtime": 102,
+    "release_date": "2011-04-08",
+    "vote_average": 5.313,
+    "poster_path": "/bq3gU60TkgBjLUbxSSZVhDhlhmH.jpg",
+    "backdrop_path": "/7P7aZ9ozRWlsruPVaTB2dLXI7aF.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Danny McBride",
+      "character": "Thadeous",
+      "profile_path": "/sVFPzl2t5QlGudQKWAszIWZCXZv.jpg"
+    },
+    {
+      "name": "James Franco",
+      "character": "Fabious",
+      "profile_path": "/bjmAntHGiibLZixH8nTNVBzaFQn.jpg"
+    },
+    {
+      "name": "Natalie Portman",
+      "character": "Isabel",
+      "profile_path": "/edPU5HxncLWa1YkgRPNkSd68ONG.jpg"
+    },
+    {
+      "name": "Zooey Deschanel",
+      "character": "Belladonna",
+      "profile_path": "/30KQyjsXfrdm4Dcori7bDFTg9Le.jpg"
+    }
+  ]
+}

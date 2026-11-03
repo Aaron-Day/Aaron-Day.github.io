@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11969,
+    "title": "Tombstone",
+    "overview": "Legendary marshal Wyatt Earp, now a weary gunfighter, joins his brothers Morgan and Virgil to pursue their collective fortune in the thriving mining town of Tombstone. But Earp is forced to don a badge again and get help from his notorious pal Doc Holliday when a gang of renegade brigands and rustlers begins terrorizing the town.",
+    "tagline": "Every town has a story. Tombstone has a legend.",
+    "runtime": 130,
+    "release_date": "1993-12-25",
+    "vote_average": 7.6,
+    "poster_path": "/wGFCvylul8iEQhJOKfwZGGvXMzA.jpg",
+    "backdrop_path": "/djPXXv9pPyTLGl9kMPCTyiBmIA5.jpg",
+    "genres": [
+      {
+        "id": 37,
+        "name": "Western"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kurt Russell",
+      "character": "Wyatt Earp",
+      "profile_path": "/6g1d98oH4miG4k0ZiZWmF3Dt0bO.jpg"
+    },
+    {
+      "name": "Val Kilmer",
+      "character": "Doc Holliday",
+      "profile_path": "/j2bJH6rxZkJJt8tHsBFMOxIVZdE.jpg"
+    },
+    {
+      "name": "Michael Biehn",
+      "character": "Johnny Ringo",
+      "profile_path": "/9oFLsADWQm2TvU8XzLIzBbjdMkU.jpg"
+    },
+    {
+      "name": "Powers Boothe",
+      "character": "Curly Bill",
+      "profile_path": "/xj3DBMqnEnyYfHEBcRHOxlpbQS4.jpg"
+    }
+  ]
+}

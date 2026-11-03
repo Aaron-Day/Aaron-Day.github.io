@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 447277,
+    "title": "The Little Mermaid",
+    "overview": "The youngest of King Triton\u2019s daughters, and the most defiant, Ariel longs to find out more about the world beyond the sea, and while visiting the surface, falls for the dashing Prince Eric. With mermaids forbidden to interact with humans, Ariel makes a deal with the evil sea witch, Ursula, which gives her a chance to experience life on land, but ultimately places her life \u2013 and her father\u2019s crown \u2013 in jeopardy.",
+    "tagline": "Be a part of her world.",
+    "runtime": 135,
+    "release_date": "2023-05-18",
+    "vote_average": 6.252,
+    "poster_path": "/ym1dxyOk4jFcSl4Q2zmRrA5BEEN.jpg",
+    "backdrop_path": "/pbMbDlOAkVuvnxovBA2ENin59xH.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Halle Bailey",
+      "character": "Ariel",
+      "profile_path": "/1Gjdlx81P7xTeVwHNIDgjgmzZq5.jpg"
+    },
+    {
+      "name": "Jonah Hauer-King",
+      "character": "Eric",
+      "profile_path": "/yXGsk9UtOV9tprU5ZSuhwdFtaBB.jpg"
+    },
+    {
+      "name": "Melissa McCarthy",
+      "character": "Ursula",
+      "profile_path": "/yl0qva0O4u92fvtItakdvKmKrW9.jpg"
+    },
+    {
+      "name": "Javier Bardem",
+      "character": "King Triton",
+      "profile_path": "/zfRID0jx8DKBluPGU9xtk9sZWUt.jpg"
+    }
+  ]
+}

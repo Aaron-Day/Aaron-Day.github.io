@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 507086,
+    "title": "Jurassic World Dominion",
+    "overview": "Four years after Isla Nublar was destroyed, dinosaurs now live\u2014and hunt\u2014alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history\u0027s most fearsome creatures.",
+    "tagline": "The epic conclusion of the Jurassic era.",
+    "runtime": 147,
+    "release_date": "2022-06-01",
+    "vote_average": 6.579,
+    "poster_path": "/jbAvCACjLf1ZG0unB2tdmx5HAf1.jpg",
+    "backdrop_path": "/9hk5iiycq7ukRAAXQiJT9HZX3SX.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 328,
+      "name": "Jurassic Park Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Pratt",
+      "character": "Owen Grady",
+      "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Bryce Dallas Howard",
+      "character": "Claire Dearing",
+      "profile_path": "/6yhDkPXythZavS6Wk57XQ2sg5AW.jpg"
+    },
+    {
+      "name": "Laura Dern",
+      "character": "Ellie Sattler",
+      "profile_path": "/gB9PnGEvxKg33OSlcqptQwTBwPE.jpg"
+    },
+    {
+      "name": "Sam Neill",
+      "character": "Alan Grant",
+      "profile_path": "/iIfuxalf37xUayuGyK0zG7z6WEZ.jpg"
+    }
+  ]
+}

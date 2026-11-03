@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 121,
+    "title": "The Lord of the Rings: The Two Towers",
+    "overview": "Frodo Baggins and the other members of the Fellowship continue on their sacred quest to destroy the One Ring--but on separate paths. Their destinies lie at two towers - Orthanc Tower in Isengard, where the corrupt wizard Saruman awaits, and Sauron\u0027s fortress at Barad-dur, deep within the dark lands of Mordor.",
+    "tagline": "The journey continues.",
+    "runtime": 179,
+    "release_date": "2002-12-18",
+    "vote_average": 8.432,
+    "poster_path": "/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
+    "backdrop_path": "/6G73mNyooWAEQTpckPSnFxFoNmc.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 119,
+      "name": "The Lord of the Rings Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Elijah Wood",
+      "character": "Frodo",
+      "profile_path": "/7UKRbJBNG7mxBl2QQc5XsAh6F8B.jpg"
+    },
+    {
+      "name": "Ian McKellen",
+      "character": "Gandalf",
+      "profile_path": "/5cnnnpnJG6TiYUSS7qgJheUZgnv.jpg"
+    },
+    {
+      "name": "Viggo Mortensen",
+      "character": "Aragorn",
+      "profile_path": "/vH5gVSpHAMhDaFWfh0Q7BG61O1y.jpg"
+    },
+    {
+      "name": "Sean Astin",
+      "character": "Sam",
+      "profile_path": "/As3ctGUtBYmG4zj4Ifyrcqd71HP.jpg"
+    }
+  ]
+}

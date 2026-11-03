@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10156,
+    "title": "History of the World: Part I",
+    "overview": "An uproarious version of history that proves nothing is sacred \u2013 not even the Roman Empire, the French Revolution and the Spanish Inquisition.",
+    "tagline": "Ten million years in the making. The truth, the whole truth, and everything, but the truth!",
+    "runtime": 92,
+    "release_date": "1981-06-12",
+    "vote_average": 6.744,
+    "poster_path": "/1bMaEfI76yrGjCSDquCippAFIDI.jpg",
+    "backdrop_path": "/AfOPonJZYtuJKy57ORBJj1dv3bm.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Mel Brooks",
+      "character": "Moses / Comicus / Torquemada / Jacques / King Louis XVI",
+      "profile_path": "/c21qNcMJlHnRolfhQhZOVacjtwI.jpg"
+    },
+    {
+      "name": "Dom DeLuise",
+      "character": "Emperor Nero",
+      "profile_path": "/73OOTJaLVq54bEeR1pASfPQLbVH.jpg"
+    },
+    {
+      "name": "Madeline Kahn",
+      "character": "Empress Nympho",
+      "profile_path": "/5jbkrxx0uaymKDnv5EImUXxWQyN.jpg"
+    },
+    {
+      "name": "Harvey Korman",
+      "character": "Count de Monet",
+      "profile_path": "/cE5X1OAa6iDOo3JKj9uM8kHwQQI.jpg"
+    }
+  ]
+}

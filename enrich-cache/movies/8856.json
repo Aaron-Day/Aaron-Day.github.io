@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8856,
+    "title": "The Karate Kid Part II",
+    "overview": "Summoned by his dying father, Miyagi returns to his homeland of Okinawa, with Daniel, after a 40-year exile. There he must confront Yukie, the love of his youth, and Sato, his former best friend turned vengeful rival. Sato is bent on a fight to the death, even if it means the destruction of their village. Daniel finds his own love in Yukia\u0027s niece, Kumiko, and his own enemy in Sato\u0027s nephew, the vicious Chozen. Now, far away from the tournaments, cheering crowds and safety of home, Daniel will face his greatest challenge ever when the cost of honor is life itself.",
+    "tagline": "One more lesson to share. The price of honor. The power of friendship. And the way you must fight when only the winner survives.",
+    "runtime": 113,
+    "release_date": "1986-06-18",
+    "vote_average": 6.353,
+    "poster_path": "/k0OwgRR6PNu7h3SiqpCbRdZWNaG.jpg",
+    "backdrop_path": "/7rfcRXbFD0xr8NteNq1hwXUd4Af.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8580,
+      "name": "The Karate Kid Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ralph Macchio",
+      "character": "Daniel",
+      "profile_path": "/AoqqL9UlyPrcTLnpzbQvKXPvXrz.jpg"
+    },
+    {
+      "name": "Pat Morita",
+      "character": "Miyagi",
+      "profile_path": "/dwnjbEvhKRanS5xTaI1NkZ98aM9.jpg"
+    },
+    {
+      "name": "Danny Kamekona",
+      "character": "Sato",
+      "profile_path": "/8MOa97iZjazhRxjBvLLba9N1JDW.jpg"
+    },
+    {
+      "name": "Nobu McCarthy",
+      "character": "Yukie",
+      "profile_path": "/to7CUnkDaPYn2gUYi4BMBCUuAFZ.jpg"
+    }
+  ]
+}

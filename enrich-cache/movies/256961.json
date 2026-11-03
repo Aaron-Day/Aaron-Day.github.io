@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 256961,
+    "title": "Paul Blart: Mall Cop 2",
+    "overview": "Security guard Paul Blart is headed to Las Vegas to attend a Security Guard Expo with his teenage daughter Maya before she departs for college. While at the convention, he inadvertently discovers a heist - and it\u0027s up to Blart to apprehend the criminals.",
+    "tagline": "Vegas has a new high roller.",
+    "runtime": 94,
+    "release_date": "2015-04-16",
+    "vote_average": 5.174,
+    "poster_path": "/qML63w7vgspicwLK6xXGLK17cM0.jpg",
+    "backdrop_path": "/cVsmfmsuUWjM9EKhtmqxtPmQjQG.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 328372,
+      "name": "Mall Cop Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kevin James",
+      "character": "Paul Blart",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    },
+    {
+      "name": "Raini Rodriguez",
+      "character": "Maya Blart",
+      "profile_path": "/luWZAVQPzSQ025P7drhksuTU3XO.jpg"
+    },
+    {
+      "name": "Neal McDonough",
+      "character": "Vincent Sofel",
+      "profile_path": "/3mI3i1CpjATSCta1Tb2qsyl1KCh.jpg"
+    },
+    {
+      "name": "Daniella Alonso",
+      "character": "Divina Martinez",
+      "profile_path": "/ipFtnG5kvkMY1HcLOSFONDIEXqn.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1368,
+    "title": "First Blood",
+    "overview": "When former Green Beret John Rambo is harassed by local law enforcement and arrested for vagrancy, he is forced to flee into the mountains and wage an escalating one-man war against his pursuers.",
+    "tagline": "This time he\u0027s fighting for his life.",
+    "runtime": 93,
+    "release_date": "1982-10-22",
+    "vote_average": 7.519,
+    "poster_path": "/a9sa6ERZCpplbPEO7OMWE763CLD.jpg",
+    "backdrop_path": "/hCxxOJojCUFyuahDx167glJgp7E.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 5039,
+      "name": "Rambo Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "John Rambo",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Richard Crenna",
+      "character": "Col. Samuel Trautman",
+      "profile_path": "/7mKmqNaOpYxUSUO9gmlJa98iZ9j.jpg"
+    },
+    {
+      "name": "Brian Dennehy",
+      "character": "Hope Sheriff Will Teasle",
+      "profile_path": "/cg7CwS1vMJXCzZ0FUm4RbrjAJ2t.jpg"
+    },
+    {
+      "name": "Bill McKinney",
+      "character": "State Police Capt. Dave Kern",
+      "profile_path": "/bXGJNizj5SbEFPjeBupnRxgwPq0.jpg"
+    }
+  ]
+}

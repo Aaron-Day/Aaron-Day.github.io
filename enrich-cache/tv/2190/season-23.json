@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 23,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Mexican Joker",
+        "overview": "Randy battles home-grown weed and comes to terms with the fact that he might be a towel. Meanwhile, Kyle goes to camp.",
+        "air_date": "2019-09-25",
+        "runtime": 23,
+        "still_path": "/rAq416Ov54a83z5d2WSTmmOkexb.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Band in China",
+        "overview": "Randy lands himself in big trouble on a visit to China. Meanwhile, Stan starts a band to work out his frustration over having to move away from South Park.",
+        "air_date": "2019-10-02",
+        "runtime": 23,
+        "still_path": "/gMpx3lekyLebEh8eat4WwOpkdn8.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "SHOTS!!!",
+        "overview": "This week, Randy revels in a Tegridy Farms milestone. Meanwhile, Cartman stands his ground and refuses to get a shot.",
+        "air_date": "2019-10-09",
+        "runtime": 23,
+        "still_path": "/2S39DaOKoFJlB80ifXEKvIsGriv.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Let Them Eat Goo",
+        "overview": "The citizens of South Park are moving toward a completely plant-based diet. Cartman is pretty sure the new food in the cafeteria gave him a heart attack.",
+        "air_date": "2019-10-16",
+        "runtime": 23,
+        "still_path": "/fHxdNUE15cSAWtKZXNKOuluqHkJ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Tegridy Farms Halloween Special",
+        "overview": "It\u2019s Halloween and Randy is dealing with his daughter\u2019s marijuana problem. Butters gets an unexpected surprise when he visits the Egyptian Artifact exhibit at the Denver Museum.",
+        "air_date": "2019-10-30",
+        "runtime": 23,
+        "still_path": "/v5SkBTtQscPz36097yUjwK4ghEY.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Season Finale",
+        "overview": "The Mayor has evidence that Randy blew up his neighbor\u2019s yards in protest over homegrown weed and then blamed it on a Mexican Joker. Now the citizens of South Park have had enough of Randy and Tegridy Farms and they just want to lock him up.",
+        "air_date": "2019-11-06",
+        "runtime": 23,
+        "still_path": "/oAV8fknEoWak7Y7EWYVgxzp4p0v.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Board Girls",
+        "overview": "In the season opener, an even stronger woman causes big problems for PC Principal. Cartman, Stan, and the rest of the boys meet their match when some of the girls join their board gamers club.",
+        "air_date": "2019-11-13",
+        "runtime": 23,
+        "still_path": "/eL55T46EU7sFkwcuVakvr7o5C2I.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Turd Burglars",
+        "overview": "Kyle\u2019s mom looks so good after her fecal transplant that everyone wants to get their hands on her goods. Cartman and the boys jump into the quest for the best microbiome.",
+        "air_date": "2019-11-27",
+        "runtime": 23,
+        "still_path": "/wDFLeLH8doOLcfAWvHDg7sJ7Wuw.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Basic Cable",
+        "overview": "Scott Malkinson\u2019s future with the new girl in his class depends on him getting the latest and greatest streaming platform. Scott\u2019s dad works for the local cable company and refuses to move beyond basic cable.",
+        "air_date": "2019-12-04",
+        "runtime": 23,
+        "still_path": "/s1hf2KFBCdyLylAvSpTxNEUzcBo.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Christmas Snow",
+        "overview": "Santa is stealing all the joy from the town\u0027s Holiday Season.",
+        "air_date": "2019-12-11",
+        "runtime": 23,
+        "still_path": "/1xg5YEgrkKNrNLZL6GfGmm4qfAu.jpg"
+      }
+    ]
+  }
+}

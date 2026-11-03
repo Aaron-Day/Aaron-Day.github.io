@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10587,
+    "title": "Police Academy 4: Citizens on Patrol",
+    "overview": "A new batch of recruits arrives at Police Academy, this time a group of civilian volunteers who have joined Commandant Lassard\u0027s new Citizens on Patrol program. Although the community relations project has strong governmental support, a disgusted Captain Harris is determined to see it fail.",
+    "tagline": "On land, on sea, or in the air, no place is safe from them!",
+    "runtime": 88,
+    "release_date": "1987-04-02",
+    "vote_average": 5.5,
+    "poster_path": "/vvk5aWBJE3EqDX2ln6M4J4UiUXr.jpg",
+    "backdrop_path": "/9KzNVjbXdt7qufCpRObIkERCE0M.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9338,
+      "name": "Police Academy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Guttenberg",
+      "character": "Mahoney",
+      "profile_path": "/ghTMepliFNcRQHNELs8pgNDsZyW.jpg"
+    },
+    {
+      "name": "Bubba Smith",
+      "character": "Hightower",
+      "profile_path": "/ew7CpCLyD4FP1zqgtxUV8jDg8cX.jpg"
+    },
+    {
+      "name": "Michael Winslow",
+      "character": "Jones",
+      "profile_path": "/uSRS2MOI1fNFAdvUgrhatBvfsvv.jpg"
+    },
+    {
+      "name": "David Graf",
+      "character": "Tackleberry",
+      "profile_path": "/oAVx2Ea0qrND2wn78m2wQtGGlz1.jpg"
+    }
+  ]
+}

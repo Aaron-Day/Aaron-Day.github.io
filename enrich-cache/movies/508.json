@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 508,
+    "title": "Love Actually",
+    "overview": "Eight very different couples deal with their love lives in various loosely interrelated tales all set during a frantic month before Christmas in London.",
+    "tagline": "Love actually is all around.",
+    "runtime": 135,
+    "release_date": "2003-09-07",
+    "vote_average": 7.1,
+    "poster_path": "/7QPeVsr9rcFU9Gl90yg0gTOTpVv.jpg",
+    "backdrop_path": "/xUWf5xX0AnZgAnYXAMk03zTbsef.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Hugh Grant",
+      "character": "The Prime Minister",
+      "profile_path": "/dvV843fOuzsEPXHtFvdzsHpy1rC.jpg"
+    },
+    {
+      "name": "Alan Rickman",
+      "character": "Harry",
+      "profile_path": "/1EearzPgXkmYFKvECfWNrctIFT9.jpg"
+    },
+    {
+      "name": "Emma Thompson",
+      "character": "Karen",
+      "profile_path": "/zQ0hWHh3tzaOOziPbABQI8s9WCu.jpg"
+    },
+    {
+      "name": "Liam Neeson",
+      "character": "Daniel",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    }
+  ]
+}

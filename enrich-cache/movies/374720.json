@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 374720,
+    "title": "Dunkirk",
+    "overview": "The story of the miraculous evacuation of Allied soldiers from Belgium, Britain, Canada and France, who were cut off and surrounded by the German army from the beaches and harbour of Dunkirk between May 26th and June 4th 1940 during World War II.",
+    "tagline": "When 400,000 men couldn\u0027t get home, home came for them.",
+    "runtime": 107,
+    "release_date": "2017-07-19",
+    "vote_average": 7.45,
+    "poster_path": "/b4Oe15CGLL61Ped0RAS9JpqdmCt.jpg",
+    "backdrop_path": "/pTwF9hLkqAtuOqXMdOyPwz4AgnI.jpg",
+    "genres": [
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Fionn Whitehead",
+      "character": "Tommy",
+      "profile_path": "/2JjRhwG6BEWeF4n9TlvDEDzlP5P.jpg"
+    },
+    {
+      "name": "Tom Hardy",
+      "character": "Farrier",
+      "profile_path": "/d81K0RH8UX7tZj49tZaQhZ9ewH.jpg"
+    },
+    {
+      "name": "Mark Rylance",
+      "character": "Mr. Dawson",
+      "profile_path": "/bztEZRyXrvW3Pg1fexNASXlZrq7.jpg"
+    },
+    {
+      "name": "Kenneth Branagh",
+      "character": "Commander Bolton",
+      "profile_path": "/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 49049,
+    "title": "Dredd",
+    "overview": "In the future, America is a dystopian wasteland. The latest scourge is Ma-Ma, a prostitute-turned-drug pusher with a dangerous new drug and aims to take over the city. The only possibility of stopping her is an elite group of urban police called Judges, who combine the duties of judge, jury and executioner to deliver a brutal brand of swift justice. But even the top-ranking Judge, Dredd, discovers that taking down Ma-Ma isn\u2019t as easy as it seems in this explosive adaptation of the hugely popular comic series.",
+    "tagline": "Judgement is coming.",
+    "runtime": 96,
+    "release_date": "2012-09-07",
+    "vote_average": 6.865,
+    "poster_path": "/wLx65gtGVnUFCxceHWGszcruCZj.jpg",
+    "backdrop_path": "/jUqDBi02CDjqrroC3Zl8hroBbSr.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Karl Urban",
+      "character": "Judge Dredd",
+      "profile_path": "/7Y96dAfg0HcFrcLjlD5eD9N0uj4.jpg"
+    },
+    {
+      "name": "Olivia Thirlby",
+      "character": "Cassandra Anderson",
+      "profile_path": "/x9ZlUX617wi9li2TJ5UuYpHzPfN.jpg"
+    },
+    {
+      "name": "Lena Headey",
+      "character": "Ma-Ma",
+      "profile_path": "/cDyZLf8ddz0EgoUjpv4jjzy7qxA.jpg"
+    },
+    {
+      "name": "Wood Harris",
+      "character": "Kay",
+      "profile_path": "/v3puIl2KncqUd6amDyD1Y0crzkF.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 424139,
+    "title": "Halloween",
+    "overview": "Laurie Strode comes to her final confrontation with Michael Myers, the masked figure who has haunted her since she narrowly escaped his killing spree on Halloween night four decades ago.",
+    "tagline": "You don\u0027t believe in the Boogeyman? You should.",
+    "runtime": 106,
+    "release_date": "2018-10-18",
+    "vote_average": 6.562,
+    "poster_path": "/f7JAX5EGk4GgsEnus6OxyzwpFp7.jpg",
+    "backdrop_path": "/8VjIXC2x8SHwAO52rfFpejKL4wc.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91361,
+      "name": "Halloween Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jamie Lee Curtis",
+      "character": "Laurie Strode",
+      "profile_path": "/eWKubKAAssRzmFwCZKh1mdYqGCH.jpg"
+    },
+    {
+      "name": "Judy Greer",
+      "character": "Karen",
+      "profile_path": "/pTLjIjh83R424RGxIfq4U0yx947.jpg"
+    },
+    {
+      "name": "Andi Matichak",
+      "character": "Allyson",
+      "profile_path": "/8XGIcVo5flyPKIbaEQiw8cMXgBj.jpg"
+    },
+    {
+      "name": "James Jude Courtney",
+      "character": "The Shape",
+      "profile_path": "/3bE8jZyPaOASww11gOwLP7QW0IY.jpg"
+    }
+  ]
+}

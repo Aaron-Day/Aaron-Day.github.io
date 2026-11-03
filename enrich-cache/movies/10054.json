@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10054,
+    "title": "Spy Kids",
+    "overview": "Carmen and Juni think their parents are boring. Little do they know that in their day, Gregorio and Ingrid Cortez were the top secret agents from their respective countries. They gave up that life to raise their children. Now, the disappearances of several of their old colleagues forces the Cortez\u0027 return from retirement. What they didn\u0027t count on was Carmen and Juni joining the \u0022family business.\u0022",
+    "tagline": "Real spies... only smaller.",
+    "runtime": 88,
+    "release_date": "2001-03-18",
+    "vote_average": 5.822,
+    "poster_path": "/j3rUkHIAAoKr6jU30q3Db4fcIF9.jpg",
+    "backdrop_path": "/wfStsmeSW7MtvYhD9Ac6ETXdbmx.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86486,
+      "name": "Spy Kids Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Alexa PenaVega",
+      "character": "Carmen Cortez",
+      "profile_path": "/11m8ff0YwS64Z04DJhupNQpwmCZ.jpg"
+    },
+    {
+      "name": "Daryl Sabara",
+      "character": "Juni Cortez",
+      "profile_path": "/eZfWmQqNgmuveRWSYuvnQyLXM0d.jpg"
+    },
+    {
+      "name": "Antonio Banderas",
+      "character": "Gregorio Cortez",
+      "profile_path": "/lpzfDt22374NPhOXZpUq74e9mfw.jpg"
+    },
+    {
+      "name": "Carla Gugino",
+      "character": "Ingrid Cortez",
+      "profile_path": "/dAqGOsHSzlP6RhaUURX2NrwITaq.jpg"
+    }
+  ]
+}

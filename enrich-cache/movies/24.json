@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 24,
+    "title": "Kill Bill: Vol. 1",
+    "overview": "An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle \u2013 but she lives to plot her vengeance.",
+    "tagline": "Here comes the bride.",
+    "runtime": 111,
+    "release_date": "2003-10-10",
+    "vote_average": 7.97,
+    "poster_path": "/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg",
+    "backdrop_path": "/iffzIhuLAO38Po6sh1s6ZEVwlNL.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2883,
+      "name": "Kill Bill Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Uma Thurman",
+      "character": "The Bride",
+      "profile_path": "/sBgAZWi3o4FsnaTvnTNtK6jpQcF.jpg"
+    },
+    {
+      "name": "Lucy Liu",
+      "character": "O-Ren Ishii",
+      "profile_path": "/9nbtjqsx3De7hO2XDtrBQ7M9VCH.jpg"
+    },
+    {
+      "name": "Vivica A. Fox",
+      "character": "Vernita Green",
+      "profile_path": "/oIzevp0dqjIxqRQ2VoSzjiDCBt.jpg"
+    },
+    {
+      "name": "Daryl Hannah",
+      "character": "Elle Driver",
+      "profile_path": "/5FllFmoiaru7tjXJ6Orc11OpQcw.jpg"
+    }
+  ]
+}

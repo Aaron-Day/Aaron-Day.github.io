@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 475557,
+    "title": "Joker",
+    "overview": "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+    "tagline": "Put on a happy face.",
+    "runtime": 122,
+    "release_date": "2019-10-01",
+    "vote_average": 8.113,
+    "poster_path": "/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+    "backdrop_path": "/rlay2M5QYvi6igbGcFjq8jxeusY.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 987044,
+      "name": "Joker Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Joaquin Phoenix",
+      "character": "Arthur Fleck",
+      "profile_path": "/u38k3hQBDwNX0VA22aQceDp9Iyv.jpg"
+    },
+    {
+      "name": "Robert De Niro",
+      "character": "Murray Franklin",
+      "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+    },
+    {
+      "name": "Zazie Beetz",
+      "character": "Sophie Dumond",
+      "profile_path": "/sgxzT54GnvgeMnOZgpQQx9csAdd.jpg"
+    },
+    {
+      "name": "Frances Conroy",
+      "character": "Penny Fleck",
+      "profile_path": "/aJRQAkO24L6bH8qkkE5Iv1nA3gf.jpg"
+    }
+  ]
+}

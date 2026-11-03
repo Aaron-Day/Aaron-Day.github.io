@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 119450,
+    "title": "Dawn of the Planet of the Apes",
+    "overview": "A group of scientists in San Francisco struggle to stay alive in the aftermath of a plague that is wiping out humanity, while Caesar tries to maintain dominance over his community of intelligent apes.",
+    "tagline": "The future is worth fighting for.",
+    "runtime": 130,
+    "release_date": "2014-07-08",
+    "vote_average": 7.344,
+    "poster_path": "/mSmAc9G25fhOHH45SLEeagR0qi7.jpg",
+    "backdrop_path": "/3SozaNPOYUadcmTPgndDibMyDNC.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 173710,
+      "name": "Planet of the Apes (Reboot) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Andy Serkis",
+      "character": "Caesar",
+      "profile_path": "/eNGqhebQ4cDssjVeNFrKtUvweV5.jpg"
+    },
+    {
+      "name": "Jason Clarke",
+      "character": "Malcolm",
+      "profile_path": "/quH4y2dto3UAgZOfaM0QriyRLPN.jpg"
+    },
+    {
+      "name": "Toby Kebbell",
+      "character": "Koba",
+      "profile_path": "/mlYytYJvoEHmhDH2enLtES1098Q.jpg"
+    },
+    {
+      "name": "Gary Oldman",
+      "character": "Dreyfus",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    }
+  ]
+}

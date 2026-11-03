@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11238,
+    "title": "Aladdin and the King of Thieves",
+    "overview": "Legendary secrets are revealed as Aladdin and his friends\u2014Jasmine, Abu, Carpet and, of course, the always entertaining Genie\u2014face all sorts of terrifying threats and make some exciting last-minute escapes pursuing the King Of Thieves and his villainous crew.",
+    "tagline": "The Spectacular Adventure Continues!",
+    "runtime": 81,
+    "release_date": "1996-05-20",
+    "vote_average": 6.246,
+    "poster_path": "/kTH7qEyvdDYMoQraQZm3LFKCge3.jpg",
+    "backdrop_path": "/gkzfPl0rjp5COdFXPaxitp9J3X3.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86027,
+      "name": "Aladdin Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Scott Weinger",
+      "character": "Aladdin (voice)",
+      "profile_path": "/5EvrWMz2xi3hOkrEMNGH2Rts2jz.jpg"
+    },
+    {
+      "name": "Robin Williams",
+      "character": "Genie (voice)",
+      "profile_path": "/lu0gIoH4Bi2CiuMc6WHF9ZIK4PS.jpg"
+    },
+    {
+      "name": "Linda Larkin",
+      "character": "Jasmine (voice)",
+      "profile_path": "/uN35v1Z374JvfdnDJBVmvnB2JNQ.jpg"
+    },
+    {
+      "name": "John Rhys-Davies",
+      "character": "Cassim (voice)",
+      "profile_path": "/qpXl1YnqQsUKYEDm3BB2zK5wbhe.jpg"
+    }
+  ]
+}

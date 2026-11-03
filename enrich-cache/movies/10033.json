@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10033,
+    "title": "Just Friends",
+    "overview": "While visiting his hometown during Christmas, a man comes face-to-face with his old high school crush whom he was best friends with \u2013 a woman whose rejection of him turned him into a ferocious womanizer.",
+    "tagline": "He loves her. She loves him not.",
+    "runtime": 94,
+    "release_date": "2005-11-23",
+    "vote_average": 6.201,
+    "poster_path": "/lh2EUTVOcESkdEOcsjYEW6qS1U0.jpg",
+    "backdrop_path": "/2X9fquknxs3JCTNWDoCLH0hUB3T.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ryan Reynolds",
+      "character": "Chris Brander",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Amy Smart",
+      "character": "Jamie Palamino",
+      "profile_path": "/9GQwkmqd5klfXvhd29YI5OKAx3N.jpg"
+    },
+    {
+      "name": "Anna Faris",
+      "character": "Samantha James",
+      "profile_path": "/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+    },
+    {
+      "name": "Chris Klein",
+      "character": "Dusty Dinkleman",
+      "profile_path": "/56kCtPVfvjm5IRPa2GyaQHTPIOy.jpg"
+    }
+  ]
+}

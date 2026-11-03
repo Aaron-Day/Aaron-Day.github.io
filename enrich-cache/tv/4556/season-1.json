@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "My First Day",
+        "overview": "John Dorian, \u0022J.D.\u0022 to friends, is a boyishly handsome, self-deprecatingly funny, likeable guy who would be confident if he only realized his assets. Four years of medical school have prepared J.D. for his first day as an intern at Sacred Heart Hospital - but he has his doubts.",
+        "air_date": "2001-10-02",
+        "runtime": 23,
+        "still_path": "/l2p4d7dz0We8j99qvyKpg8gxVNv.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "My Mentor",
+        "overview": "J.D. tries to persuade a smoker patient to quit smoking in order to impress Dr. Cox, who is just feeling lonely in his opinion. Elliot\u0027s attitude towards Carla annoys her, thus Turk is able to go on a date with Carla, when he convinces her to forgive Elliot.",
+        "air_date": "2001-10-04",
+        "runtime": 21,
+        "still_path": "/fcfTCWXXuObdDuCYNbJx1xKirEV.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "My Best Friend\u0027s Mistake",
+        "overview": "J.D. begins to feel distant from Turk, when he leaves him abandoned every time that he tries to talk to him. Elliot fights with Kelso for calling her \u0022sweetheart,\u0022 and she seeks Dr. Cox\u0027s advice. J.D.\u0027s relationship with Elliot goes in a time race, when he has 48 hours to kiss her before he is put into her \u0022Friend Zone.\u0022",
+        "air_date": "2001-10-09",
+        "runtime": 21,
+        "still_path": "/cNXgiW7PgrhOSJq0ED0HqE9tuNW.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "My Old Lady",
+        "overview": "The three interns are each assigned patients with various illnesses. Statistically speaking, one of the three is going to die. J.D.\u0027s patient is 86 year old Mrs. Tanner, who is in renal failure. 20 year old David Morrison is Turk\u0027s hernia patient and Elliot\u0027s patient Mrs. Guerrero only speaks Spanish and might have lupus.",
+        "air_date": "2001-10-16",
+        "runtime": 21,
+        "still_path": "/7L3r07hpX7ezxbZGYtFUfSmPzQm.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "My Two Dads",
+        "overview": "J.D. points out what seems to be a technical mistake to Dr. Kelso, but it was really an attempt of Dr. Cox to save a woman without insurance using a dead guy\u0027s insurance. Dr. Kelso and Dr. Cox show J.D. their different ways of looking at medicine. Meanwhile, the Janitor intimidates J.D., Elliot discovers the healing powers of her boobs and Turk gives Carla a pen he thought he took from the Lost and Found box.",
+        "air_date": "2001-10-23",
+        "runtime": 21,
+        "still_path": "/lqk1Cbltiv4ZIcdiSWel7atngws.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "My Bad",
+        "overview": "Dr. Cox is still facing the threat of suspension, and coincidentally, J.D. is assigned to a special patient: Jordan Sullivan, an important board member. Elliot is assigned to take care of a shrink whose jaw has been wired shut. Carla\u0027s mom makes a scandal after Turk spends the night at Carla\u0027s.",
+        "air_date": "2001-10-30",
+        "runtime": 21,
+        "still_path": "/zE6KZW121kYbdadS86iQMsJtIQ4.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "My Super Ego",
+        "overview": "J.D. has finally earned the spot as brightest student, but he\u0027s got competition: Nick Murdoch, who seems to be nicer, friendlier and has a better butt than him. But even J.D. can\u0027t hate the guy. Turk is having problems at the operation table and doesn\u0027t tell Carla, who keeps bothering Dr. Cox about it.",
+        "air_date": "2001-11-06",
+        "runtime": 21,
+        "still_path": "/5jWI9mkDioZzdOE3rv2ItqQMRJT.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "My Fifteen Minutes",
+        "overview": "J.D. and Turk become heroes after saving a cameraman\u0027s life on TV. J.D. worries about his evaluation. Carla blows off a night at the bar with Elliot.",
+        "air_date": "2001-11-15",
+        "runtime": 21,
+        "still_path": "/8t2ENuBC2EdEn8Vl2NDQh25O7gp.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "My Day Off",
+        "overview": "J.D. gets to see the hospital through the eyes of a patient. Elliot examines him while Dr. Cox is trying to show off to his mentor, Dr. Benson, the ex-chief of medicine.",
+        "air_date": "2001-11-20",
+        "runtime": 21,
+        "still_path": "/nw229VrDA48O6gdYKnRrAsI1H69.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "My Nickname",
+        "overview": "J.D. gains a new nickname - \u0022Scooter\u0022 - and Dr. Cox gives Elliot the evil eye when she won\u0027t discharge a troublesome patient.",
+        "air_date": "2001-11-27",
+        "runtime": 21,
+        "still_path": "/e1qs8QKHn5nBil7INhJQuEpB0R9.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "My Own Personal Jesus",
+        "overview": "It\u0027s Christmas, and Dr. Cox has J.D. videotape the birth of the child of one of his friends.",
+        "air_date": "2001-12-11",
+        "runtime": 21,
+        "still_path": "/hpfdKPuNlnOk8R1vq56bavRQVGD.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "My Blind Date",
+        "overview": "Afraid a woman might sue the hospital, Dr. Kelso asks J.D. to stand by her and be friendly, so she won\u0027t sue them. Elliot is desperate for attention from Dr. Cox and Turk snaps at Carla when she steals fries from his plate.",
+        "air_date": "2002-01-08",
+        "runtime": 21,
+        "still_path": "/sBPdoCf7oNIm2xJas6IW25H13Xx.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "My Balancing Act",
+        "overview": "J.D. is frustrated when his budding romance is constantly interrupted by emergency calls. Dr. Cox informs the interns how to avoid Dr. Kelso\u0027s bite. Carla and Turk deal with their first sexual intimacy complication.",
+        "air_date": "2002-01-15",
+        "runtime": 21,
+        "still_path": "/nB0bUAEjqhDARTxjYvttWH5QYcs.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "My Drug Buddy",
+        "overview": "Alex and Elliot argue over missing medication, and J.D. needs to choose sides. Dr. Kelso gives Carla a ride to work and she sees a totally different side of him. Turk finds out that Dr. Cox has secret feelings for Carla.",
+        "air_date": "2002-01-22",
+        "runtime": 21,
+        "still_path": "/18ova8X6VW39C6A7G0D81NUDZqF.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "My Bed Banter \u0026 Beyond",
+        "overview": "J.D. and Elliot go to work trying to hide their new secret romance, but everybody already knows it.",
+        "air_date": "2002-02-05",
+        "runtime": 27,
+        "still_path": "/hVyAQqgTIgwsdfm6GKNbxjDQbbU.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "My Heavy Meddle",
+        "overview": "Dr. Cox shows up at J.D.\u0027s door. Turk and Elliot partner on a research project and Carla struggles to fulfill a comatose patient\u0027s final request.",
+        "air_date": "2002-02-26",
+        "runtime": 21,
+        "still_path": "/ztPn3wslqhrlGE72CVYcgQ2IXJZ.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "My Student",
+        "overview": "J.D., Elliot and Turk are receiving their first medical students. Turk\u0027s student is a very attractive young woman and Elliot\u0027s is the son of a CEO.",
+        "air_date": "2002-03-05",
+        "runtime": 21,
+        "still_path": "/5MtueNV9LEQa9w9zpR7W1ia3g1O.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "My Tuscaloosa Heart",
+        "overview": "J.D.\u0027s rude patient dies from cancer. Elliot is convinced Dr. Kelso is a singer and Dr. Cox finds himself trapped in a love square.",
+        "air_date": "2002-03-12",
+        "runtime": 21,
+        "still_path": "/uZyeWSemZyEkOOjXxbv3Hsn60q1.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "My Old Man",
+        "overview": "An assortment of moms and dads descend on their offspring at home and in the workplace.",
+        "air_date": "2002-04-09",
+        "runtime": 21,
+        "still_path": "/kMYInOdk5dESauppa9E5mzVpaoR.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "My Way or the Highway",
+        "overview": "Turk\u0027s competitiveness is starting to annoy J.D. and Dr. Kelso fires the only nurse that makes good coffee. Elliot meets a very attractive patient.",
+        "air_date": "2002-04-16",
+        "runtime": 21,
+        "still_path": "/9b3QSnze1f5oq8f2duK4CgxxN3i.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "My Sacrificial Clam",
+        "overview": "J.D. fears being contaminated with Hepatitis B. Elliot has a hard time making time for her new relationship. Turk obsesses about getting in shape.",
+        "air_date": "2002-04-30",
+        "runtime": 21,
+        "still_path": "/lY0uhuHfdaPlTAWtUZEM9EwDHQy.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "My Occurrence",
+        "overview": "Jordan\u0027s brother Ben is admitted at Sacred Heart for having an accident with a nail gun. J.D. goes on a search for test results.",
+        "air_date": "2002-05-07",
+        "runtime": 21,
+        "still_path": "/pzMuBS3cbts75Su6mkzDF4HOFf3.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "My Hero",
+        "overview": "Dr. Cox is the voice of reason and compassion. Turk is upset he wasn\u0027t chosen for a difficult surgery, and Elliot is criticized by Dr. Kelso for the 100th time.",
+        "air_date": "2002-05-14",
+        "runtime": 21,
+        "still_path": "/8sii3CGM98evFf8XxA4ZUgdyO7G.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "My Last Day",
+        "overview": "It\u0027s J.D.\u0027s last day as an intern. Carla and Turk are arguing about dating other people. Elliot finally rebels against being everyone\u0027s doormat, and J.D. is just trying to stay out of people\u0027s way.",
+        "air_date": "2002-05-21",
+        "runtime": 22,
+        "still_path": "/oJ9ReqdQkfKb9tROW6KqkDCc1Ee.jpg"
+      }
+    ]
+  }
+}

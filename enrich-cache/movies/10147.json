@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10147,
+    "title": "Bad Santa",
+    "overview": "You\u0027d better watch out - Willie T. Soke is coming to town, and he doesn\u0027t care if you\u0027ve been naughty or nice. Willie\u0027s favorite holiday tradition is to fill his sacks with loot lifted from shopping malls across the country. But this year his plot gets derailed by a wisecracking store detective, a sexy bartender, and a kid who\u0027s convinced Willie is the real Santa Claus.",
+    "tagline": "He doesn\u0027t care if you\u0027re naughty or nice.",
+    "runtime": 92,
+    "release_date": "2003-11-26",
+    "vote_average": 6.571,
+    "poster_path": "/rfClLIyeHqpMofmrPY8DaLe4z9x.jpg",
+    "backdrop_path": "/tbmNzJIc7R1MuEweCOThpTzglyx.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 423173,
+      "name": "Bad Santa Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Billy Bob Thornton",
+      "character": "Willie",
+      "profile_path": "/uJBFml6efjg34u2jvT5ugVa1cPI.jpg"
+    },
+    {
+      "name": "Tony Cox",
+      "character": "Marcus",
+      "profile_path": "/sbZS0gxvRsAIgHxIEL8STINpn7u.jpg"
+    },
+    {
+      "name": "Lauren Graham",
+      "character": "Sue",
+      "profile_path": "/3leQVZnthAZwngH7HAD6T7qfsVu.jpg"
+    },
+    {
+      "name": "Brett Kelly",
+      "character": "The Kid",
+      "profile_path": "/kHPBsKWF4Cap70LVy41vL5ADyLW.jpg"
+    }
+  ]
+}

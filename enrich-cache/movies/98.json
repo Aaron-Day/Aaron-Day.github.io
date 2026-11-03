@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 98,
+    "title": "Gladiator",
+    "overview": "After the death of Emperor Marcus Aurelius, his devious son takes power and demotes Maximus, one of Rome\u0027s most capable generals who Marcus preferred. Eventually, Maximus is forced to become a gladiator and battle to the death against other men for the amusement of paying audiences.",
+    "tagline": "What we do in life echoes in eternity.",
+    "runtime": 155,
+    "release_date": "2000-05-04",
+    "vote_average": 8.233,
+    "poster_path": "/aDb548BOkFfI4nFm0kx8A3Ezh7H.jpg",
+    "backdrop_path": "/Ar7QuJ7sJEiC0oP3I8fKBKIQD9u.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1069584,
+      "name": "Gladiator Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Russell Crowe",
+      "character": "Maximus",
+      "profile_path": "/3IBZF0qCZMZ7zJYlgrH0sQzNZV.jpg"
+    },
+    {
+      "name": "Joaquin Phoenix",
+      "character": "Commodus",
+      "profile_path": "/u38k3hQBDwNX0VA22aQceDp9Iyv.jpg"
+    },
+    {
+      "name": "Connie Nielsen",
+      "character": "Lucilla",
+      "profile_path": "/gSQ3O3PJ6ly6nT63joOtfZyscFP.jpg"
+    },
+    {
+      "name": "Oliver Reed",
+      "character": "Proximo",
+      "profile_path": "/dWfotc1X71wNCGyPO9hXpv8U9Gw.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 298618,
+    "title": "The Flash",
+    "overview": "When his attempt to save his family inadvertently alters the future, Barry Allen becomes trapped in a reality in which General Zod has returned and there are no Super Heroes to turn to. In order to save the world that he is in and return to the future that he knows, Barry\u0027s only hope is to race for his life. But will making the ultimate sacrifice be enough to reset the universe?",
+    "tagline": "Worlds collide.",
+    "runtime": 144,
+    "release_date": "2023-06-13",
+    "vote_average": 6.594,
+    "poster_path": "/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+    "backdrop_path": "/yF1eOkaYvwiORauRCPWznV9xVvi.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ezra Miller",
+      "character": "Barry Allen / The Flash",
+      "profile_path": "/6wmTpbYpmhthaxzM5ss3377F9IV.jpg"
+    },
+    {
+      "name": "Sasha Calle",
+      "character": "Kara Zor-El / Supergirl",
+      "profile_path": "/yLZY25AQOC2xKzsWqteyJTcWPK3.jpg"
+    },
+    {
+      "name": "Michael Keaton",
+      "character": "Bruce Wayne / Batman",
+      "profile_path": "/tYSja1KByFnZ4Hkp3stPqkKHnNL.jpg"
+    },
+    {
+      "name": "Michael Shannon",
+      "character": "General Zod",
+      "profile_path": "/6mMczfjM8CiS1WuBOgo5Xom1TcR.jpg"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "New Terra",
+        "overview": "The crew of the Roci investigates a strange protomolecule ruin on an alien planet. Bobbie copes with civilian life on Mars. Drummer and Ashford battle with piracy in the Belt.",
+        "air_date": "2019-12-13",
+        "runtime": 51,
+        "still_path": "/r0dw6NShkJI1lUKXAV3gDRocnCH.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Jetsam",
+        "overview": "Avasarala is blindsided while on a visit to Mars. The Roci crew continue their protomolecule investigation while tensions between the RCE and Belters reach a tipping point. Drummer and Ashford track down a terrorist.",
+        "air_date": "2019-12-13",
+        "runtime": 50,
+        "still_path": "/3MI6kOshBR5yVF00crqqlEwhTEq.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Subduction",
+        "overview": "New alien threats emerge on Ilus as Naomi battles health challenges on the planet. Bobbie searches for a missing person on Mars. Avasarala faces a new challenge in the UN.",
+        "air_date": "2019-12-13",
+        "runtime": 47,
+        "still_path": "/bChzBz0ArvVXd6j5CfDHH613EtB.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Retrograde",
+        "overview": "Drummer and Ashford confront a dangerous person from Naomi\u0027s past. Murtry hunts down a target. Bobbie\u0027s makes a life-changing confession.",
+        "air_date": "2019-12-13",
+        "runtime": 45,
+        "still_path": "/jjUJY0IjX6VRZ70m5QFcmy5Uaea.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Oppressor",
+        "overview": "As tensions on Ilus reach a boiling point, Holden reveals a secret. Avasarala debates Nancy Gao while an emergency on the Roci forces Alex and Naomi into action.",
+        "air_date": "2019-12-13",
+        "runtime": 47,
+        "still_path": "/bPli5jkJvsy15RWaD29DwYtkrYy.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Displacement",
+        "overview": "The Roci crew prepares for an incoming disaster on Ilus. Ashford and Drummer close in on an enemy within the Belt. Bobbie takes on a dangerous job.",
+        "air_date": "2019-12-13",
+        "runtime": 50,
+        "still_path": "/eQb59qnmb6WxiSHCtoaoRj7rlkB.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "A Shot in the Dark",
+        "overview": "Naomi and Alex work to keep the Barbapiccola in orbit amidst a power outage. Avasarala faces a tough decision. Holden and Elvi race to find a cure for a disease spreading on Ilus.",
+        "air_date": "2019-12-13",
+        "runtime": 46,
+        "still_path": "/qddGHe54QEJGgYQECHT7iz8vEbV.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The One-Eyed Man",
+        "overview": "Avasarala faces fallout for the UN\u0027s military mission. Ashford and Drummer makes big decisions about their future within the OPA. A spreading illness on Ilus takes a toll on Amos. Alex and Naomi\u0027s attempt to rescue the Barb turns desperate.",
+        "air_date": "2019-12-13",
+        "runtime": 54,
+        "still_path": "/aNCghaRmqyYrr1LS2Dt0JhQXgJM.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Saeculum",
+        "overview": "Holden and Miller race to save Ilus. Murtry puts his endgame into motion, putting the Roci crew\u0027s lives at risk.",
+        "air_date": "2019-12-13",
+        "runtime": 45,
+        "still_path": "/3UN4rylAKdtlUbGYNxYxQhIuqZw.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Cibola Burn",
+        "overview": "Ashford closes in on an enemy while uncovering a dangerous plot. Avasarala faces a crossroads in her personal and political life. The Roci crew works to reestablish life on Ilus in the wake of a deadly catastrophe.",
+        "air_date": "2019-12-13",
+        "runtime": 50,
+        "still_path": "/2lR5oigdF6JAEiyaADjgzcP9yQv.jpg"
+      }
+    ]
+  }
+}

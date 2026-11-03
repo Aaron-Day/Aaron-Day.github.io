@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "How I Spent My Summer Vacation",
+        "overview": "Will returns home from spending the summer in Philadelphia with a new look that doesn\u0027t sit well with Uncle Phil.",
+        "air_date": "1992-09-14",
+        "runtime": 24,
+        "still_path": "/cLcs4eq4LnQDMCam25yv3HkZHSp.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Will Gets Committed",
+        "overview": "When the Banks family returns to its former neighborhood to help old friends after a destructive city-wide riot, Vivian reveals a surprise to Philip.",
+        "air_date": "1992-09-21",
+        "runtime": 24,
+        "still_path": "/7Yd0jkUuxjNpxNMQV6xqvck4bzy.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "That\u0027s No Lady, That\u0027s My Cousin",
+        "overview": "Enrolled at the newly coed Bel-Air Prep, Ashley begins dressing to entice guys, using Will\u0027s preferences in women as her examples.",
+        "air_date": "1992-09-28",
+        "runtime": 24,
+        "still_path": "/g3gvqPhstICPj9mgPa8pSVxYFuk.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Hilary Gets a Job",
+        "overview": "Hilary gets a job reporting weather on television.",
+        "air_date": "1992-10-05",
+        "runtime": 24,
+        "still_path": "/pTsvHzjrzBWJmGC04vdATGi4iap.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Mama\u0027s Baby, Carlton\u0027s Maybe",
+        "overview": "Carlton prepares for a dinner date with his former girlfriend, Cindy (Lark Voorhees), forgiving her for rejecting him several months earlier, but when she arrives with a newborn baby named Carlton Jr., the entire Banks family is stunned.",
+        "air_date": "1992-10-12",
+        "runtime": 24,
+        "still_path": "/xmgva3aIr4776vmqSN9jFHg4cHy.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "P.S. I Love You",
+        "overview": "While Philip entertains rude, senile Judge Robertson, Will accepts expensive gifts from Lindsey Simon, a rich classmate who wants to buy his affection.",
+        "air_date": "1992-10-24",
+        "runtime": 24,
+        "still_path": "/2ovBEZixXvugq49Yi98i442cC4n.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Here Comes the Judge",
+        "overview": "Will gets arrested for numerous parking tickets as Phil runs for judge against incumbent Judge Robertson.",
+        "air_date": "1992-10-26",
+        "runtime": 24,
+        "still_path": "/wFwvCOl9hO9mvWhLYimWMYgovxc.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Boyz in the Woods",
+        "overview": "Philip takes Will and Carlton on a camping trip that turns out to be a disaster when snow traps the unhappy campers.",
+        "air_date": "1992-11-05",
+        "runtime": 24,
+        "still_path": "/bN0ZExD6u8hlp7k07L8WQOXgdpM.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "A Night at the Oprah",
+        "overview": "The Bankses appear on Oprah\u0027s show and fail to invite Will on-stage, which may cause Philip to lose the election.",
+        "air_date": "1992-11-09",
+        "runtime": 24,
+        "still_path": "/mgIkl298AxYES4m4agWwjG85XeH.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Asses to Ashes",
+        "overview": "Election results are in and Philip fights to remain cool amid lies by Judge Robertson, which prompt Will to confront the outspoken incumbent. Will Will go to far? Will he say what everyone is feeling? Will Judge Robertson be able to take it?",
+        "air_date": "1992-11-16",
+        "runtime": 24,
+        "still_path": "/39bLD1H3r87Etd1VhbGXX14i6Sf.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "A Funny Thing Happened on the Way to the Forum",
+        "overview": "At Vivian\u0027s Lamaze class, Will cozies up to a pregnant sportswriter, who takes him to a game - and delivers more than just fun.",
+        "air_date": "1992-11-23",
+        "runtime": 23,
+        "still_path": "/j84QnUio5Tol42L5AWGe1x5QsL9.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Cold War",
+        "overview": "When Vivian quarantines Will and Carlton in the backyard pool house after both are stricken with contagious colds, they spend the night arguing over a girl that Will stole from Carlton.",
+        "air_date": "1992-12-07",
+        "runtime": 24,
+        "still_path": "/yHciNsvAyD2WQk2vmzfA4iQfqvD.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Mommy Nearest",
+        "overview": "Will tries to tell his mother that he doesn\u0027t want to return to Philadelphia with her after his high school graduation.",
+        "air_date": "1992-12-14",
+        "runtime": 24,
+        "still_path": "/AfruXYINwisxJiVW5UU5yQLMHu4.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Winner Takes Off",
+        "overview": "Geoffrey humiliates himself by insulting the Banks family and quitting his job when Will and Carlton trick him into thinking he has won millions of dollars in the lottery.",
+        "air_date": "1993-01-04",
+        "runtime": 24,
+        "still_path": "/hA3MKiCDeOIX4LhE2pNk8Dca4MC.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Robbing the Banks",
+        "overview": "Philip is quick to judge an ex-con Will urged him to hire as a handyman and temporary assistant after the house is robbed.",
+        "air_date": "1993-01-18",
+        "runtime": 24,
+        "still_path": "/dbC4uN40Y3BSFkFGqmBGmDsNGny.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Bundle of Joy",
+        "overview": "As Vivian\u0027s delivery date approaches, the family fantasizes about what the baby will mean to each of them: Ashley feels all but invisible, Geoffrey feels overwhelmed by the family\u0027s demands, and Vivian feels like she\u0027s having triplets.",
+        "air_date": "1993-01-25",
+        "runtime": 21,
+        "still_path": "/9OW6wcu5WmvFNHD0ZfwjRcJKtvM.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Best Laid Plans",
+        "overview": "When Monique refuses to have sex until she\u0027s married, Will stages a mock wedding ceremony with D.J. Jazzy Jeff as the preacher.",
+        "air_date": "1993-02-01",
+        "runtime": 24,
+        "still_path": "/23l4vDRaKTFA40M3peRiJgRk5Qv.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Alma Matter",
+        "overview": "Depressed and suicidal over having ruined his chances of attending Princeton University, Carlton is visited by his Guardian Angel, who shows him how awful the Banks family would be if he weren\u0027t alive.",
+        "air_date": "1993-02-08",
+        "runtime": 24,
+        "still_path": "/abIvmxQc6kkruMlypGwVEuPW3ex.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Just Say Yo",
+        "overview": "Will learns a sobering lesson after Carlton pops the wrong pills from Will\u0027s locker, mistaking amphetamines for vitamins, and winds up in hospital.",
+        "air_date": "1993-02-15",
+        "runtime": 24,
+        "still_path": "/tp5ZduolFisrEwCXzMmhUTyAZjl.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Baby Comes Out",
+        "overview": "Vivian\u0027s baby is a week late, but family members and her visiting sisters are nowhere to be found when it\u0027s time to rush to the hospital.",
+        "air_date": "1993-02-22",
+        "runtime": 23,
+        "still_path": "/w3heUzNENLcKXPsrvd0WFI73A0e.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "You Bet Your Life",
+        "overview": "Heavyweight boxing champ Riddick Brown wreaks havoc with Carlton\u0027s mind and Will\u0027s face at a funky cafe-casino in Nevada, where the cousins have stopped on their way to check out a college for Will.",
+        "air_date": "1993-03-01",
+        "runtime": 24,
+        "still_path": "/mLUSKyxx7anec4c7SWZLDU6szMW.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Ain\u0027t No Business Like Show Business",
+        "overview": "Will lands a spot in a comedy showcase after accompanying a comic friend to an audition.",
+        "air_date": "1993-04-12",
+        "runtime": 24,
+        "still_path": "/zCsirEZWQ0OJe3b9tBVaBJ3ihPA.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Way We Were",
+        "overview": "Series clips illustrate family recollections as the kids put together a scrapbook for Vivian and Philip, who want to renew their vows on their anniversary.",
+        "air_date": "1993-05-03",
+        "runtime": 24,
+        "still_path": "/yMAtPSiyOQcgViMK1iGkhL2kOrF.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Six Degrees of Graduation",
+        "overview": "Vy anticipates Will\u0027s graduation with enthusiasm, but there may be discord when she learns Will is failing music. To pass his music class, Will must sing at the graduation ceremony - with a class of eight-year-olds.",
+        "air_date": "1993-05-10",
+        "runtime": 24,
+        "still_path": "/td2YucuSYqMUYJi5Ft3pHqVR0WO.jpg"
+      }
+    ]
+  }
+}

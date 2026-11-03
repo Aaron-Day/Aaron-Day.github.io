@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9531,
+    "title": "Superman III",
+    "overview": "Aiming to defeat the Man of Steel, wealthy executive Ross Webster hires bumbling but brilliant Gus Gorman to develop synthetic kryptonite, which yields some unexpected psychological effects. Between rekindling romance with his high school sweetheart and saving himself, Superman must contend with a powerful supercomputer.",
+    "tagline": "If the world\u0027s most powerful computer can control even Superman...no one on earth is safe.",
+    "runtime": 125,
+    "release_date": "1983-06-17",
+    "vote_average": 5.5,
+    "poster_path": "/c4oR6qgZW2s5foGkQi2Dd86KuAS.jpg",
+    "backdrop_path": "/ui3oiC5mdwxTPZSLBvqoBqckTQ4.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8537,
+      "name": "Superman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Christopher Reeve",
+      "character": "Clark Kent / Superman",
+      "profile_path": "/vAGrPf3ajy6OVE3FhgABynZfybP.jpg"
+    },
+    {
+      "name": "Richard Pryor",
+      "character": "August \u0027Gus\u0027 Gorman",
+      "profile_path": "/5hLh0btIkqYPbDmJ0i4WZo9OAt2.jpg"
+    },
+    {
+      "name": "Annette O\u0027Toole",
+      "character": "Lana Lang",
+      "profile_path": "/mCTEEzuNXlCdyl9uM4ot688IfVz.jpg"
+    },
+    {
+      "name": "Robert Vaughn",
+      "character": "Ross Webster",
+      "profile_path": "/mYaQ9Qv2oC014lwMaXb76A5UL1n.jpg"
+    }
+  ]
+}

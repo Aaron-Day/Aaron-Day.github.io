@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 80035,
+    "title": "The Watch",
+    "overview": "Four everyday suburban guys come together as an excuse to escape their humdrum lives one night a week. But when they accidentally discover that their town has become overrun with aliens posing as ordinary suburbanites, they have no choice but to save their neighborhood \u2013 and the world \u2013 from total extermination.",
+    "tagline": "Got protection?",
+    "runtime": 102,
+    "release_date": "2012-07-26",
+    "vote_average": 5.6,
+    "poster_path": "/pURZnyDC8vLABAFLw3vtVWmkpTm.jpg",
+    "backdrop_path": "/iQkWo6MQ1pDxbZQ0DNxwW5J3Ysk.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Stiller",
+      "character": "Evan",
+      "profile_path": "/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg"
+    },
+    {
+      "name": "Vince Vaughn",
+      "character": "Bob",
+      "profile_path": "/qImHvsd7SFJh46Ujx50xUfkeMNz.jpg"
+    },
+    {
+      "name": "Jonah Hill",
+      "character": "Franklin",
+      "profile_path": "/cymlWttB83MsAGR2EkTgANtjeRH.jpg"
+    },
+    {
+      "name": "Richard Ayoade",
+      "character": "Jamarcus",
+      "profile_path": "/qHKoy9kP4bsv4G9EkvU4FMUmYkS.jpg"
+    }
+  ]
+}

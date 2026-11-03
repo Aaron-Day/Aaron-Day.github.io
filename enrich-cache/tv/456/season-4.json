@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Kamp Krusty",
+        "overview": "Bart leads an uprising at Krusty\u0027s summer camp after he and Lisa are subjected to a Dickensian sweatshop.",
+        "air_date": "1992-09-24",
+        "runtime": 23,
+        "still_path": "/6EoVQhrq6UOk3UBzeBGwJJz08Kh.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Streetcar Named Marge",
+        "overview": "Marge is cast in a version of \u0022A Streetcar Named Desire,\u0022 playing Blanche to Ned Flanders\u0027 Stanley.",
+        "air_date": "1992-10-01",
+        "runtime": 23,
+        "still_path": "/pDjGyQT5FbjvQWRNLQRBS76ooKt.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Homer the Heretic",
+        "overview": "After skipping church one Sunday morning, Homer decides to quit church altogether and spend Sundays worshiping in his own way -- with cigars and beer.",
+        "air_date": "1992-10-08",
+        "runtime": 23,
+        "still_path": "/wilxhMIPn9VhmRFTjyM2Mjqo44L.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Lisa the Beauty Queen",
+        "overview": "Homer enters Lisa into the Little Miss Springfield Pageant to help her feel better about her looks. But when she must choose between the title and her integrity, she realizes that confidence comes from within.",
+        "air_date": "1992-10-15",
+        "runtime": 23,
+        "still_path": "/i9LwMK7AP5O1M6wdJ8lkfdvh5T.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Treehouse of Horror III",
+        "overview": "A Halloween trilogy includes a murderous Krusty doll; a \u0022King Kong\u0022 parody; an invasion of zombies unleashed by Bart\u0027s incantation.",
+        "air_date": "1992-10-29",
+        "runtime": 23,
+        "still_path": "/lEojftT4NydQtBbDBEzNifIt2LQ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Itchy \u0026 Scratchy: The Movie",
+        "overview": "Bart is punished by being barred from the Itchy and Scratchy movie.",
+        "air_date": "1992-11-03",
+        "runtime": 23,
+        "still_path": "/nIdGe37LMkHHu7An5u869eq0jJG.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Marge Gets a Job",
+        "overview": "Mr. Burns is instantly smitten when Marge takes a job at the nuclear power plant.",
+        "air_date": "1992-11-05",
+        "runtime": 23,
+        "still_path": "/aRZbAcKvkCpCn1oxvliwrS6IDMd.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "New Kid on the Block",
+        "overview": "Bart has a crush on his new neighbor, a teenage girl who only has eyes for Jimbo Jones. Bart sets out to prove that Jimbo is not as tough as he seems.",
+        "air_date": "1992-11-12",
+        "runtime": 22,
+        "still_path": "/jlCmgPGiGc7ZjzjI4Q8FGxDOqaL.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Mr. Plow",
+        "overview": "Homer and Barney become competitors in the snow-plowing business.",
+        "air_date": "1992-11-19",
+        "runtime": 23,
+        "still_path": "/w15pg6uJc7ouZE7UlMtKSItLJeR.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Lisa\u0027s First Word",
+        "overview": "While trying to get Maggie to say her first word, Marge and Homer reminisce about Bart\u0027s and Lisa\u0027s first words.",
+        "air_date": "1992-12-03",
+        "runtime": 23,
+        "still_path": "/hKBTWStS7DHRUxtniHTIPq6Jw9W.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Homer\u0027s Triple Bypass",
+        "overview": "Homer sees a discount doctor for a coronary bypass.",
+        "air_date": "1992-12-17",
+        "runtime": 23,
+        "still_path": "/qljHnXrfSUvkKQnkx7mzKxcyNAt.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Marge vs. the Monorail",
+        "overview": "When Springfield gets a sudden windfall, a charismatic traveling salesman convinces the town to build a monorail.",
+        "air_date": "1993-01-14",
+        "runtime": 23,
+        "still_path": "/acwoGrLEdaUEw4T0O9u2xYuPLz.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Selma\u0027s Choice",
+        "overview": "After seeing Aunt Gladys die alone, Aunt Selma wants to get married and have a baby... until she spends a day babysitting Bart and Lisa at Duff Gardens.",
+        "air_date": "1993-01-21",
+        "runtime": 23,
+        "still_path": "/feDzbYBzcmy0Z5Q9IEjPmMIRv3O.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Brother from the Same Planet",
+        "overview": "When Homer neglects Bart once too often, Bart goes to the Big Brother program to get a new father figure. Stung, Homer replaces Bart with a little brother.",
+        "air_date": "1993-02-04",
+        "runtime": 23,
+        "still_path": "/wxbuu42dsewGw3VYmyepgluJIhT.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "I Love Lisa",
+        "overview": "Chief Wiggum\u0027s son has a crush on Lisa after she gives him a Valentine out of pity.",
+        "air_date": "1993-02-11",
+        "runtime": 23,
+        "still_path": "/xJ6sqPvze56B2iSsz2Hbm0QTVaA.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Duffless",
+        "overview": "After a DUI, Homer swears off beer for a month. Meanwhile, Bart and Lisa\u0027s sibling rivalry plays out in the school science fair.",
+        "air_date": "1993-02-18",
+        "runtime": 23,
+        "still_path": "/zUuDpJCgzudFFyVtgRgAy9r5Wmt.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Last Exit to Springfield",
+        "overview": "Union president Homer fights to keep the dental plan.",
+        "air_date": "1993-03-11",
+        "runtime": 23,
+        "still_path": "/xaECGLjFTGZF7PJpAMLE6yfOEpr.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "So It\u0027s Come to This: A Simpsons Clip Show",
+        "overview": "An April Fools\u0027 Day prank provides the jumping-off point for Simpson family flashbacks.",
+        "air_date": "1993-04-01",
+        "runtime": 23,
+        "still_path": "/r5UGabzVmub1ZYxg1SPSY8xnBUH.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Front",
+        "overview": "Lisa and Bart write an Itchy and Scratchy episode; Homer makes up a missing high-school credit.",
+        "air_date": "1993-04-15",
+        "runtime": 23,
+        "still_path": "/xP5TnHNcLyVVqAXutDsTmzrUETP.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Whacking Day",
+        "overview": "Lisa takes a stand against Springfield\u0027s annual snake-bashing festival.",
+        "air_date": "1993-04-29",
+        "runtime": 23,
+        "still_path": "/xNb05Ls23IWWkSXtwRyI1QXesP1.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Marge in Chains",
+        "overview": "Overwhelmed by her family\u0027s demands during a flu epidemic, Marge accidentally shoplifts at the Kwik-E-Mart and winds up in prison.",
+        "air_date": "1993-05-06",
+        "runtime": 23,
+        "still_path": "/yiqM1WlFnX586bzdFtww2Xhq6D6.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Krusty Gets Kancelled",
+        "overview": "Krusty\u0027s Hollywood pals help when his show is canceled after a new star causes his ratings to plummet.",
+        "air_date": "1993-05-13",
+        "runtime": 23,
+        "still_path": "/nPGlBGrnCSo9pP77dNelraribUr.jpg"
+      }
+    ]
+  }
+}

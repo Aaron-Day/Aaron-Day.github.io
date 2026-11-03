@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10923,
+    "title": "Agent Cody Banks",
+    "overview": "Recruited by the U.S. government to be a special agent, nerdy teenager Cody Banks must get closer to cute classmate Natalie in order to learn about an evil plan hatched by her father. But despite the agent persona, Cody struggles with teen angst.",
+    "tagline": "Save the world. Get the girl. Pass math.",
+    "runtime": 102,
+    "release_date": "2003-03-14",
+    "vote_average": 5.56,
+    "poster_path": "/fhK0mqqirPsckxkNisvi32A4lf6.jpg",
+    "backdrop_path": "/5daWhr7xQwpdoRhoXnAOHWj2zhW.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91427,
+      "name": "Agent Cody Banks Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Frankie Muniz",
+      "character": "Cody Banks",
+      "profile_path": "/tBckW8eJHv4vz8B3DJYH1rLAtyN.jpg"
+    },
+    {
+      "name": "Hilary Duff",
+      "character": "Natalie Connors",
+      "profile_path": "/2CCWB8ow2S1jxTrajq1YKOubFGN.jpg"
+    },
+    {
+      "name": "Angie Harmon",
+      "character": "Ronica Miles",
+      "profile_path": "/ktzrAh55FF6hb4FzM5S9oTSTaeu.jpg"
+    },
+    {
+      "name": "Keith David",
+      "character": "CIA Director",
+      "profile_path": "/1x0QXavmIy3QmhyrOsV7gMnJaEx.jpg"
+    }
+  ]
+}

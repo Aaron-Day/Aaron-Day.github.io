@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 957,
+    "title": "Spaceballs",
+    "overview": "When the nefarious Dark Helmet hatches a plan to snatch Princess Vespa and steal her planet\u0027s air, space-bum-for-hire Lone Starr and his clueless sidekick fly to the rescue. Along the way, they meet Yogurt, who puts Lone Starr wise to the power of \u0022The Schwartz.\u0022 Can he master it in time to save the day?",
+    "tagline": "May the schwartz be with you.",
+    "runtime": 96,
+    "release_date": "1987-06-24",
+    "vote_average": 6.888,
+    "poster_path": "/kNbaxEsnCyWBTfANVPHayujBsxp.jpg",
+    "backdrop_path": "/p50q3DO1DTFhKH5CqNLRGio6zCo.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1497153,
+      "name": "Spaceballs Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bill Pullman",
+      "character": "Lone Starr",
+      "profile_path": "/AlLhgmcX5zh3frPT82OSPY9gqXO.jpg"
+    },
+    {
+      "name": "Rick Moranis",
+      "character": "Dark Helmet",
+      "profile_path": "/e63UZRzHfQT0Nw4VO7nvDt607O.jpg"
+    },
+    {
+      "name": "Mel Brooks",
+      "character": "President Skroob / Yogurt",
+      "profile_path": "/c21qNcMJlHnRolfhQhZOVacjtwI.jpg"
+    },
+    {
+      "name": "John Candy",
+      "character": "Barf",
+      "profile_path": "/uvLWbMDE6UfWNF5tfrsrC9NqeEA.jpg"
+    }
+  ]
+}

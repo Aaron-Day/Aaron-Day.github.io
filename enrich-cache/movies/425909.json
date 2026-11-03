@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 425909,
+    "title": "Ghostbusters: Afterlife",
+    "overview": "When single mom Callie and her two kids Trevor and Phoebe arrive in a small Oklahoma town, they begin to discover their connection to the original Ghostbusters and the secret legacy their grandfather left behind.",
+    "tagline": "Discover the past. Save the future.",
+    "runtime": 124,
+    "release_date": "2021-11-18",
+    "vote_average": 7.294,
+    "poster_path": "/sg4xJaufDiQl7caFEskBtQXfD4x.jpg",
+    "backdrop_path": "/EnDlndEvw6Ptpp8HIwmRcSSNKQ.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2980,
+      "name": "Ghostbusters Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mckenna Grace",
+      "character": "Phoebe",
+      "profile_path": "/sK0CVa56IIpFhCDrcXSTqPWxNbx.jpg"
+    },
+    {
+      "name": "Finn Wolfhard",
+      "character": "Trevor",
+      "profile_path": "/vgjd34eWfVL6GsLHwiwcAsjWLmo.jpg"
+    },
+    {
+      "name": "Carrie Coon",
+      "character": "Callie",
+      "profile_path": "/vWChiHhXFjZVKC6HbACyyRFmdW4.jpg"
+    },
+    {
+      "name": "Paul Rudd",
+      "character": "Grooberson",
+      "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+    }
+  ]
+}

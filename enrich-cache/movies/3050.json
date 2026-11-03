@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 3050,
+    "title": "Doctor Dolittle",
+    "overview": "A successful physician and devoted family man, John Dolittle seems to have the world by the tail, until a long suppressed talent he possessed as a child, the ability to communicate with animals is suddenly reawakened with a vengeance! Now every creature within squawking distance wants the good doctor\u0027s advice, unleashing an outrageous chain of events that turns his world upside down!",
+    "tagline": "He doesn\u0027t just talk to the animals!",
+    "runtime": 85,
+    "release_date": "1998-06-26",
+    "vote_average": 5.734,
+    "poster_path": "/tLrchGMIkdo1KamQJA6fwvDQEy0.jpg",
+    "backdrop_path": "/kqUjxYB209bPN0DpfXZuR9E4ERW.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 3169,
+      "name": "Dr. Dolittle Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Eddie Murphy",
+      "character": "Dr. John Dolittle",
+      "profile_path": "/qgjMfefsKwSYsyCaIX46uyOXIpy.jpg"
+    },
+    {
+      "name": "Ossie Davis",
+      "character": "Archer Dolittle",
+      "profile_path": "/ubOu0TvauzO1gdPe7eVSJuCx8Rz.jpg"
+    },
+    {
+      "name": "Oliver Platt",
+      "character": "Dr. Mark Weller",
+      "profile_path": "/ipBzOzgWRdxxYoM5xNN1cfenFaC.jpg"
+    },
+    {
+      "name": "Peter Boyle",
+      "character": "Calloway",
+      "profile_path": "/6TapQmC46mPDYrwm67tyJaEM97I.jpg"
+    }
+  ]
+}

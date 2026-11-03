@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10625,
+    "title": "Mean Girls",
+    "overview": "Cady Heron is a hit with The Plastics, the A-list girl clique at her new school, until she makes the mistake of falling for Aaron Samuels, the ex-boyfriend of alpha Plastic Regina George.",
+    "tagline": "Watch your back.",
+    "runtime": 97,
+    "release_date": "2004-04-30",
+    "vote_average": 7.231,
+    "poster_path": "/2ZkuQXvVhh45uSvkBej4S7Ix1NJ.jpg",
+    "backdrop_path": "/nP3y0TkR6XniFs9J53qQkg4Bnnk.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 99606,
+      "name": "Mean Girls Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Lindsay Lohan",
+      "character": "Cady Heron",
+      "profile_path": "/hwgyUEM7UuKTVhFcFoorx72pn1j.jpg"
+    },
+    {
+      "name": "Rachel McAdams",
+      "character": "Regina George",
+      "profile_path": "/2DPh6KoNg0p57vvGc6N468zr3ct.jpg"
+    },
+    {
+      "name": "Lizzy Caplan",
+      "character": "Janis Ian",
+      "profile_path": "/cHs9pPpjcEMpWrGmrAYAn0QOE78.jpg"
+    },
+    {
+      "name": "Lacey Chabert",
+      "character": "Gretchen Wieners",
+      "profile_path": "/1q9Xe7QVi5oayhPMEiRPgd6FFKG.jpg"
+    }
+  ]
+}

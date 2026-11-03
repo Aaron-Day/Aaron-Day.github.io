@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2300,
+    "title": "Space Jam",
+    "overview": "With their freedom on the line, the Looney Tunes seek the help of NBA superstar Michael Jordan to win a basketball game against a team of moronic aliens.",
+    "tagline": "Get ready to jam.",
+    "runtime": 87,
+    "release_date": "1996-11-15",
+    "vote_average": 6.807,
+    "poster_path": "/4RN5El3Pj2W4gpwgiAGLVfSJv2g.jpg",
+    "backdrop_path": "/lWybXICZZpxnSvWSOW53XxTERUg.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 722961,
+      "name": "Space Jam Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael Jordan",
+      "character": "Michael Jordan",
+      "profile_path": "/ffwq9sh7213MuPojsjc3x86QGOQ.jpg"
+    },
+    {
+      "name": "Wayne Knight",
+      "character": "Stan Podolak",
+      "profile_path": "/yS3k7HZ8gSWyXrvvsX7V7oEmdHY.jpg"
+    },
+    {
+      "name": "Theresa Randle",
+      "character": "Juanita Jordan",
+      "profile_path": "/myBU9qG6wXHJfYF9cl07rvQmhUB.jpg"
+    },
+    {
+      "name": "Manner Washington",
+      "character": "Jeffery Jordan",
+      "profile_path": "/crbFqHSQKr7pQqRyzXlxRkWqanN.jpg"
+    }
+  ]
+}

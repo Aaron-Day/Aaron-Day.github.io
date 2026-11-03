@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 281957,
+    "title": "The Revenant",
+    "overview": "In the 1820s, a frontiersman, Hugh Glass, sets out on a path of vengeance against those who left him for dead after a bear mauling.",
+    "tagline": "Blood lost. Life found.",
+    "runtime": 157,
+    "release_date": "2015-12-25",
+    "vote_average": 7.542,
+    "poster_path": "/ji3ecJphATlVgWNY0B0RVXZizdf.jpg",
+    "backdrop_path": "/hEQYZq2CDB2LSJVxxlazdBOKeyW.jpg",
+    "genres": [
+      {
+        "id": 37,
+        "name": "Western"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Leonardo DiCaprio",
+      "character": "Hugh Glass",
+      "profile_path": "/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
+    },
+    {
+      "name": "Tom Hardy",
+      "character": "John Fitzgerald",
+      "profile_path": "/d81K0RH8UX7tZj49tZaQhZ9ewH.jpg"
+    },
+    {
+      "name": "Domhnall Gleeson",
+      "character": "Captain Andrew Henry",
+      "profile_path": "/a63BgOBKzJ9XPaLFyu7u5Ge3REG.jpg"
+    },
+    {
+      "name": "Will Poulter",
+      "character": "Jim Bridger",
+      "profile_path": "/9blYMaj79VGC6BHTLmJp3V5S8r3.jpg"
+    }
+  ]
+}

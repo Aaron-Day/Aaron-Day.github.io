@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Step Nine",
+        "overview": "Sherlock is called to London to revisit an old case, where he is forced to face his older brother, Mycroft. Although the siblings suffered a drastic falling-out a few years earlier, Mycroft allows Sherlock and Joan to stay in his new home, 221B Baker Street. With Joan in the middle, the brothers are forced to confront their very complicated history.",
+        "air_date": "2013-09-26",
+        "runtime": 43,
+        "still_path": "/2HblMCQOH4UpPAixxRomC4ypqsR.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Solve for X",
+        "overview": "When a well-respected mathematician is found dead, Holmes and Watson set out to solve a murder and the purpose of the highly guarded equation he was trying to decipher. Meanwhile, Watson is conflicted when the son of a former patient approaches her for a loan.",
+        "air_date": "2013-10-03",
+        "runtime": 43,
+        "still_path": "/5YCoyjhDQ8utALZmJbcwOjVHnjI.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "We Are Everyone",
+        "overview": "When Holmes and Watson set out to track down a civil contractor who leaked classified information, their lives are disrupted when they are targeted by the group of cyber-activists protecting him. Meanwhile, Joan takes the advice of a friend and signs up for an online dating service.",
+        "air_date": "2013-10-10",
+        "runtime": 43,
+        "still_path": "/o3f4fsmrOmRyDcYg4sEhjtfLQ7M.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Poison Pen",
+        "overview": "When a financial consulting company CEO is poisoned to death, a woman from Sherlock\u0027s past who emerges as a possible suspect.",
+        "air_date": "2013-10-17",
+        "runtime": 43,
+        "still_path": "/2xsqF4hmWxWa5I7aKptx37RqxTO.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Ancient History",
+        "overview": "Holmes and Watson find themselves digging through the dark world of the mob to find a killer when they discover the body of a former assassin. Meanwhile, Watson helps a close friend track down a mystery man who swept her off her feet.",
+        "air_date": "2013-10-24",
+        "runtime": 43,
+        "still_path": "/kOgf5Rp4MqZRGPNp4bmju3c7ppc.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "An Unnatural Arrangement",
+        "overview": "When Captain Gregson\u2019s home is invaded, Holmes and Watson work to find the masked gunman before he strikes again. Meanwhile, Gregson gives his team some insight into his private life.",
+        "air_date": "2013-10-31",
+        "runtime": 43,
+        "still_path": "/8oVAjK5VoH05TKvUALGBkNPRrDp.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Marchioness",
+        "overview": "Sherlock\u2019s brother, Mycroft, arrives in New York and enlists Holmes and Watson to help solve a case involving his former fianc\u00E9e. Meanwhile, Sherlock has a difficult time accepting Mycroft and Joan\u2019s relationship.",
+        "air_date": "2013-11-07",
+        "runtime": 43,
+        "still_path": "/sF1DRj6TjebMCQ3TT61jWHkkjtv.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Blood is Thicker",
+        "overview": "When a beautiful young woman is murdered, Holmes and Watson investigate her ties to a billionaire CEO. Meanwhile, Mycroft makes a case for Sherlock to move back to London.",
+        "air_date": "2013-11-14",
+        "runtime": 43,
+        "still_path": "/iMea6jrMSFAPyL6aJaUfdgzI1Zj.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "On The Line",
+        "overview": "Holmes and Watson uncover the identity of a serial killer whose case has gone cold and find themselves butting heads with the NYPD.",
+        "air_date": "2013-11-21",
+        "runtime": 43,
+        "still_path": "/iWbCkVf2SkfCXNhJSIH9Nfm3FIk.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Tremors",
+        "overview": "When an investigation goes horribly wrong, Sherlock must testify in an official police inquiry which jeopardizes his and Watson\u2019s future with the NYPD",
+        "air_date": "2013-12-05",
+        "runtime": 43,
+        "still_path": "/hvHtAg5dteiBnqWQXR085F32NoB.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Internal Audit",
+        "overview": "When a hedge fund manager who was also running a Ponzi scheme is murdered, Holmes and Watson must determine which of his clients is guilty.  Also, Sherlock contemplates sponsoring a fellow recovering addict.",
+        "air_date": "2013-12-12",
+        "runtime": 43,
+        "still_path": "/9L1tcbRdOpI7sgr5dmSNykAe8Kg.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Diabolical Kind",
+        "overview": "Holmes and Watson come face to face with Moriarty when their one-time adversary is brought in as a consultant on a kidnapping case. Meanwhile, Detective Bell continues his struggle on the road to recovery.",
+        "air_date": "2014-01-02",
+        "runtime": 43,
+        "still_path": "/bMT6onggMWoggmgD8uiDF3ZBQxY.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "All in the Family",
+        "overview": "When a body is found in a barrel, Holmes and Watson launch an investigation into the mafia\u2019s ties to the murder. Meanwhile, Sherlock attempts to make amends with Detective Bell.",
+        "air_date": "2014-01-09",
+        "runtime": 43,
+        "still_path": "/4G1kh72kajuu9i6jQONdULLsyqc.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Dead Clade Walking",
+        "overview": "Joan discovers an unsolved murder connected to a rare prehistoric fossil when she reviews one of Sherlock\u0027s cold cases; Sherlock\u0027s responsibilities as a sobriety sponsor cross personal boundaries.",
+        "air_date": "2014-01-30",
+        "runtime": 43,
+        "still_path": "/xoeFWYsRw9X2df9bCIDRVaIqPuf.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Corpse de Ballet",
+        "overview": "Holmes\u2019 latest investigation takes him inside a professional dance company when an up-and-coming ballerina is murdered. Meanwhile, Watson embarks on a solo enquiry to find a homeless veteran when his friend alleges he was abducted.",
+        "air_date": "2014-02-06",
+        "runtime": 43,
+        "still_path": "/vFmp2pVmMwG6H8QEFRYYoZcvVqD.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The One Percent Solution",
+        "overview": "Tensions rise when Holmes and Watson are forced to partner with Gareth Lestrade, Sherlock\u2019s former Scotland Yard colleague, on a bombing investigation.",
+        "air_date": "2014-02-27",
+        "runtime": 43,
+        "still_path": "/iC96ScWwNogRzTItIEQFnF39SIC.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Ears to You",
+        "overview": "Holmes and Watson consult on a case in which a man suspected of murdering his wife years ago receives a ransom demand for her safe return. Meanwhile, Lestrade overstays his welcome at the brownstone and seems unwilling to leave.",
+        "air_date": "2014-03-06",
+        "runtime": 43,
+        "still_path": "/haqiB2t8lswp306Huc0eiak66rc.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Hound of the Cancer Cells",
+        "overview": "When a famous cancer researcher is found dead, Holmes and Watson must determine if the scientist\u2019s untimely demise was tied to his latest cutting-edge invention. Meanwhile, Bell is finally cleared to re-enter the field.",
+        "air_date": "2014-03-13",
+        "runtime": 43,
+        "still_path": "/vLTGZmGwS5mQQG1i1Qjd50kOlKy.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Many Mouths of Aaron Colville",
+        "overview": "A serial killer known for biting his victims appears to be killing again, even though he was presumed dead.",
+        "air_date": "2014-04-03",
+        "runtime": 42,
+        "still_path": "/8XHFY5PIHgauYOfyoDOVU9l24Fx.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "No Lack of Void",
+        "overview": "A pickpocket dies of anthrax poisoning, putting Holmes and Watson on the trail of the toxin\u2019s source in order to prevent more deaths.",
+        "air_date": "2014-04-10",
+        "runtime": 42,
+        "still_path": "/kFEevXjWTEtUptQFGaMzZmITdNm.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Man with the Twisted Lip",
+        "overview": "When Sherlock\u2019s brother Mycroft makes a surprise return to New York, his motivations cause discord between Sherlock and Joan. Meanwhile, a missing person case takes Sherlock and Joan inside the world of unmanned aeronautics.",
+        "air_date": "2014-04-24",
+        "runtime": 43,
+        "still_path": "/ypYi1wAhzbERKL7lNMaPnzcDjM3.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Paint It Black",
+        "overview": "Business becomes personal for Sherlock when he is forced to partner with his estranged brother, Mycroft, to solve a case with life-or-death consequences.",
+        "air_date": "2014-05-01",
+        "runtime": 43,
+        "still_path": "/agsqT0JoeqcXVboI5g7PRbycTLQ.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Art in the Blood",
+        "overview": "Holmes and Watson come into contact with MI-6, the British intelligence agency, when a standard murder investigation turns out to have international and political implications. Meanwhile, in the wake of a crisis, Watson reevaluates her relationships with Sherlock and his brother, Mycroft.",
+        "air_date": "2014-05-08",
+        "runtime": 43,
+        "still_path": "/mlR3Hh4K7A8yBlBAMeuFp50OoSw.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "The Grand Experiment",
+        "overview": "Rising tension between Sherlock and Joan brings their partnership to a crossroads, but they endeavor to put their differences aside while they help Sherlock\u0027s brother, Mycroft, who faces accusations of treason and murder.",
+        "air_date": "2014-05-15",
+        "runtime": 43,
+        "still_path": "/7ciP7c6sLQEZhFnqhOGKi0xMlmW.jpg"
+      }
+    ]
+  }
+}

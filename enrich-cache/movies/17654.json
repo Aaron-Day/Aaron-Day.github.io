@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 17654,
+    "title": "District 9",
+    "overview": "Thirty years ago, aliens arrive on Earth. Not to conquer or give aid, but to find refuge from their dying planet. Separated from humans in a South African area called District 9, the aliens are managed by Multi-National United, which is unconcerned with the aliens\u0027 welfare but will do anything to master their advanced technology. When a company field agent contracts a mysterious virus that begins to alter his DNA, there is only one place he can hide: District 9.",
+    "tagline": "You are not welcome here.",
+    "runtime": 112,
+    "release_date": "2009-08-05",
+    "vote_average": 7.479,
+    "poster_path": "/tuGlQkqLxnodDSk6mp5c2wvxUEd.jpg",
+    "backdrop_path": "/jhM3wgWUrrOkz9r4xwV5cV5RhI4.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sharlto Copley",
+      "character": "Wikus van de Merwe",
+      "profile_path": "/em89OJJvBRX7kNJJPASmNKQujsC.jpg"
+    },
+    {
+      "name": "Jason Cope",
+      "character": "Christopher Johnson / Grey Bradnam / Trent",
+      "profile_path": "/xEqMZClrQQvaygQakUwtS5l7TYH.jpg"
+    },
+    {
+      "name": "Nathalie Boltt",
+      "character": "Sarah Livingstone - Sociologist",
+      "profile_path": "/mYvZlMSwvv6WDfJHfV6bYm4ddES.jpg"
+    },
+    {
+      "name": "Sylvaine Strike",
+      "character": "Dr Katrina McKenzie",
+      "profile_path": "/A1O7oEwqy3vebOdnXhyRtKCBeg4.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1571,
+    "title": "Live Free or Die Hard",
+    "overview": "John McClane is back and badder than ever, and this time he calls on the services of a young hacker in his bid to stop a ring of Internet terrorists intent on taking control of America\u0027s computer infrastructure.",
+    "tagline": "The choice will be clear.",
+    "runtime": 128,
+    "release_date": "2007-06-20",
+    "vote_average": 6.6,
+    "poster_path": "/31TT47YjBl7a7uvJ3ff1nrirXhP.jpg",
+    "backdrop_path": "/aRqTPOPt8BOHE0ngppM9jnuuaeS.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1570,
+      "name": "Die Hard Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bruce Willis",
+      "character": "John McClane",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Timothy Olyphant",
+      "character": "Thomas Gabriel",
+      "profile_path": "/ccQzw9I1BYBv0HHVJr4cvAWjtkI.jpg"
+    },
+    {
+      "name": "Justin Long",
+      "character": "Matt Farrell",
+      "profile_path": "/7TGXeHw4o86IBm6xknQotpludXK.jpg"
+    },
+    {
+      "name": "Cliff Curtis",
+      "character": "Deputy Director Miguel Bowman",
+      "profile_path": "/dfaElGoyJWseFWxXwEMLL9WTi7V.jpg"
+    }
+  ]
+}

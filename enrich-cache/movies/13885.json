@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13885,
+    "title": "Sweeney Todd: The Demon Barber of Fleet Street",
+    "overview": "The infamous story of Benjamin Barker, a.k.a Sweeney Todd, who sets up a barber shop down in London which is the basis for a sinister partnership with his fellow tenant, Mrs. Lovett. Based on the hit Broadway musical.",
+    "tagline": "Never forget. Never forgive.",
+    "runtime": 116,
+    "release_date": "2007-12-21",
+    "vote_average": 7.172,
+    "poster_path": "/gAW4J1bkRjZKmFsJsIiOBASeoAp.jpg",
+    "backdrop_path": "/obYVvi6eD4rjFeC7g4uoZQPIh7F.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Johnny Depp",
+      "character": "Sweeney Todd",
+      "profile_path": "/k2xt6EUxQDwYRKIyI4IBdZxfs8n.jpg"
+    },
+    {
+      "name": "Helena Bonham Carter",
+      "character": "Mrs. Lovett",
+      "profile_path": "/hJMbNSPJ2PCahsP3rNEU39C8GWU.jpg"
+    },
+    {
+      "name": "Alan Rickman",
+      "character": "Judge Turpin",
+      "profile_path": "/1EearzPgXkmYFKvECfWNrctIFT9.jpg"
+    },
+    {
+      "name": "Timothy Spall",
+      "character": "Beadle",
+      "profile_path": "/pcR6t8kpAgGwIUo4UjlP5gyKkNA.jpg"
+    }
+  ]
+}

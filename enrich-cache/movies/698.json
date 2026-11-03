@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 698,
+    "title": "Moonraker",
+    "overview": "After Drax Industries\u0027 Moonraker space shuttle is hijacked, secret agent James Bond is assigned to investigate, traveling to California to meet the company\u0027s owner, the mysterious Hugo Drax. With the help of scientist Dr. Holly Goodhead, Bond soon uncovers Drax\u0027s nefarious plans for humanity, all the while fending off an old nemesis, Jaws, and venturing to Venice, Rio, the Amazon...and even outer space.",
+    "tagline": "Where all the other Bonds end\u2026 this one begins!",
+    "runtime": 126,
+    "release_date": "1979-06-26",
+    "vote_average": 6.186,
+    "poster_path": "/6LrJdXNmu5uHOVALZxVYd44Lva0.jpg",
+    "backdrop_path": "/mrDC5DLx2wljt4HZGwgkmqlzfcF.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Roger Moore",
+      "character": "James Bond",
+      "profile_path": "/qUjeguNlZzpwh2bGUwEq2n2GNPx.jpg"
+    },
+    {
+      "name": "Lois Chiles",
+      "character": "Dr. Holly Goodhead",
+      "profile_path": "/mNfIiKy42Vy79lEzUFETPOk8LLP.jpg"
+    },
+    {
+      "name": "Michael Lonsdale",
+      "character": "Hugo Drax",
+      "profile_path": "/lQZktsBj1CFbIEIpXOZp55kCiB5.jpg"
+    },
+    {
+      "name": "Richard Kiel",
+      "character": "Jaws",
+      "profile_path": "/wop4KV2ywl6gdYnCUs1OthtGylM.jpg"
+    }
+  ]
+}

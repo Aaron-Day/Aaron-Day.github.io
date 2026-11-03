@@ -1,0 +1,64 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Somewhere Safe",
+        "overview": "Determined to learn earthbending, Aang works to free Bumi from prison. Zuko chafes at Iroh\u0027s plan to stay hidden. Azula receives a new assignment.",
+        "air_date": "2026-06-25",
+        "runtime": 68,
+        "still_path": "/rFarciKTQj1kbOTXeERESSwv4dG.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Fight, Once Begun",
+        "overview": "At a high-stakes earthbending match, Aang discovers the teacher he\u0027s been seeking. Painful memories emerge after Zuko befriends a farming family.",
+        "air_date": "2026-06-25",
+        "runtime": 67,
+        "still_path": "/xzio7ongVmf6MbJEgM6aSIVGf4V.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "City of Walls and Secrets",
+        "overview": "Aang and his friends must trade powers for parties and politics as they navigate the two-faced court of the Earth King.",
+        "air_date": "2026-06-25",
+        "runtime": 61,
+        "still_path": "/4qxABDT5K6k4NVgWF6sfe4CzWTT.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Water Falls, the Stones Emerge",
+        "overview": "Toph puts Aang\u0027s skills to the test. In the streets of Ba Sing Se, Sokka searches for a missing friend, while Katara lives a double life.",
+        "air_date": "2026-06-25",
+        "runtime": 62,
+        "still_path": "/j464Uez1gvryQhFFbXvlahhrJr2.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Ten Thousand Things",
+        "overview": "To uncover a mythic library that could hold the key to defeating the Fire Nation, the team is forced to ally with an old enemy.",
+        "air_date": "2026-06-25",
+        "runtime": 64,
+        "still_path": "/if6N0ZQYLLNCIhZIB57jTp6Ojon.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Parable of the Two Dragons",
+        "overview": "When one of their own is captured, the team concocts a risky plan to reach the Earth King. An illness changes Zuko\u0027s perspective \u2014 and Iroh\u0027s.",
+        "air_date": "2026-06-25",
+        "runtime": 56,
+        "still_path": "/1OUWuzTkALc8BKoAjksUxeBx3xd.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Something Broken",
+        "overview": "Torn across the city as the Fire Nation closes in, the team must reunite to save Ba Sing Se \u2014 and Zuko must decide where his real loyalties lie.",
+        "air_date": "2026-06-25",
+        "runtime": 69,
+        "still_path": "/hGpGatL0EwuGhTZjIy4m6cAXVJt.jpg"
+      }
+    ]
+  }
+}

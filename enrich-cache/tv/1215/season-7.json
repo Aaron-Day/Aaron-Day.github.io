@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Levon",
+        "overview": "Hank\u0027s reunion with Karen doesn\u0027t go quite as he planned. Meanwhile, Hank gets hired by the \u0022Santa Monica Cop\u0022 showrunner, and a reporter asks to interview Hank for his college paper.",
+        "air_date": "2014-04-13",
+        "runtime": 28,
+        "still_path": "/pmpEwbuVu5gCuVO6FuVcUOTIPrg.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Julia",
+        "overview": "Hank gets frustrated with his \u0022Santa Monica Cop\u0022 coworkers on his first day in the show\u0027s writer\u0027s room, and he gets a surprise when he visits Levon\u0027s apartment. Meanwhile, Charlie meets Rath\u0027s new assistant; and Karen gets an unexpected surprise.",
+        "air_date": "2014-04-20",
+        "runtime": 28,
+        "still_path": "/sIPoy1l8FqB3zxJW68sA2MBdcQ9.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Like Father Like Son",
+        "overview": "Hank gets his first episode assignment, much to the dismay of coworkers Terry and Hugh. Meanwhile, Levon tries to bond with Rath\u0027s assistant; Charlie attempts to patch things up with Marcy; and Karen considers giving up on Hank.",
+        "air_date": "2014-04-27",
+        "runtime": 28,
+        "still_path": "/rBgr1TrcQRPtMQMwEzDmOqEPCvN.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Dicks",
+        "overview": "Hank and Levon help Julia celebrate her new role. Meanwhile, financial trouble adds to Charlie and Marcy\u0027s marital unrest, but a new client may put Charlie back in the black; and Levon tries to get some alone time with Melanie, but the Director keeps getting in the way.",
+        "air_date": "2014-05-04",
+        "runtime": 28,
+        "still_path": "/lglddzQGFCuDuP11m8LaLRGcnmv.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Getting the Poison Out",
+        "overview": "Levon enjoys a night with Nikki, while Karen, Hank and Marcy are forced to endure the company of Nikki\u0027s creepy friend. Meanwhile, Charlie gets in over his head with a new client.",
+        "air_date": "2014-05-11",
+        "runtime": 28,
+        "still_path": "/nSucjMpoG4L9eUD3P8ouqetN2I9.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Kickoff",
+        "overview": "A \u0022Santa Monica Cop\u0022 kickoff party is hosted by Rath, where Hank conducts an intimate notes session with the show\u0027s leading lady, and Hashtag Black eyes Julia. Meanwhile, Charlie manages head-case client Goldie; and Stu makes Charlie an offer.",
+        "air_date": "2014-05-18",
+        "runtime": 28,
+        "still_path": "/aH7VXlWGj7GpMJL3OxqgAdD1rlR.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Smile",
+        "overview": "Rath demands a rewrite of Hank\u0027s \u0027Santa Monica Cop\u0027 script. Julia\u0027s new boss, Dr. Dan, gives her some career advice, but Levon and Hank have other ideas. Charlie and Marcy consider Stu\u0027s offer - until Atticus\u0027 old rock \u0027n\u0027 roll butler Krull offers an alternative solution to their money woes.",
+        "air_date": "2014-05-25",
+        "runtime": 28,
+        "still_path": "/jBOuK4zYkV8CL2BTTwYw50Q22BH.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "30 Minutes or Less",
+        "overview": "Hank has problems with Hashtag Black. Stu\u0027s offer leads to fisticuffs.",
+        "air_date": "2014-06-01",
+        "runtime": 28,
+        "still_path": "/eAtVmfuksc2m1cCQDO84yv4oTxY.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Faith, Hope, Love",
+        "overview": "Hank recalls turbulent times with Karen, a confused Becca, and their days with a happier Charlie and Marcy. Meanwhile, a nun helps Hank put things into perspective.",
+        "air_date": "2014-06-08",
+        "runtime": 28,
+        "still_path": "/y0xreqheF6aWtdzDQ5lf2lkR8Hd.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Dinner with Friends",
+        "overview": "Hank entices Karen to have dinner with him, but Julia interrupts their romantic evening. Later, Charlie, Marcy, Krull, Levon and his new friend bring even more drama to the night; and chaos ensues when Stu assaults Charlie\u0027s manhood.",
+        "air_date": "2014-06-15",
+        "runtime": 28,
+        "still_path": "/35UgBCBa5tsb7kNy0RX70Uxf2Qz.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Daughter",
+        "overview": "Hank might soon be out of a job. Becca makes a big announcement.",
+        "air_date": "2014-06-22",
+        "runtime": 28,
+        "still_path": "/kt9U4vA1nQI9eDXYXdXD1uzEA2o.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Grace",
+        "overview": "Hank makes a life-altering decision. Series finale.",
+        "air_date": "2014-06-29",
+        "runtime": 28,
+        "still_path": "/gr4YinFMRDysat3WTZZCV56bKn4.jpg"
+      }
+    ]
+  }
+}

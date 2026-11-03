@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10987,
+    "title": "Halloween: The Curse of Michael Myers",
+    "overview": "Six years after being presumed dead in a fire, and just as the town prepares to finally celebrate Halloween again, Michael Myers returns to Haddonfield to continue his reign of terror.",
+    "tagline": "Terror never rests in peace.",
+    "runtime": 88,
+    "release_date": "1995-09-29",
+    "vote_average": 5.157,
+    "poster_path": "/noCnM8nEI2bEDSdKHh0RKbwBwbC.jpg",
+    "backdrop_path": "/jHtuoRdP5nGyulwYoV8izEU6p8M.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91361,
+      "name": "Halloween Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Paul Rudd",
+      "character": "Tommy Doyle",
+      "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+    },
+    {
+      "name": "Donald Pleasence",
+      "character": "Dr. Loomis",
+      "profile_path": "/crtSwLnlrEidYFPupkVBSL9wK9Z.jpg"
+    },
+    {
+      "name": "Marianne Hagan",
+      "character": "Kara Strode",
+      "profile_path": "/14zTRzvemLUYpAmNWxqSmOQlcc0.jpg"
+    },
+    {
+      "name": "Mitchell Ryan",
+      "character": "Dr. Wynn",
+      "profile_path": "/9XrbQfOjDeqjXJUHeSIA6OxJAJa.jpg"
+    }
+  ]
+}

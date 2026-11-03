@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 34851,
+    "title": "Predators",
+    "overview": "A group of cold-blooded killers find themselves trapped on an alien planet to be hunted by extraterrestrial Predators.",
+    "tagline": "They are the most dangerous killers on the planet. But this is not our planet.",
+    "runtime": 107,
+    "release_date": "2010-07-07",
+    "vote_average": 6.3,
+    "poster_path": "/wdniP8NDaJIydi1hMxhpbJMUfr6.jpg",
+    "backdrop_path": "/yVSgw4UyXWg0Edl7KMehdhhgIwL.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 399,
+      "name": "Predator Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Adrien Brody",
+      "character": "Royce",
+      "profile_path": "/qBc7ahQrpVpcllaZ5hkivsOEb3C.jpg"
+    },
+    {
+      "name": "Topher Grace",
+      "character": "Edwin",
+      "profile_path": "/89sF57Br5lq8nrepS7HLzJ41QD1.jpg"
+    },
+    {
+      "name": "Alice Braga",
+      "character": "Isabelle",
+      "profile_path": "/d9JdgvUiqyWuGQLmozNfGZOpIBz.jpg"
+    },
+    {
+      "name": "Walton Goggins",
+      "character": "Stans",
+      "profile_path": "/5lcVMJbWrNDFiWa1WxK4oR8zwev.jpg"
+    }
+  ]
+}

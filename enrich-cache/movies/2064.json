@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2064,
+    "title": "While You Were Sleeping",
+    "overview": "A transit worker pulls commuter Peter off railway tracks after he\u0027s mugged, but\u2014while he\u0027s in a coma\u2014his family mistakenly thinks she\u0027s Peter\u0027s fianc\u00E9e, and she doesn\u0027t correct them. Things get more complicated when she falls for his brother, who\u0027s not quite sure that she\u0027s who she claims to be.",
+    "tagline": "A story about love at second sight.",
+    "runtime": 103,
+    "release_date": "1995-04-21",
+    "vote_average": 7.044,
+    "poster_path": "/qNGO3ETcNwlWqK2kNRpbJSJRlos.jpg",
+    "backdrop_path": "/r4ZkyhfwcpnHNGdn2QULEBTClZG.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sandra Bullock",
+      "character": "Lucy Eleanor Moderatz",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "Bill Pullman",
+      "character": "Jack Callaghan",
+      "profile_path": "/AlLhgmcX5zh3frPT82OSPY9gqXO.jpg"
+    },
+    {
+      "name": "Peter Gallagher",
+      "character": "Peter Callaghan",
+      "profile_path": "/vD6q6Ja6bAhbfqlXS4ybCtyXtdA.jpg"
+    },
+    {
+      "name": "Peter Boyle",
+      "character": "Ox Callaghan",
+      "profile_path": "/6TapQmC46mPDYrwm67tyJaEM97I.jpg"
+    }
+  ]
+}

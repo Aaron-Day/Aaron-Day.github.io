@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 61791,
+    "title": "Rise of the Planet of the Apes",
+    "overview": "A highly intelligent chimpanzee named Caesar has been living a peaceful suburban life ever since he was born. But when he gets taken to a cruel primate facility, Caesar decides to revolt against those who have harmed him.",
+    "tagline": "Evolution becomes revolution.",
+    "runtime": 105,
+    "release_date": "2011-08-03",
+    "vote_average": 7.354,
+    "poster_path": "/oqA45qMyyo1TtrnVEBKxqmTPhbN.jpg",
+    "backdrop_path": "/6cCF0KMUO2QmrVsQFujkQduREXX.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 173710,
+      "name": "Planet of the Apes (Reboot) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Andy Serkis",
+      "character": "Caesar",
+      "profile_path": "/eNGqhebQ4cDssjVeNFrKtUvweV5.jpg"
+    },
+    {
+      "name": "James Franco",
+      "character": "Will Rodman",
+      "profile_path": "/bjmAntHGiibLZixH8nTNVBzaFQn.jpg"
+    },
+    {
+      "name": "Freida Pinto",
+      "character": "Caroline Aranha",
+      "profile_path": "/tub18dfDNMxlempVIuPXh8fmZVs.jpg"
+    },
+    {
+      "name": "John Lithgow",
+      "character": "Charles Rodman",
+      "profile_path": "/ajfuBSm1HuVqFJlbTmAlza62Xxr.jpg"
+    }
+  ]
+}

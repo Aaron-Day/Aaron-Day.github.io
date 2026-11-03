@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4247,
+    "title": "Scary Movie",
+    "overview": "A familiar-looking group of teenagers find themselves being stalked by a more-than-vaguely recognizable masked killer! As the victims begin to pile up and the laughs pile on, none of your favorite scary movies escape the razor-sharp satire of this outrageously funny parody!",
+    "tagline": "No mercy. No shame. No sequel.",
+    "runtime": 88,
+    "release_date": "2000-07-07",
+    "vote_average": 6.393,
+    "poster_path": "/fVQFPRuw3yWXojYDJvA5EoFjUOY.jpg",
+    "backdrop_path": "/m5dA4JZsj78EBTa2D6imWOAebwB.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 4246,
+      "name": "Scary Movie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anna Faris",
+      "character": "Cindy",
+      "profile_path": "/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+    },
+    {
+      "name": "Regina Hall",
+      "character": "Brenda",
+      "profile_path": "/jiFZ4xNrvUUZLBHnJu71CvdN4kj.jpg"
+    },
+    {
+      "name": "Marlon Wayans",
+      "character": "Shorty",
+      "profile_path": "/7LYnX3vluHFBs1WCRKUjSIEDEkn.jpg"
+    },
+    {
+      "name": "Shawn Wayans",
+      "character": "Ray",
+      "profile_path": "/Cat25uXhB680QLmvg9Tu16W563.jpg"
+    }
+  ]
+}

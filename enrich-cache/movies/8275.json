@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8275,
+    "title": "American Pie Presents: The Naked Mile",
+    "overview": "When Erik Stifler realizes that he\u0027s the only Stifler family member who might graduate high school a virgin, he decides to live up to his legacy. After some well-meaning advice from Jim\u0027s dad, Erik\u0027s ready to take his chances at the annual and infamous Naked Mile race, where his devoted friends and some uninhibited sorority girls will create the most outrageous weekend ever.",
+    "tagline": "The most outrageous slice of pie!",
+    "runtime": 97,
+    "release_date": "2006-12-04",
+    "vote_average": 5.488,
+    "poster_path": "/6CPJVJrqVjibP5Uub8yCg4FKtJi.jpg",
+    "backdrop_path": "/9IUZw1blAscYnyFi5vEFlHVXAWr.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 298820,
+      "name": "American Pie (Spin-off) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "John White",
+      "character": "Erik Stifler",
+      "profile_path": "/3iaiCj09Kl8JnMNVEzQUCB6n0eM.jpg"
+    },
+    {
+      "name": "Jessy Schram",
+      "character": "Tracy",
+      "profile_path": "/971zERWs0pz6CeCmQAG6SQuBrkR.jpg"
+    },
+    {
+      "name": "Steve Talley",
+      "character": "Dwight Stifler",
+      "profile_path": "/bY9OTcMxmJokUNmMLCUAFlppWb1.jpg"
+    },
+    {
+      "name": "Christopher McDonald",
+      "character": "Mr. Stifler",
+      "profile_path": "/gK1XhbfD9Xd8s3VXRPpgDCluyZp.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 215,
+    "title": "Saw II",
+    "overview": "The chilling and relentless Jigsaw killer returns to terrorize the city once again. When a gruesome murder victim emerges with unmistakable traces of Jigsaw\u0027s sinister methods, Detective Eric Matthews is thrust into a high-stakes investigation. To his surprise, apprehending Jigsaw seems almost too easy, but what he doesn\u0027t realize is that being caught is merely another piece of Jigsaw\u0027s intricate puzzle.",
+    "tagline": "Oh yes... There will be blood.",
+    "runtime": 93,
+    "release_date": "2005-10-28",
+    "vote_average": 6.6,
+    "poster_path": "/gTnaTysN8HsvVQqTRUh8m35mmUA.jpg",
+    "backdrop_path": "/1lWeIA03iGXTlDv0yzsN0wUdT9T.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 656,
+      "name": "Saw Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tobin Bell",
+      "character": "Jigsaw / John",
+      "profile_path": "/wyyfG5Pml4G1Y3Aw873LIe32wsl.jpg"
+    },
+    {
+      "name": "Donnie Wahlberg",
+      "character": "Eric Matthews",
+      "profile_path": "/8OQTlgl7eGAFlKTF2o8rZZT0MoF.jpg"
+    },
+    {
+      "name": "Shawnee Smith",
+      "character": "Amanda",
+      "profile_path": "/s2Ouz4b7xqDH72aU48TSW5zS40v.jpg"
+    },
+    {
+      "name": "Erik Knudsen",
+      "character": "Daniel Matthews",
+      "profile_path": "/hQu5bMNND94HpxyaVASKpj9GMtU.jpg"
+    }
+  ]
+}

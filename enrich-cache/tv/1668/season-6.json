@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The One After Vegas",
+        "overview": "Ross and Rachel experience the world\u2019s worst hangover when they realize they\u2019ve gotten married.  Chandler and Monica back away from their own altar plans.  Phoebe and Joey head back to New York in the taxi cab.",
+        "air_date": "1999-09-23",
+        "runtime": 23,
+        "still_path": "/2T3D3y98XDM2owdjxcj8PEiQFP8.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The One Where Ross Hugs Rachel",
+        "overview": "Monica and Chandler decide to move in together, leading Rachel to believe that all three of them will be roommates, and Monica doesn\u0027t want to tell her the truth.  Meanwhile, Ross tries to keep Rachel from learning that their marriage hasn\u0027t been annulled.",
+        "air_date": "1999-09-30",
+        "runtime": 22,
+        "still_path": "/d5c8xKhUKsR4afHWc17POaCs444.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The One with Ross\u0027s Denial",
+        "overview": "Monica and Chandler disagree over how to redecorate Rachel\u0027s old room. Joey advertises for a \u0022non-ugly\u0022 roommate. Ross is unwilling to accept that he still has feelings for Rachel.",
+        "air_date": "1999-10-07",
+        "runtime": 22,
+        "still_path": "/brF8eLr2ml3UaNMmBVZQ615iyBy.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The One Where Joey Loses His Insurance",
+        "overview": "Joey\u0027s health benefits lapse just as he develops a hernia. Ross is asked to give a lecture at NYU and eager to impress his students, he puts on a fake British accent. Meanwhile, Phoebe gets some bad news from her psychic.",
+        "air_date": "1999-10-14",
+        "runtime": 22,
+        "still_path": "/ohFKAbC5iZtGfzLh9JfylXfhwKr.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The One with Joey\u0027s Porsche",
+        "overview": "Ross and Rachel try to get an annulment, but run into some legal obstacles. Joey finds keys to a Porsche in Central Perk and discovers some perks of being a fancy car owner. Meanwhile, Chandler, Monica and Phoebe babysit the triplets.",
+        "air_date": "1999-10-21",
+        "runtime": 22,
+        "still_path": "/itDy7O5nij71D7Z1MZXJjlLB9w0.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The One on the Last Night",
+        "overview": "On the last night before Chandler and Monica move in together, Monica and Rachel argue, while Chandler tries to give Joey money to help him pay the upcoming bills.",
+        "air_date": "1999-11-04",
+        "runtime": 22,
+        "still_path": "/8nNQPYtxDjMmtlJie8LLtzYu5gU.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The One Where Phoebe Runs",
+        "overview": "Now roommates Phoebe and Rachel decide to start running together, but Rachel is embarrassed by Phoebe\u0027s odd running style. Joey finds a sexy new female roommate and tries very hard not to flirt with her. Meanwhile, Chandler decides to surprise Monica by cleaning the apartment, but forgets where everything goes. Ross tries to help him remedy the situation.",
+        "air_date": "1999-11-11",
+        "runtime": 22,
+        "still_path": "/rGA8jD6BqXSAVoEGy5bmbZOHqQY.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The One with Ross\u0027s Teeth",
+        "overview": "Ross goes too far while trying to impress a date by over-whitening his teeth. Rachel uses gossip to get her boss to like her after Phoebe supposedly makes out with Ralph Lauren. Meanwhile, Chandler convinces Joey that the changes Janine has introduced to their old apartment is making it too girly.",
+        "air_date": "1999-11-18",
+        "runtime": 22,
+        "still_path": "/937TB5b6bv9OJb4OPfXvVTtweOf.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The One Where Ross Got High",
+        "overview": "It\u0027s Thanksgiving and Monica\u0027s parents are coming to visit, which is a problem because, not only they do not like Chandler, they also don\u0027t know that he and Monica are living together. Rachel is tasked with making a Thanksgiving dessert, but she does so with mixed results. Meanwhile, Joey and Ross are eager to finish the dinner and leave, because they want to go to a Thanksgiving party with Janine and her dancer friends.",
+        "air_date": "1999-11-25",
+        "runtime": 23,
+        "still_path": "/cu4c4rxWLPox2VAV2kWvT4MpYvO.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The One with the Routine",
+        "overview": "Janine gets an invitation to dance on \u0022Dick Clark\u0027s New Year\u0027s Rockin\u0027 Eve\u0022 and she invites Joey, Monica and Ross to join her. Being huge fans of the show, Monica and Ross get overly excited. At the taping, Joey tries to kiss Janine at midnight and Monica and Ross resurrect their dance routine from high school. Meanwhile, Rachel, Phoebe and Chandler look for Monica\u0027s Christmas presents.",
+        "air_date": "1999-12-16",
+        "runtime": 22,
+        "still_path": "/hGOc4JFywXjpQclb0ZFNN1OgOVj.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The One with the Apothecary Table",
+        "overview": "Rachel orders an apothecary table from Pottery Barn, which is a problem because Phoebe hates the mass-producing company. After Janine and Joey double date with Chandler and Monica, Janine tells Joey that she thinks the other two are boring. Ross buys a new apothecary table too, which causes problems for Rachel. After a confrontation with Monica and Chandler, Joey breaks up with Janine and she moves out.",
+        "air_date": "2000-01-06",
+        "runtime": 22,
+        "still_path": "/5W0BPGJbP5sjJWgjLlnQGkXWKYF.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The One with the Joke",
+        "overview": "After a joke gets published in Playboy, Chandler and Ross have an argument about who came up with it first. Meanwhile, a wayward remark of Phoebe\u0027s leads to trouble between the girls and a broke Joey starts working at Central Perk.",
+        "air_date": "2000-01-13",
+        "runtime": 22,
+        "still_path": "/zaDAyW9hOFhFjhcYBwvNqIpDCe.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The One with Rachel\u0027s Sister (1)",
+        "overview": "Joey gets in trouble for giving attractive female customers free food at Central Perk. A sick Monica desperately tries to convince Chandler that she\u0027s not sick. After her father cuts her off, Rachel\u0027s sister Jill comes to town. Rachel encourages her to start an independent life by finding a job and an apartment, but one thing leads to another and Jill ends up asking Ross out on a date. Even though Rachel doesn\u0027t want to admit it, she clearly isn\u0027t okay with that...",
+        "air_date": "2000-02-03",
+        "runtime": 22,
+        "still_path": "/lIekB9Iqefj7g2RTUgeOrawGhDV.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The One Where Chandler Can\u0027t Cry (2)",
+        "overview": "Chandler admits that he hasn\u0027t cried since he was a child. Phoebe discovers that Ursula is starring in porno movies using her name. Rachel desperately tries to stop Ross and Jill from starting a relationship.",
+        "air_date": "2000-02-10",
+        "runtime": 23,
+        "still_path": "/v9jXwRkamJyt5ZwoC9eD3c2XHKJ.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The One That Could Have Been",
+        "overview": "Barry and Mindy\u0027s impending divorce prompts the gang to fantasize about what their lives might be like if they\u0027d all taken different courses. Ross is still married to Carol, and Rachel is married to Barry, but fawning over famous soap star Joey Tribbiani. Monica is still fat and dating a doctor. Chandler is an aspiring writer and Phoebe is a Wall Street shark for Merrill Lynch.  The gang continue to fantasize about how different their lives could have been. Carol and Ross decide to have a threesome to spice up their marriage. Rachel goes to Joey\u0027s but is incredibly nervous about cheating and gets drunk. Meanwhile, Monica\u0027s dinner date falls through and Chandler tries to cheer her up but things take an unexpected turn.",
+        "air_date": "2000-02-17",
+        "runtime": 45,
+        "still_path": "/fhUs4A5qAOZZRkHsiBNvhUbzAbd.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The One with Unagi",
+        "overview": "Joey tries to earn some extra money by entering a medical study, however, there\u0027s a slight problem: the study is for identical twins. Rachel and Phoebe take self-defense classes, but Ross attempts to give them a lesson in Unagi instead. Meanwhile, Chandler and Monica agree to give each other homemade presents for Valentine\u0027s Day.",
+        "air_date": "2000-02-24",
+        "runtime": 22,
+        "still_path": "/kAf0eTcqL8ehrfWYyKbNSzwiHuv.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The One Where Ross Dates a Student",
+        "overview": "At the end of semester Ross gets his student evaluations and one of them writes that he\u0027s hot. It turns out to be a cute girl named Elizabeth and even though it could cost him his job, Ross considers dating her. An ex-girlfriend of Chandler\u0027s from college is directing the new Al Pacino movie and Joey asks Chandler for help with getting an audition. Meanwhile, after a fire ruins Phoebe and Rachel\u0027s apartment, they\u0027re forced to find temporary living spaces with Monica and Joey.",
+        "air_date": "2000-03-09",
+        "runtime": 22,
+        "still_path": "/12OVdVusbxyZKN5YFEhuMLkuFQP.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The One with Joey\u0027s Fridge",
+        "overview": "After Joey\u0027s fridge breaks, he tries to cajole his friends into helping him buy a new one. Meanwhile, Ralph Lauren is organizing a charity ball and Rachel looks for a date, however, unexpectedly it turns into a competition between Monica \u0026 Chandler against Phoebe for finding the best candidate. Ross continues to date Elizabeth, but he gets nervous when she makes plans for a spring break at Daytona Beach.",
+        "air_date": "2000-03-23",
+        "runtime": 22,
+        "still_path": "/AsK0ljsXaUVPJyMMyEZLIFjhHzR.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The One with Mac and C.H.E.E.S.E.",
+        "overview": "Joey gets an audition for the lead character in a new TV show. When the audition is rescheduled, Chandler takes the message but forgets to tell Joey. When Joey misses the audition, he gets upset and the group reminisces about their mishaps in the past.",
+        "air_date": "2000-04-13",
+        "runtime": 22,
+        "still_path": "/l8EycgFaGhknaUnWxkMza4Okj24.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The One Where Ross Meets Elizabeth\u0027s Dad",
+        "overview": "Ross meets Elizabeth\u0027s father for the first time and unfortunately he takes an instant disliking to Ross. However Paul does hit it off with Rachel and she tries to talk Ross up but does so with mixed results. Joey almost gets fired from \u0022Mac and C.H.E.E.S.E.\u0022 after offending the operator of the robot. Meanwhile, Phoebe writes a book based on Monica and Chandler.",
+        "air_date": "2000-04-27",
+        "runtime": 23,
+        "still_path": "/5t8pBcCf87asXhsO1UYvECTKU1b.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The One Where Paul\u0027s the Man",
+        "overview": "While visiting an art museum, Monica puts her name on a two-year waiting list to use the museum for a wedding. Accidentally Chandler finds out about this and freaks out. Meanwhile, Paul threatens to have Ross fired from the university if he continues to date Elizabeth, however, that doesn\u0027t stop the two of them from going to her dad\u0027s mountain cabin over the weekend. Unfortunately for them, Paul has the same idea to bring Rachel there.",
+        "air_date": "2000-05-04",
+        "runtime": 23,
+        "still_path": "/zKhnhOiuWHXmnt8u1GswTFIKX9N.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The One with the Ring",
+        "overview": "Chandler and Phoebe shop for a ring for Monica. Chandler finds the perfect one, but Phoebe accidentally lets it get away. While Chandler is busy with getting the ring back, Joey and Ross are lead to believe that he\u0027s mad at them, so they decide to team up and give him a cold shoulder treatment. Rachel continues to date Paul and wants him to open up to her, however, he opens up a bit too much.",
+        "air_date": "2000-05-11",
+        "runtime": 23,
+        "still_path": "/grpysBMIoetM5LqWxWVZwjQsoT3.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The One with the Proposal",
+        "overview": "Chandler plans to propose to Monica at dinner, but his plans go awry when Richard shows up at the same restaurant. Meanwhile, Phoebe and Joey join Rachel at a charity auction only to discover that Joey isn\u0027t aware what a silent auction is. And Ross and Elizabeth\u0027s relationship comes to a crossroad.\n\nChandler continues to pretend to hate the idea of marriage, unaware that Richard wants Monica back. Meanwhile, Rachel and Phoebe discuss their \u0027back-up\u0027 plans, if they are not married by the time they\u0027re 40.",
+        "air_date": "2000-05-18",
+        "runtime": 44,
+        "still_path": "/3OWXfD3koZkh2EbTLk95rSGJcG.jpg"
+      }
+    ]
+  }
+}

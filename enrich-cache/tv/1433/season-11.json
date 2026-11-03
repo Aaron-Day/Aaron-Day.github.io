@@ -1,0 +1,32 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 11,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Roger Passes the Bar",
+        "overview": "Roger is forced to sell his beloved attic bar to a restaurant chain after suffering a heart attack, and a sexy new next-door neighbor promises to take Steve and his friends\u2019 virginity in return for housework.",
+        "air_date": "2014-09-14",
+        "runtime": 21,
+        "still_path": "/70N4uNHZTlhtKEiKdGGrrmy2wc6.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Boy Named Michael",
+        "overview": "Greg and Terry decide to adopt a 10-year-old Russian boy named Michael. At a party celebrating the decision, Roger is jealous of Greg and Terry\u0027s fabulous lifestyle of culture and sophistication. Roger rejects the Smith family as trashy and impersonates Michael, successfully integrating into his new home.",
+        "air_date": "2014-09-14",
+        "runtime": 21,
+        "still_path": "/tWcaZHilwhstmDQxn7oepxHZlXK.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Blagsnarst: A Love Story",
+        "overview": "Roger and Francine discover an alien in the woods, and Roger capriciously has a one-night relationship with her before being fed up with her quirks. He tries to get rid of her by calling the CIA, but then realizes that he can\u2019t go through with it.",
+        "air_date": "2014-09-21",
+        "runtime": 21,
+        "still_path": "/bdfmgslV2EMDxW6ogtOVh8C3epf.jpg"
+      }
+    ]
+  }
+}

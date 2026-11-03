@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1927,
+    "title": "Hulk",
+    "overview": "Bruce Banner, a genetics researcher with a tragic past, suffers massive radiation exposure in his laboratory that causes him to transform into a raging green monster when he gets angry.",
+    "tagline": "What if everything you were forced to keep inside was suddenly set free?",
+    "runtime": 138,
+    "release_date": "2003-06-19",
+    "vote_average": 5.605,
+    "poster_path": "/UllIft2jLSBaay3zQyMV4GNdfy.jpg",
+    "backdrop_path": "/8vQBXqDbb30qNpBcNYwTesSg75.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Eric Bana",
+      "character": "Bruce Banner",
+      "profile_path": "/l9yoDgw3YFC2gMD1HTo5djGOwSY.jpg"
+    },
+    {
+      "name": "Jennifer Connelly",
+      "character": "Betty Ross",
+      "profile_path": "/wdmcJagSRJ65AuJ4IUCzuHAdvgy.jpg"
+    },
+    {
+      "name": "Sam Elliott",
+      "character": "Ross",
+      "profile_path": "/zE1fpXlIUo7fcujlVlGvHdDiCv6.jpg"
+    },
+    {
+      "name": "Josh Lucas",
+      "character": "Talbot",
+      "profile_path": "/ueR4CH32f22DGjFxuhnW1o3YKB3.jpg"
+    }
+  ]
+}

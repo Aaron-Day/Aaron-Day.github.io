@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 709,
+    "title": "Licence to Kill",
+    "overview": "After capturing the notorious drug lord Franz Sanchez, Bond\u0027s close friend and former CIA agent Felix Leiter is left for dead and his wife is murdered. Bond goes rogue and seeks vengeance on those responsible, as he infiltrates Sanchez\u0027s organization from the inside.",
+    "tagline": "James Bond is out on his own and out for revenge.",
+    "runtime": 133,
+    "release_date": "1989-06-13",
+    "vote_average": 6.436,
+    "poster_path": "/8nzJve63EXA79HGAyidZwivZrQ2.jpg",
+    "backdrop_path": "/p6VFbg5lhWj0RCgXf5dj6IDMPvt.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Timothy Dalton",
+      "character": "James Bond",
+      "profile_path": "/rKYQd6ihqWiOaCHEDrvgV2VPtAo.jpg"
+    },
+    {
+      "name": "Carey Lowell",
+      "character": "Pam Bouvier",
+      "profile_path": "/rTxHayWsDJQbVqR1sKjDghXZNUl.jpg"
+    },
+    {
+      "name": "Robert Davi",
+      "character": "Franz Sanchez",
+      "profile_path": "/yizOUAKs59CwKM6pU30gIP9gTup.jpg"
+    },
+    {
+      "name": "Talisa Soto",
+      "character": "Lupe Lamora",
+      "profile_path": "/tpEGbGgASne8m1iHzncuxdSLIkX.jpg"
+    }
+  ]
+}

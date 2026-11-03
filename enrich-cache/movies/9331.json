@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9331,
+    "title": "Clear and Present Danger",
+    "overview": "Agent Jack Ryan becomes acting Deputy Director of Intelligence for the CIA when Admiral Greer is diagnosed with cancer. When an American businessman, and friend of the president, is murdered on his yacht, Ryan starts discovering links between the man and drug dealers. As former CIA agent John Clark is sent to Colombia to kill drug cartel kingpins in retaliation, Ryan must fight through multiple cover-ups to figure out what happened and who\u0027s responsible.",
+    "tagline": "Truth needs a soldier.",
+    "runtime": 141,
+    "release_date": "1994-08-03",
+    "vote_average": 6.648,
+    "poster_path": "/6xTM8FPxrLRYwz6I3fqtwh7xybs.jpg",
+    "backdrop_path": "/hEMxuwywh3FmWjhkIrfo57k3M2n.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 192492,
+      "name": "The Jack Ryan Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "Jack Ryan",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Willem Dafoe",
+      "character": "John Clark",
+      "profile_path": "/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg"
+    },
+    {
+      "name": "Joaquim de Almeida",
+      "character": "Col. Felix V. Cortez",
+      "profile_path": "/muXJn8kTEPxJaetkgCyS8RPEzTC.jpg"
+    },
+    {
+      "name": "Henry Czerny",
+      "character": "CIA Deputy Director Robert Ritter",
+      "profile_path": "/zOWZzRmliKf9032IOOq0a3jXhVv.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9341,
+    "title": "The Core",
+    "overview": "Geophysicist Dr. Josh Keyes discovers that an unknown force has caused the earth\u0027s inner core to stop rotating. With the planet\u0027s magnetic field rapidly deteriorating, our atmosphere literally starts to come apart at the seams with catastrophic consequences. To resolve the crisis, Keyes, along with a team of the world\u0027s most gifted scientists, travel into the earth\u0027s core. Their mission: detonate a device that will reactivate the core.",
+    "tagline": "The only way out is in.",
+    "runtime": 136,
+    "release_date": "2003-03-28",
+    "vote_average": 5.85,
+    "poster_path": "/iMPR3OFhKNVvJw4eZoRhf9RzfHJ.jpg",
+    "backdrop_path": "/xvWba8xKqTWn0Z1i17pObQMYmE7.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Aaron Eckhart",
+      "character": "Dr. Josh Keyes",
+      "profile_path": "/u5JjnRMr9zKEVvOP7k3F6gdcwT6.jpg"
+    },
+    {
+      "name": "Hilary Swank",
+      "character": "Maj. Rebecca Childs",
+      "profile_path": "/uin6aAehUGpPCiJCaSjZG8B7M7d.jpg"
+    },
+    {
+      "name": "Delroy Lindo",
+      "character": "Dr. Ed \u0027Braz\u0027 Brazzleton",
+      "profile_path": "/fmnE0pLaQPrWFlRHsHWehq2L8fq.jpg"
+    },
+    {
+      "name": "Stanley Tucci",
+      "character": "Dr. Conrad Zimsky",
+      "profile_path": "/q4TanMDI5Rgsvw4SfyNbPBh4URr.jpg"
+    }
+  ]
+}

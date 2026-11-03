@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 330,
+    "title": "The Lost World: Jurassic Park",
+    "overview": "Four years after Jurassic Park\u0027s genetically bred dinosaurs ran amok, multimillionaire John Hammond shocks chaos theorist Ian Malcolm by revealing that he has been breeding more beasties at a secret location. Malcolm, his paleontologist ladylove and a wildlife videographer join an expedition to document the lethal lizards\u0027 natural behavior in this action-packed thriller.",
+    "tagline": "Something has survived.",
+    "runtime": 129,
+    "release_date": "1997-05-23",
+    "vote_average": 6.567,
+    "poster_path": "/s4RkAQWI9hgzctXgNFos8sJUnXJ.jpg",
+    "backdrop_path": "/A4rYaPdzgocCjQ0n9LUSYUxyvpS.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 328,
+      "name": "Jurassic Park Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jeff Goldblum",
+      "character": "Ian Malcolm",
+      "profile_path": "/kcyEPgYtBP5Pm6LLeLGfXKjYovL.jpg"
+    },
+    {
+      "name": "Julianne Moore",
+      "character": "Sarah Harding",
+      "profile_path": "/3YF19rWusxWfEI59ZM33dFhasRq.jpg"
+    },
+    {
+      "name": "Pete Postlethwaite",
+      "character": "Roland Tembo",
+      "profile_path": "/2gpa75Ci4y2OKmOc8WXnaeGgyKF.jpg"
+    },
+    {
+      "name": "Arliss Howard",
+      "character": "Peter Ludlow",
+      "profile_path": "/28bQJ5fqLem4Ml7x9LZ7QEnwaTa.jpg"
+    }
+  ]
+}

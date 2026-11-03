@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 137,
+    "title": "Groundhog Day",
+    "overview": "A cynical TV weatherman, along with his idealistic producer and his sardonic cameraman, is sent to report on Groundhog Day in the small town of Punxsutawney, where he finds himself repeating the same day over and over.",
+    "tagline": "He\u2019s having the worst day of his life\u2026 Over and over again.",
+    "runtime": 101,
+    "release_date": "1993-02-11",
+    "vote_average": 7.639,
+    "poster_path": "/gCgt1WARPZaXnq523ySQEUKinCs.jpg",
+    "backdrop_path": "/4W6RYDNe4OByNryOCvJprrutm9h.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Bill Murray",
+      "character": "Phil",
+      "profile_path": "/nnCsJc9x3ZiG3AFyiyc3FPehppy.jpg"
+    },
+    {
+      "name": "Andie MacDowell",
+      "character": "Rita",
+      "profile_path": "/akeheO4i3cR1HpSU8yu9HrLcsKm.jpg"
+    },
+    {
+      "name": "Chris Elliott",
+      "character": "Larry",
+      "profile_path": "/oZFGgyDCZaanGfco1UdfxM4rHAJ.jpg"
+    },
+    {
+      "name": "Stephen Tobolowsky",
+      "character": "Ned",
+      "profile_path": "/uL8yfcm0dCFYFQt052kczVQVvac.jpg"
+    }
+  ]
+}

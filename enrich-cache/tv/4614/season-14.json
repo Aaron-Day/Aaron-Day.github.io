@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 14,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Rogue",
+        "overview": "The NCIS team investigates a deadly car explosion in D.C. that connects to NCIS Special Agent Nicholas \u201CNick\u201D Torres, who disappeared six months ago while on a deep undercover assignment in Argentina.",
+        "air_date": "2016-09-20",
+        "runtime": 42,
+        "still_path": "/qkOx6Ho1VJ8V9vHGZjtm23Bh8VH.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Being Bad",
+        "overview": "NCIS uncovers a bomb plot and a long-running theft ring while investigating a death at a Quantico reunion.",
+        "air_date": "2016-09-27",
+        "runtime": 43,
+        "still_path": "/6gsssI6cxfbLxCIUKUtBSqSUrlW.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Privileged Information",
+        "overview": "When the NCIS team investigates a Marine Sergeant\u2019s tragic fall from a building, her doctor confides in Gibbs and suggests he treat it as a murder investigation.",
+        "air_date": "2016-10-04",
+        "runtime": 42,
+        "still_path": "/1P5vGXq7ON0nJyzi1XsvOna9HIu.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Love Boat",
+        "overview": "After the body of a Navy Lieutenant is discovered aboard a destroyer during a tiger cruise, when civilian guests are allowed to spend the night on the ship, Gibbs, Quinn, and Palmer travel out to sea to investigate.",
+        "air_date": "2016-10-11",
+        "runtime": 42,
+        "still_path": "/n1E1LcadNZ3j2qDVa3J8Zjwf0g5.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Philly",
+        "overview": "When a missing MI6 officer is linked to a murdered Petty Officer, Gibbs sends Quinn and Bishop to Philadelphia to work with MI6 Officer Clayton Reeves.",
+        "air_date": "2016-10-18",
+        "runtime": 41,
+        "still_path": "/uqryu7kHVw6XdDVzx5d7t261Csp.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Shell Game",
+        "overview": "After a kidnapped Petty Officer escapes her captor, NCIS uncovers a connection to her missing husband.",
+        "air_date": "2016-10-25",
+        "runtime": 42,
+        "still_path": "/fCW5LAcuTRlhazDazfdoydsvvPZ.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Home of the Brave",
+        "overview": "Torres boldly breaks protocol when he learns a witness in an NCIS case is wanted by U.S. Immigration and Customs Enforcement.",
+        "air_date": "2016-11-15",
+        "runtime": 43,
+        "still_path": "/ztqEgEHHQCv1zS6zj7nqjJ9M83g.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Enemy Combatant",
+        "overview": "After NCIS Agent Bishop is sent to Gitmo to gather evidence for a Navy chaplain murder case, she questions her previous work at the NSA.",
+        "air_date": "2016-11-22",
+        "runtime": 43,
+        "still_path": "/cT7RxGdvYkoF7t772qH1GlF9NQW.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Pay to Play",
+        "overview": "The NCIS team investigates a series of escalating threats against congresswoman Jenna Flemming, while Director Vance oversees her temporary protection detail.",
+        "air_date": "2016-12-06",
+        "runtime": 43,
+        "still_path": "/lekPqr9BPGcBYhQ5G8EBPkxDhWJ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Tie That Binds",
+        "overview": "After the NCIS team tracks evidence from the murder of a Navy captain to Ducky\u2019s deceased mother, Ducky looks back and questions a pivotal life choice he made 37 years ago.",
+        "air_date": "2016-12-13",
+        "runtime": 43,
+        "still_path": "/s4cR0tB3U9kTY0Xz8u1G00XqQH5.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Willoughby",
+        "overview": "NCIS searches for new leads after an undercover operation to apprehend a businessman who uses acts of terror to manipulate the stock market is compromised.",
+        "air_date": "2017-01-03",
+        "runtime": 42,
+        "still_path": "/pMsfwiS38OoGaG9lskyVbeBFurz.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Off the Grid",
+        "overview": "When Gibbs spots the brother of an \u0022NCIS Most Wanted\u0022 suspect, he takes the opportunity to assume his former alias and go undercover with their infamous anti-government militia.",
+        "air_date": "2017-01-17",
+        "runtime": 41,
+        "still_path": "/8aNhqb92Jhi8edichieJaiusluC.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Keep Going",
+        "overview": "During an NCIS hit-and-run investigation, Palmer joins a stranger on the outside ledge of a building in an attempt to save his life.",
+        "air_date": "2017-01-24",
+        "runtime": 43,
+        "still_path": "/e2UZUre18T94XJUr4GgzO17dNID.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Nonstop",
+        "overview": "The murder of a Petty Officer in a small town outside D.C. prompts NCIS to once again work with \u0022The Sherlocks,\u0022 a privately funded investigative team that includes their newest member, Anthony DiNozzo, Sr.",
+        "air_date": "2017-02-07",
+        "runtime": 43,
+        "still_path": "/qQ9O7OGFKv1cgdT1o1sf3ygTlEB.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Pandora\u0027s Box (I)",
+        "overview": "After Abby\u0027s homeland security think tank is compromised and she is found in possession of a real bomb, the NCIS team discovers the leader of the group has been murdered and a theoretical terror playbook has been stolen.\n\nThe crossover continues on NCIS: New Orleans S03E14 Pandora\u0027s Box (II).",
+        "air_date": "2017-02-14",
+        "runtime": 41,
+        "still_path": "/cXXkn2Zdo8hsHEBpNEEacybvckL.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "A Many Splendored Thing",
+        "overview": "Bishop is more determined than ever to seek revenge for the murder of Qasim, her late boyfriend, after Gibbs and the team find a new lead in the Chen case.",
+        "air_date": "2017-02-21",
+        "runtime": 43,
+        "still_path": "/sppsgPa5jHFoqvYFK8Lhdk4a1HE.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "What Lies Above",
+        "overview": "McGee discovers his apartment has been torn apart by a robber trying to locate an item of great value hidden somewhere by the convicted criminal who previously owned the unit.",
+        "air_date": "2017-03-07",
+        "runtime": 43,
+        "still_path": "/fmK5YuTEaCnpfNkqIGuq2q49BvC.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "M.I.A.",
+        "overview": "To carry out a sailor\u0027s dying wish, Gibbs and the NCIS team reinvestigate a murder case that was originally ruled an accidental death.",
+        "air_date": "2017-03-14",
+        "runtime": 43,
+        "still_path": "/pUXe4jQdzCIcHDKLfhzW3utNDrc.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Wall",
+        "overview": "The team must rely on an irritable Vietnam War veteran to solve a Marine\u0027s murder.",
+        "air_date": "2017-03-28",
+        "runtime": 41,
+        "still_path": "/aLR8LPI09gVLMiEncH8WZ4oZMxW.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "A Bowl of Cherries",
+        "overview": "A Vice Admiral tasks McGee with tracking down the hackers who infected his laptop with ransomware before the virus wipes out all his data. The cyberterrorism escalates when the virus spreads to the whole NCIS office.",
+        "air_date": "2017-04-04",
+        "runtime": 43,
+        "still_path": "/1vS0NYHpekPLvcoTzHaOjZhGGnt.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "One Book, Two Covers",
+        "overview": "A Marine\u0027s murder has connections to a dirt bike gang that Torres joined while on an old undercover operation.",
+        "air_date": "2017-04-18",
+        "runtime": 43,
+        "still_path": "/xm1xeEtd9KVpF2JQpQKQlZi7kwP.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Beastmaster",
+        "overview": "A Gunnery Sergeant\u0027s murder in a national park leads the team to join forces with the mounted police. While investigating the clues, they uncover a disturbing smuggling ring.",
+        "air_date": "2017-05-02",
+        "runtime": 41,
+        "still_path": "/gUeTz15Y6FbEUaBLBTb1R6thDbI.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Something Blue",
+        "overview": "The team suspects foul play when a healthy, young Petty Officer mysteriously dies in his sleep aboard a Navy destroyer.",
+        "air_date": "2017-05-09",
+        "runtime": 43,
+        "still_path": "/p30PD2B0aXGmitpabjpGOffOH2S.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Rendezvous",
+        "overview": "When a Navy SEAL vanishes during  an unsanctioned trip, Gibbs, McGee, and Torres travel to an unpopulated area in Paraguay that\u0027s teeming with violent rebels.",
+        "air_date": "2017-05-16",
+        "runtime": 42,
+        "still_path": "/6k3NEb94IrihOpZLQeOGgUheM5z.jpg"
+      }
+    ]
+  }
+}

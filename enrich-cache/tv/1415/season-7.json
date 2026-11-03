@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Further Adventures",
+        "overview": "Holmes and Watson\u2019s new careers as consultants for Scotland Yard in London take them inside the tabloid journalism industry when a popular model is the victim of an acid attack. Also, as Watson grows increasingly homesick for New York, Captain Gregson is wracked with guilt over his unresolved rift with his former consultants.",
+        "air_date": "2019-05-23",
+        "runtime": 43,
+        "still_path": "/x2Cpy5F8xhkmcDiiJMhrjgwUvBv.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Gutshot",
+        "overview": "Holmes and Watson try to work a stateside investigation from London when someone close to them is gravely wounded by an unknown perpetrator in the United States. However, Holmes\u2019 stateside legal trouble \u2013 the result of a confession to a murder he didn\u2019t commit \u2013 threatens to derail their efforts.",
+        "air_date": "2019-05-30",
+        "runtime": 43,
+        "still_path": "/y7I8fe28vuIOfZe5F1t0QGe3bFU.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Price of Admission",
+        "overview": "Holmes takes extreme measures to secure his return to New York when he leans on his father\u2019s disreputable connections to aid his legal re-entry into the United States. Also, while Holmes looks for a way back to the United States, Watson helps the NYPD investigate a murder at a storage facility that caters to wealthy clients with items they want hidden from U.S. Customs.",
+        "air_date": "2019-06-06",
+        "runtime": 43,
+        "still_path": "/1p18h6efEstQLuS8uUcJlZHYY0W.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Red Light, Green Light",
+        "overview": "After an explosion at a traffic stop, Holmes and Watson must determine whether the attack was a terrorist attack; Holmes and Watson suspect there is more for them to discover regarding the recent attack on someone within their inner circle.",
+        "air_date": "2019-06-13",
+        "runtime": 43,
+        "still_path": "/oleNa16tmfe9b9jXCOPZzsaUBnV.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Into the Woods",
+        "overview": "Tech billionaire Odin Reichenbach hires Holmes and Watson to investigate a personal threat he suspects originated from within his own company; Holmes and Watson search for a motive behind three seemingly unconnected murders.",
+        "air_date": "2019-06-20",
+        "runtime": 40,
+        "still_path": "/7qC3ThvyQWmYM9CPZw1LJDbUGhc.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Command: Delete",
+        "overview": "Tech billionaire Odin Reichenbach presents Sherlock and Joan with an extraordinary offer to help him with a program that can predict future crimes. Sherlock and Joan assist Bell when he tries to prevent a future crime of his own, as he races to locate a fellow NYPD officer planning a sniper shooting.",
+        "air_date": "2019-06-27",
+        "runtime": 43,
+        "still_path": "/ah8OmZPrqMXZf7ISDCnUk2IPqvr.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "From Russia with Drugs",
+        "overview": "Sherlock and Joan investigate the murder of a criminal who made his living by stealing from other criminals. When Gregson resumes leadership of the precinct, he suspects his interim replacement is responsible for one of his best detective\u2019s suspicious departure.",
+        "air_date": "2019-07-04",
+        "runtime": 41,
+        "still_path": "/p7gXPBv6t1lFwRQhYmfzl7ybPDi.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Miss Understood",
+        "overview": "Holmes and Watson search for an ulterior motive when Cassie Lenue, a brilliant young criminal they helped put in prison, seeks their help in solving a murder.",
+        "air_date": "2019-07-11",
+        "runtime": 42,
+        "still_path": "/ojKFus90YJII4IkMqvqG9OKtj45.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "On the Scent",
+        "overview": "Holmes and Watson work to determine if a long dormant serial killer has resurfaced in the wake of a sculptor\u2019s murder in New York City. Also, Watson suspects Holmes is keeping something from her regarding tech billionaire Odin Reichenbach.",
+        "air_date": "2019-07-18",
+        "runtime": 41,
+        "still_path": "/hHPsVnUZEzhi3T5qHTByCEcRaqp.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Latest Model",
+        "overview": "Holmes and Watson receive a shocking request to collaborate from their foe, Odin Reichenbach, when the tech billionaire asks them to test his new crime prevention system. Tasked with investigating someone the program predicts will soon commit a crime, the duo worries Odin will take drastic action before they conclude their inquiry.",
+        "air_date": "2019-07-25",
+        "runtime": 43,
+        "still_path": "/xEPrIQ2TzFncNWFjB6MlpINSrZh.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Unfriended",
+        "overview": "Holmes and Watson join forces with Holmes\u2019 father, Morland, to enlist his vast criminal network to help disassemble tech billionaire Odin Reichenbach\u2019s crime prevention system.",
+        "air_date": "2019-08-01",
+        "runtime": 43,
+        "still_path": "/mzIWHh4Mrvkc8QNLd5XFRvlf2wT.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Reichenbach Falls",
+        "overview": "Tech billionaire Odin Reichenbach inadvertently provides Holmes and Watson with a lead that could give them evidence that brings him to justice.",
+        "air_date": "2019-08-08",
+        "runtime": 43,
+        "still_path": "/XcK6kboIqBc3aCTLpi2On93xan.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Their Last Bow",
+        "overview": "Amidst Holmes and Watson\u2019s battle with tech billionaire Odin Reichenbach, the investigators receive word of their old enemy and Sherlock\u2019s former love, Jamie Moriarty.",
+        "air_date": "2019-08-15",
+        "runtime": 43,
+        "still_path": "/o7JNbGMJkGuwSlrWjF4oCIBUQ6X.jpg"
+      }
+    ]
+  }
+}

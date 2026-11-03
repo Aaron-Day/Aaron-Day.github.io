@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10377,
+    "title": "My Cousin Vinny",
+    "overview": "Two carefree pals traveling through rural Alabama on their way back to college are mistakenly arrested and charged with murder. Fortunately, one of them has a cousin who\u0027s a lawyer - Vincent Gambini, a former auto mechanic from Brooklyn who has just passed his bar exam after his sixth try. When he arrives with his leather-clad girlfriend to try his first case, it\u0027s a real shock - for him and the Deep South!",
+    "tagline": "There have been many courtroom dramas that have glorified the Great American Legal System. This is not one of them.",
+    "runtime": 119,
+    "release_date": "1992-03-13",
+    "vote_average": 7.504,
+    "poster_path": "/iwSURa8nS2ujwrU3s1lfxxX7voH.jpg",
+    "backdrop_path": "/uEoaOfvWibpvjBNxFoj4MxWn0OH.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ralph Macchio",
+      "character": "Bill Gambini",
+      "profile_path": "/AoqqL9UlyPrcTLnpzbQvKXPvXrz.jpg"
+    },
+    {
+      "name": "Joe Pesci",
+      "character": "Vinny Gambini",
+      "profile_path": "/pEHQoL8yOndOq59iXlgsOpUTcTk.jpg"
+    },
+    {
+      "name": "Marisa Tomei",
+      "character": "Mona Lisa Vito",
+      "profile_path": "/vAQ10fvGfVyuJdMNKVMA4ZkacWL.jpg"
+    },
+    {
+      "name": "Mitchell Whitfield",
+      "character": "Stan Rothenstein",
+      "profile_path": "/aCyQGfiRfoCNlSXQ8D2mD5f8zFn.jpg"
+    }
+  ]
+}

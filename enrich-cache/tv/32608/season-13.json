@@ -1,0 +1,128 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 13,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The UFO Conspiracy",
+        "overview": "In 2017, news breaks that the Department of Defense recently spent millions investigating reports of UFOs; the latest disclosure about a series of secret government UFO projects dating back decades.",
+        "air_date": "2018-04-27",
+        "runtime": 85,
+        "still_path": "/k9n9JJBuIGQ3qfe8Y4GJdsr5iri.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Da Vinci\u0027s Forbidden Codes",
+        "overview": "Researchers claim there are hidden messages that can be found within the works of Leonardo da Vinci--and other art throughout history--that may reveal an extraterrestrial influence.",
+        "air_date": "2018-05-04",
+        "runtime": 42,
+        "still_path": "/ai75xfjr98urYI8iEQqmMlMQv63.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Alien Protocols",
+        "overview": "In 2017, a strange, cigar-shaped object entered our solar system from another star system traveling in such an unusual trajectory it caused some astronomers to suggest that it could be an extraterrestrial craft. It brought up an important question--will we have a plan in place for what to do if we encounter alien life?",
+        "air_date": "2018-05-11",
+        "runtime": 42,
+        "still_path": "/3fFMxcderBbDqf1HNWuH4vakEeU.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Earth\u0027s Black Holes",
+        "overview": "Could black holes exist not just in outer space, but here on Earth? And if so, could Earth\u0027s Black Holes have caused strange disappearances and other inexplicable phenomena for centuries?",
+        "air_date": "2018-05-18",
+        "runtime": 42,
+        "still_path": "/uxBdXKGUc656PyNB08cMFKkaAK.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Desert Codes",
+        "overview": "Could giant ancient drawings found etched into the desert floor be part of an ancient alien code?",
+        "air_date": "2018-05-25",
+        "runtime": 42,
+        "still_path": "/A7advtqCUNp0maUHALkTFpkCn1v.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Area 52",
+        "overview": "Could Area 51\u0027s notoriety act as a cover up to much bigger, top-secret extraterrestrial experiments taking place at multiple locations?",
+        "air_date": "2018-06-01",
+        "runtime": 42,
+        "still_path": "/ddrWAiSaEe60yalBIGnk25EfdUM.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Earth Station Egypt",
+        "overview": "Was Egypt home to Earth\u0027s earliest extraterrestrial visitors? Ancient Astronaut theorist Giorgio A. Tsoukalos explores the latest scientific discoveries at some of the world\u0027s most ancient places to find evidence that extraterrestrials visited Egypt in the distant past.",
+        "air_date": "2018-07-20",
+        "runtime": 84,
+        "still_path": "/qLrWqpmAJUzrj3eH0LlzC40D66h.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Island of the Giants",
+        "overview": "Could the ancient ruins of Sardinia, Italy hold clues to an extraterrestrial past? Oak Island treasure hunter Marty Lagina and Ancient Astronaut theorist Giorgio A. Tsoukalos explore the bizarre statues, mysterious pyramids and gigantic structures left behind by one of the most mysterious cultures in the ancient world.",
+        "air_date": "2018-07-27",
+        "runtime": 42,
+        "still_path": "/iGXNyOc6ift6RVjjFDB0hChdeln.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Taken",
+        "overview": "Millions of people around the world have claimed to be abducted by extraterrestrials; whether or not these extraordinary accounts are some form of mass psychological delusion, still remains unanswered.",
+        "air_date": "2018-08-03",
+        "runtime": 42,
+        "still_path": "/hZDBfNkbdhXN2pWmcJQSQTIR0JJ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Sentinels",
+        "overview": "Ancient astronaut theorists Giorgio A. Tsoukalos and David H. Childress explore a Polynesian land of bizarre figures and forbidden places in search of what could be the ultimate evidence of mankind\u2019s extraterrestrial origins.",
+        "air_date": "2018-08-10",
+        "runtime": 42,
+        "still_path": "/6SCCoL7lyqiAHDMPEOWL1ki0kK4.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Russia Declassified",
+        "overview": "A look at suspicions that the U.S. and Russia have been working together to prepare for an extraterrestrial encounter.",
+        "air_date": "2018-08-17",
+        "runtime": 42,
+        "still_path": "/2ILC7iTWg4TG36F0besuzJlMvJm.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "They Came from the Sky",
+        "overview": "Ancient cultures from around the world believed that meteorites were sacred stones imbued with the power of the Gods; Ancient Astronaut theorists ask whether or not these space rocks could be pieces of extraterrestrial technology.",
+        "air_date": "2018-08-24",
+        "runtime": 42,
+        "still_path": "/6B21831b4vhAmoSy3MTVmsG8xMY.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Artificial Human",
+        "overview": "A look at whether or not intelligent robots are a threat to humanity or the next step in human evolution; as man and machine begin to merge, humanity could be fulfilling a destiny prepared for by aliens thousands of years ago.",
+        "air_date": "2018-08-31",
+        "runtime": 84,
+        "still_path": "/cnQVSDWwE2W3VNGOA56q7kog7EI.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Alien Phenomenon",
+        "overview": "Erich von D\u00E4niken\u0027s \u0022Chariots of the Gods?\u0022 suggests that aliens visited Earth in the distant past, and there are those who believe that he will be proven right.",
+        "air_date": "2019-01-04",
+        "runtime": 84,
+        "still_path": "/jtlUnz6ZSMdySk6fTUTKb3Wj6nT.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Return to Mars",
+        "overview": "An examination of possible encounters humans could have once colonies are established beyond Earth.",
+        "air_date": "2019-01-07",
+        "runtime": 84,
+        "still_path": "/7V0KBLyEYSaAUWfyKVgZHEDoFDe.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 14872,
+    "title": "The Cutting Edge: Going for the Gold",
+    "overview": "Two ice skaters develop a love-hate relationship while dreaming of Olympic glory.",
+    "tagline": "They\u0027re about to break the ice.",
+    "runtime": 98,
+    "release_date": "2006-02-07",
+    "vote_average": 6.5,
+    "poster_path": "/lDF8zGixn3WVWSKc2usVGjPWc7C.jpg",
+    "backdrop_path": "/fUosOAY42laqr82I7Ql2HRRZko5.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 110179,
+      "name": "The Cutting Edge Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Christy Carlson Romano",
+      "character": "Jackie Dorsey",
+      "profile_path": "/sU7lBGl6imfU0PaxL0GKIbjU5e2.jpg"
+    },
+    {
+      "name": "Ross Thomas",
+      "character": "Alex Harrison",
+      "profile_path": "/fL6kfmde6c5SQJrKoDP3OJPMfsy.jpg"
+    },
+    {
+      "name": "Scott Thompson Baker",
+      "character": "Doug Dorsey",
+      "profile_path": "/uzSItPTyVBSGUjiawf4TJbFgNbi.jpg"
+    },
+    {
+      "name": "Kim Kindrick",
+      "character": "Heidi Clements",
+      "profile_path": null
+    }
+  ]
+}

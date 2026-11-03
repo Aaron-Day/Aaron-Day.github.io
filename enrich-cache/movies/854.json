@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 854,
+    "title": "The Mask",
+    "overview": "Timid bank clerk Stanley Ipkiss discovers a magical mask infused with the spirit of the Norse god Loki. Donning it transforms him into an unrestrained, green-faced, cartoon-like wild man. While the mask grants him the confidence to woo a local singer, it also makes him the target of a ruthless mobster.",
+    "tagline": "From zero to hero.",
+    "runtime": 101,
+    "release_date": "1994-07-29",
+    "vote_average": 7,
+    "poster_path": "/jPC2eYub74zwf2tPGVtzSlBW6Oy.jpg",
+    "backdrop_path": "/bQlw59HncOXX9alFlOYKHAvSnm.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 43072,
+      "name": "The Mask Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jim Carrey",
+      "character": "Stanley Ipkiss / The Mask",
+      "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+    },
+    {
+      "name": "Peter Riegert",
+      "character": "Mitch Kellaway",
+      "profile_path": "/yPgaRZBMVy9eoNNuiPIm0wzG9sD.jpg"
+    },
+    {
+      "name": "Peter Greene",
+      "character": "Dorian Tyrrell",
+      "profile_path": "/n49XdJsMwNRdc4qT9XVAGb3fIQW.jpg"
+    },
+    {
+      "name": "Amy Yasbeck",
+      "character": "Peggy Brandt",
+      "profile_path": "/5BbyiBjp5T8pKUcauVTweRcvLJJ.jpg"
+    }
+  ]
+}

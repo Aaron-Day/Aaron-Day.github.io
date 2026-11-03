@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 101,
+    "title": "L\u00E9on: The Professional",
+    "overview": "L\u00E9on, the top hit man in New York, has earned a rep as an effective \u0022cleaner\u0022. But when his next-door neighbors are wiped out by a loose-cannon DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathilda\u0027s thoughts turn to revenge, and she considers following in L\u00E9on\u0027s footsteps.",
+    "tagline": "If you want the job done right, hire a professional.",
+    "runtime": 111,
+    "release_date": "1994-09-14",
+    "vote_average": 8.289,
+    "poster_path": "/bxB2q91nKYp8JNzqE7t7TWBVupB.jpg",
+    "backdrop_path": "/fj0hwDJEOOHllRim2BMt5L7tbjf.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jean Reno",
+      "character": "L\u00E9on Montana",
+      "profile_path": "/mw0EZJYz3kiFq9fNxsML773gotF.jpg"
+    },
+    {
+      "name": "Natalie Portman",
+      "character": "Mathilda Lando",
+      "profile_path": "/edPU5HxncLWa1YkgRPNkSd68ONG.jpg"
+    },
+    {
+      "name": "Gary Oldman",
+      "character": "Norman Stansfield",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    },
+    {
+      "name": "Danny Aiello",
+      "character": "Old Tony",
+      "profile_path": "/2WiZ8SkiFU355GUT2QuSPlenrfM.jpg"
+    }
+  ]
+}

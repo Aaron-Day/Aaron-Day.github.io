@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1724,
+    "title": "The Incredible Hulk",
+    "overview": "Scientist Bruce Banner scours the planet for an antidote to the unbridled force of rage within him: the Hulk. But when the military masterminds who dream of exploiting his powers force him back to civilization, he finds himself coming face to face with a new, deadly foe.",
+    "tagline": "You\u0027ll like him when he\u0027s angry.",
+    "runtime": 114,
+    "release_date": "2008-06-12",
+    "vote_average": 6.267,
+    "poster_path": "/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg",
+    "backdrop_path": "/xfBnQ4mgf1jYZsscJGJjr6ce0Ar.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Edward Norton",
+      "character": "Bruce Banner",
+      "profile_path": "/8nytsqL59SFJTVYVrN72k6qkGgJ.jpg"
+    },
+    {
+      "name": "Liv Tyler",
+      "character": "Betty Ross",
+      "profile_path": "/rC6f9NoDN9l2tMgiEocIvnJi2tW.jpg"
+    },
+    {
+      "name": "Tim Roth",
+      "character": "Emil Blonsky",
+      "profile_path": "/qSizF2i9gz6c6DbAC5RoIq8sVqX.jpg"
+    },
+    {
+      "name": "William Hurt",
+      "character": "General \u0027Thunderbolt\u0027 Ross",
+      "profile_path": "/j3mjmuHLBW4XQSw53C8Sh0Lh3ZQ.jpg"
+    }
+  ]
+}

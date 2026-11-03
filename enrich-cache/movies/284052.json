@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 284052,
+    "title": "Doctor Strange",
+    "overview": "After his career is destroyed, a brilliant but arrogant surgeon gets a new lease on life when a sorcerer takes him under her wing and trains him to defend the world against evil.",
+    "tagline": "The impossibilities are endless.",
+    "runtime": 115,
+    "release_date": "2016-10-25",
+    "vote_average": 7.426,
+    "poster_path": "/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg",
+    "backdrop_path": "/kkoiH8ZWxJ9WSAjOadGtuHUQxbm.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 618529,
+      "name": "Doctor Strange Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Benedict Cumberbatch",
+      "character": "Dr. Stephen Strange",
+      "profile_path": "/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg"
+    },
+    {
+      "name": "Chiwetel Ejiofor",
+      "character": "Mordo",
+      "profile_path": "/kq5DDnqqofoRI0t6ddtRlsJnNPT.jpg"
+    },
+    {
+      "name": "Rachel McAdams",
+      "character": "Dr. Christine Palmer",
+      "profile_path": "/2DPh6KoNg0p57vvGc6N468zr3ct.jpg"
+    },
+    {
+      "name": "Benedict Wong",
+      "character": "Wong",
+      "profile_path": "/yYfLyrC2CE6vBWSJfkpuVKL2POM.jpg"
+    }
+  ]
+}

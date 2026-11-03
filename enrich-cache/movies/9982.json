@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9982,
+    "title": "Chicken Little",
+    "overview": "When the sky really is falling and sanity has flown the coop, who will rise to save the day? Together with his hysterical band of misfit friends, Chicken Little must hatch a plan to save the planet from alien invasion and prove that the world\u0027s biggest hero is a little chicken.",
+    "tagline": "The end is near.",
+    "runtime": 81,
+    "release_date": "2005-11-04",
+    "vote_average": 5.923,
+    "poster_path": "/87FpA4b90eTaw3U6zmCNikoPLir.jpg",
+    "backdrop_path": "/h5Bwxe6dTVFtAFkybkd1EAB4yUW.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Zach Braff",
+      "character": "Chicken Little (voice)",
+      "profile_path": "/koIHwqE6hWIXuOIDHNADwSuGq6N.jpg"
+    },
+    {
+      "name": "Garry Marshall",
+      "character": "Buck Cluck (voice)",
+      "profile_path": "/uYVagiSCH4gj3BcYownQySVwfy7.jpg"
+    },
+    {
+      "name": "Joan Cusack",
+      "character": "Abby Mallard (voice)",
+      "profile_path": "/59UIeHZFYrKyP20lXqijtfTXglO.jpg"
+    },
+    {
+      "name": "Steve Zahn",
+      "character": "Runt of the Litter (voice)",
+      "profile_path": "/rwrPdKGwXnByxUVMxMf8Y7oswi3.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 271718,
+    "title": "Trainwreck",
+    "overview": "Ever since her father drilled into her head that monogamy isn\u0027t realistic, magazine writer Amy has made promiscuity her credo. As much as she enjoys an uninhibited life free of commitment, Amy is really in a rut. While writing a profile about charming and successful sports doctor Aaron Conners, she finds herself actually falling in love for the first time -- and what\u0027s more, Aaron seems to really like her too. Amy starts to wonder if it\u0027s time to clean up her act and face her fears.",
+    "tagline": "We all know one.",
+    "runtime": 125,
+    "release_date": "2015-07-17",
+    "vote_average": 5.773,
+    "poster_path": "/wrY629UTCUAKLJ4CxQXz6DCE7pr.jpg",
+    "backdrop_path": "/9O6pLFE630h7IxslegYR9CV64aE.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Amy Schumer",
+      "character": "Amy Townsend",
+      "profile_path": "/saXAIob0JOf8B4Z9v2pgzEHV8wb.jpg"
+    },
+    {
+      "name": "Bill Hader",
+      "character": "Dr. Aaron Conners",
+      "profile_path": "/qyT50vQ9PQIEctE1IxDTEsBKstU.jpg"
+    },
+    {
+      "name": "Brie Larson",
+      "character": "Kim",
+      "profile_path": "/xSGvMwNNJcEQvVcjiIUTyxyMfkZ.jpg"
+    },
+    {
+      "name": "LeBron James",
+      "character": "LeBron James",
+      "profile_path": "/wcAzgD7NFT61iUJURIY26FaCVyB.jpg"
+    }
+  ]
+}

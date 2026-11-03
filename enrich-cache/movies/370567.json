@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 370567,
+    "title": "Sherlock Gnomes",
+    "overview": "Garden gnomes Gnomeo \u0026 Juliet recruit renown detective Sherlock Gnomes to investigate the mysterious disappearance of other garden ornaments.",
+    "tagline": "They\u0027re on a mission to bring every gnome home.",
+    "runtime": 86,
+    "release_date": "2018-03-15",
+    "vote_average": 5.7,
+    "poster_path": "/wqnzpJR3PwS4doVkAkt9seSEpoX.jpg",
+    "backdrop_path": "/jVUR1W6cq8VuT4A6N4fd2yDNhji.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 493668,
+      "name": "Gnomeo \u0026 Juliet Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Johnny Depp",
+      "character": "Sherlock Gnomes (voice)",
+      "profile_path": "/k2xt6EUxQDwYRKIyI4IBdZxfs8n.jpg"
+    },
+    {
+      "name": "Emily Blunt",
+      "character": "Juliet (voice)",
+      "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+    },
+    {
+      "name": "James McAvoy",
+      "character": "Gnomeo (voice)",
+      "profile_path": "/u4REKbm3zhFI2J5tVyqRovGRYUJ.jpg"
+    },
+    {
+      "name": "Chiwetel Ejiofor",
+      "character": "Dr. Watson (Voice)",
+      "profile_path": "/kq5DDnqqofoRI0t6ddtRlsJnNPT.jpg"
+    }
+  ]
+}

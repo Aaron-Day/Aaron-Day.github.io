@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 664,
+    "title": "Twister",
+    "overview": "An unprecedented series of violent tornadoes is sweeping across Oklahoma. Tornado chasers, headed by Dr. Jo Harding, attempt to release a groundbreaking device that will allow them to track them and create a more advanced warning system. They are joined by Jo\u0027s soon to be ex-husband Bill, a former tornado chaser himself, and his girlfriend Melissa.",
+    "tagline": "The dark side of nature.",
+    "runtime": 113,
+    "release_date": "1996-05-10",
+    "vote_average": 6.58,
+    "poster_path": "/d4ie3f6QTvNw40V770Uzo87SDZn.jpg",
+    "backdrop_path": "/5oCAo7LFj2x0yByfi5JYirGnK8I.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1062948,
+      "name": "Twister Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Helen Hunt",
+      "character": "Jo",
+      "profile_path": "/bdhW2Ra84cJG3B5RDzUO6niUTO7.jpg"
+    },
+    {
+      "name": "Bill Paxton",
+      "character": "Bill",
+      "profile_path": "/aLdNe6mt1cSi2zWlUYRregzfis5.jpg"
+    },
+    {
+      "name": "Jami Gertz",
+      "character": "Melissa",
+      "profile_path": "/yYy06dtBff0WwBHyxUjkq0kUvpu.jpg"
+    },
+    {
+      "name": "Cary Elwes",
+      "character": "Jonas",
+      "profile_path": "/9UszBdQJ9PmyBydIeIBxlStozhW.jpg"
+    }
+  ]
+}

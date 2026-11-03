@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 670266,
+    "title": "Tremors: Shrieker Island",
+    "overview": "When a group of hunters genetically modify Graboid eggs, they face an all-out war against the larger, terrifyingly intelligent creatures, and swiftly multiplying Shriekers!",
+    "tagline": "",
+    "runtime": 102,
+    "release_date": "2020-10-20",
+    "vote_average": 6.037,
+    "poster_path": "/46qwaON7l11M407rqh8lD4vXcAR.jpg",
+    "backdrop_path": "/5gCBJuXCjP1PCuHT3XzTq1bL81d.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91799,
+      "name": "Tremors Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael Gross",
+      "character": "Burt Gummer",
+      "profile_path": "/467FG7f1rXkG9ZzU8IumVkBHi0v.jpg"
+    },
+    {
+      "name": "Jon Heder",
+      "character": "Jimmy",
+      "profile_path": "/xGLRJEKKmNsDpz6MefPMU4gqQj1.jpg"
+    },
+    {
+      "name": "Caroline Langrishe",
+      "character": "Jasmine \u0022Jas\u0022 Welker",
+      "profile_path": "/1ayDajjgCnt5iTLGMTUAoptuKeU.jpg"
+    },
+    {
+      "name": "Cassie Clare",
+      "character": "Anna",
+      "profile_path": "/bn18nRKMVGJ2EgUg82aXugtyZz9.jpg"
+    }
+  ]
+}

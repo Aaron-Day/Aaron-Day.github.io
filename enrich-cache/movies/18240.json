@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18240,
+    "title": "The Proposal",
+    "overview": "When she learns she\u0027s in danger of losing her visa status and being deported, overbearing book editor Margaret Tate forces her put-upon assistant, Andrew Paxton, to marry her.",
+    "tagline": "Here comes the bribe...",
+    "runtime": 108,
+    "release_date": "2009-06-02",
+    "vote_average": 7.184,
+    "poster_path": "/6stnAm1wSek8ZrislwK4xGTyCnt.jpg",
+    "backdrop_path": "/ojgXOhVi9Yk8irDpRfDkIzdD1LK.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sandra Bullock",
+      "character": "Margaret Tate",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "Ryan Reynolds",
+      "character": "Andrew Paxton",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Malin Akerman",
+      "character": "Gertrude",
+      "profile_path": "/u38qRcCAiO3SZdFKJKx3fncDyef.jpg"
+    },
+    {
+      "name": "Craig T. Nelson",
+      "character": "Joe Paxton",
+      "profile_path": "/rMh8qdexFKmc7mq7oLzsLLvCCjs.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 899112,
+    "title": "Violent Night",
+    "overview": "When a team of mercenaries breaks into a wealthy family compound on Christmas Eve, taking everyone inside hostage, the team isn\u2019t prepared for a surprise combatant: Santa Claus is on the grounds, and he\u2019s about to show why this Nick is no saint.",
+    "tagline": "You better watch out.",
+    "runtime": 112,
+    "release_date": "2022-11-30",
+    "vote_average": 7.205,
+    "poster_path": "/e8CpMgdyihz9Td7amQDqubPuzfN.jpg",
+    "backdrop_path": "/sBOenwOZGRN5nZZGw4TxwtnfrEf.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1078456,
+      "name": "Violent Night Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "David Harbour",
+      "character": "Santa",
+      "profile_path": "/qMFtMWlYVtFVyBoBhX5IoA5sN5a.jpg"
+    },
+    {
+      "name": "John Leguizamo",
+      "character": "Scrooge",
+      "profile_path": "/kwYCdxTlDh9zauUCg4mp2XTCQTw.jpg"
+    },
+    {
+      "name": "Beverly D\u0027Angelo",
+      "character": "Gertrude",
+      "profile_path": "/8fYQIA8dAaA4GOTxOFSKIvTqzi.jpg"
+    },
+    {
+      "name": "Alex Hassell",
+      "character": "Jason",
+      "profile_path": "/ssL09IDQBkw1BtRcvvZnm6OJMSm.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 609,
+    "title": "Poltergeist",
+    "overview": "The Freelings\u0027 suburban home becomes the center of paranormal activity that opens a portal to the \u0027other side\u0027. With help, they must cross over to get their daughter back.",
+    "tagline": "\u0022They\u0027re here.\u0022",
+    "runtime": 114,
+    "release_date": "1982-06-04",
+    "vote_average": 7.168,
+    "poster_path": "/4eMN3GANH5GG4kXdHkrTZEUuQ9M.jpg",
+    "backdrop_path": "/bvkPno6U02lLyvPWCnmibq4eIaN.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10453,
+      "name": "Poltergeist Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "JoBeth Williams",
+      "character": "Diane Freeling",
+      "profile_path": "/nL9ZdnI50y1yRVvmz0P61TxjZsF.jpg"
+    },
+    {
+      "name": "Craig T. Nelson",
+      "character": "Steve Freeling",
+      "profile_path": "/rMh8qdexFKmc7mq7oLzsLLvCCjs.jpg"
+    },
+    {
+      "name": "Beatrice Straight",
+      "character": "Dr. Lesh",
+      "profile_path": "/iCNm0pSNFStUBKpvY6Ou5F7Nap6.jpg"
+    },
+    {
+      "name": "Dominique Dunne",
+      "character": "Dana Freeling",
+      "profile_path": "/fGPpYzg6lp6pIV439C5Luskk7VX.jpg"
+    }
+  ]
+}

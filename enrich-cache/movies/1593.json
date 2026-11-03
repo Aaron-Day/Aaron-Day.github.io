@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1593,
+    "title": "Night at the Museum",
+    "overview": "Chaos reigns at the natural history museum when night watchman Larry Daley accidentally stirs up an ancient curse, awakening Attila the Hun, an army of gladiators, a Tyrannosaurus rex and other exhibits.",
+    "tagline": "Where history comes to life.",
+    "runtime": 108,
+    "release_date": "2006-12-20",
+    "vote_average": 6.601,
+    "poster_path": "/pDsAAYf6Zn0yiAGJ6lYGs6hoZ4E.jpg",
+    "backdrop_path": "/1ZVlzOBYCggLzvVYHK7Im6LohjC.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 85943,
+      "name": "Night at the Museum Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Stiller",
+      "character": "Larry Daley",
+      "profile_path": "/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg"
+    },
+    {
+      "name": "Carla Gugino",
+      "character": "Rebecca",
+      "profile_path": "/dAqGOsHSzlP6RhaUURX2NrwITaq.jpg"
+    },
+    {
+      "name": "Dick Van Dyke",
+      "character": "Cecil",
+      "profile_path": "/jXAeNx7mYdirzMHcqPyj5VXxcXi.jpg"
+    },
+    {
+      "name": "Mickey Rooney",
+      "character": "Gus",
+      "profile_path": "/eYuayEC3xhXQf3Z1Cy6AVMEcgZb.jpg"
+    }
+  ]
+}

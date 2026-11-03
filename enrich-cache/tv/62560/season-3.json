@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "eps3.0_power-saver-mode.h",
+        "overview": "elliot gets woke. realizes his mission. needs help from angela. darlene freaks about them coming out clean. and who tf is this irving guy?",
+        "air_date": "2017-10-11",
+        "runtime": 54,
+        "still_path": "/8ZvIFsT3GFHjaiZ7JLaDD7co5F3.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "eps3.1_undo.gz",
+        "overview": "elliot is lit by his goal to ctrl\u002Bz five/nine. darlene meets rock \u002B hard place. mr. robot sparks a panic.",
+        "air_date": "2017-10-18",
+        "runtime": 48,
+        "still_path": "/k2Ktv1CgT8UZif5rENxBf395qSN.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "eps3.2_legacy.so",
+        "overview": "hi. im tyrell wellick. former interim CTO of E Corp. ive been gone for a while. its time for an AMA!",
+        "air_date": "2017-10-25",
+        "runtime": 50,
+        "still_path": "/cPZAfgWRP0RxNHw6cE3eEr1knRB.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "eps3.3_metadata.par2",
+        "overview": "dom has a close call. elliot chases himself with darlene on the lookout. mr. robot doesn\u2019t have a need for swede. angela gets savage AF.",
+        "air_date": "2017-11-01",
+        "runtime": 47,
+        "still_path": "/n2lU9BoMU44ggA6GlayiPKdBrbU.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "eps3.4_runtime-error.r00",
+        "overview": "E Corp in chaos elliot on the run darlene comes to help cant stop wont stop angela FTW.",
+        "air_date": "2017-11-08",
+        "runtime": 45,
+        "still_path": "/e6ZSWEtw37SiULhw96BBNq7iwTb.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "eps3.5_kill-process.inc",
+        "overview": "remember, remember, 29th of september. elliot faces off with mr. robot. dom grows tired of red tape but tries the ribs for escape. tyrell\u2019s new plan wont be forgot.",
+        "air_date": "2017-11-15",
+        "runtime": 46,
+        "still_path": "/jrQbrrQBARKHClODO8bH8gDxBwW.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "eps3.6_fredrick\u002Btanya.chk",
+        "overview": "mr. robot wants answers. price \u003C whiterose. fbi closes in. knight time in the desert. angela hits the rewind button. a lot.",
+        "air_date": "2017-11-22",
+        "runtime": 48,
+        "still_path": "/82uEJqvH6FbiqipG9IYztePMRbO.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "eps3.7_dont-delete-me.ko",
+        "overview": "elliot tries to get ghosted. FWIW it\u2019s the day of all days.",
+        "air_date": "2017-11-29",
+        "runtime": 47,
+        "still_path": "/wlpJLbBqQKhVepnAuFxaK9h8cJd.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "eps3.8_stage3.torrent",
+        "overview": "elliot trolls a former ally. mr. robot leaves cryptic txt. tyrell gets new cmds. tbh darlene\u2019s plan is next level risky biz.",
+        "air_date": "2017-12-06",
+        "runtime": 49,
+        "still_path": "/lE50225dvp4QkSCMs7OasuPCqep.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "shutdown -r",
+        "overview": "elliot tries to save darlene but sh*t doesn\u2019t go as planned. mr. robot needs to step up or step back ffs. angela considers the price.",
+        "air_date": "2017-12-13",
+        "runtime": 58,
+        "still_path": "/jCqtwadu6axZY0sYYP2QGC9u15f.jpg"
+      }
+    ]
+  }
+}

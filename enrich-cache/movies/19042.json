@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 19042,
+    "title": "All Dogs Go to Heaven 2",
+    "overview": "Charlie and Itchy return to Earth to find Gabriel\u0027s Horn, but along the way meet up with a young boy named David, who ran away from home.",
+    "tagline": "Heaven help us! Look who\u0027s back in the adventure of 2 lifetimes.",
+    "runtime": 82,
+    "release_date": "1996-03-29",
+    "vote_average": 6.1,
+    "poster_path": "/kNmIJILOW9qF2F1Z0qOXkadaS50.jpg",
+    "backdrop_path": "/3DuDEqDDHG7OhbDpVEIMCTLHSic.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 140910,
+      "name": "All Dogs Go to Heaven Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Charlie Sheen",
+      "character": "Charlie B. Barkin (voice)",
+      "profile_path": "/48GB5aISoibd9IYXBO40jrSgFRl.jpg"
+    },
+    {
+      "name": "Dom DeLuise",
+      "character": "Itchy Itchiford (voice)",
+      "profile_path": "/73OOTJaLVq54bEeR1pASfPQLbVH.jpg"
+    },
+    {
+      "name": "Adam Wylie",
+      "character": "David (voice)",
+      "profile_path": "/g59pfDt3xNnPmvYkOoYFXykXW5O.jpg"
+    },
+    {
+      "name": "Sheena Easton",
+      "character": "Sasha La Fleur (voice)",
+      "profile_path": "/sUg7R7VGNOzSU7sJzrwCBB1orMh.jpg"
+    }
+  ]
+}

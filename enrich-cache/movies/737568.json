@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 737568,
+    "title": "The Doorman",
+    "overview": "A former Marine turned doorman at a luxury New York City high-rise must outsmart and battle a group of art thieves and their ruthless leader \u2014 while struggling to protect her sister\u0027s family. As the thieves become increasingly desperate and violent, the doorman calls upon her deadly fighting skills to end the showdown.",
+    "tagline": "Be careful who you trust.",
+    "runtime": 97,
+    "release_date": "2020-10-01",
+    "vote_average": 5.8,
+    "poster_path": "/pklyUbh4k1DbHdnsOMASyw7C6NH.jpg",
+    "backdrop_path": "/9pHxv7TX0jOKNgnGMDP6RJ2m1GL.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ruby Rose",
+      "character": "Ali",
+      "profile_path": "/djhT0A2hZxpYKPnCeRtim8qUdPi.jpg"
+    },
+    {
+      "name": "Jean Reno",
+      "character": "Victor Dubois",
+      "profile_path": "/mw0EZJYz3kiFq9fNxsML773gotF.jpg"
+    },
+    {
+      "name": "Aksel Hennie",
+      "character": "Borz",
+      "profile_path": "/sceuNjVXtsHOS3cn0MsLfZRkAQx.jpg"
+    },
+    {
+      "name": "Rupert Evans",
+      "character": "Jon Stanton",
+      "profile_path": "/YrsdSUjinm0NN6qd8Y2znPf8Cg.jpg"
+    }
+  ]
+}

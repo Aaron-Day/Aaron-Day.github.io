@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 280217,
+    "title": "The Lego Movie 2: The Second Part",
+    "overview": "It\u0027s been five years since everything was awesome and the citizens are facing a huge new threat: LEGO DUPLO\u00AE invaders from outer space, wrecking everything faster than they can rebuild.",
+    "tagline": "They come in pieces.",
+    "runtime": 107,
+    "release_date": "2019-02-06",
+    "vote_average": 6.636,
+    "poster_path": "/QTESAsBVZwjtGJNDP7utiGV37z.jpg",
+    "backdrop_path": "/2U2h8PpsaWn90jdtyG0tu9ZxttZ.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 325470,
+      "name": "The Lego Movie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Pratt",
+      "character": "Emmet Brickowski / Rex Dangervest (voice)",
+      "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Elizabeth Banks",
+      "character": "Wyldstyle / Lucy (voice)",
+      "profile_path": "/hQ7IwCQjlpsBPSpnnjjhH3rjwSJ.jpg"
+    },
+    {
+      "name": "Will Arnett",
+      "character": "Batman (voice)",
+      "profile_path": "/cXupYqk2ERP13XBkw816skYdVDO.jpg"
+    },
+    {
+      "name": "Tiffany Haddish",
+      "character": "Queen Watevra Wa\u0027Nabi (voice)",
+      "profile_path": "/8Db5Q34nvTlaTLnRlwXOiealCbE.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4234,
+    "title": "Scream 3",
+    "overview": "As bodies begin dropping around the Hollywood set of STAB 3, the third film based on the gruesome Woodsboro killings, Sidney and other survivors are once again terrorized by another Ghostface killer.",
+    "tagline": "The most terrifying scream is always the last.",
+    "runtime": 116,
+    "release_date": "2000-02-04",
+    "vote_average": 6.005,
+    "poster_path": "/iFrDIex06Jpgs3dTI8vXlVB1jd.jpg",
+    "backdrop_path": "/AbFWty0o5nKGo4iLJaGRgqFtC8W.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2602,
+      "name": "Scream Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Neve Campbell",
+      "character": "Sidney Prescott",
+      "profile_path": "/zQzNg6Kiufj2VCltprI6jilNtl3.jpg"
+    },
+    {
+      "name": "David Arquette",
+      "character": "Dewey Riley",
+      "profile_path": "/74wJjoywG7zCrNMWbRxwoyOj7Ub.jpg"
+    },
+    {
+      "name": "Courteney Cox",
+      "character": "Gale Weathers",
+      "profile_path": "/cSOORhCRPJiwKghozXVXrOBi3Tp.jpg"
+    },
+    {
+      "name": "Parker Posey",
+      "character": "Jennifer Jolie",
+      "profile_path": "/yoFt75JfGUqQ6EV8qN6fckQuElk.jpg"
+    }
+  ]
+}

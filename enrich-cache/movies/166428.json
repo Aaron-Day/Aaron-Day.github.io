@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 166428,
+    "title": "How to Train Your Dragon: The Hidden World",
+    "overview": "As Hiccup fulfills his dream of creating a peaceful dragon utopia, Toothless\u2019 discovery of an untamed, elusive mate draws the Night Fury away. When danger mounts at home and Hiccup\u2019s reign as village chief is tested, both dragon and rider must make impossible decisions to save their kind.",
+    "tagline": "Fly on your own. Find your way home.",
+    "runtime": 104,
+    "release_date": "2019-01-03",
+    "vote_average": 7.749,
+    "poster_path": "/xvx4Yhf0DVH8G4LzNISpMfFBDy2.jpg",
+    "backdrop_path": "/h3KN24PrOheHVYs9ypuOIdFBEpX.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 89137,
+      "name": "How to Train Your Dragon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jay Baruchel",
+      "character": "Hiccup (voice)",
+      "profile_path": "/1GYJeQzPcY9Pfmc3FFsBwClkCv7.jpg"
+    },
+    {
+      "name": "America Ferrera",
+      "character": "Astrid (voice)",
+      "profile_path": "/7q9uUWnaIjveX8DTU2lcA7mA3dp.jpg"
+    },
+    {
+      "name": "F. Murray Abraham",
+      "character": "Grimmel (voice)",
+      "profile_path": "/p2RYVGdrcP0m70BkkiKcwyrDeim.jpg"
+    },
+    {
+      "name": "Cate Blanchett",
+      "character": "Valka (voice)",
+      "profile_path": "/1Rd567YFdGfkJjSlhNPR8joYkaX.jpg"
+    }
+  ]
+}

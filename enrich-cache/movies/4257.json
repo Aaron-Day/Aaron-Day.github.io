@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4257,
+    "title": "Scary Movie 4",
+    "overview": "Cindy finds out the house she lives in is haunted by a little boy and goes on a quest to find out who killed him and why. Also, Alien \u0022Tr-iPods\u0022 are invading the world and she has to uncover the secret in order to stop them.",
+    "tagline": "Bury the grudge. Burn the village. See the saw.",
+    "runtime": 83,
+    "release_date": "2006-04-12",
+    "vote_average": 5.494,
+    "poster_path": "/dEwlu8S0z1AibuX1weLwUyiRWFl.jpg",
+    "backdrop_path": "/pSNwe7G9bESwlCBVurlwRs7fMZU.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 4246,
+      "name": "Scary Movie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anna Faris",
+      "character": "Cindy",
+      "profile_path": "/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+    },
+    {
+      "name": "Regina Hall",
+      "character": "Brenda",
+      "profile_path": "/jiFZ4xNrvUUZLBHnJu71CvdN4kj.jpg"
+    },
+    {
+      "name": "Craig Bierko",
+      "character": "Tom",
+      "profile_path": "/btsSJRxc0i7Xty1R0iCYOnbTuDE.jpg"
+    },
+    {
+      "name": "Bill Pullman",
+      "character": "Henry Hale",
+      "profile_path": "/AlLhgmcX5zh3frPT82OSPY9gqXO.jpg"
+    }
+  ]
+}

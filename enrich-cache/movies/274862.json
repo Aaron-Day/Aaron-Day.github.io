@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 274862,
+    "title": "The Lego Ninjago Movie",
+    "overview": "Six young ninjas are tasked with defending their island home of Ninjago. By night, they\u2019re gifted warriors using their skill and awesome fleet of vehicles to fight villains and monsters. By day, they\u2019re ordinary teens struggling against their greatest enemy....high school.",
+    "tagline": "Find the ninja within ya.",
+    "runtime": 101,
+    "release_date": "2017-09-21",
+    "vote_average": 6.498,
+    "poster_path": "/vUo0pNXGhp2ffTJxiStWt6fHL7F.jpg",
+    "backdrop_path": "/6BQis8u6Q8U5J4EHqdyRRIE0njI.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dave Franco",
+      "character": "Lloyd (voice)",
+      "profile_path": "/to7ee1xcCOpDSKMXjBIRuYEfbEc.jpg"
+    },
+    {
+      "name": "Justin Theroux",
+      "character": "Garmadon (voice)",
+      "profile_path": "/6YuPMsLDMoD5BRkzWIjllwFFt5Y.jpg"
+    },
+    {
+      "name": "Fred Armisen",
+      "character": "Cole (voice)",
+      "profile_path": "/rhPN8Zx6nrtNiQN2JwPkJ3ZFJ9z.jpg"
+    },
+    {
+      "name": "Abbi Jacobson",
+      "character": "Nya (voice)",
+      "profile_path": "/tYTlv2MmiOjPfkOE9ywGAaqllbv.jpg"
+    }
+  ]
+}

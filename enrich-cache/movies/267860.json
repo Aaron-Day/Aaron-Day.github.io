@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 267860,
+    "title": "London Has Fallen",
+    "overview": "In London for the Prime Minister\u0027s funeral, Mike Banning discovers a plot to assassinate all the attending world leaders.",
+    "tagline": "The world\u0027s leaders have assembled. So have their enemies.",
+    "runtime": 99,
+    "release_date": "2016-03-02",
+    "vote_average": 6.23,
+    "poster_path": "/iEbLkYzyiUdOKNK4WNBFyGH7r2Y.jpg",
+    "backdrop_path": "/ndi0PlHzSbV2pV2wUZFtS58Wk54.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 386534,
+      "name": "Has Fallen Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Gerard Butler",
+      "character": "Mike Banning",
+      "profile_path": "/i54XoxYieuff2w6MwyfwVUBvmR0.jpg"
+    },
+    {
+      "name": "Aaron Eckhart",
+      "character": "President Benjamin Asher",
+      "profile_path": "/u5JjnRMr9zKEVvOP7k3F6gdcwT6.jpg"
+    },
+    {
+      "name": "Angela Bassett",
+      "character": "Lynne Jacobs",
+      "profile_path": "/tKnuviliyeKNGlo26IU5gIrJAtd.jpg"
+    },
+    {
+      "name": "Morgan Freeman",
+      "character": "Alan Trumbull",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    }
+  ]
+}

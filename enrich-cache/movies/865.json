@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 865,
+    "title": "The Running Man",
+    "overview": "By 2017, the global economy has collapsed and U.S. society has become a totalitarian police state, censoring all cultural activity. The government pacifies the populace by broadcasting a number of game shows in which convicted criminals fight for their lives, including the gladiator-style The Running Man, hosted by the ruthless Damon Killian, where \u201Crunners\u201D attempt to evade \u201Cstalkers\u201D and certain death for a chance to be pardoned and set free.",
+    "tagline": "It is the year 2019. \u0022The Running Man\u0022 is a deadly game no one has ever survived. But... Schwarzenegger has yet to play.",
+    "runtime": 101,
+    "release_date": "1987-11-13",
+    "vote_average": 6.5,
+    "poster_path": "/GTAUOhO4BN0peJVvxGEQydJvUO.jpg",
+    "backdrop_path": "/ssQ7IcGmgUJdFLv8cHY3vC3OR4f.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Ben Richards",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Richard Dawson",
+      "character": "Damon Killian",
+      "profile_path": "/6rGawHl92otg0vMNbay6QOiwvfU.jpg"
+    },
+    {
+      "name": "Mar\u00EDa Conchita Alonso",
+      "character": "Amber Mendez",
+      "profile_path": "/zcDN921xNK0AznoA0TEbdbsPSn3.jpg"
+    },
+    {
+      "name": "Yaphet Kotto",
+      "character": "William Laughlin",
+      "profile_path": "/f0jquWLj22hvYf6PTIggdolhiDx.jpg"
+    }
+  ]
+}

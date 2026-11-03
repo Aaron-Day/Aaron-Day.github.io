@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 792307,
+    "title": "Poor Things",
+    "overview": "Brought back to life by an unorthodox scientist, a young woman runs off with a lawyer on a whirlwind adventure across the continents. Free from the prejudices of her times, she grows steadfast in her purpose to stand for equality and liberation.",
+    "tagline": "She\u2019s nothing like you\u2019ve ever seen.",
+    "runtime": 141,
+    "release_date": "2023-12-07",
+    "vote_average": 7.622,
+    "poster_path": "/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg",
+    "backdrop_path": "/zh6IdheEYinU4TPtorWsjx6qPQE.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Emma Stone",
+      "character": "Bella Baxter",
+      "profile_path": "/ak2Y9wOI3wi2pNQU6OWSvVvWPj5.jpg"
+    },
+    {
+      "name": "Mark Ruffalo",
+      "character": "Duncan Wedderburn",
+      "profile_path": "/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg"
+    },
+    {
+      "name": "Willem Dafoe",
+      "character": "Godwin Baxter",
+      "profile_path": "/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg"
+    },
+    {
+      "name": "Ramy Youssef",
+      "character": "Max McCandles",
+      "profile_path": "/uLQWOoq11TKqnLfJBu90aKEGj8O.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 86834,
+    "title": "Noah",
+    "overview": "A man who suffers visions of an apocalyptic deluge takes measures to protect his family from the coming flood.",
+    "tagline": "The end of the world\u2026 is just the beginning.",
+    "runtime": 138,
+    "release_date": "2014-03-07",
+    "vote_average": 5.696,
+    "poster_path": "/vVLkHabnF5lVpCpqyhZBI5iCYMA.jpg",
+    "backdrop_path": "/5z75Q6nqgwgYfpMB9fVHQcw9gMz.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Russell Crowe",
+      "character": "Noah",
+      "profile_path": "/3IBZF0qCZMZ7zJYlgrH0sQzNZV.jpg"
+    },
+    {
+      "name": "Jennifer Connelly",
+      "character": "Naameh",
+      "profile_path": "/wdmcJagSRJ65AuJ4IUCzuHAdvgy.jpg"
+    },
+    {
+      "name": "Ray Winstone",
+      "character": "Tubal-cain",
+      "profile_path": "/eSRgAC98u5hQroeZzDeRf60XE21.jpg"
+    },
+    {
+      "name": "Anthony Hopkins",
+      "character": "Methuselah",
+      "profile_path": "/iaf7SHSkGDpnyrDh1Jolilwk2TD.jpg"
+    }
+  ]
+}

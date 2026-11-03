@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 16577,
+    "title": "Astro Boy",
+    "overview": "Set in the futuristic Metro City, Astro Boy (Atom) is a young robot with incredible powers created by a brilliant scientist in the image of the son he had lost. Unable to fulfill his creator\u0027s expectations, Astro embarks on a journey in search of acceptance, experiencing betrayal and a netherworld of robot gladiators, before returning to save Metro City and reconcile with the father who rejected him.",
+    "tagline": "Have a blast.",
+    "runtime": 94,
+    "release_date": "2009-10-15",
+    "vote_average": 6.345,
+    "poster_path": "/6AK3uOHaIbl6EDaytHYe4FinZMu.jpg",
+    "backdrop_path": "/t39jaNSYMVNecNPQSVVlW6I4opm.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Freddie Highmore",
+      "character": "Astro / Toby (voice)",
+      "profile_path": "/9larfGVg8ALIVFkr7cZzv4Emh1F.jpg"
+    },
+    {
+      "name": "Kristen Bell",
+      "character": "Cora (voice)",
+      "profile_path": "/rP74dJXl7EjinGM0shQtUOlH5s2.jpg"
+    },
+    {
+      "name": "Nathan Lane",
+      "character": "Hamegg (voice)",
+      "profile_path": "/jLPp3RoDhwOpLimKj3NhhBofPfT.jpg"
+    },
+    {
+      "name": "Eugene Levy",
+      "character": "Orrin (voice)",
+      "profile_path": "/epZE1ZohKhEFCdCKYFyvtJEj0I7.jpg"
+    }
+  ]
+}

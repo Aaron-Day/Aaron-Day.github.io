@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 59965,
+    "title": "Abduction",
+    "overview": "For many years, Nathan Harper has had the uneasy feeling that life with his family isn\u0027t quite what it seems. As he draws closer to uncovering the truth, he is hunted by assassins, forcing him to flee with his neighbor, Karen, the only person he can trust.",
+    "tagline": "The fight for the truth will be the fight of his life.",
+    "runtime": 106,
+    "release_date": "2011-09-22",
+    "vote_average": 5.843,
+    "poster_path": "/d0TIDrwnMFVjg2EO4LsXQn1mbbc.jpg",
+    "backdrop_path": "/6wWIirFFZPQx7Lamh1iKMgbVezr.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Taylor Lautner",
+      "character": "Nathan Harper",
+      "profile_path": "/xyRXoKM7UQdijwmjpiCcLGPzcc7.jpg"
+    },
+    {
+      "name": "Lily Collins",
+      "character": "Karen Murphy",
+      "profile_path": "/5bhcp0CyTdHgfW8x45ZKewDnjMc.jpg"
+    },
+    {
+      "name": "Alfred Molina",
+      "character": "Frank Burton",
+      "profile_path": "/nJo91Czesn6z0d0pkfbDoVZY3sg.jpg"
+    },
+    {
+      "name": "Sigourney Weaver",
+      "character": "Dr. Geraldine \u0027Geri\u0027 Bennett",
+      "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+    }
+  ]
+}

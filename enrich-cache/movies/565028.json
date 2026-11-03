@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 565028,
+    "title": "Candyman",
+    "overview": "A Chicago artist\u0027s sanity starts to unravel, unleashing a terrifying wave of violence when he begins to explore the macabre history of the Candyman.",
+    "tagline": "Dare to say his name.",
+    "runtime": 91,
+    "release_date": "2021-08-25",
+    "vote_average": 5.987,
+    "poster_path": "/dqoshZPLNsXlC1qtz5n34raUyrE.jpg",
+    "backdrop_path": "/g1cMEQnEptUJ7Sv8SRjWBTTHyMv.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 98580,
+      "name": "Candyman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Yahya Abdul-Mateen II",
+      "character": "Anthony McCoy",
+      "profile_path": "/79VdVjUoiYGcgjOT9UmE5XIpoZM.jpg"
+    },
+    {
+      "name": "Teyonah Parris",
+      "character": "Brianna Cartwright",
+      "profile_path": "/iGvBTOi0y2fbBVwgnBRXgY0IXDY.jpg"
+    },
+    {
+      "name": "Colman Domingo",
+      "character": "William Burke",
+      "profile_path": "/t0cgfvtA7Thxnrtj5baRi656zlc.jpg"
+    },
+    {
+      "name": "Nathan Stewart-Jarrett",
+      "character": "Troy Cartwright",
+      "profile_path": "/xWd7wOIgJlxAKoIo5sgrZh6G2jl.jpg"
+    }
+  ]
+}

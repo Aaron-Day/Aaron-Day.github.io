@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8274,
+    "title": "American Pie Presents: Band Camp",
+    "overview": "Everyone has \u0027moved on\u0027, except for Sherman and Jim Levenstein\u0027s still understanding father. Little Matt Stiffler wants to join his older brother Steve\u0027s business and, after everything Matt has heard from Jim\u0027s band-geek wife, he plans to go back to band camp and make a video of his own.",
+    "tagline": "This one time at band camp...",
+    "runtime": 94,
+    "release_date": "2005-11-23",
+    "vote_average": 5.465,
+    "poster_path": "/6BgKeWEGROpWwEWvpw7vwfTCr9C.jpg",
+    "backdrop_path": "/TWchvpMO36QZTIiNjFBm4MYsmQ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 298820,
+      "name": "American Pie (Spin-off) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tad Hilgenbrink",
+      "character": "Matt Stifler",
+      "profile_path": "/cECyfEB8GI4zTYXEOLEpRTxINLo.jpg"
+    },
+    {
+      "name": "Arielle Kebbel",
+      "character": "Elyse",
+      "profile_path": "/c98cwlydVsihduXnq6VLW4fQFC.jpg"
+    },
+    {
+      "name": "Jason Earles",
+      "character": "Ernie",
+      "profile_path": "/98kgD3jp4DmwwL1SmViN5cRE5NI.jpg"
+    },
+    {
+      "name": "Crystle Lightning",
+      "character": "Chloe",
+      "profile_path": "/vx5UIK3ddm8hLf5WGKvQ2za26Sv.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1639,
+    "title": "Speed 2: Cruise Control",
+    "overview": "A disgruntled former employee hijacks the Seabourn Legend cruise liner. Set on a fixed course, without any means of communication and at the mercy of the hijacker, it\u0027s up to the one cop on vacation and his soon to be fianc\u00E9 (hopefully) Annie to regain control of it before it kills the passengers and causes an environmental disaster. Insurmountable and daunting tasks await them on their perilous journey throughout the ship trying to fend off the hijacker and save the passengers.",
+    "tagline": "Rush hour hits the water.",
+    "runtime": 125,
+    "release_date": "1997-06-13",
+    "vote_average": 4.6,
+    "poster_path": "/gnK1ocpwUTj24zAktzomOJsD2bu.jpg",
+    "backdrop_path": "/wmwEjQpqNXEIadsQoqWUS1pVVBi.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 43064,
+      "name": "Speed Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Patric",
+      "character": "Alex",
+      "profile_path": "/iv21ZjE90f9QNiNONKF9Lp6ZD68.jpg"
+    },
+    {
+      "name": "Sandra Bullock",
+      "character": "Annie",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "Willem Dafoe",
+      "character": "Geiger",
+      "profile_path": "/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg"
+    },
+    {
+      "name": "Temuera Morrison",
+      "character": "Juliano",
+      "profile_path": "/qGGYYjLMfuWmywgVixsu88PIbJn.jpg"
+    }
+  ]
+}

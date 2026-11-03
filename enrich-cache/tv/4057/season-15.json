@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 15,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Under the Skin",
+        "overview": "The BAU team investigates an UnSub with striking similarities to Rossi\u2019s latest obsession, \u201CThe Chameleon,\u201D a.k.a. Everett Lynch, who nearly killed him and then disappeared.",
+        "air_date": "2020-01-08",
+        "runtime": 42,
+        "still_path": "/xacQpF2nNvFyopJz8G5dAJnTc5W.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Awakenings",
+        "overview": "With a member of the BAU in the hospital, the team searches for Everett Lynch, and his daughter, Grace. Also, Spencer has a meaningful visit with his mother, Diana Reid, while she\u2019s experiencing a period of lucidity.",
+        "air_date": "2020-01-08",
+        "runtime": 42,
+        "still_path": "/9J1rAwEc40mbIlgMSmnJrhCYy1a.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Spectator Slowing",
+        "overview": "The BAU team investigates a series of seemingly random fatal explosions throughout Kentucky and Tennessee.",
+        "air_date": "2020-01-15",
+        "runtime": 42,
+        "still_path": "/zya5a6C4q7qrm8eBezHcj7ToOZ6.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Saturday",
+        "overview": "The members of the BAU enjoy a Saturday off in vastly different ways. While Rossi and Prentiss help Simmons assemble a new crib, Garcia leads a hacking competition, and Dr. Reid strikes up a conversation with a woman named Maxine.",
+        "air_date": "2020-01-22",
+        "runtime": 42,
+        "still_path": "/aVqdw7sKAxO7jsZuTvzipzTPmTK.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Ghost",
+        "overview": "Following a series of fatal shootings, the BAU team travels to Des Plaines, Ill. to investigate what appears to be a copycat serial killer. Their efforts are thrown off track when members of the BAU are targeted.",
+        "air_date": "2020-01-29",
+        "runtime": 42,
+        "still_path": "/aVc2HrQfP3HZkq37QhvX2CghKUX.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Date Night",
+        "overview": "After a father and daughter get kidnapped, a former foe of the BAU returns with very specific demands for Dr. Reid that give a whole new meaning to the phrase \u201Cwheels up\u0022.",
+        "air_date": "2020-02-05",
+        "runtime": 42,
+        "still_path": "/3UJddVQwrvCreQXwOAyWDtKvMXz.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Rusty",
+        "overview": "When the BAU team travels to Denver to investigate several murders, Prentiss is forced to evaluate her relationship with Special Agent Andrew Mendoza.",
+        "air_date": "2020-02-05",
+        "runtime": 42,
+        "still_path": "/2PyNcQsIVsY7A0F0Uu6LVa3Yyo9.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Family Tree",
+        "overview": "Prentiss and J.J. are faced with important decisions to make about their futures as the BAU travels to Beaumont, Texas to investigate a series of murdered businessmen.",
+        "air_date": "2020-02-12",
+        "runtime": 42,
+        "still_path": "/744yzxtkWQMXLruX36rZvUd6h4v.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Face Off (1)",
+        "overview": "It has been a year since Rossi nearly died at the hands of Everett Lynch, a.k.a. \u201CThe Chameleon,\u201D and he has developed some new theories, with inspiration from his former partner, Jason Gideon. The BAU team sets out on an epic hunt to capture Lynch.",
+        "air_date": "2020-02-19",
+        "runtime": 42,
+        "still_path": "/rxGEu98y7dtvTpr8yDr46jpNS7Q.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "And in the End (2)",
+        "overview": "Following an explosive face-to-face encounter with Everett Lynch, a.k.a. \u201CThe Chameleon,\u201D Dr. Reid suffers from a brain injury and, while experiencing hallucinations, is visited by ghosts from his past. Also, the BAU makes a shocking discovery about Lynch that affects Rossi personally, and the entire BAU team comes together to celebrate Rossi\u2019s retirement.",
+        "air_date": "2020-02-19",
+        "runtime": 42,
+        "still_path": "/AqL0jgVvxaZJum0QoFpoGtbmcRt.jpg"
+      }
+    ]
+  }
+}

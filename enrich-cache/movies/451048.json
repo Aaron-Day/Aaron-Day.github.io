@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 451048,
+    "title": "Jungle Cruise",
+    "overview": "Dr. Lily Houghton enlists the aid of wisecracking skipper Frank Wolff to take her down the Amazon in his dilapidated boat. Together, they search for an ancient tree that holds the power to heal \u2013 a discovery that will change the future of medicine.",
+    "tagline": "Only one adventure gets this wild.",
+    "runtime": 127,
+    "release_date": "2021-07-28",
+    "vote_average": 7.263,
+    "poster_path": "/yKy9ELL8CON5sqDg4yIvBb5LTZL.jpg",
+    "backdrop_path": "/7WJjFviFBffEJvkAms4uWwbcVUk.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dwayne Johnson",
+      "character": "Frank Wolff",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Emily Blunt",
+      "character": "Dr. Lily Houghton",
+      "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+    },
+    {
+      "name": "Edgar Ram\u00EDrez",
+      "character": "Lope de Aguirre",
+      "profile_path": "/o9xJcedad1BwpMcgDGtW5dVgzH.jpg"
+    },
+    {
+      "name": "Jack Whitehall",
+      "character": "McGregor Houghton",
+      "profile_path": "/qBHLpjH3Dad9ZoZsrcMplIPwkHC.jpg"
+    }
+  ]
+}

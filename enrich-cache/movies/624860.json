@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 624860,
+    "title": "The Matrix Resurrections",
+    "overview": "Plagued by strange memories, Neo\u0027s life takes an unexpected turn when he finds himself back inside the Matrix.",
+    "tagline": "Return to the Source.",
+    "runtime": 148,
+    "release_date": "2021-12-16",
+    "vote_average": 6.294,
+    "poster_path": "/8c4a8kE7PizaGQQnditMmI1xbRp.jpg",
+    "backdrop_path": "/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2344,
+      "name": "The Matrix Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Neo / Thomas Anderson",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Carrie-Anne Moss",
+      "character": "Trinity / Tiffany",
+      "profile_path": "/9zya72vRZYBQILfetACsnmCBgdj.jpg"
+    },
+    {
+      "name": "Yahya Abdul-Mateen II",
+      "character": "Morpheus / Agent Smith",
+      "profile_path": "/79VdVjUoiYGcgjOT9UmE5XIpoZM.jpg"
+    },
+    {
+      "name": "Jonathan Groff",
+      "character": "Smith",
+      "profile_path": "/3kmnYKAzSc3Lp7iK5pcj97Hx9Cm.jpg"
+    }
+  ]
+}

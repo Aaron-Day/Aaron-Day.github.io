@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 6466,
+    "title": "Freddy vs. Jason",
+    "overview": "Freddy Krueger and Jason Voorhees return to terrorize the teenagers of Elm Street. Only this time, they\u0027re out to get each other, too.",
+    "tagline": "Even a killer has something to fear.",
+    "runtime": 97,
+    "release_date": "2003-08-15",
+    "vote_average": 6.123,
+    "poster_path": "/ffoBCQ7y63Tvo48HsJqr1XOiqiV.jpg",
+    "backdrop_path": "/hCAOQTMRop2fHjsl8n7yNwpkMJn.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9735,
+      "name": "Friday the 13th Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robert Englund",
+      "character": "Freddy Krueger",
+      "profile_path": "/cjGEkiavinHa1dnetDvnEhlD2Wm.jpg"
+    },
+    {
+      "name": "Ken Kirzinger",
+      "character": "Jason Voorhees",
+      "profile_path": "/h9PfH9SP4gO7H7RPEpLvQWLY3zW.jpg"
+    },
+    {
+      "name": "Monica Keena",
+      "character": "Lori Campbell",
+      "profile_path": "/kdtbk4jZxLAROwE2fd3Qwj7DQtL.jpg"
+    },
+    {
+      "name": "Jason Ritter",
+      "character": "Will Rollins",
+      "profile_path": "/9i4YvUpSlQDzH0U8y5FWXQkaAGf.jpg"
+    }
+  ]
+}

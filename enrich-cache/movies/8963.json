@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8963,
+    "title": "Crimson Tide",
+    "overview": "After the Cold War, a breakaway Russian republic with nuclear warheads becomes a possible worldwide threat. U.S. submarine Capt. Frank Ramsey signs on a relatively green but highly recommended Lt. Cmdr. Ron Hunter to the USS Alabama, which may be the only ship able to stop a possible Armageddon. When Ramsey insists that the Alabama must act aggressively, Hunter, fearing they will start rather than stop a disaster, leads a potential mutiny to stop him.",
+    "tagline": "Danger runs deep.",
+    "runtime": 116,
+    "release_date": "1995-05-12",
+    "vote_average": 7.2,
+    "poster_path": "/21nqRJ6ofEgVvEl68J4O9V26Xzy.jpg",
+    "backdrop_path": "/mjlRoaURNhcW5YmXev8Z4UrV7x6.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "Lt. Commander Ronald \u0022Ron\u0022 Hunter",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Gene Hackman",
+      "character": "Captain Franklin \u0022Frank\u0022 Ramsey",
+      "profile_path": "/zDlv9vXjnRsvwNI0bARG0uOt5CJ.jpg"
+    },
+    {
+      "name": "Matt Craven",
+      "character": "Lt. Roy Zimmer",
+      "profile_path": "/tWF8B3Dj7zvKRmkTplp7ice6Wo9.jpg"
+    },
+    {
+      "name": "George Dzundza",
+      "character": "Chief of the Boat Cob",
+      "profile_path": "/wmnQQn0dFygl90M2N8tlWlpGHzV.jpg"
+    }
+  ]
+}

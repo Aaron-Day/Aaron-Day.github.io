@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Small Victories (2)",
+        "overview": "O\u0027Neill and Teal\u0027c risk their lives to keep the Replicator bugs from gaining a foothold on Earth, while Carter helps the Asgard fend off a Replicator invasion.",
+        "air_date": "2000-06-30",
+        "runtime": 44,
+        "still_path": "/6xwaf8YFoGcTo1sfeUDVOVoJYlZ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Other Side",
+        "overview": "A warring alien race offers to exchange their advanced technology for Earth\u0027s help in defeating their enemy.",
+        "air_date": "2000-07-07",
+        "runtime": 44,
+        "still_path": "/tpNj7fKHWaYarj0UP8kVflgL5NF.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Upgrades",
+        "overview": "A Tok\u0027ra archaeologist arrives at the SGC with newly discovered technology, giving the SG-1 team superhuman powers.",
+        "air_date": "2000-07-14",
+        "runtime": 44,
+        "still_path": "/3gmGcrx0ue3ZP9yNn3GZ2XHrus7.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Crossroads",
+        "overview": "Teal\u0027c is reunited with his lost love -- a woman who claims to have found a way to communicate with her symbiote and defeat the Goa\u0027uld.",
+        "air_date": "2000-07-21",
+        "runtime": 44,
+        "still_path": "/preuUWRlgAvI3BhMb2lhHGVAz76.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Divide and Conquer",
+        "overview": "When a member of the SGC tries to kill a Tok\u0027ra, it is revealed that O\u0027Neill and Carter may be victims of an untraceable form of Goa\u0027uld mind control.",
+        "air_date": "2000-07-28",
+        "runtime": 44,
+        "still_path": "/bWH13rhREFdwbEQ5MLBjSSrkje8.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Window of Opportunity",
+        "overview": "O\u0027Neill and Teal\u0027c are caught in a time loop in the SGC, and must relive the same 10 hours over and over again.",
+        "air_date": "2000-08-04",
+        "runtime": 44,
+        "still_path": "/kTMjQX3glatgbm6JCq0hYu6XeN5.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Watergate",
+        "overview": "The Russians recover a Stargate from the bottom of the ocean, and turn to the SGC for help when their experiments go awry.",
+        "air_date": "2000-08-11",
+        "runtime": 44,
+        "still_path": "/dVSJOdoxv9OKdnSq3MbHSvuJ29P.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The First Ones",
+        "overview": "Dr. Jackson is taken captive by an Unas while on an archaeological dig. The SGC mounts a rescue operation, but discovers a danger of their own.",
+        "air_date": "2000-08-18",
+        "runtime": 44,
+        "still_path": "/1UxuMbtT7hVQht63R6nFXH5gZIU.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Scorched Earth",
+        "overview": "SG-1 is caught in a conflict between two civilizations trying to colonize the same planet.",
+        "air_date": "2000-08-25",
+        "runtime": 44,
+        "still_path": "/r6XOZrRpSUqe1IpUdKi5lSnivru.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Beneath the Surface",
+        "overview": "The members of SG-1 are used as forced labor in an underground alien facility after their memories are erased by the ruling elite.",
+        "air_date": "2000-09-01",
+        "runtime": 44,
+        "still_path": "/zCvZzx22526HD2vzufXaBWMv4zT.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Point of No Return",
+        "overview": "SG-1 investigates a conspiracy theorist who has detailed knowledge of the Stargate program.",
+        "air_date": "2000-09-08",
+        "runtime": 44,
+        "still_path": "/zC2grC89ORFZ1zj8qfWNA6menX4.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Tangent",
+        "overview": "A test gone wrong leaves Jack and Teal\u0027c marooned in space aboard a damaged prototype attack ship",
+        "air_date": "2000-09-15",
+        "runtime": 44,
+        "still_path": "/rkme7jVhV0nirHnQx9bVcmhRAdv.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Curse",
+        "overview": "When his former mentor dies, Dr. Jackson returns to his roots -- and discovers an ancient Egyptian artifact containing a Goa\u0027uld parasite.",
+        "air_date": "2000-09-22",
+        "runtime": 44,
+        "still_path": "/ooBd8ELpheeo7gUMP1VvV79PIZC.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Serpent\u0027s Venom",
+        "overview": "SG-1 must stop Apophis and Heru-ur from forming an alliance of their powerful forces, while Teal\u0027c is captured and tortured by the Goa\u0027uld.",
+        "air_date": "2000-09-29",
+        "runtime": 44,
+        "still_path": "/kmxmocCttpI4y2yfyhahO24gl2V.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Chain Reaction",
+        "overview": "SG-1 must adjust to a new commanding officer when General Hammond steps down -- but O\u0027Neill discovers foul play behind the general\u0027s resignation.",
+        "air_date": "2001-01-05",
+        "runtime": 44,
+        "still_path": "/r7T9UOLMF4VaaMVKb3LfOl1uYn6.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "2010",
+        "overview": "Ten years into the future, the former members of SG-1 must send a message into the past to prevent the extinction of the human race.",
+        "air_date": "2001-01-12",
+        "runtime": 44,
+        "still_path": "/b42i2dFaDF9gArYodleC9nGkoCO.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Absolute Power",
+        "overview": "Jackson\u0027s teammates notice a disturbing change in him when he is reunited with the Harcesis child and given the Goa\u0027uld genetic memory.",
+        "air_date": "2001-01-19",
+        "runtime": 44,
+        "still_path": "/q82M7ZjmjcouB38HLnhSXwvwp59.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Light",
+        "overview": "SG-1 finds a deserted Goa\u0027uld palace, where a beautiful device causes suicidal tendencies.",
+        "air_date": "2001-01-26",
+        "runtime": 44,
+        "still_path": "/5tld4vrmquhn8HaAI6L3squ7b1n.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Prodigy",
+        "overview": "Carter must help keep a promising young cadet from throwing away a future at the SGC. O\u0027Neill and Teal\u0027c encounter a dangerous life form at an offworld research base.",
+        "air_date": "2001-02-02",
+        "runtime": 44,
+        "still_path": "/blTtJq2hfTU6yWNwPTumpsmCxCR.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Entity",
+        "overview": "The SGC is invaded by an alien life force that takes up residence in the base computer system -- and in Major Carter.",
+        "air_date": "2001-02-09",
+        "runtime": 44,
+        "still_path": "/kcYyHuSitAklGr8croVYhhZ8BwJ.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Double Jeopardy",
+        "overview": "SG-1 must rescue an alien world from the Goa\u0027uld -- with help from an unexpected source. Teal\u0027c seeks revenge on the System Lord Cronus for the murder of his father.",
+        "air_date": "2001-02-16",
+        "runtime": 44,
+        "still_path": "/vp81ImrPDUc3j0kCWj2P01AMMYo.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Exodus (1)",
+        "overview": "SG-1 helps to evacuate the Tok\u0027ra to a new base -- but matters are complicated when a spy reveals their location to Apophis. The team attempts a daring plan to take out the Goa\u0027uld\u0027s powerful fleet.",
+        "air_date": "2001-02-23",
+        "runtime": 44,
+        "still_path": "/dJcPfaPdtA2u2wQSqimvhS9wS26.jpg"
+      }
+    ]
+  }
+}

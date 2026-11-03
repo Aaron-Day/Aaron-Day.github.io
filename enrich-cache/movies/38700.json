@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 38700,
+    "title": "Bad Boys for Life",
+    "overview": "Marcus and Mike are forced to confront new threats, career changes, and midlife crises as they join the newly created elite team AMMO of the Miami police department to take down the ruthless Armando Armas, the vicious leader of a Miami drug cartel.",
+    "tagline": "Ride together. Die together.",
+    "runtime": 124,
+    "release_date": "2020-01-15",
+    "vote_average": 7.1,
+    "poster_path": "/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg",
+    "backdrop_path": "/eAIHqfS3kXm7kZl4j7ZBfdegyEz.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 14890,
+      "name": "Bad Boys Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Mike",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Martin Lawrence",
+      "character": "Marcus",
+      "profile_path": "/y3SQzIPUPJpdueb1DkbTYph68nk.jpg"
+    },
+    {
+      "name": "Vanessa Hudgens",
+      "character": "Kelly",
+      "profile_path": "/lZQPTRoJLgfsARWdpxQid2dDzhr.jpg"
+    },
+    {
+      "name": "Alexander Ludwig",
+      "character": "Dorn",
+      "profile_path": "/3KpzKT4iGhNivSISQMe6EwpAmCi.jpg"
+    }
+  ]
+}

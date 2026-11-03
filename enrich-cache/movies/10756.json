@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10756,
+    "title": "The Haunted Mansion",
+    "overview": "Workaholic Jim Evers and his wife/business partner Sara get a call one night from  a mansion owner, Edward Gracey, who wants to sell his house. Once the Evers family arrive at the mansion, a torrential thunderstorm of mysterious origin strands them with the brooding, eccentric Gracey, his mysterious butler, and a variety of residents both seen and unseen.",
+    "tagline": "Check your pulse at the door... if you have one.",
+    "runtime": 88,
+    "release_date": "2003-11-26",
+    "vote_average": 5.69,
+    "poster_path": "/lGi5yio4pdDz5PkSeZCbnMQz5vK.jpg",
+    "backdrop_path": "/uUgn9P3Ulmjt9bOfp5Yt83fauAS.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Eddie Murphy",
+      "character": "Jim Evers",
+      "profile_path": "/qgjMfefsKwSYsyCaIX46uyOXIpy.jpg"
+    },
+    {
+      "name": "Marsha Thomason",
+      "character": "Sara Evers",
+      "profile_path": "/fqN0FKAJeTfcPHDFL529EkuX1s6.jpg"
+    },
+    {
+      "name": "Terence Stamp",
+      "character": "Ramsley",
+      "profile_path": "/ept9urkuhPbGndVXkERw39R9oid.jpg"
+    },
+    {
+      "name": "Nathaniel Parker",
+      "character": "Master Gracey",
+      "profile_path": "/mtJ0EXQ7rJaRb3DiAAOPGlFLOzi.jpg"
+    }
+  ]
+}

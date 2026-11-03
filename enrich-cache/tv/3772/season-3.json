@@ -1,0 +1,208 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Badge of Honor",
+        "overview": "Walker and Trivette set to prove that race was an illegal main factor in an arrest.",
+        "air_date": "1994-09-24",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 2,
+        "name": "Branded",
+        "overview": "The death of a government inspector seems to be linked to a cattle rustling operation that always manages to avoid the law.",
+        "air_date": "1994-10-01",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 3,
+        "name": "Silk Dreams",
+        "overview": "When a new designer drug called \u0022silk\u0022 results in several fatalities, Walker and Trivette must infiltrate the local club scene to find the source of the deadly substance.",
+        "air_date": "1994-10-08",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 4,
+        "name": "Mustangs",
+        "overview": "Walker finds himself fighting for his life after he attempts to rescue a group of federally  protected mustang horses from some unsavory ranchers.",
+        "air_date": "1994-10-15",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 5,
+        "name": "Till Death Do Us Part",
+        "overview": "When a hit-and-run accident pushes a vehicle to the edge of a bridge with an infant trapped inside, Walker will do whatever it takes to save the child - even if it means putting his own life in grave danger.",
+        "air_date": "1994-10-22",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 6,
+        "name": "Rainbow Warrior",
+        "overview": "Although Chief Six Feathers\u0027 death is at first deemed an accident, his son immediately suspects foul play and enlists Walker and Trivette to help him track down whatever - or whoever - really killed his father.",
+        "air_date": "1994-11-05",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 7,
+        "name": "The Road to Black Bayou (1)",
+        "overview": "While on a fishing vacation together, C.D., Trivette, and Walker reel in more than they bargained for when they accidentally uncover an elusive and illegal drug operation.",
+        "air_date": "1994-11-19",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 8,
+        "name": "The Road to Black Bayou (2)",
+        "overview": "While on a fishing vacation together, C.D., Trivette, and Walker reel in more than they bargained for when they accidentally uncover an elusive and illegal drug operation.",
+        "air_date": "1994-11-19",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 9,
+        "name": "Line of Fire",
+        "overview": "Alex finds her life in imminent danger when she uncovers a group of Dallas police officers who have been involved in a corrupt drug ring.",
+        "air_date": "1994-11-26",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 10,
+        "name": "Payback",
+        "overview": "After killing a man involved in a carjacking, Walker becomes the target of several assassination attempts. These attempts begin to make sense when he learns that someone has put a $1 million bounty on his head.",
+        "air_date": "1994-12-10",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 11,
+        "name": "Tiger\u0027s Eye",
+        "overview": "The Japanese mob is kicking up some trouble in Houston. Unfortunately for them, they decide to kidnap the wrong kid. The cute little daughter of a wealthy Texas power broker is home from a boarding school for some R\u0026R and a little rodeo fun, when - on the drive home from the airport - she\u0027s violently snatched from her limo and two bodyguards. During the girl\u0027s previous year at the rodeo, she became one of Ranger Walker\u0027s many little buddies and proteges. So the bad guys have no idea what kind of bad news they\u0027ve brought to themselves!",
+        "air_date": "1994-12-17",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 12,
+        "name": "The Big Bingo Bamboozle",
+        "overview": "When authorities discover a local bingo gambling hall is actually a front for a drug-money laundering operation, Walker and his team are assigned the daunting job of protecting the cops\u0027 star witness - a witness who will do just about anything to escape.",
+        "air_date": "1995-01-05",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 13,
+        "name": "Money Train",
+        "overview": "The thrill of working on the set of a Hollywood western quickly turns into serious business when Walker and Trivette discover a group of stuntmen on the shoot plan to carry out an actual train heist.",
+        "air_date": "1995-01-14",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 14,
+        "name": "Mean Streets",
+        "overview": "Walker and his team take on a group of troubled, wealthy teens who believe the only way to clean up the neighborhood slums is to kill off the homeless population.",
+        "air_date": "1995-01-28",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 15,
+        "name": "Cowboy",
+        "overview": "Walker and Trivette must save Alex, who is kidnapped by career criminal Victor LaRue (Wayne P\u00E9re).",
+        "air_date": "1995-02-04",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 16,
+        "name": "War Zone (1)",
+        "overview": "A series of high-profile robberies puzzle the Rangers, but when one results in the death of Walker\u0027s friend, it becomes a personal crusade.",
+        "air_date": "1995-02-11",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 17,
+        "name": "War Zone (2)",
+        "overview": "A series of high-profile robberies puzzle the Rangers, but when one results in the death of Walker\u0027s friend, it becomes a personal crusade.",
+        "air_date": "1995-02-11",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 18,
+        "name": "Trust No One",
+        "overview": "Walker must clear the name of Trivette, who\u0027s been accused in the disappearance of $5 million in counterfeit money.",
+        "air_date": "1995-02-18",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 19,
+        "name": "Blue Movies",
+        "overview": "A judge has a meeting with Alex and Walker where he has discovered something interesting, but just before he can tell them, a helicopter comes in and the man inside kills the judge. Fortunately Walker jumps into the helicopter and pulls the killer out with him.\n\nThe killer, whose name is Sonny, reveals that a prominent businessman named DL Dade ordered the hit and also reveals that he is an underworld figure. With Sonny\u0027s help, Walker and Trivette begin to take down Dade\u0027s illegal operations but it still doesn\u0027t get anywhere because there is no way to connect these operations to Dade, and the men they arrested refuse to talk.\n\nAfterwards at the safehouse, Sonny is watching an adult video and reveals to Alex that at one time Dade was in the adult video business and there was this one girl named Candy Delight    who was the star. Just after Alex leaves, a helicopter with one of Dade\u0027s men armed with a rocket launcher kills Sonny and the guards watching him.\n\nCD wonders how they found Sonny",
+        "air_date": null,
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 20,
+        "name": "On Sacred Ground",
+        "overview": "Cherokee youths are stealing artifacts from a museum, claiming they were taken from their ancestral burial grounds.",
+        "air_date": "1995-03-11",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 21,
+        "name": "Case Closed",
+        "overview": "Walker seeks to disprove 40 years of UFO sightings in a small, Texas town, while also trying to find the missing father of a young girl.",
+        "air_date": "1995-04-29",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 22,
+        "name": "Flashback (1)",
+        "overview": "Walker pursues a group of killers seeking the lost treasures of Hayes Cooper, a Wild West Texas Ranger. Parts of the episode are \u0022flashbacks\u0022 to Hayes Cooper, who with Lockett (played by Trivette/Gilyard), is pursuing a group of killers.",
+        "air_date": "1995-05-06",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 23,
+        "name": "Flashback (2)",
+        "overview": "After surviving a rattlesnake attack, Walker (with Trivette) continues his pursuit of the killers who uncovered \u0022Cooper\u0027s Gold.\u0022",
+        "air_date": "1995-05-06",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 24,
+        "name": "Stand Off (1)",
+        "overview": "Walker (with the aid of a jet pack) and Trivette protect a Mexican Presidential candidate from an assassin.",
+        "air_date": "1995-05-13",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 25,
+        "name": "Stand Off (2)",
+        "overview": "Walker (with the aid of a jet pack) and Trivette protect a Mexican Presidential candidate from an assassin.",
+        "air_date": "1995-05-13",
+        "runtime": 60,
+        "still_path": null
+      }
+    ]
+  }
+}

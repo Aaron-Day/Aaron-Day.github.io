@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 262500,
+    "title": "Insurgent",
+    "overview": "Beatrice Prior must confront her inner demons and continue her fight against a powerful alliance which threatens to tear her society apart.",
+    "tagline": "Defy reality.",
+    "runtime": 119,
+    "release_date": "2015-03-18",
+    "vote_average": 6.361,
+    "poster_path": "/dP5Fb6YRfzmCQtRbHOr2kO7tJW9.jpg",
+    "backdrop_path": "/8YNNyQiPZlF9qv5EGOUK20mnXVk.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 283579,
+      "name": "Divergent Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Shailene Woodley",
+      "character": "Beatrice \u0027Tris\u0027 Prior",
+      "profile_path": "/gL2NvHKW9wAH3qkZuJ76ULUiArB.jpg"
+    },
+    {
+      "name": "Theo James",
+      "character": "Tobias \u0027Four\u0027 Eaton",
+      "profile_path": "/g4yeW1EgIpyht0fy1stv7EXUmPC.jpg"
+    },
+    {
+      "name": "Miles Teller",
+      "character": "Peter Hayes",
+      "profile_path": "/kDf3sW3USjEBDQ3Ua7lbwOfwty6.jpg"
+    },
+    {
+      "name": "Kate Winslet",
+      "character": "Jeanine Matthews",
+      "profile_path": "/6qNnMsKtKz9si5rabpUEG85UfHp.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9671,
+    "title": "Crocodile Dundee",
+    "overview": "When a New York reporter plucks crocodile hunter Mick Dundee from the Australian Outback for a visit to the Big Apple, it\u0027s a clash of cultures and a recipe for good-natured comedy as na\u00EFve Dundee negotiates the concrete jungle. He proves that his instincts are quite useful in the city and adeptly handles everything from wily muggers to high-society snoots without breaking a sweat.",
+    "tagline": "There\u0027s a little of him in all of us.",
+    "runtime": 97,
+    "release_date": "1986-09-26",
+    "vote_average": 6.459,
+    "poster_path": "/pduPduL1ub5kok3lPYT15ryC9L6.jpg",
+    "backdrop_path": "/fdyRR3R1urnk6oYiChCMu6bFaFb.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9332,
+      "name": "Crocodile Dundee Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Paul Hogan",
+      "character": "Mick \u0027Crocodile Dundee\u0027",
+      "profile_path": "/1QQURn65Q2yeDCaGIaLktd6kUPx.jpg"
+    },
+    {
+      "name": "Linda Kozlowski",
+      "character": "Sue Charlton",
+      "profile_path": "/38jMpI4xsicdENV8a3K89NnXmTo.jpg"
+    },
+    {
+      "name": "Mark Blum",
+      "character": "Richard Mason",
+      "profile_path": "/xJ9pudGFNrmkD2Lkn4rEYBUCjV2.jpg"
+    },
+    {
+      "name": "David Gulpilil",
+      "character": "Neville Bell",
+      "profile_path": "/d5xb4nF5C1ucsp8JgbyplVey849.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11187,
+    "title": "Child\u0027s Play 3",
+    "overview": "Eight years after seemingly destroying the killer doll, teen Andy Barclay is placed in a military school, and the spirit of Chucky returns to renew his quest and seek vengeance after being recreated from a mass of melted plastic.",
+    "tagline": "There comes a time to put away childhood things. But some things won\u0027t stay put!",
+    "runtime": 90,
+    "release_date": "1991-08-30",
+    "vote_average": 5.922,
+    "poster_path": "/6toMk9OCuDYEEf733Bzlq3yiw3z.jpg",
+    "backdrop_path": "/8kZT97Ml1ZyawrfHCajmP2b0wPC.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10455,
+      "name": "Child\u0027s Play Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Justin Whalin",
+      "character": "Andy Barclay",
+      "profile_path": "/3LXgHHlz60rmI9pn7wJGQE5Rk6L.jpg"
+    },
+    {
+      "name": "Brad Dourif",
+      "character": "Chucky (voice)",
+      "profile_path": "/ex7AmuHM3owhUetYZAyOmN1ehWS.jpg"
+    },
+    {
+      "name": "Perrey Reeves",
+      "character": "De Silva",
+      "profile_path": "/zkppOuOlGMP59ulwKdqC2tlg07B.jpg"
+    },
+    {
+      "name": "Jeremy Sylvers",
+      "character": "Tyler",
+      "profile_path": "/dnHX6Dcm7SzzDj5R4W8JIQWE00c.jpg"
+    }
+  ]
+}

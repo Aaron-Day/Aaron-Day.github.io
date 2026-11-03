@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 180,
+    "title": "Minority Report",
+    "overview": "John Anderton is a top \u0027Precrime\u0027 cop in the late-21st century, when technology can predict crimes before they\u0027re committed. But Anderton becomes the quarry when another investigator targets him for a murder charge.",
+    "tagline": "Everybody runs.",
+    "runtime": 145,
+    "release_date": "2002-06-20",
+    "vote_average": 7.355,
+    "poster_path": "/qtgFcnwh9dAFLocsDk2ySDVS8UF.jpg",
+    "backdrop_path": "/PrMb3oeEluauy0q9ZO5xL33A6C.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Chief John Anderton",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Colin Farrell",
+      "character": "Danny Witwer",
+      "profile_path": "/5FdalJbrbZ5UCsED5rFrXpvbqJa.jpg"
+    },
+    {
+      "name": "Samantha Morton",
+      "character": "Agatha",
+      "profile_path": "/kHSfnDFbfeKah823y0Gr14lbt31.jpg"
+    },
+    {
+      "name": "Max von Sydow",
+      "character": "Director Lamar Burgess",
+      "profile_path": "/u16BsGyT6v9yuO7wWAF62NayDth.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 299687,
+    "title": "The 5th Wave",
+    "overview": "16-year-old Cassie Sullivan tries to survive in a world devastated by the waves of an alien invasion that has already decimated the population and knocked mankind back to the Stone Age.",
+    "tagline": "Protect your own.",
+    "runtime": 112,
+    "release_date": "2016-01-14",
+    "vote_average": 5.95,
+    "poster_path": "/4Dd79cz5qxKNoKWg1xsfrpOchEr.jpg",
+    "backdrop_path": "/pXRAVmgcYnXGq6PAF7Hfe5P7QJR.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chlo\u00EB Grace Moretz",
+      "character": "Cassie Sullivan",
+      "profile_path": "/yq4rYmaTRC5degaOYmJQFpaiho1.jpg"
+    },
+    {
+      "name": "Nick Robinson",
+      "character": "Ben Parish / Zombie",
+      "profile_path": "/vWFoPTd8G7DIDXYmiTiq4oaYG5G.jpg"
+    },
+    {
+      "name": "Alex Roe",
+      "character": "Evan Walker",
+      "profile_path": "/n3EVRACN3XEuOzrWK3TTn791gWo.jpg"
+    },
+    {
+      "name": "Zackary Arthur",
+      "character": "Sam Sullivan",
+      "profile_path": "/sRTBA9DC8TOn7Mu0jtPFszW254c.jpg"
+    }
+  ]
+}

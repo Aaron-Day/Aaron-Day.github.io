@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 109443,
+    "title": "Anchorman 2: The Legend Continues",
+    "overview": "With the 70s behind him, San Diego\u0027s top rated newsman, Ron Burgundy, returns to take New York\u0027s first 24-hour news channel by storm.",
+    "tagline": "Bigger. Better. Burgundy-er.",
+    "runtime": 119,
+    "release_date": "2013-12-18",
+    "vote_average": 6.1,
+    "poster_path": "/BAdmxMdCqzjs6hx3KuEtnoWP8d.jpg",
+    "backdrop_path": "/hYY7wC3vuwSmoRdcMalVMjPC0a0.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 93791,
+      "name": "Anchorman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Ferrell",
+      "character": "Ron Burgundy",
+      "profile_path": "/yjGbyQzVjpQl8xFkFGa7JxKZWQb.jpg"
+    },
+    {
+      "name": "Steve Carell",
+      "character": "Brick Tamland",
+      "profile_path": "/sSxw69G0znJuettMYGDCAXfSwSY.jpg"
+    },
+    {
+      "name": "Paul Rudd",
+      "character": "Brian Fantana",
+      "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+    },
+    {
+      "name": "David Koechner",
+      "character": "Champ Kind",
+      "profile_path": "/fpTTe1ow3EdfRJ8PZgBJmpeghMS.jpg"
+    }
+  ]
+}

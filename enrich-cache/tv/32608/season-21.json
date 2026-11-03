@@ -1,0 +1,144 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 21,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Top Ten Extraordinary Discoveries",
+        "overview": "Ancient Aliens is counting down ten of history\u0027s most astonishing discoveries; breakthroughs that challenge traditional beliefs about human history. From a lost city hidden in the Andes, to mysterious metal spheres that are not of this world and a sunken city that was said to be the home of the gods. Could these discoveries provide proof of extraterrestrial contact?",
+        "air_date": "2025-02-07",
+        "runtime": 42,
+        "still_path": "/ho25NXey8pwgpcXfIXiO3NUr6Gv.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Top Ten Mysterious Monoliths",
+        "overview": "Ancient Aliens is counting down the world\u0027s top ten most mysterious monoliths. From a 500-ton stone believed to represent an ancient UFO, to giant statues said to have been created with advanced technology and ornate pillars that depict otherworldly visitors. Could these extraordinary standing stones provide evidence of extraterrestrial visitation?",
+        "air_date": "2025-02-14",
+        "runtime": 42,
+        "still_path": "/2CfGp9UrcbnWCDp12nCgNsuRrR4.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Top Ten UFO Crashes",
+        "overview": "Ancient Aliens is counting down ten of the most compelling UFO crashes that have been reported across the globe. From an acorn shaped object that crashed in the woods of rural Pennsylvania, to a mysterious craft that washed ashore in Japan and an earth shaking impact in Britain that defies explanation. Are these mysterious events proof that our planet has been visited by extraterrestrials?",
+        "air_date": "2025-02-21",
+        "runtime": 42,
+        "still_path": "/uH5ostsDVdzVvVqtRXe2lwVOCtU.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Top Ten Unexplained Technologies",
+        "overview": "Ancient Aliens is counting down ten of the most astonishing and unexplainable technologies in history. From mysterious golden orbs discovered in Mexico, to a sacred wooden box that could communicate with the heavens and an ancient tomb that is said to depict an astronaut. Might these sensational artifacts be evidence of otherworldly contact?",
+        "air_date": "2025-02-28",
+        "runtime": 42,
+        "still_path": "/lS5EUYuZPsqCqIVxofRoM7OMFEc.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Top Ten Secret Projects",
+        "overview": "Ancient Aliens is counting down ten of history\u0027s most compelling and covert projects that study the UFO phenomenon. From clandestine government organizations to agents that silence UFO witnesses and secret programs to reverse-engineer alien technology. Are these mysterious projects evidence of contact with extraterrestrials?",
+        "air_date": "2025-03-07",
+        "runtime": 60,
+        "still_path": "/6fOiT55ohkNn4HF6pX2w6ac1tC5.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Top Ten Mysterious Mountains",
+        "overview": "Ancient Aliens is counting down ten mysterious mountains that are notorious for otherworldly phenomena.  From a summit in Sri Lanka that is said to be a portal to other worlds, a volcano in Washington that was at the center of a famous UFO sighting and a mesa in New Mexico believed to contain an alien base. Could these strange peaks provide evidence of extraterrestrial contact?",
+        "air_date": "2025-03-14",
+        "runtime": 60,
+        "still_path": "/rLW3oRcc90p8OIHF4wXAZTn0onN.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Mysteries of the Aztecs",
+        "overview": "The Aztecs built one of the world\u0027s most powerful and feared empires and they claimed that they were guided by a pantheon of more than a thousand gods who came to Earth from different parts of the universe. Could the incredible story of their rise to power and their sudden demise, reveal a history of extraterrestrial intervention in Mesoamerica?",
+        "air_date": "2025-03-21",
+        "runtime": 60,
+        "still_path": "/eWz7Vl8I7RMKwuTrNy5XjpiwxEq.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Glowing Orb Phenomenon",
+        "overview": "Across the globe, reports of mysterious glowing orbs are on the rise. Their movements frequently defy the laws of physics and now they are even being reported near military bases, ships and nuclear weapon facilities. Do they represent a non-human intelligence and if so, why are they here?",
+        "air_date": "2025-03-28",
+        "runtime": 60,
+        "still_path": "/2ypRy5tiogRObEPhhjKN3rfkmWM.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Legacy of J. Allen Hynek",
+        "overview": "Dr. J. Allen Hynek is best known as the notorious government UFO debunker who became one of the founding fathers of ufology. Was Dr. Hynek right when he ultimately concluded that there is a non-human intelligence on Earth?",
+        "air_date": "2025-08-29",
+        "runtime": 60,
+        "still_path": "/wulmQ5W3bNDdXg3xSMbm0B8dgFw.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Volcano Factor",
+        "overview": "Volcanoes have inspired countless myths and legends, but curiously, they are also major hotspots for UFO sightings; is it possible that these geological formations, which can generate great energy, are attracting otherworldly visitors?",
+        "air_date": "2025-09-05",
+        "runtime": 60,
+        "still_path": "/cHLBNskn28ghERgZ8FaSMCTRZDT.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Birdman Mystery",
+        "overview": "Throughout the ancient world, there are depictions of mysterious figures that appear to be half human and half bird. In many cultures, they are revered as divine and have magical abilities. But could these so-called \u0022Birdmen\u0022 have truly existed? And if so, just what were they?",
+        "air_date": "2025-09-12",
+        "runtime": 60,
+        "still_path": "/2d0pfplJ9CTV7XGT8k4GtiJaws5.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Abduction Files",
+        "overview": "All over the world, there are people who claim they have been abducted by aliens; since the 1970s, a growing number of researchers have dedicated their lives to uncover what is behind this disturbing phenomenon.",
+        "air_date": "2025-09-19",
+        "runtime": 60,
+        "still_path": "/yTyx4tkTr28ahLsyjLqIniKpLcV.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Giants",
+        "overview": "Examining how thousands of years ago, people all over the world described encounters with enormous, human-like beings; exploring how some archaeologists claim to have found skeletons of extraordinary size; is it possible the giants actually existed?",
+        "air_date": "2025-10-02",
+        "runtime": 60,
+        "still_path": "/zuk9jCWaj74cLOtggb9DlEaxPiN.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Aliens in Our Midst",
+        "overview": "In the age of smartphones and social media, more evidence of otherworldly activity has come to light than ever before. From a giant \u0022shadow monster\u0022 witnessed outside a Miami mall to reports of ET encounters in Las Vegas.",
+        "air_date": "2025-10-09",
+        "runtime": 60,
+        "still_path": "/tzuSqESoXadsPCBuTJ9fYDsRNQ9.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Britain\u0027s UFO Files",
+        "overview": "From ancient sites like Stonehenge to the crop circle phenomenon and modern-day UFO sightings, Great Britain is a place of mysteries; exploring if throughout history this island has been a destination for extraterrestrial visitors.",
+        "air_date": "2025-10-16",
+        "runtime": 60,
+        "still_path": "/h7oqNlIJNHaQesqGOOH9A9H1O3k.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Mysteries of the Norse Gods",
+        "overview": "The ancient legends of the Norse read like modern science-fiction, with powerful gods wielding incredible weapons and high technology. Could it be that these mythological tales are based on real encounters with extraterrestrial beings?",
+        "air_date": "2025-10-23",
+        "runtime": 60,
+        "still_path": "/4Hq1E771mIzn8ip5b1B3NoPCNbt.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Secrets of Japan",
+        "overview": "Japan is a land rich with ancient mysteries, and recently, it has also become known as a UFO hotspot. Could it be, as Ancient Astronaut Theorists suggest, that this island nation has a long history of extraterrestrial activity?",
+        "air_date": "2025-11-06",
+        "runtime": 60,
+        "still_path": "/weHcM0sD1KGWIh08HTpbrFK3JKc.jpg"
+      }
+    ]
+  }
+}

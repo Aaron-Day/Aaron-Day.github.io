@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 70981,
+    "title": "Prometheus",
+    "overview": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to the darkest corners of the universe. There, they must fight a terrifying battle to save the future of the human race.",
+    "tagline": "The search for our beginning could lead to our end.",
+    "runtime": 124,
+    "release_date": "2012-05-30",
+    "vote_average": 6.615,
+    "poster_path": "/qsYQflQhOuhDpQ0W2aOcwqgDAeI.jpg",
+    "backdrop_path": "/qDG5SlGkWNsjSJWiGTBMFI8DpzA.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 135416,
+      "name": "Prometheus Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Noomi Rapace",
+      "character": "Elizabeth Shaw",
+      "profile_path": "/m0J6ZqEyNljqF1DXBoC9DcMStHP.jpg"
+    },
+    {
+      "name": "Michael Fassbender",
+      "character": "David",
+      "profile_path": "/xvbnUiB2ZBR3QIt595OzNy657Vw.jpg"
+    },
+    {
+      "name": "Charlize Theron",
+      "character": "Meredith Vickers",
+      "profile_path": "/gd7ShD0yt4bsR2STeQ19KQ6hvXL.jpg"
+    },
+    {
+      "name": "Idris Elba",
+      "character": "Janek",
+      "profile_path": "/be1bVF7qGX91a6c5WeRPs5pKXln.jpg"
+    }
+  ]
+}

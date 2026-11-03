@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 45243,
+    "title": "The Hangover Part II",
+    "overview": "The Hangover crew heads to Thailand for Stu\u0027s wedding. After the disaster of a bachelor party in Las Vegas last year, Stu is playing it safe with a mellow pre-wedding brunch. However, nothing goes as planned and Bangkok is the perfect setting for another adventure with the rowdy group.",
+    "tagline": "The wolfpack is back.",
+    "runtime": 102,
+    "release_date": "2011-05-25",
+    "vote_average": 6.513,
+    "poster_path": "/cKZu0Fdkj7dmwbfMpgDqVVCkLJQ.jpg",
+    "backdrop_path": "/aGmsekNU5cMOkJMpbdRutkvmVMl.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86119,
+      "name": "The Hangover Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bradley Cooper",
+      "character": "Phil Wenneck",
+      "profile_path": "/5Dhy50qOMOHfR1NZifKIfffjV9X.jpg"
+    },
+    {
+      "name": "Ed Helms",
+      "character": "Stu Price",
+      "profile_path": "/gPZ8tZaNQGAc3KZRIPp9rgGbEnN.jpg"
+    },
+    {
+      "name": "Zach Galifianakis",
+      "character": "Alan Garner",
+      "profile_path": "/qsDfoUlRnXHUiqZeBPWHzmgmKGX.jpg"
+    },
+    {
+      "name": "Justin Bartha",
+      "character": "Doug Billings",
+      "profile_path": "/AalKjN8nR8RZ8g6ZdWV2smnQq4d.jpg"
+    }
+  ]
+}

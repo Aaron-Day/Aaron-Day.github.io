@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 49529,
+    "title": "John Carter",
+    "overview": "John Carter is a war-weary, former military captain who\u0027s inexplicably transported to the mysterious and exotic planet of Barsoom (Mars) and reluctantly becomes embroiled in an epic conflict. It\u0027s a world on the brink of collapse, and Carter rediscovers his humanity when he realizes the survival of Barsoom and its people rests in his hands.",
+    "tagline": "Lost in our world, found in another.",
+    "runtime": 132,
+    "release_date": "2012-03-07",
+    "vote_average": 6.388,
+    "poster_path": "/lCxz1Yus07QCQQCb6I0Dr3Lmqpx.jpg",
+    "backdrop_path": "/hj5RynBrJB1Wlz84t3lJj9DuTJh.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Taylor Kitsch",
+      "character": "John Carter",
+      "profile_path": "/pTFkwvE2URbbftiaofexfolhkH9.jpg"
+    },
+    {
+      "name": "Lynn Collins",
+      "character": "Dejah Thoris",
+      "profile_path": "/ajPwDxFs3D0gbsaphHyB0ufWc3V.jpg"
+    },
+    {
+      "name": "Samantha Morton",
+      "character": "Sola",
+      "profile_path": "/kHSfnDFbfeKah823y0Gr14lbt31.jpg"
+    },
+    {
+      "name": "Mark Strong",
+      "character": "Matai Shang",
+      "profile_path": "/3cNmatYsoifytg7TfQhI1EHow3v.jpg"
+    }
+  ]
+}

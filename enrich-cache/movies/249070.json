@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 249070,
+    "title": "Hitman: Agent 47",
+    "overview": "An assassin teams up with a woman to help her find her father and uncover the mysteries of her ancestry.",
+    "tagline": "Your Number is Up.",
+    "runtime": 96,
+    "release_date": "2015-08-20",
+    "vote_average": 5.913,
+    "poster_path": "/cx9AOBOv9Qf5ufZYQMbfTV7w7VY.jpg",
+    "backdrop_path": "/yRtZmZa2bmDYaOKygG7IaroSXwg.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 737031,
+      "name": "Hitman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Rupert Friend",
+      "character": "Agent 47",
+      "profile_path": "/aMOUdXtTlqtscPumbuvfcH1JB42.jpg"
+    },
+    {
+      "name": "Zachary Quinto",
+      "character": "John Smith",
+      "profile_path": "/lNRhutc6s5soEAsPAird3W3sZdy.jpg"
+    },
+    {
+      "name": "Hannah Ware",
+      "character": "Katia",
+      "profile_path": "/vQqZkQsGZnikCk0QfJFW7OBuQ07.jpg"
+    },
+    {
+      "name": "Emilio Rivera",
+      "character": "Fabian",
+      "profile_path": "/pHgPJSoZVgmt4FQ8zyMVqwovpRb.jpg"
+    }
+  ]
+}

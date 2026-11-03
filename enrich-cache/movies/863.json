@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 863,
+    "title": "Toy Story 2",
+    "overview": "Andy heads off to Cowboy Camp, leaving his toys to their own devices. Things shift into high gear when an obsessive toy collector named Al McWhiggen, owner of Al\u0027s Toy Barn kidnaps Woody. Andy\u0027s toys mount a daring rescue mission, Buzz Lightyear meets his match and Woody has to decide where he and his heart truly belong.",
+    "tagline": "The toys are back!",
+    "runtime": 92,
+    "release_date": "1999-10-30",
+    "vote_average": 7.623,
+    "poster_path": "/4rbcp3ng8n1MKHjpeqW0L7Fnpzz.jpg",
+    "backdrop_path": "/nsfVr4QbbunUrHINN9N7JdVAMTf.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10194,
+      "name": "Toy Story Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Woody (voice)",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Tim Allen",
+      "character": "Buzz Lightyear (voice)",
+      "profile_path": "/k8XPNHBO459FaqkqqM4tfX5GMKk.jpg"
+    },
+    {
+      "name": "Joan Cusack",
+      "character": "Jessie (voice)",
+      "profile_path": "/59UIeHZFYrKyP20lXqijtfTXglO.jpg"
+    },
+    {
+      "name": "Kelsey Grammer",
+      "character": "Prospector (voice)",
+      "profile_path": "/qn38jJHEqRBsj50Gqo2uM38fgJx.jpg"
+    }
+  ]
+}

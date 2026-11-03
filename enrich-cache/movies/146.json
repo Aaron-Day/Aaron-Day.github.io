@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 146,
+    "title": "Crouching Tiger, Hidden Dragon",
+    "overview": "Two warriors in pursuit of a stolen sword and a notorious fugitive are led to an impetuous, physically-skilled, teenage nobleman\u0027s daughter, who is at a crossroads in her life.",
+    "tagline": "A timeless story of strength, secrets and two warriors who would never surrender.",
+    "runtime": 120,
+    "release_date": "2000-07-06",
+    "vote_average": 7.436,
+    "poster_path": "/iNDVBFNz4XyYzM9Lwip6atSTFqf.jpg",
+    "backdrop_path": "/nSm9cij9VRrGDoZoS16CPnX0FqK.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 290973,
+      "name": "Crouching Tiger, Hidden Dragon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chow Yun-Fat",
+      "character": "Li Mu Bai",
+      "profile_path": "/yATfb52VXqGjQksjo9wf4WYu2pQ.jpg"
+    },
+    {
+      "name": "Michelle Yeoh",
+      "character": "Yu Shu Lien",
+      "profile_path": "/i6fHvGt7Rb8oVyjjdQVV6vEHB94.jpg"
+    },
+    {
+      "name": "Zhang Ziyi",
+      "character": "Jen",
+      "profile_path": "/6DUCAJzpw06VoAA9VWrvB2g4dpq.jpg"
+    },
+    {
+      "name": "Chang Chen",
+      "character": "Lo",
+      "profile_path": "/tkROVkn6yoqF3AcQ4hneOursHXR.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 209112,
+    "title": "Batman v Superman: Dawn of Justice",
+    "overview": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City\u2019s own formidable, forceful vigilante takes on Metropolis\u2019s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it\u2019s ever known before.",
+    "tagline": "The greatest gladiator match in the history of the world.",
+    "runtime": 152,
+    "release_date": "2016-03-23",
+    "vote_average": 6.014,
+    "poster_path": "/5UsK3grJvtQrtzEgqNlDljJW96w.jpg",
+    "backdrop_path": "/5fX1oSGuYdKgwWmUTAN5MNSQGzr.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 209131,
+      "name": "Man of Steel Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Affleck",
+      "character": "Bruce Wayne / Batman",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Henry Cavill",
+      "character": "Clark Kent / Superman",
+      "profile_path": "/dgTD7Q9owL3DyX9uYoSX9KZeUUz.jpg"
+    },
+    {
+      "name": "Jesse Eisenberg",
+      "character": "Lex Luthor",
+      "profile_path": "/2ojZrkt5rdkUi857WSeCatxXdGS.jpg"
+    },
+    {
+      "name": "Gal Gadot",
+      "character": "Diana Prince / Wonder Woman",
+      "profile_path": "/AbXKtWQwuDiwhoQLh34VRglwuBE.jpg"
+    }
+  ]
+}

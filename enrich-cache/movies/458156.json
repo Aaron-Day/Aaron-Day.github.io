@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 458156,
+    "title": "John Wick: Chapter 3 - Parabellum",
+    "overview": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin\u2019s guild, the High Table, John Wick is excommunicado, but the world\u2019s most ruthless hit men and women await his every turn.",
+    "tagline": "If you want peace, prepare for war.",
+    "runtime": 131,
+    "release_date": "2019-05-15",
+    "vote_average": 7.439,
+    "poster_path": "/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg",
+    "backdrop_path": "/vVpEOvdxVBP2aV166j5Xlvb5Cdc.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 404609,
+      "name": "John Wick Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "John Wick",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Halle Berry",
+      "character": "Sofia",
+      "profile_path": "/84HRDZodRCuBSpYGSc3ow8WucI4.jpg"
+    },
+    {
+      "name": "Ian McShane",
+      "character": "Winston",
+      "profile_path": "/rteBJYNgD1yGsHg2HGZAIrYHz1t.jpg"
+    },
+    {
+      "name": "Laurence Fishburne",
+      "character": "Bowery King",
+      "profile_path": "/2GbXERENPpl5MmlqOLlPVaVtifD.jpg"
+    }
+  ]
+}

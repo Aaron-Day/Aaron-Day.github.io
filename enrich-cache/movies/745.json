@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 745,
+    "title": "The Sixth Sense",
+    "overview": "Following an unexpected tragedy, child psychologist Malcolm Crowe meets a nine year old boy named Cole Sear, who is hiding a dark secret.",
+    "tagline": "Not every gift is a blessing.",
+    "runtime": 107,
+    "release_date": "1999-08-06",
+    "vote_average": 7.957,
+    "poster_path": "/vOyfUXNFSnaTk7Vk5AjpsKTUWsu.jpg",
+    "backdrop_path": "/6TjllWT3cGrPFyqDXurVZ3L8bBi.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Bruce Willis",
+      "character": "Malcolm Crowe",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Haley Joel Osment",
+      "character": "Cole Sear",
+      "profile_path": "/2rnMTQB9Q3vLtmRyyUaenVwSgfY.jpg"
+    },
+    {
+      "name": "Toni Collette",
+      "character": "Lynn Sear",
+      "profile_path": "/lzXRh16qe4HHeBN6tMyw0DHvaMn.jpg"
+    },
+    {
+      "name": "Olivia Williams",
+      "character": "Anna Crowe",
+      "profile_path": "/gnL7XGfLiAbhqIjV4jAGIZgySJh.jpg"
+    }
+  ]
+}

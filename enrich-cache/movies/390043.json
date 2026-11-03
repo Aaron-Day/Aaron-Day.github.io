@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 390043,
+    "title": "The Hitman\u0027s Bodyguard",
+    "overview": "The world\u2019s top bodyguard gets a new client, a hitman who must testify at the International Court of Justice. They must put their differences aside and work together to make it to the trial on time.",
+    "tagline": "Everyone\u0027s out to get them... If they don\u0027t kill each other first.",
+    "runtime": 118,
+    "release_date": "2017-08-16",
+    "vote_average": 6.895,
+    "poster_path": "/5CGjlz2vyBhW5xHW4eNOZIdgzYq.jpg",
+    "backdrop_path": "/7KsqfXDECZMryX1Rv4RKsT7SIjQ.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 608101,
+      "name": "The Hitman\u0027s Bodyguard Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ryan Reynolds",
+      "character": "Michael Bryce",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Darius Kincaid",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Gary Oldman",
+      "character": "Vladislav Dukhovich",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    },
+    {
+      "name": "Salma Hayek Pinault",
+      "character": "Sonia Kincaid",
+      "profile_path": "/3j8MpAjyopkAc8mbNiDeXyqBmcS.jpg"
+    }
+  ]
+}

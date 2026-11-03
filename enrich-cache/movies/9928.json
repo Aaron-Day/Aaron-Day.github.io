@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9928,
+    "title": "Robots",
+    "overview": "Rodney Copperbottom is a young robot inventor who dreams of making the world a better place, until the evil Ratchet takes over Bigweld Industries. Now, Rodney\u0027s dreams \u2013 and those of his friends \u2013 are in danger of becoming obsolete.",
+    "tagline": "The biggest comedy ever assembled!",
+    "runtime": 90,
+    "release_date": "2005-03-10",
+    "vote_average": 6.513,
+    "poster_path": "/fnKCh67l2DDG9NxxIlk9IpsXQ99.jpg",
+    "backdrop_path": "/8p4gCdDT55PMY3UMDvo6ybzMrai.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ewan McGregor",
+      "character": "Rodney Copperbottom (voice)",
+      "profile_path": "/q2UDxfwWnmXTB7khOUF3J9puBVP.jpg"
+    },
+    {
+      "name": "Halle Berry",
+      "character": "Cappy (voice)",
+      "profile_path": "/84HRDZodRCuBSpYGSc3ow8WucI4.jpg"
+    },
+    {
+      "name": "Greg Kinnear",
+      "character": "Ratchet (voice)",
+      "profile_path": "/iJezGc9XjY0DFPs00SypkuKImFK.jpg"
+    },
+    {
+      "name": "Mel Brooks",
+      "character": "Bigweld (voice)",
+      "profile_path": "/c21qNcMJlHnRolfhQhZOVacjtwI.jpg"
+    }
+  ]
+}

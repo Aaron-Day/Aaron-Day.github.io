@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 791373,
+    "title": "Zack Snyder\u0027s Justice League",
+    "overview": "Determined to ensure Superman\u0027s ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+    "tagline": "Us united.",
+    "runtime": 242,
+    "release_date": "2021-03-18",
+    "vote_average": 8.068,
+    "poster_path": "/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
+    "backdrop_path": "/9WoLTsRgrupkvCgs3bhsl2EjLhs.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Affleck",
+      "character": "Batman / Bruce Wayne",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Henry Cavill",
+      "character": "Superman / Clark Kent",
+      "profile_path": "/dgTD7Q9owL3DyX9uYoSX9KZeUUz.jpg"
+    },
+    {
+      "name": "Gal Gadot",
+      "character": "Wonder Woman / Diana Prince",
+      "profile_path": "/AbXKtWQwuDiwhoQLh34VRglwuBE.jpg"
+    },
+    {
+      "name": "Ray Fisher",
+      "character": "Cyborg / Victor Stone",
+      "profile_path": "/310snvA05xDOQZDn2fJSp242GHw.jpg"
+    }
+  ]
+}

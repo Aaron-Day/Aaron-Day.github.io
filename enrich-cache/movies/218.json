@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 218,
+    "title": "The Terminator",
+    "overview": "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassin known as the \u0022Terminator\u0022 back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgents against 21st century mechanical hegemony. Meanwhile, the human-resistance movement dispatches a lone warrior to safeguard Sarah. Can he stop the virtually indestructible killing machine?",
+    "tagline": "Your future is in its hands.",
+    "runtime": 108,
+    "release_date": "1984-10-26",
+    "vote_average": 7.698,
+    "poster_path": "/qvktm0BHcnmDpul4Hz01GIazWPr.jpg",
+    "backdrop_path": "/ffdqHMWkh1h9MABwIfbfRJhgFW6.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 528,
+      "name": "The Terminator Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Terminator",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Michael Biehn",
+      "character": "Kyle Reese",
+      "profile_path": "/9oFLsADWQm2TvU8XzLIzBbjdMkU.jpg"
+    },
+    {
+      "name": "Linda Hamilton",
+      "character": "Sarah Connor",
+      "profile_path": "/7FNn9Z5xkRS9EFbGL2tpmpph9xV.jpg"
+    },
+    {
+      "name": "Paul Winfield",
+      "character": "Traxler",
+      "profile_path": "/6NLUJEFJCJ2Hog1ZOz4K2iyDvMZ.jpg"
+    }
+  ]
+}

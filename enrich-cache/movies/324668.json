@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 324668,
+    "title": "Jason Bourne",
+    "overview": "The most dangerous former operative of the CIA is drawn out of hiding to uncover hidden truths about his past.",
+    "tagline": "You know his name.",
+    "runtime": 123,
+    "release_date": "2016-07-27",
+    "vote_average": 6.4,
+    "poster_path": "/xA7N41glw17MBQtcWSm2eBlBRuG.jpg",
+    "backdrop_path": "/7mHeyU0a538bgguOeF57I8ZroSk.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 31562,
+      "name": "The Bourne Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Matt Damon",
+      "character": "Jason Bourne",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    },
+    {
+      "name": "Tommy Lee Jones",
+      "character": "CIA Director Robert Dewey",
+      "profile_path": "/mCiZNRAzbnPojJEZwVZWLw9kzxR.jpg"
+    },
+    {
+      "name": "Alicia Vikander",
+      "character": "Heather Lee",
+      "profile_path": "/lZu8qiTwiQIN96cuptgqMCCaUtg.jpg"
+    },
+    {
+      "name": "Vincent Cassel",
+      "character": "Asset",
+      "profile_path": "/ivUQfhn5olOmR5hthN8C8GThBV4.jpg"
+    }
+  ]
+}

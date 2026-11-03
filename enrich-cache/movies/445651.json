@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 445651,
+    "title": "The Darkest Minds",
+    "overview": "After a disease kills 98% of America\u0027s children, the surviving 2% develop superpowers and are placed in internment camps. A 16-year-old girl escapes her camp and joins a group of other teens on the run from the government.",
+    "tagline": "The ones who changed will change everything.",
+    "runtime": 105,
+    "release_date": "2018-07-25",
+    "vote_average": 7,
+    "poster_path": "/8NdQneXBYVbBKt81bFhXiyThe0h.jpg",
+    "backdrop_path": "/5BxrMNGl3YDiWgHCVJu8iLQoJDM.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Amandla Stenberg",
+      "character": "Ruby Daly",
+      "profile_path": "/1Kv2sVVUkNSXyvmma8RBAX0CNGA.jpg"
+    },
+    {
+      "name": "Harris Dickinson",
+      "character": "Liam Stewart",
+      "profile_path": "/pqqnYWWHa3Va80EXofXrVlRqIDM.jpg"
+    },
+    {
+      "name": "Patrick Gibson",
+      "character": "Clancy Gray",
+      "profile_path": "/1pCUKn2BqJJB5IuktEZGgYw6hbt.jpg"
+    },
+    {
+      "name": "Skylan Brooks",
+      "character": "Charles \u0027Chubs\u0027 Meriwether",
+      "profile_path": "/sH66hEpQlAqWh81Ecas9Y29H86k.jpg"
+    }
+  ]
+}

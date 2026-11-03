@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10072,
+    "title": "A Nightmare on Elm Street 3: Dream Warriors",
+    "overview": "A psychiatrist, familiar with the knife-wielding dream demon Freddy Krueger, helps teens at a mental hospital battle the killer who is invading their dreams.",
+    "tagline": "If you think you\u0027ll get out alive, you must be dreaming.",
+    "runtime": 96,
+    "release_date": "1987-02-27",
+    "vote_average": 6.729,
+    "poster_path": "/qbtZewU6EGvxi8yFVzwZ31NijLX.jpg",
+    "backdrop_path": "/euXJlfeYSyrdkOoFQ9gtUG8OOhH.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8581,
+      "name": "A Nightmare on Elm Street Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Patricia Arquette",
+      "character": "Kristen Parker",
+      "profile_path": "/jeThSouMatiuRiLkjDvSBLHpmq0.jpg"
+    },
+    {
+      "name": "Robert Englund",
+      "character": "Freddy Krueger",
+      "profile_path": "/cjGEkiavinHa1dnetDvnEhlD2Wm.jpg"
+    },
+    {
+      "name": "Heather Langenkamp",
+      "character": "Nancy Thompson",
+      "profile_path": "/1v3qxca6jvgTAo0T1CqC64DDpbK.jpg"
+    },
+    {
+      "name": "Craig Wasson",
+      "character": "Neil Gordon",
+      "profile_path": "/TIiSZkgapbFAHtJjWednWnTjOK.jpg"
+    }
+  ]
+}

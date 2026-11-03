@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36658,
+    "title": "X2",
+    "overview": "Professor Charles Xavier and his team of genetically gifted superheroes face a rising tide of anti-mutant sentiment led by Col. William Stryker. Storm, Wolverine and Jean Grey must join Magneto and Mystique to unhinge Stryker\u0027s scheme to exterminate all mutants.",
+    "tagline": "The time has come for those who are different to stand united.",
+    "runtime": 133,
+    "release_date": "2003-04-27",
+    "vote_average": 7.048,
+    "poster_path": "/bst4alFUXCxISwdRUKSMhhkrX1M.jpg",
+    "backdrop_path": "/s8ftvFvafWWEhApISamHx32bx6h.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 748,
+      "name": "X-Men Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Hugh Jackman",
+      "character": "Logan / Wolverine",
+      "profile_path": "/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Patrick Stewart",
+      "character": "Professor Charles Xavier",
+      "profile_path": "/ufqtnLh3JJjPbEgxEag3MM5nZyv.jpg"
+    },
+    {
+      "name": "Ian McKellen",
+      "character": "Eric Lehnsherr / Magneto",
+      "profile_path": "/5cnnnpnJG6TiYUSS7qgJheUZgnv.jpg"
+    },
+    {
+      "name": "James Marsden",
+      "character": "Scott Summers / Cyclops",
+      "profile_path": "/lf7OnfKZnMgNh9b98764tqSocGK.jpg"
+    }
+  ]
+}

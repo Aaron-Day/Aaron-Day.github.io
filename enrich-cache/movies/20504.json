@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 20504,
+    "title": "The Book of Eli",
+    "overview": "A post-apocalyptic tale, in which a lone man fights his way across America in order to protect a sacred book that holds the secrets to saving humankind.",
+    "tagline": "Some will kill to have it. He will kill to protect it.",
+    "runtime": 118,
+    "release_date": "2010-01-14",
+    "vote_average": 6.813,
+    "poster_path": "/1H1y9ZiqNFaLgQiRDDZLA55PviW.jpg",
+    "backdrop_path": "/aPrrrGtSjXbw8XnpzsVJgF0ioq3.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "Eli",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Gary Oldman",
+      "character": "Carnegie",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    },
+    {
+      "name": "Mila Kunis",
+      "character": "Solara",
+      "profile_path": "/cJAHQWX9hVadDFx5WTSBIW0VjvP.jpg"
+    },
+    {
+      "name": "Ray Stevenson",
+      "character": "Redridge",
+      "profile_path": "/msafbswGI6uisRuNvQ8a1wMF5Ca.jpg"
+    }
+  ]
+}

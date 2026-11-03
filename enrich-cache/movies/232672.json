@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 232672,
+    "title": "Blended",
+    "overview": "Recently divorced mom Lauren and widowed dad Jim let their friends push them into a blind date, which goes disastrously wrong. Unsurprisingly, neither wants to see the other ever again. However, fate intervenes when both Jim and Lauren, unbeknownst to each other, purchase one-half of the same vacation package at a South African resort for families, during spring break. They and their children are forced to share the same romantic suite and participate in a slew of family activities together.",
+    "tagline": "Single dad, no clue. Single mom, flying solo.",
+    "runtime": 117,
+    "release_date": "2014-05-21",
+    "vote_average": 6.901,
+    "poster_path": "/o2YrH9jS7CAfWjETHFeL0tth79E.jpg",
+    "backdrop_path": "/g5haoqEqt5VwVwQKEkoXY9zqSxb.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Jim",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Drew Barrymore",
+      "character": "Lauren",
+      "profile_path": "/8qvMFslwrC3w1OwJYqE3mHPvffr.jpg"
+    },
+    {
+      "name": "Kevin Nealon",
+      "character": "Eddy",
+      "profile_path": "/qM7LSgoQezyENsqGzxFTzwM5CQ4.jpg"
+    },
+    {
+      "name": "Terry Crews",
+      "character": "Nickens",
+      "profile_path": "/pxTY4SglLo5hFcMH00MxPeC5u55.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 76600,
+    "title": "Avatar: The Way of Water",
+    "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+    "tagline": "Return to Pandora.",
+    "runtime": 192,
+    "release_date": "2022-12-14",
+    "vote_average": 7.579,
+    "poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+    "backdrop_path": "/kJsPVzdyBrYHLomuNv5SJDXUQ2f.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87096,
+      "name": "Avatar Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sam Worthington",
+      "character": "Jake Sully",
+      "profile_path": "/mflBcox36s9ZPbsZPVOuhf6axaJ.jpg"
+    },
+    {
+      "name": "Zoe Salda\u00F1a",
+      "character": "Neytiri",
+      "profile_path": "/vQBwmsSOAd0JDaEcZ5p43J9xzsY.jpg"
+    },
+    {
+      "name": "Sigourney Weaver",
+      "character": "Kiri",
+      "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+    },
+    {
+      "name": "Stephen Lang",
+      "character": "Colonel Miles Quaritch",
+      "profile_path": "/gnO5VfkDgA2fsHweD0622LUY3Hu.jpg"
+    }
+  ]
+}

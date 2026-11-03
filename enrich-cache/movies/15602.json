@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 15602,
+    "title": "Grumpier Old Men",
+    "overview": "A family wedding reignites the ancient feud between next-door neighbors and fishing buddies John and Max. Meanwhile, a sultry Italian divorc\u00E9e opens a restaurant at the local bait shop, alarming the locals who worry she\u0027ll scare the fish away. But she\u0027s less interested in seafood than she is in cooking up a hot time with Max.",
+    "tagline": "Still Yelling. Still Fighting. Still Ready for Love.",
+    "runtime": 101,
+    "release_date": "1995-12-22",
+    "vote_average": 6.5,
+    "poster_path": "/1FSXpj5e8l4KH6nVFO5SPUeraOt.jpg",
+    "backdrop_path": "/1o4vuCHpmd4DXofMYDUwpnhKiuy.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 119050,
+      "name": "Grumpy Old Men Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Walter Matthau",
+      "character": "Max Goldman",
+      "profile_path": "/oAMxqfGR0C5Ru5vER9Y4OP6P0xR.jpg"
+    },
+    {
+      "name": "Jack Lemmon",
+      "character": "John Gustafson",
+      "profile_path": "/7jWVWLr1VJqQrN3d4YJaATCIHRw.jpg"
+    },
+    {
+      "name": "Ann-Margret",
+      "character": "Ariel Gustafson",
+      "profile_path": "/z20lA2EyYbLcZn5GV1deMQDUCEc.jpg"
+    },
+    {
+      "name": "Sophia Loren",
+      "character": "Maria Sophia Coletta Ragetti",
+      "profile_path": "/lxhkn933v8EuBHvfTWSS5SQQnJ4.jpg"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 284053,
+    "title": "Thor: Ragnarok",
+    "overview": "Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his home-world and the end of Asgardian civilization, at the hands of a powerful new threat, the ruthless Hela.",
+    "tagline": "No hammer. No problem.",
+    "runtime": 131,
+    "release_date": "2017-10-24",
+    "vote_average": 7.578,
+    "poster_path": "/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+    "backdrop_path": "/vLmHH8jAy8Jq8uBsLucd3592WGh.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131296,
+      "name": "Thor Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Hemsworth",
+      "character": "Thor",
+      "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    },
+    {
+      "name": "Mark Ruffalo",
+      "character": "Bruce Banner / Hulk",
+      "profile_path": "/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg"
+    },
+    {
+      "name": "Tom Hiddleston",
+      "character": "Loki",
+      "profile_path": "/mclHxMm8aPlCPKptP67257F5GPo.jpg"
+    },
+    {
+      "name": "Cate Blanchett",
+      "character": "Hela",
+      "profile_path": "/1Rd567YFdGfkJjSlhNPR8joYkaX.jpg"
+    }
+  ]
+}

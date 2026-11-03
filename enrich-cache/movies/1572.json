@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1572,
+    "title": "Die Hard: With a Vengeance",
+    "overview": "New York detective John McClane is back and kicking bad-guy butt in the third installment of this action-packed series, which finds him teaming with civilian Zeus Carver to prevent the loss of innocent lives. McClane thought he\u0027d seen it all, until a genius named Simon engages McClane, his new \u0022partner\u0022 -- and his beloved city -- in a deadly game that demands their concentration.",
+    "tagline": "Think fast. Look alive. Die hard.",
+    "runtime": 128,
+    "release_date": "1995-05-19",
+    "vote_average": 7.3,
+    "poster_path": "/buqmCdFQEWwEpL3agGgg2GVjN2d.jpg",
+    "backdrop_path": "/fBvSfLetWlAMevQVHa0nBDV1Fon.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1570,
+      "name": "Die Hard Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bruce Willis",
+      "character": "John McClane",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Jeremy Irons",
+      "character": "Simon",
+      "profile_path": "/w8Ct1q02Ht3sWdOSqfp3B85TzT.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Zeus Carver",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Larry Bryggman",
+      "character": "Chief Walter Cobb",
+      "profile_path": "/8G6HW1X6IT06Kwl9ldmGQuaW9nL.jpg"
+    }
+  ]
+}

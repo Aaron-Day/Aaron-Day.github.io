@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 8,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "A Beautiful Day",
+        "overview": "It\u2019s been 6 months since LaGuerta\u2019s murder \u2013 and Dexter is still managing life as a dad, brother, and serial killer. Debra now works as a PI for a private firm and Batista has replaced her as Lieutenant. Meanwhile, Miami Metro investigates the murder of a man who has had pieces of his brain removed.",
+        "air_date": "2013-06-30",
+        "runtime": 53,
+        "still_path": "/zfWChkrhM2yAFEy3hxqeNsirH0h.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Every Silver Lining...",
+        "overview": "Miami Metro continues their hunt for The Brain Surgeon, while Dr. Vogel enlists Dexter\u0027s help. Debra continues to track down her PI case and has to take matters into her own hands.",
+        "air_date": "2013-07-07",
+        "runtime": 57,
+        "still_path": "/zSXKPVeW1mZ1rhBE6OG2ICXXnvo.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "What\u0027s Eating Dexter Morgan?",
+        "overview": "Dexter continues his manhunt for The Brain Surgeon. Dr. Vogel tries to prove to Dexter that he\u2019s perfect as a psychopath. While Debra\u2019s PTSD kicks in and her guilt from the past begins to creep up.",
+        "air_date": "2013-07-14",
+        "runtime": 49,
+        "still_path": "/Ar1RTbPvDSdDUc33V49QX5lcRxo.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Scar Tissue",
+        "overview": "Dexter tracks down another potential serial killer from Dr. Vogel\u2019s list. Quinn celebrates his passing of the Sergeant\u2019s exam by defending Debra\u2019s honor in a fight. Dr. Vogel begins treating Debra for her PTSD.",
+        "air_date": "2013-07-21",
+        "runtime": 50,
+        "still_path": "/vUhpyOERYLVC49P450zmDeGWMtx.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "This Little Piggy",
+        "overview": "Dr. Vogel comes into contact with The Brain Surgeon. So Dexter and Debra come together to try and keep her safe.",
+        "air_date": "2013-07-28",
+        "runtime": 48,
+        "still_path": "/mBB7UV5Qb9ZD76RZLYXEMavmVBP.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "A Little Reflection",
+        "overview": "Dexter monitors a troubled young man. Dexter and Debra finally get back to normal.",
+        "air_date": "2013-08-04",
+        "runtime": 55,
+        "still_path": "/jhcF6qbj3qJNnAqZ6J5URGkI4TW.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Dress Code",
+        "overview": "Dexter and Debra\u2019s newly healed relationship is threatened. Dex adjusts to being a mentor.",
+        "air_date": "2013-08-11",
+        "runtime": 53,
+        "still_path": "/5q68Iy9MB0l1osSi404MePZ1xEx.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Are We There Yet?",
+        "overview": "Dexter tracks down his prot\u00E9g\u00E9 in the belief that he murdered an innocent person. Meanwhile, Dexter tries to help Hannah escape the country.",
+        "air_date": "2013-08-18",
+        "runtime": 52,
+        "still_path": "/zzJy8KWJqQPhjMA3uG2h8SbjO81.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Make Your Own Kind of Music",
+        "overview": "Dexter investigates a murder that hits close to home. Meanwhile, Dr. Vogel gets the surprise of her life when someone from her past returns.",
+        "air_date": "2013-08-25",
+        "runtime": 55,
+        "still_path": "/9yRjrK62A8nyzJCNICt19k4LKXL.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Goodbye Miami",
+        "overview": "With Dr. Vogel\u0027s help, Dexter tries to lure The Brain Surgeon to a location in order to get him on the table. In the meanwhile, Dexter witnesses a murder.",
+        "air_date": "2013-09-08",
+        "runtime": 53,
+        "still_path": "/7rtNUEydPUGyoUu4AM2hpJW3S5W.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Monkey in a Box",
+        "overview": "Dexter is torn between fleeing the country with Hannah and Harrison or taking Saxon out for good. Dexter\u0027s inaction results in a grisly and unexpected consequence.",
+        "air_date": "2013-09-15",
+        "runtime": 52,
+        "still_path": "/3MefgmO0eYWlXUFSic7Dn45UUur.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Remember the Monsters?",
+        "overview": "As a deadly hurricane closes in, Dexter must make a life-altering decision to protect those he loves.",
+        "air_date": "2013-09-22",
+        "runtime": 56,
+        "still_path": "/eej5sOpA2A73O6SudZxFsw2oB5n.jpg"
+      }
+    ]
+  }
+}

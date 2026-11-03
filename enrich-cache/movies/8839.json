@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8839,
+    "title": "Casper",
+    "overview": "Casper is a kind young ghost who peacefully haunts a mansion in Maine. When specialist James Harvey arrives to communicate with Casper and his fellow spirits, he brings along his teenage daughter, Kat. Casper quickly falls in love with Kat, but their budding relationship is complicated not only by his transparent state, but also by his troublemaking apparition uncles and their mischievous antics.",
+    "tagline": "Seeing is believing.",
+    "runtime": 100,
+    "release_date": "1995-05-26",
+    "vote_average": 6.352,
+    "poster_path": "/2ah8fNJFZVU3vcXhU5xfAYi2eym.jpg",
+    "backdrop_path": "/sQPckU0TfSeYIlUneHfIXwzQC2f.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8819,
+      "name": "Casper Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Malachi Pearson",
+      "character": "Casper (voice)",
+      "profile_path": "/7AvzsokeNuvefXIWTUQ9fQITCB6.jpg"
+    },
+    {
+      "name": "Christina Ricci",
+      "character": "Kat",
+      "profile_path": "/m2cY5Er1loPgHkZYdFMEz6YeiwG.jpg"
+    },
+    {
+      "name": "Bill Pullman",
+      "character": "Dr. Harvey",
+      "profile_path": "/AlLhgmcX5zh3frPT82OSPY9gqXO.jpg"
+    },
+    {
+      "name": "Cathy Moriarty",
+      "character": "Carrigan",
+      "profile_path": "/5Ja7K0QtvgUnImSSfRqe8hQeoqr.jpg"
+    }
+  ]
+}

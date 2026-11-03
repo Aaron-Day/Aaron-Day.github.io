@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 385687,
+    "title": "Fast X",
+    "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they\u0027ve ever faced: A terrifying threat emerging from the shadows of the past who\u0027s fueled by blood revenge, and who is determined to shatter this family and destroy everything\u2014and everyone\u2014that Dom loves, forever.",
+    "tagline": "The end of the road begins.",
+    "runtime": 142,
+    "release_date": "2023-05-17",
+    "vote_average": 6.961,
+    "poster_path": "/fiVW06jE7z9YnO4trhaMEdclSiC.jpg",
+    "backdrop_path": "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9485,
+      "name": "The Fast and the Furious Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vin Diesel",
+      "character": "Dominic Toretto",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Michelle Rodriguez",
+      "character": "Letty",
+      "profile_path": "/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
+    },
+    {
+      "name": "Tyrese Gibson",
+      "character": "Roman",
+      "profile_path": "/jxoy4fbXNKFQtBdK73cLXEz3ufS.jpg"
+    },
+    {
+      "name": "Ludacris",
+      "character": "Tej",
+      "profile_path": "/2hmnLauYxQJSBDL2VCcq9NHWIY8.jpg"
+    }
+  ]
+}

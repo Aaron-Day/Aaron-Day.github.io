@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1637,
+    "title": "Speed",
+    "overview": "Tensions run high when a crazed bomber rigs a Los Angeles bus with a device that will kill everyone on board if the vehicle\u0027s speed dips below fifty miles per hour.",
+    "tagline": "Get ready for rush hour.",
+    "runtime": 116,
+    "release_date": "1994-06-09",
+    "vote_average": 7.161,
+    "poster_path": "/82PkCE4R95KhHICUDF7G4Ly2z3l.jpg",
+    "backdrop_path": "/lywmuPU5Hr1Mnpb9UGeDbILmkTx.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 43064,
+      "name": "Speed Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Jack Traven",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Dennis Hopper",
+      "character": "Howard Payne",
+      "profile_path": "/hfrzsJhkX7Vphe3pVYk8lA9BNfg.jpg"
+    },
+    {
+      "name": "Sandra Bullock",
+      "character": "Annie",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "Joe Morton",
+      "character": "Capt. McMahon",
+      "profile_path": "/w7rGWWSGKWWukojLbZOQJ5yh9jv.jpg"
+    }
+  ]
+}

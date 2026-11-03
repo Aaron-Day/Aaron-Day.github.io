@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 384682,
+    "title": "Office Christmas Party",
+    "overview": "When Carol Vanstone, CEO of the technology company Zenotek, expresses her intention to close the Chicago branch, run by her brother Clay, he and his co-workers organize a Christmas party in an effort to impress a potential client and save their jobs. But the party gets out of control\u2026",
+    "tagline": "Party like your job depends on it",
+    "runtime": 105,
+    "release_date": "2016-11-25",
+    "vote_average": 5.725,
+    "poster_path": "/7r3w3cPTbNEIr1imb8zXyeIJCJe.jpg",
+    "backdrop_path": "/1uDvPjKthACQKeQBvkiJ3aSvtdh.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jason Bateman",
+      "character": "Josh Parker",
+      "profile_path": "/8e6mt0vGjPo6eW52gqRuXy5YnfN.jpg"
+    },
+    {
+      "name": "Olivia Munn",
+      "character": "Tracey Hughes",
+      "profile_path": "/ha4W3WfxBopQK2FZmVochNrN1GT.jpg"
+    },
+    {
+      "name": "T.J. Miller",
+      "character": "Clay Vanstone",
+      "profile_path": "/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg"
+    },
+    {
+      "name": "Jennifer Aniston",
+      "character": "Carol Vanstone",
+      "profile_path": "/PBSCmHDFdCMBhjx0EbXpTw4Z94.jpg"
+    }
+  ]
+}

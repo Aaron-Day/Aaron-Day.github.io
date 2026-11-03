@@ -1,0 +1,80 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "When You\u0027re Lost in the Darkness",
+        "overview": "2003. As a parasitic fungal outbreak begins to ravage the country and the world, Joel Miller attempts to escape the escalating chaos with his daughter and brother. Twenty years later, a now hardened Joel and his partner Tess fight to survive under a totalitarian regime, while the insurgent Fireflies harbor a teenage girl with a unique gift.",
+        "air_date": "2023-01-15",
+        "runtime": 81,
+        "still_path": "/3VeY1k8wFyhcrMyQ8jpGegh9beU.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Infected",
+        "overview": "In 2003, an Indonesian scientist makes a devastating discovery. In 2023, now outside of the quarantine zone, Joel and Tess clash over Ellie\u0027s fate as they navigate a long-abandoned Boston overrun with Infected.",
+        "air_date": "2023-01-22",
+        "runtime": 53,
+        "still_path": "/vGf7chl6XL7o3yYc8A5m3kjz8px.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Long, Long Time",
+        "overview": "Doomsday prepper Bill prepares to ride out the apocalypse alone...until a mysterious stranger upends his plans. Years later, Joel and Ellie seek Bill\u0027s guidance \u2013 and find themselves at a crossroads.",
+        "air_date": "2023-01-29",
+        "runtime": 77,
+        "still_path": "/fmaiMjbLXaeRyq2so0EXf3hrpyc.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Please Hold to My Hand",
+        "overview": "After a harrowing trek across a desolate United States, Joel and Ellie find themselves navigating a dangerous Kansas City on foot. Later, rebel leader Kathleen instigates a manhunt \u2013 one that pits her violent civilian militia against the world\u0027s best hope.",
+        "air_date": "2023-02-05",
+        "runtime": 47,
+        "still_path": "/nYPkaj0a5m4Y9xHdDADtnzh6zOL.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Endure and Survive",
+        "overview": "On the streets of a newly free Kansas City, Henry fights to protect his brother Sam from rebel soldiers who will stop at nothing to appease their ruthless leader. As her manhunt continues, Kathleen doubles down on her quest for revenge, while Ellie forms a meaningful friendship.",
+        "air_date": "2023-02-12",
+        "runtime": 60,
+        "still_path": "/ztzxqW4IAVQRVimxhIfryP4CuI9.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Kin",
+        "overview": "After months of traveling, Joel and Ellie receive a grave warning about what lies ahead. Later, Ellie learns more about Joel\u0027s past \u2013 while Joel tries his best to forget.",
+        "air_date": "2023-02-19",
+        "runtime": 61,
+        "still_path": "/zW9AIy0PVhYfmukqBcUvlvi4mKc.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Left Behind",
+        "overview": "As Joel fights to survive, Ellie\u2019s struggle to save him stirs memories of her life in a FEDRA orphanage. Weeks before meeting Joel, Ellie recalls joining her best friend Riley for a night to remember\u2026 one that will change the course of both of their lives \u2013 and the fate of the world \u2013 forever.",
+        "air_date": "2023-02-26",
+        "runtime": 57,
+        "still_path": "/oNyC68bnOoVAiJnKVsRNY9YDbl6.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "When We Are in Need",
+        "overview": "After crossing paths with a vengeful group of survivors, Ellie\u0027s fighting spirit draws unwanted attention from its leader. Still battling for his life, a weakened Joel faces off with a hunting party out for blood.",
+        "air_date": "2023-03-05",
+        "runtime": 52,
+        "still_path": "/iNbhbEOt1KAeqr5iyL9QOAZzgzT.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Look for the Light",
+        "overview": "After being pursued by Infected, a pregnant Anna places her trust in a lifelong friend. Years later, Ellie is forced to grapple with the emotional toll of her journey, while Joel faces a devastating decision of his own.",
+        "air_date": "2023-03-12",
+        "runtime": 46,
+        "still_path": "/4WZ9E8IGl9tkka9JPh325Lc1kfh.jpg"
+      }
+    ]
+  }
+}

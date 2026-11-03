@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10776,
+    "title": "Little Shop of Horrors",
+    "overview": "Seymour Krelborn is a nerdy orphan working at Mushnik\u0027s, a flower shop in urban Skid Row. He harbors a crush on fellow co-worker, Audrey Fulquard, and is berated by Mr. Mushnik daily. One day, Seymour finds a very mysterious unidentified plant which he calls Audrey II. The plant seems to have a craving for blood and soon begins to sing for its supper.",
+    "tagline": "A singing plant. A daring hero. A sweet girl. A demented dentist. It\u0027s the most outrageous musical comedy in years.",
+    "runtime": 94,
+    "release_date": "1986-12-19",
+    "vote_average": 6.988,
+    "poster_path": "/iKkbN17OmFosaW6asCNZTTsyvpu.jpg",
+    "backdrop_path": "/fsXEz8TgthCawuOe7JMZSGMjaSZ.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Rick Moranis",
+      "character": "Seymour Krelborn",
+      "profile_path": "/e63UZRzHfQT0Nw4VO7nvDt607O.jpg"
+    },
+    {
+      "name": "Ellen Greene",
+      "character": "Audrey",
+      "profile_path": "/nJzE8dS38hxbALr5LZ88BYt8dm0.jpg"
+    },
+    {
+      "name": "Vincent Gardenia",
+      "character": "Mushnik",
+      "profile_path": "/xoJsXDJTNV4MUCqciN3ThcQrPdP.jpg"
+    },
+    {
+      "name": "Levi Stubbs",
+      "character": "Audrey II (voice)",
+      "profile_path": "/jks1kZBTdRA0UxQZCzHdtPII010.jpg"
+    }
+  ]
+}

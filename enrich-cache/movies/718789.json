@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 718789,
+    "title": "Lightyear",
+    "overview": "Legendary Space Ranger Buzz Lightyear embarks on an intergalactic adventure alongside a group of ambitious recruits and his robot companion Sox.",
+    "tagline": "Infinity awaits.",
+    "runtime": 105,
+    "release_date": "2022-06-15",
+    "vote_average": 6.849,
+    "poster_path": "/ox4goZd956BxqJH6iLwhWPL9ct4.jpg",
+    "backdrop_path": "/hwUxHPkuUleJeoick4uZsrKDXxF.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chris Evans",
+      "character": "Buzz Lightyear (voice)",
+      "profile_path": "/3bOGNsHlrswhyW79uvIHH1V43JI.jpg"
+    },
+    {
+      "name": "Keke Palmer",
+      "character": "Izzy Hawthorne (voice)",
+      "profile_path": "/x3eFVQVw4vOCJByLlkBnMMwEnG7.jpg"
+    },
+    {
+      "name": "Peter Sohn",
+      "character": "SOX /Old SOX (voice)",
+      "profile_path": "/8cQGViF2lXlcsAIvFUMWboXYXIu.jpg"
+    },
+    {
+      "name": "Taika Waititi",
+      "character": "Mo Morrison (voice)",
+      "profile_path": "/ww6L2ksfJNMbuiIdDuvVKndUHsv.jpg"
+    }
+  ]
+}

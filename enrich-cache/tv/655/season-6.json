@@ -1,0 +1,216 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Time\u0027s Arrow (2)",
+        "overview": "Stardate: 46001.3. The away team\u0027s investigations are hampered by a nosy Samuel Clemens. Picard discovers that he originally met Guinan in the 1890s on Earth.",
+        "air_date": "1992-09-21",
+        "runtime": 46,
+        "still_path": "/g8iqy5wpAV4ZIYGdJp9sHjQNOf4.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Realm of Fear",
+        "overview": "Stardate: 46041.1. Lt. Barclay\u0027s fear of using transporters is eerily justified when he sees bizarre aliens within the transporter beam.",
+        "air_date": "1992-09-28",
+        "runtime": 46,
+        "still_path": "/da7U7d0FUB2QNkvqZxbAgsl0Ekc.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Man of the People",
+        "overview": "Stardate: 46071.6. Deanna becomes attracted to an alien ambassador. Shortly thereafter, she starts ageing rapidly and starts becoming violent.",
+        "air_date": "1992-10-05",
+        "runtime": 46,
+        "still_path": "/22e7ajBLD3MQQimxKNZrBVirgGk.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Relics",
+        "overview": "Stardate: 46125.3. Montgomery \u0027Scotty\u0027 Scott is discovered suspended in a transporter beam 75 years after he disappeared. After the Enterprise crew re-materialise him, he has a hard time adjusting to the new society.",
+        "air_date": "1992-10-12",
+        "runtime": 46,
+        "still_path": "/oKQYSaACEIY6cMSKlYhc0ykOsR8.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Schisms",
+        "overview": "Stardate: 46154.2. Members of the crew are secretly abducted from the Enterprise to be used in bizarre experiments where they are dismembered and re-assembled without anyone\u0027s knowledge - including their own. The only signs that anything is wrong is a strange form of tiredness and no recollection of having slept well the night before.",
+        "air_date": "1992-10-19",
+        "runtime": 46,
+        "still_path": "/hScW3GrXIHaT3jYNXbk6d6i3Mra.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "True Q",
+        "overview": "Stardate: 46192.3. A young intern visiting the Enterprise captures the interest of Q when she starts displaying Q-like powers.",
+        "air_date": "1992-10-26",
+        "runtime": 46,
+        "still_path": "/aNhrfQPyH0bggWeP4Cz1ngu84r4.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Rascals",
+        "overview": "Stardate: 46235.7. A transporter accident transforms Picard, Ro Laren, Guinan and Keiko O\u0027Brien into small children who appear to be about 12 years old. Matters are complicated when the Ferengi seize the Enterprise.",
+        "air_date": "1992-11-02",
+        "runtime": 46,
+        "still_path": "/8kH9E1XMevAWVgiaM7k0OYM8ZPu.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "A Fistful of Datas",
+        "overview": "Stardate: 46271.5. Worf and his son, Alexander, become trapped in the holodeck when their Wild West program malfunctions. However, they must find a way to defeat the holographic bandits who have Data\u0027s appearance and abilities.",
+        "air_date": "1992-11-09",
+        "runtime": 46,
+        "still_path": "/s5CSgy7ncOLfpR2KifQnqJ0HfSe.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Quality of Life",
+        "overview": "Stardate: 46315.2. Data discovers that the maintenance robots built by Dr. Farallon may have become sentient.",
+        "air_date": "1992-11-16",
+        "runtime": 46,
+        "still_path": "/d38X3XcjKaQtqbZlhbrHWzuGsDx.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Chain of Command (1)",
+        "overview": "Stardate: 46357.4. Picard resigns as Captain of the Enterprise to lead a top-secret espionage mission into Cardassia with Worf and Dr. Crusher.",
+        "air_date": "1992-12-14",
+        "runtime": 45,
+        "still_path": "/vvEeJkAt2Rb4Ax8doGBZoUtgBeF.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Chain of Command (2)",
+        "overview": "Stardate: 46360.8. Picard is captured and tortured by the Cardassians, while Riker tries to prevent a Federation attack on Cardassia.",
+        "air_date": "1992-12-21",
+        "runtime": 45,
+        "still_path": "/hvYWb8wxj25lmid7hdFiPNpCH4b.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Ship in a Bottle",
+        "overview": "Stardate: 46424.1. While performing holodeck maintenance, Barclay accesses the stored hologram of Professor Moriarty, who wreaks havoc on board the Enterprise.",
+        "air_date": "1993-01-25",
+        "runtime": 45,
+        "still_path": "/8Nn4kvqpcIFvgJThpj1z8gdOVHC.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Aquiel",
+        "overview": "Stardate: 46461.3. Geordie falls in love with a lieutenant who is the prime suspect in a murder case.",
+        "air_date": "1993-02-01",
+        "runtime": 45,
+        "still_path": "/hztRr9mGfOxWkquEdeLlgSg2iAy.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Face of the Enemy",
+        "overview": "Stardate: 46519.1. Troi is abducted and surgically altered by the Romulans as part of a ploy to smuggle intelligence operatives into the Federation.",
+        "air_date": "1993-02-08",
+        "runtime": 45,
+        "still_path": "/6Wj3pIR8dX75FPHsQ3KvB7hAdTQ.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Tapestry",
+        "overview": "Stardate: Unknown. A mortally wounded Picard is forced into re-living a time of his life when he was back in Starfleet Academy, with the intervention of Q.",
+        "air_date": "1993-02-15",
+        "runtime": 45,
+        "still_path": "/l4iPwnD7SIVNTnSt8zZBv6LN8GO.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Birthright (1)",
+        "overview": "Stardate: 46578.4. While visiting Deep Space Nine, Worf learns that his father is still alive and being held captive in a secret Romulan prison camp.",
+        "air_date": "1993-02-22",
+        "runtime": 45,
+        "still_path": "/ingvHW7tzEWUEhG312h0iCld2iG.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Birthright (2)",
+        "overview": "Stardate: 46759.2. Worf is captured by the Romulans where he learns why the other captives did not attempt an escape years before.",
+        "air_date": "1993-03-01",
+        "runtime": 45,
+        "still_path": "/oABAgh4LrpOzoxryc9AyzHPFK9q.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Starship Mine",
+        "overview": "Stardate: 46682.4. The crew evacuates the Enterprise when the ship needs to be cleaned of particles that have built up over the ship\u0027s hull. However, Picard accidentally stumbles over a terrorist group who plan on destroying the ship. He only has a short time to stop their attempts before the ship is swept by a beam of radiation to remove the particles that is lethal to all forms of life.",
+        "air_date": "1993-03-29",
+        "runtime": 45,
+        "still_path": "/bleLREDHg50VbxqPRCVBMg9swoT.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Lessons",
+        "overview": "Stardate: 46693.1. Picard must choose between love and command when he must make a decision that could place the woman he loves in a potentially deadly and high-risk mission.",
+        "air_date": "1993-04-05",
+        "runtime": 45,
+        "still_path": "/conZgR5Fc0VfpseLe20QMMQyPbL.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Chase",
+        "overview": "Stardate: 46731.5. Picard\u0027s old archaeology professor is found murdered, the crew try to complete his research. Soon, the crew must compete with Romulans and Klingons and Cardassians to uncover the truth behind his discoveries.",
+        "air_date": "1993-04-26",
+        "runtime": 45,
+        "still_path": "/4ovUqUiXUl12I4JRjyXBUkqADsJ.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Frame of Mind",
+        "overview": "Stardate: 46778.1. Riker questions his sanity when his reality seems to shift between an alien psychiatric hospital and a play he is performing with other members of the crew.",
+        "air_date": "1993-05-03",
+        "runtime": 45,
+        "still_path": "/ziJwtjTE3IuHfcdnnYWzl2CTvz5.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Suspicions",
+        "overview": "Stardate: 46830.1. Dr. Crusher puts her career on the line when she tries to clear the name of a murdered scientist whose invention could allow starships to pass through a sun\u0027s corona.",
+        "air_date": "1993-05-10",
+        "runtime": 45,
+        "still_path": "/sOTJNCuJteOLU7vgMsAavKd5QCi.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Rightful Heir",
+        "overview": "Stardate: 46852.2. While on a quest to summon a vision of Kahless, Worf questions his faith when the real Kahless rises from the dead to lead the Empire.",
+        "air_date": "1993-05-17",
+        "runtime": 45,
+        "still_path": "/wZoda9RvhyeGjIKyElC8XgT1mnM.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Second Chances",
+        "overview": "Stardate: 46915.2. Riker discovers that eight years ago, an exact clone of him was created when he beamed through a planet\u0027s surface while returning to his starship. This clone, named Thomas Riker, has secretly remained on the planet for the past eight years, and still has romantic feelings for Troi.",
+        "air_date": "1993-05-24",
+        "runtime": 45,
+        "still_path": "/tqPV9hFDo8VDMb5ryZPi6ATOT82.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Timescape",
+        "overview": "Stardate: 46944.2. Picard, Geordi, Troi and Data return from a Federation conference to find the Enterprise frozen in time and under attack from a frozen Romulan Warbird.",
+        "air_date": "1993-06-14",
+        "runtime": 45,
+        "still_path": "/sZor4j7NgQVM3VyHuPnr57MBeqx.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Descent (1)",
+        "overview": "Stardate: 46982.1. The Borg return to threaten the Federation under the new leadership of Lore. Data experiences a disturbing facet of human emotions - he feels pleasure after killing a Borg drone.",
+        "air_date": "1993-06-21",
+        "runtime": 45,
+        "still_path": "/nmwhaxcnimcS8rE7vvXWwgb9HSz.jpg"
+      }
+    ]
+  }
+}

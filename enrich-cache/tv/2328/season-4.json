@@ -1,0 +1,408 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "A Zeo Beginning (1)",
+        "overview": "In the rubble of the destroyed Command Center, the Power Rangers find the Zeo Crystal.",
+        "air_date": "1996-04-20",
+        "runtime": 22,
+        "still_path": "/32iOW1a3Z8FN91EQo0cjB1kEhS2.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Zeo Beginning (2)",
+        "overview": "The Rangers face their greatest challenge as Zordon explains that King Mondo is preparing to invade the Solar System, his final link in a chain of galaxies he already controls.",
+        "air_date": "1996-04-23",
+        "runtime": 22,
+        "still_path": "/vG1yVo0kpLcVbpGHMMcw0R4wfH8.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Shooting Star",
+        "overview": "When Mondo and Machina unleash the Staroid on the Zeo Rangers, they are forced to call on their untested Zeo Zords.",
+        "air_date": "1996-04-24",
+        "runtime": 22,
+        "still_path": "/rcVK3BDSjtPq2vwzqIiBvZefKgd.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Target Rangers",
+        "overview": "The computer software that Rocky, and his new friend Jennifer are working on, is stolen by the Cogs and used against the Rangers.",
+        "air_date": "1996-04-25",
+        "runtime": 22,
+        "still_path": "/abnoCl1zKodWjkEJHl7oR6Mvs9K.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "For Cryin\u0027 Out Loud",
+        "overview": "Tommy and Katherine take care of a baby for a school assignment giving King Mondo an idea for his evil ambitions.",
+        "air_date": "1996-04-27",
+        "runtime": 22,
+        "still_path": "/uw2zoI5UG1ytRauYg5Hr1F51QSz.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Rangers in the Outfield",
+        "overview": "The teens\u0027 baseball team provides the perfect outlet for Prince Sprocket to do battle with the Rangers when he turns their batting machine into the People Pitcher.",
+        "air_date": "1996-04-29",
+        "runtime": 22,
+        "still_path": "/jpRkeGzhQjt8vFryLkYSQihxmSm.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Every Dog Has His Day",
+        "overview": "Smokey, a specially trained dog, aids the Zeo Rangers in fighting Digster, Mondo and Machina\u0027s latest monster.",
+        "air_date": "1996-04-30",
+        "runtime": 22,
+        "still_path": "/zAyjq3T8GPncwfMUtm7AtwDZ00u.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Puppet Blaster",
+        "overview": "When Ernie brings a puppet show to the Youth Center to entertain the children of Angel Grove, Mondo and Machina hatch a plan to control the children\u0027s minds, by planting a transmitter on the Puppet Man.",
+        "air_date": "1996-05-01",
+        "runtime": 22,
+        "still_path": "/dvLRQL6ffCpk9DYfHOh7DDM9cS2.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Invasion of the Ranger Snatchers",
+        "overview": "Prince Sprocket recruits the Rangers to be in his own twisted movie; \u0022Invasion of the Ranger Snatchers.\u0022",
+        "air_date": "1996-05-02",
+        "runtime": 22,
+        "still_path": "/oUunMSYkbu0VR1N9dmD4JIjtYg1.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Graduation Blues",
+        "overview": "As Billy learns he has accumulated enough credits to graduate from Angel Grove High, Cestro, the Blue Alien Ranger, lands on Earth seeking Billy\u0027s help.",
+        "air_date": "1996-05-04",
+        "runtime": 22,
+        "still_path": "/pujLvyyylgZFmyxeEY7LPEokzyQ.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "A Few Bad Seeds",
+        "overview": "As Rocky and Adam work on developing hybrid plants for Botany class, Rocky\u0027s plant exhibits weird behavior, growing rapidly and developing an appetite for metal.",
+        "air_date": "1996-05-06",
+        "runtime": 22,
+        "still_path": "/9gKjpHffNX4UWWYphKWnC0UCR9a.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Instrument of Destruction",
+        "overview": "A mysterious musician in Angel Grove High is pursued by Prince Sprocket and King Mondo.",
+        "air_date": "1996-05-07",
+        "runtime": 22,
+        "still_path": "/8p9xHxNv30UP12PstRGnbuh4rxz.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Mean Screen",
+        "overview": "Tanya and Adam are exploring the new world of cyberspace with the help of Raymond, a computer whiz, at school. When they run into a computer virus, Mondo gets the idea to create Mean Screen, a horrible computer monster that will infect all of the computers in Angel Grove.",
+        "air_date": "1996-05-08",
+        "runtime": 22,
+        "still_path": "/zltrszaYbFV3RBKa9RV7Wiba6ZB.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Mr. Billy\u0027s Wild Ride",
+        "overview": "As Billy is returning from Aquitar in a space capsule, Machina and Mondo attack his space craft, sending it into the gravitational pull of the Machine Skybase.",
+        "air_date": "1996-05-11",
+        "runtime": 22,
+        "still_path": "/rwbjSgEIFESpAtqOqBr1B7jkwp7.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "There\u0027s No Business Like Snow Business (1)",
+        "overview": "Tommy receives a \u0022Dear John\u0022 letter.",
+        "air_date": "1996-05-13",
+        "runtime": 22,
+        "still_path": "/jv0QHXRdZMlweTdrvnzq8wgXqde.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "There\u0027s No Business Like Snow Business (2)",
+        "overview": "Mondo and Machina send the Defoliator to create a greenhouse effect in Angel Grove.",
+        "air_date": "1996-05-14",
+        "runtime": 22,
+        "still_path": "/pmFOBnmzqJKSwAvlyJSEsaZ3jmY.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "There\u0027s No Business Like Snow Business (3)",
+        "overview": "As Katherine tries to console Tommy about his \u0022Dear John\u0022 letter from Kimberly, a spark of attraction begins to form between the two Rangers.",
+        "air_date": "1996-05-15",
+        "runtime": 22,
+        "still_path": "/nXUBLb5ccGekrDsIl57MLT4QNMi.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Inner Spirit",
+        "overview": "On a journey to find True of Heart, Tommy comes upon the incredible discovery of a young man who looks just like him.",
+        "air_date": "1996-05-16",
+        "runtime": 22,
+        "still_path": "/7FRk0FlFSXnk51a9KzhkhwxgQJr.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Challenges",
+        "overview": "Searching for the other half of an arrowhead, Tommy discovers its owner is his brother.",
+        "air_date": "1996-05-18",
+        "runtime": 22,
+        "still_path": "/rT2S3hT4d7pp7SO7Lvh63eKhbo0.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Found and Lost",
+        "overview": "Having kidnapped Tommy\u0027s newfound brother David, King Mondo blackmails Tommy into giving up his half of the arrowhead, in order to set David free.",
+        "air_date": "1996-05-20",
+        "runtime": 22,
+        "still_path": "/ztaGlMhSdGzOcLKRKobXCSnOaSj.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Brother, Can You Spare an Arrowhead?",
+        "overview": "Now that he has both halves of the arrowhead, King Mondo vows to destroy the Zeo Rangers, while continuing to refuse the release of Tommy\u0027s brother.",
+        "air_date": "1996-09-09",
+        "runtime": 22,
+        "still_path": "/g1hWIv6hkAbl5Fl9Txh6HSPSqal.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Trust in Me",
+        "overview": "King Mondo sends down the Defector robot to trick the Zeo Rangers into gaining their trust, and thereby able to destroy them.",
+        "air_date": "1996-09-10",
+        "runtime": 22,
+        "still_path": "/7hfLgKAUoFPnpTw7OD0xesjlapv.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "It Came from Angel Grove",
+        "overview": "Adam experiences a nightmarish scenario when the Machine Empire invades Earth overnight and transforms many of Adam\u0027s friends into sinister scientists, werewolves, and dark forces.",
+        "air_date": "1996-09-11",
+        "runtime": 22,
+        "still_path": "/y9y0ThdEcSnIqhzaiJU6z0JihLp.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Bulk Fiction",
+        "overview": "Bulk\u0027s infatuation with the daughter of a high ranking officer soon puts both his, Skull\u0027s, and Lt. Stone\u0027s careers in jeopardy.",
+        "air_date": "1996-09-12",
+        "runtime": 22,
+        "still_path": "/zM0e7sXrJMPnS6qFL9aW0pRLFal.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Song Sung Yellow",
+        "overview": "Tanya\u0027s potential new singing career divides her time between fulfilling an ambition and serving as a Ranger",
+        "air_date": "1996-09-13",
+        "runtime": 22,
+        "still_path": "/2P36aGEm4s2zfaJ0pLVwMJTVhnu.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Game of Honor",
+        "overview": "King Mondo attempts to rule the Earth\u0027s waterways by building a fleet of ships under an invisible field.",
+        "air_date": "1996-09-16",
+        "runtime": 22,
+        "still_path": "/Af8Lqaaf8NhMvZQRZfWeeniH8mi.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "The Power of Gold",
+        "overview": "King Mondo\u0027s plan to divide and conquer the Zeo Rangers is spoiled by the appearance of the Gold Ranger.",
+        "air_date": "1996-09-17",
+        "runtime": 22,
+        "still_path": "/524WN0DMlG1Y4zeGFW8lwqi31Ml.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "A Small Problem",
+        "overview": "The other Rangers must find a way to help their friends when Prince Sprocket shrinks Tommy and Katherine and places them in a terrarium with a hungry spider.",
+        "air_date": "1996-09-19",
+        "runtime": 22,
+        "still_path": "/2wIPsHx0bcRgUe2jDZkFuM7KBVV.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Oily to Bed, Oily to Rise",
+        "overview": "Katherine competes in a surfing competition, but faces danger when the Leaky Faucet monster puts toxic Cog oil in all the water in Angel Grove.",
+        "air_date": "1996-09-20",
+        "runtime": 22,
+        "still_path": "/uoSYfKLbZBsTvQ5wISOoChRxoGs.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Rock-a-Bye Power Rangers",
+        "overview": "The Somnibot casts a sleeping spell on the people of Angel Grove, leaving it to the Gold Ranger to break the spell.",
+        "air_date": "1996-09-23",
+        "runtime": 22,
+        "still_path": "/c3tcRbCza8emLvyBjgu5MFxfFQf.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Do I Know You?",
+        "overview": "The Gold Ranger finds asylum in the Power Chamber from the evil Mondo, Machina, and the Varox bounty hunter.",
+        "air_date": "1996-09-27",
+        "runtime": 22,
+        "still_path": "/eYy2zOHcZr9jzr54IKpAl1F6BN9.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Revelations of Gold",
+        "overview": "When the Gold Ranger is attacked by Varox Bounty Hunters, Pyramidas is hit, and falls into the seas of the planet Aquitar.",
+        "air_date": "1996-10-03",
+        "runtime": 22,
+        "still_path": "/oqVqWedJ7twTcAiUFtGDUq9aOeT.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "A Golden Homecoming",
+        "overview": "Time is running out for transference of the Golden Powers.",
+        "air_date": "1996-10-04",
+        "runtime": 22,
+        "still_path": "/qdCTi10F3jJDJBDjW2ZxlotEgwc.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Mondo\u0027s Last Stand",
+        "overview": "King Mondo is determined to use the Damocles Sword to destroy the Zeo Rangers.",
+        "air_date": "1996-10-09",
+        "runtime": 22,
+        "still_path": "/9XArOu0P0f4M3jylkV66fwB4DBt.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Bomber in the Summer",
+        "overview": "The teens are helping Ernie set up for his new Beach Club when a group of tough teens ride in and begin to trash the place.",
+        "air_date": "1996-10-11",
+        "runtime": 22,
+        "still_path": "/3ke4q3dtBiX8cNpUaS2xSOPwTvz.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "Scent of a Weasel",
+        "overview": "The teens are involved in a charity fashion show for the famous designer, Mr. Stenchy.",
+        "air_date": "1996-10-23",
+        "runtime": 22,
+        "still_path": "/vtzNUwxJCsM7rjy4hHTdUFaxE9D.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "The Lore of Auric",
+        "overview": "Aisha sends Tanya a map of Mysterio Island, the island on which Tanya suspects her parents have been missing for years.",
+        "air_date": "1996-10-25",
+        "runtime": 22,
+        "still_path": "/ujCntExugJvAxx2wqtTND3B9xyi.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "The Ranger Who Came in from the Gold",
+        "overview": "When Katherine stages a ballet about King Midas, Louie Kaboom creates the Midas Hound, an idol that changes everything into gold.",
+        "air_date": "1996-10-31",
+        "runtime": 22,
+        "still_path": "/9kULj779qvMwy9eQNn5p3EyF43V.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "The Joke\u0027s on Blue",
+        "overview": "A practical joker wrecks havoc on Angel Grove High. While Bulk and Skull try to track down the trickster, Prince Sprocket\u0027s brother, Prince Gasket and sister-in-law, Archerina, arrive with a few new tricks of their own!",
+        "air_date": "1996-11-05",
+        "runtime": 22,
+        "still_path": "/sXorBE5SWWcPa7ZYFh3T8Jl7Pqy.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "Where In The World is Zeo Ranger 5?",
+        "overview": "While jet skiing on the lake, Tommy is mysteriously disappears.",
+        "air_date": "1996-11-06",
+        "runtime": 22,
+        "still_path": "/xvEB0r0a7MOi6iRHyZ9UNqnDBs0.jpg"
+      },
+      {
+        "episode_number": 41,
+        "name": "King for a Day (1)",
+        "overview": "The Zeo Rangers discover that Tommy has been captured by Prince Gasket, and placed in a large arena with monsters battling one another.",
+        "air_date": "1996-11-07",
+        "runtime": 22,
+        "still_path": "/5JMDngIqbLZ1zIJVrlP48BhKk3k.jpg"
+      },
+      {
+        "episode_number": 42,
+        "name": "King for a Day (2)",
+        "overview": "The Gold Ranger is forced to defend himself when the brainwashed Tommy attacks him.",
+        "air_date": "1996-11-08",
+        "runtime": 22,
+        "still_path": "/82oU82Ut3StcS6HkYO99yPtF9IB.jpg"
+      },
+      {
+        "episode_number": 43,
+        "name": "A Brief Mystery of Time",
+        "overview": "Tommy is confused when he keeps reliving experiences of the day over and over.",
+        "air_date": "1996-11-11",
+        "runtime": 22,
+        "still_path": "/gpIDP20rsxS6I4c7i3ZDXwW2Sx8.jpg"
+      },
+      {
+        "episode_number": 44,
+        "name": "A Mystery to Me",
+        "overview": "The teens all dress in classic mystery character costumes when they participate in a charity dinner organized by Detective Stone.",
+        "air_date": "1996-11-14",
+        "runtime": 22,
+        "still_path": "/rYNlh3HtelsARCafhMSJbsK4GCt.jpg"
+      },
+      {
+        "episode_number": 45,
+        "name": "Another Song and Dance",
+        "overview": "Tommy asks Tanya for voice lessons when he has to sing in front of the class.",
+        "air_date": "1996-11-15",
+        "runtime": 22,
+        "still_path": "/uRgWppdMT4DZSiqlqxJojsoGarZ.jpg"
+      },
+      {
+        "episode_number": 46,
+        "name": "Rangers of Two Worlds (1)",
+        "overview": "Everyone is stunned when it is revealed that Billy has aged into an old man.",
+        "air_date": "1996-11-20",
+        "runtime": 22,
+        "still_path": "/vDyWRnSjLG3qMJRdygSo5wjOCXa.jpg"
+      },
+      {
+        "episode_number": 47,
+        "name": "Rangers of Two Worlds (2)",
+        "overview": "The Power Rangers Zeo team up with the Alien Rangers of Aquitar to combat a double threat from King Mondo and Lord Zedd.",
+        "air_date": "1996-11-21",
+        "runtime": 22,
+        "still_path": "/cmEwCwh3mog9sOAFDTv0pKPoH2w.jpg"
+      },
+      {
+        "episode_number": 48,
+        "name": "Hawaii Zeo",
+        "overview": "The golden powers start to fade from Jason.",
+        "air_date": "1996-11-22",
+        "runtime": 22,
+        "still_path": "/kFmCVzuL55EzaZMw3rBYIeAjYup.jpg"
+      },
+      {
+        "episode_number": 49,
+        "name": "Good as Gold",
+        "overview": "Jason, who is continuing to lose the golden powers, is confronted by Rita and Lord Zedd.",
+        "air_date": "1996-11-23",
+        "runtime": 22,
+        "still_path": "/1Y0xiDDYJAAJir5LUWYU5orRSEc.jpg"
+      },
+      {
+        "episode_number": 50,
+        "name": "A Season to Remember",
+        "overview": "The Rangers, together with their friend Raymond, help Ernie set up for a multicultural holiday banquet, and in the process learn how different cultures celebrate the holidays.",
+        "air_date": "1996-11-27",
+        "runtime": 22,
+        "still_path": "/w9sjJkEjFfCWpByVACfSkTnF5qg.jpg"
+      }
+    ]
+  }
+}

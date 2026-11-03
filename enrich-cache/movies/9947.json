@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9947,
+    "title": "Elektra",
+    "overview": "Elektra the warrior survives a near-death experience, becomes an assassin-for-hire, and tries to protect her two latest targets, a single father and his young daughter, from a group of supernatural assassins.",
+    "tagline": "Looks CAN kill.",
+    "runtime": 97,
+    "release_date": "2005-01-13",
+    "vote_average": 5.05,
+    "poster_path": "/Z4dAOxjAHTUZO6DJ2WVAsxzwe3.jpg",
+    "backdrop_path": "/kRpokiyfzyQHkQ0meMmvqPzQXnj.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jennifer Garner",
+      "character": "Elektra",
+      "profile_path": "/eiX083VOa0RCGSgwENZgVi5MgDi.jpg"
+    },
+    {
+      "name": "Kirsten Zien",
+      "character": "Abby",
+      "profile_path": "/eQZtLsjTxfQx8ikPCLXeWDzPUFd.jpg"
+    },
+    {
+      "name": "Goran Vi\u0161nji\u0107",
+      "character": "Mark",
+      "profile_path": "/2jFpq46QPjCbRmmGYdW9WSVC47W.jpg"
+    },
+    {
+      "name": "Will Yun Lee",
+      "character": "Kirigi",
+      "profile_path": "/zR29E2BHrp6PF7bxD6bVq0nDZXm.jpg"
+    }
+  ]
+}

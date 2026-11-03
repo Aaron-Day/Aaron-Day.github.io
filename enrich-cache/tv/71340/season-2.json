@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Light-Years from Home",
+        "overview": "Seg-El is stranded far from home, where his grandfather leads a rebellion against General Zod.",
+        "air_date": "2019-06-12",
+        "runtime": 42,
+        "still_path": "/7FTsMhumQB4XGZh6sipsEIxPzPP.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Ghost in the Fire",
+        "overview": "Adam Strange and Seg evade a bounty hunter, while General Zod uses Nyssa to further his cause.",
+        "air_date": "2019-06-19",
+        "runtime": 41,
+        "still_path": "/awI0nBAezDhxzBBFbOG74TQ5y8J.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Will to Power",
+        "overview": "The Rebels gain advantage against General Zod, as Seg goes head-to-head with Brianiac.",
+        "air_date": "2019-06-26",
+        "runtime": 44,
+        "still_path": "/zhD4vjr87a2ARGlGubUmg5HNih4.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Danger Close",
+        "overview": "Seg and Adam return to a very different Kandor. Val and his Rebels prepare a major offensive.",
+        "air_date": "2019-07-03",
+        "runtime": 43,
+        "still_path": "/vHjstBKs6VVfc5PxXh1tC2GdYHq.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "A Better Yesterday",
+        "overview": "Amidst a hostage negotiation that could end the war on Krypton, Seg seeks answers about Lyta.",
+        "air_date": "2019-07-10",
+        "runtime": 42,
+        "still_path": "/7VSQ5JHm0HpWG1BLbjkmBnxc3VP.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "In Zod We Trust",
+        "overview": "In the wake of tragedy, Seg helps Nyssa rescue their son. Alliances on Wegthor fracture.",
+        "air_date": "2019-07-17",
+        "runtime": 44,
+        "still_path": "/dd2NlTNDp4wx24eXGyyTfH3hrYg.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Zods and Monsters",
+        "overview": "General Zod pushes for control of a dominating weapon. Seg and Nyssa fight to save Seg\u0027s life.",
+        "air_date": "2019-07-24",
+        "runtime": 44,
+        "still_path": "/bfTJCLlcvoAGroA0hSnCIf1GSk6.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Mercy",
+        "overview": "Dev and Jayna help Seg and Nyssa target General Zod\u0027s fleet, when they make a shocking discovery.",
+        "air_date": "2019-07-31",
+        "runtime": 43,
+        "still_path": "/oALZLHqyQ3Dxuj058WVxjuyk4Vm.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Blood Moon",
+        "overview": "Zod brings Doomsday to heel and unleashes him on the Rebels, and Seg, Val, and Kem fight a last-ditch battle to hold the creature back while their compatriots escape.",
+        "air_date": "2019-08-07",
+        "runtime": 44,
+        "still_path": "/emeCxiJG6MWiIW7f5c8CgglqCpw.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Alpha and the Omega",
+        "overview": "The future of Krypton is at stake as Seg faces off against his enemy, General Zod, with the help of his allies.",
+        "air_date": "2019-08-14",
+        "runtime": 42,
+        "still_path": "/8ToEvGk6zkfBxJgn6gNh0oxAy9m.jpg"
+      }
+    ]
+  }
+}

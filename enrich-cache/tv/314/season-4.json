@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Storm Front (1)",
+        "overview": "Archer and the NX-01 find themselves in Earth\u0027s past, with events of World War II altered by the Temporal Cold War.",
+        "air_date": "2004-10-08",
+        "runtime": 43,
+        "still_path": "/jg2uE3OkURrjKywB0Bys5h9r5Nu.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Storm Front (2)",
+        "overview": "With Silik\u0027s help, Archer hones in on the temporal operative who altered Earth\u0027s past and threatens to destroy all of time.",
+        "air_date": "2004-10-15",
+        "runtime": 43,
+        "still_path": "/77AzoFIR8xW7ie5Rf7qsCT3QVsW.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Home",
+        "overview": "Once the NX-01 finally returns to Earth, the weary crewmen face repercussions of their journeys, both positive and negative.",
+        "air_date": "2004-10-22",
+        "runtime": 43,
+        "still_path": "/sFpWwimrV9XAC26MGcIJnrV8C1V.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Borderland (1)",
+        "overview": "When genetic supermen left over from the Eugenics Wars hijack a Klingon ship, Archer must rely on their creator, the criminal Dr. Arik Soong, to help hunt them down.",
+        "air_date": "2004-10-29",
+        "runtime": 43,
+        "still_path": "/e66oZWwpGwPoecTfTdp4oS0w9M2.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Cold Station 12 (2)",
+        "overview": "Arik Soong leads his band of Augments to a medical facility where hundreds of genetically enhanced embryos are still stored, intending to retrieve them and bring them to life.",
+        "air_date": "2004-11-05",
+        "runtime": 43,
+        "still_path": "/baDg83U5qG8OyTCTI9H8qXAWx91.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Augments (3)",
+        "overview": "In defiance of their \u0022father,\u0022 Arik Soong\u0027s Augments devise a heinous plot against the Klingons which will surely lead to interstellar war.",
+        "air_date": "2004-11-12",
+        "runtime": 43,
+        "still_path": "/ziTaFZZP4tp4t4XLsrGXaztj8X0.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Forge (1)",
+        "overview": "Earth\u0027s embassy on Vulcan is bombed, and the ensuing investigation puts Archer and T\u0027Pol on the trail of a Vulcan religious faction hiding in a treacherous desert.",
+        "air_date": "2004-11-19",
+        "runtime": 43,
+        "still_path": "/9wBKvORqHHMH0bhdHlbwkczcjdj.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Awakening (2)",
+        "overview": "Archer and T\u0027Pol encounter the Syrrannites, a radical group hiding in the Vulcan desert, while the NX-01 crew contends with Vulcan power ploys.",
+        "air_date": "2004-11-26",
+        "runtime": 43,
+        "still_path": "/382UEO9RDwL7M2gvxCDHZiwzAqn.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Kir\u0027Shara (3)",
+        "overview": "Archer, T\u0027Pol and T\u0027Pau attempt to bring the Kir\u0027Shara \u2014 an artifact believed to contain Surak\u0027s original writings \u2014 to the Vulcan capital, as the NX-01 gets involved in a Vulcan-Andorian military clash.",
+        "air_date": "2004-12-03",
+        "runtime": 43,
+        "still_path": "/6S9xhP664GriwjzV3gJYws0RgJD.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Daedalus",
+        "overview": "The inventor of the transporter, Emory Erickson, comes aboard Enterprise for a risky experiment.",
+        "air_date": "2005-01-14",
+        "runtime": 43,
+        "still_path": "/wCBKaKeEI0Rdd22vM9vLSkSGm89.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Observer Effect",
+        "overview": "Non corporeal aliens study the Enterprise crew as they respond to a fatal viral infection brought on board from an away mission.",
+        "air_date": "2005-01-21",
+        "runtime": 43,
+        "still_path": "/1wlvbseo5oZwgjAk8zdt6MOw5ee.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Babel One (1)",
+        "overview": "Enterprise journeys to Babel with a Tellarite ambassador on board for peace talks with the Andorians, when a distress call from Shran is received.",
+        "air_date": "2005-01-28",
+        "runtime": 43,
+        "still_path": "/kWCMDMm2F7Iy6mshVoWcn1nclC0.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "United (2)",
+        "overview": "Archer tries to unify the Andorians, Tellarites and Vulcans in a plan to capture a marauder ship threatening to destabilize the region.",
+        "air_date": "2005-02-04",
+        "runtime": 43,
+        "still_path": "/bQIZqCSnTR3UolWghOsXb8Whdee.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Aenar (3)",
+        "overview": "Archer visits Shran\u0027s icy homeworld to find an Andorian subspecies called the Aenar, to determine their connection to the marauder destroying ships in the region.",
+        "air_date": "2005-02-11",
+        "runtime": 43,
+        "still_path": "/tjxxsY70ILRI9n8wKglTmHGLdxh.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Affliction (1)",
+        "overview": "While Enterprise visits Earth for the launch of Columbia, Phlox is kidnapped and forced to help the Klingons deal with a grave threat toward their species.",
+        "air_date": "2005-02-18",
+        "runtime": 43,
+        "still_path": "/j13HyqmBHFdbjHHtNCQ7VKQ8bNK.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Divergence (2)",
+        "overview": "With Columbia\u0027s help, the Enterprise crew grapples with sabotage to their ship as they pursue the truth behind the kidnapping of Phlox.",
+        "air_date": "2005-02-25",
+        "runtime": 43,
+        "still_path": "/cqhFGDsggsMNxH9gAKjBudiyHFB.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Bound",
+        "overview": "As a gift for negotiating with the Orion Syndicate, Captain Archer receives three Orion Slave Girls.",
+        "air_date": "2005-04-15",
+        "runtime": 43,
+        "still_path": "/18ABm7O0VNwqS5ucKNFx6WEgIMC.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "In a Mirror, Darkly (1)",
+        "overview": "In the mirror universe, Commander Archer mutinies against Captain Forrest in order to capture a future Earth ship found in Tholian space.",
+        "air_date": "2005-04-22",
+        "runtime": 43,
+        "still_path": "/xiNUlVsmnGSVOEUGgwD80TteQLa.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "In a Mirror, Darkly (2)",
+        "overview": "In the mirror universe, Archer commandeers the 23rd-century Defiant from the Tholians and uses it in a nefarious power grab.",
+        "air_date": "2005-04-29",
+        "runtime": 43,
+        "still_path": "/gQlZdrxlcFDMO1Si9JVC8bf9GH7.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Demons (1)",
+        "overview": "A xenophobic faction of humanity threatens to undermine talks to form a new coalition of planets.",
+        "air_date": "2005-05-06",
+        "runtime": 43,
+        "still_path": "/rJkkG79rK6JqujJjhFpi94pR921.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Terra Prime (2)",
+        "overview": "A human isolationist leader threatens to destroy Starfleet Command unless all aliens leave Earth immediately.",
+        "air_date": "2005-05-13",
+        "runtime": 43,
+        "still_path": "/net4A6vOGfh1ps6Whd1JLTmSezz.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "These Are the Voyages...",
+        "overview": "Six years in the future, an emotional Captain Archer and the crew return to Earth to face the decommission of Enterprise and signing of the Federation charter.",
+        "air_date": "2005-05-13",
+        "runtime": 43,
+        "still_path": "/hF5fwKvh9YdAEW1lx1hU3FXFR6e.jpg"
+      }
+    ]
+  }
+}

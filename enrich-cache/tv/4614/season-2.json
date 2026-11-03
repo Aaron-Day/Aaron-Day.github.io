@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "See No Evil",
+        "overview": "The wife and nine-year-old blind daughter of a Navy captain are kidnapped and the captain is a hostage in his own office, communicating with the kidnapper, who watches his every step via computer camera.",
+        "air_date": "2004-09-28",
+        "runtime": 44,
+        "still_path": "/gjTeJvwTMswAVVl4U5TFA98gP3B.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Good Wives Club",
+        "overview": "A mummified remains of a woman are found in an abandoned compound. The team discover that the woman was missing for several months, was wearing a wedding dress when she died, and might have been a victim of a serial killer.",
+        "air_date": "2004-10-05",
+        "runtime": 43,
+        "still_path": "/sQwwwpSY1Ub8XQ5H88X6tpgQsIN.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Vanished",
+        "overview": "The NCIS team are called in to investigate when a perfectly functioning Marine helicopter is found in the middle of a crop circle.",
+        "air_date": "2004-10-12",
+        "runtime": 44,
+        "still_path": "/ApdYPp0gz0VM31WaiLJEocDSbWx.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Lt. Jane Doe",
+        "overview": "A body of a woman in a Navy uniform is found by two sailors. Ducky links the murder to an unsolved case from ten years ago, and the team searches for a serial killer who left a note promising to return.",
+        "air_date": "2004-10-19",
+        "runtime": 44,
+        "still_path": "/7CyBcg8FCg5shib7KHSthWqUBkw.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Bone Yard",
+        "overview": "NCIS discover that an area in a Marine\u0027s bombing range is where mafia has been dumping bodies for a while. One of the victims is an undercover FBI agent. The team set out to find a mole.",
+        "air_date": "2004-10-26",
+        "runtime": 44,
+        "still_path": "/7tDvEftJeEwt9MeumZc0vm3SWdy.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Terminal Leave",
+        "overview": "The team must protect an Iraq veteran due to the threats made by terrorists. While trying to convince FBI Agent Lina Reyes to help them, the team are convinced that they have discovered the bomber.",
+        "air_date": "2004-11-16",
+        "runtime": 44,
+        "still_path": "/so10ph6K6aRJUthkfkbXe45pcwT.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Call of Silence",
+        "overview": "Ernie Yost, an elder Marine veteran confesses to murdering his best friend almost 60 years ago in a war battle. The NCIS\u0027s job is to solve the secrets and save Ernie from prison.",
+        "air_date": "2004-11-23",
+        "runtime": 44,
+        "still_path": "/8C7cRkddKHH09KTL2laSWMkyOSz.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Heart Break",
+        "overview": "A strange case for Gibbs and his team opens when a Navy Commander dies after successful surgery. While researching the commander\u0027s past, the team find out that he collected a lot of enemies lately.",
+        "air_date": "2004-11-30",
+        "runtime": 43,
+        "still_path": "/lgjPo9T9vaMKpiqpk6RlMNhYMqx.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Forced Entry",
+        "overview": "Laura Rowen, a Marine\u0027s wife, shoots an intruder in self defense when he is about to rape her. The team take on the case and find out that the wife is leading a double life while her husband is serving overseas.",
+        "air_date": "2004-12-07",
+        "runtime": 44,
+        "still_path": "/xD70qaFE4TgVAJ3YmdDhpfDdoPl.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Chained",
+        "overview": "Tony disappears while doing an undercover operation as an escaped prisoner who is forced to stick to a convict that owns a key to an expensive ancient Iraqi sculpture. The GPS locator that Abby planted on Tony stops working and the team are forced to find Tony before he gets murdered by the thief.",
+        "air_date": "2004-12-14",
+        "runtime": 44,
+        "still_path": "/3BbSjk60XEwczP5xxmMCRW8X8b1.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Black Water",
+        "overview": "A dead body of a two-year-missing Navy officer appears on the bottom of a lake. The team investigate the case with a help of a private detective.",
+        "air_date": "2005-01-11",
+        "runtime": 43,
+        "still_path": "/sW05qHzN9BlLg3dZIJmkNoS0T2D.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Doppelg\u00E4nger",
+        "overview": "The team take on another strange case when a telemarketer reports a possible murder of a Petty Officer who appeared to be dying over the phone.",
+        "air_date": "2005-01-18",
+        "runtime": 46,
+        "still_path": "/a0Z2fYv7gmflLmkZXyB2Epf8o1i.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Meat Puzzle",
+        "overview": "A \u0022meat puzzle\u0022 starts when Ducky identifies the pieces of three bodies that were stuffed inside a barrel a few months ago. They turn out to be bodies of a judge, prosecutor, and jury foreman that worked with Ducky on a rape case ten years ago.",
+        "air_date": "2005-02-08",
+        "runtime": 43,
+        "still_path": "/yyIPwElKKSUweoyBuM3uJqbGndW.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Witness",
+        "overview": "Erin Kendall claims to have seen a murder of a sailor in an apartment across from hers. Gibbs assigns the case to McGee who believes that he can resolve it himself. However, due to the lack of physical evidence, McGee turns to the team to help him.",
+        "air_date": "2005-02-15",
+        "runtime": 44,
+        "still_path": "/bbfB1vwVUieWwjdQhkRfGUtdlJX.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Caught on Tape",
+        "overview": "The team take on a case of a dead Marine who recorded his death while falling off a cliff. The prime suspects are his wife and his best friend with whom he had a picnic in the camp. Gibbs finds out they had an affair behind the dead man\u0027s back.",
+        "air_date": "2005-02-22",
+        "runtime": 43,
+        "still_path": "/1ZewCCBAfmkT2j5m1LI1VkRUEZK.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Pop Life",
+        "overview": "NCIS start an investigation after Petty Officer Manda King is found dead in a bartender\u0027s bed. The suspect is the owner of a competing club where Manda\u0027s sister sings.",
+        "air_date": "2005-03-01",
+        "runtime": 44,
+        "still_path": "/uqGuvrr9wybB7drNyScSxqUcOzQ.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "An Eye for an Eye",
+        "overview": "When a sailor officer receives a pair of blue eyeballs, the NCIS team start investigating the case. Gibbs traces an ex-Navy agent that does illegal work.",
+        "air_date": "2005-03-22",
+        "runtime": 44,
+        "still_path": "/oUbSj4HxGZF0KptgrvJ6jBYphOa.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Bikini Wax",
+        "overview": "A Petty Officer that just returned to her job is found dead in the backstage of a bikini contest. The team find out that she possibly had a stalker behind her back.",
+        "air_date": "2005-03-29",
+        "runtime": 44,
+        "still_path": "/1hSf8FGTPthQvzQMg3Y6eimhP4s.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Conspiracy Theory",
+        "overview": "The team investigate a suicide case, believing that the main reason of her death is a nervous breakdown, but Ducky believes that she was actually murdered. FBI Special Agent Fornell helps them in the investigation. The team discover that the dead woman was involved in a love triangle and that this may have contributed to her death.",
+        "air_date": "2005-04-12",
+        "runtime": 44,
+        "still_path": "/h65f50UXgdNgVVB66qvveqMztJq.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Red Cell",
+        "overview": "After a Marine is murdered in a school campus the team discover a possible suspect for his murder, but they soon find the suspect murdered. Tim and Abby discover a trace to a \u0022Red Cell\u0022 in the e-mails and the team believe that maybe the Marine was involved in a serious game.",
+        "air_date": "2005-04-26",
+        "runtime": 44,
+        "still_path": "/7Zliz7GH1nRyHlZCUrHP9fBHPvo.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Hometown Hero",
+        "overview": "A young Marine is killed in Iraq, but he was investigated by police for a murder on a young girl in his hometown. While going through his personal belongings, they find the body of that girl. The local police believe that the corpsman murdered the girl, but Gibbs believes that he is innocent and he will try to prove it with a help of Faith Coleman.",
+        "air_date": "2005-05-03",
+        "runtime": 44,
+        "still_path": "/iNt3dUzNfeFtBdr0tDDtwKs71By.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "SWAK",
+        "overview": "When Tony opens a mysterious letter thinking it\u0027s for him, a small puff of white powder comes out and releases a possible deadly virus. Soon Kate and Tony are isolated in a bio-hazard isolation room for precaution. McGee and Gibbs work to discover who sent the envelope and how to cure their friends before it\u0027s too late for them.",
+        "air_date": "2005-05-10",
+        "runtime": 44,
+        "still_path": "/punKgjb9wVVtRV0CeBzgv8yGw8M.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Twilight",
+        "overview": "A group of serial terrorists seek revenge and send Ari on an assignment to kill Gibbs. The NCIS team go on a hunt after him, but when they discover that Ari has a bigger plan, it is already too late.",
+        "air_date": "2005-05-24",
+        "runtime": 43,
+        "still_path": "/bWwesh80czKzQaKulIP3CUcy5RT.jpg"
+      }
+    ]
+  }
+}

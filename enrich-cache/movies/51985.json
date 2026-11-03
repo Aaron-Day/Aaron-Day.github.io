@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 51985,
+    "title": "An All Dogs Christmas Carol",
+    "overview": "Charlie, Itchy and Sasha itch and scratch their way through everything and anything in an effort to save Christmas from the wicked hellhound Belladonna, who wants to use dogs from all over the world to ruin Christmas.",
+    "tagline": "",
+    "runtime": 73,
+    "release_date": "1998-11-17",
+    "vote_average": 6.134,
+    "poster_path": "/7J8qq1O1kAjVdpDJnxuzNC5tH3H.jpg",
+    "backdrop_path": "/1Tuy9DTLarq5lCPqcFAghDeCAIo.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 140910,
+      "name": "All Dogs Go to Heaven Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steven Weber",
+      "character": "Charlie B. Barkin (voice)",
+      "profile_path": "/8FtkapenCOpe39eE1sQus5WLWAq.jpg"
+    },
+    {
+      "name": "Dom DeLuise",
+      "character": "Itchy Itchiford (voice)",
+      "profile_path": "/73OOTJaLVq54bEeR1pASfPQLbVH.jpg"
+    },
+    {
+      "name": "Bebe Neuwirth",
+      "character": "Anabelle / Belladonna (voice)",
+      "profile_path": "/yFOdER8Fc07DU6U3kq2PRcbvDR.jpg"
+    },
+    {
+      "name": "Sheena Easton",
+      "character": "Sasha La Fleur (voice)",
+      "profile_path": "/sUg7R7VGNOzSU7sJzrwCBB1orMh.jpg"
+    }
+  ]
+}

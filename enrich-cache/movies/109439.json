@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 109439,
+    "title": "The Hangover Part III",
+    "overview": "This time, there\u0027s no wedding. No bachelor party. What could go wrong, right? But when the Wolfpack hits the road, all bets are off.",
+    "tagline": "It all ends.",
+    "runtime": 100,
+    "release_date": "2013-05-23",
+    "vote_average": 6.212,
+    "poster_path": "/vtxuPWkdllLNLVyGjKYa267ntuH.jpg",
+    "backdrop_path": "/o8ZS811VjYbBi4pRYwILLdWCVey.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86119,
+      "name": "The Hangover Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bradley Cooper",
+      "character": "Phil Wenneck",
+      "profile_path": "/5Dhy50qOMOHfR1NZifKIfffjV9X.jpg"
+    },
+    {
+      "name": "Ed Helms",
+      "character": "Stu Price",
+      "profile_path": "/gPZ8tZaNQGAc3KZRIPp9rgGbEnN.jpg"
+    },
+    {
+      "name": "Zach Galifianakis",
+      "character": "Alan Garner",
+      "profile_path": "/qsDfoUlRnXHUiqZeBPWHzmgmKGX.jpg"
+    },
+    {
+      "name": "Justin Bartha",
+      "character": "Doug Billings",
+      "profile_path": "/AalKjN8nR8RZ8g6ZdWV2smnQq4d.jpg"
+    }
+  ]
+}

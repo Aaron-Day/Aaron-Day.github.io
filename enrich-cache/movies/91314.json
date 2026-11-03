@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 91314,
+    "title": "Transformers: Age of Extinction",
+    "overview": "As humanity picks up the pieces after the battle of Chicago, a shadowy group reveals itself in an attempt to control the direction of history\u2026while an ancient, powerful new menace sets Earth in its crosshairs. With help from Cade Yeager, Optimus Prime and the Autobots rise to meet their most fearsome challenge yet.",
+    "tagline": "This is not war, it\u0027s extinction.",
+    "runtime": 165,
+    "release_date": "2014-06-25",
+    "vote_average": 5.976,
+    "poster_path": "/jyzrfx2WaeY60kYZpPYepSjGz4S.jpg",
+    "backdrop_path": "/wxr4Z6E83h14CogsZOzDm1vuDX3.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8650,
+      "name": "Transformers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mark Wahlberg",
+      "character": "Cade Yeager",
+      "profile_path": "/1Oc3XSLyb8hxmjmlgFENu582Kqw.jpg"
+    },
+    {
+      "name": "Peter Cullen",
+      "character": "Optimus Prime (voice)",
+      "profile_path": "/9Snf4fBUkk5MrAjqtNtgZRJYJbj.jpg"
+    },
+    {
+      "name": "Stanley Tucci",
+      "character": "Joshua Joyce",
+      "profile_path": "/q4TanMDI5Rgsvw4SfyNbPBh4URr.jpg"
+    },
+    {
+      "name": "Kelsey Grammer",
+      "character": "Harold Attinger",
+      "profile_path": "/qn38jJHEqRBsj50Gqo2uM38fgJx.jpg"
+    }
+  ]
+}

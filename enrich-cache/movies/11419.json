@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11419,
+    "title": "Vegas Vacation",
+    "overview": "The Griswold family hits the road again for a typically ill-fated vacation, this time to the glitzy mecca of slots and showgirls\u2014Las Vegas.",
+    "tagline": "This time the Griswolds are on a roll.",
+    "runtime": 93,
+    "release_date": "1997-02-13",
+    "vote_average": 6,
+    "poster_path": "/jUOreo2AWDnPuRJsUp6T1i66tUe.jpg",
+    "backdrop_path": "/9HcZsZQZcgxr99iYYOoYMcfjmHB.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 108693,
+      "name": "National Lampoon\u0027s Vacation Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chevy Chase",
+      "character": "Clark Griswold",
+      "profile_path": "/A1X2BvR8vEXvwXdJa5uYAYVCO2k.jpg"
+    },
+    {
+      "name": "Beverly D\u0027Angelo",
+      "character": "Ellen Griswold",
+      "profile_path": "/8fYQIA8dAaA4GOTxOFSKIvTqzi.jpg"
+    },
+    {
+      "name": "Randy Quaid",
+      "character": "Cousin Eddie",
+      "profile_path": "/rGWvDokcMLIwck10dKIutSoTM9r.jpg"
+    },
+    {
+      "name": "Ethan Embry",
+      "character": "Rusty Griswold",
+      "profile_path": "/feYnMlTejbHfkhD1akVVXKWG0u1.jpg"
+    }
+  ]
+}

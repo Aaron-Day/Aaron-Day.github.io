@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10992,
+    "title": "Cats \u0026 Dogs",
+    "overview": "When a professor develops a vaccine that eliminates human allergies to dogs, he unwittingly upsets the fragile balance of power between cats and dogs and touches off an epic battle for pet supremacy. The fur flies as the feline faction, led by Mr. Tinkles, squares off against wide-eyed puppy Lou and his canine cohorts.",
+    "tagline": "Things Are Gonna Get Hairy!",
+    "runtime": 87,
+    "release_date": "2001-07-04",
+    "vote_average": 5.418,
+    "poster_path": "/wUWoat7L4vvQburQ8pVEJhRG9L5.jpg",
+    "backdrop_path": "/3ipuPBeBfsxcsry7Gh5m9J1rwJ1.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87014,
+      "name": "Cats \u0026 Dogs Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jeff Goldblum",
+      "character": "Professor Brody",
+      "profile_path": "/kcyEPgYtBP5Pm6LLeLGfXKjYovL.jpg"
+    },
+    {
+      "name": "Elizabeth Perkins",
+      "character": "Mrs. Brody",
+      "profile_path": "/t9Cfx8R8hxB1Od46s9CXJMwwNTA.jpg"
+    },
+    {
+      "name": "Alexander Pollock",
+      "character": "Scotty Brody",
+      "profile_path": "/grnmmOHtmxVEM3lb4s8vBE6yKxm.jpg"
+    },
+    {
+      "name": "Miriam Margolyes",
+      "character": "Sophie the Castle Maid",
+      "profile_path": "/vsnCGCp0nhJTag56HP8XFhXnZo9.jpg"
+    }
+  ]
+}

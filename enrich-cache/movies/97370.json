@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 97370,
+    "title": "Under the Skin",
+    "overview": "A seductive stranger prowls the streets of Glasgow in search of prey: unsuspecting men who fall under her spell.",
+    "tagline": "An otherworldly perspective on the human condition.",
+    "runtime": 108,
+    "release_date": "2014-03-14",
+    "vote_average": 6.139,
+    "poster_path": "/55wmcXJIDYITr7JDijJTdvwSaAv.jpg",
+    "backdrop_path": "/eS5OdKN3kRZXQbWRSSCJ4Gh0z26.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Scarlett Johansson",
+      "character": "",
+      "profile_path": "/mjReG6rR7NPMEIWb1T4YWtV11ty.jpg"
+    },
+    {
+      "name": "Jeremy McWilliams",
+      "character": "",
+      "profile_path": "/c4E1PMNBi2xNH9Bxh538mY24RUF.jpg"
+    },
+    {
+      "name": "Lynsey Taylor Mackay",
+      "character": "",
+      "profile_path": "/kOcKZgnduhyZnQKLbWYGczWmnhV.jpg"
+    },
+    {
+      "name": "Dougie McConnell",
+      "character": "",
+      "profile_path": null
+    }
+  ]
+}

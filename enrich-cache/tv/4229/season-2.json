@@ -1,0 +1,872 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Beard to be Feared",
+        "overview": "After a fright from Dee Dee, Dexter lays down in the beard growing machine and tries to grow a beard like his hero, Action Hank. Unfortunately, everyone thinks he\u0027s a hero.",
+        "air_date": "1997-07-16",
+        "runtime": 7,
+        "still_path": "/mlcNLWlC5Es5DlPPGgU4uhAKGJU.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Quackor the Fowl",
+        "overview": "Mandark doesn\u0027t know that his pet duck is really Quackor the Fowl, Monkey\u0027s rival. Quackor overhears Mandark talking in his sleep about destroying Dexter\u0027s lab and tries to do it, unaware that Monkey is Dexter\u0027s pet.",
+        "air_date": "1997-07-16",
+        "runtime": 7,
+        "still_path": "/piVnNHgwo1kckEnUCYhcBGWnW1h.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Ant Pants",
+        "overview": "Dexter prevents Dee Dee from destroying some ants. In order to teach her about ants, Dexter and Dee enter Dexter\u0027s ant farm. The ants think Dexter is a criminal and has him fight to the death with a stronger ant.",
+        "air_date": "1997-07-16",
+        "runtime": 7,
+        "still_path": "/jrR016glGOy7V6MJabV29RdhQp0.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Mom and Jerry",
+        "overview": "Dexter switches his brain with a mouse, and must avoid his mother when she decides to exterminate him. A Parody of Tom and Jerry.",
+        "air_date": "1997-07-23",
+        "runtime": 7,
+        "still_path": "/4aanS4B0y1FjfJr59B1V7ILWjq5.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Chubby Cheese",
+        "overview": "At the Chubby Cheese pizza restaurant, Dexter wears a Chubby Cheese hat and tries to slow down the Whack The Weasel machine to win a stuffed Monkey doll before Dee Dee does.",
+        "air_date": "1997-07-23",
+        "runtime": 7,
+        "still_path": "/8ca6mPdRRpOxqh4WRGmYiPI7Nui.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "That Crazy Robot",
+        "overview": "One of Dexter\u0027s robots becomes Dee Dee\u0027s servant when she removes a wrench that froze him up, but the robot is willing to destroy anyone who is mean to her or scolds her, including Dexter.",
+        "air_date": "1997-07-23",
+        "runtime": 7,
+        "still_path": "/tBTgTyK5IY5HgMgs22AwMbkBBxT.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "D \u0026 DD",
+        "overview": "When Dexter\u0027s friends tire of the complicated traps he sets up as Dungeon Master (he has their character\u0027s killed every time), they put Dee Dee in charge for a change of pace.",
+        "air_date": "1997-07-30",
+        "runtime": 11,
+        "still_path": "/5la2GCRCiGfAeNgONG29OaaLkly.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Hamhocks and Armlocks",
+        "overview": "Dexter\u0027s father gets challenged to an arm wrestling match against a local champion at a truck stop, when he causes the champion to lose for the first time, but refuses to do so even when he trashes the family car. He finally accepts the challenge when he slams the door in Mom\u0027s face. Dee Dee knows he\u0027ll get creamed, so Dexter builds him a robotic arm to help him win the match.",
+        "air_date": "1997-07-30",
+        "runtime": 11,
+        "still_path": "/y5mbyTuNWxbP1fQbbdwc7X4WAPu.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Hunger Strikes",
+        "overview": "Dexter uses radiation therapy so he can like vegetables, it actually causes him to only eat vegetables, also, the therapy has consequences if Dexter goes too long without them. He turns into a Parody of The Incredible Hulk without vegetables.",
+        "air_date": "1997-08-06",
+        "runtime": 7,
+        "still_path": "/7U75c0hbMnJEhQutrPviN5MCpjB.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Koos is Loose",
+        "overview": "Dee Dee\u0027s imaginary friend comes to life and annoys Dexter. Dexter ends up wishing him away, then he realizes he made a terrible mistake.",
+        "air_date": "1997-08-06",
+        "runtime": 7,
+        "still_path": "/hZ8Dy0HZ9gOKZTMkQP25VZCbc2N.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Morning Stretch",
+        "overview": "Dexter oversleeps and still has to finish his homework along with getting ready for school and eating breakfast, so he creates a helmet that expands thirty seconds into thirty minutes, but realizes that slowing down time is more detrimental than helpful. When he gets everything done, the helmet shuts off. But Dee Dee blocks his door causing him to miss the bus. When Dexter asks Dee Dee why, she replies \u0022Snow Day, school\u0027s canceled!\u0022. Dexter realizes he did all that rushing around for nothing!",
+        "air_date": "1997-08-06",
+        "runtime": 7,
+        "still_path": "/s8EqBxF2TB7qm1F3huvSGx3TQFC.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Dee Dee Locks and the Ness Monster",
+        "overview": "Dee Dee Locks and the Ness Monster\u2014Dexter\u0027s mother forces Dexter to read to Dee Dee when she\u0027s sick, but she makes up her own story after being bored by Dexter\u0027s story (which was actually a science article). The story is completely mixed up and makes no sense. Dexter ends up catching Dee Dee\u0027s illness.",
+        "air_date": "1997-08-13",
+        "runtime": 7,
+        "still_path": "/gD8H0ELL0i5Z4RcqZ6sSotw3xo6.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Backfire",
+        "overview": "Dexter fuses Dee Dee with the family car by accident, causing mayhem. A Parody of Herbie the Love Bug.",
+        "air_date": "1997-08-13",
+        "runtime": 7,
+        "still_path": "/qXIJqaP6efFVaVb4TTKFfN3lujF.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Book \u0027Em",
+        "overview": "Dexter accidentally takes a library book without checking it out, so he and Dee Dee try to put it back without being caught.",
+        "air_date": "1997-08-13",
+        "runtime": 7,
+        "still_path": "/wbGmCmhC8a0bar65QIZac1mNOf8.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Sister\u0027s Got a Brand New Bag",
+        "overview": "Dee Dee\u0027s new dance annoys Dexter to no end.",
+        "air_date": "1997-08-20",
+        "runtime": 7,
+        "still_path": "/psrrwNifFQfzCPLrJ8wpg6nmEtg.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Shoo, Shoe Gnomes",
+        "overview": "Dexter calls upon the \u0022shoe gnomes\u0022 to repair his boots, but can\u0027t rid himself of them afterwards. The only way to get rid of them, according to Dee Dee, is to kick them in the butt. Dexter gets rid of the last one with his boot, but it\u0027s damaged again.",
+        "air_date": "1997-08-20",
+        "runtime": 7,
+        "still_path": "/6H8uIPRqCbHimwoS52SlP5vUKbW.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Lab of The Lost",
+        "overview": "Dexter ends up in the \u0022old part of the lab\u0022 where his earliest inventions, long since forgotten, are not too happy to see him. They are mad at him for saying they were his greatest inventions, then moved on to another great invention.",
+        "air_date": "1997-08-20",
+        "runtime": 7,
+        "still_path": "/kuDgZ2hwbii5feD5yZ8qSKXqGLp.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Labels",
+        "overview": "Dexter and Dee Dee label everything in the house. When their parents get home, they mistake Dexter for Dee Dee (he had a Dee Dee label on his forehead), but he already blamed Dee Dee for the chaos.",
+        "air_date": "1997-08-27",
+        "runtime": 7,
+        "still_path": "/niGcQW0hBHlUoe0Q9sayEN73OQX.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Game Show",
+        "overview": "Dexter and Dee Dee compete against each other on a game show. Where Dexter can\u0027t seem to win.",
+        "air_date": "1997-08-27",
+        "runtime": 7,
+        "still_path": "/atYA8JJdsNFkN5yzbhymo3Y33X.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Fantastic Boyage",
+        "overview": "Dexter tries to inject himself into Dee Dee to find a cure to the common cold, but ends up inside his dog. He believes Dee Dee has been infected with a dog virus. He is then mistaken for the first human virus to infect a dog by the vet.",
+        "air_date": "1997-08-27",
+        "runtime": 7,
+        "still_path": "/muIZe6OgQhwHUXsKgUOj13yijCi.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Filet of Soul",
+        "overview": "When Dee Dee refuses to flush their gold fish down the toilet, the ghost of the fish haunts them.",
+        "air_date": "1997-09-03",
+        "runtime": 11,
+        "still_path": "/6gzPUxYd5GCy65ydWnjBXMtQdCE.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Golden Diskette",
+        "overview": "Dee Dee and Dexter win a free pass to Professor Hawk\u0027s magic factory after finding the golden diskette.",
+        "air_date": "1997-09-03",
+        "runtime": 11,
+        "still_path": "/zPJxNseepMfJxOGRBwjcVoA4TTv.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Snowdown",
+        "overview": "Dad encourages Dexter to become the king of snow, as he was in his early days, until someone beated him.",
+        "air_date": "1997-09-10",
+        "runtime": 7,
+        "still_path": "/mPd2HZQ9FI0roDG8ekDoYENM3k6.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "*Figure Not Included",
+        "overview": "In an attempt to be popular with his \u0022\u0022friends\u0022\u0022, Dexter makes his own Mayor Glory Action Figure.",
+        "air_date": "1997-09-10",
+        "runtime": 7,
+        "still_path": "/czkOIZmaLaT8b6ikInPVQEfTmZq.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Mock 5",
+        "overview": "In a whole parody of \u0022\u0022Speed Racer\u0022\u0022, Dexter and Mandark compete on a race.",
+        "air_date": "1997-09-10",
+        "runtime": 7,
+        "still_path": "/maDqSClAzrHUYifc4Un84RTPjev.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Ewww That\u0027s Growth",
+        "overview": "Dexter can\u0027t get into a roller coaster because he\u0027s too small so he makes himself taller.",
+        "air_date": "1997-09-17",
+        "runtime": 7,
+        "still_path": "/zqMhrWGslGaN0t7rZb39vBD4nZl.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Nuclear Confusion",
+        "overview": "Dee Dee steals the nuclear atom that Dexter needs to make his invention work, but she doesn\u0027t know that it will explode if Dexter doesn\u0027t find it on time.",
+        "air_date": "1997-09-17",
+        "runtime": 7,
+        "still_path": "/tXHo30jD0p7CKEmRVM82ut3Vl4h.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Germ Warfare",
+        "overview": "Everybody except Dexter gets sick, so he makes himself a plastic bubble to get germ protection.",
+        "air_date": "1997-09-17",
+        "runtime": 7,
+        "still_path": "/tArALPPROATyd167JTazVQmk4AJ.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "A Hard Day\u0027s Day",
+        "overview": "It\u0027s not a great day for science when Dexter has bad luck due to the position of the stars.",
+        "air_date": "1997-09-24",
+        "runtime": 7,
+        "still_path": "/6kLpEDDgZyru0Ep8adO29d035pD.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Road Rash",
+        "overview": "Mom makes Dexter go outside and ride a bike, thing that turns into a Dexter-Dee Dee chase.",
+        "air_date": "1997-09-24",
+        "runtime": 7,
+        "still_path": "/y7T5nVCbEeZAsT7ffVgazF7TMQO.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Ocean Commotion",
+        "overview": "While at the beach, Dee Dee (who\u0027s wearing a mermaid swimsuit) gets captured by a maniac sailor so Dexter must rescue her.",
+        "air_date": "1997-09-24",
+        "runtime": 7,
+        "still_path": "/tFaaF7qgU4KC6NLqyexgiv25m4Q.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "The Bus Boy",
+        "overview": "Dexter must go to the back of the school bus to retrieve his pencil, where another kid got lost years ago.",
+        "air_date": "1997-10-01",
+        "runtime": 7,
+        "still_path": "/klLwSUE9kCWS5JUK2vaDkBB4Qne.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "The Justice Friends: Things that go Bonk in the Night",
+        "overview": "Krunk stays awake all night watching The Puppet Pals Show Marathon, so his brain starts playing him tricks.",
+        "air_date": "1997-10-01",
+        "runtime": 7,
+        "still_path": "/ywZYeiE3OrydY9C3AdZlInAjtEJ.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Ol\u0027 McDexter",
+        "overview": "Dexter is sent to summer camp, in a place far away from civilization.",
+        "air_date": "1997-10-01",
+        "runtime": 7,
+        "still_path": "/1SjE7uN7Iht0PGh0qwACqTNeinW.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Sassy Come Home",
+        "overview": "While the family is at the woods, Dexter goes searching for the Mighty Bigfoot, if Dee Dee doesn\u0027t find him first.",
+        "air_date": "1997-10-08",
+        "runtime": 11,
+        "still_path": "/mLXrp3AFSjdqa0qGltnftitJ8LD.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "Photo Finish",
+        "overview": "Dee Dee photographs Dexter\u0027s secret lab.",
+        "air_date": "1997-10-08",
+        "runtime": 11,
+        "still_path": "/64VVPv4mOnbzSZV0PHfMCZRViov.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "Star Check Unconventional",
+        "overview": "Dexter and two friends go to the Star Check Convention, but certain confusion might send them to a different one.",
+        "air_date": "1997-10-15",
+        "runtime": 7,
+        "still_path": "/7EIjJKM2Y70ee5k3ufkkAEdW1Vh.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "Dexter is Dirty",
+        "overview": "To avoid the bath, Dexter decides to laminate himself.",
+        "air_date": "1997-10-15",
+        "runtime": 7,
+        "still_path": "/rovW9nCXV1qarUA8RqkHDVUSqT3.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "Ice Cream Scream",
+        "overview": "Dexter will do anything to make the ice cream vendor stop to get some ice cream.",
+        "air_date": "1997-10-15",
+        "runtime": 7,
+        "still_path": "/y879oPA3c1nJ2wRn0gYEBRqOQRq.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "Decode of Honor",
+        "overview": "Dexter and Dee Dee get their Action Hank and Pony Puff Secret Codes mixed up.",
+        "air_date": "1997-10-22",
+        "runtime": 7,
+        "still_path": "/jXew0wimx10aeywEcZNtt93pzKv.jpg"
+      },
+      {
+        "episode_number": 41,
+        "name": "World\u0027s Greatest Mom",
+        "overview": "Dexter newest creation gives Mom super powers.",
+        "air_date": "1997-10-22",
+        "runtime": 7,
+        "still_path": "/1NE9CfqMzvBnKKXaIGfuIM77fgS.jpg"
+      },
+      {
+        "episode_number": 42,
+        "name": "Ultrajerk 2000",
+        "overview": "Dexter\u0027s robot takes over his lab.",
+        "air_date": "1997-10-22",
+        "runtime": 7,
+        "still_path": "/vGYguVYSJPxbQyQ5HeeflBZQwQb.jpg"
+      },
+      {
+        "episode_number": 43,
+        "name": "Techno Turtle",
+        "overview": "Dexter heals a turtle by giving him loads of modern, techno stuff.",
+        "air_date": "1997-10-29",
+        "runtime": 7,
+        "still_path": "/2YSLSOkGZMrHkY9fejDIFM2GDZx.jpg"
+      },
+      {
+        "episode_number": 44,
+        "name": "Surprise!",
+        "overview": "Dexter makes himself invisible to make sure Mom and Dad give him what he wants for his birthday, the Ultimate Mayor Glory Action Figure.",
+        "air_date": "1997-10-29",
+        "runtime": 7,
+        "still_path": "/eCpH2jsCsLogaodn1l9bW6FHgx7.jpg"
+      },
+      {
+        "episode_number": 45,
+        "name": "Got Your Goat",
+        "overview": "Dexter and Dee Dee go to South America in order to find the chupacabras, an animal that Dexter created.",
+        "air_date": "1997-10-29",
+        "runtime": 7,
+        "still_path": "/ji6k83MF5N2H4lBBenq0VFIUpKw.jpg"
+      },
+      {
+        "episode_number": 46,
+        "name": "Dee Dee Be Deep",
+        "overview": "Dee Dee, who\u0027s not exactly good at singing, gets Dexter\u0027s help on getting a better voice, but not the voice Dexter was expecting.",
+        "air_date": "1997-11-05",
+        "runtime": 7,
+        "still_path": "/4rqUgXy403at3VO6xydQ9HLdwBa.jpg"
+      },
+      {
+        "episode_number": 47,
+        "name": "911",
+        "overview": "When Dexter\u0027s favorite show gets interrupted by an emergency, he searches all town trying to find it and solve so regular broadcast returns.",
+        "air_date": "1997-11-05",
+        "runtime": 7,
+        "still_path": "/v7KlyAD7BfwbUs4URN7pN8WBImD.jpg"
+      },
+      {
+        "episode_number": 48,
+        "name": "Down in the Dumps",
+        "overview": "Dexter and Dee Dee go to the dumps to retrieve Dee Dee\u0027s lost teddy bear.",
+        "air_date": "1997-11-05",
+        "runtime": 7,
+        "still_path": "/gXz9iOgbLVwXliX8YzKuWM5tSg7.jpg"
+      },
+      {
+        "episode_number": 49,
+        "name": "Unfortunate Cookie",
+        "overview": "Dexter and Dee Dee get trapped with a Finger trap.",
+        "air_date": "1997-11-12",
+        "runtime": 11,
+        "still_path": "/yiJP8Mk1Msey9oZHegDoCdbSmZe.jpg"
+      },
+      {
+        "episode_number": 50,
+        "name": "The Muffin King",
+        "overview": "Dexter and Dee Dee must stop Dad from eating Mom\u0027s muffins.",
+        "air_date": "1997-11-12",
+        "runtime": 11,
+        "still_path": "/m9r2qmUtzkEsN4Pil7n9fwnGEyz.jpg"
+      },
+      {
+        "episode_number": 51,
+        "name": "Picture Day",
+        "overview": "Dexter finds out he\u0027s ugly, so he transforms his face to look better for the school photo.",
+        "air_date": "1997-11-19",
+        "runtime": 7,
+        "still_path": "/uZQn6QqyhOezNRd3jOrZU0HKssz.jpg"
+      },
+      {
+        "episode_number": 52,
+        "name": "Now That\u0027s a Stretch",
+        "overview": "Dexter combines himself with bubble gum to become more stretchable.",
+        "air_date": "1997-11-19",
+        "runtime": 7,
+        "still_path": "/irkw02JCqd2MfI54zsUA4M4RtGD.jpg"
+      },
+      {
+        "episode_number": 53,
+        "name": "Dexter Detention",
+        "overview": "Dexter is send to detention after a confusion during a test.",
+        "air_date": "1997-11-19",
+        "runtime": 7,
+        "still_path": "/23JCgnkqPc2vu0e0FX2OOEHtlxT.jpg"
+      },
+      {
+        "episode_number": 54,
+        "name": "Don\u0027t Be a Baby",
+        "overview": "Dexter and Dee Dee want to become older, but instead they make everyone else a baby.",
+        "air_date": "1997-11-26",
+        "runtime": 7,
+        "still_path": "/jRKx2u8LSteCBmYHOs08tpUCYh0.jpg"
+      },
+      {
+        "episode_number": 55,
+        "name": "Dial M For Monkey: Peltra",
+        "overview": "A new female villian named Peltra wants Monkey\u0027s Coat.",
+        "air_date": "1997-11-26",
+        "runtime": 7,
+        "still_path": "/k4tHuOO4YTeuBvQiFWaBuidLQZ9.jpg"
+      },
+      {
+        "episode_number": 56,
+        "name": "G.I.R.L. Squad",
+        "overview": "Dee Dee, LeeLee and MeeMee become crimefighters, but of course they will not actually fight crime.",
+        "air_date": "1997-11-26",
+        "runtime": 7,
+        "still_path": "/hEmgOswzjj3VNjhtyyihWrRVRM6.jpg"
+      },
+      {
+        "episode_number": 57,
+        "name": "Sports a Poppin\u0027",
+        "overview": "Dad wants to show Dexter the joy of sports.",
+        "air_date": "1997-12-03",
+        "runtime": 7,
+        "still_path": "/jx8rn9lER51WuhnwZJx4wwbgI5X.jpg"
+      },
+      {
+        "episode_number": 58,
+        "name": "Koos a la Goop a Goop",
+        "overview": "Koosy tells Dee Dee that he is the king of the land of Koos, but when Dee Dee goes there...",
+        "air_date": "1997-12-03",
+        "runtime": 7,
+        "still_path": "/5PpVn8NuunSiqCpPo6OAU1hbyMh.jpg"
+      },
+      {
+        "episode_number": 59,
+        "name": "Project Dee Dee",
+        "overview": "Dee-Dee refuses any kind of help from Dexter on her science project, when Dee-Dee shows Dexter her show-and-tell product, he criticises it heavily and offers his own..contributions",
+        "air_date": "1997-12-03",
+        "runtime": 7,
+        "still_path": "/w0GzqGnyZmAFxLOWWlvJUbfg9cc.jpg"
+      },
+      {
+        "episode_number": 60,
+        "name": "Topped Off",
+        "overview": "Surprised of the results coffee causes on Mom and Dad, Dexter and Dee Dee decide to try it themselves.",
+        "air_date": "1998-01-14",
+        "runtime": 7,
+        "still_path": "/dwiQY4nkApLny1366dINmKF6275.jpg"
+      },
+      {
+        "episode_number": 61,
+        "name": "Dee Dee\u0027s Tail",
+        "overview": "Dexter uses his science to turn Dee Dee into a horse.",
+        "air_date": "1998-01-14",
+        "runtime": 7,
+        "still_path": "/rJprPAmKeqCjPHbvMv8jKgXNhMD.jpg"
+      },
+      {
+        "episode_number": 62,
+        "name": "No Power Trip",
+        "overview": "Dexter overloads the energy of the laboratory, so he makes numerous tries to reload it.",
+        "air_date": "1998-01-14",
+        "runtime": 7,
+        "still_path": "/xevgRxqb6jfzSBpRFFQQPDRLpQe.jpg"
+      },
+      {
+        "episode_number": 63,
+        "name": "Sister Mom",
+        "overview": "After Dexter did something really bad at school, he gets her mother called, so to not ruin his reputation, he turns Dee Dee into Mom.",
+        "air_date": "1998-01-21",
+        "runtime": 11,
+        "still_path": "/qdQjeHucgKXh7tov30ByCVJmatg.jpg"
+      },
+      {
+        "episode_number": 64,
+        "name": "The Laughing",
+        "overview": "After Dexter gets bitten by a clown, he turns into one every night.",
+        "air_date": "1998-01-21",
+        "runtime": 11,
+        "still_path": "/rknJGU7vZmE5vUY1YN6Rl3clr1R.jpg"
+      },
+      {
+        "episode_number": 65,
+        "name": "Dexter\u0027s Lab: A Story",
+        "overview": "On his way home, Dexter gets followed by a labrador, when he teaches him to speak, the dog becomes even more annoying.",
+        "air_date": "1998-01-28",
+        "runtime": 7,
+        "still_path": "/sZjbQNahhf8d9F7uJ3HdkiAIBgR.jpg"
+      },
+      {
+        "episode_number": 66,
+        "name": "Coupon for Craziness",
+        "overview": "A confusion at the supermarket makes Dexter go home with a different, yet extremely scientific, family; but who is home with his real family?",
+        "air_date": "1998-01-28",
+        "runtime": 7,
+        "still_path": "/m1hivEOPLEcrxe0vq6hoVzTpWhb.jpg"
+      },
+      {
+        "episode_number": 67,
+        "name": "Better Off Wet",
+        "overview": "Dexter is afraid of taking a dive at the pool because Dad always pushes him.",
+        "air_date": "1998-01-28",
+        "runtime": 7,
+        "still_path": "/rl0foGjlw21FJ0BEaemdAgkJQun.jpg"
+      },
+      {
+        "episode_number": 68,
+        "name": "Critical Gas",
+        "overview": "After Dexter eats a giant burrito he believes he\u0027s going to die, so he makes a list of everything he must do before that time comes. (Including, make Mom and Dad happy, do dishes, free Robots, make World Peace, end World\u0027s hunger, learn to dance, make Dee Dee happy, shut down the Main System... and tell Mom and Dad about the secret laboratory).",
+        "air_date": "1998-02-04",
+        "runtime": 7,
+        "still_path": "/tfxbmH1miepBojp0d2Mr3k1XnPS.jpg"
+      },
+      {
+        "episode_number": 69,
+        "name": "Let\u0027s Save the World You Jerk!",
+        "overview": "Dexter and Mandark must team up in order to save the Earth from a meteor rain.",
+        "air_date": "1998-02-04",
+        "runtime": 7,
+        "still_path": "/wvnIjEVwD2DYjQO0wFlZq8k2nB9.jpg"
+      },
+      {
+        "episode_number": 70,
+        "name": "Average Joe",
+        "overview": "After an I.Q. test defines Dexter as \u0022\u0022average\u0022\u0022, he decides to live an average life hanging out with an average boy of last name Smith.",
+        "air_date": "1998-02-04",
+        "runtime": 7,
+        "still_path": "/3vrGuAHrJyJpGtr3KskoQPLplXq.jpg"
+      },
+      {
+        "episode_number": 71,
+        "name": "Rushmore Rumble",
+        "overview": "Dexter and Mandark mechanize the giant figures of Lincoln and Washington from the Mount Rushmore statues and wreak havoc with them.",
+        "air_date": "1998-02-11",
+        "runtime": 7,
+        "still_path": "/9nyXwlxEA400NsNPS4uMEL3wuc.jpg"
+      },
+      {
+        "episode_number": 72,
+        "name": "A Boy and His Bug",
+        "overview": "Dexter creates a small bug that eats all the scrap metal caused by Dee Dee\u0027s destruction.",
+        "air_date": "1998-02-11",
+        "runtime": 7,
+        "still_path": "/uXytAhg1eWkuZVXTMp2iKF3G9PY.jpg"
+      },
+      {
+        "episode_number": 73,
+        "name": "You Vegetabelieve It!",
+        "overview": "Dexter\u0027s untested formula causes all plants in the garden to become dangerous.",
+        "air_date": "1998-02-11",
+        "runtime": 7,
+        "still_path": "/v1z7tx2j0Bx9y2uILlkBknCba73.jpg"
+      },
+      {
+        "episode_number": 74,
+        "name": "Aye Aye Eyes",
+        "overview": "After Dexter returns a bunny to a little girl with big round eyes, she starts following Dexter everywhere.",
+        "air_date": "1998-02-18",
+        "runtime": 11,
+        "still_path": "/mSxwSzVtJJd7Vag1Sgk6odLmQHw.jpg"
+      },
+      {
+        "episode_number": 75,
+        "name": "Dee Dee and the Man",
+        "overview": "After Dexter \u0022\u0022fires\u0022\u0022 Dee Dee, he realizes that his lab needs chaos.",
+        "air_date": "1998-02-18",
+        "runtime": 11,
+        "still_path": "/aAE9JasyVF8be7IbMRvjA5DGNlE.jpg"
+      },
+      {
+        "episode_number": 76,
+        "name": "Old Flame",
+        "overview": "Dexter travels to the past to meet the caveman that discovered fire.",
+        "air_date": "1998-02-25",
+        "runtime": 7,
+        "still_path": "/totS4Eppb0ynO3HOZ7zILDhnyZv.jpg"
+      },
+      {
+        "episode_number": 77,
+        "name": "Don\u0027t Be a Hero",
+        "overview": "Dexter attempts to make numerous accidents to get super powers.",
+        "air_date": "1998-02-25",
+        "runtime": 7,
+        "still_path": "/qLbU3TLCBVzOvhyj33dezzI13nF.jpg"
+      },
+      {
+        "episode_number": 78,
+        "name": "My Favorite Martian",
+        "overview": "Dexter goes to Mars to find alien life forms.",
+        "air_date": "1998-02-25",
+        "runtime": 7,
+        "still_path": "/fYTkxjjtOwU7AMbRi7PRP1UinaZ.jpg"
+      },
+      {
+        "episode_number": 79,
+        "name": "Paper Route Bout",
+        "overview": "Dee Dee and the Ninja Clan battle for who delivers the newspapers in the neighborhood.",
+        "air_date": "1998-03-04",
+        "runtime": 7,
+        "still_path": "/dpqULxsuxZjnWBcAZsRssMWSxpU.jpg"
+      },
+      {
+        "episode_number": 80,
+        "name": "The Old Switcharooms",
+        "overview": "After Dexter and Dee Dee destroy Dad\u0027s bowling trophy, they are sent to each other\u0027s room.",
+        "air_date": "1998-03-04",
+        "runtime": 7,
+        "still_path": "/77bxaWTpda7caa87O3zvg1kJc4j.jpg"
+      },
+      {
+        "episode_number": 81,
+        "name": "Trick or Treehouse",
+        "overview": "Dee Dee builds a treehouse in the garden and Dexter can\u0027t stop wondering what\u0027s up there.",
+        "air_date": "1998-03-04",
+        "runtime": 7,
+        "still_path": "/qkoOTL9jJTxiTgCjJ4p4i4OxqS8.jpg"
+      },
+      {
+        "episode_number": 82,
+        "name": "Quiet Riot",
+        "overview": "Dexter worked all night on his inventions so all he wants is some sleep, but Dee Dee will make sure that that doesn\u0027t happen.",
+        "air_date": "1998-03-11",
+        "runtime": 7,
+        "still_path": "/dY7sTF5gkQFw4CvxTBOB089vrPg.jpg"
+      },
+      {
+        "episode_number": 83,
+        "name": "Accent You Hate",
+        "overview": "Dexter and his friends Lucky and Pierre(\u00BF?) are victims of a bully that hates kids with funny accents.",
+        "air_date": "1998-03-11",
+        "runtime": 7,
+        "still_path": "/gJg0hxbxiDgFZwHRTmq91eT3WK6.jpg"
+      },
+      {
+        "episode_number": 84,
+        "name": "Catch of the Day",
+        "overview": "Numerous factors like getting up early, being the first ones there, fishing clothes and other accesories, will not allow Dexter and his Dad to go on a fishing trip.",
+        "air_date": "1998-03-11",
+        "runtime": 7,
+        "still_path": "/mbv2mqM1pxsXjgZHjFTcbptDMuW.jpg"
+      },
+      {
+        "episode_number": 85,
+        "name": "Dad is Disturbed",
+        "overview": "Constant interruptions by Dexter, Dee Dee and Mom will not let Dad watch his golf game.",
+        "air_date": "1998-03-18",
+        "runtime": 7,
+        "still_path": "/8e2DsmIyV9004xUkNrNRPxC8o6U.jpg"
+      },
+      {
+        "episode_number": 86,
+        "name": "Framed",
+        "overview": "After Dexter breaks his glasses, he starts a new fashion at school.",
+        "air_date": "1998-03-18",
+        "runtime": 7,
+        "still_path": "/3QWd22DIbqWtt2UawwpEVdypgTr.jpg"
+      },
+      {
+        "episode_number": 87,
+        "name": "That\u0027s Using Your Head",
+        "overview": "Dexter meets a bum at an appliance store with a strange device on his head.",
+        "air_date": "1998-03-18",
+        "runtime": 7,
+        "still_path": "/hRosbHYoSjIiuBLRxGJeW0hlMH6.jpg"
+      },
+      {
+        "episode_number": 88,
+        "name": "DiM",
+        "overview": "Dexter goes to the appliance store to buy a lightbulb for his lab.",
+        "air_date": "1998-03-25",
+        "runtime": 7,
+        "still_path": "/wQwnkYX7CpBycJONwU9862Oaxaw.jpg"
+      },
+      {
+        "episode_number": 89,
+        "name": "Just an Old Fashioned Lab Song...",
+        "overview": "Dexter takes piano classes from a man that looks a lot like Paul Williams.",
+        "air_date": "1998-03-25",
+        "runtime": 7,
+        "still_path": "/uB8bNl9NhmcytNlRNRJWuK07CqT.jpg"
+      },
+      {
+        "episode_number": 90,
+        "name": "Repairanoid",
+        "overview": "When an electricist comes to repair the house, Dexter discovers that if he repairs the lab it will function perfectly.",
+        "air_date": "1998-03-25",
+        "runtime": 7,
+        "still_path": "/K85ohcTvC4n5DGUcLUGQTyO6OW.jpg"
+      },
+      {
+        "episode_number": 91,
+        "name": "Sdrawkcab",
+        "overview": "Dexter creates a belt that can have its wearer do everything backwards, only to get in trouble when Dee Dee manages to get control of the time directional switch.",
+        "air_date": "1998-04-01",
+        "runtime": 7,
+        "still_path": "/alIUm3MFsSO4D5y0idZFpoP0IoG.jpg"
+      },
+      {
+        "episode_number": 92,
+        "name": "The Continuum of Cartoon Fools",
+        "overview": "Dee Dee keeps getting into Dexter\u0027s lab even though Dexter keeps throwing her out.",
+        "air_date": "1998-04-01",
+        "runtime": 7,
+        "still_path": "/yfchR8cUmMlxeZxuzBPKOyebtQI.jpg"
+      },
+      {
+        "episode_number": 93,
+        "name": "Sun, Surf, and Science",
+        "overview": "Mandark tries to impress Dee Dee by getting into a surfing contest.",
+        "air_date": "1998-04-01",
+        "runtime": 7,
+        "still_path": "/fLOD5A4YNfpKmqUOJ850xUJA9Wg.jpg"
+      },
+      {
+        "episode_number": 94,
+        "name": "Big Bots",
+        "overview": "Dexter makes Dee Dee a robot for herself, at the same time a volcano is going to burst on an island in the middle of the ocean.",
+        "air_date": "1998-04-08",
+        "runtime": 7,
+        "still_path": "/pUVoGQcLjdLwj2Jue4AGHldLC8b.jpg"
+      },
+      {
+        "episode_number": 95,
+        "name": "Gooey Aliens that Control Your Mind",
+        "overview": "Dexter must save his family after they get possesed by aliens.",
+        "air_date": "1998-04-08",
+        "runtime": 7,
+        "still_path": "/7yH9Lj9zeibs5F9BYv3K25UB4k.jpg"
+      },
+      {
+        "episode_number": 96,
+        "name": "Misplaced in Space",
+        "overview": "Dee Dee must save Dexter who is a slave in a distant galaxy.",
+        "air_date": "1998-04-08",
+        "runtime": 7,
+        "still_path": "/ziD2ueldzTrMpuDJLLEqBgVK2F2.jpg"
+      },
+      {
+        "episode_number": 97,
+        "name": "Dee Dee\u0027s Rival",
+        "overview": "Dee Dee and Lalavava (Mandark\u0027s sister), compete on a ballet contest.",
+        "air_date": "1998-04-15",
+        "runtime": 7,
+        "still_path": "/vc0zBCVYODu1iWul56oZQajyw1S.jpg"
+      },
+      {
+        "episode_number": 98,
+        "name": "Pslyghtly Psycho",
+        "overview": "It\u0027s Mother\u0027s Day and Mom can\u0027t take that Dad, Dee Dee and Dexter do all the housework.",
+        "air_date": "1998-04-15",
+        "runtime": 7,
+        "still_path": "/SxZ0zmn4U3SJMHSOwkyula3xd1.jpg"
+      },
+      {
+        "episode_number": 99,
+        "name": "Game for a Game",
+        "overview": "Dexter and Dee Dee compete in various games chosen by Dexter.",
+        "air_date": "1998-04-15",
+        "runtime": 7,
+        "still_path": "/xkoqaV0GmvJzRD8MXOwpKIsioPP.jpg"
+      },
+      {
+        "episode_number": 100,
+        "name": "Blackfoot and Slim",
+        "overview": "A documentary shows the secret lives of Dexter and Dee Dee, also known as Blackfoot and Slim.",
+        "air_date": "1998-04-22",
+        "runtime": 7,
+        "still_path": "/ed8mQelIg6KaUK4kqf7AkZMjWwa.jpg"
+      },
+      {
+        "episode_number": 101,
+        "name": "Trapped with a Vengeance",
+        "overview": "Dexter stays at school too much, forcing the janitor to stay as well, so he waits for a day in which Dexter has to leave early for an emergency, as he plans his revenge...",
+        "air_date": "1998-04-22",
+        "runtime": 7,
+        "still_path": "/4jlShZuinqAPc9vgvz8mNWO0JFR.jpg"
+      },
+      {
+        "episode_number": 102,
+        "name": "The Parrot Trap",
+        "overview": "Dexter must stop his mechanical parrot before his imitations reveal the secret of his lab.",
+        "air_date": "1998-04-22",
+        "runtime": 7,
+        "still_path": "/mzUvhinLZf43Yiogx3o6PGxmOII.jpg"
+      },
+      {
+        "episode_number": 103,
+        "name": "Dexter and Computress Get Mandark!",
+        "overview": "Dexter and Computress team up in order to shrink Mandark\u0027s head.",
+        "air_date": "1998-04-29",
+        "runtime": 7,
+        "still_path": "/qQtCw5s2e1xyfxZ3SjxEUReqj7c.jpg"
+      },
+      {
+        "episode_number": 104,
+        "name": "The Justice Friends: Pain in the Mouth",
+        "overview": "Krunk gets a nacho stuck in his tooth and Mayor Glory wants to take it out himself while Valhallens insists on taking Krunk to the dentist.",
+        "air_date": "1998-04-29",
+        "runtime": 7,
+        "still_path": "/gv7YYwYA0bL5ayWJSyuaRA5SxOr.jpg"
+      },
+      {
+        "episode_number": 105,
+        "name": "Dexter Vs. Santa\u0027s Claws",
+        "overview": "Dexter must prove to Dee Dee that Santa Claus doesn\u0027t exist.",
+        "air_date": "1998-04-29",
+        "runtime": 7,
+        "still_path": "/AplWCfgCNfyxdOGE0QxT51I1ete.jpg"
+      },
+      {
+        "episode_number": 106,
+        "name": "Dyno-Might",
+        "overview": "When Blue Falcon appears with a destroyed Dynomutt, Dexter decides to build a new one.",
+        "air_date": "1998-05-06",
+        "runtime": 11,
+        "still_path": "/rUeTpWuaTQLCZH190QNROG5estS.jpg"
+      },
+      {
+        "episode_number": 107,
+        "name": "LABretto",
+        "overview": "The story of how Dexter was born and how he built his lab, in the style of a musical.",
+        "air_date": "1998-05-06",
+        "runtime": 11,
+        "still_path": "/uZSVZqNfZ1YFi6OXvUAzcND7yp6.jpg"
+      },
+      {
+        "episode_number": 108,
+        "name": "Last But Not Beast",
+        "overview": "Dexter must save Japan from being destroyed by a monster, but his robot must be controlled by four people to function correctly, so Dexter must tell Dee Dee... and his parents.",
+        "air_date": "1998-06-15",
+        "runtime": 24,
+        "still_path": "/2PY5ES5xtM1VxfNT7q0HmOa6A4o.jpg"
+      }
+    ]
+  }
+}

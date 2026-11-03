@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 26,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Clown in the Dumps",
+        "overview": "A Springfield resident dies, Krusty retires after he\u0027s offended by a comedy cable channel roast of him, and Lisa tries to protect Homer from getting hurt.",
+        "air_date": "2014-09-28",
+        "runtime": 22,
+        "still_path": "/hWL4vzZKGnCd9Vd8SPM4mmMs9gA.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Wreck of the Relationship",
+        "overview": "When Bart disrespects Homer\u0027s authority, Homer makes a point to try his hand at parenting. This proves fruitless, so Marge signs them up for the Relation Ship, where they\u0027ll resolve their conflicts at sea. Meanwhile, Marge is in charge of Homer\u0027s fantasy football league, but manages to win despite being the underdog.",
+        "air_date": "2014-10-05",
+        "runtime": 23,
+        "still_path": "/cIVjbpWZ0N93Rg9VRUpiLQ78azC.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Super Franchise Me",
+        "overview": "Marge opens a sandwich franchise store after her sandwiches become a huge hit at Springfield Elementary. But running day-to-day at the store proves challenging, especially when the same franchise opens another location across the street.",
+        "air_date": "2014-10-12",
+        "runtime": 22,
+        "still_path": "/9CoRTG5LfwulbeBimBCHanW5Si1.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Treehouse of Horror XXV",
+        "overview": "In a Halloween-theme episode Bart reads Aramaic symbols from the bottom of his desk and he and Lisa are transported to an alternate world filled with demons. Also, Moe organizes a \u0022Clockwork Orange\u0022-ish gang in which member Dum (Homer) falls for a young lady (Marge) who wants him to quit. In a homage to \u0022The Others,\u0022 the Simpsons reconnect with their earlier incarnations from the Tracey Ullman era.",
+        "air_date": "2014-10-19",
+        "runtime": 23,
+        "still_path": "/lkIPgYy4xFKp9oVfivpGr2NgiXP.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Opposites A-Frack",
+        "overview": "Lisa brings in assembly woman Maxine Lombard to put a stop to Mr. Burns\u0027 fracking operation, but is taken aback when the two political opponents find themselves attracted to one another.",
+        "air_date": "2014-11-02",
+        "runtime": 23,
+        "still_path": "/wa6KTUFdj7K8tGL85j3VqvBt0vj.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Simpsorama",
+        "overview": "The Planet Express crew come to present-day Springfield to prevent the Simpsons from destroying the future.",
+        "air_date": "2014-11-09",
+        "runtime": 22,
+        "still_path": "/nFFi4rPMD0Gqyo5GQzzQqVbyOnF.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Blazed and Confused",
+        "overview": "Bart schemes to bring down his new teacher, Mr. Lassen, who is a terrible bully. Meanwhile, The Simpsons go to Burning Man.",
+        "air_date": "2014-11-16",
+        "runtime": 22,
+        "still_path": "/42uQpr4nmvxyi5Hvk3RABXWxekO.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Covercraft",
+        "overview": "Homer has a mid-life crisis, takes up bass guitar and forms a cover band with some of the other dads in town. But the band\u0027s modest early success is soon overwhelmed by the breakout potential of their most unlikely star, Apu.",
+        "air_date": "2014-11-23",
+        "runtime": 23,
+        "still_path": "/5k8NptlSBObwBnYTzuqCuiwkAc9.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "I Won\u0027t Be Home for Christmas",
+        "overview": "After Moe convinces Homer to stay out drinking on Christmas Eve, Marge tells Homer not to come home. This leads to Homer\u0027s sad trek through lonely Springfield, where he learns that the only place where one should truly get drunk on Christmas is home.",
+        "air_date": "2014-12-07",
+        "runtime": 22,
+        "still_path": "/bQNcB0o3ha2m4KK2FXKFgxP4nHi.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Man Who Came to Be Dinner",
+        "overview": "During a trip to \u0022Dizzneeland\u0022 the Simpsons board the wrong ride, Rocket To Your Doom, and are transported through the galaxy to Kang and Kodos\u0027 home planet, where they are held captive at the local zoo and the inhabitants decide to eat Homer.",
+        "air_date": "2015-01-04",
+        "runtime": 23,
+        "still_path": "/gfXvnNDrCQIj6wlSwAbUGC9KZPX.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Bart\u0027s New Friend",
+        "overview": "Bart has a new accomplice and best friend when Homer is hypnotized at the circus and believes he is a young boy again.",
+        "air_date": "2015-01-11",
+        "runtime": 22,
+        "still_path": "/foBHq18TAcDDdrjEIirF2biVIFV.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Musk Who Fell to Earth",
+        "overview": "When inventor Elon Musk lands in Springfield, he and Homer become fast friends and revolutionize the town\u0027s nuclear plant. But when Musk goes overboard and Mr. Burns wants him removed, Homer must figure out a way to break up with him.",
+        "air_date": "2015-01-25",
+        "runtime": 22,
+        "still_path": "/esUqin6FhqYW7nqfZnnKFdMJBRb.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Walking Big \u0026 Tall",
+        "overview": "When Lisa learns Springfield\u0027s anthem was stolen from another town she writes a replacement. Meanwhile, Homer learns the meaning of \u0022Wide Pride\u0022.",
+        "air_date": "2015-02-08",
+        "runtime": 23,
+        "still_path": "/m08LwQrFlaEvt41hMTGGHNMXC6w.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "My Fare Lady",
+        "overview": "When Marge gets fed up with the thankless duty of chauffeuring her kids around, she begins working as a driver for a transportation app service. Meanwhile, Homer bankrupts Moe when he watches over the bar for one night, which forces Moe to take a temporary job as a janitor at the nuclear plant.",
+        "air_date": "2015-02-15",
+        "runtime": 22,
+        "still_path": "/gvavyvMPZEU3FAUXXrLG06rT2pe.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Princess Guide",
+        "overview": "Homer is put in charge of keeping Princess Kemi out of trouble while her father, a Nigerian king, works out a uranium deal with Mr. Burns.",
+        "air_date": "2015-03-01",
+        "runtime": 23,
+        "still_path": "/bqmc3K6amGbdwZdo0IC0ExpHM3s.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Sky Police",
+        "overview": "Chief Wiggum is mistakenly delivered a military jet pack, which he gleefully accepts and uses in order to fight crime. But when the jet pack crashes into the church, the congregation, led by Marge, must resort to gambling and counting cards in order to collect money to repair the church.",
+        "air_date": "2015-03-08",
+        "runtime": 23,
+        "still_path": "/42gNmLHq0ZZFgWcR9U5mX8Y2Mlk.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Waiting for Duffman",
+        "overview": "When Duffman (guest voice Stacy Keach) undergoes hip replacement surgery and retires, the company sets up a reality show competition to find his replacement. Homer wins the competition, and because the job requires him to stay sober, he learns that beer isn\u0027t as necessary as he thought to have a good time.",
+        "air_date": "2015-03-15",
+        "runtime": 23,
+        "still_path": "/yppaOpYLygGbkF6D90ySAekEjkK.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Peeping Mom",
+        "overview": "Bart lies about being involved in a bulldozer crash, so Marge decides to follow him everywhere until he confesses. Meanwhile, Homer ignores Santa\u2019s Little Helper when Flanders gets a new dog.",
+        "air_date": "2015-04-19",
+        "runtime": 23,
+        "still_path": "/xQ1Y2T2LhqzaO6TpqUeP2pAT2wL.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Kids Are All Fight",
+        "overview": "When Homer gets an old film roll developed, the family takes a trip down memory lane to see the origins of how Bart and Lisa first started fighting with each other.",
+        "air_date": "2015-04-26",
+        "runtime": 22,
+        "still_path": "/xB2Hf6BNiR0HGZKMhIL4Q0XvohT.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Let\u0027s Go Fly a Coot",
+        "overview": "The Simpsons learn about Grampa\u2019s days in the Air Force, and Bart takes up smoking to impress Milhouse\u2019s Dutch cousin, Annika.",
+        "air_date": "2015-05-03",
+        "runtime": 23,
+        "still_path": "/4DhQKT65qSgNPdWKr3uY4tmaOnf.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Bull-E",
+        "overview": "After Bart gets bullied at the school dance, Marge convinces the town to pass anti-bullying legislation. Homer then gets arrested and sent to rehab for bullying Ned Flanders, only to subsequently leave rehab as a hero.",
+        "air_date": "2015-05-10",
+        "runtime": 23,
+        "still_path": "/lxVMzlQTv4EiQss2OFr8wkFPyKl.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Mathlete\u0027s Feat",
+        "overview": "When a modernized Springfield Elementary has a technical meltdown, Lisa transforms it into a Waldorf school. Meanwhile, Groundskeeper Willie becomes the coach of the mathletes.",
+        "air_date": "2015-05-17",
+        "runtime": 22,
+        "still_path": "/9m8ihZwvJ5xidLVCYoxAYiz1sqk.jpg"
+      }
+    ]
+  }
+}

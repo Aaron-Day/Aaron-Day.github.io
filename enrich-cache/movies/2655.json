@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2655,
+    "title": "What Lies Beneath",
+    "overview": "Norman and Claire Spencer are a seemingly happily married couple who uncover a terrible secret\u2026 a secret so disturbing it threatens to destroy them.",
+    "tagline": "He was the perfect husband until his one mistake followed them home.",
+    "runtime": 130,
+    "release_date": "2000-07-21",
+    "vote_average": 6.4,
+    "poster_path": "/1KqWWhMa4At7hY8uSd0aPbuI7jr.jpg",
+    "backdrop_path": "/dN0Y9PpPjW8pX4ZcdxarzswI2K6.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Michelle Pfeiffer",
+      "character": "Claire Spencer",
+      "profile_path": "/8qwNMFzmM3BxGKIj1iIqiHHBpx3.jpg"
+    },
+    {
+      "name": "Harrison Ford",
+      "character": "Norman Spencer",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Diana Scarwid",
+      "character": "Jody",
+      "profile_path": "/jGxYoIVKP8neczCUPHxBMoOY8lH.jpg"
+    },
+    {
+      "name": "Joe Morton",
+      "character": "Dr. Drayton",
+      "profile_path": "/w7rGWWSGKWWukojLbZOQJ5yh9jv.jpg"
+    }
+  ]
+}

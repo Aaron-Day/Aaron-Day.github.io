@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 243938,
+    "title": "Hot Tub Time Machine 2",
+    "overview": "After their first adventure with the Hot Tub Time Machine, Lou and Nick are living very well off their ill-gotten gains, while Jacob still cannot rely on Lou to be a positive role model. When an unknown assailant breaks into Lou\u0027s mansion and shoots him,\u00A0Nick and Jacob take him for another trip in the hot tub. They emerge in the year 2025, where they must figure out who shot Lou and prevent it from happening again.",
+    "tagline": "The laws of space and time are about to be violated.",
+    "runtime": 93,
+    "release_date": "2015-02-20",
+    "vote_average": 5.183,
+    "poster_path": "/lBroHetSm8RMI8zp7ThpFJsw9E1.jpg",
+    "backdrop_path": "/iz0gx0msnS2G2vUcmigSE7aN4CL.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 313576,
+      "name": "Hot Tub Time Machine Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Rob Corddry",
+      "character": "Lou Dorchen",
+      "profile_path": "/AjCLr5ZjP6iiP8D6SHQVCZ720nA.jpg"
+    },
+    {
+      "name": "Craig Robinson",
+      "character": "Nick Webber",
+      "profile_path": "/mTyTrOWUSOBJMOlDpnd4OYx7FlJ.jpg"
+    },
+    {
+      "name": "Clark Duke",
+      "character": "Jacob Yates-Dorchen",
+      "profile_path": "/qL7x57avA9IupsjtwnpIuJ8p8BD.jpg"
+    },
+    {
+      "name": "Bianca Haase",
+      "character": "Sophie",
+      "profile_path": "/pTydYBVeXwLD1zhNxq5wUXlmzSf.jpg"
+    }
+  ]
+}

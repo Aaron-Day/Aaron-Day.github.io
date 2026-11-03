@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 414906,
+    "title": "The Batman",
+    "overview": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
+    "tagline": "Unmask the truth.",
+    "runtime": 177,
+    "release_date": "2022-03-01",
+    "vote_average": 7.676,
+    "poster_path": "/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+    "backdrop_path": "/rvtdN5XkWAfGX6xDuPL6yYS2seK.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 948485,
+      "name": "The Batman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robert Pattinson",
+      "character": "Bruce Wayne / The Batman",
+      "profile_path": "/3qZ09UE7lN6AtorfXFRYpEtSY93.jpg"
+    },
+    {
+      "name": "Zo\u00EB Kravitz",
+      "character": "Selina Kyle",
+      "profile_path": "/n0mhAgmY6eJQmA7kaugsTZEJgHo.jpg"
+    },
+    {
+      "name": "Jeffrey Wright",
+      "character": "Lt. James Gordon",
+      "profile_path": "/yGcuHGW4glqRpOPxgiCvjcren7F.jpg"
+    },
+    {
+      "name": "Colin Farrell",
+      "character": "Oz / The Penguin",
+      "profile_path": "/5FdalJbrbZ5UCsED5rFrXpvbqJa.jpg"
+    }
+  ]
+}

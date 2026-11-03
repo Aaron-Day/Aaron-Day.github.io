@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 72571,
+    "title": "Paranormal Activity 3",
+    "overview": "In 1988, young sisters Katie and Kristi befriend an invisible entity who resides in their home.",
+    "tagline": "Discover how the activity began.",
+    "runtime": 83,
+    "release_date": "2011-10-19",
+    "vote_average": 5.927,
+    "poster_path": "/9nYranPiWdNmbD5PRPPSL7VUFTS.jpg",
+    "backdrop_path": "/6NBgG4LvjP4TkH1FDSfoJqVoQ7J.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 41437,
+      "name": "Paranormal Activity Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Katie Featherston",
+      "character": "Katie Featherston",
+      "profile_path": "/mdbMy2B70PiFp0ckLo6WhSLDbR2.jpg"
+    },
+    {
+      "name": "Sprague Grayden",
+      "character": "Kristi Rey",
+      "profile_path": "/dhWyIHiG9fYMkcd3pUK3Q7kFm37.jpg"
+    },
+    {
+      "name": "Lauren Bittner",
+      "character": "Julie",
+      "profile_path": "/1rJdHySYguJMogq39eSJCFQWwWy.jpg"
+    },
+    {
+      "name": "Christopher Nicholas Smith",
+      "character": "Dennis",
+      "profile_path": "/aNgDvTUySxZN2SfHQLzhPs5oncz.jpg"
+    }
+  ]
+}

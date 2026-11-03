@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 190859,
+    "title": "American Sniper",
+    "overview": "U.S. Navy SEAL Chris Kyle takes his sole mission\u2014protect his comrades\u2014to heart and becomes one of the most lethal snipers in American history. His pinpoint accuracy not only saves countless lives but also makes him a prime target of insurgents. Despite grave danger and his struggle to be a good husband and father to his family back in the States, Kyle serves four tours of duty in Iraq. However, when he finally returns home, he finds that he cannot leave the war behind.",
+    "tagline": "The most lethal sniper in U.S. history.",
+    "runtime": 133,
+    "release_date": "2014-12-25",
+    "vote_average": 7.405,
+    "poster_path": "/i1U46OwMc6vlm7OoSUKfqUH615e.jpg",
+    "backdrop_path": "/rl95VDEP3nsUQmGzE0S1S7y6T0N.jpg",
+    "genres": [
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Bradley Cooper",
+      "character": "Chris Kyle",
+      "profile_path": "/5Dhy50qOMOHfR1NZifKIfffjV9X.jpg"
+    },
+    {
+      "name": "Sienna Miller",
+      "character": "Taya Renae Kyle",
+      "profile_path": "/lq2mEeDbL98bSz0H7xcHA3F2Rrb.jpg"
+    },
+    {
+      "name": "Kyle Gallner",
+      "character": "Goat-Winston",
+      "profile_path": "/wfdywrw6K3ti1uW1IYDWbUtU8se.jpg"
+    },
+    {
+      "name": "Cole Konis",
+      "character": "Young Chris Kyle",
+      "profile_path": "/rZT7Lymev4ysRu3GiAbcUwCBldH.jpg"
+    }
+  ]
+}

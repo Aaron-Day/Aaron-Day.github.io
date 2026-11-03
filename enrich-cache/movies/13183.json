@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13183,
+    "title": "Watchmen",
+    "overview": "In a gritty and alternate 1985, the glory days of costumed vigilantes have been brought to a close by a government crackdown. But after one of the masked veterans is brutally murdered, an investigation into the killer is initiated. The reunited heroes set out to prevent their own destruction, but in doing so they uncover a sinister plot that puts all of humanity in grave danger.",
+    "tagline": "Justice is coming to all of us. No matter what we do.",
+    "runtime": 163,
+    "release_date": "2009-03-04",
+    "vote_average": 7.353,
+    "poster_path": "/aVURelN3pM56lFM7Dgfs5TixcIf.jpg",
+    "backdrop_path": "/dH7ia3vtkYCa3CBvDnvVjqm9uiQ.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Malin Akerman",
+      "character": "Laurie Jupiter / Silk Spectre II",
+      "profile_path": "/u38qRcCAiO3SZdFKJKx3fncDyef.jpg"
+    },
+    {
+      "name": "Patrick Wilson",
+      "character": "Dan Dreiberg / Nite Owl II",
+      "profile_path": "/oym6H2QD9esk4yABjCHaUoNAOa8.jpg"
+    },
+    {
+      "name": "Billy Crudup",
+      "character": "Jon Osterman / Dr. Manhattan",
+      "profile_path": "/4kHvUUVFMW8GJTHJtoAiskqhcyO.jpg"
+    },
+    {
+      "name": "Matthew Goode",
+      "character": "Adrian Veidt / Ozymandias",
+      "profile_path": "/3XaKKl0bKswTWbJ0Lh9nZ4UdAQo.jpg"
+    }
+  ]
+}

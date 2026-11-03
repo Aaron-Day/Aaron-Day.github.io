@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10714,
+    "title": "The Jungle Book",
+    "overview": "Raised by wild animals since childhood, Mowgli is drawn away from the jungle by the beautiful Kitty. But Mowgli must eventually face corrupt Capt. Boone, who wants both Kitty\u0027s hand and the treasures of Monkey City \u2013 a place only Mowgli can find.",
+    "tagline": "The legend will never be the same.",
+    "runtime": 111,
+    "release_date": "1994-12-23",
+    "vote_average": 6.023,
+    "poster_path": "/lFMxUrByUG2LcRAIsqrGti1zGIu.jpg",
+    "backdrop_path": "/k2QQrOoyShcnXqIlMZLDVg8si4M.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1576683,
+      "name": "The Jungle Book Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Scott Lee",
+      "character": "Mowgli",
+      "profile_path": "/7jObZCM3diuPV0WlKkzOd4uE2CJ.jpg"
+    },
+    {
+      "name": "Cary Elwes",
+      "character": "Captain William Boone",
+      "profile_path": "/9UszBdQJ9PmyBydIeIBxlStozhW.jpg"
+    },
+    {
+      "name": "Lena Headey",
+      "character": "Katherine \u0027Kitty\u0027 Brydon",
+      "profile_path": "/cDyZLf8ddz0EgoUjpv4jjzy7qxA.jpg"
+    },
+    {
+      "name": "Sam Neill",
+      "character": "Colonel Geofferey Brydon",
+      "profile_path": "/iIfuxalf37xUayuGyK0zG7z6WEZ.jpg"
+    }
+  ]
+}

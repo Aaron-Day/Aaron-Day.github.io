@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9802,
+    "title": "The Rock",
+    "overview": "When vengeful General Francis X. Hummel seizes control of Alcatraz Island and threatens to launch missiles loaded with deadly chemical weapons into San Francisco, only a young FBI chemical weapons expert and notorious Federal prisoner have the skills to penetrate the impregnable island fortress and take him down.",
+    "tagline": "Alcatraz. Only one man has ever broken out. Now five million lives depend on two men breaking in.",
+    "runtime": 137,
+    "release_date": "1996-06-07",
+    "vote_average": 7.156,
+    "poster_path": "/eBcoxveWzzXQrCrwWMGAROcqgpP.jpg",
+    "backdrop_path": "/qDVdTL1KqGmGLGsy7UPA3vksku7.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sean Connery",
+      "character": "John Patrick Mason",
+      "profile_path": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+      "name": "Nicolas Cage",
+      "character": "Dr. Stanley Goodspeed",
+      "profile_path": "/y1RtezurZYveYkVNRht7CwEgSYY.jpg"
+    },
+    {
+      "name": "Ed Harris",
+      "character": "Brigadier General Francis X. Hummel, USMC",
+      "profile_path": "/kUbUA70WPiosPT4kBJMWtGk0ASd.jpg"
+    },
+    {
+      "name": "John Spencer",
+      "character": "FBI Director James Womack",
+      "profile_path": "/8AZRfw1vqdsw7tOIK03LSQlphW.jpg"
+    }
+  ]
+}

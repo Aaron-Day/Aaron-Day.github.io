@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "After the events of The Avengers, S.H.I.E.L.D. Agent Phil Coulson assembles a small team of agents to investigate a mysterious group called the Rising Tide. In doing so, they encounter Mike Peterson, a man who has acquired superhuman powers.",
+        "air_date": "2013-09-24",
+        "runtime": 45,
+        "still_path": "/rPSvrM1XEUcVE3fYpYEdEA58KvV.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "0-8-4",
+        "overview": "Coulson and his S.H.I.E.L.D. agents travel to Peru to investigate an object of unknown origin, codenamed 0-8-4. But when he runs into Comandante Camilla Reyes, more than just sparks fly at 30,000 feet.",
+        "air_date": "2013-10-01",
+        "runtime": 42,
+        "still_path": "/3Ndrphly05IpOoBV6DyppJu15gx.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Asset",
+        "overview": "When the brilliant scientist, Dr. Franklin Hall, is kidnapped, Agent Coulson and his S.H.I.E.L.D. agents must race against the clock to locate him. Skye is their only way in\u2013pushing the team to their limits when the entire plan turns upside-down.",
+        "air_date": "2013-10-08",
+        "runtime": 44,
+        "still_path": "/7pW5MEaKH2XIiQpzZs5YvPkbNnl.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Eye Spy",
+        "overview": "Agent Coulson and the S.H.I.E.L.D. team try to track down a mysterious woman who has single-handedly committed numerous high-stakes heists. But when the woman\u2019s identity is revealed, a troubling secret stands to ruin Coulson.",
+        "air_date": "2013-10-15",
+        "runtime": 43,
+        "still_path": "/8P8Q7gb6u1vIrG3QKl9wTrOk4gS.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Girl in the Flower Dress",
+        "overview": "An elusive girl in a flower dress may hold the key to the mystery that brings Coulson and team to Asia to rescue a young man with an unusual and dangerous power; and Skye has a secret that jeopardizes her relationship with the team right when they need her most.",
+        "air_date": "2013-10-22",
+        "runtime": 43,
+        "still_path": "/sDMJIpguu44lmkOijDYriy35SIg.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "FZZT",
+        "overview": "When floating bodies turn up, Coulson and the agents of S.H.I.E.L.D. must hunt down an elusive killer. No one is safe - not even the team.",
+        "air_date": "2013-11-05",
+        "runtime": 43,
+        "still_path": "/ibziz3WqPN9m27wZdtxxga6QZej.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Hub",
+        "overview": "Dangerous secrets are being kept from Coulson\u0027s Team, and he works the system to save Ward and Fitz when they are sent on a Level 8 classified mission that may end in tragedy.",
+        "air_date": "2013-11-12",
+        "runtime": 43,
+        "still_path": "/dPzdZsaCpOf7D0jwdPhQ4VKAMc3.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Well",
+        "overview": "In the aftermath of the events chronicled in the feature film Marvel\u0027s Thor: The Dark World, Coulson and the agents of S.H.I.E.L.D. pick up the pieces\u2013one of which threatens to destroy a member of the team.",
+        "air_date": "2013-11-19",
+        "runtime": 43,
+        "still_path": "/ulp4pP5ItIubBiDDX1xOeTUAZuI.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Repairs",
+        "overview": "Coulson and his team are haunted by a ghost that threatens to destroy them all, and only a secret from May\u0027s past can save them.",
+        "air_date": "2013-11-26",
+        "runtime": 44,
+        "still_path": "/a67lxNXqoYgjl6ORKs6ZBUKuv6O.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Bridge",
+        "overview": "In a shocking cliffhanger episode, Coulson takes the war back to Centipede, and this time he brings in Michael Peterson for some super-soldier support. As they get closer to the truth, startling secrets are revealed and an unexpected twist threatens the team.",
+        "air_date": "2013-12-10",
+        "runtime": 42,
+        "still_path": "/j2SjEEDIoWiSFXzp1x3SbN0mJjz.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Magical Place",
+        "overview": "S.H.I.E.L.D. organizes a full scale hunt for Coulson. Meanwhile, Coulson uncovers vital information about the mystery of his death, but, with Centipede out for blood, this knowledge may come at the cost of one of the team!",
+        "air_date": "2014-01-07",
+        "runtime": 43,
+        "still_path": "/e37vgQPvQR5K8OKWhAgt8DQNmFS.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Seeds",
+        "overview": "Coulson and May uncover startling information about Skye\u0027s past, while the team is swept into a storm at a S.H.I.E.L.D. Academy of Science and Technology.",
+        "air_date": "2014-01-14",
+        "runtime": 44,
+        "still_path": "/ipzs6deRSPPDCyU2YB3RPnOkb5o.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "T.R.A.C.K.S.",
+        "overview": "Hot on the trail of The Clairvoyant, Coulson and his team board a mystery train that seems to be headed for certain death.",
+        "air_date": "2014-02-04",
+        "runtime": 43,
+        "still_path": "/6WUHYcORomqYVB2X4wEyh7W3Eh0.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "T.A.H.I.T.I.",
+        "overview": "Coulson goes on the attack to save Skye by enlisting the aid of Ward\u0027s former S.O. John Garrett and uncovers shocking truths about his own life and S.H.I.E.L.D.",
+        "air_date": "2014-03-04",
+        "runtime": 43,
+        "still_path": "/cYzOUnqmWaeAeF3ZbDuT5xrUID7.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Yes Men",
+        "overview": "When Coulson and his team are attacked by Lorelei - a deadly seductress who escaped from Asgard - Thor\u2019s Lady Sif, her longtime nemesis, steps in to try to save them.",
+        "air_date": "2014-03-11",
+        "runtime": 44,
+        "still_path": "/m4ZJe7JsAmqETigQGnSqN5GjHDx.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "End of the Beginning",
+        "overview": "Agents Garrett and Triplett are back to help Coulson\u0027s Team track down S.H.I.E.L.D.\u0027s nefarious enemy--The Clairvoyant. But will Deathlok destroy them all to protect his master\u0027s identity?",
+        "air_date": "2014-04-01",
+        "runtime": 42,
+        "still_path": "/5NkmOGIPFemBVzAMiznvhNPBROO.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Turn, Turn, Turn",
+        "overview": "Coulson and his team find themselves without anyone they can trust, only to discover that they are trapped with a traitor in their midst.",
+        "air_date": "2014-04-08",
+        "runtime": 44,
+        "still_path": "/qNa7fZSpGqKxt2TXN4DbcTNhb01.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Providence",
+        "overview": "With Colonel Glenn Talbot now on their trail, Coulson and his team seek refuge in the last place anyone would look, where they begin to uncover S.H.I.E.L.D.\u0027s most dangerous secrets. Secrets that could destroy them all.",
+        "air_date": "2014-04-15",
+        "runtime": 44,
+        "still_path": "/h7ocEHAdOYxX9JZznwDNwd768SV.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Only Light in the Darkness",
+        "overview": "With their world turned upside down, Coulson races to save the life of his one true love as the mystery of \u0022The Cellist,\u0022 which began in Marvel\u0027s The Avengers, is finally revealed.",
+        "air_date": "2014-04-22",
+        "runtime": 43,
+        "still_path": "/q6dKYi7TXghZ2NFNMB9nXlbREh7.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Nothing Personal",
+        "overview": "Just when there\u0027s no one left to trust, Agent Maria Hill returns to team up with Coulson as S.H.I.E.L.D. is being destroyed around them.",
+        "air_date": "2014-04-29",
+        "runtime": 44,
+        "still_path": "/8PmnWZgtau5OKyKw238WT2HRMH4.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Ragtag",
+        "overview": "Ward\u0027s betrayal and HYDRA\u0027s shocking secrets are revealed as Coulson\u0027s team goes undercover on a mission that leaves no one unscathed.",
+        "air_date": "2014-05-06",
+        "runtime": 43,
+        "still_path": "/7UqEElK16WLV10YeIH5TBbz90Nk.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Beginning of the End",
+        "overview": "Dark secrets are revealed as Coulson and his team put everything on the line to stop Garrett and the forces of HYDRA.",
+        "air_date": "2014-05-13",
+        "runtime": 43,
+        "still_path": "/dpqrPxNoAC7EKfwRwkF6ZkvWYA7.jpg"
+      }
+    ]
+  }
+}

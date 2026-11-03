@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 912649,
+    "title": "Venom: The Last Dance",
+    "overview": "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie\u0027s last dance.",
+    "tagline": "\u0027Til death do they part.",
+    "runtime": 109,
+    "release_date": "2024-10-22",
+    "vote_average": 6.663,
+    "poster_path": "/vGXptEdgZIhPg3cGlc7e8sNPC2e.jpg",
+    "backdrop_path": "/3V4kLQg0kSqPLctI5ziYWabAZYF.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 558216,
+      "name": "Venom Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Hardy",
+      "character": "Eddie Brock / Venom",
+      "profile_path": "/d81K0RH8UX7tZj49tZaQhZ9ewH.jpg"
+    },
+    {
+      "name": "Chiwetel Ejiofor",
+      "character": "Strickland",
+      "profile_path": "/kq5DDnqqofoRI0t6ddtRlsJnNPT.jpg"
+    },
+    {
+      "name": "Juno Temple",
+      "character": "Dr. Teddy Paine",
+      "profile_path": "/n20TNExAma6q9iVcWtPRxLl7pEc.jpg"
+    },
+    {
+      "name": "Rhys Ifans",
+      "character": "Martin",
+      "profile_path": "/5X8XcIqCDxsQYyHdx7mBwPVkSTs.jpg"
+    }
+  ]
+}

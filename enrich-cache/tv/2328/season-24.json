@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 24,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Return of the Prism",
+        "overview": "A young teen named Brody escapes to Earth from an alien spaceship with a special artifact called the Ninja Nexus Prism. He and two new friends must unlock its secrets to defend it from the villainous champion Galvanax.",
+        "air_date": "2017-01-21",
+        "runtime": 25,
+        "still_path": "/slPdMqvcGwDftE6AUujQlypcYU.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Forged in Steel",
+        "overview": "As Brody, Preston and Sarah return to Brody\u0027s childhood home in an attempt to find his lost family, Hayley and Calvin come across a strange alien named Mick.",
+        "air_date": "2017-01-28",
+        "runtime": 25,
+        "still_path": "/8tGskBuJL0VOEfvPesQKOu3tOPA.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Live and Learn",
+        "overview": "Brody is accused of cheating on his first day of school after using his Data Comm to find answers. Now, he must use his own abilities and leadership skills to lead the Rangers against another threat from Galvanax.",
+        "air_date": "2017-02-04",
+        "runtime": 25,
+        "still_path": "/7vcRE5DVwdu4GczYUFmmYVwZvMP.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Presto Change-O",
+        "overview": "Preston is amazed to discover that he has developed real magical abilities; Galvanax hatches a plan with a new monster to steal the ninja power stars.",
+        "air_date": "2017-02-11",
+        "runtime": 25,
+        "still_path": "/cDhiSuymwPCeYpJ1xyFy62TtHUS.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Drive to Survive",
+        "overview": "When the Power Rangers are caught in the spider web prison of Galvanax\u0027s latest monster, Tangleweb, Calvin must conquer his fear to unlock a new power and save them.",
+        "air_date": "2017-02-25",
+        "runtime": 25,
+        "still_path": "/3CeJXaFxNNhnrhkoOT3QozH9riw.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "My Friend Redbot",
+        "overview": "Hayley is targeted by Galvanax\u2019s latest monster. Isolated from the other Rangers, she and Redbot must work together to save themselves.",
+        "air_date": "2017-03-04",
+        "runtime": 25,
+        "still_path": "/eaywNlpfISp337NP8dUpnmBRdJ9.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Hack Attack",
+        "overview": "Determined to take part in as many student activities as she can, Sarah builds a device that allows her to clone herself, but the plan backfires when Galvanax\u0027s monster steals the technology for himself!",
+        "air_date": "2017-03-18",
+        "runtime": 25,
+        "still_path": "/x9tevXviMohQxJOfeqFRP3yRbIk.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Gold Rush",
+        "overview": "Both the Power Rangers and Galvanax attempt to find more information about the new mysterious Gold Ranger.",
+        "air_date": "2017-03-18",
+        "runtime": 25,
+        "still_path": "/126b3j2NBdBqWcoTEBsIdgWvEU4.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Rocking \u0026 Rolling",
+        "overview": "Levi is excited to be embarking on his world tour, but as mysterious earthquakes start shaking up Summer Cove, he\u0027s presented with a tough decision.",
+        "air_date": "2017-08-12",
+        "runtime": 25,
+        "still_path": "/5e3JzxWRcVFkOBo9GN0tGoD1Xn0.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Ranger Ribbon",
+        "overview": "When Summer Cove\u0027s sentimental \u0022Ribbon Tree\u0022 is in danger of being cut down by Preston\u0027s wealthy father, Preston must learn to stand up to his father to save what is important.",
+        "air_date": "2017-08-19",
+        "runtime": 25,
+        "still_path": "/eU7UxvHMCPBE6kk2hiibbfGRnI.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Poisonous Plots",
+        "overview": "Galvanax\u0027s latest contestant poisons Brody and the Rangers must make the ultimate sacrifice to save him.",
+        "air_date": "2017-08-26",
+        "runtime": 25,
+        "still_path": "/wfiyGZ3Qa8mvODHNIi8dujHPevG.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Family Fusion",
+        "overview": "The Rangers access a powerful new Megazord formation to battle Ripcon.",
+        "air_date": "2017-09-02",
+        "runtime": 25,
+        "still_path": "/CW2v11wMYB74Gl7tpXR3s9zlGU.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Ace and the Race",
+        "overview": "Calvin finds himself increasingly distracted from his friends and Power Ranger duties when he spends all his time trying to impress his local hero.",
+        "air_date": "2017-09-09",
+        "runtime": 22,
+        "still_path": "/6iGofjALxtrY5l1L0a2UQ2uEr6j.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Royal Rival",
+        "overview": "A mysterious princess and her royal guard arrive on Earth to challenge the Rangers.",
+        "air_date": "2017-09-16",
+        "runtime": 22,
+        "still_path": "/kJxXHh0epjGbIvKGB9L4etA3tTg.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Royal Rumble",
+        "overview": "The Power Rangers band together with a new ally to try and defeat Galvanax\u0027s new champion -- but even their teamwork may not be enough.",
+        "air_date": "2017-09-23",
+        "runtime": 22,
+        "still_path": "/taQiB89YTHMnHDdyfsHPKQbeVl2.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Grave Robber",
+        "overview": "The Power Rangers celebrate Halloween by playing a spooky new board game, but find the stakes bigger than they imagined.",
+        "air_date": "2017-10-07",
+        "runtime": 22,
+        "still_path": "/xmqyqBCURzrk8mUiLfODiEhaD8Q.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Monkey Business",
+        "overview": "Hayley and Calvin\u0027s relationship is tested when they both decide to run for student body president.",
+        "air_date": "2017-10-14",
+        "runtime": 22,
+        "still_path": "/ciS63qc6ypJBDYHoNymjXBlmMK1.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Adventures of Redbot",
+        "overview": "Redbot documents the adventures of the Power Rangers on his new blog, while a cat-like monster attempts to steal the Ninja Power Stars.",
+        "air_date": "2017-10-21",
+        "runtime": 22,
+        "still_path": "/3iIfy0dZo7WUW0FBIFyEguJ5b2L.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Abrakadanger",
+        "overview": "Preston must confront one of Galvanax\u0027s newest contestants after his magical spells backfire on his teammates.",
+        "air_date": "2017-10-28",
+        "runtime": 22,
+        "still_path": "/nCOzCESErzuIVUOPHwLWXzU2Pif.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Helping Hand",
+        "overview": "While Sarah deals with issues at school, the Ninja Steel Rangers must overcome a force field.",
+        "air_date": "2017-11-04",
+        "runtime": 22,
+        "still_path": "/1aqTBfX7T7ewCZc1uJFNaM7mINN.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Galvanax Rises",
+        "overview": "Galvanax comes to Earth with a new, seemingly unstoppable plan to defeat the Power Rangers.",
+        "air_date": "2017-11-18",
+        "runtime": 22,
+        "still_path": "/vJrJW9Nq7JO65Tm6KfIh6HxxAnp.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Past, Presents and Future",
+        "overview": "Sarah teams up with Santa Claus to save Christmas and the Power Rangers from a time-manipulating monster.",
+        "air_date": "2017-12-02",
+        "runtime": 22,
+        "still_path": "/5N5Z3ygfvKaLoKCzd4yXmY5LjPB.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8961,
+    "title": "Bad Boys II",
+    "overview": "Detectives Marcus Burnett and Mike Lowrey of the Miami Narcotics Task Force are tasked with stopping the flow of the drug Ecstasy into Miami. They track the drugs to the whacked-out Cuban drug lord Johnny Tapia, who is also involved in a bloody war with Russian and Haitian mobsters. If that isn\u0027t bad enough, there\u0027s tension between the two detectives when Marcus discovers that playboy Mike is secretly romancing Marcus\u2019 sister, Syd.",
+    "tagline": "If you can\u0027t stand the heat, get out of Miami.",
+    "runtime": 146,
+    "release_date": "2003-07-18",
+    "vote_average": 6.655,
+    "poster_path": "/yCvB5fG5aEPqa1St7ihY6KEAsHD.jpg",
+    "backdrop_path": "/gxSVZCUlDd8upT1G2wdrUdz2hxG.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 14890,
+      "name": "Bad Boys Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Martin Lawrence",
+      "character": "Detective Marcus Burnett",
+      "profile_path": "/y3SQzIPUPJpdueb1DkbTYph68nk.jpg"
+    },
+    {
+      "name": "Will Smith",
+      "character": "Detective Mike Lowrey",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Jordi Moll\u00E0",
+      "character": "Hector Juan Carlos \u0027Johnny\u0027 Tapia",
+      "profile_path": "/9XsTmWLJ2qMXoUpcb105h6h5OUX.jpg"
+    },
+    {
+      "name": "Gabrielle Union",
+      "character": "Syd",
+      "profile_path": "/toeSCybsYufRKfgz77AKy4C8axD.jpg"
+    }
+  ]
+}

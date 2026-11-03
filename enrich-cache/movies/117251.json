@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 117251,
+    "title": "White House Down",
+    "overview": "Capitol Policeman John Cale has just been denied his dream job with the Secret Service protecting President James Sawyer. Not wanting to let down his little girl with the news, he takes her on a tour of the White House, when the complex is overtaken by a heavily armed paramilitary group. Now, with the nation\u0027s government falling into chaos and time running out, it\u0027s up to Cale to save the president, his daughter, and the country.",
+    "tagline": "It will start like any other day.",
+    "runtime": 131,
+    "release_date": "2013-06-27",
+    "vote_average": 6.469,
+    "poster_path": "/6TeIVKPw7nXXWy2zKmDmlnSwzb7.jpg",
+    "backdrop_path": "/eVidMQ5eXDhRizo9ig1X4iWCDqe.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Channing Tatum",
+      "character": "Cale",
+      "profile_path": "/4TpgnS6l8YUXSne9Av9nda6mjxY.jpg"
+    },
+    {
+      "name": "Jamie Foxx",
+      "character": "President Sawyer",
+      "profile_path": "/zD8Nsy4Xrghp7WunwpCj5JKBPeU.jpg"
+    },
+    {
+      "name": "Maggie Gyllenhaal",
+      "character": "Finnerty",
+      "profile_path": "/vsfkWdYWmA9CpzMHTJzrFxlDnEZ.jpg"
+    },
+    {
+      "name": "Jason Clarke",
+      "character": "Stenz",
+      "profile_path": "/quH4y2dto3UAgZOfaM0QriyRLPN.jpg"
+    }
+  ]
+}

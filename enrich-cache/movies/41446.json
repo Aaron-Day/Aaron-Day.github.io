@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 41446,
+    "title": "Scream 4",
+    "overview": "Fifteen years after the original Woodsboro murders, Sidney Prescott returns home to promote her new book about surviving trauma, only for a new Ghostface killer to emerge, targeting a new group of teens.",
+    "tagline": "New decade. New rules.",
+    "runtime": 111,
+    "release_date": "2011-04-13",
+    "vote_average": 6.476,
+    "poster_path": "/3cf8p2qw9qnsaaFWc64AG6U05eT.jpg",
+    "backdrop_path": "/c5EmNhLQsTTKAyUHULnKYQjlloz.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2602,
+      "name": "Scream Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Neve Campbell",
+      "character": "Sidney Prescott",
+      "profile_path": "/zQzNg6Kiufj2VCltprI6jilNtl3.jpg"
+    },
+    {
+      "name": "David Arquette",
+      "character": "Dewey Riley",
+      "profile_path": "/74wJjoywG7zCrNMWbRxwoyOj7Ub.jpg"
+    },
+    {
+      "name": "Courteney Cox",
+      "character": "Gale Weathers-Riley",
+      "profile_path": "/cSOORhCRPJiwKghozXVXrOBi3Tp.jpg"
+    },
+    {
+      "name": "Emma Roberts",
+      "character": "Jill Roberts",
+      "profile_path": "/utggW2yIufP3A5CGdT8H5mXyGLs.jpg"
+    }
+  ]
+}

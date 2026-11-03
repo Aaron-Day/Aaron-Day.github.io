@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 259074,
+    "title": "Joy Ride 3",
+    "overview": "Rusty Nail is back on the road again looking to punish injustice at every turn - and this time it\u0027s with a group of hotheaded street racers on their way to the Road Rally 1000. As they drive through a desolate shortcut on the way to the race, an encounter with Rusty turns sour and soon he is tracking, teasing and torturing them until the end of the road.",
+    "tagline": "Rusty returns...",
+    "runtime": 96,
+    "release_date": "2014-06-03",
+    "vote_average": 5.65,
+    "poster_path": "/x09iUViG5OqNve87hQshHIwM8bY.jpg",
+    "backdrop_path": "/6g3albuDbP6TCeRwNoLFX6igBlL.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 166378,
+      "name": "Joy Ride Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ken Kirzinger",
+      "character": "Rusty Nail",
+      "profile_path": "/h9PfH9SP4gO7H7RPEpLvQWLY3zW.jpg"
+    },
+    {
+      "name": "Jesse Hutch",
+      "character": "Jordan Wells",
+      "profile_path": "/3tQsDlnoEVT73mV7OFs0D9EYn5f.jpg"
+    },
+    {
+      "name": "Benjamin Hollingsworth",
+      "character": "Mickey Cole",
+      "profile_path": "/5dR2AbGdWHUsOu1HkW3x5fsTebw.jpg"
+    },
+    {
+      "name": "Gianpaolo Venuta",
+      "character": "Austin Moore",
+      "profile_path": "/w3d0kUb69R8kJ4QKEjl13bJ0uRX.jpg"
+    }
+  ]
+}

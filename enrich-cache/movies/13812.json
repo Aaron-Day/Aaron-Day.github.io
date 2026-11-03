@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13812,
+    "title": "Quarantine",
+    "overview": "A television reporter and her cameraman are trapped inside a building quarantined by the CDC after the outbreak of a mysterious virus which turns humans into bloodthirsty killers.",
+    "tagline": "On March 11, 2008, the government sealed off an apartment complex in Los Angeles. The residents were never seen again. No details. No witnesses. No evidence. Until now.",
+    "runtime": 89,
+    "release_date": "2008-10-10",
+    "vote_average": 5.764,
+    "poster_path": "/rGfOD8IC1x4PqmnqRuA8KyCckia.jpg",
+    "backdrop_path": "/v3yQYRScLl8WIqS1DnPub3hPuiE.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 123932,
+      "name": "Quarantine Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jennifer Carpenter",
+      "character": "Angela Vidal",
+      "profile_path": "/sQeNgRFfCjt3EHMuaJBm8jRCLgw.jpg"
+    },
+    {
+      "name": "Steve Harris",
+      "character": "Scott Percival",
+      "profile_path": "/6qD0I3RPe2ivV5GdXgW3tJHSu1e.jpg"
+    },
+    {
+      "name": "Columbus Short",
+      "character": "Danny Wilensky",
+      "profile_path": "/rUHCNAvu9xOmBP7i9jAABR7j5cg.jpg"
+    },
+    {
+      "name": "Jay Hernandez",
+      "character": "Jake",
+      "profile_path": "/86mlhxglLYYCac1CWWj4s9uR9U9.jpg"
+    }
+  ]
+}

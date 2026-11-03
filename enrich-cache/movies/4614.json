@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4614,
+    "title": "The Sum of All Fears",
+    "overview": "When the president of Russia suddenly dies, a man whose politics are virtually unknown succeeds him. The change in political leaders sparks paranoia among American CIA officials, so CIA director Bill Cabot recruits a young analyst to supply insight and advice on the situation. Then the unthinkable happens: a nuclear bomb explodes in a U.S. city, and America is quick to blame the Russians.",
+    "tagline": "27,000 nuclear weapons. One is missing.",
+    "runtime": 124,
+    "release_date": "2002-05-31",
+    "vote_average": 6.38,
+    "poster_path": "/3E4LW4bjRhEMDeeXeIsmkJ94v8K.jpg",
+    "backdrop_path": "/455z1puGQRuMKumAaDttSEEzqg1.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Affleck",
+      "character": "Jack Ryan",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Morgan Freeman",
+      "character": "DCI William Cabot",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    },
+    {
+      "name": "James Cromwell",
+      "character": "President Fowler",
+      "profile_path": "/vpNQQbM5PtxsYmVm4oh79SGFyUK.jpg"
+    },
+    {
+      "name": "Liev Schreiber",
+      "character": "John Clark",
+      "profile_path": "/26G7QjSb5ZazgWb9XB2X6SwcILQ.jpg"
+    }
+  ]
+}

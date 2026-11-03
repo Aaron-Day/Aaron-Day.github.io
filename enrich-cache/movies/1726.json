@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1726,
+    "title": "Iron Man",
+    "overview": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+    "tagline": "Heroes aren\u0027t born. They\u0027re built.",
+    "runtime": 126,
+    "release_date": "2008-04-30",
+    "vote_average": 7.668,
+    "poster_path": "/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+    "backdrop_path": "/cKvDv2LpwVEqbdXWoQl4XgGN6le.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131292,
+      "name": "Iron Man Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robert Downey Jr.",
+      "character": "Tony Stark",
+      "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+    },
+    {
+      "name": "Terrence Howard",
+      "character": "Rhodey",
+      "profile_path": "/eZ6uRZOYWZAyjNmWpDKGdLL6WUC.jpg"
+    },
+    {
+      "name": "Jeff Bridges",
+      "character": "Obadiah Stane",
+      "profile_path": "/xms1RAY6q7Lzp7wNeRCB0kzhucn.jpg"
+    },
+    {
+      "name": "Gwyneth Paltrow",
+      "character": "Pepper Potts",
+      "profile_path": "/r4wbWWEEjmtRFZ0GU10XbLTgp47.jpg"
+    }
+  ]
+}

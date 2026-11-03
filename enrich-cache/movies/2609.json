@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2609,
+    "title": "Planes, Trains and Automobiles",
+    "overview": "An irritable marketing executive, Neal Page, is heading home to Chicago for Thanksgiving when a number of delays force him to travel with a well meaning but overbearing shower curtain ring salesman, Del Griffith.",
+    "tagline": "What he really wanted was to spend Thanksgiving with his family. What he got was three days with the turkey.",
+    "runtime": 92,
+    "release_date": "1987-11-26",
+    "vote_average": 7.256,
+    "poster_path": "/fwi2cET87xArJCb8MdbWq2BZO3n.jpg",
+    "backdrop_path": "/4f8JBqvWyPObKTrjvJnp9BeOUyY.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Steve Martin",
+      "character": "Neal Page",
+      "profile_path": "/d0KthX8hVWU9BxTCG1QUO8FURRm.jpg"
+    },
+    {
+      "name": "John Candy",
+      "character": "Del Griffith",
+      "profile_path": "/uvLWbMDE6UfWNF5tfrsrC9NqeEA.jpg"
+    },
+    {
+      "name": "Laila Robins",
+      "character": "Susan Page",
+      "profile_path": "/ucHMLT7IUaWkd64ZPHtWjqxx8rq.jpg"
+    },
+    {
+      "name": "Michael McKean",
+      "character": "State Trooper",
+      "profile_path": "/xuEZeuylzznJcf0nDs1RlvuzaPr.jpg"
+    }
+  ]
+}

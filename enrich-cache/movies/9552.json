@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9552,
+    "title": "The Exorcist",
+    "overview": "When a mysterious entity possesses a young girl, her mother seeks the help of two Catholic priests to save her life.",
+    "tagline": "Something almost beyond comprehension is happening to a girl on this street, in this house\u2026And a man has been sent for as a last resort. This man is The Exorcist.",
+    "runtime": 122,
+    "release_date": "1973-12-26",
+    "vote_average": 7.75,
+    "poster_path": "/5x0CeVHJI8tcDx8tUUwYHQSNILq.jpg",
+    "backdrop_path": "/xcjJ5khg2yzOa282mza39Lbrm7j.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 12263,
+      "name": "The Exorcist Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ellen Burstyn",
+      "character": "Chris MacNeil",
+      "profile_path": "/zGihSIVRzwmCqilnA4PmNM4C2RT.jpg"
+    },
+    {
+      "name": "Linda Blair",
+      "character": "Regan MacNeil",
+      "profile_path": "/diMBw4RF5HIFnBak6C2Obq3n2Dt.jpg"
+    },
+    {
+      "name": "Jason Miller",
+      "character": "Father Damien Karras",
+      "profile_path": "/hYC0SWjPQy4BGJo7fPleifPpcuC.jpg"
+    },
+    {
+      "name": "Max von Sydow",
+      "character": "Father Lankester Merrin",
+      "profile_path": "/u16BsGyT6v9yuO7wWAF62NayDth.jpg"
+    }
+  ]
+}

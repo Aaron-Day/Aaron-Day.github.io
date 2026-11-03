@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10283,
+    "title": "Friday the 13th Part VIII: Jason Takes Manhattan",
+    "overview": "Jason ships out aboard a teen-filled \u0022love boat\u0022 bound for New York, which he soon transforms into the ultimate voyage of the damned.",
+    "tagline": "New York has a new problem.",
+    "runtime": 100,
+    "release_date": "1989-07-28",
+    "vote_average": 4.948,
+    "poster_path": "/6ezOsZ9UzqGnbDokaatxdOWP6e9.jpg",
+    "backdrop_path": "/6U5sEPgkf3nnQC51kUUKcKzNSyR.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9735,
+      "name": "Friday the 13th Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jensen Daggett",
+      "character": "Rennie",
+      "profile_path": "/ryFfHU77jMPuHhFnW9tyutJlmw9.jpg"
+    },
+    {
+      "name": "Scott Reeves",
+      "character": "Sean Robertson",
+      "profile_path": "/jqf0Y7wdvrwj6YG1EwJgQ3bvhDB.jpg"
+    },
+    {
+      "name": "Barbara Bingham",
+      "character": "Colleen Van Deusen",
+      "profile_path": "/5BcFejTyfysSobA0REHrs4l7DcU.jpg"
+    },
+    {
+      "name": "Peter Mark Richman",
+      "character": "Charles McCulloch",
+      "profile_path": "/vfW6hOOrisdCd1YKM9as9SIS9fb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 505642,
+    "title": "Black Panther: Wakanda Forever",
+    "overview": "Queen Ramonda, Shuri, M\u2019Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T\u2019Challa\u2019s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+    "tagline": "Forever.",
+    "runtime": 162,
+    "release_date": "2022-11-09",
+    "vote_average": 6.985,
+    "poster_path": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+    "backdrop_path": "/83H0C66AcvkwpG2738VCTHMY9uv.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 529892,
+      "name": "Black Panther Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Letitia Wright",
+      "character": "Shuri",
+      "profile_path": "/f7PevpEeBqwzACPhoZ8K3ktrKvE.jpg"
+    },
+    {
+      "name": "Tenoch Huerta Mej\u00EDa",
+      "character": "Namor",
+      "profile_path": "/x0Wy85CZu887ZQMWrjj4vVulczM.jpg"
+    },
+    {
+      "name": "Lupita Nyong\u0027o",
+      "character": "Nakia",
+      "profile_path": "/y40Wu1T742kynOqtwXASc5Qgm49.jpg"
+    },
+    {
+      "name": "Danai Gurira",
+      "character": "Okoye",
+      "profile_path": "/z7H7QeQvr24vskGlANQhG43vozQ.jpg"
+    }
+  ]
+}

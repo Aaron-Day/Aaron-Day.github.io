@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 287947,
+    "title": "Shazam!",
+    "overview": "A boy is given the ability to become an adult superhero in times of need with a single magic word.",
+    "tagline": "Just say the word.",
+    "runtime": 132,
+    "release_date": "2019-03-29",
+    "vote_average": 6.966,
+    "poster_path": "/xnopI5Xtky18MPhK40cZAGAOVeV.jpg",
+    "backdrop_path": "/o7JVhqMmrex1TPbmuxl8YXVlcfl.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 724848,
+      "name": "Shazam! Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Zachary Levi",
+      "character": "Shazam",
+      "profile_path": "/1W8L3kEMMPF9umT3ZGaNIiCYKfZ.jpg"
+    },
+    {
+      "name": "Mark Strong",
+      "character": "Dr. Sivana",
+      "profile_path": "/3cNmatYsoifytg7TfQhI1EHow3v.jpg"
+    },
+    {
+      "name": "Asher Angel",
+      "character": "Billy Batson",
+      "profile_path": "/lgBt67iggDs0d8QBSyjdk2ytHtK.jpg"
+    },
+    {
+      "name": "Jack Dylan Grazer",
+      "character": "Freddy Freeman",
+      "profile_path": "/wkLAOleFx9Pis97g6t3noJRhAwg.jpg"
+    }
+  ]
+}

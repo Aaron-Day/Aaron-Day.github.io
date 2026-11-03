@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 41210,
+    "title": "The Switch",
+    "overview": "Kassie is a smart, fun-loving single woman who, despite her neurotic best friend Wally\u2019s objections, decides it\u2019s time to have a baby \u2013 even if it means doing it herself\u2026 with a little help from a charming sperm donor. But, unbeknownst to her, Kassie\u2019s plans go awry because of a last-minute switch that isn\u2019t discovered until seven years later\u2026 when Wally gets acquainted with Kassie\u2019s cute, though slightly neurotic, son.",
+    "tagline": "The most unexpected comedy ever conceived.",
+    "runtime": 101,
+    "release_date": "2010-08-20",
+    "vote_average": 6.236,
+    "poster_path": "/oJdMT6RGtbvQ26Tk7EHGfG8xZ6.jpg",
+    "backdrop_path": "/gh3uqEZQp4nhkyJqkGUJSgGr6AJ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jennifer Aniston",
+      "character": "Kassie Larson",
+      "profile_path": "/PBSCmHDFdCMBhjx0EbXpTw4Z94.jpg"
+    },
+    {
+      "name": "Jason Bateman",
+      "character": "Wally Mars",
+      "profile_path": "/8e6mt0vGjPo6eW52gqRuXy5YnfN.jpg"
+    },
+    {
+      "name": "Patrick Wilson",
+      "character": "Roland",
+      "profile_path": "/oym6H2QD9esk4yABjCHaUoNAOa8.jpg"
+    },
+    {
+      "name": "Thomas Robinson",
+      "character": "Sebastian",
+      "profile_path": "/1dFBQuO6JPv2hJAuDdA0eYRlp2e.jpg"
+    }
+  ]
+}

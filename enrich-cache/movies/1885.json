@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1885,
+    "title": "The Karate Kid",
+    "overview": "New Jersey teen Daniel LaRusso moves to Los Angeles with his mother, and soon strikes up a relationship with Ali. He quickly finds himself the target of bullying by a group of thugs, led by Ali\u0027s ex-boyfriend Johnny, who study karate at the Cobra Kai dojo under ruthless sensei John Kreese. Fortunately, Daniel befriends Mr. Miyagi, an unassuming repairman who just happens to be a martial arts master himself. Miyagi takes Daniel under his wing, training him in a more compassionate form of karate for self-defense and, later, preparing him to compete against the brutal Cobra Kai.",
+    "tagline": "He taught him the secret to karate lies in the mind and heart. Not in the hands.",
+    "runtime": 127,
+    "release_date": "1984-06-22",
+    "vote_average": 7.231,
+    "poster_path": "/1mp4ViklKvA0WXXsNvNx0RBuiit.jpg",
+    "backdrop_path": "/j1xaeJZOEOiVBD1rk3dg4YaAk23.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8580,
+      "name": "The Karate Kid Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ralph Macchio",
+      "character": "Daniel",
+      "profile_path": "/AoqqL9UlyPrcTLnpzbQvKXPvXrz.jpg"
+    },
+    {
+      "name": "Pat Morita",
+      "character": "Miyagi",
+      "profile_path": "/dwnjbEvhKRanS5xTaI1NkZ98aM9.jpg"
+    },
+    {
+      "name": "Elisabeth Shue",
+      "character": "Ali",
+      "profile_path": "/1pmjDSLvOuqKW1P2KRPlpFMeUFe.jpg"
+    },
+    {
+      "name": "William Zabka",
+      "character": "Johnny",
+      "profile_path": "/1n1a8jM9lmk7lfDxtZoOesTkIIU.jpg"
+    }
+  ]
+}

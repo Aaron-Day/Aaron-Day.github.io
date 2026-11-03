@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 333484,
+    "title": "The Magnificent Seven",
+    "overview": "Looking to mine for gold, greedy industrialist Bartholomew Bogue seizes control of the Old West town of Rose Creek. With their lives in jeopardy, Emma Cullen and other desperate residents turn to bounty hunter Sam Chisolm for help. Chisolm recruits an eclectic group of gunslingers to take on Bogue and his ruthless henchmen. With a deadly showdown on the horizon, the seven mercenaries soon find themselves fighting for more than just money once the bullets start to fly.",
+    "tagline": "Justice has a number.",
+    "runtime": 132,
+    "release_date": "2016-09-14",
+    "vote_average": 6.5,
+    "poster_path": "/ezcS78TIjgr85pVdaPDd2rSPVNs.jpg",
+    "backdrop_path": "/4qxZJRYe4ezA5J1sidnV7vuaYaz.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "Sam Chisolm",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Chris Pratt",
+      "character": "Joshua Farraday",
+      "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Ethan Hawke",
+      "character": "Goodnight Robicheaux",
+      "profile_path": "/2LoTr6x0TEM7L5em4kSx1VmGDgG.jpg"
+    },
+    {
+      "name": "Vincent D\u0027Onofrio",
+      "character": "Jack Horne",
+      "profile_path": "/qkyiLolEqYMGH25xD4sFIXAjZQB.jpg"
+    }
+  ]
+}

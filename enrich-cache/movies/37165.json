@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 37165,
+    "title": "The Truman Show",
+    "overview": "In a picture-perfect seaside town, an insurance salesman begins to realize that his entire existence may be staged and observed by a vast unseen audience as part of a long-running real-time reality TV show.",
+    "tagline": "On the air. Unaware.",
+    "runtime": 103,
+    "release_date": "1998-06-04",
+    "vote_average": 8.16,
+    "poster_path": "/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
+    "backdrop_path": "/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jim Carrey",
+      "character": "Truman Burbank",
+      "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+    },
+    {
+      "name": "Ed Harris",
+      "character": "Christof",
+      "profile_path": "/kUbUA70WPiosPT4kBJMWtGk0ASd.jpg"
+    },
+    {
+      "name": "Laura Linney",
+      "character": "Meryl",
+      "profile_path": "/6I31xZxo9Hq6T0OhSwCUjHd8jkB.jpg"
+    },
+    {
+      "name": "Noah Emmerich",
+      "character": "Marlon",
+      "profile_path": "/qwPPHYWJ3a9yRwFXicbbHsf60Nm.jpg"
+    }
+  ]
+}

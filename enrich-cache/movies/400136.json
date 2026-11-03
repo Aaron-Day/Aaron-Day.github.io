@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 400136,
+    "title": "Resident Evil: Vendetta",
+    "overview": "When a fearless enemy out for revenge unleashes a brutal and deadly new virus, BSAA captain Chris Redfield enlists the help of Agent Leon S. Kennedy and Professor Rebecca Chambers to bring down the death merchant and save New York City.",
+    "tagline": "Kill evil or die trying.",
+    "runtime": 97,
+    "release_date": "2017-05-27",
+    "vote_average": 6.9,
+    "poster_path": "/kdiMtgjWXEH9QZ85hgmWaSwshjf.jpg",
+    "backdrop_path": "/ijjRrrmQ4kVFkAqnpUNaWZ4h3yW.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 133352,
+      "name": "Resident Evil (Animated) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kevin Dorman",
+      "character": "Chris Redfield (voice)",
+      "profile_path": "/jByqQyo6VsnbtXwKGidaadSBOPb.jpg"
+    },
+    {
+      "name": "Matthew Mercer",
+      "character": "Leon S. Kennedy (voice)",
+      "profile_path": "/fe1S317253vfMuNuIDjhp9vtNSs.jpg"
+    },
+    {
+      "name": "Erin Cahill",
+      "character": "Rebecca Chambers (voice)",
+      "profile_path": "/w4WPh5Ex294Y0KnvmdIXfoSiB17.jpg"
+    },
+    {
+      "name": "John DeMita",
+      "character": "Glenn Arias (voice)",
+      "profile_path": "/1QcOloxFO6EbzAx4LuVrN48PDeX.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 545611,
+    "title": "Everything Everywhere All at Once",
+    "overview": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what\u0027s important to her by connecting with the lives she could have led in other universes.",
+    "tagline": "The universe is so much bigger than you realize.",
+    "runtime": 140,
+    "release_date": "2022-03-24",
+    "vote_average": 7.711,
+    "poster_path": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+    "backdrop_path": "/fIwiFha3WPu5nHkBeMQ4GzEk0Hv.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Michelle Yeoh",
+      "character": "Evelyn Wang",
+      "profile_path": "/i6fHvGt7Rb8oVyjjdQVV6vEHB94.jpg"
+    },
+    {
+      "name": "Stephanie Hsu",
+      "character": "Joy Wang / Jobu Tupaki",
+      "profile_path": "/8gb3lfIHKQAGOQyeC4ynQPsCiHr.jpg"
+    },
+    {
+      "name": "Ke Huy Quan",
+      "character": "Waymond Wang",
+      "profile_path": "/iestHyn7PLuVowj5Jaa1SGPboQ4.jpg"
+    },
+    {
+      "name": "James Hong",
+      "character": "Gong Gong",
+      "profile_path": "/v3lfw5aHOy0paOCx6WHiSnwzbH0.jpg"
+    }
+  ]
+}

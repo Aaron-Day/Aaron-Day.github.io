@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 26123,
+    "title": "American Pie Presents: The Book of Love",
+    "overview": "Ten years after the first American Pie movie, three new hapless virgins discover the Bible hidden in the school library at East Great Falls High. Unfortunately for them, the book is ruined, and with incomplete advice, the Bible leads them on a hilarious journey to lose their virginity.",
+    "tagline": "It\u0027s the hottest slice yet!",
+    "runtime": 93,
+    "release_date": "2009-12-02",
+    "vote_average": 5.3,
+    "poster_path": "/hwP0GEP0zy8ar965Xaht19SmMd3.jpg",
+    "backdrop_path": "/vVpPX97LFI19u56tgEP5eObqgBx.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 298820,
+      "name": "American Pie (Spin-off) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bug Hall",
+      "character": "Rob",
+      "profile_path": "/axuZx8nn7R7ohlkfnxO9k3TIGiq.jpg"
+    },
+    {
+      "name": "Brandon Hardesty",
+      "character": "Lube",
+      "profile_path": "/iXIvwwjIwv2RHcGlszvT3B6qGkZ.jpg"
+    },
+    {
+      "name": "Kevin M. Horton",
+      "character": "Nathan",
+      "profile_path": "/gHwYh8NbxKZBtLPoCtFxTjppuiP.jpg"
+    },
+    {
+      "name": "Beth Behrs",
+      "character": "Heidi",
+      "profile_path": "/ruiarln4ZdBXgtE5ACgiByrYv7N.jpg"
+    }
+  ]
+}

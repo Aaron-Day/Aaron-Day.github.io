@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 159824,
+    "title": "Hotel Transylvania 2",
+    "overview": "When the old-old-old-fashioned vampire Vlad arrives at the hotel for an impromptu family get-together, Hotel Transylvania is in for a collision of supernatural old-school and modern day cool.",
+    "tagline": "They\u0027re back to raise a little terror.",
+    "runtime": 89,
+    "release_date": "2015-09-21",
+    "vote_average": 6.767,
+    "poster_path": "/3nFnrivNgipSKZ8LZJJbRSlAcTR.jpg",
+    "backdrop_path": "/mfnkxXWuh2Br097Qteq8ieqKfev.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 185103,
+      "name": "Hotel Transylvania Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Dracula (voice)",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Selena Gomez",
+      "character": "Mavis Dracula (voice)",
+      "profile_path": "/fLjGtchxniZtAxnZsFzDn2lsWmY.jpg"
+    },
+    {
+      "name": "Andy Samberg",
+      "character": "Johnny Loughran (voice)",
+      "profile_path": "/jMXU5oG3i93SH1yhkpbBGskFiJl.jpg"
+    },
+    {
+      "name": "Kevin James",
+      "character": "Frankenstein (voice)",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    }
+  ]
+}

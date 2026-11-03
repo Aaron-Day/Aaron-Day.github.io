@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13,
+    "title": "Forrest Gump",
+    "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events\u2014in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
+    "tagline": "The world will never be the same once you\u0027ve seen it through the eyes of Forrest Gump.",
+    "runtime": 142,
+    "release_date": "1994-06-23",
+    "vote_average": 8.461,
+    "poster_path": "/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
+    "backdrop_path": "/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Forrest Gump",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Robin Wright",
+      "character": "Jenny Curran",
+      "profile_path": "/d3rIv0y2p0jMsQ7ViR7O1606NZa.jpg"
+    },
+    {
+      "name": "Gary Sinise",
+      "character": "Lieutenant Dan Taylor",
+      "profile_path": "/olRjiV8ZhBixQiTvrGwXhpVXxsV.jpg"
+    },
+    {
+      "name": "Sally Field",
+      "character": "Mrs. Gump",
+      "profile_path": "/iMeq1j9Xwvaf6PbTJ0FQz69fpuA.jpg"
+    }
+  ]
+}

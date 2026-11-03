@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1880,
+    "title": "Red Dawn",
+    "overview": "It is the dawn of World War III. In mid-western America, a group of teenagers band together to defend their town\u2014and their country\u2014from invading Soviet forces.",
+    "tagline": "In our time, no foreign army has ever occupied American soil. Until now.",
+    "runtime": 114,
+    "release_date": "1984-08-10",
+    "vote_average": 6.283,
+    "poster_path": "/a2GkHcioc2QEFJbQk1NTB85u3vD.jpg",
+    "backdrop_path": "/9fOfsVHZHig6MHPHczv0zMY6cKc.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Patrick Swayze",
+      "character": "Jed",
+      "profile_path": "/ys8dRhQRsS0nLPTXXEHyuFhXCYO.jpg"
+    },
+    {
+      "name": "Charlie Sheen",
+      "character": "Matt",
+      "profile_path": "/48GB5aISoibd9IYXBO40jrSgFRl.jpg"
+    },
+    {
+      "name": "C. Thomas Howell",
+      "character": "Robert",
+      "profile_path": "/739YbFWpAYyo9neHvBGThgmT4YH.jpg"
+    },
+    {
+      "name": "Lea Thompson",
+      "character": "Erica",
+      "profile_path": "/85E9NTEfkRdUdK4kTrrnk5of25w.jpg"
+    }
+  ]
+}

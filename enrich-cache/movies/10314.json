@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10314,
+    "title": "She\u0027s All That",
+    "overview": "High school hotshot Zach Siler is the envy of his peers. But his popularity declines sharply when his cheerleader girlfriend, Taylor, leaves him for sleazy reality-television star Brock Hudson. Desperate to revive his fading reputation, Siler agrees to a seemingly impossible challenge. He has six weeks to gain the trust of nerdy outcast Laney Boggs -- and help her to become the school\u0027s next prom queen.",
+    "tagline": "These two opposites attract... but EVERYONE\u0027S trying to keep them apart!",
+    "runtime": 95,
+    "release_date": "1999-01-29",
+    "vote_average": 6.353,
+    "poster_path": "/a0pepZNFCjggc7Na9gEwbTI1f46.jpg",
+    "backdrop_path": "/oSY7vsYlScliVKomRNviGuWXykC.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Freddie Prinze Jr.",
+      "character": "Zach Siler",
+      "profile_path": "/8V9yNBjCNRBKROyjCLKLJGcCBdG.jpg"
+    },
+    {
+      "name": "Rachael Leigh Cook",
+      "character": "Laney Boggs",
+      "profile_path": "/3ylMsV6dqo5ojKjuMz9xvkEreAA.jpg"
+    },
+    {
+      "name": "Paul Walker",
+      "character": "Dean Sampson",
+      "profile_path": "/q2PLqKHYCs35HR7QybaNPH3JT96.jpg"
+    },
+    {
+      "name": "Jodi Lyn O\u0027Keefe",
+      "character": "Taylor Vaughan",
+      "profile_path": "/5F9ESeRIlPrUbUcSYRvmNv6uPFU.jpg"
+    }
+  ]
+}

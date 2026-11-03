@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 150540,
+    "title": "Inside Out",
+    "overview": "When 11-year-old Riley moves to a new city, her Emotions team up to help her through the transition. Joy, Fear, Anger, Disgust and Sadness work together, but when Joy and Sadness get lost, they must journey through unfamiliar places to get back home.",
+    "tagline": "Meet the little voices inside your head.",
+    "runtime": 95,
+    "release_date": "2015-06-17",
+    "vote_average": 7.906,
+    "poster_path": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
+    "backdrop_path": "/jJKZaTBNenlFclQyjrnvzkRmvWE.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1022790,
+      "name": "Inside Out Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Amy Poehler",
+      "character": "Joy (voice)",
+      "profile_path": "/rwmvRonpluV6dCPiQissYrchvSD.jpg"
+    },
+    {
+      "name": "Phyllis Smith",
+      "character": "Sadness (voice)",
+      "profile_path": "/h9w9pQbiderRWAC2mi7spjzuIGz.jpg"
+    },
+    {
+      "name": "Richard Kind",
+      "character": "Bing Bong (voice)",
+      "profile_path": "/yWmuVQeQUzb5OSMVDoWkR0IylCK.jpg"
+    },
+    {
+      "name": "Bill Hader",
+      "character": "Fear (voice)",
+      "profile_path": "/qyT50vQ9PQIEctE1IxDTEsBKstU.jpg"
+    }
+  ]
+}

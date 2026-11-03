@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 181808,
+    "title": "Star Wars: The Last Jedi",
+    "overview": "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.",
+    "tagline": "Let the past die.",
+    "runtime": 152,
+    "release_date": "2017-12-13",
+    "vote_average": 6.73,
+    "poster_path": "/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg",
+    "backdrop_path": "/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10,
+      "name": "Star Wars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mark Hamill",
+      "character": "Luke Skywalker / Dobbu Scay (voice)",
+      "profile_path": "/zMQ93JTLW8KxusKhOlHFZhih3YQ.jpg"
+    },
+    {
+      "name": "Carrie Fisher",
+      "character": "Leia Organa",
+      "profile_path": "/of4yHmryKPy92eeskUQ7MRmjC3l.jpg"
+    },
+    {
+      "name": "Adam Driver",
+      "character": "Kylo Ren",
+      "profile_path": "/b5w381C8Z33D1iF30KT4k8tJNsk.jpg"
+    },
+    {
+      "name": "Daisy Ridley",
+      "character": "Rey",
+      "profile_path": "/A8QZBHZjlbWDiUXBvCTk4Zv5oBs.jpg"
+    }
+  ]
+}

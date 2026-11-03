@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 813,
+    "title": "Airplane!",
+    "overview": "An ex-fighter pilot is forced to take over the controls of an airliner when the flight crew succumbs to food poisoning.",
+    "tagline": "What\u0027s slower than a speeding bullet, and able to hit tall buildings at a single bound?",
+    "runtime": 88,
+    "release_date": "1980-06-27",
+    "vote_average": 7.304,
+    "poster_path": "/7Q3efxd3AF1vQjlSxnlerSA7RzN.jpg",
+    "backdrop_path": "/wQyvrsNSTzFVEGgarZbFkFyIciy.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91663,
+      "name": "Airplane Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robert Hays",
+      "character": "Ted Striker",
+      "profile_path": "/pqu0hSAdHGItjP0iqkbTg4Ocv9w.jpg"
+    },
+    {
+      "name": "Julie Hagerty",
+      "character": "Elaine Dickinson",
+      "profile_path": "/bQZ0bcFNyE4a3GDNfYMmfO7eWMl.jpg"
+    },
+    {
+      "name": "Leslie Nielsen",
+      "character": "Dr. Rumack",
+      "profile_path": "/rMz3ZUmFE7lQCP51Ql7IcMHJIUZ.jpg"
+    },
+    {
+      "name": "Kareem Abdul-Jabbar",
+      "character": "Roger Murdock",
+      "profile_path": "/aMbhI6nWjU3MkUhw9IIKnJz7UiX.jpg"
+    }
+  ]
+}

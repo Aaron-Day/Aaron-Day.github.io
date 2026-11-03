@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 495764,
+    "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+    "overview": "Harley Quinn joins forces with a singer, an assassin and a police detective to help a young girl who had a hit placed on her after she stole a rare diamond from a crime lord.",
+    "tagline": "Mind over mayhem.",
+    "runtime": 109,
+    "release_date": "2020-02-05",
+    "vote_average": 6.857,
+    "poster_path": "/h4VB6m0RwcicVEZvzftYZyKXs6K.jpg",
+    "backdrop_path": "/3zBjU7mXlzxJKAStRzlNDZRGT0m.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Margot Robbie",
+      "character": "Harley Quinn",
+      "profile_path": "/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg"
+    },
+    {
+      "name": "Rosie Perez",
+      "character": "Renee Montoya",
+      "profile_path": "/g6iJNyIhVDY5NxZU1jbKMjPnNYf.jpg"
+    },
+    {
+      "name": "Mary Elizabeth Winstead",
+      "character": "Helena Bertinelli / Huntress",
+      "profile_path": "/vQn6IGsClpyhV6KTba9EDqSK7e2.jpg"
+    },
+    {
+      "name": "Jurnee Smollett-Bell",
+      "character": "Dinah Lance / Black Canary",
+      "profile_path": "/ohvV70Ar4rlL5I3WzxQGtRjpsgS.jpg"
+    }
+  ]
+}

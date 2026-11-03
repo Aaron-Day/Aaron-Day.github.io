@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11081,
+    "title": "Taking Lives",
+    "overview": "Recruited to assist Montreal police in their desperate search for a serial killer who assumes the identities of his victims, FBI profiler Illeana Scott knows it\u0027s only a matter of time before the killer strikes again. Her most promising lead is a museum employee who might be the killer\u0027s only eyewitness.",
+    "tagline": "He would kill to be you.",
+    "runtime": 103,
+    "release_date": "2004-03-19",
+    "vote_average": 6.364,
+    "poster_path": "/zeFGOS1kj0CxuZjGhtK3WlMCYsa.jpg",
+    "backdrop_path": "/7IciAaJltRsOohcz2JlkupIF1s9.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Angelina Jolie",
+      "character": "Illeana Scott",
+      "profile_path": "/bXNxIKcJ5cNNW8QFrBPWcfTSu9x.jpg"
+    },
+    {
+      "name": "Ethan Hawke",
+      "character": "James Costa",
+      "profile_path": "/2LoTr6x0TEM7L5em4kSx1VmGDgG.jpg"
+    },
+    {
+      "name": "Kiefer Sutherland",
+      "character": "Christopher Hart",
+      "profile_path": "/tK5zjdvao2NELns3bqT7PPqPeJI.jpg"
+    },
+    {
+      "name": "Gena Rowlands",
+      "character": "Mrs. Rebecca Asher",
+      "profile_path": "/j6Op08k2AkPGrNHpMNp30Pu8t36.jpg"
+    }
+  ]
+}

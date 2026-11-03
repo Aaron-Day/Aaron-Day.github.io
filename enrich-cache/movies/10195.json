@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10195,
+    "title": "Thor",
+    "overview": "Against his father Odin\u0027s will, The Mighty Thor - a powerful but arrogant warrior god - recklessly reignites an ancient war. Thor is cast down to Earth and forced to live among humans as punishment. Once here, Thor learns what it takes to be a true hero when the most dangerous villain of his world sends the darkest forces of Asgard to invade Earth.",
+    "tagline": "Courage is immortal.",
+    "runtime": 115,
+    "release_date": "2011-04-27",
+    "vote_average": 6.772,
+    "poster_path": "/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg",
+    "backdrop_path": "/cDJ61O1STtbWNBwefuqVrRe3d7l.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131296,
+      "name": "Thor Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Hemsworth",
+      "character": "Thor",
+      "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    },
+    {
+      "name": "Natalie Portman",
+      "character": "Jane Foster",
+      "profile_path": "/edPU5HxncLWa1YkgRPNkSd68ONG.jpg"
+    },
+    {
+      "name": "Tom Hiddleston",
+      "character": "Loki",
+      "profile_path": "/mclHxMm8aPlCPKptP67257F5GPo.jpg"
+    },
+    {
+      "name": "Anthony Hopkins",
+      "character": "Odin",
+      "profile_path": "/iaf7SHSkGDpnyrDh1Jolilwk2TD.jpg"
+    }
+  ]
+}

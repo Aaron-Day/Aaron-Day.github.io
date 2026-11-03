@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 458897,
+    "title": "Charlie\u0027s Angels",
+    "overview": "Elena Houghlin is a scientist, engineer and inventor of Calisto -- a sustainable energy source that will revolutionize the way people use power. It will be ready as soon as she works out the last issue, if not it could be turned into a dangerous weapon. But when the cutting edge technology is pushed to an investor before she can do that, Elena turns to the Townsend Agency for help. Now, it\u0027s up to the Angels -- Jane, Sabina, and the newly recruited Elena -- to retrieve Calisto before it can be transformed into a weapon of mass destruction.",
+    "tagline": "Unseen. Undivided. Unstoppable.",
+    "runtime": 118,
+    "release_date": "2019-11-14",
+    "vote_average": 6.344,
+    "poster_path": "/1DPUFG6QnGqzpvEaDEv7TaepycM.jpg",
+    "backdrop_path": "/a0xTB1vBxMGt6LGG4N7k1wO9lfL.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kristen Stewart",
+      "character": "Sabina Wilson",
+      "profile_path": "/xldswdQ1VnpcOf2wZMPguZ3avgO.jpg"
+    },
+    {
+      "name": "Naomi Scott",
+      "character": "Elena Houghlin",
+      "profile_path": "/knSGMaEaH6CZaYw7GQpvxyJcsz7.jpg"
+    },
+    {
+      "name": "Ella Balinska",
+      "character": "Jane Kano",
+      "profile_path": "/tDki8HCmX5gl1e31IsP9p8a8Kg1.jpg"
+    },
+    {
+      "name": "Elizabeth Banks",
+      "character": "Boz",
+      "profile_path": "/hQ7IwCQjlpsBPSpnnjjhH3rjwSJ.jpg"
+    }
+  ]
+}

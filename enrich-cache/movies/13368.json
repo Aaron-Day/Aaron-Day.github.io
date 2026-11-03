@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13368,
+    "title": "White Christmas",
+    "overview": "Two talented song-and-dance men team up after the war to become one of the hottest acts in show business. In time they befriend and become romantically involved with the beautiful Haynes sisters who comprise a sister act.",
+    "tagline": "THE MOST FABULOUS MUSIC-AND-MIRTH SHOW IN MOTION PICTURE HISTORY!",
+    "runtime": 120,
+    "release_date": "1954-10-14",
+    "vote_average": 7.175,
+    "poster_path": "/A5kBQsHKbIptxJyELEpHQJROCRj.jpg",
+    "backdrop_path": "/uChOlEWqFwxwJ3eZP9eQj2yqczd.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Bing Crosby",
+      "character": "Bob Wallace",
+      "profile_path": "/wl3k3h5dgpukwaT1sMPqR4ANrzq.jpg"
+    },
+    {
+      "name": "Danny Kaye",
+      "character": "Phil Davis",
+      "profile_path": "/a4ciX3nsLZWCNj8BAKsW3hkC6cr.jpg"
+    },
+    {
+      "name": "Rosemary Clooney",
+      "character": "Betty Haynes",
+      "profile_path": "/eqCCpZp0j8ZBGM7eZLBXAIoXQ9y.jpg"
+    },
+    {
+      "name": "Vera-Ellen",
+      "character": "Judy Haynes",
+      "profile_path": "/lHisdXVTWOlzIRD6k0xKAeeVlic.jpg"
+    }
+  ]
+}

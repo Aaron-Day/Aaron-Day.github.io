@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 431693,
+    "title": "Spies in Disguise",
+    "overview": "Super spy Lance Sterling and scientist Walter Beckett are almost exact opposites. Lance is smooth, suave and debonair. Walter is\u2026 not. But what Walter lacks in social skills he makes up for in smarts and invention, creating the awesome gadgets Lance uses on his epic missions. But when events take an unexpected turn, Walter and Lance suddenly have to rely on each other in a whole new way.",
+    "tagline": "Super spy. Super fly.",
+    "runtime": 102,
+    "release_date": "2019-12-04",
+    "vote_average": 7.542,
+    "poster_path": "/z52xI0MnoX1rqySFJYnmBqHbXRn.jpg",
+    "backdrop_path": "/uG1v9Hk1XKICd6IJChRR20mBh8i.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Lance Sterling (voice)",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Tom Holland",
+      "character": "Walter Beckett (voice)",
+      "profile_path": "/5OK84Wn1bIEIThFKcVoaN087mLj.jpg"
+    },
+    {
+      "name": "Ben Mendelsohn",
+      "character": "Killian (voice)",
+      "profile_path": "/pA9mu9D2IolVA0v2Yo0tJm6uUyI.jpg"
+    },
+    {
+      "name": "Rashida Jones",
+      "character": "Marcy Kappel (voice)",
+      "profile_path": "/cgWGm9eYCretBWeljPVtpRV7n6V.jpg"
+    }
+  ]
+}

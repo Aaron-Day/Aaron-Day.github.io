@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 168259,
+    "title": "Furious 7",
+    "overview": "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+    "tagline": "Vengeance hits home.",
+    "runtime": 138,
+    "release_date": "2015-04-01",
+    "vote_average": 7.207,
+    "poster_path": "/wurKlC3VKUgcfsn0K51MJYEleS2.jpg",
+    "backdrop_path": "/ehzI1mVcnHqB58NqPyQwpMqcVoz.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9485,
+      "name": "The Fast and the Furious Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vin Diesel",
+      "character": "Dominic Toretto",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Paul Walker",
+      "character": "Brian O\u0027Conner",
+      "profile_path": "/q2PLqKHYCs35HR7QybaNPH3JT96.jpg"
+    },
+    {
+      "name": "Dwayne Johnson",
+      "character": "Luke Hobbs",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Michelle Rodriguez",
+      "character": "Letty Ortiz",
+      "profile_path": "/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
+    }
+  ]
+}

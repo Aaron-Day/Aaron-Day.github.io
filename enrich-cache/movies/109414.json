@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 109414,
+    "title": "This Is the End",
+    "overview": "While attending a party at James Franco\u0027s house, Seth Rogen, Jay Baruchel and many other celebrities are faced with the apocalypse.",
+    "tagline": "Nothing ruins a party like the end of the world.",
+    "runtime": 106,
+    "release_date": "2013-06-12",
+    "vote_average": 6.246,
+    "poster_path": "/tNIW0NhX1hKvUsy6PQ80DOKUhkD.jpg",
+    "backdrop_path": "/sXfN4ir91SfTeoWidIukQWane43.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "James Franco",
+      "character": "James Franco",
+      "profile_path": "/bjmAntHGiibLZixH8nTNVBzaFQn.jpg"
+    },
+    {
+      "name": "Jonah Hill",
+      "character": "Jonah Hill",
+      "profile_path": "/cymlWttB83MsAGR2EkTgANtjeRH.jpg"
+    },
+    {
+      "name": "Seth Rogen",
+      "character": "Seth Rogen",
+      "profile_path": "/nYl9bvQzaPQLzlf0wf75clLN6Hi.jpg"
+    },
+    {
+      "name": "Jay Baruchel",
+      "character": "Jay Baruchel",
+      "profile_path": "/1GYJeQzPcY9Pfmc3FFsBwClkCv7.jpg"
+    }
+  ]
+}

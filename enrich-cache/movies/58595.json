@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 58595,
+    "title": "Snow White and the Huntsman",
+    "overview": "After the Evil Queen marries the King, she performs a violent coup in which the King is murdered and his daughter, Snow White, is taken captive. Almost a decade later, a grown Snow White is still in the clutches of the Queen. In order to obtain immortality, The Evil Queen needs the heart of Snow White. After Snow escapes the castle, the Queen sends the Huntsman to find her in the Dark Forest.",
+    "tagline": "The fairytale is over.",
+    "runtime": 127,
+    "release_date": "2012-05-30",
+    "vote_average": 5.98,
+    "poster_path": "/8HUa5kRubYbnAD5UVpnhTGGgMTW.jpg",
+    "backdrop_path": "/KBe9fHU5rVg4daoKnFwl1Cbc28.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 393379,
+      "name": "The Huntsman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kristen Stewart",
+      "character": "Snow White",
+      "profile_path": "/xldswdQ1VnpcOf2wZMPguZ3avgO.jpg"
+    },
+    {
+      "name": "Chris Hemsworth",
+      "character": "The Huntsman",
+      "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    },
+    {
+      "name": "Charlize Theron",
+      "character": "Queen Ravenna",
+      "profile_path": "/gd7ShD0yt4bsR2STeQ19KQ6hvXL.jpg"
+    },
+    {
+      "name": "Sam Claflin",
+      "character": "William",
+      "profile_path": "/e5CU4tjCNZFfm7ITmZfzjZse2Bb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9896,
+    "title": "Rat Race",
+    "overview": "In an ensemble film about easy money, greed, manipulation and bad driving, a Las Vegas casino tycoon entertains his wealthiest high rollers -- a group that will bet on anything -- by pitting six ordinary people against each other in a wild dash for $2 million jammed into a locker hundreds of miles away. The tycoon and his wealthy friends monitor each racer\u0027s every move to keep track of their favorites. The only rule in this race is that there are no rules.",
+    "tagline": "563 miles. 9 people. $2 million. 1001 problems!",
+    "runtime": 112,
+    "release_date": "2001-08-17",
+    "vote_average": 6.295,
+    "poster_path": "/8ghNCfFbCJjcNSz2K5jOC3eO6ZD.jpg",
+    "backdrop_path": "/vian6RN3bC4QdBQzY1wTmBkhxVQ.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Gloria Allred",
+      "character": "Gloria Allred",
+      "profile_path": "/21M4KCy4qjYGuVlCx1r4R1H1U7a.jpg"
+    },
+    {
+      "name": "Breckin Meyer",
+      "character": "Nick Schaffer",
+      "profile_path": "/lKzhwW7qqQF4ZMGtRqakqrKrxzm.jpg"
+    },
+    {
+      "name": "Cuba Gooding Jr.",
+      "character": "Owen Templeton",
+      "profile_path": "/2JguzbpOXoTGzSmLbWFlulKyyAe.jpg"
+    },
+    {
+      "name": "Lanei Chapman",
+      "character": "Merrill Jennings",
+      "profile_path": "/yYkfv6yRPx2yFqiUr8jvBLsztlE.jpg"
+    }
+  ]
+}

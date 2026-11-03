@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Everything is Beautiful",
+        "overview": "The King makes himself head of the Church of England while the Catholic Church fights a losing battle to control Henry VIII\u0027s desire for an annulment. Anne Boleyn demands that Henry break off contact with Katherine, so the noble Queen is banished from court. On top of that The Reformation is underway.",
+        "air_date": "2008-03-30",
+        "runtime": 54,
+        "still_path": "/pbXObQH3EhNPbDMCFGCQEC7xu8u.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Tears of Blood",
+        "overview": "Christmas at the Tudor court is a time for ringing in the new. Mistress Anne Boleyn has replaced the banished Queen Katherine. The King\u0027s chaplain, Thomas Cranmer, makes a fact-finding visit to Lutheran Germany while Henry withdraws both the authority and taxes of the Catholic Church at home. And a royal visit to France finally convinces Anne to consummate her relationship with Henry, even as his best friend Charles Brandon suggests that she is no virgin.",
+        "air_date": "2008-04-06",
+        "runtime": 57,
+        "still_path": "/eicQLciMpUjX4cI8NpNbsgmZ6Vd.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Checkmate",
+        "overview": "Henry\u0027s patience finally wears out and he marries Anne in secret, appoints his Lutheran chaplain Thomas Cranmer the head of the Church of England, and strips Queen Katherine of her title and status; the king and new queen have their first child, and are disappointed that it\u0027s a girl...whom they christen Elizabeth.",
+        "air_date": "2008-04-13",
+        "runtime": 52,
+        "still_path": "/nTZ8DbJiq4CsauXgom9df5IdFRl.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Act of Succession",
+        "overview": "Sir Thomas More refuses to accept Henry\u0027s command that his people swear an oath of \u0022allegiance and recognition of the King\u0027s supremacy\u0022 to both church and state. Anne is made aware of the King\u0027s womanizing ways, and arranges then gives her blessing to his next mistress. Also, Anne has a confrontation with Lady Mary, Henry\u0027s daughter.",
+        "air_date": "2008-04-20",
+        "runtime": 54,
+        "still_path": "/xA3MlHs9i9knMs0egYJczn66HNx.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "His Majesty\u0027s Pleasure",
+        "overview": "Attempts to legitimise the King\u0027s marriage and increase his power hit unmovable obstacles as Sir Thomas More and Bishop Fisher insist that only God can be head of the church. Imprisoned in the Tower of London they face likely execution unless they take the Oath of Allegiance. Meanwhile Henry\u0027s wandering eye continues to roam.",
+        "air_date": "2008-04-27",
+        "runtime": 54,
+        "still_path": "/pCTzE8p7gk71bMh5XEtxMIK8JMf.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Definition of Love",
+        "overview": "As the Reformation gathers pace Sir Thomas Cromwell becomes ever more powerful as propagandist-in-chief of a new moral order. Royal confidence has given way to doubt. Henry is haunted by the memory of the executed Thomas More while Queen Anne Boleyn\u0027s insecurities border on paranoia. Her husband\u0027s affairs continue and an effort to have her daughter Elizabeth betrothed to a French royal fails when the French King refuses to recognise that the infant Princess is of legitimate birth.",
+        "air_date": "2008-05-04",
+        "runtime": 51,
+        "still_path": "/98U9IxAfUX5yUkuBiOTT5kkqCxa.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Matters of State",
+        "overview": "The English Reformation is in full swing.\n\nQueen Anne suffers from nightmares and feels threatened by Katherine and her daughter.\n\nHenry pays an unplanned visit to an old friend, Sir John Seymour, father of Jane Seymour.",
+        "air_date": "2008-05-11",
+        "runtime": 54,
+        "still_path": "/cYYAmAjsRKZcwJ2ZCA24r1hCeyI.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Lady in Waiting",
+        "overview": "At Henry\u0027s command Jane Seymour is made a lady-in-waiting to Anne Boleyn, to the discomfort and suspicion of the Queen. When Henry is seriously injured in a jousting match all thoughts turn to who might succeed him. There will be far-reaching consequences if Anne\u0027s pregnancy does not deliver a healthy son.",
+        "air_date": "2008-05-18",
+        "runtime": 52,
+        "still_path": "/wzSjIJchrP9lh5FJFCyP0sWT16g.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Act of Treason",
+        "overview": "Anne has lost a son and with it her last chance at a lasting marriage with Henry. The King\u0027s affections are shifting anyway: the Seymour family are awarded rooms at court and seem likely to replace the Boleyns as royal favourites. Several in the court begin to move against Anne who is accused of adultery. Arrests are made of suspected lovers and of Anne herself. All, including the Queen, are sentenced to death.",
+        "air_date": "2008-05-25",
+        "runtime": 52,
+        "still_path": "/bXF8aS8jPKI3duyIQdDGHidS3YX.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Destiny and Fortune",
+        "overview": "Queen Anne is imprisoned in the Tower, awaiting her execution. The king granted her wish for a special executioner, but he is delayed and the execution has to be postponed. King Henry proposes to Jane Seymour now that his marriage to Anne has been declared null and void. He hopes she will gave him a legitimate, male heir.",
+        "air_date": "2008-06-01",
+        "runtime": 49,
+        "still_path": "/u3As097GyAwrk7WopATgg1D7QBm.jpg"
+      }
+    ]
+  }
+}

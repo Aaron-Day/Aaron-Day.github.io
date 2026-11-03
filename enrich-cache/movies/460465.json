@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 460465,
+    "title": "Mortal Kombat",
+    "overview": "Washed-up MMA fighter Cole Young, unaware of his heritage, and hunted by Emperor Shang Tsung\u0027s best warrior, Sub-Zero, seeks out and trains with Earth\u0027s greatest champions as he prepares to stand against the enemies of Outworld in a high stakes battle for the universe.",
+    "tagline": "Get over here",
+    "runtime": 110,
+    "release_date": "2021-04-07",
+    "vote_average": 7.022,
+    "poster_path": "/nkayOAUBUu4mMvyNf9iHSUiPjF1.jpg",
+    "backdrop_path": "/6ELCZlTA5lGUops70hKdB83WJxH.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 931431,
+      "name": "Mortal Kombat (Reboot) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Lewis Tan",
+      "character": "Cole Young",
+      "profile_path": "/yMr3mwHHBpfbXwDDkahOzFtTCak.jpg"
+    },
+    {
+      "name": "Jessica McNamee",
+      "character": "Sonya Blade",
+      "profile_path": "/xX1WxRZyJqVAx24Q3ziziGq2T8A.jpg"
+    },
+    {
+      "name": "Mehcad Brooks",
+      "character": "Jax",
+      "profile_path": "/s7Cu6Si9n5qsH64eLBVGXaf55bE.jpg"
+    },
+    {
+      "name": "Josh Lawson",
+      "character": "Kano",
+      "profile_path": "/Am9vM77uZd9bGODugwmWtOfzx6E.jpg"
+    }
+  ]
+}

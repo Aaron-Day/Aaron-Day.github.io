@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 20,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Fellow Traveler",
+        "overview": "A lunar misstep sends Roger on an unexpected detour to New Mexico.",
+        "air_date": "2023-03-27",
+        "runtime": 22,
+        "still_path": "/mqw9RAYw53cQlazrargdiZAb8fQ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Professor and the Coach",
+        "overview": "Hayley tries to help Roger write a book.",
+        "air_date": "2023-04-03",
+        "runtime": 22,
+        "still_path": "/akNugDHpMWISeElsutApjNvrb7s.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Viced Principal",
+        "overview": "Steve and Principal Lewis get caught in a dangerous situation at the school. The rest of the family makes an adorable new friend.",
+        "air_date": "2023-04-10",
+        "runtime": 22,
+        "still_path": "/jW8UxsaTBpnQnGMZULnipbENccb.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Pleasanting at Smith House",
+        "overview": "Klaus and Jeff\u0027s friendship is threatened by Klaus\u0027s girlfriend from another realm.",
+        "air_date": "2023-04-17",
+        "runtime": 22,
+        "still_path": "/EVeEzVZWF9qVwSG5HV71Nmesl7.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Stretched Thin",
+        "overview": "When Jeff finds out that the family thinks he makes terrible decisions, he decides to take a job selling stretchy leggings to prove them wrong.",
+        "air_date": "2023-05-01",
+        "runtime": 22,
+        "still_path": "/z6YIVXnv6kX2iNSeCkv2zcOSMA4.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Better on Paper",
+        "overview": "When Stan discovers anonymous love letters written to Francine, he worries that this secret admirer could threaten their relationship.",
+        "air_date": "2023-05-08",
+        "runtime": 22,
+        "still_path": "/zLzwTmGwQ92LBfrP1fH2JHyBX6W.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Cow I Met Your Moo-ther",
+        "overview": "The judgmental voice in Hayley\u0027s head makes it impossible for her to enjoy a girls\u0027 night with Nerfer and Danuta.",
+        "air_date": "2023-05-15",
+        "runtime": 22,
+        "still_path": "/8YsvVnDIK0wdkakbkTwzCJwCUk7.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Stan Fixes a Shingle",
+        "overview": "Francine insists that Steve let her help with his school project, Stan finally fixes that shingle, and the rest of the family goes on a quest to return Gallagher\u0027s mallet.",
+        "air_date": "2023-05-22",
+        "runtime": 22,
+        "still_path": "/2ZAvXh8vMa4DNULt9e8Ocke1XE4.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Saving Face",
+        "overview": "In an attempt to maintain his \u0022prime,\u0022 Stan explores some cosmetic solutions that could not go worse.",
+        "air_date": "2023-05-29",
+        "runtime": 22,
+        "still_path": "/r2MxIbF5PIyGgQEAQJ1i1ELmnWr.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Frantastic Voyage",
+        "overview": "When Stan goes too far to keep his work friend away from Francine, she is forced to save her new \u0022little\u0022 friend.",
+        "air_date": "2023-09-04",
+        "runtime": 22,
+        "still_path": "/qyb6OEgs9boz2hCPcyxrZ5WjnL0.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "A Little Mystery",
+        "overview": "Hayley makes Jeff get a friend to add some mystery to their relationship but gets more mystery than she bargained for. Francine attempts to grow the world\u0027s longest fingernails.",
+        "air_date": "2023-09-11",
+        "runtime": 22,
+        "still_path": "/zorM0r5K8CY2DUbcqOvTdbzCQFk.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Don\u0027t You Be My Neighbor",
+        "overview": "The Smiths get new neighbors! Meanwhile, Roger dreads having to be a little boy\u0027s kite for a day.",
+        "air_date": "2023-09-18",
+        "runtime": 22,
+        "still_path": "/tvpXnZvvt2yRuVmw7OJSp7wyBlN.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Productive Panic",
+        "overview": "Francine becomes an overnight sensation when a famous art dealer discovers her homemade pottery.",
+        "air_date": "2023-09-25",
+        "runtime": 22,
+        "still_path": "/2jnyS4c8DoqIVJpVKjT4A7ZXdFT.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Multiverse of American Dadness",
+        "overview": "Hayley searches for a runaway Steve so they can go to a Shaggy concert.",
+        "air_date": "2023-10-02",
+        "runtime": 22,
+        "still_path": "/vCi4qAhCOlRR47nZiUzhgV2d0f8.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Z.O.I.N.C.S.",
+        "overview": "It\u0027s Halloween night and Stan is missing, so the Smith gang heads to the spooky, abandoned CIA headquarters to investigate.",
+        "air_date": "2023-10-30",
+        "runtime": 22,
+        "still_path": "/uPXQdaXqrKz47BBFXD8GJdQ0P2K.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "A New Era for the Smith House",
+        "overview": "Klaus house sits for the Smiths while they are away on vacation. Roger investigates the origin of powerful winds plaguing the Eastern Seaboard.",
+        "air_date": "2023-11-06",
+        "runtime": 21,
+        "still_path": "/62taBM2CCpl59cOeaHdTYwCQ41M.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Between a Ring and a Hardass",
+        "overview": "Social Services threatens to take Steve away from the family when someone files a complaint about Steve\u0027s chaotic home life.",
+        "air_date": "2023-11-13",
+        "runtime": 22,
+        "still_path": "/1PQcEfJ1lFajaXsLZbRQ0sDQrcJ.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Footprints",
+        "overview": "Stan and Roger go on a mission to leave their mark on humanity. Jeff finally deals with the reality of losing his signature hat.",
+        "air_date": "2023-11-20",
+        "runtime": 22,
+        "still_path": "/4WpE7SsTbZJGs2zoAa4jnuTQlc7.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Steve, Snot, and the Quest for the Og 4LOCO",
+        "overview": "To have a chance with a girl, Steve and Snot must track down a keg of 4Loko.",
+        "air_date": "2023-11-27",
+        "runtime": 21,
+        "still_path": "/1pmcvmhaKAvRbDf1DsEJrOredBY.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Pink Sphinx Holds Her Hearts on the Turn",
+        "overview": "Francine enters the strange and dangerous world of poker in order to learn how to hide her true feelings from Steve and Hayley.",
+        "air_date": "2023-12-04",
+        "runtime": 21,
+        "still_path": "/xQux5FQBLVTsbrHt5kKKCM0SZFP.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "A Little Extra Scratch",
+        "overview": "Suspicious about Hayley\u0027s mysterious, newfound wealth, Francine decides to get to the bottom of it. Roger sets out to make Stan an internet celebrity.",
+        "air_date": "2023-12-11",
+        "runtime": 21,
+        "still_path": "/uZx5VF4tfZRMX7jSfvvCzQrKLgO.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Into the Jingleverse",
+        "overview": "When Steve gives the family better Christmas gifts than Stan, Stan goes to great lengths to regain his title of \u0022King of Presents.\u0022",
+        "air_date": "2023-12-18",
+        "runtime": 22,
+        "still_path": "/kWYue1ndxYld2PZHWX8OfrrhGPh.jpg"
+      }
+    ]
+  }
+}

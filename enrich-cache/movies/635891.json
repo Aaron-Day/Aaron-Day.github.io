@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 635891,
+    "title": "Clerks III",
+    "overview": "After narrowly surviving a massive heart attack, Randal enlists his old friend Dante to help him make a movie immortalizing their youthful days at the little convenience store that started it all.",
+    "tagline": "They\u0027re too old for this shift.",
+    "runtime": 100,
+    "release_date": "2022-09-04",
+    "vote_average": 6,
+    "poster_path": "/apzIqZIQLc8fNx5nbbcSSfPFtax.jpg",
+    "backdrop_path": "/1IGi6NEwuJAHU29RQfF2WrpxWZL.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 182813,
+      "name": "Clerks Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brian O\u0027Halloran",
+      "character": "Dante Hicks",
+      "profile_path": "/c8bhTxVxhN4DMrJeCnu5usutbY5.jpg"
+    },
+    {
+      "name": "Jeff Anderson",
+      "character": "Randal Graves",
+      "profile_path": "/edwQlYwAWWHQC9um89c5CQpFYof.jpg"
+    },
+    {
+      "name": "Rosario Dawson",
+      "character": "Becky",
+      "profile_path": "/siTzOI810a0K46wv1TORXMw5N7J.jpg"
+    },
+    {
+      "name": "Jason Mewes",
+      "character": "Jay",
+      "profile_path": "/jVL4WC8NbJFL894Z2FBYY3XuHW5.jpg"
+    }
+  ]
+}

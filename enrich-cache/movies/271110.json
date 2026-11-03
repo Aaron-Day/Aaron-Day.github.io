@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 271110,
+    "title": "Captain America: Civil War",
+    "overview": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies.",
+    "tagline": "United we stand. Divided we fall.",
+    "runtime": 147,
+    "release_date": "2016-04-27",
+    "vote_average": 7.455,
+    "poster_path": "/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg",
+    "backdrop_path": "/7FWlcZq3r6525LWOcvO9kNWurN1.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131295,
+      "name": "Captain America Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Evans",
+      "character": "Steve Rogers / Captain America",
+      "profile_path": "/3bOGNsHlrswhyW79uvIHH1V43JI.jpg"
+    },
+    {
+      "name": "Robert Downey Jr.",
+      "character": "Tony Stark / Iron Man",
+      "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+    },
+    {
+      "name": "Scarlett Johansson",
+      "character": "Natasha Romanoff / Black Widow",
+      "profile_path": "/mjReG6rR7NPMEIWb1T4YWtV11ty.jpg"
+    },
+    {
+      "name": "Sebastian Stan",
+      "character": "Bucky Barnes / Winter Soldier",
+      "profile_path": "/v20RLWst39klatsqUgSrwHxhwee.jpg"
+    }
+  ]
+}

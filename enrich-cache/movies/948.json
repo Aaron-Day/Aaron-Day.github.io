@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 948,
+    "title": "Halloween",
+    "overview": "Fifteen years after murdering his sister on Halloween Night 1963, Michael Myers escapes from a mental hospital and returns to the small town of Haddonfield, Illinois to kill again.",
+    "tagline": "The night he came home!",
+    "runtime": 91,
+    "release_date": "1978-10-25",
+    "vote_average": 7.561,
+    "poster_path": "/wijlZ3HaYMvlDTPqJoTCWKFkCPU.jpg",
+    "backdrop_path": "/sHI9xlFRWCJ38AIIfOqnGjuEvXz.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91361,
+      "name": "Halloween Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Donald Pleasence",
+      "character": "Loomis",
+      "profile_path": "/crtSwLnlrEidYFPupkVBSL9wK9Z.jpg"
+    },
+    {
+      "name": "Jamie Lee Curtis",
+      "character": "Laurie",
+      "profile_path": "/eWKubKAAssRzmFwCZKh1mdYqGCH.jpg"
+    },
+    {
+      "name": "Nancy Kyes",
+      "character": "Annie",
+      "profile_path": "/eoVrIDGUMFJ9m8qMSQLp9MoWWoF.jpg"
+    },
+    {
+      "name": "P. J. Soles",
+      "character": "Lynda",
+      "profile_path": "/1f8uZoN3oLGmsoEOmOiaorxWoMt.jpg"
+    }
+  ]
+}

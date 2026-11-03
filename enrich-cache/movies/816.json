@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 816,
+    "title": "Austin Powers: International Man of Mystery",
+    "overview": "As a swinging fashion photographer by day and a groovy British superagent by night, Austin Powers is the \u002760s\u0027 most shagadelic spy. But can he stop megalomaniac Dr. Evil after the bald villain freezes himself and unthaws in the \u002790s? With the help of sexy sidekick Vanessa Kensington, he just might.",
+    "tagline": "Debonair. Defiant. Defrosted.",
+    "runtime": 89,
+    "release_date": "1997-05-02",
+    "vote_average": 6.605,
+    "poster_path": "/5uD4dxNX8JKFjWKYMHyOsqhi5pN.jpg",
+    "backdrop_path": "/wSm5McaHSAyOx4gGRYdlDHzj00y.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1006,
+      "name": "Austin Powers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mike Myers",
+      "character": "Austin Powers / Dr. Evil",
+      "profile_path": "/gjfDl52Kk02MPgUYFjs9bOy33OY.jpg"
+    },
+    {
+      "name": "Elizabeth Hurley",
+      "character": "Vanessa Kensington",
+      "profile_path": "/1z6bx9I3J8gTQAQPrA5cJgzkiqt.jpg"
+    },
+    {
+      "name": "Michael York",
+      "character": "Basil Exposition",
+      "profile_path": "/ha9Nh8We778sUg8QyDE1IRATzDY.jpg"
+    },
+    {
+      "name": "Mimi Rogers",
+      "character": "Mrs. Kensington",
+      "profile_path": "/o5G9610OuMuVyubfvXwR7rUPfHg.jpg"
+    }
+  ]
+}

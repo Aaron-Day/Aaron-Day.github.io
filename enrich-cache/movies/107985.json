@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 107985,
+    "title": "The World\u0027s End",
+    "overview": "Five friends who reunite in an attempt to top their epic pub crawl from 20 years earlier unwittingly become humankind\u0027s only hope for survival.",
+    "tagline": "Good food. Fine ales. Total annihilation.",
+    "runtime": 109,
+    "release_date": "2013-07-18",
+    "vote_average": 6.811,
+    "poster_path": "/kpglnOBYmKn0AkkWDzGxzKHDbds.jpg",
+    "backdrop_path": "/stAPkorBeBkvEZ6DQs30Ke4cPyr.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Simon Pegg",
+      "character": "Gary King",
+      "profile_path": "/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg"
+    },
+    {
+      "name": "Nick Frost",
+      "character": "Andrew Knightley",
+      "profile_path": "/2CHS4t6miNGLgMQAjhFqb4fFuKS.jpg"
+    },
+    {
+      "name": "Paddy Considine",
+      "character": "Steven Prince",
+      "profile_path": "/yFDFSlF4J1m9P0kVwBTKIHB8LYk.jpg"
+    },
+    {
+      "name": "Martin Freeman",
+      "character": "Oliver Chamberlain",
+      "profile_path": "/nrO54AzrxiNgCjBUOSz6ebyxDZY.jpg"
+    }
+  ]
+}

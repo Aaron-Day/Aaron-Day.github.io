@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 38356,
+    "title": "Transformers: Dark of the Moon",
+    "overview": "The Autobots continue to work for NEST, now no longer in secret. But after discovering a strange artifact during a mission in Chernobyl, it becomes apparent to Optimus Prime that the United States government has been less than forthright with them.",
+    "tagline": "Be afraid of the dark.",
+    "runtime": 154,
+    "release_date": "2011-06-28",
+    "vote_average": 6.245,
+    "poster_path": "/28YlCLrFhONteYSs9hKjD1Km0Cj.jpg",
+    "backdrop_path": "/h3js4rulxzKMOokM2oO5Kr0mBZU.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8650,
+      "name": "Transformers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Shia LaBeouf",
+      "character": "Sam Witwicky",
+      "profile_path": "/egvlIdeizCkSkuHVoDuuduIThFA.jpg"
+    },
+    {
+      "name": "Rosie Huntington-Whiteley",
+      "character": "Carly",
+      "profile_path": "/8CutB9jkotpcGfTy7qpD5rQHLwt.jpg"
+    },
+    {
+      "name": "Peter Cullen",
+      "character": "Optimus Prime (voice)",
+      "profile_path": "/9Snf4fBUkk5MrAjqtNtgZRJYJbj.jpg"
+    },
+    {
+      "name": "Leonard Nimoy",
+      "character": "Sentinel Prime (voice)",
+      "profile_path": "/9KaiO5eNzJtB4zB2inmNWR0GTRI.jpg"
+    }
+  ]
+}

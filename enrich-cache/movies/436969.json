@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 436969,
+    "title": "The Suicide Squad",
+    "overview": "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.",
+    "tagline": "They\u2019re dying to save the world.",
+    "runtime": 132,
+    "release_date": "2021-07-28",
+    "vote_average": 7.437,
+    "poster_path": "/q61qEyssk2ku3okWICKArlAdhBn.jpg",
+    "backdrop_path": "/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531242,
+      "name": "Suicide Squad Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Margot Robbie",
+      "character": "Harley Quinn",
+      "profile_path": "/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg"
+    },
+    {
+      "name": "Idris Elba",
+      "character": "Bloodsport",
+      "profile_path": "/be1bVF7qGX91a6c5WeRPs5pKXln.jpg"
+    },
+    {
+      "name": "John Cena",
+      "character": "Peacemaker",
+      "profile_path": "/rgB2eIOt7WyQjdgJCOuESdDlrjg.jpg"
+    },
+    {
+      "name": "Joel Kinnaman",
+      "character": "Colonel Rick Flag",
+      "profile_path": "/cVfYzTyQdJ4xtxKPZe7IcW3BJN4.jpg"
+    }
+  ]
+}

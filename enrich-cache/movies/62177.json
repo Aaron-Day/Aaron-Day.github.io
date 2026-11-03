@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 62177,
+    "title": "Brave",
+    "overview": "In the mystical Scottish Highlands, Merida is the princess of a kingdom ruled by King Fergus and Queen Elinor. An unruly daughter and an accomplished archer, Merida one day defies a sacred custom of the land and inadvertently brings turmoil to the kingdom. In an attempt to set things right, Merida seeks out an eccentric old Wise Woman and is granted an ill-fated wish.",
+    "tagline": "Change your fate.",
+    "runtime": 93,
+    "release_date": "2012-06-21",
+    "vote_average": 7.037,
+    "poster_path": "/1XAuDtMWpL0sYSFK0R6EZate2Ux.jpg",
+    "backdrop_path": "/qx9ts2hBYJrkIQxhryitxnLlm2u.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kelly Macdonald",
+      "character": "Merida (voice)",
+      "profile_path": "/k0yVocTnTMWlNdaeOO7YRViCdhO.jpg"
+    },
+    {
+      "name": "Emma Thompson",
+      "character": "Elinor (voice)",
+      "profile_path": "/zQ0hWHh3tzaOOziPbABQI8s9WCu.jpg"
+    },
+    {
+      "name": "Billy Connolly",
+      "character": "Fergus (voice)",
+      "profile_path": "/imqsEA1EPet7OvHx80VfTYfFcWf.jpg"
+    },
+    {
+      "name": "Julie Walters",
+      "character": "The Witch (voice)",
+      "profile_path": "/bCTkV2OUgzbJdQEoCk3GesE4DXq.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 286217,
+    "title": "The Martian",
+    "overview": "During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile planet. With only meager supplies, he must draw upon his ingenuity, wit and spirit to subsist and find a way to signal to Earth that he is alive.",
+    "tagline": "Bring him home.",
+    "runtime": 141,
+    "release_date": "2015-09-30",
+    "vote_average": 7.712,
+    "poster_path": "/5BHuvQ6p9kfc091Z8RiFNhCwL4b.jpg",
+    "backdrop_path": "/lzMS0CI3FLQYC5EgJoWeIaEt0lm.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matt Damon",
+      "character": "Mark Watney",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    },
+    {
+      "name": "Jessica Chastain",
+      "character": "Melissa Lewis",
+      "profile_path": "/mR1ELpP0T2Q1ZRSaADPgtrbPGla.jpg"
+    },
+    {
+      "name": "Kristen Wiig",
+      "character": "Annie Montrose",
+      "profile_path": "/gEKYhc3HvNxWhxneVfeePu0rTm.jpg"
+    },
+    {
+      "name": "Jeff Daniels",
+      "character": "Theodore \u0022Teddy\u0022 Sanders",
+      "profile_path": "/r0mkZJZnTSJO3HJRsMW5HtszxE8.jpg"
+    }
+  ]
+}

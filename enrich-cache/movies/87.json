@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 87,
+    "title": "Indiana Jones and the Temple of Doom",
+    "overview": "After arriving in India, Indiana Jones is asked by a desperate village to find a mystical stone. He agrees \u2013 and stumbles upon a secret cult plotting a terrible plan in the catacombs of an ancient palace.",
+    "tagline": "If adventure has a name... it must be Indiana Jones.",
+    "runtime": 118,
+    "release_date": "1984-05-23",
+    "vote_average": 7.308,
+    "poster_path": "/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg",
+    "backdrop_path": "/f133nWlU6yUkZqqwcCXCbTEJWHr.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 84,
+      "name": "Indiana Jones Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "Indiana Jones",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Kate Capshaw",
+      "character": "Willie Scott",
+      "profile_path": "/nx3JwH8kwG5RXD3uSBUdNVcejki.jpg"
+    },
+    {
+      "name": "Ke Huy Quan",
+      "character": "Short Round",
+      "profile_path": "/iestHyn7PLuVowj5Jaa1SGPboQ4.jpg"
+    },
+    {
+      "name": "Amrish Puri",
+      "character": "Mola Ram",
+      "profile_path": "/uhMGFS7tuG71LDv2wk9LfZZ4EG6.jpg"
+    }
+  ]
+}

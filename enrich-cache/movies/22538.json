@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 22538,
+    "title": "Scott Pilgrim vs. the World",
+    "overview": "As bass guitarist for a garage-rock band, Scott Pilgrim has never had trouble getting a girlfriend; usually, the problem is getting rid of them. But when Ramona Flowers skates into his heart, he finds she has the most troublesome baggage of all: an army of ex-boyfriends who will stop at nothing to eliminate him from her list of suitors.",
+    "tagline": "An epic of epic epicness.",
+    "runtime": 113,
+    "release_date": "2010-08-12",
+    "vote_average": 7.485,
+    "poster_path": "/g5IoYeudx9XBEfwNL0fHvSckLBz.jpg",
+    "backdrop_path": "/6R9nT6m8wmzayV5XOQq3TRA6yZw.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Michael Cera",
+      "character": "Scott Pilgrim",
+      "profile_path": "/qjhNKsw0OLyZQgK4srhelBafcCf.jpg"
+    },
+    {
+      "name": "Mary Elizabeth Winstead",
+      "character": "Ramona Flowers",
+      "profile_path": "/vQn6IGsClpyhV6KTba9EDqSK7e2.jpg"
+    },
+    {
+      "name": "Ellen Wong",
+      "character": "Knives Chau",
+      "profile_path": "/4XUSp0qEwEOAwqBMD3ZdDXf4BIg.jpg"
+    },
+    {
+      "name": "Kieran Culkin",
+      "character": "Wallace Wells",
+      "profile_path": "/b5EC4nziLhBRX4GOcYx2BdS3FTt.jpg"
+    }
+  ]
+}

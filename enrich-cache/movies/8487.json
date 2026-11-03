@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8487,
+    "title": "Wild Wild West",
+    "overview": "Legless Southern inventor Dr. Arliss Loveless plans to rekindle the Civil War by assassinating President Ulysses S. Grant. Only two men can stop him: gunfighter James West and master-of-disguise and inventor Artemus Gordon. The two must team up to thwart Loveless\u0027 plans.",
+    "tagline": "It\u0027s a whole new west.",
+    "runtime": 106,
+    "release_date": "1999-06-30",
+    "vote_average": 5.319,
+    "poster_path": "/mCdo7nykEVCa25bjnkwgyX35fjm.jpg",
+    "backdrop_path": "/tbzWgnaqhFwN5mCIiwbgN5oiw0V.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Capt. James West",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Kevin Kline",
+      "character": "U.S. Marshal Artemus Gordon / President Grant",
+      "profile_path": "/ArH5dACd9AmWNNMnI6bGEkiFYIM.jpg"
+    },
+    {
+      "name": "Kenneth Branagh",
+      "character": "Dr. Arliss Loveless",
+      "profile_path": "/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
+    },
+    {
+      "name": "Salma Hayek Pinault",
+      "character": "Rita Escobar",
+      "profile_path": "/3j8MpAjyopkAc8mbNiDeXyqBmcS.jpg"
+    }
+  ]
+}

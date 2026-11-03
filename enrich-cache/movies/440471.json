@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 440471,
+    "title": "Escape Plan 2: Hades",
+    "overview": "Ray Breslin manages an elite team of security specialists trained in the art of breaking people out of the world\u0027s most impenetrable prisons. When his most trusted operative, Shu Ren, is kidnapped and disappears inside the most elaborate prison ever built, Ray must track him down with the help of some of his former friends.",
+    "tagline": "This isn\u0027t a prison. It\u0027s a machine.",
+    "runtime": 93,
+    "release_date": "2018-06-05",
+    "vote_average": 5.152,
+    "poster_path": "/A6tb8JNrie2qT8JC2tGqshayuck.jpg",
+    "backdrop_path": "/xIAaN3AQqaJiN5RJ0WsmBady8Hq.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 525891,
+      "name": "Escape Plan Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Ray Breslin",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Dave Bautista",
+      "character": "Trent DeRosa",
+      "profile_path": "/snk6JiXOOoRjPtHU5VMoy6qbd32.jpg"
+    },
+    {
+      "name": "Jesse Metcalfe",
+      "character": "Luke Walken",
+      "profile_path": "/qZR4VAB2t0qawkH88Wv3K7y67nM.jpg"
+    },
+    {
+      "name": "50 Cent",
+      "character": "Hush",
+      "profile_path": "/7VfwFIwBxy7qBUErosWRDQOovl9.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1669,
+    "title": "The Hunt for Red October",
+    "overview": "A new technologically-superior Soviet nuclear sub, the Red October, is heading for the U.S. coast under the command of Captain Marko Ramius. The American government thinks Ramius is planning to attack. Lone CIA analyst Jack Ryan has a different idea: he thinks Ramius is planning to defect, but he has only a few hours to find him and prove it - because the entire Russian naval and air commands are trying to find Ramius, too. The hunt is on!",
+    "tagline": "Invisible. Silent. Stolen.",
+    "runtime": 135,
+    "release_date": "1990-03-02",
+    "vote_average": 7.388,
+    "poster_path": "/yVl7zidse4KiWtGMqHFtZCx4X3N.jpg",
+    "backdrop_path": "/5jCpCFrku6wmCZOYZWhHOC2j8IU.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 192492,
+      "name": "The Jack Ryan Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Alec Baldwin",
+      "character": "Dr. Jack Ryan",
+      "profile_path": "/hzKy7x574eeUS3wt1R3yvWBRpeR.jpg"
+    },
+    {
+      "name": "Sean Connery",
+      "character": "Capt. 1st Marko Ramius",
+      "profile_path": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+      "name": "Scott Glenn",
+      "character": "CDR Bart Mancuso (USS Dallas)",
+      "profile_path": "/8DHORod2l6ZFS9KR0gNAAM3WZfI.jpg"
+    },
+    {
+      "name": "Sam Neill",
+      "character": "Capt. 2nd Vasily Borodin",
+      "profile_path": "/iIfuxalf37xUayuGyK0zG7z6WEZ.jpg"
+    }
+  ]
+}

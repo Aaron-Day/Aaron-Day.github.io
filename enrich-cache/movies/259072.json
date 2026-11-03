@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 259072,
+    "title": "Wrong Turn 6: Last Resort",
+    "overview": "A sudden and mysterious inheritance brings Danny and his friends to Hobb Springs, a forgotten resort deep in the West Virginia hills. Hobb Springs is being looked after under the watchful care of Jackson and Sally, a socially awkward couple who introduce Danny to the long lost family he\u0027s never known. A clan by the name of Hillicker. But soon Danny learns his relatives have a different way of living, that for generations, the Hillickers have observed ancient traditions rooted in cannibalism and other taboo rituals.",
+    "tagline": "Checking into your worst nightmare!",
+    "runtime": 91,
+    "release_date": "2014-08-22",
+    "vote_average": 5.411,
+    "poster_path": "/cV1biK7jlHVXlQ7ErYe5MUSBGcx.jpg",
+    "backdrop_path": "/iS3cMqqWQBehsm0b9Zb5ND4m2pf.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 52985,
+      "name": "Wrong Turn Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anthony Ilott",
+      "character": "Danny",
+      "profile_path": "/4nDqPZDRLtcUwVuPfatKXUEz6m4.jpg"
+    },
+    {
+      "name": "Aqueela Zoll",
+      "character": "Toni",
+      "profile_path": "/cvN1Bg4uEoBzCA03jjyHPtbzkNg.jpg"
+    },
+    {
+      "name": "Sadie Katz",
+      "character": "Sally",
+      "profile_path": "/eWGA3hZgyYq1pj5ADTKH4QSn28a.jpg"
+    },
+    {
+      "name": "Chris Jarvis",
+      "character": "Jackson",
+      "profile_path": "/nWs0ofnvxxCdbDE33fIrnPKAdT8.jpg"
+    }
+  ]
+}

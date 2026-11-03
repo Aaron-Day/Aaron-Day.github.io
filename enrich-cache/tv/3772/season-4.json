@@ -1,0 +1,216 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Blown Apart",
+        "overview": "An escaped prisoner goes on a spree, killing people who helped put him away--a list of people that includes Walker.",
+        "air_date": "1995-09-23",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 2,
+        "name": "Deep Cover",
+        "overview": "Walker poses as a cocaine dealer to help break up a drug trafficking operation.",
+        "air_date": "1995-09-30",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 3,
+        "name": "The Guardians",
+        "overview": "Walker must stop eco-terrorists out to destroy an oil rig.",
+        "air_date": "1995-10-07",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 4,
+        "name": "Collision Course",
+        "overview": "Walker must come to the rescue when C.D.\u0027s niece is kidnapped by her ex-boyfriend and forced to go on a spree of bank robberies.",
+        "air_date": "1995-10-14",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 5,
+        "name": "Point After",
+        "overview": "Walker and Trivette investigate the death of a high school football coach.",
+        "air_date": "1995-10-21",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 6,
+        "name": "Evil in the Night",
+        "overview": "A malevolent medicine man resurrects after desecration of his burial ground.",
+        "air_date": "1995-11-04",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 7,
+        "name": "Final Justice",
+        "overview": "For years Walker has believed that the man who murdered his parents at a carnival in the sixties was dead, but after visiting with one of them men who had attacked them that night, Walker realises that his parents\u0027 killer has been living the life of Riley for the past few years, and he needs the help of an old cowboy who witnessed the crime to track him down.",
+        "air_date": "1995-11-11",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 8,
+        "name": "The Lynching",
+        "overview": "Walker protects a mentally disabled boy, accused of killing a lady, from being lynched by his community.",
+        "air_date": "1995-11-18",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 9,
+        "name": "Whitewater (1)",
+        "overview": "Alex and Walker\u0027s whitewater rafting trip becomes a working vacation when one of the rafters is murdered.",
+        "air_date": "1995-11-25",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 10,
+        "name": "Whitewater (2)",
+        "overview": "Alex and Walker\u0027s whitewater rafting trip becomes a working vacation when one of the rafters is murdered.",
+        "air_date": "1995-12-02",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 11,
+        "name": "The Covenant",
+        "overview": "Feuding gangs divide a neighborhood at Christmas.",
+        "air_date": "1995-12-09",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 12,
+        "name": "Rodeo",
+        "overview": "Walker and Trivette must protect the last surviving witness for a mob trial, who turns out to be an ex-boyfriend of Alex.",
+        "air_date": "1996-01-06",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 13,
+        "name": "Flashpoint",
+        "overview": "Some Irish militants are trying to kill a peacemaker.",
+        "air_date": "1996-01-13",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 14,
+        "name": "Break In",
+        "overview": "Undercover in a prison, Walker is left alone when the corrupt warden discovers Trivette and removes him.",
+        "air_date": "1996-01-20",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 15,
+        "name": "The Return of LaRue",
+        "overview": "Victor LaRue having been released from prison by the parole board because of good behavior,seeks to take revenge on Alex Cahill,and Walker.",
+        "air_date": "1996-02-03",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 16,
+        "name": "The Juggernaut",
+        "overview": "Alex\u0027s attempt to help the victom of spousal abuse gets complicated when the victim\u0027s husband is released from jail.",
+        "air_date": "1996-02-10",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 17,
+        "name": "El Coyote (1)",
+        "overview": "Walker poses as a peasant to track slave-labor smugglers in Mexico.",
+        "air_date": "1996-02-17",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 18,
+        "name": "El Coyote (2)",
+        "overview": "Walker poses as a peasant to track slave-labor smugglers in Mexico.",
+        "air_date": "1996-02-24",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 19,
+        "name": "The Avenger",
+        "overview": "The brother of an illegal arms dealer killed by Walker gets revenge by making him fight deadly martial artists.",
+        "air_date": "1996-03-02",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 20,
+        "name": "Behind the Badge",
+        "overview": "Trivette tries to impress the reporterette following him around for the \u0022\u0022Behind the Badge\u0022\u0022 tv show, but all the action is going on with Walker.",
+        "air_date": "1996-03-23",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 21,
+        "name": "Blackout",
+        "overview": "A blow to the head leaves Walker with amnesia during an undercover operation to uncover money laundering at a casino.",
+        "air_date": "1996-04-06",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 22,
+        "name": "Deadline",
+        "overview": "The existence of the Texas Rangers is threatened by budget cuts.",
+        "air_date": "1996-04-13",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 23,
+        "name": "The Siege",
+        "overview": "Meanwhile Alex is taking a ride with Bobby; Hanks son who is the Park ranger and they see the Larkins pick up a case of heroin Alex recognizes them and despite her warning to wait for Walker Bobby knows that they would be gone by then and orders them with their hands up unaware that one of Larkins men is sneaking up behind Bobby and shoots him. Alex narrowly gets Bobby back to the truck and head back to the lodge with the Larkins closely behind Walker and Trivette hear the gun shots Trivette thinks it is hunters but Walker knows that hunters don\u0027t use Automatic Guns.\n\nOnce Alex and the",
+        "air_date": "1996-04-27",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 24,
+        "name": "The Moscow Connection",
+        "overview": "When warehouse robberies get linked to the Russian mob, the Rangers call on the Moscow police for assistance.",
+        "air_date": "1996-05-04",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 25,
+        "name": "Miracle at Middle Creek",
+        "overview": "While attempting to help a small boy trapped underground, Walker finds himself buried alive.",
+        "air_date": "1996-05-11",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 26,
+        "name": "Hall of Fame",
+        "overview": "A serial killer taunts C.D. as he prepares for induction to the Texas Ranger Hall of Fame.",
+        "air_date": "1996-05-18",
+        "runtime": 60,
+        "still_path": null
+      }
+    ]
+  }
+}

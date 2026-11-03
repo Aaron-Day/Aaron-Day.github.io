@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 253,
+    "title": "Live and Let Die",
+    "overview": "James Bond must investigate a mysterious murder case of a British agent in New Orleans. Soon he finds himself up against a gangster boss named Mr. Big.",
+    "tagline": "Bond is back. Back in action. Back with excitement.",
+    "runtime": 121,
+    "release_date": "1973-06-27",
+    "vote_average": 6.498,
+    "poster_path": "/39qkrjqMZs6utwNmihVImC3ghas.jpg",
+    "backdrop_path": "/hzmmXx6UeYQeylioNbliFKjSbV7.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Roger Moore",
+      "character": "James Bond",
+      "profile_path": "/qUjeguNlZzpwh2bGUwEq2n2GNPx.jpg"
+    },
+    {
+      "name": "Yaphet Kotto",
+      "character": "Kananga/Mr. Big",
+      "profile_path": "/f0jquWLj22hvYf6PTIggdolhiDx.jpg"
+    },
+    {
+      "name": "Jane Seymour",
+      "character": "Solitaire",
+      "profile_path": "/4crZXhSXSeAiwZDZyjfQ9dMgbj0.jpg"
+    },
+    {
+      "name": "Clifton James",
+      "character": "Sheriff J.W. Pepper",
+      "profile_path": "/4XRoVhgoeQEZdg4BAKCWRkI1UfR.jpg"
+    }
+  ]
+}

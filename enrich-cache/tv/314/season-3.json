@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Xindi",
+        "overview": "Captain Archer and his crew set out to gain information about the mysterious and antagonistic Xindi race.",
+        "air_date": "2003-09-10",
+        "runtime": 43,
+        "still_path": "/4SMC3iSAFhSUtsHbSMqBnbNtMn0.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Anomaly",
+        "overview": "Enterprise starts experiencing effects of the spatial distortions pervading the Delphic Expanse, and falls victim to predatory aliens.",
+        "air_date": "2003-09-17",
+        "runtime": 43,
+        "still_path": "/jQVOUJfejOwPCJ899pTQNfdgrQ9.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Extinction",
+        "overview": "On a mission to investigate an abandoned Xindi vessel on a jungle planet, Archer, Reed and Hoshi succumb to a virus that mutates them into a primal life form.",
+        "air_date": "2003-09-24",
+        "runtime": 43,
+        "still_path": "/uxJebkOvCdOAD7217y3TPGTA3vy.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Rajiin",
+        "overview": "The NX-01 gets closer to a showdown with the Xindi when Captain Archer takes on an enigmatic passenger: a beautiful slave named Rajiin.",
+        "air_date": "2003-10-01",
+        "runtime": 43,
+        "still_path": "/vHt6PmutODfASlHr1qlnmChhMz2.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Impulse",
+        "overview": "When Enterprise responds to a distress call from a Vulcan ship stranded in the Delphic Expanse, Archer and his boarding team are attacked by insane zombie-like Vulcans.",
+        "air_date": "2003-10-08",
+        "runtime": 43,
+        "still_path": "/bNrj7YEfhxQi8abhvFWkE7VdBAq.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Exile",
+        "overview": "A powerful telepath makes contact with Hoshi and offers to help Enterprise find the Xindi ... for a price.",
+        "air_date": "2003-10-15",
+        "runtime": 43,
+        "still_path": "/ahnyDrKgsZeIzmt9Q86DX30SuAi.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Shipment",
+        "overview": "Archer, Reed and Major Hayes infiltrate a Xindi-Sloth industrial colony to learn more about the weapon of mass destruction that will be used against Earth.",
+        "air_date": "2003-10-29",
+        "runtime": 43,
+        "still_path": "/u2r72yZNzVA3strcSCBRMoRSfnQ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Twilight",
+        "overview": "A spatial distortion leaves Archer unable to form any new long-term memories. Years in the future, he wakes up one morning and is stunned to learn the outcome of the human-Xindi conflict.",
+        "air_date": "2003-11-05",
+        "runtime": 43,
+        "still_path": "/waq0aN2528cyrXMLwtMqAilgp5A.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "North Star",
+        "overview": "When a settlement of humans living a 19th-century Western lifestyle is discovered on a Delphic Expanse planet, Archer and crew set out to learn how they got there.",
+        "air_date": "2003-11-12",
+        "runtime": 43,
+        "still_path": "/jhyLKUnDVmr5X0B8Y5Xjj0WWbnp.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Similitude",
+        "overview": "When Trip suffers a catastrophic injury, his only hope for survival is a transplant from a \u0022mimetic symbiont\u0022 which Phlox grows from one of his exotic creatures.",
+        "air_date": "2003-11-19",
+        "runtime": 43,
+        "still_path": "/4Q54bDCwtgiqBAZKHtecnvUNT2x.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Carpenter Street",
+        "overview": "Archer and T\u0027Pol travel back in time to 2004 Detroit to stop a Xindi plot.",
+        "air_date": "2003-11-26",
+        "runtime": 43,
+        "still_path": "/u68vQ35sXH2G8S0B86VEOJkOmor.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Chosen Realm",
+        "overview": "Religious zealots hijack Enterprise to use it as a weapon against the enemies of their faith.",
+        "air_date": "2004-01-14",
+        "runtime": 43,
+        "still_path": "/73ZYTLvplRtfcP7iVoXXhKkmCFN.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Proving Ground",
+        "overview": "An Andorian ship led by Commander Shran arrives in the Delphic Expanse to help Enterprise hone in on the Xindi super-weapon.",
+        "air_date": "2004-01-21",
+        "runtime": 43,
+        "still_path": "/1pF4grfhgxaequ93Awe6XhFF7RK.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Stratagem",
+        "overview": "Archer finds himself face-to-face with Degra, the designer of the Xindi superweapon, and tries to get him to reveal its location.",
+        "air_date": "2004-02-04",
+        "runtime": 43,
+        "still_path": "/cHTep9AcCPPgfXgEuRgJVyhVgPQ.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Harbinger",
+        "overview": "As Archer tries to unravel the mystery of a rescued alien, long-simmering feelings explode among his senior officers.",
+        "air_date": "2004-02-11",
+        "runtime": 43,
+        "still_path": "/nQE9Hvp4Pbs8hQTCC0fpLdEyq4r.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Doctor\u0027s Orders",
+        "overview": "The fate of Enterprise is in Dr. Phlox\u0027s hands as the rest of the crew must be induced into a coma in order to survive a trans-dimensional disturbance.",
+        "air_date": "2004-02-18",
+        "runtime": 43,
+        "still_path": "/m70rYWBY7ZhcTjK79qZ9069kGlP.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Hatchery",
+        "overview": "Archer goes to extreme lengths to save an abandoned nest of Xindi-Insectoid eggs ready to hatch.",
+        "air_date": "2004-02-25",
+        "runtime": 43,
+        "still_path": "/iaE8dgpJrSbBKWcJW3iBehcWKzy.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Azati Prime",
+        "overview": "Archer sets out on a suicide mission to destroy the Xindi superweapon as Enterprise faces a brutal attack.",
+        "air_date": "2004-03-03",
+        "runtime": 43,
+        "still_path": "/86rduHGk3LV5PAWXvaGkWgdA1V9.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Damage",
+        "overview": "While dissension among Xindi ranks festers, Enterprise tries to recover from a devastating attack.",
+        "air_date": "2004-04-21",
+        "runtime": 43,
+        "still_path": "/qcmwWAkdDoY7L1Jvr2xmrOJEiYI.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Forgotten",
+        "overview": "Two high-ranking Xindi offer to stop the launch of their superweapon if Archer can prove they\u0027ve been manipulated. Meanwhile, the crew mourns their lost mates.",
+        "air_date": "2004-04-28",
+        "runtime": 43,
+        "still_path": "/7vdMSKIxfIPYps5lhuuPhapoQ4Q.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "E\u00B2",
+        "overview": "An attempt to use a Xindi subspace corridor leads the Enterprise crew to a bizarre encounter with their own descendants.",
+        "air_date": "2004-05-05",
+        "runtime": 43,
+        "still_path": "/uKqXCFucIjPaPpv6hDSiCLxC7tm.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Council",
+        "overview": "Archer and Hoshi stand before the Xindi Council as T\u0027Pol and Reed lead a team into the heart of a Sphere.",
+        "air_date": "2004-05-12",
+        "runtime": 43,
+        "still_path": "/zhHeIspudtQfBO0VpCrb1VvJyEG.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Countdown",
+        "overview": "With help from Xindi allies, the Enterprise crew attempts to stop the arming of the Weapon aimed toward Earth.",
+        "air_date": "2004-05-19",
+        "runtime": 43,
+        "still_path": "/1xuf7glHcm2UqknW77peHTTlZEW.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Zero Hour",
+        "overview": "Archer puts his life on the line in a risky gambit to intercept the Xindi superweapon and disarm it from within.",
+        "air_date": "2004-05-26",
+        "runtime": 43,
+        "still_path": "/8R6mmKvXcH773QvZGK1bHhqZj0j.jpg"
+      }
+    ]
+  }
+}

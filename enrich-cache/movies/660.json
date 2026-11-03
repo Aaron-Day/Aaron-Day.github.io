@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 660,
+    "title": "Thunderball",
+    "overview": "A criminal organization has obtained two nuclear bombs and are asking for a 100 million pound ransom in the form of diamonds in seven days or they will use the weapons. The secret service sends James Bond to the Bahamas to once again save the world.",
+    "tagline": "Look up! Look down! Look out! Here comes the biggest Bond of all!",
+    "runtime": 130,
+    "release_date": "1965-12-11",
+    "vote_average": 6.7,
+    "poster_path": "/wCc4qllaTDsQN8zgGkAgQrKO6N9.jpg",
+    "backdrop_path": "/7DLCXCQx52YLle1qTokrjROTwVV.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sean Connery",
+      "character": "James Bond",
+      "profile_path": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+      "name": "Claudine Auger",
+      "character": "Dominique \u0027Domino\u0027 Derval",
+      "profile_path": "/vwsc6RUADD2ErL8KK6gj0JbjxQR.jpg"
+    },
+    {
+      "name": "Adolfo Celi",
+      "character": "Emilio Largo",
+      "profile_path": "/bIxjJ4eXYiNrYgSBCLD7OHw1LdT.jpg"
+    },
+    {
+      "name": "Luciana Paluzzi",
+      "character": "Fiona Volpe",
+      "profile_path": "/c8cRWe82adjPqKr0kHme36KAe5f.jpg"
+    }
+  ]
+}

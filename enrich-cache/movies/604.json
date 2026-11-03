@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 604,
+    "title": "The Matrix Reloaded",
+    "overview": "The Resistance builds in numbers as humans are freed from the Matrix and brought to the city of Zion. Neo discovers his superpowers, including the ability to see the code inside the Matrix. With machine sentinels digging to Zion in 72 hours, Neo, Morpheus and Trinity must find the Keymaker to ultimately reach the Source.",
+    "tagline": "Free your mind.",
+    "runtime": 138,
+    "release_date": "2003-05-15",
+    "vote_average": 7.086,
+    "poster_path": "/8xEVAe84zlL9rkfYT6dZXero4KK.jpg",
+    "backdrop_path": "/ihOJcrorpDQtHTzIOrobbOhpJsj.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2344,
+      "name": "The Matrix Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Neo",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Laurence Fishburne",
+      "character": "Morpheus",
+      "profile_path": "/2GbXERENPpl5MmlqOLlPVaVtifD.jpg"
+    },
+    {
+      "name": "Carrie-Anne Moss",
+      "character": "Trinity",
+      "profile_path": "/9zya72vRZYBQILfetACsnmCBgdj.jpg"
+    },
+    {
+      "name": "Hugo Weaving",
+      "character": "Agent Smith",
+      "profile_path": "/lSC8Et0PYi5zeQb3IpPkFje7hgR.jpg"
+    }
+  ]
+}

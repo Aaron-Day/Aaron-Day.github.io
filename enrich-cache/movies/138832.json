@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 138832,
+    "title": "We\u0027re the Millers",
+    "overview": "A veteran pot dealer creates a fake family as part of his plan to move a huge shipment of weed into the U.S. from Mexico.",
+    "tagline": "If anyone asks.",
+    "runtime": 110,
+    "release_date": "2013-08-07",
+    "vote_average": 6.842,
+    "poster_path": "/qF2LJ0jwWrtXSuT4AFD5OS2IqaT.jpg",
+    "backdrop_path": "/jxDo3i2f6Ab1XeTWjdNDkkZYEju.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jennifer Aniston",
+      "character": "Rose O\u0027Reilly",
+      "profile_path": "/PBSCmHDFdCMBhjx0EbXpTw4Z94.jpg"
+    },
+    {
+      "name": "Jason Sudeikis",
+      "character": "David Clark",
+      "profile_path": "/uuacnP9DOHMsmj8FhBi0cWWDgrn.jpg"
+    },
+    {
+      "name": "Emma Roberts",
+      "character": "Casey Mathis",
+      "profile_path": "/utggW2yIufP3A5CGdT8H5mXyGLs.jpg"
+    },
+    {
+      "name": "Will Poulter",
+      "character": "Kenny Rossmore",
+      "profile_path": "/9blYMaj79VGC6BHTLmJp3V5S8r3.jpg"
+    }
+  ]
+}

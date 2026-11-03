@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 512200,
+    "title": "Jumanji: The Next Level",
+    "overview": "As the gang return to Jumanji to rescue one of their own, they discover that nothing is as they expect. The players will have to brave parts unknown and unexplored in order to escape the world\u2019s most dangerous game.",
+    "tagline": "New places. New faces. Next level.",
+    "runtime": 123,
+    "release_date": "2019-12-04",
+    "vote_average": 6.865,
+    "poster_path": "/2RyMYPKmlUcT4BkVmPIOUV4X2iC.jpg",
+    "backdrop_path": "/qgch2rFskIxDMgwrD5lWTaB4nBl.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 495527,
+      "name": "Jumanji Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dwayne Johnson",
+      "character": "Dr. Smolder Bravestone",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Kevin Hart",
+      "character": "Franklin \u0027Mouse\u0027 Finbar",
+      "profile_path": "/byiNydUlM6oP8diA7WMvYbNM7a1.jpg"
+    },
+    {
+      "name": "Jack Black",
+      "character": "Professor Sheldon \u0027Shelly\u0027 Oberon",
+      "profile_path": "/rtCx0fiYxJVhzXXdwZE2XRTfIKE.jpg"
+    },
+    {
+      "name": "Karen Gillan",
+      "character": "Ruby Roundhouse",
+      "profile_path": "/qYx8CflXVq48nGKX1IJsDrAj0sT.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13676,
+    "title": "The Little Mermaid: Ariel\u0027s Beginning",
+    "overview": "Follow Ariel\u0027s adventures before she gave up her fins for true love. When Ariel wasn\u0027t singing with her sisters, she spent time with her mother, Queen Athena. Ariel is devastated when Athena is killed by pirates, and after King Triton outlaws all singing. Along with pals Flounder and Sebastian, Ariel sets off in hopes of changing her father\u0027s decision to ban music from the kingdom.",
+    "tagline": "Every Tale Has A Beginning, But Only One Begins Under The Sea",
+    "runtime": 77,
+    "release_date": "2008-08-25",
+    "vote_average": 6.678,
+    "poster_path": "/6EwcdQH134T4HGr0W3m2FnLjTnc.jpg",
+    "backdrop_path": "/1UNDNyqTV4CS03T4gMuRYiahtpd.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 33085,
+      "name": "The Little Mermaid Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jodi Benson",
+      "character": "Ariel (voice)",
+      "profile_path": "/4mxtuq3mXLZwPKbI7t0KFxf0PRW.jpg"
+    },
+    {
+      "name": "Samuel E. Wright",
+      "character": "Sebastian (voice)",
+      "profile_path": "/fNdu3ge0Bf8kKvJCkrGTUbBaJKB.jpg"
+    },
+    {
+      "name": "Jim Cummings",
+      "character": "King Triton / Shelbow / Additional Voices (voice)",
+      "profile_path": "/c0sQPRCM5Ri3F4gVyxPr4AcPmIq.jpg"
+    },
+    {
+      "name": "Sally Field",
+      "character": "Marina Del Ray (voice)",
+      "profile_path": "/iMeq1j9Xwvaf6PbTJ0FQz69fpuA.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 188927,
+    "title": "Star Trek Beyond",
+    "overview": "The USS Enterprise crew explores the furthest reaches of uncharted space, where they encounter a mysterious new enemy who puts them and everything the Federation stands for to the test.",
+    "tagline": "The final frontier...and beyond.",
+    "runtime": 122,
+    "release_date": "2016-07-07",
+    "vote_average": 6.79,
+    "poster_path": "/wI5VghYNYLktDRPUa5rrVcVA1h7.jpg",
+    "backdrop_path": "/nkr43pY7ZzUt9b0kDFwJLVuDP8G.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 115575,
+      "name": "Star Trek: Alternate Reality Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Pine",
+      "character": "Captain James T. Kirk",
+      "profile_path": "/vSe6sIsdtcoqBhuWRXynahFg8Vf.jpg"
+    },
+    {
+      "name": "Zachary Quinto",
+      "character": "Commander Spock",
+      "profile_path": "/lNRhutc6s5soEAsPAird3W3sZdy.jpg"
+    },
+    {
+      "name": "Karl Urban",
+      "character": "Dr. Leonard \u0027Bones\u0027 McCoy",
+      "profile_path": "/7Y96dAfg0HcFrcLjlD5eD9N0uj4.jpg"
+    },
+    {
+      "name": "Zoe Salda\u00F1a",
+      "character": "Lieutenant Nyota Uhura",
+      "profile_path": "/vQBwmsSOAd0JDaEcZ5p43J9xzsY.jpg"
+    }
+  ]
+}

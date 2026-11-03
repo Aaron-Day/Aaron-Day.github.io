@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 249660,
+    "title": "God\u0027s Not Dead",
+    "overview": "After he refuses to disavow his faith, a devout Christian student must prove the existence of God or else his college philosophy professor will fail him.",
+    "tagline": "What do you believe?",
+    "runtime": 113,
+    "release_date": "2014-03-21",
+    "vote_average": 6,
+    "poster_path": "/yKUzBolWrwyByevBtDPfy3kIumv.jpg",
+    "backdrop_path": "/8pl2t8FvYHHEAT6ly8YtJJWd1bn.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 409343,
+      "name": "God\u0027s Not Dead Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kevin Sorbo",
+      "character": "Professor Radisson",
+      "profile_path": "/a6rDi3tkNJwaVoP7VGbdGelwtYw.jpg"
+    },
+    {
+      "name": "Shane Harper",
+      "character": "Josh Wheaton",
+      "profile_path": "/4hZDzXBDeUbs8bxYevJEmXNVhyE.jpg"
+    },
+    {
+      "name": "David A.R. White",
+      "character": "Reverend Dave",
+      "profile_path": "/q5YGId1d2PlHMZPOCjrZGKs9VNG.jpg"
+    },
+    {
+      "name": "Dean Cain",
+      "character": "Mark Shelley",
+      "profile_path": "/vVBqgo0BJQVreLZaIW8tHI8hXYZ.jpg"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 10,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Conspiracy in the Corpse",
+        "overview": "Brennan and the team attempt to absolve Booth and get him released from prison. The remains of a man who has been dead for over sixteen years prove to be significant.",
+        "air_date": "2014-09-25",
+        "runtime": 44,
+        "still_path": "/5aBPR7kfX9wTmiwyfrVy9g8flIa.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Lance to the Heart",
+        "overview": "Aubrey works alongside the team to investigate a government conspiracy. DNA found on a previous victim helps the team to narrow down the suspects.",
+        "air_date": "2014-10-02",
+        "runtime": 42,
+        "still_path": "/69NpzA6yAtT4mGg1h6k3qShYJSz.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Purging of the Pundit",
+        "overview": "The remains of a right-wing radio host are found in a storm drain, and the investigation reveals some surprising extracurricular activities that narrows the search for suspects. Meanwhile, Agent Aubrey tries to get Booth to trust him, and Brennan worries about her husband\u0027s state of mind.",
+        "air_date": "2014-10-09",
+        "runtime": 43,
+        "still_path": "/tL8S6Bm8SOK2RXDx44l7TdWQ0gr.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Geek in the Guck",
+        "overview": "The investigation of the murder of a video-game designer reveals the wealth he accumulated during his career, which makes a suspect out of everyone who was in his inner circle. Meanwhile, \u0022squintern\u0022 Jessica sheds light on an educational opportunity; and Brennan and Booth discuss Christine\u0027s future.",
+        "air_date": "2014-10-16",
+        "runtime": 41,
+        "still_path": "/yaprDrkNj7j2F8rcsaOrnkdhU1t.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Corpse at the Convention",
+        "overview": "Brennan runs into a publishing rival. Wendell hears back from his diagnosis. The team members investigate a murder when remains are found in a convention\u0027s stairwell.",
+        "air_date": "2014-10-30",
+        "runtime": 44,
+        "still_path": "/gYQL6u6jx9CekV7bZ3OwoxIXgSn.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Lost Love in the Foreign Land",
+        "overview": "The case of a maid\u0027s death turns out to be a bigger case than originally thought. Tensions are rising between Cam and Brennan.",
+        "air_date": "2014-11-06",
+        "runtime": 43,
+        "still_path": "/oclXllLnbT8ggZoploL0vvk49y2.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Money Maker on the Merry-Go-Round",
+        "overview": "The team investigate a billion dollar hedge fund company when severely damaged remains from human\u0027s are found under a merry go round.",
+        "air_date": "2014-11-13",
+        "runtime": 43,
+        "still_path": "/4jVdXO0nD4L9DJpXSPWarZUpQ04.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Puzzler in the Pit",
+        "overview": "The team is called in after a crossword puzzle master is discovered in an urban fracking site.",
+        "air_date": "2014-11-20",
+        "runtime": 43,
+        "still_path": "/iiNRr5mtj7N9BEk2xPADuxiC0Jq.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Mutilation of the Master Manipulator",
+        "overview": "The team is called in after the remains of a psychology professor are discovered.",
+        "air_date": "2014-12-04",
+        "runtime": 43,
+        "still_path": "/77afqBs9xozlgWgjFYUDKt8kcaR.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The 200th in the 10th",
+        "overview": "Paying homage to Alfred Hitchcock in an episode that reimagines the Jeffersonian and FBI teams in 1950s Hollywood. Brennan plays an LAPD detective who\u0027s battling sexism on the force, and Booth is a notorious jewel thief who is far more than he seems to be. When Booth is framed for the murder of a rich socialite, he and Brennan team up to clear his name and find the true identity of the murderer.",
+        "air_date": "2014-12-11",
+        "runtime": 43,
+        "still_path": "/c7BRjj2YBA9AmkR0fOKtmTq4QVB.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Psychic in the Soup",
+        "overview": "Angela\u2019s psychic friend is enlisted when the body of a local psychic is found.",
+        "air_date": "2015-03-26",
+        "runtime": 43,
+        "still_path": "/fwqToebb4AYjGh4Z1m5QDafFoMH.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Teacher in the Books",
+        "overview": "The team are called in after a wealthy teacher is discovered dead in an abandoned bookstore.",
+        "air_date": "2015-04-02",
+        "runtime": 43,
+        "still_path": "/pBNatl8xQEXVpvLonhaqPxnbClF.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Baker in the Bits",
+        "overview": "When the body of an ex-con is found in pieces, the Jeffersonian team investigates a local bakery known for employing former felons.",
+        "air_date": "2015-04-09",
+        "runtime": 43,
+        "still_path": "/eOuy52ebCXUz9AulcWg3cwjfmG0.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Putter in the Rough",
+        "overview": "The team take a look into the death of a mini-golf superstar. Brennan is concerned about her dad.",
+        "air_date": "2015-04-16",
+        "runtime": 42,
+        "still_path": "/tgfVKOS1JlIXbYwBffOLqn3OgZN.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Eye in the Sky",
+        "overview": "Booth and Brennan work undercover as they become involved in the world of underground poker.",
+        "air_date": "2015-04-23",
+        "runtime": 43,
+        "still_path": "/jul28ze6HUliK06zgO4qrcoR9Jc.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Big Beef at the Royal Diner",
+        "overview": "The team are called in after the remains of a celebrity chef are found in a local park.",
+        "air_date": "2015-04-30",
+        "runtime": 44,
+        "still_path": "/t0x8b7GjVc9Vctt8PJeplpu5Nln.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Lost in the Found",
+        "overview": "Brennan and Booth believe that bullying is behind the death of a private high school student.",
+        "air_date": "2015-05-07",
+        "runtime": 42,
+        "still_path": "/hWhXfMT0MRhvcL2rvtYUMzBj9bv.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Verdict in the Victims",
+        "overview": "The team attempt to find evidence that Alex Rockwell did not commit the crimes of which he was convicted for.",
+        "air_date": "2015-05-07",
+        "runtime": 42,
+        "still_path": "/zbBTOcPKjkO7Dg2ZDMxmAiJRAPR.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Murder in the Middle East",
+        "overview": "The team must race against the clock to expose the killer of the son of a powerful diplomat.",
+        "air_date": "2015-05-14",
+        "runtime": 43,
+        "still_path": "/6WlI7XvsxvuwPquRIhduicRTl2Z.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Woman in the Whirlpool",
+        "overview": "A well-known cookie jar collector\u0027s body is found on a riverbank.",
+        "air_date": "2015-05-28",
+        "runtime": 43,
+        "still_path": "/1RXYicN8j0NGgtzcjjdLcCeQvZg.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Life in the Light",
+        "overview": "The team take a look into the death of an ex-con who has become a yoga instructor.",
+        "air_date": "2015-06-04",
+        "runtime": 43,
+        "still_path": "/aqbfVDPrukFwywi90gKjNc7ZzHy.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Next in the Last",
+        "overview": "When the Jeffersonian team discovers remains of a victim, and elements of the crime scene point to a possible protege of serial killer Christopher Pelant, they must revisit their prior work on Pelant while tracing new clues that will hopefully lead them to the copycat killer. Meanwhile, Angela is skeptical about her and Hodgins decision to move to Paris and Brennan and Booth contemplate options outside of the Jeffersonian and FBI.",
+        "air_date": "2015-06-11",
+        "runtime": 43,
+        "still_path": "/lK8U4ws186fo3a6wu8VmoxVKLMu.jpg"
+      }
+    ]
+  }
+}

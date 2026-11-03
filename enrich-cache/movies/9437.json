@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9437,
+    "title": "Kiss the Girls",
+    "overview": "Forensic psychologist and detective Alex Cross travels to North Carolina and teams with escaped kidnap victim Kate McTiernan to hunt down \u0022Casanova,\u0022 a serial killer who abducts strong-willed women and forces them to submit to his demands. The trail leads to Los Angeles, where the duo discovers that the psychopath may not be working alone.",
+    "tagline": "Smart girls. Pretty girls. Missing girls.",
+    "runtime": 115,
+    "release_date": "1997-09-29",
+    "vote_average": 6.55,
+    "poster_path": "/a4P8PD9kvN0IZnDzsyurVs2WaJX.jpg",
+    "backdrop_path": "/y319VH0gIFie6KEO5L4nHhxxQUw.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 142680,
+      "name": "Alex Cross Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Morgan Freeman",
+      "character": "Det. Alex Cross",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    },
+    {
+      "name": "Ashley Judd",
+      "character": "Dr. Kate McTiernan",
+      "profile_path": "/5771ZxVIs5rQbI1SV8TOlAFcF15.jpg"
+    },
+    {
+      "name": "Cary Elwes",
+      "character": "Det. Nick Ruskin",
+      "profile_path": "/9UszBdQJ9PmyBydIeIBxlStozhW.jpg"
+    },
+    {
+      "name": "Alex McArthur",
+      "character": "Det. Davey Sikes",
+      "profile_path": "/aZk9kZUDTZJwsJGBVRORPdCTrcy.jpg"
+    }
+  ]
+}

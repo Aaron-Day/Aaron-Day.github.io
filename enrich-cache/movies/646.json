@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 646,
+    "title": "Dr. No",
+    "overview": "Agent 007 battles mysterious Dr. No, a scientific genius bent on destroying the U.S. space program. As the countdown to disaster begins, Bond must go to Jamaica, where he encounters beautiful Honey Ryder, to confront a megalomaniacal villain in his massive island headquarters.",
+    "tagline": "Now meet the most extraordinary gentleman spy in all fiction!",
+    "runtime": 110,
+    "release_date": "1962-10-07",
+    "vote_average": 6.986,
+    "poster_path": "/9zCOLJmLNst0sCPZlkW1IRoH65E.jpg",
+    "backdrop_path": "/srgq7bzZsuDw7NoGXdazRXp7Hl6.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sean Connery",
+      "character": "James Bond",
+      "profile_path": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+      "name": "Ursula Andress",
+      "character": "Honey Ryder",
+      "profile_path": "/mZSFE3vayIgXmfot4btC7K1rECZ.jpg"
+    },
+    {
+      "name": "Joseph Wiseman",
+      "character": "Dr. No",
+      "profile_path": "/7QS6Z4rZ8kVimx10eeZ3r882Ahk.jpg"
+    },
+    {
+      "name": "Jack Lord",
+      "character": "Felix Leiter",
+      "profile_path": "/laGKjiYuFGtmFFYPyZaJZJ0xBT5.jpg"
+    }
+  ]
+}

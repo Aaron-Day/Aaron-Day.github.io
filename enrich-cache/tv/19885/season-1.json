@@ -1,0 +1,32 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "A Study in Pink",
+        "overview": "A war hero, invalided home from Afghanistan, meets a strange but charismatic genius who is looking for a flatmate; it is London, 2010, and Dr Watson and Sherlock Holmes are meeting for the first time. A string of impossible suicides has Scotland Yard baffled - and only one man can help.",
+        "air_date": "2010-07-25",
+        "runtime": 88,
+        "still_path": "/u8xvgVzTQjAeRu68sI9JJHeQSuA.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Blind Banker",
+        "overview": "A mysterious cipher is being scrawled on the walls around London. The first person to see the cipher is dead within hours of reading it. Sherlock plunges into a world of codes and symbols, consulting with London\u0027s best graffiti artists. He soon learns that the city is in the grip a gang of international smugglers, a secret society called the Black Lotus.",
+        "air_date": "2010-08-01",
+        "runtime": 89,
+        "still_path": "/cp1mf1pwb8F7NcuCJkzcfxIkZw2.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Great Game",
+        "overview": "A strange clue in an empty room, a blood-soaked car, a priceless Old Master, a deranged bomber. With the clock ticking, the curtain rises on a battle of wits between Sherlock, John and the shadowy stranger who seems to know all the answers...",
+        "air_date": "2010-08-08",
+        "runtime": 90,
+        "still_path": "/inRnf07LWmlT5Z3KkS4iWlBX48x.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 264660,
+    "title": "Ex Machina",
+    "overview": "Caleb, a coder at the world\u0027s largest internet company, wins a competition to spend a week at a private mountain retreat belonging to Nathan, the reclusive CEO of the company. But when Caleb arrives at the remote location he finds that he will have to participate in a strange and fascinating experiment in which he must interact with the world\u0027s first true artificial intelligence, housed in the body of a beautiful robot girl.",
+    "tagline": "There is nothing more human than the will to survive.",
+    "runtime": 108,
+    "release_date": "2015-01-21",
+    "vote_average": 7.57,
+    "poster_path": "/dmJW8IAKHKxFNiUnoDR7JfsK7Rp.jpg",
+    "backdrop_path": "/uqOuJ50EtTj7kkDIXP8LCg7G45D.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Domhnall Gleeson",
+      "character": "Caleb",
+      "profile_path": "/a63BgOBKzJ9XPaLFyu7u5Ge3REG.jpg"
+    },
+    {
+      "name": "Alicia Vikander",
+      "character": "Ava",
+      "profile_path": "/lZu8qiTwiQIN96cuptgqMCCaUtg.jpg"
+    },
+    {
+      "name": "Oscar Isaac",
+      "character": "Nathan",
+      "profile_path": "/dW5U5yrIIPmMjRThR9KT2xH6nTz.jpg"
+    },
+    {
+      "name": "Sonoya Mizuno",
+      "character": "Kyoko",
+      "profile_path": "/WVROOHuk6G6QgVe0pU8R2i1fsE.jpg"
+    }
+  ]
+}

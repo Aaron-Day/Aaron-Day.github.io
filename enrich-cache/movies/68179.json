@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 68179,
+    "title": "Escape from Planet Earth",
+    "overview": "Astronaut Scorch Supernova finds himself caught in a trap when he responds to an SOS from a notoriously dangerous alien planet.",
+    "tagline": "Earth\u0027s greatest secrets are about to break out!",
+    "runtime": 89,
+    "release_date": "2013-02-14",
+    "vote_average": 5.8,
+    "poster_path": "/9la0CSCJqwh6io3yk4Xv3aEZxEA.jpg",
+    "backdrop_path": "/dlReM2zDrOfkvrJj9R96XmhNdS4.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Rob Corddry",
+      "character": "Gary Supernova (voice)",
+      "profile_path": "/AjCLr5ZjP6iiP8D6SHQVCZ720nA.jpg"
+    },
+    {
+      "name": "Brendan Fraser",
+      "character": "Scorch Supernova (voice)",
+      "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg"
+    },
+    {
+      "name": "Jessica Alba",
+      "character": "Lena (voice)",
+      "profile_path": "/hPoy6FRfiCIxguX3w2CoBbDoaEV.jpg"
+    },
+    {
+      "name": "Steve Zahn",
+      "character": "Hawk (voice)",
+      "profile_path": "/rwrPdKGwXnByxUVMxMf8Y7oswi3.jpg"
+    }
+  ]
+}

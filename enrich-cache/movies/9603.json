@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9603,
+    "title": "Clueless",
+    "overview": "Shallow, rich and socially successful Cher is at the top of her Beverly Hills high school\u0027s pecking scale. Seeing herself as a matchmaker, Cher first coaxes two teachers into dating each other. Emboldened by her success, she decides to give hopelessly klutzy new student Tai a makeover. When Tai becomes more popular than she is, Cher realizes that her disapproving ex-stepbrother was right about how misguided she was -- and falls for him.",
+    "tagline": "Sex. Clothes. Popularity. Is there a problem here?",
+    "runtime": 97,
+    "release_date": "1995-07-19",
+    "vote_average": 7.236,
+    "poster_path": "/8AwVTcgpTnmeOs4TdTWqcFDXEsA.jpg",
+    "backdrop_path": "/65d0MccsiRSPTVicregKQL8owoo.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Alicia Silverstone",
+      "character": "Cher",
+      "profile_path": "/pyxqkP4i0ubVdoRe5hoiiiwkHkb.jpg"
+    },
+    {
+      "name": "Stacey Dash",
+      "character": "Dionne",
+      "profile_path": "/mn9QUB95Hxkk5hVjKTZlSAMWGin.jpg"
+    },
+    {
+      "name": "Brittany Murphy",
+      "character": "Tai",
+      "profile_path": "/uLOrqcSk2h5o3ekNfcuGFDzN13W.jpg"
+    },
+    {
+      "name": "Paul Rudd",
+      "character": "Josh",
+      "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+    }
+  ]
+}

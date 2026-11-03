@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10882,
+    "title": "Sleeping Beauty",
+    "overview": "Cursed to die by the evil fairy Maleficent when she was a baby, Princess Aurora is sent into hiding under protection from three good fairies. As she grows up far away, Maleficent becomes increasingly determined to seal the princess\u0027s fate.",
+    "tagline": "Awaken to a World of Wonders!",
+    "runtime": 75,
+    "release_date": "1959-02-17",
+    "vote_average": 6.945,
+    "poster_path": "/pO9YMLSmj3essVSWSGygjGxX6Kw.jpg",
+    "backdrop_path": "/me67dwJnUBt3O9NqZaBdEQ6i4vM.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Mary Costa",
+      "character": "Princess Aurora (voice)",
+      "profile_path": "/mg6gsqucGQZi6ASO5UZt0l6nj5e.jpg"
+    },
+    {
+      "name": "Bill Shirley",
+      "character": "Prince Phillip (voice)",
+      "profile_path": "/xTA6se8rp7GW45EtI6YW2odi3WJ.jpg"
+    },
+    {
+      "name": "Eleanor Audley",
+      "character": "Maleficent (voice)",
+      "profile_path": "/rppllmBSCZhkhCWoomVvbB1pB4T.jpg"
+    },
+    {
+      "name": "Verna Felton",
+      "character": "Flora / Queen Leah (voice)",
+      "profile_path": "/xJ7mohLuufsNn6dkvzjKi5nlaFn.jpg"
+    }
+  ]
+}

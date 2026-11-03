@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 6950,
+    "title": "Outbreak",
+    "overview": "A deadly airborne virus finds its way into the USA and starts killing off people at an epidemic rate. Col. Sam Daniels\u0027 job is to stop the virus spreading from a small town, which must be quarantined, and to prevent an over reaction by the White House.",
+    "tagline": "Try to remain calm.",
+    "runtime": 129,
+    "release_date": "1995-03-10",
+    "vote_average": 6.592,
+    "poster_path": "/4KymNvlWR0XF0sqX2BWRd9Z3yXR.jpg",
+    "backdrop_path": "/jwwltwI2uLpxhIUReucyLBkL8dg.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dustin Hoffman",
+      "character": "Sam Daniels",
+      "profile_path": "/yFjTzJHE6AFbwQifOlnNDzmiwlq.jpg"
+    },
+    {
+      "name": "Rene Russo",
+      "character": "Robby Keough",
+      "profile_path": "/yWPSqrv3nfPPKC6I2S0sRTWZ5Yi.jpg"
+    },
+    {
+      "name": "Morgan Freeman",
+      "character": "General Billy Ford",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    },
+    {
+      "name": "Kevin Spacey",
+      "character": "Casey Schuler",
+      "profile_path": "/nPrUZDEbGQe6jwpVbHKJCXsMd7r.jpg"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 56288,
+    "title": "Spy Kids: All the Time in the World",
+    "overview": "Eight years after the third film, the OSS has become the world\u0027s top spy agency, while the Spy Kids department has since become defunct. Retired spy Marissa is called back into action, and to bond with her new stepchildren Rebecca and Cecil, she invites them along to stop the evil Timekeeper from taking over the world.",
+    "tagline": "",
+    "runtime": 89,
+    "release_date": "2011-08-18",
+    "vote_average": 4.7,
+    "poster_path": "/9pUVarhiXfCu8amjmyadzJJJITi.jpg",
+    "backdrop_path": "/3COCz2DMRNefY4a3lfUHrNj4tl0.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86486,
+      "name": "Spy Kids Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Rowan Blanchard",
+      "character": "Rebecca Wilson",
+      "profile_path": "/51qWnocFUKfUPeLMi81XtATFct2.jpg"
+    },
+    {
+      "name": "Mason Cook",
+      "character": "Cecil Wilson",
+      "profile_path": "/7w9OSReqRtjp5D2AKgA4Z5EsK82.jpg"
+    },
+    {
+      "name": "Jessica Alba",
+      "character": "Marissa Wilson",
+      "profile_path": "/hPoy6FRfiCIxguX3w2CoBbDoaEV.jpg"
+    },
+    {
+      "name": "Joel McHale",
+      "character": "Wilbur Wilson",
+      "profile_path": "/7iwIiaYhIPaiAyiaZOc2Gl1ZAY4.jpg"
+    }
+  ]
+}

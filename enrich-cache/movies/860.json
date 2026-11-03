@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 860,
+    "title": "WarGames",
+    "overview": "High school student David Lightman has a talent for hacking. But while trying to hack into a computer system to play unreleased video games, he unwittingly taps into the Department of Defense\u0027s war computer and initiates a confrontation of global proportions. Together with his friend and a wizardly computer genius, David must race against time to outwit his opponent and prevent a nuclear Armageddon.",
+    "tagline": "Is it a game, or is it real?",
+    "runtime": 114,
+    "release_date": "1983-06-03",
+    "vote_average": 7.066,
+    "poster_path": "/zZ1rN4LoPxKNfAp67Xl300WxVeD.jpg",
+    "backdrop_path": "/qtamfYGFfDLfGRcucx1zNwohRts.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 151263,
+      "name": "WarGames Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Matthew Broderick",
+      "character": "David Lightman",
+      "profile_path": "/papqFgpyroZJEqd7WvuNGN8ti2k.jpg"
+    },
+    {
+      "name": "Dabney Coleman",
+      "character": "McKittrick",
+      "profile_path": "/wfYLBxqwRUB15FaDGEolL0lgSA5.jpg"
+    },
+    {
+      "name": "John Wood",
+      "character": "Stephen Falken",
+      "profile_path": "/6raTQciey2xpcVV5c8HRV4XzFCk.jpg"
+    },
+    {
+      "name": "Ally Sheedy",
+      "character": "Jennifer",
+      "profile_path": "/dV6eGZm2HNEN2sfa4abTa2QtwOH.jpg"
+    }
+  ]
+}

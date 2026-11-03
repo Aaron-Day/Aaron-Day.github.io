@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 744,
+    "title": "Top Gun",
+    "overview": "For Lieutenant Pete \u0027Maverick\u0027 Mitchell and his friend and co-pilot Nick \u0027Goose\u0027 Bradshaw, being accepted into an elite training school for fighter pilots is a dream come true. But a tragedy, as well as personal demons, will threaten Pete\u0027s dreams of becoming an ace pilot.",
+    "tagline": "Up there with the best of the best.",
+    "runtime": 110,
+    "release_date": "1986-05-16",
+    "vote_average": 7.071,
+    "poster_path": "/xUuHj3CgmZQ9P2cMaqQs4J0d4Zc.jpg",
+    "backdrop_path": "/dBgxEkWe17R0AJDAvAhpeVELQx2.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531330,
+      "name": "Top Gun Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Maverick",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Kelly McGillis",
+      "character": "Charlie",
+      "profile_path": "/5M1JlzKRECJCIENJrYBqSsSvUEw.jpg"
+    },
+    {
+      "name": "Val Kilmer",
+      "character": "Ice",
+      "profile_path": "/j2bJH6rxZkJJt8tHsBFMOxIVZdE.jpg"
+    },
+    {
+      "name": "Anthony Edwards",
+      "character": "Goose",
+      "profile_path": "/rP88gP87pa3je6Viem3081tESIV.jpg"
+    }
+  ]
+}

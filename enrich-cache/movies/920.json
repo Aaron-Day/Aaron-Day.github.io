@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 920,
+    "title": "Cars",
+    "overview": "Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town\u0027s offbeat characters.",
+    "tagline": "Ahhh... it\u0027s got that new movie smell.",
+    "runtime": 117,
+    "release_date": "2006-06-08",
+    "vote_average": 7.064,
+    "poster_path": "/2Touk3m5gzsqr1VsvxypdyHY5ci.jpg",
+    "backdrop_path": "/sd4xN5xi8tKRPrJOWwNiZEile7f.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87118,
+      "name": "Cars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Owen Wilson",
+      "character": "Lightning McQueen (voice)",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    },
+    {
+      "name": "Paul Newman",
+      "character": "Doc Hudson (voice)",
+      "profile_path": "/5K9gQEzuQ0DeNO6KKEb5xK8iOVD.jpg"
+    },
+    {
+      "name": "Bonnie Hunt",
+      "character": "Sally Carrera (voice)",
+      "profile_path": "/tT9C6uLztgN8OxJULq6F9iEzqlA.jpg"
+    },
+    {
+      "name": "Larry the Cable Guy",
+      "character": "Mater (voice)",
+      "profile_path": "/34pX2sQj9DddaQWRBGukSWYdXxS.jpg"
+    }
+  ]
+}

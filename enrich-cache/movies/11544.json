@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11544,
+    "title": "Lilo \u0026 Stitch",
+    "overview": "As Stitch, a runaway genetic experiment from a faraway planet, wreaks havoc on the Hawaiian Islands, he becomes the mischievous adopted alien \u0022puppy\u0022 of an independent little girl named Lilo and learns about loyalty, friendship, and \u02BBohana, the Hawaiian tradition of family.",
+    "tagline": "There\u0027s one in every family.",
+    "runtime": 85,
+    "release_date": "2002-06-21",
+    "vote_average": 7.563,
+    "poster_path": "/cFuLvQJPoZpuruAtN3rVnMmLIH8.jpg",
+    "backdrop_path": "/AcxbOWUbwtIEDisfuhNGHQNfnMK.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 97461,
+      "name": "Lilo \u0026 Stitch (Animated) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daveigh Chase",
+      "character": "Lilo (voice)",
+      "profile_path": "/3PVQPEc6nXNX2eoW2UbsfVikc7H.jpg"
+    },
+    {
+      "name": "Chris Sanders",
+      "character": "Stitch (voice)",
+      "profile_path": "/mrUm1agSL9Kj6dhV6ABVJvrwlie.jpg"
+    },
+    {
+      "name": "Tia Carrere",
+      "character": "Nani (voice)",
+      "profile_path": "/vNpUUXtTcU9svzOZS4x4is669vc.jpg"
+    },
+    {
+      "name": "David Ogden Stiers",
+      "character": "Jumba (voice)",
+      "profile_path": "/cgCTQt3RZVkhkusG77l4HwHEH6A.jpg"
+    }
+  ]
+}

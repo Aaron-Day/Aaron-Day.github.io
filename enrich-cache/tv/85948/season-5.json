@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Dos Cerritos",
+        "overview": "A spatial anomaly forces the Cerritos crew to face their own faces. Tendi pirates.",
+        "air_date": "2024-10-24",
+        "runtime": 28,
+        "still_path": "/lHkzQhGr3puKjk7MjRyLxSix29B.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Shades of Green",
+        "overview": "Tendi races to stop a conflict while Boimler \u0026 Mariner race to stop capitalists.",
+        "air_date": "2024-10-24",
+        "runtime": 26,
+        "still_path": "/5GLCBGP7V78jGw26VhzozafWA4q.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Best Exotic Nanite Hotel",
+        "overview": "The Lower Deckers hunt nanites on a resort...in space?!",
+        "air_date": "2024-10-31",
+        "runtime": 26,
+        "still_path": "/AtpIPLJrFB7NnNCw6RdQmVHNKTY.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "A Farewell to Farms",
+        "overview": "Dr. Migleemo cooks up some hot dishes while Mariner prefers hers served cold.",
+        "air_date": "2024-11-07",
+        "runtime": 27,
+        "still_path": "/bWXQWpWpGHzlCesCymSarDTiUqd.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Starbase 80?!",
+        "overview": "Ransom uses too much disinfectant gel while Mariner gets paranoid about curses.",
+        "air_date": "2024-11-14",
+        "runtime": 25,
+        "still_path": "/rP5lZ891fRdQRrcPH25WwaJf7df.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Of Gods and Angles",
+        "overview": "Mariner teams up with a troubled ensign while the Cerritos hosts peace talks between civilizations.",
+        "air_date": "2024-11-21",
+        "runtime": 25,
+        "still_path": "/bQSapZbN5EpsD4DvUZPRwKdxS0A.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Fully Dilated",
+        "overview": "It\u0027s a pre-warp society undercover Girls Trip!",
+        "air_date": "2024-11-28",
+        "runtime": 26,
+        "still_path": "/4t4hdbCNrG4VMxDOOJ0JVtCibfA.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Upper Decks",
+        "overview": "The Lower Deckers have a pumpkin carving party.",
+        "air_date": "2024-12-05",
+        "runtime": 25,
+        "still_path": "/hnMcRvMA0yp5QmFgqG5nhTXtbcy.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Fissure Quest (1)",
+        "overview": "Fissures must be closed before they get inflamed.",
+        "air_date": "2024-12-12",
+        "runtime": 29,
+        "still_path": "/iilJ7g74gclQGh44ymsi7eGjzfq.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The New Next Generation (2)",
+        "overview": "Season finale where lots of wild stuff happens!",
+        "air_date": "2024-12-19",
+        "runtime": 34,
+        "still_path": "/1gCainIaYfxn7Sh3cGljmj0wwvV.jpg"
+      }
+    ]
+  }
+}

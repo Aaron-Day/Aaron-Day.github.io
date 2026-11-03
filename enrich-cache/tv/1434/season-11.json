@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 11,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Into Fat Air",
+        "overview": "The Griffins attempt to conquer Mount Everest after competitive friends mention they plan to scale the legendary peak. Things, however, are not looking up for the Griffins, as a wicked storm leaves them pinned down on the side of the mountain.",
+        "air_date": "2012-09-30",
+        "runtime": 22,
+        "still_path": "/gTsi5qZtWp5S9cV1CJGVQyZ7xOV.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Ratings Guy",
+        "overview": "Peter gets carried away when the Nielsen people select the Griffins to have their television-viewing habits monitored and he steals a number of the Nielsen boxes in hopes of controlling the airwaves.",
+        "air_date": "2012-10-07",
+        "runtime": 22,
+        "still_path": "/9YLnp8xl37MGoVq2NCDPYNagv55.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Old Man and the Big \u0027C\u0027",
+        "overview": "When Brian discovers that Carter Pewterschmidt\u0027s pharmaceutical company is withholding the cure for cancer from the public in order to gain more profit, he and Stewie plot to expose the big secret that could change the world. Meanwhile, Quagmire reveals a hair-raising secret of his own.",
+        "air_date": "2012-11-04",
+        "runtime": 22,
+        "still_path": "/vHAXMM7s8lpgqSUWQ2mVXkV29I2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Yug Ylimaf",
+        "overview": "Brian abuses Stewie\u0027s time machine and causes reality to run in reverse. So the two must work together to set things right before Stewie is \u0022unborn.\u0022",
+        "air_date": "2012-11-11",
+        "runtime": 22,
+        "still_path": "/dHtDFlgPkmsvCXS5IeZasQLCwYi.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Joe\u0027s Revenge",
+        "overview": "When the criminal who shot Joe years ago, leaving Joe in a wheelchair, becomes a fugitive, Quagmire, Joe and Peter team up to hunt the bad guy down.",
+        "air_date": "2012-11-18",
+        "runtime": 22,
+        "still_path": "/vV3AwEaBbrcTvr9mmugwHYZ69Ii.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Lois Comes Out of Her Shell",
+        "overview": "Peter tries to keep up with Lois as she goes through a midlife crisis; Stewie brings home a turtle from the park.",
+        "air_date": "2012-11-25",
+        "runtime": 22,
+        "still_path": "/oiCHm019aQuIHxtNEjaTS62vjtw.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Friends Without Benefits",
+        "overview": "When Meg learns her crush is gay and interested in Chris, she uses her brother to get closer to him.",
+        "air_date": "2012-12-09",
+        "runtime": 22,
+        "still_path": "/xICps91MFrcofxViujLf12qBMhi.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Jesus, Mary and Joseph!",
+        "overview": "As the Griffin family is preparing for Christmas, Peter tells his own version of the Nativity story.",
+        "air_date": "2012-12-23",
+        "runtime": 22,
+        "still_path": "/1cqObUgMsWwJsdl5dR0liwWvLgj.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Space Cadet",
+        "overview": "To boost Chris\u0027 self-esteem, Peter and Lois send him to space camp. When camp ends and the Griffins come to pick Chris up, they accidentally are launched into outer space, and it\u0027s up to Chris to land the clan safely back on earth.",
+        "air_date": "2013-01-06",
+        "runtime": 22,
+        "still_path": "/d9RkHPzEt8RAN1SHzV6fbGE4fMA.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Brian\u0027s Play",
+        "overview": "Brian writes a play that becomes a hit in Quahog, but loses his confidence when he finds that the play Stewie wrote is better than his.",
+        "air_date": "2013-01-13",
+        "runtime": 22,
+        "still_path": "/k3rXmnzddkKz2ey7s7ixbpyuIqm.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Giggity Wife",
+        "overview": "When Peter, Quagmire and Joe visit the Harvard University campus, Quagmire accidentally marries a prostitute. In order to get out of his marriage, Quagmire pretends to be lovers with Peter.",
+        "air_date": "2013-01-27",
+        "runtime": 22,
+        "still_path": "/hWiX1jwjvS9j3xQm1IrGeM9miBH.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Valentine\u0027s Day in Quahog",
+        "overview": "On Valentine\u0027s Day, Meg goes on a date with a guy she met online, and Lois and Peter stay in bed all day; Brian is visited by his ex-girlfriends.",
+        "air_date": "2013-02-10",
+        "runtime": 22,
+        "still_path": "/vnKC7TDundl6X9LTbV3SrLtsWuc.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Chris Cross",
+        "overview": "Chris leaves home to move in with Herbert while Stewie and Brian become obsessed with singer Anne Murray.",
+        "air_date": "2013-02-17",
+        "runtime": 22,
+        "still_path": "/ebZ65X9ELoPiqRF3PhSEcmRvnN5.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Call Girl",
+        "overview": "When the Griffins find themselves in a financial bind, Lois is forced to find a job of her own. She gets discovered by a \u0022voiceover\u0022 talent agent named Randy, who actually runs an adult-only phone line and pays his employees generously. As Lois settles into her new gig, she hears Peter\u0027s voice on the other end of the line.",
+        "air_date": "2013-03-10",
+        "runtime": 22,
+        "still_path": "/hJI8V9J5RAgRLyV4gSmLcXR59QV.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Turban Cowboy",
+        "overview": "When Peter, Quagmire and Joe need a jolt in their mundane lives, they decide to go skydiving. But after an unfortunate accident, Peter ends up in the hospital, where he befriends Mahmoud, who convinces Peter to convert to Islam. Quagmire and Joe are suspicious of Mahmoud\u0027s intentions and try to stop the friendship from progressing.",
+        "air_date": "2013-03-17",
+        "runtime": 22,
+        "still_path": "/eODs2LVFAje6kWd9nvzFLjBTC8M.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "12 and a Half Angry Men",
+        "overview": "When Mayor West is put on trial for murder, Brian is the lone holdout voting \u0022not guilty,\u0022 and he tries to persuade his fellow jurors that there\u0027s a reasonable doubt of the Mayor\u0027s guilt.",
+        "air_date": "2013-03-24",
+        "runtime": 22,
+        "still_path": "/tSMkUViWl2ykrFH900xCcUgVLII.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Bigfat",
+        "overview": "Peter, Quagmire and Joe take a trip to Canada. But after Peter gets lost for two months, a feral Peter returns to his family with no ability to communicate intelligently.",
+        "air_date": "2013-04-14",
+        "runtime": 22,
+        "still_path": "/4Pptiqwn5F4jdRtZilv5rNNmoep.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Total Recall",
+        "overview": "After teddy bear Rupert gets recalled, Stewie stops at nothing to get back his beloved best friend. Meanwhile, When Peter falls ill and can\u0027t compete in his bowling tournament, Peter becomes jealous when Lois fills in for him.",
+        "air_date": "2013-04-28",
+        "runtime": 22,
+        "still_path": "/iEovLBUZ2wKgwGKANACBSECW37R.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Save the Clam",
+        "overview": "When the owner of The Drunken Clam is killed, Peter and the guys must find a way to save the bar, after the bank threatens to close it. Meanwhile, Meg gets a part-time job at a funeral home.",
+        "air_date": "2013-05-05",
+        "runtime": 22,
+        "still_path": "/npjJT5DXITeJpH6W4NTBjcq9tva.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Farmer Guy",
+        "overview": "Peter buys a farm and becomes a meth dealer.",
+        "air_date": "2013-05-12",
+        "runtime": 22,
+        "still_path": "/mr5pnrnfRbtWntgI2tHsYAFfmyN.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Roads to Vegas",
+        "overview": "Duplicates of Brian and Stewie each see a road trip differently.",
+        "air_date": "2013-05-19",
+        "runtime": 22,
+        "still_path": "/2HTCMGkCvOQUBf7Xs14HZChtL4S.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "No Country Club for Old Men",
+        "overview": "The Griffins are invited to join the prestigious Barrington Country Club and get thrown out.",
+        "air_date": "2013-05-19",
+        "runtime": 22,
+        "still_path": "/musuOOVy5JpsuXG5qwxrkrPuVm4.jpg"
+      }
+    ]
+  }
+}

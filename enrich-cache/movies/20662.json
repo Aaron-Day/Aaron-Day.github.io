@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 20662,
+    "title": "Robin Hood",
+    "overview": "When soldier Robin happens upon the dying Robert of Loxley, he promises to return the man\u0027s sword to his family in Nottingham. There, he assumes Robert\u0027s identity; romances his widow, Marion; and draws the ire of the town\u0027s sheriff and King John\u0027s henchman, Godfrey.",
+    "tagline": "Rise and rise again, until lambs become lions",
+    "runtime": 140,
+    "release_date": "2010-05-12",
+    "vote_average": 6.401,
+    "poster_path": "/9NS5QGOfck24yL3bZqWeW06PgPC.jpg",
+    "backdrop_path": "/gxJnDz2W566PRdYKCaJrp1FpRRI.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Russell Crowe",
+      "character": "Robin Longstride",
+      "profile_path": "/3IBZF0qCZMZ7zJYlgrH0sQzNZV.jpg"
+    },
+    {
+      "name": "Cate Blanchett",
+      "character": "Marion Loxley",
+      "profile_path": "/1Rd567YFdGfkJjSlhNPR8joYkaX.jpg"
+    },
+    {
+      "name": "Max von Sydow",
+      "character": "Sir Walter Loxley",
+      "profile_path": "/u16BsGyT6v9yuO7wWAF62NayDth.jpg"
+    },
+    {
+      "name": "William Hurt",
+      "character": "William Marshal",
+      "profile_path": "/j3mjmuHLBW4XQSw53C8Sh0Lh3ZQ.jpg"
+    }
+  ]
+}

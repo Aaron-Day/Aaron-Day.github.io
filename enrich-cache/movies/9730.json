@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9730,
+    "title": "Friday the 13th: The Final Chapter",
+    "overview": "After his revival in a hospital morgue, Jason fixes his vengeful attention on the Jarvis family and a group of hitherto carefree teenagers.",
+    "tagline": "Three times before you have felt the terror, known the madness, lived the horror. But this is the one you\u0027ve been screaming for.",
+    "runtime": 91,
+    "release_date": "1984-04-13",
+    "vote_average": 6.131,
+    "poster_path": "/1J7zudfR3VLPwAf9lK5YPfSu0n6.jpg",
+    "backdrop_path": "/2bbEE2aLu47unsPJwS57UZW0YF4.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9735,
+      "name": "Friday the 13th Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kimberly Beck",
+      "character": "Trish",
+      "profile_path": "/hdeafwyoYDEF1i3zR7TX0skACcS.jpg"
+    },
+    {
+      "name": "Peter Barton",
+      "character": "Doug",
+      "profile_path": "/sWSYmonc6xtTe8A6akw8ps7ayWJ.jpg"
+    },
+    {
+      "name": "Corey Feldman",
+      "character": "Tommy",
+      "profile_path": "/9n5xDsrBFY0AFESmXOJEzEj4ezx.jpg"
+    },
+    {
+      "name": "Erich Anderson",
+      "character": "Rob",
+      "profile_path": "/hb89TAid82AM8MJLZEQ70WWISNv.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11003,
+    "title": "The Wedding Singer",
+    "overview": "Robbie, a local rock star turned wedding singer, is dumped on the day of his wedding. Meanwhile, waitress Julia finally sets a wedding date with her fianc\u00E9e Glenn. When Julia and Robbie meet and hit it off, they find that things are more complicated than anybody thought.",
+    "tagline": "He\u0027s gonna party like it\u0027s 1985!",
+    "runtime": 97,
+    "release_date": "1998-02-13",
+    "vote_average": 6.768,
+    "poster_path": "/zVvyTrcZQb7kC2DPDzyo25WcxXp.jpg",
+    "backdrop_path": "/7Kfuj85Bbi6EJqfhg2wKUh2fEkN.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Robbie Hart",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Drew Barrymore",
+      "character": "Julia Sullivan",
+      "profile_path": "/8qvMFslwrC3w1OwJYqE3mHPvffr.jpg"
+    },
+    {
+      "name": "Christine Taylor",
+      "character": "Holly Sullivan",
+      "profile_path": "/oeuYnwazeIJowHUAPfm086P87Gi.jpg"
+    },
+    {
+      "name": "Allen Covert",
+      "character": "Sammy",
+      "profile_path": "/7n3euonyxM0wOGfk0T50pgHo06v.jpg"
+    }
+  ]
+}

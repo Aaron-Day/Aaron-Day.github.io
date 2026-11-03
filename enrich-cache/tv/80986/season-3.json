@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Frenemies - Chapter One: The Murder",
+        "overview": "With Starman back from the dead and her former super-villain enemies vowing to reform, Courtney is hopeful that there will finally be peace in Blue Valley.",
+        "air_date": "2022-08-31",
+        "runtime": 43,
+        "still_path": "/nPSOqaRFZnSkLwXPxxvrNi9F6LQ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Frenemies - Chapter Two: The Suspects",
+        "overview": "After stumbling upon a suspicious murder in Blue Valley, the JSA begin looking at potential suspects.",
+        "air_date": "2022-09-07",
+        "runtime": 43,
+        "still_path": "/hnU2RcmxVlgibt76mnEcVXPSNOV.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Frenemies - Chapter Three: The Blackmail",
+        "overview": "After one of Sylvester\u0027s plans results in an unexpected outcome, Pat calls upon an old friend for help. Meanwhile, Beth uncovers a new suspect in their murder investigation.",
+        "air_date": "2022-09-14",
+        "runtime": 43,
+        "still_path": "/uVxXSj7kmDHArafo2EdC50RMJyy.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Frenemies - Chapter Four: The Evidence",
+        "overview": "After one of Sylvester\u0027s plans results in an unexpected outcome, Pat calls upon an old friend for help. Meanwhile, Beth uncovers a new suspect in their murder investigation.",
+        "air_date": "2022-09-21",
+        "runtime": 41,
+        "still_path": "/gxkGBTha0DdG8qq1ts7kdaAYz2M.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Frenemies - Chapter Five: The Thief",
+        "overview": "As Courtney continues to secretly help Cameron, the team notices she\u0027s pulling away from her role as the JSA leader. Mike and Jakeem approach Cindy with a proposition.",
+        "air_date": "2022-10-05",
+        "runtime": 43,
+        "still_path": "/fgPnvgBJG9xoefRsWUUKD9UmS6S.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Frenemies - Chapter Six: The Betrayal",
+        "overview": "After learning that Courtney has been spending time with Cameron, Pat and Barbara go on a recon mission to see if the Mahkents pose a threat.",
+        "air_date": "2022-10-12",
+        "runtime": 41,
+        "still_path": "/EeOC7k4Jj9NNwmtINrwStA3aBO.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Frenemies - Chapter Seven: Infinity Inc. (1)",
+        "overview": "After Beth makes a major discovery on The Gambler\u0027s laptop, the team moves forward with a risky plan that effects the entire town of Blue Valley.",
+        "air_date": "2022-10-19",
+        "runtime": 39,
+        "still_path": "/mtAd5308OF1StnmUAzf1srjmQKg.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Frenemies - Chapter Eight: Infinity Inc. (2)",
+        "overview": "Desperate to avert a major crisis on their hands, Courtney attempts to help a friend navigate their powers. Elsewhere, Pat and The Shade are forced to face their worst fears.",
+        "air_date": "2022-10-26",
+        "runtime": 39,
+        "still_path": "/2OskeIAS3zUbOKngIUkVTvFgqTw.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Frenemies - Chapter Nine: The Monsters",
+        "overview": "After a recent experience renews Courtney\u0027s confidence, she sets out to make amends with those around her. Jakeem puts his foot down after Mike shares his latest plan.",
+        "air_date": "2022-11-02",
+        "runtime": 41,
+        "still_path": "/tayfAL7jgF4KfsbmRjc3NszrN8X.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Frenemies - Chapter Ten: The Killer",
+        "overview": "Courtney and the team regroup after a confrontation leaves battle lines clearly drawn. A terrifying discovery made by Mike and Jakeem forces Pat and Sylvester to go on high alert.",
+        "air_date": "2022-11-09",
+        "runtime": 42,
+        "still_path": "/qwpk7YBTD60g2ARF99qaRWQSN1H.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Frenemies - Chapter Eleven: The Haunting",
+        "overview": "As Courtney, Sylvester and the JSA plot to take down a major threat, the arrival of someone from their past sends shock waves through the town.",
+        "air_date": "2022-11-16",
+        "runtime": 41,
+        "still_path": "/9rOy5f4RRFGQYo7WCpHIDJu3Ak8.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Frenemies - Chapter Twelve: The Last Will and Testament of Sylvester Pemberton",
+        "overview": "As the team devise a plan to deal with their latest threat, Sylvester takes matters into his own hands and leaves Courtney, Pat and the JSA fearing for what comes next.",
+        "air_date": "2022-11-30",
+        "runtime": 43,
+        "still_path": "/4XOtIeB3pGm7AqAXKY7tZVAwkMD.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Frenemies - Chapter Thirteen: The Reckoning",
+        "overview": "Courtney and the JSA find themselves in the fight of their lives against their biggest threat yet.",
+        "air_date": "2022-12-07",
+        "runtime": 43,
+        "still_path": "/k00LhKH8A5HTZw7aRSY7uIUpwq5.jpg"
+      }
+    ]
+  }
+}

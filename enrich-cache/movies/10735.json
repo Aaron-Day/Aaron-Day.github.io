@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10735,
+    "title": "What a Girl Wants",
+    "overview": "American Daphne Reynolds heads to Europe in search of the father she\u0027s never met. But instead of finding a British version of her boho mother, she learns the love of her mom\u0027s life is an uptight politician. The only problem now is that her long-lost father is engaged to a fiercely territorial social climber with a daughter who makes Daphne\u0027s life miserable.",
+    "tagline": "Trying to fit in. Born to stand out.",
+    "runtime": 105,
+    "release_date": "2003-03-27",
+    "vote_average": 6.309,
+    "poster_path": "/gGpMruX59KWNuAXgHpiAm8hiChw.jpg",
+    "backdrop_path": "/bZwUUgz0pgl1cEjcvpDSsBfYvzK.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Amanda Bynes",
+      "character": "Daphne Reynolds",
+      "profile_path": "/7bpm17KLd3e7pfEDUBdu8kKtc14.jpg"
+    },
+    {
+      "name": "Colin Firth",
+      "character": "Henry Dashwood",
+      "profile_path": "/z6wxnkqSTnzO1tcBui0ss7ehdm9.jpg"
+    },
+    {
+      "name": "Kelly Preston",
+      "character": "Libby Reynolds",
+      "profile_path": "/yyD9u0ziaHBrNs2eYx21pMG4Iq5.jpg"
+    },
+    {
+      "name": "Eileen Atkins",
+      "character": "Jocelyn Dashwood",
+      "profile_path": "/8gac03PfTFz2vByZi1aun0NiTqM.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18,
+    "title": "The Fifth Element",
+    "overview": "In 2257, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity.",
+    "tagline": "There is no future without it.",
+    "runtime": 126,
+    "release_date": "1997-05-02",
+    "vote_average": 7.593,
+    "poster_path": "/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg",
+    "backdrop_path": "/jW21PoKwqs79wk6bfiYezox63mK.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Bruce Willis",
+      "character": "Korben Dallas",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Milla Jovovich",
+      "character": "Leeloo",
+      "profile_path": "/usWnHCzbADijULREZYSJ0qfM00y.jpg"
+    },
+    {
+      "name": "Gary Oldman",
+      "character": "Zorg",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    },
+    {
+      "name": "Ian Holm",
+      "character": "Cornelius",
+      "profile_path": "/cOJDgvgj4nMec6Inzj1H5nugTO5.jpg"
+    }
+  ]
+}

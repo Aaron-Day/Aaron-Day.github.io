@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1271,
+    "title": "300",
+    "overview": "A story very loosely based the 480 B.C. Battle of Thermopylae, where the King of Sparta led his army against the advancing Persians.",
+    "tagline": "Prepare for glory!",
+    "runtime": 117,
+    "release_date": "2007-03-07",
+    "vote_average": 7.211,
+    "poster_path": "/h7Lcio0c9ohxPhSZg42eTlKIVVY.jpg",
+    "backdrop_path": "/lgBZlJ1LHQel5nneNQMoesmvc7l.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 125570,
+      "name": "300 Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Gerard Butler",
+      "character": "King Leonidas",
+      "profile_path": "/i54XoxYieuff2w6MwyfwVUBvmR0.jpg"
+    },
+    {
+      "name": "Lena Headey",
+      "character": "Gorgo",
+      "profile_path": "/cDyZLf8ddz0EgoUjpv4jjzy7qxA.jpg"
+    },
+    {
+      "name": "Dominic West",
+      "character": "Theron",
+      "profile_path": "/6y2M3EWslBPwPlugEFg8XDHfSJ0.jpg"
+    },
+    {
+      "name": "David Wenham",
+      "character": "Dilios/Narrator",
+      "profile_path": "/F7CWSqUE75HtrcdqIQ7UMZ9aTX.jpg"
+    }
+  ]
+}

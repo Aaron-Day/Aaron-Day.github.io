@@ -1,0 +1,48 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "1:23:45",
+        "overview": "April 26, 1986, Ukrainian SSR. Plant workers and firefighters put their lives on the line to control a catastrophic 1986 explosion at a Soviet nuclear power plant.",
+        "air_date": "2019-05-06",
+        "runtime": 61,
+        "still_path": "/thaMHLz5l6TVL8R4EzaBkjn2EZA.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Please Remain Calm",
+        "overview": "With untold millions at risk after the Chernobyl explosion, nuclear physicist Ulana Khomyuk makes a desperate attempt to reach Valery Legasov, a leading Soviet nuclear physicist, and warn him about the threat of second explosion that could devastate the continent.",
+        "air_date": "2019-05-13",
+        "runtime": 66,
+        "still_path": "/kVsUEtOOYeLRmABVuZztl4k9onO.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Open Wide, O Earth",
+        "overview": "Lyudmilla Ignatenko, a Pripyat resident, ignores warning about her firefighter husband\u0027s contamination. Valery Legasov lays out a decontamination plan, complete with human risks.",
+        "air_date": "2019-05-20",
+        "runtime": 64,
+        "still_path": "/2Eje4lD5MWkTdbFdtlHnrHT2kA2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Happiness of All Mankind",
+        "overview": "Valery Legasov and Soviet Deputy Prime Minister Boris Shcherbina consider using lunar rovers to remove radioactive debris, while Ulana Khomyuk faces government hurdles in determining the truth about the cause of the explosion.",
+        "air_date": "2019-05-27",
+        "runtime": 67,
+        "still_path": "/xV2eVT4ejGhVn9OIMCo4uBOhmCC.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Vichnaya Pamyat",
+        "overview": "Valery Legasov, Boris Shcherbina and Ulana Khomyuk risk their lives and reputations to expose the truth about Chernobyl.",
+        "air_date": "2019-06-03",
+        "runtime": 73,
+        "still_path": "/mgXm2Y6SOFDHtD5thi2LmS7uQBj.jpg"
+      }
+    ]
+  }
+}

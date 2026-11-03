@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 297761,
+    "title": "Suicide Squad",
+    "overview": "From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.",
+    "tagline": "Worst. Heroes. Ever.",
+    "runtime": 122,
+    "release_date": "2016-08-03",
+    "vote_average": 5.917,
+    "poster_path": "/sk3FZgh3sRrmr8vyhaitNobMcfh.jpg",
+    "backdrop_path": "/wAk0yKrhAmvsoMvlKs4QImhvK5X.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531242,
+      "name": "Suicide Squad Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Deadshot",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Jared Leto",
+      "character": "The Joker",
+      "profile_path": "/ca3x0OfIKbJppZh8S1Alx3GfUZO.jpg"
+    },
+    {
+      "name": "Margot Robbie",
+      "character": "Harley Quinn",
+      "profile_path": "/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg"
+    },
+    {
+      "name": "Joel Kinnaman",
+      "character": "Rick Flag",
+      "profile_path": "/cVfYzTyQdJ4xtxKPZe7IcW3BJN4.jpg"
+    }
+  ]
+}

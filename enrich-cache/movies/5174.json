@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 5174,
+    "title": "Rush Hour 3",
+    "overview": "After a botched assassination attempt, the mismatched duo finds themselves in Paris, struggling to retrieve a precious list of names, as the murderous crime syndicate\u0027s henchmen try their best to stop them. Once more, Lee and Carter must fight their way through dangerous gangsters; however, this time, the past has come back to haunt Lee. Will the boys get the job done once and for all?",
+    "tagline": "The rush is on!",
+    "runtime": 90,
+    "release_date": "2007-08-08",
+    "vote_average": 6.504,
+    "poster_path": "/mp9CzKxLa2i7yblMXUrzVfGqsCo.jpg",
+    "backdrop_path": "/ozsLB1HRCN6ZAmJN89pWtoiAwnb.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 90863,
+      "name": "Rush Hour Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jackie Chan",
+      "character": "Yan Naing Lee",
+      "profile_path": "/nraZoTzwJQPHspAVsKfgl3RXKKa.jpg"
+    },
+    {
+      "name": "Chris Tucker",
+      "character": "James Carter",
+      "profile_path": "/rE5OaSWp45pNpMm2TYbAwLgYoCn.jpg"
+    },
+    {
+      "name": "Hiroyuki Sanada",
+      "character": "Kenji",
+      "profile_path": "/SOwDxhGnRccP2lAtssQ7TxCzOe.jpg"
+    },
+    {
+      "name": "Max von Sydow",
+      "character": "Varden Reynard",
+      "profile_path": "/u16BsGyT6v9yuO7wWAF62NayDth.jpg"
+    }
+  ]
+}

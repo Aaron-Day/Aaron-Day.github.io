@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 280,
+    "title": "Terminator 2: Judgment Day",
+    "overview": "Ten years after the events of the original, a reprogrammed T-800 is sent back in time to protect young John Connor from the shape-shifting T-1000. Together with his mother Sarah, he fights to stop Skynet from triggering a nuclear apocalypse.",
+    "tagline": "It\u0027s nothing personal.",
+    "runtime": 137,
+    "release_date": "1991-07-03",
+    "vote_average": 8.177,
+    "poster_path": "/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg",
+    "backdrop_path": "/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 528,
+      "name": "The Terminator Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "The Terminator",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Linda Hamilton",
+      "character": "Sarah Connor",
+      "profile_path": "/7FNn9Z5xkRS9EFbGL2tpmpph9xV.jpg"
+    },
+    {
+      "name": "Edward Furlong",
+      "character": "John Connor",
+      "profile_path": "/e221dMIBgb6Lk092GIkHB9ohQF1.jpg"
+    },
+    {
+      "name": "Robert Patrick",
+      "character": "T-1000",
+      "profile_path": "/qRv2Es9rZoloullTbzss3I5j1Mp.jpg"
+    }
+  ]
+}

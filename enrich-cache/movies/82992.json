@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 82992,
+    "title": "Fast \u0026 Furious 6",
+    "overview": "Hobbs has Dominic and Brian reassemble their crew to take down a team of mercenaries; Dominic unexpectedly gets sidetracked with facing his presumed deceased girlfriend, Letty.",
+    "tagline": "All roads lead to this.",
+    "runtime": 130,
+    "release_date": "2013-05-21",
+    "vote_average": 6.812,
+    "poster_path": "/thSmnRdrzPBBospIOJjLZBReqzo.jpg",
+    "backdrop_path": "/xDp29MSWa7O3ROC13r6dPTFnREJ.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9485,
+      "name": "The Fast and the Furious Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vin Diesel",
+      "character": "Dominic Toretto",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Paul Walker",
+      "character": "Brian O\u0027Conner",
+      "profile_path": "/q2PLqKHYCs35HR7QybaNPH3JT96.jpg"
+    },
+    {
+      "name": "Dwayne Johnson",
+      "character": "Luke Hobbs",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Jordana Brewster",
+      "character": "Mia Toretto",
+      "profile_path": "/ceL0zxeVbWfCfhoIDZIE1NYqBWb.jpg"
+    }
+  ]
+}

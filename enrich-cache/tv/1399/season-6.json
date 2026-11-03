@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Red Woman",
+        "overview": "The fate of Jon Snow is revealed. Daenerys meets a strong man. Cersei sees her daughter once again.",
+        "air_date": "2016-04-24",
+        "runtime": 51,
+        "still_path": "/qEu20NFIbwxtyABtFvsyyPaCNDM.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Home",
+        "overview": "Bran trains with the Three-Eyed Raven. In King\u2019s Landing, Jaime advises Tommen. Tyrion demands good news, but has to make his own. At Castle Black, the Night\u2019s Watch stands behind Thorne. Ramsay Bolton proposes a plan, and Balon Greyjoy entertains other proposals.",
+        "air_date": "2016-05-01",
+        "runtime": 54,
+        "still_path": "/onEtnj84EBWmt4AnJjaX9Ip6oaa.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Oathbreaker",
+        "overview": "Daenerys meets her future. Arya trains to be No One.",
+        "air_date": "2016-05-08",
+        "runtime": 53,
+        "still_path": "/dNp7HBQbwKlgX76fwqM6SWUo5tU.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Book of the Stranger",
+        "overview": "Tyrion strikes a deal. Jorah and Daario undertake a difficult task. Jaime and Cersei try to improve their situation.",
+        "air_date": "2016-05-15",
+        "runtime": 59,
+        "still_path": "/dY2DbzgIjIatJJCVRgk1gKTJWez.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Door",
+        "overview": "Tyrion seeks a strange ally. Bran learns a great deal. Brienne goes on a mission. Arya is given a chance to prove herself.",
+        "air_date": "2016-05-22",
+        "runtime": 57,
+        "still_path": "/96u7HuryCkPEIN3JkZP336KTSq3.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Blood of My Blood",
+        "overview": "An old foe comes back into the picture. Gilly meets Sam\u0027s family. Arya faces a difficult choice. Jaime faces off against the High Sparrow.",
+        "air_date": "2016-05-29",
+        "runtime": 52,
+        "still_path": "/k01MUth8Xm2y79nvsQ3UF25SN9w.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Broken Man",
+        "overview": "The High Sparrow eyes another target. Jaime confronts a hero. Arya makes a plan. The North is reminded.",
+        "air_date": "2016-06-05",
+        "runtime": 51,
+        "still_path": "/3ii3PhSJvYxvviAroxVWgm9REsu.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "No One",
+        "overview": "While Jaime weighs his options, Cersei answers a request. Tyrion\u0027s plans bear fruit. Arya faces a new test.",
+        "air_date": "2016-06-12",
+        "runtime": 59,
+        "still_path": "/xl2l1a3kXGxWwZqGDgjowBk4x46.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Battle of the Bastards",
+        "overview": "Slaver envoys demand terms of surrender in Meereen. Ramsay plays the odds in defense of Winterfell.",
+        "air_date": "2016-06-19",
+        "runtime": 60,
+        "still_path": "/j2znyjFSe1ol26DeQWMB1yE5EDQ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Winds of Winter",
+        "overview": "Cersei faces a day of reckoning. Daenerys antes up for the \u0027Great Game\u0027.",
+        "air_date": "2016-06-26",
+        "runtime": 68,
+        "still_path": "/8qgIcKTOKeAHlJMjGyPHl3IHjcU.jpg"
+      }
+    ]
+  }
+}

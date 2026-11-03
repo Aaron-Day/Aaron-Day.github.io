@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 8,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Impossible Stream",
+        "overview": "Fry risks permanent insanity when he attempts to binge-watch every TV show ever made.",
+        "air_date": "2023-07-24",
+        "runtime": 25,
+        "still_path": "/s3YVyUt8SInaEAnNa8fYV0rWJop.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Children of a Lesser Bog",
+        "overview": "Amy and Kif\u2019s children emerge from an alien swamp.",
+        "air_date": "2023-07-31",
+        "runtime": 25,
+        "still_path": "/pSjcaB0hcVKSFvOwkTbgaYDEgbW.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "How the West Was 1010001",
+        "overview": "Bender and the crew head west to join the bitcoin mining rush.",
+        "air_date": "2023-08-07",
+        "runtime": 25,
+        "still_path": "/5tr9m2MZQavA8nmzwPVyDK1DGEZ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Parasites Regained",
+        "overview": "After Nibbler falls ill, the crew shrinks down for a dangerous mission into a desert world contained within his litter box.",
+        "air_date": "2023-08-14",
+        "runtime": 25,
+        "still_path": "/8ptBm3N0yHZGBo07EKzfkqivHtN.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Related to Items You\u0027ve Viewed",
+        "overview": "Bender uncovers the mysteries of the vast Momazon corporation.",
+        "air_date": "2023-08-21",
+        "runtime": 25,
+        "still_path": "/eA2rsWBqVNNbADLo0DxWmx311NO.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "I Know What You Did Next Xmas",
+        "overview": "Bender and Zoidberg travel through time to attack Robot Santa.",
+        "air_date": "2023-08-28",
+        "runtime": 25,
+        "still_path": "/y7jQsMXPgouBsfTL6yQDouWhwNo.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Rage Against the Vaccine",
+        "overview": "A pandemic ravages future Earth.",
+        "air_date": "2023-09-04",
+        "runtime": 25,
+        "still_path": "/uMEn0pihJrYdSGukejV7MS743GU.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Zapp Gets Canceled",
+        "overview": "When Zapp Brannigan is canceled for crude behavior, Leela takes over as captain of the Nimbus on a critical mission.",
+        "air_date": "2023-09-11",
+        "runtime": 25,
+        "still_path": "/aVzZrjSpNTHkI0hDBzsarJn6wpV.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Prince and the Product",
+        "overview": "The crew members are reborn as toys.",
+        "air_date": "2023-09-18",
+        "runtime": 25,
+        "still_path": "/viAOi4RsqfpcmEcmOyiPPeTMUjw.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "All the Way Down",
+        "overview": "The crew investigates whether the universe is a simulation.",
+        "air_date": "2023-09-25",
+        "runtime": 24,
+        "still_path": "/ocxxkIYyGed5WyHe46onNk3Jntj.jpg"
+      }
+    ]
+  }
+}

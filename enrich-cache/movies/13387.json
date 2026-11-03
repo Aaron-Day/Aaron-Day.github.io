@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13387,
+    "title": "Transporter 3",
+    "overview": "Frank Martin puts the driving gloves on to deliver Valentina, the kidnapped daughter of a Ukrainian government official, from Marseilles to Odessa on the Black Sea. En route, he has to contend with thugs who want to intercept Valentina\u0027s safe delivery and not let his personal feelings get in the way of his dangerous objective.",
+    "tagline": "This time, the rules are the same. Except one.",
+    "runtime": 104,
+    "release_date": "2008-11-26",
+    "vote_average": 6.166,
+    "poster_path": "/o4w9VF3GRZuXe9NHHvZ07pJespl.jpg",
+    "backdrop_path": "/5yrQsEuuqc4s8t8nszLxAAGQpR2.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9518,
+      "name": "The Transporter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Statham",
+      "character": "Frank Martin",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Natalya Rudakova",
+      "character": "Valentina Vasilev",
+      "profile_path": "/7439tb7LAfZGRtZq2GyMts8RKDn.jpg"
+    },
+    {
+      "name": "Fran\u00E7ois Berl\u00E9and",
+      "character": "Inspector Tarconi",
+      "profile_path": "/5TDYSUfCj8vaG5sqJXUU06Cvafa.jpg"
+    },
+    {
+      "name": "Robert Knepper",
+      "character": "Johnson",
+      "profile_path": "/lRncjvgCIm1muIkK94zJSH2i3d6.jpg"
+    }
+  ]
+}

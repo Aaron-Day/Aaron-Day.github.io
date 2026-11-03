@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 594767,
+    "title": "Shazam! Fury of the Gods",
+    "overview": "Billy Batson and his foster siblings, who transform into superheroes by saying \u0022Shazam!\u0022, are forced to get back into action and fight the Daughters of Atlas, who they must stop from using a weapon that could destroy the world.",
+    "tagline": "Oh. My. Gods.",
+    "runtime": 130,
+    "release_date": "2023-03-15",
+    "vote_average": 6.378,
+    "poster_path": "/3GrRgt6CiLIUXUtoktcv1g2iwT5.jpg",
+    "backdrop_path": "/kQV9sV0IbastbU5FYxuYwxfMawz.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 724848,
+      "name": "Shazam! Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Zachary Levi",
+      "character": "Shazam",
+      "profile_path": "/1W8L3kEMMPF9umT3ZGaNIiCYKfZ.jpg"
+    },
+    {
+      "name": "Asher Angel",
+      "character": "Billy Batson",
+      "profile_path": "/lgBt67iggDs0d8QBSyjdk2ytHtK.jpg"
+    },
+    {
+      "name": "Jack Dylan Grazer",
+      "character": "Freddy Freeman",
+      "profile_path": "/wkLAOleFx9Pis97g6t3noJRhAwg.jpg"
+    },
+    {
+      "name": "Rachel Zegler",
+      "character": "Anthea",
+      "profile_path": "/2zR0rz3yluyWoFgCL3lGAPoRWlz.jpg"
+    }
+  ]
+}

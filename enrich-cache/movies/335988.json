@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 335988,
+    "title": "Transformers: The Last Knight",
+    "overview": "Humans and Transformers are at war. Optimus Prime is gone. The key to saving our future lies buried in the secrets of the past, in the hidden history of Transformers on Earth. Saving our world falls upon the shoulders of an unlikely alliance: Cade Yeager; Bumblebee; an English Lord; and an Oxford Professor.",
+    "tagline": "Two worlds collide. One survives.",
+    "runtime": 154,
+    "release_date": "2017-06-16",
+    "vote_average": 6.1,
+    "poster_path": "/s5HQf2Gb3lIO2cRcFwNL9sn1o1o.jpg",
+    "backdrop_path": "/1n00NlOGRFZVs8coBxyZLm5l4EC.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8650,
+      "name": "Transformers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mark Wahlberg",
+      "character": "Cade Yeager",
+      "profile_path": "/1Oc3XSLyb8hxmjmlgFENu582Kqw.jpg"
+    },
+    {
+      "name": "Laura Haddock",
+      "character": "Viviane Wembly",
+      "profile_path": "/6kRUvA7N3pMzznG9PdiqCOvxhGQ.jpg"
+    },
+    {
+      "name": "Peter Cullen",
+      "character": "Optimus Prime (voice)",
+      "profile_path": "/9Snf4fBUkk5MrAjqtNtgZRJYJbj.jpg"
+    },
+    {
+      "name": "Anthony Hopkins",
+      "character": "Sir Edmund Burton",
+      "profile_path": "/iaf7SHSkGDpnyrDh1Jolilwk2TD.jpg"
+    }
+  ]
+}

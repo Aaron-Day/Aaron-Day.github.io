@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 393,
+    "title": "Kill Bill: Vol. 2",
+    "overview": "The Bride unwaveringly continues on her roaring rampage of revenge against the band of assassins who had tried to kill her and her unborn child. She visits each of her former associates one-by-one, checking off the victims on her Death List Five until there\u0027s nothing left to do \u2026 but kill Bill.",
+    "tagline": "The bride is back for the final cut.",
+    "runtime": 136,
+    "release_date": "2004-04-16",
+    "vote_average": 7.873,
+    "poster_path": "/2yhg0mZQMhDyvUQ4rG1IZ4oIA8L.jpg",
+    "backdrop_path": "/pgG6tzJzC8mjGqhaT8IWwEk00xf.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2883,
+      "name": "Kill Bill Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Uma Thurman",
+      "character": "Beatrix Kiddo / The Bride / \u0027Black Mamba\u0027 / Mommy",
+      "profile_path": "/sBgAZWi3o4FsnaTvnTNtK6jpQcF.jpg"
+    },
+    {
+      "name": "David Carradine",
+      "character": "Bill \u0027Snake Charmer\u0027",
+      "profile_path": "/1X2GlkMKS9FIG1kGou7o6LRqAjz.jpg"
+    },
+    {
+      "name": "Daryl Hannah",
+      "character": "Elle Driver \u0027California Mountain Snake\u0027",
+      "profile_path": "/5FllFmoiaru7tjXJ6Orc11OpQcw.jpg"
+    },
+    {
+      "name": "Michael Madsen",
+      "character": "Budd \u0027Sidewinder\u0027",
+      "profile_path": "/fvr2EXEPrVwsF2JlfRp0Olbj4g8.jpg"
+    }
+  ]
+}

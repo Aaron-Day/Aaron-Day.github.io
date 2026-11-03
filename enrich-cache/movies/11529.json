@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11529,
+    "title": "Sweet Home Alabama",
+    "overview": "New York fashion designer Melanie Carmichael suddenly finds herself engaged to the city\u0027s most eligible bachelor. But her past holds many secrets\u2014including Jake, the redneck husband she married in high school, who refuses to divorce her. Bound and determined to end their contentious relationship once and for all, Melanie sneaks back home to Alabama to confront her past.",
+    "tagline": "Sometimes what you\u0027re looking for is right where you left it.",
+    "runtime": 108,
+    "release_date": "2002-09-26",
+    "vote_average": 6.439,
+    "poster_path": "/698cbxq0SRwCdOPG5Bwi7JDk12d.jpg",
+    "backdrop_path": "/xE0ouu4yVA4fBojdHg2UkfvRxY4.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Reese Witherspoon",
+      "character": "Melanie Smooter",
+      "profile_path": "/mfjunuTHrd0wnh8UG1ImMN9FSws.jpg"
+    },
+    {
+      "name": "Josh Lucas",
+      "character": "Jake Perry",
+      "profile_path": "/ueR4CH32f22DGjFxuhnW1o3YKB3.jpg"
+    },
+    {
+      "name": "Patrick Dempsey",
+      "character": "Andrew Hennings",
+      "profile_path": "/2PpaYtXdaDmNi3jap4qPIdyVesL.jpg"
+    },
+    {
+      "name": "Candice Bergen",
+      "character": "Mayor Kate Hennings",
+      "profile_path": "/yDthvXPRkcwSVcPj9QZz3Z7ZH5B.jpg"
+    }
+  ]
+}

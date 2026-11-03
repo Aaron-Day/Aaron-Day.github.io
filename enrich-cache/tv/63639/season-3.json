@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Fight or Flight",
+        "overview": "The Rocinante crew deals with the fallout over Naomi\u0027s betrayal while caught in the middle of the war between Earth and Mars. Meanwhile, Avasarala and Bobbie hatch an escape plan.",
+        "air_date": "2018-04-11",
+        "runtime": 44,
+        "still_path": "/h6sFPmgQO1YDwiJKacCodtNVgze.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "IFF",
+        "overview": "The Rocinante answers an unexpected distress signal. Bobbie and Avasarala find themselves being hunted by a mysterious captor. UN Secretary-General Sorrento-Gillis brings in a colleague from his past to lend an ear during this crucial time of war.",
+        "air_date": "2018-04-18",
+        "runtime": 43,
+        "still_path": "/m3H4TZLBtxgiKQi5QSs73KzlrS6.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Assured Destruction",
+        "overview": "As Earth strategizes a costly ploy to gain advantage in the war against Mars, Anna struggles to convince Sorrento-Gillis to do the right thing. Avasarala and Bobbie seek refuge aboard the Rocinante.",
+        "air_date": "2018-04-25",
+        "runtime": 45,
+        "still_path": "/3k8GKJQjGUOqCJCUiGdOsrWa3Pv.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Reload",
+        "overview": "The Rocinante tends to wounded Martian soldiers in exchange for supplies. Avasarala struggles with how to disseminate a key piece of evidence despite being in hiding.",
+        "air_date": "2018-05-02",
+        "runtime": 45,
+        "still_path": "/9MuriDpo8to5RSEDdDsEx5IMJGa.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Triple Point",
+        "overview": "The search for Prax\u0027s daughter comes to a head. Admiral Souther\u0027s men plan for mutiny aboard the Agatha King",
+        "air_date": "2018-05-09",
+        "runtime": 44,
+        "still_path": "/cx9BYoZteQIuSG7k0IeNk76ZPwo.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Immolation",
+        "overview": "The final battle between Earth and Mars threatens the very future of humanity. A new monster is unleashed on Prospero Station. Anna receives the smoking gun she needs.",
+        "air_date": "2018-05-16",
+        "runtime": 45,
+        "still_path": "/8lNtU8ZowPe07B5xdVHGZDv8qyr.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Delta-V",
+        "overview": "All eyes turn to the edge of the solar system as a mysterious new presence emerges; Naomi recommits to her roots; Drummer butts heads with a seasoned new commander aboard the Behemoth; and a young Belter makes a name for himself.",
+        "air_date": "2018-05-23",
+        "runtime": 46,
+        "still_path": "/sj3mQMJmV0MFukdTeSYa0lUDzNT.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "It Reaches Out",
+        "overview": "An old friend taunts Holden with the answers he seeks. Naomi struggles to fit in. A mysterious low-level tech aboard the Thomas Prince enacts a terrifying plan.",
+        "air_date": "2018-05-30",
+        "runtime": 44,
+        "still_path": "/vZQhZwYBtk9ITRP4cWWA77uC25N.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Intransigence",
+        "overview": "The Rocinante seeks a new gameplan as they attempt to avoid capture. Melba\u0027s true motives are revealed. Naomi is torn between identity and ideal. Anna seeks a way to stay aboard the Thomas Prince.",
+        "air_date": "2018-06-06",
+        "runtime": 44,
+        "still_path": "/c5H1GubNA2Zrq0M6tBER4YzK2jY.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Dandelion Sky",
+        "overview": "Holden sees past, present, and future. A ghost from Melba\u0027s past threatens her mission. Bobbie struggles to trust an old friend as she leads a group into unchartered territory.",
+        "air_date": "2018-06-13",
+        "runtime": 42,
+        "still_path": "/jCpRBsRBbKyEnF92kUABaWuZLvG.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Fallen World",
+        "overview": "Drummer and Ashford find themselves trapped with few options for survival; Anna tends to the wounded masses as Melba continues to hunt down her prey; the Rocinante crew struggles to survive as Naomi reunites with her true family.",
+        "air_date": "2018-06-20",
+        "runtime": 46,
+        "still_path": "/8xt6KnC9IP6pWUGD8mJlQMoJffk.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Congregation",
+        "overview": "As survivors arrive at the Behemoth, two factions form over how to handle a life-or-death threat. Holden grapples with what he\u0027s seen and the choices he must make.",
+        "air_date": "2018-06-27",
+        "runtime": 44,
+        "still_path": "/shCp0lAR2xh6NTfl381EFk2McG0.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Abaddon\u0027s Gate",
+        "overview": "Holden and his allies must stop Ashford and his team from destroying the Ring, and perhaps all of humanity.",
+        "air_date": "2018-06-27",
+        "runtime": 42,
+        "still_path": "/nE5kS7hHGmv3bTGVL1hlsVQKXo4.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 126889,
+    "title": "Alien: Covenant",
+    "overview": "The crew of the colony ship Covenant, bound for a remote planet on the far side of the galaxy, discovers what they think is an uncharted paradise but is actually a dark, dangerous world.",
+    "tagline": "The path to paradise begins in hell.",
+    "runtime": 122,
+    "release_date": "2017-05-09",
+    "vote_average": 6.193,
+    "poster_path": "/zecMELPbU5YMQpC81Z8ImaaXuf9.jpg",
+    "backdrop_path": "/iXXPaQPfQowpQ5UvhsHLj9BgFhe.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 135416,
+      "name": "Prometheus Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael Fassbender",
+      "character": "David / Walter",
+      "profile_path": "/xvbnUiB2ZBR3QIt595OzNy657Vw.jpg"
+    },
+    {
+      "name": "Katherine Waterston",
+      "character": "Daniels",
+      "profile_path": "/zaqbXjr5jE1DnEoyAHokUDoCKOM.jpg"
+    },
+    {
+      "name": "Billy Crudup",
+      "character": "Oram",
+      "profile_path": "/4kHvUUVFMW8GJTHJtoAiskqhcyO.jpg"
+    },
+    {
+      "name": "Danny McBride",
+      "character": "Tennessee",
+      "profile_path": "/sVFPzl2t5QlGudQKWAszIWZCXZv.jpg"
+    }
+  ]
+}

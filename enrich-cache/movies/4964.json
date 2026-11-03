@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4964,
+    "title": "Knocked Up",
+    "overview": "A slacker and a career-driven woman accidentally conceive a child after a one-night stand. As they try to make the relationship work, they must navigate the challenges of parenthood and their differences in lifestyle and maturity.",
+    "tagline": "Save the due date.",
+    "runtime": 129,
+    "release_date": "2007-06-01",
+    "vote_average": 6.307,
+    "poster_path": "/b4OaXw2MW97VvIiZE0Sbn1NfxSh.jpg",
+    "backdrop_path": "/8uNx4YtClqB9duM4n6jOx8vWvvl.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 779062,
+      "name": "Knocked Up Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Seth Rogen",
+      "character": "Ben Stone",
+      "profile_path": "/nYl9bvQzaPQLzlf0wf75clLN6Hi.jpg"
+    },
+    {
+      "name": "Katherine Heigl",
+      "character": "Alison Scott",
+      "profile_path": "/1yYJI5qtkeJMZo9JU4KMVuO2Hy9.jpg"
+    },
+    {
+      "name": "Paul Rudd",
+      "character": "Pete",
+      "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+    },
+    {
+      "name": "Leslie Mann",
+      "character": "Debbie",
+      "profile_path": "/x3OS9RL3qsv50kzRtpR2OhbuTkr.jpg"
+    }
+  ]
+}

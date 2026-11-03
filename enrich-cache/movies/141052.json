@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 141052,
+    "title": "Justice League",
+    "overview": "Fuelled by his restored faith in humanity and inspired by Superman\u0027s selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth.",
+    "tagline": "You can\u0027t save the world alone.",
+    "runtime": 120,
+    "release_date": "2017-11-15",
+    "vote_average": 6.063,
+    "poster_path": "/eifGNCSDuxJeS1loAXil5bIGgvC.jpg",
+    "backdrop_path": "/2nyaeISu2xIxIgZYNpX4UayY8PN.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Affleck",
+      "character": "Batman / Bruce Wayne",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Henry Cavill",
+      "character": "Superman / Clark Kent",
+      "profile_path": "/dgTD7Q9owL3DyX9uYoSX9KZeUUz.jpg"
+    },
+    {
+      "name": "Amy Adams",
+      "character": "Lois Lane",
+      "profile_path": "/gn0K6c6d1L6qQrRc86iL8uyIqiF.jpg"
+    },
+    {
+      "name": "Gal Gadot",
+      "character": "Wonder Woman / Diana Prince",
+      "profile_path": "/AbXKtWQwuDiwhoQLh34VRglwuBE.jpg"
+    }
+  ]
+}

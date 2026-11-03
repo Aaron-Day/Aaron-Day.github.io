@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 18,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Time for Change",
+        "overview": "Twelve people who want to get healthy and transform their lives arrive at The Biggest Loser Campus.",
+        "air_date": "2020-01-28",
+        "runtime": 90,
+        "still_path": "/moZIEARcTpZ1xSmGPsDwcee66J4.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Big Loss",
+        "overview": "A loss by one team causes emotions to run high as the contestants push harder to meet their goals.",
+        "air_date": "2020-02-04",
+        "runtime": 90,
+        "still_path": "/zcbfqVcj28QKiskWBzGfwqn8vZr.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Supporting the Team",
+        "overview": "Two contestants overcome their insecurities and emerge as leaders during this week\u0027s challenge.",
+        "air_date": "2020-02-11",
+        "runtime": 90,
+        "still_path": "/zO8j4kWcwydAMdDvlvrB7Nwu7LZ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Messages from Home",
+        "overview": "All the remaining contestants finally get to reconnect with friends and family.",
+        "air_date": "2020-02-18",
+        "runtime": 90,
+        "still_path": "/lq3OLsLYoXEXQyoiCopxMt99OgQ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Diving In",
+        "overview": "The contestants take a dive into fitness as friendships grow stronger.",
+        "air_date": "2020-02-25",
+        "runtime": 90,
+        "still_path": "/6W8VdZHyOAGgOEjVJdwNwU4MvHj.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Overcoming Obstacles",
+        "overview": "One contestant faces an unexpected obstacle, forcing their team to come together in new ways.",
+        "air_date": "2020-02-27",
+        "runtime": 90,
+        "still_path": "/zK2GZAq0Uskvip0AMWusDUdc9Td.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Going Solo",
+        "overview": "It\u2019s every person for themselves as the contestants no longer compete in teams.",
+        "air_date": "2020-03-10",
+        "runtime": 90,
+        "still_path": "/cO7Z9oHljQwWeWFlrRL5pwhTB33.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Boosting Morale",
+        "overview": "The contestants get the encouragement they need to keep moving forward on their journey.",
+        "air_date": "2020-03-17",
+        "runtime": 90,
+        "still_path": "/8gKGMk3rmv37jrEhQawlajHCQMG.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Final Four",
+        "overview": "The final four contestants revisit a fitness milestone to see how much progress they have made.",
+        "air_date": "2020-03-24",
+        "runtime": 90,
+        "still_path": "/gAmGCMxIviPviMAuhFkNVi2W1gb.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Finale",
+        "overview": "",
+        "air_date": "2020-03-31",
+        "runtime": 90,
+        "still_path": "/dGxUNjjfJLOvVAqOgzKYCmzm0zu.jpg"
+      }
+    ]
+  }
+}

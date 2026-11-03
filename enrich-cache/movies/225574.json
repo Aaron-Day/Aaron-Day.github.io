@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 225574,
+    "title": "Non-Stop",
+    "overview": "Bill Marks is a Federal Air Marshall for whom every day is the same until this one. On this plane ride, he starts receiving text messages from someone claiming to be on the flight and threatening to kill passengers. In a race against the clock, he must identify and stop the killer to save everyone on board.",
+    "tagline": "The hijacking was just the beginning.",
+    "runtime": 107,
+    "release_date": "2014-02-26",
+    "vote_average": 6.815,
+    "poster_path": "/Nkgaj3X0W2jHQ1TzHEgWFpN3kJ.jpg",
+    "backdrop_path": "/pvvPS1V8aR1puiQeRIIXP0SgT1y.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Liam Neeson",
+      "character": "Bill Marks",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Julianne Moore",
+      "character": "Jen Summers",
+      "profile_path": "/3YF19rWusxWfEI59ZM33dFhasRq.jpg"
+    },
+    {
+      "name": "Scoot McNairy",
+      "character": "Tom Bowen",
+      "profile_path": "/oP2LJEqupxVZ2XdEW1lN5Q5LF3M.jpg"
+    },
+    {
+      "name": "Michelle Dockery",
+      "character": "Nancy",
+      "profile_path": "/pgPJGf2wAPgoC6Bp5PBJYQV7IVt.jpg"
+    }
+  ]
+}

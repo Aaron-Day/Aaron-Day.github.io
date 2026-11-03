@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 51540,
+    "title": "Horrible Bosses",
+    "overview": "For Nick, Kurt and Dale, the only thing that would make the daily grind more tolerable would be to grind their intolerable bosses into dust. Quitting is not an option, so, with the benefit of a few-too-many drinks and some dubious advice from a hustling ex-con, the three friends devise a convoluted and seemingly foolproof plan to rid themselves of their respective employers... permanently.",
+    "tagline": "Ever wish your boss was dead?",
+    "runtime": 98,
+    "release_date": "2011-07-08",
+    "vote_average": 6.571,
+    "poster_path": "/uQkUwgyFHAm0jGQERPG6Z9o9Zbj.jpg",
+    "backdrop_path": "/9fkYHcOtaz4cKmlDWw7tqUr5TUt.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 280588,
+      "name": "Horrible Bosses Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Bateman",
+      "character": "Nick Hendricks",
+      "profile_path": "/8e6mt0vGjPo6eW52gqRuXy5YnfN.jpg"
+    },
+    {
+      "name": "Charlie Day",
+      "character": "Dale Arbus",
+      "profile_path": "/c0HNhjChGybnHa4eoLyqO4dDu1j.jpg"
+    },
+    {
+      "name": "Jason Sudeikis",
+      "character": "Kurt Buckman",
+      "profile_path": "/uuacnP9DOHMsmj8FhBi0cWWDgrn.jpg"
+    },
+    {
+      "name": "Kevin Spacey",
+      "character": "Dave Harken",
+      "profile_path": "/nPrUZDEbGQe6jwpVbHKJCXsMd7r.jpg"
+    }
+  ]
+}

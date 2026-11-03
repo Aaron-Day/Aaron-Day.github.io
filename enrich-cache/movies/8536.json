@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8536,
+    "title": "Superman II",
+    "overview": "Three Kryptonian criminals led by General Zod team up with Lex Luthor to conquer Earth, forcing a depowered Superman to regain his strength and stop them.",
+    "tagline": "The Man of Steel meets his match!",
+    "runtime": 127,
+    "release_date": "1980-12-04",
+    "vote_average": 6.746,
+    "poster_path": "/3xk5cno9BHcnwc97XO9k21aI1Zi.jpg",
+    "backdrop_path": "/e77VeVcrXhxfCdJWD9rameYn7Qn.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8537,
+      "name": "Superman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Christopher Reeve",
+      "character": "Superman / Clark Kent",
+      "profile_path": "/vAGrPf3ajy6OVE3FhgABynZfybP.jpg"
+    },
+    {
+      "name": "Margot Kidder",
+      "character": "Lois Lane",
+      "profile_path": "/uJI4BwpmD9fX8D8jBdn2jT5rpvo.jpg"
+    },
+    {
+      "name": "Terence Stamp",
+      "character": "General Zod",
+      "profile_path": "/ept9urkuhPbGndVXkERw39R9oid.jpg"
+    },
+    {
+      "name": "Sarah Douglas",
+      "character": "Ursa",
+      "profile_path": "/76YfRJyQodMIBiuO33slvSYEQhS.jpg"
+    }
+  ]
+}

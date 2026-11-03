@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 5876,
+    "title": "The Mist",
+    "overview": "After a violent storm, a dense cloud of mist envelops a small Maine town, trapping David Drayton and his five-year-old son in a local grocery store with other local residents. They soon discover that the mist conceals deadly horrors that threaten their lives, and worse, their sanity.",
+    "tagline": "Fear changes everything.",
+    "runtime": 126,
+    "release_date": "2007-11-21",
+    "vote_average": 6.96,
+    "poster_path": "/c4UgUKZjM0Qzy5t4hAXSOFHYsnb.jpg",
+    "backdrop_path": "/76J14zgwVWyOciri7X7F3DGP3TA.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Thomas Jane",
+      "character": "David Drayton",
+      "profile_path": "/9frnlc2zoDcoeqZALB6aeYSQddl.jpg"
+    },
+    {
+      "name": "Laurie Holden",
+      "character": "Amanda Dunfrey",
+      "profile_path": "/rRhtmJsZ5IiE0lYrLDmYOCiPK1P.jpg"
+    },
+    {
+      "name": "Toby Jones",
+      "character": "Ollie Weeks",
+      "profile_path": "/1qNisdp4f1KstdfvAgYXMdrhwfk.jpg"
+    },
+    {
+      "name": "Marcia Gay Harden",
+      "character": "Mrs. Carmody",
+      "profile_path": "/5vxcHIHABJxqhweAsTiXVOhT4SE.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 34584,
+    "title": "The NeverEnding Story",
+    "overview": "While hiding from bullies in his school\u0027s attic, a young boy discovers the extraordinary land of Fantasia, through a magical book called The Neverending Story. The book tells the tale of Atreyu, a young warrior who, with the help of a luck dragon named Falkor, must save Fantasia from the destruction of The Nothing.",
+    "tagline": "A boy who needs a friend finds a world that needs a hero in a land beyond imagination!",
+    "runtime": 101,
+    "release_date": "1984-04-06",
+    "vote_average": 7.228,
+    "poster_path": "/ddYCa91iDXfJCxaqSYzwi2fjfnl.jpg",
+    "backdrop_path": "/rKmOe5pb5a6P1HmQAzpRw20gORp.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91430,
+      "name": "The NeverEnding Story Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Noah Hathaway",
+      "character": "Atreyu",
+      "profile_path": "/ceJroN6JLOKOJUC4AOXq0yKHAXO.jpg"
+    },
+    {
+      "name": "Barret Oliver",
+      "character": "Bastian",
+      "profile_path": "/1qf7uNR1rIp7wGAJTnlcMVCK3e3.jpg"
+    },
+    {
+      "name": "Tami Stronach",
+      "character": "The Childlike Empress",
+      "profile_path": "/hxekEPKrKNlNAiS16n3wPI4asOf.jpg"
+    },
+    {
+      "name": "Alan Oppenheimer",
+      "character": "Rockbiter / Falkor / G\u0027mork / Narrator (voice)",
+      "profile_path": "/5UAa7wSnoh6JwiAKciCCKB9dnro.jpg"
+    }
+  ]
+}

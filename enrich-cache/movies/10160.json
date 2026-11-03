@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10160,
+    "title": "A Nightmare on Elm Street: The Dream Child",
+    "overview": "The pregnant Alice finds Freddy Krueger striking through the sleeping mind of her unborn child, hoping to be reborn into the real world.",
+    "tagline": "Freddy delivers.",
+    "runtime": 89,
+    "release_date": "1989-08-11",
+    "vote_average": 5.419,
+    "poster_path": "/kizvpgXQfrAgN8FhOd87LbKk6kO.jpg",
+    "backdrop_path": "/48eGqD1OvrCPC7zqCEaD6GDiqoT.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8581,
+      "name": "A Nightmare on Elm Street Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Lisa Wilcox",
+      "character": "Alice Johnson",
+      "profile_path": "/hmYgN7mygzXMwO0cxOGsst4oSLB.jpg"
+    },
+    {
+      "name": "Robert Englund",
+      "character": "Freddy Krueger",
+      "profile_path": "/cjGEkiavinHa1dnetDvnEhlD2Wm.jpg"
+    },
+    {
+      "name": "Danny Hassel",
+      "character": "Dan Jordan",
+      "profile_path": "/6JVIfjmN0qoMtBlbIIX4FpWSA4l.jpg"
+    },
+    {
+      "name": "Kelly Jo Minter",
+      "character": "Yvonne Miller",
+      "profile_path": "/zVRys4W5kzkWefva3LvkF2bHMV3.jpg"
+    }
+  ]
+}

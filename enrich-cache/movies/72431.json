@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 72431,
+    "title": "Red Tails",
+    "overview": "The story of the Tuskegee Airmen, the first African-American pilots to fly in a combat squadron during World War II.",
+    "tagline": "Courage has no color.",
+    "runtime": 125,
+    "release_date": "2012-01-19",
+    "vote_average": 6.691,
+    "poster_path": "/dXmhYTdeMiuQFW4VpiWbfjtxtl9.jpg",
+    "backdrop_path": "/j89IzBAT9Ob0zGLR30h7coB6YVy.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Bryan Cranston",
+      "character": "Colonel William Mortamus",
+      "profile_path": "/7Jahy5LZX2Fo8fGJltMreAI49hC.jpg"
+    },
+    {
+      "name": "David Oyelowo",
+      "character": "Joe \u0027Lightning\u0027 Little",
+      "profile_path": "/7UZHRwOKe2cYxj8SeNUklyPYkns.jpg"
+    },
+    {
+      "name": "Cuba Gooding Jr.",
+      "character": "Major Emanuelle Stance",
+      "profile_path": "/2JguzbpOXoTGzSmLbWFlulKyyAe.jpg"
+    },
+    {
+      "name": "Daniela Ruah",
+      "character": "Sofia",
+      "profile_path": "/9JFaU3gJrHrIuzBnbhX3CZzP6gt.jpg"
+    }
+  ]
+}

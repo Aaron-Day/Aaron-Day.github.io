@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 881,
+    "title": "A Few Good Men",
+    "overview": "When cocky military lawyer Lt. Daniel Kaffee and his co-counsel, Lt. Cmdr. JoAnne Galloway, are assigned to a murder case, they uncover a hazing ritual that could implicate high-ranking officials such as shady Col. Nathan Jessep.",
+    "tagline": "In the heart of the nation\u0027s capital, in a courthouse of the U.S. government, one man will stop at nothing to keep his honor, and one will stop at nothing to find the truth.",
+    "runtime": 138,
+    "release_date": "1992-12-11",
+    "vote_average": 7.563,
+    "poster_path": "/rLOk4z9zL1tTukIYV56P94aZXKk.jpg",
+    "backdrop_path": "/8UOdqhVP28OcnzNL6DnQf0GDLvR.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Lt. Daniel Kaffee",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Jack Nicholson",
+      "character": "Col. Nathan R. Jessep",
+      "profile_path": "/6h12pZsgj3WWjMtykUgfLkLEBWz.jpg"
+    },
+    {
+      "name": "Demi Moore",
+      "character": "Lt. Cdr. JoAnne Galloway",
+      "profile_path": "/wApParZYBDi4yxekjfxjKEifJYh.jpg"
+    },
+    {
+      "name": "Kevin Bacon",
+      "character": "Capt. Jack Ross",
+      "profile_path": "/rjX2Oz3tCZMfSwOoIAyEhdtXnTE.jpg"
+    }
+  ]
+}

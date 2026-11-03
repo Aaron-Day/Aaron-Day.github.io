@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 5825,
+    "title": "National Lampoon\u0027s Christmas Vacation",
+    "overview": "It\u0027s Christmastime, and the Griswolds are preparing for a family seasonal celebration. But things never run smoothly for Clark, his wife Ellen, and their two kids. Clark\u0027s continual bad luck is worsened by his obnoxious family guests, but he manages to keep going, knowing that his Christmas bonus is due soon.",
+    "tagline": "Yule crack up!",
+    "runtime": 97,
+    "release_date": "1989-11-30",
+    "vote_average": 7.225,
+    "poster_path": "/oat42hUw8XzKYUmfy0YLAxYd484.jpg",
+    "backdrop_path": "/klH8ti8LUaEhktnjdHb1RW8Yq6w.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 108693,
+      "name": "National Lampoon\u0027s Vacation Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chevy Chase",
+      "character": "Clark Griswold",
+      "profile_path": "/A1X2BvR8vEXvwXdJa5uYAYVCO2k.jpg"
+    },
+    {
+      "name": "Beverly D\u0027Angelo",
+      "character": "Ellen Griswold",
+      "profile_path": "/8fYQIA8dAaA4GOTxOFSKIvTqzi.jpg"
+    },
+    {
+      "name": "Juliette Lewis",
+      "character": "Audrey Griswold",
+      "profile_path": "/sSGCW01aUsYlVQhuk3XSY7cl6Ww.jpg"
+    },
+    {
+      "name": "Johnny Galecki",
+      "character": "Rusty Griswold",
+      "profile_path": "/5zTHvvKpR9VUkzHxGnbrdB51Kyc.jpg"
+    }
+  ]
+}

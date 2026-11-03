@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Homer\u0027s Barbershop Quartet",
+        "overview": "Homer recalls when he, Apu, Barney and Principal Skinner became recording icons.",
+        "air_date": "1993-09-30",
+        "runtime": 23,
+        "still_path": "/9IV7ORotDcT8m6n7bBEMg0ZeBvZ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Cape Feare",
+        "overview": "The Simpsons go incognito to avoid the newly paroled Sideshow Bob, who\u0027s out to get Bart.",
+        "air_date": "1993-10-07",
+        "runtime": 23,
+        "still_path": "/7jzTrfSakoBjBUWrQ85jA9K4H00.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Homer Goes to College",
+        "overview": "Homer takes Nuclear Physics 101 at the local college, where he gets a trio of nerdy tutors expelled for extracurricular activities.",
+        "air_date": "1993-10-14",
+        "runtime": 23,
+        "still_path": "/9k3Dj5UBho5pFwX4DhAHo1rF0Ic.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Rosebud",
+        "overview": "Burns longs for a childhood toy that winds up in the grip of Maggie.",
+        "air_date": "1993-10-21",
+        "runtime": 23,
+        "still_path": "/xekqIZuJRqP1xGfQoNhmsNlwJB4.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Treehouse of Horror IV",
+        "overview": "Homer sells his soul; Vampire Burns invites the Simpsons for dinner; Bart sees a gremlin damaging his school bus.",
+        "air_date": "1993-10-28",
+        "runtime": 23,
+        "still_path": "/7G1KjBt1yvhUzwHFZNsKET3exea.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Marge on the Lam",
+        "overview": "Marge\u0027s wild night out with neighbor Ruth includes running from the police in Ruth\u0027s car, stolen from her ex.",
+        "air_date": "1993-11-04",
+        "runtime": 23,
+        "still_path": "/onltAK4OWpPVw0vEEFbVjpNW1Xu.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Bart\u0027s Inner Child",
+        "overview": "Springfield emulates Bart after he\u0027s praised by a self-help guru.",
+        "air_date": "1993-11-11",
+        "runtime": 23,
+        "still_path": "/eKFCtqz9SgmTlsvLk71NhMrYlzR.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Boy-Scoutz \u0027N the Hood",
+        "overview": "After a reckless Squishee bender with Milhouse, Bart wakes to the shocking realization that he joined the Junior Campers. Lured by pocketknives and knot-tying lessons, Bart assimilates into the group but then must face the father-son rafting trip.",
+        "air_date": "1993-11-18",
+        "runtime": 23,
+        "still_path": "/tGir1Jf3JsYlXcfdm29SzoqdV5h.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Last Temptation of Homer",
+        "overview": "Homer struggles with his attraction to new coworker Mindy, a beautiful engineer whose love for doughnuts is equal to his own.",
+        "air_date": "1993-12-09",
+        "runtime": 23,
+        "still_path": "/gaFL3cAedTpS77KTvU9iq0m9YkI.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "$pringfield (Or, How I Learned to Stop Worrying and Love Legalized Gambling)",
+        "overview": "Legalized gambling comes to Springfield, and Marge becomes addicted; Robert Goulet entertains at Bart\u0027s casino for kids.",
+        "air_date": "1993-12-16",
+        "runtime": 23,
+        "still_path": "/ll44I7PnnU55SiG5R2QPAQQRAUa.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Homer the Vigilante",
+        "overview": "Homer leads a vigilante group to catch the Springfield Cat Burglar, who then robs the museum.",
+        "air_date": "1994-01-06",
+        "runtime": 23,
+        "still_path": "/pRgmMCZzu7gwDbdrNJDF8OaNmuN.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Bart Gets Famous",
+        "overview": "When an on-air remark catapults Bart to instant stardom, he finds that fame isn\u0027t all it\u0027s cracked up to be.",
+        "air_date": "1994-02-03",
+        "runtime": 23,
+        "still_path": "/4CBra5bUOrTKV8rcdz0LXX3W8pZ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Homer and Apu",
+        "overview": "Homer accompanies Apu to the Kwik-E-Mart home office--in India--after Apu is fired.",
+        "air_date": "1994-02-10",
+        "runtime": 23,
+        "still_path": "/onaCUyUhtQthJfjFJXLb8qeLD7Y.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Lisa vs. Malibu Stacy",
+        "overview": "Lisa\u0027s outrage over the gender stereotypes reinforced by a new talking doll prompts her to confront the dollmaker.",
+        "air_date": "1994-02-17",
+        "runtime": 23,
+        "still_path": "/tJnSyhaq87qeZZeYKj8RhnqcSNe.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Deep Space Homer",
+        "overview": "Homer and Barney compete to be the first \u0022average\u0022 American in space.",
+        "air_date": "1994-02-24",
+        "runtime": 23,
+        "still_path": "/kxwK6540qpra3kmnVfldNKOFbRI.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Homer Loves Flanders",
+        "overview": "Flanders\u0027 extra ticket to the big game makes him Homer\u0027s new best friend, a role that sorely tests Flanders\u0027 patience.",
+        "air_date": "1994-03-17",
+        "runtime": 23,
+        "still_path": "/qKBkMYL2nLxyYN4P9tGbPpJE1Rq.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Bart Gets an Elephant",
+        "overview": "Bart wins an elephant, but Homer won\u0027t let him keep it.",
+        "air_date": "1994-03-31",
+        "runtime": 23,
+        "still_path": "/jvZhuAzHEPvdVVMScGuAymhAdPS.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Burns\u0027 Heir",
+        "overview": "Bart is picked to be Burns\u0027 heir and moves into the Burns mansion, prompting Homer and Marge to hire a deprogrammer to get him back.",
+        "air_date": "1994-04-14",
+        "runtime": 23,
+        "still_path": "/oqlwa6cxsdeAvk9Cta2hjYSOEzh.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Sweet Seymour Skinner\u0027s Baadasssss Song",
+        "overview": "Bart takes his dog to school, which gets Skinner fired, which in turn leaves Bart missing his archnemesis.",
+        "air_date": "1994-04-28",
+        "runtime": 23,
+        "still_path": "/ba4sh9jxbEet4LKAHj4pPi06srx.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Boy Who Knew Too Much",
+        "overview": "Bart can clear Mayor Quimby\u0027s nephew of a charge of battery, but only by implicating himself as a hooky player.",
+        "air_date": "1994-05-05",
+        "runtime": 23,
+        "still_path": "/yCRZfaIbiFBsTu1v06fGTgcchJL.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Lady Bouvier\u0027s Lover",
+        "overview": "Grandpa Simpson falls for Marge\u0027s mother, but loses out to a competitor; Bart gets ripped off shopping at home with Homer\u0027s credit card.",
+        "air_date": "1994-05-12",
+        "runtime": 23,
+        "still_path": "/ubyg8hnpwt2tCSDVMwMeFOSqs1.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Secrets of a Successful Marriage",
+        "overview": "Homer teaches a class on marriage, but sharing secrets about his own union gets him kicked out of the house.",
+        "air_date": "1994-05-19",
+        "runtime": 23,
+        "still_path": "/gSIdAQC1IqvyF8g79SH43hit3v7.jpg"
+      }
+    ]
+  }
+}

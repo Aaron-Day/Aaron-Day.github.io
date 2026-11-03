@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 12,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Crimson King",
+        "overview": "Agent Luke Alvez (Adam Rodriguez) joins the BAU team, which is tasked with capturing a killer who escaped prison with 13 other convicts at the end of last season.",
+        "air_date": "2016-09-28",
+        "runtime": 42,
+        "still_path": "/1dCWXEufSREWZ8tNNpbWIj4odsl.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Sick Day",
+        "overview": "When JJ arrives home shaken after a rough case, she breaks down and tells her husband about the abduction of two children.",
+        "air_date": "2016-10-05",
+        "runtime": 42,
+        "still_path": "/eAmr2Le6HQS2dRnUFadyvcPvT1U.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Taboo",
+        "overview": "The BAU welcomes back Emily Prentiss as they are called upon to investigate the disappearance of three women",
+        "air_date": "2016-10-12",
+        "runtime": 42,
+        "still_path": "/nGOHP9LqAy7EavhyayMf5iTF9jp.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Keeper",
+        "overview": "The BAU team searches for a serial killer along the Appalachian Trail in rural Virginia.",
+        "air_date": "2016-10-26",
+        "runtime": 42,
+        "still_path": "/jXSUPLxtCyqUP2nUhB9Z5AK0PmU.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Anti-Terrorism Squad",
+        "overview": "The BAU investigates if bullying may be the link between two high school students who are the sole survivors after both of their families are killed.",
+        "air_date": "2016-11-09",
+        "runtime": 42,
+        "still_path": "/uggAkXmfRLSrufMmOablSuw3f6c.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Elliott\u0027s Pond",
+        "overview": "When three children disappear while riding their bikes on the same path as a similar unsolved disappearance 30 years ago, the BAU team comes in to investigate.",
+        "air_date": "2016-11-16",
+        "runtime": 42,
+        "still_path": "/dM41fiIAvbRwA1qHsTTksmkmLS.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Mirror Image",
+        "overview": "The BAU team opens an investigation when a man who fully believes he\u2019s Dr. Tara Lewis\u2019  brother arrives in town, knowing everything about her and her family, and she is unable to make contact with her real sibling.",
+        "air_date": "2016-11-30",
+        "runtime": 42,
+        "still_path": "/AmvW1L5xJkDMjif5ragjTNx7TPS.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Scarecrow",
+        "overview": "The team heads to Yakima, Washington when the remains of a dozen people are found along a creek bed.",
+        "air_date": "2016-12-07",
+        "runtime": 42,
+        "still_path": "/duQxuBuPioxtWA8eZP0AkJ84h7y.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Profiling 202",
+        "overview": "While Rossi conducts a profiling course on his birthday, he receives a call from his nemesis Tommy Yates, who discloses the location of his latest victim.",
+        "air_date": "2017-01-04",
+        "runtime": 42,
+        "still_path": "/iRazpVRVyBVfOIPT84ecMV4pTdt.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Seek and Destroy",
+        "overview": "BAU team investigates a series of home invasions in upscale neighborhoods in San Diego involving casualties.",
+        "air_date": "2017-01-11",
+        "runtime": 42,
+        "still_path": "/fGzlROqooTlWUtJWGwHCsAA1jDg.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Surface Tension",
+        "overview": "Reid has returned from Houston, where he was visiting his mother who is in a new facility on an experimental drug program. He is called back home from the office while the rest of the team heads off on their next case. It isn\u0027t until the team is in the air that they learn that Diana is no longer in the Houston facility, but that she is now living with Reid, as the trial drug was not having the intended effect.",
+        "air_date": "2017-02-01",
+        "runtime": 42,
+        "still_path": "/fibmcK3BlxXZAZr1f0o6TR4y3ma.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "A Good Husband",
+        "overview": "The BAU team is called in to investigate when male victims are found with no way to identify them.",
+        "air_date": "2017-02-08",
+        "runtime": 42,
+        "still_path": "/hE0MHN0DhnmWDZ0bi3ZEeMzw9L6.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Spencer",
+        "overview": "When a BAU member gets in trouble in Mexico, the team enlists the services of the International Response Team for their help.",
+        "air_date": "2017-02-15",
+        "runtime": 42,
+        "still_path": "/utCZ1KZCzJf65McanxIR6eo6jio.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Collision Course",
+        "overview": "The BAU investigates the cause of several fatal car crashes involving drivers and pedestrians. Also, Reid gets bad news.",
+        "air_date": "2017-02-22",
+        "runtime": 42,
+        "still_path": "/jDH4FqXRjc59fhHdGIBdgPymGA2.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Alpha Male",
+        "overview": "The BAU investigates when several young men and women are victims of disfiguring acid attacks. Also, Dr. Reid begins to settle into his new surroundings.",
+        "air_date": "2017-03-01",
+        "runtime": 42,
+        "still_path": "/8XVZBO1lnmOCTPuHeVGJx8tKITS.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Assistance Is Futile",
+        "overview": "When three women in New York City are found dead with several bones broken, the BAU works with a single mother (Tatum O\u0027Neal) who believes that her son is behind the heinous crimes. Meanwhile, Reid faces a difficult decision after a fellow inmate is threatened.",
+        "air_date": "2017-03-15",
+        "runtime": 42,
+        "still_path": "/iKK2MoZsdcbAfKfbBjzIyUbPggr.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "In the Dark",
+        "overview": "When two drastically different murder sprees are committed in Burlington, Vermont, the BAU concludes that a serial killer suffering from sleepwalking is responsible for both crimes. Meanwhile, Alvez presents Shaw with a shocking ultimatum after Reid is assaulted in prison.",
+        "air_date": "2017-03-22",
+        "runtime": 42,
+        "still_path": "/1EmGSukzTifeBu8P2jv1ByLKcLS.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Hell\u0027s Kitchen",
+        "overview": "The BAU investigates an urban vampire who kidnaps his victims at night and holds them underground in the sewer system; Reid makes a difficult decision in prison.",
+        "air_date": "2017-03-29",
+        "runtime": 42,
+        "still_path": "/jPh1I195ry0WfgN0agRZ8CL5It2.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "True North",
+        "overview": "Three victims are found tied to stakes in the Arizona desert.",
+        "air_date": "2017-04-05",
+        "runtime": 42,
+        "still_path": "/oBZ1QkDLlLSTdPc0dSS0qe8ZbXC.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Unforgettable",
+        "overview": "The BAU investigates when several federal government employees, including a close friend of Walker\u0027s, succumb to symptoms of a heart attack; Reid anxiously awaits his trial date.",
+        "air_date": "2017-04-26",
+        "runtime": 42,
+        "still_path": "/o21FirtNsJd65QIr5rSPdaXP6dS.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Green Light",
+        "overview": "When Reid fears his mother has been abducted, he asks the BAU to investigate while he\u0027s stuck in prison.",
+        "air_date": "2017-05-03",
+        "runtime": 42,
+        "still_path": "/zWj1c9LAJ6UqucxOL1Cuzr71lHt.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Red Light",
+        "overview": "Derek Morgan brings the BAU a lead in the case against serial killer and escaped convict Mr. Scratch.",
+        "air_date": "2017-05-10",
+        "runtime": 42,
+        "still_path": "/nHPW0ZpnbddIHDPh9tHc7djZk0M.jpg"
+      }
+    ]
+  }
+}

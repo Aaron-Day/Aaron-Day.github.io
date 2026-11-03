@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 14560,
+    "title": "Paul Blart: Mall Cop",
+    "overview": "When a shopping mall is taken over by a gang of organized crooks, it\u0027s up to a mild-mannered security guard to save the day.",
+    "tagline": "Safety never takes a holiday.",
+    "runtime": 91,
+    "release_date": "2009-01-15",
+    "vote_average": 5.446,
+    "poster_path": "/A4zZv0Q1VKURFZFEl2vwjaE2q0g.jpg",
+    "backdrop_path": "/nZwlezCansLTXU6w775zj9RAm4u.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 328372,
+      "name": "Mall Cop Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kevin James",
+      "character": "Paul Blart",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    },
+    {
+      "name": "Keir O\u0027Donnell",
+      "character": "Veck",
+      "profile_path": "/1GYWx3q4QNXIIBdwirZPiSHFFfJ.jpg"
+    },
+    {
+      "name": "Jayma Mays",
+      "character": "Amy",
+      "profile_path": "/n8tY5eVXje0vXTws66YAdEeHMy5.jpg"
+    },
+    {
+      "name": "Raini Rodriguez",
+      "character": "Maya",
+      "profile_path": "/luWZAVQPzSQ025P7drhksuTU3XO.jpg"
+    }
+  ]
+}

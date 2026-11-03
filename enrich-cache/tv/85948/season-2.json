@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Strange Energies",
+        "overview": "Approximately three months after the events of the season one finale, the U.S.S. Cerritos is dispatched on a mission where it ends up in a sci-fi event resulting in \u0022strange energy,\u0022 which Commander Ransom inadvertently absorbs.",
+        "air_date": "2021-08-12",
+        "runtime": 26,
+        "still_path": "/zesRgabB6QBLohnQ97tOvIodwAF.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Kayshon, His Eyes Open",
+        "overview": "Our Lower Deckers have trouble bonding with Ensign Jet Manhaver, who has been assigned Boimler\u2019s bunk and shift duties. Meanwhile, we get a glimpse of Boimler\u2019s life on the U.S.S. Titan, which is more intense than he thought it would be.",
+        "air_date": "2021-08-19",
+        "runtime": 26,
+        "still_path": "/jAOq6FIv25Tk0oJjQsE5JtpqvqK.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "We\u0027ll Always Have Tom Paris",
+        "overview": "Assigned a special task by Dr. T\u0027Ana, Tendi enlists Mariner for help. On the U.S.S. Cerritos, Rutherford is consumed by a bridge crew mystery.",
+        "air_date": "2021-08-26",
+        "runtime": 27,
+        "still_path": "/1ISFNYYREGb5Z9DwKdRxRZjya4.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Mugato, Gumato",
+        "overview": "The U.S.S. Cerritos is dispatched to a planet to investigate an unexplained sighting of a dangerous Mugato.",
+        "air_date": "2021-09-02",
+        "runtime": 27,
+        "still_path": "/aBwnEOSziZod2D6XKqOu6vAorMT.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "An Embarrassment of Dooplers",
+        "overview": "Mariner and Boimler try to track down the location of a legendary Starfleet party while the bridge crew deals with an insecure alien diplomat.",
+        "air_date": "2021-09-09",
+        "runtime": 25,
+        "still_path": "/xSoRSb0pXfyKLDE43zI8BSnPayc.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Spy Humongous",
+        "overview": "Anomaly consolidation day on the U.S.S. Cerritos leaves the Lower Deckers with mixed emotions. Captain Freeman attempts to negotiate peace on the Pakled home world.",
+        "air_date": "2021-09-16",
+        "runtime": 26,
+        "still_path": "/sU7F61UdLmNvVlL4VNdGWJMIzZy.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Where Pleasant Fountains Lie",
+        "overview": "Mariner and Boimler are stranded on an uninhabited planet with a sentient computer. On the Cerritos, Lt. Commander Billups must prove his engineering abilities to an old adversary.",
+        "air_date": "2021-09-23",
+        "runtime": 26,
+        "still_path": "/nWP4Bkv4pCOmTiWFtFpVqavd2l9.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "I, Excretus",
+        "overview": "A consultant arrives on the U.S.S. Cerritos to run drills that require the lower deckers and bridge crew to swap duties.",
+        "air_date": "2021-09-30",
+        "runtime": 26,
+        "still_path": "/yImQyvFcELANavOwaOj9mInyjKC.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "wej Duj",
+        "overview": "Boimler tries to find a friend from the bridge, while the crew of the USS Cerritos has free time during a long warp trip.",
+        "air_date": "2021-10-07",
+        "runtime": 28,
+        "still_path": "/dbNgwjo6rnGQaMtwcGEJ6Y7bh5Y.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "First First Contact",
+        "overview": "In the season two finale, the U.S.S. Cerritos is tasked to aid another class starship on a first contact mission.",
+        "air_date": "2021-10-14",
+        "runtime": 31,
+        "still_path": "/c3hk6948lCQ6Kfzr2dxa5Xu30jB.jpg"
+      }
+    ]
+  }
+}

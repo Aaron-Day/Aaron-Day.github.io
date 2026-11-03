@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Box Cutter",
+        "overview": "Walt and Jesse face the deadly consequences of their actions. Skyler deals with a puzzling disappearance, as Marie struggles to help Hank with his recovery.",
+        "air_date": "2011-07-17",
+        "runtime": 48,
+        "still_path": "/1voCxDEPeYXcKAaoDvdGUMyAjps.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Thirty-Eight Snub",
+        "overview": "Walt attempts to form a new alliance as he plans his next move. Skyler pushes Walt towards a business opportunity, in hopes of protecting the family.",
+        "air_date": "2011-07-24",
+        "runtime": 46,
+        "still_path": "/ra0R3q9jEOObo6gspjYcbqPmIM.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Open House",
+        "overview": "Events spiral out of control at Jesse\u0027s place. Skyler reluctantly asks for Saul\u0027s help. Marie returns to an old pastime and a friend asks Hank for help.",
+        "air_date": "2011-07-31",
+        "runtime": 47,
+        "still_path": "/Ac0wu93r4LaZk07wa7PiWpNOOru.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Bullet Points",
+        "overview": "The Cartel takes steps to gain the upper hand. Walt and Skyler share an embarrassing secret with the rest of the family. Jesse\u0027s activities draw unwanted attention.",
+        "air_date": "2011-08-07",
+        "runtime": 46,
+        "still_path": "/gzHp77NjrkDOu9sgkLB5PYmwArK.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Shotgun",
+        "overview": "When Jesse goes missing, Walt fears the worst. Skyler has an unlikely reunion. Hank shares some bad news with Detective Tim Roberts.",
+        "air_date": "2011-08-14",
+        "runtime": 48,
+        "still_path": "/wbCdpu4qlciRQMyKmcstoadcFak.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Cornered",
+        "overview": "Skyler makes an unsettling discovery. Walter, Jr. pushes his dad into a questionable purchase. Jesse offers Mike some unexpected help.",
+        "air_date": "2011-08-21",
+        "runtime": 48,
+        "still_path": "/3tuFJVKzlWRqstoAOxwWF6lPzJY.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Problem Dog",
+        "overview": "A frustrated Walt gambles on a risky new plan. Skyler\u0027s business venture hits a snag. Hank recruits Walter, Jr. for an unusual outing.",
+        "air_date": "2011-08-28",
+        "runtime": 48,
+        "still_path": "/gXYKZO4nTsDrAc2AjJOhjJkwu1V.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Hermanos",
+        "overview": "Skyler develops an unusual solution to her money troubles. Hank enlists Walt to investigate a theory. Walt\u0027s impatience with Jesse grows.",
+        "air_date": "2011-09-04",
+        "runtime": 48,
+        "still_path": "/vf9uFwIaZRLKv8npuz3eJJnjd99.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Bug",
+        "overview": "Skyler\u0027s past mistakes come back to haunt her. Gus takes action to thwart his rivals. Jesse seeks Walt\u0027s help, with mixed results.",
+        "air_date": "2011-09-11",
+        "runtime": 48,
+        "still_path": "/bIU8FJxe1yXvMm7yREwj138Z6x8.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Salud",
+        "overview": "Walt\u0027s family worries when he doesn\u0027t turn up for Walter, Jr.\u0027s 16th birthday. Jesse is forced to put his lab skills to the test without Mr. White\u0027s help.",
+        "air_date": "2011-09-18",
+        "runtime": 48,
+        "still_path": "/dBrs0Npmn76g81yel2mjK7mTaOj.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Crawl Space",
+        "overview": "Walt takes drastic action to protect his secret and Gus. Skyler\u0027s efforts to solve Ted\u0027s financial problems hit a wall.",
+        "air_date": "2011-09-25",
+        "runtime": 47,
+        "still_path": "/mySdUn0ab1rrWUuoribRZilCqAF.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "End Times",
+        "overview": "Hank pushes Gomez to pursue one last lead, while Walt struggles to protect the family. Jesse gets alarming news and rushes to meet with Mr. White.",
+        "air_date": "2011-10-02",
+        "runtime": 46,
+        "still_path": "/ffIjlpJndsel3FkPMpHCnpJ71lw.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Face Off",
+        "overview": "Walt and Jesse team up to take on Gus. With Saul\u0027s help, Walt finds an unexpected ally.",
+        "air_date": "2011-10-09",
+        "runtime": 51,
+        "still_path": "/Apl61kYZF2zQlUMh13t8zmUD7Vr.jpg"
+      }
+    ]
+  }
+}

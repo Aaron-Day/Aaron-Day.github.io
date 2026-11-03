@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 19,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Stunning and Brave",
+        "overview": "There is a new principal at the helm of South Park Elementary. He forces the boys to confront the damage they\u2019ve done through their history of racism and unconscious bias. It is the most stunning and brave South Park ever.",
+        "air_date": "2015-09-16",
+        "runtime": 23,
+        "still_path": "/FDGbwKkuZBGMw5BmPxSwhoTkHX.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Where My Country Gone?",
+        "overview": "Mr Garrison is fed up with undocumented immigrants, and proposes building a wall to keep them out.",
+        "air_date": "2015-09-23",
+        "runtime": 23,
+        "still_path": "/ySn5vzVyIKRzeRlIkJCXenqzo27.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The City Part of Town",
+        "overview": "As the town is gentrifying around him, Kenny attempts to climb out of the cycle of poverty by taking a job at City Wok.",
+        "air_date": "2015-09-30",
+        "runtime": 23,
+        "still_path": "/j9sxq8S5G5cgtjum8CWLSVpI9yu.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "You\u0027re Not Yelping",
+        "overview": "There\u2019s a new kid in school and his parents have opened a restaurant in the recently gentrified part of town. Cartman now considers himself the top on-line restaurant reviewer in South Park.",
+        "air_date": "2015-10-14",
+        "runtime": 23,
+        "still_path": "/1qIC6IAMbdywlNxONgmNNSiTVZE.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Safe Space",
+        "overview": "Cartman is the latest victim of body shaming on Twitter. Randy has to deal with uncomfortable confrontations every time he shops at the new Whole Foods. He feels exposed at every turn and it\u2019s ruining his Whole Foods experience. Randy and Cartman are both seeking a safe space.",
+        "air_date": "2015-10-21",
+        "runtime": 23,
+        "still_path": "/7l8LvekA5PmGwZ45OYB5ScBzTob.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Tweek x Craig",
+        "overview": "The Asian girls in school are drawing dreamy pictures of Tweek and Craig.",
+        "air_date": "2015-10-28",
+        "runtime": 23,
+        "still_path": "/5I6mAtiG5KhhZeo2mKw41VPIoAH.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Naughty Ninjas",
+        "overview": "The citizens of South Park decide they no longer need a police force in town. ",
+        "air_date": "2015-11-11",
+        "runtime": 23,
+        "still_path": "/amLM31UFF0mIAR4oDHRKBrFPAWu.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Sponsored Content",
+        "overview": "Jimmy is sent to the principal\u2019s office for using an inappropriate word in the school paper. His integrity as a newsman runs head on into PC Principals ideology. Will Jimmy be the undoing of PC Principal?",
+        "air_date": "2015-11-18",
+        "runtime": 23,
+        "still_path": "/hdPSECPPdbMhwqGQlwrgyX6762j.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Truth and Advertising",
+        "overview": "PC Principal disappears with two of the 4th grade students.",
+        "air_date": "2015-12-02",
+        "runtime": 23,
+        "still_path": "/9eQnxNJ5bNcXxUTAFQgibqnheqz.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "PC Principal Final Justice",
+        "overview": "The gentrification of South Park is pricing Randy right out of town. Meanwhile, Kyle\u2019s distrust of Stan has broken their friendship and thrown Kyle into a dangerous alliance.",
+        "air_date": "2015-12-09",
+        "runtime": 23,
+        "still_path": "/2rdpdjHrEWSEIkyQL7gTTLaGkza.jpg"
+      }
+    ]
+  }
+}

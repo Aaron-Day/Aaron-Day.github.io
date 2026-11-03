@@ -1,0 +1,424 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Mutiny (1)",
+        "overview": "Rita Repulsa\u0027s minions abandon her when an even more evil menace arrives on the Moon.",
+        "air_date": "1994-07-21",
+        "runtime": 22,
+        "still_path": "/gmVqA2UmYu1kdCFohtlj9qTHlrZ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Mutiny (2)",
+        "overview": "Lord Zedd steals the power of the Zords away from the Rangers.",
+        "air_date": "1994-07-29",
+        "runtime": 22,
+        "still_path": "/hjzM1ctEIG12JNpqT10bE7EVBu7.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Mutiny (3)",
+        "overview": "The Power Rangers obtain new Zords to defeat Pirantishead.",
+        "air_date": "1994-08-05",
+        "runtime": 22,
+        "still_path": "/bqV6cTChYrY2MySuRGDxyc881ko.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Wanna-Be Ranger",
+        "overview": "Lord Zedd attacks with a monster that can morph from one Power Ranger to another.",
+        "air_date": "1994-09-13",
+        "runtime": 22,
+        "still_path": "/4NrjPYIXCwzONbXy4s42eQ3ddcy.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Putty on the Brain",
+        "overview": "Lord Zedd casts a spell on the Power Rangers.",
+        "air_date": "1994-09-14",
+        "runtime": 22,
+        "still_path": "/l9KLbMpe6nEQiODw4OzZ958T8GW.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Bloom of Doom",
+        "overview": "Kimberly is attacked by the Bloom of Doom, a poisonous plant.",
+        "air_date": "1994-09-17",
+        "runtime": 22,
+        "still_path": "/2LaRX5O5HVGqLB1StZ9BXTomhjD.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Green Dream",
+        "overview": "Goldar plans to steal Tommy\u0027s Green Ranger powers.",
+        "air_date": "1994-09-19",
+        "runtime": 22,
+        "still_path": "/cguMI1lprKReu2ZAkNlbmFgKaEF.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Power Stealer",
+        "overview": "While cleaning up Angel Grove, the teens get trapped by the Octophantom monster who attempts to drain the Rangers of their powers.",
+        "air_date": "1994-09-20",
+        "runtime": 22,
+        "still_path": "/sNUfPR9TT8NafjxWuI9P6y5e6z2.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Beetle Invasion",
+        "overview": "The Stag Beetle Monster drains Tommy\u0027s powers in an attack on Angel Grove.",
+        "air_date": "1994-09-21",
+        "runtime": 22,
+        "still_path": "/s2EyVBx0lpbfQq1ydcxvk08yloC.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Welcome to Venus Island",
+        "overview": "Rangers face Monster Venus Fly Traps as they try to rescue Hallie from Lord Zedd\u0027s island stronghold.",
+        "air_date": "1994-09-24",
+        "runtime": 22,
+        "still_path": "/vqQXsq9Jtt128H2LVLTzcwMCNC4.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Song of Guitardo",
+        "overview": "Kimberly is the only one who can save the Rangers from a musical spell.",
+        "air_date": "1994-09-26",
+        "runtime": 22,
+        "still_path": "/hGgXPIoAsMAvrFPuYHRcUWB2QqN.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Green No More (1)",
+        "overview": "A giant Turban Shell captures Tommy and transports him to Zedd\u0027s Otherworld.",
+        "air_date": "1994-09-27",
+        "runtime": 22,
+        "still_path": "/26fMR4d7hiNvixPCoYEvGtWkdEq.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Green No More (2)",
+        "overview": "Tommy attempts to retrieve the Rangers\u0027 Morphers and escape from Zedd\u0027s Otherworld.",
+        "air_date": "1994-09-28",
+        "runtime": 22,
+        "still_path": "/dUKYvGNvpUxnStTjMeqmLlzT3Tn.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Missing Green",
+        "overview": "Jason\u0027s guilt of Tommy\u0027s loss of power causes even more problems for the Power Rangers.",
+        "air_date": "1994-10-03",
+        "runtime": 22,
+        "still_path": "/3LyUgffofB6xCleaoH1GJ133uo5.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Orchestral Maneuvers in the Park",
+        "overview": "The Power Rangers must toot their own horns to stop Lord Zedd\u0027s Trumpet Top.",
+        "air_date": "1994-10-04",
+        "runtime": 22,
+        "still_path": "/1teZGwhmesmNukJH9qkODVNv8a.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Beauty and the Beast",
+        "overview": "Kimberly is captured and transformed into Lord Zedd\u0027s evil queen.",
+        "air_date": "1994-10-10",
+        "runtime": 22,
+        "still_path": "/vRNrSnd6DYNpHNfQSuXeChKS3Gm.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "White Light (1)",
+        "overview": "Alpha and Zordon go on a secret mission, leaving the Power Rangers to fend for themselves.",
+        "air_date": "1994-10-17",
+        "runtime": 22,
+        "still_path": "/zf3JRCLUTeB8KlttNroxmKyfazL.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "White Light (2)",
+        "overview": "Zordon introduces the team to the new White Ranger and his mighty White Tiger Zord.",
+        "air_date": "1994-10-18",
+        "runtime": 22,
+        "still_path": "/ynk99h5X0ZNvMeHJFz24p04ytEs.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Two for One",
+        "overview": "Lord Zedd fashions unfeminine monsters from Kimberly\u0027s stolen purse.",
+        "air_date": "1994-10-24",
+        "runtime": 22,
+        "still_path": "/wCxhvj1OYxCcgH5CkaFwejYbPKl.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Opposites Attract",
+        "overview": "Lord Zedd plans to steal Billy\u0027s magnetic polarizing gauge and wreak havoc with the Earth\u0027s gravitational pull.",
+        "air_date": "1994-10-25",
+        "runtime": 22,
+        "still_path": "/xFvA3uCzTNdFkpZ7SdwsV30xWlk.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Zedd\u0027s Monster Mash",
+        "overview": "Tommy faces some real Halloween monsters after he\u0027s kidnapped by Goldar.",
+        "air_date": "1994-10-28",
+        "runtime": 22,
+        "still_path": "/gcEJttnZU7q7WLpi6M9prNBKGyl.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Ninja Encounter (1)",
+        "overview": "Lord Zedd tries to recruit winners of a Ninja Tournament to his cause, but the Rangers have other plans.",
+        "air_date": "1994-11-02",
+        "runtime": 22,
+        "still_path": "/bJIKEQUYRNHeNldRNP2gaoCgehr.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Ninja Encounter (2)",
+        "overview": "The Power Rangers attempt to save their young ninja friends from the clutches of Lord Zedd.",
+        "air_date": "1994-11-03",
+        "runtime": 22,
+        "still_path": "/lNsRzafHqsHR0MKkxfU742aaPQf.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "The Ninja Encounter (3)",
+        "overview": "Billy must risk revealing his real identity to save his new ninja friends.",
+        "air_date": "1994-11-04",
+        "runtime": 22,
+        "still_path": "/cQp8WxQg1XNjbXwL8afPSSwkXFd.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "A Monster of Global Proportions",
+        "overview": "Lord Zedd tries to sabotage the first World Teen Summit.",
+        "air_date": "1994-11-05",
+        "runtime": 22,
+        "still_path": "/atxJLSn7mJaGr5uHF285ozVHTgz.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Zedd Waves",
+        "overview": "Beamcaster controls the minds of Angel Grove\u0027s citizens, turning them into Zedd\u0027s Zombies.",
+        "air_date": "1994-11-07",
+        "runtime": 22,
+        "still_path": "/gfdo3KOYIAAXwYIC50p6tceNoRm.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "The Power Transfer (1)",
+        "overview": "The Rangers must stop Zedd as he unleashes an awesome new weapon to attack the planet.",
+        "air_date": "1994-11-08",
+        "runtime": 22,
+        "still_path": "/3pjFHy6r60GUKKHFeUZWgaVClGF.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "The Power Transfer (2)",
+        "overview": "Three departing Rangers transfer their powers to the new Rangers who are immediately called into battle against the Silver Horns Monster.",
+        "air_date": "1994-11-09",
+        "runtime": 22,
+        "still_path": "/gsVunmUkODnwlgebNlEFjsO4cDS.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Goldar\u0027s Vice-Versa",
+        "overview": "Adam discovers his attractive hiking partner is taking him on a trail to nowhere.",
+        "air_date": "1994-11-12",
+        "runtime": 22,
+        "still_path": "/eK42yOZDw50Dtm3SYT8aO91pZxJ.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Mirror of Regret",
+        "overview": "Zedd tries to use the Mirror of Regret to undermine Adam\u0027s confidence.",
+        "air_date": "1994-11-14",
+        "runtime": 22,
+        "still_path": "/x7rdISVOKYNi14dcBORwYccezTP.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "When is a Ranger Not a Ranger?",
+        "overview": "Bulk and Skull must save the Power Rangers from the Scatterbrain Monster.",
+        "air_date": "1994-11-15",
+        "runtime": 22,
+        "still_path": "/aoW4lCpWKmUtis3BlmfwQy9QLEo.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Rocky Just Wants to Have Fun",
+        "overview": "Lord Zedd casts a spell on Rocky causing him to become obsessed with playing a pachinko game.",
+        "air_date": "1994-11-16",
+        "runtime": 22,
+        "still_path": "/e4iRWAMreREjipPcA56MYcSPB8v.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "Lights, Camera, Action",
+        "overview": "Lord Zedd tries to break into show biz, but the Rangers show him the true meaning of rejection.",
+        "air_date": "1994-11-17",
+        "runtime": 22,
+        "still_path": "/x7c4dD3g7JHikas5JtJ4x5tsPh.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Where There\u0027s Smoke, There\u0027s Fire",
+        "overview": "Aisha learns the value of being part of a team when all the Rangers are needed to deal with the Flame Head Monster.",
+        "air_date": "1994-11-21",
+        "runtime": 22,
+        "still_path": "/65z8U6ANwUxL1emw6vCgGB57e8A.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Scavenger Hunt",
+        "overview": "Zedd turns the gang\u0027s scavenger hunt into a fight for survival.",
+        "air_date": "1994-11-22",
+        "runtime": 22,
+        "still_path": "/zGcWXFNqsKtY7Se9EQIV42Bcqhl.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "The Great Bookala Escape",
+        "overview": "The Rangers try to help Bookala, a friendly alien, return to his planet.",
+        "air_date": "1994-11-23",
+        "runtime": 22,
+        "still_path": "/pzmvlxjpL203Pcu2LlAgEbZh0Ws.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "Forever Friends",
+        "overview": "Zedd sends the huge Jaws of Destruction to destroy the Power Rangers.",
+        "air_date": "1994-11-28",
+        "runtime": 22,
+        "still_path": "/fEqozWWd3ZS642zTt72VjFsfZDF.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "A Reel Fish Story",
+        "overview": "Zedd creates some underwater monsters to scare a young swimmer.",
+        "air_date": "1994-11-29",
+        "runtime": 22,
+        "still_path": "/bq28NQVLnmIdPMnsRoekdiORlOh.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "Rangers Back in Time (1)",
+        "overview": "Zedd turns back time reverting the Rangers back into helpless children.",
+        "air_date": "1995-02-04",
+        "runtime": 22,
+        "still_path": "/d5R1TrGel4FCR1Lv3kvcXLFeidv.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "Rangers Back in Time (2)",
+        "overview": "Alpha attempts to save the Power Rangers and restore them to their rightful ages.",
+        "air_date": "1995-02-11",
+        "runtime": 22,
+        "still_path": "/zSpDBerd5imk5qTUjcoMVatfeGu.jpg"
+      },
+      {
+        "episode_number": 41,
+        "name": "The Wedding (1)",
+        "overview": "Rita Repulsa drugs Lord Zedd with a love potion and launches her own attack against the Rangers.",
+        "air_date": "1995-02-13",
+        "runtime": 22,
+        "still_path": "/mDxNas295gXrsMb3M8ZuY6dHnO2.jpg"
+      },
+      {
+        "episode_number": 42,
+        "name": "The Wedding (2)",
+        "overview": "Zedd proposes to Rita, and she promises to deliver the defeated Rangers as a wedding present.",
+        "air_date": "1995-02-14",
+        "runtime": 22,
+        "still_path": "/onj5693SggwWsje14fOsdS6cLpg.jpg"
+      },
+      {
+        "episode_number": 43,
+        "name": "The Wedding (3)",
+        "overview": "Rita and Zedd marry and decide to spend their honeymoon destroying the Power Rangers.",
+        "air_date": "1995-02-15",
+        "runtime": 22,
+        "still_path": "/myYwF6KWjrvJTugphL13k0vo9mp.jpg"
+      },
+      {
+        "episode_number": 44,
+        "name": "Return of the Green Ranger (1)",
+        "overview": "The Evil Green Ranger returns and Tommy is forced to confront him alone.",
+        "air_date": "1995-02-20",
+        "runtime": 22,
+        "still_path": "/nH9Mb4jqB76ZnjknhWKPbzY9wfM.jpg"
+      },
+      {
+        "episode_number": 45,
+        "name": "Return of the Green Ranger (2)",
+        "overview": "The Rangers are stuck in the year 1774 and find they are unable to morph as the evil Green Ranger continues his destructive rampage.",
+        "air_date": "1995-02-21",
+        "runtime": 22,
+        "still_path": "/cS9hKdVQ0TO1J0OkJIHMZiBBaeT.jpg"
+      },
+      {
+        "episode_number": 46,
+        "name": "Return of the Green Ranger (3)",
+        "overview": "The world hangs in the balance as the White Ranger and Green Ranger face off in a final showdown.",
+        "air_date": "1995-02-22",
+        "runtime": 22,
+        "still_path": "/zO0JogUH5QqCOEPbEEBVwiumbt6.jpg"
+      },
+      {
+        "episode_number": 47,
+        "name": "Best Man for the Job",
+        "overview": "Rita and Zedd turn the class election into an ugly rivalry for Kimberly and Tommy.",
+        "air_date": "1995-04-29",
+        "runtime": 22,
+        "still_path": "/b2vs2RPDE4azlqXQ5YY7tQsK8KW.jpg"
+      },
+      {
+        "episode_number": 48,
+        "name": "Storybook Rangers (1)",
+        "overview": "Rita traps Kimberly, Tommy and Rocky inside a book of fairy tales.",
+        "air_date": "1995-05-01",
+        "runtime": 22,
+        "still_path": "/cjNmkWY39tQ8fQRv4JjUJgCthwI.jpg"
+      },
+      {
+        "episode_number": 49,
+        "name": "Storybook Rangers (2)",
+        "overview": "Fairy tale monsters prove to be a challenge for the Rangers.",
+        "air_date": "1995-05-02",
+        "runtime": 22,
+        "still_path": "/rbMTiHb3c7nNc9kmFcj1l97dbPv.jpg"
+      },
+      {
+        "episode_number": 50,
+        "name": "Wild West Rangers (1)",
+        "overview": "Kimberly is transported through a time hole to the 1800s where she meets the Power Rangers\u0027 wild west ancestors.",
+        "air_date": "1995-05-08",
+        "runtime": 22,
+        "still_path": "/3YMsZ0jtIBH3lB6yyVidfa29gfL.jpg"
+      },
+      {
+        "episode_number": 51,
+        "name": "Wild West Rangers (2)",
+        "overview": "Kimberly helps the Rangers\u0027 ancestors morph into \u0022Wild West Rangers\u0022 to fight the Needle Nose monster and save the world.",
+        "air_date": "1995-05-09",
+        "runtime": 22,
+        "still_path": "/7ppHETwh5QcWU0XGdDlwv5jv7NI.jpg"
+      },
+      {
+        "episode_number": 52,
+        "name": "Blue Ranger Gone Bad",
+        "overview": "Rita and Zedd create an evil Blue Ranger from a high school art project.",
+        "air_date": "1995-05-20",
+        "runtime": 22,
+        "still_path": "/hF27y5cUjbD3k9m1xKxIUnWKKU5.jpg"
+      }
+    ]
+  }
+}

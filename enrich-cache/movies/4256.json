@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4256,
+    "title": "Scary Movie 3",
+    "overview": "News anchorwoman Cindy Campbell has to investigate mysterious crop circles and killing video tapes, and help the President stop an alien invasion in the process.",
+    "tagline": "Great trilogies come in threes.",
+    "runtime": 84,
+    "release_date": "2003-10-24",
+    "vote_average": 5.976,
+    "poster_path": "/8dLsax5KSwlCY5uWXETKjud5k6U.jpg",
+    "backdrop_path": "/nF74HKjNe7X54XMcIc7ulK5InxR.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 4246,
+      "name": "Scary Movie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anna Faris",
+      "character": "Cindy",
+      "profile_path": "/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+    },
+    {
+      "name": "Regina Hall",
+      "character": "Brenda Meeks",
+      "profile_path": "/jiFZ4xNrvUUZLBHnJu71CvdN4kj.jpg"
+    },
+    {
+      "name": "Simon Rex",
+      "character": "George",
+      "profile_path": "/swlyh3YQoaB4OAgVi6NSdojVeyZ.jpg"
+    },
+    {
+      "name": "Anthony Anderson",
+      "character": "Mahalik",
+      "profile_path": "/reO1OjwFdtXmiO4LMDaBj6eatzK.jpg"
+    }
+  ]
+}

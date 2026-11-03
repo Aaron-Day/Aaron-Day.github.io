@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10479,
+    "title": "Rules of Engagement",
+    "overview": "A Marine Colonel is brought to court-martial after ordering his men to fire on demonstrators surrounding the American embassy in Yemen.",
+    "tagline": "A hero should never have to stand alone.",
+    "runtime": 127,
+    "release_date": "2000-04-07",
+    "vote_average": 6.253,
+    "poster_path": "/38iMM0sHOqNz315ApF9bEjT4rFA.jpg",
+    "backdrop_path": "/euVuflyoWzpaLGOBHZhxwGgldNX.jpg",
+    "genres": [
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tommy Lee Jones",
+      "character": "Col. Hayes Lawrence \u0022Hodge\u0022 Hodges II",
+      "profile_path": "/mCiZNRAzbnPojJEZwVZWLw9kzxR.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Col. Terry L. Childers",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Guy Pearce",
+      "character": "Maj. Mark Biggs",
+      "profile_path": "/vTqk6Nh3WgqPubkS23eOlMAwmwa.jpg"
+    },
+    {
+      "name": "Ben Kingsley",
+      "character": "Ambassador Mourain",
+      "profile_path": "/k3Dmu49B2akwDvgqy52MOxznI59.jpg"
+    }
+  ]
+}

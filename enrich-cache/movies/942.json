@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 942,
+    "title": "Lethal Weapon 2",
+    "overview": "Riggs and Murtaugh are on the trail of South African diplomats using their immunity to engage in criminal activities.",
+    "tagline": "The magic is back!",
+    "runtime": 114,
+    "release_date": "1989-07-07",
+    "vote_average": 7.052,
+    "poster_path": "/1EEIUw0tkX7AJZ1ikZrtKZZKlC6.jpg",
+    "backdrop_path": "/uY8i4RABFyBpH2cmFWMVLEswopD.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 945,
+      "name": "Lethal Weapon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mel Gibson",
+      "character": "Martin Riggs",
+      "profile_path": "/jnqHMaOslt8cef2atSmOpGRvNla.jpg"
+    },
+    {
+      "name": "Danny Glover",
+      "character": "Roger Murtaugh",
+      "profile_path": "/7ZyztVlG7OpqD0EhzG8iwYNcd1s.jpg"
+    },
+    {
+      "name": "Joe Pesci",
+      "character": "Leo Getz",
+      "profile_path": "/pEHQoL8yOndOq59iXlgsOpUTcTk.jpg"
+    },
+    {
+      "name": "Joss Ackland",
+      "character": "Arjen Rudd",
+      "profile_path": "/k8GQrf54DLILcLBmnMq94xijA6z.jpg"
+    }
+  ]
+}

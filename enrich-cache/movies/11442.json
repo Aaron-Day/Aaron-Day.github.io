@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11442,
+    "title": "Halloween: Resurrection",
+    "overview": "Reality programmers at DangerTainment select a group of thrill-seeking teenagers to spend one night in the childhood home of serial killer Michael Myers. Their planned live broadcast turns deadly when Michael decides to crash the party.",
+    "tagline": "Evil finds its way home.",
+    "runtime": 89,
+    "release_date": "2002-07-01",
+    "vote_average": 4.589,
+    "poster_path": "/1mlKwbNzJCGzqe4i0ZEJtUUL290.jpg",
+    "backdrop_path": "/jnSB3v76tGte9lzHS1XLGu75oaT.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91361,
+      "name": "Halloween Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bianca Kajlich",
+      "character": "Sara Moyer",
+      "profile_path": "/mJdcpCgnR4nJLcCivk3E4jThuNn.jpg"
+    },
+    {
+      "name": "Busta Rhymes",
+      "character": "Freddie Harris",
+      "profile_path": "/f0MX6SdEsGYJYDy8vF6ghTZ25N6.jpg"
+    },
+    {
+      "name": "Brad Loree",
+      "character": "Michael Myers",
+      "profile_path": "/1uhz69qnLcMjzmfm49TFC0MV9E4.jpg"
+    },
+    {
+      "name": "Sean Patrick Thomas",
+      "character": "Rudy",
+      "profile_path": "/59Mqg13DVutKEN4ZmkG8O814uKg.jpg"
+    }
+  ]
+}

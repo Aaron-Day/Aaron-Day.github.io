@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 329833,
+    "title": "Zoolander 2",
+    "overview": "Derek and Hansel are modelling again when an opposing company attempts to take them out from the business.",
+    "tagline": "Long time no Z.",
+    "runtime": 100,
+    "release_date": "2016-02-06",
+    "vote_average": 4.931,
+    "poster_path": "/n8AJzALlTPBwe9Tkv3tdxbiAr9i.jpg",
+    "backdrop_path": "/4ANhwN1jr5EGwHS0M13AH5Fs3NH.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 352789,
+      "name": "Zoolander Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Stiller",
+      "character": "Derek Zoolander",
+      "profile_path": "/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg"
+    },
+    {
+      "name": "Owen Wilson",
+      "character": "Hansel",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    },
+    {
+      "name": "Will Ferrell",
+      "character": "Jacobim Mugatu",
+      "profile_path": "/yjGbyQzVjpQl8xFkFGa7JxKZWQb.jpg"
+    },
+    {
+      "name": "Pen\u00E9lope Cruz",
+      "character": "Valentina Valencia",
+      "profile_path": "/n5SFgmvJSENQt8poE4qYacUnKOi.jpg"
+    }
+  ]
+}

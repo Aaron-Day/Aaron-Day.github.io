@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 25884,
+    "title": "Feds!",
+    "overview": "Ellie DeWitt and Janis Zuckermann are admitted to the very strict FBI Training Academy. They get a hard course, in which they learn to deal with guns and to recognise crimes. They also get a physical training. It appears that Ellie is a real fighting- machine, in contrast with Janis, the great student. They have to help each other, all the way to graduation.",
+    "tagline": "Sleep Tight America. These Women Carry Guns.",
+    "runtime": 82,
+    "release_date": "1988-10-28",
+    "vote_average": 5.8,
+    "poster_path": "/a8g0q2R4cwLc5a9SSBuqq6GhSlq.jpg",
+    "backdrop_path": "/surpQs4jrCEeUF3Zle7vaozYEWS.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Rebecca De Mornay",
+      "character": "Ellis DeWitt",
+      "profile_path": "/zC2RrrdZv4UKUtHgCfKD6bJY1Qy.jpg"
+    },
+    {
+      "name": "Mary Gross",
+      "character": "Janis Zuckerman",
+      "profile_path": "/9s20j6Hg9WTnKH8dbjqgLUgwR9W.jpg"
+    },
+    {
+      "name": "Fred Thompson",
+      "character": "Bill Belecki",
+      "profile_path": "/d3x9crhTbzHaVA2OEsRu1YxirBG.jpg"
+    },
+    {
+      "name": "Larry Cedar",
+      "character": "Howard Butz",
+      "profile_path": "/mvfn1YoL9ACp4n51HZOD0TMs2Ah.jpg"
+    }
+  ]
+}

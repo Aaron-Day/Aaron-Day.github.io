@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 39514,
+    "title": "RED",
+    "overview": "After surviving an assault from a squad of hit men, retired CIA black ops agent Frank Moses reassembles his old team for an all-out war. Frank reunites with old Joe, crazy Marvin and wily Victoria to uncover a massive conspiracy that threatens their lives. Only their expert training will allow them to survive a near-impossible mission -- breaking into CIA headquarters.",
+    "tagline": "Still armed. Still dangerous. Still got it.",
+    "runtime": 111,
+    "release_date": "2010-10-13",
+    "vote_average": 6.709,
+    "poster_path": "/8eeK3OB5PeSRQD7BpZcGZKkehG.jpg",
+    "backdrop_path": "/5tqBeCUaNHptScH3rBixjE5z2NV.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 163902,
+      "name": "RED Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bruce Willis",
+      "character": "Frank Moses",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "John Malkovich",
+      "character": "Marvin Boggs",
+      "profile_path": "/7GoOdGNc4ra1L0F5nJTkmIB37iu.jpg"
+    },
+    {
+      "name": "Morgan Freeman",
+      "character": "Joe Matheson",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    },
+    {
+      "name": "Helen Mirren",
+      "character": "Victoria",
+      "profile_path": "/1reKRrsdsHXJaRVHVyOEg4oPTcZ.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 572802,
+    "title": "Aquaman and the Lost Kingdom",
+    "overview": "Black Manta seeks revenge on Aquaman for his father\u0027s death. Wielding the Black Trident\u0027s power, he becomes a formidable foe. To defend Atlantis, Arthur (Aquaman) forges an alliance with his imprisoned brother. They must protect the kingdom.",
+    "tagline": "The tide is turning.",
+    "runtime": 124,
+    "release_date": "2023-12-20",
+    "vote_average": 6.482,
+    "poster_path": "/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
+    "backdrop_path": "/bckxSN9ueOgm0gJpVJmPQrecWul.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 573693,
+      "name": "Aquaman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Momoa",
+      "character": "Arthur",
+      "profile_path": "/3troAR6QbSb6nUFMDu61YCCWLKa.jpg"
+    },
+    {
+      "name": "Patrick Wilson",
+      "character": "Orm",
+      "profile_path": "/oym6H2QD9esk4yABjCHaUoNAOa8.jpg"
+    },
+    {
+      "name": "Yahya Abdul-Mateen II",
+      "character": "Black Manta",
+      "profile_path": "/79VdVjUoiYGcgjOT9UmE5XIpoZM.jpg"
+    },
+    {
+      "name": "Randall Park",
+      "character": "Dr. Shin",
+      "profile_path": "/GpERQxWcT3TXLHpH8b6hIyUazK.jpg"
+    }
+  ]
+}

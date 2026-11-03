@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 17,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Gold Star",
+        "overview": "Prentiss uncovers a series of brutal killings linked by a specific calling card. Despite being haunted by Elias Voit, the BAU is forced to team up with him to track the Gold Star killer. Rossi and Prentiss devise a plan to gain leverage over Voit.",
+        "air_date": "2024-06-06",
+        "runtime": 53,
+        "still_path": "/71sks91wHDvhkUvsSOgKsHF3sCE.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Contagion",
+        "overview": "The BAU investigates a series of killings with the same brutal M.O. they saw with the strike team deaths. The team tries to link the victims to determine if they are dealing with the same killer. Rebecca joins Lewis and Tyler Green on a stakeout.",
+        "air_date": "2024-06-06",
+        "runtime": 50,
+        "still_path": "/spzzurSKcQvRYhfnMPRcihfHfnu.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Homesick",
+        "overview": "The BAU investigates the \u0022Moving Day Murders\u0022 and track a ritualistic killer with a twisted method of subduing his victims. Tyler goes rogue to track down the latest Gold Star lead. Prentiss is targeted by conspiracy theorists.",
+        "air_date": "2024-06-13",
+        "runtime": 49,
+        "still_path": "/n5wahPk33bKMQrgttxFH3qht6L2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Kingdom of the Blind",
+        "overview": "The BAU is faced with more Gold Star killing with the same gruesome M.O. Elias Voit says goodbye to his family. Prentiss wrestles with the fallout of her run-in with Brian Garrity. Garcia hacks the cloned phone brought in by Tyler Green.",
+        "air_date": "2024-06-20",
+        "runtime": 49,
+        "still_path": "/rHiRsNI7mkZlGXl3Jy2keIpBW7L.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Conspiracy vs. Theory",
+        "overview": "The BAU enlists Voit to help capture Jade and Damien, the UnSubs behind the Gold Star killings. Damien and Jade get the upper hand and the BAU must watch as Voit tries to negotiate with them in order to avoid a mass casualty event.",
+        "air_date": "2024-06-27",
+        "runtime": 48,
+        "still_path": "/d6JO0TqrA6qh0UDZ5Ei2vVYPLNg.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Message in a Bottle",
+        "overview": "Alvez and Garcia profile who might be targeting Tyler\u0027s ex-girlfriend. JJ helps Prentiss work through an existential hangover. When Rossi\u0027s Voit delusions reach a breaking point, Rossi confronts Voit and unpack what has been truly haunting him.",
+        "air_date": "2024-07-04",
+        "runtime": 59,
+        "still_path": "/49lPREy2PTR3Eqo4CcXNnBIuutK.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Piranha",
+        "overview": "The BAU zeroes in on a sadistic UnSub in D.C. with a twisted M.O. Prentiss and Rossi dive into the BAU\u0027s history to find connections to Gold Star. Prentiss reaches out to someone from Rossi\u0027s past. Voit utilizes his lawyer to reach out to Damien.",
+        "air_date": "2024-07-11",
+        "runtime": 56,
+        "still_path": "/iy9SEEWkalZodEfrBh9iyEue3t1.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "North Star",
+        "overview": "The BAU tries to get ahead of Jade and Damien who are on a killing spree. Rossi must confront an old flame to unpack the secrets behind the Gold Star program. Tyler and Rebecca attempt to gain leverage over Elias Voit\u0027s lawyer.",
+        "air_date": "2024-07-18",
+        "runtime": 58,
+        "still_path": "/xcBz04NKYEt1V8GCWkVArRW2OQ3.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Stars \u0026 Stripes",
+        "overview": "With Jade on the run, the BAU continues to assemble the pieces connecting Gold Star victims to Aida Limited. Jade and Dana follow Voit\u2019s breadcrumbs to the heart of the \u201Cconspiracy.\u201D A search warrant execution by the BAU has deadly consequences.",
+        "air_date": "2024-07-25",
+        "runtime": 52,
+        "still_path": "/tsi7Igvio8BcstWDsnb4RGQHuHl.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Save the Children",
+        "overview": "When the identity of the last Gold Star member is revealed, the pieces of the puzzle click together. Prentiss, now in mortal danger, must confront Jade and her accomplice to expose the truth behind the \u201Cconspiracy\u201D before time runs out for the BAU.",
+        "air_date": "2024-08-01",
+        "runtime": 55,
+        "still_path": "/eub3OIy0S03t3xrMBEAVc4GnG6a.jpg"
+      }
+    ]
+  }
+}

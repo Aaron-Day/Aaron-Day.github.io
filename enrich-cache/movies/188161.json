@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 188161,
+    "title": "A Million Ways to Die in the West",
+    "overview": "As a cowardly farmer begins to fall for the mysterious new woman in town, he must put his new-found courage to the test when her husband, a notorious gun-slinger, announces his arrival.",
+    "tagline": "Bring protection.",
+    "runtime": 116,
+    "release_date": "2014-05-22",
+    "vote_average": 6,
+    "poster_path": "/1fhAJzhzlaHYAPqiKZN5ap7d5PE.jpg",
+    "backdrop_path": "/5ZDM988DfYLFPBqy4CNvQ9AXnp4.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Seth MacFarlane",
+      "character": "Albert",
+      "profile_path": "/8oQJqM51Z0Qtdb7sE6ZfX1peNCB.jpg"
+    },
+    {
+      "name": "Charlize Theron",
+      "character": "Anna",
+      "profile_path": "/gd7ShD0yt4bsR2STeQ19KQ6hvXL.jpg"
+    },
+    {
+      "name": "Amanda Seyfried",
+      "character": "Louise",
+      "profile_path": "/gtBUIpZ3dvLpOMIVORxE6sHSyZj.jpg"
+    },
+    {
+      "name": "Liam Neeson",
+      "character": "Clinch",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    }
+  ]
+}

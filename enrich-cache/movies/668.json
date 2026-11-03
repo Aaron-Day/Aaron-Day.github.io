@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 668,
+    "title": "On Her Majesty\u0027s Secret Service",
+    "overview": "With the help of Marc-Ange Draco, head of the Unione Corse crime syndicate, and Draco\u0027s troubled daughter Tracy, James Bond tracks his archnemesis, Ernst Stravro Blofeld, to a mountaintop retreat in the Swiss Alps, where he is training an army of beautiful, lethal women.",
+    "tagline": "Far up! Far out! Far more! James Bond 007 is back!",
+    "runtime": 142,
+    "release_date": "1969-12-18",
+    "vote_average": 6.559,
+    "poster_path": "/yVzJLLhBwuWJBR9BYEMurShu2WT.jpg",
+    "backdrop_path": "/58pMrmwwcKamJIdjUlinE6QX1Fs.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "George Lazenby",
+      "character": "James Bond",
+      "profile_path": "/c2Sb2SYKhvwoq0MYrwpNTVuw6xH.jpg"
+    },
+    {
+      "name": "Diana Rigg",
+      "character": "Tracy Di Vicenzo",
+      "profile_path": "/tFZei9BMHqau7XN2PeQ0M24RT7G.jpg"
+    },
+    {
+      "name": "Telly Savalas",
+      "character": "Ernst Stavro Blofeld",
+      "profile_path": "/pdJfRVsCdKgrRFXODXkaOfJzAtH.jpg"
+    },
+    {
+      "name": "Gabriele Ferzetti",
+      "character": "Marc Ange Draco",
+      "profile_path": "/usiGcuBhMrSK8VnMHFKV6zDFrhj.jpg"
+    }
+  ]
+}

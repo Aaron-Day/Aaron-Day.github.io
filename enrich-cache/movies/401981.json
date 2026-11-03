@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 401981,
+    "title": "Red Sparrow",
+    "overview": "Prima ballerina Dominika Egorova faces a bleak and uncertain future after she suffers an injury that ends her career. She soon turns to Sparrow School, a secret intelligence service that trains exceptional young people to use their minds and bodies as weapons. Dominika emerges as the most dangerous Sparrow after completing the sadistic training process. As she comes to terms with her new abilities, she meets a CIA agent who tries to convince her that he is the only person she can trust.",
+    "tagline": "Seduce. Deceive. Repeat.",
+    "runtime": 140,
+    "release_date": "2018-02-28",
+    "vote_average": 6.531,
+    "poster_path": "/cdefNr6aS00IwVbSlxdFJnfmzKh.jpg",
+    "backdrop_path": "/sGzuQYSTwJvLBc2PnuSVLHhuFeh.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jennifer Lawrence",
+      "character": "Dominika Egorova",
+      "profile_path": "/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+    },
+    {
+      "name": "Joel Edgerton",
+      "character": "Nathaniel \u0022Natan\u0022 Nash",
+      "profile_path": "/r2TTDZ8cG5wrZqx7Drz1M95S9z3.jpg"
+    },
+    {
+      "name": "Matthias Schoenaerts",
+      "character": "Vanya Egorov",
+      "profile_path": "/9mRssCj4si6f6IF3nJ2RB5w0J7g.jpg"
+    },
+    {
+      "name": "Charlotte Rampling",
+      "character": "Matron",
+      "profile_path": "/7fhg5FCcl0VfYERP5D0unpybqgx.jpg"
+    }
+  ]
+}

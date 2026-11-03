@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12445,
+    "title": "Harry Potter and the Deathly Hallows: Part 2",
+    "overview": "Harry, Ron and Hermione continue their quest to vanquish the evil Voldemort once and for all. Just as things begin to look hopeless for the young wizards, Harry discovers a trio of magical objects that endow him with powers to rival Voldemort\u0027s formidable skills.",
+    "tagline": "It all ends.",
+    "runtime": 130,
+    "release_date": "2011-07-12",
+    "vote_average": 8.082,
+    "poster_path": "/c54HpQmuwXjHq2C9wmoACjxoom3.jpg",
+    "backdrop_path": "/eKUk4oN4ucwnLJml7wRnjuB9AQH.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1241,
+      "name": "Harry Potter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Radcliffe",
+      "character": "Harry Potter",
+      "profile_path": "/uUFfo8RANo7tuckB6AZAnESne55.jpg"
+    },
+    {
+      "name": "Emma Watson",
+      "character": "Hermione Granger",
+      "profile_path": "/mf0OANvWYSzU1d8yggrhyw8IbIz.jpg"
+    },
+    {
+      "name": "Rupert Grint",
+      "character": "Ron Weasley",
+      "profile_path": "/iFlkpTaOF6fGLqxz8b0PhI0i0zN.jpg"
+    },
+    {
+      "name": "Ralph Fiennes",
+      "character": "Lord Voldemort",
+      "profile_path": "/tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg"
+    }
+  ]
+}

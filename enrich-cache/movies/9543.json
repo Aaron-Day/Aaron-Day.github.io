@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9543,
+    "title": "Prince of Persia: The Sands of Time",
+    "overview": "A rogue prince reluctantly joins forces with a mysterious princess and together, they race against dark forces to safeguard an ancient dagger capable of releasing the Sands of Time \u2013 gift from the gods that can reverse time and allow its possessor to rule the world.",
+    "tagline": "Defy the future.",
+    "runtime": 116,
+    "release_date": "2010-05-19",
+    "vote_average": 6.314,
+    "poster_path": "/siNGMLdOUNYLEGtlsnmQcpO2XZX.jpg",
+    "backdrop_path": "/iP0capCU4w5nxCDl398CH7yR1r9.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jake Gyllenhaal",
+      "character": "Prince Dastan",
+      "profile_path": "/ct2Gh2sJSxd4yaMrSsqSt1HpIC3.jpg"
+    },
+    {
+      "name": "Gemma Arterton",
+      "character": "Tamina",
+      "profile_path": "/Alfm28oyHNiYweNCUaMmrVjVMAT.jpg"
+    },
+    {
+      "name": "Ben Kingsley",
+      "character": "Nizam",
+      "profile_path": "/k3Dmu49B2akwDvgqy52MOxznI59.jpg"
+    },
+    {
+      "name": "Alfred Molina",
+      "character": "Sheik Amar",
+      "profile_path": "/nJo91Czesn6z0d0pkfbDoVZY3sg.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 19286,
+    "title": "Leprechaun 3",
+    "overview": "It was a normal night in Las Vegas, Nevada, all the lights were flashing brightly, until a man with one hand, one eye, and one leg walks into a pawn shop with a statue of a hideous looking Leprechaun. The owner claims it\u0027s a good luck charm. The statue also wore a medallion around it\u0027s neck. The careless pawn shop owner took off the medallion setting the Leprechaun free...",
+    "tagline": "Welcome to Vegas... the odds are you won\u0027t leave alive!",
+    "runtime": 94,
+    "release_date": "1995-06-27",
+    "vote_average": 5.832,
+    "poster_path": "/z9NT2smK66pYOjBtmZuKFFTZ478.jpg",
+    "backdrop_path": "/xGGRgSD7vbkyFwrt24x6cG4ytbp.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 19285,
+      "name": "Leprechaun Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Warwick Davis",
+      "character": "Leprechaun",
+      "profile_path": "/vUwjgAYcBEcCv0OVAN00qUUXX3V.jpg"
+    },
+    {
+      "name": "John Gatins",
+      "character": "Scott",
+      "profile_path": "/pFtxpu4aGb6H2RgVKwHNrT10CPn.jpg"
+    },
+    {
+      "name": "Lee Armstrong",
+      "character": "Tammy",
+      "profile_path": "/2Is1G9aQh0mwdJeyXlnlxuU60h9.jpg"
+    },
+    {
+      "name": "John DeMita",
+      "character": "Fazio",
+      "profile_path": "/1QcOloxFO6EbzAx4LuVrN48PDeX.jpg"
+    }
+  ]
+}

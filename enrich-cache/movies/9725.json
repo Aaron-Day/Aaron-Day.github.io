@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9725,
+    "title": "Friday the 13th Part 2",
+    "overview": "Five years after the horrible bloodbath at Camp Crystal Lake, new counselors roam the area, not sensing the ominous lurking presence that proves that the grisly legend is real.",
+    "tagline": "The body count continues...",
+    "runtime": 86,
+    "release_date": "1981-05-01",
+    "vote_average": 6.209,
+    "poster_path": "/92rGctBMTv4uaSlIBVnhz01kRWL.jpg",
+    "backdrop_path": "/80emEEa0svrT0YJDZLgLUu85ttp.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9735,
+      "name": "Friday the 13th Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Amy Steel",
+      "character": "Ginny",
+      "profile_path": "/EzrRTc6vAX8Ls3kmJ1sbe1LQm.jpg"
+    },
+    {
+      "name": "John Furey",
+      "character": "Paul",
+      "profile_path": "/7JpqZPatgDgZf7EuC5eSIqA5DNJ.jpg"
+    },
+    {
+      "name": "Adrienne King",
+      "character": "Alice",
+      "profile_path": "/igRfRtDEogoLzCXkX833atJCzC2.jpg"
+    },
+    {
+      "name": "Kirsten Baker",
+      "character": "Terry",
+      "profile_path": "/bj77sofQ69Ox3DOWjrwlxfHia72.jpg"
+    }
+  ]
+}

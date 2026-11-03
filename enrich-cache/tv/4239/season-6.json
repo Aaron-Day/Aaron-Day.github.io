@@ -1,0 +1,216 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "She\u0027s Having My Baby (1)",
+        "overview": "Marcy and Peggy discover they are both pregnant, to Jefferson\u0027s joy and Al\u0027s horror.",
+        "air_date": "1991-09-08",
+        "runtime": 22,
+        "still_path": "/hDqe6AyQg5d0EFtRLI5svvt0sim.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "She\u0027s Having My Baby (2)",
+        "overview": "Al runs off to a bus station to escape Peggy\u0027s constant demands, and Jefferson does the same by running away from Marcy.",
+        "air_date": "1991-09-15",
+        "runtime": 22,
+        "still_path": "/ylovQpFhg7RTUMxcKMYe9x9Yppt.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "If Al Had a Hammer",
+        "overview": "Al builds a private room for himself, using the Bundy hammer.  Meanwhile, Bud starts going by \u0022Grandmaster B,\u0022 but nobody can remember his nickname right.",
+        "air_date": "1991-09-22",
+        "runtime": 22,
+        "still_path": "/5LpH37uPLiOgapRS4PSfDFGLuM9.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Cheese, Cues and Blood",
+        "overview": "In order to earn money for a competition, Kelly hustle men for money by playing pool.",
+        "air_date": "1991-09-29",
+        "runtime": 22,
+        "still_path": "/a9EvSCn5JqFRm0meehxdgXmBI9F.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Looking for a Desk in All the Wrong Places",
+        "overview": "Peggy and Marcy go out on a journey to buy back all of Marcy\u0027s childhood furniture, which Jefferson sold.",
+        "air_date": "1991-10-06",
+        "runtime": 22,
+        "still_path": "/yHfQpnaR8mkOfGQupFSdK85vGOK.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Buck Has a Belly Ache",
+        "overview": "Peggy gets jealous of Buck when the family pay him all the attention, and she flees home to W* County.",
+        "air_date": "1991-10-13",
+        "runtime": 22,
+        "still_path": "/wcn6Z5QLlmmdh3O3Oz2Pumpr2Y7.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "If I Could See Me Now",
+        "overview": "Bud and Kelly convince Al to get glasses after a few minor  accidents.",
+        "air_date": "1991-10-27",
+        "runtime": 22,
+        "still_path": "/zOjmsvoEvpMKx4nkn2MprPyoR2A.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "God\u0027s Shoes",
+        "overview": "After having a vision of God, Al starts building the perfect shoes.",
+        "air_date": "1991-11-06",
+        "runtime": 22,
+        "still_path": "/y3Ab876aQwXq1rPO7pM23J64kd9.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Kelly Does Hollywood (1)",
+        "overview": "Kelly gets her own talk show and the other networks become interested in it.",
+        "air_date": "1991-11-10",
+        "runtime": 22,
+        "still_path": "/dw2Ak03lXssWRf8zpHeXaJcl9H0.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Kelly Does Hollywood (2)",
+        "overview": "Kelly goes to Hollywood, but her show gets slaughtered by the censors.",
+        "air_date": "1991-11-17",
+        "runtime": 22,
+        "still_path": "/librm21hqOlU05M7LxgX1bwU5oG.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Al Bundy, Shoe Dick",
+        "overview": "Al gets a job as a private detective and is framed for murder.",
+        "air_date": "1991-11-24",
+        "runtime": 22,
+        "still_path": "/hEUpeISQf4R3TH9GMwwhpzK9CSj.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "So This Is How Sinatra Felt",
+        "overview": "Peggy thinks Al is having an affair, so she sends the kids to spy on him.",
+        "air_date": "1991-12-01",
+        "runtime": 22,
+        "still_path": "/tBcONmu3xhuaA4YN2GpT2caNmXQ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "I Who Have Nothing",
+        "overview": "Al discovers that he truly has no possessions of his own, and decides to get back one of the things that truly meant a lot to him - his championship game ball.",
+        "air_date": "1991-12-22",
+        "runtime": 22,
+        "still_path": "/dadb8K479BNPyYT1i7MQKbit1It.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Mystery of Skull Island",
+        "overview": "Bud dates an extreme sporter and the D\u0027Arcys play a relationship board game with Peggy and Al.",
+        "air_date": "1992-01-05",
+        "runtime": 22,
+        "still_path": "/iB9HgVMSEQ38wL4XNeuT5NOaoEW.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Just Shoe It",
+        "overview": "Al gets to star in an athletic shoe commericial.",
+        "air_date": "1992-01-19",
+        "runtime": 22,
+        "still_path": "/j6wlbzVXGbLzCSxnJWSZsRM5dmP.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Rites of Passage",
+        "overview": "In traditional male Bundy bonding, Al takes Bud to the nudie bar on his 18th birthday.",
+        "air_date": "1992-02-09",
+        "runtime": 22,
+        "still_path": "/4MHUj6ImBXOJQXrVJ2qCPfVjmke.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Egg and I",
+        "overview": "Steve Rhoades returns to reclaim his wife, but is shocked to find out that Marcy remarried. The Bundys argue whether friendship is more important than money when they find out that Steve is on the run from the police for stealing a rare egg from a national park.",
+        "air_date": "1992-02-16",
+        "runtime": 22,
+        "still_path": "/8y8xTrX2myV87qfuVx7Kixxm3K4.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "My Dinner With Anthrax",
+        "overview": "Bud wins a \u0022\u0022Dinner with Anthrax\u0022\u0022 contest and sends away Al and Peg on a timeshare vacation to Florida while Anthrax visit the house.",
+        "air_date": "1992-02-23",
+        "runtime": 22,
+        "still_path": "/2Vyngu3VccfQtnwAwwNvDT1mTmI.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Psychic Avengers",
+        "overview": "Jefferson lets Al in on his psychic phone scam but the Bundys soon take over the business.",
+        "air_date": "1992-03-01",
+        "runtime": 22,
+        "still_path": "/iju7XSdBc9nCZnmnOUrXiswyrz1.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Hi I.Q.",
+        "overview": "Bud is suspicious when Kelly is invited to a party for smart people.",
+        "air_date": "1992-03-22",
+        "runtime": 22,
+        "still_path": "/zUs5ndPODyB5Nn9JrAbvqEtVI3Y.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Teacher Pets",
+        "overview": "Bud juggles two women at once, one being Miss McGowen, his English teacher. Meanwhile, the family ignores Peggy when she is sick and Al gets free pizza by attending children\u0027s birthday parties at Chuck E. Cheese.",
+        "air_date": "1992-04-05",
+        "runtime": 22,
+        "still_path": "/kojzKS67CICRJVbZXbjhf21JsyD.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Goodbye Girl",
+        "overview": "Kelly gets a job at an amusement park. Meanwhile, Al takes a personal vacation - in the Bundy living room.",
+        "air_date": "1992-04-19",
+        "runtime": 22,
+        "still_path": "/cxx6eC696EbpDhI1qWrqFBmqFMT.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Gas Station Show",
+        "overview": "Al must work at a gas station after Peggy and the kids buy too much junk food, which Al cannot pay for, so he has to work off his debt.",
+        "air_date": "1992-04-26",
+        "runtime": 22,
+        "still_path": "/7D3NtrsmozgayT3EUT2V7DIfXZ7.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "England Show (1)",
+        "overview": "The Bundys win a free trip to England, but the villagers of Lower Uncton, England, want to get rid of all male Bundys in the world to break a curse cast upon their village.",
+        "air_date": "1992-05-03",
+        "runtime": 22,
+        "still_path": "/duLj6QFlIkETPlZtGZjsppWJhJs.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "England Show (2)",
+        "overview": "The Bundys spend a day shopping in England before finally going to Lower Uncton, not knowing what awaits them.",
+        "air_date": "1992-05-10",
+        "runtime": 22,
+        "still_path": "/n2YZKXLPVmiQ0sVe8KISOlI7QOh.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "England Show (3)",
+        "overview": "Al has to joust for his and his family\u0027s life in a medieval tournament in Lower Uncton.",
+        "air_date": "1992-05-17",
+        "runtime": 22,
+        "still_path": "/hrB9DHtVD0WG14WzhODywpgks4y.jpg"
+      }
+    ]
+  }
+}

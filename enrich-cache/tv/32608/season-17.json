@@ -1,0 +1,64 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 17,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Lost City of Peru",
+        "overview": "Giorgio A. Tsoukalos, David Childress and William Henry examine a recently discovered lost city in Peru that has upended the historical timeline of South America, revealing that civilization emerged thousands of years earlier than previously thought.",
+        "air_date": "2021-08-06",
+        "runtime": 40,
+        "still_path": "/8NUjLOybsjcOicAcgTg9trJyqkW.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Top Ten Mysterious Sites",
+        "overview": "Ancient Aliens is counting down the world\u0027s top ten most mysterious sites, from the towering Moai statues of Easter Island to the enormous megalithic blocks of Stonehenge to the precision cut stones of Puma Punku. Could these extraordinary places provide evidence of extraterrestrial visitation?",
+        "air_date": "2021-08-13",
+        "runtime": 40,
+        "still_path": "/jZqhfMWLkknKz9NlwmZbS6MZ4Wd.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Top Ten Alien Cover-Ups",
+        "overview": "Ancient Aliens is counting down the world\u0027s top ten alien cover-ups, from the famous Roswell Incident to a secret military base rumored to be housing ET technology to recently released UFO videos captured by cameras on Navy fighter jets. Has there been a massive cover-up regarding the truth about an extraterrestrial presence on Earth?",
+        "air_date": "2021-08-20",
+        "runtime": 40,
+        "still_path": "/2jUmwRRc4kk0RFyVYvne6wcpO5W.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Mystery of Mount Shasta",
+        "overview": "Examining the unique geology and location of Mount Shasta in northern California, to determine why it is known as a hotbed of strange events, from Bigfoot sightings to UFO encounters to hikers vanishing without a trace.",
+        "air_date": "2021-09-17",
+        "runtime": 40,
+        "still_path": "/sq1IsLqE45CurXtIzZzb0vyEj8G.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Human Experiment",
+        "overview": "Scientists now know that seven human-like species lived alongside Homo sapiens for thousands of years. But why is it that only humans survived? Is it possible that we were the product of extraterrestrial experimentation? Ancient Astronaut theorists Giorgio A. Tsoukalos. David Childress and William Henry will be joined by Rabbi Ariel bar Tzadok and filmmaker Caroline Cory to investigate the mystery of the Human genome. in an attempt to determine if human beings are the product of an extraterrestrial experiment. Might the ultimate proof we are not alone in the universe be hidden in our own genetic code?",
+        "air_date": "2021-09-24",
+        "runtime": 39,
+        "still_path": "/sJwVuMO29iV6ZINetqAkcJc8iMd.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Top Ten Alien Encounters",
+        "overview": "We\u0027re counting down the world\u0027s top ten alien encounters, from the first reported abduction event to mass UFO sightings over New York\u0027s Hudson Valley to an incident in ancient Rome that changed the course of human history. Could these incredible accounts be actual encounters with visitors from the stars?",
+        "air_date": "2021-10-01",
+        "runtime": 40,
+        "still_path": "/b6U9igLTIKomyPWLEdAGYpdxaDF.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Top Ten Alien Artifacts",
+        "overview": "An ancient figurine of a modern-day airplane. A primitive statue of a man in a spacesuit. Mysterious crystal skulls whose origins are entirely unknown. For more than a decade on Ancient Aliens, we\u0027ve traveled the globe and investigated strange objects found on every continent on Earth. We\u0027re counting down the top ten alien artifacts. Objects that could provide evidence that extraterrestrials once walked among us.",
+        "air_date": "2021-10-08",
+        "runtime": 40,
+        "still_path": "/gVtsP12avuC0qYXZkhzFizJ200G.jpg"
+      }
+    ]
+  }
+}

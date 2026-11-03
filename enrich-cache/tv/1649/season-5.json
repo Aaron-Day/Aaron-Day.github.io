@@ -1,0 +1,152 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Unstuck Man",
+        "overview": "After experiencing a rough slide, Rembrandt and Maggie see Colin is nowhere to be found. More disturbing, they meet a stranger claiming he is Quinn Mallory. Rembrandt and Maggie learn too late that this is all apart of an evil genius\u0027 desperate plan to save his life.",
+        "air_date": "1999-06-11",
+        "runtime": 43,
+        "still_path": "/8o6ztLHHlt0LjzeaWuLZeGvUY8I.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Applied Physics",
+        "overview": "Diana tries using a university lab to find a way to separate Quinn and Mallory, which leads to her first encounter with her double, a struggling single mother. Meanwhile, Mallory experiences violent flashbacks from Quinn\u0027s life.",
+        "air_date": "1999-06-18",
+        "runtime": 43,
+        "still_path": "/fD2sKG7aQLx0qELLnPA6gkQWDlD.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Strangers and Comrades",
+        "overview": "The Sliders arrive in a barren wasteland, where the timer is inoperable. Worse yet, they find themselves forced to take part in a never ending battle between Kromaggs and soldiers from Quinn\u0027s home world, who are guarding a mysterious bunker.",
+        "air_date": "1999-06-25",
+        "runtime": 43,
+        "still_path": "/x3D3GUKxkaMx7J4PtxWbj2ErEqJ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Great Work",
+        "overview": "The Sliders arrive on a small island, with a very sick Maggie in tow. While looking for help, Rembrandt, Mallory and Diana meet the monks of a secluded monastery. Reluctantly, the monks allow them to stay and give Maggie medical attention. But the Sliders soon learn the monks have a secret and won\u0027t allow them to leave.",
+        "air_date": "1999-07-09",
+        "runtime": 43,
+        "still_path": "/geUudwkmiTBFV4NJ2qdxDxUXoAl.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "New Gods for Old",
+        "overview": "Just before sliding out and escaping a small army, Mallory is shot with a laser beam and paralyzed. His only chance of walking again lies in a group of spiritual healers, but their cure could be much worse than being paralyzed.",
+        "air_date": "1999-07-16",
+        "runtime": 43,
+        "still_path": "/vMrNl74NnfdBAyoOFTc71DT6jf3.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Please Press One",
+        "overview": "After trying to buy a candy bar, Maggie is kidnapped by a corporate conglomerate that uses data codes to control commerce.",
+        "air_date": "1999-07-23",
+        "runtime": 43,
+        "still_path": "/bGrnJS0raW1asqZ5idNOcYG9sL4.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "A Current Affair",
+        "overview": "On a world where tabloid journalism is in place of real news, a photo suggests Maggie is having an affair with the President. But the President\u0027s advisers decide to exploit it in order to distract attention from a war with Switzerland.",
+        "air_date": "1999-07-30",
+        "runtime": 43,
+        "still_path": "/dcgQo1jFkxW4qONIROxVV6uY489.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Java Jive",
+        "overview": "The Sliders arrive on a world where Prohibition still exists, only it was caffeine that was outlawed. They meet a nightclub owner whose lover was murdered by a gang dealing in bootleg coffee.",
+        "air_date": "1999-08-06",
+        "runtime": 43,
+        "still_path": "/5GEfwN9jmw71sXbAg7fAV1JcLP9.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Return of Maggie Beckett",
+        "overview": "The Sliders arrive on a world where Maggie\u0027s double was a heroic astronaut and loved by the public. When she is mistaken for her double, the public gets excited. After being kidnapped by the mysterious Leader, Maggie is taken by the government where she must confront her father.",
+        "air_date": "1999-08-13",
+        "runtime": 43,
+        "still_path": "/sPLSzvepEub2zQjqBbqumVOqDkw.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Easy Slider",
+        "overview": "The Sliders arrive on a world where combustion engines were outlawed by the government due to pollution. But a biker gang is fighting to keep their engines and Mallory falls for the gang\u0027s sexy leader.",
+        "air_date": "1999-08-20",
+        "runtime": 43,
+        "still_path": "/KjWk6sUSN15Kmar30C2IyWXXKZ.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Requiem",
+        "overview": "Rembrandt experiences a strange dream in which Wade is trying to contact him and bring him to her. The others have their doubts until a spatial fold opens before them. On the other side, they find Wade is somehow being used in a plan to attack Kromagg Prime.",
+        "air_date": "1999-09-10",
+        "runtime": 43,
+        "still_path": "/9xMVOljgdkX3A5Umus6sYA4J4Jm.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Map of the Mind",
+        "overview": "The Sliders arrive at a mental institution in the middle of an unusual riot. Rembrandt and Maggie escape capture, but Diana and Mallory get left behind. While Mallory has managed to pose as a doctor, Diana is mistaken for a patient and undergoes the process of her brain being remapped.",
+        "air_date": "1999-09-17",
+        "runtime": 43,
+        "still_path": "/slLpU0o46AfrT3DiAjWonLbwW48.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "A Thousand Deaths",
+        "overview": "The Sliders arrive on a world where millions play in highly realistic arcade simulations. Rembrandt and Mallory take part in separate simulations, until they discover Maggie and Diana have been forced to play characters in these simulations, where each \u0022death\u0022 experienced is real.",
+        "air_date": "1999-09-24",
+        "runtime": 43,
+        "still_path": "/edS2LO0jvX7wkaqTd2cM50eGjJw.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Heavy Metal",
+        "overview": "A malfunctioning timer deposits the Sliders underwater in the Pacific Ocean. A merchant ship picks them up, but is taking them out of their sliding radius and decreasing the likelihood of a safe slide. Their only chance is to join up with a pirate crew to get back to California.",
+        "air_date": "1999-10-01",
+        "runtime": 43,
+        "still_path": "/cMDNAhVURSmeEmQmzyXADca2nOa.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "To Catch a Slider",
+        "overview": "The timer continues to malfunction, giving the Sliders rougher slides than usual. To fix it, the Sliders need to get ahold of a gem, even if it means stealing.",
+        "air_date": "2000-01-14",
+        "runtime": 43,
+        "still_path": "/ux5h0zN6SrLEvUb5kVEGGRxUTcv.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Dust",
+        "overview": "The Sliders are lost in the desert, but happen upon an archaeological dig. They soon find, however, that the dig is unearthing a buried Los Angeles and that the locals consider Rembrandt a deity.",
+        "air_date": "2000-01-21",
+        "runtime": 43,
+        "still_path": "/bAeRwHA8jBiqwvnGWQhmXWYITMD.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Eye of the Storm",
+        "overview": "The Sliders confront Dr. Geiger again, in a collapsing dimension full of innocent victims.",
+        "air_date": "2000-01-28",
+        "runtime": 43,
+        "still_path": "/biX3a3pCCfabMDFM9yWcfDQzYPx.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Seer",
+        "overview": "The Sliders arrive in the middle of a rally, surprisingly being held in their honor. They learn they are the subjects of a religion called Slidology, founded by a man with psychic abilities. He has been following their adventures and warns that on their next slide, they will all die.",
+        "air_date": "2000-02-04",
+        "runtime": 43,
+        "still_path": "/yCYnLR41T57FBLABUQ1SL9xA5or.jpg"
+      }
+    ]
+  }
+}

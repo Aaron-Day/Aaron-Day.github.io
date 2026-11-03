@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18011,
+    "title": "Leprechaun in the Hood",
+    "overview": "When Butch, Postmaster P, and Stray Bullet loot the local hip-hop mogul\u0027s studio to fund their demo album, the threesome unwittingly ends up with the secret of Mack Daddy\u0027s success: a magical flute. Their gigs instantly turn golden but a blood-thristy Leprechaun and an angry Mack Daddy are hot on their trail, leaving a wake of destruction tainted by politically incorrect limericks.",
+    "tagline": "Evil\u0027s in the house.",
+    "runtime": 90,
+    "release_date": "2000-03-28",
+    "vote_average": 4.838,
+    "poster_path": "/lCRwtuxnJWkZ04gwtfYF9h1GUkl.jpg",
+    "backdrop_path": "/sChPC8EozCIqmduXgZEV6ie8swD.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 19285,
+      "name": "Leprechaun Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Warwick Davis",
+      "character": "Leprechaun",
+      "profile_path": "/vUwjgAYcBEcCv0OVAN00qUUXX3V.jpg"
+    },
+    {
+      "name": "Ice-T",
+      "character": "Mack Daddy",
+      "profile_path": "/96TdPckI16ggfHcPrSFf6bHYLLe.jpg"
+    },
+    {
+      "name": "Anthony Montgomery",
+      "character": "Postmaster P",
+      "profile_path": "/56nYKjXlm8lii2HvS3x5xePye8o.jpg"
+    },
+    {
+      "name": "Rashaan Nall",
+      "character": "Stray Bullet",
+      "profile_path": "/dVvoIXRCZ4omSpfm2vhsgB6gHrJ.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 122,
+    "title": "The Lord of the Rings: The Return of the King",
+    "overview": "As armies mass for a final battle that will decide the fate of the world--and powerful, ancient forces of Light and Dark compete to determine the outcome--one member of the Fellowship of the Ring is revealed as the noble heir to the throne of the Kings of Men. Yet, the sole hope for triumph over evil lies with a brave hobbit, Frodo, who, accompanied by his loyal friend Sam and the hideous, wretched Gollum, ventures deep into the very dark heart of Mordor on his seemingly impossible quest to destroy the Ring of Power.\u200B",
+    "tagline": "The journey ends.",
+    "runtime": 201,
+    "release_date": "2003-12-17",
+    "vote_average": 8.506,
+    "poster_path": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+    "backdrop_path": "/ctiw6FZK4N36LmkjSklWEbuvlq9.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 119,
+      "name": "The Lord of the Rings Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Elijah Wood",
+      "character": "Frodo",
+      "profile_path": "/7UKRbJBNG7mxBl2QQc5XsAh6F8B.jpg"
+    },
+    {
+      "name": "Ian McKellen",
+      "character": "Gandalf",
+      "profile_path": "/5cnnnpnJG6TiYUSS7qgJheUZgnv.jpg"
+    },
+    {
+      "name": "Viggo Mortensen",
+      "character": "Aragorn",
+      "profile_path": "/vH5gVSpHAMhDaFWfh0Q7BG61O1y.jpg"
+    },
+    {
+      "name": "Sean Astin",
+      "character": "Sam",
+      "profile_path": "/As3ctGUtBYmG4zj4Ifyrcqd71HP.jpg"
+    }
+  ]
+}

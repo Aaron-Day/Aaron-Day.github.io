@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 328111,
+    "title": "The Secret Life of Pets",
+    "overview": "The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.",
+    "tagline": "Ever wonder what your pets do when you\u0027re not home?",
+    "runtime": 86,
+    "release_date": "2016-06-18",
+    "vote_average": 6.328,
+    "poster_path": "/g3Hms6AE174doeGR1gz5zX5sVsv.jpg",
+    "backdrop_path": "/c1Ywtvlqls6tPBZ3BqbPtBwHyng.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 427084,
+      "name": "The Secret Life of Pets Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Louis C.K.",
+      "character": "Max (voice)",
+      "profile_path": "/1ii770zdeX62UFGawTmNr2vddYb.jpg"
+    },
+    {
+      "name": "Eric Stonestreet",
+      "character": "Duke (voice)",
+      "profile_path": "/lz0m88IjLZ8OcEHU2jhPvubcr7k.jpg"
+    },
+    {
+      "name": "Kevin Hart",
+      "character": "Snowball (voice)",
+      "profile_path": "/byiNydUlM6oP8diA7WMvYbNM7a1.jpg"
+    },
+    {
+      "name": "Jenny Slate",
+      "character": "Gidget (voice)",
+      "profile_path": "/mMxsNO6r966ut0sordYzj2iDOb6.jpg"
+    }
+  ]
+}

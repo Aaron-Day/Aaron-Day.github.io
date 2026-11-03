@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 392044,
+    "title": "Murder on the Orient Express",
+    "overview": "Genius Belgian detective Hercule Poirot investigates the murder of an American tycoon aboard the Orient Express train.",
+    "tagline": "Everyone is a suspect.",
+    "runtime": 114,
+    "release_date": "2017-11-03",
+    "vote_average": 6.706,
+    "poster_path": "/7GtdJU6iAg6fjQu3E3zta3bIAQh.jpg",
+    "backdrop_path": "/IQyEvPTYvrzsa7qstRj6VLQupr.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 735384,
+      "name": "Hercule Poirot (Kenneth Branagh) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kenneth Branagh",
+      "character": "Hercule Poirot",
+      "profile_path": "/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
+    },
+    {
+      "name": "Tom Bateman",
+      "character": "Bouc",
+      "profile_path": "/6elQzmY4EJHlLvHsaeoeo2dXOQ1.jpg"
+    },
+    {
+      "name": "Michelle Pfeiffer",
+      "character": "Caroline Hubbard",
+      "profile_path": "/8qwNMFzmM3BxGKIj1iIqiHHBpx3.jpg"
+    },
+    {
+      "name": "Johnny Depp",
+      "character": "Edward Ratchett",
+      "profile_path": "/k2xt6EUxQDwYRKIyI4IBdZxfs8n.jpg"
+    }
+  ]
+}

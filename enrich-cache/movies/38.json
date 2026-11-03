@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 38,
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "overview": "Joel Barish, heartbroken that his girlfriend underwent a procedure to erase him from her memory, decides to do the same. However, as he watches his memories of her fade away, he realises that he still loves her, and may be too late to correct his mistake.",
+    "tagline": "You can erase someone from your mind. Getting them out of your heart is another story.",
+    "runtime": 108,
+    "release_date": "2004-03-19",
+    "vote_average": 8.09,
+    "poster_path": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg",
+    "backdrop_path": "/95qi5TJMIBI5VzWHia88Pbrye7Z.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jim Carrey",
+      "character": "Joel Barish",
+      "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+    },
+    {
+      "name": "Kate Winslet",
+      "character": "Clementine Kruczynski",
+      "profile_path": "/6qNnMsKtKz9si5rabpUEG85UfHp.jpg"
+    },
+    {
+      "name": "Kirsten Dunst",
+      "character": "Mary",
+      "profile_path": "/yhLKGjuiMMdbGnFrR8AREkCZcVF.jpg"
+    },
+    {
+      "name": "Mark Ruffalo",
+      "character": "Stan",
+      "profile_path": "/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg"
+    }
+  ]
+}

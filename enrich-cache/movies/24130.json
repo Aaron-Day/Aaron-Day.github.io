@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 24130,
+    "title": "In Like Flint",
+    "overview": "Flint is again called out of retirement when his old boss finds that he seems to have missed 3 Minutes while golfing with the President. Flint finds that the President has been replaced by an actor and that a group of women have banded together to take over the world through subliminal brainwashing in beauty salons they own.",
+    "tagline": "FLINT\u0027S BACK In Action... In Danger... In the Virgin Islands... Where the Bad Guys... Are Girls!",
+    "runtime": 114,
+    "release_date": "1967-03-15",
+    "vote_average": 6.2,
+    "poster_path": "/fnZyHB7SdfZSlQJmw6PVhzsebIr.jpg",
+    "backdrop_path": "/nimONgj9GMnBOuRzXVpi9ALouyn.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 167456,
+      "name": "Our Man Flint Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "James Coburn",
+      "character": "Derek Flint",
+      "profile_path": "/9GApjInyrVvjnTAr652C1aViPqZ.jpg"
+    },
+    {
+      "name": "Lee J. Cobb",
+      "character": "Lloyd C. Cramden",
+      "profile_path": "/yxMxBvM0PZwu7YXQamG0kFwt9DZ.jpg"
+    },
+    {
+      "name": "Jean Hale",
+      "character": "Lisa",
+      "profile_path": "/aoser0k9goo5h0rMxRBwPX8b6BJ.jpg"
+    },
+    {
+      "name": "Andrew Duggan",
+      "character": "U.S. President Trent",
+      "profile_path": "/gtgK1glZ1XJB6xwXUB8XUNqnd84.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13448,
+    "title": "Angels \u0026 Demons",
+    "overview": "Harvard symbologist Robert Langdon is recruited by the Vatican to investigate the apparent return of the Illuminati \u2013 a secret, underground organization \u2013 after four cardinals are kidnapped on the night of the papal conclave.",
+    "tagline": "The holiest event of our time. Perfect for their return.",
+    "runtime": 139,
+    "release_date": "2009-04-20",
+    "vote_average": 6.731,
+    "poster_path": "/tFZQAuulEOtFTp0gHbVdEXwGrYe.jpg",
+    "backdrop_path": "/olz8Xw3yOLpBAHKgPoSRwmomdM.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 115776,
+      "name": "Robert Langdon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Robert Langdon",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Ewan McGregor",
+      "character": "Camerlengo Patrick McKenna",
+      "profile_path": "/q2UDxfwWnmXTB7khOUF3J9puBVP.jpg"
+    },
+    {
+      "name": "Ayelet Zurer",
+      "character": "Vittoria Vetra",
+      "profile_path": "/wSDtipN1Ew19x7duWaNEP8kPMCx.jpg"
+    },
+    {
+      "name": "Stellan Skarsg\u00E5rd",
+      "character": "Commander Richter",
+      "profile_path": "/mW7xmtGV4y79kQGn0zkKVGDMAmw.jpg"
+    }
+  ]
+}

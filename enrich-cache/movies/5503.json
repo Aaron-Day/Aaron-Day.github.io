@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 5503,
+    "title": "The Fugitive",
+    "overview": "Wrongfully convicted of murdering his wife and sentenced to death, Richard Kimble escapes from the law in an attempt to find the real killer and clear his name.",
+    "tagline": "A murdered wife. A one-armed man. An obsessed detective. The chase begins.",
+    "runtime": 131,
+    "release_date": "1993-08-06",
+    "vote_average": 7.495,
+    "poster_path": "/b3rEtLKyOnF89mcK75GXDXdmOEf.jpg",
+    "backdrop_path": "/tN7ZVNWLgh57iZzMyvuhunIuUVd.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 721111,
+      "name": "Marshal Samuel Gerard Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "Richard Kimble",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Tommy Lee Jones",
+      "character": "Samuel Gerard",
+      "profile_path": "/mCiZNRAzbnPojJEZwVZWLw9kzxR.jpg"
+    },
+    {
+      "name": "Joe Pantoliano",
+      "character": "Cosmo Renfro",
+      "profile_path": "/3OHUI3nX4SYGGItDk3xqeIvWtIf.jpg"
+    },
+    {
+      "name": "Jeroen Krabb\u00E9",
+      "character": "Charles Nichols",
+      "profile_path": "/r26lZKUeLIaUt8DMotm4mdc4EaY.jpg"
+    }
+  ]
+}

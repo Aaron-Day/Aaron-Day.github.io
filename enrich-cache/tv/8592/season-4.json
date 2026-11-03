@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "I\u0027m Leslie Knope",
+        "overview": "Leslie is torn between Ben and her dreams of running for public office, while Ron braces himself for the arrival of his first wife, the original Tammy.",
+        "air_date": "2011-09-22",
+        "runtime": 22,
+        "still_path": "/eCGwh8gtCaUCs9wzyk5r3vi2wzw.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Ron and Tammys",
+        "overview": "Ron\u0027s first ex-wife, Tammy One, reenters his life and tries to control his every move. Meanwhile, Ben helps Tom balance the books at his new company, and Ann makes a PSA, with help from Chris.",
+        "air_date": "2011-09-29",
+        "runtime": 22,
+        "still_path": "/bzB2hm4mCzOt6YyQVskmk1w1MsC.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Born and Raised",
+        "overview": "Leslie\u0027s book about Pawnee comes out just in time for her campaign. Ann tries to bond with Ron and April.",
+        "air_date": "2011-10-06",
+        "runtime": 22,
+        "still_path": "/ludRZYnv5LA9YzyDZbpJubiVDqo.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Pawnee Rangers",
+        "overview": "Ron takes his boys-only troop of Pawnee Rangers into the wild. Not wanting the girls to feel left out, Leslie also takes her troop of Pawnee Goddesses on an adventure weekend. Meanwhile, a reluctant Ben joins Tom and Donna for a day of relaxation, and Chris spends some time with Jerry.",
+        "air_date": "2011-10-13",
+        "runtime": 22,
+        "still_path": "/sZpmkTYLPVwDnQ961EadP4LEPi3.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Meet \u0027n\u0027 Greet",
+        "overview": "Andy and April host a Halloween bash at their house. Tom emcees an event for Leslie\u0027s campaign. Andy and April receive an unusual wedding present from Ron and Ann.",
+        "air_date": "2011-10-27",
+        "runtime": 22,
+        "still_path": "/nLPVhU7wNtoZNgYd3U9DXIWkvzn.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "End of the World",
+        "overview": "A local Pawnee group predicts the end of days, causing chaos in the Parks department.",
+        "air_date": "2011-11-03",
+        "runtime": 22,
+        "still_path": "/7qFj3IZeeS4xKOQmC9fNjtfki0w.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Treaty",
+        "overview": "Leslie enlists the help of Ben, Andy and April to host a Model U.N. for Pawnee Central High School. Chris asks Ann for her advice on love when a date cancels on him. Meanwhile, Ron struggles to find a replacement for Tom.",
+        "air_date": "2011-11-10",
+        "runtime": 22,
+        "still_path": "/A8zX0aQfxXcZyhOuVisbykFH1lM.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Smallest Park",
+        "overview": "Leslie uses her new tourist attraction as a way to spend more time with Ben. Meanwhile, Ron and April encourage Andy to go to college, and Chris tasks Tom and Jerry with revamping the Parks and Rec logo.",
+        "air_date": "2011-11-17",
+        "runtime": 22,
+        "still_path": "/tE5HR6Ezpry7Qqi8tJawA95iHVU.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Trial of Leslie Knope",
+        "overview": "Leslie has to face an ethics committee about her secret relationship with Ben after they come clean to Chris.",
+        "air_date": "2011-12-01",
+        "runtime": 22,
+        "still_path": "/fPv5g4yxaoAI85OKbM5xIjoEzWY.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Citizen Knope",
+        "overview": "Unable to get work done from inside the Parks Department, Leslie forms a citizen action group and fights from the outside. Meanwhile, everyone in the office brainstorms ideas for what to get Leslie for Christmas.",
+        "air_date": "2011-12-08",
+        "runtime": 22,
+        "still_path": "/91Zh7tINRjfew6p4dB61QHw1pNt.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Comeback Kid",
+        "overview": "Leslie enlists everyone\u0027s help in staging an attention-getting event. Ben takes up a new hobby, while April and Andy adopt a pet.",
+        "air_date": "2012-01-12",
+        "runtime": 22,
+        "still_path": "/xhfHQZWfUD55gBctlntaXMHYGy.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Campaign Ad",
+        "overview": "Faced with a tough new opponent, Leslie and Ben disagree on the content of her first campaign ad. Ron is very uncomfortable when Chris tries to befriend him, while Andy and April make a trip to the doctor.",
+        "air_date": "2012-01-19",
+        "runtime": 22,
+        "still_path": "/fx9XCP8DcHfQHH4AYt76sgT9lGq.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Bowling for Votes",
+        "overview": "Leslie and Ben host a bowling night after receiving feedback about Leslie\u0027s campaign. April, Chris, and Jerry hold a competition to see who can raise the most funds.",
+        "air_date": "2012-01-26",
+        "runtime": 22,
+        "still_path": "/zwVveBPQ5hyesVgvNQj62ja61mR.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Operation Ann",
+        "overview": "Leslie works to find Ann a Valentine\u0027s date. Ron helps Ben with a scavenger hunt, and Chris becomes depressed over his love life.",
+        "air_date": "2012-02-02",
+        "runtime": 22,
+        "still_path": "/6YoPbEcQXp7hpmW7FVBxxHk14Eh.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Dave Returns",
+        "overview": "While trying to get an endorsement from the Chief of Police, Leslie and Ben awkwardly run into Leslie\u0027s old flame, Dave. Meanwhile, Andy and the rest of the office work on a theme song for Leslie\u0027s campaign.",
+        "air_date": "2012-02-16",
+        "runtime": 22,
+        "still_path": "/kg4OxNksELcI6N7LC6ulfGFw8s6.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Sweet Sixteen",
+        "overview": "Leslie realizes that the department has forgotten Jerry\u0027s birthday and decides to throw a party for him at a special location. Meanwhile, Tom is flabbergasted when he finds out Ann doesn\u0027t share his taste in music.",
+        "air_date": "2012-02-23",
+        "runtime": 22,
+        "still_path": "/xjY2aDQKEqGNNUEALditgo6EPnE.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Campaign Shake-Up",
+        "overview": "Leslie and Ben are caught off guard when her opponent Bobby Newport hires a powerful campaign manager from Washington. Chris forces Ron to start interviewing replacements for Leslie when work starts falling through the cracks, and an unlikely officemate solves a challenging problem.",
+        "air_date": "2012-03-01",
+        "runtime": 22,
+        "still_path": "/yKlvhNc7urdD9EnhCwEbkzR1OiY.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Lucky",
+        "overview": "Leslie and Ben are thrilled when Buddy Wood wants to interview Leslie for his Indianapolis talkshow. April and Ron prep Andy for his final exam in his Women\u0027s Studies course.",
+        "air_date": "2012-03-08",
+        "runtime": 22,
+        "still_path": "/mKI8znK474tqlQ9pUlK7zCZgo0O.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Live Ammo",
+        "overview": "Leslie discovers that the Parks Department budget is about to be cut, and she later meets the City Council member she is running to replace. Chris and Ron visit a meditation center.",
+        "air_date": "2012-04-19",
+        "runtime": 22,
+        "still_path": "/sEg51Fqi5Z6SH9fOEUM1ZcoWS8P.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Debate",
+        "overview": "Leslie goes toe-to-toe with Bobby Newport in a debate. Ann, Tom, and Chris work in the media spin room, while Ron goes the extra mile to save a party for Leslie\u0027s donors.",
+        "air_date": "2012-04-26",
+        "runtime": 26,
+        "still_path": "/ogqB655EhFLX2fbf1VYbsJZPzad.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Bus Tour",
+        "overview": "An important person in Pawnee dies while Leslie is on a bus tour for the final day of her campaign. Meanwhile Andy investigates a security threat, and Chris finds a cure for his depression.",
+        "air_date": "2012-05-03",
+        "runtime": 25,
+        "still_path": "/spIRC4TbXZKIuzUDp1vHHrB6PIW.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Win, Lose, or Draw",
+        "overview": "It\u0027s election day in Pawnee, and Leslie and Bobby Newport are separated by a razor-thin margin. While everyone waits with Leslie for the race to be called, they ponder their futures, and their new opportunities.",
+        "air_date": "2012-05-10",
+        "runtime": 27,
+        "still_path": "/i6wOfRi5L6JKQV5ONoxCOLUsAUF.jpg"
+      }
+    ]
+  }
+}

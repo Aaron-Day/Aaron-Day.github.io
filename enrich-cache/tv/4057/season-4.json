@@ -1,0 +1,216 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Mayhem",
+        "overview": "When an SUV carrying members of the team explodes, the rest of the team fights to save them and catch the terrorists responsible for the bombing.",
+        "air_date": "2008-09-24",
+        "runtime": 40,
+        "still_path": "/zb8Zl86UQaOQMlj7l9Hipmxh8Qt.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Angel Maker",
+        "overview": "A series of murders is linked to a serial killer executed a year earlier, and the BAU team must find the link between the dead killer and the new spate of crimes.",
+        "air_date": "2008-10-01",
+        "runtime": 41,
+        "still_path": "/nrbaZghvQG21bWA9II4hG9bbfYk.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Minimal Loss",
+        "overview": "Reid and Prentiss are taken hostage when they go under cover to investigate possible child abuse at an underground cult.",
+        "air_date": "2008-10-08",
+        "runtime": 42,
+        "still_path": "/6xfdh7wBnK4KrETcC0bKb23hJO8.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Paradise",
+        "overview": "The BAU joins the manhunt to catch a serial killer who conceals the manner of his crimes by staging car accidents.",
+        "air_date": "2008-10-22",
+        "runtime": 40,
+        "still_path": "/mXOaehXKgQiBS6s24ZFVcwFHsJt.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Catching Out",
+        "overview": "The BAU investigates a series of murders that appear to be connected to a killer who jumps trains and chooses his victims based on their proximity to the railway.",
+        "air_date": "2008-10-29",
+        "runtime": 40,
+        "still_path": "/uBGJChna8pYsLtcqDUnOIbvCRZi.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Instincts",
+        "overview": "While investigating the abduction of a young boy in Las Vegas, Dr. Reid starts to have dreams that might help reveal buried memories from his childhood.",
+        "air_date": "2008-11-05",
+        "runtime": 42,
+        "still_path": "/3adeR1htobOjHe149v7Z4k8NM5j.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Memoriam",
+        "overview": "As Reid\u0027s investigation of a young boy\u0027s murder in Las Vegas continues, he discovers possible connections to his own past.",
+        "air_date": "2008-11-12",
+        "runtime": 40,
+        "still_path": "/bB2ehThNc95bc9r17ycuRh3tJl6.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Masterpiece",
+        "overview": "When a narcissistic psychopath confesses he has killed seven people and more will die, the team must locate his latest victims before it is too late.",
+        "air_date": "2008-11-19",
+        "runtime": 39,
+        "still_path": "/w6Q6XHccVNcsunmm51RaxfmrpwF.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "52 Pickup",
+        "overview": "Agents Prentiss and Todd go undercover to profile a serial killer who uses skills of persuasion to lure women into danger.",
+        "air_date": "2008-11-26",
+        "runtime": 41,
+        "still_path": "/tgpHVSokiQu420foQE4pVLivvm9.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Brothers in Arms",
+        "overview": "The BAU team hunts for a serial killer who targets members of the police department in Phoenix, Ariz., a case that hits close to home for Morgan, a former cop.",
+        "air_date": "2008-12-10",
+        "runtime": 39,
+        "still_path": "/eoz47HN8ECEdOf9JWbHEdImCEBf.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Normal",
+        "overview": "The team investigates a serial killer who shoots luxury car owners on Southern California\u0027s freeways.",
+        "air_date": "2008-12-17",
+        "runtime": 40,
+        "still_path": "/ism7tmOsDepjAeSMMCWe2ge15fj.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Soul Mates",
+        "overview": "The BAU team suspects a member of an affluent community in Atlanta is responsible for the disappearance of a local young woman and that the suspect may have worked with an accomplice",
+        "air_date": "2009-01-14",
+        "runtime": 41,
+        "still_path": "/fKCEagHSRWnctveEJgCqak66dT7.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Bloodline",
+        "overview": "The BAU team becomes involved in the case of a family working together to abduct young girls.",
+        "air_date": "2009-01-21",
+        "runtime": 42,
+        "still_path": "/uCzsEJOt9vM8IeY8zTWRgQjGpAr.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Cold Comfort",
+        "overview": "The mother of an abducted child works with the BAU to apprehend a serial killer who kidnaps, murders, and embalms his victims.",
+        "air_date": "2009-02-11",
+        "runtime": 42,
+        "still_path": "/aYdnaGek8QD6KBiWvqnZKDHaLwT.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Zoe\u0027s Reprise",
+        "overview": "The team pursues a copycat serial killer who is recreating the techniques used by past famous murderers.",
+        "air_date": "2009-02-18",
+        "runtime": 42,
+        "still_path": "/98l4XHOPOqkZSH6JTD9f1Vxt1fQ.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Pleasure Is My Business",
+        "overview": "The team searches for a female suspect who uses her professional skills as a high class call girl to lure and kill high-powered executives.",
+        "air_date": "2009-02-25",
+        "runtime": 41,
+        "still_path": "/5DPrwP33ce8EXWK6MkQbEknj4Dl.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Demonology",
+        "overview": "Agent Prentiss has a personal connection to one of the victims in a series of deaths with religious overtones.",
+        "air_date": "2009-03-11",
+        "runtime": 42,
+        "still_path": "/lymXWr8AktWfwSFiQHmBxQCdxIu.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Omnivore",
+        "overview": "Agent Hotchner revisits the first case he worked at the BAU when details come forth that one of the deadliest serial killers in New England\u0027s history has struck again after a 10-year hiatus.",
+        "air_date": "2009-03-18",
+        "runtime": 42,
+        "still_path": "/tLWRsojjumUWHzXthJRI7sDBhlr.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "House on Fire",
+        "overview": "The BAU team must track down a serial arsonist who instills fear in a small town by setting fire to community meeting places and killing several residents in the process.",
+        "air_date": "2009-03-25",
+        "runtime": 39,
+        "still_path": "/6sbL4i20a4uJjD1vsqjobMYdLgT.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Conflicted",
+        "overview": "The team travels to Fort Lauderdale during spring break to find a serial killer who is targeting co-eds on vacation.",
+        "air_date": "2009-04-08",
+        "runtime": 41,
+        "still_path": "/26pT3Nz9DOtoekyoX28YlqfTImM.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "A Shade of Gray",
+        "overview": "When profiling a series of child abductions and murders, the team discovers that one of the cases may not be the handiwork of the serial killer they apprehended.",
+        "air_date": "2009-04-22",
+        "runtime": 41,
+        "still_path": "/nDlAKO0gcJT8KaPfJNISCYKfOks.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Big Wheel",
+        "overview": "When the team is sent a videotape from a serial killer detailing one of his crimes, they discover a hidden message asking them to help him stop his murderous ways.",
+        "air_date": "2009-04-29",
+        "runtime": 42,
+        "still_path": "/h5ACn7WioIE7t1XACJVvq4oyig0.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Roadkill",
+        "overview": "An unsub who kills with his car is the subject of a BAU investigation.",
+        "air_date": "2009-05-06",
+        "runtime": 41,
+        "still_path": "/zBI46i4T6SdnNIQb33svmh4MyWN.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Amplification",
+        "overview": "When a new type of chemical warfare is released into the open air, the BAU must act quickly to find the source before any more innocent people are exposed.",
+        "air_date": "2009-05-13",
+        "runtime": 41,
+        "still_path": "/wFlm8zdHWisY1gUll54nePWdZLo.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "To Hell... (1)",
+        "overview": "The BAU tracks a serial killer who chooses junkies, prostitutes and the homeless off the streets of Detroit as his victims and takes them across the border into Canada, and an agent\u0027s life is in peril.",
+        "air_date": "2009-05-20",
+        "runtime": 41,
+        "still_path": "/glVQ0nzZQpctGUYbEohHFxC4eCv.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "...And Back (2)",
+        "overview": "The BAU tracks a serial killer who chooses junkies, prostitutes and the homeless off the streets of Detroit as his victims and takes them across the border into Canada, and an agent\u0027s life is in peril.",
+        "air_date": "2009-05-20",
+        "runtime": 42,
+        "still_path": "/gNIE5NZVkRlQtMgJoc1wFr9jrWq.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7518,
+    "title": "Over the Hedge",
+    "overview": "A scheming raccoon fools a mismatched family of forest creatures into helping him repay a debt of food, by invading the new suburban sprawl that popped up while they were hibernating \u2013 and learns a lesson about family himself.",
+    "tagline": "Get over it.",
+    "runtime": 83,
+    "release_date": "2006-05-17",
+    "vote_average": 6.614,
+    "poster_path": "/jtZnymorbnHY7mOiBXR14ZDJseM.jpg",
+    "backdrop_path": "/4BmZXt8Yty7F2He4KE05jqGidEz.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Bruce Willis",
+      "character": "RJ (voice)",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Garry Shandling",
+      "character": "Verne (voice)",
+      "profile_path": "/zGjPMqSqtZtP3npd5fhm7MYqxIU.jpg"
+    },
+    {
+      "name": "Steve Carell",
+      "character": "Hammy (voice)",
+      "profile_path": "/sSxw69G0znJuettMYGDCAXfSwSY.jpg"
+    },
+    {
+      "name": "Wanda Sykes",
+      "character": "Stella (voice)",
+      "profile_path": "/toPTeiRGN1Ha0DaXl8587i9aHUi.jpg"
+    }
+  ]
+}

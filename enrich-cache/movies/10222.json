@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10222,
+    "title": "Kickboxer",
+    "overview": "If your enemy refuses to be humbled... Destroy him. Accompanied by his brother Kurt, American kickboxing champion Eric Sloane, arrives in Thailand to defeat the Eastern warriors at their own sport. His opponent: ruthless fighter and Thai champion, Tong Po. Tong not only defeats Eric, he paralyzes him for life. Crazed with anger, Kurt vows revenge.",
+    "tagline": "An ancient sport becomes a deadly game.",
+    "runtime": 98,
+    "release_date": "1989-04-20",
+    "vote_average": 6.846,
+    "poster_path": "/tXSD8U5aVdGscQNcyY6C2ANVEuh.jpg",
+    "backdrop_path": "/sl7hpSJR11FlfcewMJ6ihsbbAuJ.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 105322,
+      "name": "Kickboxer Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jean-Claude Van Damme",
+      "character": "Kurt Sloane",
+      "profile_path": "/7DP3bm3MS0qa0L8tBLHGebbCu6H.jpg"
+    },
+    {
+      "name": "Dennis Alexio",
+      "character": "Eric Sloane",
+      "profile_path": null
+    },
+    {
+      "name": "Dennis Chan Kwok-San",
+      "character": "Xian",
+      "profile_path": "/wW90J7wyACpndFPgwq5TFtyKHaO.jpg"
+    },
+    {
+      "name": "Haskell V. Anderson III",
+      "character": "Winston Taylor",
+      "profile_path": "/eHMkXS54U17AtKmZyth8g6DP2M2.jpg"
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 10,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Lionheart",
+        "overview": "A young man raised in the jungle travels to the city of Turtle Cove and discovers an island - home to legendary beasts from an ancient civilization - floating in the sky above the city.",
+        "air_date": "2002-02-09",
+        "runtime": 22,
+        "still_path": "/c7qcoNjIYllJjKC1UoI8JaNZuST.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Darkness Awakening",
+        "overview": "Cole seeks to reason with the Orgs while Jindrax and Toxica discover that after 3000 years the Master Org has returned to Earth again.",
+        "air_date": "2002-02-09",
+        "runtime": 22,
+        "still_path": "/1pDgGu4nTErzqs69lOpPNkx0U7A.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Click, Click, Zoom",
+        "overview": "Cole learns about the secret history of the Animarium while Taylor struggles to accept his leadership.",
+        "air_date": "2002-02-16",
+        "runtime": 22,
+        "still_path": "/yGnPAvTqYtQrekGl3wrivYp1ObR.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Never Give Up",
+        "overview": "Danny and Max\u0027s close friendship is strained by the return of Danny\u0027s old crush.",
+        "air_date": "2002-02-23",
+        "runtime": 22,
+        "still_path": "/dJsW1SgzIUhTeGZtSDzIwtTStRR.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Ancient Awakening",
+        "overview": "On a university field trip to some local caves, Alyssa discovers an ancient relic from the Kingdom of Animaria.",
+        "air_date": "2002-03-02",
+        "runtime": 22,
+        "still_path": "/ifxIIM7hhfehHXwcmGMIFY18yVF.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Wishes on the Water",
+        "overview": "Max writes a wish on a note inside a bottle and throws it into Turtle Lake but when the Ship Org appears with the bottle stuck to his body, Max worries others will discover what he wished for.",
+        "air_date": "2002-03-09",
+        "runtime": 22,
+        "still_path": "/tdSyNNKz6LLWa77joU45OwsSwD0.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Bear Necessities",
+        "overview": "Taylor helps out two mysterious twin boys while reflecting on how she became the first Wild Force Ranger.",
+        "air_date": "2002-03-16",
+        "runtime": 22,
+        "still_path": "/7vjwVbVyRmrEZJZDidQjd37NvsF.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Soul Searching",
+        "overview": "Cole searches for the Soul Bird to heal the injured Red Lion Zord and comes face to face with Master Org, a man he does not remember but has met before.",
+        "air_date": "2002-03-23",
+        "runtime": 22,
+        "still_path": "/zie4DAHPMquMZErHmBxWGmWGdsx.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Soul Bird Salvation",
+        "overview": "Master Org\u0027s old bodyguard Retinax fights the Power Rangers to restore his lost honor.",
+        "air_date": "2002-03-30",
+        "runtime": 22,
+        "still_path": "/gL69nrvCtC54um7fraQCasHMkBD.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Curse of the Wolf",
+        "overview": "The General Org Nayzor unseals an ancient tomb, freeing a cursed warrior with the face of a wolf.",
+        "air_date": "2002-04-06",
+        "runtime": 22,
+        "still_path": "/pJysyDpA7Tcc0QE5uYNSSFbKBJF.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Battle of the Zords",
+        "overview": "Zen-Aku battles the Rangers with his own evil Wild Zords.",
+        "air_date": "2002-04-13",
+        "runtime": 22,
+        "still_path": "/kgW8hc9q5tb7dnTqPrq9RoScozg.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Predazord, Awaken",
+        "overview": "Jindrax and Toxica hijack a bus full of innocents to coerce Max into giving up his Animal Crystal.",
+        "air_date": "2002-04-20",
+        "runtime": 22,
+        "still_path": "/pZUHOqYIqeuC8xOSkRX9disWicX.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Revenge of Zen-Aku",
+        "overview": "Taylor and the Rangers rally to rescue Princess Shayla from Zen-Aku.",
+        "air_date": "2002-04-27",
+        "runtime": 22,
+        "still_path": "/zNWIyMusTc7lCxAqVEfbYh8Mhsj.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Identity Crisis",
+        "overview": "Worried that Zen-Aku\u0027s memory is returning to him, Nayzor coerces him into attacking the Power Rangers with their own Zords.",
+        "air_date": "2002-05-04",
+        "runtime": 22,
+        "still_path": "/wNp0kEwTJDoEVJm2ogysxFx6ftc.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Ancient Warrior",
+        "overview": "The Rangers learn Zen-Aku\u0027s true identity and how he became an evil warrior for the Orgs.",
+        "air_date": "2002-05-11",
+        "runtime": 22,
+        "still_path": "/krPPQJl6RUU1Nt1hREyql3JLXGd.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Lone Wolf",
+        "overview": "The ancient Animarian warrior Merrick fights to atone for his past misdeeds.",
+        "air_date": "2002-05-18",
+        "runtime": 22,
+        "still_path": "/dHUTHRkQFXtzmlHXQ2Y2B8Kvfhr.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Power Play",
+        "overview": "The mysterious new Org General Necronomica fights the Rangers while Merrick finds a new home.",
+        "air_date": "2002-06-01",
+        "runtime": 22,
+        "still_path": "/zrATpbu8acGmDC3dPxhFGThptyc.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Secrets and Lies",
+        "overview": "Alyssa helps Cole search for information on his long-lost parents while Master Org tries to hide his past from Jindrax and Toxica.",
+        "air_date": "2002-06-08",
+        "runtime": 22,
+        "still_path": "/c1z3N3g2LyqmF9WaI5UGUNuXVvL.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Tornado Spin",
+        "overview": "Max tries to regain the respect of his former bowling mentor in order to help him defeat a peculiar new Org.",
+        "air_date": "2002-06-15",
+        "runtime": 22,
+        "still_path": "/4k8mmlcnMDjWUvOYFauT0OJ2JZc.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Three\u0027s a Crowd",
+        "overview": "Danny competes with a wealthy rival for Kendall while preventing the Wedding Dress Org from capturing Turtle Cove\u0027s brides to be.",
+        "air_date": "2002-06-29",
+        "runtime": 22,
+        "still_path": "/9BzuDiFMxTonh7YGunxe59Yxpu0.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "A Father\u0027s Footsteps",
+        "overview": "Alyssa must rely on her martial arts heritage when the Rangers come up against Samurai Org.",
+        "air_date": "2002-07-06",
+        "runtime": 22,
+        "still_path": "/deYQ1pMWMB24AaGwgcZqHreEiOY.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Sing Song",
+        "overview": "The especially powerful Tombstone Org tries to send the Rangers six feet under while Merrick and the Princess try to appease the only Zord capable of saving them.",
+        "air_date": "2002-07-13",
+        "runtime": 22,
+        "still_path": "/oxvBKPoNhaxUkiDEIKiIVTiFpgy.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Wings of Animaria",
+        "overview": "Nayzor returns more powerful than ever requiring the Rangers to quest across time and space to find a new Zord\u0027s help.",
+        "air_date": "2002-07-20",
+        "runtime": 22,
+        "still_path": "/vi4NI4QAg87RbESpDABYygowQH1.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Reinforcements from the Future (1)",
+        "overview": "The Wild Force Rangers join forces with the Silver Guardians to stop three time-traveling monsters from the year 3001.",
+        "air_date": "2002-07-27",
+        "runtime": 22,
+        "still_path": "/chcu19t337mIpE66HmS1DppVikW.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Reinforcements from the Future (2)",
+        "overview": "The Power Ranges Time Force travel back in time to help the Power Rangers Wild Force prevent the three Mut-Orgs from joining forces with Master Org.",
+        "air_date": "2002-08-03",
+        "runtime": 22,
+        "still_path": "/chcu19t337mIpE66HmS1DppVikW.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "The Master\u0027s Last Stand",
+        "overview": "Cole learns the truth about his parents when Master Org reveals his sinister origin to the Wild Force Rangers.",
+        "air_date": "2002-08-10",
+        "runtime": 22,
+        "still_path": "/9WeV129IiE4rYh2fhIQ7NWoB284.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Unfinished Business",
+        "overview": "Merrick must confront a demon from his past when Zen-Aku returns to claim his soul.",
+        "air_date": "2002-09-14",
+        "runtime": 22,
+        "still_path": "/VBgpXrsJBYFn6574APPf1p0NnR.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Homecoming",
+        "overview": "Cole must protect Kite, a young boy alone in the city, as Mandilok, the new Org General, discovers a taste for new buildings.",
+        "air_date": "2002-09-14",
+        "runtime": 22,
+        "still_path": "/x2wnQiTIorRAtq8WAONEMfN6QUh.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "The Flute",
+        "overview": "Princess Shayla and Merrick argue as the Flute Org\u0027s music ruins their song, causing the Rangers to dance uncontrollably.",
+        "air_date": "2002-09-21",
+        "runtime": 22,
+        "still_path": "/8An6COKmiQSu5Hg1dWabOsU8sku.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Team Carnival",
+        "overview": "While Max and Taylor help Kite look for his home, they are attacked by Jindrax and his brother Juggelo at an amusement park.",
+        "air_date": "2002-09-21",
+        "runtime": 22,
+        "still_path": "/4gq6CaiBcah6SXrYU0WrajKPRst.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Taming of the Zords",
+        "overview": "The Lion Tamer Org takes control of the Wild Zords and turns them against the Rangers.",
+        "air_date": "2002-09-28",
+        "runtime": 22,
+        "still_path": "/jg3HjX6lDLuu2RjjCOwLoEyYp9s.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Monitoring Earth",
+        "overview": "Kite finally remembers his past as he grows dissatisfied with mankind\u0027s disregard for nature.",
+        "air_date": "2002-09-28",
+        "runtime": 22,
+        "still_path": "/51I7z57Q8kEtjQTCUeCdbJzqJJE.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "The Soul of Humanity",
+        "overview": "Without Princess Shayla or the Wild Zords, the Rangers still refuse to give up in their fight to save the world.",
+        "air_date": "2002-10-05",
+        "runtime": 22,
+        "still_path": "/5haM1WZypYh1HFXmS1HxSonxYEZ.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Forever Red",
+        "overview": "Ten Red Rangers from ten different teams unite to stop the Machine Empire from using Serpenterra to destroy Earth.",
+        "air_date": "2002-10-05",
+        "runtime": 22,
+        "still_path": "/fDAuhvMxCeLHWOqmWcjucGOWj5l.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "The Master\u0027s Herald (1)",
+        "overview": "The Duke Org Onikage arrives in the Nexus with a plan to infiltrate the Rangers\u0027 Animarium and capture Princess Shayla.",
+        "air_date": "2002-10-19",
+        "runtime": 22,
+        "still_path": "/5UxH7eh9lKbDu5OxKB80dQMMNc5.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "The Master\u0027s Herald (2)",
+        "overview": "The Power Rangers fight across dimensions to try and rescue Princess Shayla from the returning Master Org.",
+        "air_date": "2002-10-19",
+        "runtime": 22,
+        "still_path": "/sH7WyltoLtq5BJ3lTTiXRmrRTET.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "Fishing for a Friend",
+        "overview": "The Rangers receive help from an unlikely source in their battle against the powerful Locomotive Org, as Jindrax plots to bring back his friend.",
+        "air_date": "2002-11-02",
+        "runtime": 22,
+        "still_path": "/9crBDDnYaUcmNav6M5uo68Ojkpp.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "Sealing the Nexus",
+        "overview": "Jindrax and Toxica team up with the Rangers in order to rescue the Princess and destroy the Nexus once and for all.",
+        "air_date": "2002-11-02",
+        "runtime": 22,
+        "still_path": "/nx6yYUnvJXvoMdBLvW6gqcIyYAT.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "The End of the Power Rangers (1)",
+        "overview": "With no more villains to fight, the Rangers realize that their time as super heroes is finally at an end. Meanwhile, in the remains of the Nexus, a new threat emerges to threaten the Earth and the Animarium.",
+        "air_date": "2002-11-16",
+        "runtime": 22,
+        "still_path": "/1PSQ1mbOhcX1XvXRCJYZdNI015N.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "The End of the Power Rangers (2)",
+        "overview": "Master Org\u0027s destruction of nature continues unchecked while the Power Rangers fight a last desperate battle for the Earth. Good and evil collide in a final battle between the forces of Animaria and the Orgs.",
+        "air_date": "2002-11-16",
+        "runtime": 22,
+        "still_path": "/uAhyhPTINc8ffz78USKR5cN5zom.jpg"
+      }
+    ]
+  }
+}

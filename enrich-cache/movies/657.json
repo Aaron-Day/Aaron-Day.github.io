@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 657,
+    "title": "From Russia with Love",
+    "overview": "Agent 007 is back in the second installment of the James Bond series, this time battling a secret crime organization known as SPECTRE. Russians Rosa Klebb and Kronsteen are out to snatch a decoding device known as the Lektor, using the ravishing Tatiana to lure Bond into helping them. Bond willingly travels to meet Tatiana in Istanbul, where he must rely on his wits to escape with his life in a series of deadly encounters with the enemy.",
+    "tagline": "The world\u0027s masters of murder pull out all the stops to destroy Agent 007!",
+    "runtime": 115,
+    "release_date": "1963-10-10",
+    "vote_average": 7.058,
+    "poster_path": "/zx4V17FP8oclNvOpTgs2iCCtiYk.jpg",
+    "backdrop_path": "/8JMiQa0OqsCYvbNUrQIrMzwV7g2.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sean Connery",
+      "character": "James Bond",
+      "profile_path": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+      "name": "Daniela Bianchi",
+      "character": "Tatiana \u0027Tanja\u0027 Romanova",
+      "profile_path": "/6pdO17mFaxwWEvarNhmHEuL1HZs.jpg"
+    },
+    {
+      "name": "Pedro Armend\u00E1riz",
+      "character": "Ali Kerim Bey",
+      "profile_path": "/rcjOD4kAs7Rfx8fJfp5oVPaFfQz.jpg"
+    },
+    {
+      "name": "Robert Shaw",
+      "character": "Donald \u0027Red\u0027 Grant",
+      "profile_path": "/c8SIbGEmGIfhD9bObSf4FELUEns.jpg"
+    }
+  ]
+}

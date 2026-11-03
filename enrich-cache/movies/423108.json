@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 423108,
+    "title": "The Conjuring: The Devil Made Me Do It",
+    "overview": "Paranormal investigators Ed and Lorraine Warren encounter what would become one of the most sensational cases from their files. The fight for the soul of a young boy takes them beyond anything they\u0027d ever seen before, to mark the first time in U.S. history that a murder suspect would claim demonic possession as a defense.",
+    "tagline": "The demonic case that shocked America.",
+    "runtime": 111,
+    "release_date": "2021-05-25",
+    "vote_average": 7.325,
+    "poster_path": "/xbSuFiJbbBWCkyCCKIMfuDCA4yV.jpg",
+    "backdrop_path": "/p26c040MErns7DJYhisa1CpVB5i.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 313086,
+      "name": "The Conjuring Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vera Farmiga",
+      "character": "Lorraine Warren",
+      "profile_path": "/5Vs7huBmTKftwlsc2BPAntyaQYj.jpg"
+    },
+    {
+      "name": "Patrick Wilson",
+      "character": "Ed Warren",
+      "profile_path": "/oym6H2QD9esk4yABjCHaUoNAOa8.jpg"
+    },
+    {
+      "name": "Sterling Jerins",
+      "character": "Judy Warren",
+      "profile_path": "/rVqbOn2xRwn12MisEXUnaRZiP8L.jpg"
+    },
+    {
+      "name": "Sarah Catherine Hook",
+      "character": "Debbie Glatzel",
+      "profile_path": "/37fcP1czSI7LYuF4OgMdYz8SEHf.jpg"
+    }
+  ]
+}

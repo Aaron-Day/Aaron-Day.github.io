@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1083862,
+    "title": "Resident Evil: Death Island",
+    "overview": "In San Francisco, Jill Valentine is dealing with a zombie outbreak and a new T-Virus, Leon Kennedy is on the trail of a kidnapped DARPA scientist, and Claire Redfield is investigating a monstrous fish that is killing whales in the bay. Joined by Chris Redfield and Rebecca Chambers, they discover the trail of clues from their separate cases all converge on the same location, Alcatraz Island, where a new evil has taken residence and awaits their arrival.",
+    "tagline": "Destinies intertwined. A world gone mad.",
+    "runtime": 91,
+    "release_date": "2023-06-22",
+    "vote_average": 7.261,
+    "poster_path": "/qayga07ICNDswm0cMJ8P3VwklFZ.jpg",
+    "backdrop_path": "/7drO1kYgQ0PnnU87sAnBEphYrSM.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 133352,
+      "name": "Resident Evil (Animated) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Matthew Mercer",
+      "character": "Leon Scott  Kennedy (voice)",
+      "profile_path": "/fe1S317253vfMuNuIDjhp9vtNSs.jpg"
+    },
+    {
+      "name": "Nicole Tompkins",
+      "character": "Jill Valentine (voice)",
+      "profile_path": "/rD3uXD6PHHLyXoTk2sSITKsJmSF.jpg"
+    },
+    {
+      "name": "Kevin Dorman",
+      "character": "Chris Redfield (voice)",
+      "profile_path": "/jByqQyo6VsnbtXwKGidaadSBOPb.jpg"
+    },
+    {
+      "name": "Stephanie Panisello",
+      "character": "Claire Redfield (voice)",
+      "profile_path": "/tmiQx5yU14ulJ7vzZZHwEngsGhp.jpg"
+    }
+  ]
+}

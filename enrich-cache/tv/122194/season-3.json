@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Reaper",
+        "overview": "With their respected colleague Josh Folsom under arrest for the death of Kahn Schefter \u2013 the man responsible for killing Folsom\u2019s mother \u2013 the CSI team combs through every crumb of forensic evidence to determine his innocence or guilt.",
+        "air_date": "2024-02-18",
+        "runtime": 43,
+        "still_path": "/prsmeerhXk7lWxml8Gtw0ymK6xu.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Scar Tissue",
+        "overview": "With a new piece of evidence at play, Catherine Willows reopens an investigation from her past that never got solved after a violent attack left her hospitalized. Internal affairs begins questioning Folsom.",
+        "air_date": "2024-02-25",
+        "runtime": 43,
+        "still_path": "/1XUoN5QaV34wmDwYuJ41g7q4aL6.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Rat Packed",
+        "overview": "The CSI team is called to investigate when the bodies of Frank Sinatra and Joey Bishop impersonators are discovered behind the drywall of a home construction project. Also, Folsom must face the review board about the future of his career.",
+        "air_date": "2024-03-03",
+        "runtime": 43,
+        "still_path": "/jNYpZ9bkjGtAkV2IPUB3NNQdD5J.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Health and Wellness",
+        "overview": "As the CSI team investigates the death of a man visiting Las Vegas for a health and wellness convention, a fiery explosion traps Allie Rajan in the basement of an abandoned hospital.",
+        "air_date": "2024-03-17",
+        "runtime": 43,
+        "still_path": "/n1v3RIfk5yadfC3qNI3SHDKR8A2.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "It Was Automation",
+        "overview": "When a mechanic is found murdered in a dark factory, the CSI team investigates whether the perpetrator was human or a humanoid robot with an AI operating system.",
+        "air_date": "2024-03-24",
+        "runtime": 43,
+        "still_path": "/kjnf6TbgCxMMY08XVjVQTauHyc9.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Atomic City",
+        "overview": "The CSI team investigates a radioactive crime scene that left a father and son dead.",
+        "air_date": "2024-04-21",
+        "runtime": 42,
+        "still_path": "/deRpmqltUaLKo1crVENw0ILAy8X.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Coinkydink",
+        "overview": "When a fitness guru is found dead in a gym sauna and his soon to be son-in-law is found dead from an apparent hunting accident, the CSI team investigates to see if these deaths are unrelated tragic accidents or if they\u0027re connected.",
+        "air_date": "2024-04-28",
+        "runtime": 43,
+        "still_path": "/dNs2RBR6QPMZdobsKxTgQDuDm8f.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Artist Is Present",
+        "overview": "The CSI team investigates when a plastinated nervous system is found hanging above a local car dealership. Also, Chavez and Max search for a missing source in their ongoing investigation of the robotics factory.",
+        "air_date": "2024-05-05",
+        "runtime": 43,
+        "still_path": "/wH984DfX7OquULmzcLYUm2xMVAT.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Heavy Metal",
+        "overview": "The CSI team investigates the death of a local antique shop owner who died from an apparent gunshot wound that is missing one important clue - the bullet. Also, Max makes an important breakthrough in the ongoing case with Ocho from the robotics factory.",
+        "air_date": "2024-05-12",
+        "runtime": 43,
+        "still_path": "/wK4iOf2rSaiRA4aLhUUSWtVaqld.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Tunnel Vision",
+        "overview": "After an explosion in a bio lab, the CSI team races to determine which nerve agent left one of their own unconscious, while the others explore a dangerous underground tunnel to find another CSI who got kidnapped during the blast.",
+        "air_date": "2024-05-19",
+        "runtime": 43,
+        "still_path": "/qb6FoCzWH1wRcJWVtl7fmtvFnqW.jpg"
+      }
+    ]
+  }
+}

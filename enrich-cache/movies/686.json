@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 686,
+    "title": "Contact",
+    "overview": "A radio astronomer receives the first extraterrestrial radio signal ever picked up on Earth. As the world powers scramble to decipher the message and decide upon a course of action, she must make some difficult decisions between her beliefs, the truth, and reality.",
+    "tagline": "Take a journey to the heart of the universe.",
+    "runtime": 150,
+    "release_date": "1997-07-11",
+    "vote_average": 7.451,
+    "poster_path": "/bCpMIywuNZeWt3i5UMLEIc0VSwM.jpg",
+    "backdrop_path": "/yFkUPqBuUnbhYbQL8VFpTrAT9za.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jodie Foster",
+      "character": "Ellie Arroway",
+      "profile_path": "/5emVgsLFlU6SmeBIFsF2Y7aqwtG.jpg"
+    },
+    {
+      "name": "Matthew McConaughey",
+      "character": "Palmer Joss",
+      "profile_path": "/lCySuYjhXix3FzQdS4oceDDrXKI.jpg"
+    },
+    {
+      "name": "James Woods",
+      "character": "Michael Kitz",
+      "profile_path": "/tLH7mpH4KqkWL5VgjueTbewGsfK.jpg"
+    },
+    {
+      "name": "John Hurt",
+      "character": "S. R. Hadden",
+      "profile_path": "/bjNSzt1d7uK3q5PbtFXUJrRt4qg.jpg"
+    }
+  ]
+}

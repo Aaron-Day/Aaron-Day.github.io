@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8277,
+    "title": "American Pie Presents: Beta House",
+    "overview": "Erik, Ryan, and Cooze start college and pledge the Beta House fraternity, presided over by none other than legendary Dwight Stifler. But chaos ensues when a fraternity of geeks threatens to stop the debauchery and the Betas have to make a stand for their right to party.",
+    "tagline": "The most outrageous slice of pie!",
+    "runtime": 89,
+    "release_date": "2007-12-06",
+    "vote_average": 5.6,
+    "poster_path": "/j7eGbwVb9hTaRFWMlSa7C1OYp3T.jpg",
+    "backdrop_path": "/qSx994cBgJ2jgc5Gx4hc3QjtJP0.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 298820,
+      "name": "American Pie (Spin-off) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "John White",
+      "character": "Erik Stifler",
+      "profile_path": "/3iaiCj09Kl8JnMNVEzQUCB6n0eM.jpg"
+    },
+    {
+      "name": "Jake Siegel",
+      "character": "Mike \u0027Cooze\u0027 Coozeman",
+      "profile_path": "/37em14zMY3aDrZnzRrDZFA6S31J.jpg"
+    },
+    {
+      "name": "Steve Talley",
+      "character": "Dwight Stifler",
+      "profile_path": "/bY9OTcMxmJokUNmMLCUAFlppWb1.jpg"
+    },
+    {
+      "name": "Christopher McDonald",
+      "character": "Mr. Stifler",
+      "profile_path": "/gK1XhbfD9Xd8s3VXRPpgDCluyZp.jpg"
+    }
+  ]
+}

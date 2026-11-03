@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9737,
+    "title": "Bad Boys",
+    "overview": "Marcus Burnett is a henpecked family man. Mike Lowrey is a footloose and fancy free ladies\u0027 man. Both Miami policemen, they have 72 hours to reclaim a consignment of drugs stolen from under their station\u0027s nose. To complicate matters, in order to get the assistance of the sole witness to a murder, they have to pretend to be each other.",
+    "tagline": "Whatcha gonna do?",
+    "runtime": 119,
+    "release_date": "1995-04-07",
+    "vote_average": 6.83,
+    "poster_path": "/x1ygBecKHfXX4M2kRhmFKWfWbJc.jpg",
+    "backdrop_path": "/wOLTJxfv98miIQcn0oNXq9fIgXM.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 14890,
+      "name": "Bad Boys Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Mike Lowrey",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Martin Lawrence",
+      "character": "Marcus Burnett",
+      "profile_path": "/y3SQzIPUPJpdueb1DkbTYph68nk.jpg"
+    },
+    {
+      "name": "T\u00E9a Leoni",
+      "character": "Julie Mott",
+      "profile_path": "/vWijsKTlNs9bgKdUVgsr2w4msGo.jpg"
+    },
+    {
+      "name": "Tch\u00E9ky Karyo",
+      "character": "Fouchet",
+      "profile_path": "/EcpFzLMmfz6fm4FrpamfFQ51pz.jpg"
+    }
+  ]
+}

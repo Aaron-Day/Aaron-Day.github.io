@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 205584,
+    "title": "Gods of Egypt",
+    "overview": "A common thief joins a mythical god on a quest through Egypt.",
+    "tagline": "The battle for eternity begins",
+    "runtime": 127,
+    "release_date": "2016-02-25",
+    "vote_average": 5.69,
+    "poster_path": "/hzH7fwaTyQNITLo40Hu3R7cVMqv.jpg",
+    "backdrop_path": "/pl2zr5efo9Dz1fi2gpsslGwEQm.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Nikolaj Coster-Waldau",
+      "character": "Horus",
+      "profile_path": "/rpFOERbHkj7GWxkinUNiQ76sSGk.jpg"
+    },
+    {
+      "name": "Brenton Thwaites",
+      "character": "Bek",
+      "profile_path": "/4jrtVjdIGJpmgevEPRuIIU9HWcO.jpg"
+    },
+    {
+      "name": "Gerard Butler",
+      "character": "Set",
+      "profile_path": "/i54XoxYieuff2w6MwyfwVUBvmR0.jpg"
+    },
+    {
+      "name": "Chadwick Boseman",
+      "character": "Thoth",
+      "profile_path": "/nL16SKfyP1b7Hk6LsuWiqMfbdb8.jpg"
+    }
+  ]
+}

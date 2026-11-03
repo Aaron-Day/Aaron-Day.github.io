@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 480042,
+    "title": "Escape Plan: The Extractors",
+    "overview": "After security expert Ray Breslin is hired to rescue the kidnapped daughter of a Hong Kong tech mogul from a formidable Latvian prison, Breslin\u0027s girlfriend is also captured. Now he and his team must pull off a deadly rescue mission to confront their sadistic foe and save the hostages before time runs out.",
+    "tagline": "This time it\u2019s personal.",
+    "runtime": 97,
+    "release_date": "2019-06-20",
+    "vote_average": 5.44,
+    "poster_path": "/r15SUgzjL8bablcdEkHk9T7TSRl.jpg",
+    "backdrop_path": "/yxmfjj4YiFcJipn9nYVBRxeCvo9.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 525891,
+      "name": "Escape Plan Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Ray Breslin",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Dave Bautista",
+      "character": "Trent DeRosa",
+      "profile_path": "/snk6JiXOOoRjPtHU5VMoy6qbd32.jpg"
+    },
+    {
+      "name": "50 Cent",
+      "character": "Hush",
+      "profile_path": "/7VfwFIwBxy7qBUErosWRDQOovl9.jpg"
+    },
+    {
+      "name": "Max Zhang",
+      "character": "Shen Lo",
+      "profile_path": "/vGJ0Jox8VCKpX4e6COT6KPYYeHJ.jpg"
+    }
+  ]
+}

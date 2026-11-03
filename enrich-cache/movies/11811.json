@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11811,
+    "title": "Leprechaun",
+    "overview": "A demonic leprechaun terrorizes a group of young people whom he believes stole his gold.",
+    "tagline": "Your luck just ran out.",
+    "runtime": 93,
+    "release_date": "1993-01-08",
+    "vote_average": 5.571,
+    "poster_path": "/8SZgqIjiCSaRq03SxW1Z6yLfBHf.jpg",
+    "backdrop_path": "/odBmsTbv5bZPe0tBL4UTzQVn0RG.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 19285,
+      "name": "Leprechaun Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Warwick Davis",
+      "character": "Leprechaun",
+      "profile_path": "/vUwjgAYcBEcCv0OVAN00qUUXX3V.jpg"
+    },
+    {
+      "name": "Jennifer Aniston",
+      "character": "Tory",
+      "profile_path": "/PBSCmHDFdCMBhjx0EbXpTw4Z94.jpg"
+    },
+    {
+      "name": "Ken Olandt",
+      "character": "Nathan",
+      "profile_path": "/tnoElWWF9Oi39LYYEkvD2bk8qNm.jpg"
+    },
+    {
+      "name": "Mark Holton",
+      "character": "Ozzie",
+      "profile_path": "/2NleIh4ohQcw9M5i8mNYzq5qqwE.jpg"
+    }
+  ]
+}

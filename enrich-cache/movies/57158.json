@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 57158,
+    "title": "The Hobbit: The Desolation of Smaug",
+    "overview": "The Dwarves, Bilbo and Gandalf have successfully escaped the Misty Mountains, and Bilbo has gained the One Ring. They all continue their journey to get their gold back from the Dragon, Smaug.",
+    "tagline": "Beyond darkness... beyond desolation... lies the greatest danger of all.",
+    "runtime": 161,
+    "release_date": "2013-12-11",
+    "vote_average": 7.579,
+    "poster_path": "/xQYiXsheRCDBA39DOrmaw1aSpbk.jpg",
+    "backdrop_path": "/5ZYxL6k4ZHrEmrFvmY4HZVzerxG.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 121938,
+      "name": "The Hobbit Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ian McKellen",
+      "character": "Gandalf the Grey",
+      "profile_path": "/5cnnnpnJG6TiYUSS7qgJheUZgnv.jpg"
+    },
+    {
+      "name": "Martin Freeman",
+      "character": "Bilbo Baggins",
+      "profile_path": "/nrO54AzrxiNgCjBUOSz6ebyxDZY.jpg"
+    },
+    {
+      "name": "Richard Armitage",
+      "character": "Thorin Oakenshield",
+      "profile_path": "/oNoKjTOUNUiJ01UNQSCQDkt5EHi.jpg"
+    },
+    {
+      "name": "Benedict Cumberbatch",
+      "character": "Smaug / Sauron",
+      "profile_path": "/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg"
+    }
+  ]
+}

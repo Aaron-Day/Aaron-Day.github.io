@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10281,
+    "title": "Friday the 13th Part VII - The New Blood",
+    "overview": "Tina Shepard, a telekinetic teenage girl, accidentally unchains Jason from his watery grave, allowing him to go on another killing spree in the area.",
+    "tagline": "On Friday the 13th, Jason is back. But this time someone\u0027s waiting.",
+    "runtime": 88,
+    "release_date": "1988-05-13",
+    "vote_average": 5.508,
+    "poster_path": "/rUzk9Qnyz2FZGxHMBrq6DYIQZkO.jpg",
+    "backdrop_path": "/roHX6N0VkySKBlramHUw1zdMQHB.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9735,
+      "name": "Friday the 13th Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Lar Park Lincoln",
+      "character": "Tina",
+      "profile_path": "/qgzZKuL57xGcWs08FeNxORSgbXg.jpg"
+    },
+    {
+      "name": "Kevin Spirtas",
+      "character": "Nick",
+      "profile_path": "/pjt3LJIii2wfv0hxvH9VYQFbujc.jpg"
+    },
+    {
+      "name": "Susan Blu",
+      "character": "Mrs. Shepard",
+      "profile_path": "/xDtrH8YqqVc11kAUThxG80AaaHP.jpg"
+    },
+    {
+      "name": "Terry Kiser",
+      "character": "Dr. Crews",
+      "profile_path": "/2d4ZN6NuQvv7j11Ouf0xcvRamGu.jpg"
+    }
+  ]
+}

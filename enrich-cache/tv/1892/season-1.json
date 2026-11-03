@@ -1,0 +1,208 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Fresh Prince Project",
+        "overview": "Aunt Vivian tries to mediate between her husband Philip and the newly arrived Will.",
+        "air_date": "1990-09-10",
+        "runtime": 23,
+        "still_path": "/5lCamIuABgSnlOzm6i1s2FIORxT.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Bang the Drum, Ashley",
+        "overview": "Will persuades Ashley to pawn her violin for a drum set.",
+        "air_date": "1990-09-17",
+        "runtime": 24,
+        "still_path": "/x6HCdjM5wMU4N1e72oq7cQRVUjh.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Clubba Hubba",
+        "overview": "Will wants to go out with a beautiful girl he meets at the country club, but first he must figure out how to impress her extremely snobbish and very protective father so he seeks tips from cousin Carlton on becoming preppie.",
+        "air_date": "1990-09-24",
+        "runtime": 22,
+        "still_path": "/bM81YQfLo3XV4tUiAjNHWmKyanq.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Not with My Pig, You Don\u0027t",
+        "overview": "Will tries to smooth things between Philip and his very rural parents when they visit to see him receive an award.",
+        "air_date": "1990-10-01",
+        "runtime": 24,
+        "still_path": "/f9xcqTuSwx71glpUAb51JCjdEA8.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Homeboy, Sweet Homeboy",
+        "overview": "Will gets a visit from an old pal named Ice Tray, who, to Vivian and Philip\u0027s dismay, warms up to Hilary.",
+        "air_date": "1990-10-08",
+        "runtime": 24,
+        "still_path": "/6i7MlV5hmQcsDaow4sxuqxeeFRP.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Mistaken Identity",
+        "overview": "Jailed, Will and Carlton stage a media stunt.",
+        "air_date": "1990-10-15",
+        "runtime": 24,
+        "still_path": "/gk9AkieYW7EpJitfN9hnsJkPm8T.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Def Poet\u0027s Society",
+        "overview": "Will joins his prep school\u0027s poetry club.",
+        "air_date": "1990-10-22",
+        "runtime": 24,
+        "still_path": "/qb7IqGqBtEED7Uowmau0Xvjk5zl.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Someday Your Prince Will Be in Effect (1)",
+        "overview": "Carlton and Will, babe magnets. Who will be first to get a date for Hilary\u0027s Halloween party?",
+        "air_date": "1990-10-29",
+        "runtime": 24,
+        "still_path": "/wgBXcnt8hCtDTYETda64eGKhPxn.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Someday Your Prince Will Be in Effect (2)",
+        "overview": "Carlton and Will, babe magnets. Who will be first to get a date for Hilary\u0027s Halloween party?",
+        "air_date": "1990-10-29",
+        "runtime": 25,
+        "still_path": "/aHL7AS1SFDkKFRMCWEc1XraBxeO.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Kiss My Butler",
+        "overview": "Happy birthday Geoffrey! For a gift, Will tries matchmaking, then falls for Geoffrey\u0027s date himself.",
+        "air_date": "1990-11-05",
+        "runtime": 24,
+        "still_path": "/a41BCHSYHCUPNv1o4bE5MyWPD7b.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Courting Disaster",
+        "overview": "Carlton feels overshadowed by Will, who\u0027s become a basketball star at school.",
+        "air_date": "1990-11-12",
+        "runtime": 24,
+        "still_path": "/bdqVeAw8RcMRL0kVUqJ6geiysQS.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Talking Turkey",
+        "overview": "A holiday visit from Will\u0027s taskmaster mother puts the kibosh on conspicuous consumption and puts the kids to work preparing Thanksgiving dinner.",
+        "air_date": "1990-11-19",
+        "runtime": 24,
+        "still_path": "/ycmK2bMfNBZQzU38TNRIrJCxbq2.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Knowledge is Power",
+        "overview": "Hilary becomes Will\u0027s personal maid when he threatens to disclose she\u0027s dropped out of UCLA.",
+        "air_date": "1990-11-26",
+        "runtime": 24,
+        "still_path": "/ycmK2bMfNBZQzU38TNRIrJCxbq2.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Day Damn One",
+        "overview": "Will tells Ashley\u0027s slumber party guests a scary tale about his first day at Bel-Air Academy.",
+        "air_date": "1990-12-03",
+        "runtime": 24,
+        "still_path": "/7GjTBjUAJpawPsh1fyx7Asz9bHl.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Deck the Halls",
+        "overview": "Will inimitably dresses the mansion for the holidays, to the dismay of the neighbors, including heavyweight boxing champion Evander Holyfield.",
+        "air_date": "1990-12-10",
+        "runtime": 24,
+        "still_path": "/7pVmDdsF8wS8q8yidmSyRnL9Ufr.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Lucky Charm",
+        "overview": "Philip may lose a superstitious client whom he advises not to make decisions based on Will\u0027s spontaneous remarks.",
+        "air_date": "1991-01-07",
+        "runtime": 24,
+        "still_path": "/t16Ko9t6doUMcNW5N2QKlr7P5OC.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Ethnic Tip",
+        "overview": "Will proposes a black history class be instituted at Bel-Air Academy, and gets a surprise when Aunt Viv arrives to teach it.",
+        "air_date": "1991-01-14",
+        "runtime": 24,
+        "still_path": "/kWk0DFqYKdG2oGWz0dfmxZ7zG0P.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Young and the Restless",
+        "overview": "Will sneaks Philip\u0027s elderly mother out of the house for a night on the town.",
+        "air_date": "1991-01-21",
+        "runtime": 24,
+        "still_path": "/q3WGl5guZyeUq4RjodepmuJ8Ruo.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "It Had to Be You",
+        "overview": "Will has girl problems after a date with Jazz\u0027s domineering sister, who\u0027s ready to pick out a china pattern before the night is over.",
+        "air_date": "1991-02-04",
+        "runtime": 24,
+        "still_path": "/iYZegQOtj6e2RKvl80xM9urGDr1.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Nice Lady",
+        "overview": "Fresh Prince Will is on his best behavior for visiting royalty - the seemingly demure Lady Penelope, who Will hopes to persuade to let herself have a good time at a party.",
+        "air_date": "1991-02-11",
+        "runtime": 24,
+        "still_path": "/6qLv2xauoYf1FwxGUziBM5K3yXB.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Love at First Fight",
+        "overview": "Jasmine Guy plays a scholarship student whose introduction to Will opens up a different world of fun and games - and romance - to divert her from her studies.",
+        "air_date": "1991-02-18",
+        "runtime": 24,
+        "still_path": "/yea3DGqmx29O7xbzYy5enJM78Q6.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Banks Shot",
+        "overview": "Will crawls to Philip for help after sneaking out on the town and getting hustled by sleazy pool sharks.",
+        "air_date": "1991-02-25",
+        "runtime": 24,
+        "still_path": "/rWdVwomUsOML2QfIXTSoP6Wc0Gy.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "72 Hours",
+        "overview": "Will challenges Carlton to spend time in a tough neighborhood, trying to survive by masquerading as a financial consultant.",
+        "air_date": "1991-03-11",
+        "runtime": 24,
+        "still_path": "/94r0aMtVOeoN5JIOiVZ7RfX5Edp.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Just Infatuation",
+        "overview": "R\u0026B singer Tevin Campbell plays teen idol Little T, who surprises Ashley on her birthday with a special song and an invitation for a date.",
+        "air_date": "1991-04-29",
+        "runtime": 24,
+        "still_path": "/n3UWdEVAtBpGWgeZyrKSDZMyWjO.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Working It Out",
+        "overview": "Rap\u0027s Queen Latifah plays Hilary\u0027s new actress boss, who wants Will as her boy toy - or Hilary\u0027s glamorous job is over.",
+        "air_date": "1991-05-06",
+        "runtime": 24,
+        "still_path": "/fXCfqkkQgQJIjC0cpwqq049agk3.jpg"
+      }
+    ]
+  }
+}

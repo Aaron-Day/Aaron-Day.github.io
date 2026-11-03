@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 15,
+    "title": "Citizen Kane",
+    "overview": "Newspaper magnate Charles Foster Kane is taken from his mother as a boy and made the ward of a rich industrialist. As a result, every well-meaning, tyrannical or self-destructive move he makes for the rest of his life appears in some way to be a reaction to that deeply wounding event.",
+    "tagline": "Some called him a hero...others called him a heel.",
+    "runtime": 119,
+    "release_date": "1941-04-17",
+    "vote_average": 8,
+    "poster_path": "/sav0jxhqiH0bPr2vZFU0Kjt2nZL.jpg",
+    "backdrop_path": "/ruF3Lmd4A8MHbnEBE6lxPMbsHGL.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Orson Welles",
+      "character": "Charles Foster Kane",
+      "profile_path": "/p5JF3pnAHDy4JSNPJBatM5Ttdam.jpg"
+    },
+    {
+      "name": "Joseph Cotten",
+      "character": "Jedediah Leland",
+      "profile_path": "/djfCB0jPOgmq3w7RD3BMLzWsAu8.jpg"
+    },
+    {
+      "name": "Dorothy Comingore",
+      "character": "Susan Alexander Kane",
+      "profile_path": "/x8RBK7T3HgWMWVniWkapAfPULDU.jpg"
+    },
+    {
+      "name": "Ray Collins",
+      "character": "Jim W. Gettys",
+      "profile_path": "/usQN1n6UMPwYrTuTKdiSxUj8Qwa.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9386,
+    "title": "In the Line of Fire",
+    "overview": "Veteran Secret Service agent Frank Horrigan is a man haunted by his failure to save President Kennedy while serving protection detail in Dallas. Thirty years later, a man calling himself \u0022Booth\u0022 threatens the life of the current President, forcing Horrigan to come back to protection detail to confront the ghosts from his past.",
+    "tagline": "An assassin on the loose. A president in danger. Only one man stands between them\u2026",
+    "runtime": 128,
+    "release_date": "1993-07-08",
+    "vote_average": 6.979,
+    "poster_path": "/3NvOFpmyECI3DNExYMtFIRcGMsu.jpg",
+    "backdrop_path": "/zYM9IbF08gB1Ip3Qee19HPvNY8T.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Clint Eastwood",
+      "character": "Frank Horrigan",
+      "profile_path": "/8TwdCfeOZH7ucRlfLZ6wObxa7cO.jpg"
+    },
+    {
+      "name": "John Malkovich",
+      "character": "Mitch Leary",
+      "profile_path": "/7GoOdGNc4ra1L0F5nJTkmIB37iu.jpg"
+    },
+    {
+      "name": "Rene Russo",
+      "character": "Lilly Raines",
+      "profile_path": "/yWPSqrv3nfPPKC6I2S0sRTWZ5Yi.jpg"
+    },
+    {
+      "name": "Dylan McDermott",
+      "character": "Al D\u0027Andrea",
+      "profile_path": "/3i69RNLuL7KOD9pCmHQYruhcOdn.jpg"
+    }
+  ]
+}

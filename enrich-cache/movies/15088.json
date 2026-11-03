@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 15088,
+    "title": "The Cutting Edge: Chasing the Dream",
+    "overview": "A world class ice skater eager to take the top prize in the biggest competition around finds his dreams going up in flames after his partner suffers a debilitating injury in this romantic sports drama starring Matt Lanter, Francia Rosa, and Christy Carlson Romano. Zack (Lanter) was headed for the gold when his partner suffered an injury that made competing impossible, but could a feisty female hockey player prove the key to keeping his illustrious career on track? Alexandra is an amateur Latina hockey player who has never skated professionally and doesn\u0027t much care for Zack, though a little determination goes a long way in helping Zack convince her to join him on the ice. Now, as this unlikely pair begins the arduous training process that could make them both bona-fide superstars, the girl with the icy attitude finds her handsome partner\u0027s warmth and charm bringing about a most unexpected thaw.",
+    "tagline": "",
+    "runtime": 90,
+    "release_date": "2008-03-16",
+    "vote_average": 6.9,
+    "poster_path": "/pwhDGNlBplpLxnZsI1x3SbnZb5q.jpg",
+    "backdrop_path": "/4KJN0JtDN81mzJyb6EDgTrfYPA1.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 110179,
+      "name": "The Cutting Edge Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Matt Lanter",
+      "character": "Zack Conroy",
+      "profile_path": "/2ms8DR9n4wh9ZU6lIuqsE58LPT9.jpg"
+    },
+    {
+      "name": "Francia Ra\u00EDsa",
+      "character": "Alexandra \u0027Alex\u0027 Delgado",
+      "profile_path": "/uTjmrUPJUyM7n5CBCjxT5IX3Eac.jpg"
+    },
+    {
+      "name": "Sarah Gadon",
+      "character": "Celeste Mercier",
+      "profile_path": "/sWBMkqjRiszNrvaLE2SSedG9szT.jpg"
+    },
+    {
+      "name": "Stefano DiMatteo",
+      "character": "Bryan Hemmings",
+      "profile_path": "/v7m1QEADqpBrFlNz1GFzf0bdUcA.jpg"
+    }
+  ]
+}

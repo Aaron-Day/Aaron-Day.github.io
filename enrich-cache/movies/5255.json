@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 5255,
+    "title": "The Polar Express",
+    "overview": "When a doubting young boy takes an extraordinary train ride to the North Pole, he embarks on a journey of self-discovery that shows him that the wonder of life never fades for those who believe.",
+    "tagline": "A journey like you\u2019ve never imagined.",
+    "runtime": 100,
+    "release_date": "2004-11-10",
+    "vote_average": 6.728,
+    "poster_path": "/eOoCzH0MqeGr2taUZO4SwG416PF.jpg",
+    "backdrop_path": "/jtOvTVlkF8TlaOq94oNXRc9u2yp.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1234824,
+      "name": "The Polar Express Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Hero Boy (Adult)/ Father / Conductor / Hobo / Scrooge / Santa Claus",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Leslie Zemeckis",
+      "character": "Sister Sarah / Mother",
+      "profile_path": "/1bUcEr76agVCsWpMDbfll78biaW.jpg"
+    },
+    {
+      "name": "Eddie Deezen",
+      "character": "Know-It-All",
+      "profile_path": "/AqjxoV14Jd3p5uvPsSPoAHmzQHI.jpg"
+    },
+    {
+      "name": "Nona Gaye",
+      "character": "Hero Girl (voice)",
+      "profile_path": "/nD6Gawyx0QOQIKsFtJXBWMzjLw3.jpg"
+    }
+  ]
+}

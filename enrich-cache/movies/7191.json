@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7191,
+    "title": "Cloverfield",
+    "overview": "Five young New Yorkers throw their friend a going-away party the night that a monster the size of a skyscraper descends upon the city. Told from the point of view of their video camera, the film is a document of their attempt to survive the most surreal, horrifying event of their lives.",
+    "tagline": "Whatever it is, it\u0027s winning.",
+    "runtime": 85,
+    "release_date": "2008-01-15",
+    "vote_average": 6.732,
+    "poster_path": "/qIegUGJqyMMCRjkKV1s7A9MqdJ8.jpg",
+    "backdrop_path": "/6ms6RdNcQUAnjBY26aM85xC2wV0.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Lizzy Caplan",
+      "character": "Marlena",
+      "profile_path": "/cHs9pPpjcEMpWrGmrAYAn0QOE78.jpg"
+    },
+    {
+      "name": "Jessica Lucas",
+      "character": "Lily",
+      "profile_path": "/nYS2J93VapM1GW5UdqMFqCxVMUv.jpg"
+    },
+    {
+      "name": "T.J. Miller",
+      "character": "Hud",
+      "profile_path": "/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg"
+    },
+    {
+      "name": "Michael Stahl-David",
+      "character": "Rob Hawkins",
+      "profile_path": "/97a0cwKFuAHXh8X0NlxSGDvBvxn.jpg"
+    }
+  ]
+}

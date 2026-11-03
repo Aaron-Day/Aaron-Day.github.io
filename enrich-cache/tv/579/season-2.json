@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Season Two Begins",
+        "overview": "Caroline Rhea returns to welcome fourteen new players to The Biggest Loser and to host them at their stay at the new ranch. After being faced with a room of tempting food, the players discover a twist in the game - this time it\u0027s men vs. women! The women, who will always wear Red, will be trained by Jillian Michaels, while the Blue team, the men, will be put to the test by Bob Harper. Later, the new teams compete in the first challenge of the season - a competition that takes place in a jet so that the contestants can experience what it feels like to weigh nothing! At the end of this 90-minute episode, one of the hopefuls will be voted off of their team. Who will survive the battle of the sexes Biggest Loser style?",
+        "air_date": "2005-09-13",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 2,
+        "name": "Straight and Narrow is Tough",
+        "overview": "The contestants\u0027 diets are put to the test when they are told that if they eat some high-calorie treats, they will be given a letter from home. Who will be able to resist the temptation? Plus, who will win the next challenge, which deals with balance, and who will be voted off of their team?",
+        "air_date": "2005-09-20",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 3,
+        "name": "Hurt Bodies and Feelings",
+        "overview": "Twelve contestants remain, as they continue to endure the pain from their injuries and the disputes from their trainers. They\u0027ll have to decide whether to continue on with the next physical challenge and resist the food temptations that continue to tempt them. Can they do it?",
+        "air_date": "2005-09-27",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 4,
+        "name": "What Happens in Vegas Buffets in Vegas",
+        "overview": "When the teams get a chance to go to Las Vegas, they\u0027ll have to endure some very tempting temptations. They will have to make some very tough decisions while they\u0027re there. Will they be able to resist, or will they lose it all for some cash?",
+        "air_date": "2005-10-04",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 5,
+        "name": "Losing Teammates Instead of Weight Drags Down One Team",
+        "overview": "As the teams continue to lose teammates, one team begins to lose their confidence. So, their trainer brings in a special visitor from the past to talk to them and help them regain their confidence once again. But will this be enough to get the team back on track, or will the team continue to fall apart, despite their trainer\u0027s efforts?",
+        "air_date": "2005-10-11",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 6,
+        "name": "High Anxiety",
+        "overview": "Because of the Blue Team\u0027s subpar performance on previous weekly challenges, the team decides to push themselves during workouts, as well as try harder to get along with each other. Meanwhile, Jillian pushes her team to go on their most dangerous workout yet. Can they handle it?",
+        "air_date": "2005-10-18",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 7,
+        "name": "Let\u0027s Do the Twist!",
+        "overview": "As eight contestants remain, everything changes with twists at every corner. The teams are no more, contestants are forced to work with their enemies, and even the weigh-in will have a special twist this time around. All this leads up to the most shocking elimination yet. Who will it be?",
+        "air_date": "2005-10-25",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 8,
+        "name": "Fancy Footwork from Pedicures to Pedicabs",
+        "overview": "In order to participate in a professional photo shoot, all seven remaining contestants receive a Beverly Hills-style make-over. Afterwards, a special surprise awaits the seven contestants at the pedicab race when their family members arrive for a surprise visit, as they become the cargo for the race. The winner will not only receive immunity for the week, but he/she will also get to spend an evening with their family.",
+        "air_date": "2005-11-01",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 9,
+        "name": "Jump Start",
+        "overview": "Caroline informs the remaining six contestants that the duos are gone from here on out. Now, they will all be competing against each other by themselves. Aside from this change in the game, one contestant will shock everyone with their new look. Meanwhile, two other contestants will end up having a fight between each other.",
+        "air_date": "2005-11-08",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 10,
+        "name": "Last One in the Pool is a Winner",
+        "overview": "Before participating in the weekly challenge, the remaining men share their dreams with everyone else. This week, the challenge will prove to be one of the hardest ones yet. The contestants must hang on with their arms and legs to a tube hanging above a swimming pool. Can the remaining five contestants handle it?",
+        "air_date": "2005-11-15",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 11,
+        "name": "Scary Scale",
+        "overview": "Final episode before the live season finale, where the remaining four contestants discover how far they\u0027ve come since their first day on the ranch. Time for one last challenge, in which the contestants will have to carry their weight in quarters, with the winner getting to keep his/her quarters.",
+        "air_date": "2005-11-22",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 12,
+        "name": "Season Two Finale",
+        "overview": "Caroline Rhea hosts the live season finale, where \u0022\u0022The Biggest Loser\u0022\u0022 will be chosen out of the three remaining contestants. The results of all their hard work will finally be revealed, with \u0022\u0022The Biggest Loser\u0022\u0022 also walking away with $250,000, as well as a healthier lifestyle.",
+        "air_date": "2005-11-29",
+        "runtime": 90,
+        "still_path": null
+      }
+    ]
+  }
+}

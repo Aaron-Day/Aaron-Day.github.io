@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 3989,
+    "title": "Team America: World Police",
+    "overview": "When North Korean ruler Kim Jong-il orchestrates a global terrorist plot, it\u0027s up to the heavily armed, highly specialized Team America unit to stop his dastardly scheme. The group, which has recruited troubled Broadway actor Gary Johnston, not only has to face off against Jong-il, but they must also contend with the Film Actors Guild, a cadre of Hollywood liberals at odds with Team America\u0027s \u0027policing the world\u0027 tactics.",
+    "tagline": "Freedom hangs by a thread.",
+    "runtime": 98,
+    "release_date": "2004-10-10",
+    "vote_average": 6.733,
+    "poster_path": "/m1Q2VFe1DVVbjfu1LDZe7tlp9yb.jpg",
+    "backdrop_path": "/5jQEcjppZnQnBAVN10uWPk6IKUK.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Trey Parker",
+      "character": "Gary Johnston / Joe / Kim Jong Il / Hans Blix / Carson / Matt Damon / Drunk in Bar / Tim Robbins / Sean Penn / Michael Moore / Helen Hunt / Susan Sarandon (voice)",
+      "profile_path": "/3tJe8t90lrcQzXj9cRcpW9wmj2c.jpg"
+    },
+    {
+      "name": "Matt Stone",
+      "character": "Chris / George Clooney / Danny Glover / Ethan Hawke (voice)",
+      "profile_path": "/nS3BOaF0EHd7vyATV7WBnFEvTLr.jpg"
+    },
+    {
+      "name": "Kristen Miller",
+      "character": "Lisa (voice)",
+      "profile_path": "/plgKgewVheRyAPbWZSGzo9Zksfq.jpg"
+    },
+    {
+      "name": "Chelsea Marguerite",
+      "character": "Police Officer / French Mother / French Police (voice)",
+      "profile_path": null
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11497,
+    "title": "All Dogs Go to Heaven",
+    "overview": "When a casino-owning dog named Charlie is murdered by his rival Carface, he finds himself in Heaven. Wanting to get back at his killer, he cons his way back to the living with the warning that doing so damns him to Hell. Once back, he teams with his old partner, Itchy, to prep his retaliation. He stumbles upon an orphan girl who can talk to the animals, thus allowing him to get the inside info on the races to ensure his wins to finance his plans. However, all the while, he is still haunted by nightmares of what\u0027s waiting for him on the other side unless he can prove that he is worthy of Heaven again.",
+    "tagline": "But not all dogs stay there!",
+    "runtime": 84,
+    "release_date": "1989-11-17",
+    "vote_average": 6.8,
+    "poster_path": "/nmWh1NglDinfkHD9zCNqGWyhl7Q.jpg",
+    "backdrop_path": "/haJ6SsjxfhSRG61LMy4QJWxCNAb.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 140910,
+      "name": "All Dogs Go to Heaven Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Burt Reynolds",
+      "character": "Charlie B. Barkin (voice)",
+      "profile_path": "/5FNuc4f1OR9EF9QcrcnFIr3zZQr.jpg"
+    },
+    {
+      "name": "Dom DeLuise",
+      "character": "Itchy Itchiford (voice)",
+      "profile_path": "/73OOTJaLVq54bEeR1pASfPQLbVH.jpg"
+    },
+    {
+      "name": "Judith Barsi",
+      "character": "Anne-Marie (voice)",
+      "profile_path": "/erZLiFH7hiQvgfNa3xe1D398RzN.jpg"
+    },
+    {
+      "name": "Vic Tayback",
+      "character": "Carface (voice)",
+      "profile_path": "/aX34tFZt5C12QrSynsgDWNJl0MG.jpg"
+    }
+  ]
+}

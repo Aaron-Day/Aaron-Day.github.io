@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 244786,
+    "title": "Whiplash",
+    "overview": "Under the direction of a ruthless instructor, a talented young drummer begins to pursue perfection at any cost, even his humanity.",
+    "tagline": "Do your best, he said\u2026",
+    "runtime": 107,
+    "release_date": "2014-10-10",
+    "vote_average": 8.377,
+    "poster_path": "/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+    "backdrop_path": "/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Miles Teller",
+      "character": "Andrew",
+      "profile_path": "/kDf3sW3USjEBDQ3Ua7lbwOfwty6.jpg"
+    },
+    {
+      "name": "J.K. Simmons",
+      "character": "Fletcher",
+      "profile_path": "/ScmKoJ9eiSUOthAt1PDNLi8Fkw.jpg"
+    },
+    {
+      "name": "Paul Reiser",
+      "character": "Jim",
+      "profile_path": "/rGryzG00uSk8LsidacSBXVgo3iv.jpg"
+    },
+    {
+      "name": "Melissa Benoist",
+      "character": "Nicole",
+      "profile_path": "/1F0fCPNhb5W0WyFe8Tszfbx1DEp.jpg"
+    }
+  ]
+}

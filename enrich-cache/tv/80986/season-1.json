@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "Courtney Whitmore moves to Nebraska with her family and discovers her stepfather, Pat Dugan is hiding a major secret.",
+        "air_date": "2020-05-18",
+        "runtime": 54,
+        "still_path": "/eD5QIAk9xfEcv7fCYEOhnbjItoJ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "S.T.R.I.P.E.",
+        "overview": "After Courtney has an unexpected run-in with a member of the Injustice Society of America, Pat reveals the truth to her about their history.",
+        "air_date": "2020-05-25",
+        "runtime": 52,
+        "still_path": "/ytXH4QhxFVbTGLS4geEvosA8Vhh.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Icicle",
+        "overview": "After a dangerous run-in with the Injustice Society of America, Pat warns Courtney to back down from her attempts to go after them. Barbara impresses her new boss, Jordan.",
+        "air_date": "2020-06-01",
+        "runtime": 45,
+        "still_path": "/vbzvCuzbQVozndesAuBAAEcTLo1.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Wildcat",
+        "overview": "After realizing that she needs the extra help, Courtney sets out to recruit new members to the Justice Society of America \u2013 starting with Yolanda Montez.",
+        "air_date": "2020-06-08",
+        "runtime": 43,
+        "still_path": "/9FxuVUlaYjydDp190tdkjaZbR0X.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Hourman and Dr. Mid-Nite",
+        "overview": "A search for Rick Tyler leads Courtney, Yolanda and Beth Chapel to Cindy Burman\u2019s Halloween party.",
+        "air_date": "2020-06-15",
+        "runtime": 44,
+        "still_path": "/qYUeEYkO6QJCRP5ekC23vOHUdo8.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Justice Society",
+        "overview": "After Pat confronts Courtney about the potential consequences of recruiting new JSA members, Courtney makes a difficult decision and the JSA prepare for their first mission.",
+        "air_date": "2020-06-22",
+        "runtime": 42,
+        "still_path": "/z9FFAkJwd5FY9Upo1OMZoDAUgZL.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Shiv (1)",
+        "overview": "As Pat teaches Courtney, Yolanda, Beth and Rick the importance of teamwork, the ISA converge to figure out who is trying to take them down.",
+        "air_date": "2020-06-29",
+        "runtime": 43,
+        "still_path": "/7xEXk1S6EC9A8wO5ZLqX0flVhCB.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Shiv (2)",
+        "overview": "After Courtney gets herself into some trouble, Pat decides they need to come clean to Barbara. Meanwhile, Yolanda, Beth and Rick lead an investigation into a classmate.",
+        "air_date": "2020-07-06",
+        "runtime": 41,
+        "still_path": "/cVBLK8kSk1XsnQGt36HvKHcfEsX.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Brainwave",
+        "overview": "Tensions rise among the JSA members after Courtney suggests who she wants to recruit next to the team. Meanwhile, Henry, Jr. makes a surprising discovery about his father.",
+        "air_date": "2020-07-13",
+        "runtime": 42,
+        "still_path": "/f1i62hHlf5GQa0w7qqd2RIUmIdp.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Brainwave Jr.",
+        "overview": "As Henry Jr. hones his newfound skills, uncovered secrets from his family\u0027s past force him to make a difficult decision. Meanwhile, Courtney, Yolanda, Beth and Rick\u0027s latest plan brings them face to face with a member of the ISA. Finally, tensions between Pat and Barbara force her to revisit her own past.",
+        "air_date": "2020-07-20",
+        "runtime": 43,
+        "still_path": "/ncAqnWuf2WvZqExaVfDtDtnIYEC.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Shining Knight",
+        "overview": "While Pat uncovers new information about the ISA\u2019s plan, Courtney\u2019s life gets turned upside down when someone from her past arrives in Blue Valley.",
+        "air_date": "2020-07-27",
+        "runtime": 44,
+        "still_path": "/kf92GFVlVCRCOTEAXfO8lsSVF6e.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Stars \u0026 S.T.R.I.P.E. (1)",
+        "overview": "With the ISA on their trail, Courtney, Pat and the team regroup to figure out their next steps. Meanwhile, Rick makes a breakthrough, and the team prepares for a showdown with the ISA.",
+        "air_date": "2020-08-03",
+        "runtime": 42,
+        "still_path": "/tHF7j56h4sKuYsGq4wJvnvrAX0H.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Stars \u0026 S.T.R.I.P.E. (2)",
+        "overview": "As the Injustice Society of America come closer to accomplishing their mission, Courtney and the JSA face off against Icicle and the villains of the ISA.",
+        "air_date": "2020-08-10",
+        "runtime": 41,
+        "still_path": "/1hyY7mi7UyQrzallRGwE5Fpkop8.jpg"
+      }
+    ]
+  }
+}

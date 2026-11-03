@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Trial by Fire: Episode 1",
+        "overview": "Vixen teams up with The Flash and Firestorm to save her city.",
+        "air_date": "2016-10-13",
+        "runtime": 6,
+        "still_path": "/AnUXfyPfhbBWkzgrmhlWsXPtsUe.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Trial by Fire: Episode 2",
+        "overview": "Vixen investigates a stolen pendant from her family\u0027s past.",
+        "air_date": "2016-10-21",
+        "runtime": 4,
+        "still_path": "/bXv0AMLFEdVUi2q9SVyVSxNAMcV.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Trial by Fire: Episode 3",
+        "overview": "Vixen learns her enemy may have more power than she does.",
+        "air_date": "2016-10-28",
+        "runtime": 6,
+        "still_path": "/wn3gjJLi8RWXDEr53HEAwRlndPS.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Trial by Fire: Episode 4",
+        "overview": "Vixen goes totem hunting in Star City with assistance from some super-helpful friends.",
+        "air_date": "2016-11-04",
+        "runtime": 5,
+        "still_path": "/qDLo3edoixQQIEoSlRWKBFzMmIO.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Trial by Fire: Episode 5",
+        "overview": "Vixen, Kuasa, the Atom, and Black Canary face Eshu on the streets of Detroit... and one of them will die.",
+        "air_date": "2016-11-11",
+        "runtime": 4,
+        "still_path": "/f1aRawhJqHcOGrUClAkPkd5CG5K.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Trial by Fire: Episode 6",
+        "overview": "Vixen accepts her destiny as she draws on all of the spirits of the animals to destroy the source of Eshu\u0027s power.",
+        "air_date": "2016-11-18",
+        "runtime": 5,
+        "still_path": "/8lbZBp9XXR8wx3QuoBBtRYO8rvx.jpg"
+      }
+    ]
+  }
+}

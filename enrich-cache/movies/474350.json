@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 474350,
+    "title": "It Chapter Two",
+    "overview": "27 years after overcoming the malevolent supernatural entity Pennywise, the former members of the Losers\u0027 Club, who have grown up and moved away from Derry, are brought back together by a devastating phone call.",
+    "tagline": "It ends.",
+    "runtime": 169,
+    "release_date": "2019-09-04",
+    "vote_average": 6.826,
+    "poster_path": "/zfE0R94v1E8cuKAerbskfD3VfUt.jpg",
+    "backdrop_path": "/6LVSrgm83UYWlrLTCVGmWhFKYO0.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 477962,
+      "name": "It Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jessica Chastain",
+      "character": "Beverly Marsh",
+      "profile_path": "/mR1ELpP0T2Q1ZRSaADPgtrbPGla.jpg"
+    },
+    {
+      "name": "James McAvoy",
+      "character": "Bill Denbrough",
+      "profile_path": "/u4REKbm3zhFI2J5tVyqRovGRYUJ.jpg"
+    },
+    {
+      "name": "Bill Hader",
+      "character": "Richie Tozier",
+      "profile_path": "/qyT50vQ9PQIEctE1IxDTEsBKstU.jpg"
+    },
+    {
+      "name": "Isaiah Mustafa",
+      "character": "Mike Hanlon",
+      "profile_path": "/cdXLqmG0nZWjfwfduZk22eBDsmP.jpg"
+    }
+  ]
+}

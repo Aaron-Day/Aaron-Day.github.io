@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9087,
+    "title": "The American President",
+    "overview": "Widowed U.S. president Andrew Shepherd, one of the world\u0027s most powerful men, can have anything he wants -- and what he covets most is Sydney Ellen Wade, a Washington lobbyist. But Shepherd\u0027s attempts at courting her spark wild rumors and decimate his approval ratings.",
+    "tagline": "Why can\u0027t the most powerful man in the world have the one thing he wants most?",
+    "runtime": 113,
+    "release_date": "1995-11-17",
+    "vote_average": 6.5,
+    "poster_path": "/hudVVQa0jCspRPYGLJwUVsteKsk.jpg",
+    "backdrop_path": "/hMc2fw8J56H6u4VRWHwLfeXnUCU.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Michael Douglas",
+      "character": "Andrew Shepherd",
+      "profile_path": "/kVYGPIZowzXLEQfAGUNOqKjAbBb.jpg"
+    },
+    {
+      "name": "Annette Bening",
+      "character": "Sydney Ellen Wade",
+      "profile_path": "/kGslMAWcpv8MKzODhDRDkFE0uX7.jpg"
+    },
+    {
+      "name": "Martin Sheen",
+      "character": "A.J. MacInerney",
+      "profile_path": "/m2Y3Q0uyuW6htrn2W9UWCWMkpZu.jpg"
+    },
+    {
+      "name": "Michael J. Fox",
+      "character": "Lewis Rothschild",
+      "profile_path": "/2JB4FMgQmnhbBlQ4SxWFN9EIVDi.jpg"
+    }
+  ]
+}

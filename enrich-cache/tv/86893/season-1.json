@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "On the Hot Seat",
+        "overview": "Tacoma FD\u0027s newest chief, Terry McConky, is under scrutiny by the city council to get serious about his station\u0027s ratings. Meanwhile, Terry\u0027s crew puts his job in jeopardy by engaging in a ridiculous competition for a super sawft prize.",
+        "air_date": "2019-03-25",
+        "runtime": 25,
+        "still_path": "/4JA0eAwje4ITqNYqWn0zTaNlsrH.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Cop Wars",
+        "overview": "Andy and Ike\u2019s misstep on a call to a Tacoma police officer\u2019s house fans the flames of the FD\u2019s long-standing feud with the PD. Chief tries to keep a lid on the dispute, but all goes awry as his crew wages a tit-for-tat war with the cops.",
+        "air_date": "2019-04-04",
+        "runtime": 24,
+        "still_path": "/5AOKx6WoGqqw1Imi7I422AblbIi.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "A New Hope",
+        "overview": "The crew is assigned their first ever female firefighter, Lucy, sending the firehouse into a gender confused tailspin. When Chief puts the clamp on rookie hazing, the guys try to engage in their old traditions anyway only to find that Lucy is a force to be reckoned with.",
+        "air_date": "2019-04-11",
+        "runtime": 24,
+        "still_path": "/vMvTXA9DkCyGDf1mLxj3rRAd56q.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Training Day",
+        "overview": "The Tacoma FD\u0027s negligence during a firehouse school trip makes Councilwoman Price so angry that she orders the guys to complete a training recertification with an old nemesis who\u0027s just itching to fail them.",
+        "air_date": "2019-04-18",
+        "runtime": 24,
+        "still_path": "/5rItx94E38I99BUpn12lOjNQ7F7.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The B-Team",
+        "overview": "Andy\u0027s big welcome from a different team of firefighters has him questioning his place within his own crew. Meanwhile, Eddie spars with a new top chef at the station to win the annual pancake cook-off!",
+        "air_date": "2019-04-25",
+        "runtime": 24,
+        "still_path": "/qd6v8m14VA2cnjT1dWMrGPoOUXg.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Full Moon Fever",
+        "overview": "FD braces for a night of insane full moon rescue calls. Plus, Eddie and Granny go on active appendage duty and Ike gets bitten into an altered state.",
+        "air_date": "2019-05-02",
+        "runtime": 25,
+        "still_path": "/urkLVVAWpDnnII0UNykPNnwM0s3.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Old Flame",
+        "overview": "Eddie runs into his cradle-robbing first love and must decide whether to rekindle his romance with the sexy senior citizen. Then, Granny and Lucy compete to win the affections of an androgynous dispatcher and Terry discovers moisturizer.",
+        "air_date": "2019-05-09",
+        "runtime": 24,
+        "still_path": "/lDPtYsjJm7FWUdYTxF1OCyGj8ol.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Where\u0027s the Beefcake",
+        "overview": "When Councilwoman Price tries to take nudity out of the annual Firefighters\u0027 Beefcake Calendar, the crew must get creative to maintain the integrity of its sexy (and oily) tradition.",
+        "air_date": "2019-05-16",
+        "runtime": 24,
+        "still_path": "/bHoEfTvFaPboMIYYQuWDpx8Qpic.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "I\u0027m Eddie Penisi",
+        "overview": "When the police captain catches Eddie sleeping with his wife days before the Tacoma FD/PD charity boxing match, he challenges Eddie to be the main event.",
+        "air_date": "2019-05-23",
+        "runtime": 25,
+        "still_path": "/2l3VOFXbUmiKMSSbH2112yBIFON.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Fire at the Dispensary",
+        "overview": "It\u0027s the anniversary of Terry busting a nut to save Eddie\u0027s life and the biggest football game of the year! But the party gets interrupted when a fire breaks out at a local weed dispensary - which at least ends the day on a high note!",
+        "air_date": "2019-05-30",
+        "runtime": 24,
+        "still_path": "/mWwaxaqs8yaY93vAucvqz5nLQgK.jpg"
+      }
+    ]
+  }
+}

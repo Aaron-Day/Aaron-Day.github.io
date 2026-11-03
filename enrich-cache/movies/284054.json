@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 284054,
+    "title": "Black Panther",
+    "overview": "King T\u0027Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country\u0027s new leader. However, T\u0027Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T\u0027Challa assumes the Black Panther mantle to join with ex-girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan \u0027special forces\u0027) and an American secret agent, to prevent Wakanda from being dragged into a world war.",
+    "tagline": "Long live the king.",
+    "runtime": 135,
+    "release_date": "2018-02-13",
+    "vote_average": 7.36,
+    "poster_path": "/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+    "backdrop_path": "/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 529892,
+      "name": "Black Panther Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chadwick Boseman",
+      "character": "T\u0027Challa / Black Panther",
+      "profile_path": "/nL16SKfyP1b7Hk6LsuWiqMfbdb8.jpg"
+    },
+    {
+      "name": "Michael B. Jordan",
+      "character": "Erik Killmonger",
+      "profile_path": "/sMBpav8cK7t7Nk0yf4tuNOqNUyW.jpg"
+    },
+    {
+      "name": "Lupita Nyong\u0027o",
+      "character": "Nakia",
+      "profile_path": "/y40Wu1T742kynOqtwXASc5Qgm49.jpg"
+    },
+    {
+      "name": "Danai Gurira",
+      "character": "Okoye",
+      "profile_path": "/z7H7QeQvr24vskGlANQhG43vozQ.jpg"
+    }
+  ]
+}

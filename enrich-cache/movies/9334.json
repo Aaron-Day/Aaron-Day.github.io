@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9334,
+    "title": "The Scorpion King",
+    "overview": "In ancient Egypt, peasant Mathayus is hired to exact revenge on the powerful Memnon and the sorceress Cassandra, who are ready to overtake Balthazar\u0027s village. Amid betrayals, thieves, abductions and more, Mathayus strives to bring justice to his complicated world.",
+    "tagline": "Warrior. Legend. King.",
+    "runtime": 92,
+    "release_date": "2002-04-18",
+    "vote_average": 5.584,
+    "poster_path": "/aITIsX20tACn6jgtyDcCYpRT216.jpg",
+    "backdrop_path": "/nZSUgauXlVUrJGdGUGWMXCtnZx4.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 116669,
+      "name": "The Scorpion King Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dwayne Johnson",
+      "character": "Mathayus / The Scorpion King",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Steven Brand",
+      "character": "Memnon",
+      "profile_path": "/oWkitw5jzILwb775CVGjsqMSrqz.jpg"
+    },
+    {
+      "name": "Michael Clarke Duncan",
+      "character": "Balthazar",
+      "profile_path": "/3RX8OBqt3gbvFwKYZqiom4O3Ta6.jpg"
+    },
+    {
+      "name": "Kelly Hu",
+      "character": "Cassandra",
+      "profile_path": "/jLhnDPiUIrIcdKJYnnVSZ4nbgyh.jpg"
+    }
+  ]
+}

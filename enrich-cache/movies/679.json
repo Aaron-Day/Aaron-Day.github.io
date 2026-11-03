@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 679,
+    "title": "Aliens",
+    "overview": "Ripley, the sole survivor of the Nostromo\u0027s deadly encounter with the monstrous Alien, returns to Earth after drifting through space in hypersleep for 57 years. Although her story is initially met with skepticism, she agrees to accompany a team of Colonial Marines back to LV-426.",
+    "tagline": "This time it\u0027s war.",
+    "runtime": 137,
+    "release_date": "1986-07-18",
+    "vote_average": 7.97,
+    "poster_path": "/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
+    "backdrop_path": "/4kix6fAblJIH6eMs0Ku2loyZJXK.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8091,
+      "name": "Alien Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sigourney Weaver",
+      "character": "Ripley",
+      "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+    },
+    {
+      "name": "Carrie Henn",
+      "character": "Newt",
+      "profile_path": "/iNaYp4liKvKsEZp5g5xjd94OFCz.jpg"
+    },
+    {
+      "name": "Michael Biehn",
+      "character": "Corporal Hicks",
+      "profile_path": "/9oFLsADWQm2TvU8XzLIzBbjdMkU.jpg"
+    },
+    {
+      "name": "Paul Reiser",
+      "character": "Burke",
+      "profile_path": "/rGryzG00uSk8LsidacSBXVgo3iv.jpg"
+    }
+  ]
+}

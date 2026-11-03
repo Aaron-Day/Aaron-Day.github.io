@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 50619,
+    "title": "The Twilight Saga: Breaking Dawn - Part 1",
+    "overview": "Bella Swan and Edward Cullen\u0027s honeymoon phase is abruptly disrupted by betrayals and unforeseen tragedies that endanger their world.",
+    "tagline": "Forever is just the beginning.",
+    "runtime": 117,
+    "release_date": "2011-11-16",
+    "vote_average": 6.182,
+    "poster_path": "/qs8LsHKYlVRmJbFUiSUhhRAygwj.jpg",
+    "backdrop_path": "/iPqoeXEfByDN399PQQ42IJHV2kN.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 33514,
+      "name": "Twilight Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kristen Stewart",
+      "character": "Bella Swan",
+      "profile_path": "/xldswdQ1VnpcOf2wZMPguZ3avgO.jpg"
+    },
+    {
+      "name": "Robert Pattinson",
+      "character": "Edward Cullen",
+      "profile_path": "/3qZ09UE7lN6AtorfXFRYpEtSY93.jpg"
+    },
+    {
+      "name": "Taylor Lautner",
+      "character": "Jacob Black",
+      "profile_path": "/xyRXoKM7UQdijwmjpiCcLGPzcc7.jpg"
+    },
+    {
+      "name": "Billy Burke",
+      "character": "Charlie Swan",
+      "profile_path": "/AoyN5a1TNRa4OCeylcXusQM1bD4.jpg"
+    }
+  ]
+}

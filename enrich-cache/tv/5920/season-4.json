@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Scarlet Ribbons",
+        "overview": "In prison for killing his nemesis, Patrick Jane must prove that the man he shot really was Red John. Meanwhile, Lisbon urges Van Pelt to seek counseling in the aftermath of the death of her fianc\u00E9.",
+        "air_date": "2011-09-22",
+        "runtime": 42,
+        "still_path": "/5oME6nECiONQSAlYAuwNLpXVWX8.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Little Red Book",
+        "overview": "With Lisbon suspended and the rest of the team reassigned, Jane is reinstated as a CBI consultant and forced to work with a new team. During the investigation, Jane conspires to bring his former team back together.",
+        "air_date": "2011-09-29",
+        "runtime": 43,
+        "still_path": "/cqz32gA4KSvraRU9wLPdgbVsT4F.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Pretty Red Balloon",
+        "overview": "When the son of a former client from Jane\u0027s days as a psychic is kidnapped, Jane and the CBI team are asked to help find him. Meanwhile, Jane butts heads with his former client\u0027s new \u0022spiritual advisor.\u0022",
+        "air_date": "2011-10-06",
+        "runtime": 41,
+        "still_path": "/mtiyePK6mbzAbb7oTHmU3VUqEsw.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Ring Around the Rosie",
+        "overview": "Jane notices a suspicious-looking man carrying a gun at a political rally and sets out to prove he\u0027s a psychopath on the brink of committing murder. Meanwhile, Lisbon investigates the death of a photographer at the same rally.",
+        "air_date": "2011-10-13",
+        "runtime": 43,
+        "still_path": "/nJyeVSWvpnqirXXbPgmdkprUTIp.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Blood and Sand",
+        "overview": "The CBI team investigates the murder of a woman whose corpse washed up on an island off the coast of California. Rigsby worries that his relationship with a public defender will create awkwardness between him and Van Pelt.",
+        "air_date": "2011-10-20",
+        "runtime": 41,
+        "still_path": "/bI6KnDMRKaLwJoU5zxQm0ErLtfB.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Where in the World Is Carmine O\u0027Brien?",
+        "overview": "When the CBI team travels to a resort town to find out who murdered a police chief, Lisbon crosses paths with her brother Tommy, now a bounty hunter, who\u0027s tracking a bail jumper.",
+        "air_date": "2011-10-27",
+        "runtime": 41,
+        "still_path": "/2Sr4vNtT2oqRAWhNJYWIGJ4VPao.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Blinking Red Light",
+        "overview": "The search for a serial killer hits close to home for Jane when he encounters a blogger who has devoted his life to finding the killer.",
+        "air_date": "2011-11-03",
+        "runtime": 43,
+        "still_path": "/xccae4LQOpetQq53LUXNcp3FU8D.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Pink Tops",
+        "overview": "In order to find the killer of an undercover narcotics cop, Jane and the CBI team retrace her investigation.",
+        "air_date": "2011-11-17",
+        "runtime": 42,
+        "still_path": "/skKF3z4VvRG5NKkoehAZAF2PTMg.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Redshirt",
+        "overview": "Jane and the CBI investigate when a retired NFL star quarterback is presumed dead after his car blows up. Meanwhile, while preparing for a court case, Rigsby and Harrigan take their relationship to the next level.",
+        "air_date": "2011-12-08",
+        "runtime": 42,
+        "still_path": "/5tmVajdJopu7iLfTKXbLHGVHjvh.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Fugue in Red",
+        "overview": "During the search for a firefighter\u0027s killer, Jane is attacked and nearly drowned, resulting in a temporary loss of his memory and a return to his pre-CBI con man persona.",
+        "air_date": "2011-12-15",
+        "runtime": 42,
+        "still_path": "/3cwaUBQmOSjCMjMqDIpaT5jOopu.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Always Bet on Red",
+        "overview": "Jane and the CBI team narrow down the long list of suspects after a high-end divorce attorney, with many enemies, is killed on his speed boat. Meanwhile, Jane is questioned by Agent Darcy about whether Red John was responsible for Panzer\u0027s murder.",
+        "air_date": "2012-01-12",
+        "runtime": 41,
+        "still_path": "/kANcMu9bkoHRbmrhdw6QEfFA6Vr.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "My Bloody Valentine",
+        "overview": "With very little evidence, Jane and the CBI investigate the death of a mob boss\u2019 son. Meanwhile, while taking an eyewitness in for questioning, Van Pelt is haunted by the memories of O\u2019Laughlin\u2019s shooting.",
+        "air_date": "2012-01-19",
+        "runtime": 43,
+        "still_path": "/7JLOA9Zq0idz1c3sWK3F6kVu1ie.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Red Is the New Black",
+        "overview": "Jane and the CBI narrow down the list of suspects after a disgraced clothing designer on the verge of a comeback becomes a fashion victim. Meanwhile, FBI Agent Darcy continues her investigation into finding Red John.",
+        "air_date": "2012-02-02",
+        "runtime": 41,
+        "still_path": "/1xqCHfPDH68AK7OAvIlgGlTBpn1.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "At First Blush",
+        "overview": "While a jury deliberates the guilt or innocence of a defendant on trial for murder, Jane tries to prove she has been wrongfully accused before time runs out. Meanwhile, Summer may have gone too far when she helps Cho make a case against a suspect.",
+        "air_date": "2012-02-09",
+        "runtime": 43,
+        "still_path": "/4ZT1Qz6j5uOf6O8SgB3MAouVrPU.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "War of the Roses",
+        "overview": "When a charity worker is killed, Jane has Erica Flynn, a murderer he helped imprison, furloughed in exchange for information she claims to have about the case. Meanwhile, Rigsby and Sarah try to adjust to impending parenthood.",
+        "air_date": "2012-02-16",
+        "runtime": 42,
+        "still_path": "/f4u5fHLrV8QoiovtvPqP7eKaAf.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "His Thoughts Were Red Thoughts",
+        "overview": "Jane is reunited with his former nemesis, cult leader Bret Stiles, when the head of an anti-cult activist organization is murdered.",
+        "air_date": "2012-02-23",
+        "runtime": 43,
+        "still_path": "/A1gmNPFAPeBxL48OJfQlwDrPlDF.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Cheap Burgundy",
+        "overview": "Jane suspects that Agent Susan Darcy has ulterior motives when she asks for his help with a homicide investigation. Meanwhile, the CBI team handles the murder of a young woman who was killed after meeting someone in an online chat room.",
+        "air_date": "2012-03-08",
+        "runtime": 43,
+        "still_path": "/eYZFLJwBzvoHp3sKFmo4NJbSSf6.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Ruddy Cheeks",
+        "overview": "Jane and the CBI try to narrow down the list of suspects when a terminally ill man, is found murdered. Meanwhile, Cho is forced to face his demons.",
+        "air_date": "2012-03-09",
+        "runtime": 43,
+        "still_path": "/tNx0G7bE1BkjaWYWp8EI7QsgG0n.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Pink Champagne on Ice",
+        "overview": "While investigating the murder of a casino employee, Jane runs into a stage magician he used to tour with during his time as a mentalist and discovers he is hiding a shocking secret.",
+        "air_date": "2012-03-29",
+        "runtime": 41,
+        "still_path": "/eoz4UvoHqMcjOVB1JzGbhFWyABd.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Something\u0027s Rotten in Redmund",
+        "overview": "Jane and the CBI try to determine who would have reason to kill a popular English teacher, and Rigsby nervously awaits a special delivery.",
+        "air_date": "2012-04-05",
+        "runtime": 42,
+        "still_path": "/xADQOmMkfRD588L14vKsCavJ0ca.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Ruby Slippers",
+        "overview": "Jane and the CBI try to find the killer of a man found outside a cabaret featuring female impersonators. During the investigation they discover a list of suspects, all of whom bullied the victim. Meanwhile, Cho and Summer hide their relationship from Lisbon.",
+        "air_date": "2012-04-26",
+        "runtime": 42,
+        "still_path": "/8rceP0pG3TdYelcWu2vUn5n0cvg.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "So Long, and Thanks for All the Red Snapper",
+        "overview": "While investigating the murder of a surfer, Lisbon reconnects with her former fianc\u00E9, Kenny Johnson, who she hasn\u0027t seen in over a decade. Also, Cho questions his decision to be in a relationship with Summer.",
+        "air_date": "2012-05-03",
+        "runtime": 42,
+        "still_path": "/rL4QLlpzrYPWQGurzHXFXF4IHJH.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Red Rover, Red Rover",
+        "overview": "On the ninth anniversary of his wife and daughter\u0027s death, Jane receives a message from Red John, causing Jane to lose focus on his current case and put the investigation and his career at the CBI in jeopardy",
+        "air_date": "2012-05-10",
+        "runtime": 42,
+        "still_path": "/boPDiRtWITkSHnRSy4SlxULQ1PU.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "The Crimson Hat",
+        "overview": "After another failed attempt to defeat Red John, Patrick Jane hits rock bottom, finds a lover and shoots one of his own.",
+        "air_date": "2012-05-17",
+        "runtime": 43,
+        "still_path": "/aCE1ohFGv4rpQNWk6rJrNizNkx4.jpg"
+      }
+    ]
+  }
+}

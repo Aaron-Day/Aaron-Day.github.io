@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Ghost",
+        "overview": "Daisy has left S.H.I.E.L.D. and is trying to solve the mystery of a bunch of serial killings in the Los Angeles area. At the same time her old friends suspect her for the killings and are following her trail in an attempt to find her.",
+        "air_date": "2016-09-20",
+        "runtime": 44,
+        "still_path": "/jZqFpmLdNplNUItksydNW00B2wd.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Meet the New Boss",
+        "overview": "Daisy goes to battle Ghost Rider at a terrible cost, and Coulson faces the new Director, and his bold agenda surprises them all.",
+        "air_date": "2016-09-27",
+        "runtime": 44,
+        "still_path": "/tGN11MjBGBXLyVa71LkESjQI1IX.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Uprising",
+        "overview": "As Coulson, Mack and Fitz attempt to track down and neutralize a rogue group looking to end Inhuman Registration worldwide, Simmons and Dr. Radcliffe only have hours to save May before she succumbs forever to her mysterious illness.",
+        "air_date": "2016-10-11",
+        "runtime": 44,
+        "still_path": "/iKJWzNLHS7p0sKIp2jwNhl4pPze.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Let Me Stand Next to Your Fire",
+        "overview": "As Ghost Rider\u0027s quest for vengeance brings him into an explosive confrontation with S.H.I.E.L.D., Coulson and Mack must rely on an unlikely ally in their time of desperate need; and Daisy reunites with a familiar face to stop the Watchdogs.",
+        "air_date": "2016-10-18",
+        "runtime": 44,
+        "still_path": "/p1z4qOqo5uhAYkjBvmb1pVaPgFq.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Lockup",
+        "overview": "As Robbie Reyes struggles to control the Ghost Rider, S.H.I.E.L.D. infiltrates a high-security prison to unravel the secrets that haunt them all.",
+        "air_date": "2016-10-25",
+        "runtime": 43,
+        "still_path": "/wMOSwONwzrxqKd7K8t62gHvXYod.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Good Samaritan",
+        "overview": "Robbie\u0027s shocking story on how he became Ghost Rider is finally discovered as Coulson and his team\u0027s lives hang in the balance.",
+        "air_date": "2016-11-01",
+        "runtime": 43,
+        "still_path": "/oOxPd63MZaQ2dSIKqw0xoHIypPz.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Deals with Our Devils",
+        "overview": "With the loss of half the team, the remaining members search for answers as the clock counts down for Ghost Rider.",
+        "air_date": "2016-11-29",
+        "runtime": 43,
+        "still_path": "/xsWH8UxtkpXdqFusf5sqNrgjNq2.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Laws of Inferno Dynamics",
+        "overview": "S.H.I.E.L.D. and Ghost Rider find themselves unlikely allies when the lives of all of Los Angeles hang in the balance.",
+        "air_date": "2016-12-06",
+        "runtime": 44,
+        "still_path": "/9AXiOfCn7rt7JHAjybGfcjr85fy.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Broken Promises",
+        "overview": "Coulson is unaware of a dark secret May is hiding, even as the two grow closer; Aida is determined to find the Darkhold.",
+        "air_date": "2017-01-10",
+        "runtime": 44,
+        "still_path": "/wV1SEHFumP1JqA0MkCymp6oxcfP.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Patriot",
+        "overview": "Separated from their team, Coulson and Mack discover a shocking secret about Mace, leaving all of S.H.I.E.L.D. in a precarious position.",
+        "air_date": "2017-01-17",
+        "runtime": 44,
+        "still_path": "/17BHUo07w0CcgYU5U05yuafu5il.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Wake Up",
+        "overview": "May works to uncover the truth about what happened to her; Aida\u0027s next move puts everyone\u0027s life at risk.",
+        "air_date": "2017-01-24",
+        "runtime": 44,
+        "still_path": "/AbjNrMXLJZW08CMgCbb4Hh6dYX4.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Hot Potato Soup",
+        "overview": "Agents Sam and Billy Koenig are hunted down to get at the Darkhold book, and only Phil Coulson and the team can save them before the clock ticks out.",
+        "air_date": "2017-01-31",
+        "runtime": 44,
+        "still_path": "/gnZKKsBZICeNEGUotnjKxD79Zck.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "BOOM",
+        "overview": "Daisy, Director Mace and the S.H.I.E.L.D. team must find a way to contain an explosive Inhuman. Meanwhile, Coulson and Mack come face-to-face with Radcliffe\u2019s inspiration for Aida.",
+        "air_date": "2017-02-07",
+        "runtime": 44,
+        "still_path": "/5Wpk9n2p4aNnQyluFmlwvhjEd6u.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Man Behind the Shield",
+        "overview": "Mace fights for his life while Coulson and team find themselves in a deadly cat-and-mouse game as they attempt his rescue.",
+        "air_date": "2017-02-14",
+        "runtime": 44,
+        "still_path": "/oxuPvQUSoz9WdyhQP9OmMRagAla.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Self Control",
+        "overview": "Suspicion turns to paranoia when the team doesn\u0027t know who can be trusted as more LMDs infiltrate S.H.I.E.L.D.",
+        "air_date": "2017-02-21",
+        "runtime": 44,
+        "still_path": "/ne8HjEI78M76ss4IT9CCN0YYCKq.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "What If...",
+        "overview": "Daisy and Simmons uncover secrets and lies in a world gone mad. With HYDRA in control, they are our only hope to save everyone.",
+        "air_date": "2017-04-04",
+        "runtime": 44,
+        "still_path": "/4Jx8jFi2ktUN7JnK241Lfxa9hAA.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Identity and Change",
+        "overview": "As Daisy and Simmons struggle to discover an escape route to the real world, the identity of the Inhuman leader of the Resistance is revealed.",
+        "air_date": "2017-04-11",
+        "runtime": 44,
+        "still_path": "/dezSHDhYkcELCokuJrodGiWGlOj.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "No Regrets",
+        "overview": "The truth behind Fitz\u0027s turn could bring down all of S.H.I.E.L.D..",
+        "air_date": "2017-04-18",
+        "runtime": 44,
+        "still_path": "/ghV30AN3fXLyoJNJA6SVw0tj5du.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "All the Madame\u0027s Men",
+        "overview": "Daisy finds herself teamed up with an unlikely partner. Meanwhile, Aida prepares to put her ultimate end game into effect.",
+        "air_date": "2017-04-25",
+        "runtime": 44,
+        "still_path": "/hQobjT6HTH2IWudF0VU6YrG03TS.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Farewell, Cruel World!",
+        "overview": "The clock is ticking for Daisy and Simmons to get the team out of the Framework, but not everyone is ready and willing to leave.",
+        "air_date": "2017-05-02",
+        "runtime": 43,
+        "still_path": "/kzme3TmWPS7OqK1aFXw8fFIQZeA.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Return",
+        "overview": "Coulson and the team\u0027s victory in the Framework is short-lived, as an even deadlier enemy looms against them all.",
+        "air_date": "2017-05-09",
+        "runtime": 44,
+        "still_path": "/q9lYYFeTx7coNawd3YymCTie0cJ.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "World\u0027s End",
+        "overview": "With the surprising emergence of Ghost Rider, Coulson and the team attempt to stop Aida from ending the world.",
+        "air_date": "2017-05-16",
+        "runtime": 40,
+        "still_path": "/si1rzZskavyY6jSedZCtqq5AdU5.jpg"
+      }
+    ]
+  }
+}

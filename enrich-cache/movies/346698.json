@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 346698,
+    "title": "Barbie",
+    "overview": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.",
+    "tagline": "She\u0027s everything. He\u0027s just Ken.",
+    "runtime": 114,
+    "release_date": "2023-07-19",
+    "vote_average": 6.904,
+    "poster_path": "/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+    "backdrop_path": "/1esAE8sLJRWWFsLLeh5r3g2WanI.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Margot Robbie",
+      "character": "Barbie",
+      "profile_path": "/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg"
+    },
+    {
+      "name": "Ryan Gosling",
+      "character": "Ken",
+      "profile_path": "/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg"
+    },
+    {
+      "name": "America Ferrera",
+      "character": "Gloria",
+      "profile_path": "/7q9uUWnaIjveX8DTU2lcA7mA3dp.jpg"
+    },
+    {
+      "name": "Ariana Greenblatt",
+      "character": "Sasha",
+      "profile_path": "/lp7lzzBE7EYTMvSb4foN5LyZUkP.jpg"
+    }
+  ]
+}

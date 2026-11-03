@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11165,
+    "title": "Tora! Tora! Tora!",
+    "overview": "In the summer of 1941, the United States and Japan seem on the brink of war after constant embargos and failed diplomacy come to no end. \u0022Tora! Tora! Tora!\u0022, named after the code words used by the lead Japanese pilot to indicate they had surprised the Americans, covers the days leading up to the attack on Pearl Harbor, which plunged America into the Second World War.",
+    "tagline": "The incredible attack on Pearl Harbor.",
+    "runtime": 144,
+    "release_date": "1970-01-26",
+    "vote_average": 7.198,
+    "poster_path": "/c311sN931DixuZRer0JGYCwpx9N.jpg",
+    "backdrop_path": "/z2mntgw06VvPybd1YlNBi5prg7N.jpg",
+    "genres": [
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Martin Balsam",
+      "character": "Admiral Husband E. Kimmel",
+      "profile_path": "/2q7xs6j6vGll3pc9Mm6TUEvvwBf.jpg"
+    },
+    {
+      "name": "So Yamamura",
+      "character": "Admiral Isoroku Yamamoto",
+      "profile_path": "/norRWkMGfj3OGT42hKdQ5FvSBG2.jpg"
+    },
+    {
+      "name": "Jason Robards",
+      "character": "General Walter C. Short",
+      "profile_path": "/9y0HAtWWBkB02gVzh8QDdz6UYZH.jpg"
+    },
+    {
+      "name": "Joseph Cotten",
+      "character": "Henry L. Stimson",
+      "profile_path": "/djfCB0jPOgmq3w7RD3BMLzWsAu8.jpg"
+    }
+  ]
+}

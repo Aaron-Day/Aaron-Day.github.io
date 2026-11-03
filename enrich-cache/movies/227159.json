@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 227159,
+    "title": "Horrible Bosses 2",
+    "overview": "Dale, Kurt and Nick decide to start their own business but things don\u0027t go as planned because of a slick investor, prompting the trio to pull off a harebrained and misguided kidnapping scheme.",
+    "tagline": "New crime. Same tools.",
+    "runtime": 108,
+    "release_date": "2014-11-12",
+    "vote_average": 6.175,
+    "poster_path": "/boBOkwIqgrs8noxBUSDkkicKa4K.jpg",
+    "backdrop_path": "/5CUtGZASj2UqomudRG1RZOt5QbG.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 280588,
+      "name": "Horrible Bosses Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Bateman",
+      "character": "Nick Hendricks",
+      "profile_path": "/8e6mt0vGjPo6eW52gqRuXy5YnfN.jpg"
+    },
+    {
+      "name": "Jason Sudeikis",
+      "character": "Kurt Buckman",
+      "profile_path": "/uuacnP9DOHMsmj8FhBi0cWWDgrn.jpg"
+    },
+    {
+      "name": "Charlie Day",
+      "character": "Dale Arbus",
+      "profile_path": "/c0HNhjChGybnHa4eoLyqO4dDu1j.jpg"
+    },
+    {
+      "name": "Jennifer Aniston",
+      "character": "Julia Harris",
+      "profile_path": "/PBSCmHDFdCMBhjx0EbXpTw4Z94.jpg"
+    }
+  ]
+}

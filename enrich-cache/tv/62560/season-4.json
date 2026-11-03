@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "401 Unauthorized",
+        "overview": "xmas time. elliot\u002Bmrrobot are BAK. darlene deals with real sh*t. tyrell\u0027s bored. dom\u0027s paranoid AF.",
+        "air_date": "2019-10-06",
+        "runtime": 61,
+        "still_path": "/n97iv8wyYGIPIlopX9Ac2XeLkHm.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "402 Payment Required",
+        "overview": "elliot \u002B darlene come together. dom gets dark army vibes. wtf is deus group? price has answers.",
+        "air_date": "2019-10-13",
+        "runtime": 48,
+        "still_path": "/cS3HczysMAZ2FY2sR75eu5UIrQA.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "403 Forbidden",
+        "overview": "whiterose has the feels. elliot gets owned by his own hack. an old foe chillz in wait.",
+        "air_date": "2019-10-20",
+        "runtime": 48,
+        "still_path": "/rqY41dxEhrP8eAadjXJP7yHRV20.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "404 Not Found",
+        "overview": "elliot, mrrobot, and tyrell walkin\u0027 in a winter wonderland. darlene meets a bad santa. dom is DTF.",
+        "air_date": "2019-10-27",
+        "runtime": 50,
+        "still_path": "/wb8zbWEBtTlSpd0zvJhZ0qDWTXe.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "405 Method Not Allowed",
+        "overview": "no xmas lolz for dom. darelliot gives a run-around. krista plays hookie. quiet pls, the show is on.",
+        "air_date": "2019-11-03",
+        "runtime": 50,
+        "still_path": "/npveuBuAJ59XxBa63VJVwD3h8nC.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "406 Not Acceptable",
+        "overview": "vera tells a tale. darlene gets an xmas surprise. elliot goes rogue.",
+        "air_date": "2019-11-10",
+        "runtime": 47,
+        "still_path": "/g3E7JUyz5TmCKFZ6vsyatzZMEkD.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "407 Proxy Authentication Required",
+        "overview": "I feud any data",
+        "air_date": "2019-11-17",
+        "runtime": 57,
+        "still_path": "/gIOUQXw1dtnRRYTaPUUMDsSoL6m.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "408 Request Timeout",
+        "overview": "janice wants all the deets. elliot is shook.",
+        "air_date": "2019-11-24",
+        "runtime": 45,
+        "still_path": "/7FLZfngpIrZ3noag2ugvyqbviqQ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "409 Conflict",
+        "overview": "fsociety v deus group",
+        "air_date": "2019-12-01",
+        "runtime": 47,
+        "still_path": "/zAMJXJ6tWtxOlXIIRD8HWwlcwTV.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "410 Gone",
+        "overview": "we stan domlene",
+        "air_date": "2019-12-08",
+        "runtime": 46,
+        "still_path": "/mzWSddXbEjxD5oGA4Lq2OLzdbOG.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "eXit",
+        "overview": "enuf is enuf. elliot goes to the washington township power plant.",
+        "air_date": "2019-12-15",
+        "runtime": 53,
+        "still_path": "/vUmFuhEW9ZZnPvN8qIR1mpxsJCr.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "whoami",
+        "overview": "say hi to Elliot",
+        "air_date": "2019-12-22",
+        "runtime": 45,
+        "still_path": "/dASAGrbEmsiGyzbtwgkq02NanlM.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Hello, Elliot",
+        "overview": "Goodbye, Friend",
+        "air_date": "2019-12-22",
+        "runtime": 51,
+        "still_path": "/rnD5umHZG1DCJjEU1xbwM9Fne0G.jpg"
+      }
+    ]
+  }
+}

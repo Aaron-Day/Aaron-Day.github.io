@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1636,
+    "title": "Bedazzled",
+    "overview": "Elliot Richards, a socially awkward IT worker, is given seven wishes to get the girl of his dreams when he meets a very seductive Satan. The catch: his soul. Some of his wishes include being a 7 foot basketball star, a wealthy, powerful man, and a sensitive caring guy. But, as could be expected, the Devil puts her own little twist on each of his fantasies.",
+    "tagline": "Meet the Devil. She\u0027s giving Elliott seven wishes. But not a chance in Hell.",
+    "runtime": 93,
+    "release_date": "2000-10-19",
+    "vote_average": 6.12,
+    "poster_path": "/sBV28EVvWsJRosMsEFCbVmpAZEl.jpg",
+    "backdrop_path": "/uaTVgIzIn02wd1SBTDXouGTpiIG.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Brendan Fraser",
+      "character": "Elliot",
+      "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg"
+    },
+    {
+      "name": "Elizabeth Hurley",
+      "character": "Devil",
+      "profile_path": "/1z6bx9I3J8gTQAQPrA5cJgzkiqt.jpg"
+    },
+    {
+      "name": "Frances O\u0027Connor",
+      "character": "Alison / Nicole",
+      "profile_path": "/tWGMS7DciV43tlxA6UEc2UqxrhL.jpg"
+    },
+    {
+      "name": "Miriam Shor",
+      "character": "Carol / Penthouse Hostess",
+      "profile_path": "/n6hpEZqCpxxb4yln76mfDvuz5lh.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11186,
+    "title": "Child\u0027s Play 2",
+    "overview": "Chucky is reconstructed by a toy factory to dispel the negative publicity surrounding the doll, and tracks young Andy Barclay to a foster home where the chase begins again.",
+    "tagline": "Sorry Jack... Chucky\u0027s back!",
+    "runtime": 84,
+    "release_date": "1990-11-09",
+    "vote_average": 6.381,
+    "poster_path": "/2tPQbPQeHEYAGoXFSW61IWNmoce.jpg",
+    "backdrop_path": "/fNkt4S5iXgBD4ea5bP9MZRHO8su.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10455,
+      "name": "Child\u0027s Play Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Alex Vincent",
+      "character": "Andy Barclay",
+      "profile_path": "/gLMOloD4taUOnL7f3OoIVKA9Fdt.jpg"
+    },
+    {
+      "name": "Brad Dourif",
+      "character": "Chucky (voice)",
+      "profile_path": "/ex7AmuHM3owhUetYZAyOmN1ehWS.jpg"
+    },
+    {
+      "name": "Christine Elise",
+      "character": "Kyle",
+      "profile_path": "/nrfYPmtvHHmDj8Orm41C6AsNlce.jpg"
+    },
+    {
+      "name": "Jenny Agutter",
+      "character": "Joanne Simpson",
+      "profile_path": "/hxroyCTMk54hesfCRo4g6Jwc8dT.jpg"
+    }
+  ]
+}

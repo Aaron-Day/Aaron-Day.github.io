@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 346672,
+    "title": "Underworld: Blood Wars",
+    "overview": "Vampire death dealer Selene fends off brutal attacks from both the Lycan clan and the Vampire faction that betrayed her. With her only allies, David and his father Thomas, she must stop the eternal war between Lycans and Vampires, even if it means she has to make the ultimate sacrifice.",
+    "tagline": "Protect the bloodline.",
+    "runtime": 91,
+    "release_date": "2016-11-24",
+    "vote_average": 5.924,
+    "poster_path": "/v1ciDCWMG47gdT4kMyjyQbnLQQn.jpg",
+    "backdrop_path": "/b5QnSrjDRHUFg3hpjmwBwsJfzyP.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2326,
+      "name": "Underworld Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kate Beckinsale",
+      "character": "Selene",
+      "profile_path": "/aoIQJzrWRtq9mOeaPadzpUCAaVd.jpg"
+    },
+    {
+      "name": "Theo James",
+      "character": "David",
+      "profile_path": "/g4yeW1EgIpyht0fy1stv7EXUmPC.jpg"
+    },
+    {
+      "name": "Tobias Menzies",
+      "character": "Marius",
+      "profile_path": "/hGhAw2obMEOu1K0ed9b3jds9thf.jpg"
+    },
+    {
+      "name": "Lara Pulver",
+      "character": "Semira",
+      "profile_path": "/uacMDTL4YnuJD6frGF35CHLFh43.jpg"
+    }
+  ]
+}

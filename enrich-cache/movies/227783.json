@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 227783,
+    "title": "The Nut Job",
+    "overview": "Surly, a curmudgeon, independent squirrel is banished from his park and forced to survive in the city. Lucky for him, he stumbles on the one thing that may be able to save his life, and the rest of park community, as they gear up for winter - Maury\u0027s Nut Store.",
+    "tagline": "No nuts, no glory.",
+    "runtime": 85,
+    "release_date": "2014-01-17",
+    "vote_average": 5.9,
+    "poster_path": "/4iHnGlmOjAj2k5zUftYDIzSITCf.jpg",
+    "backdrop_path": "/hDyGD9UQn6CDky3jcGXGVnPOGUS.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 464308,
+      "name": "The Nut Job Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Arnett",
+      "character": "Surly (voice)",
+      "profile_path": "/cXupYqk2ERP13XBkw816skYdVDO.jpg"
+    },
+    {
+      "name": "Brendan Fraser",
+      "character": "Grayson (voice)",
+      "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg"
+    },
+    {
+      "name": "Liam Neeson",
+      "character": "Raccoon (voice)",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Katherine Heigl",
+      "character": "Andie (voice)",
+      "profile_path": "/1yYJI5qtkeJMZo9JU4KMVuO2Hy9.jpg"
+    }
+  ]
+}

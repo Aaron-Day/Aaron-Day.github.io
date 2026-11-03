@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 35,
+    "title": "The Simpsons Movie",
+    "overview": "After Homer accidentally pollutes the town\u0027s water supply, Springfield is encased in a gigantic dome by the EPA and the Simpsons are declared fugitives.",
+    "tagline": "See our family. And feel better about yours.",
+    "runtime": 87,
+    "release_date": "2007-07-25",
+    "vote_average": 7.022,
+    "poster_path": "/s3b8TZWwmkYc2KoJ5zk77qB6PzY.jpg",
+    "backdrop_path": "/8ln5VUVk7gnNGIb2VNgw8nICDVt.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1554359,
+      "name": "The Simpsons Movie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dan Castellaneta",
+      "character": "Homer Simpson / Itchy / Barney / Abe Simpson / Stage Manager / Krusty the Clown / Mayor Quimby / Mayor\u0027s Aide / Multi-Eyed Squirrel / Panicky Man / Sideshow Mel / Mr. Teeny / EPA Official / Kissing Cop / Bear / Boy on Phone / NSA Worker / Officer / Santa\u0027s Little Helper / Squeaky-Voiced Teen (voice)",
+      "profile_path": "/AmeqWhP4A46AWkM4kVphg6jOTQX.jpg"
+    },
+    {
+      "name": "Julie Kavner",
+      "character": "Marge Simpson / Selma Bouvier / Patty Bouvier (voice)",
+      "profile_path": "/87kSPYlWcHvqOVEkhdqxysiAf6w.jpg"
+    },
+    {
+      "name": "Nancy Cartwright",
+      "character": "Bart Simpson / Maggie Simpson / Ralph / Nelson / Todd Flanders / TV Daughter / Woman on Phone (voice)",
+      "profile_path": "/kJQEz3NAwHGdb2sQzAnBf1RmMV4.jpg"
+    },
+    {
+      "name": "Yeardley Smith",
+      "character": "Lisa Simpson (voice)",
+      "profile_path": "/9AjPwbb3uz4GfgOPBYsy2ILvwkB.jpg"
+    }
+  ]
+}

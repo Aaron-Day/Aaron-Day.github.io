@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 482321,
+    "title": "Ron\u0027s Gone Wrong",
+    "overview": "In a world where walking, talking, digitally connected bots have become children\u0027s best friends, an 11-year-old finds that his robot buddy doesn\u0027t quite work the same as the others do.",
+    "tagline": "Best Friend Forever* (*battery life may vary).",
+    "runtime": 107,
+    "release_date": "2021-10-14",
+    "vote_average": 7.844,
+    "poster_path": "/plzgQAXIEHm4Y92ktxU6fedUc0x.jpg",
+    "backdrop_path": "/sdL37sfUBth7mdkAolI83bXAl7L.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jack Dylan Grazer",
+      "character": "Barney (voice)",
+      "profile_path": "/wkLAOleFx9Pis97g6t3noJRhAwg.jpg"
+    },
+    {
+      "name": "Zach Galifianakis",
+      "character": "Ron (voice)",
+      "profile_path": "/qsDfoUlRnXHUiqZeBPWHzmgmKGX.jpg"
+    },
+    {
+      "name": "Ed Helms",
+      "character": "Graham (voice)",
+      "profile_path": "/gPZ8tZaNQGAc3KZRIPp9rgGbEnN.jpg"
+    },
+    {
+      "name": "Olivia Colman",
+      "character": "Donka (voice)",
+      "profile_path": "/lawJUdbLb1YW0niaYjiVGR9IBG8.jpg"
+    }
+  ]
+}

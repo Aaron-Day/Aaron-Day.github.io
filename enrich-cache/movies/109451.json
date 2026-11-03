@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 109451,
+    "title": "Cloudy with a Chance of Meatballs 2",
+    "overview": "After the disastrous food storm in the first film, Flint and his friends are forced to leave the town. Flint accepts the invitation from his idol Chester V to join The Live Corp Company, which has been tasked to clean the island, and where the best inventors in the world create technologies for the betterment of mankind. When Flint discovers that his machine still operates and now creates mutant food beasts like living pickles, hungry tacodiles, shrimpanzees and apple pie-thons, he and his friends must return to save the world.",
+    "tagline": "Something big was leftover.",
+    "runtime": 95,
+    "release_date": "2013-09-26",
+    "vote_average": 6.463,
+    "poster_path": "/ss5NcK2NWFg2YcKKYXLrk8q1myS.jpg",
+    "backdrop_path": "/vWriOBVlgW0XWdgbOiijhyLW7B8.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 177467,
+      "name": "Cloudy with a Chance of Meatballs Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bill Hader",
+      "character": "Flint Lockwood (voice)",
+      "profile_path": "/qyT50vQ9PQIEctE1IxDTEsBKstU.jpg"
+    },
+    {
+      "name": "Anna Faris",
+      "character": "Sam Sparks (voice)",
+      "profile_path": "/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+    },
+    {
+      "name": "James Caan",
+      "character": "Tim Lockwood (voice)",
+      "profile_path": "/z2Lz3rtxZ7aJjzBUkCnExvo8stn.jpg"
+    },
+    {
+      "name": "Will Forte",
+      "character": "Chester V (voice)",
+      "profile_path": "/4VEzbkL3HwHTUZAPA5PyypFG2U.jpg"
+    }
+  ]
+}

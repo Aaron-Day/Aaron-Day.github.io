@@ -1,0 +1,48 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Mighty Megalosaurus",
+        "overview": "Earl lays an egg when he asks his boss for a raise, and Fran lays an egg--literally.",
+        "air_date": "1991-04-26",
+        "runtime": 23,
+        "still_path": "/1eBuFyGJwCGaEW1DOSShDGnhbD2.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Mating Dance",
+        "overview": "Family duties and the baby combine to frazzle Fran, and Earl can\u0027t figure out her problem.",
+        "air_date": "1991-05-03",
+        "runtime": 23,
+        "still_path": "/kvswdhfYB6zGShpfyKwn7sX1dET.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Hurling Day",
+        "overview": "Earl has the honor of tossing his mother-in-law into the tar pits on \u0022Hurling Day.\u0022",
+        "air_date": "1991-05-10",
+        "runtime": 23,
+        "still_path": "/cDPkM8Bx42Jt0I9MePAc7WNhxXe.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "High Noon",
+        "overview": "A monstrous male who notices Fran in the supermarket challenges Earl to a fight to the death.",
+        "air_date": "1991-05-17",
+        "runtime": 23,
+        "still_path": "/eIV4TEa9kBxzVH9NwCbfv8fmgwM.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Howling",
+        "overview": "Robbie questions howling as a rite of passage--an act that puts Earl and Roy at odds with each other.",
+        "air_date": "1991-05-24",
+        "runtime": 23,
+        "still_path": "/15dFhmjRRjeBgewvT18uZ3AtpEA.jpg"
+      }
+    ]
+  }
+}

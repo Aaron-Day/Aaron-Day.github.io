@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10406,
+    "title": "Encino Man",
+    "overview": "High school misfits Stoney and Dave discover a long-frozen primeval man buried in their backyard. But the thawed-out Link\u2014as the boys have named him\u2014quickly becomes a wild card in the teens\u0027 already zany Southern California lives. After a shave and some new clothes, Link\u0027s presence at school makes the daily drudgery a lot more interesting.",
+    "tagline": "When the stone age meets the rock age.",
+    "runtime": 88,
+    "release_date": "1992-05-22",
+    "vote_average": 5.857,
+    "poster_path": "/y8HtL6pyjfODdHOFgciFVFmt8Eq.jpg",
+    "backdrop_path": "/2C4b0mHxy420fBk5xvbBwEf03bY.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1695980,
+      "name": "Encino Man Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sean Astin",
+      "character": "Dave Morgan",
+      "profile_path": "/As3ctGUtBYmG4zj4Ifyrcqd71HP.jpg"
+    },
+    {
+      "name": "Brendan Fraser",
+      "character": "Linkovich \u0022Link\u0022 Chomovsky",
+      "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg"
+    },
+    {
+      "name": "Pauly Shore",
+      "character": "Stanley \u0022Stoney\u0022 Brown",
+      "profile_path": "/uI7ctTqSIlLL7nn6UqDdqqhGNVC.jpg"
+    },
+    {
+      "name": "Megan Ward",
+      "character": "Robyn Sweeney",
+      "profile_path": "/wMrxzRi6101yXfcOzJnw7fNgZpl.jpg"
+    }
+  ]
+}

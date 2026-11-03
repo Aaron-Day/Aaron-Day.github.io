@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 872585,
+    "title": "Oppenheimer",
+    "overview": "The story of J. Robert Oppenheimer\u0027s role in the development of the atomic bomb during World War II.",
+    "tagline": "The world forever changes.",
+    "runtime": 181,
+    "release_date": "2023-07-19",
+    "vote_average": 8.023,
+    "poster_path": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+    "backdrop_path": "/neeNHeXjMF5fXoCJRsOmkNGC7q.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Cillian Murphy",
+      "character": "J. Robert Oppenheimer",
+      "profile_path": "/2lKs67r7FI4bPu0AXxMUJZxmUXn.jpg"
+    },
+    {
+      "name": "Emily Blunt",
+      "character": "Kitty Oppenheimer",
+      "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+    },
+    {
+      "name": "Matt Damon",
+      "character": "Leslie Groves",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    },
+    {
+      "name": "Robert Downey Jr.",
+      "character": "Lewis Strauss",
+      "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 489,
+    "title": "Good Will Hunting",
+    "overview": "Will Hunting is a headstrong, working-class genius who is failing the lessons of life. After one too many run-ins with the law, Will\u0027s last chance is a psychology professor, who might be the only man who can reach him.",
+    "tagline": "Some people can never believe in themselves, until someone believes in them.",
+    "runtime": 127,
+    "release_date": "1997-12-05",
+    "vote_average": 8.167,
+    "poster_path": "/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
+    "backdrop_path": "/xj1Sv1xm4Y0ydBueGuf10Y9qM0O.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matt Damon",
+      "character": "Will Hunting",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    },
+    {
+      "name": "Robin Williams",
+      "character": "Sean Maguire",
+      "profile_path": "/lu0gIoH4Bi2CiuMc6WHF9ZIK4PS.jpg"
+    },
+    {
+      "name": "Ben Affleck",
+      "character": "Chuckie Sullivan",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Stellan Skarsg\u00E5rd",
+      "character": "Gerald Lambeau",
+      "profile_path": "/mW7xmtGV4y79kQGn0zkKVGDMAmw.jpg"
+    }
+  ]
+}

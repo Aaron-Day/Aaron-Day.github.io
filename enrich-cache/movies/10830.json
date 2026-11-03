@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10830,
+    "title": "Matilda",
+    "overview": "Matilda Wormwood is an brilliant and intelligent little girl. Unfortunately, her parents, Harry and Zinnia, fail to see that fact. As time passes, she finally starts school and has a kind teacher, loyal friends, and a terrifying, sadistic headmistress. As she becomes fed up with the constant cruelty, she discovers she has a special gift that she just might be able to use to outwit the unruly adults around her.",
+    "tagline": "Somewhere inside all of us is the power to change the world.",
+    "runtime": 98,
+    "release_date": "1996-08-02",
+    "vote_average": 7.195,
+    "poster_path": "/wYoDpWInsBEVSmWStnRH06ddoyk.jpg",
+    "backdrop_path": "/t3HVA7XdVnQneMjI5hYjEhXmHY3.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Mara Wilson",
+      "character": "Matilda",
+      "profile_path": "/305mjPnTI7ep8rDJ4i7H6XyvLqP.jpg"
+    },
+    {
+      "name": "Danny DeVito",
+      "character": "Mr. Wormwood / Narrator (voice)",
+      "profile_path": "/6kO4IN7ndoIGw2JhyhAQN3SFmdx.jpg"
+    },
+    {
+      "name": "Rhea Perlman",
+      "character": "Mrs. Wormwood",
+      "profile_path": "/4S4PdeHea2pePiWHy8MlDODZRLP.jpg"
+    },
+    {
+      "name": "Embeth Davidtz",
+      "character": "Miss Honey",
+      "profile_path": "/nwsdu9lOsKJ5v9RwOCc7kAiuxSO.jpg"
+    }
+  ]
+}

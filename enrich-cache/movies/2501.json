@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2501,
+    "title": "The Bourne Identity",
+    "overview": "Wounded to the brink of death and suffering from amnesia, Jason Bourne is rescued at sea by a fisherman. With nothing to go on but a Swiss bank account number, he starts to reconstruct his life, but finds that many people he encounters want him dead. However, Bourne realizes that he has the combat and mental skills of a world-class spy\u2014but who does he work for?",
+    "tagline": "He was the perfect weapon until he became the target.",
+    "runtime": 119,
+    "release_date": "2002-06-14",
+    "vote_average": 7.5,
+    "poster_path": "/aP8swke3gmowbkfZ6lmNidu0y9p.jpg",
+    "backdrop_path": "/kJaRWmy1BGq3pHyE94LOTteiHer.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 31562,
+      "name": "The Bourne Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Matt Damon",
+      "character": "Jason Bourne",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    },
+    {
+      "name": "Franka Potente",
+      "character": "Marie Helena Kreutz",
+      "profile_path": "/aU6f9UemZsTkqKEG4l77zf6masg.jpg"
+    },
+    {
+      "name": "Chris Cooper",
+      "character": "Alexander Conklin",
+      "profile_path": "/sJKghcu9wRDIvKM0cI7kqNXYRfS.jpg"
+    },
+    {
+      "name": "Clive Owen",
+      "character": "The Professor",
+      "profile_path": "/xlWpuLgwxMnZEVgV9OID1TkUNtP.jpg"
+    }
+  ]
+}

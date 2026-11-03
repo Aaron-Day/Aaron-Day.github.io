@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1893,
+    "title": "Star Wars: Episode I - The Phantom Menace",
+    "overview": "Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi.",
+    "tagline": "Every saga has a beginning.",
+    "runtime": 136,
+    "release_date": "1999-05-19",
+    "vote_average": 6.583,
+    "poster_path": "/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg",
+    "backdrop_path": "/3TeGmKJfkik1D1rIoqGb1aR4k9c.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10,
+      "name": "Star Wars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Liam Neeson",
+      "character": "Qui-Gon Jinn",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Ewan McGregor",
+      "character": "Obi-Wan Kenobi",
+      "profile_path": "/q2UDxfwWnmXTB7khOUF3J9puBVP.jpg"
+    },
+    {
+      "name": "Natalie Portman",
+      "character": "Padm\u00E9 Amidala",
+      "profile_path": "/edPU5HxncLWa1YkgRPNkSd68ONG.jpg"
+    },
+    {
+      "name": "Jake Lloyd",
+      "character": "Anakin Skywalker",
+      "profile_path": "/tp5PRiy8Ip8Vs70pUY1jeHbk2wH.jpg"
+    }
+  ]
+}

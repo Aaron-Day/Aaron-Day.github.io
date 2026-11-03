@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Arrival",
+        "overview": "Having been transported to the Fortress of Solitude, Clark is confronted by Jor-El, who tells him he cannot return to Smallville, instead he must stay and prepare to save the planet. Also, transported to the Fortress, Chloe is unable to handle the sub-zero temperature and collapses, begging Clark to use his powers to save her. Jor-El forbids him to leave, but finally acquiesces, telling Clark he must return before sunset or there will be dire consequences. Meanwhile, Lana is horrified when she sees two Kryptonian aliens emerge from a spaceship discovered in the remnants of the meteor shower. The two aliens destroy what\u0027s left of the town searching for Kal-El.",
+        "air_date": "2005-09-29",
+        "runtime": 42,
+        "still_path": "/fpkE0EGG9JprSGKv2wPFb2hLQqj.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Mortal",
+        "overview": "Jor-El strips Clark of his powers, making him human. Delighted to finally be normal, Clark pursues a relationship with Lana sans secrets. However, after Lana, Jonathan and Martha are taken hostage by three thugs, Clark must figure out how to save his family without his super powers.",
+        "air_date": "2005-10-06",
+        "runtime": 41,
+        "still_path": "/ntMrI2PjqTF8QidhiGAiTn6d5tm.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Hidden",
+        "overview": "A krypto-mutant, Gabriel, hacks into missile codes and prepares to eliminate krypto-mutants in Smallville once and for all. A powerless Clark confronts him and is shot, and only Jor-El can save him.",
+        "air_date": "2005-10-13",
+        "runtime": 42,
+        "still_path": "/xfdsLBmWjVXOZTwQcSj9lYSlaV2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Aqua",
+        "overview": "At a party at Crater Lake, Lois is saved from drowning by Arthur \u0022A.C.\u0022 Curry. Arthur has incredible swimming abilities, but also a secret agenda aimed at...Lex. Meanwhile, Professor Fine discussed Lex\u0027s weapons-manfucturing operations with Clark.",
+        "air_date": "2005-10-20",
+        "runtime": 41,
+        "still_path": "/jZWBz7ygNurPMUQClf6U3YZiogl.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Thirst",
+        "overview": "Lana joins a sorority to get housing for her last-minute college registration, but the sisters have a deadly agenda which involves turning Lana into a vampire like themselves and sending her against Clark. Meanwhile, Chloe applies to become an intern at the Daily Planet and runs up against the editor-in-chief, Pauline Kahn.",
+        "air_date": "2005-10-27",
+        "runtime": 41,
+        "still_path": "/qqtUsjCeCVs6pBbW9e3QAEfpezm.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Exposed",
+        "overview": "Jonathan\u0027s oldest friend, Senator Jack Jennings, comes to Smallville looking for support in his re-election campaign, but is framed for the murder of his mistress, requiring Lois to go undercover as a stripper.",
+        "air_date": "2005-11-03",
+        "runtime": 41,
+        "still_path": "/rS7a7M1EiSnTDXxpm5OScG7l6a7.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Splinter",
+        "overview": "Clark gives into paranoid delusions brought on by exposure to new \u0022silver\u0022 kryptonite, and Professor Fine is the only one who can save him... before he kills Lana.",
+        "air_date": "2005-11-10",
+        "runtime": 43,
+        "still_path": "/Ar8D8alZxxWjmRGPw7qj61OMOaM.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Solitude",
+        "overview": "When Martha comes down with a strange disease, Professor Fine convinces Clark that Jor-El is responsible and that the Fortress must be trying to eliminate the father of Kal-El. But Professor Fine has an ulterior motive which comes to fruition when they arrive.",
+        "air_date": "2005-11-17",
+        "runtime": 41,
+        "still_path": "/szxHsWybJXPpqW3eAYmBikUCpaO.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Lexmas",
+        "overview": "Lex  is given an envelope with damaging information that will destroy Jonathan\u0027s life and must decide whether he will use it as it will also bring harm to Clark and Martha. Before he can decide what to do, Lex is shot and falls into a coma. He dreams that his mother visits him and shows him the life he could lead if he walks away from his father and LuthorCorp. In this alternate life, Lex is happily married to Lana with a baby on the way. Meanwhile, Chloe asks Clark to use his powers to deliver Christmas presents to needy kids.",
+        "air_date": "2005-12-08",
+        "runtime": 42,
+        "still_path": "/1nSRbYR7UtDlzioOJ3ywvT9xlJQ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Fanatic",
+        "overview": "The Senatorial race between Jonathan and Lex heats up when Jonathan receives an anonymous threat warning him to drop out of the election. When Clark finds Jonathan badly beaten he determines to find the attackers. Lois is thrown into the mix when she is captured and she is forced to assassinate Jonathan during his speech.",
+        "air_date": "2006-01-12",
+        "runtime": 42,
+        "still_path": "/bxbvYKKxnwZQ3NrruM7WLYe9PP9.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Lockdown",
+        "overview": "Lex and Lana are at the mercy of a deranged Smallville deputy who plans to keep them captive until Lex reveals the location of the Kryptonian spaceship. Meanwhile, the Kents can\u0027t see eye-to-eye on campaign financing.",
+        "air_date": "2006-01-19",
+        "runtime": 41,
+        "still_path": "/lVx5MT94LBeuGOyBIKBxmjPYtK6.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Reckoning",
+        "overview": "Clark reveals his secret to Lana, Jonathan and Lex learn the results of the senatorial election, and there is a tragic car accident on the highway that takes the life of someone Clark loves, forcing Clark to appeal to Jor-El for help.",
+        "air_date": "2006-01-26",
+        "runtime": 43,
+        "still_path": "/9lq55IwxzBGrmhgpDnLNVpPFnaS.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Vengeance",
+        "overview": "Clark discovers that the new assistant at the Daily Planet, a bespectacled, bumbling woman named Andrea, is actually a mysterious female vigilante who stalks Suicide Slum. Her path crosses Clark\u0027s as they both seek the same criminal. Meanwhile, Clark\u0027s bottled-up grief threatens to get the best of him and LuthorCorp experiences a shakeup.",
+        "air_date": "2006-02-02",
+        "runtime": 41,
+        "still_path": "/ulX6o2yxkmFTAzWxio95ck7ntHF.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Tomb",
+        "overview": "Chloe is possessed by the spirit of a young girl whose body is sealed in the Talon\u0027s walls, and goes searching for the girl\u0027s killer while Clark and Lois try to track her down.",
+        "air_date": "2006-02-09",
+        "runtime": 40,
+        "still_path": "/mdL57trQZjGIsUhqbSVKTvmjxWs.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Cyborg",
+        "overview": "Clark finds himself up against Lex when he befriends Victor Stone, a half-machine, half-human subject who escapes from LuthorCorp with the aid of a sympathetic doctor.",
+        "air_date": "2006-02-16",
+        "runtime": 41,
+        "still_path": "/adTztTM3MLxZ0m1SpVu4arZaopp.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Hypnotic",
+        "overview": "Clark is hypnotized by a woman who uses a supposedly magical charm to control others - he reveals his super powers and is sent to kill Lex. Meanwhile, Lex has tracked down the missing Professor Fine and plans to confront him, unaware that Clark is coming to murder him.",
+        "air_date": "2006-03-30",
+        "runtime": 42,
+        "still_path": "/e1zuF3WMJU4Ik1tAe5fbrsEDPWG.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Void",
+        "overview": "Distraught over her break-up with Clark, Lana goes to a rogue medical student who experiments with a dangerous kryptonite-based serum that allows people to flat-line but see their dead loved ones. Lana attempts to see her dead parents using the serum and when Clark returns from Honduras to help her, the doctor injects him with the serum and Clark speaks with his dead father...who warns him that Lionel knows his secret. Meanwhile, Lionel continues working to get closer to Martha, and Lex has a near-death vision of his mother.",
+        "air_date": "2006-04-06",
+        "runtime": 40,
+        "still_path": "/awCoP3ioZSYmKvUhTP4oiJO1iOb.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Fragile",
+        "overview": "Clark befriends a little girl who has the ability to telekinetically shatter glass, then comes to her aid when it\u0027s believed she killed her mother in a brutal stabbing attack. Meanwhile Lex and Lana grow closer together and Chloe finds out about it.",
+        "air_date": "2006-04-13",
+        "runtime": 42,
+        "still_path": "/xVp9MXjTaB73ZRWhNJMAY5BwT3E.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Mercy",
+        "overview": "Lionel is taken hostage by a masked man who forces him to play elaborate games for the prize of staying alive. Martha goes to confront Lionel after Clark tells her Lionel knows his secret and becomes a part of the game herself, fighting for her life.",
+        "air_date": "2006-04-20",
+        "runtime": 43,
+        "still_path": "/18b0Hxo9trxLCUc8jjtv98bLyEp.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Fade",
+        "overview": "Clark saves a man who in gratitude decides to help Clark in return...by using his ability to turn invisible and his skill as a hitman to kill Lex so Clark can reunite with Lana. And Clark and Lana finally square off about Lana\u0027s new relationship.",
+        "air_date": "2006-04-27",
+        "runtime": 42,
+        "still_path": "/c1nW5UwaY1czCuKFyBuaRxmWA1i.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Oracle",
+        "overview": "Clark and Martha are both visited by Jonathan\u0027s ghost, who warns them about Lionel and claims that Clark must kill him to stop him. Meanwhile Fine will do whatever it takes to get the vaccine from Lex.",
+        "air_date": "2006-05-04",
+        "runtime": 42,
+        "still_path": "/6k9NAcaNyT6b2dNuLpQR7Pc4I3w.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Vessel",
+        "overview": "Professor Fine has unleashed a virus that will kill millions. Clark must put a stop to him, while Lex wonders what happens when he will tell Lana his newest secret.",
+        "air_date": "2006-05-11",
+        "runtime": 44,
+        "still_path": "/qUzW5wPz6txROilc6J4IJdDIdge.jpg"
+      }
+    ]
+  }
+}

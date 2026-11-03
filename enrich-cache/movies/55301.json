@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 55301,
+    "title": "Alvin and the Chipmunks: Chipwrecked",
+    "overview": "Playing around while aboard a cruise ship, the Chipmunks and Chipettes accidentally go overboard and end up marooned in a tropical paradise. They discover their new turf is not as deserted as it seems.",
+    "tagline": "Sun, sea and squeaks.",
+    "runtime": 87,
+    "release_date": "2011-12-14",
+    "vote_average": 5.705,
+    "poster_path": "/npOXWVoZyl8UrF2wtByHtfmsWSX.jpg",
+    "backdrop_path": "/j8M9FjI1seC6OmUluDGkOZIwZt.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 167613,
+      "name": "Alvin and the Chipmunks Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Lee",
+      "character": "Dave",
+      "profile_path": "/64tEXo3xR9IFXsIJKSlJ2LUrrEA.jpg"
+    },
+    {
+      "name": "David Cross",
+      "character": "Ian",
+      "profile_path": "/aYsbAtUu5oWk1p8RY31k3w5Emul.jpg"
+    },
+    {
+      "name": "Jenny Slate",
+      "character": "Zoe",
+      "profile_path": "/mMxsNO6r966ut0sordYzj2iDOb6.jpg"
+    },
+    {
+      "name": "Justin Long",
+      "character": "Alvin (voice)",
+      "profile_path": "/7TGXeHw4o86IBm6xknQotpludXK.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 274870,
+    "title": "Passengers",
+    "overview": "A spacecraft traveling to a distant colony planet and transporting thousands of people has a malfunction in its sleep chambers. As a result, two passengers are awakened 90 years early.",
+    "tagline": "There is a reason they woke up.",
+    "runtime": 116,
+    "release_date": "2016-12-21",
+    "vote_average": 6.956,
+    "poster_path": "/jK9S6HANSf2no64v1x1HxfcpmcA.jpg",
+    "backdrop_path": "/gHz4ZQytRs8YGrqFMwB3Vrr8pig.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jennifer Lawrence",
+      "character": "Aurora Lane",
+      "profile_path": "/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+    },
+    {
+      "name": "Chris Pratt",
+      "character": "Jim Preston",
+      "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Michael Sheen",
+      "character": "Arthur",
+      "profile_path": "/nGxIcIcfJjdPN3k8zFabtA1gRqL.jpg"
+    },
+    {
+      "name": "Laurence Fishburne",
+      "character": "Gus Mancuso",
+      "profile_path": "/2GbXERENPpl5MmlqOLlPVaVtifD.jpg"
+    }
+  ]
+}

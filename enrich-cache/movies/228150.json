@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 228150,
+    "title": "Fury",
+    "overview": "April, 1945. As the Allies make their final push in the European Theater, a battle-hardened army sergeant commands a Sherman tank with a five-man crew on a deadly mission behind enemy lines.",
+    "tagline": "War never ends quietly.",
+    "runtime": 135,
+    "release_date": "2014-10-15",
+    "vote_average": 7.546,
+    "poster_path": "/pfte7wdMobMF4CVHuOxyu6oqeeA.jpg",
+    "backdrop_path": "/95ckrV6wQgbffurAVmETQ5YKASL.jpg",
+    "genres": [
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Brad Pitt",
+      "character": "Don \u0027Wardaddy\u0027 Collier",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "Shia LaBeouf",
+      "character": "Boyd \u0027Bible\u0027 Swan",
+      "profile_path": "/egvlIdeizCkSkuHVoDuuduIThFA.jpg"
+    },
+    {
+      "name": "Logan Lerman",
+      "character": "Norman Ellison",
+      "profile_path": "/ckcpgSvSWOhi8mvAfR1Cpsakg3S.jpg"
+    },
+    {
+      "name": "Michael Pe\u00F1a",
+      "character": "Trini \u0027Gordo\u0027 Garcia",
+      "profile_path": "/afs4PCiwn8LR93a10drULLVeVLo.jpg"
+    }
+  ]
+}

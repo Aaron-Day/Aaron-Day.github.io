@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 440,
+    "title": "Aliens vs Predator: Requiem",
+    "overview": "After a horrifying PredAlien crash-lands near a small Colorado town, killing everyone it encounters and producing countless Alien offspring, a lone Predator arrives to \u0022clean up\u0022 the infestation.",
+    "tagline": "On Earth everyone can hear you scream.",
+    "runtime": 94,
+    "release_date": "2007-12-25",
+    "vote_average": 5.158,
+    "poster_path": "/5iTwPDNtvK6ZZF607BHBbU3HO0B.jpg",
+    "backdrop_path": "/jXntuh47VtKLeoyBQ268rv24Igw.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 115762,
+      "name": "AVP Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "David Paetkau",
+      "character": "Dale",
+      "profile_path": "/c2LHO9ERSk8D5SW4vgRvgS9sSmb.jpg"
+    },
+    {
+      "name": "Sam Trammell",
+      "character": "Tim",
+      "profile_path": "/nt4uogoUsX3gR3kUcxuEZzsonep.jpg"
+    },
+    {
+      "name": "Steven Pasquale",
+      "character": "Dallas Howard",
+      "profile_path": "/exO1cSAwbKsqaXAGnkvVXMgKNFl.jpg"
+    },
+    {
+      "name": "Reiko Aylesworth",
+      "character": "Kelly O\u0027Brien",
+      "profile_path": "/bznmFIKDFalcTDUxneXgY33YOn0.jpg"
+    }
+  ]
+}

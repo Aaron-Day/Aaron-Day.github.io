@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Electric Sheep",
+        "overview": "The Orville crew deals with the interpersonal aftermath of the battle against the Kaylon.",
+        "air_date": "2022-06-02",
+        "runtime": 70,
+        "still_path": "/StOHShvx0gRo2NPjTRqhYxsIn3.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Shadow Realms",
+        "overview": "The Orville explores a mysterious region of space.",
+        "air_date": "2022-06-09",
+        "runtime": 65,
+        "still_path": "/trhZQGL4b5riNF7mVERKksp8wAH.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Mortality Paradox",
+        "overview": "The Orville crew discovers signs of a modern civilization on a planet known to be uninhabited.",
+        "air_date": "2022-06-16",
+        "runtime": 61,
+        "still_path": "/po0K01lpyDKDhz6BcalovgMh23c.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Gently Falling Rain",
+        "overview": "The Orville crew leads a Union delegation to sign a peace treaty with the Krill.",
+        "air_date": "2022-06-23",
+        "runtime": 66,
+        "still_path": "/msS2RMWviZX7XsiCF3Hdo3q59ti.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "A Tale of Two Topas",
+        "overview": "Tensions between Kelly and the Moclans result when she helps Topa prepare for the Union Point entrance exam.",
+        "air_date": "2022-06-30",
+        "runtime": 75,
+        "still_path": "/85fJZoyHqgKaoCsmK9qu7BZZRvl.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Twice in a Lifetime",
+        "overview": "The crew must rescue Gordon from a distant yet familiar world.",
+        "air_date": "2022-07-07",
+        "runtime": 70,
+        "still_path": "/uFu8HHzFnp09KLYisWA69HXl2h9.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "From Unknown Graves",
+        "overview": "The Orville discovers a Kaylon with a very special ability.",
+        "air_date": "2022-07-14",
+        "runtime": 74,
+        "still_path": "/3I0QE5W42yFDMnSrwODbSQsB0hb.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Midnight Blue",
+        "overview": "The crew visit Haveena\u0027s sanctuary world and embark on a journey that may leave the Union more vulnerable.",
+        "air_date": "2022-07-21",
+        "runtime": 87,
+        "still_path": "/eR6MKHDEfQ0l36YFevRkt3p9jNE.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Domino",
+        "overview": "The creation of a powerful new weapon puts the Orville crew \u2014 and the entire Union \u2014 in a political and ethical quandary.",
+        "air_date": "2022-07-28",
+        "runtime": 79,
+        "still_path": "/hbTs0y3PvtYdOOWeXJoFrkvaHNK.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Future Unknown",
+        "overview": "A celebration is underway aboard the ship.",
+        "air_date": "2022-08-04",
+        "runtime": 81,
+        "still_path": "/t2Qdr54ZqbSpC70Wfz1FqlF2Zum.jpg"
+      }
+    ]
+  }
+}

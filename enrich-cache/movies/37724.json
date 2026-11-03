@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 37724,
+    "title": "Skyfall",
+    "overview": "When Bond\u0027s latest assignment goes gravely wrong, agents around the world are exposed and MI6 headquarters is attacked. While M faces challenges to her authority and position from Gareth Mallory, the new Chairman of the Intelligence and Security Committee, it\u0027s up to Bond, aided only by field agent Eve, to locate the mastermind behind the attack.",
+    "tagline": "Think on your sins.",
+    "runtime": 143,
+    "release_date": "2012-10-24",
+    "vote_average": 7.269,
+    "poster_path": "/d0IVecFQvsGdSbnMAHqiYsNYaJT.jpg",
+    "backdrop_path": "/wkA622CCN2X0uwpgqYEOnUYEDf5.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Craig",
+      "character": "James Bond",
+      "profile_path": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
+    },
+    {
+      "name": "Judi Dench",
+      "character": "M",
+      "profile_path": "/cpna5VGvAxuKuC31xJPBKy9zbnv.jpg"
+    },
+    {
+      "name": "Javier Bardem",
+      "character": "Silva",
+      "profile_path": "/zfRID0jx8DKBluPGU9xtk9sZWUt.jpg"
+    },
+    {
+      "name": "Ralph Fiennes",
+      "character": "Gareth Mallory",
+      "profile_path": "/tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg"
+    }
+  ]
+}

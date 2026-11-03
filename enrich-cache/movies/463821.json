@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 463821,
+    "title": "The House with a Clock in Its Walls",
+    "overview": "When ten-year-old Lewis is suddenly orphaned, he is sent to live with his Uncle Jonathan in a creaky (and creepy) old mansion with a mysterious ticking noise that emanates from the walls. Upon discovering that his uncle is a warlock, Lewis begins learning magic, but when he rebelliously resurrects an evil warlock he must find the secret of the house and save the world from destruction.",
+    "tagline": "This house knows what makes you tick.",
+    "runtime": 105,
+    "release_date": "2018-09-15",
+    "vote_average": 6.251,
+    "poster_path": "/qM66Hv4ByAxnilr0jaqCA9uOD4Y.jpg",
+    "backdrop_path": "/tQvvRReWhrXnj28s4AIp2PblByg.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jack Black",
+      "character": "Jonathan Barnavelt",
+      "profile_path": "/rtCx0fiYxJVhzXXdwZE2XRTfIKE.jpg"
+    },
+    {
+      "name": "Cate Blanchett",
+      "character": "Florence Zimmerman",
+      "profile_path": "/1Rd567YFdGfkJjSlhNPR8joYkaX.jpg"
+    },
+    {
+      "name": "Owen Vaccaro",
+      "character": "Lewis Barnavelt",
+      "profile_path": "/34TBZv3c6cBIXGuO6xKeHWO7DI0.jpg"
+    },
+    {
+      "name": "Kyle MacLachlan",
+      "character": "Isaac Izard",
+      "profile_path": "/7gNyx8fYAUdOp2jpCEH3dyFbeV.jpg"
+    }
+  ]
+}

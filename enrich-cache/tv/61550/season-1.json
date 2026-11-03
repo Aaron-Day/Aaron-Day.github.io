@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Now Is Not the End",
+        "overview": "In 1946, Peggy Carter is now a secretary for the Strategic Scientific Reserve. Howard Stark asks her for help when the country believes that he is selling deadly weapons to their enemies.",
+        "air_date": "2015-01-06",
+        "runtime": 43,
+        "still_path": "/vElAbFDFXDG9ehuFyAeE6bnAd4U.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Bridge and Tunnel",
+        "overview": "Howard Stark\u0027s deadliest weapon has fallen into enemy hands, and only Agent Carter can recover it. But can she do so before her undercover mission is discovered by SSR Chief Dooley and Agent Thompson?",
+        "air_date": "2015-01-06",
+        "runtime": 42,
+        "still_path": "/e84YFCOmu5mtJNV5z7prEl8VmRE.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Time and Tide",
+        "overview": "As Agent Carter closes in on Howard Stark\u0027s stolen technology, Peggy\u0027s secret mission could unravel when the SSR arrests Jarvis and a secret is revealed.",
+        "air_date": "2015-01-13",
+        "runtime": 43,
+        "still_path": "/van9Z5L64ys0U4XKEg1K6aKbaxJ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Blitzkrieg Button",
+        "overview": "Peggy may be in more trouble than usual when fugitive Howard Stark suddenly returns for mysterious reasons. And Chief Dooley chases a new clue all the way to Europe that threatens to destroy Peggy\u0027s future at the SSR.",
+        "air_date": "2015-01-27",
+        "runtime": 43,
+        "still_path": "/7B8N00E8GtO9ETOkNfztYMqkDIS.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Iron Ceiling",
+        "overview": "Peggy is finally trusted with a mission and calls upon her trusted Howling Commandos squad for backup. But her cover could be at risk when SSR Chief Dooley also sends Agent Thompson with her.",
+        "air_date": "2015-02-03",
+        "runtime": 43,
+        "still_path": "/bq5WiUnGLMCB6FNeLvRRaWUw4GS.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "A Sin to Err",
+        "overview": "Peggy discovers the shocking truth about Leviathan but doesn\u0027t realize that her true enemies are even closer than she imagined. Meanwhile, Souza is close to confirming the truth about Peggy and may just put her in the crosshairs of the SSR.",
+        "air_date": "2015-02-10",
+        "runtime": 43,
+        "still_path": "/8ZdobzrZhqPzVTVL8n5tw1zLuqw.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "SNAFU",
+        "overview": "Peggy is cornered and more vulnerable than ever as Leviathan makes their move against her. As the SSR zeroes in on Howard Stark, they may pay the ultimate price as they find their true enemy is closer than they realized.",
+        "air_date": "2015-02-17",
+        "runtime": 43,
+        "still_path": "/tLrmFLU6XVM3gpg7hrDb1VS4mP8.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Valediction",
+        "overview": "Peggy faces the full fury of Leviathan, as Howard Stark makes his return.",
+        "air_date": "2015-02-24",
+        "runtime": 43,
+        "still_path": "/2H8M4L0ach8fF6oX9LhJ0fWP9Mo.jpg"
+      }
+    ]
+  }
+}

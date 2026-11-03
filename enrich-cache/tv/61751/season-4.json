@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The All Hail King Julien Show",
+        "overview": "King Julien launches a new TV channel called \u0022Julien-Vision\u0022 but quickly realizes that the kingdom only wants to watch a reality show of his own life.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/mxRIsVMCfkP9xNOPmCps34lNUgi.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Neverending Clover",
+        "overview": "After Clover is knocked unconscious, the entire kingdom plays along when she wakes up believing she\u0027s living in a make-believe storybook world.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/mxchFnYAMI5sFnwK98JtWdEdQBj.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Who Arted?",
+        "overview": "King Julien is crazy with jealousy and throws out the kingdom\u0027s art after he is upstaged by Mort who is now the town\u0027s hottest new artist.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/9ugrEcUkcuKgWg6PNdh9Lgao3jw.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "That Sinking Feeling",
+        "overview": "When Masikura convinces King Julien that the island is sinking, Julien believes building an ark is the only way to save his people.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/rM0WzCUqnLj579pcL3FsPhphcKG.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Jungle Rooster",
+        "overview": "When the Jungle Rooster keeps him up at night, Julien discovers that the Foosa have been farming chickens for food and risks his life to free them all.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/4VyYf060yZtFO4rCstHLoQnbTPC.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Good Book",
+        "overview": "Julien hires Croc Ambassador, an etiquette expert, to teach the kingdom how to behave at a classy ball, but everyone is too uptight to party.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/wZM9jfulLskXTL29wYwfQVitv0G.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The King and Mrs. Mort",
+        "overview": "With Julien sick and the others away on a cruise, Mort poses as king to entertain a judge from a big competition -- with disastrous results.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/ij1AnNS1HxKTM07ciT6tQytpD8y.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "King Julien Superstar!",
+        "overview": "Julien, Clover, Mort and Maurice become music sensations overnight, but the band breaks up over Julien and Clover\u0027s non-stop fighting.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/oL5yPnYxxynPaFzJIOvkUd4wbkc.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Panchurian Candidate",
+        "overview": "After Uncle King Julien turned Pancho into a deadly killer so he could take back his throne, King Julien must save the kingdom before it\u0027s too late.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/cKg9pdBNGHm5LAC0eZjzP8OYPPE.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Wrath of Morticus Khan",
+        "overview": "King Julien clones himself but things take a turn for the worse when Morticus Khan, an evil warlord, unleashes an army of Mort clones on the kingdom.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/dUL2hoWFz9moE3k9NvDEFRFxMPe.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Koto, Plain and Tall",
+        "overview": "Julien is lost in the jungle and accidentally saves a Mountain Lemur named Koto who turns out to be the biggest threat the kingdom has ever faced.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/xSE27vionrjnPXgMaUDC0C7oNGR.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "I, Maurice",
+        "overview": "When Maurice learns that he isn\u0027t a lemur like everyone else, he sets off on a journey to find his Aye-Aye parents and sister Brosalind.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": "/ivLpYWsiFpgJnwJQINbwozOOKVL.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Un-King Me",
+        "overview": "When the kingdom is overrun with refugees, Julien is shocked that an old friend Koto and his Mountain Lemur army are preparing to attack.",
+        "air_date": "2016-11-11",
+        "runtime": 24,
+        "still_path": null
+      }
+    ]
+  }
+}

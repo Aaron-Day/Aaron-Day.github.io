@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2756,
+    "title": "The Abyss",
+    "overview": "A civilian oil rig crew is recruited to conduct a search and rescue effort when a nuclear submarine mysteriously sinks. One diver soon finds himself on a spectacular odyssey 25,000 feet below the ocean\u0027s surface where he confronts a mysterious force that has the power to change the world or destroy it.",
+    "tagline": "When you get there, you will understand.",
+    "runtime": 140,
+    "release_date": "1989-08-09",
+    "vote_average": 7.364,
+    "poster_path": "/2dCit3XAtv9KWCJvRKdPkJ0FAkH.jpg",
+    "backdrop_path": "/xLzkWj2C6zCWyFT8Z7tKKtfrwcR.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ed Harris",
+      "character": "Virgil \u0027Bud\u0027 Brigman",
+      "profile_path": "/kUbUA70WPiosPT4kBJMWtGk0ASd.jpg"
+    },
+    {
+      "name": "Mary Elizabeth Mastrantonio",
+      "character": "Lindsey Brigman",
+      "profile_path": "/vbZ1E557K5oj34xLHR5ErO8wPCi.jpg"
+    },
+    {
+      "name": "Michael Biehn",
+      "character": "Lieutenant Hiram Coffey",
+      "profile_path": "/9oFLsADWQm2TvU8XzLIzBbjdMkU.jpg"
+    },
+    {
+      "name": "Leo Burmester",
+      "character": "Catton \u2018Catfish\u2019 De Vries",
+      "profile_path": "/o7ZXSICrTDzhxIyd95HBwVjBi1f.jpg"
+    }
+  ]
+}

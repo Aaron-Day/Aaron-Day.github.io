@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Enemies (2)",
+        "overview": "SG-1 finds themselves stranded in a crippled ship in a distant galaxy -- with Apophis threatening to destroy them. Teal\u0027c is brainwashed and made loyal to Apophis once again.",
+        "air_date": "2001-06-29",
+        "runtime": 44,
+        "still_path": "/aK2vhS2Y3XFRzT3z8DLzTkxZ219.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Threshold (3)",
+        "overview": "His mind altered by Apophis, Teal\u0027c must undergo a ritual that takes him to the edge of death itself, in order for him to rediscover who he is.",
+        "air_date": "2001-07-06",
+        "runtime": 44,
+        "still_path": "/sw5lZE3qzGmiA5peVfp1GuFrZQu.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Ascension",
+        "overview": "An alien being is smitten with Carter and follows her back to Earth. It assumes a human form and pursues a relationship with her.",
+        "air_date": "2001-07-13",
+        "runtime": 44,
+        "still_path": "/vrRtiX1YKxh1ZHNrgUtdhaYu0uv.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Fifth Man",
+        "overview": "O\u0027Neill and Lieutenant Tyler are ambushed by Goa\u0027uld forces and trapped behind enemy lines -- while the rest of their team discover they don\u0027t know who Tyler is.",
+        "air_date": "2001-07-20",
+        "runtime": 44,
+        "still_path": "/79gFMPBK85iTmN7eQXZyCd5Itnk.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Red Sky",
+        "overview": "SG-1 discovers that their recent trip through the Stargate may have inadvertently doomed an entire civilization.",
+        "air_date": "2001-07-27",
+        "runtime": 44,
+        "still_path": "/jl3NCL7fRoG6OIAJG2AYtiE1dd6.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Rite of Passage",
+        "overview": "Cassandra mysteriously falls ill, sending SG-1 back to her home planet -- where they uncover a dark Goa\u0027uld secret.",
+        "air_date": "2001-08-03",
+        "runtime": 44,
+        "still_path": "/2s75ZDL4d2rqwMPczOZZc8YNHLQ.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Beast of Burden",
+        "overview": "SG-1 discovers a civilization that uses Unas as slave labor, and attempt to liberate Daniel\u0027s friend, Chaka.",
+        "air_date": "2001-08-10",
+        "runtime": 44,
+        "still_path": "/iFxQJW6f8xXVYYYoKw5ffS0jOku.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Tomb",
+        "overview": "SG-1 teams with a Russian unit when one of their Stargate teams goes missing in a mysterious alien ziggurat.",
+        "air_date": "2001-08-17",
+        "runtime": 44,
+        "still_path": "/6oABVOgcpp2WeoWKRD8ZOxzOYFE.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Between Two Fires",
+        "overview": "The Tollan offer Earth advanced weapons technology, prompting a secret investigation on Tollana -- one that leads to a startling discovery.",
+        "air_date": "2001-08-24",
+        "runtime": 44,
+        "still_path": "/3CMuWO3elQLXaUQSKhM82bzsAFD.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "2001",
+        "overview": "SG-1 encounters a potential new, technologically advanced ally in the war against the Goa\u0027uld -- though they do not know the Aschen\u0027s dark secret.",
+        "air_date": "2001-08-31",
+        "runtime": 44,
+        "still_path": "/8FrKswBYGehHBND6GHNbM9lTXe5.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Desperate Measures",
+        "overview": "When Carter goes missing, O\u0027Neill teams up with Col. Maybourne again to free her.",
+        "air_date": "2001-09-07",
+        "runtime": 44,
+        "still_path": "/7tAZNOsasABpKLu8JrJpN83XPxt.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Wormhole X-Treme!",
+        "overview": "An alien ship approaches Earth, sending SG-1 to an old friend for some answers -- where they discover that Martin Lloyd has created a TV show about the Stargate program.",
+        "air_date": "2001-09-08",
+        "runtime": 44,
+        "still_path": "/5IKEjTMgdmH4CAGQkx2lIKrq7zh.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Proving Ground",
+        "overview": "SG-1 trains a team of raw cadets, and Colonel O\u0027Neill is forced to take them into a real-life battle situation when he learns of a possible alien incursion at the SGC.",
+        "air_date": "2002-03-08",
+        "runtime": 44,
+        "still_path": "/hSDHk8y6JFFHzw6Up4FLC32ekog.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "48 Hours",
+        "overview": "Disaster strikes the Stargate, trapping Teal\u0027c in transit. SG-1 must turn to Russia -- and to their enemies -- for help.",
+        "air_date": "2002-03-15",
+        "runtime": 44,
+        "still_path": "/iybjLcNbQ2Xm0V6NdkJlMTNvUO5.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Summit (1)",
+        "overview": "The Tok\u0027ra war with the Goa\u0027uld escalates, and the rebel faction sends Daniel Jackson to a secret meeting between the System Lords.",
+        "air_date": "2002-03-22",
+        "runtime": 44,
+        "still_path": "/ykWxXzdRpkPRJA3krjPEnm7uyKf.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Last Stand (2)",
+        "overview": "Dr. Jackson\u0027s undercover mission to a Goa\u0027uld summit is complicated by the arrival of a surprise guest. The rest of the team face a full-scale invasion of the Tok\u0027ra homeworld.",
+        "air_date": "2002-03-29",
+        "runtime": 44,
+        "still_path": "/nW5Om8n5XBj23IBdnKvRdbZqGdP.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Fail Safe",
+        "overview": "Earth finds itself threatened by something even larger than the Goa\u0027uld when the team learns that an asteroid is on a collision course with the planet.",
+        "air_date": "2002-04-05",
+        "runtime": 44,
+        "still_path": "/63K7SFpDXEPmCc0fE5TRunCbsyW.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Warrior",
+        "overview": "A charismatic Jaffa leader seeks to forge an alliance between Earth and his rebel followers, winning the allegiance of Teal\u0027c and Bra\u0027tac.",
+        "air_date": "2002-04-12",
+        "runtime": 44,
+        "still_path": "/pR8lqP5QsNOSzoXB7OQ0pSBIG9N.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Menace",
+        "overview": "SG-1 encounters a young woman with the ability to control Replicators, and who may hold the key to the salvation of the Asgard.",
+        "air_date": "2002-04-26",
+        "runtime": 44,
+        "still_path": "/9Zn0UmTN4lj72gqiSxqWiPPC44o.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Sentinel",
+        "overview": "SG-1 must turn to a pair of convicted criminals to save a world from annihilation by the Goa\u0027uld.",
+        "air_date": "2002-05-03",
+        "runtime": 44,
+        "still_path": "/o6e2jzXMefLwHdigji26OMDhbQV.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Meridian",
+        "overview": "Daniel Jackson is exposed to a lethal dose of radiation while visiting an alien civilization that is building a weapon of mass destruction.",
+        "air_date": "2002-05-10",
+        "runtime": 44,
+        "still_path": "/mBI1ULMrGGam2TG83B6cNLnjWJ7.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Revelations",
+        "overview": "SG-1 must come to the rescue of their once-powerful allies when the Goa\u0027uld attack a secret Asgard laboratory.",
+        "air_date": "2002-05-17",
+        "runtime": 44,
+        "still_path": "/c4miwTF8EdINU5xwyVc3IhgwO1T.jpg"
+      }
+    ]
+  }
+}

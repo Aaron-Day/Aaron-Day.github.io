@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 62211,
+    "title": "Monsters University",
+    "overview": "A look at the relationship between Mike and Sulley during their days at Monsters University \u2014 when they weren\u0027t necessarily the best of friends.",
+    "tagline": "Before they were incorporated, they had to be educated.",
+    "runtime": 104,
+    "release_date": "2013-06-19",
+    "vote_average": 7.06,
+    "poster_path": "/y7thwJ7z5Bplv6vwl6RI0yteaDD.jpg",
+    "backdrop_path": "/mIpCxBWNz6SHCQBe2K2PFr5MB7f.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 137696,
+      "name": "Monsters, Inc. Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Billy Crystal",
+      "character": "Mike (voice)",
+      "profile_path": "/jfcCceTnP7rrHz1pSjCxiqRosw3.jpg"
+    },
+    {
+      "name": "John Goodman",
+      "character": "Sullivan (voice)",
+      "profile_path": "/yyYqoyKHO7hE1zpgEV2XlqYWcNV.jpg"
+    },
+    {
+      "name": "Steve Buscemi",
+      "character": "Randy (voice)",
+      "profile_path": "/n0pZumkrcZrAPMoPq684RhYnjPV.jpg"
+    },
+    {
+      "name": "Helen Mirren",
+      "character": "Dean Hardscrabble (voice)",
+      "profile_path": "/1reKRrsdsHXJaRVHVyOEg4oPTcZ.jpg"
+    }
+  ]
+}

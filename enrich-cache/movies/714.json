@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 714,
+    "title": "Tomorrow Never Dies",
+    "overview": "A deranged media mogul is staging international incidents to pit the world\u0027s superpowers against each other. Now James Bond must take on this evil mastermind in an adrenaline-charged battle to end his reign of terror and prevent global pandemonium.",
+    "tagline": "Yesterday is a memory. Today is history. Tomorrow is in the hands of one man.",
+    "runtime": 119,
+    "release_date": "1997-12-11",
+    "vote_average": 6.394,
+    "poster_path": "/gZm002w7q9yLOkltxT76TWGfdZX.jpg",
+    "backdrop_path": "/fesAgiKA0pc04vScDTAQe1f9nd4.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Pierce Brosnan",
+      "character": "James Bond",
+      "profile_path": "/dzXVwwJLPwiZeXOnf7YxorqVEEM.jpg"
+    },
+    {
+      "name": "Jonathan Pryce",
+      "character": "Elliot Carver",
+      "profile_path": "/3nQ01F9WPNPzzLblY7XyaihT9JT.jpg"
+    },
+    {
+      "name": "Michelle Yeoh",
+      "character": "Wai Lin",
+      "profile_path": "/i6fHvGt7Rb8oVyjjdQVV6vEHB94.jpg"
+    },
+    {
+      "name": "Teri Hatcher",
+      "character": "Paris Carver",
+      "profile_path": "/ySmnfZm8ZGabcwp4UwaMDeSzXqx.jpg"
+    }
+  ]
+}

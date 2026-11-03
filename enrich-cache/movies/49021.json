@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 49021,
+    "title": "Killer Elite",
+    "overview": "Based on a shocking true story, Killer Elite pits two of the world\u2019s most elite operatives\u2014Danny, an ex-special ops agent and Hunter, his longtime mentor\u2014against the cunning leader of a secret military society. Covering the globe from Australia to Paris, London and the Middle East, Danny and Hunter are plunged into a highly dangerous game of cat and mouse\u2014where the predators become the prey.",
+    "tagline": "May the best man live.",
+    "runtime": 116,
+    "release_date": "2011-09-22",
+    "vote_average": 6.269,
+    "poster_path": "/7O2U0WPFPSvNSUYZlhbnV081lBF.jpg",
+    "backdrop_path": "/RzIuQRoXiO8WeFdjtnjUCzSymV.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jason Statham",
+      "character": "Danny Bryce",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Clive Owen",
+      "character": "Spike",
+      "profile_path": "/xlWpuLgwxMnZEVgV9OID1TkUNtP.jpg"
+    },
+    {
+      "name": "Robert De Niro",
+      "character": "Hunter",
+      "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+    },
+    {
+      "name": "Dominic Purcell",
+      "character": "Davies",
+      "profile_path": "/5GtHSYdnH7o2x5UIm09XqqLoJKO.jpg"
+    }
+  ]
+}

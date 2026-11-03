@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 550,
+    "title": "Fight Club",
+    "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \u0022fight clubs\u0022 forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+    "tagline": "Mischief. Mayhem. Soap.",
+    "runtime": 139,
+    "release_date": "1999-10-15",
+    "vote_average": 8.438,
+    "poster_path": "/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
+    "backdrop_path": "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Edward Norton",
+      "character": "Narrator",
+      "profile_path": "/8nytsqL59SFJTVYVrN72k6qkGgJ.jpg"
+    },
+    {
+      "name": "Brad Pitt",
+      "character": "Tyler Durden",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "Helena Bonham Carter",
+      "character": "Marla Singer",
+      "profile_path": "/hJMbNSPJ2PCahsP3rNEU39C8GWU.jpg"
+    },
+    {
+      "name": "Meat Loaf",
+      "character": "Robert Paulson",
+      "profile_path": "/1zkohpaG3my4qQAZGVgzgPuXwZ6.jpg"
+    }
+  ]
+}

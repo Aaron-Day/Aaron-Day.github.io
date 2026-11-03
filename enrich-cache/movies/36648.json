@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36648,
+    "title": "Blade: Trinity",
+    "overview": "For years, Blade has fought against the vampires in the cover of the night. But now, after falling into the crosshairs of the FBI, he is forced out into the daylight, where he is driven to join forces with a clan of human vampire hunters he never knew existed\u2014The Nightstalkers. Together with Abigail and Hannibal, two deftly trained Nightstalkers, Blade follows a trail of blood to the ancient creature that is also hunting him\u2014the original vampire, Dracula.",
+    "tagline": "The final hunt begins.",
+    "runtime": 113,
+    "release_date": "2004-12-08",
+    "vote_average": 5.862,
+    "poster_path": "/6f7iXvPOnf83MaLB1JmPzUor1rr.jpg",
+    "backdrop_path": "/63eAFgJtN6ZTyFFzlAOoZLhlYqc.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 735,
+      "name": "Blade Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Wesley Snipes",
+      "character": "Blade",
+      "profile_path": "/oOjRfYKQOBS6XsRyXaZktmSQBph.jpg"
+    },
+    {
+      "name": "Jessica Biel",
+      "character": "Abigail Whistler",
+      "profile_path": "/u5DzbWKvAzS0M4ZhYqpUR9MZr2M.jpg"
+    },
+    {
+      "name": "Ryan Reynolds",
+      "character": "Hannibal King",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Kris Kristofferson",
+      "character": "Whistler",
+      "profile_path": "/efD2Uu8QYBN7ZWSFa79mm3Pkk4L.jpg"
+    }
+  ]
+}

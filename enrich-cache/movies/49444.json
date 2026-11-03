@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 49444,
+    "title": "Kung Fu Panda 2",
+    "overview": "Po is finally living the dream as the Dragon Warrior\u2014until a shadow from his past comes roaring back. When the ruthless peacock Lord Shen unleashes a devastating new weapon used to wipe out kung fu masters across the land, Po and the Furious Five race across China to put an end to his plans. But if Po is to have any hope of stopping him, he must first confront the truth of his origins\u2014and find inner peace before his past tears him apart.",
+    "tagline": "The future of Kung Fu hangs in balance.",
+    "runtime": 91,
+    "release_date": "2011-05-25",
+    "vote_average": 7.09,
+    "poster_path": "/mtqqD00vB4PGRt20gWtGqFhrkd0.jpg",
+    "backdrop_path": "/iBUIS2duNa9aDfLgRr8thsUPRs0.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 77816,
+      "name": "Kung Fu Panda Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jack Black",
+      "character": "Po (voice)",
+      "profile_path": "/rtCx0fiYxJVhzXXdwZE2XRTfIKE.jpg"
+    },
+    {
+      "name": "Angelina Jolie",
+      "character": "Tigress (voice)",
+      "profile_path": "/bXNxIKcJ5cNNW8QFrBPWcfTSu9x.jpg"
+    },
+    {
+      "name": "Dustin Hoffman",
+      "character": "Shifu (voice)",
+      "profile_path": "/yFjTzJHE6AFbwQifOlnNDzmiwlq.jpg"
+    },
+    {
+      "name": "Gary Oldman",
+      "character": "Shen (voice)",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    }
+  ]
+}

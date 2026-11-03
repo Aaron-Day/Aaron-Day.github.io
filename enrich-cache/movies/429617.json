@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 429617,
+    "title": "Spider-Man: Far From Home",
+    "overview": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+    "tagline": "It\u0027s time to step up.",
+    "runtime": 129,
+    "release_date": "2019-06-28",
+    "vote_average": 7.387,
+    "poster_path": "/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg",
+    "backdrop_path": "/wqBW5ltBJu0gs26yCc8shQQV82d.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531241,
+      "name": "Spider-Man (MCU) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Holland",
+      "character": "Peter Parker / Spider-Man",
+      "profile_path": "/5OK84Wn1bIEIThFKcVoaN087mLj.jpg"
+    },
+    {
+      "name": "Jake Gyllenhaal",
+      "character": "Quentin Beck / Mysterio",
+      "profile_path": "/ct2Gh2sJSxd4yaMrSsqSt1HpIC3.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Nick Fury",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Marisa Tomei",
+      "character": "May Parker",
+      "profile_path": "/vAQ10fvGfVyuJdMNKVMA4ZkacWL.jpg"
+    }
+  ]
+}

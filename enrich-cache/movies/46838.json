@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 46838,
+    "title": "Tucker and Dale vs. Evil",
+    "overview": "Two hillbillies are suspected of being killers by a group of paranoid college kids camping near the duo\u0027s West Virginian cabin. As the body count climbs, so does the fear and confusion as the college kids try to seek revenge against the pair.",
+    "tagline": "Evil just messed with the wrong hillbillies.",
+    "runtime": 89,
+    "release_date": "2010-01-22",
+    "vote_average": 7.406,
+    "poster_path": "/8shwLEDzajJGSfLgbpac8x8xn1U.jpg",
+    "backdrop_path": "/Aa1Z4BYYwnxT2lqFnUIGPycSDoB.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tyler Labine",
+      "character": "Dale",
+      "profile_path": "/uTg5k0mflhBju9Q1tOYmYDzdBu6.jpg"
+    },
+    {
+      "name": "Alan Tudyk",
+      "character": "Tucker",
+      "profile_path": "/jUuUbPuMGonFT5E2pcs4alfqaCN.jpg"
+    },
+    {
+      "name": "Katrina Bowden",
+      "character": "Allison",
+      "profile_path": "/ykdL2JKteaBexfDiS9jp9Msyori.jpg"
+    },
+    {
+      "name": "Jesse Moss",
+      "character": "Chad",
+      "profile_path": "/ki9S8rLqvhde9nYaUqrMisCSqwq.jpg"
+    }
+  ]
+}

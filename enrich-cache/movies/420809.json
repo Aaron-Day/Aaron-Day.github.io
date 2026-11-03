@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 420809,
+    "title": "Maleficent: Mistress of Evil",
+    "overview": "Maleficent and her goddaughter Aurora begin to question the complex family ties that bind them as they are pulled in different directions by impending nuptials, unexpected allies, and dark new forces at play.",
+    "tagline": "Go beyond the fairy tale.",
+    "runtime": 119,
+    "release_date": "2019-10-16",
+    "vote_average": 7.291,
+    "poster_path": "/vloNTScJ3w7jwNwtNGoG8DbTThv.jpg",
+    "backdrop_path": "/skvI4rYFrKXS73BJxWGH54Omlvv.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531331,
+      "name": "Maleficent Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Angelina Jolie",
+      "character": "Maleficent",
+      "profile_path": "/bXNxIKcJ5cNNW8QFrBPWcfTSu9x.jpg"
+    },
+    {
+      "name": "Elle Fanning",
+      "character": "Princess Aurora",
+      "profile_path": "/hGL46Q5bkVkQbKAT0SrXcV6ZvRg.jpg"
+    },
+    {
+      "name": "Harris Dickinson",
+      "character": "Prince Phillip",
+      "profile_path": "/pqqnYWWHa3Va80EXofXrVlRqIDM.jpg"
+    },
+    {
+      "name": "Michelle Pfeiffer",
+      "character": "Queen Ingrith",
+      "profile_path": "/8qwNMFzmM3BxGKIj1iIqiHHBpx3.jpg"
+    }
+  ]
+}

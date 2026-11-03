@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10762,
+    "title": "Without a Paddle",
+    "overview": "Three friends, whose lives have been drifting apart, reunite for the funeral of a fourth childhood friend. When looking through their childhood belongings, they discover a trunk which contained details on a quest their friend was attempting. It revealed that he was hot on the trail of the $200,000 that went missing with airplane hijacker D.B. Cooper in 1971. They decide to continue his journey, but do not understand the dangers they will soon encounter.",
+    "tagline": "The call of the wild. The thrill of adventure. The mistake of a lifetime.",
+    "runtime": 95,
+    "release_date": "2004-08-20",
+    "vote_average": 5.7,
+    "poster_path": "/bSQBfHDzyfzxrCLepjegVb5F8j8.jpg",
+    "backdrop_path": "/vEEEKiUJOXmOJXW7X8P3kCgsm9p.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 146534,
+      "name": "Without a Paddle Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Seth Green",
+      "character": "Dan Mott",
+      "profile_path": "/l4No5Eu6j0U80hCIkaSn17AOWrj.jpg"
+    },
+    {
+      "name": "Matthew Lillard",
+      "character": "Jerry Conlaine",
+      "profile_path": "/mIEKAfe0iC41RDXibbTy48LtNOi.jpg"
+    },
+    {
+      "name": "Dax Shepard",
+      "character": "Tom Marshall",
+      "profile_path": "/aaUGRjfghjgysn5grVdm8kyYN4V.jpg"
+    },
+    {
+      "name": "Ethan Suplee",
+      "character": "Elwood",
+      "profile_path": "/gGSb8P9nQdDNu0JC65zyAyMUFhS.jpg"
+    }
+  ]
+}

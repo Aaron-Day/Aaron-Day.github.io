@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18885,
+    "title": "3 Ninjas Kick Back",
+    "overview": "During a championship baseball match, the three brothers hear that their grandfather in Japan is in trouble, and head out to help him, conceding the match. When they arrive in Japan, they must use all their powers to defend him against his ancient enemy, who has returned to exact revenge.",
+    "tagline": "Colt, Rocky and Tum Tum are back for bigger kicks in an all new adventure",
+    "runtime": 93,
+    "release_date": "1994-02-25",
+    "vote_average": 5.6,
+    "poster_path": "/kXuh3c0DyvqSGo0DBatoemBwEtz.jpg",
+    "backdrop_path": "/2m8gk7KmYk5POA5b4Xr7URBsK4P.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 71458,
+      "name": "3 Ninja Kids Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Victor Wong",
+      "character": "Grandpa",
+      "profile_path": "/3XvU2mK3i5V8Un7HyZn5pVnp4qw.jpg"
+    },
+    {
+      "name": "Max Elliott Slade",
+      "character": "Colt",
+      "profile_path": "/s22j7jmD5hUnBU835T3NsCtT6ao.jpg"
+    },
+    {
+      "name": "Sean Fox",
+      "character": "Rocky",
+      "profile_path": "/7IK37SVymBJVIlB9XM4R4B69h6N.jpg"
+    },
+    {
+      "name": "J. Evan Bonifant",
+      "character": "Tum Tum",
+      "profile_path": "/20HCiKBLqAK797xNOdwMq2HHSz8.jpg"
+    }
+  ]
+}

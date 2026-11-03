@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 153518,
+    "title": "The Angry Birds Movie",
+    "overview": "An island populated entirely by happy, flightless birds or almost entirely. In this paradise, Red, a bird with a temper problem, speedy Chuck, and the volatile Bomb have always been outsiders. But when the island is visited by mysterious green piggies, it\u2019s up to these unlikely outcasts to figure out what the pigs are up to.",
+    "tagline": "They came in peace, they left in chaos.",
+    "runtime": 97,
+    "release_date": "2016-05-11",
+    "vote_average": 6.294,
+    "poster_path": "/iOH0fEFtV9z9rZp9zmBFGGeWicv.jpg",
+    "backdrop_path": "/o4mhrLxv6I70kvYA42qANGUF7ya.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531315,
+      "name": "The Angry Birds Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Sudeikis",
+      "character": "Red (voice)",
+      "profile_path": "/uuacnP9DOHMsmj8FhBi0cWWDgrn.jpg"
+    },
+    {
+      "name": "Josh Gad",
+      "character": "Chuck (voice)",
+      "profile_path": "/17iKlfWZBDTAucqjkhRKHr9xjIz.jpg"
+    },
+    {
+      "name": "Danny McBride",
+      "character": "Bomb (voice)",
+      "profile_path": "/sVFPzl2t5QlGudQKWAszIWZCXZv.jpg"
+    },
+    {
+      "name": "Maya Rudolph",
+      "character": "Matilda (voice)",
+      "profile_path": "/bpEVMFMyHEQ8wLdii9WKB279w8p.jpg"
+    }
+  ]
+}

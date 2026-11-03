@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 575264,
+    "title": "Mission: Impossible - Dead Reckoning Part One",
+    "overview": "Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands. With control of the future and the world\u0027s fate at stake and dark forces from Ethan\u0027s past closing in, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan must consider that nothing can matter more than his mission\u2014not even the lives of those he cares about most.",
+    "tagline": "We all share the same fate.",
+    "runtime": 164,
+    "release_date": "2023-07-08",
+    "vote_average": 7.502,
+    "poster_path": "/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
+    "backdrop_path": "/628Dep6AxEtDxjZoGP78TsOxYbK.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87359,
+      "name": "Mission: Impossible Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Ethan Hunt",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Hayley Atwell",
+      "character": "Grace",
+      "profile_path": "/x57wXHexIjD2ywly9cRA4rov7cu.jpg"
+    },
+    {
+      "name": "Ving Rhames",
+      "character": "Luther Stickell",
+      "profile_path": "/tOVDvu1EQP78AwaUw6uh1wN818E.jpg"
+    },
+    {
+      "name": "Simon Pegg",
+      "character": "Benji Dunn",
+      "profile_path": "/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg"
+    }
+  ]
+}

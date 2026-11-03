@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 44896,
+    "title": "Rango",
+    "overview": "When Rango, a lost family pet, accidentally winds up in the gritty, gun-slinging Western town of Dirt, the theater-loving lizard suddenly finds himself the newly appointed sheriff. Welcomed as the last hope the town has been waiting for, Rango is forced to play his new role to the hilt and uncover the truth behind a looming water crisis\u2014before his act catches up with him.",
+    "tagline": "No man can walk out on his own story.",
+    "runtime": 107,
+    "release_date": "2011-03-02",
+    "vote_average": 6.924,
+    "poster_path": "/A5MP1guV8pbruieG0tnpPIbaJtt.jpg",
+    "backdrop_path": "/mOtKQlXdL5J4lwqcSFlkZmgmFeZ.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Johnny Depp",
+      "character": "Rango / Lars (voice)",
+      "profile_path": "/k2xt6EUxQDwYRKIyI4IBdZxfs8n.jpg"
+    },
+    {
+      "name": "Isla Fisher",
+      "character": "Beans (voice)",
+      "profile_path": "/vVeKcMyFMPcIDLYNAnGSGnQrJ3k.jpg"
+    },
+    {
+      "name": "Ned Beatty",
+      "character": "Mayor (voice)",
+      "profile_path": "/rUNNq9CYLkyOwnyGd8QA0LzhmJf.jpg"
+    },
+    {
+      "name": "Bill Nighy",
+      "character": "Rattlesnake Jake (voice)",
+      "profile_path": "/ixFI2YCGNGJfwlpI8iyhvVZRg8C.jpg"
+    }
+  ]
+}

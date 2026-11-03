@@ -1,0 +1,80 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "While working in his basement, Quinn Mallory opens the gateway to parallel worlds. For a test run, Quinn invites co-worker Wade Welles and his teacher, Professor Arturo, along. Upon opening the vortex, Quinn uses too much power, which causes the vortex to suck them in along with Rembrandt \u0022Crying Man\u0022 Brown, who happened to be driving by Quinn\u0027s house. The four arrive on a world that experienced an ecological disaster and will have to survive until the timer hits zero.",
+        "air_date": "1995-03-22",
+        "runtime": 86,
+        "still_path": "/pvuldUyAw3w0kFf1kjqggmb0Xfl.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Fever",
+        "overview": "On a world where penicillin was never invented, Quinn is mistaken for his double, who is believed to be the cause of a massive epidemic. While he is imprisoned by a health agency, Wade shows signs of being infected and only Arturo can find the cure.",
+        "air_date": "1995-03-29",
+        "runtime": 43,
+        "still_path": "/dWoTzPZf22NiwUbtXR2wmgdKJMw.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Last Days",
+        "overview": "The Sliders arrive on a world that will be destroyed by an asteroid before they are due to slide. Arturo works with Bennish to develop an atom bomb to destroy the asteroid and Rembrandt gets caught up in an end of the world celebration, while Quinn and Wade confront their feelings for one another.",
+        "air_date": "1995-04-05",
+        "runtime": 43,
+        "still_path": "/cNNS8ahAU6cWlPGhR7QM6OvB87O.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Prince of Wails",
+        "overview": "The Sliders arrive in the British States of America, where Arturo\u0027s double is plotting to assassinate a prince and take the throne. When the Sliders inadvertently foil the plot, they come into contact with a group of rebels trying to bring freedom to America.",
+        "air_date": "1995-04-12",
+        "runtime": 43,
+        "still_path": "/dLehnN8ObNgr0ozTWpFnlLRGTMY.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Summer of Love",
+        "overview": "The Sliders are separated on a world where the Hippie movement of the sixties is still alive and the US is at war with Australia. Wade and Rembrandt are mistaken for extraterrestrial prophets at a commune, while Quinn and Arturo race to fix a broken timer and rejoin the others.",
+        "air_date": "1995-04-19",
+        "runtime": 43,
+        "still_path": "/rjcohe0ytTZMJUi2eL52GAElecT.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Eggheads",
+        "overview": "On a world where being smart is the equivalent of being a sports star, Quinn is a popular college athlete and finds his double had underhanded dealings with gangsters. Meanwhile, Arturo discovers his late wife is alive on this world and tries for reconciliation after learning she is pressing for divorce.",
+        "air_date": "1995-04-26",
+        "runtime": 43,
+        "still_path": "/wSp0BK9WoiXpZI9C99OjZg0tSHZ.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Weaker Sex",
+        "overview": "The Sliders arrive on a world where roles are reversed with women holding the positions of power. Arturo becomes a candidate for the mayoral race in San Francisco, trying to bring about a \u0022men\u0027s rights\u0022 movement.",
+        "air_date": "1995-05-03",
+        "runtime": 43,
+        "still_path": "/mkWWDi5F7IkFlCRkJgPKJAduYCB.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The King Is Back",
+        "overview": "Rembrandt has arrived on his dream world, where his double is as popular as Elvis, but has been dead for eight years. As Rembrandt gets to enjoy the fame he\u0027s long since wanted, an old enemy plots to make sure he disappears for good.",
+        "air_date": "1995-05-10",
+        "runtime": 43,
+        "still_path": "/puPH58CIDo8JG8t5Suv1v3tfjjI.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Luck of the Draw",
+        "overview": "When the Sliders land on a seemingly ideal world, Wade wins the lottery. But Quinn discovers that the lottery is population control and the winners are killed.",
+        "air_date": "1995-05-17",
+        "runtime": 43,
+        "still_path": "/uDYrOJwSDSPsvDArzDxxOEyi5D6.jpg"
+      }
+    ]
+  }
+}

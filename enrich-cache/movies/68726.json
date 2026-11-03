@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 68726,
+    "title": "Pacific Rim",
+    "overview": "Using massive piloted robots to combat the alien threat, Earth\u0027s survivors take the fight to the invading alien force lurking in the depths of the Pacific Ocean. Nearly defenseless in the face of the relentless enemy, the forces of mankind have no choice but to turn to two unlikely heroes who now stand as Earth\u0027s final hope against the mounting apocalypse.",
+    "tagline": "To fight monsters, we created monsters.",
+    "runtime": 131,
+    "release_date": "2013-07-11",
+    "vote_average": 6.951,
+    "poster_path": "/mmznhaQDwlHWpUwKuNxtQiubbmM.jpg",
+    "backdrop_path": "/9X7Im1YuBhyHYVD8r7CAONPJR5k.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 363369,
+      "name": "Pacific Rim Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Charlie Hunnam",
+      "character": "Raleigh Becket",
+      "profile_path": "/5WIDrnY25Ps2RYu0zIzHSVuSt5n.jpg"
+    },
+    {
+      "name": "Rinko Kikuchi",
+      "character": "Mako Mori",
+      "profile_path": "/lv4UuorZtC37VaFAHO205u4lS73.jpg"
+    },
+    {
+      "name": "Idris Elba",
+      "character": "Stacker Pentecost",
+      "profile_path": "/be1bVF7qGX91a6c5WeRPs5pKXln.jpg"
+    },
+    {
+      "name": "Max Martini",
+      "character": "Herc Hansen",
+      "profile_path": "/gehOxb2cgNjcRnbAxaCUnFFJvAY.jpg"
+    }
+  ]
+}

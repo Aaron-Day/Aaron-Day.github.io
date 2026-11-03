@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7485,
+    "title": "Shooter",
+    "overview": "A top Marine sniper, Bob Lee Swagger, leaves the military after a mission goes horribly awry and disappears, living in seclusion. He is coaxed back into service after a high-profile government official convinces him to help thwart a plot to kill the President of the United States. Ultimately double-crossed and framed for the attempt, Swagger becomes the target of a nationwide manhunt. He goes on the run to track the real killer and find out who exactly set him up, and why, eventually seeking revenge against some of the most powerful and corrupt leaders in the free world.",
+    "tagline": "Yesterday was about honor. Today is about justice.",
+    "runtime": 124,
+    "release_date": "2007-03-22",
+    "vote_average": 7.13,
+    "poster_path": "/2aWGxo1E5polpBjPvtBRkWp7qaS.jpg",
+    "backdrop_path": "/uy2trYgO8MOQfQXlvMaLhBnkUqg.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Mark Wahlberg",
+      "character": "Bob Lee Swagger",
+      "profile_path": "/1Oc3XSLyb8hxmjmlgFENu582Kqw.jpg"
+    },
+    {
+      "name": "Michael Pe\u00F1a",
+      "character": "Nick Memphis",
+      "profile_path": "/afs4PCiwn8LR93a10drULLVeVLo.jpg"
+    },
+    {
+      "name": "Danny Glover",
+      "character": "Colonel Isaac Johnson",
+      "profile_path": "/7ZyztVlG7OpqD0EhzG8iwYNcd1s.jpg"
+    },
+    {
+      "name": "Kate Mara",
+      "character": "Sarah Fenn",
+      "profile_path": "/t8a9iWAZrkdKjRG8jmtT27bJf0W.jpg"
+    }
+  ]
+}

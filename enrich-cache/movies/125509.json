@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 125509,
+    "title": "Wrong Turn 5: Bloodlines",
+    "overview": "A small West Virginia town is hosting the legendary Mountain Man Festival on Halloween, where throngs of costumed party goers gather for a wild night of music and mischief. But an inbred family of hillbilly cannibals kill the fun when they trick and treat themselves to a group of visiting college students.",
+    "tagline": "The inbred hillbillies are back!",
+    "runtime": 91,
+    "release_date": "2012-10-18",
+    "vote_average": 5.475,
+    "poster_path": "/8fABep8FSRpeo8Ea4j3rfnoVgkg.jpg",
+    "backdrop_path": "/6PTWsiDugvnI44QwmP2f2Yq2fhN.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 52985,
+      "name": "Wrong Turn Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Camilla Arfwedson",
+      "character": "Sheriff Angela",
+      "profile_path": "/nIqwNRJxX0kSN67HKSrC9fpeZRx.jpg"
+    },
+    {
+      "name": "Doug Bradley",
+      "character": "Maynard",
+      "profile_path": "/7RRelx5RlEbWhGRSUQMqo7KPTzg.jpg"
+    },
+    {
+      "name": "Borisa Tyutyundzhieva",
+      "character": "Linda",
+      "profile_path": "/5W2IwmYTyZv2ouRmU6J6o9H8eGh.jpg"
+    },
+    {
+      "name": "Roxanne McKee",
+      "character": "Lita",
+      "profile_path": "/cNeWJUhflzfJK8SytGpemc0fUmK.jpg"
+    }
+  ]
+}

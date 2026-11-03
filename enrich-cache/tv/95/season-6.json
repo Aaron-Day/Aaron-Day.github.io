@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Bargaining (1)",
+        "overview": "The gang hope to bring Buffy back from the dead. Meanwhile, motorcycle-riding demons discover the Buffybot has been posing as the Slayer.",
+        "air_date": "2001-10-02",
+        "runtime": 43,
+        "still_path": "/q6YimmwstCbajBY7aMl6OsXaRU3.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Bargaining (2)",
+        "overview": "As the Hellions continue to ravage Sunnydale, a feral Buffy claws her way out of her own grave and must come to the aid of her friends.",
+        "air_date": "2001-10-02",
+        "runtime": 43,
+        "still_path": "/cbZCOABOcJJhO9Up05fTRFns0iA.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "After Life",
+        "overview": "Buffy and her friends battle a demon that may have hitched a ride with Buffy as she crossed into the world from another dimension.",
+        "air_date": "2001-10-09",
+        "runtime": 43,
+        "still_path": "/5TF4M9q1q8AILE4EauAlTKE11Di.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Flooded",
+        "overview": "While trying to get a loan, Buffy runs afoul of three deadbeat sorcerers who are using the otherworldly powers of a demon to rob a bank.",
+        "air_date": "2001-10-16",
+        "runtime": 43,
+        "still_path": "/rIwhEPI6khuOHmDjX0jPgx4buYG.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Life Serial",
+        "overview": "Buffy tries to figure out how to support herself and Dawn. Her job search is complicated by Andrew, Jonathan and Warren, who are testing her to find the Slayer\u0027s weaknesses.",
+        "air_date": "2001-10-23",
+        "runtime": 43,
+        "still_path": "/ugqRb0G98ypiArQFAb1Wy8d4ziQ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "All the Way",
+        "overview": "On Halloween, Dawn and her friend go out to make mischief and impress their crushes, but stumble into real danger. Xander announces his engagement to Anya, and Tara worries about Willow\u0027s reliance on magic.",
+        "air_date": "2001-10-30",
+        "runtime": 43,
+        "still_path": "/upgFsjYce8k4JsTQA6tabkvCCee.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Once More, with Feeling",
+        "overview": "In this musical extravaganza, Sunnydale residents find themselves bursting into song, and flame, when a demon attempts to make Dawn his bride.",
+        "air_date": "2001-11-06",
+        "runtime": 50,
+        "still_path": "/m6DAoR7I3UAeyjGA5ekLf5KQDfS.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Tabula Rasa",
+        "overview": "While trying to find a way to make Buffy forget about her afterlife experience, Willow inadvertently casts a spell that erases everyone\u0027s memories.",
+        "air_date": "2001-11-13",
+        "runtime": 43,
+        "still_path": "/g44MSCA0Z5mA8Yr7arkowa4hDRJ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Smashed",
+        "overview": "Willow turns Amy the Rat into her old self; Jonathan, Warren and Andrew steal a diamond; and Spike discovers something unexpected about Buffy.",
+        "air_date": "2001-11-20",
+        "runtime": 43,
+        "still_path": "/3jUToSvkuHWMtbACIdM7pTE3jqs.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Wrecked",
+        "overview": "Amy introduces Willow to a warlock whose powerful black magic proves addictive; Buffy and Spike deal with the aftermath of their night of passion.",
+        "air_date": "2001-11-27",
+        "runtime": 43,
+        "still_path": "/bDjoO4ebG0UYZwJyGLJKBWDt3ad.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Gone",
+        "overview": "The Three Geeks mistakenly turn Buffy invisible, and the Slayer takes some advantage from going unseen.",
+        "air_date": "2002-01-08",
+        "runtime": 43,
+        "still_path": "/rpTt7C5rdut8inmOoNLOSltSo1X.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Doublemeat Palace",
+        "overview": "When Buffy gets a job at the Doublemeat Palace, a local fast-food restaurant, she begins to believe that disappearing co-workers and the secret ingredient to the restaurant\u0027s hamburger may be connected.",
+        "air_date": "2002-01-29",
+        "runtime": 43,
+        "still_path": "/6fknp0yn5gH00x9NTVitfS7mWqk.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Dead Things",
+        "overview": "After Jonathan, Andrew, and Warren accidentally kill Warren\u0027s ex-girlfriend Katrina, they set Buffy up to make her believe it was she who killed the girl.",
+        "air_date": "2002-02-05",
+        "runtime": 43,
+        "still_path": "/axHu1Jvu4g3oMGVAliNjnLLXv4F.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Older and Far Away",
+        "overview": "Dawn accidentally puts a spell on Buffy and her friends, trapping them inside the Summer\u0027s house with a sword-wielding demon.",
+        "air_date": "2002-02-12",
+        "runtime": 43,
+        "still_path": "/zmRlR0o4jk2Yga5GFzXDOc6usRP.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "As You Were",
+        "overview": "Buffy\u0027s old boyfriend, Riley Finn, shows up unexpectedly as he tracks a demon about to hatch eggs that could wipe out Sunnydale.",
+        "air_date": "2002-02-26",
+        "runtime": 43,
+        "still_path": "/sqKWT5Yk4rqnh5EJ7RS1sp2UkFH.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Hell\u0027s Bells",
+        "overview": "Anya and Xander\u0027s wedding is thrown into turmoil when a man claiming to be Xander\u0027s future self turns up at the ceremony.",
+        "air_date": "2002-03-05",
+        "runtime": 43,
+        "still_path": "/mlkHAdRrUJ79NtMYnrRcA92oJpD.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Normal Again",
+        "overview": "After being stung by a demon, Buffy finds herself shifting back and forth between the Sunnydale she knows and a psych ward where she is told the last six years have been an elaborate hallucination. Struggling to make sense of either reality, she must decide which to believe.",
+        "air_date": "2002-03-12",
+        "runtime": 43,
+        "still_path": "/A7vOaodA3NihPm6sSSSSNLtBvEO.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Entropy",
+        "overview": "Anya returns to Sunnydale, bent on vengeance on Xander for leaving her at the altar.",
+        "air_date": "2002-04-30",
+        "runtime": 43,
+        "still_path": "/wf8eWvOomS7nXzxl01lodyyhWak.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Seeing Red",
+        "overview": "Willow and Tara delight in their renewed relationship. The Trio arm themselves with an artifact of great power and face off again with the Slayer. Spike\u0027s obsession with Buffy drives him further than ever.",
+        "air_date": "2002-05-07",
+        "runtime": 43,
+        "still_path": "/3HyqqPnWn3oRsNYRpRcgDBL4fn9.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Villains",
+        "overview": "A vengeful Willow uses her enormous power to track down Warren, despite Buffy\u0027s strong feelings about targeting humans.",
+        "air_date": "2002-05-14",
+        "runtime": 43,
+        "still_path": "/dUS5olJiGdULJqBpioq1OLdrqJu.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Two to Go",
+        "overview": "Fueled by black magic, Willow targets Andrew and Jonathan, leading to a battle between Buffy and Willow; Spike fights an unstoppable foe.",
+        "air_date": "2002-05-21",
+        "runtime": 43,
+        "still_path": "/tyFqwqILQBiDPCbIsJWqsSpR9AH.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Grave",
+        "overview": "Giles arrives to face Willow, armed with powerful borrowed magic. Willow, overwhelmed by power and grief, plans a ritual to put the world out of its misery.",
+        "air_date": "2002-05-21",
+        "runtime": 43,
+        "still_path": "/lnyeVvoR1WSsLJqhXzpBn0Us2iJ.jpg"
+      }
+    ]
+  }
+}

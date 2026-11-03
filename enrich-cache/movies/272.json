@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 272,
+    "title": "Batman Begins",
+    "overview": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
+    "tagline": "Evil fears the knight.",
+    "runtime": 140,
+    "release_date": "2005-06-10",
+    "vote_average": 7.732,
+    "poster_path": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg",
+    "backdrop_path": "/9IIBboV7MCT0bTxzXHmWK1Hq558.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 263,
+      "name": "The Dark Knight Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Christian Bale",
+      "character": "Bruce Wayne / Batman",
+      "profile_path": "/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg"
+    },
+    {
+      "name": "Michael Caine",
+      "character": "Alfred",
+      "profile_path": "/bVZRMlpjTAO2pJK6v90buFgVbSW.jpg"
+    },
+    {
+      "name": "Liam Neeson",
+      "character": "Ducard",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Katie Holmes",
+      "character": "Rachel Dawes",
+      "profile_path": "/gDhc9rLbhpXdY8lISD7yPiIhvp4.jpg"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12096,
+    "title": "The Pink Panther",
+    "overview": "When the coach of the France football team is killed by a poisoned dart in the stadium at the end of a game, and his huge, expensive ring with the Pink Panther diamond  disappears, the ambitious Chief Inspector Dreyfus assigns the worst police inspector \u2013 Jacques Clouseau \u2013 to the case.",
+    "tagline": "Pardon his French.",
+    "runtime": 93,
+    "release_date": "2006-02-10",
+    "vote_average": 5.881,
+    "poster_path": "/57ViRkdsddHLK32W8Nf3ZPLSAu4.jpg",
+    "backdrop_path": "/3jiNJ4lyAmdSidvbFTFIL2GQGBu.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 130440,
+      "name": "The Pink Panther (Steve Martin) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Martin",
+      "character": "Clouseau",
+      "profile_path": "/d0KthX8hVWU9BxTCG1QUO8FURRm.jpg"
+    },
+    {
+      "name": "Jean Reno",
+      "character": "Ponton",
+      "profile_path": "/mw0EZJYz3kiFq9fNxsML773gotF.jpg"
+    },
+    {
+      "name": "Kevin Kline",
+      "character": "Dreyfus",
+      "profile_path": "/ArH5dACd9AmWNNMnI6bGEkiFYIM.jpg"
+    },
+    {
+      "name": "Beyonc\u00E9",
+      "character": "Xania",
+      "profile_path": "/2HbjNtiCtmbArEnELuDFU7knaVK.jpg"
+    }
+  ]
+}

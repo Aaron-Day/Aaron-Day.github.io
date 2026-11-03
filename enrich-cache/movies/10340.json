@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10340,
+    "title": "Lady and the Tramp",
+    "overview": "Lady, a golden cocker spaniel, meets up with a mongrel dog who calls himself the Tramp. He is obviously from the wrong side of town, but happenings at Lady\u0027s home make her decide to travel with him for a while.",
+    "tagline": "She\u0027s from the leash and license set... he\u0027s footloose and collar free!",
+    "runtime": 76,
+    "release_date": "1955-06-22",
+    "vote_average": 7.127,
+    "poster_path": "/340NcWz9SQXWQyf4oicMxjbrLOb.jpg",
+    "backdrop_path": "/yGgEg4yimYQJLZrZg3Qhogp2raQ.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 97460,
+      "name": "Lady and the Tramp Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Barbara Luddy",
+      "character": "Lady (voice)",
+      "profile_path": "/jXXbYWessv2MgXPu6fPg0B6sXDi.jpg"
+    },
+    {
+      "name": "Larry Roberts",
+      "character": "Tramp (voice)",
+      "profile_path": null
+    },
+    {
+      "name": "Peggy Lee",
+      "character": "Darling / Si / Am / Peg (voice)",
+      "profile_path": "/n2VgRpO6cV7jDpMWX1dqUBwMeU1.jpg"
+    },
+    {
+      "name": "Bill Thompson",
+      "character": "Jock / Bull / Policeman at Zoo / Dachsie / Joe (voice)",
+      "profile_path": "/4l8jV6jZ9k06B62MH1rdtCho3Ag.jpg"
+    }
+  ]
+}

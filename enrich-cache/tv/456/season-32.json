@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 32,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Undercover Burns",
+        "overview": "Mr. Burns goes undercover as \u0022Fred\u0022 at the nuclear power plant and becomes friends with Homer and the gang. Burns implements all sorts of amenities to improve his employees\u0027 lives, but a jealous Smithers plots to bring the old, bitter Burns back and destroy Fred.",
+        "air_date": "2020-09-27",
+        "runtime": 22,
+        "still_path": "/83sbq5Y3askRXtPJgRNvTEgS4PT.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "I, Carumbus",
+        "overview": "At a museum exhibit of Ancient Rome, Marge and Homer get into an argument about Homer\u0027s lack of ambition. They then imagine a Roman version of what would happen if Homer was more career-driven.",
+        "air_date": "2020-10-04",
+        "runtime": 22,
+        "still_path": "/i3ESoxKyri7dVopnBdF91OdRbv0.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Now Museum, Now You Don\u0027t",
+        "overview": "Lisa stays home from school to explore the wonders of Western art. She appears as Lisanardo, while Bart takes the shape of a French impressionist, Homer and Marge as Diego Rivera and Frida Kahlo, and Maggie as a warrior Cupid.",
+        "air_date": "2020-10-11",
+        "runtime": 22,
+        "still_path": "/befj2isEP25SsYJmqb54bzvX7tA.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Treehouse of Horror XXXI",
+        "overview": "The 31st annual Simpsons Halloween special includes a frightening look at the 2020 election, parodies of Toy Story and Spider-Man: Into the Spider-Verse and a 9th birthday Lisa just can\u0027t get over.",
+        "air_date": "2020-11-01",
+        "runtime": 22,
+        "still_path": "/iKJoBSkH7IEp6pp1EvVFLd3sUOu.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The 7 Beer Itch",
+        "overview": "Homer is tempted by a British femme fatale while Marge and the kids are on a seaside vacation.",
+        "air_date": "2020-11-08",
+        "runtime": 22,
+        "still_path": "/5TQXBGH7UVTOifDlefTKRc6A8VS.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Podcast News",
+        "overview": "Grampa Simpson is accused of a crime; Kent Brockman questions his career.",
+        "air_date": "2020-11-15",
+        "runtime": 22,
+        "still_path": "/12uPYyVUgJQ326TDcmyatzvQqpB.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Three Dreams Denied",
+        "overview": "Bart becomes a voice-over actor; Comic Book Guy is humiliated at Comic-Con; Lisa is set up for a fall.",
+        "air_date": "2020-11-22",
+        "runtime": 22,
+        "still_path": "/egIB2qEof6EgW9C177ItbTOLdaJ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Road to Cincinnati",
+        "overview": "Odd couple Skinner and Chalmers embark on an 800-mile car ride to Cincinnati to attend an administrator\u0027s convention - but can they reach their destination without killing each other first?",
+        "air_date": "2020-11-29",
+        "runtime": 22,
+        "still_path": "/sZGWfUjenYSZRAX3cYkzYrjNlc4.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Sorry Not Sorry",
+        "overview": "Lisa calls her teacher, Ms. Hoover, a hack and refuses to apologize. Then, she learns Ms. Hoover\u0027s private pain.",
+        "air_date": "2020-12-06",
+        "runtime": 22,
+        "still_path": "/l33tCkHCecUmrfrlP4E3unOW8Bs.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "A Springfield Summer Christmas for Christmas",
+        "overview": "A cable channel films a Christmas movie in Springfield and Skinner falls in love.",
+        "air_date": "2020-12-13",
+        "runtime": 22,
+        "still_path": "/5EdlHoXMtkQw2gTngLn3lTmsvZO.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Dad Feelings Limited",
+        "overview": "Comic Book Guy and his wife Kumiko debate about having a baby and we learn about his awesome origin story.",
+        "air_date": "2021-01-03",
+        "runtime": 22,
+        "still_path": "/hkB8qBAZnSf8J3hjsGOkD6bclTP.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Diary Queen",
+        "overview": "Bart finds his old teacher\u0027s diary and learns a surprising secret. Then, Lisa discovers an even bigger surprise.",
+        "air_date": "2021-02-21",
+        "runtime": 22,
+        "still_path": "/lals0XbdD1PuQkxsxGv7tsc508p.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Wad Goals",
+        "overview": "Bart becomes a successful caddy, but Marge worries it is ruining his character.",
+        "air_date": "2021-02-28",
+        "runtime": 22,
+        "still_path": "/dNodmnSgvi8QbqzwPC80b67hjPL.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Yokel Hero",
+        "overview": "Cletus becomes a singing sensation, while Homer becomes a new man. Then, Cletus turns on his fans, ruining everything.",
+        "air_date": "2021-03-07",
+        "runtime": 22,
+        "still_path": "/orkEy4oQrca0oyGkHcGpZrvh5TV.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Do Pizza Bots Dream of Electric Guitars",
+        "overview": "Homer tries to reunite a mechanical band from his youth, but film and TV creator J.J. Abrams gets ahold of them first.",
+        "air_date": "2021-03-14",
+        "runtime": 22,
+        "still_path": "/s67j9cnGWsxY31SZVPPTlPqSXvY.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Manger Things",
+        "overview": "A secret of Flanders\u0027 Past and a never-before-seen room of the Simpson house are shown off.",
+        "air_date": "2021-03-21",
+        "runtime": 22,
+        "still_path": "/abZrCPptPo3f1kujkpyGHir7wWK.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Uncut Femmes",
+        "overview": "It is discovered that Chief Wiggum\u0027s wife is more than she seems. Meanwhile, Marge takes part in a jewel heist.",
+        "air_date": "2021-03-28",
+        "runtime": 22,
+        "still_path": "/qngCTRXo3w0Orj8U3uUpJtH3Fr8.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Burger Kings",
+        "overview": "Mr. Burns gets into the plant-based burger business. Lisa refuses to believe he\u0027s up to no good.",
+        "air_date": "2021-04-11",
+        "runtime": 22,
+        "still_path": "/mlVeooD3eTUnKmn918ifeJMyqsn.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Panic on the Streets of Springfield",
+        "overview": "Lisa gets a new imaginary friend - a depressed British singer from the 1980s. Meanwhile, Homer becomes a truck guy.",
+        "air_date": "2021-04-18",
+        "runtime": 24,
+        "still_path": "/yibhsAPT9wxz09wdJhtuisBgN17.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Mother and Child Reunion",
+        "overview": "Lisa makes a shocking college decision, wounding Marge. It leads to a very surprising place.",
+        "air_date": "2021-05-09",
+        "runtime": 22,
+        "still_path": "/t1j6VyJYwg26yVoVMtwa1B1DYvr.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Man from G.R.A.M.P.A.",
+        "overview": "A British secret agent comes to Springfield in search of a Russian spy.",
+        "air_date": "2021-05-16",
+        "runtime": 22,
+        "still_path": "/w4MvFkaZp85Wj3UQeLS6RqM2tRU.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Last Barfighter",
+        "overview": "After Moe breaks their most sacred rule, a secret society of bartenders seeks ultimate vengeance on Homer and his friends.",
+        "air_date": "2021-05-23",
+        "runtime": 22,
+        "still_path": "/a9ymN3dyP5diL7UUe4edKQvx8hU.jpg"
+      }
+    ]
+  }
+}

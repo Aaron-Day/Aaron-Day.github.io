@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 76492,
+    "title": "Hotel Transylvania",
+    "overview": "Welcome to Hotel Transylvania, Dracula\u0027s lavish five-stake resort, where monsters and their families can live it up and no humans are allowed. One special weekend, Dracula has invited all his best friends to celebrate his beloved daughter Mavis\u0027s 118th birthday. For Dracula catering to all of these legendary monsters is no problem but the party really starts when one ordinary guy stumbles into the hotel and changes everything!",
+    "tagline": "Where monsters go to get away from it all.",
+    "runtime": 91,
+    "release_date": "2012-09-20",
+    "vote_average": 6.972,
+    "poster_path": "/eJGvzGrsfe2sqTUPv5IwLWXjVuR.jpg",
+    "backdrop_path": "/5rARlA8beRAVXPYzSaF2NoS8Ry5.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 185103,
+      "name": "Hotel Transylvania Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Count Dracula (voice)",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Selena Gomez",
+      "character": "Mavis Dracula (voice)",
+      "profile_path": "/fLjGtchxniZtAxnZsFzDn2lsWmY.jpg"
+    },
+    {
+      "name": "Andy Samberg",
+      "character": "Jonathan Loughran (voice)",
+      "profile_path": "/jMXU5oG3i93SH1yhkpbBGskFiJl.jpg"
+    },
+    {
+      "name": "Kevin James",
+      "character": "Frankenstein (voice)",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    }
+  ]
+}

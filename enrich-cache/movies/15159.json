@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 15159,
+    "title": "The Pink Panther 2",
+    "overview": "When legendary treasures from around the world are stolen, including the priceless Pink Panther Diamond, Chief Inspector Dreyfus is forced to assign Inspector Clouseau to a team of international detectives and experts charged with catching the thief and retrieving the stolen artifacts.",
+    "tagline": "Inspect the unexpected.",
+    "runtime": 92,
+    "release_date": "2009-02-06",
+    "vote_average": 5.708,
+    "poster_path": "/aPg6iZjnBUlsmnCSGHX85T82AJ4.jpg",
+    "backdrop_path": "/ia6qY2XV4uvrrhSFcqqKZphizXR.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 130440,
+      "name": "The Pink Panther (Steve Martin) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Martin",
+      "character": "Clouseau",
+      "profile_path": "/d0KthX8hVWU9BxTCG1QUO8FURRm.jpg"
+    },
+    {
+      "name": "Jean Reno",
+      "character": "Ponton",
+      "profile_path": "/mw0EZJYz3kiFq9fNxsML773gotF.jpg"
+    },
+    {
+      "name": "Emily Mortimer",
+      "character": "Nicole",
+      "profile_path": "/oZ4CZW2eW8lL2alD1mwZrFkfACI.jpg"
+    },
+    {
+      "name": "Andy Garcia",
+      "character": "Vicenzo",
+      "profile_path": "/9EivXoBlczZcFBet96WOoFbDsfF.jpg"
+    }
+  ]
+}

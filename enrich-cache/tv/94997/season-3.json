@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Salt and Sea, Fire and Blood",
+        "overview": "Driven by her faith in Alicent, Rhaenyra positions herself to take King\u0027s Landing while the Triarchy sails to take on Corlys in the Gullet.",
+        "air_date": "2026-06-21",
+        "runtime": 66,
+        "still_path": "/oVawK97dRbB7zeMaC44SjXQgUr1.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Queen\u0027s Landing",
+        "overview": "As Alicent risks everything to fulfill her end of the bargain, Rhaenyra must decide whether the Iron Throne is worth the cost.",
+        "air_date": "2026-06-28",
+        "runtime": 64,
+        "still_path": "/6qXcvZEnD9InL1itud7eK88CDzC.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Rhaenyra Triumphant",
+        "overview": "Rhaenyra learns the situation in King\u0027s Landing is not what she anticipated. Unable to locate her enemies, and with demands coming from all sides, Rhaenyra must navigate a delicate balance between appeasing her supporters and consolidating her rule.",
+        "air_date": "2026-07-05",
+        "runtime": 57,
+        "still_path": "/rtSucmBIzQPcBejfWXqRC8ElcEQ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Tumbleton",
+        "overview": "Ormund\u0027s invasion of Tumbleton forces Rhaenyra into a corner.",
+        "air_date": "2026-07-12",
+        "runtime": 62,
+        "still_path": "/kcKcglqhlje5zqIadRQgc7tvWMN.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Unbowed and Unbent",
+        "overview": "As the search for Aemond and Vhagar continues, Daemon attempts to control the spiraling situation in King\u0027s Landing.",
+        "air_date": "2026-07-19",
+        "runtime": 64,
+        "still_path": "/trmxI19SM9arfcd4Petr5sJXrGd.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Faceless Men",
+        "overview": "While Rhaenyra and Daemon focus on how best to deal with Ormund, tensions among their neglected allies begin to erupt.",
+        "air_date": "2026-07-26",
+        "runtime": 63,
+        "still_path": "/6nU7pbPWspOKjud544KV2VEamUe.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Dragon in Winter",
+        "overview": "Torn between Mysaria and Daemon\u0027s visions for her reign, Rhaenyra grows desperate for a sign that she will prevail.",
+        "air_date": "2026-08-02",
+        "runtime": 64,
+        "still_path": "/cBsXy1Jxoun2H5mYKkzNkUysoni.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Treasons at Tumbleton",
+        "overview": "Shifting alliances irrevocably reshape the war as Rhaenyra\u0027s forces converge around Tumbleton and both sides vie to gain the upper hand.",
+        "air_date": "2026-08-09",
+        "runtime": 71,
+        "still_path": "/3307RKThwUvOoa0h8nhbMYZNpEd.jpg"
+      }
+    ]
+  }
+}

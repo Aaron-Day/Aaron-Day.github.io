@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9637,
+    "title": "Scooby-Doo",
+    "overview": "When the Mystery Inc. gang is invited to Spooky Island, a popular amusement park, they soon discover that the attractions aren\u0027t the only things that are spooky. Strange things are happening, and it\u0027s up to Scooby, Shaggy, Fred, Daphne, and Velma to uncover the truth behind the mysterious happenings.",
+    "tagline": "Be afraid. Be kind of afraid.",
+    "runtime": 87,
+    "release_date": "2002-06-14",
+    "vote_average": 6.112,
+    "poster_path": "/mTAiBJGg8mqEfnYHHbi37ZoRSZm.jpg",
+    "backdrop_path": "/1RAxtBxslR4OZCZC1vxIRUxjR7a.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86860,
+      "name": "Scooby-Doo Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Freddie Prinze Jr.",
+      "character": "Fred",
+      "profile_path": "/8V9yNBjCNRBKROyjCLKLJGcCBdG.jpg"
+    },
+    {
+      "name": "Sarah Michelle Gellar",
+      "character": "Daphne",
+      "profile_path": "/xKe52w4tpv61ohz9iz75wNdzcwZ.jpg"
+    },
+    {
+      "name": "Matthew Lillard",
+      "character": "Shaggy",
+      "profile_path": "/mIEKAfe0iC41RDXibbTy48LtNOi.jpg"
+    },
+    {
+      "name": "Linda Cardellini",
+      "character": "Velma",
+      "profile_path": "/bcycvynDprC1rrhBNrnBjn5uOUd.jpg"
+    }
+  ]
+}

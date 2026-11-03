@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Hegemony (2)",
+        "overview": "Pike leads a risky rescue behind enemy lines as the landing party flees a deadly enemy.",
+        "air_date": "2025-07-17",
+        "runtime": 49,
+        "still_path": "/opluRsQk2CN6b3jopZoJCvrP7Cm.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Wedding Bell Blues",
+        "overview": "At a Federation celebration, an uninvited guest disrupts Spock and the crew\u0027s reflections.",
+        "air_date": "2025-07-17",
+        "runtime": 51,
+        "still_path": "/9r9pBXDtdgVtp5x0VLlSgilhwgG.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Shuttle to Kenfori",
+        "overview": "Pike and M\u0027Benga enter Klingon space for Batel\u0027s cure as M\u0027Benga\u0027s past returns on a deadly world.",
+        "air_date": "2025-07-24",
+        "runtime": 51,
+        "still_path": "/IF8eXYDYglz6W52FCozVCiySn3.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "A Space Adventure Hour",
+        "overview": "La\u0027An tests a prototype holodeck with a fictional case only she can solve.",
+        "air_date": "2025-07-31",
+        "runtime": 48,
+        "still_path": "/uH8ElDr6YZPXIVXmcl8QyMv5fCO.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Through the Lens of Time",
+        "overview": "Chapel and Korby\u0027s quest leads the Enterprise to ancient ruins hiding a dark secret.",
+        "air_date": "2025-08-07",
+        "runtime": 55,
+        "still_path": "/8wU3xRdYMMWoV6yurDEr9XHw190.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Sehlat Who Ate Its Tail",
+        "overview": "Kirk\u0027s first day as captain turns disastrous when a Scavenger Ship seizes the Enterprise.",
+        "air_date": "2025-08-14",
+        "runtime": 49,
+        "still_path": "/wfbnUqpIQWnDq4U1i0X2WKchimt.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "What Is Starfleet?",
+        "overview": "While aiding a war-torn planet, Pike and crew face scrutiny from a probing journalist.",
+        "air_date": "2025-08-21",
+        "runtime": 41,
+        "still_path": "/3s5WG0w3zQpKJeJdAUepWaFNBIU.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Four-and-a-Half Vulcans",
+        "overview": "After a mission turns crew members into Vulcans, trouble arises when they try to revert to human.",
+        "air_date": "2025-08-28",
+        "runtime": 55,
+        "still_path": "/jTI3PI3cEqJJX5jvik1kmu1qLxs.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Terrarium",
+        "overview": "Stranded on a toxic moon, Ortegas must defy her deepest beliefs to survive.",
+        "air_date": "2025-09-04",
+        "runtime": 57,
+        "still_path": "/AbgG3jb8kSEWxJvHYotQmGpSPQP.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "New Life and New Civilizations",
+        "overview": "When an ancient evil resurfaces, Pike faces a life-altering choice to stop it.",
+        "air_date": "2025-09-11",
+        "runtime": 56,
+        "still_path": "/orhTTIshYMwHRcsLmgmePXo0cHg.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "Lower-level cabinet member Tom Kirkman becomes President of the United States after a catastrophic attack on the U.S. Capitol. Kirkman must keep the country and his family safe while leading the search for the those responsible for the attack.",
+        "air_date": "2016-09-21",
+        "runtime": 44,
+        "still_path": "/qaYfFcIqlzlqqRw5MN16nMb3MPF.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The First Day",
+        "overview": "Hours after the attack on the Capitol, President Kirkman steps into his role as Commander-in-Chief in the midst of chaos and confusion. Facing dangerous new challenges and adversaries, Kirkman struggles to hold a country together that is on the brink of falling apart.",
+        "air_date": "2016-09-28",
+        "runtime": 45,
+        "still_path": "/p12fc59MiwrIomlW9pMpVUbCtYr.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Confession",
+        "overview": "President Kirkman and his staff work to keep a high-level security breach of the White House a secret just as he\u2019s about to give his first television interview. The FBI continues to investigate the Capitol bombing but Agent Hannah Wells starts to develop her own theories about who was really behind the attack.",
+        "air_date": "2016-10-05",
+        "runtime": 44,
+        "still_path": "/bE0hpviTLAYlF7JLhlo7ZlcgMqs.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Enemy",
+        "overview": "Kirkman learns who is behind the attack and needs to grapple not only with the prospect of war, but brewing domestic troubles as well. Kirkman taps Emily to monitor the domestic situation. Alex may be in for more than she bargains for when she seeks out help from Hookstraten.",
+        "air_date": "2016-10-12",
+        "runtime": 44,
+        "still_path": "/y205klNZ1DNdZWcUp1wUZ1oMpQe.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Mission",
+        "overview": "Realizing his attempts at diplomacy with Algeria have failed, President Kirkman makes the difficult decision of sending Navy SEALs on a mission that will define his presidency. Agent Hannah Wells discovers more secrets than answers.",
+        "air_date": "2016-10-26",
+        "runtime": 43,
+        "still_path": "/66hrMOYtFbcIc51p3NSkOoiHz5F.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Interrogation",
+        "overview": "When shots ring out at The White House during a Governors Summit, President Kirkman\u2019s plans at electing a new Congress are thrown into turmoil. Agent Hannah Wells continues investigating the Capitol bombing and makes one of her most shocking discoveries yet.",
+        "air_date": "2016-11-09",
+        "runtime": 44,
+        "still_path": "/gfVSqIpe2A1Vi7w0z6HWBO0CIzM.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Traitor",
+        "overview": "When an American track-and-field coach heads to Russia, President Kirkman is thrust into a hostage exchange involving the CIA and the Russian government. Agent Hannah Wells and Deputy Director Atwood\u0027s investigation into the Capitol bombing uncovers information that puts Atwood and his family\u0027s life at risk.",
+        "air_date": "2016-11-16",
+        "runtime": 44,
+        "still_path": "/5OGKewMdWusb40TaNe2hZZ8OKgq.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Results",
+        "overview": "On the eve of the country voting to elect a new House of Representatives, an unexpected development forces Kirkman to consider cancelling the elections entirely. News about Majid Nassar\u2019s death leaks out, and Kirkman has to handle the fallout.",
+        "air_date": "2016-11-30",
+        "runtime": 44,
+        "still_path": "/7jQyapGAUinVWpbhPLNAaayebel.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Blueprint",
+        "overview": "When classified government documents are leaked online, President Kirkman searches for the party responsible only to find that they have taken refuge inside a foreign embassy and are beyond even his reach. Agent Hannah Wells races furiously to gather evidence of MacLeish\u0027s involvement in the conspiracy before he can be confirmed as the country\u0027s next Vice President.",
+        "air_date": "2016-12-07",
+        "runtime": 44,
+        "still_path": "/tA9ON7oybwG7g3DK07LBJKNzGts.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Oath",
+        "overview": "President Kirkman fears there could be a traitor in the White House when he discovers shocking information connected to the Capitol Bombing. Confiding in Emily, Kirkman puts her in charge of quietly investigating. New information surfaces about Congressman MacLeish, raising concerns regarding his vice presidential nomination.",
+        "air_date": "2016-12-14",
+        "runtime": 43,
+        "still_path": "/rFCsdg4f1WtDmmWyRNCMbmIizd2.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Warriors",
+        "overview": "The nation reels from the aftermath of the shooting on the steps of the Capitol while Emily struggles with the knowledge there may be a traitor in the White House. Agent Wells grapples with her decision to reveal what she knows about the conspiracy behind the Capitol bombing.",
+        "air_date": "2017-03-08",
+        "runtime": 43,
+        "still_path": "/kJj91eWPNaF21VgXTCh3UrrtqLF.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The End of the Beginning",
+        "overview": "Circles must tighten as a new discovery within the conspiracy emerges. Tension rises between Aaron and Emily as suspicions loom in the White House. A new lead places Agent Wells closer than before to the truth.",
+        "air_date": "2017-03-15",
+        "runtime": 43,
+        "still_path": "/232T7NdbiwTTQ1rGNrzkIx9lS4X.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Backfire",
+        "overview": "An investigative journalist shocks the White House when he reveals classified information during a press briefing and leaves Seth struggling to contain the damage from the leaked story. Hannah unearths a key connection between MacLeish and the conspiracy.",
+        "air_date": "2017-03-22",
+        "runtime": 43,
+        "still_path": "/dB9V6eHWaz0gGcnBzC5em0xBgVH.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Commander-in-Chief",
+        "overview": "Turmoil in an African country forces President Kirkman to rely on an unlikely ally for help. Hannah\u0027s investigation into the Capitol bombing takes an unexpected turn. Emily settles into her role as chief of staff. Aaron has to make a difficult choice.",
+        "air_date": "2017-03-29",
+        "runtime": 42,
+        "still_path": "/tKJgjKnmqcIuzmWmXXd7WdSjihB.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "One Hundred Days",
+        "overview": "As President Kirkman releases an agenda to reset his presidency, Alex makes a controversial public statement that threatens to derail it. Agent Wells unknowingly finds herself in the center of a dangerous trap while getting closer to the truth.",
+        "air_date": "2017-04-05",
+        "runtime": 44,
+        "still_path": "/qlWARseBPtgSaSKWaoD5acoArsg.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Party Lines",
+        "overview": "President Kirkman forms an unlikely alliance in the hopes of passing his first bill. Agent Ritter is briefed by Agent Wells about a new alarming threat to the nation.",
+        "air_date": "2017-04-12",
+        "runtime": 43,
+        "still_path": "/kzBNufIVmnUIOBMsloV9osAI0eC.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Ninth Seat",
+        "overview": "As President Kirkman struggles to put together a new Supreme Court, FBI Agent Hannah Wells goes undercover and discovers much more than she ever could have imagined. Seth Wright has to contend with journalist Abe Leonard, who returns from the Middle East with an explosive story.",
+        "air_date": "2017-04-19",
+        "runtime": 43,
+        "still_path": "/vmUTbH0w9Y0d4g77yPDpiMCGvpQ.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Lazarus",
+        "overview": "As President Kirkman considers candidates for Vice President, Kimble Hookstraten finds herself embroiled in scandal. Agent Wells and Jason Atwood return from North Dakota with a critical new lead while journalist Abe Leonard\u0027s investigation takes an unexpected turn.",
+        "air_date": "2017-04-26",
+        "runtime": 43,
+        "still_path": "/xhG6cHIJR8iLB6Nf6rv9hZdNzr7.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Misalliance",
+        "overview": "As the White House gears up for President Kirkman\u2019s first international summit, Kimble Hookstraten faces her toughest political battle yet when her speakership is challenged. Meanwhile, Alex wrestles with whether or not to bring the kids back to Washington.",
+        "air_date": "2017-05-03",
+        "runtime": 42,
+        "still_path": "/dQc6BTdyOEqOZiApcFYcHQ6KEJg.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Bombshell",
+        "overview": "President Kirkman\u2019s first international summit is derailed when journalist Abe Leonard publishes an explosive article. Meanwhile, Hannah Wells uncovers the conspiracy\u2019s next target.",
+        "air_date": "2017-05-10",
+        "runtime": 42,
+        "still_path": "/fRU444JgNhHPl1cOlnw5VLIyCVA.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Brace for Impact",
+        "overview": "In the nail-biting season finale, Hannah Wells must stop the conspiracy from carrying out a final attack while President Kirkman authorizes a nationwide manhunt for the mastermind behind it all.",
+        "air_date": "2017-05-17",
+        "runtime": 42,
+        "still_path": "/dnSd39madc4aZeo4p1rGQDgh1MO.jpg"
+      }
+    ]
+  }
+}

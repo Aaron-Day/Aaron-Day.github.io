@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7340,
+    "title": "Carrie",
+    "overview": "Withdrawn and sensitive teenager Carrie White faces bullying from her classmates and abuse from her fanatically pious mother. When she begins to suspect that she has supernatural powers, things take a dark and violent turn.",
+    "tagline": "If you\u0027ve got a taste for terror...Take Carrie to the prom!",
+    "runtime": 98,
+    "release_date": "1976-11-03",
+    "vote_average": 7.344,
+    "poster_path": "/8tT1rqlsTguyfUBMrbHR9cv1rxM.jpg",
+    "backdrop_path": "/zwJFfKQdfiptK2GY6N8GkZFrAxJ.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 257053,
+      "name": "Carrie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sissy Spacek",
+      "character": "Carrie",
+      "profile_path": "/xAxenjxjLNQFq4v1ccS2to3Mnoq.jpg"
+    },
+    {
+      "name": "Piper Laurie",
+      "character": "Margaret White",
+      "profile_path": "/ccMC4RssRDKU6cz6K7rxiq1t2Hp.jpg"
+    },
+    {
+      "name": "Amy Irving",
+      "character": "Sue Snell",
+      "profile_path": "/dGPkygyZ8F5lKJyiuqBLs3WveeF.jpg"
+    },
+    {
+      "name": "William Katt",
+      "character": "Tommy Ross",
+      "profile_path": "/b1IQSajUi0VUDF36bnWTiTs7hsT.jpg"
+    }
+  ]
+}

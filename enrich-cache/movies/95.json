@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 95,
+    "title": "Armageddon",
+    "overview": "When an asteroid threatens to collide with Earth, NASA honcho Dan Truman determines the only way to stop it is to drill into its surface and detonate a nuclear bomb. This leads him to renowned driller Harry Stamper, who agrees to helm the dangerous space mission provided he can bring along his own hotshot crew. Among them is the cocksure A.J. who Harry thinks isn\u0027t good enough for his daughter, until the mission proves otherwise.",
+    "tagline": "For love. For honor. For mankind.",
+    "runtime": 151,
+    "release_date": "1998-07-01",
+    "vote_average": 6.835,
+    "poster_path": "/eTM3qtGhDU8cvjpoa6KEt5E2auU.jpg",
+    "backdrop_path": "/1cO6OQJxz7YhTZ4V1OlkYfebeJa.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Bruce Willis",
+      "character": "Harry S. Stamper",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Billy Bob Thornton",
+      "character": "Dan Truman",
+      "profile_path": "/uJBFml6efjg34u2jvT5ugVa1cPI.jpg"
+    },
+    {
+      "name": "Ben Affleck",
+      "character": "A.J. Frost",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Liv Tyler",
+      "character": "Grace Stamper",
+      "profile_path": "/rC6f9NoDN9l2tMgiEocIvnJi2tW.jpg"
+    }
+  ]
+}

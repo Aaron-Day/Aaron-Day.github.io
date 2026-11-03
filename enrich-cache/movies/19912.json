@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 19912,
+    "title": "The Final Destination",
+    "overview": "A horrifying premonition saves a young man and his friends from death during a racetrack accident but terrible fates await them nonetheless.",
+    "tagline": "Rest in pieces.",
+    "runtime": 82,
+    "release_date": "2009-08-26",
+    "vote_average": 5.605,
+    "poster_path": "/5vxXrr1MqGsT4NNeRITpfDnl4Rq.jpg",
+    "backdrop_path": "/vMaKc5PwdKIIBt5q7JQjfgyESYT.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8864,
+      "name": "Final Destination Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bobby Campo",
+      "character": "Nick",
+      "profile_path": "/6ART3lx7kJEC3vNJBKqILCKKOuM.jpg"
+    },
+    {
+      "name": "Shantel VanSanten",
+      "character": "Lori",
+      "profile_path": "/pjTcORzZ8TUKtJwYBuzgmT9aLsO.jpg"
+    },
+    {
+      "name": "Nick Zano",
+      "character": "Hunt",
+      "profile_path": "/t47PZJOUehQV4RFOEXoszMiOEjx.jpg"
+    },
+    {
+      "name": "Haley Webb",
+      "character": "Janet",
+      "profile_path": "/tKMPyfje7LEQDFaNNMW1vQQ0fvE.jpg"
+    }
+  ]
+}

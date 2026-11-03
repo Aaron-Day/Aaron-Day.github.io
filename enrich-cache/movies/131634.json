@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 131634,
+    "title": "The Hunger Games: Mockingjay - Part 2",
+    "overview": "As the war between the Capitol and the districts reaches its peak, Katniss Everdeen embarks on a perilous mission to liberate Panem and confront President Snow. Joined by a team of trusted allies, she navigates deadly traps, shifting loyalties, and the heavy cost of rebellion, determined to bring freedom to her people and end the Hunger Games once and for all.",
+    "tagline": "The fire will burn forever.",
+    "runtime": 137,
+    "release_date": "2015-11-18",
+    "vote_average": 6.898,
+    "poster_path": "/lImKHDfExAulp16grYm8zD5eONE.jpg",
+    "backdrop_path": "/qVgLMRVNB5bHU0inmRa0ueShacN.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131635,
+      "name": "The Hunger Games Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jennifer Lawrence",
+      "character": "Katniss Everdeen",
+      "profile_path": "/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+    },
+    {
+      "name": "Josh Hutcherson",
+      "character": "Peeta Mellark",
+      "profile_path": "/GqIyK5mCJXFUXW4FwLM3Zj7UtK.jpg"
+    },
+    {
+      "name": "Liam Hemsworth",
+      "character": "Gale Hawthorne",
+      "profile_path": "/7UIm9RoBnlqS1uLlbElAY8urdWD.jpg"
+    },
+    {
+      "name": "Woody Harrelson",
+      "character": "Haymitch Abernathy",
+      "profile_path": "/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg"
+    }
+  ]
+}

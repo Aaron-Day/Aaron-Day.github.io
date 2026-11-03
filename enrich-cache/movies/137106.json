@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 137106,
+    "title": "The Lego Movie",
+    "overview": "An ordinary Lego mini-figure, mistakenly thought to be the extraordinary MasterBuilder, is recruited to join a quest to stop an evil Lego tyrant from conquering the universe.",
+    "tagline": "The story of a nobody who saved everybody.",
+    "runtime": 100,
+    "release_date": "2014-02-06",
+    "vote_average": 7.434,
+    "poster_path": "/lbctonEnewCYZ4FYoTZhs8cidAl.jpg",
+    "backdrop_path": "/6gI1dAkOaUQ6659OdRPsTLlsem5.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 325470,
+      "name": "The Lego Movie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Pratt",
+      "character": "Emmet Brickowski (voice)",
+      "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Elizabeth Banks",
+      "character": "Wyldstyle / Lucy (voice)",
+      "profile_path": "/hQ7IwCQjlpsBPSpnnjjhH3rjwSJ.jpg"
+    },
+    {
+      "name": "Will Ferrell",
+      "character": "Lord Business / President Business / The Man Upstairs",
+      "profile_path": "/yjGbyQzVjpQl8xFkFGa7JxKZWQb.jpg"
+    },
+    {
+      "name": "Morgan Freeman",
+      "character": "Vitruvius (voice)",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    }
+  ]
+}

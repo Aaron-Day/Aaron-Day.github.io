@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 180299,
+    "title": "The Raid 2",
+    "overview": "After fighting his way through an apartment building populated by an army of dangerous criminals and escaping with his life, SWAT team member Rama goes undercover, joining a powerful Indonesian crime syndicate to protect his family and uncover corrupt members of his own force.",
+    "tagline": "It\u0027s not over yet.",
+    "runtime": 150,
+    "release_date": "2014-03-27",
+    "vote_average": 7.613,
+    "poster_path": "/mlGuKlIDLdPhYjz1QBXi0FmyYik.jpg",
+    "backdrop_path": "/wJD1VaO6XMkOSAacUGLkzOKAd4D.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 257960,
+      "name": "The Raid Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Iko Uwais",
+      "character": "Rama",
+      "profile_path": "/9WngJ2lOCy3UczLv3L2JRZvX0UM.jpg"
+    },
+    {
+      "name": "Arifin Putra",
+      "character": "Ucok",
+      "profile_path": "/An0p5UDfq1Seeyg80E9lVFlfZmw.jpg"
+    },
+    {
+      "name": "Tio Pakusadewo",
+      "character": "Bangun",
+      "profile_path": "/uAbKPJPbXVg1pi1bAEEkaMxc0Br.jpg"
+    },
+    {
+      "name": "Oka Antara",
+      "character": "Eka",
+      "profile_path": "/hxa27iexJSLga0x1NNxmpzQLh8V.jpg"
+    }
+  ]
+}

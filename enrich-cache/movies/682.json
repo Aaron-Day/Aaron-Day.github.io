@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 682,
+    "title": "The Man with the Golden Gun",
+    "overview": "Cool government operative James Bond searches for a stolen invention that can turn the sun\u0027s heat into a destructive weapon. He soon crosses paths with the menacing Francisco Scaramanga, a hitman so skilled he has a seven-figure working fee. Bond then joins forces with the swimsuit-clad Mary Goodnight, and together they track Scaramanga to a Thai tropical isle hideout where the killer-for-hire lures the slick spy into a deadly maze for a final duel.",
+    "tagline": "The world\u0027s greatest villains tried to kill James Bond...now it\u0027s Scaramanga\u0027s turn to try!",
+    "runtime": 125,
+    "release_date": "1974-12-04",
+    "vote_average": 6.465,
+    "poster_path": "/xVkbKwGnBVNQ122GN5bCTMyPbWz.jpg",
+    "backdrop_path": "/3tpNEbRahT8smy7RraaWa0xg9Gv.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Roger Moore",
+      "character": "James Bond",
+      "profile_path": "/qUjeguNlZzpwh2bGUwEq2n2GNPx.jpg"
+    },
+    {
+      "name": "Christopher Lee",
+      "character": "Francisco Scaramanga",
+      "profile_path": "/dA26fBr3t7mKqjn3OYW6kbD1LXM.jpg"
+    },
+    {
+      "name": "Britt Ekland",
+      "character": "Mary Goodnight",
+      "profile_path": "/xwqKmseMHCXwLQGxardWgPTtAcW.jpg"
+    },
+    {
+      "name": "Maud Adams",
+      "character": "Andrea Anders",
+      "profile_path": "/iJMwjbngYgfh4LELSV8HPI9QeJT.jpg"
+    }
+  ]
+}

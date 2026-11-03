@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Bad Fish Paradigm",
+        "overview": "Penny\u0027s first date with Leonard goes awry; Penny finds Sheldon to be an unwilling confidant.",
+        "air_date": "2008-09-22",
+        "runtime": 22,
+        "still_path": "/y9cFxQyFRBOewwVvkMl6SaH2om0.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Codpiece Topology",
+        "overview": "A jealous Leonard reacts to Penny\u0027s new guy by rebounding with Leslie.",
+        "air_date": "2008-09-29",
+        "runtime": 21,
+        "still_path": "/a9k5gM9GYU4IBW93LJc4IjRbgHI.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Barbarian Sublimation",
+        "overview": "Sheldon creates a monster when he introduces Penny to online gaming.",
+        "air_date": "2008-10-06",
+        "runtime": 21,
+        "still_path": "/q0bhAlY77x9XwfpHYrDScHZvMQE.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Griffin Equivalency",
+        "overview": "Raj gets an inflated ego and makes a play for Penny after being referenced in a magazine article.",
+        "air_date": "2008-10-13",
+        "runtime": 21,
+        "still_path": "/AvCiGNJqqaowpZlBdoO6Bp2hIdp.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Euclid Alternative",
+        "overview": "Leonard and his friends stage an intervention to force Sheldon to face his fear of driving.",
+        "air_date": "2008-10-20",
+        "runtime": 20,
+        "still_path": "/84UnqiLl4J8LCmJXWwTNfne4pWC.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Cooper-Nowitzki Theorem",
+        "overview": "Sheldon and the gang are confused when a young grad student is attracted to him.",
+        "air_date": "2008-11-03",
+        "runtime": 21,
+        "still_path": "/2WAmfZtammDEhuQuDgxqQT7BR9z.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Panty Pi\u00F1ata Polarization",
+        "overview": "When Sheldon bans Penny from the apartment for numerous minor infractions, she decides to retaliate.",
+        "air_date": "2008-11-10",
+        "runtime": 21,
+        "still_path": "/nBAjkqE9I805f9OCqxZAKVqnJT2.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Lizard-Spock Expansion",
+        "overview": "Leonard inadvertently steals away the new woman Wolowitz thinks is the love of his life.",
+        "air_date": "2008-11-17",
+        "runtime": 20,
+        "still_path": "/AlvHVY7gvBHfQvMLAvB9PODeYQw.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The White Asparagus Triangulation",
+        "overview": "Sheldon is thrilled when Leonard starts dating a woman who meets Sheldon\u0027s stringent standards.",
+        "air_date": "2008-11-24",
+        "runtime": 21,
+        "still_path": "/f5ls4tc9cY8Zh9998lMyZ3A9E6B.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Vartabedian Conundrum",
+        "overview": "Leonard asks Penny for advice when his new relationship starts moving too fast.",
+        "air_date": "2008-12-08",
+        "runtime": 21,
+        "still_path": "/uosBIO5639eeocnvjCxqrLl2HEN.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Bath Item Gift Hypothesis",
+        "overview": "Penny starts dating Leonard\u0027s handsome colleague; Leonard and his friends are tortured by Sheldon\u0027s obsession with gift-giving etiquette.",
+        "air_date": "2008-12-15",
+        "runtime": 21,
+        "still_path": "/aUh7k8uTCSjnlFqQZ4HVKZ8N7rA.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Killer Robot Instability",
+        "overview": "Penny\u0027s criticism of Wolowitz\u0027s romantic life pushes him into depression and AWOL for a fighting robot battle the rest of guys are depending on him for.",
+        "air_date": "2009-01-12",
+        "runtime": 21,
+        "still_path": "/fdo2epxMfOhpAWJ3EWplioQakRK.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Friendship Algorithm",
+        "overview": "Sheldon creates a scientific procedure for making friends.",
+        "air_date": "2009-01-19",
+        "runtime": 21,
+        "still_path": "/9q49iyMGcO9EIk9vWbnBZgfGNSF.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Financial Permeability",
+        "overview": "Sheldon\u0027s solution to Penny\u0027s financial difficulty leads to a confrontation between Leonard and Penny\u0027s ex-boyfriend.",
+        "air_date": "2009-02-02",
+        "runtime": 21,
+        "still_path": "/wC2YMYgyCnEixzO1ztYx1LUAndL.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Maternal Capacitance",
+        "overview": "Leonard and Penny are drawn together after a disastrous visit from Leonard\u0027s mother.",
+        "air_date": "2009-02-09",
+        "runtime": 21,
+        "still_path": "/cShchuw3099TXbfav7e9XU6qCoV.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Cushion Saturation",
+        "overview": "A paintball game leads to a fight between Sheldon and Penny, and romance for Leslie and Wolowitz.",
+        "air_date": "2009-03-02",
+        "runtime": 21,
+        "still_path": "/egK4v3alm6G7cm0CmMRGR3p8Yx3.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Terminator Decoupling",
+        "overview": "Leonard, Sheldon and Wolowitz are ecstatic to learn that a famous science-fiction actress (Summer Glau) is on board the train they are taking to San Francisco.",
+        "air_date": "2009-03-09",
+        "runtime": 21,
+        "still_path": "/uorhUtKMHkx7EokhUcSBl3q6GRt.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Work Song Nanocluster",
+        "overview": "Penny\u0027s home business turns into a complete nightmare when Sheldon takes over.",
+        "air_date": "2009-03-16",
+        "runtime": 20,
+        "still_path": "/fkaYEuDqCyBsODp0XYMAZrLULYs.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Dead Hooker Juxtaposition",
+        "overview": "Penny squares off with a new beautiful female neighbor who may become the building\u0027s \u0022new Penny.\u0022",
+        "air_date": "2009-03-30",
+        "runtime": 20,
+        "still_path": "/8LL0P42Z8mwyFXfnF3jnaabSZYt.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Hofstadter Isotope",
+        "overview": "A fellow comic book enthusiast\u0027s hitting on Penny leads to Leonard and Howard going to a bar\u0027s Ladies\u0027 Night.",
+        "air_date": "2009-04-13",
+        "runtime": 20,
+        "still_path": "/otMgg5qrM4XfHwbGnpWhPy8R2yD.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Vegas Renormalization",
+        "overview": "Leonard and Koothrappali escort a heartbroken Wolowitz to Las Vegas, and Sheldon becomes locked out of his apartment and must stay with Penny.",
+        "air_date": "2009-04-27",
+        "runtime": 22,
+        "still_path": "/5SRU3ZHSjhdh7MOWHxivvO6p2Xs.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Classified Materials Turbulence",
+        "overview": "Penny\u0027s second date with Stuart sees her making a comment that gives Leonard new hope for a relationship with her. Wolowitz realizes there\u0027s a crucial error in a NASA project he\u0027s working on.",
+        "air_date": "2009-05-04",
+        "runtime": 19,
+        "still_path": "/jNdjEnmBwdJiojaG6weilqZPfOn.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Monopolar Expedition",
+        "overview": "The guys\u0027 plan to work over the summer at the North Pole makes Penny revaluate her feelings for Leonard.",
+        "air_date": "2009-05-11",
+        "runtime": 21,
+        "still_path": "/5NiLbb4TXeiiAjTPyqP08Swu8w5.jpg"
+      }
+    ]
+  }
+}

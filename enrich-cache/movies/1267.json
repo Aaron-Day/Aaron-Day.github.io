@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1267,
+    "title": "Meet the Robinsons",
+    "overview": "Lewis, a brilliant young inventor, is keen on creating a time machine to find his mother, who abandoned him in an orphanage. Things take a turn when he meets Wilbur Robinson and his family.",
+    "tagline": "If you think your family\u0027s different, wait \u0027til you meet the family of the future.",
+    "runtime": 95,
+    "release_date": "2007-03-23",
+    "vote_average": 6.955,
+    "poster_path": "/naya0zF4kT401Sx15AtwB9vpcJr.jpg",
+    "backdrop_path": "/AsWuvFnzgmG6kZMIpJO7HZpvYRB.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Daniel Hansen",
+      "character": "Lewis (voice)",
+      "profile_path": "/b1Ysm57lDb6ittujrmorrhoGuhN.jpg"
+    },
+    {
+      "name": "Jordan Fry",
+      "character": "Lewis (voice)",
+      "profile_path": "/sYOwt75vhzZsVOJr44myYj0fpyW.jpg"
+    },
+    {
+      "name": "Wesley Singerman",
+      "character": "Wilbur (voice)",
+      "profile_path": "/iypxTXlk2O5iwelGOYUuzcSz8TY.jpg"
+    },
+    {
+      "name": "Matthew Josten",
+      "character": "Michael \u0027Goob\u0027 Yagoobian (voice)",
+      "profile_path": "/vpa2BK9OGS8cci4zUFkLTw8Y5Hj.jpg"
+    }
+  ]
+}

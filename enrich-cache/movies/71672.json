@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 71672,
+    "title": "Wrong Turn 4: Bloody Beginnings",
+    "overview": "A group of friends take refuge in a deserted sanatorium after they are left stranded in a snowstorm. Later, the place becomes a death trap when man-eating cannibals surround them.",
+    "tagline": "Frost is not the only thing that bites in the snow!",
+    "runtime": 93,
+    "release_date": "2011-10-17",
+    "vote_average": 5.752,
+    "poster_path": "/l1vD4GY7tlT420KJ3xWTzyQ2Aa9.jpg",
+    "backdrop_path": "/8xyJcJnYbupkPPMvwTEJaUwjxDI.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 52985,
+      "name": "Wrong Turn Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jennifer Pudavick",
+      "character": "Kenia",
+      "profile_path": "/w05dMTiZ1x8gQy56MoWdgZZEuBu.jpg"
+    },
+    {
+      "name": "Tenika Davis",
+      "character": "Sara",
+      "profile_path": "/qCAf2GjM9HktCcRWrqSzqOkjTZe.jpg"
+    },
+    {
+      "name": "Terra Vnesa",
+      "character": "Jenna",
+      "profile_path": "/cPrVqyeoFCx4e9vhJ5NnJld37Kx.jpg"
+    },
+    {
+      "name": "Kristen Harris",
+      "character": "Dr. Annmarie McQuaid",
+      "profile_path": "/jbu0VJaJtw0awZ9J6ObAQiIcG8s.jpg"
+    }
+  ]
+}

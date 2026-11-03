@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 72976,
+    "title": "Lincoln",
+    "overview": "The revealing story of the 16th US President\u0027s tumultuous final months in office. In a nation divided by war and the strong winds of change, Lincoln pursues a course of action designed to end the war, unite the country and abolish slavery. With the moral courage and fierce determination to succeed, his choices during this critical moment will change the fate of generations to come.",
+    "tagline": "The hours that changed history.",
+    "runtime": 150,
+    "release_date": "2012-11-09",
+    "vote_average": 6.838,
+    "poster_path": "/7mUYEkv9W3ek61eetZCfMQYVoi.jpg",
+    "backdrop_path": "/hwOFrwHladQ8FktYn3aJNAt8KA1.jpg",
+    "genres": [
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Daniel Day-Lewis",
+      "character": "Abraham Lincoln",
+      "profile_path": "/3kNA9VcmymoEwT0btQ4bvMYxzcP.jpg"
+    },
+    {
+      "name": "Sally Field",
+      "character": "Mary Todd Lincoln",
+      "profile_path": "/iMeq1j9Xwvaf6PbTJ0FQz69fpuA.jpg"
+    },
+    {
+      "name": "David Strathairn",
+      "character": "William Seward",
+      "profile_path": "/w5YM2cGefPnkoyIXCi2UrCQW53r.jpg"
+    },
+    {
+      "name": "Joseph Gordon-Levitt",
+      "character": "Robert Lincoln",
+      "profile_path": "/z2FA8js799xqtfiFjBTicFYdfk.jpg"
+    }
+  ]
+}

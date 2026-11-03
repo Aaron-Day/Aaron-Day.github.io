@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "One Year In",
+        "overview": "Now, one year into office, Kirkman is a Commander-in-Chief determined to rebuild the Capitol and capture the terrorists behind the catastrophic attack on the United States. When Ukrainian nationalists hijack a Russian Air flight, the president is faced with a hostage situation in which his diplomatic skills are put to the test.",
+        "air_date": "2017-09-27",
+        "runtime": 42,
+        "still_path": "/by23X7AzEoRn2zYK7xX1AWZGfeN.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Sting of the Tail",
+        "overview": "FBI Agent Hannah Wells finally closes in on Patrick Lloyd, but when the president decides to take action during the White House Correspondents Dinner, members of the Homeland Security Council threaten to derail their plans.",
+        "air_date": "2017-10-04",
+        "runtime": 42,
+        "still_path": "/et4JapXznGtwAF1L6sg6NY1fOlk.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Outbreak",
+        "overview": "President Kirkman is faced with a viral pandemic that threatens to kill countless Americans. Hannah and Damian discover evidence that could change the lives of members of the first family forever.",
+        "air_date": "2017-10-11",
+        "runtime": 43,
+        "still_path": "/xfcWlj7JJMaQKQRaTNAfqbgd9Jj.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Equilibrium",
+        "overview": "Tensions rise between America and Mexico when a Mexican citizen is shot during a border dispute regarding Mexican trade imports. Kirkman and his staff must work quickly to resolve the situation and create a new trade deal.",
+        "air_date": "2017-10-18",
+        "runtime": 41,
+        "still_path": "/7FVn6QqpCSbyICzWDYfe1PTJk2W.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Suckers",
+        "overview": "Kirkman tries to win back the people\u0027s trust after a senator appears on the national news and misrepresents a private conversation he had with the president. MI-6 agent Damian Rennett joins FBI agent Hannah Wells to solve an international murder.",
+        "air_date": "2017-10-25",
+        "runtime": 43,
+        "still_path": "/cvcxF4CeCaD7OXdjylNzcrtUh2t.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Two Ships",
+        "overview": "When a U.S. Navy ship containing secret surveillance becomes stranded in enemy waters, President Kirkman must negotiate the crew and ship\u2019s release. If captured, the technology on board would create a massive threat to national security. Meanwhile. Chief of Staff Emily Rhodes reconnects with someone from her childhood.",
+        "air_date": "2017-11-01",
+        "runtime": 44,
+        "still_path": "/TzSK1MgsohFusYn6ZgJ7URnKad.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Family Ties",
+        "overview": "When a Turkish activist ignites protests in the U.S., Turkey\u2019s president demands his extradition while the first family unknowingly finds themselves in the center of a battle that could threaten Leo\u2019s future.",
+        "air_date": "2017-11-15",
+        "runtime": 42,
+        "still_path": "/zq9Am6ahHcl5gCXfTxL1U8f5JYv.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Home",
+        "overview": "While on a secret mission to Afghanistan, President Kirkman meets with two infamous warlords and must determine whom he can trust to hand over territories to the U.S., while Seth has a run-in with Washington, D.C., police that puts his job, reputation and future in the White House on the line.",
+        "air_date": "2017-11-29",
+        "runtime": 43,
+        "still_path": "/dCYvFePoTPFxttUE4yTbeNXKkKU.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Three-Letter Day",
+        "overview": "After sorting through thousands of letters all requesting something of president, the White House staff are assigned three, with Emily, Seth, Aaron, Llyor and Kendra joining forces to get answers and possibly save a life. Meanwhile, Hannah and Damian continue to chase down leads to exonerate the first lady, but in the end, Hannah learns the truth may be closer than she thinks.",
+        "air_date": "2017-12-06",
+        "runtime": 42,
+        "still_path": "/jzXXGoIG44tymxZUHitoTKq39mt.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Line of Fire",
+        "overview": "It\u2019s Christmas Day and President Kirkman is alerted to a group of religious extremists who refuse to evacuate when a forest fire threatens to engulf their cabin. Deploying Emily and Aaron to help diffuse the situation, Kirkman must act quickly to save multiple lives at stake. Meanwhile, the First Lady finally gives her testimony to the FBI director, while what happens next changes the lives of the Kirkman family forever.",
+        "air_date": "2017-12-13",
+        "runtime": 43,
+        "still_path": "/uiHZqbFvgdyOmcNwwcV7wamaMa.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Grief",
+        "overview": "It\u2019s been ten weeks since his wife, Alex, was killed in a car accident; and President Kirkman\u2019s senior staff insist he seek professional help in dealing with his loss, forcing him to reluctantly see therapist Dr. Adam Louden. Meanwhile, FBI Agent Hannah Wells and Aaron Shore travel to Cuba as part of a trade delegation, but the trip does not go according to plan. With lives in the balance, Kirkman is challenged with a decision that will test his role as commander in chief during this time of personal tragedy.",
+        "air_date": "2018-02-28",
+        "runtime": 44,
+        "still_path": "/qhgzUkuZ64ApYSFwhAYRHhp2bj.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Final Frontier",
+        "overview": "When a missile intended to bring water to stranded astronauts in space is hacked, President Kirkman must work with Russia and enlists the help of Dr. Andrea Frost to help save lives and find out who is behind the hack. Meanwhile, Hannah finds herself working with Damian again.",
+        "air_date": "2018-03-07",
+        "runtime": 44,
+        "still_path": "/ovvHkqPfFleIXViwTnXvg9EOy4w.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Original Sin",
+        "overview": "When a video of the president visiting prison leaks to the media, his team works to minimize the fallout. A surprise White House demonstration has deeper ties to the president than anyone first realizes.",
+        "air_date": "2018-03-14",
+        "runtime": 42,
+        "still_path": "/8vX3owHFAGk47HvEnBE8ua4YHjI.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "In the Dark",
+        "overview": "When a blackout threatens to shut down the government and causes chaos in the streets of Washington, D.C., President Kirkman joins forces with Mayor Ellenor Darby, but the partnership doesn\u2019t end there.",
+        "air_date": "2018-03-21",
+        "runtime": 43,
+        "still_path": "/v59dI3MAbeKTIX0G81kxauzikaG.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Summit",
+        "overview": "As tensions between East and West Hun Chiu escalate, President Kirkman travels to Camp David to broker a peace treaty with the leaders of those countries. While back in Washington, D.C., Seth and Emily take a hard look at their relationship and decide how, and if, they will move forward as a couple.",
+        "air_date": "2018-03-28",
+        "runtime": 42,
+        "still_path": "/9RK5Vt8eW6X1O9ynMKHvcG2ES1Z.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Fallout",
+        "overview": "President Kirkman and his staff have credible intelligence that a dirty bomb is on U.S. soil, thrusting the president into a high-stakes effort to find the bomb and stop it from detonating. At the White House, Emily approaches Chuck to help her with something that has damaging and illegal consequences.",
+        "air_date": "2018-04-04",
+        "runtime": 43,
+        "still_path": "/uOFBjZSnPdHyXeDSt3mDbSN4p96.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Overkill",
+        "overview": "Following the deadly bomb explosion inside a D.C. metro station, President Kirkman declares war on Kunami. When the emir of that country sends his ambassador to negotiate, FBI Agent Hannah Wells learns the emir is hiding something that could have deadly consequences.",
+        "air_date": "2018-04-11",
+        "runtime": 43,
+        "still_path": "/cgNFmdvBLhmOG4asXISEf022XoG.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Kirkman Agonistes",
+        "overview": "As more content from President Kirkman\u2019s confidential therapy sessions continues to leak out, Vice President Darby meets secretly with the entire Cabinet, resulting in attorney Ethan West looking into the president\u2019s past \u2013 while playing a large role in his future as commander in chief.",
+        "air_date": "2018-04-18",
+        "runtime": 42,
+        "still_path": "/g7igDC1qGmQe7CuaEkDCZ2BncFV.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Capacity",
+        "overview": "Attorney Ethan West calls on President Kirkman\u0027s closest advisors and staff as he begins his investigation.",
+        "air_date": "2018-04-25",
+        "runtime": 44,
+        "still_path": "/7nAtpXRQxPt0DAsvhidtXIly4MQ.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Bad Reception",
+        "overview": "President Kirkman negotiates with a foreign government to release an American held overseas, while attorney Ethan West continues his investigation.",
+        "air_date": "2018-05-02",
+        "runtime": 43,
+        "still_path": "/3rvhzxaDoDSqp5HOsc5RI6yJ7cq.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Target",
+        "overview": "White House Council Kendra Daynes finds herself in a dangerous situation that puts another White House staffer\u0027s life at risk, while Hannah Wells takes an unexpected trip for answers.",
+        "air_date": "2018-05-09",
+        "runtime": 43,
+        "still_path": "/sS8NYiUkci71uQJnpg84GL2bkpG.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Run",
+        "overview": "As President Kirkman continues to deal with the turmoil surrounding the hacker and Congressional investigation, a natural disaster threatens the lives of two White House staffers. Meanwhile, Kirkman\u2019s closest allies are surprised when the president makes an announcement no one saw coming.",
+        "air_date": "2018-05-16",
+        "runtime": 43,
+        "still_path": "/8xB2pjXxsikYxGevBGnNlz3T84F.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 454640,
+    "title": "The Angry Birds Movie 2",
+    "overview": "Red, Chuck, Bomb and the rest of their feathered friends are surprised when a green pig suggests that they put aside their differences and unite to fight a common threat. Aggressive birds from an island covered in ice are planning to use an elaborate weapon to destroy the fowl and swine.",
+    "tagline": "Frenemies unite.",
+    "runtime": 97,
+    "release_date": "2019-08-02",
+    "vote_average": 7.047,
+    "poster_path": "/ebe8hJRCwdflNQbUjRrfmqtUiNi.jpg",
+    "backdrop_path": "/tTVjF5q63fli9ecSg5L9ljHibKJ.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531315,
+      "name": "The Angry Birds Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Sudeikis",
+      "character": "Red (voice)",
+      "profile_path": "/uuacnP9DOHMsmj8FhBi0cWWDgrn.jpg"
+    },
+    {
+      "name": "Josh Gad",
+      "character": "Chuck (voice)",
+      "profile_path": "/17iKlfWZBDTAucqjkhRKHr9xjIz.jpg"
+    },
+    {
+      "name": "Danny McBride",
+      "character": "Bomb (voice)",
+      "profile_path": "/sVFPzl2t5QlGudQKWAszIWZCXZv.jpg"
+    },
+    {
+      "name": "Leslie Jones",
+      "character": "Zeta (voice)",
+      "profile_path": "/1rBpNNijHRg4Ha3PxlpOjcbPVeN.jpg"
+    }
+  ]
+}

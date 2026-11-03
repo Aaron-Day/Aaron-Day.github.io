@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Two Swords",
+        "overview": "King\u0027s Landing prepares for a royal wedding; Dany finds the way to Meereen; the Night\u0027s Watch braces for a new threat.",
+        "air_date": "2014-04-06",
+        "runtime": 59,
+        "still_path": "/nwtWHSlKnXS1sRLuzzwEmIuXjj8.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Lion and the Rose",
+        "overview": "The Lannisters and their guests gather in King\u0027s Landing; Stannis loses patience with Davos; Ramsay finds a purpose for his pet.",
+        "air_date": "2014-04-13",
+        "runtime": 53,
+        "still_path": "/zOeaRpAKbrATuVe8Z5MtVJfair9.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Breaker of Chains",
+        "overview": "Tyrion ponders his options; Tywin extends an olive branch; Jon proposes a bold plan; The Hound teaches Arya the way thing are.",
+        "air_date": "2014-04-20",
+        "runtime": 57,
+        "still_path": "/pgwGxEDIv1XyB5TcJcJM7EMLWiX.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Oathkeeper",
+        "overview": "Dany balances justice and mercy; Jaime tasks Brienne with his honor; Jon readies his men.",
+        "air_date": "2014-04-27",
+        "runtime": 56,
+        "still_path": "/hOjPzU2QAWLPug0uy3dcPQHEzNM.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "First of His Name",
+        "overview": "Cersei and Tywin plot the Crown\u0027s next move. Dany discusses future plans. Jon Snow embarks on a new mission.",
+        "air_date": "2014-05-04",
+        "runtime": 54,
+        "still_path": "/A2Z9SLPtW4fpNGUm7o8KCLW78Qv.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Laws of Gods and Men",
+        "overview": "Stannis and Davos set sail with a new strategy. Dany meets with supplicants. Tyrion faces down his father in the Throne Room.",
+        "air_date": "2014-05-11",
+        "runtime": 51,
+        "still_path": "/vKt9b7HNYhwM91C7S53zPsAWfT3.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Mockingbird",
+        "overview": "Tyrion enlists an unlikely ally. Daario entreats Dany to allow him to do what he does best. Jon\u0027s warnings fall on deaf ears.",
+        "air_date": "2014-05-18",
+        "runtime": 52,
+        "still_path": "/loEv49LmoG5SVHmf2BegG8nJGG0.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Mountain and the Viper",
+        "overview": "Mole\u0027s Town receives some unexpected visitors. Littlefinger\u0027s motives are questioned. Tyrion\u0027s fate is decided.",
+        "air_date": "2014-06-01",
+        "runtime": 53,
+        "still_path": "/cOcGpQmBvwuScHJjwQYlCreVl4x.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Watchers on the Wall",
+        "overview": "Jon Snow and the rest of the Night\u0027s Watch face the biggest challenge to the Wall yet.",
+        "air_date": "2014-06-08",
+        "runtime": 51,
+        "still_path": "/lBah4n16r10fdXlM4xe3WE5DzUK.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Children",
+        "overview": "Circumstances change after an unexpected arrival from north of the Wall. Dany must face harsh realities. Bran learns more about his destiny. Tyrion sees the truth about his situation.",
+        "air_date": "2014-06-15",
+        "runtime": 66,
+        "still_path": "/jV8E0KoHCTU0OXImZFRBKsJH0GD.jpg"
+      }
+    ]
+  }
+}

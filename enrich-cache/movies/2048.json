@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2048,
+    "title": "I, Robot",
+    "overview": "In 2035, where robots are commonplace and abide by the three laws of robotics, a technophobic cop investigates an apparent suicide. Suspecting that a robot may be responsible for the death, his investigation leads him to believe that humanity may be in danger.",
+    "tagline": "One man saw it coming.",
+    "runtime": 115,
+    "release_date": "2004-07-15",
+    "vote_average": 6.976,
+    "poster_path": "/efwv6F2lGaghjPpBRSINHtoEiZB.jpg",
+    "backdrop_path": "/jpFcZH2eyh6gcoxCa637TrGe4bT.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Del Spooner",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Bridget Moynahan",
+      "character": "Susan Calvin",
+      "profile_path": "/7WuwRCcwtBmJZ64pNsLbwhQCEA4.jpg"
+    },
+    {
+      "name": "Alan Tudyk",
+      "character": "Sonny (voice)",
+      "profile_path": "/jUuUbPuMGonFT5E2pcs4alfqaCN.jpg"
+    },
+    {
+      "name": "James Cromwell",
+      "character": "Dr. Alfred Lanning",
+      "profile_path": "/vpNQQbM5PtxsYmVm4oh79SGFyUK.jpg"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Truth or Consequences",
+        "overview": "As the hunt for Ziva\u0027s replacement begins, Gibbs and his remaining team members must head back to work with the past still weighing heavily on their minds.",
+        "air_date": "2009-09-22",
+        "runtime": 44,
+        "still_path": "/yOH4k62ui8sIfpUWkGRUwZwQh06.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Reunion",
+        "overview": "The team discovers the bizarre death of a Marine and his two friends may be linked to their past, but it\u0027s Gibbs who ends up taking a trip down memory lane.",
+        "air_date": "2009-09-29",
+        "runtime": 44,
+        "still_path": "/lApQT6lQEkFzY2ez6vzsG1TQzwt.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Inside Man",
+        "overview": "The team must take a second look into the death of a Lieutenant after the blogger who accused them of a cover-up ends up dead.",
+        "air_date": "2009-10-06",
+        "runtime": 44,
+        "still_path": "/emRdBMFpbCgtFmMAGuOGt2pej0c.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Good Cop, Bad Cop",
+        "overview": "When a Marine\u0027s body surfaces halfway around the world, the investigation forces Ziva to dig up a buried chapter of her life.",
+        "air_date": "2009-10-13",
+        "runtime": 44,
+        "still_path": "/e2QxPAtz8WJGyV1Ak1vkI5g6Jlj.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Code of Conduct",
+        "overview": "When a Marine known for his practical jokes is found dead on Halloween Eve, the NCIS team discovers that the victim\u0027s \u0022good-natured\u0022 pranks may have inspired ghoulish retribution.",
+        "air_date": "2009-10-20",
+        "runtime": 42,
+        "still_path": "/c9r88mESch8ibUWyaicZRI8foHM.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Outlaws and In-Laws",
+        "overview": "A murder investigation prompts Gibbs and the team to play family counselor to his former mentor, Mike Franks, in the hopes of preventing a bloody international conflict.",
+        "air_date": "2009-11-03",
+        "runtime": 44,
+        "still_path": "/trYIp0yUP31z19jFCMXDDmke0aB.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Endgame",
+        "overview": "With the team\u0027s help, Vance faces his demons while uncovering a complex relationship with a killer that puts his whole family in danger.",
+        "air_date": "2009-11-10",
+        "runtime": 44,
+        "still_path": "/cR5pvpqOcOJREHydOVEtbAfeP3O.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Power Down",
+        "overview": "The team literally finds themselves in the dark when the investigation into the death of a Lieutenant is connected to a city-wide blackout.",
+        "air_date": "2009-11-17",
+        "runtime": 43,
+        "still_path": "/sF8UM0Yf4ShobrevsOAWuOn4RAL.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Child\u0027s Play",
+        "overview": "A dead Marine\u0027s day job at a government think tank leads Gibbs and the team into the life of a 12-year-old prodigy who may be the killer\u0027s next target.",
+        "air_date": "2009-11-24",
+        "runtime": 44,
+        "still_path": "/q3NdmtDzL0TjeXxLuwD87GdaoON.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Faith",
+        "overview": "The body of the son of a retired Colonel-turned-preacher is found and the team have their suspicions that he may be the victim of a hate crime.",
+        "air_date": "2009-12-15",
+        "runtime": 44,
+        "still_path": "/zqQ9gCMDJZPUVao85NN5CWVjFMW.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Ignition",
+        "overview": "When a Navy pilot is found dead under strange circumstances in a secluded area, the team finds themselves battling a no-nonsense attorney with a hidden agenda.",
+        "air_date": "2010-01-05",
+        "runtime": 44,
+        "still_path": "/S4tG6C3tSkMA3dljzBewREDzFs.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Flesh and Blood",
+        "overview": "Gibbs is worried about Tony\u0027s ability to handle his job when Tony\u0027s father turns out to be linked to their newest investigation, an assassination attempt on a foreign prince.",
+        "air_date": "2010-01-12",
+        "runtime": 44,
+        "still_path": "/3NQZ26i6fmBfniQTMBTyhPcKrJA.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Jet Lag",
+        "overview": "While on the flight back from Paris, Tony and Ziva realize that their assignment to protect a government witness in an embezzlement case is in great danger when they learn that an assassin is located on the same flight.",
+        "air_date": "2010-01-26",
+        "runtime": 43,
+        "still_path": "/l4bLrOXIEj4clnfv5iVC6rxGKKA.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Masquerade",
+        "overview": "The team finds themselves in a race against time when a terrorist group threatens to detonate a \u0022dirty bomb\u0022 in the D.C. area.",
+        "air_date": "2010-02-02",
+        "runtime": 44,
+        "still_path": "/viPSI8JNhLXF7Iupd9rBeAHpnyR.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Jack-Knife",
+        "overview": "When a Marine is found dead, Gibbs, Fornell, and the team hit the open road to bust an illegal trucking operation.",
+        "air_date": "2010-02-09",
+        "runtime": 43,
+        "still_path": "/8LjxUf4xfgqZ7zVGYSwbEyaNJfb.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Mother\u0027s Day",
+        "overview": "Secrets arise when Gibbs\u0027 former mother-in-law surfaces as a witness in a murder investigation.",
+        "air_date": "2010-03-02",
+        "runtime": 43,
+        "still_path": "/zqtP2cH7vk6MoINpWl3OjAcnhM3.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Double Identity",
+        "overview": "Gibbs and the team investigate the shooting of a Marine and uncovers more to his life than anyone would have ever imagined.",
+        "air_date": "2010-03-09",
+        "runtime": 43,
+        "still_path": "/n6SwbahtxYR38mXgBWR1aJCAvgI.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Jurisdiction",
+        "overview": "The team discovers striking similarities between themselves and their CGIS (Coast Guard Investigative Services) counterparts when a Navy diver seeking sunken treasure is found dead.",
+        "air_date": "2010-03-16",
+        "runtime": 43,
+        "still_path": "/AbAsYOp6A12Ua32z0kmbKR3zwUe.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Guilty Pleasure",
+        "overview": "The death of a Navy officer leads Gibbs and the team into the world of high-priced call girls, relying on D.C. Madam Holly Snow to help them catch a killer.",
+        "air_date": "2010-04-06",
+        "runtime": 43,
+        "still_path": "/cbjizs6j6HhZ1sPrZnGNrQXJagk.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Moonlighting",
+        "overview": "When an NCIS polygraph specialist\u0027s night job takes a dangerous turn, Gibbs, Fornell, and the team have to uncover the truth.",
+        "air_date": "2010-04-27",
+        "runtime": 44,
+        "still_path": "/nEiBwYQ6HQ6PBsNzuJLyzoRC2a4.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Obsession",
+        "overview": "DiNozzo finds himself increasingly captivated by a woman he\u0027s never met while investigating the murder of her brother.",
+        "air_date": "2010-05-04",
+        "runtime": 44,
+        "still_path": "/oBu5JbYfgaPnK7oRvNpCYRIr9QM.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Borderland",
+        "overview": "The team tries to track down a serial killer, while Abby heads south of the border to give a speech with McGee in tow.",
+        "air_date": "2010-05-11",
+        "runtime": 44,
+        "still_path": "/b48DJjmAXk9cCtfWY0hBY71dgeH.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Patriot Down",
+        "overview": "When a colleague\u0027s murder sends shockwaves through the team, Gibbs uncovers a surprising link to the crime.",
+        "air_date": "2010-05-18",
+        "runtime": 43,
+        "still_path": "/xpZHtMYvau4lyNhaxmgHItiM3RI.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Rule Fifty-One",
+        "overview": "Gibbs heads to Mexico to face his demons and make a startling decision.",
+        "air_date": "2010-05-25",
+        "runtime": 44,
+        "still_path": "/yIiOsgfTxNJlIX9k0Z581rj2AY3.jpg"
+      }
+    ]
+  }
+}

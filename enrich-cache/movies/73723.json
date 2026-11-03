@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 73723,
+    "title": "The Lorax",
+    "overview": "A 12-year-old boy searches for the one thing that will enable him to win the affection of the girl of his dreams. To find it he must discover the story of the Lorax, the grumpy yet charming creature who fights to protect his world.",
+    "tagline": "Meet the original force of nature.",
+    "runtime": 86,
+    "release_date": "2012-03-01",
+    "vote_average": 6.543,
+    "poster_path": "/tePFnZFw5JvjwjQjaKkqDPNMLPU.jpg",
+    "backdrop_path": "/71FjlP0qZPc1iymcHf8u5vXfH50.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Danny DeVito",
+      "character": "The Lorax (voice)",
+      "profile_path": "/6kO4IN7ndoIGw2JhyhAQN3SFmdx.jpg"
+    },
+    {
+      "name": "Ed Helms",
+      "character": "Once-ler (voice)",
+      "profile_path": "/gPZ8tZaNQGAc3KZRIPp9rgGbEnN.jpg"
+    },
+    {
+      "name": "Zac Efron",
+      "character": "Ted Wiggins (voice)",
+      "profile_path": "/pdWXP7XG6qqOoxoLid1DWYwmaMY.jpg"
+    },
+    {
+      "name": "Rob Riggle",
+      "character": "Mr. Aloysius O\u0027Hare (voice)",
+      "profile_path": "/hQgOp8vWxl6KPZbqzKSSL4k6G1j.jpg"
+    }
+  ]
+}

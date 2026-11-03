@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "In Cold Blood",
+        "overview": "Henry prepares for war with France but receives cautious counsel from the powerful Cardinal Wolsey, who urges a treaty; the king learns that his queen\u0027s lady-in-waiting Elizabeth Blount is pregnant with his child.",
+        "air_date": "2007-04-01",
+        "runtime": 56,
+        "still_path": "/w4XSM4tn4DppQgE80jfmLojab5T.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Simply Henry",
+        "overview": "Henry contemplates an alliance with Holy Roman Emperor Charles V of Spain despite his \u0022Field of Cloth of Gold\u0022 ceremony celebrating allegiance to France, and executes a rival; Elizabeth gives birth to the king\u0027s illegitimate son.",
+        "air_date": "2007-04-08",
+        "runtime": 55,
+        "still_path": "/a1PJKNPmT8VBTqV3N7EHolvI5GQ.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Wolsey, Wolsey, Wolsey!",
+        "overview": "A visit from Charles V forces Henry to conceal his growing disaffection from Queen Katherine, who is the influential Spanish monarch\u0027s aunt - even as Henry comes face-to-face with the seductive Anne Boleyn for the first time.",
+        "air_date": "2007-04-15",
+        "runtime": 53,
+        "still_path": "/8VM4iAGCZvI9oZFDfOQqbuS2Up8.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "His Majesty, The King",
+        "overview": "As a reward for his denunciation of Martin Luther, the Pope christens Henry \u201CDefender of the Faith,\u201D but a brush with death causes the king to seek a solution to his lack of an heir. Princess Margaret marries the decrepit King of Portugal reluctantly, but the union is short-lived; Henry\u0027s desire for Anne Boleyn intensifies when Anne goes home to her family estate.",
+        "air_date": "2007-04-22",
+        "runtime": 57,
+        "still_path": "/AtKfYoMudXS99swKoGHSFPdHJoB.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Arise, My Lord",
+        "overview": "Henry is shocked when he learns that his ally, Emperor Charles V of Spain, has released France\u0027s King Francis I from prison. He\u0027s equally surprised when Anne Boleyn turns him down after offering to make her his sole mistress.",
+        "air_date": "2007-04-29",
+        "runtime": 54,
+        "still_path": "/qXvDya9x8eVB67i3ik41K76BRwU.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "True Love",
+        "overview": "As King Henry gains in confidence, his displeasure with the way the Catholic church handles his request for an annulment of his marriage to Katherine of Aragon grows. As a result, Cardinal Wolsey\u0027s position is weakening, leaving him vulnerable to his enemies.",
+        "air_date": "2007-05-06",
+        "runtime": 56,
+        "still_path": "/kwaoI3eBaWzA0ReutkZlt16KMTu.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Message to the Emperor",
+        "overview": "England\u0027s population is suffering, both from a lack of food and from a lethal plague called \u0027The Sweats\u0027. As a result, King Henry feels depressed and not his usual, confident self. He starts having doubts about the future and his ability to rule the country. Fortunately for him, a change is coming up.",
+        "air_date": "2007-05-13",
+        "runtime": 55,
+        "still_path": "/7ZZnRvtAMdT2kCIePyxCvWQmooo.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Truth and Justice",
+        "overview": "A papal envoy has come to discuss the annulment of the King\u0027s marriage to Katherine of Aragon, as requested by the King. The outcome of these discussions will determine Cardinal Wolsey\u0027s future career as well as the King\u0027s romance with Anne Boleyn. These discussions will also influence the nature of the relationship between England and Rome.",
+        "air_date": "2007-05-20",
+        "runtime": 54,
+        "still_path": "/gek38UErjbfBJnwCfH1x22Vr6da.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Look to God First",
+        "overview": "Cardinal Wolsey\u0027s fall is quick and pitiless. Stripped of office and authority, he is banished from the court and sent far from his much-beloved King. His unlikely successor is Sir Thomas More, a man unlike the overbearing Wolsey in every way but one...his loyalty to Henry.",
+        "air_date": "2007-05-27",
+        "runtime": 49,
+        "still_path": "/raUIyzFVZ18hZPcvSAHv47Iqc0g.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Death of Wolsey",
+        "overview": "Cardinal Wolsey is down but not yet out. Although exiled, he tries to gather last-minute support from his old enemy, Queen Katherine. She hesitantly agrees to his plan, as she finds herself in a situation similar to that of the fallen Cardinal. But their plot is intercepted by the King\u0027s new advisors and Wolsey must pay the ultimate price.",
+        "air_date": "2007-06-03",
+        "runtime": 53,
+        "still_path": "/axVc2NKOcYuXNVJfpMCxMEw5mfh.jpg"
+      }
+    ]
+  }
+}

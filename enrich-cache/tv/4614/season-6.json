@@ -1,0 +1,208 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Last Man Standing",
+        "overview": "When a Petty Officer is found murdered, Gibbs learns about the mysterious connection between the disbanding of his team and the case.",
+        "air_date": "2008-09-23",
+        "runtime": 44,
+        "still_path": "/kOwJQ0nRS3Tv92iYjPgQiu2fRTS.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Agent Afloat",
+        "overview": "DiNozzo\u0027s investigation into a Navy Lieutenant\u0027s apparent suicide takes a surprising and deadly turn when it seems that it might have a connection to a larger, deadly scheme.",
+        "air_date": "2008-09-30",
+        "runtime": 43,
+        "still_path": "/9X7kvMzP43607TTPiuF9I1browe.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Capitol Offense",
+        "overview": "A distinguished senator asks Gibbs for help in solving the murder of a young female Naval officer.",
+        "air_date": "2008-10-07",
+        "runtime": 44,
+        "still_path": "/5HQpkCHACOJWBb9gmLkvOmvUvb2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Heartland",
+        "overview": "When a murder investigation leads the team to Gibbs\u0027 hometown, secrets about his past are revealed.",
+        "air_date": "2008-10-14",
+        "runtime": 44,
+        "still_path": "/ysDttbIr8PBwsVLmP6bMFbPI2Fs.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Nine Lives",
+        "overview": "Gibbs\u0027 hunt for the killer of a Marine puts him on a collision course with an old friend.",
+        "air_date": "2008-10-21",
+        "runtime": 43,
+        "still_path": "/u1xsArDB7Wz4wzWsS7TEcDQ5xST.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Murder 2.0",
+        "overview": "Gibbs and his team are searching for a cyber serial killer who takes videos of his victims. The team quickly finds out that the videos of the dead victims are false.",
+        "air_date": "2008-10-28",
+        "runtime": 44,
+        "still_path": "/rPvoT14V6JDZ4Gqv16fNpOQi4fW.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Collateral Damage",
+        "overview": "A Navy bank has been robbed and NCIS is responsible for the investigation. One of the new recruits assigned to the fraud unit, Special Agent Dwayne Wilson, joins the team to help.",
+        "air_date": "2008-11-11",
+        "runtime": 43,
+        "still_path": "/1jOSrsVdmzO66BShFBGw93t79yG.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Cloak",
+        "overview": "A strange delivery in a box arrives at a Navy facility. The delivery driver and a Navy MP officer discover it is a sailor\u0027s corpse.",
+        "air_date": "2008-11-18",
+        "runtime": 44,
+        "still_path": "/2gI7S7P08hr33UcqMQo5kzPN7TU.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Dagger",
+        "overview": "The team is forced to rely on information from questionable sources while trying to stop a criminal bent on stealing government secrets.",
+        "air_date": "2008-11-25",
+        "runtime": 44,
+        "still_path": "/3TbG9mhWesSJGpTnZVkwqVXeNrE.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Road Kill",
+        "overview": "The team investigates the death of a Petty Officer and discovers he may have been leading a violent secret life.",
+        "air_date": "2008-12-02",
+        "runtime": 44,
+        "still_path": "/7EBa6qY0DxNKxHtG8GGJLb8fMfx.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Silent Night",
+        "overview": "During the week of Christmas, the NCIS team is forced to work overtime when they discover their prime suspect had been dead for 17 years.",
+        "air_date": "2008-12-16",
+        "runtime": 44,
+        "still_path": "/mKrgFROQAvy2IauMGvsYBPwUtip.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Caged",
+        "overview": "The NCIS team must uncover the truth behind the murder of a jail guard which resulted in a prison riot and McGee being held captive by the inmates.",
+        "air_date": "2009-01-06",
+        "runtime": 44,
+        "still_path": "/ltOSGEg00JLGwAHRnygJD7TUtcp.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Broken Bird",
+        "overview": "Secrets from Ducky\u0027s clandestine past come to the forefront after he\u0027s attacked at a crime scene.",
+        "air_date": "2009-01-13",
+        "runtime": 44,
+        "still_path": "/mEUQF3Rfcxac9dGanKU6PxtOFu.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Love and War",
+        "overview": "The team discovers a link between a sergeant\u0027s murder and his possibly treasonous private life.",
+        "air_date": "2009-01-27",
+        "runtime": 44,
+        "still_path": "/nQCbv1ymNhV6ZirEboRWgWIoXm3.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Deliverance",
+        "overview": "Demons of the past come back to haunt Gibbs when he finds a cryptic message waiting for him at a crime scene.",
+        "air_date": "2009-02-10",
+        "runtime": 44,
+        "still_path": "/tDbrLmh6sPGxjMUTfhPnYa1hmDz.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Bounce",
+        "overview": "A murder prompts the reopening of one of Tony\u0027s old investigations, leading Gibbs and DiNozzo to reverse roles to solve the case.",
+        "air_date": "2009-02-17",
+        "runtime": 44,
+        "still_path": "/9161js0tziUB6K5xJOge2PCAT1Y.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "South by Southwest",
+        "overview": "When a fellow agent is murdered, the NCIS team head into the desert to locate a woman who might hold the answer to the mystery murder.",
+        "air_date": "2009-02-24",
+        "runtime": 44,
+        "still_path": "/aNucTCDtFFuEo7cf1Be8zzvP9cZ.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Knockout",
+        "overview": "The death of a boxer leads Vance to borrow the NCIS team and start investigating his death, while Gibbs digs into Vance\u0027s past.",
+        "air_date": "2009-03-17",
+        "runtime": 44,
+        "still_path": "/dOsPKcExTwlKxfG2qy3QjveDluz.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Hide and Seek",
+        "overview": "When a young boy finds a murder weapon, the team must trace ownership of the gun to find who used it last and who was murdered.",
+        "air_date": "2009-03-24",
+        "runtime": 44,
+        "still_path": "/sxs3cwmAJuqq4HGKYttTejE2QEa.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Dead Reckoning",
+        "overview": "Gibbs and the team must work with the shady Trent Kort to put away one of NCIS\u0027s most wanted.",
+        "air_date": "2009-03-31",
+        "runtime": 44,
+        "still_path": "/fsaBo9LmK6rx19SsKSXCL7cG4Uy.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Toxic",
+        "overview": "When a government scientist goes missing, Abby is recruited to carry on his work, but the team worries that she may meet the same fate as her predecessor.",
+        "air_date": "2009-04-07",
+        "runtime": 44,
+        "still_path": "/cwFZFy33bvJQlbo8CuHkgDWA3IN.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Legend (1)",
+        "overview": "The body of a Marine leads Gibbs and McGee to the NCIS OSP division in Los Angeles, where a murder investigation quickly climbs to a matter of national security.",
+        "air_date": "2009-04-28",
+        "runtime": 43,
+        "still_path": "/qgp0qxHGH55FRv31SMcQgXReAG2.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Legend (2)",
+        "overview": "With the appearance of Mossad agent Michael Rivkin, Tony is forced to question Ziva\u2019s loyalty to NCIS.",
+        "air_date": "2009-05-05",
+        "runtime": 44,
+        "still_path": "/z2V44SQKDl26u3Op8ZYmNSnhWNE.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Semper Fidelis",
+        "overview": "After a security breach at the SecNav\u0027s residence leads to the death of an ICE agent, Gibbs and the team are forced to work with ICE and the FBI to find his killer.",
+        "air_date": "2009-05-12",
+        "runtime": 43,
+        "still_path": "/1JzTCDztESlulLFbIzXdA3c0pTE.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Aliyah",
+        "overview": "Ziva\u0027s homecoming to Israel with Gibbs and the team is not a happy reunion with her father, the enigmatic and powerful head of Mossad. As tensions rise, Gibbs is forced to make a decision that sends shock waves through NCIS.",
+        "air_date": "2009-05-19",
+        "runtime": 44,
+        "still_path": "/rH9deRKHd1V5XSQK37UlU3DiehH.jpg"
+      }
+    ]
+  }
+}

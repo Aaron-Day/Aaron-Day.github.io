@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 658,
+    "title": "Goldfinger",
+    "overview": "Special agent 007 comes face to face with one of the most notorious villains of all time, and now he must outwit and outgun the powerful tycoon to prevent him from cashing in on a devious scheme to raid Fort Knox -- and obliterate the world\u0027s economy.",
+    "tagline": "Everything he touches turns into excitement!",
+    "runtime": 110,
+    "release_date": "1964-09-20",
+    "vote_average": 7.355,
+    "poster_path": "/aKNFzaqQgPzsGXnsMc4kJH5hFIV.jpg",
+    "backdrop_path": "/mM4WeXqJd2tu1gCF5GYyAZf2Npl.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sean Connery",
+      "character": "James Bond",
+      "profile_path": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+      "name": "Gert Fr\u00F6be",
+      "character": "Auric Goldfinger",
+      "profile_path": "/ApnMHQBCBFLt20eql5uWlBOWm9L.jpg"
+    },
+    {
+      "name": "Honor Blackman",
+      "character": "Pussy Galore",
+      "profile_path": "/2AGVWf7orxXvgcssUWdonX1yKvm.jpg"
+    },
+    {
+      "name": "Harold Sakata",
+      "character": "Oddjob",
+      "profile_path": "/lNEfOsm3V0MPZuhO3dKfyZuaDZD.jpg"
+    }
+  ]
+}

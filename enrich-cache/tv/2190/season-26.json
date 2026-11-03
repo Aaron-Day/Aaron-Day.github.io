@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 26,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Cupid Ye",
+        "overview": "Cartman is jealous of the friendship that\u2019s developed between Kyle and Tolkien and decides to do something about it.",
+        "air_date": "2023-02-08",
+        "runtime": 23,
+        "still_path": "/bq0wXlSJfn1egIe6WFrjHG7noc1.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Worldwide Privacy Tour",
+        "overview": "The prince of Canada and his wife try to find privacy and seclusion in a small mountain town.",
+        "air_date": "2023-02-15",
+        "runtime": 23,
+        "still_path": "/yPh6XElpM7MI6GhgCwVu8B5SqEF.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Japanese Toilet",
+        "overview": "South Park learns about the wonders of Japanese toilets.",
+        "air_date": "2023-03-01",
+        "runtime": 23,
+        "still_path": "/fiSlUZXrKROyZ29cNOBE2gGSgHS.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Deep Learning",
+        "overview": "Stan is reeling when a cheating scandal hits the school.",
+        "air_date": "2023-03-08",
+        "runtime": 23,
+        "still_path": "/uB8a8agpPwmHVFFpMVhloCOX4WN.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "DikinBaus Hot Dogs",
+        "overview": "The South Park boys renovate and open an historic restaurant in Colorado.",
+        "air_date": "2023-03-22",
+        "runtime": 23,
+        "still_path": "/b4JoHQhCdm9ZxIHjgdrPBwp1rqZ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Spring Break",
+        "overview": "Spring Break is an excuse for Garrison to jump back into his former depraved lifestyle.",
+        "air_date": "2023-03-29",
+        "runtime": 23,
+        "still_path": "/4gD7EPUld7GBGa6vSqaj8ImyUb7.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Welcome to the Hellmouth (1)",
+        "overview": "When teen vampire slayer Buffy tries to start a new life at Sunnydale High, she discovers that the school sits atop a demonic dimensional portal.",
+        "air_date": "1997-03-10",
+        "runtime": 42,
+        "still_path": "/zPyNtKPl7S4IAGzohTjvOHGoti5.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Harvest (2)",
+        "overview": "Buffy and her friends encounter a powerful vampire bent on opening a portal to a dimension inhabited by demons.",
+        "air_date": "1997-03-10",
+        "runtime": 43,
+        "still_path": "/2fbkidtdVURH2v1IbyOMFJv14R5.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Witch",
+        "overview": "Buffy suspects she has a witch on her hands when the cheerleading squad falls victim to sudden blindness and spontaneous combustion.",
+        "air_date": "1997-03-17",
+        "runtime": 43,
+        "still_path": "/p37idHQIs5ztzGK7rpfPrQGRZuu.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Teacher\u0027s Pet",
+        "overview": "Buffy\u0027s biology teacher is killed by a giant praying mantis that assumes the form of a beautiful substitute teacher.",
+        "air_date": "1997-03-24",
+        "runtime": 43,
+        "still_path": "/jn6Pcp90LG7DpALsLyrjoGrz9o7.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Never Kill a Boy on the First Date",
+        "overview": "With Buffy preoccupied by her date with Owen, Giles is trapped by a group of vampires seeking to raise a powerful leader.",
+        "air_date": "1997-03-31",
+        "runtime": 43,
+        "still_path": "/uEZNSfCsUqO3nim8MArdk62KUsD.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Pack",
+        "overview": "Xander and several other students are possessed by the spirit of a demonic breed of hyenas that wreak havoc at the high school.",
+        "air_date": "1997-04-07",
+        "runtime": 43,
+        "still_path": "/bX0QTl7cxFlFLrlqsF9Fjq1THzr.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Angel",
+        "overview": "Buffy discovers Angel\u0027s dark secret and hesitates to do anything about it, which could spell danger for someone she loves.",
+        "air_date": "1997-04-14",
+        "runtime": 43,
+        "still_path": "/eofxSigv2HcdnxRmSHEBGsJl2aO.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "I, Robot... You, Jane",
+        "overview": "Willow\u0027s new Internet chat buddy turns out to be a powerful demon electronically unleashed from a centuries-old, newly digitized book.",
+        "air_date": "1997-04-28",
+        "runtime": 43,
+        "still_path": "/5CgAU1iyy7zwl84HmOvVyfL3Aht.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Puppet Show",
+        "overview": "Buffy suspects that a ventriloquist\u0027s dummy may be harvesting organs from classmates performing in a talent show.",
+        "air_date": "1997-05-05",
+        "runtime": 43,
+        "still_path": "/v3RPMAnIdxi0TrJI9O8D0aOM42I.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Nightmares",
+        "overview": "A series of strange occurrences lead Buffy and her friends to discover that their worst nightmares have literally become reality.",
+        "air_date": "1997-05-12",
+        "runtime": 43,
+        "still_path": "/sefSYbpiW393Pfl7KF3iQ2UJLOf.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Out of Mind, Out of Sight",
+        "overview": "When an invisible menace starts attacking students and faculty at Sunnydale High, the Scooby Gang traces the problem back to Cordelia.",
+        "air_date": "1997-05-19",
+        "runtime": 43,
+        "still_path": "/zOZa7E2ZH7obgqYuav24EACqwE8.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Prophecy Girl",
+        "overview": "Buffy\u0027s life may hang in the balance as Giles uncovers an ancient book that foretells not only her death, but also the end of the world.",
+        "air_date": "1997-06-02",
+        "runtime": 44,
+        "still_path": "/8m7rgYl2m197LnnNi9Jz0desczy.jpg"
+      }
+    ]
+  }
+}

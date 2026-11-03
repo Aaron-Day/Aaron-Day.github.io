@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11631,
+    "title": "Mamma Mia!",
+    "overview": "A spirited young bride-to-be living with her single mother on a small Greek island secretly invites three of her mother\u0027s ex-boyfriends in hope of finding her biological father to walk her down the aisle.",
+    "tagline": "A mother. A daughter. Three possible fathers. A trip down the aisle you\u0027ll never forget.",
+    "runtime": 108,
+    "release_date": "2008-07-03",
+    "vote_average": 6.957,
+    "poster_path": "/xYLiCWmAMHJubx5jNZ7HuXKjAbV.jpg",
+    "backdrop_path": "/90sDsHugeRU5dtTG3zEVIOXXl4L.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 458558,
+      "name": "Mamma Mia! Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Amanda Seyfried",
+      "character": "Sophie Sheridan",
+      "profile_path": "/gtBUIpZ3dvLpOMIVORxE6sHSyZj.jpg"
+    },
+    {
+      "name": "Meryl Streep",
+      "character": "Donna Sheridan",
+      "profile_path": "/g5cVxQBAQ3AXt3LhdBXtbbN47Uc.jpg"
+    },
+    {
+      "name": "Pierce Brosnan",
+      "character": "Sam Carmichael",
+      "profile_path": "/dzXVwwJLPwiZeXOnf7YxorqVEEM.jpg"
+    },
+    {
+      "name": "Colin Firth",
+      "character": "Harry Bright",
+      "profile_path": "/z6wxnkqSTnzO1tcBui0ss7ehdm9.jpg"
+    }
+  ]
+}

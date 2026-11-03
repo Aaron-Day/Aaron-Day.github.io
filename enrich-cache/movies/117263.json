@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 117263,
+    "title": "Olympus Has Fallen",
+    "overview": "When the White House (Secret Service Code: \u0022Olympus\u0022) is captured by a terrorist mastermind and the President is kidnapped, disgraced former Presidential guard Mike Banning finds himself trapped within the building. As the national security team scrambles to respond, they are forced to rely on Banning\u0027s inside knowledge to help retake the White House, save the President and avert an even bigger disaster.",
+    "tagline": "When our flag falls our nation will rise.",
+    "runtime": 120,
+    "release_date": "2013-03-20",
+    "vote_average": 6.42,
+    "poster_path": "/u3GTFGwesNBNd0t1hiLaEk1iqZU.jpg",
+    "backdrop_path": "/mjYU7EwVeOtM39ArdWHZk78VhYm.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 386534,
+      "name": "Has Fallen Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Gerard Butler",
+      "character": "Mike Banning",
+      "profile_path": "/i54XoxYieuff2w6MwyfwVUBvmR0.jpg"
+    },
+    {
+      "name": "Aaron Eckhart",
+      "character": "President Benjamin Asher",
+      "profile_path": "/u5JjnRMr9zKEVvOP7k3F6gdcwT6.jpg"
+    },
+    {
+      "name": "Finley Jacobsen",
+      "character": "Connor",
+      "profile_path": "/jb5V4NPK0rSxQ7KH6PxftVhQLW8.jpg"
+    },
+    {
+      "name": "Dylan McDermott",
+      "character": "Forbes",
+      "profile_path": "/3i69RNLuL7KOD9pCmHQYruhcOdn.jpg"
+    }
+  ]
+}

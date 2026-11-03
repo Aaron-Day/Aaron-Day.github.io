@@ -1,0 +1,64 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Future Days",
+        "overview": "Five years after the events in Salt Lake City, a now 19-year-old Ellie makes a discovery while on patrol with her best friend Dina. Back in Jackson Hole, Joel seeks help to mend his relationship with Ellie.",
+        "air_date": "2025-04-13",
+        "runtime": 59,
+        "still_path": "/rNTeUQ0C2eRyOlSoPToHV3adTYb.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Through the Valley",
+        "overview": "As a storm brews in the mountains, the people of Jackson Hole prepare for the worst amid increased sightings of Infected. Meanwhile, Abby weighs her options.",
+        "air_date": "2025-04-20",
+        "runtime": 57,
+        "still_path": "/y5hH64UU5QSbsVOarLsdk0sD5Rm.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Path",
+        "overview": "After Dina shares crucial information, Ellie prepares to petition the town council, even while she struggles with her deep emotional scars. On the outskirts of Seattle, a religious sect attempts to flee a war \u2013 raising questions on what lies ahead.",
+        "air_date": "2025-04-27",
+        "runtime": 57,
+        "still_path": "/naQJx4p1H8pjnS2fntzK6Jtcak9.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Day One",
+        "overview": "In 2018, Seattle FEDRA confronts an unexpected foe. Ten years later, Ellie and Dina find themselves in the middle of a bloody battle between the zealous Seraphites and a ruthless militia.",
+        "air_date": "2025-05-04",
+        "runtime": 53,
+        "still_path": "/agq0JjJXYJclLH7iQWmVJxUb0CV.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Feel Her Love",
+        "overview": "The WLF makes a dangerous discovery... at a great cost. Later, Ellie must decide whether to continue with her plan \u2013 and risk putting Dina in danger \u2013 or give up on her quest for justice.",
+        "air_date": "2025-05-11",
+        "runtime": 45,
+        "still_path": "/o79Zkjoe2bNKslh8Dr7mcm8gyg.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Price",
+        "overview": "Joel surprises Ellie for her birthday. Years later, Ellie prepares to confront Joel about her past.",
+        "air_date": "2025-05-18",
+        "runtime": 60,
+        "still_path": "/iyqiOrn1253erbEpX9UeSPYXhTh.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Convergence",
+        "overview": "As the Wolves and the Scars prepare for a battle that could potentially end their longstanding feud, Ellie\u0027s search draws her away from her friends and toward a devastating confrontation.",
+        "air_date": "2025-05-25",
+        "runtime": 50,
+        "still_path": "/5xCYzdb4ASjn6wZQr5esz5aRf5U.jpg"
+      }
+    ]
+  }
+}

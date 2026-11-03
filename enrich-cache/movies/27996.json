@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 27996,
+    "title": "Dr. Dolittle: Tail to the Chief",
+    "overview": "Maya Dolittle is back in a heartwarming adventure of presidential proportions! Maya\u0027s dream of going to vet school is put on hold when she gets a call from the president of the United States. It seems the First Dog is out of control, and the president needs Maya\u0027s help. It\u0027s up to Maya and her own dog, Lucky, to stop a canine catastrophe from becoming a national crisis!",
+    "tagline": "The White House has gone to the dogs!",
+    "runtime": 85,
+    "release_date": "2008-03-04",
+    "vote_average": 5.4,
+    "poster_path": "/5eamhJLpdvTDNOwHuT9RmUKfpxF.jpg",
+    "backdrop_path": "/2Imy8YUcvX0Scqe8JODbtii05U4.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 3169,
+      "name": "Dr. Dolittle Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kyla Pratt",
+      "character": "Maya Dolittle",
+      "profile_path": "/y02hmYVndLlJbOYkNDu3Ksdsiib.jpg"
+    },
+    {
+      "name": "Peter Coyote",
+      "character": "President Sterling",
+      "profile_path": "/AglpxXP9wBM567UMGL9DAMbid1V.jpg"
+    },
+    {
+      "name": "Malcolm Stewart",
+      "character": "Chief Dorian",
+      "profile_path": null
+    },
+    {
+      "name": "Niall Matter",
+      "character": "Cole Fletcher",
+      "profile_path": "/9hlmypLILRkaEVOazFdg11nfsJm.jpg"
+    }
+  ]
+}

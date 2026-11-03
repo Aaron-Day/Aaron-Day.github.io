@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9336,
+    "title": "Police Academy",
+    "overview": "New rules enforced by the Lady Mayoress mean that sex, weight, height and intelligence need no longer be a factor for joining the Police Force. This opens the floodgates for all and sundry to enter the Police Academy, much to the chagrin of the instructors. Not everyone is there through choice, though. Social misfit Mahoney has been forced to sign up as the only alternative to a jail sentence and it doesn\u0027t take long before he falls foul of the boorish Lieutenant Harris. But before long, Mahoney realises that he is enjoying being a police cadet and decides he wants to stay... while Harris decides he wants Mahoney out!",
+    "tagline": "The new police recruits. Call them slobs. Call them jerks. Call them gross. Just don\u0027t call them when you\u0027re in trouble.",
+    "runtime": 97,
+    "release_date": "1984-03-22",
+    "vote_average": 6.728,
+    "poster_path": "/3PriqoVUQcPwcyvk0SJRiMTdBJK.jpg",
+    "backdrop_path": "/6qAYgsvnH4wUS9fAcrxUvUtCM6x.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9338,
+      "name": "Police Academy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Guttenberg",
+      "character": "Carey Mahoney",
+      "profile_path": "/ghTMepliFNcRQHNELs8pgNDsZyW.jpg"
+    },
+    {
+      "name": "Kim Cattrall",
+      "character": "Karen Thompson",
+      "profile_path": "/6X6x8gLSOWxwhoquIi37769m0k0.jpg"
+    },
+    {
+      "name": "G.W. Bailey",
+      "character": "Lieutenant Harris",
+      "profile_path": "/doZuJwI446yhQ28PHT9vyM6pa0f.jpg"
+    },
+    {
+      "name": "Bubba Smith",
+      "character": "Moses Hightower",
+      "profile_path": "/ew7CpCLyD4FP1zqgtxUV8jDg8cX.jpg"
+    }
+  ]
+}

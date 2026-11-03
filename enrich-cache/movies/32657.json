@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 32657,
+    "title": "Percy Jackson \u0026 the Olympians: The Lightning Thief",
+    "overview": "Accident prone teenager, Percy discovers he\u0027s actually a demi-God, the son of Poseidon, and he is needed when Zeus\u0027 lightning is stolen. Percy must master his new found skills in order to prevent a war between the Gods that could devastate the entire world.",
+    "tagline": "Worlds collide.",
+    "runtime": 118,
+    "release_date": "2010-02-01",
+    "vote_average": 6.212,
+    "poster_path": "/brzpTyZ5bnM7s53C1KSk1TmrMO6.jpg",
+    "backdrop_path": "/ugiV9SpJburMOPeIyjBJyAnO1So.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 179919,
+      "name": "Percy Jackson Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Logan Lerman",
+      "character": "Percy Jackson",
+      "profile_path": "/ckcpgSvSWOhi8mvAfR1Cpsakg3S.jpg"
+    },
+    {
+      "name": "Brandon T. Jackson",
+      "character": "Grover Underwood",
+      "profile_path": "/vkaHkhqqBreqAXARXspFvcjMuiu.jpg"
+    },
+    {
+      "name": "Alexandra Daddario",
+      "character": "Annabeth Chase",
+      "profile_path": "/6qiLUZZYBE4FsrG8irWbb3I7P1n.jpg"
+    },
+    {
+      "name": "Jake Abel",
+      "character": "Luke Castellan",
+      "profile_path": "/ijog1BFmm4BgZGnScwoYJKkwAcO.jpg"
+    }
+  ]
+}

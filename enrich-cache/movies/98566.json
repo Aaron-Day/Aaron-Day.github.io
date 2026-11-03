@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 98566,
+    "title": "Teenage Mutant Ninja Turtles",
+    "overview": "When a kingpin threatens New York City, a group of mutated turtle warriors must emerge from the shadows to protect their home.",
+    "tagline": "Mysterious. Dangerous. Reptilious. You\u0027ve never seen heroes like this.",
+    "runtime": 101,
+    "release_date": "2014-08-07",
+    "vote_average": 5.93,
+    "poster_path": "/azL2ThbJMIkts3ZMt3j1YgBUeDB.jpg",
+    "backdrop_path": "/eezsbzYPbYKjjh6E1XHDBNlLynh.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 401562,
+      "name": "Teenage Mutant Ninja Turtles (Remake) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Pete Ploszek",
+      "character": "Leonardo",
+      "profile_path": "/9ZFxQLUQzfMNEHVqYjwK346vaCK.jpg"
+    },
+    {
+      "name": "Alan Ritchson",
+      "character": "Raphael",
+      "profile_path": "/92YNEEpCyugkTzPprJwZpvVtvuK.jpg"
+    },
+    {
+      "name": "Jeremy Howard",
+      "character": "Donatello",
+      "profile_path": "/tkZNfmlNkiH7UZxYDaDqO9z1TuV.jpg"
+    },
+    {
+      "name": "Noel Fisher",
+      "character": "Michelangelo",
+      "profile_path": "/rBD5Iwt9WITaUKGk1oxSPLjjpm2.jpg"
+    }
+  ]
+}

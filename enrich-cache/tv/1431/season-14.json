@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 14,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Devil and D.B. Russell",
+        "overview": "D.B. Russell leads the CSI team on a hunt to find Morgan and Ellie Brass following their kidnapping by a ritualistic killer.",
+        "air_date": "2013-09-25",
+        "runtime": 43,
+        "still_path": "/q5Znqk1sdvDS0Pi42UY3cWkShDF.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Take the Money and Run",
+        "overview": "The CSI team investigate a murder at a high stakes poker game.",
+        "air_date": "2013-10-02",
+        "runtime": 44,
+        "still_path": "/4LVgv9kxMsp7YS2xr5PZ8xk4zoi.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Torch Song",
+        "overview": "The CSI team investigates a fire at a music venue that leaves four people dead, including two band members.",
+        "air_date": "2013-10-09",
+        "runtime": 42,
+        "still_path": "/gyRytnn4eg3nQdPsTpT1wT2mv9y.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Last Supper",
+        "overview": "When contestants on a reality cooking show accidentally eat human flesh during a competition, the CSI team is brought in to investigate.",
+        "air_date": "2013-10-16",
+        "runtime": 43,
+        "still_path": "/toLigUhbpCdgIm3crofAmYttWsX.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Frame by Frame",
+        "overview": "The team meets a blast from the past, with a chance to solve a cold case that has haunted the team for 14 years.",
+        "air_date": "2013-10-23",
+        "runtime": 44,
+        "still_path": "/pBye4wUwTqhPcR57sY2xuCmeuIA.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Passed Pawns",
+        "overview": "The CSI team investigates the death of a homeless man who had a huge winning streak at a small casino.",
+        "air_date": "2013-10-30",
+        "runtime": 43,
+        "still_path": "/2uGfauTn1VaHM1mqqIiMXo4NNEf.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Under a Cloud",
+        "overview": "A body is discovered during torrential rain in Vegas; Sanders is accused of framing a man for murder seven years ago.",
+        "air_date": "2013-11-06",
+        "runtime": 43,
+        "still_path": "/ayRhOrpgPOsyYXGVAiMCemhHmEX.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Helpless",
+        "overview": "A dead man is found inside a human-size hamster ball; the team collaborates on a serial rapist investigation.",
+        "air_date": "2013-11-13",
+        "runtime": 41,
+        "still_path": "/b91DXeXypQI6Hx9nLr4LJjl1Hn5.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Check In and Check Out",
+        "overview": "The CSI team is called in to investigate the stabbing of a couple found at a local motel that is reminiscent of two incidents that occurred in the same room.",
+        "air_date": "2013-11-20",
+        "runtime": 43,
+        "still_path": "/hiiAY3I60NBaeFuM84fOBqMylFl.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Girls Gone Wild",
+        "overview": "A spa weekend for Sara, Finlay and Morgan turns into a murder investigation and missing persons case when Finlay disappears, as the CSI team must piece together what happened in detail to find her.",
+        "air_date": "2013-11-27",
+        "runtime": 43,
+        "still_path": "/sd6nZadbeINKFi5YrPrAe2jzOeQ.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Lost Reindeer",
+        "overview": "When a man is found murdered at an elaborate holiday party complete with real snow and live reindeer, the CSI team is brought in to investigate.",
+        "air_date": "2013-12-11",
+        "runtime": 43,
+        "still_path": "/2S3akvY4WZiHVH1F9LrmoHNPyWL.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Keep Calm and Carry-On",
+        "overview": "An inbound plane\u2019s passengers become the victims of an onboard thief, but when one of the passengers is found dead, the petty crime turns into a murder investigation.",
+        "air_date": "2014-01-15",
+        "runtime": 43,
+        "still_path": "/8foLBOAYjlbVz2WJtv3l9AB9M3A.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Boston Brakes",
+        "overview": "The CSIs are shocked when they discover that a victim in a car crash is someone they are familiar with.",
+        "air_date": "2014-01-22",
+        "runtime": 43,
+        "still_path": "/hSsO7q2GW1l2wau4v0oWn9IMJGD.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "De Los Muertos",
+        "overview": "When a woman is found dead in Mexico and a murdered couple is discovered in a driveway, evidence from one investigation could help the other.",
+        "air_date": "2014-02-05",
+        "runtime": 43,
+        "still_path": "/c3Bu6T2GW7S5pe2KxTYnGK01eXx.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Love for Sale",
+        "overview": "Greg and Nick investigate the death of a 16-year-old girl with ties to a brothel.",
+        "air_date": "2014-02-19",
+        "runtime": 43,
+        "still_path": "/13pwWVstSA1ADg9BptVkJobWTJa.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Killer Moves",
+        "overview": "A murdered Elvis impersonator has a strange connection with a bird.",
+        "air_date": "2014-03-05",
+        "runtime": 42,
+        "still_path": "/8X5AcIE8oNlGziQf5ETvp6buvgC.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Long Road Home",
+        "overview": "A murdered groupie and a missing prostitute both have connections to a mysterious band.",
+        "air_date": "2014-03-12",
+        "runtime": 42,
+        "still_path": "/bVUAMinITQCAZxxbjcL3BPnVzS1.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Uninvited",
+        "overview": "The team investigates when a whole family is reported to have been missing for a month.",
+        "air_date": "2014-03-19",
+        "runtime": 43,
+        "still_path": "/OdHfRfmiEYfDNfdWryKMTyCMH0.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Fallen",
+        "overview": "When a teen opens fire in a police station, Russell is taken hostage.",
+        "air_date": "2014-04-02",
+        "runtime": 43,
+        "still_path": "/cKHkpgXBSD004g3HnaWop3Y8Nkd.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Consumed",
+        "overview": "As the CSIs hunt a cannibalistic killer, they realize there is more than one.",
+        "air_date": "2014-04-09",
+        "runtime": 43,
+        "still_path": "/sfFVNuLzbxOASP9YGZW5UlRm1H.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Kitty",
+        "overview": "The team investigates the cyber-related murder of a prominent casino owner\u0027s wife and receive help from the FBI\u0027s Cyber Crime Division.",
+        "air_date": "2014-04-30",
+        "runtime": 44,
+        "still_path": "/qWUvutJa9hcCRjLNY3eeFF3W7wu.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Dead in His Tracks",
+        "overview": "The CSIs investigate a crime that has ties to a 25-year-old mob heist; Brass is faced with a decision when his daughter tries to commit suicide.",
+        "air_date": "2014-05-07",
+        "runtime": 43,
+        "still_path": "/t5yKUR3Xt8abrxzIf662a6KV2EU.jpg"
+      }
+    ]
+  }
+}

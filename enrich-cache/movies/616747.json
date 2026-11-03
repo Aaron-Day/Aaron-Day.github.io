@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 616747,
+    "title": "Haunted Mansion",
+    "overview": "A woman and her son enlist a motley crew of so-called spiritual experts to help rid their home of supernatural squatters.",
+    "tagline": "Home is where the haunt is.",
+    "runtime": 123,
+    "release_date": "2023-07-26",
+    "vote_average": 6.431,
+    "poster_path": "/8Im6DknDVxRiGXc5t8rVOJyzuNx.jpg",
+    "backdrop_path": "/Als2QyqbLgT5G3rwTGJta8QQfqP.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Rosario Dawson",
+      "character": "Gabbie",
+      "profile_path": "/siTzOI810a0K46wv1TORXMw5N7J.jpg"
+    },
+    {
+      "name": "Chase W. Dillon",
+      "character": "Travis",
+      "profile_path": "/8GkzgrM3JPTCK3eromBzu5KfHnN.jpg"
+    },
+    {
+      "name": "LaKeith Stanfield",
+      "character": "Ben Matthias",
+      "profile_path": "/x3k0HCpMNqEtVf2VKQrSCol1ia2.jpg"
+    },
+    {
+      "name": "Owen Wilson",
+      "character": "Father Kent",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    }
+  ]
+}

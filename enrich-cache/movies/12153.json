@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12153,
+    "title": "White Chicks",
+    "overview": "Two FBI agent brothers, Marcus and Kevin Copeland, accidentally foil a drug bust. To avoid being fired they accept a mission escorting a pair of socialites to the Hamptons--but when the girls are disfigured in a car accident, they refuse to go. Left without options, Marcus and Kevin decide to pose as the sisters, transforming themselves from black men into rich white women.",
+    "tagline": "They\u0027re going deep undercover.",
+    "runtime": 109,
+    "release_date": "2004-06-23",
+    "vote_average": 6.968,
+    "poster_path": "/aHTUpo45qy9QYIOnVITGGqLoVcA.jpg",
+    "backdrop_path": "/di47xqYMCYpjqwnqNlO17X5qXMX.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Shawn Wayans",
+      "character": "Kevin Copeland",
+      "profile_path": "/Cat25uXhB680QLmvg9Tu16W563.jpg"
+    },
+    {
+      "name": "Marlon Wayans",
+      "character": "Marcus Copeland",
+      "profile_path": "/7LYnX3vluHFBs1WCRKUjSIEDEkn.jpg"
+    },
+    {
+      "name": "Frankie Faison",
+      "character": "Chief Elliott Gordon",
+      "profile_path": "/3717JOXK2Z8qelfyvScDGimfFBf.jpg"
+    },
+    {
+      "name": "Terry Crews",
+      "character": "Latrell Spencer",
+      "profile_path": "/pxTY4SglLo5hFcMH00MxPeC5u55.jpg"
+    }
+  ]
+}

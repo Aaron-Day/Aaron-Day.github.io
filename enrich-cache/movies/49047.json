@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 49047,
+    "title": "Gravity",
+    "overview": "Dr Ryan Stone, an engineer on her first space mission, and Matt Kowalski, an astronaut on his final expedition, have to survive in space after they are hit by debris while spacewalking.",
+    "tagline": "Don\u0027t let go.",
+    "runtime": 91,
+    "release_date": "2013-10-03",
+    "vote_average": 7.172,
+    "poster_path": "/kZ2nZw8D681aphje8NJi8EfbL1U.jpg",
+    "backdrop_path": "/a2n6bKD7qhCPCAEALgsAhWOAQcc.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sandra Bullock",
+      "character": "Ryan Stone",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "George Clooney",
+      "character": "Matt Kowalski",
+      "profile_path": "/dt0a7DT0SQeHb7NpURD6ifyEzsN.jpg"
+    },
+    {
+      "name": "Ed Harris",
+      "character": "Mission Control (voice)",
+      "profile_path": "/kUbUA70WPiosPT4kBJMWtGk0ASd.jpg"
+    },
+    {
+      "name": "Orto Ignatiussen",
+      "character": "Aningaaq (voice)",
+      "profile_path": "/jpbMzoXaPjgZGjNOtGAxnZSO3Pz.jpg"
+    }
+  ]
+}

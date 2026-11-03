@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 102382,
+    "title": "The Amazing Spider-Man 2",
+    "overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen\u2019s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+    "tagline": "His greatest battle begins.",
+    "runtime": 141,
+    "release_date": "2014-04-16",
+    "vote_average": 6.567,
+    "poster_path": "/bU7nTmvmy0h3VUP01v1T2imgH6N.jpg",
+    "backdrop_path": "/k0hlAzTryCYX1O1LyC6P8tAa8s0.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 125574,
+      "name": "The Amazing Spider-Man Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Andrew Garfield",
+      "character": "Spider-Man / Peter Parker",
+      "profile_path": "/5ydZ6TluPtxlz5G8nlWMB7SGmow.jpg"
+    },
+    {
+      "name": "Emma Stone",
+      "character": "Gwen Stacy",
+      "profile_path": "/ak2Y9wOI3wi2pNQU6OWSvVvWPj5.jpg"
+    },
+    {
+      "name": "Jamie Foxx",
+      "character": "Electro / Max Dillon",
+      "profile_path": "/zD8Nsy4Xrghp7WunwpCj5JKBPeU.jpg"
+    },
+    {
+      "name": "Dane DeHaan",
+      "character": "Green Goblin / Harry Osborn",
+      "profile_path": "/uwl0WKqHj6ahsriOEPLks84T70j.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 198184,
+    "title": "Chappie",
+    "overview": "Every child comes into the world full of promise, and none more so than Chappie: he is gifted, special, a prodigy. Like any child, Chappie will come under the influence of his surroundings\u2014some good, some bad\u2014and he will rely on his heart and soul to find his way in the world and become his own man. But there\u0027s one thing that makes Chappie different from any one else: he is a robot.",
+    "tagline": "I am consciousness. I am alive. I am Chappie.",
+    "runtime": 120,
+    "release_date": "2015-03-04",
+    "vote_average": 6.795,
+    "poster_path": "/uuDUpzlMFomdSfNWlpEPS9nVZWV.jpg",
+    "backdrop_path": "/qX5T5GVAcq2UKaaiAx5SZp1AtlY.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sharlto Copley",
+      "character": "Chappie",
+      "profile_path": "/em89OJJvBRX7kNJJPASmNKQujsC.jpg"
+    },
+    {
+      "name": "Dev Patel",
+      "character": "Deon Wilson",
+      "profile_path": "/byAo6xoleVSG5O9YpGrQ5YuCRX7.jpg"
+    },
+    {
+      "name": "Hugh Jackman",
+      "character": "Vincent Moore",
+      "profile_path": "/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Ninja",
+      "character": "Ninja",
+      "profile_path": "/kotA6v2WZLYh464YLxsuWFpnOqS.jpg"
+    }
+  ]
+}

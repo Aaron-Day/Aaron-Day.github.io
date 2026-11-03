@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 16,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Divine Number",
+        "overview": "In numerous sacred traditions, the number 12 holds a divine significance; it can be found repeated in ancient architecture, groups of 12 wisdom keepers and even the latest scientific principles.",
+        "air_date": "2020-11-13",
+        "runtime": 42,
+        "still_path": "/ywvmxwvZPIZ4utdAkowASVLHoo4.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Lost Kingdom",
+        "overview": "According to the earliest Tibetan traditions, hidden high in the Himalaya Mountains is a kingdom of the gods--Shambhala. Is it possible that this mystical realm truly exists, and can be reached through ancient practices designed to access other dimensions?",
+        "air_date": "2020-11-20",
+        "runtime": 42,
+        "still_path": "/rrx7v1ypnq1Pr1VSHBZAV11ZJnN.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Galactic Keyhole",
+        "overview": "The mysterious symbol of the keyhole exists in mystic texts, sacred architecture and ancient artwork found all over the planet; exploring if this cryptic shape represents a profound connection to the cosmos.",
+        "air_date": "2020-12-04",
+        "runtime": 42,
+        "still_path": "/udMMAYNlzkka4UuNg7RIKDAvdfT.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Giants of the Mediterranean",
+        "overview": "Ancient cultures recorded stories of enormous beings that descended from the sky; exploring if massive megalithic structures and reported discoveries of towering human-like skeletons reveal that the world was once inhabited by giants.",
+        "air_date": "2020-12-11",
+        "runtime": 42,
+        "still_path": "/lGP068shJGxFjZImGmFjfuwxxQa.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Forbidden Bible",
+        "overview": "Rebellious angels, giant hybrid beings, and humans taken up to a heavenly realm above the Earth; examining the possibility that The Book of Enoch was stricken from the Bible because it documents humanity\u0027s extraterrestrial origins.",
+        "air_date": "2020-12-18",
+        "runtime": 42,
+        "still_path": "/2oOudjwKGUCtcoHpFr06dwfVXuI.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "William Shatner Meets Ancient Aliens",
+        "overview": "In this extraordinary two-hour special, Shatner will bring thought-provoking questions to the leading experts of the show. Ancient Astronaut theorists Giorgio Tsoukalos, Erich von D niken, David Childress, William Henry and Linda Moulton Howe will be joined by former British Ministry of Defense investigator Nick Pope, rocket scientist Dr. Travis Taylor, theoretical physicist Dr. Michio Kaku, and religious history experts Rabbi Ariel Bar Tzadok and Reverend Michael Carter. They will explore everything from human origins to groundbreaking archaeological finds, new understandings of the cosmos and the profound possibility that we are not alone in the universe.",
+        "air_date": "2021-02-12",
+        "runtime": 81,
+        "still_path": "/ery0cTiQ3QaUmnN9Tt6w9uDjZoa.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Impossible Artifacts",
+        "overview": "Throughout the world, ancient objects have been found that leave archaeologists at a loss. Could these impossible artifacts suggest that advanced--and perhaps even extraterrestrial--civilizations existed on Earth thousands of years before our own?",
+        "air_date": "2021-02-19",
+        "runtime": 42,
+        "still_path": "/1WKgIsK5y0jijbSQWUkpNyHswdV.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Space Travelers",
+        "overview": "It is humankind\u0027s most profound achievement: blasting off into the stars. But is it possible that our voyages into the cosmos are really a return to our true origins? And if so, as we venture out further into outer space, will we encounter space travelers from other worlds?",
+        "air_date": "2021-02-26",
+        "runtime": 42,
+        "still_path": "/vpEZMpf1LJXV4vb1GSPgpI2d54D.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The UFO Pioneers",
+        "overview": "In the 20th century, pioneering scientists, journalists and investigators defied convention and began documenting UFOs. Now, with incredible new UFO accounts coming to light, will their work finally culminate in undeniable proof of extraterrestrial visitation?",
+        "air_date": "2021-03-05",
+        "runtime": 41,
+        "still_path": "/hMQt6iZyQKv0NWAXZL7RGa2zhVL.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Harmonic Code",
+        "overview": "Archaeologists have discovered that many ancient sites were built with an acoustic purpose, and often resonate at a frequency that has a profound effect on the human brain. Could ancient people have been aware of a harmonic code? One that put them in contact with alien beings?",
+        "air_date": "2021-03-12",
+        "runtime": 42,
+        "still_path": "/i6PeH8mnEXhBJmcoKOHSmykjplx.jpg"
+      }
+    ]
+  }
+}

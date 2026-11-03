@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "That Hope Is You (1)",
+        "overview": "Arriving 930 years in the future, Burnham navigates a galaxy she no longer recognizes while searching for the rest of the U.S.S. Discovery crew.",
+        "air_date": "2020-10-15",
+        "runtime": 52,
+        "still_path": "/d1zubUsMskWBYuj45PjyMZdTHSU.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Far from Home",
+        "overview": "The crew of the Discovery races to repair their ship after they crash. Tilly \u0026 Saru make a first contact looking for Burnham.",
+        "air_date": "2020-10-22",
+        "runtime": 53,
+        "still_path": "/8gyrr9c57cSrIv8xwtMz2pvZstr.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "People of Earth",
+        "overview": "Reunited with Burnham, Discovery heads to Earth to find out what has happened to the Federation in the last thousand years.",
+        "air_date": "2020-10-29",
+        "runtime": 48,
+        "still_path": "/qXtjIfQVfBFZNSraNvrZF6WX6Fq.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Forget Me Not",
+        "overview": "Burnham and Adira visit the Trill homeworld while Saru\u0027s efforts on the Discovery to help the crew reconnect yield surprises.",
+        "air_date": "2020-11-05",
+        "runtime": 55,
+        "still_path": "/2xdn4gmzN7iFRrR6YsTpXdBNwNx.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Die Trying",
+        "overview": "After reuniting with what remains of Starfleet and the Federation, the U.S.S. Discovery and its crew must prove that a 930 year old crew and starship are exactly what this new future needs.",
+        "air_date": "2020-11-12",
+        "runtime": 55,
+        "still_path": "/pZYeTnk127ThdYYDaek8c4OrSPC.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Scavengers",
+        "overview": "After receiving a message from Book, Burnham and Georgiou embark on a rogue mission to find him, leaving Saru to pick up the pieces with Admiral Vance. Meanwhile, Stamets forms an unexpected bond with Adira.",
+        "air_date": "2020-11-19",
+        "runtime": 49,
+        "still_path": "/n5arWcgMnw7pINNwKnsldvGQxo8.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Unification III",
+        "overview": "While grappling with the fallout of her recent actions, and what her future might hold, Burnham agrees to represent the Federation in an intense debate about the release of politically sensitive - but highly valuable - Burn data.",
+        "air_date": "2020-11-26",
+        "runtime": 50,
+        "still_path": "/yaYC9EYUdBM1CJLj1u5pWHrAxVT.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Sanctuary",
+        "overview": "Osyraa attacks Book\u0027s home planet and the Discovery travels there to help. Stamets and Adira investigate The Burn.",
+        "air_date": "2020-12-03",
+        "runtime": 47,
+        "still_path": "/8xGLBF0s7ZkOzEDJiMzMtUt8mbn.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Terra Firma (1)",
+        "overview": "The U.S.S. Discovery crew journey to a mysterious planet in hopes of finding a cure for Georgiou\u0027s deteriorating condition. Stamets and Adira make a stunning breakthrough with the newly acquired Burn data.",
+        "air_date": "2020-12-10",
+        "runtime": 48,
+        "still_path": "/e4UoaZwASHoITSS667wP8nw5n1J.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Terra Firma (2)",
+        "overview": "Georgiou uncovers the true depths of the plot against her, leading her to a revelation about how deeply her time on the U.S.S. Discovery truly changed her.",
+        "air_date": "2020-12-17",
+        "runtime": 49,
+        "still_path": "/mOtR0Mp1nlic7VNk0tQi4x8tzTy.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Su\u0027Kal",
+        "overview": "Discovery ventures to the Verubin Nebula, where Burnham, Saru, and Culber make a shocking realization about the origin of the Burn. The rest of the crew faces an unexpected threat.",
+        "air_date": "2020-12-24",
+        "runtime": 55,
+        "still_path": "/zxKheCZHAjXV0ZfU9J58aakyzTt.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "There is a Tide\u2026",
+        "overview": "After capturing the U.S.S. Discovery, Osyraa seeks a meeting with Admiral Vance while Burnham and the crew must overcome unimaginable odds as they attempt to regain command of their ship.",
+        "air_date": "2020-12-31",
+        "runtime": 48,
+        "still_path": "/9YbzeEQkjIkEXeRoazPScvaJ4GD.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "That Hope Is You (2)",
+        "overview": "As the Emerald Chain tightens its grip and the mystery of the Burn is finally solved, Burnham and the crew have one last chance to save themselves - and the Federation.",
+        "air_date": "2021-01-07",
+        "runtime": 61,
+        "still_path": "/ebddkXFMaPxNrqPstDOXjqBt26S.jpg"
+      }
+    ]
+  }
+}

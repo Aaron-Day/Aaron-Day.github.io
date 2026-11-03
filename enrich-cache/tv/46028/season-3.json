@@ -1,0 +1,176 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Girl Meets High School Part 1",
+        "overview": "Riley, Maya, Farkle and Lucas start their freshmen year and quickly learn their place as smaller fish in a much bigger lake.",
+        "air_date": "2016-06-03",
+        "runtime": 23,
+        "still_path": "/qDpkpYvleE4pd0momu1z3986Eby.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Girl Meets High School Part 2",
+        "overview": "The foursome continues to navigate the rigors of high school; some join sports teams while others choose academic clubs.",
+        "air_date": "2016-06-05",
+        "runtime": 23,
+        "still_path": "/gcuIXgCu5h4fcarjZ6J6ME068sM.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Girl Meets Jexica",
+        "overview": "Riley\u0027s worried that her new classmates don\u0027t like the real her so she invents and online alter-ego named Jexica; Cory and Topanga face Auggie\u0027s internet usage.",
+        "air_date": "2016-06-10",
+        "runtime": 23,
+        "still_path": "/xWCeVAveXg2fm98YxVbPavAFV8X.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Girl Meets Permanent Record",
+        "overview": "Riley finds out the hard way that getting a bad grade in high school will count toward her permanent record.",
+        "air_date": "2016-06-17",
+        "runtime": 23,
+        "still_path": "/dym0SKeapMBEnSqOcpO1xzziaRJ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Girl Meets Triangle",
+        "overview": "Maya\u0027s art teacher implies that her friendship with Riley could be affecting her artist\u0027s voice, thus kicking her identity crisis into full gear.",
+        "air_date": "2016-06-24",
+        "runtime": 23,
+        "still_path": "/wIiztYTfF2mB9o4K97ix5x7qq0B.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Girl Meets Upstate",
+        "overview": "Maya and Riley travel upstate to help Maya find her true artistic voice, but neglect to tell Cory and Topanga where they\u0027ve gone.",
+        "air_date": "2016-07-08",
+        "runtime": 23,
+        "still_path": "/llmZLeKb0HiicEL47zAMj2Tmvxt.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Girl Meets True Maya",
+        "overview": "Maya wants to do something bad to balance out all the good she\u0027s done lately.",
+        "air_date": "2016-07-15",
+        "runtime": 23,
+        "still_path": "/g2Il5Wb4yFVJlW2cHjWIby1X1pt.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Girl Meets Ski Lodge Part 1",
+        "overview": "When Cory becomes the head of the Nature Club, the whole gang heads out on a trip to a familiar ski lodge",
+        "air_date": "2016-07-22",
+        "runtime": 23,
+        "still_path": "/xTmRr3OLjSYVKbkfgEH2adFHile.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Girl Meets Ski Lodge Part 2",
+        "overview": "The group\u0027s ski trip comes to an end, and Lucas must finally choose between Maya and Riley.",
+        "air_date": "2016-07-29",
+        "runtime": 23,
+        "still_path": "/eG9KkQ18eFcLurs11vdzf3WTLSY.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Girl Meets I Do",
+        "overview": "Maya has some concerns about Shawn and Katy\u2019s upcoming wedding.",
+        "air_date": "2016-08-12",
+        "runtime": 23,
+        "still_path": "/AeCkG1d4PxropHcnz4ZVg7AjKBk.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Girl Meets the Real World",
+        "overview": "Riley has trouble with her debate assignment when she must argue if people are naturally good or evil.",
+        "air_date": "2016-08-19",
+        "runtime": 23,
+        "still_path": "/kSqObFLbGgPsHhFwmMqEkMunQOE.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Girl Meets Bear",
+        "overview": "Riley wakes to find her childhood teddy bear, Barry the Bear, missing and enlists the help of her family and friends to find him.",
+        "air_date": "2016-08-26",
+        "runtime": 23,
+        "still_path": "/nCXLZvRNJmoy8td95fMaIisZbwJ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Girl Meets the Great Lady of New York",
+        "overview": "Some students learn surprises about their diverse heritage during Cultural Week.",
+        "air_date": "2016-09-16",
+        "runtime": 23,
+        "still_path": "/9h9uaJbYBFjdtdvLR8Kz98lENyT.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Girl Meets She Don\u0027t Like Me",
+        "overview": "Riley tries to make new friends in high school but everyone acts less friendly than she expects.",
+        "air_date": "2016-09-23",
+        "runtime": 23,
+        "still_path": "/2kREUqTVHAqGy3tpQSeaqwSLTBj.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Girl Meets World of Terror 3",
+        "overview": "Auggie hosts \u0022Scary Time Theater\u0022 and shows what the world would be like if Riley and Maya had never met.",
+        "air_date": "2016-10-14",
+        "runtime": 23,
+        "still_path": "/lGYVmF3IrcjUZA0ug30V7MLyIWF.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Girl Meets Her Monster",
+        "overview": "Riley skips out on helping Topanga at the bakery to stay home and binge-watch her favorite TV show.",
+        "air_date": "2016-11-04",
+        "runtime": 23,
+        "still_path": "/8LDsoB2eMvavwjQO0teYquDXTfB.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Girl Meets Hollyworld",
+        "overview": "Maya schemes to sabotage another actress so that her mom will get a role in an upcoming movie.",
+        "air_date": "2016-11-10",
+        "runtime": 23,
+        "still_path": "/sv2XDCUqVqtg7Z2EGPrIE91AAJr.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Girl Meets a Christmas Maya",
+        "overview": "It\u0027s Christmas time and Riley is excited to celebrate her favorite holiday, but for Maya the holidays only bring back unhappy memories from her childhood.",
+        "air_date": "2016-12-02",
+        "runtime": 23,
+        "still_path": "/qetLw6Wyc0zrLPqBJZjc0PE8sRW.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "World Meets Girl",
+        "overview": "Fans peek behind the scenes of Girl Meets World.",
+        "air_date": "2016-12-09",
+        "runtime": 48,
+        "still_path": "/9dwbxjPmXnipv8WxRscRnoz0eOp.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Girl Meets Sweet Sixteen",
+        "overview": "With Riley\u2019s 16th birthday approaching, the kids contemplate the future and how rapidly their relationships will change in a few short years.",
+        "air_date": "2017-01-13",
+        "runtime": 23,
+        "still_path": "/777NF7Yh49K7JrAlwYdQ1p0DOmi.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Girl Meets Goodbye",
+        "overview": "Friends and family gather at the Matthews\u2019 home to help make a difficult decision.",
+        "air_date": "2017-01-20",
+        "runtime": 23,
+        "still_path": "/eCGIq8FtTqHeJ0Hzvoxqum4bFZo.jpg"
+      }
+    ]
+  }
+}

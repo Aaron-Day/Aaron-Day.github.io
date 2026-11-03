@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12444,
+    "title": "Harry Potter and the Deathly Hallows: Part 1",
+    "overview": "Harry, Ron and Hermione walk away from their last year at Hogwarts to find and destroy the remaining Horcruxes, putting an end to Voldemort\u0027s bid for immortality. But with Harry\u0027s beloved Dumbledore dead and Voldemort\u0027s unscrupulous Death Eaters on the loose, the world is more dangerous than ever.",
+    "tagline": "Nowhere is safe.",
+    "runtime": 146,
+    "release_date": "2010-11-17",
+    "vote_average": 7.734,
+    "poster_path": "/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
+    "backdrop_path": "/5i2QAYnbN5vOZUUolLPYHTb9spe.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1241,
+      "name": "Harry Potter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Radcliffe",
+      "character": "Harry Potter",
+      "profile_path": "/uUFfo8RANo7tuckB6AZAnESne55.jpg"
+    },
+    {
+      "name": "Emma Watson",
+      "character": "Hermione Granger",
+      "profile_path": "/mf0OANvWYSzU1d8yggrhyw8IbIz.jpg"
+    },
+    {
+      "name": "Rupert Grint",
+      "character": "Ron Weasley",
+      "profile_path": "/iFlkpTaOF6fGLqxz8b0PhI0i0zN.jpg"
+    },
+    {
+      "name": "Toby Jones",
+      "character": "Dobby (voice)",
+      "profile_path": "/1qNisdp4f1KstdfvAgYXMdrhwfk.jpg"
+    }
+  ]
+}

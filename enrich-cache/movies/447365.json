@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 447365,
+    "title": "Guardians of the Galaxy Vol. 3",
+    "overview": "Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.",
+    "tagline": "Once more with feeling.",
+    "runtime": 150,
+    "release_date": "2023-05-03",
+    "vote_average": 7.931,
+    "poster_path": "/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+    "backdrop_path": "/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 284433,
+      "name": "Guardians of the Galaxy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Pratt",
+      "character": "Peter Quill / Star-Lord",
+      "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Zoe Salda\u00F1a",
+      "character": "Gamora",
+      "profile_path": "/vQBwmsSOAd0JDaEcZ5p43J9xzsY.jpg"
+    },
+    {
+      "name": "Dave Bautista",
+      "character": "Drax",
+      "profile_path": "/snk6JiXOOoRjPtHU5VMoy6qbd32.jpg"
+    },
+    {
+      "name": "Karen Gillan",
+      "character": "Nebula",
+      "profile_path": "/qYx8CflXVq48nGKX1IJsDrAj0sT.jpg"
+    }
+  ]
+}

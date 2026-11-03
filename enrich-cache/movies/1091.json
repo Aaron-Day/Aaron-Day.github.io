@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1091,
+    "title": "The Thing",
+    "overview": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims.",
+    "tagline": "Anytime. Anywhere. Anyone.",
+    "runtime": 109,
+    "release_date": "1982-06-25",
+    "vote_average": 8.073,
+    "poster_path": "/tzGY49kseSE9QAKk47uuDGwnSCu.jpg",
+    "backdrop_path": "/r9leYNa8nTRCceZrZhP1DXkgKVb.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 479888,
+      "name": "The Thing Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kurt Russell",
+      "character": "MacReady",
+      "profile_path": "/6g1d98oH4miG4k0ZiZWmF3Dt0bO.jpg"
+    },
+    {
+      "name": "Wilford Brimley",
+      "character": "Blair",
+      "profile_path": "/tB0DdWX6FeNB3tjffJIaC0EOLBB.jpg"
+    },
+    {
+      "name": "T.K. Carter",
+      "character": "Nauls",
+      "profile_path": "/rqlDLtg8USZsO07VEiYQpQyjyA2.jpg"
+    },
+    {
+      "name": "David Clennon",
+      "character": "Palmer",
+      "profile_path": "/jLOf8nYolcb4P8LUDOW7QK5Y9pH.jpg"
+    }
+  ]
+}

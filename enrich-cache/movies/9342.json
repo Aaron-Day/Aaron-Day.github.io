@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9342,
+    "title": "The Mask of Zorro",
+    "overview": "It has been twenty years since Don Diego de la Vega fought Spanish oppression in Alta California as the legendary romantic hero, Zorro. Having escaped from prison he transforms troubled bandit Alejandro into his successor, in order to foil the plans of the tyrannical Don Rafael Montero who robbed him of his freedom, his wife and his precious daughter.",
+    "tagline": "No one has seen his face... but everyone... knows this mark.",
+    "runtime": 138,
+    "release_date": "1998-07-16",
+    "vote_average": 6.583,
+    "poster_path": "/bdMufwGDDzqu4kTSQwrKc5WR4bu.jpg",
+    "backdrop_path": "/hthzCwZ1inzSCSjf3SUn9S6C26d.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1657,
+      "name": "Zorro Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Antonio Banderas",
+      "character": "Alejandro Murrieta / Zorro",
+      "profile_path": "/lpzfDt22374NPhOXZpUq74e9mfw.jpg"
+    },
+    {
+      "name": "Anthony Hopkins",
+      "character": "Don Diego de la Vega / Zorro",
+      "profile_path": "/iaf7SHSkGDpnyrDh1Jolilwk2TD.jpg"
+    },
+    {
+      "name": "Catherine Zeta-Jones",
+      "character": "Elena Montero / Elena Murrieta",
+      "profile_path": "/2fAo0jWy8zPl9jgR4DH5nLyL8Xa.jpg"
+    },
+    {
+      "name": "Stuart Wilson",
+      "character": "Don Rafael Montero",
+      "profile_path": "/ghP4hkVaNc4upspxsLQCwkOBhy6.jpg"
+    }
+  ]
+}

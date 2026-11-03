@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 336843,
+    "title": "Maze Runner: The Death Cure",
+    "overview": "Thomas leads his group of escaped Gladers on their final and most dangerous mission yet. To save their friends, they must break into the legendary Last City, a WCKD-controlled labyrinth that may turn out to be the deadliest maze of all. Anyone who makes it out alive will get answers to the questions the Gladers have been asking since they first arrived in the maze.",
+    "tagline": "The end will be WCKD.",
+    "runtime": 143,
+    "release_date": "2018-01-10",
+    "vote_average": 7.072,
+    "poster_path": "/s8K0US4tUEoOrQ1LDh0eppuwGDx.jpg",
+    "backdrop_path": "/zGCfnZ3bCowMY9So9ZGpsyuOYl3.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 295130,
+      "name": "The Maze Runner Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dylan O\u0027Brien",
+      "character": "Thomas",
+      "profile_path": "/xN3GdvIlqsR838gDoblhPH0numP.jpg"
+    },
+    {
+      "name": "Kaya Scodelario",
+      "character": "Teresa Agnes",
+      "profile_path": "/qmtXUabwXw0RvyK6R0la6CmvGxr.jpg"
+    },
+    {
+      "name": "Thomas Brodie-Sangster",
+      "character": "Newt",
+      "profile_path": "/tapXeOg3wnezcjm2ENox0lL2b25.jpg"
+    },
+    {
+      "name": "Ki Hong Lee",
+      "character": "Minho",
+      "profile_path": "/Ws4cNaHHX4tNddh7mw4zIBZyPb.jpg"
+    }
+  ]
+}

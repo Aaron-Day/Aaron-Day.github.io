@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 16,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Just Getting Started",
+        "overview": "When a family annihilator abducts a teen girl, the Behavioral Analysis Unit works the case on either side of the country to save her. But an unlikely connection to a mysterious kit leads to a bigger investigation and at the center of it is Penelope Garcia.",
+        "air_date": "2022-11-24",
+        "runtime": 51,
+        "still_path": "/jU3IUOjgn2MwW7AduFYm5fU5UBO.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Sicarius",
+        "overview": "As the team hunts an UnSub who severs spinal cords, they uncover a clue from their last case that points to a serial killing network. To figure out how big this network is, Rossi has to convince a reluctant Garcia to do the one thing she doesn\u2019t want: come back to the BAU.",
+        "air_date": "2022-11-24",
+        "runtime": 54,
+        "still_path": "/kx1wGxvtGtOkZRpaeMQCZoD9GZa.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Moose",
+        "overview": "At the heart of the serial killing network is Elias Voit. Dangerous psychopath. Manipulative narcissist. Loving father and husband. In order to find him, the team must find all of his kill kits. But one is missing, and the path leads to a bomb in the middle of Washington, D.C.",
+        "air_date": "2022-12-01",
+        "runtime": 44,
+        "still_path": "/19fx4OazeO3aFOT9ncoheRiFNFf.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Pay-Per-View",
+        "overview": "The BAU hunts for the next connection to the serial killer network when they pursue a home invasion team. Alvez and Garcia convince Tyler Green to submit a cognitive interview to unlock his memories of Sicarius.",
+        "air_date": "2022-12-08",
+        "runtime": 48,
+        "still_path": "/xiJpk7XzrSI9oBP2XTfUcd30pm1.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Oedipus Wrecks",
+        "overview": "A surprising connection forces Deputy Director Bailey to ask the BAU to take a case involving young D.C. socialites who are bitten by a sadistic UnSub. But when the case turns political, the BAU finds themselves in the crosshairs from a high-powered senator. The team is led to a second shipping container that\u2019s rigged to blow.",
+        "air_date": "2022-12-15",
+        "runtime": 53,
+        "still_path": "/6kO1A5qucnNTnkBmrZZihv7OUJw.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "True Conviction",
+        "overview": "The explosion looks to have exposed the true mastermind behind Sicarius, but all is not what it seems. Is someone taking the fall for these deadly actions? The BAU is determined to seek the truth.",
+        "air_date": "2023-01-12",
+        "runtime": 56,
+        "still_path": "/72ElmjywFLL6SJwr2Pscy2KEc0t.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "What Doesn\u2019t Kill Us",
+        "overview": "With the fate of the Sicarius investigation hanging in the balance, the BAU takes a case in West Virginia, where an UnSub practices his own twisted form of Old Testament vengeance.",
+        "air_date": "2023-01-19",
+        "runtime": 55,
+        "still_path": "/t4SuD2hFDhKVT8FxqdA6LRT86Bq.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Forget Me Knots",
+        "overview": "Voit\u2019s internal struggles with himself lead him to a desperate kidnapping. But Rossi\u2019s obsession brings the BAU closer to the truth than they\u2019ve ever been.",
+        "air_date": "2023-01-26",
+        "runtime": 47,
+        "still_path": "/q7I9vxrm2toeWC10xSGMN5Y71Ht.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Memento Mori",
+        "overview": "Rossi will go to any lengths to prove that Elias Voit is Sicarius. But Voit turns Rossi into his own worst enemy, putting his future at the BAU in jeopardy.",
+        "air_date": "2023-02-02",
+        "runtime": 57,
+        "still_path": "/iPET8sctCURmeSKipPI1mefx8O6.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Dead End",
+        "overview": "With Rossi in Voit\u2019s clutches, he grapples with the limits of his technical know-how and mental strength. As the BAU tightens their grip on Voit, he reveals just how far he\u2019s willing to take his deadly crusade.",
+        "air_date": "2023-02-09",
+        "runtime": 56,
+        "still_path": "/juvi0FpYppE5sithFjki1QY01Fj.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 64686,
+    "title": "47 Ronin",
+    "overview": "Kai\u2014an outcast\u2014joins Oishi, the leader of 47 outcast samurai.  Together they seek vengeance upon the treacherous overlord who killed their master and banished their kind.  To restore honour to their homeland, the warriors embark upon a quest that challenges them with a series of trials that would destroy ordinary warriors.",
+    "tagline": "For courage. For loyalty. For honor.",
+    "runtime": 119,
+    "release_date": "2013-12-06",
+    "vote_average": 6.217,
+    "poster_path": "/xDHnmcroujCRG0ysYQaiswjbyHd.jpg",
+    "backdrop_path": "/nyt0jlofZyjhRqiQkEp0cdoKaS3.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 732461,
+      "name": "47 Ronin Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Kai",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Hiroyuki Sanada",
+      "character": "Kuranosuke \u00D4ishi",
+      "profile_path": "/SOwDxhGnRccP2lAtssQ7TxCzOe.jpg"
+    },
+    {
+      "name": "Ko Shibasaki",
+      "character": "Mika",
+      "profile_path": "/eEBNceN1MsDFibWVV3VIcEHygUW.jpg"
+    },
+    {
+      "name": "Tadanobu Asano",
+      "character": "Lord Kira",
+      "profile_path": "/3CBpfGRcPq1jEeYr51TiOiNbZzT.jpg"
+    }
+  ]
+}

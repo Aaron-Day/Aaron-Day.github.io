@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10536,
+    "title": "The Italian Job",
+    "overview": "Charlie\u0027s got a \u0027job\u0027 to do. Having just left prison he finds one of his friends has attempted a high-risk job in Torino, Italy, right under the nose of the mafia. Charlie\u0027s friend doesn\u0027t get very far, so Charlie takes over the \u0027job\u0027. Using three Mini Coopers, a couple of Jaguars, and a bus, he hopes to bring Torino to a standstill, steal a fortune in gold and escape in the chaos.",
+    "tagline": "Introducing the plans for a new business venture: \u0022The Italian Job.\u0022",
+    "runtime": 100,
+    "release_date": "1969-06-02",
+    "vote_average": 6.9,
+    "poster_path": "/8NOw3HPHkcBndJW2K6ofbcSb7WD.jpg",
+    "backdrop_path": "/jkYdRAhshaRwiRAB4KdDz1Ocj4e.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Michael Caine",
+      "character": "Charlie Croker",
+      "profile_path": "/bVZRMlpjTAO2pJK6v90buFgVbSW.jpg"
+    },
+    {
+      "name": "No\u00EBl Coward",
+      "character": "Mr. Bridger",
+      "profile_path": "/m1oZF2p7M0ngXRpeRKsWO2YZZze.jpg"
+    },
+    {
+      "name": "Benny Hill",
+      "character": "Professor Simon Peach",
+      "profile_path": "/i3Yw1laJhKw104a2lGtjDVVtHN8.jpg"
+    },
+    {
+      "name": "Margaret Blye",
+      "character": "Lorna",
+      "profile_path": "/hvgzZtn3AliCNqXgwUJT1aYrTRM.jpg"
+    }
+  ]
+}

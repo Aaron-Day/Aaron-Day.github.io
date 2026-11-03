@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10658,
+    "title": "Howard the Duck",
+    "overview": "A scientific experiment unknowingly brings extraterrestrial life forms to the Earth through a laser beam. First is the cigar-smoking drake, Howard, from the duck\u0027s planet. A few kids try to keep him from the greedy scientists and help him back to his planet, but then a much less friendly being arrives through the beam...",
+    "tagline": "More adventure than humanly possible.",
+    "runtime": 110,
+    "release_date": "1986-08-01",
+    "vote_average": 5.457,
+    "poster_path": "/30tnH0hy6S5FjGCfCdnkBd3wqS2.jpg",
+    "backdrop_path": "/3KQe8Vzma7ZAYE25mJjgIG4Gj5e.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Lea Thompson",
+      "character": "Beverly Switzler",
+      "profile_path": "/85E9NTEfkRdUdK4kTrrnk5of25w.jpg"
+    },
+    {
+      "name": "Jeffrey Jones",
+      "character": "Dr. Walter Jenning",
+      "profile_path": "/zLodpqWUb9OzQLpK1ZY9im1Lh0p.jpg"
+    },
+    {
+      "name": "Tim Robbins",
+      "character": "Phil Blumburtt",
+      "profile_path": "/3FfJMIVwXgsIXbAT8ECBSZJAncR.jpg"
+    },
+    {
+      "name": "Ed Gale",
+      "character": "Howard T. Duck",
+      "profile_path": "/pTX4hpATB8F9lrH17OkFCB9DBjR.jpg"
+    }
+  ]
+}

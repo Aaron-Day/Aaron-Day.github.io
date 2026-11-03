@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 726739,
+    "title": "Cats \u0026 Dogs 3: Paws Unite",
+    "overview": "It\u0027s been ten years since the creation of the Great Truce, an elaborate joint-species surveillance system designed and monitored by cats and dogs to keep the peace when conflicts arise. But when a tech-savvy villain hacks into wireless networks to use frequencies only heard by cats and dogs, he manipulates them into conflict and the worldwide battle between cats and dogs is BACK ON. Now, a team of inexperienced and untested agents will have to use their old-school animal instincts to restore order and peace between cats and dogs everywhere.",
+    "tagline": "",
+    "runtime": 84,
+    "release_date": "2020-09-15",
+    "vote_average": 6.2,
+    "poster_path": "/4BgSWFMW2MJ0dT5metLzsRWO7IJ.jpg",
+    "backdrop_path": "/bLDpDWS67GVtfK35XfH3kCsliQR.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87014,
+      "name": "Cats \u0026 Dogs Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Melissa Rauch",
+      "character": "Gwen the Cat (voice)",
+      "profile_path": "/2gdX9GwWL8ulRSYFv8iQ4ZP69Yp.jpg"
+    },
+    {
+      "name": "Max Greenfield",
+      "character": "Roger the Dog (voice)",
+      "profile_path": "/79w2mSZT8JwYv5ZwjJMDYQbzptE.jpg"
+    },
+    {
+      "name": "George L\u00F3pez",
+      "character": "Pablo the Parrot (voice)",
+      "profile_path": "/jeUUeE3ipY9edqdOSNI9v5maAbi.jpg"
+    },
+    {
+      "name": "Callum Seagram Airlie",
+      "character": "Max",
+      "profile_path": "/i9kzWXWld03UOJSNM04TZDbr8iO.jpg"
+    }
+  ]
+}

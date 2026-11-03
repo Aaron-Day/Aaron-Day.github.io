@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 590995,
+    "title": "The Craft: Legacy",
+    "overview": "An eclectic foursome of aspiring teenage witches get more than they bargained for as they lean into their newfound powers.",
+    "tagline": "The ritual begins again.",
+    "runtime": 94,
+    "release_date": "2020-10-28",
+    "vote_average": 6.1,
+    "poster_path": "/lhMIra0pqWNuD6CIXoTmGwZ0EBS.jpg",
+    "backdrop_path": "/jb8pEmjgmUlJI3Llbb9x75ZlJ03.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 758369,
+      "name": "The Craft Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Cailee Spaeny",
+      "character": "Lily",
+      "profile_path": "/6gUzyMnwo7TjZA7E1Amd1GI8JGw.jpg"
+    },
+    {
+      "name": "Zoey Luna",
+      "character": "Lourdes",
+      "profile_path": "/raqPWDnjGn6iipbvMMgGhBjMX4h.jpg"
+    },
+    {
+      "name": "Gideon Adlon",
+      "character": "Frankie",
+      "profile_path": "/2z8IfO0ccm932usPJUEcR1u6Oma.jpg"
+    },
+    {
+      "name": "Lovie Simone",
+      "character": "Tabby",
+      "profile_path": "/8O709kbtGUtffT2eypPpzYZemYR.jpg"
+    }
+  ]
+}

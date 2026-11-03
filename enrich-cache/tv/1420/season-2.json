@@ -1,0 +1,208 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Re-launch",
+        "overview": "Jess is laid off from her teaching job and volunteers to be a shot girl at Schmidt\u0027s \u0022rebranding\u0022 party.",
+        "air_date": "2012-09-25",
+        "runtime": 22,
+        "still_path": "/xoBUZGmRH0eyEDGhsS5F8T3cthr.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Katie",
+        "overview": "Jess pretends she\u0027s someone else when a handsome stranger mistakes her for his blind date. Meanwhile, a patron at Nick\u0027s bar claims to be Nick from the future, and Winston\u0027s disapproving mother pays him a visit.",
+        "air_date": "2012-09-25",
+        "runtime": 22,
+        "still_path": "/ajHOouRdpu1Dp8xCoOwcAEkhoAv.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Fluffer",
+        "overview": "Jess and Nick examine their friendship. Elsewhere, Schmidt hopes to impress an attractive Republican by pretending to be one of Mitt Romney\u0027s sons.",
+        "air_date": "2012-10-02",
+        "runtime": 22,
+        "still_path": "/hYSjU7eOrkVtPiomMMMOYOP8fyi.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Neighbors",
+        "overview": "Jess gets a quartet of very young new neighbors -- and she\u0027s determined to win them over, in spite of the fact that to them, she\u0027s not a New Girl -- she\u0027s an Old Girl",
+        "air_date": "2012-10-09",
+        "runtime": 22,
+        "still_path": "/yhpwgHLzdClChconUbAVkPTahXd.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Models",
+        "overview": "After spending a wild night out with Cece and her model friends, Jess jumps in the driver\u0027s seat when she must fill in for Cece at a car show. Meanwhile, the guys question what defines male friendship after Schmidt buys Nick a cookie.",
+        "air_date": "2012-10-23",
+        "runtime": 22,
+        "still_path": "/mcEGeGOU54exXtwO0UQC9fIpODJ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Halloween",
+        "overview": "Jess gets a job as a zombie at a haunted house, but is more frightened of her changing feelings towards Sam. Schmidt and Cece are perfectly matched in the costumes they\u0027re wearing, while Winston and Shelby are worlds apart in theirs. Nick gets a visit from a former college crush who shows her affection in a scary way.",
+        "air_date": "2012-10-30",
+        "runtime": 22,
+        "still_path": "/h2oGh0pQ3tMJWyE3OAKvSQKsqJf.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Menzies",
+        "overview": "As Jess\u0027 job search kicks into high gear, the guys fear her time of the month is also affecting their physical and psychological well-being. Meanwhile, Schmidt begins a \u002250 Shades of Grey\u0022-type of relationship with his corporate boss, and Nick gains wisdom from an unlikely, hands-on (and mute) source.",
+        "air_date": "2012-11-13",
+        "runtime": 22,
+        "still_path": "/cyUtOLM43ODFtlN4Z1mXpodKVD6.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Parents",
+        "overview": "Jess invites her divorced Mom and Dad over for Thanksgiving dinner and enlists Nick and Cece to help her with a \u0022Parent Trap\u0022 to reunite them. Meanwhile, Schmidt\u0027s cousin, Big Schmidt, visits, and Winston manipulates them into an escalating battle to prove their manhood.",
+        "air_date": "2012-11-20",
+        "runtime": 22,
+        "still_path": "/6jd2IH6LMQzrgp6Uel1cld1Hfx5.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Eggs",
+        "overview": "When Jess learns that a friend is pregnant, both she and Cece panic that time is running out for them to have children. Meanwhile, Schmidt seeks advice on how to please Emma, and Nick and Winston visit the zoo to find inspiration for Nick\u0027s zombie-themed novel.",
+        "air_date": "2012-11-27",
+        "runtime": 22,
+        "still_path": "/8kpTCQuZydCT2IkxppVuceD4JYk.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Bathtub",
+        "overview": "Tired of taking showers, Jess and Winston scheme to get a bathtub in the loft. Then, at the bar, Nick meets a tough and beautiful customer with boyfriend troubles. Meanwhile, Schmidt is torn between his boss and trying to win back Cece.",
+        "air_date": "2012-12-04",
+        "runtime": 22,
+        "still_path": "/bk0uCEPxkP9H1MnRgCcX17Nq1mS.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Santa",
+        "overview": "When the gang attempts to juggle multiple holiday parties in one night, Jess tries to avoid a remorseful Sam, Nick tries to keep up with a sexually adventurous Angie and Winston panics when he gets a cranberry stuck in his ear.",
+        "air_date": "2012-12-11",
+        "runtime": 22,
+        "still_path": "/vIf3zuGRmXJ9a9rvkgUO7QRAVPx.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Cabin",
+        "overview": "Jess and Sam go on a weekend getaway with Nick and Angie. But this might not be the trip they expected when Jess starts to party and trouble begins. Could jealousy get in the way of a good time?",
+        "air_date": "2013-01-08",
+        "runtime": 22,
+        "still_path": "/sfdtq4d7SGLlJRy5BRKdzIVSQJV.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "A Father\u0027s Love",
+        "overview": "When Nick\u0027s con-man father suddenly reappears, Jess tries her best to fix the two men\u0027s relationship, despite Nick\u0027s fears that he\u0027s being used in another one of his dad\u0027s gambling schemes. Meanwhile, Schmidt teams up with Robby to try to win back Cece.",
+        "air_date": "2013-01-15",
+        "runtime": 22,
+        "still_path": "/1VK36SBwj2oWxkd8UAv2wlFuhSV.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Pepperwood",
+        "overview": "Nick becomes convinced that a promising student in Jess\u0027s adult writing class is a murderer.",
+        "air_date": "2013-01-22",
+        "runtime": 22,
+        "still_path": "/fjBh6c1jdur1nFwEW658iMZRqFx.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Cooler",
+        "overview": "Nick and Schmidt go out on a \u0022bro\u0027s night,\u0022 but quickly become infatuated with, and highly competitive over, a beautiful woman attracted to sadness. Meanwhile, Winston falls for a girl with absolutely no interest in him, which only makes him more attracted to her. Then, Jess\u0027 decision to have a night alone in the loft doesn\u0027t go as planned and involves another round of the drinking game \u0022True American,\u0022 and a surprising development in her relationship with one of the loft mates.",
+        "air_date": "2013-01-29",
+        "runtime": 22,
+        "still_path": "/1tJbvC0ZaLm6AVWBbUUQZhz8qxP.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Table 34",
+        "overview": "The gang attends a dating convention, where Cece hopes to find a prospective husband - even as Schmidt hopes to win her back. Meanwhile, Winston\u0027s mojo returns, and Jess and Nick get put in a compromising position in front of Dr. Sam.",
+        "air_date": "2013-02-05",
+        "runtime": 22,
+        "still_path": "/jLSdpilR7sjHyJsP2Okj7tIQBe6.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Parking Spot",
+        "overview": "When Schmidt discovers a previously unknown, yet highly-coveted parking spot, Jess and the roommates battle it out to see who will get to use it. Meanwhile, Winston has a hard time finding a condom when he gets an impromptu invitation from Daisy.",
+        "air_date": "2013-02-19",
+        "runtime": 22,
+        "still_path": "/xQMuqFI1RX7Vl6KHzwkT3Ks1pOD.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Tinfinity",
+        "overview": "Jess catches the eye of a professional football player, with whom Winston landed an exclusive interview for his radio station. Meanwhile, Nick and Schmidt argue over the planning of their \u0022TinFinity\u0022 party celebrating their tenth anniversary of living together, and Cece gets a surprise offer",
+        "air_date": "2013-02-26",
+        "runtime": 22,
+        "still_path": "/p78ik0u4SeS0rw3oSNfBpJVaJK6.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Quick Hardening Caulk",
+        "overview": "Jess comes to a conclusion about her romantic feelings for Nick and she struggles to tell him - until she\u0027s hopped up on pain medication. But after admitting her feelings, she finds out he may have been keeping something from her. Meanwhile, Schmidt becomes obsessed with buying a fish, which Winston sees as a metaphor for Schmidt\u0027s unresolved feelings toward Cece and Nick plans a bar promotion to impress the bar owner (guest star Odette Annable).",
+        "air_date": "2013-03-19",
+        "runtime": 22,
+        "still_path": "/y85gJRHE6xZO3AAtH6XYKY5pslI.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Chicago",
+        "overview": "When a death occurs in Nick\u0027s family, Jess, Schmidt and Winston travel with Nick to the Windy City to help him with the funeral preparations and meet his boisterous family members, including his mom, Bonnie; his younger brother, Jamie; and his Boston cousin, Bobby.",
+        "air_date": "2013-03-26",
+        "runtime": 22,
+        "still_path": "/v8sqy7oQJkb777wxBCZ5zVJ8r2U.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "First Date",
+        "overview": "Jess and Nick, who are caught between friendship and something more, try to break out of relationship-limbo by going on a First Date. Once Schmidt and Winston realize a full-on Jess/Nick romance might be happening, they swoop in to try to sabotage the date.",
+        "air_date": "2013-04-04",
+        "runtime": 22,
+        "still_path": "/yKOwUy27zJfhNG8kg1jbK48RHwG.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Bachelorette Party",
+        "overview": "Jess decides to throw Cece a surprise bachelorette party while Nick and Winston awkwardly take her fianc\u00E9, Shivrang, out for the night. Then, as Schmidt desperately tries to find a real girlfriend in time for the wedding in order to get a \u201Cplus one,\u201D he is forced to seek out his old girlfriend from his \u201Cfat Schmidt\u201D college days.",
+        "air_date": "2013-04-09",
+        "runtime": 22,
+        "still_path": "/kpZHP6R7UN6Q1n6ju9NGjomfhUy.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Virgins",
+        "overview": "In a series of flashbacks, Jess, Nick, Schmidt, Winston and Cece tell one another how they each lost their virginity. Not surprisingly, when they realize the stories directly affect their present day sex lives, one relationship will change forever.",
+        "air_date": "2013-04-30",
+        "runtime": 22,
+        "still_path": "/m1mG2HJOlEnxvFXzMMcSKLKJWLi.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Winston\u0027s Birthday",
+        "overview": "Jess\u0027 dad chooses the worst day to pay the loft an unexpected visit, forcing a nervous Nick to spend the day alone with him. Jess finds herself with huge opportunity for a new job on the day before Cece\u0027s wedding. Schmidt must take a look in the mirror and confront his real feelings about Elizabeth. Meanwhile, Winston psyches himself up for his huge surprise birthday celebration, which no one seemed to remember to throw for him.",
+        "air_date": "2013-05-07",
+        "runtime": 22,
+        "still_path": "/dbNrSj8uaC1Q49V2XtWQjll9pfc.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Elaine\u0027s Big Day",
+        "overview": "Cece\u0027s wedding day finds Jess and Nick making a decision about their relationship. Meanwhile, Schmidt schemes with a typically overenthusiastic Winston to sabotage the nuptials, although a shocking announcement may be bigger than anything he plans.",
+        "air_date": "2013-05-14",
+        "runtime": 22,
+        "still_path": "/nGsY2aiDECW0dsnPLMabT8LroRr.jpg"
+      }
+    ]
+  }
+}

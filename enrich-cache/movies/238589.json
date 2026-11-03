@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 238589,
+    "title": "Enemies Closer",
+    "overview": "After a major shipment of drugs goes missing on the US-Canadian border, forest ranger and former Navy SEAL Henry is plunged into survival mode when the drug cartel forces him to help retrieve the downed package. Trapped in the wilderness with no communication to the outside world, Henry finds himself face to face with Clay, a man with a personal vendetta against Henry who has returned for retribution. Now, the two mortal enemies must make a choice: put aside their past and work together, or die alone at the hands of the drug runners, a ruthless gang who will stop at nothing to retrieve their lost cargo.",
+    "tagline": "Keep your friends close",
+    "runtime": 85,
+    "release_date": "2013-12-04",
+    "vote_average": 5.4,
+    "poster_path": "/5njeDzYgcFV8wyVnytKPc3U62Cc.jpg",
+    "backdrop_path": "/cM5zEPXTudPjjcYwjzFcIdxpIsp.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jean-Claude Van Damme",
+      "character": "Xander",
+      "profile_path": "/7DP3bm3MS0qa0L8tBLHGebbCu6H.jpg"
+    },
+    {
+      "name": "Tom Everett Scott",
+      "character": "Henry",
+      "profile_path": "/nVDihOvsSm7kmeyHLtAcEzrrSYC.jpg"
+    },
+    {
+      "name": "Orlando Jones",
+      "character": "Clay",
+      "profile_path": "/ypN7IS7lXOAij4rfMd4NlcF7f6R.jpg"
+    },
+    {
+      "name": "Linzey Cocker",
+      "character": "Kayla",
+      "profile_path": "/bSrebVRx4hxtlWFof6reRzVnX90.jpg"
+    }
+  ]
+}

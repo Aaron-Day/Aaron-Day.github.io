@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "Superman\u0027s grandfather, Seg-El, learns Krypton is in danger of being destroyed so that his future grandson will never be born.",
+        "air_date": "2018-03-21",
+        "runtime": 43,
+        "still_path": "/2iu3gtK9VT4U1Z21a2OpytY96sG.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "House of El",
+        "overview": "After suffering a tragedy, Seg must adjust to a new life, a new rank and a new threat.",
+        "air_date": "2018-03-28",
+        "runtime": 42,
+        "still_path": "/5nsVydJixGGlQeap6SbW1zwBnIj.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Rankless Initiative",
+        "overview": "During a military crackdown on Seg\u0027s home district, Seg and Adam Strange race to find a deadly Sentry.",
+        "air_date": "2018-04-04",
+        "runtime": 42,
+        "still_path": "/qBjmgHkKIUC42q5ON4CHLwcaudZ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Word of Rao",
+        "overview": "Seg is approached by a Black Zero leader as Rao finds a scapegoat for the failed Rankless Initiative.",
+        "air_date": "2018-04-11",
+        "runtime": 41,
+        "still_path": "/jmgF0nftMVqpkQGUniKhM85y1gU.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "House of Zod",
+        "overview": "Jayna grapples with her torn loyalties as Seg fights for survival within the heart of Black Zero.",
+        "air_date": "2018-04-18",
+        "runtime": 42,
+        "still_path": "/brlR65rJxhQYbNRweME2UBEiYFh.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Civil Wars",
+        "overview": "Seg is faced with an impossible choice that will shape the El legacy and the fate of the universe.",
+        "air_date": "2018-04-25",
+        "runtime": 43,
+        "still_path": "/zbFaRZMKZZQ2kSlmpWoJTVqPJJh.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Transformation",
+        "overview": "After a failed coup, Daron punishes the conspirators. Lyta and Dev go in search of Jayna.",
+        "air_date": "2018-05-02",
+        "runtime": 42,
+        "still_path": "/bUo2mXCkeM2bm9vdM248pr9q7IP.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Savage Night",
+        "overview": "A resistance movement begins to form to impede the Voice of Rao\u0027s increasing power and influence.",
+        "air_date": "2018-05-09",
+        "runtime": 43,
+        "still_path": "/rBz4FjsH7lMR0968E9y9fLLNo5S.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Hope",
+        "overview": "Seg must decide if he can make the ultimate sacrifice in service of the greater good of Kandor.",
+        "air_date": "2018-05-16",
+        "runtime": 42,
+        "still_path": "/4JOcCkBhvVxUYU141BsEweRIT5J.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Phantom Zone",
+        "overview": "Seg races to save his city from being overtaken as the bottling of Kandor begins.",
+        "air_date": "2018-05-23",
+        "runtime": 42,
+        "still_path": "/eYUE3CRxCD7Hl7FpZmI4UQ7jWob.jpg"
+      }
+    ]
+  }
+}

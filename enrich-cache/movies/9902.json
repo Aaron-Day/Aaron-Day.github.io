@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9902,
+    "title": "Wrong Turn",
+    "overview": "Chris crashes into a carload of other young people, and the group of stranded motorists is soon lost in the woods of West Virginia, where they\u0027re hunted by three cannibalistic mountain men who are grossly disfigured by generations of inbreeding.",
+    "tagline": "It\u0027s the last one you\u0027ll ever take.",
+    "runtime": 84,
+    "release_date": "2003-05-30",
+    "vote_average": 6.4,
+    "poster_path": "/12G5V0dTmljnv7RFMT144dJ2chh.jpg",
+    "backdrop_path": "/6FYkeJOKKEdrUVg9g5sSye802RH.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 52985,
+      "name": "Wrong Turn Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Eliza Dushku",
+      "character": "Jessie Burlingame",
+      "profile_path": "/lvu4Vo9GL7uOjtU59MDiy3QDPAZ.jpg"
+    },
+    {
+      "name": "Desmond Harrington",
+      "character": "Chris Flynn",
+      "profile_path": "/toJbvangSsh9MQHFU9MxQi3S6h6.jpg"
+    },
+    {
+      "name": "Emmanuelle Chriqui",
+      "character": "Carly",
+      "profile_path": "/5ll30bFOYMlIucGNrqWQ4bAA14U.jpg"
+    },
+    {
+      "name": "Jeremy Sisto",
+      "character": "Scott",
+      "profile_path": "/1XfuASLjBhGOhJ4os7juRJot2we.jpg"
+    }
+  ]
+}

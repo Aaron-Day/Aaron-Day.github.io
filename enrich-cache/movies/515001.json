@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 515001,
+    "title": "Jojo Rabbit",
+    "overview": "Jojo, a lonely German boy during World War II has his world shaken when he learns that his single mother is hiding a Jewish girl in their home. Influenced by a buffoonish imaginary version of Adolf Hitler, he begins to question his beliefs and confront the conflict between propaganda and his own humanity.",
+    "tagline": "An anti-hate satire.",
+    "runtime": 108,
+    "release_date": "2019-10-18",
+    "vote_average": 7.969,
+    "poster_path": "/1mqL7VG4Ix8wmxwypmCA1HTHBky.jpg",
+    "backdrop_path": "/lTyikzfGgRX5ZqIfVeT26APYfRL.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Roman Griffin Davis",
+      "character": "Jojo",
+      "profile_path": "/jEox6Bq4TlINrnp5EUjqSlDK3eP.jpg"
+    },
+    {
+      "name": "Thomasin McKenzie",
+      "character": "Elsa",
+      "profile_path": "/WOpnEFG5Q8LWxP81MtUrskmVox.jpg"
+    },
+    {
+      "name": "Scarlett Johansson",
+      "character": "Rosie",
+      "profile_path": "/mjReG6rR7NPMEIWb1T4YWtV11ty.jpg"
+    },
+    {
+      "name": "Taika Waititi",
+      "character": "Adolf",
+      "profile_path": "/ww6L2ksfJNMbuiIdDuvVKndUHsv.jpg"
+    }
+  ]
+}

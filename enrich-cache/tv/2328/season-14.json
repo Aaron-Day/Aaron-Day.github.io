@@ -1,0 +1,264 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 14,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Broken Spell (1)",
+        "overview": "A spell has been broken and evil is emerging to destroy the Earth.",
+        "air_date": "2006-02-20",
+        "runtime": 22,
+        "still_path": "/d4pE4nDxdsoEdWD8g2kTsH04uvL.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Broken Spell (2)",
+        "overview": "Xander, Vida, Chip and Madison finally tap into their Mystic Force powers. But without a Red Ranger, Udonna and Clare know they are in trouble.",
+        "air_date": "2006-02-20",
+        "runtime": 22,
+        "still_path": "/4gmBz5oZ1u75wWB2b0r377L11rC.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Code Busters",
+        "overview": "Chip and Vida think they can learn more spell codes by doing community service, but learn that real heroes are born in the face of danger.",
+        "air_date": "2006-02-27",
+        "runtime": 22,
+        "still_path": "/83UWpWrnbL2WILW8F98BUHheAZT.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Rock Solid",
+        "overview": "Nick thinks Madison is too shy. When she gets turned to stone, Nick finds out he\u0027s wrong.",
+        "air_date": "2006-03-06",
+        "runtime": 22,
+        "still_path": "/qFoeELnQTsoeDITwM86fOiW5dWM.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Whispering Voices",
+        "overview": "The others think Nick stole some money. Nick hears voices in his head and finds out its Koragg.",
+        "air_date": "2006-03-13",
+        "runtime": 22,
+        "still_path": "/b9WVsabSyIywjoXMNXXfEgBLTNR.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Legendary Catastros",
+        "overview": "While in battle, Nick is whisked away with Catastros to another dimension. He must face his fears of Catastros.",
+        "air_date": "2006-03-20",
+        "runtime": 22,
+        "still_path": "/yBwI6UxQft5184Qr0Qta4ms8Rwc.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Fire Heart",
+        "overview": "Xander thinks he knows how to be a leader. When it comes to getting the Fire Heart before Necrolai, Xander has to follow in order to lead.",
+        "air_date": "2006-03-27",
+        "runtime": 22,
+        "still_path": "/lyPyJrEKGPn5jq1rK6uKRfuZs1H.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Stranger Within (1)",
+        "overview": "DJ Fly, a new DJ, comes to town. Chip finds out that DJ Fly is turning the teens of Briarwood into vampires.",
+        "air_date": "2006-04-03",
+        "runtime": 22,
+        "still_path": "/2aTZDVl6y5GtkRUA0YvXbW6P89w.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Stranger Within (2)",
+        "overview": "Fly Trap has been destroyed, but Vida is still a vampire. The Rangers find out that Necrolai is the vampire who bit Vida.",
+        "air_date": "2006-04-17",
+        "runtime": 22,
+        "still_path": "/n3l8EIZdtUBORwZdvQWXotoU4Yq.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Petrified Xander",
+        "overview": "Xander has a big zit. He thinks he can get rid of it by using a perfection potion. Instead Xander starts turning into a tree. Vida has to help Xander and then the Rangers have to protect and figure out the secret of the Fire Heart.",
+        "air_date": "2006-04-24",
+        "runtime": 22,
+        "still_path": "/52zoHkd09XRcN1S5kTO036KHxqb.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Gatekeeper (1)",
+        "overview": "Clare takes on the legacy of her mother as the Gatekeeper. Koragg captures Udonna.",
+        "air_date": "2006-05-08",
+        "runtime": 22,
+        "still_path": "/qiPv00XFhwb7KzwfjZ7uN774Cce.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Gatekeeper (2)",
+        "overview": "The gates have been raised and Morticon is set free. Nick goes to save Clare while the others hold off Morticon.",
+        "air_date": "2006-05-15",
+        "runtime": 22,
+        "still_path": "/99ZAFRF9fOrrToLbuFA0jdybmKO.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Scaredy Cat",
+        "overview": "Necrolai gets the Rangers to break the force field of a magical cave. Inside the cave is a magical lamp and a petrified mummy. Jenji is found inside the lamp. Imperious is brought to life by Octomus.",
+        "air_date": "2006-06-05",
+        "runtime": 22,
+        "still_path": "/3FEFH8LRmeB3ao1vaiIq0TXTeaj.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Long Ago",
+        "overview": "Imperious turns into Calindor and tries to persuade Udonna into believing he can help Mystic Force. The Rangers are busy trying to fight Jester.",
+        "air_date": "2006-06-12",
+        "runtime": 22,
+        "still_path": "/dgbGJhYCW8BDm1fPDxEZrJOH1gu.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Inner Strength",
+        "overview": "Daggeron teaches Xander that without practice, he can cause harm to the rest of the Rangers. Daggeron sends the teens to Shalifar to help Xander see the meaning of inner strength.",
+        "air_date": "2006-06-12",
+        "runtime": 22,
+        "still_path": "/qcU8BzBJHxuMrqOGZXxSSg8chty.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Soul Specter",
+        "overview": "Koragg decides it\u0027s time to fight Solaris Knight. Gnatu steals life force from civilians when the Rangers come to stop him. Chip accidentally stumbles upon a soul specter as they battle Gnatu. Daggeron must save Chip from the soul specter while battling Koragg.",
+        "air_date": "2006-06-19",
+        "runtime": 22,
+        "still_path": "/eLFsA75akTkg4V99bQarMeYHRSr.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Ranger Down",
+        "overview": "Jenji gets jealous of Fire Heart. He takes Fire Heart to live in the forest. When he goes back to find him, Fire Heart is gone.",
+        "air_date": "2006-06-26",
+        "runtime": 22,
+        "still_path": "/x5ciCpyIdVwa1mV1ewI0TzvGS3X.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Dark Wish (1)",
+        "overview": "The Rangers get lazy and use their magic for everything. When fighting becomes too tiring for them, the Rangers want to use Jenji.",
+        "air_date": "2006-07-10",
+        "runtime": 22,
+        "still_path": "/hbXc37Qdc240bH3sdOQkGRJQqr5.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Dark Wish (2)",
+        "overview": "Imperious has wished the Power Rangers away. The world has lost its color and evil now rules.",
+        "air_date": "2006-07-10",
+        "runtime": 22,
+        "still_path": "/f6K3dgQglMA3HfKRjcq4oPwl7KQ.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Dark Wish (3)",
+        "overview": "The Tribunal of Magic has turned down the teens\u0027 request to restore things to the way they were.",
+        "air_date": "2006-07-10",
+        "runtime": 22,
+        "still_path": "/f1NFIj4oFi2ye83C4rCZ4iG8KDc.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Koragg\u0027s Trial",
+        "overview": "Imperious makes Koragg stand trial for his countless failures. In the end, Koragg argues that he fights with honor.",
+        "air_date": "2006-07-22",
+        "runtime": 22,
+        "still_path": "/7MZW3Z5jbtF6h0mAkb2YQhrUFpZ.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Heir Apparent (1)",
+        "overview": "Daggeron and Udonna finally tell the Rangers the full story of the Great War.",
+        "air_date": "2006-07-29",
+        "runtime": 22,
+        "still_path": "/7pQienSMlG44XJ1dVxpa7nP4p4d.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Heir Apparent (2)",
+        "overview": "Koragg was really Leanbow all this time. Nick finds out he\u0027s really Leanbow and Udonna\u0027s son.",
+        "air_date": "2006-08-11",
+        "runtime": 22,
+        "still_path": "/zcy9tqjwnPSpidtwiKVSNdmPw2B.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "The Light",
+        "overview": "With Udonna gone, Mystic Force faces a new terror. 10 Terrors rise against the Rangers. Magma is the first Terror the Rangers must face.",
+        "air_date": "2006-08-14",
+        "runtime": 22,
+        "still_path": "/kpLuN6myEYc9DEmvFPuffqEtKlI.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "The Hunter",
+        "overview": "Oculus is chosen to capture the Light. He is able to take all the other Rangers down one by one. In order to defeat him, Nick must learn to connect with Fire Heart.",
+        "air_date": "2006-08-20",
+        "runtime": 22,
+        "still_path": "/8Mrbzdrz3XLWrbxkbfKMyOkaSpN.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Hard Heads",
+        "overview": "Nick \u0026 Vida keep arguing. Hekatoid slimes them so they can\u0027t morph. As stubborn as they are, they need to learn to work together in order to save the others from Serpentina.",
+        "air_date": "2006-09-18",
+        "runtime": 22,
+        "still_path": "/7Atg8c0HcOegS7Buq6x9KV5V1NL.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "The Snow Prince",
+        "overview": "Leanbow is stopping the Master from rising and Sculpin has a plan to stop him. The Snow Prince commands that instead of being teacher, Daggeron should take a lesson from Nick on following his gut.",
+        "air_date": "2006-09-25",
+        "runtime": 22,
+        "still_path": "/PjcPXFNEfjNA1AJun5XrOLE2EI.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Light Source (1)",
+        "overview": "Hekatoid has captured Udonna and the Rangers chase after him in his own dimension to rescue her. Daggeron, in the real world, tries to stop all the tadpoles Hekatoid has laid to destroy the world.",
+        "air_date": "2006-10-09",
+        "runtime": 22,
+        "still_path": "/htaBS3zUn3evUM6HOdDpLLcJQ1W.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Light Source (2)",
+        "overview": "The teens lose their powers trying to save Udonna.",
+        "air_date": "2006-10-09",
+        "runtime": 22,
+        "still_path": "/sdy1gci4BmBziVlQDqYVOlVSYR.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "The Return",
+        "overview": "Matoombo is chosen to bring forth the Master. But Matoombo doesn\u0027t want to hurt anyone. Vida teams up with him to try to seal the Master away forever.",
+        "air_date": "2006-10-30",
+        "runtime": 22,
+        "still_path": "/jDtfpPMJu9CZjha0nGXWYMzPpih.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Mystic Fate (1)",
+        "overview": "Itassis doesn\u0027t want to fight for the Master anymore and defies his wishes. The Master takes matters into his own hands and destroys Mystic Mother.",
+        "air_date": "2006-11-13",
+        "runtime": 22,
+        "still_path": "/uE194BYdcdCo5fZjke43V0sf2A4.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Mystic Fate (2)",
+        "overview": "In the final confrontation with The Master, the Mystic Force has suffered great losses. With Daggeron and Leanbow defeated, the Rangers must use all their magic to try and save both the Surface World and the Magical Realm.",
+        "air_date": "2006-11-13",
+        "runtime": 22,
+        "still_path": "/kw43VWwB7ebK6mPVFBiQh8ruOyt.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8848,
+    "title": "The Bank Job",
+    "overview": "Terry is a small-time car dealer trying to leave his shady past behind and start a family. Martine is a beautiful model from Terry\u0027s old neighbourhood who knows that Terry is no angel. When Martine proposes a foolproof plan to rob a bank, Terry recognises the danger but realises this may be the opportunity of a lifetime.",
+    "tagline": "The true story of a heist gone wrong... in all the right ways.",
+    "runtime": 112,
+    "release_date": "2008-02-28",
+    "vote_average": 6.858,
+    "poster_path": "/bfXjFTytfFTdo9WeO7lYqzkHG7g.jpg",
+    "backdrop_path": "/ynnarxTMs8jWKV9GK0SpUhGNCgH.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jason Statham",
+      "character": "Terry Leather",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Saffron Burrows",
+      "character": "Martine Love",
+      "profile_path": "/2qMLZh9XWquBt7TZF9wmDiOtJdm.jpg"
+    },
+    {
+      "name": "Stephen Campbell Moore",
+      "character": "Kevin Swain",
+      "profile_path": "/5w4EvQfi5YipR5I5lhtN5dCDiEY.jpg"
+    },
+    {
+      "name": "Daniel Mays",
+      "character": "Dave Shilling",
+      "profile_path": "/2qmA5mXnhA7Nelu2BTbJTvzq35u.jpg"
+    }
+  ]
+}

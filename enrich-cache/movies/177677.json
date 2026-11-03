@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 177677,
+    "title": "Mission: Impossible - Rogue Nation",
+    "overview": "Ethan and team take on their most impossible mission yet\u2014eradicating \u0027The Syndicate\u0027, an International and highly-skilled rogue organization committed to destroying the IMF.",
+    "tagline": "Desperate times. Desperate measures.",
+    "runtime": 131,
+    "release_date": "2015-07-28",
+    "vote_average": 7.228,
+    "poster_path": "/fRJLXQBHK2wyznK5yZbO7vmsuVK.jpg",
+    "backdrop_path": "/vYIUN5rrCncHFY8WvcuXQlM4hk5.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87359,
+      "name": "Mission: Impossible Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Ethan Hunt",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Jeremy Renner",
+      "character": "William Brandt",
+      "profile_path": "/yB84D1neTYXfWBaV0QOE9RF2VCu.jpg"
+    },
+    {
+      "name": "Simon Pegg",
+      "character": "Benji Dunn",
+      "profile_path": "/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg"
+    },
+    {
+      "name": "Rebecca Ferguson",
+      "character": "Ilsa Faust",
+      "profile_path": "/ty8ZPzaCBBlqIr5qzpOXI24iC8j.jpg"
+    }
+  ]
+}

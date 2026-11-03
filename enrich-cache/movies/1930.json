@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1930,
+    "title": "The Amazing Spider-Man",
+    "overview": "A teenage Peter Parker grapples with both high school and amazing super-human crises as his alter-ego Spider-Man.",
+    "tagline": "The untold story begins.",
+    "runtime": 136,
+    "release_date": "2012-06-23",
+    "vote_average": 6.768,
+    "poster_path": "/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg",
+    "backdrop_path": "/sxskOU71CO8LaNX2LOtjYFUtKv7.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 125574,
+      "name": "The Amazing Spider-Man Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Andrew Garfield",
+      "character": "Spider-Man / Peter Parker",
+      "profile_path": "/5ydZ6TluPtxlz5G8nlWMB7SGmow.jpg"
+    },
+    {
+      "name": "Emma Stone",
+      "character": "Gwen Stacy",
+      "profile_path": "/ak2Y9wOI3wi2pNQU6OWSvVvWPj5.jpg"
+    },
+    {
+      "name": "Rhys Ifans",
+      "character": "The Lizard / Dr. Curt Connors",
+      "profile_path": "/5X8XcIqCDxsQYyHdx7mBwPVkSTs.jpg"
+    },
+    {
+      "name": "Denis Leary",
+      "character": "Captain Stacy",
+      "profile_path": "/tAOziVWQBnrW9eR442M6g9SQkmA.jpg"
+    }
+  ]
+}

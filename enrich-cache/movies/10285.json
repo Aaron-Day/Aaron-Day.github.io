@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10285,
+    "title": "Jason Goes to Hell: The Final Friday",
+    "overview": "Jason Voorhees is tracked down and blown to bits by a special FBI task force, reborn with the bone-chilling ability to assume the identity of anyone he touches.",
+    "tagline": "Evil has finally found a home.",
+    "runtime": 88,
+    "release_date": "1993-08-13",
+    "vote_average": 4.598,
+    "poster_path": "/Aacq05foqiWdXqetFv02HBvMoJy.jpg",
+    "backdrop_path": "/wqRyyOZcMaUxTnKsxDexPp4IAZ5.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9735,
+      "name": "Friday the 13th Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "John D. LeMay",
+      "character": "Steven Freeman",
+      "profile_path": "/aBGuK1pWQ2elq60H0357kFvqhNs.jpg"
+    },
+    {
+      "name": "Kari Keegan",
+      "character": "Jessica Kimble",
+      "profile_path": "/COOk0Frd2j6GK8L6jpTbzTelMl.jpg"
+    },
+    {
+      "name": "Kane Hodder",
+      "character": "Jason Voorhees",
+      "profile_path": "/avMGd9rA2ys1pJok1EGOa46MEQX.jpg"
+    },
+    {
+      "name": "Steven Williams",
+      "character": "Creighton Duke",
+      "profile_path": "/nOsMJ7zPykxlPkjgoMrk677BaqQ.jpg"
+    }
+  ]
+}

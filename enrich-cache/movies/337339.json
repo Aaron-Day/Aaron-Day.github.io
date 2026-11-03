@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 337339,
+    "title": "The Fate of the Furious",
+    "overview": "When a mysterious woman seduces Dom into the world of crime and a betrayal of those closest to him, the crew face trials that will test them as never before.",
+    "tagline": "Never give up on family.",
+    "runtime": 136,
+    "release_date": "2017-04-12",
+    "vote_average": 6.847,
+    "poster_path": "/dImWM7GJqryWJO9LHa3XQ8DD5NH.jpg",
+    "backdrop_path": "/3IJ8kG8i84PncXkSovu0PaZQfjM.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9485,
+      "name": "The Fast and the Furious Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vin Diesel",
+      "character": "Dominic Toretto",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Jason Statham",
+      "character": "Deckard Shaw",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Dwayne Johnson",
+      "character": "Luke Hobbs",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Michelle Rodriguez",
+      "character": "Letty Ortiz",
+      "profile_path": "/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
+    }
+  ]
+}

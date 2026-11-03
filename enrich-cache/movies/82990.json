@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 82990,
+    "title": "Paranormal Activity 4",
+    "overview": "It has been five years since the disappearance of Katie and Hunter, and a suburban family witness strange events in their neighborhood when a woman and a mysterious child move in.",
+    "tagline": "All the activity has led to this...",
+    "runtime": 87,
+    "release_date": "2012-10-17",
+    "vote_average": 5.398,
+    "poster_path": "/na5tAslm1kGNcft083AIXMTOsYR.jpg",
+    "backdrop_path": "/iIXEKq51MS8SfVLUX1p6ofwFFQU.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 41437,
+      "name": "Paranormal Activity Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Katie Featherston",
+      "character": "Katie Featherston",
+      "profile_path": "/mdbMy2B70PiFp0ckLo6WhSLDbR2.jpg"
+    },
+    {
+      "name": "Kathryn Newton",
+      "character": "Alex Nelson",
+      "profile_path": "/3mos4oK6bps0uhQzW1L7nj5O0Gd.jpg"
+    },
+    {
+      "name": "Matt Shively",
+      "character": "Ben",
+      "profile_path": "/iHRsz1oz5SWGYhEXS59dR0dsODZ.jpg"
+    },
+    {
+      "name": "Aiden Lovekamp",
+      "character": "Wyatt Nelson",
+      "profile_path": "/ArVLQOI1UMcPjoakXCHIrZYFyVp.jpg"
+    }
+  ]
+}

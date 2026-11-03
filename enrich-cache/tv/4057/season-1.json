@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Extreme Aggressor",
+        "overview": "After a fourth woman goes missing in as many months, the team is brought in to track down the guy before he kidnaps again. Hotch is asked to secretly evaluate Gideon to see if he is ready to work full time again.",
+        "air_date": "2005-09-22",
+        "runtime": 40,
+        "still_path": "/ap6KTZgsg94pdBLrwBJloVmrlLa.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Compulsion",
+        "overview": "The team of investigators tries to capture a serial arsonist who has been terrorizing a college campus.",
+        "air_date": "2005-09-28",
+        "runtime": 43,
+        "still_path": "/d46a4eVjnECDSzKGJDNCSRQGrRo.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Won\u0027t Get Fooled Again",
+        "overview": "Gideon and his team track down a copycat bomber terrorizing a quiet community.",
+        "air_date": "2005-10-05",
+        "runtime": 41,
+        "still_path": "/toYKI34n5XeCVxig0CxgIch60W.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Plain Sight",
+        "overview": "The BAU team travels to San Diego to stop a rapist and murderer who commits his crimes in the middle of the day.",
+        "air_date": "2005-10-12",
+        "runtime": 40,
+        "still_path": "/3dJupZnJEsl3r3uuHRKAkSjw8vP.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Broken Mirror",
+        "overview": "The BAU investigates the kidnapping of a U.S. District Attorney\u0027s daughter and determines the kidnapper isn\u0027t seeking money -- he\u0027s after her twin sister.",
+        "air_date": "2005-10-19",
+        "runtime": 42,
+        "still_path": "/f3y70pxQqduNehv4ye6B7QcGonY.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "L.D.S.K.",
+        "overview": "The BAU is asked to identify a killer who is shooting at victims in broad daylight, and the team works with local law enforcement officers to recreate one of the shootings.",
+        "air_date": "2005-11-02",
+        "runtime": 40,
+        "still_path": "/f9LQ6wGnyTQPisEDVd0rLQYI7kh.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Fox",
+        "overview": "The BAU profiles a serial killer who takes families hostage and lives with them as a father figure during what is supposed to be their family vacations.",
+        "air_date": "2005-11-09",
+        "runtime": 42,
+        "still_path": "/p1mHOIXrNrzSCpNcCtU6nNaMHlN.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Natural Born Killer",
+        "overview": "When an undercover cop in Baltimore involved in a mob investigation goes missing, the BAU believes a serial killer rather than organized crime has something to do with his disappearance. The probe leads to several unsolved missing persons cases.",
+        "air_date": "2005-11-16",
+        "runtime": 42,
+        "still_path": "/1booI4nqM6233Bf4pi3vNebVaUf.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Derailed",
+        "overview": "Elle, along with many others, is held hostage on a train in Texas by a paranoid schizophrenic who is convinced that the U.S. government is monitoring him. Hotchner and Gideon are forced to play into the man\u0027s fantasy to save the people he has taken hostage.",
+        "air_date": "2005-11-23",
+        "runtime": 41,
+        "still_path": "/zzQrq3oyWT69mzbX6v8O4O2akMB.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Popular Kids",
+        "overview": "The team investigates the death of one teen, and the disappearance of another , which may be linked to a satanic ritual.",
+        "air_date": "2005-11-30",
+        "runtime": 41,
+        "still_path": "/tuokReAxIlXke1MZIkNhqsEWFVB.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Blood Hungry",
+        "overview": "While Gideon is stuck at the office on crutches, the rest of the team travels to Tennessee to track down a killer who disembowels his victims and supposedly eats their organs.",
+        "air_date": "2005-12-14",
+        "runtime": 43,
+        "still_path": "/hzM7cWLGjRGwXbfFzUo3T73rZNb.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "What Fresh Hell?",
+        "overview": "When a young girl is abducted in broad daylight from a playground in a seemingly safe neighborhood, the BAU team initially believes her father is responsible. When he is able to provide an alibi, the team is forced to look for clues where the girl lives to determine who is really responsible.",
+        "air_date": "2006-01-11",
+        "runtime": 43,
+        "still_path": "/2q6aCsavgZfdyfmUX4dWmgUZ7qA.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Poison",
+        "overview": "The team travels to New Jersey where several people have been poisoned, one of them fatally with LSD, ten times more potent than the street version.",
+        "air_date": "2006-01-18",
+        "runtime": 40,
+        "still_path": "/pSNFElZd8YeL1CkumS994r8xPbj.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Riding the Lightning",
+        "overview": "After interviewing a couple on death row for serial murders, Gideon suspects that the woman is actually innocent. But since she\u0027s set to be executed in two days, it\u0027s a race against time to prove it.",
+        "air_date": "2006-01-25",
+        "runtime": 43,
+        "still_path": "/vzXEXjpLJksJ5ahZLvmOe2z7O9c.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Unfinished Business",
+        "overview": "A serial killer reappears after 20 years of silence and contacts the BAU with the promise he will kill another victim in the next five days.",
+        "air_date": "2006-03-01",
+        "runtime": 41,
+        "still_path": "/oqi6ckoc4NITmtVRvXq16O6JULo.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Tribe",
+        "overview": "The BAU team believes a dangerous cult may be responsible for the mass murders of five college students in an empty house.",
+        "air_date": "2006-03-08",
+        "runtime": 43,
+        "still_path": "/58TdNsMkdc4d3odgYSsk6OvFeKm.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "A Real Rain",
+        "overview": "The BAU unit travels to NYC to investigate a series of murders that appears to have been committed by a vigilante conducting revenge on former criminals who have been released by the justice system.",
+        "air_date": "2006-03-22",
+        "runtime": 42,
+        "still_path": "/4Xjt61N1dJmyoaVPoRwn2FCnHbd.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Somebody\u0027s Watching",
+        "overview": "Reid finds himself in danger when he falls for a starlet whose stalker has turned into a killer.",
+        "air_date": "2006-03-29",
+        "runtime": 42,
+        "still_path": "/y7h6JlCN7ljizjsvVb75gfQ6YoH.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Machismo",
+        "overview": "The BAU team travels to Mexico to aid in the capture of a serial killer who is targeting elderly women.",
+        "air_date": "2006-04-12",
+        "runtime": 41,
+        "still_path": "/h1Ifji80euTDmQX1Rgho6AoUuLS.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Charm and Harm",
+        "overview": "The BAU works to capture a serial killer who has evaded capture by altering his appearance.",
+        "air_date": "2006-04-19",
+        "runtime": 41,
+        "still_path": "/3LJdisnh9U2YKENBdzcx0vIibFd.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Secrets and Lies",
+        "overview": "The BAU works with the CIA to identify a mole within that organization, whose leaks are putting operatives at risk.",
+        "air_date": "2006-05-03",
+        "runtime": 42,
+        "still_path": "/pqVdAJ64qrnRWnGREsh2VejRhBL.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Fisher King (1)",
+        "overview": "While on their vacations, each of the team receives a clue from a psychopathic killer challenging them to save his next victim.",
+        "air_date": "2006-05-10",
+        "runtime": 41,
+        "still_path": "/vV1nfKWFtAKFEy7bfJP19lbu1a1.jpg"
+      }
+    ]
+  }
+}

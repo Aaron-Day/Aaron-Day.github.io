@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Heartthrob",
+        "overview": "As Angel mourns Buffy\u0027s death, he battles a lovelorn vampire seeking revenge for the death of his beloved, who was killed by Angel.",
+        "air_date": "2001-09-24",
+        "runtime": 41,
+        "still_path": "/hoNTcYiUbGUXNOsq5bWS05yVfC7.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "That Vision Thing",
+        "overview": "Lilah coerces Angel to help in securing the release of a prisoner the powers that be have locked in a fiery prison.",
+        "air_date": "2001-10-01",
+        "runtime": 42,
+        "still_path": "/g2qdncqPHB6GdjovcnZHKPnvZAw.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "That Old Gang of Mine",
+        "overview": "Gunn\u0027s loyalties are torn between his current demon-hunting associates and the gang he used to hang out with, which has taken to killing demons for fun instead of defence.",
+        "air_date": "2001-10-08",
+        "runtime": 41,
+        "still_path": "/yxOMRYPwSj4Zu7DluwBQfzgEV0q.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Carpe Noctem",
+        "overview": "An old man uses an ancient incantation to switch bodies with Angel.",
+        "air_date": "2001-10-15",
+        "runtime": 40,
+        "still_path": "/gGwusocuFFFt7L6MdGMn8Q48uuS.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Fredless",
+        "overview": "When Fred\u0027s parents come to take her home, she feels she should go with them...until she earns a place in the group by figuring out the key to an attack of larger bug demons.",
+        "air_date": "2001-10-22",
+        "runtime": 42,
+        "still_path": "/mt1hJioskEA0EdSC3uEmQJasBbN.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Billy",
+        "overview": "Angel\u0027s friends are affected by a man with the power to make other men brutalise women.",
+        "air_date": "2001-10-29",
+        "runtime": 42,
+        "still_path": "/qHdTOPC9Quz6fP8UdAVOE9r5fQw.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Offspring",
+        "overview": "Darla returns and reveals that she is pregnant with Angel\u0027s child.",
+        "air_date": "2001-11-05",
+        "runtime": 41,
+        "still_path": "/nDxEsXjbcBocJNGqgBZyi6pD8Mj.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Quickening",
+        "overview": "As Angel and his friends try to determine what kind of baby Darla will have, Holtz starts his search for Angel... while Lilah and Nathan send out a SWAT team to find Darla.",
+        "air_date": "2001-11-12",
+        "runtime": 41,
+        "still_path": "/dp5ik6Z7h82yr9924RQtYJY4YwQ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Lullaby",
+        "overview": "As Darla goes through a difficult labour, Holtz pursues Angel.",
+        "air_date": "2001-11-19",
+        "runtime": 42,
+        "still_path": "/rrBfgQ3FJv8ELVybKNCdaYyVS9L.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Dad",
+        "overview": "Angel tries to keep his son safe from the many demons, vampires and humans who would like to harm the baby; Holtz joins forces with another vampire slayer.",
+        "air_date": "2001-12-10",
+        "runtime": 42,
+        "still_path": "/7Wdc3AoTz3ZEDhHVDY8oeELPDlm.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Birthday",
+        "overview": "On her birthday, Cordelia learns her visions will kill her unless she goes back in time and chooses a different path in life - which doesn\u0027t include Angel.",
+        "air_date": "2002-01-14",
+        "runtime": 42,
+        "still_path": "/2S7sTZsrjcRQXyczf1H6enMyPQq.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Provider",
+        "overview": "Fred solves a puzzle for a group of demons who literally want to buy her brain; Angel is hired to clean out a vampire nest by a man who can\u0027t afford to pay for Angel\u0027s services; Wes and Gunn help a woman whose dead boyfriend is stalking her.",
+        "air_date": "2002-01-21",
+        "runtime": 42,
+        "still_path": "/ple0PsB3SnJl4UCY8nGjWRHbIHk.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Waiting in the Wings",
+        "overview": "Angel and his friends attend a ballet,where Angel realises he saw the exact same dancers on stage 110 years ago.",
+        "air_date": "2002-02-04",
+        "runtime": 43,
+        "still_path": "/exGTqkChdkKMuX99nNybnWyCIgw.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Couplet",
+        "overview": "Angel struggles with his jealousy of the Groosalugg and Cordelia\u0027s attraction to him; Gunn and Fred get captured by a tree monster.",
+        "air_date": "2002-02-18",
+        "runtime": 42,
+        "still_path": "/A3koWLb6virV5qxNzV85gQLUIFX.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Loyalty",
+        "overview": "Wes dreads the fulfilment of the prophecy that Angel will kill Connor; Sahjhan becomes dissatisfied with Holtz\u0027s progress in stalking Angel and take matters into his own hands; Fred and Gunn try to figure out how to juggle working together with their new romance.",
+        "air_date": "2002-02-25",
+        "runtime": 43,
+        "still_path": "/dwL0sp7uinmlX19x0j7YyBnlJJi.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Sleep Tight",
+        "overview": "To save Connor\u0027s life, Wes takes him away from Angel; Angel uncovers Lilah\u0027s plot to have him kill Connor, Holtz finally attacks.",
+        "air_date": "2002-03-04",
+        "runtime": 42,
+        "still_path": "/gYMDiXvyaWzJ9Czisb0BycKqme3.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Forgiving",
+        "overview": "As Fred and Gunn search for Wesley, Angel searches for Sahjhan - and casts a spell to make him corporeal so he can be killed.",
+        "air_date": "2002-04-15",
+        "runtime": 43,
+        "still_path": "/v8sWIDWDMIkXH6XZQuKySYzKRFL.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Double or Nothing",
+        "overview": "When a demon that Gunn once sold his soul to comes to collect on the debt, Angel, Fred and Cordelia help to save him.",
+        "air_date": "2002-04-22",
+        "runtime": 42,
+        "still_path": "/zQ5pYTVSSqbkXJTVFAOEbY8FHEP.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Price",
+        "overview": "Angel\u0027s hotel is infested with demonic slugscreated by the spell he used to alter Sahjhan.",
+        "air_date": "2002-04-29",
+        "runtime": 41,
+        "still_path": "/s0w2dymvILS5lHGNzTQgx5KrqsV.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "A New World",
+        "overview": "Angel pursues Connor, who makes a new friend on the streets; something else comes through the portal from Quor-toth; Lilah approaches Wesley.",
+        "air_date": "2002-05-06",
+        "runtime": 43,
+        "still_path": "/1KNLC7d8GrrfyjK3g6x9fMgFZAI.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Benediction",
+        "overview": "Holtz insists that Connor rejoins Angel; Justine learns Holtz is back; the Groosalugg realises the depths of Cordelia\u0027s feelings for Angel.",
+        "air_date": "2002-05-13",
+        "runtime": 42,
+        "still_path": "/sDB6oXslLrKmTXKNP0amvx7Lxdo.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Tomorrow",
+        "overview": "Connor returns to Angel to seek his revenge; Angel and Cordelia acknowledge their feelings for each other.",
+        "air_date": "2002-05-20",
+        "runtime": 43,
+        "still_path": "/2spG4fqMP8J41VpPl6rJPN47Ke2.jpg"
+      }
+    ]
+  }
+}

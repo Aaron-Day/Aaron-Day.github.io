@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 667,
+    "title": "You Only Live Twice",
+    "overview": "A mysterious spacecraft captures Russian and American space capsules and brings the two superpowers to the brink of war. James Bond investigates the case in Japan and comes face to face with his archenemy Blofeld.",
+    "tagline": "...and \u0022twice\u0022 is the only way to live!",
+    "runtime": 117,
+    "release_date": "1967-06-13",
+    "vote_average": 6.587,
+    "poster_path": "/gIhS0VC7YzI8pj6zfS3KxsxV0dS.jpg",
+    "backdrop_path": "/cpZAXIYA0lkZMpAt7d1MmH8ojNV.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sean Connery",
+      "character": "James Bond",
+      "profile_path": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+      "name": "Akiko Wakabayashi",
+      "character": "Aki",
+      "profile_path": "/iPQTkhIRVT6EL9cvwFbYu0p0nyD.jpg"
+    },
+    {
+      "name": "Mie Hama",
+      "character": "Kissy Suzuki",
+      "profile_path": "/9RHWi6Y4ZC7QkdyPMKuoFKw6pn6.jpg"
+    },
+    {
+      "name": "Tetsuro Tamba",
+      "character": "Tiger Tanaka",
+      "profile_path": "/ihugQ2afio03fcKSGXdkcQKTVmt.jpg"
+    }
+  ]
+}

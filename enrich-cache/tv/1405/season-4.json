@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Living the Dream",
+        "overview": "Dexter sleeplessly struggles to balance his new family life with his dark, murderous drive for a fresh victim, and his busier-than-ever forensic career pursuing a new target, \u0022The Trinity Killer.\u0022",
+        "air_date": "2009-09-27",
+        "runtime": 54,
+        "still_path": "/4dJnt4To4wrM9QX0cMA7EQ0ZSM3.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Remains to Be Seen",
+        "overview": "Dexter realizes that he has carelessly misplaced crucial evidence that could expose his dark side to the world, while helping to investigate new slayings that Agent Frank Lundy insists are the work of Trinity.",
+        "air_date": "2009-10-04",
+        "runtime": 49,
+        "still_path": "/wLVHnCNEcAc4c7OTwxBX4Or567k.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Blinded by the Light",
+        "overview": "Dexter is hampered by his neighborhood\u0027s increased vigilance due to vandalism, his temporary inability to drive himself anywhere, and his admiration for the killing technique of the artful Trinity Killer.",
+        "air_date": "2009-10-11",
+        "runtime": 51,
+        "still_path": "/fyUv2iXYpKSpWqq8psrV8dT7p5y.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Dex Takes a Holiday",
+        "overview": "Rita goes to a wedding with the kids, allowing Dexter to have his own little vacation. He does what he does best when alone, hunt, and goes after an officer with a dark secret.",
+        "air_date": "2009-10-18",
+        "runtime": 54,
+        "still_path": "/1pBP6NIWBlbbSppmePj08aAkepS.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Dirty Harry",
+        "overview": "Dexter is inspired to investigate the Trinity Killer on his own, while Debra blames herself for an event that was out of her control, and Rita realizes how little she knows her husband after discovering one of his secrets.",
+        "air_date": "2009-10-25",
+        "runtime": 49,
+        "still_path": "/kmkkP8AtKIN9Knsdq4Ct9j1nTxo.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "If I Had a Hammer",
+        "overview": "Dexter doubles his efforts to stay ahead of the official Trinity investigation, and receives relationship advice about the friction between himself and Rita from a most unexpected source.",
+        "air_date": "2009-11-01",
+        "runtime": 55,
+        "still_path": "/o7QS9elByQgYGRAimw2TI8vdKP3.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Slack Tide",
+        "overview": "Dexter finally strikes a balance between family, career and his secret life, but is thwarted in his pursuit of his next victim, while Debra expresses a renewed and unwelcome interest in their father\u0027s checkered past. Miami Metro Homicide tries to solve the Model Killer Case.",
+        "air_date": "2009-11-08",
+        "runtime": 52,
+        "still_path": "/cCUipEG71f7dVwCb6vnpPrx8fge.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Road Kill",
+        "overview": "Dexter wonders if his father\u0027s Code is truly the right path, and hopes to get answers by accompanying Trinity on an out-of-town road trip to Tampa; Debra discovers that her single-minded pursuit of Trinity has blinded her to the true identity of her assailant.",
+        "air_date": "2009-11-15",
+        "runtime": 54,
+        "still_path": "/9B2ykyALH7ZaUMGQQlYbvYc8pw9.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Hungry Man",
+        "overview": "For most people, Thanksgiving is a time for traditions and family. But for Dexter, it\u2019s an opportunity to learn more about Arthur\u0027s bizarre and twisted world. Meanwhile, Rita has her hands full preparing dinner for a packed house, Debra uses the holiday to further investigate Trinity, and Batista gets closure on an old case.",
+        "air_date": "2009-11-22",
+        "runtime": 51,
+        "still_path": "/c0MAgpJXH5TkNxShkPjDHz5WXf9.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Lost Boys",
+        "overview": "The disappearance of a ten-year-old boy forces Dexter to question his assumptions about Trinity, while Cody defends one of Dexter\u0027s lies and Masuka is unable to face what he witnessed on Thanksgiving.",
+        "air_date": "2009-11-29",
+        "runtime": 57,
+        "still_path": "/8zYOWNOB76BeTgsZYEhyjDCDLFS.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Hello, Dexter Morgan",
+        "overview": "Dexter must buy time to protect himself when Debra\u0027s investigation brings the department one step away from identifying Arthur as the Trinity Killer; Rita confides in Dexter, but is disappointed in the result.",
+        "air_date": "2009-12-06",
+        "runtime": 51,
+        "still_path": "/wDLYbem5WVkncXCOmmzTMPa1o8A.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Getaway",
+        "overview": "Dexter and Arthur find themselves on a collision course, as Debra unearths a shocking long-hidden truth, Rita admits her marriage to Dexter is troubled, and Batista and LaGuerta face the consequences of an ethics breach.",
+        "air_date": "2009-12-13",
+        "runtime": 51,
+        "still_path": "/4ikoyXM8YIwLJFkiZdmwsx7yGc5.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 38,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Children\u0027s Book Job",
+        "overview": "A British children\u0027s book author comes to Springfield to give a talk at Springfield Elementary School. Homer is tasked with picking her up from the airport, but things go bad from there.",
+        "air_date": "2026-09-27",
+        "runtime": 21,
+        "still_path": "/O0A33LtxZqRQtwt0BQwjXDB0Df.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Diary of a Chimpy Kid",
+        "overview": "Bart and Lisa adopt an abandoned baby chimp and clash over their surprisingly different parenting styles. When the chimp is abducted by a private wild animal zoo, the family goes on a mission to rescue him. Homer is conflicted about saving the ape, because he\u0027s convinced the chimp will tear off his face and groin.",
+        "air_date": "2026-10-04",
+        "runtime": 21,
+        "still_path": "/i23y9yvOhQp8O6dSKX1sdvfja4z.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Treehouse of Horror Presents: The Revengening",
+        "overview": "All hell breaks loose on Halloween when a killer comes to Springfield and hacks their way through town. No Simpson is safe from... THE REVENGENING!",
+        "air_date": "2026-10-18",
+        "runtime": 21,
+        "still_path": "/8scWJopRcOjerwBnmrsOWbH365h.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Treehouse of Horror XXXVII",
+        "overview": "In this year\u0027s extra-scary, ultra-spooky Treehouse of Horror, Marge gets a horrifying new perspective on marriage; Bart and Santa\u0027s Little Helper embark on a bone-chilling adventure; and Homer takes a driving lesson.",
+        "air_date": "2026-10-25",
+        "runtime": 21,
+        "still_path": "/r4w2KQXOhOFXzTF7GN6GDNq0FF3.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Testing 1-2-3",
+        "overview": "In what she argues is not an attempt to get extra time on tests, Lisa has herself evaluated for three types of neurodiversity... which remind her of behaviors she\u0027s witnessed in Principal Skinner, Comic Boy and Homer. Perhaps these atypical behaviors aren\u0027t as atypical as we think.",
+        "air_date": "2026-11-01",
+        "runtime": 21,
+        "still_path": "/t6tWNPmtZie4zsjaENAJEW8nXbz.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Kosmic Kruiser",
+        "overview": "Bart and Lisa break into Krustyland\u0027s most notorious failed attraction, only to discover that it hasn\u0027t been completely abandoned.",
+        "air_date": "2026-11-08",
+        "runtime": 21,
+        "still_path": "/dBZnWz1iJcXo7h6eDU30mKk0B9E.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Dream Scenari-Moe",
+        "overview": "When Moe has trouble sleeping, he enrolls in a brand-new sleep study that gives him the greatest romantic comedy dreams of his life. But unbeknownst to him, his beautiful fantasy comes at a nightmarish price.",
+        "air_date": "2026-11-15",
+        "runtime": 21,
+        "still_path": null
+      },
+      {
+        "episode_number": 8,
+        "name": "Curb Your Expectations",
+        "overview": "",
+        "air_date": "2026-11-22",
+        "runtime": null,
+        "still_path": null
+      },
+      {
+        "episode_number": 9,
+        "name": "Jersey Score",
+        "overview": "",
+        "air_date": "2026-11-29",
+        "runtime": null,
+        "still_path": null
+      },
+      {
+        "episode_number": 10,
+        "name": "Don\u0027t Marge with Texas",
+        "overview": "",
+        "air_date": "2026-12-06",
+        "runtime": null,
+        "still_path": null
+      },
+      {
+        "episode_number": 11,
+        "name": "Bog",
+        "overview": "",
+        "air_date": "2026-12-13",
+        "runtime": null,
+        "still_path": null
+      },
+      {
+        "episode_number": 12,
+        "name": "The Offendables",
+        "overview": "",
+        "air_date": "2026-12-20",
+        "runtime": null,
+        "still_path": null
+      },
+      {
+        "episode_number": 13,
+        "name": "Lock, Stock and One Stupid Narrator",
+        "overview": "",
+        "air_date": "2026-12-27",
+        "runtime": null,
+        "still_path": null
+      },
+      {
+        "episode_number": 14,
+        "name": "Billionaire on the Bayou",
+        "overview": "",
+        "air_date": "2027-01-03",
+        "runtime": null,
+        "still_path": null
+      },
+      {
+        "episode_number": 15,
+        "name": "Lenny Goes Squiggy",
+        "overview": "",
+        "air_date": "2027-01-03",
+        "runtime": null,
+        "still_path": null
+      }
+    ]
+  }
+}

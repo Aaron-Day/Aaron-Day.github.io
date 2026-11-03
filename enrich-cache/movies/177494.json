@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 177494,
+    "title": "Veronica Mars",
+    "overview": "Years after walking away from her past as a teenage private eye, Veronica Mars gets pulled back to her hometown - just in time for her high school reunion - in order to help her old flame Logan Echolls, who\u0027s embroiled in a murder mystery.",
+    "tagline": "She thought she was out.",
+    "runtime": 107,
+    "release_date": "2014-03-13",
+    "vote_average": 6.6,
+    "poster_path": "/qWBAPJdew9MRUv8ApRPkXAM1feB.jpg",
+    "backdrop_path": "/n87QS93x8YiTjeOf94WRQWhXFPn.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kristen Bell",
+      "character": "Veronica Mars",
+      "profile_path": "/rP74dJXl7EjinGM0shQtUOlH5s2.jpg"
+    },
+    {
+      "name": "Jason Dohring",
+      "character": "Logan Echolls",
+      "profile_path": "/zH6ztPTS7yNqftgYgt1Qt1kRiUF.jpg"
+    },
+    {
+      "name": "Enrico Colantoni",
+      "character": "Keith Mars",
+      "profile_path": "/yxxy8IrGRwnRPbLmgyfwF26Feve.jpg"
+    },
+    {
+      "name": "Chris Lowell",
+      "character": "Stosh \u0027Piz\u0027 Piznarski",
+      "profile_path": "/mRZcivH2VjWRB1mQuOvRuRC2Lll.jpg"
+    }
+  ]
+}

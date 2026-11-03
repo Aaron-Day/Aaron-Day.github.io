@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Legacy",
+        "overview": "An attack on Jim Brass kicks off a twisted conspiracy targeting the Las Vegas crime lab.",
+        "air_date": "2021-10-06",
+        "runtime": 43,
+        "still_path": "/zbovhZ4L3PD0KW0bm9ZHbrZFPgh.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Honeymoon in Vegas",
+        "overview": "Gil Grissom and Sara Sidle come to the aid of a former colleague who is implicated in tampering with evidence. Maxine and the rest of the CSI team work the murder of a couple slain on their wedding day, following the evidence to the salacious underbelly of the Las Vegas elite.",
+        "air_date": "2021-10-13",
+        "runtime": 43,
+        "still_path": "/qqriIpD224gZlTgWp9AxoB8cjel.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Under the Skin",
+        "overview": "Grissom and Sara\u0027s investigation into charges against David Hodges heats up as Internal Affairs joins the hunt. Also, pressure rises for the CSIs when a video game developer\u0027s body is found floating in a fountain before a huge gaming tournament.",
+        "air_date": "2021-10-20",
+        "runtime": 43,
+        "still_path": "/2yC5AEjBqD9NNNJGYH1m3JNUH3M.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Long Pig",
+        "overview": "The CSI team investigates when a body is dug up in the luau pit of a Hawaiian-themed hotel. Also, Internal Affairs begins to question Grissom and Sara\u0027s return to the crime lab.",
+        "air_date": "2021-10-27",
+        "runtime": 43,
+        "still_path": "/srPg6rNRQmT9G4FD2TARF5C5i8T.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Let the Chips Fall",
+        "overview": "As Grissom and Sara close in on who framed Hodges, the CSI team investigates a lock room murder mystery at 30,000 feet, when a cargo plane lands autonomously at McCarran Airport and everyone on board has been killed.",
+        "air_date": "2021-11-03",
+        "runtime": 43,
+        "still_path": "/nzILwAsl3mao6pNv30IUY0FVPxS.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Funhouse",
+        "overview": "Max puts CSI on lockdown when evidence in a new murder tips Grissom and Sara to a new suspect in the crime lab. Also, Folsom and Allie investigate a series of chilling killings at a dilapidated clown-themed hotel.",
+        "air_date": "2021-11-10",
+        "runtime": 43,
+        "still_path": "/w1zEEPscsT4nhOxUwBUb2IkNBvH.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "In the Blood",
+        "overview": "An abandoned horse covered in blood leads the CSI team to a halfway house for convicted murderers. Also, Grissom and Sara begin to circle their prime suspect in the David Hodges case.",
+        "air_date": "2021-11-17",
+        "runtime": 43,
+        "still_path": "/xiQYuv5VnN1KZf47g6QsYlF8ocz.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Pipe Cleaner",
+        "overview": "When the CSIs are called to investigate human remains found in a convention center owner\u2019s bathtub, Sara and Grissom use the case to get close to attorney Anson Wix\u2019s star forensic expert witness, just days before David Hodges\u2019 trial begins",
+        "air_date": "2021-11-24",
+        "runtime": 43,
+        "still_path": "/7BNDvGw9gOpnUoxXcKPIT2X84dM.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Waiting in the Wings",
+        "overview": "The CSI team looks closely at the eccentric world of sideshows when a couple of performers are discovered burned in a pit. Also, Hodges mulls a plea deal as his criminal trial kicks off, while Max, Grissom and Sara search for evidence to exonerate him.",
+        "air_date": "2021-12-01",
+        "runtime": 43,
+        "still_path": "/3UUAQr5gD5JAceawFR7yE9wOquz.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Signed, Sealed, Delivered",
+        "overview": "When David Hodges goes missing, the entire CSI team searches for any piece of evidence that can help locate him, clear his name and save the reputation of the entire crime lab.",
+        "air_date": "2021-12-08",
+        "runtime": 43,
+        "still_path": "/1W1j3SDtKAD5u0QG8hJFYI7mglf.jpg"
+      }
+    ]
+  }
+}

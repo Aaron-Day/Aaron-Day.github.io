@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8467,
+    "title": "Dumb and Dumber",
+    "overview": "Lloyd and Harry are two men whose stupidity is really indescribable. When Mary, a beautiful woman, loses an important suitcase with money before she leaves for Aspen, the two friends (who have found the suitcase) decide to return it to her. After some \u0022adventures\u0022 they finally get to Aspen where, using the lost money they live it up and fight for Mary\u0027s heart.",
+    "tagline": "For Harry and Lloyd, every day is a no-brainer.",
+    "runtime": 107,
+    "release_date": "1994-12-16",
+    "vote_average": 6.667,
+    "poster_path": "/4LdpBXiCyGKkR8FGHgjKlphrfUc.jpg",
+    "backdrop_path": "/8uBTDGRcNHhYChcoazP5rleRME7.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 96665,
+      "name": "Dumb and Dumber Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jim Carrey",
+      "character": "Lloyd Christmas",
+      "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+    },
+    {
+      "name": "Jeff Daniels",
+      "character": "Harry Dunne",
+      "profile_path": "/r0mkZJZnTSJO3HJRsMW5HtszxE8.jpg"
+    },
+    {
+      "name": "Lauren Holly",
+      "character": "Mary Swanson",
+      "profile_path": "/uJoOKPd6resnq9qA0ChbiNIk7ob.jpg"
+    },
+    {
+      "name": "Teri Garr",
+      "character": "Helen Swanson",
+      "profile_path": "/iscVncnCVtM8Wl4FmcEkr6KDtRE.jpg"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 72559,
+    "title": "G.I. Joe: Retaliation",
+    "overview": "Framed for crimes against the country, the G.I. Joe team is terminated by Presidential order. This forces the G.I. Joes into not only fighting their mortal enemy Cobra; they are forced to contend with threats from within the government that jeopardize their very existence.",
+    "tagline": "Heroes are made in America.",
+    "runtime": 110,
+    "release_date": "2013-03-27",
+    "vote_average": 5.667,
+    "poster_path": "/3rWIZMzTKcCtV0eHJ70Z4Ru659f.jpg",
+    "backdrop_path": "/pEhXq18GVe1dg2ltplcxtGWfSje.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 135468,
+      "name": "G.I. Joe (Live-Action) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dwayne Johnson",
+      "character": "Marvin Hinton / Roadblock",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Bruce Willis",
+      "character": "Joe Colton",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Jonathan Pryce",
+      "character": "U.S. President",
+      "profile_path": "/3nQ01F9WPNPzzLblY7XyaihT9JT.jpg"
+    },
+    {
+      "name": "Adrianne Palicki",
+      "character": "Jaye Burnett / Lady Jaye",
+      "profile_path": "/sh9s2GpNuaNdg7oNz9QN3L2jqs6.jpg"
+    }
+  ]
+}

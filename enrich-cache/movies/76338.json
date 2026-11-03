@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 76338,
+    "title": "Thor: The Dark World",
+    "overview": "Thor fights to restore order across the cosmos\u2026 but an ancient race led by the vengeful Malekith returns to plunge the universe back into darkness. Faced with an enemy that even Odin and Asgard cannot withstand, Thor must embark on his most perilous and personal journey yet, one that will reunite him with Jane Foster and force him to sacrifice everything to save us all.",
+    "tagline": "Delve into the darkness.",
+    "runtime": 112,
+    "release_date": "2013-10-30",
+    "vote_average": 6.506,
+    "poster_path": "/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg",
+    "backdrop_path": "/5o88bbqcV5STn56jqOeovaaWbAE.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131296,
+      "name": "Thor Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Hemsworth",
+      "character": "Thor",
+      "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    },
+    {
+      "name": "Natalie Portman",
+      "character": "Jane Foster",
+      "profile_path": "/edPU5HxncLWa1YkgRPNkSd68ONG.jpg"
+    },
+    {
+      "name": "Tom Hiddleston",
+      "character": "Loki",
+      "profile_path": "/mclHxMm8aPlCPKptP67257F5GPo.jpg"
+    },
+    {
+      "name": "Christopher Eccleston",
+      "character": "Malekith",
+      "profile_path": "/v6ezjezzDo6xP2wlONO5ZzBciwl.jpg"
+    }
+  ]
+}

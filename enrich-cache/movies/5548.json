@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 5548,
+    "title": "RoboCop",
+    "overview": "In a violent, near-apocalyptic Detroit, evil corporation Omni Consumer Products wins a contract from the city government to privatize the police force. To test their crime-eradicating cyborgs, the company leads street cop Alex Murphy into an armed confrontation with crime lord Boddicker so they can use his body to support their untested RoboCop prototype. But when RoboCop learns of the company\u0027s nefarious plans, he turns on his masters.",
+    "tagline": "Part man, part machine, all cop.",
+    "runtime": 102,
+    "release_date": "1987-07-17",
+    "vote_average": 7.371,
+    "poster_path": "/hHtOgGb3NihlyRATHlKPaFApbrd.jpg",
+    "backdrop_path": "/xcaX6BZ1JUPSVMH2gBkWIckLLaA.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 5547,
+      "name": "RoboCop Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Peter Weller",
+      "character": "Officer Alex J. Murphy / RoboCop",
+      "profile_path": "/mVRJX38zabRadVPJe0XOTObVzhp.jpg"
+    },
+    {
+      "name": "Nancy Allen",
+      "character": "Officer Anne Lewis",
+      "profile_path": "/lgCqBlGhgxTNINoYeDhxhLUuLf.jpg"
+    },
+    {
+      "name": "Dan O\u0027Herlihy",
+      "character": "The Old Man",
+      "profile_path": "/cNVYyDPBgBy3aP61Zk3DJfHBK16.jpg"
+    },
+    {
+      "name": "Ronny Cox",
+      "character": "Dick Jones",
+      "profile_path": "/cKkVkqft2RacSDhsKxO8nMFgeAd.jpg"
+    }
+  ]
+}

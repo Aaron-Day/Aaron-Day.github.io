@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10985,
+    "title": "The New Guy",
+    "overview": "Nerdy high school senior Dizzy Harrison has finally gotten lucky -- after purposely getting expelled, he takes lessons in \u0027badass cool\u0027 from a convict and enrolls at a new school. But can he keep up the ruse?",
+    "tagline": "A zero will rise.",
+    "runtime": 88,
+    "release_date": "2002-05-10",
+    "vote_average": 6,
+    "poster_path": "/aekXSzkn3zry6aummMl7AU4rSa8.jpg",
+    "backdrop_path": "/bF8cXquHdctJgTGfHkjdUwGqwZx.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "DJ Qualls",
+      "character": "Dizzy Harrison / Gil Harris",
+      "profile_path": "/mzA2ZxEcBHlUvSjlYRZzH5bVAGL.jpg"
+    },
+    {
+      "name": "Eliza Dushku",
+      "character": "Danielle",
+      "profile_path": "/lvu4Vo9GL7uOjtU59MDiy3QDPAZ.jpg"
+    },
+    {
+      "name": "Zooey Deschanel",
+      "character": "Nora",
+      "profile_path": "/30KQyjsXfrdm4Dcori7bDFTg9Le.jpg"
+    },
+    {
+      "name": "Lyle Lovett",
+      "character": "Bear Harrison",
+      "profile_path": "/ppjDBst7wl05E08OfKen24XJSXd.jpg"
+    }
+  ]
+}

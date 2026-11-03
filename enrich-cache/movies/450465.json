@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 450465,
+    "title": "Glass",
+    "overview": "In a series of escalating encounters, former security guard David Dunn uses his supernatural abilities to track Kevin Wendell Crumb, a disturbed man who has twenty-four personalities. Meanwhile, the shadowy presence of Elijah Price emerges as an orchestrator who holds secrets critical to both men.",
+    "tagline": "You cannot contain what you are.",
+    "runtime": 129,
+    "release_date": "2019-01-16",
+    "vote_average": 6.663,
+    "poster_path": "/svIDTNUoajS8dLEo7EosxvyAsgJ.jpg",
+    "backdrop_path": "/rzsMWXQ7GaN60wIpg3yf01iBmXy.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "James McAvoy",
+      "character": "Patricia / Dennis / Hedwig / The Beast / Barry / Heinrich / Jade / Ian / Mary Reynolds / Norma / Jalin / Kat / B.T. / Kevin Wendell Crumb / Mr. Pritchard / Felida / Luke / Goddard / Samuel / Polly",
+      "profile_path": "/u4REKbm3zhFI2J5tVyqRovGRYUJ.jpg"
+    },
+    {
+      "name": "Bruce Willis",
+      "character": "David Dunn / The Overseer",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Elijah Price / Mr. Glass",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Sarah Paulson",
+      "character": "Dr. Ellie Staple",
+      "profile_path": "/tJnhBV516yrekR3hTDUw15UMbxS.jpg"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Gossip",
+        "overview": "A few interns who stayed at Dunder-Mifflin over the summer end their internship. Michael announces some potentially damaging gossip about an employee to the rest of the office, then starts to spread false rumours about others to cover up what he has unwittingly revealed.",
+        "air_date": "2009-09-17",
+        "runtime": 23,
+        "still_path": "/pWbVgfvhF7u0aFdhJJbzTQAOqdw.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Meeting",
+        "overview": "Michael gets worried after a request from Jim, and Pam\u0027s busy with wedding planning. Darryl\u0027s worker\u0027s compensation claim makes Dwight suspicious.",
+        "air_date": "2009-09-24",
+        "runtime": 23,
+        "still_path": "/i6ShaUbd4F9sQqfKfs2zQuHXGmI.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Promotion",
+        "overview": "David Wallace comes bearing the news that not all the staffers will receive a raise this year. Jim pushes Dwight to the limit and causes him to form office alliances. And Pam decides she wants only cash as a wedding gift.",
+        "air_date": "2009-10-01",
+        "runtime": 23,
+        "still_path": "/aQcBZoTjrScKTeBshUcs5OFNyUu.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Niagara",
+        "overview": "The Dunder Mifflin staff head to Niagara Falls for Jim and Pam\u0027s wedding, with the understanding that her pregnancy is a forbidden discussion topic, but Jim\u0027s slip of the tongue prods Michael to attempt damage control.",
+        "air_date": "2009-10-08",
+        "runtime": 45,
+        "still_path": "/dMRxj9BYrcmHMsvLwbC6IIoJ5QJ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Mafia",
+        "overview": "Michael becomes convinced that an insurance salesman visiting the office is a part of the mafia, and Dwight and Andy accompany Michael to a meeting with him. Meanwhile, Kevin accidentally cancels Jim\u0027s credit card, while Jim and Pam are on their honeymoon in Puerto Rico.",
+        "air_date": "2009-10-15",
+        "runtime": 23,
+        "still_path": "/haQudolF7pDPsUaYxcuUWJKOueM.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Lover",
+        "overview": "Jim and Pam return from their honeymoon and discover that Michael is dating Pam\u0027s mother, which infuriates her. Meanwhile, Dwight tries to install a recording device in Jim\u0027s office, by giving him a wooden mallard as an apology for their long rivalry.",
+        "air_date": "2009-10-22",
+        "runtime": 23,
+        "still_path": "/7gem2WvuueQCSZToxHrCAJ3wne1.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Koi Pond",
+        "overview": "Michael and Jim head off to a meeting and Michael comes back soaked after having fallen in a koi pond. Meanwhile, Pam and Andy, as the two worst salesmen in the branch, have to go cold calling for sales.",
+        "air_date": "2009-10-29",
+        "runtime": 23,
+        "still_path": "/pgTWGaBh8DKm2AHU8BRrEvu2WxQ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Double Date",
+        "overview": "Jim and Pam finally go on a double date with Michael and Pam\u0027s mother Helene on Helene\u0027s birthday, which takes a dark turn when Michael discovers just how old Helene is turning, and breaks up with her. Meanwhile, Dwight offers to do nice things for all the members of the office so that they will owe him a specific favor, but Andy ruins his plans.",
+        "air_date": "2009-11-05",
+        "runtime": 23,
+        "still_path": "/c6splVKmX2f7JOSreqSgrn8N9an.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Murder",
+        "overview": "Rumors spread that Dunder Mifflin is in financial trouble, so Michael tries to distract the office by having everyone play a murder mystery game called Belles, Bourbon, and Bullets. Meanwhile, Andy uses the game as a way to ask out Erin, but fears he may have asked out Erin\u0027s character, instead of Erin herself.",
+        "air_date": "2009-11-12",
+        "runtime": 23,
+        "still_path": "/dKyyCAdK3ynTa0V5GhGCDUZVpqu.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Shareholder Meeting",
+        "overview": "Michael speaks out of line at the Dunder Mifflin shareholders meeting and creates a big problem for management, while Jim discovers that nobody in the office thinks he\u0027s the \u0022real\u0022 boss.",
+        "air_date": "2009-11-19",
+        "runtime": 23,
+        "still_path": "/3MDPYQJtNYOhwrU4gf8eRwpUrka.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Scott\u0027s Tots",
+        "overview": "Michael and Erin meet \u0022Scott\u0027s Tots\u0022, a group of local teenagers whose college tuition was promised in one of Michael\u0027s grand delusions ten years prior. Meanwhile, in Michael\u0027s absence, Dwight convinces Jim to start an employee-of-the-month program with the intention of sabotaging Jim.",
+        "air_date": "2009-12-03",
+        "runtime": 23,
+        "still_path": "/oCpspjTl50bBvzAvAe7EcFyjm5k.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Secret Santa",
+        "overview": "Michael gets upset when Jim promises Phyllis that she can be the office Santa, but the office Christmas party may be overshadowed by some bad news from David Wallace.",
+        "air_date": "2009-12-10",
+        "runtime": 23,
+        "still_path": "/91UtqA3zap0dXyyYVQNnPiHSUfr.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Banker",
+        "overview": "A banker representing a potential buyer comes to the Scranton branch to interview the H.R. department before the sale goes through.",
+        "air_date": "2010-01-21",
+        "runtime": 23,
+        "still_path": "/nisOv4RtbvTWFSsN12tKwfTndma.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Sabre",
+        "overview": "Michael hates the changes that Dunder Mifflin\u0027s new owner is implementing, so he turns to David Wallace for advice. Jim and Pam find the perfect day care center, but Jim\u0027s mistake threatens to ruin the interview.",
+        "air_date": "2010-02-04",
+        "runtime": 23,
+        "still_path": "/1nqkoBwzBQotglrTaVdfvRyStVV.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Manager and the Salesman",
+        "overview": "Sabre\u0027s CEO wants the Scranton branch to have one manager, and Michael voluntarily steps down and lets Jim become the boss when he finds out that salespeople make more money. However, he soon comes to regret the decision.",
+        "air_date": "2010-02-11",
+        "runtime": 23,
+        "still_path": "/rUeCQBiSKMiaEvB8fnoRDl8rtb4.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Delivery",
+        "overview": "Pam\u2019s contractions begin but she and Jim are determined to wait it out as long as possible so they can have more time at the hospital. Meanwhile the rest of the office tries to distract Pam from the pain with food and entertainment.",
+        "air_date": "2010-03-04",
+        "runtime": 45,
+        "still_path": "/q0DrvhOk0dpaVXKn5nDVZcxQ1a9.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "St. Patrick\u0027s Day",
+        "overview": "Michael thinks he impressed Jo only to discover someone else in the office caught her eye. Meanwhile, Dwight makes trouble on Jim\u0027s first day back from paternity leave. Andy and Erin have an interesting first date.",
+        "air_date": "2010-03-11",
+        "runtime": 23,
+        "still_path": "/4wjZb7YyWTB1Ao9BjRx8e7UIl7z.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "New Leads",
+        "overview": "When the sales staff lets Sabre\u0027s new \u0022sales is king\u0022 policy get to their heads, Michael hides their new, prized leads.",
+        "air_date": "2010-03-18",
+        "runtime": 23,
+        "still_path": "/56hRdwaPs3rKIJUSEL8RJFA3SgA.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Happy Hour",
+        "overview": "Michael gets kicked out of the bar when he pulls out all the stops to impress a friend of Jim and Pam\u0027s. Meanwhile, Andy and Erin do their best to keep their relationship under wraps. Dwight rethinks his pre-natal contract with Angela.",
+        "air_date": "2010-03-25",
+        "runtime": 23,
+        "still_path": "/3pJIfZOXxReM3zOoJTv253tRbb3.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Secretary\u0027s Day",
+        "overview": "Andy pulls out all the stops to give Erin a memorable Secretary\u0027s Day. Michael reluctantly takes Erin out to lunch and lets slip about Andy\u0027s relationship with Angela. Meanwhile, Oscar circulates a video he created that compares Kevin\u0027s voice to Sesame Street\u0027s Cookie Monster.",
+        "air_date": "2010-04-22",
+        "runtime": 23,
+        "still_path": "/z2956xSFqY2te3F1dWcREzK0h78.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Body Language",
+        "overview": "Pam and Jim work on their first sales pitch together to Donna, the manager of a local restaurant. But Michael keeps misreading the signals she\u0027s putting out. Meanwhile, Dwight encourages Kelly to try out for the minority training program.",
+        "air_date": "2010-04-29",
+        "runtime": 23,
+        "still_path": "/cHGGrFJD8lyvWeqenTKLEcB1VqP.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Cover-Up",
+        "overview": "Michael suspects Donna is cheating on him and puts P.I. Dwight Schrute on the case. Meanwhile, Andy is frustrated when no one takes his customer\u0027s complaint seriously.",
+        "air_date": "2010-05-06",
+        "runtime": 23,
+        "still_path": "/8RBNOu7JwQY8OBjquqnnYiVXMFk.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Chump",
+        "overview": "Michael is surprisingly cheerful after learning some bad news about Donna. The new parents, Pam and Jim, have trouble staying awake in the office. Meanwhile, Angela takes matters into her own hands when Dwight refuses to honor their contract.",
+        "air_date": "2010-05-13",
+        "runtime": 23,
+        "still_path": "/nGdklnVWRdmXpuckdyZTpvjwvt2.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Whistleblower",
+        "overview": "The press finds out that Sabre\u2019s printers catch on fire. Jo shows up to the office in hopes of finding out who the whistleblower is. Everyone suspects Andy, who adamantly denies he leaked the information.",
+        "air_date": "2010-05-20",
+        "runtime": 23,
+        "still_path": "/ediO7Y2iJDcdmoTEFkHeS3HPTVp.jpg"
+      }
+    ]
+  }
+}

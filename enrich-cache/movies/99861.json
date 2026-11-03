@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 99861,
+    "title": "Avengers: Age of Ultron",
+    "overview": "When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth\u2019s Mightiest Heroes are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to The Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure.",
+    "tagline": "A new age has come.",
+    "runtime": 141,
+    "release_date": "2015-04-22",
+    "vote_average": 7.278,
+    "poster_path": "/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg",
+    "backdrop_path": "/kIBK5SKwgqIIuRKhhWrJn3XkbPq.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86311,
+      "name": "The Avengers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robert Downey Jr.",
+      "character": "Tony Stark / Iron Man",
+      "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+    },
+    {
+      "name": "Chris Hemsworth",
+      "character": "Thor",
+      "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    },
+    {
+      "name": "Mark Ruffalo",
+      "character": "Bruce Banner / Hulk",
+      "profile_path": "/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg"
+    },
+    {
+      "name": "Chris Evans",
+      "character": "Steve Rogers / Captain America",
+      "profile_path": "/3bOGNsHlrswhyW79uvIHH1V43JI.jpg"
+    }
+  ]
+}

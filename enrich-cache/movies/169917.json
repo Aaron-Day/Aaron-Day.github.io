@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 169917,
+    "title": "A Walk Among the Tombstones",
+    "overview": "Private investigator Matthew Scudder is hired by a drug kingpin to find out who kidnapped and murdered his wife.",
+    "tagline": "Some people are afraid of all the wrong things.",
+    "runtime": 114,
+    "release_date": "2014-09-18",
+    "vote_average": 6.35,
+    "poster_path": "/euPgyPsiNFp6gOBB7nUFxvN5ZaY.jpg",
+    "backdrop_path": "/k23FPWl97XKpJ1oTaDyADzxWxs6.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Liam Neeson",
+      "character": "Matthew Scudder",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Dan Stevens",
+      "character": "Kenny Kristo",
+      "profile_path": "/fFsgginZKH527o38ZfdDxuzx7Ew.jpg"
+    },
+    {
+      "name": "David Harbour",
+      "character": "Ray",
+      "profile_path": "/qMFtMWlYVtFVyBoBhX5IoA5sN5a.jpg"
+    },
+    {
+      "name": "Boyd Holbrook",
+      "character": "Peter Kristo",
+      "profile_path": "/xmkpedcct3ey1d1HGDNsUMQPHcB.jpg"
+    }
+  ]
+}

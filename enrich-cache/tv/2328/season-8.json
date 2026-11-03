@@ -1,0 +1,328 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 8,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Operation Lightspeed",
+        "overview": "Five brave young men and women are recruited by the secret agency Lightspeed Rescue to stop a band of demons from destroying Mariner Bay.",
+        "air_date": "2000-02-12",
+        "runtime": 22,
+        "still_path": "/mhpFN4aNwp5X1BQQWvTHGRbbPdQ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Lightspeed Teamwork",
+        "overview": "The Rangers deploy the Rescue Bird to evacuate people from a burning building while fighting the lava monster Magmavore.",
+        "air_date": "2000-02-19",
+        "runtime": 22,
+        "still_path": "/2uZg6jM8ZiMH2keboW3tjSpVllH.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Trial by Fire",
+        "overview": "Carter struggles with leading the Rangers in battle as he recalls a traumatic event from his childhood.",
+        "air_date": "2000-02-26",
+        "runtime": 22,
+        "still_path": "/8CbKGMsfLb7swQ8w9WU0Fgd8AS4.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Riding the Edge",
+        "overview": "The team rushes to help Kelsey\u0027s friend Nancy try to land a space shuttle under attack by Diabolico.",
+        "air_date": "2000-03-04",
+        "runtime": 22,
+        "still_path": "/zqqpRnagPkCkHiCJoDtIs512MK6.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "A Matter of Trust",
+        "overview": "Dana is trusted with a special assignment by her father.",
+        "air_date": "2000-03-11",
+        "runtime": 22,
+        "still_path": "/dcyta3la3TRbXIYzGdYE10A8Ew3.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Wheels of Destruction",
+        "overview": "The Rangers and Vypra battle it out in new advanced vehicles.",
+        "air_date": "2000-03-18",
+        "runtime": 22,
+        "still_path": "/hMhJSyPN7YoixrrOkYbqw52Vwsp.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Cyborg Rangers",
+        "overview": "General McKnight tries to replace the Power Rangers with robotic doubles.",
+        "air_date": "2000-03-25",
+        "runtime": 22,
+        "still_path": "/beDYplAHxUHhxQE5J60s3xAkXED.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Up to the Challenge",
+        "overview": "Chad faces a dangerous new opponent secretly in league with Vypra.",
+        "air_date": "2000-04-01",
+        "runtime": 22,
+        "still_path": "/1qELdVBwTyRhtK1bDwnmRZKwiH2.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Go Volcanic",
+        "overview": "Dana faces double trouble when the bus she\u0027s on is hijacked and a monster causes a volcano to erupt in Mariner Bay.",
+        "air_date": "2000-04-08",
+        "runtime": 22,
+        "still_path": "/299AxTSCJth7v3VWg7uuGbr9tsz.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Rising from Ashes",
+        "overview": "The Power Rangers attempt to rescue Miss Fairweather from an erupting volcano.",
+        "air_date": "2000-04-15",
+        "runtime": 22,
+        "still_path": "/wi2d2VC7XVEWoPbzscYxGItThtZ.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "From Deep in the Shadows",
+        "overview": "The mysterious Titanium Ranger attacks the Power Rangers.",
+        "air_date": "2000-04-22",
+        "runtime": 22,
+        "still_path": "/vUwFxGX02wh5YsjresaVlaqZgvl.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Truth Discovered",
+        "overview": "Captain Mitchell is reunited with his long-lost son.",
+        "air_date": "2000-04-29",
+        "runtime": 22,
+        "still_path": "/3bigA9sd7rKFbHOnDO7iqvxLN4Y.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Ryan\u0027s Destiny",
+        "overview": "Ryan does some soul-searching while Diabolico attacks Mariner Bay.",
+        "air_date": "2000-05-06",
+        "runtime": 22,
+        "still_path": "/4L7JshYUcm1IvCKF8XIrOlw1rvh.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Curse of the Cobra",
+        "overview": "Ryan tries to hide his curse from the team.",
+        "air_date": "2000-05-13",
+        "runtime": 22,
+        "still_path": "/lJCnIZH6Q4RWujUVeCZSkjiLssO.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Strength of the Sun",
+        "overview": "Ryan risks life and limb to overcome his curse and help the Rangers battle Diabolico\u0027s monsters.",
+        "air_date": "2000-05-20",
+        "runtime": 22,
+        "still_path": "/dSIUBbfjpuLu6R06MHORXsdm3WZ.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Cobra Strikes",
+        "overview": "Ryan journeys to an ancient tomb to overcome the curse of the cobra once and for all.",
+        "air_date": "2000-05-27",
+        "runtime": 22,
+        "still_path": "/uoGw7JQ5WnSPxA90l53oqBaZH2Q.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Olympius Ascends",
+        "overview": "As the Rangers battle Diabolico, the infant Impus finally matures into an even more powerful demon.",
+        "air_date": "2000-08-19",
+        "runtime": 22,
+        "still_path": "/gsPMU7R0xOVX6WukF0PI2fHv26B.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "A Face from the Past",
+        "overview": "Carter finally learns the identity of his boyhood hero.",
+        "air_date": "2000-08-26",
+        "runtime": 22,
+        "still_path": "/qckLBOddry9rElqBbLozWYIcoxM.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Queen\u0027s Return",
+        "overview": "Olympius conspires with Vypra to allow his mother Queen Bansheera to return to Earth once the planets align.",
+        "air_date": "2000-09-02",
+        "runtime": 22,
+        "still_path": "/bJIhnxQsQpxOrJckWh45msAN5Bn.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Omega Project",
+        "overview": "Lightspeed Rescue tries to stop an asteroid from colliding with the Earth.",
+        "air_date": "2000-09-09",
+        "runtime": 22,
+        "still_path": "/gXxKEMOUlanOSQQWTsIwZbAcH9g.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Fifth Crystal",
+        "overview": "The Rangers race to find a crystal before Vypra can use it to power her dangerous new laser.",
+        "air_date": "2000-09-16",
+        "runtime": 22,
+        "still_path": "/jIzmjMWOPEElFxiqx59drtMbLv9.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Chosen Path",
+        "overview": "Chad works to regain the respect of his disappointed martial arts instructor.",
+        "air_date": "2000-09-23",
+        "runtime": 22,
+        "still_path": "/v3ZyxatgTMH42QQkRDNRoGFdxh3.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Yesterday Again",
+        "overview": "Carter is haunted by psychic visions of a future in which the Power Rangers are defeated.",
+        "air_date": "2000-09-30",
+        "runtime": 22,
+        "still_path": "/9i4npLdFuYmzLtcwMFhy1ENpsbc.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "As Time Runs Out",
+        "overview": "The Rangers hurry to rid themselves of dangerous pods filled with poisonous flowers before they can hatch.",
+        "air_date": "2000-10-07",
+        "runtime": 22,
+        "still_path": "/p2XsWxxqaM6KrKSwrnJXjUlZaxV.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "In the Freeze Zone",
+        "overview": "Carter battles to save their frozen teammates.",
+        "air_date": "2000-10-21",
+        "runtime": 22,
+        "still_path": "/6uoKEQ5ZeunR2qsePxApU3uaH4M.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "The Mighty Mega Battles",
+        "overview": "The Rangers deploy their Mega Battle gear against Olympius and his monster.",
+        "air_date": "2000-10-28",
+        "runtime": 22,
+        "still_path": "/uEMpWD2VFbPkhCUDMJTVNEfU1eX.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "The Great Egg Caper",
+        "overview": "Jinxer\u0027s plan to unleash a powerful monster on Mariner Bay is thwarted when a thief steals the monster\u0027s egg.",
+        "air_date": "2000-11-03",
+        "runtime": 22,
+        "still_path": "/p6svN1hMzoPNgE4FcIUuCSoJSZH.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Ocean Blue",
+        "overview": "Vypra plots to use Chad\u0027s love for a mermaid against him.",
+        "air_date": "2000-11-04",
+        "runtime": 22,
+        "still_path": "/bBcV74qMuLDXz07OxdcNnBxbTep.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Trakeena\u0027s Revenge (1)",
+        "overview": "Trakeena comes to Mariner Bay, prompting the Lost Galaxy Rangers to team up with the Lightspeed Rescue Rangers.",
+        "air_date": "2000-11-06",
+        "runtime": 22,
+        "still_path": "/kzVGJZByIV4rEkLtknikyI4p2Hz.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Trakeena\u0027s Revenge (2)",
+        "overview": "The Lost Galaxy and Lightspeed Rescue Rangers join forces to stop Trakeena from destroying Mariner Bay.",
+        "air_date": "2000-11-07",
+        "runtime": 22,
+        "still_path": "/nGYLoJEHHYVlGJ2F0iUiHdYzpGM.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "The Last Ranger",
+        "overview": "Dana helps her teammates overcome a case of amnesia.",
+        "air_date": "2000-11-08",
+        "runtime": 22,
+        "still_path": "/cqdQ4k8pI6JqMcIRWFeIugvulM9.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Sorcerer of the Sands",
+        "overview": "Ryan searches for a sorcerer to help him decrypt an ancient spell to banish Bansheera from Earth again.",
+        "air_date": "2000-11-09",
+        "runtime": 22,
+        "still_path": "/dy9s8RU1b1MBDbrMQx5ueAHeYQd.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "Olympius Unbound",
+        "overview": "Olympius fights to return to Earth while Jinxer hypnotizes Captain Mitchell into draining the Aquabase\u0027s power.",
+        "air_date": "2000-11-10",
+        "runtime": 22,
+        "still_path": "/1mJo7Ra5BDeFxo0VCHvb8ciZwsO.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Neptune\u0027s Daughter",
+        "overview": "Marina warns Chad that Diabolico has stolen her father\u0027s magical trident to drain the ocean leaving the Aquabase vulnerable to attack.",
+        "air_date": "2000-11-11",
+        "runtime": 22,
+        "still_path": "/mzbObMlrjKARoWxGDXzEIF3hdw7.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Web War",
+        "overview": "The Arachnor monster traps the Rangers in its web forcing Carter to deploy the Trans Armor Cycle: Mega Armor mode.",
+        "air_date": "2000-11-13",
+        "runtime": 22,
+        "still_path": "/7Bi2Kz6x9pGWK6uNmlCUjdlf63o.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "In the Limelight",
+        "overview": "Dana balances being a glamorous supermodel with her duties as the Pink Ranger.",
+        "air_date": "2000-11-14",
+        "runtime": 22,
+        "still_path": "/iwNg3im41jb4QJeI2Uaiwt0Tyb8.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "Wrath of the Queen",
+        "overview": "Bansheera unleashes her magnificent power on friend and foe alike.",
+        "air_date": "2000-11-15",
+        "runtime": 22,
+        "still_path": "/1OAooujhBYKzqEXYWizi3AMgHyv.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "Rise of the Super Demons",
+        "overview": "Olympius and Diabolico join forces prompting the Rangers to risk using the Lifeforce Megazord powered by their own life energy.",
+        "air_date": "2000-11-16",
+        "runtime": 22,
+        "still_path": "/sgDYcUqRf4My8PsNFIYmCmXBIhJ.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "The Fate of Lightspeed (1)",
+        "overview": "Jinxer launches a crippling attack on the Aquabase.",
+        "air_date": "2000-11-17",
+        "runtime": 22,
+        "still_path": "/KdWu3fSBzA8qI5MuZy1cD9wsm4.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "The Fate of Lightspeed (2)",
+        "overview": "The Lightspeed Rescue Rangers take their battle against Queen Bansheera into her very lair.",
+        "air_date": "2000-11-18",
+        "runtime": 22,
+        "still_path": "/u0TxgfabtFoYEtmQYR5H9e1cTlT.jpg"
+      }
+    ]
+  }
+}

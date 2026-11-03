@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "Gil Grissom is the supervisor of the graveyard shift of Las Vegas\u0027 elite crime scene investigators. Holly Gribbs, fresh out of the academy, joins the team.  Jim Brass is head of the unit and is trying to scare Gribbs from CSI.  Catherine Willows, mother of a young daughter, is the number two CSI on this shift.  Warrick Brown and Nick Stokes are competing to solve their 100th case to earn a promotion to CSI 3. Grissom investigates a murder staged to look like a suicide with precious little evidence.  Warrick and Catherine take the case of a drunk who breaks into the house where he had been staying and is shot to death. Nick talks to a man who picked up a woman who drugged and robbed him.",
+        "air_date": "2000-10-06",
+        "runtime": 46,
+        "still_path": "/2OTcEHmMt38KtzNtGzx09oxJEEr.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Cool Change",
+        "overview": "A man is killed after winning a fortune and then dumping his girlfriend.  So, Grissom, Nick, and newcomer to the CSI team, Sara Sidel, investigate this one.  Holly Gribbs is in the hospital and Warrick is up for suspension for leaving her at the crime scene by herself.  Holly later dies in the hospital, but Grissom doesn\u0027t suspend Warrick.",
+        "air_date": "2000-10-13",
+        "runtime": 44,
+        "still_path": "/lUFrzLX2bahPIW2zfesmzrymHFg.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Crate \u0027n Burial",
+        "overview": "Grissom, Nick, and Sara search for a kidnapped woman and find more than they expected. Catherine and Warrick investigate the hit and run death of a little girl.",
+        "air_date": "2000-10-20",
+        "runtime": 45,
+        "still_path": "/4KUvEU3MihfjoSD1FSkYNtGNPFq.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Pledging Mr. Johnson",
+        "overview": "Grissom and Catherine investigate when a leg is found severed from a body in a lake.  They suspect the husband and boyfriend.  Meanwhile Sara and Nick investigate a fraternity pledging gone terribly wrong.",
+        "air_date": "2000-10-27",
+        "runtime": 45,
+        "still_path": "/tGKnGLNnsEpckVUaXkDF8RVAS0s.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Friends \u0026 Lovers",
+        "overview": "Grissom and Warrick take the case of a young man who is found naked in the desert without an obvious cause of death.  Sara gets to find out why the body of a woman who was buried last week is in a dumpster.  Catherine and Nick investigate the killing of a school\u0027s dean by the school\u0027s founder.",
+        "air_date": "2000-11-03",
+        "runtime": 46,
+        "still_path": "/7nW2ly7I0khV5ld1wOTjfo2HLiw.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Who Are You?",
+        "overview": "Catherine violates department protocol when she takes the case of a rape accusation against her ex-husband.  Warrick and Sara search for the missing bullet that will either exonerate or indict a cop for murder.  Grissom and Nick investigate when a female skeleton is found under a house buried in cement.",
+        "air_date": "2000-11-10",
+        "runtime": 46,
+        "still_path": "/cJouEIHa7AGWVDbhX99BC5jWMnH.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Blood Drops",
+        "overview": "When a teenager and her sister are the sole survivors of the gruesome murder of four members of one family in a quiet suburban neighborhood, Grissom and his entire team investigate the crime. What initially looks like a bizarre cult murder becomes more disturbing when they discover the motive behind the massacre.",
+        "air_date": "2000-11-17",
+        "runtime": 45,
+        "still_path": "/fs4Rv1NK1IRt0yanB70qyCFe7Oh.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Anonymous",
+        "overview": "Royce Harmon was murdered 3 months ago in a scene staged to look like a suicide. Now another murder has taken place. Whoever the killer is he has a thorough knowledge of forensics, he purposefully has left evidence, and has baffled Grissom and his team.  Warrick and Nick investigate the case of a man who went over a cliff in his car and is now unconscious.",
+        "air_date": "2000-11-24",
+        "runtime": 45,
+        "still_path": "/bAJ7CPJF360yDeP2yByHG8z9kqf.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Unfriendly Skies",
+        "overview": "Grissom and his team investigate the death of a first class passenger on a flight to Las Vegas. The investigators are forced not only to examine the physical evidence, but also to interview all of the first class passengers to get their personal accounts of the incident.",
+        "air_date": "2000-12-08",
+        "runtime": 45,
+        "still_path": "/7dQA5Z85irAIltU1i5oMvecVNue.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Sex, Lies and Larvae",
+        "overview": "Grissom and Sara investigate a bug riddled body found in the desert.  Warrick and Catherine look in to the theft of some valuable art.  Nick gets to find out why a missing woman\u0027s car is found at the bus station. Warrick is suspected of having gambled on duty.",
+        "air_date": "2000-12-22",
+        "runtime": 46,
+        "still_path": "/qwqQTwm5jblYiNP8L3YdxKLe3HX.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "I-15 Murders",
+        "overview": "A woman is abducted from a supermarket. In the store, Grissom finds a bathroom stall door that claims five women have been killed.  Warrick is caught in a casino on duty and is paired with a reluctant Sara. Their case is the apparent murder and robbery of a man who is found be his brother. Nick gets pulled in by his prostitute friend who gets in a scuffle with hotel security.",
+        "air_date": "2001-01-12",
+        "runtime": 44,
+        "still_path": "/fXW0lDKlzAvLrUm9vr3sfyyyIMQ.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Fahrenheit 932",
+        "overview": "A man convicted of arson and the murder of his wife and child seeks assistance from Grissom to help prove his innocence. Meanwhile, Catherine and Nick investigate the underground world of sports gambling when a teenager is murdered at close range.",
+        "air_date": "2001-02-01",
+        "runtime": 45,
+        "still_path": "/s8fDQ0Xn9H9I6GkeWaUm6j9FQSQ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Boom",
+        "overview": "A bomb goes off in an office building killing one and injuring many more. The chief suspect is a security guard who left minutes before the explosion and has knowledge in bomb making.  Nick helps his prostitute friend again. After giving in to his passion, she is found dead the next morning. Naturally, Nick is a suspect and to make it worse, Ecklie has the case.",
+        "air_date": "2001-02-08",
+        "runtime": 46,
+        "still_path": "/uLoGoQ1hCvhrRaEtWCLpSnyrGQU.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "To Halve and to Hold",
+        "overview": "When a single human bone is discovered in the desert, Grissom and Catherine must cover miles of territory to find the rest of the skeleton. And Warrick and Sarah trace the death of a male stripper to members of a wedding party who may have celebrated a little too hard the night before the nuptials.",
+        "air_date": "2001-02-15",
+        "runtime": 44,
+        "still_path": "/f7wgChVaCvycFh8yQ1LxopBllIO.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Table Stakes",
+        "overview": "At a swanky fundraiser, attended by the sheriff, a woman turns up dead in the pool.  The owner of the house is away and a young couple is housesitting. Warrick looks into an apparent professional hit in the glass elevator of one of the hotels.",
+        "air_date": "2001-02-22",
+        "runtime": 46,
+        "still_path": "/156Rlc58PI8KztxhBAyRhFHcJua.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Too Tough to Die",
+        "overview": "A woman is abducted from a mall parking garage. She\u0027s raped, beaten, shot and left for dead.  Sara collects evidence from her and grows attached to her.  Nick and Grissom analyze the crime scene.  Catherine and Warrick are given boxes of evidence from a shooting that goes to trial in four days.  The CSI who had the case has quit and they have to prove what happened.  To make Catherine\u0027s life more complicated, Eddie has taken out a second mortgage without her knowledge.",
+        "air_date": "2001-03-01",
+        "runtime": 44,
+        "still_path": "/wzqBvvO5fElpW5KKcEFP99jNXGy.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Face Lift",
+        "overview": "A body is found in a pottery store in what\u0027s apparently a robbery that was interrupted. Fingerprints at the scene seem to match a twenty year old kidnapping case.  Sara and Warrick look into a case where a woman burned to death in her home. The woman was burned to an ash but only the chair she was in was burned, the rest of the house is fine. Sara believes they have a case of spontaneous combustion.",
+        "air_date": "2001-03-08",
+        "runtime": 46,
+        "still_path": "/swQpdt4vEgVEPWnH4ZFxntCla8u.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "$35K O.B.O.",
+        "overview": "A couple leaving a restaurant on their anniversary are killed in the street and their car is stolen.  The crime scene is compromised when it rains shortly after the CSIs arrive.  It gets more mysterious when the car is found and it becomes a new crime scene. Catherine looks into the collapse of a city owned residence that kills three elderly women. She runs into problems with the city engineer responsible for the building.",
+        "air_date": "2001-03-29",
+        "runtime": 45,
+        "still_path": "/bywj2jwN3vTeI6PkKnpOpNOrrxF.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Gentle, Gentle",
+        "overview": "The entire team investigate the abduction of the infant child of a well to do family. Suspicion immediately falls on the child\u0027s parents.",
+        "air_date": "2001-04-12",
+        "runtime": 46,
+        "still_path": "/t7wscNocqv52reFG3jIoGHrbAh7.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Sounds of Silence",
+        "overview": "Two women run over a deaf man but they didn\u0027t kill him- he was already dead.  Grissom has to find out who did it and he\u0027s not getting help from the deaf man\u0027s school.  Catherine and Nick investigate an apparent mob hit that leaves five dead in a coffee shop.",
+        "air_date": "2001-04-19",
+        "runtime": 46,
+        "still_path": "/pBk6TV8LVXYYXHMryNYMrHP7qrL.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Justice is Served",
+        "overview": "Grissom, Nick, and Warrick take the case of a jogger who was killed by a wild animal in the park. It gets complicated when they discover that the jogger had his liver removed after he was killed.  Catherine and Sara investigate the death of a six year old girl at shady carnival.",
+        "air_date": "2001-04-26",
+        "runtime": 44,
+        "still_path": "/lUiy3KNbgxp671IsOPLXVkVySNf.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Evaluation Day",
+        "overview": "On the day Grissom has to evaluate his team, a head is found in the trunk of a car. While Gil and Catherine work on the head, Sara and Nick investigate a body in the desert that\u0027s missing it\u0027s head. Warrick looks into a murder in juvenile detention in which his young friend James is the only witness.",
+        "air_date": "2001-05-10",
+        "runtime": 45,
+        "still_path": "/h5Q4lZxXr5DlbL3ZtLTCTDAYzSs.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Strip Strangler",
+        "overview": "The team is investigating the ongoing murders by a signature killer. The killer has some knowledge of forensics and has left little evidence behind. With the investigation somewhat stalled, the sheriff invites the FBI to join the case. This makes Grissom angry and it only gets worse when Sara offers to bait the killer.",
+        "air_date": "2001-05-17",
+        "runtime": 46,
+        "still_path": "/tFsu13pRJeUvoQgc3rj37P90Eks.jpg"
+      }
+    ]
+  }
+}

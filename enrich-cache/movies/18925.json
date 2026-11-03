@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18925,
+    "title": "Facing the Giants",
+    "overview": "A losing coach with an underdog football team faces their giants of fear and failure on and off the field to surprising results.",
+    "tagline": "Never give up. Never back down. Never lose faith.",
+    "runtime": 111,
+    "release_date": "2006-09-29",
+    "vote_average": 7.6,
+    "poster_path": "/1eY8O7fIGcmwetNqvwnnkQB0LYK.jpg",
+    "backdrop_path": "/hZoXUcBN0CgD7s1QgmO7OZSHzBx.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Alex Kendrick",
+      "character": "Grant Taylor",
+      "profile_path": "/9n7UKpTp7KNjL2qm2k0qAOuiNCC.jpg"
+    },
+    {
+      "name": "Shannen Fields",
+      "character": "Brooke Taylor",
+      "profile_path": "/1m8B3GAIGCqJUr82t4Rhzu66oev.jpg"
+    },
+    {
+      "name": "Bill Butler",
+      "character": "Neil Prater",
+      "profile_path": null
+    },
+    {
+      "name": "Bailey Cave",
+      "character": "David Childers",
+      "profile_path": null
+    }
+  ]
+}

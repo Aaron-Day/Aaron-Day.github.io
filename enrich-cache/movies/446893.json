@@ -1,0 +1,66 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 446893,
+    "title": "Trolls World Tour",
+    "overview": "Queen Poppy and Branch make a surprising discovery \u2014 there are other Troll worlds beyond their own, and their distinct differences create big clashes between these various tribes. When a mysterious threat puts all of the Trolls across the land in danger, Poppy, Branch, and their band of friends must embark on an epic quest to create harmony among the feuding Trolls to unite them against certain doom.",
+    "tagline": "Happiest. Movie. Ever.",
+    "runtime": 91,
+    "release_date": "2020-03-11",
+    "vote_average": 7.224,
+    "poster_path": "/7W0G3YECgDAfnuiHG91r8WqgIOe.jpg",
+    "backdrop_path": "/qsxhnirlp7y4Ae9bd11oYJSX59j.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 489724,
+      "name": "The Trolls Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anna Kendrick",
+      "character": "Poppy (voice)",
+      "profile_path": "/i2HIJQcBsUQ3o9HwEeDwou45D60.jpg"
+    },
+    {
+      "name": "Justin Timberlake",
+      "character": "Branch (voice)",
+      "profile_path": "/6Yk5t9RwkdkAT8Qv45934Eez2CA.jpg"
+    },
+    {
+      "name": "Ron Funches",
+      "character": "Cooper (voice)",
+      "profile_path": "/DtULMxPvAlOKfrwISxdEffIKlk.jpg"
+    },
+    {
+      "name": "Rachel Bloom",
+      "character": "Barb (voice)",
+      "profile_path": "/hfnU70X7QOdiURFEd1hM7gQIe6J.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 578,
+    "title": "Jaws",
+    "overview": "When the seaside community of Amity finds itself under attack by a dangerous great white shark, the town\u0027s chief of police, a young marine biologist, and a grizzled shark hunter embark on a desperate quest to kill the beast before it strikes again.",
+    "tagline": "The terrifying motion picture from the terrifying No. 1 best seller.",
+    "runtime": 124,
+    "release_date": "1975-06-20",
+    "vote_average": 7.686,
+    "poster_path": "/lxM6kqilAdpdhqUl2biYp5frUxE.jpg",
+    "backdrop_path": "/i1yf91svRHX45l9BXL8rVFzLoPH.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2366,
+      "name": "Jaws Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Roy Scheider",
+      "character": "Brody",
+      "profile_path": "/yyZ0DwUz3qAelJIUGVoOktGgMIh.jpg"
+    },
+    {
+      "name": "Robert Shaw",
+      "character": "Quint",
+      "profile_path": "/c8SIbGEmGIfhD9bObSf4FELUEns.jpg"
+    },
+    {
+      "name": "Richard Dreyfuss",
+      "character": "Hooper",
+      "profile_path": "/q2BPu6zWwFtnzQfpl4fgbKqURXM.jpg"
+    },
+    {
+      "name": "Lorraine Gary",
+      "character": "Ellen Brody",
+      "profile_path": "/6JKNdZopypnFnD9xSSlDs6YTHMC.jpg"
+    }
+  ]
+}

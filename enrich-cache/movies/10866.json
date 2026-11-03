@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10866,
+    "title": "Joy Ride",
+    "overview": "Three young people on a road trip from Colorado to New Jersey talk to a trucker on their CB radio, then must escape when he turns out to be a psychotic killer.",
+    "tagline": "It started as a joke. Now the joke is on them.",
+    "runtime": 98,
+    "release_date": "2001-10-05",
+    "vote_average": 6.558,
+    "poster_path": "/1LVGjf1QWgkNNPQssZtuT1GYKoP.jpg",
+    "backdrop_path": "/onqQM9YETEcFynO3gZ2kgdI9wIO.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 166378,
+      "name": "Joy Ride Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Zahn",
+      "character": "Fuller",
+      "profile_path": "/rwrPdKGwXnByxUVMxMf8Y7oswi3.jpg"
+    },
+    {
+      "name": "Paul Walker",
+      "character": "Lewis",
+      "profile_path": "/q2PLqKHYCs35HR7QybaNPH3JT96.jpg"
+    },
+    {
+      "name": "Leelee Sobieski",
+      "character": "Venna",
+      "profile_path": "/gec4o10UZZFCtTGAtebcNR4g0PF.jpg"
+    },
+    {
+      "name": "Jessica Bowman",
+      "character": "Charlotte",
+      "profile_path": "/ajobpHgE69twlnyivZT9Wix9obo.jpg"
+    }
+  ]
+}

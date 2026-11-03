@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 21,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Alg\u00FAn D\u00EDa",
+        "overview": "The NCIS team must help Torres when he puts his future at stake by confronting the man who tormented his family when he was a child.",
+        "air_date": "2024-02-12",
+        "runtime": 43,
+        "still_path": "/wbiam7AeiXf0xq1h5v1rPyKzr3a.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Stories We Leave Behind",
+        "overview": "As NCIS mourns the loss of Ducky, the agents find comfort in working on one of his unfinished cases involving a woman whose father was dishonorably discharged from the Marines.",
+        "air_date": "2024-02-19",
+        "runtime": 44,
+        "still_path": "/8nrdF9CJxaLnWcJYrUBkTbObDTv.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Lifeline",
+        "overview": "When the NCIS team engages in Walk-a-Mile day to gain a new perspectives on different departments, things take a turn when Kasie receives a distress call from a mysterious man.",
+        "air_date": "2024-02-26",
+        "runtime": 44,
+        "still_path": "/pQSso4BaGlHQ7iCEV1XPUc8iNK8.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Left Unsaid",
+        "overview": "The NCIS team is in a race against time to find a missing officer who disappeared during his wedding proposal.",
+        "air_date": "2024-03-04",
+        "runtime": 42,
+        "still_path": "/xUxjzKoDWGsot6EC9FahSVPFL7h.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Plan",
+        "overview": "With the help of Knight\u0027s dad, NCIS works to unravel the mystery of a recently used service weapon belonging to a missing agent.",
+        "air_date": "2024-03-25",
+        "runtime": 44,
+        "still_path": "/oKIwb1GN7up75G0EglcFtg1yM2S.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Strange Invaders",
+        "overview": "After discovering a Navy pilot\u0027s body riddled with unusual wounds, NCIS\u0027 investigation draws the team into the rabbit hole of UFO conspiracy theories.",
+        "air_date": "2024-04-01",
+        "runtime": 43,
+        "still_path": "/cAxbnGxY4ZIDDMt8ZkYMj1YtI2j.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "A Thousand Yards",
+        "overview": "NCIS comes under attack by a mysterious enemy from the past.",
+        "air_date": "2024-04-15",
+        "runtime": 43,
+        "still_path": "/qC1OWokEjK5zUIvqiZKIMFhFuKJ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Heartless",
+        "overview": "The NCIS team looks for a motive behind the kidnapping and death of a famous heart surgeon.",
+        "air_date": "2024-04-22",
+        "runtime": 44,
+        "still_path": "/1gp2hI5UyzVEOQFGyyuRyugCSZ2.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Prime Cut",
+        "overview": "After discovering the remains of a Marine captain, the NCIS team travels to Texas to interrogate the suspected killer.",
+        "air_date": "2024-04-29",
+        "runtime": 44,
+        "still_path": "/4N0LNnmCLHFxvqZFrMdFsMqodFW.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Reef Madness",
+        "overview": "Parker and Knight discover three bodies on an old Navy ship that\u0027s about to be sunk and turned into an artificial reef, when they\u0027re suddenly locked inside by a mysterious figure.",
+        "air_date": "2024-05-06",
+        "runtime": 44,
+        "still_path": "/xTjAC7B0Jy2aVxXwFjXPr5uPJJg.jpg"
+      }
+    ]
+  }
+}

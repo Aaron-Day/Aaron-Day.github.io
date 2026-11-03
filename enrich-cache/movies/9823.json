@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9823,
+    "title": "Mortal Kombat: Annihilation",
+    "overview": "A group of heroic warriors has only six days to save the planet in \u0022Mortal Kombat Annihilation.\u0022 To succeed they must survive the most spectacular series of challenges any human, or god, has ever encountered as they battle an evil warlord bent on taking control of Earth.",
+    "tagline": "Destroy all expectations.",
+    "runtime": 95,
+    "release_date": "1997-11-11",
+    "vote_average": 4.559,
+    "poster_path": "/ttryglcY2osWZE3sRYBf3ewTZsW.jpg",
+    "backdrop_path": "/19EpgKZDkLIwY1TI1pjBJtQ5qdr.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9818,
+      "name": "Mortal Kombat Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robin Shou",
+      "character": "Liu Kang",
+      "profile_path": "/cnL8HqBowYu9ssTkShDfEmxTgdZ.jpg"
+    },
+    {
+      "name": "Talisa Soto",
+      "character": "Kitana",
+      "profile_path": "/tpEGbGgASne8m1iHzncuxdSLIkX.jpg"
+    },
+    {
+      "name": "James Remar",
+      "character": "Raiden",
+      "profile_path": "/56LwfMaMge2LmWYI46O6R2Wm0YX.jpg"
+    },
+    {
+      "name": "Brian Thompson",
+      "character": "Shao Kahn",
+      "profile_path": "/qooSjBMA1P85JhBpHlwmmisGroO.jpg"
+    }
+  ]
+}

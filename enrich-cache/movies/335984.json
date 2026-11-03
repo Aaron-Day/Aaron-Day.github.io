@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 335984,
+    "title": "Blade Runner 2049",
+    "overview": "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what\u0027s left of society into chaos. K\u0027s discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years.",
+    "tagline": "The key to the future is finally unearthed.",
+    "runtime": 164,
+    "release_date": "2017-10-04",
+    "vote_average": 7.6,
+    "poster_path": "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+    "backdrop_path": "/gNdLJU9TxrpGx4dkZidjys3fyy0.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 422837,
+      "name": "Blade Runner Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ryan Gosling",
+      "character": "\u0027K\u0027",
+      "profile_path": "/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg"
+    },
+    {
+      "name": "Harrison Ford",
+      "character": "Rick Deckard",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Ana de Armas",
+      "character": "Joi",
+      "profile_path": "/ngHnBOofQzCO3AvMyuW3UMRWg1B.jpg"
+    },
+    {
+      "name": "Dave Bautista",
+      "character": "Sapper Morton",
+      "profile_path": "/snk6JiXOOoRjPtHU5VMoy6qbd32.jpg"
+    }
+  ]
+}

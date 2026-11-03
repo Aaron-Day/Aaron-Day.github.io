@@ -1,0 +1,48 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Beginnings",
+        "overview": "Noah endures God\u0027s wrath; Abraham reaches the Promised Land but still must prove his faith in God; Moses leads the Israelites out of Egypt, and his faith in God is rewarded when the Red Sea parts to allow the Israelites to escape Pharaoh\u0027s chariots; Moses delivers his final message from God\u2013the Ten Commandments.",
+        "air_date": "2013-03-03",
+        "runtime": 96,
+        "still_path": "/7qF0UkyH865w6xLAIziuB0llyq4.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Homeland",
+        "overview": "Joshua conquers Jericho; Delilah betrays Samson as the Israelites battle the Philistines; Samuel anoints David king, a move that could throw the nation into civil war; Saul is consumed with jealousy when David defeats Goliath; King David ushers in a golden age for Israel, but is soon seduced by power and lust for Bathsheba; God forgives David, and his son, Solomon, builds God\u0027s temple in Jerusalem.",
+        "air_date": "2013-03-10",
+        "runtime": 96,
+        "still_path": "/7f2lQ6JWN9ElylsSY3AOoQbayyw.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Hope",
+        "overview": "The Jews are enslaved in Babylon; Daniel is thrown into the lions\u0027 den, but when his faith endures and God spares him, the Jews are allowed to return to Jerusalem; the Angel Gabriel tells Mary she will bear a child; Joseph takes Mary to Bethlehem for the census, where Jesus is born; the Holy family escapes Herod\u0027s order to kill Bethlehem\u0027s male babies; Judea comes under the ruthless rule of Pilate; John baptizes Jesus, who is now ready to take on his mission\u2013and his revolution.",
+        "air_date": "2013-03-17",
+        "runtime": 96,
+        "still_path": "/fZp2PY6TJ1q13JFnBF4UVeIDg1s.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Mission",
+        "overview": "Jesus feeds the crowds in Galilee and brings a dead man, Lazarus, back to life; Jesus enters Jerusalem riding on a donkey\u2013a declaration that he is the Messiah; Jesus turns on the money-changers in the Temple; Caiphas coaxes Judas into betraying Jesus; Jesus throws the disciples into turmoil at the Last Supper; Jesus is arrested and condemned to death as the disciples scatter.",
+        "air_date": "2013-03-24",
+        "runtime": 96,
+        "still_path": "/bsOpKK93tCcu1E9XOqCx0aixRdB.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Passion",
+        "overview": "Peter denies Jesus and Judas hangs himself; the crowd clamors for Jesus\u0027s death; Jesus is crucified, but when Mary Magdalene goes to his tomb, a figure walks towards her\u2013he is back; Jesus commissions the disciples to \u0022go and preach to all creation,\u0022 but their godly mission meets with hatred and even death; Paul has a vision and experiences a miraculous change of faith on a journey to Damascus; John receives a revelation\u2013Jesus is coming back, and all who keep the faith will be rewarded.",
+        "air_date": "2013-03-31",
+        "runtime": 95,
+        "still_path": "/oYGXiYCgq3gynK36nUyiKCXCHyL.jpg"
+      }
+    ]
+  }
+}

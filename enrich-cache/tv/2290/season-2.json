@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Siege (3)",
+        "overview": "The Daedalus arrives to defend Atlantis from the Wraith onslaught, but it may not be enough when the team discovers that an even larger armada is on the way.",
+        "air_date": "2005-07-15",
+        "runtime": 42,
+        "still_path": "/xtXwUHZrGfRuJ3pSPtfmnzizcrt.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Intruder",
+        "overview": "The Daedalus is infected by a Wraith computer virus, while members of the expedition hope to return to Earth.",
+        "air_date": "2005-07-22",
+        "runtime": 44,
+        "still_path": "/6m6reQko8IJ7jtPsAIRdQPVYWlX.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Runner",
+        "overview": "Sheppard and his team attempt to locate Lieutenant Ford, only to find themselves captives of a former soldier who is being hunted by the Wraith.",
+        "air_date": "2005-07-29",
+        "runtime": 42,
+        "still_path": "/uciPV1SbctkgwJ6QF93dvog3EjJ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Duet",
+        "overview": "A run-in with a Wraith Dart leaves the consciousness of a precocious Atlantis security officer trapped in Dr. McKay\u0027s mind.",
+        "air_date": "2005-08-05",
+        "runtime": 42,
+        "still_path": "/4tRt7gTFwtNGevBvnhCcpxxIN7n.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Condemned",
+        "overview": "The Atlantis team finds a culture that lives in relative safety from the Wraith, because they hand over their criminals to the Wraith -- and crash-land in the volatile penal colony.",
+        "air_date": "2005-08-12",
+        "runtime": 42,
+        "still_path": "/lkMnGprdyQKsaecCGXUylC8Gy1q.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Trinity",
+        "overview": "McKay puts the team at risk when he tries to perfect unfinished Ancient technology that wiped out a civilization. Ronon Dex discovers that he is not the lone survivor from his world.",
+        "air_date": "2005-08-19",
+        "runtime": 44,
+        "still_path": "/lYRmLCe479sSwXwwFr6MsrMpgNZ.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Instinct",
+        "overview": "The team discovers a young Wraith girl who has been raised by a human, and is in hiding from the people of her human village in fear of her life.",
+        "air_date": "2005-08-26",
+        "runtime": 44,
+        "still_path": "/6DWLK3yY172ESRltFRqApnv6Uvl.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Conversion",
+        "overview": "Colonel Sheppard begins to undergo a disturbing physical transformation after being exposed to Beckett\u0027s anti-Wraith drug.",
+        "air_date": "2005-09-09",
+        "runtime": 42,
+        "still_path": "/ldWvmLQHP8w303DpJJBFGX2f9F9.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Aurora",
+        "overview": "When the team finds an Ancient warship adrift on the edge of the galaxy, its crew still alive, Colonel Sheppard enters their virtual reality stasis to communicate with them.",
+        "air_date": "2005-09-23",
+        "runtime": 44,
+        "still_path": "/ypGXeIfaMDQ0VTOdugM8EFPSqFb.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Lost Boys (1)",
+        "overview": "The team is captured by the missing Lieutenant Ford, who is now leading a group of young men who are taking the Wraith enzyme -- and who wants the team\u0027s help in a suicide attack against a hive ship.",
+        "air_date": "2005-09-23",
+        "runtime": 44,
+        "still_path": "/nNB6zD6gHaehxtPvGrlFCovGdu9.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Hive (2)",
+        "overview": "Colonel Sheppard and his team find themselves prisoners of the Wraith following Ford\u0027s attack on a hive ship. Dr. McKay goes to great lengths to help them.",
+        "air_date": "2005-11-16",
+        "runtime": 44,
+        "still_path": "/xgXH2bAqe4RGWeprunLeNmW9ABH.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Epiphany",
+        "overview": "Sheppard finds himself on a planet where time passes more rapidly, with no way to contact his team or return to Atlantis.",
+        "air_date": "2005-11-28",
+        "runtime": 44,
+        "still_path": "/u0Mlk6PHCylao1Heu18zGpc6gXe.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Critical Mass",
+        "overview": "When an operative of the Trust plants a bomb in Atlantis, the team must find a spy within their own ranks before the Wraith arrive and discover the city.",
+        "air_date": "2005-12-05",
+        "runtime": 44,
+        "still_path": "/kl275Hc9ktrOB9fownJs5r6imUD.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Grace Under Pressure",
+        "overview": "When Dr. McKay is trapped underwater in a sinking Puddle Jumper, his only chance for survival may be an hallucination of Samantha Carter.",
+        "air_date": "2005-12-10",
+        "runtime": 44,
+        "still_path": "/kS71D6zEJGpT4ciGwnx8Zj8Awyi.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Tower",
+        "overview": "The team finds a world that possesses Ancient defense technology, where Colonel Sheppard finds himself a pawn in the rivalry between the heirs to the throne.",
+        "air_date": "2005-12-19",
+        "runtime": 44,
+        "still_path": "/e11cv8v0WAchv7uQhaJGLtIk78G.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Long Goodbye",
+        "overview": "The team discovers two pods that contain the minds of alien beings, who take control of Weir and Sheppard\u0027s bodies to continue their personal war.",
+        "air_date": "2006-01-02",
+        "runtime": 44,
+        "still_path": "/s5AWdjLbWacnw9PwjZjA1syKoZO.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Coup D\u0027etat",
+        "overview": "After a team from Atlantis goes missing, the expedition finds itself in the middle of a Genii coup.",
+        "air_date": "2006-01-09",
+        "runtime": 44,
+        "still_path": "/aAVptPWLB4ALnFKEjLrT9upkDzD.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Michael",
+        "overview": "An amnesiac young Lieutenant in Atlantis suffers from disturbing nightmares that he is a Wraith, only to make a shocking discovery about himself.",
+        "air_date": "2006-01-16",
+        "runtime": 44,
+        "still_path": "/knlADby3yYSEUJWOiRFuz8HLGPD.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Inferno",
+        "overview": "Sheppard\u0027s team meets a civilization about to be destroyed by a super-volcano, and is trapped there when the Stargate is destroyed during the evacuation.",
+        "air_date": "2006-01-23",
+        "runtime": 44,
+        "still_path": "/sUfPniWRB2djEruVp885FzBzFFi.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Allies (1)",
+        "overview": "Michael and his Wraith faction arrive at Atlantis to propose an alliance, hoping to use the retrovirus to transform their Wraith enemies into prey.",
+        "air_date": "2006-01-30",
+        "runtime": 44,
+        "still_path": "/uWvhpRwKmS2Zwdf2jprw1vIvLoO.jpg"
+      }
+    ]
+  }
+}

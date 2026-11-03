@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9100,
+    "title": "The Craft",
+    "overview": "A Catholic school newcomer falls in with a clique of teen witches who wield their powers against all who dare to cross them -- be they teachers, rivals or meddlesome parents.",
+    "tagline": "Welcome to the witching hour.",
+    "runtime": 101,
+    "release_date": "1996-05-03",
+    "vote_average": 6.8,
+    "poster_path": "/8bW2RdRkloYtEPhbQZN4wcdmJP4.jpg",
+    "backdrop_path": "/7YZSNbi1zTqYAM7WHAFD0vY2UrF.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 758369,
+      "name": "The Craft Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robin Tunney",
+      "character": "Sarah",
+      "profile_path": "/vOmWyYNoVEaPPvoto4IW8dSXn7I.jpg"
+    },
+    {
+      "name": "Fairuza Balk",
+      "character": "Nancy",
+      "profile_path": "/jJGfElPOapRPRm99eovc3EUgLxp.jpg"
+    },
+    {
+      "name": "Neve Campbell",
+      "character": "Bonnie",
+      "profile_path": "/zQzNg6Kiufj2VCltprI6jilNtl3.jpg"
+    },
+    {
+      "name": "Rachel True",
+      "character": "Rochelle",
+      "profile_path": "/sqUAlTNYyNxoCR36uTV8FJaNFDp.jpg"
+    }
+  ]
+}

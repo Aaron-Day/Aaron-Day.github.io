@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 257445,
+    "title": "Goosebumps",
+    "overview": "After moving to a small town, Zach Cooper finds a silver lining when he meets next door neighbor Hannah, the daughter of bestselling Goosebumps series author R.L. Stine. When Zach unintentionally unleashes real monsters from their manuscripts and they begin to terrorize the town, it\u2019s suddenly up to Stine, Zach and Hannah to get all of them back in the books where they belong.",
+    "tagline": "The stories are alive.",
+    "runtime": 103,
+    "release_date": "2015-08-05",
+    "vote_average": 6.325,
+    "poster_path": "/aeZT9pqEgrmXOGdESFkAuVjX6kw.jpg",
+    "backdrop_path": "/6mPe4rBHzDMal2oL6hVgOBkaHz9.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 508783,
+      "name": "Goosebumps Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dylan Minnette",
+      "character": "Zach",
+      "profile_path": "/acjK192xObchDXIHv17OjE5FkK0.jpg"
+    },
+    {
+      "name": "Jack Black",
+      "character": "Stine / Slappy / Invisible Boy (voice)",
+      "profile_path": "/rtCx0fiYxJVhzXXdwZE2XRTfIKE.jpg"
+    },
+    {
+      "name": "Odeya Rush",
+      "character": "Hannah",
+      "profile_path": "/Rfd4IFoCWeMtizbjEkebkRnUlW.jpg"
+    },
+    {
+      "name": "Ryan Lee",
+      "character": "Champ",
+      "profile_path": "/1DpDbF9qi9nnMfKfGKnyhNPkNCb.jpg"
+    }
+  ]
+}

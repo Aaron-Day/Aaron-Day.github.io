@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10948,
+    "title": "The Fox and the Hound",
+    "overview": "When a feisty little fox named Tod is adopted into a farm family, he quickly becomes friends with a fun and adorable hound puppy named Copper. Life is full of hilarious adventures until Copper is expected to take on his role as a hunting dog -- and the object of his search is his best friend!",
+    "tagline": "A story of two friends who didn\u0027t know they were supposed to be enemies.",
+    "runtime": 82,
+    "release_date": "1981-07-10",
+    "vote_average": 7.172,
+    "poster_path": "/bbPEYD1z1DN13UJMr9sjhMh8DJx.jpg",
+    "backdrop_path": "/lNmIAX1IuPIEPMHhLBEm4wmhYX0.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 100970,
+      "name": "The Fox and the Hound Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mickey Rooney",
+      "character": "Tod (voice)",
+      "profile_path": "/eYuayEC3xhXQf3Z1Cy6AVMEcgZb.jpg"
+    },
+    {
+      "name": "Kurt Russell",
+      "character": "Copper (voice)",
+      "profile_path": "/6g1d98oH4miG4k0ZiZWmF3Dt0bO.jpg"
+    },
+    {
+      "name": "Pearl Bailey",
+      "character": "Big Mama (voice)",
+      "profile_path": "/oX4MFLmCuZWQQctbgx4nsQtGJvG.jpg"
+    },
+    {
+      "name": "Jack Albertson",
+      "character": "Amos Slade (voice)",
+      "profile_path": "/6Ed6n1sfOlOvr0F7sEDiHvQnp96.jpg"
+    }
+  ]
+}

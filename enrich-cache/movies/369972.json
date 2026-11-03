@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 369972,
+    "title": "First Man",
+    "overview": "A look at the life of the astronaut, Neil Armstrong, and the legendary space mission that led him to become the first man to walk on the Moon on July 20, 1969.",
+    "tagline": "One giant leap into the unknown.",
+    "runtime": 141,
+    "release_date": "2018-10-10",
+    "vote_average": 7.041,
+    "poster_path": "/i91mfvFcPPlaegcbOyjGgiWfZzh.jpg",
+    "backdrop_path": "/jrudoaXcoLyHRPdolyOGemXgPEs.jpg",
+    "genres": [
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ryan Gosling",
+      "character": "Neil Armstrong",
+      "profile_path": "/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg"
+    },
+    {
+      "name": "Claire Foy",
+      "character": "Janet Shearon",
+      "profile_path": "/pI1lOswQWZRhc8TKu0MESulw9uF.jpg"
+    },
+    {
+      "name": "Jason Clarke",
+      "character": "Ed White",
+      "profile_path": "/quH4y2dto3UAgZOfaM0QriyRLPN.jpg"
+    },
+    {
+      "name": "Kyle Chandler",
+      "character": "Deke Slayton",
+      "profile_path": "/66n7XNj1dyYkzCBWR3Lq8Vz4PJ1.jpg"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 9,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Unknown Ninja",
+        "overview": "While watching video tapes of old battles, Raphael sees a mystery person spying on them. While the Turtles investigate, an alien warlord named Dregg sends his TechnoGansters to steal all the gold on Earth.",
+        "air_date": "1995-09-16",
+        "runtime": 24,
+        "still_path": "/iIIQUHyNqnEIbGBpytfoFrIUK01.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Dregg of the Earth",
+        "overview": "April contacts the Turtles to let them know that Dregg has landed on Earth and is preparing a press conference. The Turtles rush to meet April at the Park, where they hear Dregg announce his friendly intentions and offers the world his molecular converter.",
+        "air_date": "1995-09-23",
+        "runtime": 24,
+        "still_path": "/5oyY3ENzONfhhdcZWuJ68vEfhfc.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Wrath of Medusa",
+        "overview": "Believing that the Turtles are the only thing that stands between him and total domination of the planet Dregg makes contact with Medusa, a sinisterly beautiful alien.",
+        "air_date": "1995-09-30",
+        "runtime": 24,
+        "still_path": "/CNsbyvfFdZj9lIbD4SAFXcj4jY.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The New Mutation",
+        "overview": "After challenging Dregg to a final showdown, the Turtles find themselves on the losing end. Only this time, their new mutations have been captured on film and the world believes the Super Turtles to be evil monsters.",
+        "air_date": "1995-10-07",
+        "runtime": 24,
+        "still_path": "/kJPWt3Y1URlTKgvq3UlAf4Zfw36.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Showdown",
+        "overview": "April contacts the Turtles to inform them that all the TV stations in the City are jammed. Sleazebug tries to recruit the Turtles for a martial arts tournament.",
+        "air_date": "1995-10-14",
+        "runtime": 24,
+        "still_path": "/uIbIuqDWzKSFqsgyaqICze3NkQe.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Split-Second",
+        "overview": "Carter, April and the Turtles investigate a break-in at the Antique Timepiece Museum. Convinced that Dregg is responsible, the Turtles discover a clue on a wall display.",
+        "air_date": "1995-10-21",
+        "runtime": 24,
+        "still_path": "/hiEpWFXuaYS4QEhegcOSBAQMt0C.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Carter the Enforcer",
+        "overview": "Splinter convinces the Turtles that it is their duty to fight evil, even when the whole world is against them. Carter and the Turtles team up with April to get the goods on Dregg.",
+        "air_date": "1995-10-28",
+        "runtime": 24,
+        "still_path": "/fod7kZuhreNb6GM9ZL9mwbnW7Sn.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Doomquest",
+        "overview": "Dregg broadcasts his message to the citizens of Earth about the evil mutant Turtles. The Turtles mutate in broad daylight, attack a squad of Techno Gangsters, scaring the local citizenry.",
+        "air_date": "1995-11-04",
+        "runtime": 24,
+        "still_path": "/nkwgQXbzuuTmWn2uYcK4DItHo3K.jpg"
+      }
+    ]
+  }
+}

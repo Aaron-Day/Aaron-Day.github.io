@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 788,
+    "title": "Mrs. Doubtfire",
+    "overview": "Loving but irresponsible dad Daniel Hillard, estranged from his exasperated spouse, is crushed by a court order allowing only weekly visits with his kids. When Daniel learns his ex needs a housekeeper, he gets the job -- disguised as a British nanny. Soon he becomes not only his children\u0027s best pal but the kind of parent he should have been from the start.",
+    "tagline": "She makes dinner. She does windows. She reads bedtime stories. She\u0027s a blessing... in disguise.",
+    "runtime": 125,
+    "release_date": "1993-11-24",
+    "vote_average": 7.195,
+    "poster_path": "/ualFkVe5zYDphGuJv37byW2Suim.jpg",
+    "backdrop_path": "/xAWx1UGc6LEMpao5FaNxgTNljay.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Robin Williams",
+      "character": "Daniel Hillard / Mrs. Doubtfire",
+      "profile_path": "/lu0gIoH4Bi2CiuMc6WHF9ZIK4PS.jpg"
+    },
+    {
+      "name": "Sally Field",
+      "character": "Miranda Hillard",
+      "profile_path": "/iMeq1j9Xwvaf6PbTJ0FQz69fpuA.jpg"
+    },
+    {
+      "name": "Lisa Jakub",
+      "character": "Lydia Hillard",
+      "profile_path": "/6lgi7ietMAsarGhEvjWZFjDA3S2.jpg"
+    },
+    {
+      "name": "Matthew Lawrence",
+      "character": "Chris Hillard",
+      "profile_path": "/gT55TawgeA4B1Q0SHsVj9RsK9rQ.jpg"
+    }
+  ]
+}

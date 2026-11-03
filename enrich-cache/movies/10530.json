@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10530,
+    "title": "Pocahontas",
+    "overview": "Pocahontas, daughter of a Native American tribe chief, falls in love with an English soldier as colonists invade 17th century Virginia.",
+    "tagline": "An American legend comes to life.",
+    "runtime": 81,
+    "release_date": "1995-06-16",
+    "vote_average": 6.91,
+    "poster_path": "/kZ1ft0QZ4e3zDUPMBftEkwI9ftd.jpg",
+    "backdrop_path": "/fDZ2DCKW2D7J0ABNr9EICdD2H1s.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 136214,
+      "name": "Pocahontas Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Irene Bedard",
+      "character": "Pocahontas (voice)",
+      "profile_path": "/9q6ad1uihRROKM8FWv2Asb8sj5j.jpg"
+    },
+    {
+      "name": "Mel Gibson",
+      "character": "John Smith (voice)",
+      "profile_path": "/jnqHMaOslt8cef2atSmOpGRvNla.jpg"
+    },
+    {
+      "name": "David Ogden Stiers",
+      "character": "Governor Ratcliffe (voice)",
+      "profile_path": "/cgCTQt3RZVkhkusG77l4HwHEH6A.jpg"
+    },
+    {
+      "name": "John Kassir",
+      "character": "Meeko (voice)",
+      "profile_path": "/byj6Px0tLcqRFWIJYUxstg25Qd2.jpg"
+    }
+  ]
+}

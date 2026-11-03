@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 43959,
+    "title": "Soul Surfer",
+    "overview": "The true story of teen surfer Bethany Hamilton, who lost her arm in a shark attack and courageously overcame all odds to become a champion again, through her sheer determination and unwavering faith.",
+    "tagline": "When you come back from a loss, beat the odds, and never say never, you find a champion.",
+    "runtime": 112,
+    "release_date": "2011-04-08",
+    "vote_average": 7,
+    "poster_path": "/cvgRxrEupUFeJ0xzUExJo4dMXbL.jpg",
+    "backdrop_path": "/9eW3peWBtvM8ZOlFvjfKkHohSyX.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "AnnaSophia Robb",
+      "character": "Bethany Hamilton",
+      "profile_path": "/mJawWikGXsSLA79mZ9xqhn0B9gI.jpg"
+    },
+    {
+      "name": "Helen Hunt",
+      "character": "Cheri Hamilton",
+      "profile_path": "/bdhW2Ra84cJG3B5RDzUO6niUTO7.jpg"
+    },
+    {
+      "name": "Dennis Quaid",
+      "character": "Tom Hamilton",
+      "profile_path": "/lMaDAJHzsKH7U3dln2B3kY3rOhE.jpg"
+    },
+    {
+      "name": "Carrie Underwood",
+      "character": "Sarah Hill",
+      "profile_path": "/8ZYFDTg7qVripncGatvG7ufxeyx.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7737,
+    "title": "Resident Evil: Extinction",
+    "overview": "Years after the Racoon City catastrophe, survivors travel across the Nevada desert, hoping to make it to Alaska. Alice joins the caravan and their fight against hordes of zombies and the evil Umbrella Corp.",
+    "tagline": "All bets are off.",
+    "runtime": 94,
+    "release_date": "2007-09-20",
+    "vote_average": 6.314,
+    "poster_path": "/6yaLr7Ymg5cvbtSVi5hHwBKx35I.jpg",
+    "backdrop_path": "/bzfUXYiwO8GcRolszsL8FG7uOhv.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 17255,
+      "name": "Resident Evil Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Milla Jovovich",
+      "character": "Alice",
+      "profile_path": "/usWnHCzbADijULREZYSJ0qfM00y.jpg"
+    },
+    {
+      "name": "Oded Fehr",
+      "character": "Carlos Olivera",
+      "profile_path": "/xt50Z02mO5pLTW0cNLZhIsiequJ.jpg"
+    },
+    {
+      "name": "Ali Larter",
+      "character": "Claire",
+      "profile_path": "/5qaQFxx8Az83ycd4LHyQ39HXaEJ.jpg"
+    },
+    {
+      "name": "Iain Glen",
+      "character": "Dr. Isaacs",
+      "profile_path": "/d9CKAAiV1HvSnzzmpDzD0mC0HlX.jpg"
+    }
+  ]
+}

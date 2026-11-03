@@ -1,0 +1,66 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11970,
+    "title": "Hercules",
+    "overview": "Bestowed with superhuman strength, a young mortal named Hercules sets out to prove himself a hero in the eyes of his father, the great god Zeus. Along with his friends Pegasus, a flying horse, and Phil, a personal trainer, Hercules is tricked by the hilarious, hotheaded villain Hades, who\u0027s plotting to take over Mount Olympus!",
+    "tagline": "The man. The myth. The movie.",
+    "runtime": 93,
+    "release_date": "1997-06-13",
+    "vote_average": 7.498,
+    "poster_path": "/dK9rNoC97tgX3xXg5zdxFisdfcp.jpg",
+    "backdrop_path": "/oG9dcGSSu13fjFp1Uly15ZXjRKV.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 978459,
+      "name": "Hercules (Disney) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tate Donovan",
+      "character": "Hercules (voice)",
+      "profile_path": "/1SVx1zVO2lR5mUoduURUL64mIDH.jpg"
+    },
+    {
+      "name": "Josh Keaton",
+      "character": "Young Hercules (voice)",
+      "profile_path": "/9ss2EXbN0VarF1tM2Qotwxy6fJs.jpg"
+    },
+    {
+      "name": "Roger Bart",
+      "character": "Young Hercules (singing voice)",
+      "profile_path": "/cliL3nZpi0di8wkNK9VBznd99lg.jpg"
+    },
+    {
+      "name": "Danny DeVito",
+      "character": "Philoctetes (voice)",
+      "profile_path": "/6kO4IN7ndoIGw2JhyhAQN3SFmdx.jpg"
+    }
+  ]
+}

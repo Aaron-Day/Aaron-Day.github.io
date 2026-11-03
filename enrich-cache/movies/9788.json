@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9788,
+    "title": "Accepted",
+    "overview": "A high school slacker who\u0027s rejected by every school he applies to opts to create his own institution of higher learning, the South Harmon Institute of Technology, on a rundown piece of property near his hometown.",
+    "tagline": "When every college turned them down. . . they made one up.",
+    "runtime": 93,
+    "release_date": "2006-08-18",
+    "vote_average": 6.474,
+    "poster_path": "/pMh1dCw5vhMATmJs0ve0OpoSVED.jpg",
+    "backdrop_path": "/bKdNEAJ4TEN7w9Y8MgUwiC7F8Xd.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Justin Long",
+      "character": "Bartleby Gaines",
+      "profile_path": "/7TGXeHw4o86IBm6xknQotpludXK.jpg"
+    },
+    {
+      "name": "Jonah Hill",
+      "character": "Sherman Schrader",
+      "profile_path": "/cymlWttB83MsAGR2EkTgANtjeRH.jpg"
+    },
+    {
+      "name": "Blake Lively",
+      "character": "Monica Moreland",
+      "profile_path": "/rkGVjd6wImtgjOCi0IpeffdEWtb.jpg"
+    },
+    {
+      "name": "Adam Herschman",
+      "character": "Glen",
+      "profile_path": "/qyGGwLJ3EZ20eQ0pADwOc8RY5uy.jpg"
+    }
+  ]
+}

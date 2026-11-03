@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 165,
+    "title": "Back to the Future Part II",
+    "overview": "Marty and Doc are at it again as the time-traveling duo head to 2015 to nip some McFly family woes in the bud. But things go awry thanks to bully Biff Tannen and a pesky sports almanac. In a last-ditch attempt to set things straight, Marty finds himself bound for 1955 and face to face with his teenage parents -- again.",
+    "tagline": "Getting back was only the beginning.",
+    "runtime": 108,
+    "release_date": "1989-11-22",
+    "vote_average": 7.786,
+    "poster_path": "/hQq8xZe5uLjFzSBt4LanNP7SQjl.jpg",
+    "backdrop_path": "/w6tPctxWAsHoQXeKxxNOT6lYKpx.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 264,
+      "name": "Back to the Future Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael J. Fox",
+      "character": "Marty McFly / Marty McFly Junior / Marlene McFly",
+      "profile_path": "/2JB4FMgQmnhbBlQ4SxWFN9EIVDi.jpg"
+    },
+    {
+      "name": "Christopher Lloyd",
+      "character": "Doctor Emmett Brown",
+      "profile_path": "/nxVjpyb3UrfbPZnEyDNlQVlFAs5.jpg"
+    },
+    {
+      "name": "Lea Thompson",
+      "character": "Lorraine",
+      "profile_path": "/85E9NTEfkRdUdK4kTrrnk5of25w.jpg"
+    },
+    {
+      "name": "Thomas F. Wilson",
+      "character": "Biff Tannen / Griff",
+      "profile_path": "/mVhm65ZVBIRIptWGiMIvoUy0Khi.jpg"
+    }
+  ]
+}

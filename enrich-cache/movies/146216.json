@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 146216,
+    "title": "RED 2",
+    "overview": "Retired C.I.A. agent Frank Moses reunites his unlikely team of elite operatives for a global quest to track down a missing portable nuclear device.",
+    "tagline": "The best never rest.",
+    "runtime": 116,
+    "release_date": "2013-07-18",
+    "vote_average": 6.527,
+    "poster_path": "/kMTG8jcjqFlq4A2GF3rpgbz73pF.jpg",
+    "backdrop_path": "/gd2vQT8uMf1FAsiC0OdewL7XUFR.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 163902,
+      "name": "RED Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bruce Willis",
+      "character": "Frank Moses",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "John Malkovich",
+      "character": "Marvin Boggs",
+      "profile_path": "/7GoOdGNc4ra1L0F5nJTkmIB37iu.jpg"
+    },
+    {
+      "name": "Mary-Louise Parker",
+      "character": "Sarah Ross",
+      "profile_path": "/1ohhrIZ4OMlLx9DvHjPhQJAIP0F.jpg"
+    },
+    {
+      "name": "Dan Jeannotte",
+      "character": "Young FBI Agent",
+      "profile_path": "/j8njXZcmImI9xGqbGY5gZiRq8wC.jpg"
+    }
+  ]
+}

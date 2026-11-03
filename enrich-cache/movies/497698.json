@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 497698,
+    "title": "Black Widow",
+    "overview": "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+    "tagline": "Her world. Her secrets. Her legacy.",
+    "runtime": 134,
+    "release_date": "2021-07-07",
+    "vote_average": 7.1,
+    "poster_path": "/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg",
+    "backdrop_path": "/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Scarlett Johansson",
+      "character": "Natasha Romanoff / Black Widow",
+      "profile_path": "/mjReG6rR7NPMEIWb1T4YWtV11ty.jpg"
+    },
+    {
+      "name": "Florence Pugh",
+      "character": "Yelena Belova",
+      "profile_path": "/1QfiLnofJFlOJOLCWaxyDpIN03v.jpg"
+    },
+    {
+      "name": "Rachel Weisz",
+      "character": "Melina",
+      "profile_path": "/9tfHL5tholha1YF6bSKt422ETPM.jpg"
+    },
+    {
+      "name": "David Harbour",
+      "character": "Alexei",
+      "profile_path": "/qMFtMWlYVtFVyBoBhX5IoA5sN5a.jpg"
+    }
+  ]
+}

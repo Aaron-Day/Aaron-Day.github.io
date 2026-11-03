@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 297802,
+    "title": "Aquaman",
+    "overview": "Half-human, half-Atlantean Arthur Curry is taken on the journey of his lifetime to discover if he is worth of being a king.",
+    "tagline": "Home is calling.",
+    "runtime": 143,
+    "release_date": "2018-12-07",
+    "vote_average": 6.861,
+    "poster_path": "/ufl63EFcc5XpByEV2Ecdw6WJZAI.jpg",
+    "backdrop_path": "/9QusGjxcYvfPD1THg6oW3RLeNn7.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 573693,
+      "name": "Aquaman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Momoa",
+      "character": "Arthur Curry / Aquaman",
+      "profile_path": "/3troAR6QbSb6nUFMDu61YCCWLKa.jpg"
+    },
+    {
+      "name": "Amber Heard",
+      "character": "Mera",
+      "profile_path": "/vnDolRlZWiOLBg1N0hsUTz4OH4C.jpg"
+    },
+    {
+      "name": "Willem Dafoe",
+      "character": "Nuidis Vulko",
+      "profile_path": "/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg"
+    },
+    {
+      "name": "Patrick Wilson",
+      "character": "King Orm Marius / Ocean Master",
+      "profile_path": "/oym6H2QD9esk4yABjCHaUoNAOa8.jpg"
+    }
+  ]
+}

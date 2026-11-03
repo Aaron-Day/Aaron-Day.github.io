@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 522938,
+    "title": "Rambo: Last Blood",
+    "overview": "After fighting his demons for decades, John Rambo now lives in peace on his family ranch in Arizona, but his rest is interrupted when Gabriela, the granddaughter of his housekeeper Mar\u00EDa, disappears after crossing the border into Mexico to meet her biological father. Rambo, who has become a true father figure for Gabriela over the years, undertakes a desperate and dangerous journey to find her.",
+    "tagline": "Everyone has one more fight in them.",
+    "runtime": 89,
+    "release_date": "2019-09-18",
+    "vote_average": 6.534,
+    "poster_path": "/kTQ3J8oTTKofAVLYnds2cHUz9KO.jpg",
+    "backdrop_path": "/spYx9XQFODuqEVoPpvaJI1ksAVt.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 5039,
+      "name": "Rambo Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "John Rambo",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Paz Vega",
+      "character": "Carmen",
+      "profile_path": "/fNLlJysFd5f0Q8Lj20EZpU8BiRN.jpg"
+    },
+    {
+      "name": "Sergio Peris-Mencheta",
+      "character": "Hugo Mart\u00EDnez",
+      "profile_path": "/uPE1n0JpbicJ5gm2fNarbsx6Nc4.jpg"
+    },
+    {
+      "name": "Adriana Barraza",
+      "character": "Mar\u00EDa Beltr\u00E1n",
+      "profile_path": "/kfww4YbO9J2HpCldEqyyhQugwy5.jpg"
+    }
+  ]
+}

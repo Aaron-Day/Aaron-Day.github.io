@@ -1,0 +1,144 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "Brilliant physicist roommates Leonard and Sheldon meet their new neighbor Penny, who begins showing them that as much as they know about science, they know little about actual living.",
+        "air_date": "2007-09-24",
+        "runtime": 23,
+        "still_path": "/l3rRtcQ3hk0JXjhiRqSqImXUBVO.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Big Bran Hypothesis",
+        "overview": "Leonard volunteers to sign for a package in an attempt to make a good impression on Penny, but when he enlists Sheldon for help, his attempt at chivalry goes terribly awry.",
+        "air_date": "2007-10-01",
+        "runtime": 21,
+        "still_path": "/2OXgMuOqkyjQ19fOrMDGATVCsw1.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Fuzzy Boots Corollary",
+        "overview": "Leonard asks a woman out after he finds out that Penny is seeing someone.",
+        "air_date": "2007-10-08",
+        "runtime": 22,
+        "still_path": "/eDyDC7cwKz9ZTA4CX44eKuHjPgZ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Luminous Fish Effect",
+        "overview": "Sheldon\u0027s getting fired forces him to explore what life has to offer outside physics, leaving Leonard to take drastic action to snap his friend out of his funk.",
+        "air_date": "2007-10-15",
+        "runtime": 21,
+        "still_path": "/kKS7oikWCivvrOarkUpH4q1vv2T.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Hamburger Postulate",
+        "overview": "Fearing he\u0027s wasting his time on Penny, Leonard ends up making a connection with Leslie.",
+        "air_date": "2007-10-22",
+        "runtime": 20,
+        "still_path": "/zO3CSyb13PQyzWICp4mmZEUeExp.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Middle-Earth Paradigm",
+        "overview": "Penny hosts a Halloween party, putting Leonard, Sheldon, Wolowitz, and Koothrappali through a new test of their social skills.",
+        "air_date": "2007-10-29",
+        "runtime": 21,
+        "still_path": "/4P20QdmB6QL8aa0b8dKR8sHK1iW.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Dumpling Paradox",
+        "overview": "With Wolowitz AWOL with one of her friends, Penny\u0027s recruited to fill in for him on the guys\u0027 Halo team",
+        "air_date": "2007-11-05",
+        "runtime": 21,
+        "still_path": "/4y5rvzPZF5ukM3vtktqWTp9MhyH.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Grasshopper Experiment",
+        "overview": "Raj\u0027s parents set him up on a blind date, but just when he discovers he can talk to her, she shows interest in Sheldon.",
+        "air_date": "2007-11-12",
+        "runtime": 20,
+        "still_path": "/rbVfuB7vBrrXygo0d8qhk9FhmAd.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Cooper-Hofstadter Polarization",
+        "overview": "When they\u0027re invited to present at a physics conference, Sheldon\u0027s reluctance to share the credit leads to a tiff between him and Leonard, and Penny\u0027s intervention only exacerbates the situation.",
+        "air_date": "2008-03-17",
+        "runtime": 19,
+        "still_path": "/8MvMEvZzZPBkgQZIVk9KvF8nLH5.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Loobenfeld Decay",
+        "overview": "Leonard and Sheldon each lie to avoid seeing Penny\u0027s concert, but Sheldon\u0027s is a bit too complicated for his own good.",
+        "air_date": "2008-03-24",
+        "runtime": 21,
+        "still_path": "/6dssfbhNv1g3FFqKWKJhNqaqSQH.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Pancake Batter Anomaly",
+        "overview": "With his friends knowing how sour he acts when sick\u2014and avoiding him as a result\u2014Sheldon is nursed by Penny, who hasn\u0027t a clue what she\u0027s in for.",
+        "air_date": "2008-03-31",
+        "runtime": 22,
+        "still_path": "/q0E0GNUMHWZDNKbygCjKJGiFc9G.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Jerusalem Duality",
+        "overview": "With Sheldon rattled over meeting Dennis, a 15-year-old physicist who\u0027s smarter than he, Leonard helps him look for a way to debunk Dennis\u0027s research.",
+        "air_date": "2008-04-14",
+        "runtime": 20,
+        "still_path": "/wlo6NGvrpo58hnUztkAmdDBPj2D.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Bat Jar Conjecture",
+        "overview": "Sheldon finds himself booted from the gang\u0027s Physics Bowl team and replaced with Leslie, so he forms his own team, hoping to prove he\u0027s superior.",
+        "air_date": "2008-04-21",
+        "runtime": 22,
+        "still_path": "/w1Et8tW5En8a2ieEWRlolAVkyED.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Nerdvana Annihilation",
+        "overview": "When delivery of another collectible leads to Penny\u0027s lashing out at Leonard, he decides it\u0027s time to give up his habit, much to his friends\u0027 protestation.",
+        "air_date": "2008-04-28",
+        "runtime": 20,
+        "still_path": "/sktEOfZVIBnyW6MeZlGXbcdp6vO.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Pork Chop Indeterminacy",
+        "overview": "The rest of the gang fall for Sheldon\u0027s twin sister, and Leonard\u0027s plan to win her heart is derailed when Sheldon declares he\u0027ll be the one to decide who can date her.",
+        "air_date": "2008-05-05",
+        "runtime": 22,
+        "still_path": "/qBlf2PEd6RDGnyOip6ZPJ825AMw.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Peanut Reaction",
+        "overview": "Penny wants to throw a surprise party for Leonard, but Sheldon\u0027s indulgence at an electronics store throws her off-track.",
+        "air_date": "2008-05-12",
+        "runtime": 20,
+        "still_path": "/jnI6qR3y9Hfn7hA1uCUJhYMkIAv.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Tangerine Factor",
+        "overview": "Penny\u0027s break-up spurs Leonard to summon the courage to ask her out, and each goes to Sheldon for advice on their upcoming date.",
+        "air_date": "2008-05-19",
+        "runtime": 20,
+        "still_path": "/3RCfgXjtRcWRt1ci7RIYi3JzJQ9.jpg"
+      }
+    ]
+  }
+}

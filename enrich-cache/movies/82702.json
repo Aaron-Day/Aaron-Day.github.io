@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 82702,
+    "title": "How to Train Your Dragon 2",
+    "overview": "Five years after uniting the dragons and Vikings of Berk, Hiccup and Toothless soar beyond their homeland, charting the vast unknown. During one of their adventures, the pair discover a secret cave that houses hundreds of wild dragons\u2014and a mysterious dragon rider with a startling connection to Hiccup. And as the ruthless conqueror Drago Bludvist rises to seize control of both dragons and people alike, Hiccup must step into his role as a true leader and, alongside his friends and Toothless, protect Berk from a devastating war.",
+    "tagline": "Training is over. The adventure begins.",
+    "runtime": 102,
+    "release_date": "2014-06-05",
+    "vote_average": 7.684,
+    "poster_path": "/d13Uj86LdbDLrfDoHR5aDOFYyJC.jpg",
+    "backdrop_path": "/8AAuJtCzaibYkbE0QVHc8EBsELB.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 89137,
+      "name": "How to Train Your Dragon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jay Baruchel",
+      "character": "Hiccup (voice)",
+      "profile_path": "/1GYJeQzPcY9Pfmc3FFsBwClkCv7.jpg"
+    },
+    {
+      "name": "Cate Blanchett",
+      "character": "Valka (voice)",
+      "profile_path": "/1Rd567YFdGfkJjSlhNPR8joYkaX.jpg"
+    },
+    {
+      "name": "Gerard Butler",
+      "character": "Stoick (voice)",
+      "profile_path": "/i54XoxYieuff2w6MwyfwVUBvmR0.jpg"
+    },
+    {
+      "name": "Craig Ferguson",
+      "character": "Gobber (voice)",
+      "profile_path": "/mBxNrOxdQeM7bVBveE47Syj9ES6.jpg"
+    }
+  ]
+}

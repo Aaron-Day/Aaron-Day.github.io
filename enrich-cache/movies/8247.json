@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8247,
+    "title": "Jumper",
+    "overview": "David Rice is a man who knows no boundaries, a Jumper, born with the uncanny ability to teleport instantly to anywhere on Earth. When he discovers others like himself, David is thrust into a dangerous and bloodthirsty war while being hunted by a sinister and determined group of zealots who have sworn to destroy all Jumpers. Now, David\u2019s extraordinary gift may be his only hope for survival!",
+    "tagline": "Anywhere is possible.",
+    "runtime": 88,
+    "release_date": "2008-02-13",
+    "vote_average": 6.181,
+    "poster_path": "/3pPZ9JhNz3VMmASVir5SMHvTDUU.jpg",
+    "backdrop_path": "/1R4DZbEwWTPnRShBumJsOwsfAiB.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Hayden Christensen",
+      "character": "David Rice",
+      "profile_path": "/hqEgJYEUvZvL9ytmmiYBbbt63qd.jpg"
+    },
+    {
+      "name": "Jamie Bell",
+      "character": "Griffin",
+      "profile_path": "/xAfNYOJYOy5ee9PHbBF8Y6xzZ9I.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Roland",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Rachel Bilson",
+      "character": "Millie Harris",
+      "profile_path": "/jlacH60rFke82EfuvFqgjcxPIx0.jpg"
+    }
+  ]
+}

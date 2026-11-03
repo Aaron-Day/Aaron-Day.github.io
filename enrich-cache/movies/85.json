@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 85,
+    "title": "Raiders of the Lost Ark",
+    "overview": "When Dr. Indiana Jones \u2013 the tweed-suited professor who just happens to be a celebrated archaeologist \u2013 is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
+    "tagline": "The return of the great adventure.",
+    "runtime": 115,
+    "release_date": "1981-06-12",
+    "vote_average": 7.928,
+    "poster_path": "/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
+    "backdrop_path": "/zPACwR32amTNvzId9qyapCWXYDJ.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 84,
+      "name": "Indiana Jones Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "Indiana Jones",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Karen Allen",
+      "character": "Marion Ravenwood",
+      "profile_path": "/eJszpndpRzrXbSlz7RUlApoTykn.jpg"
+    },
+    {
+      "name": "Paul Freeman",
+      "character": "Dr. Ren\u00E9 Belloq",
+      "profile_path": "/qrjgLfuNdXektuBwNL6onZBkbHw.jpg"
+    },
+    {
+      "name": "John Rhys-Davies",
+      "character": "Sallah",
+      "profile_path": "/qpXl1YnqQsUKYEDm3BB2zK5wbhe.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 438650,
+    "title": "Cold Pursuit",
+    "overview": "The quiet family life of Nels Coxman, a snowplow driver, is upended after his son\u0027s murder. Nels begins a vengeful hunt for Viking, the drug lord he holds responsible for the killing, eliminating Viking\u0027s associates one by one. As Nels draws closer to Viking, his actions bring even more unexpected and violent consequences, as he proves that revenge is all in the execution.",
+    "tagline": "Meet Nels Coxman. Citizen of the Year.",
+    "runtime": 119,
+    "release_date": "2019-02-07",
+    "vote_average": 5.882,
+    "poster_path": "/5RILVnOchQyL1LbcVzmabipdJfc.jpg",
+    "backdrop_path": "/aiM3XxYE2JvW1vJ4AC6cI1RjAoT.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 848380,
+      "name": "Cold Pursuit Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Liam Neeson",
+      "character": "Nels Coxman",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Tom Bateman",
+      "character": "Trevor \u0027Viking\u0027 Calcote",
+      "profile_path": "/6elQzmY4EJHlLvHsaeoeo2dXOQ1.jpg"
+    },
+    {
+      "name": "Tom Jackson",
+      "character": "White Bull Legrew",
+      "profile_path": "/qS5cdsHozQ1mbdH02kcBxy8BUao.jpg"
+    },
+    {
+      "name": "Laura Dern",
+      "character": "Grace Coxman",
+      "profile_path": "/gB9PnGEvxKg33OSlcqptQwTBwPE.jpg"
+    }
+  ]
+}

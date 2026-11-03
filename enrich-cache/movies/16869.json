@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 16869,
+    "title": "Inglourious Basterds",
+    "overview": "In Nazi-occupied France during World War II, a group of Jewish-American soldiers known as \u0022The Basterds\u0022 are chosen specifically to spread fear throughout the Third Reich by scalping and brutally killing Nazis. The Basterds, lead by Lt. Aldo Raine soon cross paths with a French-Jewish teenage girl who runs a movie theater in Paris which is targeted by the soldiers.",
+    "tagline": "Once upon a time in Nazi occupied France...",
+    "runtime": 153,
+    "release_date": "2009-08-02",
+    "vote_average": 8.217,
+    "poster_path": "/aupnPtagH9JVBuMrGEanf4iqXEQ.jpg",
+    "backdrop_path": "/hwNtEmmugU5Yd7hpfprNWI0DGIn.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Brad Pitt",
+      "character": "LT. Aldo Raine",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "M\u00E9lanie Laurent",
+      "character": "Shosanna",
+      "profile_path": "/i99ogEo4gQyanCmHWYYoS6hsUqL.jpg"
+    },
+    {
+      "name": "Christoph Waltz",
+      "character": "COL. Hans Landa",
+      "profile_path": "/jMvLGCVXLaBqjRLf5olyvEucZob.jpg"
+    },
+    {
+      "name": "Eli Roth",
+      "character": "SGT. Donny Donowitz",
+      "profile_path": "/qQTkpxzh1FlBGL1HD5hzdUMxv49.jpg"
+    }
+  ]
+}

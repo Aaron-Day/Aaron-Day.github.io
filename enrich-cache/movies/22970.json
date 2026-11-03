@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 22970,
+    "title": "The Cabin in the Woods",
+    "overview": "Five friends set out for a weekend at a remote cabin in the woods, expecting nothing more than fun and relaxation. As night falls, they discover that something far more unsettling is at work and that nothing about their getaway is what it seems.",
+    "tagline": "You think you know the story.",
+    "runtime": 95,
+    "release_date": "2012-04-12",
+    "vote_average": 6.667,
+    "poster_path": "/zZZe5wn0udlhMtdlDjN4NB72R6e.jpg",
+    "backdrop_path": "/wJffMiCnrszaNclKggGixYWB7D7.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kristen Connolly",
+      "character": "Dana Polk",
+      "profile_path": "/zcI32zxpotOTOYetH0PL7ZoHl6E.jpg"
+    },
+    {
+      "name": "Fran Kranz",
+      "character": "Marty Mikalski",
+      "profile_path": "/hBg88mL38BxMpSjtMjSAz2NnDKg.jpg"
+    },
+    {
+      "name": "Chris Hemsworth",
+      "character": "Curt Vaughn",
+      "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    },
+    {
+      "name": "Jesse Williams",
+      "character": "Holden McCrea",
+      "profile_path": "/m5Hfhph3XA7RvXMkHSAhxWEQwID.jpg"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 126172,
+    "title": "Leprechaun: Origins",
+    "overview": "Two young couples backpacking through Ireland discover that one of Ireland\u0027s most famous legends is a terrifying reality.",
+    "tagline": "A horror icon is reborn.",
+    "runtime": 90,
+    "release_date": "2014-08-22",
+    "vote_average": 4.4,
+    "poster_path": "/yyZ7folrZTqEJFD7wUuGf84CmPK.jpg",
+    "backdrop_path": "/5r52emjfcu5jqxDWgQrdAXN8FHp.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Stephanie Bennett",
+      "character": "Sophie",
+      "profile_path": "/qOrtOLOtkOyIJNmT7B5E8w4kPmU.jpg"
+    },
+    {
+      "name": "Andrew Dunbar",
+      "character": "Ben",
+      "profile_path": "/7DLjOd6qPgNI5fA37M5O2SkRLYA.jpg"
+    },
+    {
+      "name": "Melissa Roxburgh",
+      "character": "Jeni",
+      "profile_path": "/8RE7Wtgi8tiNU7oJLlLadKmMkwq.jpg"
+    },
+    {
+      "name": "Brendan Fletcher",
+      "character": "David",
+      "profile_path": "/azeMOxQdCw18ABRwwOMIo3lV1If.jpg"
+    }
+  ]
+}

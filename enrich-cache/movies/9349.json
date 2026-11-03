@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9349,
+    "title": "Universal Soldier",
+    "overview": "An American soldier who had been killed during the Vietnam War is revived 25 years later by the military as a semi-android, UniSols, a high-tech soldier of the future. After the failure of the initiative to erase all the soldier\u0027s memories, he begins to experience flashbacks that are forcing him to recall his past.",
+    "tagline": "Almost human. Almost perfect. Almost under control.",
+    "runtime": 102,
+    "release_date": "1992-07-10",
+    "vote_average": 6.35,
+    "poster_path": "/fp0mWrHl1SW9PhP8QcsgYPoVYFc.jpg",
+    "backdrop_path": "/505LZxTJd2o7BqpispO427M9bPI.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10713,
+      "name": "Universal Soldier Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jean-Claude Van Damme",
+      "character": "Luc Deveraux / GR44",
+      "profile_path": "/7DP3bm3MS0qa0L8tBLHGebbCu6H.jpg"
+    },
+    {
+      "name": "Dolph Lundgren",
+      "character": "Andrew Scott / GR13",
+      "profile_path": "/fB1tOws6Gav0xE8LYlELEb82hJt.jpg"
+    },
+    {
+      "name": "Ally Walker",
+      "character": "Veronica Roberts",
+      "profile_path": "/kuR6HUF1D0Xk5o5nShgWDBMV2gx.jpg"
+    },
+    {
+      "name": "Ed O\u0027Ross",
+      "character": "Colonel Perry",
+      "profile_path": "/6hzovUAs5hFcrZvPdk84NR3KcHU.jpg"
+    }
+  ]
+}

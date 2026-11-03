@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 559,
+    "title": "Spider-Man 3",
+    "overview": "The seemingly invincible Spider-Man goes up against an all-new crop of villains\u2014including the shape-shifting Sandman. While Spider-Man\u2019s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle.",
+    "tagline": "The greatest battle lies within.",
+    "runtime": 139,
+    "release_date": "2007-05-01",
+    "vote_average": 6.489,
+    "poster_path": "/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg",
+    "backdrop_path": "/FfAU0PUs8AJkMU2VbkVNFtRXR4.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 556,
+      "name": "Spider-Man Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tobey Maguire",
+      "character": "Spider-Man / Peter Parker",
+      "profile_path": "/s6PwSvq6gC7PGEjIku69tPbvR8M.jpg"
+    },
+    {
+      "name": "Kirsten Dunst",
+      "character": "Mary Jane Watson",
+      "profile_path": "/yhLKGjuiMMdbGnFrR8AREkCZcVF.jpg"
+    },
+    {
+      "name": "James Franco",
+      "character": "New Goblin / Harry Osborn",
+      "profile_path": "/bjmAntHGiibLZixH8nTNVBzaFQn.jpg"
+    },
+    {
+      "name": "Thomas Haden Church",
+      "character": "Sandman / Flint Marko",
+      "profile_path": "/74NK9HCYvNafMggSp1PAK5Nwkpe.jpg"
+    }
+  ]
+}

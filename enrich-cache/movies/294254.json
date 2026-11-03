@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 294254,
+    "title": "Maze Runner: The Scorch Trials",
+    "overview": "Thomas and his fellow Gladers face their greatest challenge yet: searching for clues about the mysterious and powerful organization known as WCKD. Their journey takes them to the Scorch, a desolate landscape filled with unimaginable obstacles. Teaming up with resistance fighters, the Gladers take on WCKD\u2019s vastly superior forces and uncover its shocking plans for them all.",
+    "tagline": "The maze was just the beginning.",
+    "runtime": 131,
+    "release_date": "2015-09-09",
+    "vote_average": 6.729,
+    "poster_path": "/mYw7ZyejqSCPFlrT2jHZOESZDU3.jpg",
+    "backdrop_path": "/4mcOCiR06dqQ5eoEJcG3zvonjOa.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 295130,
+      "name": "The Maze Runner Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dylan O\u0027Brien",
+      "character": "Thomas",
+      "profile_path": "/xN3GdvIlqsR838gDoblhPH0numP.jpg"
+    },
+    {
+      "name": "Kaya Scodelario",
+      "character": "Teresa Agnes",
+      "profile_path": "/qmtXUabwXw0RvyK6R0la6CmvGxr.jpg"
+    },
+    {
+      "name": "Thomas Brodie-Sangster",
+      "character": "Newt",
+      "profile_path": "/tapXeOg3wnezcjm2ENox0lL2b25.jpg"
+    },
+    {
+      "name": "Giancarlo Esposito",
+      "character": "Jorge",
+      "profile_path": "/MJOo4QZgMAb3y8QzOUDVFQusQZ.jpg"
+    }
+  ]
+}

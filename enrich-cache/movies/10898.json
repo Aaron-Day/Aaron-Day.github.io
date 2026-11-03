@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10898,
+    "title": "The Little Mermaid II: Return to the Sea",
+    "overview": "Set several years after the first film, Ariel and Prince Eric are happily married with a daughter, Melody. In order to protect Melody from the Sea Witch, Morgana, they have not told her about her mermaid heritage. Melody is curious and ventures into the sea, where she meets new friends. But will she become a pawn in Morgana\u0027s quest to take control of the ocean from King Triton?",
+    "tagline": "Return to the sea.",
+    "runtime": 75,
+    "release_date": "2000-01-23",
+    "vote_average": 6.387,
+    "poster_path": "/k3UHxvYv8ZgWLL0lM45f979OSo7.jpg",
+    "backdrop_path": "/rNOeiC5uruGnr5n7YW8hvnrbX9q.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 33085,
+      "name": "The Little Mermaid Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jodi Benson",
+      "character": "Ariel (voice)",
+      "profile_path": "/4mxtuq3mXLZwPKbI7t0KFxf0PRW.jpg"
+    },
+    {
+      "name": "Samuel E. Wright",
+      "character": "Sebastian (voice)",
+      "profile_path": "/fNdu3ge0Bf8kKvJCkrGTUbBaJKB.jpg"
+    },
+    {
+      "name": "Tara Strong",
+      "character": "Melody (voice)",
+      "profile_path": "/Cm3X7CCSuYbjW1ZKJ8vxCj4SI7.jpg"
+    },
+    {
+      "name": "Pat Carroll",
+      "character": "Morgana (voice)",
+      "profile_path": "/r7JwQ9wmolpgPUFz8iSmgPy0SbH.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 252,
+    "title": "Willy Wonka \u0026 the Chocolate Factory",
+    "overview": "When eccentric candy man Willy Wonka promises a lifetime supply of sweets and a tour of his chocolate factory to five lucky kids, penniless Charlie Bucket seeks the golden ticket that will make him a winner.",
+    "tagline": "It\u0027s scrumdidilyumptious!",
+    "runtime": 100,
+    "release_date": "1971-06-29",
+    "vote_average": 7.48,
+    "poster_path": "/vmpsZkrs4Uvkp9r1atL8B3frA63.jpg",
+    "backdrop_path": "/ko7hMSCtXoJFfpYAIbrowwgH0eq.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Peter Ostrum",
+      "character": "Charlie",
+      "profile_path": "/4YTQglyqPQ7jciCSghDJv1MZIQn.jpg"
+    },
+    {
+      "name": "Gene Wilder",
+      "character": "Willy Wonka",
+      "profile_path": "/mwwOSWS2m8ArpiUKnoxVVyT8fND.jpg"
+    },
+    {
+      "name": "Jack Albertson",
+      "character": "Grandpa Joe",
+      "profile_path": "/6Ed6n1sfOlOvr0F7sEDiHvQnp96.jpg"
+    },
+    {
+      "name": "Diana Sowle",
+      "character": "Mrs. Bucket",
+      "profile_path": "/1KPNpB73VD6kackWNgOvuJDJjcK.jpg"
+    }
+  ]
+}

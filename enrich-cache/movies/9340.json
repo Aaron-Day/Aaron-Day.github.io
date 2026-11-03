@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9340,
+    "title": "The Goonies",
+    "overview": "Young teen Mikey Walsh and his friends set off on a quest to find Pirate One-Eyed Willie\u0027s treasure in hopes of saving their homes from demolition. However, on their quest to find the treasure, they run into a family of recently escaped criminals, determined to capture the kids and reach the treasure first.",
+    "tagline": "They call themselves \u0022The Goonies.\u0022 The secret caves. The old lighthouse. The lost map. The treacherous traps. The hidden adventure. And Sloth\u2026 Join the adventure.",
+    "runtime": 114,
+    "release_date": "1985-06-07",
+    "vote_average": 7.509,
+    "poster_path": "/eBU7gCjTCj9n2LTxvCSIXXOvHkD.jpg",
+    "backdrop_path": "/5qsyqA7FeYRymBmNbPBqBgqWPO4.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sean Astin",
+      "character": "Mikey",
+      "profile_path": "/As3ctGUtBYmG4zj4Ifyrcqd71HP.jpg"
+    },
+    {
+      "name": "Josh Brolin",
+      "character": "Brand",
+      "profile_path": "/7QpneI3HoZCCDVPyWx3p3t7yeo7.jpg"
+    },
+    {
+      "name": "Jeff Cohen",
+      "character": "Chunk",
+      "profile_path": "/iuD0UN3cdRc9ZSnmebeJUy14lde.jpg"
+    },
+    {
+      "name": "Corey Feldman",
+      "character": "Mouth",
+      "profile_path": "/9n5xDsrBFY0AFESmXOJEzEj4ezx.jpg"
+    }
+  ]
+}

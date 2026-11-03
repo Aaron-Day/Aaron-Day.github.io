@@ -1,0 +1,136 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Wanheda (1)",
+        "overview": "Three months have passed since the tragedy at Mount Weather and our heroes learn that a bounty has been put on Clarke\u2019s head. Unbeknownst to Clarke, a team led by Bellamy and Kane journeys deep into Grounder territory to save her. Meanwhile, Murphy finds his way to the mansion and discovers a very different Jaha on a very different mission.",
+        "air_date": "2016-01-21",
+        "runtime": 42,
+        "still_path": "/lvX5DPGYXGpJs0SHMkXIP4BzE6H.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Wanheda (2)",
+        "overview": "Bellamy and Kane risk life and limb to rescue Clarke. In an attempt to avoid worrying about her daughter, Abby focuses on whether to open Mount Weather as a medical facility. Meanwhile, Murphy plots to betray his former Chancellor.",
+        "air_date": "2016-01-28",
+        "runtime": 42,
+        "still_path": "/pma3VaGLIwugRlRs2h9XyJKoEyQ.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Ye Who Enter Here",
+        "overview": "Clarke wrestles with a decision. Bellamy learns that something isn\u0027t what it seems. Meanwhile, Murphy plots to betray his former Chancellor.",
+        "air_date": "2016-02-04",
+        "runtime": 42,
+        "still_path": "/vafq3iTJTraZGND0EOQxgPISlpq.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Watch the Thrones",
+        "overview": "Clarke discovers the mastermind behind a devious plan. Kane struggles to keep the peace. Meanwhile, Jasper\u2019s grief drives him to reckless behavior.",
+        "air_date": "2016-02-11",
+        "runtime": 42,
+        "still_path": "/1BQWumd9QB11QgfvinpcwuIk63D.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Hakeldama",
+        "overview": "Pike\u0027s twisted crusade threatens Clarke\u0027s attempts for peace. Raven becomes a target, while Murphy tries to conspire against Jaha.",
+        "air_date": "2016-02-18",
+        "runtime": 42,
+        "still_path": "/udKcSE3ZcmKiGtMhYO1jAGOTqV4.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Bitter Harvest",
+        "overview": "Clarke is torn between vengeance and mercy. Meanwhile, Kane and Octavia work together to avert a disaster, and Abby continues to worry about Raven.",
+        "air_date": "2016-02-25",
+        "runtime": 42,
+        "still_path": "/iYp1X35GSyfsp5XWNZiHtD3SGty.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Thirteen",
+        "overview": "Lexa tries to maintain peace and order within the clans, and Clarke uncovers a strange and game-changing truth. Meanwhile, a flashback takes us into the darker chapter of humanity\u2019s past.",
+        "air_date": "2016-03-03",
+        "runtime": 42,
+        "still_path": "/qaBbOG8OmfkiHG1PKQVtO3woyf.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Terms and Conditions",
+        "overview": "Kane is searching for a peaceful way to handle things but soon realizes he may be forced to resort to drastic measures. Meanwhile, Pike suspects that there may be a leak within the walls of Arkadia. Lastly, Raven has a plan and reaches out to Jasper for help.",
+        "air_date": "2016-03-10",
+        "runtime": 41,
+        "still_path": "/8Cv1axACgYULTySXmKbOkgveAkN.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Stealing Fire",
+        "overview": "Clarke discovers a shocking truth, and Octavia is forced to make a decision that could have devastating consequences. Meanwhile, Kane and Abby share a moment.",
+        "air_date": "2016-03-31",
+        "runtime": 42,
+        "still_path": "/uUo6FG5WwzDkYgg8lafcujsgaMg.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Fallen",
+        "overview": "Jaha employs a terrifying new method to convince Abby to join his cause, Kane is on a mission, and Bellamy is hit with a hard truth. Meanwhile, Monty finds himself in a precarious situation, and Jasper rushes to save one of his own.",
+        "air_date": "2016-04-07",
+        "runtime": 40,
+        "still_path": "/ljlEysgEddN4IoyfYiCP2IlZq0B.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Nevermore",
+        "overview": "Alie forces Raven\u2019s dark side to come out, and Jasper\u2019s anger continues to grow. Meanwhile, Octavia wrestles with her place in the world, and Monty is forced to make a split second decision.",
+        "air_date": "2016-04-14",
+        "runtime": 42,
+        "still_path": "/vIoeTABMZ0mEAhhqifzL1m99n4B.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Demons",
+        "overview": "Jaha returns to Polis, and Murphy has a surprise encounter. Meanwhile, Octavia uncovers a clue.",
+        "air_date": "2016-04-21",
+        "runtime": 42,
+        "still_path": "/ykN1FtGGhlIg3BfwOlQgJWo12RJ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Join or Die",
+        "overview": "Clarke is on a mission that could change everything. Meanwhile, Murphy gains insight that might prove useful in ensuring his survival. Lastly, Kane reaches a breaking point.",
+        "air_date": "2016-04-28",
+        "runtime": 42,
+        "still_path": "/mu79Iw0oKXqaSCP2qfEbeptSm3a.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Red Sky at Morning",
+        "overview": "Clarke, Bellamy, Octavia and Jasper hit a tragic roadblock. Meanwhile, Raven and Monty make an important discovery.",
+        "air_date": "2016-05-05",
+        "runtime": 41,
+        "still_path": "/574S0jyVEi244LIbCDW1vA5O2w2.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Perverse Instantiation (1)",
+        "overview": "Clarke finds hope in the most unlikely place. Meanwhile, Alie\u2019s master plan comes together.",
+        "air_date": "2016-05-12",
+        "runtime": 41,
+        "still_path": "/nipAKX8l7bFgG1AohCs39QiF040.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Perverse Instantiation (2)",
+        "overview": "Our heroes begin to face the reality of their tragic situation. Everyone prepares for a final showdown.",
+        "air_date": "2016-05-19",
+        "runtime": 42,
+        "still_path": "/bQ7ayEa7XthcwXA7pttPSKvuI3v.jpg"
+      }
+    ]
+  }
+}

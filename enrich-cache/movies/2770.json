@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2770,
+    "title": "American Pie 2",
+    "overview": "After a year apart - attending different schools, meeting different people - the guys rent a beach house and vow to make this the best summer ever. As it turns out, whether that will happen or not has a lot to do with the girls. Between the wild parties, outrageous revelations and yes, a trip to band camp, they discover that times change and people change, but in the end, it\u0027s all about sticking together.",
+    "tagline": "This summer it\u0027s all about sticking together.",
+    "runtime": 111,
+    "release_date": "2001-08-10",
+    "vote_average": 6.374,
+    "poster_path": "/854ZZxXdeabAs90mrV72NqShJqR.jpg",
+    "backdrop_path": "/as3gvp4DIXVRlXsj5x7OWPQI5lI.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2806,
+      "name": "American Pie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Biggs",
+      "character": "Jim Levenstein",
+      "profile_path": "/3nRgOQylYbNuDiddtNoh8uWTz5P.jpg"
+    },
+    {
+      "name": "Thomas Ian Nicholas",
+      "character": "Kevin Myers",
+      "profile_path": "/hQo2P9vwjJW6A1b327nl71a2JEW.jpg"
+    },
+    {
+      "name": "Chris Klein",
+      "character": "Chris \u0027Oz\u0027 Ostreicher",
+      "profile_path": "/56kCtPVfvjm5IRPa2GyaQHTPIOy.jpg"
+    },
+    {
+      "name": "Seann William Scott",
+      "character": "Steve Stifler",
+      "profile_path": "/AftiUFP4rYcl3SG3xllxyiLiuXS.jpg"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 54897,
+    "title": "The Grace Card",
+    "overview": "Everything can change in an instant ... and take a lifetime to unravel. When Mac McDonald loses his son in an accident, the ensuing 17 years of bitterness and pain erodes his love for his family and leaves him angry with God ... and just about everyone else. Mac\u0027s rage stonewalls his career in the police department and makes for a combustible situation when he\u0027s partnered with Sam Wright, a rising star on the force who happens to be a part-time pastor and a loving family man. Can they somehow join forces to help one another when it\u0027s impossible for either of them to look past their differences-especially the most obvious one? Every day, we have the opportunity to rebuild relationships and heal deep wounds by extending and receiving God\u0027s grace. Offer THE GRACE CARD ... and never underestimate the power of God\u0027s love.",
+    "tagline": "Never Underestimate The Power Of Grace ...",
+    "runtime": 101,
+    "release_date": "2011-02-25",
+    "vote_average": 7.2,
+    "poster_path": "/bbWsYKtWTNtECusWJs3tvpTGlwO.jpg",
+    "backdrop_path": "/7oJePkds4pouWdkpQn5hYyfAcHk.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Michael Joiner",
+      "character": "Bill \u0027Mac\u0027 McDonald",
+      "profile_path": "/impgf9ohVgUlNmbPmIz3hcKwV1y.jpg"
+    },
+    {
+      "name": "Michael Higgenbottom",
+      "character": "Sam Wright",
+      "profile_path": null
+    },
+    {
+      "name": "Joy Parmer Moore",
+      "character": "Sara McDonald",
+      "profile_path": null
+    },
+    {
+      "name": "Louis Gossett Jr.",
+      "character": "George Wright",
+      "profile_path": "/gNdTmckVFDz5M9k9zMiwCFb2cl9.jpg"
+    }
+  ]
+}

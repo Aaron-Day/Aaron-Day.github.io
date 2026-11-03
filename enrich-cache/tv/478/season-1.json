@@ -1,0 +1,216 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "A Hero for Earth",
+        "overview": "The spirit of the Earth, Gaia, summons five teenagers to join her in battling ecological destruction and pollution. Their first fight is to keep Hoggish Greedly\u0027s oil rig from destroying a coastline.",
+        "air_date": "1990-09-15",
+        "runtime": 25,
+        "still_path": "/aRjFTLLrqzC3tUFPThu8Q6LbCJj.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Rain of Terror",
+        "overview": "Skumm and his rat pack threaten to destroy a city with acid rain.",
+        "air_date": "1990-09-22",
+        "runtime": 25,
+        "still_path": "/flWPwH9MwYepetNEnfn8uwdz5gb.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Beast of the Temple",
+        "overview": "Greedly and Rigger strip-mine Thailand for rubies.",
+        "air_date": "1990-09-29",
+        "runtime": 25,
+        "still_path": "/tG3zTYJxBXjb6RbA2iULYZJDTuk.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Skumm Lord",
+        "overview": "Skumm peddles a polluted drink that turns consumers into rodent zombies.",
+        "air_date": "1990-10-06",
+        "runtime": 25,
+        "still_path": "/47Xpko9prLZnUw5c6w8h6IHMsLI.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Deadly Ransom",
+        "overview": "Captain Planet is held hostage by Nukem, Blight and MAL.",
+        "air_date": "1990-10-13",
+        "runtime": 25,
+        "still_path": "/xDQtqac9q7gpE1CNQCNJahG2oc4.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Conqueror",
+        "overview": "An aggressive and sneaky Earth spirit named Zarm tricks the teens into disobeying Gaia, sparking a dangerous game that threatens to lead to nuclear war.",
+        "air_date": "1990-10-20",
+        "runtime": 25,
+        "still_path": "/g6J200uN8Y0nERKjeaAIFjpaOHm.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Last of Her Kind",
+        "overview": "The Planeteers fight to save the African elephants from extinction as Looten Plunder tries to corner the market in ivory.",
+        "air_date": "1990-10-27",
+        "runtime": 25,
+        "still_path": "/q9VNYLjnpOix7KKDa1wFK5DoHpG.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Dead Seas",
+        "overview": "Greedly and Rigger plot to empty the oceans of fish.",
+        "air_date": "1990-11-03",
+        "runtime": 25,
+        "still_path": "/2NhoDUv5Ar5RmQZM2b6822BdIVB.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Tree of Life",
+        "overview": "Blight gains powers from the \u0022Tree of Life\u0022 and threatens to use her new strength to destroy the redwood forest.",
+        "air_date": "1990-11-10",
+        "runtime": 25,
+        "still_path": "/jhPvJ9NxbGUEvRzl6vQdTzQGExI.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Volcano\u0027s Wrath",
+        "overview": "Sludge solves the world\u0027s trash problem by dumping everything into a volcano, which then erupts.",
+        "air_date": "1990-11-17",
+        "runtime": 25,
+        "still_path": "/sBuUs9zvOe1O1naS5MjsdoDWzh1.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Littlest Planeteer",
+        "overview": "A little boy helps battle a smog monster.",
+        "air_date": "1990-11-24",
+        "runtime": 25,
+        "still_path": "/fSgJqeMkuFSnPtFutxs2MZNnqXP.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "A World Below Us",
+        "overview": "A dumping operation threatens an underwater city.",
+        "air_date": "1991-01-26",
+        "runtime": 25,
+        "still_path": "/6iOXStnX3QcZf1lCffH0sTIVPtY.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Plunder Dam",
+        "overview": "Plunder dams an African river, leaving the locals without the food or water the waterway provided.",
+        "air_date": "1991-02-02",
+        "runtime": 25,
+        "still_path": "/yT9uAFsr7QY1MtJpcHQwvQDvLF8.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Meltdown Syndrome",
+        "overview": "Nukem\u0027s radioactive presence at a leaking nuclear power plant triggers a meltdown.",
+        "air_date": "1991-02-09",
+        "runtime": 25,
+        "still_path": "/cfFw8u6GXtAhaAy6kVPptVETnes.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Smog Hog",
+        "overview": "Greedly creates a pollution-intensive car but his own son becomes a victim of the resulting smog and pollution.",
+        "air_date": "1991-02-16",
+        "runtime": 25,
+        "still_path": "/pbxGdLbUMgRR1zqzdA67ZuWsaO7.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Polluting by Computer",
+        "overview": "Sludge and Blight break into government computers and transform all national parks into toxic waste dumps.",
+        "air_date": "1991-02-23",
+        "runtime": 25,
+        "still_path": "/3POoa7WLmX2OlmlII3XzFmEMHZk.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Don\u0027t Drink the Water",
+        "overview": "Plunder, Skumm and Greedly pollute the nation\u0027s water supply.",
+        "air_date": "1991-03-02",
+        "runtime": 25,
+        "still_path": "/zQdbYMdlZItnjQaGp61rYFLdzgM.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Kwame\u0027s Crisis",
+        "overview": "A depressed Kwame leaves the Planeteers when no one seems to care that Sludge is burying a small town in garbage.",
+        "air_date": "1991-03-09",
+        "runtime": 25,
+        "still_path": "/f8LZnZd77AOIGVTSqPenh1FeSHs.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Ozone Hole",
+        "overview": "Nukem decimates the ozone layer so he can feast on ultra-violet rays.",
+        "air_date": "1991-04-13",
+        "runtime": 25,
+        "still_path": "/nmkB7d0EgwfMWeogOhpx1rjalLH.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Ultimate Pollution",
+        "overview": "Looten Plunder provokes tribal warfare so he can sell arms to both sides.",
+        "air_date": "1991-04-20",
+        "runtime": 25,
+        "still_path": "/5cp7WzDGexHJzoQGdvxGdd3mFm9.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Population Bomb",
+        "overview": "Wheeler is stranded on an island of humanoid mice on the brink of population overload.",
+        "air_date": "1991-04-27",
+        "runtime": 25,
+        "still_path": "/tMwav4vRPLpXBLhb0avwr987Svc.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Mission to Save Earth (1)",
+        "overview": "The teens cross paths with Cold Warrior Commander Clash, but their true opponent is Captain Pollution, a creation of Blight\u0027s.",
+        "air_date": "1991-05-04",
+        "runtime": 25,
+        "still_path": "/pGQ6oahk3OzWU3l3iw86nrEHpEt.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Mission to Save Earth (2)",
+        "overview": "Commander Clash joins the Planeteers to stop the eco-villains and Captain Pollution.",
+        "air_date": "1991-05-11",
+        "runtime": 25,
+        "still_path": "/4b3gHtdGijdQNfaiBpWlttzTkrZ.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Two Futures (1)",
+        "overview": "A disgruntled Wheeler uses a time machine to travel to the past to stop himself from becoming a Planeteer.",
+        "air_date": "1991-05-18",
+        "runtime": 25,
+        "still_path": "/awKX2Hv3tQFRSXVYirnMdMnaGXG.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Two Futures (2)",
+        "overview": "Wheeler\u0027s attempt to keep his former self from joining the Planeteers has grave consequences for the planet.",
+        "air_date": "1991-05-25",
+        "runtime": 25,
+        "still_path": "/fue2n7JXlXUuIz2OVeGKTh59ya8.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Heat Wave",
+        "overview": "Blight creates a mini greenhouse effect over Hope Island, threatening Gaia\u0027s life.",
+        "air_date": "1991-06-01",
+        "runtime": 25,
+        "still_path": "/sdfJ7L9MROrk1m1rIXtcvJGbMRK.jpg"
+      }
+    ]
+  }
+}

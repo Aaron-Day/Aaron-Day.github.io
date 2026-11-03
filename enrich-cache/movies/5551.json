@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 5551,
+    "title": "Space Cowboys",
+    "overview": "Frank Corvin, \u2018Hawk\u2019 Hawkins, Jerry O\u0027Neill and \u2018Tank\u2019 Sullivan were hotdog members of Project Daedalus, the US Air Force\u0027s test program for space travel, but their hopes were dashed in 1958 with the formation of NASA and the use of trained chimps. They blackmail their way into orbit when Russia\u0027s mysterious \u2018Ikon\u2019 communications satellite\u0027s orbit begins to degrade and threatens to crash to Earth.",
+    "tagline": "Space will never be the same.",
+    "runtime": 130,
+    "release_date": "2000-08-04",
+    "vote_average": 6.387,
+    "poster_path": "/hPzt1bbA1sUDQOl6Vujmyz2hjLN.jpg",
+    "backdrop_path": "/sUye6BrOjlpoAKRMjcP0YwiUvHW.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Clint Eastwood",
+      "character": "Frank Corvin",
+      "profile_path": "/8TwdCfeOZH7ucRlfLZ6wObxa7cO.jpg"
+    },
+    {
+      "name": "Tommy Lee Jones",
+      "character": "Hawk Hawkins",
+      "profile_path": "/mCiZNRAzbnPojJEZwVZWLw9kzxR.jpg"
+    },
+    {
+      "name": "Donald Sutherland",
+      "character": "Jerry O\u0027Neill",
+      "profile_path": "/t9rN5Vni7GYmqqNi9nANCZbmewx.jpg"
+    },
+    {
+      "name": "James Garner",
+      "character": "Tank Sullivan",
+      "profile_path": "/67CRvu5Ac76uJL5WD4Z4Db4mx6x.jpg"
+    }
+  ]
+}

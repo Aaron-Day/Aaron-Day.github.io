@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 17,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Out of the Darkness",
+        "overview": "Ziva surprises Gibbs with a cryptic warning, prompting him to question why she remained underground for years while being presumed dead by family and friends, and what led to her return.",
+        "air_date": "2019-09-24",
+        "runtime": 43,
+        "still_path": "/vso07V1hov1tbxjcTh1EERQm2QA.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Into the Light",
+        "overview": "With their lives in danger, Gibbs and Ziva\u2019s rogue investigation takes an unexpected turn when a possible terrorist plot is revealed.",
+        "air_date": "2019-10-01",
+        "runtime": 41,
+        "still_path": "/kJWVRdYlBR36W2LGzqTxFuSbGAp.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Going Mobile",
+        "overview": "After the body of a Marine Lieutenant is found hidden under an 18-wheeler, the NCIS team tracks the vehicle\u2019s previous locations to pinpoint the crime scene and suspect.",
+        "air_date": "2019-10-08",
+        "runtime": 43,
+        "still_path": "/A9DIjmfR5KTYlNXa43TcIJ2HpmX.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Someone Else\u0027s Shoes",
+        "overview": "The NCIS team links a bizarre crime scene at Arlington National Cemetery to a string of attacks on homeless veterans.",
+        "air_date": "2019-10-15",
+        "runtime": 42,
+        "still_path": "/4QBC9gxrNJ8QxgK9UAb3nJXjvF5.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Wide Awake",
+        "overview": "NCIS investigates Marine Corporal Laney Alimonte after evidence suggests she murdered her neighbor while being treated for insomnia by a hypnotherapist.",
+        "air_date": "2019-10-22",
+        "runtime": 43,
+        "still_path": "/73AKlsPjjVSFvHoJG5rpXzesVQD.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Institutionalized",
+        "overview": "After a Petty Officer\u2019s son is found murdered at his \u201Cwelcome home from prison\u201D party, evidence suggests Kasie\u2019s lifelong best friend, Dante Brown, is the suspect.",
+        "air_date": "2019-11-05",
+        "runtime": 43,
+        "still_path": "/pybLwxo415qDekVrSNHwM64uI3N.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "No Vacancy",
+        "overview": "While investigating a Marine\u2019s murder, the NCIS team uncovers a labyrinth of live-streaming spy cameras hidden in the rooms of a Virginia motel.",
+        "air_date": "2019-11-12",
+        "runtime": 43,
+        "still_path": "/8IZFtkyaHHDbAfGpbRttrmzSDeo.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Musical Chairs",
+        "overview": "The NCIS team investigates the murder of a musician in the Navy\u2019s most elite band that performs at diplomatic events around the world.",
+        "air_date": "2019-11-19",
+        "runtime": 41,
+        "still_path": "/eAXhMr6dfQziJpyde8tt5UO4jEd.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "IRL",
+        "overview": "The NCIS team investigates a Petty Officer\u0027s murder that was livestreamed on a popular gaming app.",
+        "air_date": "2019-11-26",
+        "runtime": 43,
+        "still_path": "/pB8TDOJirnaq2eARSTnZ164s7AT.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The North Pole",
+        "overview": "Gibbs and the team help Ziva with the \u0022one thing\u0022 she said she\u0027d take care of before returning to her family.",
+        "air_date": "2019-12-17",
+        "runtime": 43,
+        "still_path": "/dYUhjpSN2VVPdwhQWJ2QgKktffA.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "In the Wind",
+        "overview": "Gibbs must face the consequences of helping Ziva with \u0022the one thing\u0022 she said she\u0027d take care of before returning to her family.",
+        "air_date": "2020-01-07",
+        "runtime": 42,
+        "still_path": "/mPxECULZUpCFS32zHlMzSO6vYjp.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Flight Plan",
+        "overview": "The NCIS team investigates an F-18 crash and the subsequent disappearance of the pilot.",
+        "air_date": "2020-01-14",
+        "runtime": 43,
+        "still_path": "/lLJZFGqfoM80T5R17L6f9qazgZq.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Sound Off",
+        "overview": "After a body is found at an unmanned aerial vehicle testing site, the NCIS team must determine if the death was murder or an accident.",
+        "air_date": "2020-01-21",
+        "runtime": 42,
+        "still_path": "/xeCA8AW3ACjev9TrYwzptpQNV0r.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "On Fire",
+        "overview": "After Torres and Bishop are victims of a hit-and-run, Torres fights for his life in the Intensive Care Unit.",
+        "air_date": "2020-01-28",
+        "runtime": 43,
+        "still_path": "/Aw6fHV6IN4fdFp0CizDbWcpK0E.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Lonely Hearts",
+        "overview": "The lead suspect in an NCIS murder investigation is a woman Gibbs\u0027 friend, Phillip Brooks, met on a dating site.",
+        "air_date": "2020-02-11",
+        "runtime": 43,
+        "still_path": "/sUHEvFDuVDN2r5tM3j2Ij4FYIl2.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Ephemera",
+        "overview": "While investigating the suicide of a retired Navy officer who left a rare, valuable - and possibly stolen - coin to the National Museum of the Navy, the team imagines themselves in his life story in order to piece together how the coin ended up in his possession.",
+        "air_date": "2020-02-18",
+        "runtime": 43,
+        "still_path": "/z64FVrRzCEcu9ricK9d6In5InWA.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "In a Nutshell",
+        "overview": "As the NCIS team investigates the death of a Navy officer murdered the same way as his parents a decade ago, they stumble across a storage container filled with dollhouses that display recreations of murder scenes.",
+        "air_date": "2020-03-10",
+        "runtime": 41,
+        "still_path": "/yqdche2k66WdXb7pBUyXMqjXYLL.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Schooled",
+        "overview": "The team searches for answers when the body of a well-regarded Navy technician in the Reserves is found floating in a lake where a popular community event is being held.",
+        "air_date": "2020-03-24",
+        "runtime": 42,
+        "still_path": "/mSpsEE6vzUtIiC0itvSVGjmeeJ8.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Blarney",
+        "overview": "When Kasie and Jimmy are held hostage in a diner after a jewelry store robbery goes awry, they attempt to keep the other customers safe from the thieves.",
+        "air_date": "2020-03-31",
+        "runtime": 42,
+        "still_path": "/yqSlOm6hNOnm88dinpRCynL1c5Z.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Arizona",
+        "overview": "The team tries to verify the identity of Joe Smith, who claims he served on the U.S.S. Arizona during the attack on Pearl Harbor, and wants to be buried there upon his death.",
+        "air_date": "2020-04-14",
+        "runtime": 43,
+        "still_path": "/gX56I2MOYijRIwhfMB4glPqcfoK.jpg"
+      }
+    ]
+  }
+}

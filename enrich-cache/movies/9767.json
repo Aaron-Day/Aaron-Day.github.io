@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9767,
+    "title": "The Break-Up",
+    "overview": "Pushed to the breaking-up point after their latest \u0027why can\u0027t you do this one little thing for me?\u0027 argument, Brooke calls it quits with her boyfriend Gary. What follows is a hilarious series of remedies, war tactics, overtures and undermining tricks \u2013 all encouraged by the former couple\u0027s friends and confidantes \u2026and the occasional total stranger! When neither ex is willing to move out of their shared apartment, the only solution is to continue living as hostile roommates until one of them reaches breaking point.",
+    "tagline": "\u2026pick a side.",
+    "runtime": 106,
+    "release_date": "2006-06-01",
+    "vote_average": 5.905,
+    "poster_path": "/ghCLIPRZNAndBoIZJ8f7lN5Mlly.jpg",
+    "backdrop_path": "/tukmcuDcTgFesqveQQWKhKXKEzg.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Vince Vaughn",
+      "character": "Gary Grobowski",
+      "profile_path": "/qImHvsd7SFJh46Ujx50xUfkeMNz.jpg"
+    },
+    {
+      "name": "Jennifer Aniston",
+      "character": "Brooke Meyers",
+      "profile_path": "/PBSCmHDFdCMBhjx0EbXpTw4Z94.jpg"
+    },
+    {
+      "name": "Joey Lauren Adams",
+      "character": "Addie",
+      "profile_path": "/A7p7Rrda5tmYQvlcCY5UXCpT5tq.jpg"
+    },
+    {
+      "name": "Cole Hauser",
+      "character": "Lupus Grobowski",
+      "profile_path": "/1SNoIDILoXtAUJu4f7nDCPVQH5j.jpg"
+    }
+  ]
+}

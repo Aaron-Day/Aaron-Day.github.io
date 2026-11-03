@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 551804,
+    "title": "Freaky",
+    "overview": "A mystical, ancient dagger causes a notorious serial killer to magically switch bodies with a 17-year-old girl.",
+    "tagline": "Basic switch. Killer new look.",
+    "runtime": 102,
+    "release_date": "2020-11-12",
+    "vote_average": 6.544,
+    "poster_path": "/8xC6QSyxrpm0D5A6iyHNemEWBVe.jpg",
+    "backdrop_path": "/ngpC8wikrZDnhjkFQMEjWSh7HAV.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kathryn Newton",
+      "character": "Millie Kessler",
+      "profile_path": "/3mos4oK6bps0uhQzW1L7nj5O0Gd.jpg"
+    },
+    {
+      "name": "Vince Vaughn",
+      "character": "The Butcher",
+      "profile_path": "/qImHvsd7SFJh46Ujx50xUfkeMNz.jpg"
+    },
+    {
+      "name": "Celeste O\u0027Connor",
+      "character": "Nyla Chones",
+      "profile_path": "/jI3pNOhj9Gr7ym9cUcv8vsI0lCF.jpg"
+    },
+    {
+      "name": "Misha Osherovich",
+      "character": "Josh Detmer",
+      "profile_path": "/ytcRmANPXkdDSJcs20wVMHci0L0.jpg"
+    }
+  ]
+}

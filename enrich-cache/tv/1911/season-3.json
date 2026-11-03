@@ -1,0 +1,128 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Widow\u0027s Son in the Windshield",
+        "overview": "After a skull smashes into the windshield of a teenager\u0027s car, the investigation reveals the skull has been gnawed on by human teeth, which implies cannibalism and marks the beginning of the Widow\u0027s Son case. Meanwhile, Angela and Hodgins hire a private investigator to find her husband. Bones searches for Zach\u0027s replacement and the team gets a wonderful surprise.",
+        "air_date": "2007-09-25",
+        "runtime": 44,
+        "still_path": "/971ixP12JMde55Tan1h7rmEGoJK.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Soccer Mom in the Mini-Van",
+        "overview": "Brennan and Booth investigate the death of a soccer mom who was blown up in her mini-van. They soon discover that the victim was part of a group of radicals from the 70\u0027s, adding several names to the list of possible suspects.",
+        "air_date": "2007-10-02",
+        "runtime": 43,
+        "still_path": "/mqBCu0Zh3VbEVc6G2fCY8tnJyzz.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Death in the Saddle",
+        "overview": "Things get kinky when Booth and Brennan follow murder clues that lead to a lodge used as an S\u0026M retreat for \u0022jockeys\u0022 and their \u0022horses.\u0022  Meanwhile, Angela tries hypnosis in an effort to figure out her elusive husband\u0027s name so she can finally divorce him.",
+        "air_date": "2007-10-09",
+        "runtime": 43,
+        "still_path": "/m5Aesj4MK8bJtn398Oglfkramrf.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Secret in the Soil",
+        "overview": "When a body that appears to be cooked is discovered, the clues lead Booth and Bones to an organic farm co-op. Meanwhile, the two of them must meet with Lance Sweets, an FBI psychologist who must determine if they should continue to work together.",
+        "air_date": "2007-10-23",
+        "runtime": 44,
+        "still_path": "/cH1K8I9tHsApr3PBQQrlVjHvuRv.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Mummy in the Maze",
+        "overview": "On Halloween, two mummified bodies are discovered and found to be people reported missing the past two Halloweens. When Booth and Bones learn about a missing girl, linked to the suspect of the previous murders, the race is on to save her life.",
+        "air_date": "2007-10-30",
+        "runtime": 44,
+        "still_path": "/wZlFNCMs44ECYM8qvyM2C0ITDuJ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Intern in the Incinerator",
+        "overview": "The team suspect their own colleagues after the burnt remains of an intern at the Jeffersonian are discovered. Meanwhile, Booth poses as Cam\u0027s boyfriend at her family get-together.",
+        "air_date": "2007-11-06",
+        "runtime": 44,
+        "still_path": "/5SoOE0RjjKJLl5aAXEpw4KP50Nr.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Boy in the Time Capsule",
+        "overview": "On the 20th anniversary, the Foothill High School, class of \u002787 alumni unearth the time capsule they buried to discover the remains of one of their classmates inside. Booth and Bones investigate the past lives of his classmates in an effort to discover the truth.",
+        "air_date": "2007-11-13",
+        "runtime": 44,
+        "still_path": "/aEjP21klBb906vnumsDKUCr0WE.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Knight on the Grid",
+        "overview": "After the body of an archbishop is found, missing the kneecaps, the team concludes the murder is related to the Widow\u0027s Son case.",
+        "air_date": "2007-11-20",
+        "runtime": 43,
+        "still_path": "/y0hpiI3AfAO2Do9bCIeMks3dFjw.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Santa in the Slush",
+        "overview": "Booth and Brennan investigate a mall Santa named Kris Kringle who was found dead by two elves.  A series of clues makes the murdered mall Santa seem like he\u0027s the real deal.",
+        "air_date": "2007-11-27",
+        "runtime": 44,
+        "still_path": "/a5JDfTTKGUa6b2Qq99DZxnMiSt0.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Man in the Mud",
+        "overview": "A body discovered in a hot spring turns out to be that of Tripp Goddard, a sexy motorcycle racer who had disappeared two weeks earlier. Sweets talks Booth and Bones into going out with him and his girlfriend.",
+        "air_date": "2008-04-14",
+        "runtime": 43,
+        "still_path": "/hrOut4sMrg2nTcA1mS13y4Rdthh.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Player Under Pressure",
+        "overview": "All team members are working to identify the bones from a college athlete who suffered a lot of fractures. After the body is identified they talk to his sister and somebody who acted as a sort of an adviser for the deceased. Angela and Hodgins have an important talk. Zack is overwhelmed by having to reconstruct the crushed bones to form a skeleton.",
+        "air_date": "2008-04-21",
+        "runtime": 44,
+        "still_path": "/uCvtfx2dSuHGrWqYkJc9PhC82E5.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Baby in the Bough",
+        "overview": "A woman\u0027s car is run off the road and she is killed, but her baby miraculously survives the accident.  Booth and Brennan go to the woman\u0027s hometown to try to find out who\u0027s responsible for running her car off the road. Bones, with help from Booth, takes care of the baby until the team finds out who killed the mother.",
+        "air_date": "2008-04-28",
+        "runtime": 44,
+        "still_path": "/jGd4mjvN7NiQbvZcCMWbFJ3MeY1.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Verdict in the Story",
+        "overview": "Brennan\u0027s father Max Keenan is on trial for the alleged murder of FBI Deputy Director Kirby.  Everyone on the team, except for Brennan, is called as a witness for the prosecution during the trial.  Brennan on the other hand is the forensics advisor for the defense, and she must rely on both her dedication to her family and her skill as an anthropologist to help free her father.",
+        "air_date": "2008-05-05",
+        "runtime": 43,
+        "still_path": "/ksS9JpKWwIsrwih7IB3qCQET37g.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Wannabe in the Weeds",
+        "overview": "A wannabe singer Tommy Sour was found on a grassy location. The investigation leads Brennan, Booth, and Cam to the Checker Box Restaurant where Tommy used to sing. There are several suspects who took part in the open mike contest there, with talent scouts in the audience. The group comes together with a startling revelation for Brennan.",
+        "air_date": "2008-05-12",
+        "runtime": 43,
+        "still_path": "/atBsNzMIBmIGAFr2Q4pOalD7DVz.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Pain in the Heart",
+        "overview": "The Gormogon serial killer is back again, and the silver skeleton from the basement vault has gone missing.  All the Jeffersonian employees become suspects, with the scary possibility that one of their own is working with Gormogon.",
+        "air_date": "2008-05-19",
+        "runtime": 43,
+        "still_path": "/gmlHyVVsTM9gNMf3FHiTodBZ2br.jpg"
+      }
+    ]
+  }
+}

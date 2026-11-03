@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 857,
+    "title": "Saving Private Ryan",
+    "overview": "As U.S. troops storm the beaches of Normandy, three brothers lie dead on the battlefield, with a fourth trapped behind enemy lines. Ranger captain John Miller and seven men are tasked with penetrating German-held territory and bringing the boy home.",
+    "tagline": "The mission is a man.",
+    "runtime": 169,
+    "release_date": "1998-07-24",
+    "vote_average": 8.235,
+    "poster_path": "/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
+    "backdrop_path": "/bdD39MpSVhKjxarTxLSfX6baoMP.jpg",
+    "genres": [
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Captain Miller",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Tom Sizemore",
+      "character": "Sergeant Horvath",
+      "profile_path": "/soINOuacuiThRb2LyPD4tTWve7C.jpg"
+    },
+    {
+      "name": "Edward Burns",
+      "character": "Private Reiben",
+      "profile_path": "/pTLdPUSxDUcdmvy91LGCF3pk0AM.jpg"
+    },
+    {
+      "name": "Barry Pepper",
+      "character": "Private Jackson",
+      "profile_path": "/xBvW4dMoz496rItLQU6TGteYCEP.jpg"
+    }
+  ]
+}

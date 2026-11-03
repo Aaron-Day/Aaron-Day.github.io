@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 873,
+    "title": "The Color Purple",
+    "overview": "An epic tale spanning forty years in the life of Celie, an African-American woman living in the South who survives incredible abuse and bigotry. After Celie\u0027s abusive father marries her off to the equally debasing \u0027Mister\u0027 Albert Johnson, things go from bad to worse, leaving Celie to find companionship anywhere she can. She perseveres, holding on to her dream of one day being reunited with her sister in Africa.",
+    "tagline": "It\u0027s about life. It\u0027s about love. It\u0027s about us.",
+    "runtime": 154,
+    "release_date": "1985-12-18",
+    "vote_average": 7.727,
+    "poster_path": "/6bvxkcTAXyqxGRwo38mxw92D6Xr.jpg",
+    "backdrop_path": "/lh6MbyxwCribn3hdAo81xLdPGoV.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Danny Glover",
+      "character": "Albert",
+      "profile_path": "/7ZyztVlG7OpqD0EhzG8iwYNcd1s.jpg"
+    },
+    {
+      "name": "Whoopi Goldberg",
+      "character": "Celie",
+      "profile_path": "/78LZMMzNUJVfLI1MObxejScwZz5.jpg"
+    },
+    {
+      "name": "Margaret Avery",
+      "character": "Shug Avery",
+      "profile_path": "/pvAB2GwE8QCPo7WxwBW7ndqUoPR.jpg"
+    },
+    {
+      "name": "Oprah Winfrey",
+      "character": "Sofia",
+      "profile_path": "/nNpYieaDLxKZWw2FY9wsDkjwURu.jpg"
+    }
+  ]
+}

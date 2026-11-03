@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Wars to Come",
+        "overview": "Cersei and Jaime adjust to a world without Tywin. Varys reveals a conspiracy to Tyrion. Dany faces a new threat to her rule. Jon is caught between two kings.",
+        "air_date": "2015-04-12",
+        "runtime": 53,
+        "still_path": "/shIFxmFySt9CtGXMTXWBipsNOIs.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The House of Black and White",
+        "overview": "Arya arrives in Braavos. Podrick and Brienne run into trouble on the road. Cersei fears for her daughter\u0027s safety in Dorne as Ellaria Sand seeks revenge for Oberyn\u0027s death. Stannis tempts Jon. An adviser tempts Daenerys.",
+        "air_date": "2015-04-19",
+        "runtime": 56,
+        "still_path": "/7bfWJLwZ2OBkryNu8AqPUaJdW4c.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "High Sparrow",
+        "overview": "In Braavos, Arya sees the Many-Faced God. In King\u0027s Landing, Queen Margaery enjoys her new husband. Tyrion and Varys walk the Long Bridge of Volantis.",
+        "air_date": "2015-04-26",
+        "runtime": 60,
+        "still_path": "/5b6eUi2w12ao24ug8cL5QqJFKig.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Sons of the Harpy",
+        "overview": "The Faith Militant grow increasingly aggressive. Jaime and Bronn head south. Ellaria and the Sand Snakes vow vengeance.",
+        "air_date": "2015-05-03",
+        "runtime": 51,
+        "still_path": "/xJK24ELjz04a05saADPXkYafa21.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Kill the Boy",
+        "overview": "Dany makes a difficult decision in Meereen. Jon recruits the help of an unexpected ally. Brienne searches for Sansa. Theon remains under Ramsay\u0027s control.",
+        "air_date": "2015-05-10",
+        "runtime": 57,
+        "still_path": "/25HHLKWpNKiy6e7zBhaoysK9hzv.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Unbowed, Unbent, Unbroken",
+        "overview": "Arya trains. Jorah and Tyrion run into slavers. Trystane and Myrcella make plans. Jaime and Bronn reach their destination. The Sand Snakes attack.",
+        "air_date": "2015-05-17",
+        "runtime": 54,
+        "still_path": "/ihngOB9FfBZvmTy01D836QMFybe.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Gift",
+        "overview": "Jon prepares for conflict. Sansa tries to talk to Theon. Brienne waits for a sign. Stannis remains stubborn. Jaime attempts to reconnect with family.",
+        "air_date": "2015-05-24",
+        "runtime": 59,
+        "still_path": "/n4BFZfiqOX1l5l6uYtpDS4m19WX.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Hardhome",
+        "overview": "Arya makes progress in her training. Sansa confronts an old friend. Cersei struggles. Jon travels.",
+        "air_date": "2015-05-31",
+        "runtime": 60,
+        "still_path": "/58PgfiE8eIOdQ1iDvFnJG471RFB.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Dance of Dragons",
+        "overview": "Stannis confronts a troubling decision. Jon returns to The Wall. Mace visits the Iron Bank. Arya encounters someone from her past. Dany reluctantly oversees a traditional celebration of athleticism.",
+        "air_date": "2015-06-07",
+        "runtime": 53,
+        "still_path": "/ymI7V3wsZRcRqLWgjJ59CTTGvh5.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Mother\u0027s Mercy",
+        "overview": "Stannis marches. Dany is surrounded by strangers. Cersei seeks forgiveness. Jon is challenged.",
+        "air_date": "2015-06-14",
+        "runtime": 61,
+        "still_path": "/b5dIepsIO3robQSe18fWmsQe37R.jpg"
+      }
+    ]
+  }
+}

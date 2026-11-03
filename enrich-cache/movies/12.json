@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12,
+    "title": "Finding Nemo",
+    "overview": "Nemo, an adventurous young clownfish, is unexpectedly taken from his Great Barrier Reef home to a dentist\u0027s office aquarium. It\u0027s up to his worrisome father Marlin and a friendly but forgetful fish Dory to bring Nemo home -- meeting vegetarian sharks, surfer dude turtles, hypnotic jellyfish, hungry seagulls, and more along the way.",
+    "tagline": "There are 3.7 trillion fish in the ocean. They\u0027re looking for one.",
+    "runtime": 100,
+    "release_date": "2003-05-30",
+    "vote_average": 7.823,
+    "poster_path": "/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg",
+    "backdrop_path": "/eCynaAOgYYiw5yN5lBwz3IxqvaW.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 137697,
+      "name": "Finding Nemo Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Albert Brooks",
+      "character": "Marlin (voice)",
+      "profile_path": "/8iDSGu5l93N7benjf6b3AysBore.jpg"
+    },
+    {
+      "name": "Ellen DeGeneres",
+      "character": "Dory (voice)",
+      "profile_path": "/z8IEEid4z63CBlJtxrTKEfsW7NA.jpg"
+    },
+    {
+      "name": "Alexander Gould",
+      "character": "Nemo (voice)",
+      "profile_path": "/zzfj8LHhSiRntnyThvOBirEEmII.jpg"
+    },
+    {
+      "name": "Willem Dafoe",
+      "character": "Gill (voice)",
+      "profile_path": "/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7555,
+    "title": "Rambo",
+    "overview": "In Thailand, ex-Green Beret John James Rambo joins a group of mercenaries to venture into war-torn neighboring Myanmar to rescue a group of Christian aid workers who have been kidnapped by a ruthless local infantry unit.",
+    "tagline": "Live for nothing, or die for something.",
+    "runtime": 92,
+    "release_date": "2008-01-24",
+    "vote_average": 6.708,
+    "poster_path": "/3mInub5c8o00H7EJ1TrjAqOzIuc.jpg",
+    "backdrop_path": "/wzfTG1obTazlGXiIcfRIviBZ1QU.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 5039,
+      "name": "Rambo Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "John Rambo",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Julie Benz",
+      "character": "Sarah",
+      "profile_path": "/4rLq98jWRAOJIMzGZW0bB5Y6fGX.jpg"
+    },
+    {
+      "name": "Matthew Marsden",
+      "character": "School Boy",
+      "profile_path": "/qejtyAt9dQdOS9AbXxSOwbw82E.jpg"
+    },
+    {
+      "name": "Graham McTavish",
+      "character": "Lewis",
+      "profile_path": "/qpKVz46PkKVaXzthcJO4ldFPdM9.jpg"
+    }
+  ]
+}

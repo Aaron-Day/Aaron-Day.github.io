@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 8,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Winterfell",
+        "overview": "Arriving at Winterfell, Jon and Daenerys struggle to unite a divided North. Jon Snow gets some big news.",
+        "air_date": "2019-04-14",
+        "runtime": 55,
+        "still_path": "/o65qwX1aHJclJ36VDhD3VYzz5em.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Knight of the Seven Kingdoms",
+        "overview": "The battle at Winterfell is approaching. Jaime is confronted with the consequences of the past. A tense interaction between Sansa and Daenerys follows.",
+        "air_date": "2019-04-21",
+        "runtime": 59,
+        "still_path": "/vJ8H9WtzbJGfArfdycc4nagQVRU.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Long Night",
+        "overview": "The Night King and his army have arrived at Winterfell and the great battle begins. Arya looks to prove her worth as a fighter.",
+        "air_date": "2019-04-28",
+        "runtime": 82,
+        "still_path": "/lto7fBOnfBUqH5QN8CWdFc70QjW.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Last of the Starks",
+        "overview": "In the wake of a costly victory, Jon and Daenerys look to the south as Tyrion eyes a compromise that could save countless lives.",
+        "air_date": "2019-05-05",
+        "runtime": 79,
+        "still_path": "/qe508xwVVO7cF2oWzfJp52StkTk.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Bells",
+        "overview": "Daenerys brings her forces to King\u0027s Landing.",
+        "air_date": "2019-05-12",
+        "runtime": 80,
+        "still_path": "/xF9hOs5h9sc37oWdtF4RPHq8dXA.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Iron Throne",
+        "overview": "In the aftermath of the devastating attack on King\u0027s Landing, Daenerys must face the survivors.",
+        "air_date": "2019-05-19",
+        "runtime": 80,
+        "still_path": "/zBi2O5EJfgTS6Ae0HdAYLm9o2nf.jpg"
+      }
+    ]
+  }
+}

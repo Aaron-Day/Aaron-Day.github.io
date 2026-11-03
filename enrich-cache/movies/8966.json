@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8966,
+    "title": "Twilight",
+    "overview": "When Bella Swan moves to a small town in the Pacific Northwest, she falls in love with Edward Cullen, a mysterious classmate who reveals himself to be a 108-year-old vampire. Despite Edward\u0027s repeated cautions, Bella can\u0027t stay away from him, a fatal move that endangers her own life.",
+    "tagline": "When you can live forever, what do you live for?",
+    "runtime": 122,
+    "release_date": "2008-11-20",
+    "vote_average": 6.273,
+    "poster_path": "/3Gkb6jm6962ADUPaCBqzz9CTbn9.jpg",
+    "backdrop_path": "/weAYfu6FfrNxEDJ3xH1XpgQcqUv.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 33514,
+      "name": "Twilight Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kristen Stewart",
+      "character": "Bella Swan",
+      "profile_path": "/xldswdQ1VnpcOf2wZMPguZ3avgO.jpg"
+    },
+    {
+      "name": "Robert Pattinson",
+      "character": "Edward Cullen",
+      "profile_path": "/3qZ09UE7lN6AtorfXFRYpEtSY93.jpg"
+    },
+    {
+      "name": "Billy Burke",
+      "character": "Charlie Swan",
+      "profile_path": "/AoyN5a1TNRa4OCeylcXusQM1bD4.jpg"
+    },
+    {
+      "name": "Peter Facinelli",
+      "character": "Dr. Carlisle Cullen",
+      "profile_path": "/mmha3A5INmromiCsN8FBSLScVpZ.jpg"
+    }
+  ]
+}

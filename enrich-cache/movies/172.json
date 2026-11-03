@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 172,
+    "title": "Star Trek V: The Final Frontier",
+    "overview": "A renegade Vulcan with a startling secret hijacks the U.S.S. Enterprise in order to find a mythical planet.",
+    "tagline": "Adventure and imagination will meet at the final frontier.",
+    "runtime": 106,
+    "release_date": "1989-06-09",
+    "vote_average": 5.729,
+    "poster_path": "/uiXr41VLYsuug3CZbFrKLSNahuZ.jpg",
+    "backdrop_path": "/y0klN15XPVyYtd4P7HYecgJXSsZ.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 151,
+      "name": "Star Trek: The Original Series Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "William Shatner",
+      "character": "Captain James T. Kirk",
+      "profile_path": "/8X9RuRmwOYQewfCvGg8zFZejC6U.jpg"
+    },
+    {
+      "name": "Leonard Nimoy",
+      "character": "Captain Spock",
+      "profile_path": "/9KaiO5eNzJtB4zB2inmNWR0GTRI.jpg"
+    },
+    {
+      "name": "DeForest Kelley",
+      "character": "Dr. Leonard \u0027Bones\u0027 McCoy",
+      "profile_path": "/lBFQdiLYeSN7eZ6ddOXTGc7loQf.jpg"
+    },
+    {
+      "name": "James Doohan",
+      "character": "Captain Montgomery \u0027Scotty\u0027 Scott",
+      "profile_path": "/lsI15wIkmcKVTM8qu8ooukaLShi.jpg"
+    }
+  ]
+}

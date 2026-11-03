@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7453,
+    "title": "The Hitchhiker\u0027s Guide to the Galaxy",
+    "overview": "Mere seconds before the Earth is to be demolished by an alien construction crew, Arthur Dent is swept off the planet by his friend Ford Prefect, a researcher penning a new edition of \u0022The Hitchhiker\u0027s Guide to the Galaxy.\u0022",
+    "tagline": "Don\u0027t leave Earth without it.",
+    "runtime": 109,
+    "release_date": "2005-04-28",
+    "vote_average": 6.686,
+    "poster_path": "/4fOFbNMjq708CQ7ou71by6rI6wZ.jpg",
+    "backdrop_path": "/58xc04IuCymfgtWUFRuLRtcEECP.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Martin Freeman",
+      "character": "Arthur Dent",
+      "profile_path": "/nrO54AzrxiNgCjBUOSz6ebyxDZY.jpg"
+    },
+    {
+      "name": "Yasiin Bey",
+      "character": "Ford Prefect",
+      "profile_path": "/cu6pZ0ThtrT9Mo3l2cKk3UjYhmE.jpg"
+    },
+    {
+      "name": "Zooey Deschanel",
+      "character": "Trillian",
+      "profile_path": "/30KQyjsXfrdm4Dcori7bDFTg9Le.jpg"
+    },
+    {
+      "name": "Sam Rockwell",
+      "character": "Zaphod Beeblebrox",
+      "profile_path": "/afYhNpLwpa65Yy0Q0g00FNFhzx5.jpg"
+    }
+  ]
+}

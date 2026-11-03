@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 22,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Aw Rats, a Pool Party",
+        "overview": "The Smiths are having a pool party! Everyone is coming, including Francine\u0027s sister and Steve\u0027s ex! Wait, is that a dead rat in the pool?",
+        "air_date": "2026-02-22",
+        "runtime": 22,
+        "still_path": "/dOAbTg62SgQvm0dVU3F5CLwNkWz.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Flume Flume Room",
+        "overview": "Stan struggles to appreciate Francine\u0027s niche interest in flume rides.",
+        "air_date": "2026-03-01",
+        "runtime": 22,
+        "still_path": "/pbArut97pDbMN1IFWJxRR3M6XwN.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Powering Through",
+        "overview": "Stan is determined to prove that there\u0027s no illness he can\u0027t power through, even if it ends up killing him... and everyone else.",
+        "air_date": "2026-03-08",
+        "runtime": 22,
+        "still_path": "/cvZfjbfy3qsKi0lHTIhLuZjWKL8.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Camera Stan",
+        "overview": "Stan thinks he has what it takes to thrive on reality TV; Klaus gets himself a Klaus.",
+        "air_date": "2026-03-15",
+        "runtime": 22,
+        "still_path": "/yUfrDPNrjjvjvvkl70SbGdB49YX.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Idol Threat",
+        "overview": "The school bully saves Steve\u0027s life at the carnival and is celebrated as a local hero by everyone but Steve.",
+        "air_date": "2026-04-12",
+        "runtime": 22,
+        "still_path": "/3ndi2mL49oVHaFfWfG4BI9YeC9O.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Treasure of Old Chinatown",
+        "overview": "Steve and Bah Bah, along with a reluctant Francine, set out to discover an ancient Chinese treasure. Roger becomes an online food influencer.",
+        "air_date": "2026-04-26",
+        "runtime": 22,
+        "still_path": "/lKJI8fgmj1UTWxzVZATK47hrGZ.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Reaper Madness",
+        "overview": "After experiencing a euphoric high from a scary story, Klaus and Hayley band together to search for their next fix.",
+        "air_date": "2026-05-03",
+        "runtime": 22,
+        "still_path": "/tPzuFHPBY9kqUxdr7o1RLNWOLBn.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Dude, You\u0027re Getting a Del!",
+        "overview": "Klaus becomes Snot\u0027s father figure to woo Snot\u0027s mom. Meanwhile, Hayley opens a cat caf\u00E9 and hires Roger\u0027s infamous cat persona, Marmalade.",
+        "air_date": "2026-05-10",
+        "runtime": 22,
+        "still_path": "/1ZUxPkWMqRu3mQZ5KUkynx2GAot.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Where the Wild Boars Are",
+        "overview": "Jeff comes of age with the help of an old man. Roger takes care of a \u0022special\u0022 shed.",
+        "air_date": "2026-05-17",
+        "runtime": 22,
+        "still_path": "/fuBOYsLgwT0k351j0miW7pf0a2Q.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Dumbston Checks In",
+        "overview": "Steve and Principal Lewis team up to save the school while Stan seeks out a decent meal.",
+        "air_date": "2026-06-21",
+        "runtime": 22,
+        "still_path": "/3PbQYQtzJ0ZIG4JARfk97Dya8Xa.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "A Donkey\u0027s Shame",
+        "overview": "Stan and Francine drive to Vegas to confront John Mayer.",
+        "air_date": "2026-06-21",
+        "runtime": 22,
+        "still_path": "/1JTKpz27ISc1j3u1KLAIwCK0zTY.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "400?!",
+        "overview": "Stan nearly dies on his 400th mission and returns home to realize the CIA\u0027s secret clone program has already replaced him.",
+        "air_date": "2026-09-13",
+        "runtime": 21,
+        "still_path": "/gEvm2hPD7zTC5A2jkkffKtnnQXd.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Tales from the Outer Frontier",
+        "overview": "In this three-part anthology of self-contained tales, the Smiths take on new roles across the harsh frontier of space, confronting mortality, purpose, and that relentless Mars dust.",
+        "air_date": "2026-09-13",
+        "runtime": 21,
+        "still_path": "/wuR7GXL7OrpyFfUrWatC4WAFgvz.jpg"
+      }
+    ]
+  }
+}

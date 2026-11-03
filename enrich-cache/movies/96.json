@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 96,
+    "title": "Beverly Hills Cop II",
+    "overview": "Axel Foley returns to the land of sunshine and palm trees to investigate the near-fatal shooting of police Captain Andrew Bogomil. With the help of Sgt. Taggart and Det. Rosewood, they soon uncover that the shooting is associated with a series of \u0022alphabet\u0022 robberies masterminded by a heartless weapons kingpin\u2014and the chase is on.",
+    "tagline": "Axel Foley is back. Back where he doesn\u0027t belong.",
+    "runtime": 103,
+    "release_date": "1987-05-18",
+    "vote_average": 6.535,
+    "poster_path": "/egDakU8O5yUwpUJP9IMAUVtIDll.jpg",
+    "backdrop_path": "/bIA65PCRtIQfBvIoKohJbtOPl3M.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 85861,
+      "name": "Beverly Hills Cop Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Eddie Murphy",
+      "character": "Axel Foley",
+      "profile_path": "/qgjMfefsKwSYsyCaIX46uyOXIpy.jpg"
+    },
+    {
+      "name": "Judge Reinhold",
+      "character": "Billy Rosewood",
+      "profile_path": "/6R0vCxzSx1CaDAM9y9ZgmejUdiL.jpg"
+    },
+    {
+      "name": "John Ashton",
+      "character": "John Taggart",
+      "profile_path": "/8TzYptb6pPxZJXfrJIu0UoZTNkX.jpg"
+    },
+    {
+      "name": "J\u00FCrgen Prochnow",
+      "character": "Maxwell Dent",
+      "profile_path": "/4489XcYBPCY0CoqLHN04Bjz4A3q.jpg"
+    }
+  ]
+}

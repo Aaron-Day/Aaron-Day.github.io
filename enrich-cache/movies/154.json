@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 154,
+    "title": "Star Trek II: The Wrath of Khan",
+    "overview": "The starship Enterprise and its crew is pulled back into action when old nemesis, Khan, steals a top secret device called Project Genesis.",
+    "tagline": "At the end of the universe lies the beginning of vengeance.",
+    "runtime": 113,
+    "release_date": "1982-06-04",
+    "vote_average": 7.453,
+    "poster_path": "/uPyLsKl8Z0LOoxeaFXsY5MxhR5s.jpg",
+    "backdrop_path": "/meqmvZjKpQ7WRhpZvIoKIAvioSD.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 151,
+      "name": "Star Trek: The Original Series Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "William Shatner",
+      "character": "Admiral James T. Kirk",
+      "profile_path": "/8X9RuRmwOYQewfCvGg8zFZejC6U.jpg"
+    },
+    {
+      "name": "Leonard Nimoy",
+      "character": "Captain Spock",
+      "profile_path": "/9KaiO5eNzJtB4zB2inmNWR0GTRI.jpg"
+    },
+    {
+      "name": "Ricardo Montalban",
+      "character": "Khan Noonien Singh",
+      "profile_path": "/cadERRbhUJ0674YiIwKOwmeDOgE.jpg"
+    },
+    {
+      "name": "DeForest Kelley",
+      "character": "Dr. Leonard \u0027Bones\u0027 McCoy",
+      "profile_path": "/lBFQdiLYeSN7eZ6ddOXTGc7loQf.jpg"
+    }
+  ]
+}

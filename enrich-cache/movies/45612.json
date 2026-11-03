@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 45612,
+    "title": "Source Code",
+    "overview": "When decorated soldier Captain Colter Stevens wakes up in the body of an unknown man, he discovers he\u0027s part of a mission to find the bomber of a Chicago commuter train.",
+    "tagline": "Make every second count.",
+    "runtime": 93,
+    "release_date": "2011-03-30",
+    "vote_average": 7.314,
+    "poster_path": "/nTr0lvAzeQmUjgSgDEHTJpnrxTz.jpg",
+    "backdrop_path": "/mDb4uku4zEElsITXDpbir4fR0HW.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jake Gyllenhaal",
+      "character": "Colter Stevens",
+      "profile_path": "/ct2Gh2sJSxd4yaMrSsqSt1HpIC3.jpg"
+    },
+    {
+      "name": "Michelle Monaghan",
+      "character": "Christina Warren",
+      "profile_path": "/z5j4HVHEYf1RR9eiz1QkcxaSExZ.jpg"
+    },
+    {
+      "name": "Vera Farmiga",
+      "character": "Colleen Goodwin",
+      "profile_path": "/5Vs7huBmTKftwlsc2BPAntyaQYj.jpg"
+    },
+    {
+      "name": "Jeffrey Wright",
+      "character": "Dr. Rutledge",
+      "profile_path": "/yGcuHGW4glqRpOPxgiCvjcren7F.jpg"
+    }
+  ]
+}

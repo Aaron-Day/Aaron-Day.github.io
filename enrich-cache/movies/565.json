@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 565,
+    "title": "The Ring",
+    "overview": "Journalist Rachel Keller investigates a strange videotape that may be behind the untimely deaths of four teenagers. There is an urban legend about this tape: the viewer will die seven days after watching it. Rachel tracks down the video... and watches it. Now she has just seven days to unravel the mystery of the Ring in order to save herself and her son.",
+    "tagline": "Before you die, you see.",
+    "runtime": 115,
+    "release_date": "2002-10-18",
+    "vote_average": 6.713,
+    "poster_path": "/AeRpUynJKDpJveklBJipOYrVxCS.jpg",
+    "backdrop_path": "/6tuNQ16hC4Qp7wjTweKzUnnLBkI.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 14563,
+      "name": "The Ring Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Naomi Watts",
+      "character": "Rachel Keller",
+      "profile_path": "/7ysvff7ZhW388SIh2YjQ0XIryOn.jpg"
+    },
+    {
+      "name": "Martin Henderson",
+      "character": "Noah Clay",
+      "profile_path": "/avJFARzEPaB24rKQUYLinGQqilL.jpg"
+    },
+    {
+      "name": "David Dorfman",
+      "character": "Aidan Keller",
+      "profile_path": "/6DoBfsNmZnbwGbjHXPTx1sVG48U.jpg"
+    },
+    {
+      "name": "Brian Cox",
+      "character": "Richard Morgan",
+      "profile_path": "/scSjbFCTRngXlkJRoKptM5kQGw7.jpg"
+    }
+  ]
+}

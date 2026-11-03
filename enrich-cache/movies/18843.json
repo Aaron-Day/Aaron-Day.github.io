@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18843,
+    "title": "Dr. Dolittle 3",
+    "overview": "Lisa Dolittle sends her daughter to \u0027Durango\u0027, a Dude Ranch, to find herself. While there, she uses her talent to talk to the animals in order to save Durango from being taken over by a neighboring Ranch.",
+    "tagline": "Like father, like daughter!",
+    "runtime": 93,
+    "release_date": "2006-04-25",
+    "vote_average": 5.1,
+    "poster_path": "/mODEH6RuoL8s9ptF1Mbrq1Z6aYz.jpg",
+    "backdrop_path": "/qf7fKQbdrwnQPPdLTTahUF2ETcC.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 3169,
+      "name": "Dr. Dolittle Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kyla Pratt",
+      "character": "Maya Dolittle",
+      "profile_path": "/y02hmYVndLlJbOYkNDu3Ksdsiib.jpg"
+    },
+    {
+      "name": "Kristen Wilson",
+      "character": "Lisa Dolittle",
+      "profile_path": "/ld2W1mIvaS0yAd3pHW2wyeacg8v.jpg"
+    },
+    {
+      "name": "Walker Howard",
+      "character": "Bo Jones",
+      "profile_path": "/nRm6ctdguG15zjwGw15L4fdNlaH.jpg"
+    },
+    {
+      "name": "John Amos",
+      "character": "Jud",
+      "profile_path": "/b2zYGkMG28wYDHC9CunfYAeoeMQ.jpg"
+    }
+  ]
+}

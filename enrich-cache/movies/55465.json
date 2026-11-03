@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 55465,
+    "title": "A Very Harold \u0026 Kumar Christmas",
+    "overview": "Six years have elapsed since Guantanamo Bay, leaving Harold and Kumar estranged from one another with very different families, friends and lives. But when Kumar arrives on Harold\u0027s doorstep during the holiday season with a mysterious package in hand, he inadvertently burns down Harold\u0027s father-in-law\u0027s beloved Christmas tree. To fix the problem, Harold and Kumar embark on a mission through New York City to find the perfect Christmas tree, once again stumbling into trouble at every single turn.",
+    "tagline": "Christmas comes prematurely.",
+    "runtime": 90,
+    "release_date": "2011-11-04",
+    "vote_average": 6,
+    "poster_path": "/cncxLilRHKayn8VKhzjAMHkbN4f.jpg",
+    "backdrop_path": "/A5VmqOiOXHUqX8QMnXuYJdIOXeD.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 30663,
+      "name": "Harold \u0026 Kumar Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "John Cho",
+      "character": "Harold Lee",
+      "profile_path": "/4Lar4uy8gk78cEocq6ERPRFWt3e.jpg"
+    },
+    {
+      "name": "Kal Penn",
+      "character": "Kumar Patel",
+      "profile_path": "/yICM1JcxKbEpaqTUreY0yFMIc8W.jpg"
+    },
+    {
+      "name": "Paula Garc\u00E9s",
+      "character": "Maria",
+      "profile_path": "/ukwCVnfSp5qYGbdXHVeCwOXiZyu.jpg"
+    },
+    {
+      "name": "Neil Patrick Harris",
+      "character": "Neil Patrick Harris",
+      "profile_path": "/r2twLWLwDpKJ7JyhWsD1YsL7rJV.jpg"
+    }
+  ]
+}

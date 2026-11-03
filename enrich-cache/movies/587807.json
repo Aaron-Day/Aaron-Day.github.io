@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 587807,
+    "title": "Tom \u0026 Jerry",
+    "overview": "Tom the cat and Jerry the mouse get kicked out of their home and relocate to a fancy New York hotel, where a scrappy employee named Kayla will lose her job if she can\u2019t evict Jerry before a high-class wedding at the hotel. Her solution? Hiring Tom to get rid of the pesky mouse.",
+    "tagline": "Best of enemies. Worst of friends.",
+    "runtime": 101,
+    "release_date": "2021-02-10",
+    "vote_average": 6.713,
+    "poster_path": "/8XZI9QZ7Pm3fVkigWJPbrXCMzjq.jpg",
+    "backdrop_path": "/69USXLJEXcgMzlhZi7bmaCORxHn.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chlo\u00EB Grace Moretz",
+      "character": "Kayla Forrester",
+      "profile_path": "/yq4rYmaTRC5degaOYmJQFpaiho1.jpg"
+    },
+    {
+      "name": "Michael Pe\u00F1a",
+      "character": "Terence Mendoza",
+      "profile_path": "/afs4PCiwn8LR93a10drULLVeVLo.jpg"
+    },
+    {
+      "name": "Colin Jost",
+      "character": "Ben",
+      "profile_path": "/cuNRnDX02digyoqYVyFGkwd78fn.jpg"
+    },
+    {
+      "name": "Rob Delaney",
+      "character": "Henry Dubros",
+      "profile_path": "/xirfT1znRkkughLiPemKu3NhkKQ.jpg"
+    }
+  ]
+}

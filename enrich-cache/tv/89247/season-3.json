@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Mad As A Hatter",
+        "overview": "As Batwoman continues to keep the streets of Gotham safe, Batwing joins in on the action, but Luke quickly realizes he hasn\u0027t quite mastered his suit. When Ryan pays Alice a visit to ask about the bombshell she dropped, Ryan must decide if she should go down the rabbit hole of her past. As Mary prepares to finally graduate from medical school, she feels the absence of her family more than ever. When an Alice admirer stumbles upon one of the missing Bat Trophies, Gotham and the Bat Team get mixed up in the madness, culminating in a shockingly gruesome graduation... and an equally shocking new partnership.",
+        "air_date": "2021-10-13",
+        "runtime": 43,
+        "still_path": "/2bnaVaFm3eJppPNSkibEb7nm8dJ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Loose Tooth",
+        "overview": "When a new incarnation of Gotham\u0027s swamp slumming Killer Croc surfaces and starts racking up a body count, the inaugural team-up of Batwoman and Alice is put to the test. But Alice isn\u0027t the only unwanted intrusion into Ryan\u0027s life when Jada Jet shows up at Wayne Enterprises, insisting on meeting the company\u0027s new CEO. Luke and Mary\u0027s relationship is strained under the weight of a secret Luke is keeping, while Sophie finds herself becoming part of Ryan\u0027s inner circle.",
+        "air_date": "2021-10-20",
+        "runtime": 43,
+        "still_path": "/cLTMcm1rAqFZiJI3s0h49kJOtcH.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Freeze",
+        "overview": "An unfortunate incident in downtown Gotham alerts Batwoman and the Bat Team that another missing trophy has made its way into the wrong hands. Meanwhile, a new member of the Jet family surfaces when Marquis Jet makes a not-so-subtle entrance, interrupting a very personal moment between Ryan and Jada. Batwing must decide if he\u0027s ready to suit up again, and the Hippocratic Oath forces a strained sisterly moment between Alice and Mary.",
+        "air_date": "2021-10-27",
+        "runtime": 41,
+        "still_path": "/nO4XzfmMmp2sQXc0fo1H32ANoLf.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Antifreeze",
+        "overview": "When Ryan makes Gotham\u0027s \u201C30 Under 30\u201D list, Luke worries about how Marquis\u0027s involvement in Ryan\u0027s rising popularity as Wayne Enterprises\u0027 acting CEO will land with Jada. Mary returns from a late night out not feeling quite herself, while Alice\u0027s hallucinations grow stronger. And when Sophie\u0027s sister, Jordan, goes missing, she and the Bat Team quickly realize that Freeze\u0027s missing weapon hasn\u0027t been fully contained.",
+        "air_date": "2021-11-03",
+        "runtime": 43,
+        "still_path": "/3KPpPKDsChjuss6GfwjNmZI0Hra.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "A Lesson From Professor Pyg",
+        "overview": "Ryan asks Sophie to accompany her to a dinner at Jada\u0027s to do recon on what her estranged mother knows about Wayne Enterprises, but the evening takes a turn when an uninvited guest drops in on the intimate gathering. As the terrifying evening unfolds, Ryan witnesses another side to Marquis and her mother.",
+        "air_date": "2021-11-10",
+        "runtime": 43,
+        "still_path": "/jiuMxorzudQS0VYNVojPCYoQRbK.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "How Does Your Garden Grow?",
+        "overview": "An unnerving discovery in a garden shed sends Renee Montoya rushing to Ryan to ensure the city is on high alert. Her terrifying theory \u2014 a Bat Trophy has entangled a new host, and her thorny ways are weaving their way through Gotham. Alice is suspiciously eager to help the Bat Team, and Sophie seeks vengeance for an incident involving her sister.",
+        "air_date": "2021-11-17",
+        "runtime": 43,
+        "still_path": "/rgDqoFsWNZZgBCkOrfxm55UFuqA.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Pick Your Poison",
+        "overview": "As Ryan\u0027s family dynamic grows more complicated, she also finds herself in the middle of a Bat Team stand-off between Luke and Mary. Meanwhile, Alice finds a new sidekick to do her bidding.",
+        "air_date": "2021-11-24",
+        "runtime": 41,
+        "still_path": "/lalwxiOrCCbSGI6v4HjdUO20zqx.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Trust Destiny",
+        "overview": "While Mary and Alice continue their sisterly bonding, Ryan, Luke and Sophie are desperate and willing to do almost anything to stop them. Renee is forced to revisit her heartbreaking past. Meanwhile, Marquis grows more unhinged and throws a spectacularly sinister soiree at Wayne Tower... and everyone is invited.",
+        "air_date": "2022-01-12",
+        "runtime": 43,
+        "still_path": "/6EV1NvrcV9TdJX4zb3m5xKnr12p.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Meet Your Maker",
+        "overview": "Ryan, Sophie and Luke attempt to track down the OG Poison Ivy when all signs point to Pamela Isley\u0027s reappearance in Gotham. At the same time, Mary feels drawn by a powerful force and Alice suddenly feels very protective of her stepsister. Meanwhile, Jada hasn\u0027t given up on rehabilitating Marquis and seeks the help of an old friend.",
+        "air_date": "2022-01-19",
+        "runtime": 43,
+        "still_path": "/uKjpe4r2rGgWahn9ucjxfBT6BYQ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Toxic",
+        "overview": "Batwoman\u0027s hands are full as she juggles Jada\u0027s demands, Mary\u0027s ever-increasing power and a new romantic entanglement. Loyalties are tested and motives come into question as Batwoman races against the clock to once again save the city and those closest to her.",
+        "air_date": "2022-01-26",
+        "runtime": 42,
+        "still_path": "/vIjkTIlUXv6RAVoaGRZTXahyv1Q.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Broken Toys",
+        "overview": "Just when it seems things can\u0027t get worse... Batwoman\u0027s identity is once again at risk of being exposed, and some of Gotham\u0027s most villainous unite. Sophie joins Luke on a mission and Alice gets into Mary\u0027s head.",
+        "air_date": "2022-02-02",
+        "runtime": 43,
+        "still_path": "/tswgeFCswkfmOHlFz1yG2g2kqSg.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "We\u0027re All Mad Here",
+        "overview": "Ryan, Sophie and Jada come together to formulate a plan to stop Marquis, while Mary seeks to make amends for the harm she did as Poison Ivy. Meanwhile, Alice continues to spiral out of control and contend with her mental demons.",
+        "air_date": "2022-02-23",
+        "runtime": 43,
+        "still_path": "/fR3SD36SLKisax0BvUWFJg089MZ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "We Having Fun Yet?",
+        "overview": "Joining forces with Jada, Batwoman and a panicked Bat Team must race against the clock as Marquis\u0027s nefarious plan balloons into something Gotham would never have suspected...and won\u0027t see coming. And as Alice reaches her breaking point, an empathetic Mary makes another appeal on behalf of her sister for the Joker\u0027s buzzer, but everyone wonders - is Alice beyond saving?",
+        "air_date": "2022-03-02",
+        "runtime": 41,
+        "still_path": "/hTvtZF9WzbAJ2r6pgrtlOTWTHPd.jpg"
+      }
+    ]
+  }
+}

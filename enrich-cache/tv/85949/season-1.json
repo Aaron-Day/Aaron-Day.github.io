@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Remembrance",
+        "overview": "At the end of the 24th Century, and 14 years after his retirement from Starfleet, Jean-Luc Picard is living a quiet life on his vineyard, Chateau Picard. When he is sought out by a mysterious young woman, in need of his help, he soon realizes she may have personal connections to his own past.",
+        "air_date": "2020-01-23",
+        "runtime": 45,
+        "still_path": "/lOHyfQhGqcPpakvRFkMpDUqjCwE.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Maps and Legends",
+        "overview": "Picard begins investigating the mystery of Dahj as well as what her very existence means to the Federation. Without Starfleet\u0027s support, Picard is left leaning on others for help, including Dr. Agnes Jurati and an estranged former colleague, Raffi Musiker. Meanwhile, hidden enemies are also interested in where Picard\u0027s search for the truth about Dahj will lead.",
+        "air_date": "2020-01-30",
+        "runtime": 44,
+        "still_path": "/3vFld9A4moYyYt2pHp8kNtgU1qr.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The End Is the Beginning",
+        "overview": "Completely unaware of her special nature, Soji continues her work and captures the attention of the Borg cube research project\u2019s executive director. After rehashing past events with a reluctant Raffi, Picard seeks others willing to join his search for Bruce Maddox, including pilot and former Starfleet officer Crist\u00F3bal Rios.",
+        "air_date": "2020-02-06",
+        "runtime": 43,
+        "still_path": "/ww4a6c3HPOiJIlXhT84tNtlbCRy.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Absolute Candor",
+        "overview": "The crew\u0027s journey to Freecloud takes a detour when Picard orders a stop at the planet Vashti, where Picard and Raffi relocated Romulan refugees fourteen years earlier. Upon arrival, Picard reunites with Elnor, a young Romulan he befriended during the relocation. Meanwhile, Narek continues his attempts to learn more about Soji while Narissa\u0027s impatience with his lack of progress grows.",
+        "air_date": "2020-02-13",
+        "runtime": 45,
+        "still_path": "/55nXz9SuIbBHNPkWq9wyeqMAxI4.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Stardust City Rag",
+        "overview": "The La Sirena crew begins an unpredictable and lively expedition on Freecloud to search for Bruce Maddox. When they learn that Maddox has found himself in a precarious situation, a familiar face offers her assistance.",
+        "air_date": "2020-02-20",
+        "runtime": 45,
+        "still_path": "/iW6MIkGmC4TEJOOGhk2alMfP2N9.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Impossible Box",
+        "overview": "Picard and the crew track Soji to the Borg cube in Romulan space, resurfacing haunting memories for Picard. Meanwhile, Narek believes he finally found a way to safely exploit Soji for information.",
+        "air_date": "2020-02-27",
+        "runtime": 55,
+        "still_path": "/wymJPBehQiO9HCmtVdJWVUIhnxb.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Nepenthe",
+        "overview": "Picard and Soji transport to the planet Nepenthe, home to some old and trusted friends. As the rest of the La Sirena crew attempt to join them, Picard helps Soji make sense of her recently unlocked memories. Meanwhile, Hugh and Elnor are left on the Borg cube and must face an angered Narissa.",
+        "air_date": "2020-03-05",
+        "runtime": 59,
+        "still_path": "/il75QcllFnO1g0TGZzQ3ZzUrpH0.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Broken Pieces",
+        "overview": "When devastating truths behind the Mars attack are revealed, Picard realizes just how far many will go to preserve secrets stretching back generations, all while the La Sirena crew grapples with secrets and revelations of their own. Narissa directs her guards to capture Elnor, setting off an unexpected chain of events on the Borg cube.",
+        "air_date": "2020-03-12",
+        "runtime": 56,
+        "still_path": "/sgyQ2PanSiuUfEbcX66HT0ez8P5.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Et in Arcadia Ego (1)",
+        "overview": "Following an unconventional and dangerous transit, Picard and the crew finally arrive at Soji\u0027s home world, Coppelius. However, with Romulan warbirds on their tail, their arrival brings only greater danger as the crew discovers more than expected about the planet\u2019s inhabitants.",
+        "air_date": "2020-03-19",
+        "runtime": 46,
+        "still_path": "/1aPyotpgY9u6kENHuTGo5aHHe5Q.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Et in Arcadia Ego (2)",
+        "overview": "A final confrontation on the synthetics\u2019 homeworld, Coppelius pits Picard and his team against the Romulans, as well as the synths who seek to safeguard their existence at all costs.",
+        "air_date": "2020-03-26",
+        "runtime": 57,
+        "still_path": "/8jJhlJ1sTScm5Be8o0Vsx9oftIm.jpg"
+      }
+    ]
+  }
+}

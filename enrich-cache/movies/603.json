@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 603,
+    "title": "The Matrix",
+    "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+    "tagline": "Believe the unbelievable.",
+    "runtime": 136,
+    "release_date": "1999-03-31",
+    "vote_average": 8.262,
+    "poster_path": "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
+    "backdrop_path": "/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2344,
+      "name": "The Matrix Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Neo",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Laurence Fishburne",
+      "character": "Morpheus",
+      "profile_path": "/2GbXERENPpl5MmlqOLlPVaVtifD.jpg"
+    },
+    {
+      "name": "Carrie-Anne Moss",
+      "character": "Trinity",
+      "profile_path": "/9zya72vRZYBQILfetACsnmCBgdj.jpg"
+    },
+    {
+      "name": "Hugo Weaving",
+      "character": "Agent Smith",
+      "profile_path": "/lSC8Et0PYi5zeQb3IpPkFje7hgR.jpg"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 335777,
+    "title": "The Nut Job 2: Nutty by Nature",
+    "overview": "When the evil mayor of Oakton decides to bulldoze Liberty Park and build a dangerous amusement park in its place, Surly Squirrel and his ragtag group of animal friends need to band together to save their home, defeat the mayor, and take back the park.",
+    "tagline": "Get ready. Get set. Get nuts!",
+    "runtime": 91,
+    "release_date": "2017-08-11",
+    "vote_average": 6.2,
+    "poster_path": "/xOfdQHNF9TlrdujyAjiKfUhxSXy.jpg",
+    "backdrop_path": "/snobCf0u4ex9OKNNFuNQKmGe3gJ.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 464308,
+      "name": "The Nut Job Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Arnett",
+      "character": "Surly (voice)",
+      "profile_path": "/cXupYqk2ERP13XBkw816skYdVDO.jpg"
+    },
+    {
+      "name": "Maya Rudolph",
+      "character": "Precious (voice)",
+      "profile_path": "/bpEVMFMyHEQ8wLdii9WKB279w8p.jpg"
+    },
+    {
+      "name": "Bobby Cannavale",
+      "character": "Frankie (voice)",
+      "profile_path": "/wlp20ggyNI7x0xGUtTjC2Xl2XmD.jpg"
+    },
+    {
+      "name": "Bobby Moynihan",
+      "character": "Mayor Muldoon (voice)",
+      "profile_path": "/gOvwNz5joi5yWJ7dAhuF8WA2aas.jpg"
+    }
+  ]
+}

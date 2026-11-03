@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 402900,
+    "title": "Ocean\u0027s Eight",
+    "overview": "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century at New York\u0027s annual Met Gala.",
+    "tagline": "Every con has its pros.",
+    "runtime": 111,
+    "release_date": "2018-06-07",
+    "vote_average": 6.943,
+    "poster_path": "/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
+    "backdrop_path": "/scQf03Fm3jeyv4FH04qvi4fp4wh.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sandra Bullock",
+      "character": "Debbie Ocean",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "Cate Blanchett",
+      "character": "Lou",
+      "profile_path": "/1Rd567YFdGfkJjSlhNPR8joYkaX.jpg"
+    },
+    {
+      "name": "Anne Hathaway",
+      "character": "Daphne Kluger",
+      "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
+    },
+    {
+      "name": "Mindy Kaling",
+      "character": "Amita",
+      "profile_path": "/m4veWEp9TEDallTZRobb7MLkd9K.jpg"
+    }
+  ]
+}

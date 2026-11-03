@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 493529,
+    "title": "Dungeons \u0026 Dragons: Honor Among Thieves",
+    "overview": "A charming thief and a band of unlikely adventurers undertake an epic heist to retrieve a lost relic, but things go dangerously awry when they run afoul of the wrong people.",
+    "tagline": "No experience necessary.",
+    "runtime": 134,
+    "release_date": "2023-03-23",
+    "vote_average": 7.355,
+    "poster_path": "/v7UF7ypAqjsFZFdjksjQ7IUpXdn.jpg",
+    "backdrop_path": "/AdBXP8e6K3FYdDrMx3Wr6WZqCYF.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chris Pine",
+      "character": "Edgin",
+      "profile_path": "/vSe6sIsdtcoqBhuWRXynahFg8Vf.jpg"
+    },
+    {
+      "name": "Michelle Rodriguez",
+      "character": "Holga",
+      "profile_path": "/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
+    },
+    {
+      "name": "Justice Smith",
+      "character": "Simon",
+      "profile_path": "/htJrcOzYkLVcnF4ExT4O1bDN5e5.jpg"
+    },
+    {
+      "name": "Sophia Lillis",
+      "character": "Doric",
+      "profile_path": "/4jUkLBBhGnFi6LymePzWVw4oVFa.jpg"
+    }
+  ]
+}

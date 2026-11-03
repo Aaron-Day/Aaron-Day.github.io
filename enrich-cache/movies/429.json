@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 429,
+    "title": "The Good, the Bad and the Ugly",
+    "overview": "While the Civil War rages on between the Union and the Confederacy, three men \u2013 a quiet loner, a ruthless hitman, and a Mexican bandit \u2013 comb the American Southwest in search of a strongbox containing $200,000 in stolen gold.",
+    "tagline": "For three men the Civil War wasn\u0027t hell. It was practice.",
+    "runtime": 161,
+    "release_date": "1966-12-23",
+    "vote_average": 8.5,
+    "poster_path": "/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg",
+    "backdrop_path": "/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
+    "genres": [
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Clint Eastwood",
+      "character": "Blondie",
+      "profile_path": "/8TwdCfeOZH7ucRlfLZ6wObxa7cO.jpg"
+    },
+    {
+      "name": "Eli Wallach",
+      "character": "Tuco Ramirez",
+      "profile_path": "/tX1kYpW1K8XjEA3i9FXrgFqNAaw.jpg"
+    },
+    {
+      "name": "Lee Van Cleef",
+      "character": "Sentenza / Angel Eyes",
+      "profile_path": "/prcDQR2pp0b92j0G8rnX5kQeQk0.jpg"
+    },
+    {
+      "name": "Aldo Giuffr\u00E8",
+      "character": "Alcoholic Union Captain",
+      "profile_path": "/aT6eECl1R3YGYL4KatyIQrq0zG8.jpg"
+    }
+  ]
+}

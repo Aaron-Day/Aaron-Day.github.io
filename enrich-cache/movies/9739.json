@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9739,
+    "title": "Demolition Man",
+    "overview": "In 1996, brash L.A. detective John Spartan and maniac killer Simon Phoenix are both sentenced to decades in a cryogenic prison as punishment for a rescue mission gone wrong. When Phoenix escapes 36 years later to wreak havoc on the future, Spartan is awakened to capture his nemesis the old-fashioned way.",
+    "tagline": "The future isn\u0027t big enough for the both of them.",
+    "runtime": 115,
+    "release_date": "1993-10-08",
+    "vote_average": 6.776,
+    "poster_path": "/dq6AmlVFo92PRuoLCcIyFdoRuxf.jpg",
+    "backdrop_path": "/4pl165EUdvveHCr4J4YcHVA1MnD.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "John Spartan",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Wesley Snipes",
+      "character": "Simon Phoenix",
+      "profile_path": "/oOjRfYKQOBS6XsRyXaZktmSQBph.jpg"
+    },
+    {
+      "name": "Sandra Bullock",
+      "character": "Lt. Lenina Huxley",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "Nigel Hawthorne",
+      "character": "Dr. Raymond Cocteau",
+      "profile_path": "/v8bin2HUa9gayqxmCnlRlh0taxq.jpg"
+    }
+  ]
+}

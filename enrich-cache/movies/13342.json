@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13342,
+    "title": "Fast Times at Ridgemont High",
+    "overview": "A group of Southern-California high school students ignore their studies in favor of indulging in their teenage distractions.",
+    "tagline": "At Ridgemont High, only the rules get busted!",
+    "runtime": 90,
+    "release_date": "1982-08-13",
+    "vote_average": 6.792,
+    "poster_path": "/e15rmfjf0m6EGLe4MnNhwD3Dd1W.jpg",
+    "backdrop_path": "/mHbnNX6jxpndW03yGXslHcBOaZv.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Sean Penn",
+      "character": "Jeff Spicoli",
+      "profile_path": "/9glqNTVpFpdN1nFklKaHPUyCwR6.jpg"
+    },
+    {
+      "name": "Jennifer Jason Leigh",
+      "character": "Stacy Hamilton",
+      "profile_path": "/7DbG2AO3nygHAkNC866HLPKkxv9.jpg"
+    },
+    {
+      "name": "Judge Reinhold",
+      "character": "Brad Hamilton",
+      "profile_path": "/6R0vCxzSx1CaDAM9y9ZgmejUdiL.jpg"
+    },
+    {
+      "name": "Phoebe Cates",
+      "character": "Linda Barrett",
+      "profile_path": "/nh2jiRCFa7TQdGB87k557LG0PtY.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 45132,
+    "title": "Super",
+    "overview": "After his wife falls under the influence of a drug dealer, an everyday guy transforms himself into Crimson Bolt, a superhero with the best intentions, though he lacks for heroic skills.",
+    "tagline": "Shut up, crime!",
+    "runtime": 96,
+    "release_date": "2010-11-26",
+    "vote_average": 6.5,
+    "poster_path": "/jZrRMGSajZQehg8mz74A5A00L3.jpg",
+    "backdrop_path": "/5OGrBmi0fWAE6b1R6uv5EnuWOaL.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Rainn Wilson",
+      "character": "Frank Darbo",
+      "profile_path": "/yRTElSeC3q9nBqBuleI6OODlDMS.jpg"
+    },
+    {
+      "name": "Elliot Page",
+      "character": "Libby",
+      "profile_path": "/nXO8DE4biVXY4UDYP0NdIY1zvXS.jpg"
+    },
+    {
+      "name": "Liv Tyler",
+      "character": "Sarah",
+      "profile_path": "/rC6f9NoDN9l2tMgiEocIvnJi2tW.jpg"
+    },
+    {
+      "name": "Kevin Bacon",
+      "character": "Jacques",
+      "profile_path": "/rjX2Oz3tCZMfSwOoIAyEhdtXnTE.jpg"
+    }
+  ]
+}

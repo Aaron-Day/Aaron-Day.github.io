@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 345,
+    "title": "Eyes Wide Shut",
+    "overview": "After Dr. Bill Harford\u0027s wife, Alice, admits to having sexual fantasies about a man she met, Bill becomes obsessed with having a sexual encounter. He discovers an underground sexual group and attends one of their meetings -- and quickly discovers that he is in over his head.",
+    "tagline": "No dream is ever just a dream.",
+    "runtime": 159,
+    "release_date": "1999-07-16",
+    "vote_average": 7.482,
+    "poster_path": "/knEIz1eNGl5MQDbrEAVWA7iRqF9.jpg",
+    "backdrop_path": "/aC6wW62V6b0csr5iUnbOjYAqfhg.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Dr. William Harford",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Nicole Kidman",
+      "character": "Alice Harford",
+      "profile_path": "/4KSQDodyBtTDMaREYgMdWD1LbH1.jpg"
+    },
+    {
+      "name": "Sydney Pollack",
+      "character": "Victor Ziegler",
+      "profile_path": "/d22QmhGE9bCkXeOwRsfrGTk188I.jpg"
+    },
+    {
+      "name": "Marie Richardson",
+      "character": "Marion",
+      "profile_path": "/y2zq5XV66m5IKGkPbT5VZ8n0s23.jpg"
+    }
+  ]
+}

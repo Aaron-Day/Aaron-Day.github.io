@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 10,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Family Affair",
+        "overview": "A rising young star is killed in a wreck and her determined stalker claims credit, but the team finds out there\u0027s more to this tragedy than meets the eye.",
+        "air_date": "2009-09-24",
+        "runtime": 45,
+        "still_path": "/vNqgoqu0918cP6qC3Nsu1dwDxms.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Ghost Town",
+        "overview": "The son of a notorious killer is arrested on suspicion of murder, and the CSI team must overcome their natural prejudices against the boy\u0027s antecedents in order to track the true culprit.",
+        "air_date": "2009-10-01",
+        "runtime": 45,
+        "still_path": "/xFXjrR7HddHHNcTdmb6qxPuecWI.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Working Stiffs",
+        "overview": "The team investigates the murder of Jason, a troubled computer geek working at a low-level casino support industry job who lures a colleague, Paulie, into a dangerous plan to make a working stiff\u0027s dream come true.",
+        "air_date": "2009-10-08",
+        "runtime": 45,
+        "still_path": "/9qcuBKFWCrGXyysu9TfY3RhCLaC.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Coup de Grace",
+        "overview": "When a policeman kills another officer, the CSIs must look to the evidence to determine if the shooting was premeditated or an accident.",
+        "air_date": "2009-10-15",
+        "runtime": 44,
+        "still_path": "/buLLCu6R9gPab6OlyvqDja6AwAy.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Bloodsport",
+        "overview": "After a beloved college football coach is found dead and his house drenched and spattered with his blood, the CSI team hunts for the killer who didn\u0027t find Coach Jimmy lovable at all.",
+        "air_date": "2009-10-29",
+        "runtime": 45,
+        "still_path": "/sOg7uQHvhfK7EVEl3lBaDBbtsp9.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Death and the Maiden",
+        "overview": "When two seemingly different crimes turn out to be related, the CSIs discover they\u0027re interlocking parts of the same revenge plot.",
+        "air_date": "2009-11-05",
+        "runtime": 44,
+        "still_path": "/mBUldTbPRBgYri5qjkXAhSupfaN.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Lost Girls (III)",
+        "overview": "The CSI team helps Ray Langston investigate a prostitution ring that may have harbored a hostage he has been looking for in Miami and New York.\n\nThe crossover starts on CSI: Miami S08E07 Bone Voyage (I) and CSI: New York S06E07 Hammer Down (II).",
+        "air_date": "2009-11-12",
+        "runtime": 45,
+        "still_path": "/3zx9xOtceAdXCXYwHDW5ilFTvRb.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Lover\u0027s Lanes",
+        "overview": "A bowling tournament is disrupted when an important piece of evidence is uncovered, leading the CSIs to investigate a murder at the same bowling alley.",
+        "air_date": "2009-11-19",
+        "runtime": 45,
+        "still_path": "/A5IGavJBP0SulXvdmLV1qBEslaz.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Appendicitement",
+        "overview": "When Nick, Greg and Hodges take Henry to celebrate his birthday at a biker bar, they uncover a double homicide and find several suspects still at the bar who may be the murderers.",
+        "air_date": "2009-12-10",
+        "runtime": 45,
+        "still_path": "/nIVZKh96V8Key38kSdX1C9saLqI.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Better Off Dead",
+        "overview": "The CSIs dig to find the truth about how a recent shootout at a gun store might connect to a young woman who may have committed suicide.",
+        "air_date": "2009-12-17",
+        "runtime": 43,
+        "still_path": "/b4xrL4LtY14v1X9Hsxb5874E4vU.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Sin City Blue",
+        "overview": "Two secretaries on holiday from Arizona attempt to steal a man\u0027s wallet and ATM pin number in a scam, and wind up dead in different locations. Meanwhile, the CSI team also investigates a disturbing medical mystery involving the dumping of human organs in a wildlife refuge.",
+        "air_date": "2010-01-14",
+        "runtime": 45,
+        "still_path": "/eUBvhbLVs13rjMnOxn5zCCijm8k.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Long Ball",
+        "overview": "The CSI investigates the mystifying death of a former pro golfer whose allegiance to the game might have cost him everything.",
+        "air_date": "2010-01-21",
+        "runtime": 44,
+        "still_path": "/qPL6G3hvqvsndUqYm3PDTzOBxYJ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Internal Combustion",
+        "overview": "The case of two high school students, one dead and one missing, lead the CSIs into the underbelly of streetcar racing and a tangled web of deadly competition.",
+        "air_date": "2010-02-04",
+        "runtime": 43,
+        "still_path": "/msJDi9qhnEKNQQPi69dGZmlox2Z.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Unshockable",
+        "overview": "When a band member of Rascal Flatts is electrocuted by his own guitar during a concert, the CSI team investigates if it was a case of foul play.",
+        "air_date": "2010-03-04",
+        "runtime": 45,
+        "still_path": "/w8525CCPwacHb7Dm5yZLOxnAxUR.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Neverland",
+        "overview": "When a young boy is found murdered, the CSI team uncovers evidence that may link his death to an old case that recently resurfaced.",
+        "air_date": "2010-03-11",
+        "runtime": 44,
+        "still_path": "/garqyOsIsgQbcrk5QHh1qvPipf5.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Panty Sniffer",
+        "overview": "Catherine and Detective Vartann are thrown together in a hotel room for 24 hours as they stake out a duo making drugs in the room next door. Meanwhile, Nick and Langston work a case that involves a fetish which has become big business in Vegas.",
+        "air_date": "2010-04-01",
+        "runtime": 45,
+        "still_path": "/bRaDHd4nKeqIBynDoc5sTUFI0I5.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Irradiator",
+        "overview": "When the CSI team investigates the brutal murder of a family, they trace the killer to the house next door, which might belong to the \u0022Dr. Jekyll\u0022 serial killer.",
+        "air_date": "2010-04-08",
+        "runtime": 45,
+        "still_path": "/tXPVLO6O2ISDwMdyVeR92lx3ZZy.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Field Mice",
+        "overview": "When Hodges and Wendy take a group of high school CSI Explorer Scouts on a field trip, they embellish their role in solving cases and take their assignment a little bit too far.",
+        "air_date": "2010-04-15",
+        "runtime": 45,
+        "still_path": "/zhEBvf0puSB4JVKf0JS09dhMMwP.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "World\u0027s End",
+        "overview": "When a student is discovered murdered at Lindsey\u0027s school, the investigation takes a sharp turn when the CSIs uncover an unlikely connection between the boy\u0027s death and atrocities of the past.",
+        "air_date": "2010-04-22",
+        "runtime": 44,
+        "still_path": "/qAqVLaVEO0Gi71wO1s13tRtHXTF.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Take My Life, Please!",
+        "overview": "A legendary comic from the good old days of Las Vegas is set to reunite with his partner on stage for one night only, until one half of the famous duo is found dead.",
+        "air_date": "2010-04-29",
+        "runtime": 44,
+        "still_path": "/2eiNvmPbtfxVubq7uSr9L5mHEMu.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Lost \u0026 Found",
+        "overview": "A mother thought to be grieving for the loss of her family three years ago becomes a suspect in a CSI investigation.",
+        "air_date": "2010-05-06",
+        "runtime": 43,
+        "still_path": "/mCCpmfw8qpGUQphQCPiU717oLHP.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Doctor Who",
+        "overview": "The CSI team must investigate one of their own when Langston is accused by a former colleague of being part of the Dr. Jekyll murders, on part one of a two-part season finale of CSI.",
+        "air_date": "2010-05-13",
+        "runtime": 43,
+        "still_path": "/hBwQecDJrfKdmNnxOnTIaPrFVuy.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Meat Jekyll",
+        "overview": "The CSI\u0027s lives are on the line as they close in on the elusive Dr. Jekyll, and more than one member of the team may not live to see his capture, on part two of a two-part 10th season finale of CSI.",
+        "air_date": "2010-05-20",
+        "runtime": 45,
+        "still_path": "/sa4q9j095xBdGE1CalYj73gdktZ.jpg"
+      }
+    ]
+  }
+}

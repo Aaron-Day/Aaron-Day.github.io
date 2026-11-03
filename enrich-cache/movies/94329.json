@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 94329,
+    "title": "The Raid",
+    "overview": "Deep in the heart of Jakarta\u0027s slums lies an impenetrable safe house for the world\u0027s most dangerous killers and gangsters. Until now, the run-down apartment block has been considered untouchable to even the bravest of police. Cloaked under the cover of pre-dawn darkness and silence, an elite swat team is tasked with raiding the safe house in order to take down the notorious drug lord that runs it.  But when a chance encounter with a spotter blows their cover and news of their assault reaches the drug lord, the building\u0027s lights are cut and all the exits blocked. Stranded on the sixth floor with no way out, the unit must fight their way through the city\u0027s worst to survive their mission. Starring Indonesian martial arts sensation Iko Uwais.",
+    "tagline": "1 Ruthless Crime Lord, 20 Elite Cops, 30 Floors of Hell.",
+    "runtime": 101,
+    "release_date": "2012-03-22",
+    "vote_average": 7.412,
+    "poster_path": "/Abnm1Ws3JH0ReCfEhLMPwPcMcGO.jpg",
+    "backdrop_path": "/3wf5wV222vqTmz10y1vbrPgrGDf.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 257960,
+      "name": "The Raid Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Iko Uwais",
+      "character": "Rama",
+      "profile_path": "/9WngJ2lOCy3UczLv3L2JRZvX0UM.jpg"
+    },
+    {
+      "name": "Joe Taslim",
+      "character": "Jaka",
+      "profile_path": "/bk2j6Oa8T02KtvpD4qOXXGJe4Vy.jpg"
+    },
+    {
+      "name": "Donny Alamsyah",
+      "character": "Andi",
+      "profile_path": "/zfv0xvwhealzqRwI0BUQpbzrUuD.jpg"
+    },
+    {
+      "name": "Yayan Ruhian",
+      "character": "Mad Dog",
+      "profile_path": "/y8ZLh6FZMuLFw8PhqDxcEsyozjJ.jpg"
+    }
+  ]
+}

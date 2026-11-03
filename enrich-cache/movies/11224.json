@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11224,
+    "title": "Cinderella",
+    "overview": "Cinderella has faith her dreams of a better life will come true. With help from her loyal mice friends and a wave of her Fairy Godmother\u0027s wand, Cinderella\u0027s rags are magically turned into a glorious gown and off she goes to the Royal Ball. But when the clock strikes midnight, the spell is broken, leaving a single glass slipper... the only key to the ultimate fairy-tale ending!",
+    "tagline": "The greatest love story ever told.",
+    "runtime": 74,
+    "release_date": "1950-02-22",
+    "vote_average": 7.057,
+    "poster_path": "/4nssBcQUBadCTBjrAkX46mVEKts.jpg",
+    "backdrop_path": "/puJKgNcWaGgMk5VHanSSomUTpmw.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 55419,
+      "name": "Cinderella Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ilene Woods",
+      "character": "Cinderella (voice)",
+      "profile_path": "/ApIXw423GZoMnwYUmkqEq5awpng.jpg"
+    },
+    {
+      "name": "Eleanor Audley",
+      "character": "Lady Tremaine (voice)",
+      "profile_path": "/rppllmBSCZhkhCWoomVvbB1pB4T.jpg"
+    },
+    {
+      "name": "Verna Felton",
+      "character": "Fairy Godmother (voice)",
+      "profile_path": "/xJ7mohLuufsNn6dkvzjKi5nlaFn.jpg"
+    },
+    {
+      "name": "Claire Du Brey",
+      "character": "(credit only) (voice)",
+      "profile_path": "/e8WDoA2IhvjkFMZ2OEsr7PinZEe.jpg"
+    }
+  ]
+}

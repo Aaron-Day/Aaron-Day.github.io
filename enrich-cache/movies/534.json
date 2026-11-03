@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 534,
+    "title": "Terminator Salvation",
+    "overview": "All grown up in post-apocalyptic 2018, John Connor must lead the resistance of humans against the increasingly dominating militaristic robots. But when Marcus Wright appears, his existence confuses the mission as Connor tries to determine whether Wright has come from the future or the past -- and whether he\u0027s friend or foe.",
+    "tagline": "The end begins.",
+    "runtime": 115,
+    "release_date": "2009-05-20",
+    "vote_average": 6.106,
+    "poster_path": "/gw6JhlekZgtKUFlDTezq3j5JEPK.jpg",
+    "backdrop_path": "/uifaXfJxjTMeNttw5u04nHx1G5w.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 528,
+      "name": "The Terminator Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Christian Bale",
+      "character": "John Connor",
+      "profile_path": "/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg"
+    },
+    {
+      "name": "Sam Worthington",
+      "character": "Marcus Wright",
+      "profile_path": "/mflBcox36s9ZPbsZPVOuhf6axaJ.jpg"
+    },
+    {
+      "name": "Moon Bloodgood",
+      "character": "Blair Williams",
+      "profile_path": "/9CGOg5nGFlQ3IWwbElMAEJMm9Iq.jpg"
+    },
+    {
+      "name": "Helena Bonham Carter",
+      "character": "Serena",
+      "profile_path": "/hJMbNSPJ2PCahsP3rNEU39C8GWU.jpg"
+    }
+  ]
+}

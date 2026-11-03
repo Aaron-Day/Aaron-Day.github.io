@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 944,
+    "title": "Lethal Weapon 4",
+    "overview": "With personal crises and age weighing in on them, LAPD officers Riggs and Murtaugh must contend with a deadly Chinese crime lord trying to get his brother out of prison.",
+    "tagline": "The gang\u0027s all here.",
+    "runtime": 127,
+    "release_date": "1998-07-10",
+    "vote_average": 6.613,
+    "poster_path": "/pTLliHRoG0Qwp6qycmrMB4bD3mr.jpg",
+    "backdrop_path": "/u4d4vymNPo1UuJ6ihtyy9OQgco2.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 945,
+      "name": "Lethal Weapon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mel Gibson",
+      "character": "Martin Riggs",
+      "profile_path": "/jnqHMaOslt8cef2atSmOpGRvNla.jpg"
+    },
+    {
+      "name": "Danny Glover",
+      "character": "Roger Murtaugh",
+      "profile_path": "/7ZyztVlG7OpqD0EhzG8iwYNcd1s.jpg"
+    },
+    {
+      "name": "Joe Pesci",
+      "character": "Leo Getz",
+      "profile_path": "/pEHQoL8yOndOq59iXlgsOpUTcTk.jpg"
+    },
+    {
+      "name": "Rene Russo",
+      "character": "Lorna Cole",
+      "profile_path": "/yWPSqrv3nfPPKC6I2S0sRTWZ5Yi.jpg"
+    }
+  ]
+}

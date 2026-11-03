@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8005,
+    "title": "Robin Hood: Men in Tights",
+    "overview": "Robin Hood comes home after fighting in the Crusades to learn that the noble King Richard is in exile and that the despotic King John now rules England, with the help of the Sheriff of Rottingham. Robin Hood assembles a band of fellow patriots to do battle with King John and the Sheriff.",
+    "tagline": "The legend had it coming...",
+    "runtime": 104,
+    "release_date": "1993-07-28",
+    "vote_average": 6.612,
+    "poster_path": "/woexOLEkUlYsPLLuZRK6LjZaF38.jpg",
+    "backdrop_path": "/xFhpZ9UDUGXu52lCHdN39PIooRt.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Cary Elwes",
+      "character": "Robin Hood",
+      "profile_path": "/9UszBdQJ9PmyBydIeIBxlStozhW.jpg"
+    },
+    {
+      "name": "Richard Lewis",
+      "character": "Prince John",
+      "profile_path": "/yyTBCwdS0A4rbii6dMPeY5TG0PF.jpg"
+    },
+    {
+      "name": "Roger Rees",
+      "character": "Sheriff of Rotingham",
+      "profile_path": "/pVZwILdpzTXECMUvLOSu12RbTHa.jpg"
+    },
+    {
+      "name": "Amy Yasbeck",
+      "character": "Maid Marian",
+      "profile_path": "/5BbyiBjp5T8pKUcauVTweRcvLJJ.jpg"
+    }
+  ]
+}

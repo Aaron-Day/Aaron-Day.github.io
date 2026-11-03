@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 174,
+    "title": "Star Trek VI: The Undiscovered Country",
+    "overview": "After years of war, the Federation and the Klingon empire find themselves on the brink of a peace summit when a Klingon ship is nearly destroyed by an apparent attack from the Enterprise. Both worlds brace for what may be their deadliest encounter.",
+    "tagline": "The battle for peace has begun.",
+    "runtime": 110,
+    "release_date": "1991-12-06",
+    "vote_average": 7.042,
+    "poster_path": "/tvTOJD7Gz668GLy2nNdLRQvpPsv.jpg",
+    "backdrop_path": "/nGJTamFPZ9V4JX5YpiOS0UDuwmx.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 151,
+      "name": "Star Trek: The Original Series Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "William Shatner",
+      "character": "Captain James T. Kirk",
+      "profile_path": "/8X9RuRmwOYQewfCvGg8zFZejC6U.jpg"
+    },
+    {
+      "name": "Leonard Nimoy",
+      "character": "Captain Spock",
+      "profile_path": "/9KaiO5eNzJtB4zB2inmNWR0GTRI.jpg"
+    },
+    {
+      "name": "DeForest Kelley",
+      "character": "Dr. Leonard \u0027Bones\u0027 McCoy",
+      "profile_path": "/lBFQdiLYeSN7eZ6ddOXTGc7loQf.jpg"
+    },
+    {
+      "name": "James Doohan",
+      "character": "Captain Montgomery \u0027Scotty\u0027 Scott",
+      "profile_path": "/lsI15wIkmcKVTM8qu8ooukaLShi.jpg"
+    }
+  ]
+}

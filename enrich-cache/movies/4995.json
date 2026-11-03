@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4995,
+    "title": "Boogie Nights",
+    "overview": "In 1977, an idealistic porn producer and his promising protege try to catch up with the end of an era before their never-ending party collides with cold, hard reality.",
+    "tagline": "The life of a dreamer, the days of a business and the nights in between.",
+    "runtime": 156,
+    "release_date": "1997-10-07",
+    "vote_average": 7.634,
+    "poster_path": "/wnE24UPCPQsQnbBOu4zVE2qaDNm.jpg",
+    "backdrop_path": "/ArpTzQZHWh4UVsgUvV6S7WjTq1n.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Mark Wahlberg",
+      "character": "Eddie Adams / Dirk Diggler",
+      "profile_path": "/1Oc3XSLyb8hxmjmlgFENu582Kqw.jpg"
+    },
+    {
+      "name": "Burt Reynolds",
+      "character": "Jack Horner",
+      "profile_path": "/5FNuc4f1OR9EF9QcrcnFIr3zZQr.jpg"
+    },
+    {
+      "name": "Julianne Moore",
+      "character": "Amber Waves",
+      "profile_path": "/3YF19rWusxWfEI59ZM33dFhasRq.jpg"
+    },
+    {
+      "name": "John C. Reilly",
+      "character": "Reed Rothchild",
+      "profile_path": "/iDQ8w4qcxU3le5ZWoCKpHs1QNok.jpg"
+    }
+  ]
+}

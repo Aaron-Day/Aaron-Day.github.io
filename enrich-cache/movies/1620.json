@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1620,
+    "title": "Hitman",
+    "overview": "A genetically engineered assassin with deadly aim, known only as \u0022Agent 47\u0022 eliminates strategic targets for a top-secret organization. But when he\u0027s double-crossed, the hunter becomes the prey as 47 finds himself in a life-or-death game of international intrigue.",
+    "tagline": "Most believe his very existence is a sin. But others know he is a necessary evil.",
+    "runtime": 89,
+    "release_date": "2007-11-21",
+    "vote_average": 6.182,
+    "poster_path": "/h69UJOOKlrHcvhl5H2LY74N61DQ.jpg",
+    "backdrop_path": "/sFAqIqo3ZvsXXLdwXYUEjB6owZu.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 737031,
+      "name": "Hitman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Timothy Olyphant",
+      "character": "Agent 47",
+      "profile_path": "/ccQzw9I1BYBv0HHVJr4cvAWjtkI.jpg"
+    },
+    {
+      "name": "Dougray Scott",
+      "character": "Mike Whittier",
+      "profile_path": "/fDjTHSZuUIEstxxBvHApLrU1fWz.jpg"
+    },
+    {
+      "name": "Olga Kurylenko",
+      "character": "Nika Boronina",
+      "profile_path": "/ei6eYUhQFw2AaV6U5fyPptBaPF0.jpg"
+    },
+    {
+      "name": "Robert Knepper",
+      "character": "Yuri Marklov",
+      "profile_path": "/lRncjvgCIm1muIkK94zJSH2i3d6.jpg"
+    }
+  ]
+}

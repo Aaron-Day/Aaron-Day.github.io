@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2034,
+    "title": "Training Day",
+    "overview": "On his first day on the job as a narcotics officer, a rookie cop works with a rogue detective who isn\u0027t what he appears.",
+    "tagline": "The only thing more dangerous than the line being crossed, is the cop who will cross it.",
+    "runtime": 122,
+    "release_date": "2001-10-05",
+    "vote_average": 7.536,
+    "poster_path": "/bUeiwBQdupBLQthMCHKV7zv56uv.jpg",
+    "backdrop_path": "/nuO8o9ltxhI7AZQxePavEZ4TyHa.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 945477,
+      "name": "Training Day Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "Alonzo",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Ethan Hawke",
+      "character": "Jake",
+      "profile_path": "/2LoTr6x0TEM7L5em4kSx1VmGDgG.jpg"
+    },
+    {
+      "name": "Scott Glenn",
+      "character": "Roger",
+      "profile_path": "/8DHORod2l6ZFS9KR0gNAAM3WZfI.jpg"
+    },
+    {
+      "name": "Tom Berenger",
+      "character": "Stan Gursky",
+      "profile_path": "/zLxzAdAfu7y02yEx29JSLDgXJZ4.jpg"
+    }
+  ]
+}

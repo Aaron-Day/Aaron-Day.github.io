@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 16,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Emmy-Winning Episode",
+        "overview": "Tired of not winning an Emmy, Peter embarks on his own For Your Consideration campaign for Family Guy by making the show more like Emmy-winning shows - and no category is off limits.",
+        "air_date": "2017-10-01",
+        "runtime": 23,
+        "still_path": "/ilyzKiSOFolhAoTfye8CgsrXsPp.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Foxx in the Men House",
+        "overview": "Peter becomes friends with a cool, handsome paramedic named Stryker Foxx. Wrapped up in his newfound \u0022coolness,\u0022 he soon dumps Quagmire, Joe and Cleveland.",
+        "air_date": "2017-10-08",
+        "runtime": 23,
+        "still_path": "/A3QUvgfGqHqsZPJvTOUjGctXQgw.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Nanny Goats",
+        "overview": "Peter and Louis find themselves with a golden opportunity to reconnect as a couple after Lois\u0027 parents get a nanny to take care of the children for them.",
+        "air_date": "2017-10-15",
+        "runtime": 23,
+        "still_path": "/9RYTjhr2HG4W2WG5oHuyILHcNHe.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Follow the Money",
+        "overview": "Chris receives a special one-dollar bill as a birthday present, but he quickly loses it and the dollar passes into the possession of everybody in Quahog.",
+        "air_date": "2017-10-22",
+        "runtime": 23,
+        "still_path": "/q8pQxy5ELNkE6ugqWmwQwOoyvOb.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Three Directors",
+        "overview": "The story of Peter\u0027s firing from the brewery, as told in the styles of Quentin Tarantino, Wes Anderson, and Michael Bay.",
+        "air_date": "2017-11-05",
+        "runtime": 23,
+        "still_path": "/wjlSGURLGS3ILyvK976brLUv7iY.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The D in Apartment 23",
+        "overview": "When Brian posts an offensive tweet that goes viral and the rest of the Griffins are also treated as outcasts, he\u0027s forced to move out of the Griffin house.",
+        "air_date": "2017-11-12",
+        "runtime": 23,
+        "still_path": "/7YKVC9Uld32ZYoEqgEJmOIyRPxY.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Petey IV",
+        "overview": "Vladimir Putin comes to Quahog after Peter writes to him about an alternate ending to the Russian version of Rocky IV (1985).",
+        "air_date": "2017-11-19",
+        "runtime": 23,
+        "still_path": "/sqrRIdWm0LbCSnnbREXdEFiB3NF.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Crimes and Meg\u0027s Demeanor",
+        "overview": "Peter encourages Meg to attend a high school party, where she takes up drinking, which both concerns and delights her father. Meanwhile, Brian begins spying on his neighbors and suspects Principal Shepherd of a crime.",
+        "air_date": "2017-12-03",
+        "runtime": 23,
+        "still_path": "/8xAJhr7MutgyyIE2VznxNPtL1SV.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Don\u0027t Be a Dickens at Christmas",
+        "overview": "In this special holiday episode, a selfish Peter loses his Christmas spirit and is visited by ghosts of Christmas past, present and future who take him on a journey around Quahog in the style of Charles Dickens\u0027 \u0022A Christmas Carol\u0022.",
+        "air_date": "2017-12-10",
+        "runtime": 23,
+        "still_path": "/dOInKyjN8Cb85zZFGWrn3ELPVy9.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Boy (Dog) Meets Girl (Dog)",
+        "overview": "Brian is smitten with a female show dog and enters a show dog competition in which the winner gets to breed her; Peter and Lois go to extreme measures to try to convince Chris that Arthur Valentine doesn\u0027t exist.",
+        "air_date": "2018-01-07",
+        "runtime": 23,
+        "still_path": "/oEwSgmUWto9xv7JNStTqjAdp4us.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Dog Bites Bear",
+        "overview": "Stewie and Brian get into a friendship-ending fight after Brian commits a terrible act to one of Stewie\u0027s beloved toys. Meanwhile, Peter refuses to wash his hand after meeting his favorite breakfast cereal mascot, Boo Berry.",
+        "air_date": "2018-01-14",
+        "runtime": 23,
+        "still_path": "/eb7ivHUJKJKMALNw9pq1mG9N1oR.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Send in Stewie, Please",
+        "overview": "When Stewie gets sent to see his school\u0027s child psychologist for a surprising session, he reveals major secrets about himself.",
+        "air_date": "2018-03-18",
+        "runtime": 27,
+        "still_path": "/1CsZ59zYZbk2cp9ZI9F9Tr2bupH.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "V Is for Mystery",
+        "overview": "Stewie and Brian are detectives who embark on solving a string of mysterious murders set in Victorian-era London.",
+        "air_date": "2018-03-25",
+        "runtime": 23,
+        "still_path": "/89E8wDhJBYu7YvFuiB70d5XAnme.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Veteran Guy",
+        "overview": "After Peter and the guys get caught pretending to be military veterans and are found guilty of the Stolen Valor Act, a judge sentences them to join the U.S. Coast Guard.",
+        "air_date": "2018-04-01",
+        "runtime": 23,
+        "still_path": "/4zBE3gEmkozuynSsDkICzwzZ8do.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Woof of Wall Street",
+        "overview": "Brian convinces Stewie to teach him how to invest in the stock market after learning Stewie has a knack for making money from it. Meanwhile, Peter, Quagmire, Cleveland, and Joe look after the Drunken Clam while Jerome is away.",
+        "air_date": "2018-04-08",
+        "runtime": 23,
+        "still_path": "/9NgkbRnuywWYj5tDWx5iIOs3TaL.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "\u0027Family Guy\u0027 Through the Years",
+        "overview": "FAMILY GUY is reimagined as a series that\u0027s been on the air for 60 years and, in a special retrospective, it looks back at the cultural events and issues that were tackled on the show in the 1950s, \u002760s and \u002770s.",
+        "air_date": "2018-04-22",
+        "runtime": 23,
+        "still_path": "/pLOkW6vhyKoejPlqMvpvmB9RDco.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Switch the Flip",
+        "overview": "To help get Brian\u0027s life in order, Stewie and Brian swap bodies using a machine that Stewie invents, but chaos quickly ensues around Quahog when the machine goes haywire.",
+        "air_date": "2018-04-29",
+        "runtime": 23,
+        "still_path": "/pEdQDKIUCTjoxc23J28upjlyLJ7.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "HTTPete",
+        "overview": "To help promote the brewery to millennials, Peter adopts the millennial lifestyle, and his methods soon attract the attention of a high-powered Silicon Valley executive.",
+        "air_date": "2018-05-06",
+        "runtime": 23,
+        "still_path": "/7umhqRHAHgQHHPTq4nhQPpxngJv.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Unkindest Cut",
+        "overview": "Quagmire\u0027s most treasured body part gets cut off in a freak accident and he is forced to learn how to live without it. Meanwhile, Stewie and Brian search for Mort after learning there is a $10,000 reward for turning him into the police for his involvement in a drug scam.",
+        "air_date": "2018-05-13",
+        "runtime": 23,
+        "still_path": "/gWbpPSskoUDLD09Q9Hh5hjljapv.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Are You There God? It\u0027s Me, Peter",
+        "overview": "After Peter falls into a coma, Peter meets God face-to-face, which leads him to ask some of life\u0027s tough questions.",
+        "air_date": "2018-05-20",
+        "runtime": 23,
+        "still_path": "/nB0stgMeq0v0EBhAHCujU4kIN11.jpg"
+      }
+    ]
+  }
+}

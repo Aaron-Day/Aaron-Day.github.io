@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Laws of Nature",
+        "overview": "When a new Inhuman is discovered, Coulson and the team have an encounter with another organization seeking powered people; Fitz goes to extreme measures to determine how to get Simmons back.",
+        "air_date": "2015-09-29",
+        "runtime": 44,
+        "still_path": "/1P0eP5p1bwhlE83qy9IEkL8dCwy.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Purpose in the Machine",
+        "overview": "Fitz and the team enlist the aid of an Asgardian to unlock the secrets of the ancient Monolith that swallowed Simmons, and Agent May is at a crossroads in her personal and professional life.",
+        "air_date": "2015-10-06",
+        "runtime": 43,
+        "still_path": "/xAFplFckAJpNNM5xi8foc4hQBNZ.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "A Wanted (Inhu)man",
+        "overview": "Daisy, Mack and Coulson race to protect Lincoln as Rosalind\u2019s team hunts down the Inhuman in their quest for powered people. Meanwhile, Hunter proves that there is no line that he will not cross to exact his revenge against Ward and HYDRA.",
+        "air_date": "2015-10-13",
+        "runtime": 42,
+        "still_path": "/jNbTGZr1LtdVgZDIsnPfUCXLBW6.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Devils You Know",
+        "overview": "Coulson and the team search for the Inhuman who is killing other Inhumans. Meanwhile, May feels that Hunter\u0027s mission to take down Ward is getting too personal.",
+        "air_date": "2015-10-20",
+        "runtime": 43,
+        "still_path": "/2tHTKnadLo0ozLcNGyFXJ9EOhvQ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "4,722 Hours",
+        "overview": "After her dramatic rescue from another planet, Simmons is still reeling from her ordeal and reveals how she had to fight for her life in a harsh new world.",
+        "air_date": "2015-10-27",
+        "runtime": 44,
+        "still_path": "/uiFzRLgg6Xox0boRV9bIZ012rEN.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Among Us Hide...",
+        "overview": "The stakes get even higher as Hunter and May continue to go after Ward and HYDRA, and Daisy and Coulson begin to suspect that the ATCU may be keeping a big secret from S.H.I.E.L.D.",
+        "air_date": "2015-11-03",
+        "runtime": 43,
+        "still_path": "/ihMfiBtCSlqfe0gdUY3cuJgwW5P.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Chaos Theory",
+        "overview": "As Daisy and the team fight to protect Inhumans, S.H.I.E.L.D. discovers the shocking truth about one of their foes; Fitz helps Simmons recover information that could lead them back through the portal.",
+        "air_date": "2015-11-10",
+        "runtime": 44,
+        "still_path": "/6Ydnnge97ilgurECKJ2uLvEHtEn.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Many Heads, One Tale",
+        "overview": "The S.H.I.E.L.D. team discovers dangerous truths about the ATCU, and Ward\u0027s plans to destroy S.H.I.E.L.D. take a surprising twist.",
+        "air_date": "2015-11-17",
+        "runtime": 44,
+        "still_path": "/uxo5pIK6N9kS0fYsTUMvYziJQf5.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Closure",
+        "overview": "Ward\u0027s campaign for revenge brings the S.H.I.E.L.D. team to their knees, and Coulson proves he will do anything to settle the score.",
+        "air_date": "2015-12-01",
+        "runtime": 44,
+        "still_path": "/ejB2zryf5tLYrlsl2AthAelUCvO.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Maveth",
+        "overview": "S.H.I.E.L.D battles HYDRA head-to-head, which sees Coulson and Fitz take the ultimate risk while Daisy and the Inhumans try to keep HYDRA at bay.",
+        "air_date": "2015-12-08",
+        "runtime": 43,
+        "still_path": "/sDFiKs9N8riEJrj1CFwzHPyFcJA.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Bouncing Back",
+        "overview": "In the aftermath of his trip to Maveth, Coulson is more determined than ever to get to Gideon Malick and put an end to HYDRA once and for all. Daisy and the team encounter more Inhumans who have powers like they\u0027ve never seen before, but will they be friends or enemies of S.H.I.E.L.D.?",
+        "air_date": "2016-03-08",
+        "runtime": 44,
+        "still_path": "/kYcByOG1WiEO2wvJhZic2hGudG7.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Inside Man",
+        "overview": "Coulson and General Talbot are forced to team up and attend a worldwide symposium on Inhumans, where they suspect Malick has an inside man. As the S.H.I.E.L.D. team gets closer to the truth, an unexpected traitor is revealed.",
+        "air_date": "2016-03-15",
+        "runtime": 44,
+        "still_path": "/i4pHnhWmM4ypoCuTnvXsburpj97.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Parting Shot",
+        "overview": "Bobbi and Hunter become ensnared in an assassination plot after tracking Malick to Russia. As S.H.I.E.L.D. races to save the lives on the line, the team is changed forever.",
+        "air_date": "2016-03-22",
+        "runtime": 43,
+        "still_path": "/rM2YhjtgdpiuY2CRHQunuvv2ruw.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Watchdogs",
+        "overview": "When a radical group called The Watchdogs emerges with plans to eliminate the Inhumans, Agent Mack and his brother become caught in the crossfire. Meanwhile, Simmons discovers a powerful chemical compound that could alter the future for Inhumans.",
+        "air_date": "2016-03-29",
+        "runtime": 42,
+        "still_path": "/etpZGj19Gwh23i5zHwv8uA6QLhk.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Spacetime",
+        "overview": "When Daisy gets a horrifying glimpse of the future, S.H.I.E.L.D. races to prove that fate is not fixed.",
+        "air_date": "2016-04-05",
+        "runtime": 44,
+        "still_path": "/xwNhM9XUCqamdiGlcGS2psKwBzO.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Paradise Lost",
+        "overview": "S.H.I.E.L.D. hunts for information on their dangerous new enemy, and a shameful secret from Malick\u0027s past is exposed, threatening to destroy his HYDRA legacy.",
+        "air_date": "2016-04-12",
+        "runtime": 44,
+        "still_path": "/yfqapN4fL5ntUPm6HX8ZhJ9PsqO.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Team",
+        "overview": "Agent Daisy Johnson must call upon the Secret Warriors for an inaugural mission that will leave no member unscathed, and S.H.I.E.L.D. learns more about Hive\u0027s powers, forcing them to question everyone they trust.",
+        "air_date": "2016-04-19",
+        "runtime": 44,
+        "still_path": "/hKy261BmYpiQGl6AVzvvLhbPjGA.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Singularity",
+        "overview": "The S.H.I.E.L.D. team is left reeling and decimated as Hive continues to sway Inhumans to his side. But there is a sliver of hope as Agents Fitz and Simmons follow a lead that may be able to stop the maniacal Inhuman once and for all.",
+        "air_date": "2016-04-26",
+        "runtime": 43,
+        "still_path": "/jmxDKqT8qsLfyEwV6vJIQUNolkQ.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Failed Experiments",
+        "overview": "Coulson and his team race to combat Hive\u0027s control over the Inhumans, as their enemy\u0027s deadly plan for the human race is revealed.",
+        "air_date": "2016-05-03",
+        "runtime": 42,
+        "still_path": "/cmkPSkX78l1BcoNhr6Z04f2pIVc.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Emancipation",
+        "overview": "In the aftermath of the events of Captain America: Civil War, S.H.I.E.L.D. feels pressure to reveal their involvement with Inhumans. But with the stakes higher than ever and Hive growing stronger, the team is tested in ways they could never anticipate.",
+        "air_date": "2016-05-10",
+        "runtime": 43,
+        "still_path": "/vqFiwpphngTGMQDYlsamuofs7cS.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Absolution (1)",
+        "overview": "S.H.I.E.L.D. takes on Hive, and when his master plan is finally revealed, the team must spring into action.",
+        "air_date": "2016-05-17",
+        "runtime": 43,
+        "still_path": "/tIZdzqLQviPhff6FezM1RKIcfXs.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Ascension (2)",
+        "overview": "As Hive prepares to convert the world into his personal army, S.H.I.E.L.D. scrambles to mount a counteroffensive. Who\u0027s going to pay the ultimate price to ensure that the mission is a success?",
+        "air_date": "2016-05-17",
+        "runtime": 44,
+        "still_path": "/tvyesxa1nV8CFBhxYhMfyeCL2l1.jpg"
+      }
+    ]
+  }
+}

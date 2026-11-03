@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11825,
+    "title": "Police Academy 5: Assignment Miami Beach",
+    "overview": "The Police Academy misfits travel to Miami Beach for Commandant Lassard to be honored with a prestigious lifetime award pending his retirement. Things take a turn when Lassard unknowingly ends up in possession of stolen diamonds from a jewel heist.",
+    "tagline": "Hold everything! The cadets are dropping in on Miami Beach for an all new adventure.",
+    "runtime": 90,
+    "release_date": "1988-03-17",
+    "vote_average": 5.2,
+    "poster_path": "/4m1qfTiVxdEDv0fgUf0FI7CA9Fe.jpg",
+    "backdrop_path": "/qUYNcbiYkRehth3xnxqHv7NKJ0H.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9338,
+      "name": "Police Academy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bubba Smith",
+      "character": "Hightower",
+      "profile_path": "/ew7CpCLyD4FP1zqgtxUV8jDg8cX.jpg"
+    },
+    {
+      "name": "David Graf",
+      "character": "Tackleberry",
+      "profile_path": "/oAVx2Ea0qrND2wn78m2wQtGGlz1.jpg"
+    },
+    {
+      "name": "Michael Winslow",
+      "character": "Jones",
+      "profile_path": "/uSRS2MOI1fNFAdvUgrhatBvfsvv.jpg"
+    },
+    {
+      "name": "Leslie Easterbrook",
+      "character": "Callahan",
+      "profile_path": "/cgivmDAMFWTMGKGr12Z0HjEcBgN.jpg"
+    }
+  ]
+}

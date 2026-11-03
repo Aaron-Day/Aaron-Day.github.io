@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Lord of the Flys (1)",
+        "overview": "Superman leaves Earth for New Krypton to aid inhabitants of his homeland in their civil war against the sinister Lord Nor. Meanwhile, in Smallville, Nor holds Clark\u0027s parents hostage as slaves.",
+        "air_date": "1996-09-22",
+        "runtime": 46,
+        "still_path": "/dZ7dh6bWmEGCGt4K78gvKfNYNLe.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Battleground Earth (2)",
+        "overview": "After Superman is unmasked as an impostor in a Kryptonian tribunal, the Man of Steel faces Nor in mortal combat.",
+        "air_date": "1996-09-29",
+        "runtime": 46,
+        "still_path": "/vZy1Rtlp1cpYKRnae563zZzP27T.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Swear to God, This Time We\u0027re Not Kidding",
+        "overview": "The Wedding Destroyer arrives as Lois and Clark prepare to settle down in marriage.",
+        "air_date": "1996-10-06",
+        "runtime": 46,
+        "still_path": "/oSX5n20tudaQqL7XDay3TwJ4VSS.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Soul Mates",
+        "overview": "As the newlyweds are about to consummate their marriage, time traveler H.G. Wells arrives with news that a curse threatens to strike them down.",
+        "air_date": "1996-10-13",
+        "runtime": 46,
+        "still_path": "/b5aXgza0qZYPWDKb2xlEqzX9b3x.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Brutal Youth",
+        "overview": "Superman\u0027s eternal youth may intimidate Lois, but the super-power is eagerly sought by a gerontologist, an aging bank robber--and Jimmy.",
+        "air_date": "1996-10-20",
+        "runtime": 46,
+        "still_path": "/iCN6lcNM655L5BlUF8dpFVfCwWQ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The People vs. Lois Lane (1)",
+        "overview": "Lois holds the smoking gun when an informant is shot down during a meeting with her.",
+        "air_date": "1996-10-27",
+        "runtime": 46,
+        "still_path": "/bN0FrvGqCNPHGLvO7vOqTAGJDOZ.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Dead Lois Walking (2)",
+        "overview": "Superman helps Lois break out of prison, only to encounter the wrath of the vengeful Prof. Cole--who plots to annihilate Metropolis.",
+        "air_date": "1996-11-10",
+        "runtime": 46,
+        "still_path": "/ml3ha9iIhu6HTbvaK1XQAuXGxWh.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Bob and Carol and Lois and Clark",
+        "overview": "The newlyweds get chummy with a new couple  as Superman encounters a new adversary--known as Deathstroke.",
+        "air_date": "1996-11-17",
+        "runtime": 46,
+        "still_path": "/jvZlwmM1aCzQtL0W6FGlsLWRGeZ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Ghosts",
+        "overview": "A con artist is after the Kents\u0027 brownstone, and he summons the ghost of a woman who was murdered there to scare the couple away.",
+        "air_date": "1996-11-24",
+        "runtime": 46,
+        "still_path": "/egtQeMkQiyU6L9eAUjj8szmRvCg.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Stop the Presses",
+        "overview": "A new editor takes over Perry\u0027s office; and a computer hacker taps into classified files to learn the source of Superman\u0027s powers--and kill him.",
+        "air_date": "1996-12-08",
+        "runtime": 46,
+        "still_path": "/d5TqwDneNCPkK28OQsMF00UCyqs.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "\u0027Twas the Night Before Mxymas",
+        "overview": "An elfin visitor puts Daily Planet Christmas Eve partygoers into a time loop--and plunges the city into hopelessness and despair.",
+        "air_date": "1996-12-15",
+        "runtime": 46,
+        "still_path": "/vzXzRzRcbUUmbBagRXNa0QiDUth.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Lethal Weapon",
+        "overview": "Just as an extortionist threatens to level Metropolis, Superman\u0027s powers go haywire, thanks to exposure to red kryptonite.",
+        "air_date": "1997-01-05",
+        "runtime": 46,
+        "still_path": "/xnekGvyBqyy6D3Y9gebocfw8KQB.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Sex, Lies and Videotape",
+        "overview": "Superman wins a peace prize--and then sees his reputation crumble with the publication of a scandalous photo of himself with Lois.",
+        "air_date": "1997-01-19",
+        "runtime": 46,
+        "still_path": "/grKMrEZ0f0wsKlSvYtu3tMEj63P.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Meet John Doe (1)",
+        "overview": "Tempus, the time traveler, returns to Metropolis as a Presidential candidate bent on controlling the minds of the masses.",
+        "air_date": "1997-03-02",
+        "runtime": 46,
+        "still_path": "/kuxtcCh9D2QPerFrW5a3SutgO2G.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Lois and Clarks (2)",
+        "overview": "With Superman lost in a time warp, an alternate Superman from another dimension helps Lois combat the diabolical Tempus, the new President-elect.",
+        "air_date": "1997-03-09",
+        "runtime": 46,
+        "still_path": "/h3XyQrDGHJaNXTLZNqrRSxu1YAK.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "AKA Superman",
+        "overview": "Jimmy\u0027s new girlfriend is a Superman fan who thinks that Jimmy is the disguised Man of Steel.",
+        "air_date": "1997-03-16",
+        "runtime": 46,
+        "still_path": "/8LDhUx95AaPnI5Ez1bQ8m072zab.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Faster than a Speeding Vixen (1)",
+        "overview": "Superman contends with a tough female competitor; the Planet gets a new owner; and corporate CEOs begin disappearing.",
+        "air_date": "1997-04-12",
+        "runtime": 46,
+        "still_path": "/oDIowlQ0wBYXRfbhtgBdNNzz5yv.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Shadow of a Doubt (2)",
+        "overview": "Clark finds evidence that someone is planning to take over Lex Luthor\u0027s empire.",
+        "air_date": "1997-04-19",
+        "runtime": 46,
+        "still_path": "/xbvrRCaNb8xANl7UMnobDLdvEdq.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Voice from the Past (3)",
+        "overview": "Lois and Clark move to confront Leslie about his true identity, but a power-hungry maniac suddenly begins controlling Lois\u0027s mind.",
+        "air_date": "1997-04-26",
+        "runtime": 46,
+        "still_path": "/vqiUnBH8JrLfxOeTCWTYfpW1OKF.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "I\u0027ve Got You Under My Skin",
+        "overview": "A robber trying to hide out from the mob switches bodies with an unsuspecting Clark and discovers that the Man of Steel\u0027s superpowers come with the package.",
+        "air_date": "1997-05-31",
+        "runtime": 46,
+        "still_path": "/yJlUP7yEmV1fgj0WQPt3YOjFNgq.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Toy Story",
+        "overview": "Toys are involved in the abductions of orphans, Dr. Klein and the daughter of a toy-company board member.",
+        "air_date": "1997-06-07",
+        "runtime": 46,
+        "still_path": "/4XPBTLBHeYquVBQuzhENaEWBsn5.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Family Hour",
+        "overview": "Lois and Clark turn to Lois\u0027s father as they battle infertility problems; a telekinetic ex-con turns his mind into a deadly weapon.",
+        "air_date": "1997-06-14",
+        "runtime": 46,
+        "still_path": "/7Lu7ZrTeZDVMyOT5THIlGQ5FeqV.jpg"
+      }
+    ]
+  }
+}

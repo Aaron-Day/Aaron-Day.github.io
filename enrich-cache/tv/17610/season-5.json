@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Ascension",
+        "overview": "While Sam and Deeks recover from traumatic torture that will have a lasting impact on their personal and professional relationships, lives are still in jeopardy as the NCIS: LA team searches for stolen nuclear weapons.",
+        "air_date": "2013-09-24",
+        "runtime": 44,
+        "still_path": "/8dTPo4zKhv0AbEzSTTeSxhMlwyv.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Impact",
+        "overview": "In an effort to help Sam and Deeks return to work, Hetty calls upon Operational Psychologist Nate Getz to help them cope with their traumatic experience. Meanwhile, the rest of the NCIS: LA team investigates the murder of a former Navy Admiral and a controversial journalist aboard a private jet.",
+        "air_date": "2013-10-01",
+        "runtime": 43,
+        "still_path": "/3gmm0NWViVZs6O1XSMalWljyuDy.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Omni",
+        "overview": "The NCIS: LA team must find who compromised a classified vaccine project from a bio tech company. Meanwhile, Deeks struggles with his emotions upon returning to the field.",
+        "air_date": "2013-10-08",
+        "runtime": 44,
+        "still_path": "/XvTvOMOYi99XxALPsDX3ke9kqP.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Reznikov, N.",
+        "overview": "The NCIS: LA team finds themselves in danger while investigating a kidnapping case of a man claiming to be Callen\u2019s father.",
+        "air_date": "2013-10-15",
+        "runtime": 43,
+        "still_path": "/l3JZzZgC3f3I5KpkiEWG4ahsSL6.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Unwritten Rule",
+        "overview": "Analyst Nell Jones joins the NCIS: LA team in the field when a former Navy officer\u2019s girlfriend is kidnapped in exchange for Navy intelligence. Meanwhile, Deeks unknowingly breaks one of Hetty\u2019s rules.",
+        "air_date": "2013-10-22",
+        "runtime": 42,
+        "still_path": "/9LNGYFSYSvpEAAuB1B4nzOTK6VZ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Big Brother",
+        "overview": "When a 15-year-old hacker compromises missions, Callen goes under cover at a prestigious high school.",
+        "air_date": "2013-10-29",
+        "runtime": 41,
+        "still_path": "/fVMEwf0OJEwZXHRIicdZtllDLiv.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Livelong Day",
+        "overview": "The team must alert Homeland Security when they uncover a threat to a Los Angeles-based train during a murder investigation.",
+        "air_date": "2013-11-05",
+        "runtime": 43,
+        "still_path": "/oCDIknAXrWra4XGE7VOS33VuS5z.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Fallout",
+        "overview": "The team must locate and retrieve a stolen antiterrorism device before the city is attacked; Hetty is haunted by her past.",
+        "air_date": "2013-11-12",
+        "runtime": 44,
+        "still_path": "/2UPkKTW000qpD9td2HYnOCWNQBc.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Recovery",
+        "overview": "Kensi goes undercover as a nutritionist and Deeks poses as a new patient at a rehab center to investigate the death of a Navy officer.",
+        "air_date": "2013-11-19",
+        "runtime": 42,
+        "still_path": "/pd58OaQyhnFhz9zG6FbwQ9aZTD9.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Frozen Lake",
+        "overview": "Callen and Sam enlist the help of a Gurkha, an elite Nepali soldier specializing in knife fighting, to retrieve a missing thumb drive.  Meanwhile, Kensi and Deeks struggle to find a balance in their partnership.",
+        "air_date": "2013-11-26",
+        "runtime": 44,
+        "still_path": "/t3DqFMmAM8wPzsFh5kPFmxZHZr6.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Iron Curtain Rising",
+        "overview": "When a former Romanian Communist leader and suspected war criminal is discovered to be living in Los Angeles under a false identity, the NCIS: LA team must locate him before he disappears again.",
+        "air_date": "2013-12-10",
+        "runtime": 44,
+        "still_path": "/qpqPjPYBEz5k96dIgXGahozPycJ.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Merry Evasion",
+        "overview": "A senator\u2019s daughter is the victim of a home invasion. The team investigate to determine if it was a random crime or a targeted attack due to her father\u2019s crackdown on international cyber warfare. Meanwhile, Kensi\u2019s holiday spirit changes after she receives a surprise Christmas gift.",
+        "air_date": "2013-12-17",
+        "runtime": 44,
+        "still_path": "/gob2WIbSl71imgX41jLsMrZSu75.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Allegiance",
+        "overview": "While in Afghanistan, Kensi and Granger join the team on a joint case when a federal agent in Los Angeles tied to Hawala, an ancient system of money transfer, is murdered.",
+        "air_date": "2014-01-14",
+        "runtime": 43,
+        "still_path": "/r3nLHEfcORDcQhw7IPVO8YZWXxH.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "War Cries",
+        "overview": "The investigation into the murder of two private military contractors ends up putting a member of the team in grave danger; Sam arranges a blind date for Callen.",
+        "air_date": "2014-02-04",
+        "runtime": 44,
+        "still_path": "/A5E1SSp7ApMQGYVoiDQ8V73kCL3.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Tuhon",
+        "overview": "Callen and Sam search for a murder suspect -- a retired assassin (Danny Trejo) they encountered on their first case together.",
+        "air_date": "2014-02-25",
+        "runtime": 44,
+        "still_path": "/hted9mTJTv1ynNTyFigJmQlnTQT.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Fish Out of Water",
+        "overview": "Following an explosion at a fish market, the NCIS: LA team partners with an undercover DEA agent to determine if the incident is an act of terrorism or a botched drug smuggling deal. Meanwhile, in Afghanistan, Granger and Kensi investigate a helicopter crash that could be tied to their ongoing search for the infamous white ghost.",
+        "air_date": "2014-03-04",
+        "runtime": 44,
+        "still_path": "/xjKjSZKoaNeVnEInvmv6YoJX5W8.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Between the Lines",
+        "overview": "When a gang identifies and executes an undercover agent, the team must locate a mole before other agents are put in danger.",
+        "air_date": "2014-03-18",
+        "runtime": 43,
+        "still_path": "/vT5BMXJA6aECqOoT0tlfQWl6D1i.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Zero Days",
+        "overview": "Eric witnesses his friend, a computer systems expert, being attacked by people who want information that could redirect a missile; Kensi runs into a familiar face in Afghanistan.",
+        "air_date": "2014-03-25",
+        "runtime": 43,
+        "still_path": "/ok4DM8fvssB7Q9uxAJcOp0ZhCUg.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Spoils of War",
+        "overview": "After learning that Special Agent Kensi Blye disappeared and the Taliban may be he holding her captive, Hetty sends the NCIS: LA team to Afghanistan on a rescue mission.",
+        "air_date": "2014-04-01",
+        "runtime": 44,
+        "still_path": "/udYI1QTuqnQRNPMYIr0uCxCCtIR.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Windfall",
+        "overview": "Nell joins Deeks in the field on a case involving a former Marine who is being tracked by al-Qaida after embezzling money from Iraq.",
+        "air_date": "2014-04-08",
+        "runtime": 43,
+        "still_path": "/iWkOtLA7tW1yfqnnBJyNt1kogR7.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Three Hearts",
+        "overview": "The team takes an undercover agent who is suspected of working for the smuggler he is supposed to be investigating into custody; Kensi and Deeks discuss their relationship.",
+        "air_date": "2014-04-15",
+        "runtime": 44,
+        "still_path": "/2xhOZSh5eaFZ70RZF1vqTkawXWJ.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "One More Chance",
+        "overview": "Sam is convinced that the theft of software for a new unmanned aerial vehicle is connected with the disappearance of the lead engineer\u0027s 10-year-old daughter, a girl Sam once provided protection detail for in Saudi Arabia.",
+        "air_date": "2014-04-29",
+        "runtime": 41,
+        "still_path": "/se2SXgJZuly3fayRZn2dzP0DrBV.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Exposure",
+        "overview": "When a news reporter announces the group responsible for the deadly explosion at a military-sponsored charity event, the team must investigate her claims and search for the attacker.",
+        "air_date": "2014-05-06",
+        "runtime": 42,
+        "still_path": "/lbwtlcTF7UmVaYusSzAUjobf20L.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Deep Trouble (1)",
+        "overview": "When the NCIS: Los Angeles team and DEA uncover the cartel\u0027s plans to slyly transport billions of dollars\u2019 worth of cocaine from Colombia to the U.S. using a submarine, Callen and Sam must quickly locate the missing vessel. Meanwhile, Hetty is called to Washington in the aftermath of the controversial mission in Afghanistan.",
+        "air_date": "2014-05-13",
+        "runtime": 44,
+        "still_path": "/vRqZ4K121CEqnrqzkVOHoNxVz11.jpg"
+      }
+    ]
+  }
+}

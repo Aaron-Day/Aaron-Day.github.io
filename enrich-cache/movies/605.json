@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 605,
+    "title": "The Matrix Revolutions",
+    "overview": "The human city of Zion defends itself against the massive invasion of the machines as Neo fights to end the war at another front while also opposing the rogue Agent Smith.",
+    "tagline": "Everything that has a beginning has an end.",
+    "runtime": 129,
+    "release_date": "2003-11-05",
+    "vote_average": 6.761,
+    "poster_path": "/qEWiBXJGXK28jGBAm8oFKKTB0WD.jpg",
+    "backdrop_path": "/533xAMhhVyjTy8hwMUFEt5TuDfR.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2344,
+      "name": "The Matrix Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Neo",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Laurence Fishburne",
+      "character": "Morpheus",
+      "profile_path": "/2GbXERENPpl5MmlqOLlPVaVtifD.jpg"
+    },
+    {
+      "name": "Carrie-Anne Moss",
+      "character": "Trinity",
+      "profile_path": "/9zya72vRZYBQILfetACsnmCBgdj.jpg"
+    },
+    {
+      "name": "Hugo Weaving",
+      "character": "Agent Smith",
+      "profile_path": "/lSC8Et0PYi5zeQb3IpPkFje7hgR.jpg"
+    }
+  ]
+}

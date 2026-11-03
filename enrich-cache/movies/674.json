@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 674,
+    "title": "Harry Potter and the Goblet of Fire",
+    "overview": "After his name emerges from the Goblet of Fire, Harry Potter becomes a competitor in a grueling battle for glory among three wizarding schools in the Triwizard Tournament. But if Harry never submitted his name for the Tournament, then who did? Nevertheless, Harry must confront a deadly dragon, fierce water monsters, and an enchanted maze\u2014only to find himself in the cruel grasp of He Who Must Not Be Named.",
+    "tagline": "Dark and difficult times lie ahead.",
+    "runtime": 157,
+    "release_date": "2005-11-16",
+    "vote_average": 7.804,
+    "poster_path": "/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
+    "backdrop_path": "/cClWTo3ftVXvV1sF8vlLuWfnlph.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1241,
+      "name": "Harry Potter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Radcliffe",
+      "character": "Harry Potter",
+      "profile_path": "/uUFfo8RANo7tuckB6AZAnESne55.jpg"
+    },
+    {
+      "name": "Rupert Grint",
+      "character": "Ron Weasley",
+      "profile_path": "/iFlkpTaOF6fGLqxz8b0PhI0i0zN.jpg"
+    },
+    {
+      "name": "Emma Watson",
+      "character": "Hermione Granger",
+      "profile_path": "/mf0OANvWYSzU1d8yggrhyw8IbIz.jpg"
+    },
+    {
+      "name": "Brendan Gleeson",
+      "character": "Alastor \u0027Mad-Eye\u0027 Moody",
+      "profile_path": "/ctPPJu5ZYDZr1IPmzoNpezczrm0.jpg"
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Plan Six From Outer Space",
+        "overview": "With the Technodrome in serious need for new equipment, Bebop and Rocksteady are sent to Earth, disguised in human form, to capture the Channel 6 building and return it to Dimension X.",
+        "air_date": "1990-09-10",
+        "runtime": 22,
+        "still_path": "/p0ybDsLIsXJzP3OKI2xT6zbODAk.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Turtles of the Jungle",
+        "overview": "A professor\u0027s new ray-gun causes plants to go wild and his pet ape Jocko to become a giant rampaging monkey. By using the same ray-gun, Donatello is increased to Jocko\u0027s size so he can fight the giant ape and save April from him.",
+        "air_date": "1990-09-11",
+        "runtime": 22,
+        "still_path": "/aMhsYn1OshfJF5y1FZhrLdIXGbl.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Michaelangelo Toys Around",
+        "overview": "While trying to see the new toys at the Toy Fair, Michaelangelo stumbles upon a plot to take over a noted toy company.",
+        "air_date": "1990-09-12",
+        "runtime": 22,
+        "still_path": "/z29lRnaZhFeYGw1BBPfyKdqKMhA.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Peking Turtle",
+        "overview": "The Turtles must battle a reanimated Terracotta Army after Shredder steals an energy device shaped like a giant pearl, which is held and guarded by a Jade Dragon.",
+        "air_date": "1990-09-13",
+        "runtime": 22,
+        "still_path": "/ldpJRR8gucWYVvbJaYRNziAzoui.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Shredder\u0027s Mom",
+        "overview": "New York is in the middle of an induced heat wave caused by Shredder, who must battle the Turtles and deal with his mother, Miyoko Saki, at the same time.",
+        "air_date": "1990-09-14",
+        "runtime": 22,
+        "still_path": "/ssrIJIejOr04X3fQP8BgF3AWocn.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Four Turtles and a Baby",
+        "overview": "When General Tragg and his troops attack the Neutrino capital, the Neutrino leaders, Zenter and Gizzla, send their infant daughter Tribble through a portal to Earth, asking the Turtles to look after her, but Tribble causes big trouble for our heroes.",
+        "air_date": "1990-09-17",
+        "runtime": 22,
+        "still_path": "/3Ehoqxf8FALv8JpVK6Ls5rmkldz.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Turtlemaniac",
+        "overview": "An eccentric billionaire, Monroe Q. Flem, who is also a collector, wishes to collect every piece of TMNT memorabilia that he can get his evil hands on, including April and the Turtles themselves.",
+        "air_date": "1990-09-18",
+        "runtime": 22,
+        "still_path": "/MDDRnYgIbYOunkU0lTJlunch8d.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Rondo in New York",
+        "overview": "Shredder, Bebop, and Rocksteady are in town to steal a rare new mutagen created by Oswald Dren, a grad student. Some mutagen is accidentally spilled onto a reel of movie film causing monsters to come to life.",
+        "air_date": "1990-09-19",
+        "runtime": 22,
+        "still_path": "/sfKwBnroVl8BHexMaYBtMd5YbRK.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Planet of the Turtles",
+        "overview": "The Turtles must save the Earth from a massive energy drain and its Apocalyptic result by traveling to another dimension where turtles are the dominant species.",
+        "air_date": "1990-09-20",
+        "runtime": 22,
+        "still_path": "/fiFK4vStTHYsSTEwZBCEKoJl743.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Name That Toon",
+        "overview": "A Technodrome computer disguised as an electronic keyboard ends up on Earth, and in the most unlikely of hands.",
+        "air_date": "1990-09-21",
+        "runtime": 22,
+        "still_path": "/vlqFxYQpkOZgcNVPyDYneAnKCpq.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Menace, Maestro Please",
+        "overview": "The Turtles must contend with the \u0022Phantom of the Floxy\u0022 while trying to hinder Shredder\u0027s latest plan to bring the Technodrome back to earth.",
+        "air_date": "1990-09-28",
+        "runtime": 22,
+        "still_path": "/7U4enukP6ZCovTbEaNzIOwxOu74.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Superhero for a Day",
+        "overview": "Gadget Man comes out of retirement after 50 years, but is tricked by Shredder into fighting against the Turtles.",
+        "air_date": "1990-09-25",
+        "runtime": 22,
+        "still_path": "/d9uhbICSr4GWHwcQ2AKFmNJjlPM.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Back to the Egg",
+        "overview": "Krang hires a multi-dimentional ring-master who intends on making the Teenage Mutant Ninja Turtles part of his circus by using an anti-aging serum.",
+        "air_date": "1990-09-26",
+        "runtime": 22,
+        "still_path": "/8V59xZeMAnGqgqNO5uVsmEhSayI.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Son of Return of the Fly II",
+        "overview": "Vengeful Baxter Stockman and an A.I. computer return to Earth from a dimentional limbo and capture the Turtles while luring Shredder into their trap as well.",
+        "air_date": "1990-09-15",
+        "runtime": 22,
+        "still_path": "/oOEcy5KKU3e6ezbrbbqX1opCXX7.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Raphael Knocks \u0027em Dead",
+        "overview": "Raphael must contend with a mobster named Pinky McFingers when he is kidnapped from a local comedy club.",
+        "air_date": "1990-09-15",
+        "runtime": 22,
+        "still_path": "/wh4PFb14Q1BrxZTXgEIqrB4nfqf.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Bebop and Rocksteady Conquer the Universe",
+        "overview": "On their latest trip to Earth, Bebop and Rocksteady steal a machine that makes everyone scared of everything.",
+        "air_date": "1990-09-22",
+        "runtime": 22,
+        "still_path": "/hD5JSie6PXeyVIgOaaKKLH3hcup.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Raphael Meets His Match",
+        "overview": "Raphael wins a ticket to a costume party on MacDonald Crump\u0027s yacht and decides to go disguised as a Teenage Mutant Ninja Turtle.",
+        "air_date": "1990-09-22",
+        "runtime": 22,
+        "still_path": "/xrz30cGu4w0mtnDhJG3CS8xjyxt.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Slash the Evil Turtle from Dimension X",
+        "overview": "Bebop and Rocksteady use Krang\u0027s new Mutagen on Bebop\u0027s pet turtle Slash so he can do their housework for them. Slash runs away and is conned by an irritated entrepreneur into framing the TMNT.",
+        "air_date": "1990-09-29",
+        "runtime": 22,
+        "still_path": "/1esbaI3JJNBvQizxmcSdqD1uAfo.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Leonardo Lightens Up",
+        "overview": "A ray-gun makes Leonardo carefree and ignore his responsibilities. This leaves the Turtles defenseless and the city at the mercy of Maestro G Clef, a villain who destroys the city with music.",
+        "air_date": "1990-09-29",
+        "runtime": 22,
+        "still_path": "/p9U4Ww4LBOtX5EWoipgYW9bkUxr.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Were-Rats from Channel 6",
+        "overview": "After many failed attempts from his rodent subjects to find food, the Rat King learns of an abandoned canister of mutagen lost in the sewers and claims it for himself.",
+        "air_date": "1990-10-13",
+        "runtime": 22,
+        "still_path": "/bRWArpOxdor5OYU9CmKejE74667.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Funny, They Shrunk Michaelangelo",
+        "overview": "While Michaelangelo is testing out a sailboard in the sewers he accidentally gets swept out into the city harbor.",
+        "air_date": "1990-10-13",
+        "runtime": 22,
+        "still_path": "/gVWMxTWBaUXU9uQmYjl9jNm4CSE.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Big Zipp Attack",
+        "overview": "Krang sends Shredder, Bebop and Rocksteady to find Rigidium to repair the Technodrome. A meteorite lands containing a large egg. The egg hatches, revealing a Zipp, a cute little creature that begins to eat the Technodrome.",
+        "air_date": "1990-10-20",
+        "runtime": 22,
+        "still_path": "/oABRlymvPNOvTUs0jA9shMx4uMo.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Donatello Makes Time",
+        "overview": "Professor Lloyd Cycloyd, a crazy scientist who escaped from an institution, accidentally discovers the Turtles\u0027 lair. He sees Donatello testing out one of his new inventions, a time stopper.",
+        "air_date": "1990-10-20",
+        "runtime": 22,
+        "still_path": "/2JqiPsFhq1UPGW13egmHDAmc9Qy.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Farewell, Lotus Blossum",
+        "overview": "While on their way to a movie, the Turtles rescue the Urn of Chakahachi from two thieves. The thieves pry off a pearl from the Urn before the Turtles get their hands on it.",
+        "air_date": "1990-10-27",
+        "runtime": 22,
+        "still_path": "/8XEMnCzrp32xGbUQsBULv0gh2Zn.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Rebel Without a Fin",
+        "overview": "Dr. Polidorius creates a half-man half-fish named Ray. The Doctor has Ray plant explosives in certain parts of the sewer so that he can sink the city beneath the ocean.",
+        "air_date": "1990-10-27",
+        "runtime": 22,
+        "still_path": "/eHeeh4AlySHDr8sjDyp9PfsR7cy.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Rhino-Man",
+        "overview": "J. Gordon Hungerdunger, a Texas millionaire, is holding a best super-hero contest. The winner of the contest will receive the humongous Malaprop Diamond.",
+        "air_date": "1990-11-03",
+        "runtime": 22,
+        "still_path": "/qIfCHHrjkxmsULKFh8ldDXOSP7D.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Michaelangelo Meets Bugman",
+        "overview": "Michaelangelo meets his favourite comic book hero after he saves a weakened Brick Bradley in the sewers, and then he and Bugman take on the evil Electrozapper together.",
+        "air_date": "1990-11-03",
+        "runtime": 22,
+        "still_path": "/e9HWehfhviMtlbrkaLj89c0Ihxl.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Poor Little Rich Turtle",
+        "overview": "Krang has come up with yet another brilliant plan to free the Technodrome. The evil alien sends Bebop and Rocksteady to kidnap Buffy Shellhammer, 15 year-old CEO of Shellhammer Chemicals.",
+        "air_date": "1990-11-10",
+        "runtime": 22,
+        "still_path": "/w3Us2xdWl13PAr1gDQH36oXfARW.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "What\u0027s Michaelangelo Good For?",
+        "overview": "The Turtles go along with Michaelangelo and his pet pigeon to the zoo so that Dr. Goodfellow can check the bird out.",
+        "air_date": "1990-11-10",
+        "runtime": 23,
+        "still_path": "/3uy1mO6G99MEPk9V7U1A91k85eh.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "The Dimension X Story",
+        "overview": "Disguised as humans, Rocksteady and Bebop are sent to attach special trans-dimensional thrusters to the Channel Six Building.",
+        "air_date": "1990-09-08",
+        "runtime": 23,
+        "still_path": "/i6xZLBekHBKc9olcTMD2AkLusEH.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Donatello\u0027s Degree",
+        "overview": "Donatello gets an invitation to accept his degree personally from Professor Sopho at Sopho University. The only problem is that the invitation is addressed to a Miss Donna Tello.",
+        "air_date": "1990-09-08",
+        "runtime": 23,
+        "still_path": "/oBOEurqvc1gijzoTTNWqRTHAe6M.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "The Big Cufflink Caper",
+        "overview": "The Turtles, bored at the lack of action, decide to investigate when they hear that cufflinks are being stolen around the city.",
+        "air_date": "1990-09-14",
+        "runtime": 23,
+        "still_path": "/hWT2gAofJ1PwAD42sSNU9R2Bl8t.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "Leonardo Versus Tempestra",
+        "overview": "The Turtles sneak into an arcade in the middle of the night to play video games. Leonardo gets hooked on a game called Tempestra\u0027s Revenge. ",
+        "air_date": "1990-11-17",
+        "runtime": 23,
+        "still_path": "/4aKi2Cn5OJ2T505YLT4sBWRRDnM.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Splinter Vanishes",
+        "overview": "Returning from another mission, the  Turtles are shocked to discover their mentor has left the lair, leaving behind only a video taped message.",
+        "air_date": "1990-11-24",
+        "runtime": 23,
+        "still_path": "/jnGJH4HP8H5fIyq6tVZNEuqPkGs.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Raphael Drives \u0027em Wild",
+        "overview": "On his way home from getting pizza Raphael and a cab driver accidentally get exposed to rays from a Personality Transmogrifier.",
+        "air_date": "1990-11-24",
+        "runtime": 23,
+        "still_path": "/8wl71aTnbRSnjxy3QOtFmpeikmb.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "Beyond the Donatello Nebula",
+        "overview": "Donatello has created a device to communicate with distant galaxies. While trying to communicate with the Turtle Nebula Donatello accidentally brings a spaceship to Earth.",
+        "air_date": "1990-12-01",
+        "runtime": 23,
+        "still_path": "/A9RJ6Md8tPBcLztRDMjdZks4FZO.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "Big Bug Blunder",
+        "overview": "A fly lands in the mutagen and it increases in size. Not being able to control it, Bebop and Rocksteady send the giant insect to Earth.",
+        "air_date": "1990-12-01",
+        "runtime": 23,
+        "still_path": "/s5i3VJb585hw4BC44uVYx7cfUdR.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "The Foot Soldiers Are Revolting",
+        "overview": "After Bebop and Rocksteady blow another assignment, Shredder fires them and decides to replace them with an intelligent Foot Soldier named Alpha One.",
+        "air_date": "1990-12-08",
+        "runtime": 23,
+        "still_path": "/aLKYXILHaRpxl9uI7CAk74xVXAZ.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "Unidentified Flying Leonardo",
+        "overview": "UFO sightings at an upstate farm town known as High Falls, cause April to investigate. Splinter foresees danger clouding April\u0027s visit and sends Leonardo to chaperone.",
+        "air_date": "1990-12-08",
+        "runtime": 23,
+        "still_path": "/dL17R2dGlTocjZyfSrnJsUQHvSM.jpg"
+      }
+    ]
+  }
+}

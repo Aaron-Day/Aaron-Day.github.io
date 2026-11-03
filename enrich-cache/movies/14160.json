@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 14160,
+    "title": "Up",
+    "overview": "Carl Fredricksen spent his entire life dreaming of exploring the globe and experiencing life to its fullest. But at age 78, life seems to have passed him by, until a twist of fate (and a persistent 8-year old Wilderness Explorer named Russell) gives him a new lease on life.",
+    "tagline": "Change is in the air.",
+    "runtime": 96,
+    "release_date": "2009-05-28",
+    "vote_average": 7.961,
+    "poster_path": "/mFvoEwSfLqbcWwFsDjQebn9bzFe.jpg",
+    "backdrop_path": "/hGGC9gKo7CFE3fW07RA587e5kol.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ed Asner",
+      "character": "Carl Fredricksen (voice)",
+      "profile_path": "/AeVizz1AfAB2TbsfyzgBvqeSR3G.jpg"
+    },
+    {
+      "name": "Christopher Plummer",
+      "character": "Charles Muntz (voice)",
+      "profile_path": "/u0YBwss0ebEUp8sjRtQKnK2wZdR.jpg"
+    },
+    {
+      "name": "Jordan Nagai",
+      "character": "Russell (voice)",
+      "profile_path": "/j1kVS2sI3wWIHCCzzYD1buXAP9e.jpg"
+    },
+    {
+      "name": "Bob Peterson",
+      "character": "Dug / Alpha (voice)",
+      "profile_path": "/dJe3nTCIToebjj1WHFHP7LmZKyk.jpg"
+    }
+  ]
+}

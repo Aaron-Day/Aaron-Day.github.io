@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 338970,
+    "title": "Tomb Raider",
+    "overview": "Lara Croft, the fiercely independent daughter of a missing adventurer, must push herself beyond her limits when she finds herself on the island where her father disappeared.",
+    "tagline": "Her legend begins.",
+    "runtime": 118,
+    "release_date": "2018-03-05",
+    "vote_average": 6.361,
+    "poster_path": "/s4Qn5LF6OwK4rIifmthIDtbqDSs.jpg",
+    "backdrop_path": "/ohijjhvNqAPKTURQr6VIF7xuAjY.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Alicia Vikander",
+      "character": "Lara Croft",
+      "profile_path": "/lZu8qiTwiQIN96cuptgqMCCaUtg.jpg"
+    },
+    {
+      "name": "Dominic West",
+      "character": "Richard Croft",
+      "profile_path": "/6y2M3EWslBPwPlugEFg8XDHfSJ0.jpg"
+    },
+    {
+      "name": "Walton Goggins",
+      "character": "Mathias Vogel",
+      "profile_path": "/5lcVMJbWrNDFiWa1WxK4oR8zwev.jpg"
+    },
+    {
+      "name": "Daniel Wu",
+      "character": "Lu Ren",
+      "profile_path": "/w6fCmYDlTNYfgdXBZjZH107c9zJ.jpg"
+    }
+  ]
+}

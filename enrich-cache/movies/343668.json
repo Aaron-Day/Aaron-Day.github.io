@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 343668,
+    "title": "Kingsman: The Golden Circle",
+    "overview": "When an attack on the Kingsman headquarters takes place and a new villain rises, Eggsy and Merlin are forced to work together with the American agency known as the Statesman to save the world.",
+    "tagline": "A proper spy movie.",
+    "runtime": 141,
+    "release_date": "2017-09-20",
+    "vote_average": 6.939,
+    "poster_path": "/34xBL6BXNYFqtHO9zhcgoakS4aP.jpg",
+    "backdrop_path": "/eVHVwP71el20fofkCHo78ebQv7Q.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 391860,
+      "name": "Kingsman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Taron Egerton",
+      "character": "Eggsy",
+      "profile_path": "/uCaPhyKAQIfEzAWWCYIrO2004CB.jpg"
+    },
+    {
+      "name": "Colin Firth",
+      "character": "Harry Hart",
+      "profile_path": "/z6wxnkqSTnzO1tcBui0ss7ehdm9.jpg"
+    },
+    {
+      "name": "Julianne Moore",
+      "character": "Poppy",
+      "profile_path": "/3YF19rWusxWfEI59ZM33dFhasRq.jpg"
+    },
+    {
+      "name": "Mark Strong",
+      "character": "Merlin",
+      "profile_path": "/3cNmatYsoifytg7TfQhI1EHow3v.jpg"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Safe",
+        "overview": "Unlikely allies Joe Miller and the crew of the Rocinante led by Jim Holden uncover more about the conspiracy to release the protomolecule on Eros station.",
+        "air_date": "2017-02-01",
+        "runtime": 48,
+        "still_path": "/zNfP3vPgNiFQMAu5RyerLumstsb.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Doors \u0026 Corners",
+        "overview": "With the help of Fred Johnson and the OPA, Miller, Holden and the crew stage a raid for information on the protomolecule. On Earth, Avasarala learns a truth about Fred Johnson.",
+        "air_date": "2017-02-01",
+        "runtime": 45,
+        "still_path": "/s4mqynKQLkdv8ifGsFb2nS400ge.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Static",
+        "overview": "Holden and Miller butt heads about how the raid was handled.",
+        "air_date": "2017-02-08",
+        "runtime": 43,
+        "still_path": "/6NMpdVYY6mdQPmUArGlSnCeqrT7.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Godspeed",
+        "overview": "Miller devises a dangerous plan to eradicate what\u0027s left of the protomolecule on Eros.",
+        "air_date": "2017-02-15",
+        "runtime": 45,
+        "still_path": "/hLmcPdFU13KNNk9QJk5yPZ3n5Qn.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Home",
+        "overview": "The Rocinante chases an asteroid as it hurtles towards Earth.",
+        "air_date": "2017-02-22",
+        "runtime": 46,
+        "still_path": "/17yAwqrEuTkrvFPa2ArJyrHtguF.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Paradigm Shift",
+        "overview": "Earth and Mars search for answers in the aftermath of the asteroid collision.",
+        "air_date": "2017-03-01",
+        "runtime": 45,
+        "still_path": "/w0AbiMibXiIeXwOJ9QAZ8q4cED7.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Seventh Man",
+        "overview": "Preparations for the Earth/Mars peace conference tighten the tension on Erringwright.",
+        "air_date": "2017-03-08",
+        "runtime": 46,
+        "still_path": "/cSrtMZ5Z3VKuF6ruiyuRLIBWlOK.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Pyre",
+        "overview": "Naomi tracks down signs of the protomolecule; Fred Johnson\u0027s control over the OPA collapses.",
+        "air_date": "2017-03-15",
+        "runtime": 45,
+        "still_path": "/cHzAX3ayauYGqJXT0PSTxh5meRr.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Weeping Somnambulist",
+        "overview": "Bobbie becomes a political pawn in the struggle between Earth and Mars.",
+        "air_date": "2017-03-22",
+        "runtime": 44,
+        "still_path": "/td21NvVVqPH3C9BqBkxcMoJMXXZ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Cascade",
+        "overview": "Holden leads his crew through the war-torn station on Ganymede.",
+        "air_date": "2017-03-29",
+        "runtime": 44,
+        "still_path": "/mWD2EvPAO5yo2aelLvKWC5vhuQA.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Here There Be Dragons",
+        "overview": "Bobbie makes a decision that changes her life forever.",
+        "air_date": "2017-04-05",
+        "runtime": 45,
+        "still_path": "/sTggrja5l04Ve9plqqJlVBVmbnE.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Monster and the Rocket",
+        "overview": "A discovery pushes Naomi and Holden apart and sets the Rocinante crew against each other.",
+        "air_date": "2017-04-12",
+        "runtime": 46,
+        "still_path": "/b01XrxLTmcpxFKkeb7hKzw2LOOE.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Caliban\u0027s War",
+        "overview": "The Rocinante crew must fight to save the ship.",
+        "air_date": "2017-04-19",
+        "runtime": 44,
+        "still_path": "/ntAnfwgBoRAvbbdGxelNTtKBYqh.jpg"
+      }
+    ]
+  }
+}

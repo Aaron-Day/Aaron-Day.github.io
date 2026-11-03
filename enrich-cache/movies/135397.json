@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 135397,
+    "title": "Jurassic World",
+    "overview": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.",
+    "tagline": "The park is open.",
+    "runtime": 124,
+    "release_date": "2015-06-06",
+    "vote_average": 6.704,
+    "poster_path": "/rhr4y79GpxQF9IsfJItRXVaoGs4.jpg",
+    "backdrop_path": "/dF6FjTZzRTENfB4R17HDN20jLT2.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 328,
+      "name": "Jurassic Park Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Pratt",
+      "character": "Owen",
+      "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Bryce Dallas Howard",
+      "character": "Claire",
+      "profile_path": "/6yhDkPXythZavS6Wk57XQ2sg5AW.jpg"
+    },
+    {
+      "name": "Irrfan Khan",
+      "character": "Masrani",
+      "profile_path": "/qkA9PpWJRw3rNjVkWfNZdwLvRZx.jpg"
+    },
+    {
+      "name": "Vincent D\u0027Onofrio",
+      "character": "Hoskins",
+      "profile_path": "/qkyiLolEqYMGH25xD4sFIXAjZQB.jpg"
+    }
+  ]
+}

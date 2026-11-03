@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 381719,
+    "title": "Peter Rabbit",
+    "overview": "Peter Rabbit\u0027s feud with Mr. McGregor escalates to greater heights than ever before as they rival for the affections of the warm-hearted animal lover who lives next door.",
+    "tagline": "Who said the countryside was peaceful?",
+    "runtime": 93,
+    "release_date": "2018-02-07",
+    "vote_average": 6.699,
+    "poster_path": "/lugOvdaNpbVGQK9TyMRDiUbLtY6.jpg",
+    "backdrop_path": "/1wj8H9gdtkb98Tl3zu0hrHfW0qw.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 595693,
+      "name": "Peter Rabbit Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "James Corden",
+      "character": "Peter Rabbit (voice)",
+      "profile_path": "/xGB0gfZ48M27gQjjL7inJIh1Pqj.jpg"
+    },
+    {
+      "name": "Rose Byrne",
+      "character": "Beatrix \u0027Bea\u0027 Potter / Jemima Puddle-Duck (voice)",
+      "profile_path": "/wR8YZlrewVW2FixRBrJcxaXU3R1.jpg"
+    },
+    {
+      "name": "Domhnall Gleeson",
+      "character": "Thomas McGregor / Mr. Jeremy Fisher (voice)",
+      "profile_path": "/a63BgOBKzJ9XPaLFyu7u5Ge3REG.jpg"
+    },
+    {
+      "name": "Margot Robbie",
+      "character": "Flopsy Rabbit / Narrator (voice)",
+      "profile_path": "/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg"
+    }
+  ]
+}

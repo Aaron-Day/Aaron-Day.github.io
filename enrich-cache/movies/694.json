@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 694,
+    "title": "The Shining",
+    "overview": "Jack Torrance accepts a caretaker job at the Overlook Hotel, where he, along with his wife Wendy and their son Danny, must live isolated from the rest of the world for the winter. But they aren\u0027t prepared for the madness that lurks within.",
+    "tagline": "A masterpiece of modern horror.",
+    "runtime": 144,
+    "release_date": "1980-05-23",
+    "vote_average": 8.2,
+    "poster_path": "/uAR0AWqhQL1hQa69UDEbb2rE5Wx.jpg",
+    "backdrop_path": "/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 530064,
+      "name": "The Shining Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jack Nicholson",
+      "character": "Jack Torrance",
+      "profile_path": "/6h12pZsgj3WWjMtykUgfLkLEBWz.jpg"
+    },
+    {
+      "name": "Shelley Duvall",
+      "character": "Wendy Torrance",
+      "profile_path": "/zwscEWl7QLiOsfsvzGXFjAQCVp3.jpg"
+    },
+    {
+      "name": "Danny Lloyd",
+      "character": "Danny",
+      "profile_path": "/5pEmugZ6m25RB0cXbL4t5D4kZAO.jpg"
+    },
+    {
+      "name": "Scatman Crothers",
+      "character": "Hallorann",
+      "profile_path": "/ughfThqQuuoPLSsC9HfkxwX370w.jpg"
+    }
+  ]
+}

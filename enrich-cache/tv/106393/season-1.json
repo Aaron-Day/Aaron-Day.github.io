@@ -1,0 +1,160 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Lost \u0026 Found (1) / Lost \u0026 Found (2)",
+        "overview": "A group of lawless teens, exiled on a mining colony outside Federation space, discover a derelict Starfleet ship. Dal must gather an unlikely crew for their newfound ship if they are going to escape Tars Lamora, but the Diviner and his daughter Gwyn have other plans.",
+        "air_date": "2021-10-28",
+        "runtime": 46,
+        "still_path": "/sPerp6iLSRcnQuor5yD8yX5lGb7.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Starstruck",
+        "overview": "Even with the guidance of their hologram advisor Janeway, the crew of The Protostar is tested when their ship is on a dangerous cosmic collision course.",
+        "air_date": "2021-11-04",
+        "runtime": 24,
+        "still_path": "/blttdkWf39NufbZt6ZgYI67XgZG.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Dream Catcher",
+        "overview": "The crew has their first away mission on an undiscovered planet that manifests their deepest desires, only to realize the planet has desires of its own.",
+        "air_date": "2021-11-11",
+        "runtime": 24,
+        "still_path": "/xqWl4H5wFIwefEjCyiHPQyTmA5z.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Terror Firma",
+        "overview": "Marooned on a deadly planet, the crew must work together with their captive Gwyn to stay alive\u2026except the planet isn\u2019t the only thing in pursuit.",
+        "air_date": "2021-11-18",
+        "runtime": 23,
+        "still_path": "/sSVuZH8DWAOAlsHQO3QnUfTDs9I.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Kobayashi",
+        "overview": "As Gwyn struggles to find her role aboard the U.S.S. Protostar, Dal tests his leadership skills in the newly discovered holodeck.",
+        "air_date": "2022-01-06",
+        "runtime": 24,
+        "still_path": "/UoiXnRhlq8CknEtvjen8A32ax4.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "First Con-tact",
+        "overview": "When a mentor from Dal\u2019s past persuades him to use their Federation cover for personal gain, they quickly discover Starfleet has protocols for a reason.",
+        "air_date": "2022-01-13",
+        "runtime": 24,
+        "still_path": "/MOLS2qdbRtw0TkcWk4FbJJs21n.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Time Amok",
+        "overview": "When the U.S.S. Protostar is fractured in time by an anomaly, Hologram Janeway must synchronize the disjointed crew and save their ship before it destructs.",
+        "air_date": "2022-01-20",
+        "runtime": 24,
+        "still_path": "/lv4GR9JZtiH8XeepDdRAWxO2ozr.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "A Moral Star (1)",
+        "overview": "The crew forgo their dreams of Starfleet to return to Tars Lamora in a no-win scenario.",
+        "air_date": "2022-01-27",
+        "runtime": 24,
+        "still_path": "/dwjJalsYHokjSurYRsLTlRPd1BC.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "A Moral Star (2)",
+        "overview": "When the plan goes awry, the crew must improvise. Meanwhile, Gwyn discovers a dark truth that will forever jeopardize their quest toward salvation.",
+        "air_date": "2022-02-03",
+        "runtime": 24,
+        "still_path": "/vyxhxX8FEiwPI8judxd9pig8dwj.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Asylum",
+        "overview": "At the edge of Federation space, the crew applies for asylum at a comm relay outpost, only for their starship to reveal its shocking true purpose.",
+        "air_date": "2022-10-27",
+        "runtime": 24,
+        "still_path": "/fmDg2fviQoRC6g2jEm1pjDmZFVe.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Let Sleeping Borg Lie",
+        "overview": "When the crew encounters a dormant Borg Cube, Zero risks everything to save their ship.",
+        "air_date": "2022-11-03",
+        "runtime": 24,
+        "still_path": "/zhy7LzHRMts3w8hufQ73mvTZD3Z.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "All the World\u0027s a Stage",
+        "overview": "The crew answers a distress call to find a colony trapped in Starfleet\u0027s past.",
+        "air_date": "2022-11-10",
+        "runtime": 24,
+        "still_path": "/qHngIISihWFyeUvfdRRI6tvYksH.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Crossroads",
+        "overview": "When the crew attempts to secure transport to the Federation, they unwittingly cross paths with the Vice Admiral who is hunting them.",
+        "air_date": "2022-11-17",
+        "runtime": 23,
+        "still_path": "/vy1cCzPWfqLyTArTd8Oc7ep30HA.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Masquerade",
+        "overview": "Trapped in the Neutral Zone, the crew encounters a rogue geneticist who sheds light on Dal\u2019s past.",
+        "air_date": "2022-11-24",
+        "runtime": 24,
+        "still_path": "/8nNUqKfp5BA2ZDvXcQkArBLjZhJ.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Preludes",
+        "overview": "A Starfleet Admiral digs into the past of the Protostar crew. Meanwhile, the Diviner recalls his life\u0027s mission.",
+        "air_date": "2022-12-01",
+        "runtime": 24,
+        "still_path": "/vMEsP63MgTV9KOkFiZNCO4oE5KD.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Ghost in the Machine",
+        "overview": "When the crew gets trapped in the holodeck by a mysterious malfunction, they aren\u0027t sure what\u0027s programmed or what\u0027s real.",
+        "air_date": "2022-12-08",
+        "runtime": 24,
+        "still_path": "/wDyRKxpk7oKbhv3PikbTpQFTDcu.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Mindwalk",
+        "overview": "Desperate to warn Starfleet of their dilemma, a daring experiment goes awry as Dal inadvertently swaps minds with a Starfleet Vice Admiral.",
+        "air_date": "2022-12-15",
+        "runtime": 24,
+        "still_path": "/5ymyryUQ7pMC82BtupqFzyWXoVg.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Supernova (1)",
+        "overview": "Surrounded by the Federation armada, the crew attempts to stop their ship from destroying all of Starfleet.",
+        "air_date": "2022-12-22",
+        "runtime": 24,
+        "still_path": "/8UeiPpOmdUMOaDJhKo39F0IcuHj.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Supernova (2)",
+        "overview": "As the Federation hangs in the balance, the crew must make the ultimate sacrifice to save Starfleet\u0027s future.",
+        "air_date": "2022-12-29",
+        "runtime": 24,
+        "still_path": "/8aMbQgu8tFF68TVzLkF4PLKnLou.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Red Squirrel",
+        "overview": "The penguins are recruited by Buck Rockgut to help him capture the Red Squirrel.",
+        "air_date": "2010-03-13",
+        "runtime": 22,
+        "still_path": "/328DukpTxHKz3DrrMegSProcjYC.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "It\u0027s About Time",
+        "overview": "Kowalski travels back in time to prevent himself from building a time machine.",
+        "air_date": "2010-03-13",
+        "runtime": 12,
+        "still_path": "/p6ohHume9u9uq2KD0WoWxSWPH37.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Gator Watch",
+        "overview": "When Roger\u0027s sewer home becomes unbearable, the penguins try to find him a new home in the city.",
+        "air_date": "2010-05-15",
+        "runtime": 12,
+        "still_path": "/4kuwNLSExx8kJ1w3ICseKt4DkwK.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "In The Line of Doody",
+        "overview": "The penguins must protect the zoo commissioner from Frankie the pigeon\u0027s wrath.",
+        "air_date": "2010-05-15",
+        "runtime": 12,
+        "still_path": "/1EPIIluGob79sZdZdbWh5o4ppAW.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Can\u0027t Touch This",
+        "overview": "The penguins try to help Randy overcomes the problems he\u0027s having at the petting zoo.",
+        "air_date": "2010-06-19",
+        "runtime": 12,
+        "still_path": "/hgq6JpUK3wHczRGjnYihWDh4YUC.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Hard Boiled Eggy",
+        "overview": "Eggy the duckling is convinced that he can handle dangerous missions like the penguins.",
+        "air_date": "2010-06-19",
+        "runtime": 12,
+        "still_path": "/grEzO2Sra7TSG61mh3Jpn09wNIo.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Lost Treasure of the Golden Squirrel",
+        "overview": "It\u0027s a race against time when the whole gang competes with the Rat King to find the Lost Treasure of the Golden Squirrel, which may have a dangerous curse on it!",
+        "air_date": "2010-04-25",
+        "runtime": 24,
+        "still_path": "/kNvyqEw5RA3LQJtwOGuKG5ps9aA.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Fit To Print",
+        "overview": "When the penguins realize their operation is at risk of being exposed, they attempt to destroy the evidence.",
+        "air_date": "2010-07-19",
+        "runtime": 12,
+        "still_path": "/y9mDfS2uIRAVTbJ0LCm8hxxTTRz.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Operation: Cooties",
+        "overview": "The penguins and Julien believe Marlene has cooties after overhearing a group of schoolchildren.",
+        "air_date": "2010-07-19",
+        "runtime": 12,
+        "still_path": "/uxKdqjGKm4qV8vJYuZUljkENU9N.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Mr. Tux",
+        "overview": "The Amarillo Kid arrives and declares that he has a score to settle with \u0022Mr. Tux.\u0022",
+        "air_date": "2010-07-19",
+        "runtime": 12,
+        "still_path": "/vPnCr81QiqGuYYpOqnwfQQYtTB8.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Concrete Jungle Survival",
+        "overview": "Private is ready to move up in rank within the penguin commando unit... or is he?",
+        "air_date": "2010-07-19",
+        "runtime": 12,
+        "still_path": "/qHWRWWfYLc47okiNccFl0CBE8Eh.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Stop Bugging Me",
+        "overview": "A group of cockroaches ask the penguins for help with their exterminator problem.",
+        "air_date": "2010-09-04",
+        "runtime": 12,
+        "still_path": "/nXzuNwTlmXiUM5Jn5Yz23McaBQV.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Field Tripped",
+        "overview": "The penguins become convinced that a kid on a field trip to the zoo is spying on them.",
+        "air_date": "2010-09-04",
+        "runtime": 12,
+        "still_path": "/lsXqcX8Wp9noZUPBGSx4sHjpnDj.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Badger Pride",
+        "overview": "Private wants to be friends with a group of badgers... until they threaten to hurt Marlene.",
+        "air_date": "2010-09-04",
+        "runtime": 12,
+        "still_path": "/iZxt738CNWDXXFocQEn3cUBDgzi.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Kaboom and Kabust",
+        "overview": "When the Penguins send Rico off to help King Julien, an unlikely friendship develops between them.",
+        "air_date": "2010-09-11",
+        "runtime": 12,
+        "still_path": "/zOjGgD5ERmbkZg995yS3Js377Pz.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Helmet",
+        "overview": "Julien causes chaos at the zoo when he steals Kowalski\u0027s new invention.",
+        "air_date": "2010-09-11",
+        "runtime": 12,
+        "still_path": "/9zbvMTrD8umRcATaalLp3RcxsSf.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Night and Dazed",
+        "overview": "The penguins accidentally launch Leonard the koala out of the zoo and into midtown Manhattan.",
+        "air_date": "2010-09-18",
+        "runtime": 12,
+        "still_path": "/5y3aK1zjnUASerc5vgvmhhMxx7T.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Big Squeeze",
+        "overview": "When animals begin disappearing, the penguins suspect Savio, the new boa constrictor.",
+        "air_date": "2010-09-18",
+        "runtime": 12,
+        "still_path": "/2EWnxOR3HKXitImYivAgBMsTz90.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Wishful Thinking",
+        "overview": "Private tells Mort that if he throws a penny in the fountain, his wish will come true... and it works!",
+        "air_date": "2010-10-02",
+        "runtime": 12,
+        "still_path": "/4lf7WdeMhBxLERc8JBbUm6KgvXr.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "April Fools",
+        "overview": "Julien goes on a pranking spree when he learns about April Fool\u0027s Day.",
+        "air_date": "2010-10-02",
+        "runtime": 12,
+        "still_path": "/rgQwopJpS3z1ZlLF6P4yUdAkL9o.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Hello, Dollface",
+        "overview": "Rico desperately wants to a voice chip upgrade for his doll-girlfriend.",
+        "air_date": "2010-10-09",
+        "runtime": 12,
+        "still_path": "/biyrGYCsMPkNnq1DrXLfkqj5a8N.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Huffin and Puffin",
+        "overview": "A puffin from Skipper\u0027s past returns and tries to take over the penguins\u0027 habitat.",
+        "air_date": "2010-10-09",
+        "runtime": 12,
+        "still_path": "/uAUZl7ntc4neqsaCluOQcmxusEP.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Invention Intervention",
+        "overview": "After a series of gadget malfunctions, Skipper orders Kowalski to stop inventing.",
+        "air_date": "2010-10-16",
+        "runtime": 12,
+        "still_path": "/xf7SHVtjS3dcT4zOCvob7HCUxTr.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Cradle and All",
+        "overview": "When a baby stroller rolls outside the zoo, the penguins redefine the term \u0022daycare.\u0022",
+        "air_date": "2010-10-16",
+        "runtime": 12,
+        "still_path": "/4rC2Oeueslv92jcx8hLfuF4qncr.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Driven to the Brink",
+        "overview": "The penguins\u0027 car seems to have a mind of its own after Rico rebuilds it.",
+        "air_date": "2010-10-23",
+        "runtime": 12,
+        "still_path": "/upWd90oNbZXdzuskjmDpB0dwyh7.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Friend-in-a-Box",
+        "overview": "Kowalski steals the computer chip from Mort\u0027s new video game to finish an invention.",
+        "air_date": "2010-10-23",
+        "runtime": 12,
+        "still_path": "/xHyST4H6DzETEeNxJ83I3sjZQml.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Work Order",
+        "overview": "The penguins must stop a contractor from completing repairs on their habitat before he destroys the world!",
+        "air_date": "2010-11-06",
+        "runtime": 12,
+        "still_path": "/9C8r0uYqD696v3JQJ1sgYQ1ZRBf.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Hot Ice",
+        "overview": "Two thieves stash a very expensive diamond necklace at the zoo.",
+        "air_date": "2010-11-06",
+        "runtime": 12,
+        "still_path": "/h1DmEluOMnPxFq0i6oHNwJVdmH4.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Command Crisis",
+        "overview": "When Skipper is knocked on the head, he\u0027s unable to lead the penguins on an important mission.",
+        "air_date": "2010-11-07",
+        "runtime": 12,
+        "still_path": "/1nZeRN03nYATJLJkp2P4nnyfOuV.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Truth Ache",
+        "overview": "Private accidentally drinks Kowalski\u0027s truth serum and starts spilling the penguin\u0027s secrets to the rest of the zoo.",
+        "air_date": "2010-11-07",
+        "runtime": 12,
+        "still_path": "/660DICWLilIr5Fgqxgbyb1suAgc.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "The All Nighter Before Christmas",
+        "overview": "When the zoo is closed for Christmas, the animals prepare for \u0022Kidsmas\u0022 -- their annual celebration complete with decorations, food, gifts and a visit from Santa.",
+        "air_date": "2010-12-12",
+        "runtime": 24,
+        "still_path": "/7F8cokdFKMtIKgX9vJN6gF2rC6l.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Whispers and Coups",
+        "overview": "Julien believes Maurice is plotting an overthrow and the penguins send him through basic training.",
+        "air_date": "2011-01-15",
+        "runtime": 12,
+        "still_path": "/cZdsKAfPxtx0IYsqi4zZBADSYNW.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "Brush With Danger",
+        "overview": "Burt the elephant discovers a love for painting, and he\u0027s remarkably talented.",
+        "air_date": "2011-01-15",
+        "runtime": 12,
+        "still_path": "/ff5sHZpVE7R3yiEA2UaFDJD0ipr.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Love Hurts",
+        "overview": "Private is smitten with the zoo nurse, but the only way he can see her is to get injured.",
+        "air_date": "2011-02-12",
+        "runtime": 12,
+        "still_path": "/o2QYiDqG34KehEDj9S2aIxbATHW.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "The Officer X Factor",
+        "overview": "The penguins have a plan to beat the heat, but they\u0027ll need Alice out of the way.",
+        "air_date": "2011-02-12",
+        "runtime": 12,
+        "still_path": "/pbMbevEYpsor6s49WaRZa28wsIe.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "Brain Drain",
+        "overview": "Kowalski\u0027s attempt to super-charge his brain backfires and now he\u0027s dumber than mud.",
+        "air_date": "2011-02-26",
+        "runtime": 12,
+        "still_path": "/8vxmvzHQHHhCb4iJpRDKp0UJVby.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "Right Hand Man",
+        "overview": "The lemur habitat gets a new resident, Clemson, and Julien loves to order him around.",
+        "air_date": "2011-02-26",
+        "runtime": 12,
+        "still_path": "/5UQ5Ll0JSHQrhvooKCVHA14wdW3.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "Danger Wears a Cape",
+        "overview": "Private finds a stack of comic books and ignores Skipper\u0027s request to destroy them.",
+        "air_date": "2011-03-19",
+        "runtime": 12,
+        "still_path": "/72C0UzmxNAbt73PUwdQ0lHVe0Q9.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "Operation: Break-Speare",
+        "overview": "Shakespeare in the park has inspired Private as he struts around quoting from the Bard\u0027s works.",
+        "air_date": "2011-03-19",
+        "runtime": 12,
+        "still_path": "/g5im9JFDV5moqWvK74whjgpBwyI.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "Rat Fink",
+        "overview": "A simple plan to have Mort spy on the rats ends up with Julien and Skipper captured.",
+        "air_date": "2011-03-19",
+        "runtime": 12,
+        "still_path": "/gS0JlP7IX5vNP6CPiZ5mmLaxU9I.jpg"
+      },
+      {
+        "episode_number": 41,
+        "name": "Kanga Management",
+        "overview": "The penguins accidentally blow up the koala habitat wall, so Leonard has to bunk up with Joey.",
+        "air_date": "2011-03-19",
+        "runtime": 12,
+        "still_path": "/nuGIRgurPez7OyyM8bGke9f3JnP.jpg"
+      },
+      {
+        "episode_number": 42,
+        "name": "King Julien For a Day",
+        "overview": "King Julien and Skipper switch places for a day, troubling everyone involved.",
+        "air_date": "2011-03-26",
+        "runtime": 12,
+        "still_path": "/dn7J0QBxKLZ1NyoDHQxoH58oT3C.jpg"
+      },
+      {
+        "episode_number": 43,
+        "name": "Maurice At Peace",
+        "overview": "The penguins intercept a fax with catastrophic news -- Maurice has only 24 hours to live!",
+        "air_date": "2011-03-26",
+        "runtime": 12,
+        "still_path": "/xnUZCrunNkfrTnz4zywhwsYpsKb.jpg"
+      },
+      {
+        "episode_number": 44,
+        "name": "Cute-Astrophe",
+        "overview": "When Private\u0027s cuteness factor tests off the charts, the penguins use it to their advantage.",
+        "air_date": "2011-04-02",
+        "runtime": 12,
+        "still_path": "/tiPI4F5YUddNguXOiYWDx1Nnib0.jpg"
+      },
+      {
+        "episode_number": 45,
+        "name": "Operation: Neighbor Swap",
+        "overview": "Annoyed by the lemurs\u0027 constant music, the penguins plan to get them moved to another part of the zoo.",
+        "air_date": "2011-06-13",
+        "runtime": 12,
+        "still_path": "/kgRRnsp1BurQWgAk17ZuI0UW8oJ.jpg"
+      },
+      {
+        "episode_number": 46,
+        "name": "All Tied Up With a Boa",
+        "overview": "The animals panic when a boa constrictor escapes from the zoo.",
+        "air_date": "2011-06-14",
+        "runtime": 12,
+        "still_path": "/wkkqhauC7ITJWgqBLttXCZD8kIv.jpg"
+      },
+      {
+        "episode_number": 47,
+        "name": "Rock-a-Bye Birdie",
+        "overview": "Kowalski\u0027s invention turns Skipper into a baby, so the penguins must find a way to change him back.",
+        "air_date": "2011-06-15",
+        "runtime": 12,
+        "still_path": "/hybw0tE8BAg7h8leO5UxtG7OKPZ.jpg"
+      },
+      {
+        "episode_number": 48,
+        "name": "Herring Impaired",
+        "overview": "The penguins journey to the bottom of the Atlantic for preserved herring.",
+        "air_date": "2011-06-16",
+        "runtime": 12,
+        "still_path": "/bjVipwAwCc3y4Hd6mP8V0sZ8NbL.jpg"
+      },
+      {
+        "episode_number": 49,
+        "name": "A Visit From Uncle Nigel",
+        "overview": "Private\u0027s quirky Uncle Nigel pops in for a quick visit from across the pond.",
+        "air_date": "2011-06-17",
+        "runtime": 12,
+        "still_path": "/3FPSG8y3EQAB49Ni0V6rnMte8N3.jpg"
+      },
+      {
+        "episode_number": 50,
+        "name": "The Hoboken Surprise",
+        "overview": "After a sailing trip to the Massachusetts coast goes wrong, the penguins wind up at the Hoboken Zoo, which turns out to be a perfectly pristine paradise... or is it?",
+        "air_date": "2011-08-20",
+        "runtime": 24,
+        "still_path": "/k83K9uKTntqSZsc7kC9m32BbPrG.jpg"
+      },
+      {
+        "episode_number": 51,
+        "name": "The Return of the Revenge of Dr. Blowhole",
+        "overview": "Dr. Blowhole, the penguins\u0027 evil dolphin nemesis, returns to New York with a diabolical plan to turn them into creatures of destruction.",
+        "air_date": "2011-09-09",
+        "runtime": 46,
+        "still_path": "/aT6ajfuZa7z1EULvZd3HYPbbrkt.jpg"
+      },
+      {
+        "episode_number": 52,
+        "name": "Pets Peeved",
+        "overview": "The Vesuvius twins adopt Skipper and Julien, then force them to fight each other.",
+        "air_date": "2011-09-24",
+        "runtime": 12,
+        "still_path": "/7kqpgRTTTomPl1tMKcL9fzr8Xn5.jpg"
+      },
+      {
+        "episode_number": 53,
+        "name": "Byte-Sized",
+        "overview": "Kowalski invents a group of tiny robots, which he says will protect the penguins from harm.",
+        "air_date": "2011-09-24",
+        "runtime": 12,
+        "still_path": "/fCxV2R7Tk5kOxBrIJIYhJ6jPWJj.jpg"
+      },
+      {
+        "episode_number": 54,
+        "name": "Operation: Good Deed",
+        "overview": "The penguins are inspired seeing a good deed and decide to perform their own.",
+        "air_date": "2011-10-08",
+        "runtime": 12,
+        "still_path": "/4Qwoa2RUTA2Ss8Ng7uCPA4DCc4q.jpg"
+      },
+      {
+        "episode_number": 55,
+        "name": "When the Chips are Down",
+        "overview": "Mort and Private are sucked into a vending machine after trying to retrieve a snack.",
+        "air_date": "2011-10-08",
+        "runtime": 12,
+        "still_path": "/lROlYDRwnSg5jTmphF42gcKwFOm.jpg"
+      },
+      {
+        "episode_number": 56,
+        "name": "Time Out",
+        "overview": "Kowalski\u0027s time-stop invention falls into the wrong hands -- Julien\u0027s!",
+        "air_date": "2011-10-10",
+        "runtime": 12,
+        "still_path": "/yY5Zc0Y9weTGlsWMzUEYboJkXjr.jpg"
+      },
+      {
+        "episode_number": 57,
+        "name": "Our Man in Grrfurjiclestan",
+        "overview": "Special Agent Rockgut contacts the penguins with a warning that Red Squirrel has brainwashed one of them.",
+        "air_date": "2011-10-10",
+        "runtime": 12,
+        "still_path": "/vPSCInNYFLec9vY5qiqpCrFB0d2.jpg"
+      },
+      {
+        "episode_number": 58,
+        "name": "Gut Instinct",
+        "overview": "The animals think Julien caused old lady Gladys to slip and hurt herself.",
+        "air_date": "2011-10-10",
+        "runtime": 12,
+        "still_path": "/hWPhZ69XoDKtcFZ6q0Lm2CZIgJ8.jpg"
+      },
+      {
+        "episode_number": 59,
+        "name": "I Know Why the Caged Bird Goes Insane",
+        "overview": "Kowalski is laid up in the hospital, so he can\u0027t attend the invention expo, and it\u0027s driving him crazy.",
+        "air_date": "2011-10-10",
+        "runtime": 12,
+        "still_path": "/ouCBv5jwJs7n40OTgpZRTIfIbs1.jpg"
+      },
+      {
+        "episode_number": 60,
+        "name": "Arch-Enemy",
+        "overview": "Private accidentally steps on Dale the snail, so Dale wants some payback.",
+        "air_date": "2011-11-26",
+        "runtime": 12,
+        "still_path": "/r7yCwF9kScuJjpsyzB2MnVg25ed.jpg"
+      },
+      {
+        "episode_number": 61,
+        "name": "The Big S.T.A.N.K.",
+        "overview": "Julien becomes enamored with the gigantic toilet that the penguins built, but it\u0027s all a trap!",
+        "air_date": "2011-11-26",
+        "runtime": 12,
+        "still_path": "/2yIAX53WGh3x8Zgi1412SKZlTgw.jpg"
+      },
+      {
+        "episode_number": 62,
+        "name": "Operation: Antarctica",
+        "overview": "Private\u0027s heart overcomes his instinct to flee as he helps a stranded seal get back to Antarctica, and the rest of the team follow in the submarine to make sure they make it.",
+        "air_date": "2012-01-16",
+        "runtime": 24,
+        "still_path": "/jM089y5WsaL9BMSHG3d9u7BqGIt.jpg"
+      },
+      {
+        "episode_number": 63,
+        "name": "The Big Move",
+        "overview": "Julien is supposed to keep quiet about the penguins\u0027 secret tunnel, be he blabs anyway.",
+        "air_date": "2012-01-16",
+        "runtime": 12,
+        "still_path": "/aiGTGScn0KP0Y0iHcZsslMGvhQM.jpg"
+      },
+      {
+        "episode_number": 64,
+        "name": "Endangerous Species",
+        "overview": "Kowalski tries to bring a penguin species back from extinction, but clones a Dodo instead.",
+        "air_date": "2012-01-16",
+        "runtime": 12,
+        "still_path": "/yLrYY8d5IpNxJUZJoKSdTCtfI6b.jpg"
+      },
+      {
+        "episode_number": 65,
+        "name": "Loathe at First Sight",
+        "overview": "Skipper orders Kowalski\u0027s love ray to be put in reverse.",
+        "air_date": "2012-02-11",
+        "runtime": 12,
+        "still_path": "/lxIfVRVnE2wUTQBnBHvvR7soFFg.jpg"
+      },
+      {
+        "episode_number": 66,
+        "name": "The Trouble With Jiggles",
+        "overview": "When the penguins discover that Jiggles is still alive, the others start squishing it, which makes it multiply.",
+        "air_date": "2012-02-11",
+        "runtime": 12,
+        "still_path": "/k08hLbtU4nhhmmiBlFprfQ2X7jV.jpg"
+      },
+      {
+        "episode_number": 67,
+        "name": "Alienated",
+        "overview": "Lemmy the robot returns from Mars with a space squid.",
+        "air_date": "2012-03-31",
+        "runtime": 12,
+        "still_path": "/gvk5TWnVFQrhFvZLxdZBQl5iecB.jpg"
+      },
+      {
+        "episode_number": 68,
+        "name": "The Most Dangerous Game Night",
+        "overview": "Marlene plans a game night to help the zoo animals bond but it takes a terrible turn when the snacks run out.",
+        "air_date": "2012-03-31",
+        "runtime": 12,
+        "still_path": "/4r6xPmuQYFAfHmBOjxAOuZq3vTA.jpg"
+      }
+    ]
+  }
+}

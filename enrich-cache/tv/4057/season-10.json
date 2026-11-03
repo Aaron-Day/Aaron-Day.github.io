@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 10,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "X",
+        "overview": "The BAU team investigates a series of murders in Bakersfield, Ca, which have left the victims unidentifiable. New agent Kate Callahan joins the BAU fold, and assists in the effort to solve the cases.",
+        "air_date": "2014-10-01",
+        "runtime": 42,
+        "still_path": "/tqj1OjTnAn1E9ZE0tFTr7ige3fe.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Burn",
+        "overview": "A series of abductions and murders in Seattle send the BAU seeking an UnSub who was abused in the past and is out for revenge. Garcia heads to Texas to confront the man she shot while defending Reid and herself, as he waits on death row.",
+        "air_date": "2014-10-08",
+        "runtime": 42,
+        "still_path": "/8t68zF6nJEzNitfG0RkFxujJvpf.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "A Thousand Suns",
+        "overview": "When a passenger jet crashes in Colorado, the BAU team is called to build a profile around the suspicious circumstances. The case hits close to home for Kate, who is reminded of a family tragedy.",
+        "air_date": "2014-10-15",
+        "runtime": 42,
+        "still_path": "/xh1M7Bj4tzWSKUeSS0zG3rbxwSQ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Itch",
+        "overview": "The investigation into a series of mysterious deaths in Atlanta reveals the murders were likely committed by an UnSub with an obsessive skin disorder.",
+        "air_date": "2014-10-22",
+        "runtime": 42,
+        "still_path": "/5miHdmpP8gnPHGhCdBRMUzOi6Ge.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Boxed In",
+        "overview": "When a young boy who went missing in San Diego on Halloween suddenly reappears one year later, the BAU must work fast when another trick-or-treater disappears under similar circumstances.",
+        "air_date": "2014-10-29",
+        "runtime": 42,
+        "still_path": "/ubOtoqrYAIwNzndYbHydIEoz4op.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "If the Shoe Fits",
+        "overview": "The BAU is stumped to find the common denominator among male victims in Montana, making in difficult to profile the UnSub. JJ confronts her feelings about her sister\u0027s tragic death.",
+        "air_date": "2014-11-05",
+        "runtime": 42,
+        "still_path": "/blb15JM8DM8JRZxSaHabUIjG24f.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Hashtag",
+        "overview": "When victims with large social media followings are found dead in Maryland, the BAU searches for an UnSub taking on the persona of an Internet urban legend. Morgan and Savannah struggle to find quality time for each other with their busy careers.",
+        "air_date": "2014-11-12",
+        "runtime": 42,
+        "still_path": "/9Qy0tDJezLQNGtHZ6rJW7i5Bq0r.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Boys of Sudworth Place",
+        "overview": "When a prominent attorney goes missing in Boston, the BAU unearths secrets in his past which could point to the reasons for his disappearance.",
+        "air_date": "2014-11-19",
+        "runtime": 42,
+        "still_path": "/eUraHRObQv2lt0T2AepNukn94wB.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Fate",
+        "overview": "The BAU investigates random murders in northern Virginia and searches for a conflicted UnSub who has an uncontrollable urge to kill but is also filled with remorse. Rossi receives a visit from a woman who could hold a secret from his past.",
+        "air_date": "2014-11-26",
+        "runtime": 42,
+        "still_path": "/1YpUMnSLK4hMkpjCElFW6YhyZcg.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Amelia Porter",
+        "overview": "When the BAU is called to Salt Lake City Utah to investigate a triple homicide, the search for a connection among the victims could lead them to a fugitive who could have ties to the UnSub.",
+        "air_date": "2014-12-10",
+        "runtime": 42,
+        "still_path": "/arkSlS91nnBKg1PlGl0vwOjdfQ1.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Forever People",
+        "overview": "When frozen bodies are found in Nevada floating in water, the BAU\u2019s investigation leads them to suspect that the victims were part of a cult that could be behind the deaths. Also, JJ confronts old demons from her abduction and torture last year.",
+        "air_date": "2015-01-14",
+        "runtime": 42,
+        "still_path": "/zQ2Nvuwe30tNgic6v1TfzTN6j1a.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Anonymous",
+        "overview": "The BAU searches Tallahassee for a serial killer who calls the authorities to report the crimes prior to committing murder. Also, as Rossi prepares for a weekend visit with his daughter, Joy, he receives startling news about the death of a comrade in Vietnam.",
+        "air_date": "2015-01-21",
+        "runtime": 42,
+        "still_path": "/tbTjUTPh4CAl4IQhfvlmwgf0KrD.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Nelson\u0027s Sparrow",
+        "overview": "The BAU revisits its origins when they look at one of Rossi and Gideon\u2019s old cases to track a killer that got away.",
+        "air_date": "2015-01-28",
+        "runtime": 42,
+        "still_path": "/4YBOSxsEUFeynrAlylN7PGaDNJx.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Hero Worship",
+        "overview": "When an Indianapolis coffee shop is blown up and a hero emerges from the wreckage, the BAU tries to protect that person and his family while searching for the UnSub before more incidents occur.",
+        "air_date": "2015-02-04",
+        "runtime": 42,
+        "still_path": "/wIvasZ7uR77WAz1vJpa93RZUrhw.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Scream",
+        "overview": "Victims in California have the BAU searching for an UnSub who may have witnessed abuse as a child. Meanwhile, Kate shows parental concern when her niece, Meg, makes a date with a friend to meet a boy they met online.",
+        "air_date": "2015-02-11",
+        "runtime": 42,
+        "still_path": "/3ijm7vFf9e9ykyCxAwswSw2Jhat.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Lockdown",
+        "overview": "When two guards at a privatized maximum security prison in Texas are murdered, the BAU suspects that more than one UnSub within the prison could be at work.",
+        "air_date": "2015-03-04",
+        "runtime": 42,
+        "still_path": "/t9Rk0NE3mSLZ4wMkACD3Yq6RjDD.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Breath Play",
+        "overview": "The BAU is called to Wisconsin in search of a serial killer, and the team looks for a connection among the victims for clues to the UnSub. Also, Kate has trouble dealing with her niece, Meg, when she begins acting out.",
+        "air_date": "2015-03-11",
+        "runtime": 42,
+        "still_path": "/dxGG7AAXGUdwmSSDxP2QvCpsi4s.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Rock Creek Park",
+        "overview": "When the wife of an up-and-coming congressman disappears, the BAU investigates his political enemies as possible suspects.",
+        "air_date": "2015-03-25",
+        "runtime": 42,
+        "still_path": "/quPfr7ZP5qFO0FG5t76qWtrHAZW.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Beyond Borders",
+        "overview": "When a family of four is abducted while on vacation in Barbados, the BAU is called to assist Unit Chief Jack Garrett and his International Unit on their investigation.  Garrett and his unit, the FBI\u0027s top division for handling cases involving Americans abroad, work jointly with Hotch and his team when they discover that this case matches one the BAU investigated last year in Florida.",
+        "air_date": "2015-04-08",
+        "runtime": 42,
+        "still_path": "/dOvalGgpTwcJVfSEZtJem4m4uYv.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "A Place at the Table",
+        "overview": "When a Maryland family is found murdered at their dining room table, the team tracks down other family members and friends to uncover secrets that may have led to it. Also, Hotch must try to make peace with his father-in-law, Roy, after discovering he\u2019s been diagnosed with Alzheimer\u2019s.",
+        "air_date": "2015-04-15",
+        "runtime": 42,
+        "still_path": "/4S5T3ICLOaTTvq83myfNVfcv2qS.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Mr. Scratch",
+        "overview": "When three people implicated in murders claim they were attacked by a \u201Cclawed shadow monster\u201D at the moment each crime occurred, the BAU searches for an UnSub who is controlling their minds. Also, the search for the culprit puts one of the team in jeopardy.",
+        "air_date": "2015-04-22",
+        "runtime": 42,
+        "still_path": "/2ORI17OdsHZUNfFShI0xJNksH3i.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Protection",
+        "overview": "When shooting victims are found in the Los Angeles area with possible links to criminal activity, the BAU searches for a vigilante UnSub.",
+        "air_date": "2015-04-29",
+        "runtime": 42,
+        "still_path": "/dKesYKX7d5xvLRJGErJdlvKTUbT.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Hunt",
+        "overview": "When Kate\u0027s niece and her best friend Markayla are kidnapped, the BAU suspects an online predator engaged in sex trafficking who poses as a teenage boy.",
+        "air_date": "2015-05-06",
+        "runtime": 42,
+        "still_path": "/uapdvp24cSBZQHZTs3yIZyzN0G6.jpg"
+      }
+    ]
+  }
+}

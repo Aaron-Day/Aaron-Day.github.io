@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10495,
+    "title": "The Karate Kid Part III",
+    "overview": "Despondent over the closing of his karate school, Cobra Kai teacher John Kreese joins a ruthless businessman and martial artist to get revenge on Daniel and Mr. Miyagi.",
+    "tagline": "First it was teacher to student. Then it was father to son. Now, it\u0027s man to man.",
+    "runtime": 112,
+    "release_date": "1989-06-16",
+    "vote_average": 5.921,
+    "poster_path": "/lVZ3r0iDwGejlCvFEvXGzhQB9ds.jpg",
+    "backdrop_path": "/c12c7Rpq4kakQiaZIQgp5aTaDFB.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8580,
+      "name": "The Karate Kid Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ralph Macchio",
+      "character": "Daniel",
+      "profile_path": "/AoqqL9UlyPrcTLnpzbQvKXPvXrz.jpg"
+    },
+    {
+      "name": "Pat Morita",
+      "character": "Mr. Miyagi",
+      "profile_path": "/dwnjbEvhKRanS5xTaI1NkZ98aM9.jpg"
+    },
+    {
+      "name": "Robyn Lively",
+      "character": "Jessica",
+      "profile_path": "/tz4oKXOkJhHZezaQUTgo66gPn77.jpg"
+    },
+    {
+      "name": "Thomas Ian Griffith",
+      "character": "Terry",
+      "profile_path": "/4h1qQeZMG2drwEEat6WKG0rbPVC.jpg"
+    }
+  ]
+}

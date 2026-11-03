@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 207703,
+    "title": "Kingsman: The Secret Service",
+    "overview": "The story of a super-secret spy organization that recruits an unrefined but promising street kid into the agency\u0027s ultra-competitive training program just as a global threat emerges from a twisted tech genius.",
+    "tagline": "Manners maketh man.",
+    "runtime": 129,
+    "release_date": "2015-01-24",
+    "vote_average": 7.616,
+    "poster_path": "/r6q9wZK5a2K51KFj4LWVID6Ja1r.jpg",
+    "backdrop_path": "/qzUIOTk0E3F1zjvYjcBRTKUTgf9.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 391860,
+      "name": "Kingsman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Taron Egerton",
+      "character": "Gary \u0027Eggsy\u0027 Unwin",
+      "profile_path": "/uCaPhyKAQIfEzAWWCYIrO2004CB.jpg"
+    },
+    {
+      "name": "Colin Firth",
+      "character": "Harry Hart / Galahad",
+      "profile_path": "/z6wxnkqSTnzO1tcBui0ss7ehdm9.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Valentine",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Mark Strong",
+      "character": "Merlin",
+      "profile_path": "/3cNmatYsoifytg7TfQhI1EHow3v.jpg"
+    }
+  ]
+}

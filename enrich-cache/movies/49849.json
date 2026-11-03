@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 49849,
+    "title": "Cowboys \u0026 Aliens",
+    "overview": "A stranger stumbles into the desert town of Absolution with no memory of his past and a futuristic shackle around his wrist. With the help of mysterious beauty Ella and the iron-fisted Colonel Dolarhyde, he finds himself leading an unlikely posse of cowboys, outlaws, and Apache warriors against a common enemy from beyond this world in an epic showdown for survival.",
+    "tagline": "First Contact. Last Stand.",
+    "runtime": 119,
+    "release_date": "2011-07-29",
+    "vote_average": 5.716,
+    "poster_path": "/9uZsGCP4rvOHVGCpMpYq5gNCuNI.jpg",
+    "backdrop_path": "/sGXCYMzr1sCnGNVuRpB2TOWPWDA.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Daniel Craig",
+      "character": "Jake Lonergan",
+      "profile_path": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
+    },
+    {
+      "name": "Harrison Ford",
+      "character": "Woodrow Dolarhyde",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Olivia Wilde",
+      "character": "Ella Swenson",
+      "profile_path": "/eODi1QKamyVa41eSK2SjU20VAZS.jpg"
+    },
+    {
+      "name": "Sam Rockwell",
+      "character": "Doc",
+      "profile_path": "/afYhNpLwpa65Yy0Q0g00FNFhzx5.jpg"
+    }
+  ]
+}

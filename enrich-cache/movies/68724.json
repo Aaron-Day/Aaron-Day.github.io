@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 68724,
+    "title": "Elysium",
+    "overview": "In the year 2159, two classes of people exist: the very wealthy who live on a pristine man-made space station called Elysium, and the rest, who live on an overpopulated, ruined Earth. Secretary Rhodes, a hard line government official, will stop at nothing to enforce anti-immigration laws and preserve the luxurious lifestyle of the citizens of Elysium. That doesn\u2019t stop the people of Earth from trying to get in, by any means they can. When unlucky Max is backed into a corner, he agrees to take on a daunting mission that, if successful, will not only save his life, but could bring equality to these polarized worlds.",
+    "tagline": "He can save us all.",
+    "runtime": 109,
+    "release_date": "2013-08-07",
+    "vote_average": 6.525,
+    "poster_path": "/aRjuJuPXHtVs6YegfeeQWXGRs1E.jpg",
+    "backdrop_path": "/oo9GyiNKvR4CU1etuYl081UJ1LE.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matt Damon",
+      "character": "Max",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    },
+    {
+      "name": "Jodie Foster",
+      "character": "Delacourt",
+      "profile_path": "/5emVgsLFlU6SmeBIFsF2Y7aqwtG.jpg"
+    },
+    {
+      "name": "Sharlto Copley",
+      "character": "Kruger",
+      "profile_path": "/em89OJJvBRX7kNJJPASmNKQujsC.jpg"
+    },
+    {
+      "name": "Diego Luna",
+      "character": "Julio",
+      "profile_path": "/qwbjcyDN37OHiln4a6P4LP31o7F.jpg"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Fallen (1)",
+        "overview": "While searching for the Lost City of the Ancients on a distant planet, SG-1 is stunned to find Daniel Jackson alive and in human form but stripped of his memory.  O\u0027Neill convinces Daniel to return with them to the SGC, where he is reinstated for a daring mission to destroy Anubis\u0027 powerful new super-weapon!",
+        "air_date": "2003-06-13",
+        "runtime": 44,
+        "still_path": "/z6EwlxCy4SlfmcH6JKUMHYrWJBc.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Homecoming (2)",
+        "overview": "The team returns to Jonas\u0027 homeworld when they learn that the Goa\u0027uld are after its naquadria. When Jonas is captured by Anubis, Daniel is his only hope.",
+        "air_date": "2003-06-13",
+        "runtime": 44,
+        "still_path": "/x005Jcl4Sgf3cyjeXlMtGs93AGa.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Fragile Balance",
+        "overview": "A teenage boy shows up at the S.G.C. claiming to be Jack O\u0027Neill, sending the team on a mission to uncover his true identity.",
+        "air_date": "2003-06-20",
+        "runtime": 44,
+        "still_path": "/vNV6BgYP68csdvZYSa24P14lsIp.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Orpheus",
+        "overview": "After an injury, Teal\u0027c must put aside his self-doubt when SG-1 launches a mission to rescue his son and his mentor from a Jaffa death camp.",
+        "air_date": "2003-06-27",
+        "runtime": 44,
+        "still_path": "/o3FcnYaTHY5XVjiFOYjqieLMX16.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Revisions",
+        "overview": "The team gates to a climate-controlled environment amidst a toxic wasteland, whose people are all linked to a central computer.",
+        "air_date": "2003-07-11",
+        "runtime": 44,
+        "still_path": "/fTrM4F3XVie1ePX652s2iMyeFIS.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Lifeboat",
+        "overview": "When SG-1 finds a crashed alien space ship, Daniel\u0027s mind is taken over by its disembodied passengers.",
+        "air_date": "2003-07-18",
+        "runtime": 44,
+        "still_path": "/2HesBuCqtPDr5Wclrl7iFDxd8au.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Enemy Mine",
+        "overview": "When Earth\u0027s attempts to exploit a newly-discovered naquadah mine are thwarted by a tribe of indigenous Unas, SG-1 must turn to an old friend for help.",
+        "air_date": "2003-07-25",
+        "runtime": 44,
+        "still_path": "/vZEkNdJlJOHUFxg9UGRCn6RgKex.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Space Race",
+        "overview": "Major Carter joins an alien pilot for a space race, where the winner is awarded a lucrative contract with the planet\u0027s most powerful corporation. But the rest of the team discovers that there is more at stake than the finish line.",
+        "air_date": "2003-08-01",
+        "runtime": 44,
+        "still_path": "/5VL15eBxSEYIZkwBh93FVUhb1WO.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Avenger 2.0",
+        "overview": "An S.G.C. scientist creates a computer virus to be used to disable enemy Stargates -- but succeeds in shutting down the entire gate network.",
+        "air_date": "2003-08-08",
+        "runtime": 44,
+        "still_path": "/3MPRf4xCOf3XNj14DUToUDWEENK.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Birthright",
+        "overview": "The team finds a fugitive colony of Jaffa women, who must prey on other Jaffa to acquire symbiotes.",
+        "air_date": "2003-08-15",
+        "runtime": 44,
+        "still_path": "/pEdRiPBJnOapxTNTnS3N7eH7Wql.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Evolution (1)",
+        "overview": "The team investigates an unstoppable new enemy soldier engineered by Anubis. Dr. Jackson leads a team in search of an alien device in Central America, but gets more than he bargained for.",
+        "air_date": "2003-08-22",
+        "runtime": 44,
+        "still_path": "/smYY2jA1YGzTWeOa1M92TFxLob7.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Evolution (2)",
+        "overview": "O\u0027Neill seeks help from a former comrade to rescue Daniel and Dr. Lee, who have been kidnapped in Central America. Carter, Teal\u0027c and Jacob infiltrate Anubis\u0027 super-soldier facility.",
+        "air_date": "2004-01-09",
+        "runtime": 44,
+        "still_path": "/olnRS1mN9832Axxnucpy1cH463T.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Grace",
+        "overview": "Carter is injured when the Prometheus is attacked by an unknown ship, and awakens to find herself stranded alone in deep space.",
+        "air_date": "2004-01-16",
+        "runtime": 44,
+        "still_path": "/5it9lu7Cb0TDcaIs1873F4xQxn4.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Fallout",
+        "overview": "When the Kelownans discover that a massive underground vein of naquadah is being converted into naquadria, Jonas Quinn seeks help from Earth in avoiding the total destruction of his planet.",
+        "air_date": "2004-01-23",
+        "runtime": 44,
+        "still_path": "/wDQisfRT4gB0KUqQagkVnHLovfb.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Chimera",
+        "overview": "Daniel is plagued by dreams of his former girlfriend, who has been taken as a Goa\u0027uld host. Samantha Carter begins a romantic relationship with a detective, from whom she must hide her life at Stargate Command.",
+        "air_date": "2004-01-30",
+        "runtime": 44,
+        "still_path": "/uGp7e2VMYg8hKabnnaJhIApMzYq.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Death Knell",
+        "overview": "Earth\u0027s secret offworld base is attacked by Anubis\u0027 forces, and Major Carter finds herself being hunted by the enemy. General Hammond and Jacob Carter make an unnerving discovery about the Earth-Tok\u0027ra alliance.",
+        "air_date": "2004-02-06",
+        "runtime": 44,
+        "still_path": "/ezF9Uulqi4IC1ZDxpWqUcL2rSxn.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Heroes (1)",
+        "overview": "A film crew arrives to document the work of the S.G.C. for eventual disclosure to the public, but finds that the base\u0027s personnel are less than eager to participate.",
+        "air_date": "2004-02-13",
+        "runtime": 44,
+        "still_path": "/e0eJFzVPMQcnU3SiNSs1mNpBSfV.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Heroes (2)",
+        "overview": "SG-1 is called into action while a film crew is documenting the Stargate program, but the S.G.C. comes under investigation after the mission goes terribly wrong.",
+        "air_date": "2004-02-20",
+        "runtime": 44,
+        "still_path": "/oWPrRkjBbJGBEVi1UGUzALw7EmY.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Resurrection",
+        "overview": "SG-1 investigates a secret N.I.D. laboratory, where a ruthless scientist has used cloning technology to create a Goa\u0027uld-human hybrid.",
+        "air_date": "2004-02-27",
+        "runtime": 44,
+        "still_path": "/kOccyYTotAhc6H9X3rkNyd3M31D.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Inauguration",
+        "overview": "The newly-elected president is debriefed about the Stargate program, and Vice President Kinsey makes a new play for control of the program.",
+        "air_date": "2004-03-05",
+        "runtime": 44,
+        "still_path": "/g5Oe1qPP4gsdA9B3MPFjvWwQzz4.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Lost City (1)",
+        "overview": "O\u0027Neill goes to great lengths to keep the Ancients\u0027 knowledge from falling into Goa\u0027uld hands when the team discovers a second repository. The President replaces General Hammond with a civilian diplomat.",
+        "air_date": "2004-03-12",
+        "runtime": 44,
+        "still_path": "/8mLUgTDVwNV4TMVHgrlEoJyNmHR.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Lost City (2)",
+        "overview": "Anubis begins a systematic assault on Earth, and the planet\u0027s only hope of salvation depends on whether SG-1 can find the Ancients\u0027 mythical Lost City.",
+        "air_date": "2004-03-19",
+        "runtime": 44,
+        "still_path": "/a2OvFj1vA7PMewH1itAiQko5wiX.jpg"
+      }
+    ]
+  }
+}

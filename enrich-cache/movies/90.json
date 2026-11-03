@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 90,
+    "title": "Beverly Hills Cop",
+    "overview": "Fast-talking, quick-thinking Detroit street cop Axel Foley has bent more than a few rules and regs in his time, but when his best friend is murdered, he heads to sunny Beverly Hills to work the case like only he can.",
+    "tagline": "He\u0027s been chased, thrown through a window and arrested. Eddie Murphy is a Detroit cop on vacation in Beverly Hills.",
+    "runtime": 105,
+    "release_date": "1984-12-05",
+    "vote_average": 7.211,
+    "poster_path": "/eBJEvKkhQ0tUt1dBAcTEYW6kCle.jpg",
+    "backdrop_path": "/p256RduW9wMC3uhGJTerywmGiiX.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 85861,
+      "name": "Beverly Hills Cop Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Eddie Murphy",
+      "character": "Axel Foley",
+      "profile_path": "/qgjMfefsKwSYsyCaIX46uyOXIpy.jpg"
+    },
+    {
+      "name": "Judge Reinhold",
+      "character": "Det. Billy Rosewood",
+      "profile_path": "/6R0vCxzSx1CaDAM9y9ZgmejUdiL.jpg"
+    },
+    {
+      "name": "John Ashton",
+      "character": "Sgt. Taggart",
+      "profile_path": "/8TzYptb6pPxZJXfrJIu0UoZTNkX.jpg"
+    },
+    {
+      "name": "Lisa Eilbacher",
+      "character": "Jenny Summers",
+      "profile_path": "/tYbOrII1dXzNauGSbMlAZRyRUWT.jpg"
+    }
+  ]
+}

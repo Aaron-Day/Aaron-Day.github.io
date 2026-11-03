@@ -1,0 +1,272 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Feline Fervor",
+        "overview": "When King Julien is accidentally bounced out of his kingdom, he is mistaken for a cat and adopted by old lady Gladys.",
+        "air_date": "2012-04-16",
+        "runtime": 12,
+        "still_path": "/yhidIjDgbPeKHEuLyCEDYvY9lrG.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "King Me",
+        "overview": "Kowalski uses an invention to switch King Julian\u0027s mind with all the penguins in order to win a contest.",
+        "air_date": "2012-04-17",
+        "runtime": 12,
+        "still_path": "/b0jJ8PSjGTPB7bu1h3avHXQAWKU.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Otter Woman",
+        "overview": "Marlene\u0027s fur is bleached when Alice over-chlorinates the otter habitat.",
+        "air_date": "2012-04-18",
+        "runtime": 12,
+        "still_path": "/iqcZiFRSFLFvU8cQYECNUVsWOBF.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Action Reaction",
+        "overview": "Skipper is accidentally doused with a substance called Inflatium, so whenever he is stressed he swells up like a balloon.",
+        "air_date": "2012-04-19",
+        "runtime": 12,
+        "still_path": "/gqem6eQRbVRT1vTbXoxEZ788for.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Thumb Drive",
+        "overview": "After realizing that Maurice\u0027s thumbs could prove to be very useful, the penguins recruit him into their team.",
+        "air_date": "2012-04-20",
+        "runtime": 12,
+        "still_path": "/m4lK9ISgWRkalVojQv5zIL5NYZV.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Operation: Big Blue Marble",
+        "overview": "The Penguins are faced with a global battle when their specialty food-making machine belches out a toxic cloud that threatens not just the zoo, not just the city, but the earth itself!",
+        "air_date": "2012-04-22",
+        "runtime": 24,
+        "still_path": "/mo4lRSnBShT5shlviNIBL9KfVe1.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Hair Apparent",
+        "overview": "The Commissioner\u0027s toupee blows off and soon gets stuck on Maurice\u0027s head.",
+        "air_date": "2012-05-06",
+        "runtime": 12,
+        "still_path": "/9SICYM21JUlw45vDlSx58y5OAVt.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Love Takes Flightless",
+        "overview": "After Rico saves Shelly, she falls for him but things turn a little crazy when she kidnaps his doll in a fit of jealousy.",
+        "air_date": "2012-05-06",
+        "runtime": 12,
+        "still_path": "/wM7BEtP1gjRyYzd8MU0YcMaYrUC.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Smotherly Love",
+        "overview": "Ma takes up residence in the Penguins Lair. She smothers the penguins with love and they devolve into a bunch of softies, opening the door for Hans to take advantage.",
+        "air_date": "2012-05-13",
+        "runtime": 12,
+        "still_path": "/ptjxu0QL1zR1WEGuiAHDrSoPMst.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Littlefoot",
+        "overview": "Marlene wants see a concert but every time she leaves the zoo she becomes a monster!",
+        "air_date": "2012-05-13",
+        "runtime": 12,
+        "still_path": "/pUH9a3cp2SqYpWpM8rk7sICZgV4.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Antics on Ice",
+        "overview": "The other penguins agree to take Private to see \u0022Lunacorns on Ice\u0022 to cheer him up.",
+        "air_date": "2012-05-20",
+        "runtime": 12,
+        "still_path": "/qvFFzr2oGlCC7Q1vwktHaokMC1F.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Showdown on Fairway 18",
+        "overview": "A putter is at the center of controversy when the Amarillo Kid returns to the zoo.",
+        "air_date": "2012-05-20",
+        "runtime": 12,
+        "still_path": "/2ocroqmYxQU6ClS4Fp87v4CBYC9.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Street Smarts",
+        "overview": "A stray dog refuses to give up Mort after believing he is a squeaky toy, so the penguins set out to rescue him with the help of Max the cat.",
+        "air_date": "2012-05-27",
+        "runtime": 12,
+        "still_path": "/e8RIkCwJvoR1RLApNZaaCKwo9hg.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Nighty Night Ninja",
+        "overview": "Watching too many ninja movies has brainwashed Leonard the koala. During the day, as he sleeps, he terrorizes everyone by sleepfighting.",
+        "air_date": "2012-05-27",
+        "runtime": 12,
+        "still_path": "/lT6mIjp9lJYtR50TPcABCvWKbLf.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "A Kipper for Skipper",
+        "overview": "Skipper agrees gives a day off from training to the first penguin brings him a kipper.",
+        "air_date": "2012-06-02",
+        "runtime": 12,
+        "still_path": "/3i9IcWgY1SWsx5H0vURZDUFse4M.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "High Moltage",
+        "overview": "The penguins need Private\u0027s hypercute to escape Alice in order to see their favorite action star at the cinema, but Private\u0027s molting renders him unable to engage the talent.",
+        "air_date": "2012-06-02",
+        "runtime": 12,
+        "still_path": "/aMUCXVurGr0m1ZpOe6IVIvw2cwH.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Nuts to You",
+        "overview": "Fred seeks financial advice from King Julien when he stumbles upon an oak tree loaded with acorns, but the Red Squirrel has his own plans for the loot.",
+        "air_date": "2012-06-10",
+        "runtime": 12,
+        "still_path": "/oY8bLAOsplMOCl3sVGn1BrZs2Es.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Terror of Madagascar",
+        "overview": "A special delivery has come from Madagascar. A baby Fossa!",
+        "air_date": "2012-06-10",
+        "runtime": 12,
+        "still_path": "/k3gYG8pmALOHQtv84wAZJv0vKwG.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Mental Hen",
+        "overview": "A hen who seems to have psychic abilities moves into the zoo, and a skeptical Kowalski tries to prove she\u0027s a fraud.",
+        "air_date": "2012-06-17",
+        "runtime": 12,
+        "still_path": "/5gZQcNXlldkVPcDBjfGLjOayCBM.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Siege the Day",
+        "overview": "Private is tasked with babysitting Eggy and his siblings for Momma Duck while the rest of the team is away, and has to protect the ducklings from the combined forces of the hornets and the sewer rats.",
+        "air_date": "2012-06-17",
+        "runtime": 12,
+        "still_path": "/6ngFtEalUPD6tC0B5ERj0bbIWF0.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "P.E.L.T.",
+        "overview": "Skipper must prove he can still be a leader when his strength starts to decline.",
+        "air_date": "2012-07-29",
+        "runtime": 12,
+        "still_path": "/zMyIQWJoF7zDkxVgajxzVXqHmX0.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Private and the Winky Factory",
+        "overview": "When Private learns that the Peanut Butter Winkies are going out of production, he urges a raid on the factory and Skipper is so impressed he lets him command the mission.",
+        "air_date": "2012-07-29",
+        "runtime": 12,
+        "still_path": "/l1keFlUg1gJv5HGJ825JK3JAClG.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Best Laid Plantains",
+        "overview": "It\u0027s a special day when Bada and Bing get a shipment of delicious plantains to eat. Although they jealously guard the African bananas, King Julien\u0027s determined to taste them too.",
+        "air_date": "2012-11-03",
+        "runtime": 12,
+        "still_path": "/dYicRGRO77JA0p7opS9XKZCUSBW.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Skipper Makes Perfect",
+        "overview": "Skipper\u0027s having one of those perfect days, and he decides to use the opportunity to settle an old score.",
+        "air_date": "2012-11-03",
+        "runtime": 12,
+        "still_path": "/sWNabZYRP3d6LtISxFrE94QklXd.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Marble Jar Head",
+        "overview": "How in the world is Rico supposed to behave well when King Julien has kidnapped his doll, Miss Perky, with the intention of marrying her?",
+        "air_date": "2012-11-10",
+        "runtime": 12,
+        "still_path": "/pGguCiOutR4XhwjK04hAZHTDfvg.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Good Night and Good Chuck",
+        "overview": "A former news anchor grows suspicious of the penguins when he begins working at the zoo.",
+        "air_date": "2012-11-10",
+        "runtime": 12,
+        "still_path": "/aD4v1kSlQy0YFF3PRI0DzhG0V4w.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Best Foes",
+        "overview": "Kowalski invents an enemy detector but it doesn\u0027t work. Old enemies are now friends and old friends are now enemies.",
+        "air_date": "2012-11-17",
+        "runtime": 12,
+        "still_path": "/5aSSXC3Lwyu7z1yIrLg4fnXpmpn.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Night of the Vesuviuses",
+        "overview": "The annual Zoo Snooze is here! This year the Vesuvius Twins buy up all the tickets. The zoosters plan to exact sweet revenge on the twins.",
+        "air_date": "2012-11-17",
+        "runtime": 12,
+        "still_path": "/cCgxcB7x5iiZNgbMns8IdMUwJLZ.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Operation: Lunacorn Apocalypse",
+        "overview": "The Penguins are faced with a World Domination battle when Private accidentally unleashes KuchiKukhan the Destroyer of Worlds. Can they stop him in time to save the World?",
+        "air_date": "2012-11-24",
+        "runtime": 22,
+        "still_path": "/nGd70XfJC0AIhveTZAU9kwCK6a7.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Operation: Swap-anzee",
+        "overview": "The Space Agency sends Private to the moon. The other birds can\u0027t monkey around if they hope to get him home again.",
+        "air_date": "2012-12-01",
+        "runtime": 12,
+        "still_path": "/n4WBR55Zb82Or43M7AH0M4eTs6l.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Snowmageddon",
+        "overview": "Snowmageddon hits and traps Skipper and Marlene in the convenience store, while Kowalski and Private get snowed into a tree.",
+        "air_date": "2012-12-01",
+        "runtime": 12,
+        "still_path": "/bHLIZPqzkNlB7AzHUoCiiTq345P.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Tunnel of Love",
+        "overview": "When a massive sneeze from Rico causes the underground tunnel system beneath the zoo to rupture, Skipper calls in 4 beavers to fix the situation.",
+        "air_date": "2013-02-14",
+        "runtime": 12,
+        "still_path": "/yBA8rxBvNYLsx3LcvXLJ2bcjWMv.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "The Penguin Who Loved Me",
+        "overview": "Doris the dolphin\u0027s quest to rescue her brother Francis from Seaville brings her to the lovestruck Kowalski.",
+        "air_date": "2013-02-28",
+        "runtime": 24,
+        "still_path": "/xR8KY82I9iZdnhJmqaxUNO0o2ye.jpg"
+      }
+    ]
+  }
+}

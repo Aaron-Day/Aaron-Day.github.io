@@ -1,0 +1,63 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12610,
+    "title": "Osmosis Jones",
+    "overview": "A white blood cell policeman, with the help of a cold pill, must stop a deadly virus from destroying the human they live in, Frank.",
+    "tagline": "Every body needs a hero.",
+    "runtime": 95,
+    "release_date": "2001-08-10",
+    "vote_average": 6.5,
+    "poster_path": "/foZpSG88IQUCEBJE3unc5QzO6bQ.jpg",
+    "backdrop_path": "/b4bOy4QfEN9DfWrH2iTVi2W9eOp.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chris Rock",
+      "character": "Osmosis Jones (voice)",
+      "profile_path": "/5lILFeBvX3sC0EfbHhrvMEc7bPD.jpg"
+    },
+    {
+      "name": "Laurence Fishburne",
+      "character": "Thrax (voice)",
+      "profile_path": "/2GbXERENPpl5MmlqOLlPVaVtifD.jpg"
+    },
+    {
+      "name": "David Hyde Pierce",
+      "character": "Drix (voice)",
+      "profile_path": "/9BSgq4yxjPry1Oghqq92S4wUIvs.jpg"
+    },
+    {
+      "name": "Brandy Norwood",
+      "character": "Leah (voice)",
+      "profile_path": "/ie1IH8LQI3aGzke4FoYRbcdHv88.jpg"
+    }
+  ]
+}

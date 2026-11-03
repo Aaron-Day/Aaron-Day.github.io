@@ -1,0 +1,136 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Chapter Twenty-One: The Hellbound Heart",
+        "overview": "Sabrina recruits Roz, Harvey and Theo for an emotional mission. Prudence and Ambrose travel to New Orleans. Ms. Wardwell returns to Baxter High.",
+        "air_date": "2020-01-24",
+        "runtime": 61,
+        "still_path": "/rNES4xyZE5m6Ey7QUeIFP4ABzLz.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Chapter Twenty-Two: Drag Me to Hell",
+        "overview": "In Greendale, Sabrina explores a new hobby ... and a disturbing duty. Elsewhere, Prudence and Ambrose continue their search for Father Blackwood.",
+        "air_date": "2020-01-24",
+        "runtime": 57,
+        "still_path": "/5KamSGZfkoNLP1tt7DbHpSjbVm0.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Chapter Twenty-Three: Heavy Is the Crown",
+        "overview": "Sabrina visits a mysterious (and familiar) town. Zelda aims to restore order at the academy. A carnival creates buzz in Greendale. Theo takes a chance.",
+        "air_date": "2020-01-24",
+        "runtime": 58,
+        "still_path": "/jCJhRfEL7A5QtdLkwBOSShPUVTE.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Chapter Twenty-Four: The Hare Moon",
+        "overview": "The coven celebrates a festive tradition -- and crosses paths with unexpected guests. Nick struggles to strike a balance between pleasure and pain.",
+        "air_date": "2020-01-24",
+        "runtime": 59,
+        "still_path": "/iOFMMP6NDYl6DQXmnMjrUa5UzFN.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Chapter Twenty-Five: The Devil Within",
+        "overview": "Ambrose treats Nick\u0027s affliction while Harvey and Theo tend to Roz. Meanwhile, Sabrina and Caliban continue in their unholy regalia challenge.",
+        "air_date": "2020-01-24",
+        "runtime": 57,
+        "still_path": "/bwv2GbZUgXlAIUguHIa5cZBLPBc.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Chapter Twenty-Six: All of Them Witches",
+        "overview": "Zelda attempts to forge a supernatural alliance, Sabrina and the gang work with Caliban, and Hilda\u0027s transformation takes a terrifying turn.",
+        "air_date": "2020-01-24",
+        "runtime": 58,
+        "still_path": "/etl75GyDSKTYmawpGxyG901zsTt.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Chapter Twenty-Seven: The Judas Kiss",
+        "overview": "On the heels of tragedy, the Spellmans receive a grim omen. Blackwood seeks vengeance. Sabrina prepares for her final challenge against Caliban.",
+        "air_date": "2020-01-24",
+        "runtime": 55,
+        "still_path": "/c41eOe0Ie242RgD67lkyqiItC2X.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Chapter Twenty-Eight: Sabrina Is Legend",
+        "overview": "The lines between past, present and future blur as Sabrina stages an act of heroic restoration. But will her powers prove to be enough?",
+        "air_date": "2020-01-24",
+        "runtime": 61,
+        "still_path": "/tfGR8bWvc2vH9TZqyjniuLmsgm5.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Chapter Twenty-Nine: The Eldritch Dark",
+        "overview": "As an all-consuming darkness trickles into town, Sabrina grapples with feeling like the odd witch out \u2014 and makes a risky plan for a whirlwind trip.",
+        "air_date": "2020-12-31",
+        "runtime": 60,
+        "still_path": "/eelLr2X1sbLP1hFCXhpbSspsXM5.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Chapter Thirty: The Uninvited",
+        "overview": "A grim visitor sends Roz and Harvey into a panic. Elsewhere, Sabrina reconnects with an enemy from her past, and Aunt Hilda\u0027s wedding day arrives.",
+        "air_date": "2020-12-31",
+        "runtime": 60,
+        "still_path": "/jXMxcgUQPa5z7WPtxLrOsS62CXE.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Chapter Thirty-One: The Weird",
+        "overview": "The next terror graces Greendale. Sabrina bonds with a new classmate... and finds herself in a squeamish predicament. Roz uncovers a shocking truth.",
+        "air_date": "2020-12-31",
+        "runtime": 58,
+        "still_path": "/psqJyTVdz3ecWSOvdFahj4Gocf6.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Chapter Thirty-Two: The Imp of the Perverse",
+        "overview": "Panic turns political as Sabrina and Roz run for Baxter High co-presidents. Harvey struggles with Roz\u0027s reveal. Blackwood takes control of the terror.",
+        "air_date": "2020-12-31",
+        "runtime": 62,
+        "still_path": "/zUuU32lBakTlldtPEFK2b81VeAR.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Chapter Thirty-Three: Deus Ex Machina",
+        "overview": "Sabrina encounters a surprise at school \u2014 and faces a pivotal decision. Theo explores the perks and pitfalls of Robin\u0027s time in the mortal world.",
+        "air_date": "2020-12-31",
+        "runtime": 56,
+        "still_path": "/lRTby9TRu3rqef3hOKNTjHqT3JR.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Chapter Thirty-Four: The Returned",
+        "overview": "As Sabrina longs for a piece of her past, vengeful visitors return to Greendale. The Fright Club competes in a life-or-death battle of the bands.",
+        "air_date": "2020-12-31",
+        "runtime": 58,
+        "still_path": "/xinDM7cMVeCg4EI6apKctI6Or5U.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Chapter Thirty-Five: The Endless",
+        "overview": "In an alternate universe, Sabrina Morningstar meets a cast of familiar faces \u2014 and investigates the thin line between fact and fiction.",
+        "air_date": "2020-12-31",
+        "runtime": 51,
+        "still_path": "/2XeWy983rK9EoLM2BPV7fmgtRUz.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Chapter Thirty-Six: At the Mountains of Madness",
+        "overview": "The darkest days of the void arrive as Sabrina struggles with grief and regret. Can she summon the strength to overcome an endless cycle of destruction?",
+        "air_date": "2020-12-31",
+        "runtime": 64,
+        "still_path": "/5rwsv1Qovbleyz8D4YpR66APw9F.jpg"
+      }
+    ]
+  }
+}

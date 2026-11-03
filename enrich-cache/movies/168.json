@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 168,
+    "title": "Star Trek IV: The Voyage Home",
+    "overview": "When a huge alien probe enters the galaxy and begins to vaporize Earth\u0027s oceans, Kirk and his crew must travel back in time in order to bring back whales and save the planet.",
+    "tagline": "Star date: 1986. How on Earth can they save the future?",
+    "runtime": 118,
+    "release_date": "1986-11-26",
+    "vote_average": 7.18,
+    "poster_path": "/xY5TzGXJOB3L9rhZ1MbbPyVlW5J.jpg",
+    "backdrop_path": "/2LiU13aDAWpU2mX25JdacTzBnyr.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 151,
+      "name": "Star Trek: The Original Series Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "William Shatner",
+      "character": "Admiral James T. Kirk",
+      "profile_path": "/8X9RuRmwOYQewfCvGg8zFZejC6U.jpg"
+    },
+    {
+      "name": "Leonard Nimoy",
+      "character": "Captain Spock",
+      "profile_path": "/9KaiO5eNzJtB4zB2inmNWR0GTRI.jpg"
+    },
+    {
+      "name": "DeForest Kelley",
+      "character": "Dr. Leonard \u0027Bones\u0027 McCoy",
+      "profile_path": "/lBFQdiLYeSN7eZ6ddOXTGc7loQf.jpg"
+    },
+    {
+      "name": "James Doohan",
+      "character": "Captain Montgomery \u0027Scotty\u0027 Scott",
+      "profile_path": "/lsI15wIkmcKVTM8qu8ooukaLShi.jpg"
+    }
+  ]
+}

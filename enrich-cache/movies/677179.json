@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 677179,
+    "title": "Creed III",
+    "overview": "After dominating the boxing world, Adonis Creed has thrived in his career and family life. When a childhood friend and former boxing prodigy, Damian Anderson, resurfaces after serving a long sentence in prison, he is eager to prove that he deserves his shot in the ring. The face-off between former friends is more than just a fight. To settle the score, Adonis must put his future on the line to battle Damian \u2014 a fighter with nothing to lose.",
+    "tagline": "You can\u0027t run from your past.",
+    "runtime": 116,
+    "release_date": "2023-03-01",
+    "vote_average": 7.082,
+    "poster_path": "/cvsXj3I9Q2iyyIo95AecSd1tad7.jpg",
+    "backdrop_path": "/gOIztYywR291pC4k3IpDq7Vj3Kj.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 553717,
+      "name": "Creed Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael B. Jordan",
+      "character": "Adonis Creed",
+      "profile_path": "/sMBpav8cK7t7Nk0yf4tuNOqNUyW.jpg"
+    },
+    {
+      "name": "Tessa Thompson",
+      "character": "Bianca Creed",
+      "profile_path": "/19ze60jXlb2j7dXc2UpA3MujXA8.jpg"
+    },
+    {
+      "name": "Jonathan Majors",
+      "character": "Damian \u0027Dame\u0027 Anderson",
+      "profile_path": "/nsxnMbkl9Lpc12AmYwKi9SmsJ7e.jpg"
+    },
+    {
+      "name": "Phylicia Rash\u0101d",
+      "character": "Mary-Anne Creed",
+      "profile_path": "/o0sQd9JvPsxRq7BJLOeP6ASsh5Q.jpg"
+    }
+  ]
+}

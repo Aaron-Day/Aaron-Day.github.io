@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Rising (1)",
+        "overview": "A new Stargate team embarks on a dangerous mission to a distant galaxy, where they discover a mythical lost city -- and a deadly new enemy.",
+        "air_date": "2004-07-15",
+        "runtime": 45,
+        "still_path": "/9VY06DH7RbPaZdyRd3OKQCpDYve.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Rising (2)",
+        "overview": "Sheppard tries to convince Weir to mount a rescue mission to free Colonel Sumner, Teyla, and the others captured by the Wraith.",
+        "air_date": "2004-07-15",
+        "runtime": 41,
+        "still_path": "/nUoq9WRYqc1TZdPozkDeFXbfWwm.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Hide and Seek",
+        "overview": "The Atlantis base is threatened when the team discovers that an alien entity is in the city. McKay\u0027s experiment with alien technology goes awry.",
+        "air_date": "2004-07-23",
+        "runtime": 44,
+        "still_path": "/zGsj7E3BLHxOxKjHpmBlZc2TwqV.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Thirty Eight Minutes",
+        "overview": "The team finds themselves in mortal danger when their Puddle Jumper ship becomes lodged in the Stargate.",
+        "air_date": "2004-07-30",
+        "runtime": 44,
+        "still_path": "/3MBBKpJ3qEabTF0TskMEHvcdsk4.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Suspicion",
+        "overview": "After a series of run-ins with the Wraith, the team begins to suspect their Athosian allies of having a spy in their midst.",
+        "air_date": "2004-08-06",
+        "runtime": 48,
+        "still_path": "/Tk1i1WPjseecFFFqF1OLXXWDgg.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Childhood\u0027s End",
+        "overview": "Sheppard and the team visit a world where no one is over 24 years old -- because of a ritual suicide practice they believe keeps the Wraith at bay.",
+        "air_date": "2004-08-13",
+        "runtime": 44,
+        "still_path": "/rwc38H3Uwy7u2RpD9a0ScDHSDot.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Poisoning the Well",
+        "overview": "The team finds a world whose people are on the brink of a discovery that may make them immune to the Wraith feeding.",
+        "air_date": "2004-08-20",
+        "runtime": 42,
+        "still_path": "/rEAMaOY4j4ndBZ39gNynjW2nNTA.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Underground",
+        "overview": "Efforts to open trade relations with a species called the Genii turn sour when the team discovers their new \u0022allies\u0022 have ulterior motives.",
+        "air_date": "2004-08-27",
+        "runtime": 44,
+        "still_path": "/hEOQrUX0BdIhdRd2mPVKD1GRrIP.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Home",
+        "overview": "McKay\u0027s efforts to harness the energy of an alien planet\u0027s atmosphere allows for a return trip to Earth -- but the team may not be able to return to Atlantis.",
+        "air_date": "2004-09-10",
+        "runtime": 42,
+        "still_path": "/7UOWtktzimhLrVIc4z7387L6cBt.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Storm (1)",
+        "overview": "When a massive storm threatens the city, Atlantis is evacuated, only to be taken over by the team\u0027s newest enemy.",
+        "air_date": "2004-09-17",
+        "runtime": 42,
+        "still_path": "/l2GwHYP9okEuE2HMkWf0cilMva9.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Eye (2)",
+        "overview": "Major Sheppard plays a dangerous game of cat and mouse with soldiers who have seized control of Atlantis and taken Weir and McKay hostage.",
+        "air_date": "2004-11-08",
+        "runtime": 42,
+        "still_path": "/b6c5Jbs1ME9IJUQrXYr21pXNQ0x.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Defiant One",
+        "overview": "Sheppard\u0027s team investigates a downed Wraith ship, and find themselves stuck on a planet with a lone Wraith survivor.",
+        "air_date": "2004-11-15",
+        "runtime": 42,
+        "still_path": "/esOYvF4PiRK3lFhjAkGslvchygZ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Hot Zone",
+        "overview": "Nearly a third of Atlantis\u0027s residents are infected with a deadly virus that causes hallucinations and death, forcing a lockdown of the city.",
+        "air_date": "2004-11-22",
+        "runtime": 42,
+        "still_path": "/c4iWFsZciggtoZHVwrG4JfIpdsp.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Sanctuary",
+        "overview": "The team finds a paradise world that would make an ideal sanctuary for those fleeing from the Wraith, but the local inhabitants believe their goddess will not permit it.",
+        "air_date": "2004-11-29",
+        "runtime": 44,
+        "still_path": "/tVOgzVvVXjvKaiyC90nch9IYMKZ.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Before I Sleep",
+        "overview": "A woman is found in suspended animation in Atlantis, and the team is shocked to see that it is Dr. Weir herself, who tells them of her trip 10,000 years into the city\u0027s past.",
+        "air_date": "2004-12-06",
+        "runtime": 42,
+        "still_path": "/3tRL7AHz2GW1GrA5UPkhl1PL4Nw.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Brotherhood",
+        "overview": "The team searches for a valuable Zero Point Module rumored to be hidden on the planet Dagan. But their new allies have motives of their own.",
+        "air_date": "2005-01-03",
+        "runtime": 44,
+        "still_path": "/5wIUGuhjJTYUNcda7bOz6DnSxbC.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Letters From Pegasus",
+        "overview": "Given a brief opportunity to send a data transmission to Earth, members of the Atlantis expedition compose video messages home to their loved ones.",
+        "air_date": "2005-01-10",
+        "runtime": 44,
+        "still_path": "/hHV9pyR8kE7v1m4QenWXmO4GgPb.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Gift",
+        "overview": "Plagued by terrifying nightmares, Teyla begins to recall a time when she and her father were captured by the Wraith and subjected to disturbing experiments.",
+        "air_date": "2005-01-17",
+        "runtime": 42,
+        "still_path": "/uPTlbhBw0qLERB52szeIqFx3pZ.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Siege (1)",
+        "overview": "With a group of Wraith hive ships on the way to Atlantis, the team searches for a place to flee and a way to destroy the city. McKay leads a team to try and activate the Ancients\u0027 orbital weapons platform.",
+        "air_date": "2005-01-24",
+        "runtime": 44,
+        "still_path": "/hrMSVvLgNRXQpDnyjo78MluwDyk.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Siege (2)",
+        "overview": "All hope seems lost, until Colonel Everett arrives suddenly from Earth. He is determined to defend the city until the arrival of a ZPM, brought by a new ship.",
+        "air_date": "2005-01-31",
+        "runtime": 44,
+        "still_path": "/6T75Toeth1S8dZmJDtizpaWRqkx.jpg"
+      }
+    ]
+  }
+}

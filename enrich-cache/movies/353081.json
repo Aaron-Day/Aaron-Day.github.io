@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 353081,
+    "title": "Mission: Impossible - Fallout",
+    "overview": "When an IMF mission ends badly, the world is faced with dire consequences. As Ethan Hunt takes it upon himself to fulfill his original briefing, the CIA begin to question his loyalty and his motives. The IMF team find themselves in a race against time, hunted by assassins while trying to prevent a global catastrophe.",
+    "tagline": "Some missions are not a choice.",
+    "runtime": 147,
+    "release_date": "2018-07-25",
+    "vote_average": 7.453,
+    "poster_path": "/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
+    "backdrop_path": "/5jnoAA74Qwb5w6B9FMvnc20n6Ie.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87359,
+      "name": "Mission: Impossible Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Ethan Hunt",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Henry Cavill",
+      "character": "August Walker",
+      "profile_path": "/dgTD7Q9owL3DyX9uYoSX9KZeUUz.jpg"
+    },
+    {
+      "name": "Ving Rhames",
+      "character": "Luther Stickell",
+      "profile_path": "/tOVDvu1EQP78AwaUw6uh1wN818E.jpg"
+    },
+    {
+      "name": "Simon Pegg",
+      "character": "Benji Dunn",
+      "profile_path": "/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg"
+    }
+  ]
+}

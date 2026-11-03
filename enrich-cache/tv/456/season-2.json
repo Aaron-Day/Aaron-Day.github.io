@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Bart Gets an \u0027F\u0027",
+        "overview": "Bart fails four consecutive history exams and the school psychiatrist recommends that Bart repeat the fourth grade.",
+        "air_date": "1990-10-11",
+        "runtime": 24,
+        "still_path": "/aafzMJo5MhpVJRQeRLpdLKbiYQ3.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Simpson and Delilah",
+        "overview": "Homer uses his medical insurance to buy Dimoxinil, a miracle hair-growth formula. After growing luxurious locks, he\u0027s given a promotion which allows him to hire a secretary named Karl and makes grand promises to his family at home.",
+        "air_date": "1990-10-18",
+        "runtime": 24,
+        "still_path": "/6cs49lUDM3wImex0w2gnAlw3dq3.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Treehouse of Horror",
+        "overview": "The Simpson kids hide in the family treehouse and tell each other spooky stories. The first regards haunted houses, the second introduces Kang and Kodos for the first time in an alien abduction, and the third is a Simpson-adapted retelling of The Raven.",
+        "air_date": "1990-10-25",
+        "runtime": 24,
+        "still_path": "/fn3vVIu3jQoygMdcZBomUQJg8pF.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Two Cars in Every Garage and Three Eyes on Every Fish",
+        "overview": "Bart catches a three-eyed fish in a river downstream of the Nuclear Power Plant. This causes the plant to become inspected, and in order to prevent it from being shut down, Mr. Burns decides to run for governor. After a hard campaign which sees Burns rise from being universally despised to running neck and neck with popular incumbent Mary Bailey, it is decided that Burns will have dinner with a random employee the night before the election. Homer is chosen, much to Marge\u0027s chagrin.",
+        "air_date": "1990-11-01",
+        "runtime": 24,
+        "still_path": "/ku11Kcqz7rzAsqbkhx15BbKZZtB.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Dancin\u0027 Homer",
+        "overview": "Homer fires up the crowd at a Springfield Isotopes baseball game and is chosen to be the team\u0027s new mascot. He immediately becomes a popular attraction and the Isotopes start a winning streak. As a result, Homer is promoted to a team in Capital City, the Capital City Capitals.",
+        "air_date": "1990-11-08",
+        "runtime": 24,
+        "still_path": "/cAioTdV38QEms5UtiQyZdxyHI9D.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Dead Putting Society",
+        "overview": "Bart and Todd Flanders decide to enter a miniature golf tournament. Homer becomes confident that Bart will win and makes a bet with Ned that the father of the boy that does not win will have to mow their neighbors lawn in their wife\u0027s Sunday dress. ",
+        "air_date": "1990-11-15",
+        "runtime": 24,
+        "still_path": "/cRZ49SPbI4IodoRYyIGcWTS5rSS.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Bart vs. Thanksgiving",
+        "overview": "Lisa makes a table centerpiece for the Thanksgiving dinner, which Bart accidentally destroys. After he is sent to his room by his parents, Bart angrily runs away from home and experiences a very different kind of Thanksgiving holiday.",
+        "air_date": "1990-11-22",
+        "runtime": 24,
+        "still_path": "/k0ahzHBXD46LCKLI1xogy9m95AG.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Bart the Daredevil",
+        "overview": "The Simpsons go to a Monster truck rally that features famous daredevil Lance Murdock. Bart immediately becomes enamored and decides that he wants to become a daredevil as well. His first stunt ends in injury, but to gain the respect of his friends, he promises a far more impressive feat to them: to jump the Springfield Gorge.",
+        "air_date": "1990-12-06",
+        "runtime": 23,
+        "still_path": "/uONSQsPJwiq18mQukHSAGXiAaLN.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Itchy \u0026 Scratchy \u0026 Marge",
+        "overview": "Maggie attacks Homer with a mallet after seeing it on Itchy \u0026 Scratchy. Marge begins a protest outside the production offices, demanding the show be retooled to prevent further violence.",
+        "air_date": "1990-12-20",
+        "runtime": 24,
+        "still_path": "/gR6NU8rl4ElEkLi69feiD4IJKIy.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Bart Gets Hit by a Car",
+        "overview": "After Mr. Burns hits Bart with his car, ambulance-chasing attorney Lionel Hutz persuades Homer and Marge to sue for a million dollars.",
+        "air_date": "1991-01-10",
+        "runtime": 24,
+        "still_path": "/iktR0XuBPJHEHqmRjwo4HKqdkPw.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "One Fish, Two Fish, Blowfish, Blue Fish",
+        "overview": "After eating poisonous blowfish at a sushi restaurant, Homer decides to live life to the fullest in the 24 hours he has left to live.",
+        "air_date": "1991-01-24",
+        "runtime": 24,
+        "still_path": "/AdbRkunWr3yRbQD66DGJaIwmBmN.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Way We Was",
+        "overview": "When the TV breaks, Marge and Homer entertain the kids with the story of how they first met.",
+        "air_date": "1991-01-31",
+        "runtime": 24,
+        "still_path": "/aZSapvJzK0KMNUCRTtveHMSBpCR.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Homer vs. Lisa and the 8th Commandment",
+        "overview": "Homer becomes the most popular guy in town when he gets an illegal cable hook-up, but Lisa fears he will go to hell for violating the Eighth Commandment.",
+        "air_date": "1991-02-07",
+        "runtime": 24,
+        "still_path": "/kbMszxJqQWDQKVWK0RKy2N9REiJ.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Principal Charming",
+        "overview": "When Marge begs Homer to find Selma a husband, he sets her up with Principal Skinner... who falls in love with Patty instead.",
+        "air_date": "1991-02-14",
+        "runtime": 24,
+        "still_path": "/gbGO7vBVkoZ41iWmFMPE0Hkgb0V.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Oh Brother, Where Art Thou?",
+        "overview": "Homer\u0027s long-lost half-brother is the CEO of a car company that\u0027s wildly successful... until he hires Homer to help design a car for the average man.",
+        "air_date": "1991-02-21",
+        "runtime": 24,
+        "still_path": "/zGmGslqh8BRkJ7VEH0h6p2AUPee.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Bart\u0027s Dog Gets an \u0027F\u0027",
+        "overview": "After a series of destructive acts, Homer decides that Santa\u0027s Little Helper must go unless he passes obedience school. As the dog\u0027s last hours with the family approach, Bart must find a way to get through to him.",
+        "air_date": "1991-03-07",
+        "runtime": 24,
+        "still_path": "/1KPtp6dSfbsgRyZDY11tMNmUCYk.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Old Money",
+        "overview": "When Grandpa\u0027s new girlfriend at the Springfield Retirement Castle dies, he inherits her savings and must decide the best way to spend his windfall.",
+        "air_date": "1991-03-28",
+        "runtime": 23,
+        "still_path": "/r4Ep38sEljrbhZ50xoI5kWd3BiK.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Brush with Greatness",
+        "overview": "Marge rediscovers her interest in art and takes up painting. When Mr. Burns hires her to paint his official portrait, Marge tries but fails to find his \u0022inner beauty.\u0022",
+        "air_date": "1991-04-11",
+        "runtime": 23,
+        "still_path": "/uF2l60fu1pgUxxsDFOsSdQ660AN.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Lisa\u0027s Substitute",
+        "overview": "With Miss Hoover out sick, a substitute teacher takes the class and becomes an inspiring role model for Lisa.",
+        "air_date": "1991-04-25",
+        "runtime": 23,
+        "still_path": "/c4qViYIMe2s3awGr5E19U92CC8Y.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The War of the Simpsons",
+        "overview": "At a lakeside retreat for married couples, Marge is determined to fix her marriage with Homer, but Homer is more determined to catch General Sherman, the freakishly large catfish that lives in the lake.",
+        "air_date": "1991-05-02",
+        "runtime": 24,
+        "still_path": "/zs22jpXWYbQJDavcZ5IoSLu1TFC.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Three Men and a Comic Book",
+        "overview": "Bart, Milhouse, and Martin pool their money to buy the new first issue of Radioactive Man, but their investment and their friendship are threatened when they can\u0027t agree on who will keep it.",
+        "air_date": "1991-05-09",
+        "runtime": 23,
+        "still_path": "/yK3anNbQqsQfIh9Yjq23ISMpkIT.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Blood Feud",
+        "overview": "When Mr. Burns is saved by a transfusion of Bart\u0027s blood, Homer expects a handsome reward but is outraged to receive only a simple thank-you note.",
+        "air_date": "1991-07-11",
+        "runtime": 24,
+        "still_path": "/hs2ZFWVFvRwe7Kq3jEbP3p22jPV.jpg"
+      }
+    ]
+  }
+}

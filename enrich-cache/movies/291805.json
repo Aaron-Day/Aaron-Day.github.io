@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 291805,
+    "title": "Now You See Me 2",
+    "overview": "One year after outwitting the FBI and winning the public\u2019s adulation with their mind-bending spectacles, the Four Horsemen resurface only to find themselves face to face with a new enemy who enlists them to pull off their most dangerous heist yet.",
+    "tagline": "You haven\u0027t seen anything yet.",
+    "runtime": 129,
+    "release_date": "2016-06-02",
+    "vote_average": 6.819,
+    "poster_path": "/A81kDB6a1K86YLlcOtZB27jriJh.jpg",
+    "backdrop_path": "/oFQilRMEq6yQbtMPxIYWpXeQ5ZN.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 382685,
+      "name": "Now You See Me Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jesse Eisenberg",
+      "character": "J. Daniel Atlas",
+      "profile_path": "/2ojZrkt5rdkUi857WSeCatxXdGS.jpg"
+    },
+    {
+      "name": "Mark Ruffalo",
+      "character": "Dylan Rhodes",
+      "profile_path": "/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg"
+    },
+    {
+      "name": "Woody Harrelson",
+      "character": "Merritt McKinney / Chase McKinney",
+      "profile_path": "/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg"
+    },
+    {
+      "name": "Dave Franco",
+      "character": "Jack Wilder",
+      "profile_path": "/to7ee1xcCOpDSKMXjBIRuYEfbEc.jpg"
+    }
+  ]
+}

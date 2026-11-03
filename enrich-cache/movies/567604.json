@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 567604,
+    "title": "Once Upon a Deadpool",
+    "overview": "A kidnapped Fred Savage is forced to endure Deadpool\u0027s PG-13 rendition of Deadpool 2, as a Princess Bride-esque story full of magic, wonder, and zero Fs.",
+    "tagline": "Yule believe in miracles.",
+    "runtime": 118,
+    "release_date": "2018-12-11",
+    "vote_average": 7.116,
+    "poster_path": "/w6Jk8BHohhoKBUcxGeSyDQGWGWc.jpg",
+    "backdrop_path": "/5ZSwZPKgcTJJwhxjbOHeoBTVaKh.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ryan Reynolds",
+      "character": "Wade Wilson / Deadpool / Juggernaut (voice)",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Josh Brolin",
+      "character": "Cable",
+      "profile_path": "/7QpneI3HoZCCDVPyWx3p3t7yeo7.jpg"
+    },
+    {
+      "name": "Morena Baccarin",
+      "character": "Vanessa",
+      "profile_path": "/4gyHyg6FJ1oFczOm5pmMkdEEo2J.jpg"
+    },
+    {
+      "name": "Julian Dennison",
+      "character": "Firefist",
+      "profile_path": "/zSFwaT2osi7D2G0vFetub4yCDwi.jpg"
+    }
+  ]
+}

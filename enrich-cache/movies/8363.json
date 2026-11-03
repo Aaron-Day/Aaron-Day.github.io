@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8363,
+    "title": "Superbad",
+    "overview": "Two co-dependent high school seniors are forced to deal with separation anxiety after their plan to stage a booze-soaked party goes awry.",
+    "tagline": "Come and get some!",
+    "runtime": 113,
+    "release_date": "2007-08-17",
+    "vote_average": 7.275,
+    "poster_path": "/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg",
+    "backdrop_path": "/coru98UcFBzJIU7bxZguxaePgu0.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jonah Hill",
+      "character": "Seth",
+      "profile_path": "/cymlWttB83MsAGR2EkTgANtjeRH.jpg"
+    },
+    {
+      "name": "Michael Cera",
+      "character": "Evan",
+      "profile_path": "/qjhNKsw0OLyZQgK4srhelBafcCf.jpg"
+    },
+    {
+      "name": "Christopher Mintz-Plasse",
+      "character": "Fogell",
+      "profile_path": "/dnj2qyxmPt5JF5uurbXQLegppAx.jpg"
+    },
+    {
+      "name": "Bill Hader",
+      "character": "Officer Slater",
+      "profile_path": "/qyT50vQ9PQIEctE1IxDTEsBKstU.jpg"
+    }
+  ]
+}

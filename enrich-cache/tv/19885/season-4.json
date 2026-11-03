@@ -1,0 +1,32 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Six Thatchers",
+        "overview": "Why is someone destroying images of Margaret Thatcher? Is there a madman on the loose? Or is there a much darker purpose at work?",
+        "air_date": "2017-01-01",
+        "runtime": 89,
+        "still_path": "/pGRnT0D3Ni2QJzmcRyX3HZVcWrE.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Lying Detective",
+        "overview": "Sherlock faces perhaps the most chilling enemy of his long career: the powerful and seemingly unassailable Culverton Smith \u2013 a man with a very dark secret indeed.",
+        "air_date": "2017-01-08",
+        "runtime": 89,
+        "still_path": "/krz3V8MLoVKjMwCuAG2xxnx49TO.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Final Problem",
+        "overview": "Holmes and Watson travel to Europe to escape Moriarty\u0027s vengeance.",
+        "air_date": "2017-01-15",
+        "runtime": 89,
+        "still_path": "/mZHXncZhEd6X7U7n24KLOdfN6Z2.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11281,
+    "title": "Halloween II",
+    "overview": "After failing to kill stubborn survivor Laurie and taking a bullet or six from former psychiatrist Dr. Sam Loomis, Michael Myers has followed Laurie to the Haddonfield Memorial Hospital, where she\u0027s been admitted for Myers\u0027 attempt on her life. The institution proves to be particularly suited to serial killers, however, as Myers cuts, stabs and slashes his way through hospital staff to reach his favorite victim.",
+    "tagline": "More of the night he came home.",
+    "runtime": 92,
+    "release_date": "1981-10-30",
+    "vote_average": 6.596,
+    "poster_path": "/3nX5HHGgOKaVMxXwMLT9DHO1Ne6.jpg",
+    "backdrop_path": "/lDXQNRmQKzJGdEJSDxWrjIZb7gB.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91361,
+      "name": "Halloween Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jamie Lee Curtis",
+      "character": "Laurie Strode",
+      "profile_path": "/eWKubKAAssRzmFwCZKh1mdYqGCH.jpg"
+    },
+    {
+      "name": "Donald Pleasence",
+      "character": "Dr Samuel Loomis",
+      "profile_path": "/crtSwLnlrEidYFPupkVBSL9wK9Z.jpg"
+    },
+    {
+      "name": "Lance Guest",
+      "character": "Jimmy",
+      "profile_path": "/rfLT0dxqWcAsN5rcEia6tHt2UpW.jpg"
+    },
+    {
+      "name": "Gloria Gifford",
+      "character": "Nurse Virginia Alves",
+      "profile_path": "/gEGEJoZocXvFLSWDd6LNvbRVWAC.jpg"
+    }
+  ]
+}

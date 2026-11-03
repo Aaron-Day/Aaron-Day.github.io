@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "After a violent shipwreck, billionaire playboy Oliver Queen was missing and presumed dead for five years before being discovered alive on a remote island in the Pacific. Back in Starling City, Oliver slowly reconnects with those closest to him. Oliver has brought back many new skills from his time on the island and manages to secretly create the persona of Arrow to right the wrongs of his family and fight the ills of society. As Arrow, Oliver will atone for the past sins of his family while he searches for the personal redemption he needs.",
+        "air_date": "2012-10-10",
+        "runtime": 43,
+        "still_path": "/ff5afoT5fCbGfQGjBmF80faqIQU.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Honor Thy Father",
+        "overview": "Oliver heads to the courthouse to get his death certificate repealed and is pleasantly surprised to run into Laurel, who is there prosecuting Martin Somers, a criminal with ties to the Chinese Triad. Oliver recognizes Martin\u0027s name from his father\u0027s book and sets his sights on taking him down. Martin orders the Triad to \u0022take care of\u0022 Laurel so they send their top mercenary - China White - after her, an act that culminates in a battle between Arrow and China White. Meanwhile, Moira and Walter ask Oliver to take over the company.",
+        "air_date": "2012-10-17",
+        "runtime": 42,
+        "still_path": "/vd1muBD34LjjKoHUx0J0Dnx1NGt.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Lone Gunmen",
+        "overview": "Oliver is surprised when someone shoots and kills one of his targets. As his plan is to bring people to justice vs. outright killing them, Oliver doesn\u0027t appreciate the help and searches for the gunman. He soon learns that the man, Deadshot, is taking out businessmen who are scheduled to bid at an auction on an energy company and Walter is one of the bidders. Realizing he can\u0027t protect his family and stop Deadshot at the same time, Oliver enlists Detective Lance\u0027s help, but his plan has dire consequences. Meanwhile, Laurel and Tommy get caught in an awkward situation with Oliver.",
+        "air_date": "2012-10-24",
+        "runtime": 42,
+        "still_path": "/qfhJRnr9xxVPTzEZqfM3qnqzlNg.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "An Innocent Man",
+        "overview": "Oliver still hasn\u0027t figured out how to get back in Laurel\u0027s good graces, but a late night bonding session with Thea gives him the inspiration he needs. Looking into a suspicious murder case, Oliver realizes an innocent man, Peter Declan, was framed by one of the targets on his list. As Arrow, he asks Laurel to help prove Declan\u0027s innocence. Meanwhile, Walter asks one of his employees, Felicity Smoak, to look into a $2.6 million withdrawal that Moira made without his knowledge.",
+        "air_date": "2012-10-31",
+        "runtime": 43,
+        "still_path": "/gf5M5oC7jAuzisQh7uy9XJMzsdO.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Damaged",
+        "overview": "After Detective Lance arrests Oliver for murder, Oliver tells Moira the only lawyer he\u0027ll allow to represent him is Laurel. Laurel takes the case which puts her at odds with her father. Oliver offers to take a polygraph in front Detective Lance but things get tense when Lance asks him if anyone else was on the island with him. Oliver flashes back to when he got his first scar, courtesy of Deathstroke.",
+        "air_date": "2012-11-07",
+        "runtime": 42,
+        "still_path": "/dy6AyCilp9fbFkaB3iV0jU8o4sd.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Legacies",
+        "overview": "A gang of bank robbers, dubbed The Royal Flush Gang, hits a local bank and seriously wounds an off-duty police officer during a heist. Diggle tells Oliver he needs to deviate from his father\u0027s list and start helping the citizens of Starling City. Meanwhile, Tommy asks Thea for relationship advice, but things get awkward when she realizes he was asking about Laurel. Moira confronts Oliver about all of his recent disappearances in the middle of family functions.",
+        "air_date": "2012-11-14",
+        "runtime": 42,
+        "still_path": "/aMoIdnLnwzeF6amCjuz7mCEpEet.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Muse of Fire",
+        "overview": "Oliver encounters a mysterious woman, Helena Bertinelli, daughter of mob boss Frank Bertinelli, who he can finally be himself with, but he soon comes to realize she\u0027s hiding dangerous secrets of her own. Helena is on her own personal mission of vengeance and Oliver is caught in the middle. Meanwhile, Tommy is blindsided by an unfortunate turn of events and turns to Laurel for support.",
+        "air_date": "2012-11-28",
+        "runtime": 41,
+        "still_path": "/8lJ0vSYeeXm3X57gDzbcLm5b0RD.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Vendetta",
+        "overview": "As Oliver and Helena grow closer, Oliver trains her to be his ally, complete with showing her how to use a crossbow. Diggle disapproves of Oliver sharing his secret with Helena as he\u0027s not sure she can be trusted, but Oliver refuses to listen to his concerns. Helena\u0027s quest for revenge proves to be too strong for Oliver to handle after she kills the head of the Triad and all hell breaks loose.",
+        "air_date": "2012-12-05",
+        "runtime": 42,
+        "still_path": "/i9I8WZJxDksZE9ETqcKD8yWnNP1.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Year\u0027s End",
+        "overview": "Oliver discovers that after he and his father went missing, Moira and Thea stopped celebrating Christmas. Determined to make up for lost time and restore a sense of normalcy to the Queen household, Oliver decides to throw the family a Christmas party. Meanwhile, Tommy asks Laurel to spend Christmas with him but she points out that Christmas was also her sister Sara\u0027s birthday and she needs to be with her father. Tommy suggests changing things up might be the best way for everyone to heal but Laurel isn\u0027t sure her father is ready for that. Meanwhile, Diggle tells Oliver someone is murdering the people on his father\u0027s list with arrows, which sends Oliver off to face his toughest adversary yet.",
+        "air_date": "2012-12-12",
+        "runtime": 43,
+        "still_path": "/ikvn1DwAROee80Pzy4oEfuPaORn.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Burned",
+        "overview": "Oliver\u2019s confidence is shaken after being beaten by the Dark Archer and he takes a break from being Arrow. However, when Laurel calls Arrow for help investigating a firefighter\u2019s suspicious death, he reluctantly agrees but his hesitance while fighting almost costs him his life. Meanwhile, Tommy throws a benefit for the firefighters and Thea tries to lift Moira out of her depressive state.",
+        "air_date": "2013-01-16",
+        "runtime": 43,
+        "still_path": "/5JYPDSgkcS7f1rUIjbuxff48JIb.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Trust But Verify",
+        "overview": "The next person on Arrow\u0027s list is Diggle\u0027s commanding officer and mentor from Afghanistan, Ted Gaynor. Oliver suspects Ted is responsible for recent armoured truck robberies, but Diggle defends Ted and takes a job at Ted\u0027s security company to keep an eye on him. Oliver decides to make a move on Ted, which puts him at odds with Diggle. Meanwhile, Thea suspects that Moira is having an affair with Malcom. Tommy and Laurel have an awkward dinner with Malcom.",
+        "air_date": "2013-01-23",
+        "runtime": 43,
+        "still_path": "/6WsgWOZ91lV8oJodxwM3vl5KSxw.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Vertigo",
+        "overview": "Thea is in trouble with the police after she gets caught using a drug called \u0022Vertigo.\u0022 Oliver thinks the only way to keep her out of jail is to find the dealer, a man who goes by the name of \u0022The Count\u0022. Oliver turns to McKenna Hall, an old flame and current Vice cop, for help. Meanwhile, Laurel steps in to defend Thea, and Felicity gives Oliver some disturbing news about Moira.",
+        "air_date": "2013-01-30",
+        "runtime": 43,
+        "still_path": "/rrq3Pk6XAc3xCX7w46C45F8cH5.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Betrayal",
+        "overview": "Cyrus Vanch, a nefarious criminal, is recently released from prison and intends to re-secure his position as leader of the underworld. His first step is to take down his biggest opponent in the city - Arrow. Meanwhile, Oliver shows Moira his father\u0027s notebook and questions her about the names on the list. Thea is miserable as she starts her internship with Laurel at the legal aid office and Detective Lance makes a deadly mistake that puts Laurel in the crosshairs of Vanch.",
+        "air_date": "2013-02-06",
+        "runtime": 42,
+        "still_path": "/iF9KJ74o7FKmIoKjFO3N6XTWpP0.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Odyssey",
+        "overview": "After Oliver is shot, he turns to a surprising person for help - Felicity. Diggle is stunned when he sees Felicity walk through the front door of the lair dragging a dying Oliver behind her, and the two team up to save Oliver\u0027s life. As Oliver hovers between life and death, he flashes back to a seminal event on the island - a daring escape attempt with his new friend Slade Wilson.",
+        "air_date": "2013-02-13",
+        "runtime": 43,
+        "still_path": "/4WErMzAFM4Y0VdLirpArWmRLCmj.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Dodger",
+        "overview": "Felicity tells Oliver he\u0027s all work and no play, so he asks Detective McKenna on a date. A jewel thief named Dodger hits Starling City and targets someone very close to Oliver. Meanwhile, while working with Laurel, Thea gets her purse stolen by a very fast pickpocket named Roy Harper. Moira makes a move against Malcom.",
+        "air_date": "2013-02-20",
+        "runtime": 42,
+        "still_path": "/zw5UohXDBs9Ko5s2ZxmPL6E7VoB.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Dead to Rights",
+        "overview": "Oliver and Diggle learn that Deadshot is still alive and his next target is Malcom. Malcom invites Tommy to attend a benefit honoring Malcom for his work with Starling City but Tommy refuses to attend. Oliver encourages his friend to mend his relationship with his father while he can. Meanwhile, Oliver struggles to balance his new relationship with McKenna and his duties as Arrow.",
+        "air_date": "2013-02-27",
+        "runtime": 41,
+        "still_path": "/eQizajQbKrMNOtgTPmuHJBbmR25.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Huntress Returns",
+        "overview": "With his nightclub set to open and a new romance brewing with McKenna, Oliver is as happy as he\u0027s been since returning to Starling City. But when Oliver\u0027s ex, The Huntress, suddenly returns to town, she threatens to destroy everything and everyone he cares about. Meanwhile, Laurel and her father struggle with the return of Dinah Lance who claims she has proof Sara is still alive. Thea gets Roy Harper a job at Oliver\u0027s club, but he\u0027s not too inclined to stop his life of crime. Oliver and Tommy are thrilled they were able to get Steve Aoki to play at the opening of their new nightclub, Verdant.",
+        "air_date": "2013-03-20",
+        "runtime": 42,
+        "still_path": "/u8brhFmGhsI3DyuAHbw99eduTbE.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Salvation",
+        "overview": "An angry resident of The Glades who calls himself \u0022The Savior\u0022 embarks on a kidnapping and killing spree to punish those he believes have wronged the residents of his neighborhood. To make things worse, he broadcasts these murders online and claims he was inspired by Arrow\u0027s vigilantism. Oliver is horrified by this statement and vows to stop \u0022The Savior,\u0022 but his manhunt in intensified after Thea comes to him in tears and tells him Roy has been kidnapped. Laurel is surprised when her father starts to believe her mother\u0027s claim that Sara is still alive. Meanwhile, Malcom  tells Moira to find the person responsible for his attempted murder.",
+        "air_date": "2013-03-27",
+        "runtime": 42,
+        "still_path": "/grBk2rk97jXqsZgpaczrYvnrccW.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Unfinished Business",
+        "overview": "When a young woman meets a violent death after partying at Verdant, Detective Lance and his new partner, Detective Hilton inform Oliver and Tommy that she was on the drug Vertigo. Oliver immediately pays a visit to the mental institution where The Count is locked up, but finds he is in no condition to deal drugs. However, when The Count escapes and Starling City is flooded with even more Vertigo-related violence, Oliver and Diggle make it their mission to track him down. After Detective Lance uncovers incriminating evidence against him, Tommy goes to great lengths to clear his name, and the fallout from his actions leads Tommy down a new, unexpected path. In a flashback to the island, Oliver recalls the lessons he learned from Slade and Shado.",
+        "air_date": "2013-04-03",
+        "runtime": 42,
+        "still_path": "/y7sWDvX9QgzKaEVjm1TOWrNPPeA.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Home Invasion",
+        "overview": "Deadshot returns to Starling City after taking down a U.S. Ambassador and six others overseas. By keeping tabs on A.R.G.U.S.\u0027s manhunt for the assassin, Oliver, Diggle, and Felicity learn that a sting operation is underway to capture Deadshot - alive. Diggle is determined to see his brother\u0027s killer dead, with or without Ollie\u0027s help. Meanwhile, Laurel takes drastic steps to protect a young witness, exacerbating friction between Tommy and Oliver. Later, Roy Harperunconventionally pursues all leads to find his new hero, but runs afoul of Detective Lance. Back on the island, Oliver recalls how Shado helped him incrementally gain confidence with a bow and hit the target for the first time.",
+        "air_date": "2013-04-24",
+        "runtime": 42,
+        "still_path": "/1yeRL8ntftdM2Ly8v8B0qx9GP5S.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Undertaking",
+        "overview": "Finding it difficult to mend fences with Tommy and Diggle, Oliver instead focuses on crossing another name off the list. While digging through a crooked accountant\u0027s laptop, Felicity discovers a transaction that could help Oliver find Walter. To reconfirm the lead, Oliver gambles that Felicity can be counted on in the field for the first time. In a flashback, Malcolm reveals to Robert Queen and Frank Chen painful details surrounding his wife\u0027s murder, and how that shaped his plans for the Glades. Meanwhile, Tommy stuns Laurel with the truth.",
+        "air_date": "2013-05-01",
+        "runtime": 42,
+        "still_path": "/tStBTG7MnTQYfXtX9jlIE45tYR9.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Darkness on the Edge of Town",
+        "overview": "With the Undertaking days away, Malcolm dons his black hood to conclude business with seismologist Dr. Brion Markov and his team. Oliver and Moira entertain a number of surprise - and mostly unwelcome - visitors. Hooded confrontations at home and the Meryln Global Group reveal dark secrets. Meanwhile, Roy and Thea are still looking out for a hero. Laurel makes a decision after Tommy\u0027s revelation. In a flashback to the island, Oliver, Slade and Shado struggle to prevent Fyers from shooting a Ferris Air jet out of the sky. Paul Blackthorne and David Ramsey also star.",
+        "air_date": "2013-05-08",
+        "runtime": 42,
+        "still_path": "/oLgqlOxMcILXGvHf7WU1h5KHZT7.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Sacrifice",
+        "overview": "Oliver and Diggle race to stop the Dark Archer from unleashing his vengeance on The Glades. However, they run into a roadblock after Detective Lance picks up Felicity for questioning. Tommy and Oliver\u0027s already tumultuous relationship takes a turn for the worse after Oliver makes a confession about Laurel. After hearing of the danger in The Glades, Thea races to find Roy, inadvertently putting herself directly in the line of fire for Malcolm\u0027s devious plan. On the island, Oliver, Slade and Shado are locked in a life-or-death struggle against Fyers as his missiles lock on a full Ferris Air jetliner.",
+        "air_date": "2013-05-15",
+        "runtime": 42,
+        "still_path": "/bgXrB2ewp9HpjYMQPWHW7qp5rfh.jpg"
+      }
+    ]
+  }
+}

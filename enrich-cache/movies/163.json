@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 163,
+    "title": "Ocean\u0027s Twelve",
+    "overview": "Despite pulling off one of the biggest heists in Las Vegas history and splitting the $160 million take, each of the infamous Ocean\u0027s crew have tried to go straight, lay low and live a legit life... but that\u0027s proven to be a challenge. Casino owner Terry Benedict demands that Danny Ocean return the money, plus millions more in interest. Unable to come up the cash, the crew is forced to come together to pull off another series of heists, this time in Rome, Paris, and Amsterdam \u2013 but a Europol agent is hot on their heels.",
+    "tagline": "Twelve is the new eleven.",
+    "runtime": 125,
+    "release_date": "2004-12-09",
+    "vote_average": 6.571,
+    "poster_path": "/pE5anFf7nf6ah7V3VRezQ1KSovi.jpg",
+    "backdrop_path": "/5b5HrewiViLWEdMR4dmbd7ajQ8Q.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 304,
+      "name": "Ocean\u0027s Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "George Clooney",
+      "character": "Danny Ocean",
+      "profile_path": "/dt0a7DT0SQeHb7NpURD6ifyEzsN.jpg"
+    },
+    {
+      "name": "Julia Roberts",
+      "character": "Tess Ocean",
+      "profile_path": "/fQacAdIa1WUNChQ6FgEko13eqOA.jpg"
+    },
+    {
+      "name": "Brad Pitt",
+      "character": "Rusty Ryan",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "Matt Damon",
+      "character": "Linus Caldwell",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    }
+  ]
+}

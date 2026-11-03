@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 585083,
+    "title": "Hotel Transylvania: Transformania",
+    "overview": "When Van Helsing\u0027s mysterious invention, the \u0022Monsterfication Ray,\u0022 goes haywire, Drac and his monster pals are all transformed into humans, and Johnny becomes a monster. In their new mismatched bodies, Drac and Johnny must team up and race across the globe to find a cure before it\u0027s too late, and before they drive each other crazy.",
+    "tagline": "Change can be scary.",
+    "runtime": 92,
+    "release_date": "2022-01-31",
+    "vote_average": 7.027,
+    "poster_path": "/teCy1egGQa0y8ULJvlrDHQKnxBL.jpg",
+    "backdrop_path": "/7QabKu8tizoqy8qCZJXljdSpP4A.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 185103,
+      "name": "Hotel Transylvania Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Andy Samberg",
+      "character": "Johnny (voice)",
+      "profile_path": "/jMXU5oG3i93SH1yhkpbBGskFiJl.jpg"
+    },
+    {
+      "name": "Selena Gomez",
+      "character": "Mavis (voice)",
+      "profile_path": "/fLjGtchxniZtAxnZsFzDn2lsWmY.jpg"
+    },
+    {
+      "name": "Kathryn Hahn",
+      "character": "Ericka (voice)",
+      "profile_path": "/9sVllAKfEls3SJD3GoPm2JEZoa5.jpg"
+    },
+    {
+      "name": "Jim Gaffigan",
+      "character": "Van Helsing (voice)",
+      "profile_path": "/dhguhHxIrb26jvPznBt8y25Fb2U.jpg"
+    }
+  ]
+}

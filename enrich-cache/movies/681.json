@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 681,
+    "title": "Diamonds Are Forever",
+    "overview": "Diamonds are stolen only to be sold again in the international market. James Bond infiltrates a smuggling mission to find out who\u0027s guilty. The mission takes him to Las Vegas where Bond meets his archenemy Blofeld.",
+    "tagline": "The man who made 007 a household number.",
+    "runtime": 120,
+    "release_date": "1971-12-14",
+    "vote_average": 6.397,
+    "poster_path": "/ooDT0eKrWCxJCsn9JehPkD0QYNj.jpg",
+    "backdrop_path": "/pyTDtQCn5sG8gi2zkM5ZylSNmtJ.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sean Connery",
+      "character": "James Bond",
+      "profile_path": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+      "name": "Jill St. John",
+      "character": "Tiffany Case",
+      "profile_path": "/o0LKSONTaFmjuf9ntKa4oVbOLKq.jpg"
+    },
+    {
+      "name": "Charles Gray",
+      "character": "Ernst Stavro Blofeld",
+      "profile_path": "/3H5YbhDgZq9fUk12aKm82wgDFsk.jpg"
+    },
+    {
+      "name": "Lana Wood",
+      "character": "Plenty O\u0027Toole",
+      "profile_path": "/voLuDL9aFiTQnZaFqzaiSgqE1jG.jpg"
+    }
+  ]
+}

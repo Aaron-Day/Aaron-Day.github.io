@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4011,
+    "title": "Beetlejuice",
+    "overview": "A newly dead New England couple seeks help from a deranged demon exorcist to scare an affluent New York family out of their home.",
+    "tagline": "In this house... if you\u0027ve seen one ghost... you haven\u0027t seen them all.",
+    "runtime": 92,
+    "release_date": "1988-03-30",
+    "vote_average": 7.367,
+    "poster_path": "/nnl6OWkyPpuMm595hmAxNW3rZFn.jpg",
+    "backdrop_path": "/yRKyJJYIzfeiVDHBe4LXguPQCvD.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 945475,
+      "name": "Beetlejuice Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Alec Baldwin",
+      "character": "Adam",
+      "profile_path": "/hzKy7x574eeUS3wt1R3yvWBRpeR.jpg"
+    },
+    {
+      "name": "Geena Davis",
+      "character": "Barbara",
+      "profile_path": "/jNsZLedzKPuyUmgnvpRpP5oG3Wr.jpg"
+    },
+    {
+      "name": "Winona Ryder",
+      "character": "Lydia",
+      "profile_path": "/8RVrlgtua8b53wmK7oZAAkm0N5O.jpg"
+    },
+    {
+      "name": "Catherine O\u0027Hara",
+      "character": "Delia",
+      "profile_path": "/gI2RyymLJ9ZrhEyJSD5EqSvFpCX.jpg"
+    }
+  ]
+}

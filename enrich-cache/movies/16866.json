@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 16866,
+    "title": "Planet 51",
+    "overview": "When Earth astronaut Capt. Chuck Baker arrives on Planet 51 -- a world reminiscent of American suburbia circa 1950 -- he tries to avoid capture, recover his spaceship and make it home safely, all with the help of an empathetic little green being.",
+    "tagline": "Something strange is coming to their planet... Us!",
+    "runtime": 91,
+    "release_date": "2009-11-19",
+    "vote_average": 5.922,
+    "poster_path": "/x7Itcg3ZdExKwdKguy73WPEqosW.jpg",
+    "backdrop_path": "/wk7R89u4l3AC3PRg7Abac2IJ5Ky.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Justin Long",
+      "character": "Lem (voice)",
+      "profile_path": "/7TGXeHw4o86IBm6xknQotpludXK.jpg"
+    },
+    {
+      "name": "Dwayne Johnson",
+      "character": "Chuck Baker (voice)",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Jessica Biel",
+      "character": "Neera (voice)",
+      "profile_path": "/u5DzbWKvAzS0M4ZhYqpUR9MZr2M.jpg"
+    },
+    {
+      "name": "Seann William Scott",
+      "character": "Skiff (voice)",
+      "profile_path": "/AftiUFP4rYcl3SG3xllxyiLiuXS.jpg"
+    }
+  ]
+}

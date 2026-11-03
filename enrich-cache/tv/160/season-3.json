@@ -1,0 +1,384 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Beneath these Streets",
+        "overview": "The Turtles learn the cost of slacking off when Splinter is badly hurt during a confrontation with Shredder.",
+        "air_date": "1989-09-25",
+        "runtime": 22,
+        "still_path": "/8F8vGQOwckNc6P5l8jqcQnqZkHO.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Turtles On Trial",
+        "overview": "The intentions of the Ninja Turtles are put to the test when a controversial TV-figure portrays our heroes as menaces to society.",
+        "air_date": "1989-09-26",
+        "runtime": 22,
+        "still_path": "/7hcpF4kUMKQWmuG1nMDMdxNLV3c.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Attack of the 50-Foot Irma",
+        "overview": "Irma accidentally becomes gigantic and her naturally clumsy nature makes her a danger to the city.",
+        "air_date": "1989-09-27",
+        "runtime": 22,
+        "still_path": "/wIc63C8fwFtsjaPjK3PeOtaIv3C.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Maltese Hamster",
+        "overview": "Gangsters are swiping all the antiques in town. And when they swipe most of our heroes, it\u0027s up to Donatello and April to find out why. Could Shredder be behind this?",
+        "air_date": "1989-09-28",
+        "runtime": 22,
+        "still_path": "/69KYRTS6XHVFpzVSCRonY9b2e59.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Sky Turtles",
+        "overview": "The Turtles go flying when the Shredder invents a gravity-altering device.",
+        "air_date": "1989-09-29",
+        "runtime": 22,
+        "still_path": "/jUXW8Lqpr6ksq2YMxVozNqaOdUK.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Old Switcheroo",
+        "overview": "The personalities of Shredder and Splinter are switched when a device is accidentally activated during a battle between the Turtles and their enemies. As Shredder plans the Turtles\u0027 demise and Splinter plans on how to get back to his body, everyone else is clueless.",
+        "air_date": "1989-10-02",
+        "runtime": 22,
+        "still_path": "/eQewAZ9lGRsgvbAUXPU2tux181l.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Burne\u0027s Blues",
+        "overview": "In the middle of a summer heat wave, someone is destroying all the air conditioners and taking all the city\u0027s freon. In the meantime, Vernon and Burne go looking for the Turtles, but find something else.",
+        "air_date": "1989-10-03",
+        "runtime": 22,
+        "still_path": "/yW9Pt2Xsjjh8J56eNEXYjVU8fTS.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Fifth Turtle",
+        "overview": "A 14-year-old boy tries his best to help out the Turtles, but with some not so optimal results.",
+        "air_date": "1989-10-04",
+        "runtime": 22,
+        "still_path": "/dkeRolCECB3xxllnOmGaRxZUu7b.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Enter: The Rat King",
+        "overview": "Thompson assigns April to research the growing rat infestation. She is pursued by an army of rats and escapes on a passing city bus.",
+        "air_date": "1989-10-05",
+        "runtime": 22,
+        "still_path": "/4lx2Ja1Fi0gJ7PW7OU5cugyy7ds.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Turtles at the Earth\u0027s Core",
+        "overview": "Dinosaurs invade the Big Apple. Befriending a young diplodocus the Turtles trace the invading dinosaurs to their source finding a lost world.",
+        "air_date": "1989-10-06",
+        "runtime": 22,
+        "still_path": "/nUKVua6FjE9RMFg9modlhNHX52C.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "April Fool",
+        "overview": "Emperor Aleister of Malicuria comes to New York City, bringing along a shard of Lydium 90 to the USA.",
+        "air_date": "1989-10-09",
+        "runtime": 22,
+        "still_path": "/7It17xoieOA1Mll12z7hsnapNKI.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Attack of the Big MACC",
+        "overview": "A robot warrior arrives from 400 years in the future in 20th-Century New York.",
+        "air_date": "1989-10-10",
+        "runtime": 22,
+        "still_path": "/uNvDuwhMXoWFFHcOMUIL01kTow9.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Ninja Sword of Nowhere",
+        "overview": "Krang\u0027s computers detect an alien metal on the surface of the Earth. Krang sends Shredder, along with an Alien Metal Detector, to the surface to find it.",
+        "air_date": "1989-10-11",
+        "runtime": 22,
+        "still_path": "/A4xgRJXqGsU5KILozWyJ4cZ5FQP.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "20,000 Leaks Under the City",
+        "overview": "Still searching for a way to destroy the Turtles, Krang develops a super pump that he intends to use to flood the sewers.",
+        "air_date": "1989-10-12",
+        "runtime": 22,
+        "still_path": "/kqDqRI9TcBHWBErKy4KI6Hfj9nY.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Take Me to Your Leader",
+        "overview": "Full of self doubt, Leonardo leaves the team. Michaelangelo, Raphael, and Donatello all take turns being leader as they try to figure out why the sun is getting smaller.",
+        "air_date": "1989-10-13",
+        "runtime": 22,
+        "still_path": "/m33zRJOwUm1OfZFZo3UPPurupfe.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Four Musketurtles",
+        "overview": "A bump on the head leaves Leonardo thinking that he is in 17th century France, and that he and his comrades are Musketeers.",
+        "air_date": "1989-10-16",
+        "runtime": 22,
+        "still_path": "/impI8J4zbcaaqAwFCFH8YMW5n2Q.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Turtles, Turtles Everywhere",
+        "overview": "Shredder programs the city\u0027s new garbage collecting super-computer to collect the Turtles. But when Shredder doesn\u0027t specify \u0027Ninja\u0027 Turtles, the super-computer collects them all! Turtles of the city of every shape and size are not safe.",
+        "air_date": "1989-10-17",
+        "runtime": 22,
+        "still_path": "/uMIIgkTCAxENLCd5x9B10vxUqDL.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Cowabunga Shredhead",
+        "overview": "The Shredder thinks he\u0027s Michaelangelo after a computer malfunction.",
+        "air_date": "1989-10-18",
+        "runtime": 22,
+        "still_path": "/hdxyZcFzjPcBPsJK9Qaugr9ZPZM.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Invasion of the Turtle Snatchers",
+        "overview": "Aliens abduct Donatello and Rocksteady.",
+        "air_date": "1989-10-19",
+        "runtime": 22,
+        "still_path": "/ttPGNE2ynr3M0foy2G3Ix8r1rqQ.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Camera Bugged",
+        "overview": "A visit to Earth from a Polarisoid results in havoc when Shredder comes into possession of the alien\u0027s camera, because it does more than just take pictures.",
+        "air_date": "1989-10-20",
+        "runtime": 22,
+        "still_path": "/nE5pahVFyWJkSU54FdejB43j1LR.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Green with Jealousy",
+        "overview": "Krang sets his sights on a powerful Nuclear-Powered Submarine, believing it\u0027s fuel will be more than enough to power the technodrome.",
+        "air_date": "1989-10-23",
+        "runtime": 22,
+        "still_path": "/7Z8GgEzglt2uLPbcicTGCECUQaN.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Return of the Fly",
+        "overview": "Baxter Stockman returns for revenge against the Turtles and Shredder, while our heroes attempt to stop Shredder\u0027s plan to siphon water from an underground reservoir.",
+        "air_date": "1989-10-24",
+        "runtime": 22,
+        "still_path": "/xNY1AO32PgGU73axa2u8nUBNzxr.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Casey Jones: Outlaw Hero",
+        "overview": "An eager vigilante is causing a stir in the city, while Krang and Shredder take control of all the machines in the city. Maybe this new \u0027hero\u0027 can help the Turtles.",
+        "air_date": "1989-10-25",
+        "runtime": 22,
+        "still_path": "/mzvbobxsu0NXBkYbY9WPg6WioWv.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Mutagen Monster",
+        "overview": "In an attempt to hijack two separate trains carrying the ingredients needed to make mutagen, Rocksteady and Bebop cause their head-on collision, resulting in the spillage of both chemicals in the city\u0027s train yard.",
+        "air_date": "1989-10-26",
+        "runtime": 22,
+        "still_path": "/thvrr72KOYKCDgfoU4EgOE333uX.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Corporate Raiders from Dimension X",
+        "overview": "High ranking corporate executives are kidnapped by men in business suits. The Turtles don\u0027t get involved until they learn that one of these corporations is the world\u0027s largest suppliers of pizza.",
+        "air_date": "1989-10-27",
+        "runtime": 22,
+        "still_path": "/9S7NjA1k8NPTRpEqmZcCAkzQxRg.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Pizza by the Shred",
+        "overview": "Michaelangelo gets a job as a pizza delivery boy. But who\u0027s his new boss?",
+        "air_date": "1989-10-30",
+        "runtime": 22,
+        "still_path": "/w76ScJQJvKVCKqzwKM0bRiIIC1d.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Super Bebop \u0026 Mighty Rocksteady",
+        "overview": "Shredder and Krang produce hi-tech versions of Rocksteady and Bebop to keep the Turtles busy.",
+        "air_date": "1989-10-31",
+        "runtime": 22,
+        "still_path": "/zySDHGTbbzSpDJpP4N2IHpMhgcw.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Beware the Lotus",
+        "overview": "A skilled, and lovely, ninja warrior is hired by Krang to defeat the Turtles. Shredder\u0027s replaced, Leonardo\u0027s met his match.",
+        "air_date": "1989-11-01",
+        "runtime": 22,
+        "still_path": "/4gyQfxPDZfQCUnjd28EYxVoih4v.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Blast from the Past",
+        "overview": "Splinter suffers amnesia as the Turtles try to remind him that he is the true leader of the Foot Clan.",
+        "air_date": "1989-11-02",
+        "runtime": 22,
+        "still_path": "/72u4x3sEPKjml4RradG8Djt6LF2.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Leatherhead: Terror of the Swamp",
+        "overview": "While Raphael is reliving the past, via the Turtles\u0027 photo album, their frog friends in the Florida Swamps are being terrorized by a mutant alligator known as Leatherhead.",
+        "air_date": "1989-11-03",
+        "runtime": 22,
+        "still_path": "/aVZSYWuD99eqxZqXKwnsKifxPIM.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Michaelangelo\u0027s Birthday",
+        "overview": "It\u0027s Michaelangelo\u0027s birthday, but none of his brothers seem to remember, and it frustrates him greatly.",
+        "air_date": "1989-11-06",
+        "runtime": 22,
+        "still_path": "/1yaHTXFq3lsIsRAfnOhQNUSjNeb.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Usagi Yojimbo",
+        "overview": "A rabbit ronin warrior from an alternate dimension is lost in our world. While the Turtles help him adjust, Shredder steals a dragon egg to unleash it on the city.",
+        "air_date": "1989-11-07",
+        "runtime": 22,
+        "still_path": "/muelgHFApStqgfhuktX1Lva0q0z.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "Case of the Hot Kimono",
+        "overview": "Someone is stealing all the kimonos in the city. After Master Splinter\u0027s favorite kimono is stolen, April\u0027s famous detective aunt helps the Turtles retrieve it.",
+        "air_date": "1989-11-08",
+        "runtime": 22,
+        "still_path": "/2D2gjiHyTOCFFrYy6NnHrZTNjgW.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Usagi Come Home",
+        "overview": "Shredder tricks Usagi Yojimbo into battling the Turtles.",
+        "air_date": "1989-11-09",
+        "runtime": 22,
+        "still_path": "/bluzNWeWDHlL5m9obTJ2hDZWjEu.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "The Making of Metalhead",
+        "overview": "While the Turtles are suffering from turtle pox, a disease that affects only mutant Turtles, Krang has developed a robotic turtle that he calls Metalhead.",
+        "air_date": "1989-11-10",
+        "runtime": 22,
+        "still_path": "/mT0wB4BPQ00yeTlgGM11hBQs0DF.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "Leatherhead Meets the Rat King",
+        "overview": "Leatherhead has come to the city searching for the Turtles. While crawling through the sewers he encounters the Rat King who charges him with trespassing.",
+        "air_date": "1989-11-13",
+        "runtime": 22,
+        "still_path": "/SE83I0aW1ww01hQwSQyBjOAkc.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "The Turtle Terminator",
+        "overview": "Irma is kidnapped by Bebop and Rocksteady and is replaced by a robot that looks just like her that is programmed to eliminate the turtles.",
+        "air_date": "1989-11-14",
+        "runtime": 22,
+        "still_path": "/kS8MhsPC5JV2iwEyqDQQ2ApwwJr.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "The Great Boldini",
+        "overview": "The Turtles must clear their names when they are believed to be jewel thieves who stole a priceless emerald during a magic act run by a wizard named Boldini.",
+        "air_date": "1989-11-15",
+        "runtime": 22,
+        "still_path": "/xLl4S1DGNbpdyigEEPZqvZCQBTp.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "The Missing Map",
+        "overview": "Zach and his brother Walt visit the Turtles. As they leave, Walt takes a map that could guide Shredder to the lair if it happens to fall into the wrong hands.",
+        "air_date": "1989-11-16",
+        "runtime": 22,
+        "still_path": "/o0fKHxWAMgEdpgTsJpNcTBD3DCD.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "The Gang\u0027s All Here",
+        "overview": "Shredder tries to trick the Turtles into eating cookies made with anti-mutagen. Michaelangelo, wanting to be a human, tries one of the cookies and it mutates him into a teenager.",
+        "air_date": "1989-11-17",
+        "runtime": 22,
+        "still_path": "/biRt8tfqQIhSXhvUSb8ZIpdBtjh.jpg"
+      },
+      {
+        "episode_number": 41,
+        "name": "The Grybyx",
+        "overview": "Kala\u0027s pet Grybyx, which has a really bad temper whenever it gets hungry, escapes from Dimension X through a portal to Earth, causing trouble for the Turtles.",
+        "air_date": "1989-11-20",
+        "runtime": 22,
+        "still_path": "/7eTQPVsS9mTZJtFmyQxDNvJnvgT.jpg"
+      },
+      {
+        "episode_number": 42,
+        "name": "Mister Ogg Goes to Town",
+        "overview": "While searching for a device to transform crude oil into liquid hydrogen, Krang accidentally brings Mr. Ogg from Dimension Z to earth.",
+        "air_date": "1989-11-21",
+        "runtime": 22,
+        "still_path": "/vBlrObURAEW21FAs0xWaVF6qU9o.jpg"
+      },
+      {
+        "episode_number": 43,
+        "name": "Shredderville",
+        "overview": "The Turtles are frustrated that they let Shredder slip away from them again. They feel like giving up, and wish they had never been born.",
+        "air_date": "1989-11-22",
+        "runtime": 22,
+        "still_path": "/69hvssD9bDCJV1B7P7EHeXhZ268.jpg"
+      },
+      {
+        "episode_number": 44,
+        "name": "Bye Bye Fly",
+        "overview": "An interdimensional alien spacecraft leads Baxter Stockman to his latest vengeful plot to destroy the Turtles and Shredder.",
+        "air_date": "1989-11-23",
+        "runtime": 22,
+        "still_path": "/dz7tZXPKlmJvUf0gzD1RIVRHfCu.jpg"
+      },
+      {
+        "episode_number": 45,
+        "name": "The Big Rip Off",
+        "overview": "After several failed attempts to get the Technodrome re-energized, Shredder and Krang run one last-ditch distraction for the Turtles at Fort Charles while Bebop and Rocksteady steal energy fuel cells from the neighboring space research center.",
+        "air_date": "1989-11-24",
+        "runtime": 22,
+        "still_path": "/vgICXrTxninlC3NtyRrSwPXzglt.jpg"
+      },
+      {
+        "episode_number": 46,
+        "name": "The Big Break In",
+        "overview": "The Technodrome is up and running again, and it is up to the Turtles to hinder Shredder and Krang from getting to the surface.",
+        "air_date": "1989-11-27",
+        "runtime": 22,
+        "still_path": "/bBRsGaYTCVhXIGak2FdOMHYp9pf.jpg"
+      },
+      {
+        "episode_number": 47,
+        "name": "The Big Blow Out",
+        "overview": "After several setbacks, Shredder and Krang steal all of New York\u0027s electricity and charge it into a giant transdimensional gateway, designed to send Earth into Dimension X. The Turtles must defeat their enemies once and for all before Earth is destroyed by Krang\u0027s Rock Soldier army.",
+        "air_date": "1989-11-28",
+        "runtime": 22,
+        "still_path": "/l7W1X7ae5ZGYnzRyg9U3Kwqg1rA.jpg"
+      }
+    ]
+  }
+}

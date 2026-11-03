@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 454619,
+    "title": "Overboard",
+    "overview": "A spoiled, wealthy yacht owner is thrown overboard and becomes the target of revenge from his mistreated employee.",
+    "tagline": "A riches to rags story. If only he could remember it.",
+    "runtime": 112,
+    "release_date": "2018-04-13",
+    "vote_average": 6.673,
+    "poster_path": "/41Rzkgo9y7n6BNGD6O8j0LVs8Yu.jpg",
+    "backdrop_path": "/xiw4mTeahSbFMUgxapE9lfrBTUd.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Anna Faris",
+      "character": "Kate Sullivan",
+      "profile_path": "/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+    },
+    {
+      "name": "Eugenio Derbez",
+      "character": "Leonardo Montenegro",
+      "profile_path": "/6o1w3mYF947N6TTakQXcs3NNy4w.jpg"
+    },
+    {
+      "name": "Eva Longoria",
+      "character": "Theresa",
+      "profile_path": "/1u26GLWK1DE7gBugyI9P3OMFq4A.jpg"
+    },
+    {
+      "name": "John Hannah",
+      "character": "Colin",
+      "profile_path": "/8GzJhaZrChZpv84SU4vAsvsR3cl.jpg"
+    }
+  ]
+}

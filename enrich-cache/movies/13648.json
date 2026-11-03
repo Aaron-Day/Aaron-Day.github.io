@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13648,
+    "title": "Resident Evil: Degeneration",
+    "overview": "Leon S. Kennedy and Claire Redfield must battle a rogue warrior seeking revenge after unleashing the deadly G-Virus, whilst a mutated monster goes on a rampage.",
+    "tagline": "Evil never rests.",
+    "runtime": 97,
+    "release_date": "2008-02-13",
+    "vote_average": 6.813,
+    "poster_path": "/1x5OaFOo38JAwR5yXxeuvQg3VWH.jpg",
+    "backdrop_path": "/3JgfNUCoN6pyXlO7wZOJ4PgQgW3.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 133352,
+      "name": "Resident Evil (Animated) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Paul Mercier",
+      "character": "Leon S. Kennedy (voice)",
+      "profile_path": "/1GcIA6oQ3aaBG8HSfBcCRf6R5DW.jpg"
+    },
+    {
+      "name": "Alyson Court",
+      "character": "Claire Redfield (voice)",
+      "profile_path": "/kPeTYEV6vyyAJEsUlomVpiLcd6v.jpg"
+    },
+    {
+      "name": "Laura Bailey",
+      "character": "Angela Miller (voice)",
+      "profile_path": "/xrq33v9N78hhmApcfkoYx0TAw1A.jpg"
+    },
+    {
+      "name": "Roger Craig Smith",
+      "character": "Curtis Miller (voice)",
+      "profile_path": "/6oE356GbRHAf91Llw7LDpvsAf5L.jpg"
+    }
+  ]
+}

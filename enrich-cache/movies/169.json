@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 169,
+    "title": "Predator 2",
+    "overview": "A police chief in the war-torn streets of Los Angeles discovers that an extraterrestrial creature is hunting down residents - and that he is the next target.",
+    "tagline": "Silent. Invisible. Invincible. He\u2019s in town with a few days to kill.",
+    "runtime": 108,
+    "release_date": "1990-11-21",
+    "vote_average": 6.332,
+    "poster_path": "/83X4VwY9sdSJykskmsplIVG0a4h.jpg",
+    "backdrop_path": "/8GGAXEXaTPMDGa0sCPyFcitvlD9.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 399,
+      "name": "Predator Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Danny Glover",
+      "character": "Lieutenant Mike Harrigan",
+      "profile_path": "/7ZyztVlG7OpqD0EhzG8iwYNcd1s.jpg"
+    },
+    {
+      "name": "Gary Busey",
+      "character": "Peter Keyes",
+      "profile_path": "/8H7Hlv6b7ZoK4jZKeLnc2i4pfPL.jpg"
+    },
+    {
+      "name": "Rub\u00E9n Blades",
+      "character": "Danny Archuleta",
+      "profile_path": "/kOgVo3qDJ9jXgIZJRJI3I1bm6sA.jpg"
+    },
+    {
+      "name": "Mar\u00EDa Conchita Alonso",
+      "character": "Leona Cantrell",
+      "profile_path": "/zcDN921xNK0AznoA0TEbdbsPSn3.jpg"
+    }
+  ]
+}

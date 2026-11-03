@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9016,
+    "title": "Treasure Planet",
+    "overview": "When space galleon cabin boy Jim Hawkins discovers a map to an intergalactic \u0022loot of a thousand worlds,\u0022 a cyborg cook named John Silver teaches him to battle supernovas and space storms on their journey to find treasure.",
+    "tagline": "Find your place in the universe.",
+    "runtime": 96,
+    "release_date": "2002-11-26",
+    "vote_average": 7.579,
+    "poster_path": "/kNhZkR3UNbXfvESQo7mJpOi4tGd.jpg",
+    "backdrop_path": "/f2opsSUSiMdEp6AiY2sbC8QPd8S.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Joseph Gordon-Levitt",
+      "character": "Jim Hawkins (voice)",
+      "profile_path": "/z2FA8js799xqtfiFjBTicFYdfk.jpg"
+    },
+    {
+      "name": "Brian Murray",
+      "character": "John Silver (voice)",
+      "profile_path": "/hjbab72rP0PopqbRHo3MKdPDd2s.jpg"
+    },
+    {
+      "name": "Emma Thompson",
+      "character": "Captain Amelia (voice)",
+      "profile_path": "/zQ0hWHh3tzaOOziPbABQI8s9WCu.jpg"
+    },
+    {
+      "name": "David Hyde Pierce",
+      "character": "Doctor Doppler (voice)",
+      "profile_path": "/9BSgq4yxjPry1Oghqq92S4wUIvs.jpg"
+    }
+  ]
+}

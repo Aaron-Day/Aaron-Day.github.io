@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 198663,
+    "title": "The Maze Runner",
+    "overview": "A teenager with no memory of his past finds himself among a group of boys living in a walled enclosure surrounded by a massive, ever-changing maze. As he struggles to adapt to their rules and society, he begins to uncover clues that may lead to escape and the truth behind their confinement.",
+    "tagline": "Get ready to run.",
+    "runtime": 113,
+    "release_date": "2014-09-10",
+    "vote_average": 7.188,
+    "poster_path": "/ode14q7WtDugFDp78fo9lCsmay9.jpg",
+    "backdrop_path": "/eTlcNXGv32zkVI7ZDHhfeaKHXKQ.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 295130,
+      "name": "The Maze Runner Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dylan O\u0027Brien",
+      "character": "Thomas",
+      "profile_path": "/xN3GdvIlqsR838gDoblhPH0numP.jpg"
+    },
+    {
+      "name": "Kaya Scodelario",
+      "character": "Teresa Agnes",
+      "profile_path": "/qmtXUabwXw0RvyK6R0la6CmvGxr.jpg"
+    },
+    {
+      "name": "Thomas Brodie-Sangster",
+      "character": "Newt",
+      "profile_path": "/tapXeOg3wnezcjm2ENox0lL2b25.jpg"
+    },
+    {
+      "name": "Ki Hong Lee",
+      "character": "Minho",
+      "profile_path": "/Ws4cNaHHX4tNddh7mw4zIBZyPb.jpg"
+    }
+  ]
+}

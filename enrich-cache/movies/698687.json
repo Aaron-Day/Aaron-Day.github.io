@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 698687,
+    "title": "Transformers One",
+    "overview": "The untold origin story of Optimus Prime and Megatron, better known as sworn enemies, but once were friends bonded like brothers who changed the fate of Cybertron forever.",
+    "tagline": "Witness the origin.",
+    "runtime": 104,
+    "release_date": "2024-09-11",
+    "vote_average": 7.982,
+    "poster_path": "/iRCgqpdVE4wyLQvGYU3ZP7pAtUc.jpg",
+    "backdrop_path": "/cMfokHWle5lfCreoV08cbmkKv6G.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chris Hemsworth",
+      "character": "Orion Pax / Optimus Prime (voice)",
+      "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    },
+    {
+      "name": "Brian Tyree Henry",
+      "character": "D-16 / Megatron (voice)",
+      "profile_path": "/2MsJh0bpyzwvOUnXOltHp3j85Pb.jpg"
+    },
+    {
+      "name": "Scarlett Johansson",
+      "character": "Elita-1 (voice)",
+      "profile_path": "/mjReG6rR7NPMEIWb1T4YWtV11ty.jpg"
+    },
+    {
+      "name": "Keegan-Michael Key",
+      "character": "B-127 (voice)",
+      "profile_path": "/xmdzYXP9j87a43FSiL138nLesuS.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 840,
+    "title": "Close Encounters of the Third Kind",
+    "overview": "After an encounter with UFOs, an electricity linesman feels undeniably drawn to an isolated area in the wilderness where something spectacular is about to happen.",
+    "tagline": "We are not alone.",
+    "runtime": 137,
+    "release_date": "1977-12-14",
+    "vote_average": 7.35,
+    "poster_path": "/dTWvLWur0XM7YezSTSoZxZ7gDfM.jpg",
+    "backdrop_path": "/yBCekmb7vK70xUhtsRQBcTu65sB.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Richard Dreyfuss",
+      "character": "Roy Neary",
+      "profile_path": "/q2BPu6zWwFtnzQfpl4fgbKqURXM.jpg"
+    },
+    {
+      "name": "Fran\u00E7ois Truffaut",
+      "character": "Claude Lacombe",
+      "profile_path": "/3bXLtipaybsje01LlQvHvuUAZNq.jpg"
+    },
+    {
+      "name": "Teri Garr",
+      "character": "Ronnie Neary",
+      "profile_path": "/iscVncnCVtM8Wl4FmcEkr6KDtRE.jpg"
+    },
+    {
+      "name": "Melinda Dillon",
+      "character": "Jillian Guiler",
+      "profile_path": "/biM3R6qURBprG9U8tIvpOk8WjOw.jpg"
+    }
+  ]
+}

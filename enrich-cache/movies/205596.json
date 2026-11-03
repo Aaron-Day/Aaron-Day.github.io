@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 205596,
+    "title": "The Imitation Game",
+    "overview": "Based on the real life story of legendary cryptanalyst Alan Turing, the film portrays the nail-biting race against time by Turing and his brilliant team of code-breakers at Britain\u0027s top-secret Government Code and Cypher School at Bletchley Park, during the darkest days of World War II.",
+    "tagline": "The true enigma was the man who cracked the code.",
+    "runtime": 113,
+    "release_date": "2014-11-14",
+    "vote_average": 7.976,
+    "poster_path": "/zSqJ1qFq8NXFfi7JeIYMlzyR0dx.jpg",
+    "backdrop_path": "/8FCHJ21JBQOgATY2WI8vwYAiXg8.jpg",
+    "genres": [
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Benedict Cumberbatch",
+      "character": "Alan Turing",
+      "profile_path": "/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg"
+    },
+    {
+      "name": "Keira Knightley",
+      "character": "Joan Clarke",
+      "profile_path": "/bRC1B2VwV0wK3ElciFAK6QZf2wD.jpg"
+    },
+    {
+      "name": "Matthew Goode",
+      "character": "Hugh Alexander",
+      "profile_path": "/3XaKKl0bKswTWbJ0Lh9nZ4UdAQo.jpg"
+    },
+    {
+      "name": "Rory Kinnear",
+      "character": "Detective Robert Nock",
+      "profile_path": "/8aEABMeHXOozwE5DrMxUlCM9mpG.jpg"
+    }
+  ]
+}

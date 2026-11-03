@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9447,
+    "title": "Babe: Pig in the City",
+    "overview": "Babe, fresh from his victory in the sheepherding contest, returns to Farmer Hoggett\u0027s farm, but after Farmer Hoggett is injured and unable to work, Babe has to go to the big city to save the farm.",
+    "tagline": "In the heart of the city, a pig with heart.",
+    "runtime": 96,
+    "release_date": "1998-11-25",
+    "vote_average": 5.7,
+    "poster_path": "/glO6LcTWUZcbxWT2SB4eRDnFSsP.jpg",
+    "backdrop_path": "/73Zd7StP4Ln0hSCwmqhCaZomYWB.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9435,
+      "name": "Babe Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "E. G. Daily",
+      "character": "Babe (voice)",
+      "profile_path": "/sWLXj0yvpMEsZTIsS1ReVQzGnwO.jpg"
+    },
+    {
+      "name": "Magda Szubanski",
+      "character": "Mrs. Esme Cordelia Hoggett",
+      "profile_path": "/fNb650TNqOBG6dSP9bLhoxxI9wA.jpg"
+    },
+    {
+      "name": "James Cromwell",
+      "character": "Farmer Arthur Hoggett",
+      "profile_path": "/vpNQQbM5PtxsYmVm4oh79SGFyUK.jpg"
+    },
+    {
+      "name": "Mickey Rooney",
+      "character": "Fugly Floom, the Speechless Man in Hotel",
+      "profile_path": "/eYuayEC3xhXQf3Z1Cy6AVMEcgZb.jpg"
+    }
+  ]
+}

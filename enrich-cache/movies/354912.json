@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 354912,
+    "title": "Coco",
+    "overview": "Despite his family\u2019s baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. Along the way, he meets charming trickster Hector, and together, they set off on an extraordinary journey to unlock the real story behind Miguel\u0027s family history.",
+    "tagline": "The celebration of a lifetime.",
+    "runtime": 105,
+    "release_date": "2017-10-27",
+    "vote_average": 8.207,
+    "poster_path": "/6Ryitt95xrO8KXuqRGm1fUuNwqF.jpg",
+    "backdrop_path": "/g7CHF8gTLGooTbP4GznIGwaqAGL.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1451578,
+      "name": "Coco Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anthony Gonzalez",
+      "character": "Miguel Rivera (voice)",
+      "profile_path": "/WF7bn6t0LkxwBWyDMWvomVujn7.jpg"
+    },
+    {
+      "name": "Gael Garc\u00EDa Bernal",
+      "character": "H\u00E9ctor (voice)",
+      "profile_path": "/7uEO29wtdyY9bjt2JN43gVpE6vt.jpg"
+    },
+    {
+      "name": "Benjamin Bratt",
+      "character": "Ernesto de la Cruz (voice)",
+      "profile_path": "/hBenHPT4iJEG2kt5z2TOGnkRZwh.jpg"
+    },
+    {
+      "name": "Alanna Ubach",
+      "character": "Mam\u00E1 Imelda (voice)",
+      "profile_path": "/ffyBAEoW3bDgVJQV3GaHsZ9x29W.jpg"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Monster Under the Bed",
+        "overview": "The Baby swears there\u0027s a monster under his bed, but no one believes him--until it starts dragging victims into its hole.",
+        "air_date": "1994-06-01",
+        "runtime": 23,
+        "still_path": "/j6u7IP4pcraDXO6YOxUqksoahBQ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Earl, Don\u0027t Be a Hero",
+        "overview": "Earl assumes the powers of a superhero, but he\u0027s bound to use his might only for the Wesayso Corp.",
+        "air_date": "1994-06-08",
+        "runtime": 23,
+        "still_path": "/gjPoQDKhgit4sMShnwpSvmYlOj1.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Greatest Story Ever Sold",
+        "overview": "Questions about life\u0027s meaning plague the population, so the Elders dictate a belief system called \u0022Potatoism.\u0022",
+        "air_date": "1994-06-22",
+        "runtime": 23,
+        "still_path": "/dvYuTubb0DlgdiuYV0Ew1DsGtYr.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Driving Miss Ethyl",
+        "overview": "Earl drives Ethyl to her reunion, and the kids drive Fran crazy when she tries to get them to pose for a portrait.",
+        "air_date": "1994-06-29",
+        "runtime": 23,
+        "still_path": "/74KggiHhsFAzdFDq2nbf7kAsxaL.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Earl\u0027s Big Jackpot",
+        "overview": "A workplace injury ends up costing Earl his job but it pays off big for him in court.",
+        "air_date": "1994-07-06",
+        "runtime": 23,
+        "still_path": "/nB68fqYNhnU3UvZoRXKgkwtQcaN.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Terrible Twos",
+        "overview": "Fran and Earl face an untimely extinction when the baby enters his \u0022terrible twos.\u0022",
+        "air_date": "1994-07-13",
+        "runtime": 23,
+        "still_path": "/sn0w1KVq31FRt3asRhCamCgooBK.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Changing Nature",
+        "overview": "Efforts to solve an environmental crisis put the dinosaurs on the road to doomsday.",
+        "air_date": "1994-07-20",
+        "runtime": 23,
+        "still_path": "/o55LVERGuyuQ57c6ApjNnL2WNow.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Georgie Must Die",
+        "overview": "The baby goes gaga over a hippo named Georgie, the latest children\u0027s idol. But when Earl dresses up as Georgie, he\u0027s arrested for copyright infringement.",
+        "air_date": "1995-09-06",
+        "runtime": 23,
+        "still_path": "/ijdcLyRo2njTc9zpAD4uubldodl.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Into the Woods",
+        "overview": "Earl, Robbie and Roy stumble into a tar pit when they take the Baby into the forest for the traditional dinosaur Wilderness Rite of Passage.",
+        "air_date": "1995-09-20",
+        "runtime": 23,
+        "still_path": "/aYMQhpEcRR4xJxXv5oouBezMyCR.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Variations on a Theme Park",
+        "overview": "When too many overworked employees drop dead from exhaustion, businesses give dinosaurs two weeks off for a vacation; B.P. Richfield advises Earl to bring his family to WeSaySo Land, which is supposed to be a fun amusement park for the family. What the Sinclairs find is an overpriced, cow themed park that is newly under construction, and they have to stay for 14 days.",
+        "air_date": "1995-11-06",
+        "runtime": 23,
+        "still_path": "/vYiB6gfRHPUjB21nr01imV6Bu32.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Life in the Faust Lane",
+        "overview": "Earl makes a deal with the devil (which is a wierd inconsistency in the show) after watching a late night show, \u0022Lifestyles of Those We Envy\u0022.",
+        "air_date": "1995-11-07",
+        "runtime": 23,
+        "still_path": "/zbihelFQNPlkfsSbaVetgjJACIn.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Working Girl",
+        "overview": "Charlene becomes her father\u0027s boss when Richfield is pressured into hiring women. The only problem is, Dad won\u0027t listen to her.",
+        "air_date": "1995-11-08",
+        "runtime": 23,
+        "still_path": "/9JKKeatCgTcWbv1aApWM3mciot2.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Earl and Pearl",
+        "overview": "Robbie and Charlene go against Earl\u0027s orders and sneak out to see his estranged sister, Pearl, a country star, perform. Roy falls in love with Pearl and plans to settle down with her, despite Earl\u0027s protests.",
+        "air_date": "1995-11-09",
+        "runtime": 23,
+        "still_path": "/nB3Al2VMhzbSfvYWj1qHkMTgA8t.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Scent of a Reptile",
+        "overview": "Charlene\u0027s scent gland comes in and Fran explains the one boy who is attracted to her scent is the one she\u0027s destined to marry. But Charlene puts out fumes of burning rubber and attracts the school janitor who aspires to be a tree pusher.",
+        "air_date": "1995-11-10",
+        "runtime": 23,
+        "still_path": "/p60nwXskCKbCSJyc2B5YjCIpTER.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Grounded",
+        "overview": "Mariner enlists her friends on a rogue mission to exonerate her mother, as Captain Freeman faces a military tribunal for the destruction of Pakled Planet.",
+        "air_date": "2022-08-25",
+        "runtime": 27,
+        "still_path": "/7jeFgztTp1NrzjzDTplu8jcnLsB.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Least Dangerous Game",
+        "overview": "On a tropical paradise planet, Mariner questions Commander Ransom on how he structures his away team. Boimler makes a bold career decision.",
+        "air_date": "2022-09-01",
+        "runtime": 26,
+        "still_path": "/lR7ZHOKR3Sl2pzcSauEf5fw13Cy.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Mining the Mind\u0027s Mines",
+        "overview": "On a remote science outpost, stone orbs are bringing fantasies to life. Tendi starts her first day as a Senior Science Officer Trainee.",
+        "air_date": "2022-09-08",
+        "runtime": 26,
+        "still_path": "/xX5zqlqVqPXHlqcqVW7UnQwWmvW.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Room for Growth",
+        "overview": "Mariner, Boimler and Tendi clash with their arch-rivals: Delta Shift. The Cerritos engineers go on mandatory relaxation leave.",
+        "air_date": "2022-09-15",
+        "runtime": 26,
+        "still_path": "/AuctpWAj1hQt334a4Wna98c4q5z.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Reflections",
+        "overview": "Mariner and Boimler work the Starfleet recruitment booth at an alien job fair, Rutherford challenges himself.",
+        "air_date": "2022-09-22",
+        "runtime": 28,
+        "still_path": "/cOMkC7tXkdpVyQ9pTGfeSZ9lbcT.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Hear All, Trust Nothing",
+        "overview": "The Cerritos crew unexpectedly spends a day on Deep Space Nine.",
+        "air_date": "2022-09-29",
+        "runtime": 28,
+        "still_path": "/AealHSXAmWdGDQwEL6iUOdA2VKe.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "A Mathematically Perfect Redemption",
+        "overview": "A wayward Starfleet ensign struggles to find a path to redemption.",
+        "air_date": "2022-10-06",
+        "runtime": 29,
+        "still_path": "/ewWTuxG1d4NXJQaP9iQ8Jljob9d.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Crisis Point 2: Paradoxus",
+        "overview": "Boimler\u0027s holodeck movie sequel tries to live up to the original.",
+        "air_date": "2022-10-13",
+        "runtime": 29,
+        "still_path": "/rZlZ7yO1zJr4tiYtnWnj7A8uL0S.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Trusted Sources",
+        "overview": "A visiting reporter on the Cerritos puts Captain Freeman on edge.",
+        "air_date": "2022-10-20",
+        "runtime": 27,
+        "still_path": "/nYAKgYJHfxwVRTBl0P8e01bpphZ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Stars at Night",
+        "overview": "The Cerritos crew must prove their worth in a mission race.",
+        "air_date": "2022-10-27",
+        "runtime": 30,
+        "still_path": "/1uOb8Z3wNN2U7pztlIk85meP9mv.jpg"
+      }
+    ]
+  }
+}

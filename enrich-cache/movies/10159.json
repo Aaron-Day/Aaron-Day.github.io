@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10159,
+    "title": "The Rundown",
+    "overview": "When Travis, the mouthy son of a criminal, disappears in the Amazon in search of a treasured artifact, his father sends in Beck, who becomes Travis\u0027s rival for the affections of Mariana, a mysterious Brazilian woman. With his steely disposition, Beck is a man of few words -- but it takes him all the discipline he can muster to work with Travis to nab a tyrant who\u0027s after the same treasure.",
+    "tagline": "Bulls, guns, whips, gold and one sacred cat.",
+    "runtime": 104,
+    "release_date": "2003-09-26",
+    "vote_average": 6.4,
+    "poster_path": "/cwNeP2fz0vqNhmKIcSgLD0xc6g2.jpg",
+    "backdrop_path": "/i7ClLxhjClTCXGBt3FLC4hbEvU.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dwayne Johnson",
+      "character": "Beck",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Seann William Scott",
+      "character": "Travis",
+      "profile_path": "/AftiUFP4rYcl3SG3xllxyiLiuXS.jpg"
+    },
+    {
+      "name": "Rosario Dawson",
+      "character": "Mariana",
+      "profile_path": "/siTzOI810a0K46wv1TORXMw5N7J.jpg"
+    },
+    {
+      "name": "Christopher Walken",
+      "character": "Hatcher",
+      "profile_path": "/ApgDL7nudR9T2GpjCG4vESgymO2.jpg"
+    }
+  ]
+}

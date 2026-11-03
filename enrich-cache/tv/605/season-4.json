@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "No Place Like Home",
+        "overview": "Sabrina goes to live with her father in Paris.",
+        "air_date": "1999-09-24",
+        "runtime": 22,
+        "still_path": "/48Z5PBUSnMskdFVWpLr9DRSHqiN.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Dream a Little Dreama Me",
+        "overview": "Sabrina learns that she has been instructed to mentor a witch student, and it turns out that her student is the new girl at school, Dreama. However, Dreama\u0027s clumsy spells arouse Harvey\u0027s friend Brad\u0027s suspicions, revealing his true nature.",
+        "air_date": "1999-10-01",
+        "runtime": 22,
+        "still_path": "/2kj1DTS4YflTQdzZ6ga2EgMGCcs.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Jealousy",
+        "overview": "Sabrina turns green with envy, literally, after Harvey and Brad become best friends, triggering a case of Jealotosis - an intense green-eyed witch envy - when Harvey teams up with Brad instead of her to write an article for the school paper.",
+        "air_date": "1999-10-08",
+        "runtime": 22,
+        "still_path": "/ylKA2xf1nbFKaDp45itZTpKKcGA.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Little Orphan Hilda",
+        "overview": "Sabrina invites her fussy grandmother Lydia to visit, but the family gathering is not a success.",
+        "air_date": "1999-10-15",
+        "runtime": 22,
+        "still_path": "/lg8i503xvUPoFkHbWYTN78lQsv5.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Spoiled Rotten",
+        "overview": "Credit-card carrier Sabrina catches get-itis and begins to spoil herself...literally, and tries to cure it by donating magic mementos to a yard sale.",
+        "air_date": "1999-10-22",
+        "runtime": 22,
+        "still_path": "/2zeRRtrsZHSUilBQ39eQ2pJapOU.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Episode LXXXI: The Phantom Menace",
+        "overview": "It\u0027s Halloween, and Sabrina is having a ghoulish time adjusting to her new job at the coffee house.",
+        "air_date": "1999-10-29",
+        "runtime": 22,
+        "still_path": "/h23ye0qP9SNvU6fiqR9Tl6AjGqE.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Prelude to a Kiss",
+        "overview": "Sabrina enlists Dreama to zap her into two places at once after she agrees to help Josh study on the night of Harvey\u0027s big football game.",
+        "air_date": "1999-11-05",
+        "runtime": 22,
+        "still_path": "/qss0ClFNMNhInDgkIDW6pVgpmey.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Aging, Not So Gracefully",
+        "overview": "Sabrina zaps on a skin cream to appear more mature after college-guy Josh shoots down a romance because of her age, but the fast-acting lotion ends up being a rapid-aging potion.",
+        "air_date": "1999-11-12",
+        "runtime": 22,
+        "still_path": "/fyMNpYGNUjHKUq1lh7pQSUxewui.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Love Means Having to Say You\u0027re Sorry",
+        "overview": "Consumed with guilt over kissing Josh, Sabrina runs herself ragged trying to cook up a way to get Harvey to forgive her without having to say she\u0027s sorry.",
+        "air_date": "1999-11-19",
+        "runtime": 22,
+        "still_path": "/r7mZ144JcsSwSNUtKu3GJAUdD6r.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Ice Station Sabrina",
+        "overview": "Sabrina is unable to use magic to save the day after uninvited witch-hunter Brad joins her and Harvey on a doomed ski trip.",
+        "air_date": "1999-11-21",
+        "runtime": 22,
+        "still_path": "/k1M9v3yvslJsRkz3YkgBtkCTXXB.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Salem and Juliette",
+        "overview": "Sabrina and Mrs. Quick uncover a scandal at school involving Mr. Kraft and misappropriated funds. Meanwhile, Sabrina finds Salem a date for his high school reunion, but it seems he is much more interested in her than she is in him.",
+        "air_date": "1999-12-10",
+        "runtime": 22,
+        "still_path": "/tpKm5kNvSxuFoHfZx4EjNzuzq4A.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Sabrina, Nipping at Your Nose",
+        "overview": "A Jamaica-bound Sabrina must spend the holidays with Mr. Kraft after she fools with Mother Nature and her snowy forecast.",
+        "air_date": "1999-12-17",
+        "runtime": 22,
+        "still_path": "/5tKqXGP4IAVjFPJNINEfLUyCuEX.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Now You See Her, Now You Don\u0027t",
+        "overview": "Trying to lose weight to fit into a dress, Sabrina\u0027s Other Realm remedy makes her disappear.",
+        "air_date": "2000-01-07",
+        "runtime": 22,
+        "still_path": "/oLHvKJRN0OZ5fvhCRPOn81TxF2y.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Super Hero",
+        "overview": "Sabrina\u0027s sloppy spell casting turns Harvey into his childhood superhero idol, while Kraft quits school to become a world famous aviator.",
+        "air_date": "2000-01-21",
+        "runtime": 22,
+        "still_path": "/s0YcEo3LrnvpAL2dkfRP5LrDKbn.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Love in Bloom",
+        "overview": "Valentine\u0027s Day magic has Sabrina rushing to put an end to Josh\u0027s secret crush on her before she breaks Harvey\u0027s heart.",
+        "air_date": "2000-02-11",
+        "runtime": 22,
+        "still_path": "/y0bhfFe796wo1BBxdRWBdlcnhpz.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Welcome Back, Duke",
+        "overview": "Salem\u0027s war-criminal buddy Duke visits after completing his sentence as a cat, and finds his powers have grown a little hairy.",
+        "air_date": "2000-02-25",
+        "runtime": 22,
+        "still_path": "/sZ9D0RsFVva5pQs16IfKwo3a9h1.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Salem\u0027s Daughter",
+        "overview": "Salem is heartbroken to receive a wedding announcement from his estranged daughter Annabele, who hasn\u0027t spoken to him in decades.",
+        "air_date": "2000-03-03",
+        "runtime": 22,
+        "still_path": "/2MiE0mr9mtN9P5Vu9CSkC4Y2bNY.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Dreama the Mouse",
+        "overview": "Sabrina has to fight a bad case of spring fever and deal with Dreama who has been turned into a mouse.",
+        "air_date": "2000-03-17",
+        "runtime": 22,
+        "still_path": "/zBhfEdos8rSyhn1qZPpt7qJKz81.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Wild, Wild Witch",
+        "overview": "When upset with all the rules in her life, Sabrina is sent to an old west town that has no rules.",
+        "air_date": "2000-03-31",
+        "runtime": 22,
+        "still_path": "/6jwzN2S68QzdJgFM3kzx536P9j5.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "She\u0027s Baaaack!",
+        "overview": "Sabrina\u0027s bratty cousin Amanda shows up with plans to steal one of Sabrina\u0027s men.",
+        "air_date": "2000-04-14",
+        "runtime": 22,
+        "still_path": "/9tLzcHgFLKIQ0PYTaoGYaxxEoVo.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Four Faces of Sabrina",
+        "overview": "When Sabrina is accepted to different colleges, she is pressured by Josh, Harvey and Zelda to choose their favorite, but her indecisiveness and need to please everyone causes her to be torn apart -- literally into four different Sabrinas.",
+        "air_date": "2000-04-28",
+        "runtime": 22,
+        "still_path": "/zi9M98ojr2D5q34Esd7rgpEbPMT.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The End of an Era",
+        "overview": "Josh and Harvey are both fighting over Sabrina and they have to take a magical test.",
+        "air_date": "2000-05-05",
+        "runtime": 22,
+        "still_path": "/mC2BCSHEbtDcUSRCPpLJSFihDeY.jpg"
+      }
+    ]
+  }
+}

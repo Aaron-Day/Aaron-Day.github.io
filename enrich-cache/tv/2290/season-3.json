@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "No Man\u0027s Land (2)",
+        "overview": "The team desperately attempts to stop two Wraith hive ships from reaching Earth. Sheppard must rely on an old foe to rescue McKay and Ronon.",
+        "air_date": "2006-07-13",
+        "runtime": 43,
+        "still_path": "/uL9bbbIE795DtTbZBPZJygPYgZm.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Misbegotten (3)",
+        "overview": "The Atlantis team must decide the fate of a colony of Wraith they have turned into humans. Dr. Weir must defend her leadership when she is evaluated by the I.O.A.",
+        "air_date": "2006-07-20",
+        "runtime": 44,
+        "still_path": "/vVW7f2irqUzVXe3MAIH7lzlzBfA.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Irresistible",
+        "overview": "Sheppard\u0027s team meets an obnoxious man who is adored by all thanks to a secret that he carries -- and who has an unexpected effect on them.",
+        "air_date": "2006-07-27",
+        "runtime": 42,
+        "still_path": "/g1rubx5yFZU4zcKL5K4x36K0G2W.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Sateda",
+        "overview": "Ronon Dex is captured by the Wraith and returned to his homeworld, where he is haunted by his past as he is forced to once again become their prey.",
+        "air_date": "2006-08-03",
+        "runtime": 42,
+        "still_path": "/gDzGgBTFA3WiZjMwCqg1jevQzEw.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Progeny",
+        "overview": "Weir and the team visit an advanced civilization that split off from the Lanteans thousands of years ago, but discover that they may not have left Atlantis in peace.",
+        "air_date": "2006-08-10",
+        "runtime": 44,
+        "still_path": "/7MNywRdqD9mlKaSOR8bkZmpuKyA.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Real World",
+        "overview": "Elizabeth Weir wakes up in a mental institution, where she is told that the expedition to Atlantis and the Stargate are figments of her imagination.",
+        "air_date": "2006-08-17",
+        "runtime": 42,
+        "still_path": "/6wKLEYQzJoY7iCAonE5kaDmXB56.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Common Ground",
+        "overview": "Colonel Sheppard finds himself the prisoner of a Genii commander, along with a desperately hungry Wraith who has been separated from his hive.",
+        "air_date": "2006-08-24",
+        "runtime": 42,
+        "still_path": "/ogXoxpQt7HUlTDHRHDDIaKCOh6Y.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "McKay and Mrs. Miller",
+        "overview": "Rodney McKay is reunited with his estranged sister back on Earth, who has given up a brilliant career as a scientist to raise a family.",
+        "air_date": "2006-09-07",
+        "runtime": 44,
+        "still_path": "/mAe8ewwdaTwUEDEqnDpMi40Ityt.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Phantoms",
+        "overview": "Sheppard and Ronon are influenced by a mind-altering device created by the Wraith while on a mission to rescue a lost team.",
+        "air_date": "2006-09-14",
+        "runtime": 42,
+        "still_path": "/3Zsj06hyFdjJ7vQaysFDdpqbm3b.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Return (1)",
+        "overview": "The Atlantis expedition is stunned to learn that a ship full of Ancients is returning to reclaim their lost city.",
+        "air_date": "2006-09-21",
+        "runtime": 42,
+        "still_path": "/ms7915GM0u19ir3MEvds7D5jljP.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Return (2)",
+        "overview": "The Atlantis team goes against orders to try and save Atlantis from Replicator control -- and to rescue General O\u0027Neill and Richard Woolsey, who are trapped in the occupied city.",
+        "air_date": "2006-11-19",
+        "runtime": 42,
+        "still_path": "/j3YDDguS4X4gilmtDnNR6070QNS.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Echoes",
+        "overview": "The inhabitants of Atlantis begin to suffer ill effects when the planet\u0027s whale population begins migrating to the island city, bringing an unexpected harbinger of doom.",
+        "air_date": "2006-11-26",
+        "runtime": 42,
+        "still_path": "/6IuekQcCjq0xU5EgjixbYiNAPQQ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Irresponsible",
+        "overview": "The team finds Lucius Lavin manipulating the people of another hapless planet, using Ancient technology to pose as an invincible hero.",
+        "air_date": "2006-12-03",
+        "runtime": 42,
+        "still_path": "/zv9X73GxQWGwr9ICk09yWmW5RCi.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Tao of Rodney",
+        "overview": "After an Ancient device gives Rodney superhuman powers, his enhanced brilliance is checked only by his impending death -- unless he can learn how to ascend.",
+        "air_date": "2006-12-10",
+        "runtime": 43,
+        "still_path": "/5zQM2mX0inIfNYusmaPziGPbsAK.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Game",
+        "overview": "Sheppard and McKay discover that their competitive video game has been controlling a planet of real people, who now stand on the brink of war.",
+        "air_date": "2006-12-17",
+        "runtime": 42,
+        "still_path": "/zbyvUkIEaya6ChSBypHM8lTCSLs.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Ark",
+        "overview": "The team discovers the last of a civilization in suspended animation, whose survival is at risk when their station is critically damaged.",
+        "air_date": "2007-01-07",
+        "runtime": 42,
+        "still_path": "/y30iAUUoUiSpxzUWLJMQ83Kc7v5.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Sunday",
+        "overview": "The team tries to relax during a mandatory day off, until an explosion leaves three people dead -- and reveals that one scientist is a walking time bomb.",
+        "air_date": "2007-01-11",
+        "runtime": 42,
+        "still_path": "/kJJ0z5sERgFZEfpd1GHwtkCnkFx.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Submersion",
+        "overview": "The team discovers an Ancient drilling station deep beneath the surface of the ocean, only to find that a Wraith queen is still alive there.",
+        "air_date": "2007-01-14",
+        "runtime": 42,
+        "still_path": "/1exwYPurmmyNb8IkjJWFp5wEojR.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Vengeance",
+        "overview": "The Atlantis team investigates the disappearance of one of their allies, only to find an old enemy engineering a race of powerful monsters.",
+        "air_date": "2007-01-28",
+        "runtime": 44,
+        "still_path": "/q3xpASEzLDhSBDqP0SdD43uaMGw.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "First Strike (1)",
+        "overview": "An unstoppable energy weapon leaves Atlantis under siege after Earth launches a preemptive attack against a very powerful enemy\u0027s homeworld.",
+        "air_date": "2007-02-04",
+        "runtime": 42,
+        "still_path": "/gZmDS8pWkBbFF6DL2iFDXYIuB20.jpg"
+      }
+    ]
+  }
+}

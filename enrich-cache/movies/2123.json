@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2123,
+    "title": "Me, Myself \u0026 Irene",
+    "overview": "Rhode Island State Trooper Charlie Baileygates has a multiple personality disorder. One personality is crazy and aggressive, while the other is more friendly and laid back. Both of these personalities fall in love with the same woman named Irene after Charlie loses his medication.",
+    "tagline": "From gentle to mental.",
+    "runtime": 117,
+    "release_date": "2000-06-22",
+    "vote_average": 6.636,
+    "poster_path": "/rvRrcbLbpn7UJGRH1JupgHOeJFq.jpg",
+    "backdrop_path": "/8qLen3NLCVSu1I9aqGWbTUIoBLQ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jim Carrey",
+      "character": "Off. Charlie Baileygates / Hank Evans",
+      "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+    },
+    {
+      "name": "Ren\u00E9e Zellweger",
+      "character": "Irene P. Waters",
+      "profile_path": "/iNnPqkEF0hPWhmWpjyuLuUdbKN8.jpg"
+    },
+    {
+      "name": "Mongo Brownlee",
+      "character": "Lee Harvey Baileygates",
+      "profile_path": "/chHO4vrhTtngLPrU01ngN7MP5v9.jpg"
+    },
+    {
+      "name": "Zen Gesner",
+      "character": "Agent Peterson",
+      "profile_path": "/gaUpc3SDYQAmFei8NFllxtJGs3A.jpg"
+    }
+  ]
+}

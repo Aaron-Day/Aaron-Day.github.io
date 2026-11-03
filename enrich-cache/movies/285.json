@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 285,
+    "title": "Pirates of the Caribbean: At World\u0027s End",
+    "overview": "After losing Captain Jack Sparrow to the locker of Davy Jones, Will Turner, Elizabeth Swann, and Captain Barbossa journey to the ends of the earth to rescue him. And as the East India Trading Company tightens its grip on the seas under Lord Cutler Beckett\u2014now in control of Davy Jones\u2014the fate of piracy hangs by a thread. Now, they must unite the pirate lords for one final stand. But as loyalties are tested and alliances shift, each must ultimately choose where they stand in the battle for freedom on the high seas.",
+    "tagline": "At the end of the world, the adventure begins.",
+    "runtime": 169,
+    "release_date": "2007-05-19",
+    "vote_average": 7.28,
+    "poster_path": "/jGWpG4YhpQwVmjyHEGkxEkeRf0S.jpg",
+    "backdrop_path": "/1jHxkVXMI5s3vRiyiZooUy1shB5.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 295,
+      "name": "Pirates of the Caribbean Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Johnny Depp",
+      "character": "Jack Sparrow",
+      "profile_path": "/k2xt6EUxQDwYRKIyI4IBdZxfs8n.jpg"
+    },
+    {
+      "name": "Geoffrey Rush",
+      "character": "Barbossa",
+      "profile_path": "/npXFjaFQzBNroCEPllGPTZ5IisA.jpg"
+    },
+    {
+      "name": "Orlando Bloom",
+      "character": "Will Turner",
+      "profile_path": "/lwQoA0qJTCZ6l2FH6PjmhRQjiaB.jpg"
+    },
+    {
+      "name": "Keira Knightley",
+      "character": "Elizabeth Swann",
+      "profile_path": "/bRC1B2VwV0wK3ElciFAK6QZf2wD.jpg"
+    }
+  ]
+}

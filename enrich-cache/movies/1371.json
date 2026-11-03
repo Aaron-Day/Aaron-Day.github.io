@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1371,
+    "title": "Rocky III",
+    "overview": "Following Rocky Balboa\u0027s intense battle with his most powerful adversary yet \u2013 the ferocious Clubber Lang \u2013 Rocky joins forces with former rival Apollo Creed in an effort to get back his fighting spirit.",
+    "tagline": "The greatest challenge.",
+    "runtime": 99,
+    "release_date": "1982-05-28",
+    "vote_average": 6.906,
+    "poster_path": "/uqw16i2kmwVqkJHzjzbDU4xZ0Pl.jpg",
+    "backdrop_path": "/ljOHSIyTbxdkQFjcJyWKfGm2i2r.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1575,
+      "name": "Rocky Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Robert \u0027Rocky\u0027 Balboa",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Talia Shire",
+      "character": "Adrianna \u0027Adrian\u0027 Balboa",
+      "profile_path": "/oktJmlLeyYKBCWPNjHskDwAfjct.jpg"
+    },
+    {
+      "name": "Burt Young",
+      "character": "Paulie Pennino",
+      "profile_path": "/6QWnsSbjYog0D6hkPhg7Frty54D.jpg"
+    },
+    {
+      "name": "Carl Weathers",
+      "character": "Apollo Creed",
+      "profile_path": "/oUwtC5hEbcIZv53WPerZ9HhlSJR.jpg"
+    }
+  ]
+}

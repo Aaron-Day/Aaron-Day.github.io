@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 75780,
+    "title": "Jack Reacher",
+    "overview": "One morning in an ordinary town, five people are shot dead in a seemingly random attack. All evidence points to a single suspect: an ex-military sniper who is quickly brought into custody. The interrogation yields one written note: \u0027Get Jack Reacher!\u0027. Reacher, an enigmatic ex-Army investigator, believes the authorities have the right man but agrees to help the sniper\u0027s defense attorney. However, the more Reacher delves into the case, the less clear-cut it appears. So begins an extraordinary chase for the truth, pitting Jack Reacher against an unexpected enemy, with a skill for violence and a secret to keep.",
+    "tagline": "The law has limits. He does not.",
+    "runtime": 130,
+    "release_date": "2012-12-20",
+    "vote_average": 6.683,
+    "poster_path": "/uQBbjrLVsUibWxNDGA4Czzo8lwz.jpg",
+    "backdrop_path": "/iwvP8XVpYVmJ3xfF9xdBi5uAOWl.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 403374,
+      "name": "Jack Reacher Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Jack Reacher",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Rosamund Pike",
+      "character": "Helen Rodin",
+      "profile_path": "/8ObNklHDi2hjdz0ayzJFB9jtqzm.jpg"
+    },
+    {
+      "name": "Richard Jenkins",
+      "character": "D.A. Alex Rodin",
+      "profile_path": "/muT3RZG9hiKaKojD751RcQ5tGEy.jpg"
+    },
+    {
+      "name": "David Oyelowo",
+      "character": "Det. Emerson",
+      "profile_path": "/7UZHRwOKe2cYxj8SeNUklyPYkns.jpg"
+    }
+  ]
+}

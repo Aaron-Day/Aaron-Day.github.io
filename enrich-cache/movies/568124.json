@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 568124,
+    "title": "Encanto",
+    "overview": "The tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of the Encanto has blessed every child in the family\u2014every child except one, Mirabel. But when she discovers that the magic surrounding the Encanto is in danger, Mirabel decides that she, the only ordinary Madrigal, might just be her exceptional family\u0027s last hope.",
+    "tagline": "There\u0027s a little magic in all of us...almost all of us.",
+    "runtime": 102,
+    "release_date": "2021-11-24",
+    "vote_average": 7.563,
+    "poster_path": "/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg",
+    "backdrop_path": "/3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1451277,
+      "name": "Encanto Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Stephanie Beatriz",
+      "character": "Mirabel (voice)",
+      "profile_path": "/7gNPOlsVIdg7QQOv1gRfHjv1Sdb.jpg"
+    },
+    {
+      "name": "Mar\u00EDa Cecilia Botero",
+      "character": "Abuela Alma (voice)",
+      "profile_path": "/nH6eBBgv1PI9J6Ftkn01ny1TMt1.jpg"
+    },
+    {
+      "name": "John Leguizamo",
+      "character": "Bruno (voice)",
+      "profile_path": "/kwYCdxTlDh9zauUCg4mp2XTCQTw.jpg"
+    },
+    {
+      "name": "Mauro Castillo",
+      "character": "F\u00E9lix (voice)",
+      "profile_path": "/qGNGBRyy9LumdFw32M7elnHP4IJ.jpg"
+    }
+  ]
+}

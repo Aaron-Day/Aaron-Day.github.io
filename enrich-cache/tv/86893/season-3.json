@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Quarantine",
+        "overview": "The gang is quarantined at the station after being exposed to a potentially infected Capuchin monkey on an emergency call. Everyone deals in their own way.",
+        "air_date": "2021-09-16",
+        "runtime": 24,
+        "still_path": "/yCNeaO0W0fBTRmWbXk9HXNZIR8J.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Hell Week",
+        "overview": "Lucy graduates to official Firefighter if she can survive the gang\u0027s pranks. She insists they don\u0027t go easy just because she\u0027s Chief\u0027s daughter.",
+        "air_date": "2021-09-23",
+        "runtime": 24,
+        "still_path": "/gvJyEwzt9cML0z2LhcOkxbkgver.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Big Chill",
+        "overview": "It\u0027s time for the annual firehouse chili cook-off, and everyone is excited to impress the chief, but judge Terry is affected by his wisdom teeth surgery and the drugs that go along with it.",
+        "air_date": "2021-09-30",
+        "runtime": 24,
+        "still_path": "/srvucjEJQoPK1SQCOZmlQl27nYe.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "How I Met Your Mother",
+        "overview": "A flashback to how Terry and Vicky met and were set up by Eddie as a prank years ago. Terry, Eddie and Vicky all have very different memories of the event, but all involve Terry eating.",
+        "air_date": "2021-10-07",
+        "runtime": 24,
+        "still_path": "/hj9B1tIbizq9tK3YlK8zRF8rCX5.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Carpet Diem",
+        "overview": "The station receives a sexual harassment complaint, requiring the Crew to participate in a sexual bias seminar. Eddie falls for the teacher and tries to navigate the thorny process of how to pick up the Sexual Bias Trainer.",
+        "air_date": "2021-10-14",
+        "runtime": 24,
+        "still_path": "/1wbnch8TI9bb3pJL0UOKq1IIlfT.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Rise of the Machines",
+        "overview": "An upgrade at Station 24 brings Inferna, a new Artificial Intelligence system, intended to improve the station\u0027s efficiency and safety. While the crew enjoys the perks of a \u0022smart\u0022 station, Eddie grows suspicious of Inferna\u0027s true agenda.",
+        "air_date": "2021-10-21",
+        "runtime": 24,
+        "still_path": "/lyof9AnXt1fSIE54vCQyKEmnYlD.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Quiet Party",
+        "overview": "Terry is serious about his \u0022No Station Birthday Parties\u0022 policy, but the Crew is set on ignoring it upon finding out it\u0027s Andy\u0027s 9th Leap Year birthday. Pulling it off might be mission impossible.",
+        "air_date": "2021-10-28",
+        "runtime": 24,
+        "still_path": "/AaKfTb6tA5NiHj7d80iFAzMNAjZ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Eddie the Chief",
+        "overview": "When Terry throws out his back, Eddie becomes the interim Chief, which creates tension over whose methods are best.",
+        "air_date": "2021-11-04",
+        "runtime": 24,
+        "still_path": "/c4b0rSatYc0MChJQ56QEM3zY8xG.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Wedding Crashers",
+        "overview": "When Lucy\u0027s secret date with a Tacoma police officer ends in embarrassment, the firefighters and the local police struggle to manage the aftermath.",
+        "air_date": "2021-11-11",
+        "runtime": 24,
+        "still_path": "/xeVBayD9L5QRCitCeTicjSlnfd3.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Eddie\u0027s Exes",
+        "overview": "Eddie learns his divorce lawyer was never really a lawyer and that his multiple divorces were never really finalized. The crew chips in for the latest Pedalton bike for the station but all fall for the same trainer.",
+        "air_date": "2021-11-18",
+        "runtime": 24,
+        "still_path": "/fpPjOkfDeHTNSaBpKfM5SkRZkZZ.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Thanksgiving",
+        "overview": "It\u0027s Thanksgiving Day in the station, and as usual, Terry wants to do everything his way, but no one gets their way once an engine breaks down. Spatchcock, an irritating mechanic, is summoned at the TFD.",
+        "air_date": "2021-11-25",
+        "runtime": 24,
+        "still_path": "/myQgtHX7uLdM82ORqXJW9F8VOU3.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Pickleball",
+        "overview": "The annual TFD Pickleball Tournament is underway and Terry \u0026 Eddie\u0027s team are long-running-and-very-cocky station champs, but the crew has plans to finally take them and their attitudes down.",
+        "air_date": "2021-12-02",
+        "runtime": 24,
+        "still_path": "/co3htwp5djhqvyo71OEu4Rx6isJ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Fire at the Fire Station",
+        "overview": "The Firefighters are out on a call when a fire breaks out at home Station 24.",
+        "air_date": "2021-12-09",
+        "runtime": 24,
+        "still_path": "/8fXveS0X9FIkzRyQqueAFF4qDOb.jpg"
+      }
+    ]
+  }
+}

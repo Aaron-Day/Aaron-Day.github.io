@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 20177,
+    "title": "Super Capers",
+    "overview": "Would-be superhero, Ed Gruberman, who possesses no super powers must join a team of misfit heroes-in-training known as The Super Capers. Having only faith, Gruberman must travel through time to uncover an evil plot involving some gold bullion, a fiery femme fatale, and a criminal mastermind with a dark secret about Ed\u0027s past.",
+    "tagline": "Fighting evil has never been funnier!",
+    "runtime": 98,
+    "release_date": "2009-03-20",
+    "vote_average": 3.3,
+    "poster_path": "/hH3luraymJhy8Fkpv7C5zNLwtr6.jpg",
+    "backdrop_path": "/hKcPqtUfcESNyJUBVqPEUmiPaEn.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Justin Whalin",
+      "character": "Ed Gruberman",
+      "profile_path": "/3LXgHHlz60rmI9pn7wJGQE5Rk6L.jpg"
+    },
+    {
+      "name": "Sam Lloyd",
+      "character": "Herman Brainard",
+      "profile_path": "/ti0pt6k5eXGbW8j7ktxSXLfutLA.jpg"
+    },
+    {
+      "name": "Ryan McPartlin",
+      "character": "Will Powers",
+      "profile_path": "/v0vKYfoSVLBEGBZ2ldjm3cHJwf3.jpg"
+    },
+    {
+      "name": "Danielle Harris",
+      "character": "Felicia Freeze",
+      "profile_path": "/hgoVrVDEujZTZoxpElzXBSlIUyU.jpg"
+    }
+  ]
+}

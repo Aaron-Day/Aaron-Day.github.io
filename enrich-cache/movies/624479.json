@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 624479,
+    "title": "Superman II: The Richard Donner Cut",
+    "overview": "Superman agrees to sacrifice his powers to start a relationship with Lois Lane, unaware that three Kryptonian criminals he inadvertently released are conquering Earth.",
+    "tagline": "The version you have never seen.",
+    "runtime": 116,
+    "release_date": "2006-11-02",
+    "vote_average": 7.4,
+    "poster_path": "/dkLplIwss7Jleh82NawyGyFNMgJ.jpg",
+    "backdrop_path": "/rRo1EzVd0E8GAOAeCulPpekKwjP.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Christopher Reeve",
+      "character": "Clark Kent / Superman",
+      "profile_path": "/vAGrPf3ajy6OVE3FhgABynZfybP.jpg"
+    },
+    {
+      "name": "Margot Kidder",
+      "character": "Lois Lane",
+      "profile_path": "/uJI4BwpmD9fX8D8jBdn2jT5rpvo.jpg"
+    },
+    {
+      "name": "Gene Hackman",
+      "character": "Lex Luthor",
+      "profile_path": "/zDlv9vXjnRsvwNI0bARG0uOt5CJ.jpg"
+    },
+    {
+      "name": "Marlon Brando",
+      "character": "Jor-El",
+      "profile_path": "/yIvLpf9U9NfAvC7fuAgOQ8tu51T.jpg"
+    }
+  ]
+}

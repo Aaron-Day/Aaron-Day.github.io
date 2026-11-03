@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Air (1)",
+        "overview": "When Icarus Base is attacked, it\u0027s inhabitants are forced to flee through the Stargate. The base was created on a distant planet to take advantage of a powerful energy supply located there. Their goal is to try and determine the purpose of the mysterious ninth symbol of the Stargate which they have never been able to lock in. In going through the Stargate, they are transported not to Earth but onto an very old, apparently uninhabited but huge spacecraft. With the group\u0027s commander injured, Lt. Scott and the chief scientist, Dr. Nicholas Rush lead the exploration of the craft. Several areas of the ship have been damaged but it is basically functional. They are able to learn that they are in fact billions of light years from Earth.",
+        "air_date": "2009-10-02",
+        "runtime": 44,
+        "still_path": "/npobKwfbMOEHyemIaStK83EDjYa.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Air (2)",
+        "overview": "The survivors arrive on an uninhabited ship floating billions of light years away from Earth. Panic spreads throughout the group and Col. Young, who was severely injured during the escape, transfers command to Lt. Matthew Scott, before lapsing into unconsciousness. Teams led by Dr. Rush and Sgt. Greer try to make sense of the situation, while Lt. Tamara Johansen, a medic who was days away from leaving the program, is thrust into the role of chief medical officer.",
+        "air_date": "2009-10-02",
+        "runtime": 45,
+        "still_path": "/yA3jY2wpGBQUYDW680l7JieoJ1t.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Air (3)",
+        "overview": "With the air supply failing on the Destiny, a team disembarks to a desert-like planet in search of the mineral needed to scrub the ship\u2019s air of carbon dioxide. After testing numerous sand samples without success, and with their window of opportunity closing fast, the group opts to split into two to cover more ground, despite the unbearable heat.",
+        "air_date": "2009-10-09",
+        "runtime": 44,
+        "still_path": "/vbIl3S4Sq3N3i8bOoqhN3l5Yktx.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Darkness",
+        "overview": "The Destiny suffers a power crisis, putting the lives of the stranded crew in jeopardy and forcing them to consider abandoning the ship.",
+        "air_date": "2009-10-16",
+        "runtime": 44,
+        "still_path": "/hhzo9FS5zZVMTvRSzsEVfu10cZA.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Light",
+        "overview": "With the ship on a collision course, the crew must decide who will stay and who will flee on the shuttle to try and find a habitable planet.",
+        "air_date": "2009-10-23",
+        "runtime": 44,
+        "still_path": "/wx2pha6WetaHzuBmFTaS0wr7dGX.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Water",
+        "overview": "Severe rationing can\u0027t save the Destiny\u0027s dwindling water supply, forcing Colonel Young and Lieutenant Scott to seek out drinkable water on a deadly ice planet.",
+        "air_date": "2009-10-30",
+        "runtime": 44,
+        "still_path": "/r2juwNGwcadbsi669rIKVEqFIn1.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Earth",
+        "overview": "With the situation onboard the Destiny dire, General O\u0027Neill and Home World Command orders Col. Young to execute a high risk plan concocted by the I.O.A. scientists which, in theory, could return the crew to earth.",
+        "air_date": "2009-11-06",
+        "runtime": 44,
+        "still_path": "/t7zlW0W2CsuiAH3VyKgJLZTHssP.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Time",
+        "overview": "Visiting a newly discovered jungle planet, the crew is amazed to recover a Kino by the gate. Downloading the Kino data, Eli discovers video of the team, which appears to have been shot during an earlier visit. The mystery of the video\u2019s origin becomes a secondary concern as members of the team start falling ill.",
+        "air_date": "2009-11-13",
+        "runtime": 44,
+        "still_path": "/wwwTNBnxPy6xq39N9HhWCNIjO5C.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Life",
+        "overview": "Aboard Destiny, Dr. Rush supervises the exploration of new areas of the ship. Looking for resources to make their everyday lives easier, the crew stumbles upon a piece of Ancient technology that carries the promise of a way home. While somewhat familiar with the find, Dr. Rush can\u2019t guarantee the safety of using it, bringing him and Col. Young to a standoff on what to do.",
+        "air_date": "2009-11-20",
+        "runtime": 44,
+        "still_path": "/cMpIKDdvLJVmjw8Lj2NoKdrDdCC.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Justice",
+        "overview": "Everyone is shocked when a member of the crew is found dead from a gunshot wound. While at first glance it appears to be suicide, the gun is nowhere to be found. The crew is confined to quarters while a search is performed and when the gun shows up in Col. Young\u2019s quarters, he becomes the number one suspect.",
+        "air_date": "2009-12-04",
+        "runtime": 44,
+        "still_path": "/jU9X4CsnQtq8YkctaUdhJ0CmiSk.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Space (1)",
+        "overview": "A snafu with the communications stones lands Col. Young\u0027s consciousness in an unknown being, resulting in a standoff between the Destiny and an alien vessel and the abduction of Chloe.",
+        "air_date": "2010-04-02",
+        "runtime": 44,
+        "still_path": "/2lzvsNVDBvtlrlctZV0VjDfFFUX.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Divided (2)",
+        "overview": "Dr. Nicholas Rush and Chloe suffer nightmares following their ordeal on the alien vessel, and Rush suspects that a tracking device may have been placed on the ship\u0027s hull. Later, a splinter group on Destiny executes a coup with life-threatening consequences.",
+        "air_date": "2010-04-09",
+        "runtime": 44,
+        "still_path": "/cM3XEMdzQIz3Uc4pIez71uFH3Y8.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Faith",
+        "overview": "Now firmly in control again, Col. Young and the other military personnel try to find a way to live with the civilians who tried to take control of the ship. When the Destiny prematurely drops out of FTL due to a computer glitch, they find both a sun and an Earth-like planet that should not be there. Rush concludes that the entire system was created by an alien race that is far beyond their imaginations. With the ship malfunctioning and a month\u0027s worth of repairs before it can jump again, several of the military and civilians decide to spend time on the planet. Hard feelings from the mutiny persist and it\u0027s an opportunity for everyone to mend fences. When the time comes to return to the Destiny, several of them decide they want to stay on the planet. Young is prepared to let them stay, but he imposes severe conditions.",
+        "air_date": "2010-04-16",
+        "runtime": 44,
+        "still_path": "/aCQdZwU3FBzk6PJG36l0c86ZRxd.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Human",
+        "overview": "Dr. Rush relives his past life by sitting in the alien chair in an attempt to download critical data. A university professor, his wife\u0027s cancer returns and he is recruited by Dr. Daniel Jackson for what will be called the Icarus project. He\u0027s avoiding dealing with his wife\u0027s situation and throws himself into his work. In his dream-like state, he\u0027s trying to make sense of all the information he is accumulating. Back on the ship, the Destiny drops out of FTL and some of the crew investigate the planet below. They find an ancient archaeological site but are trapped when part of the site caves in. Digging them out is a slow process and the next jump is quickly approaching.",
+        "air_date": "2010-04-23",
+        "runtime": 44,
+        "still_path": "/kfFkNUsXBQ9wSOL5M9rhxd7xTpH.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Lost",
+        "overview": "Still trapped on the planet after the Destiny has jumped, Lt. Scott, Sgt. Greer, Chloe and Eli try to find a way out of the underground maze. After one is caught in another cave in, the remaining three make their way to a gate but must jump blindly from planet to planet hoping to pick up a signal from the Destiny before it jumps. On board the ship, Col. Young decides to send out a search party. The clock is ticking down and the next jump will take them into an inter-galactic void forever leaving their friends behind. TJ meanwhile decides the time has come to tell Col. Young that she is pregnant with his child.",
+        "air_date": "2010-04-30",
+        "runtime": 44,
+        "still_path": "/nta0N317t9P98VBcjl6UFZcd3fo.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Sabotage",
+        "overview": "The Destiny has jumped into hyperspace and is now traveling through an inter-galactic void. They\u0027ve also been unable to locate Eli, Chloe and Scott who have been left behind. Dr. Rush has calculated that based on their current energy consumption, the Destiny has insufficient fuel to reach the next galaxy and they are doomed to die. The engines suddenly fail however and they arrange for an expert, Amanda Perry, to come on board via the communication stones and help them out. Perry and Rush have known each other for many years but as a quadriplegic, is experiencing what life has to offer. On Earth, Camile Wray\u0027s consciousness has been transferred to Perry\u0027s body and is wheelchair bound.",
+        "air_date": "2010-05-07",
+        "runtime": 44,
+        "still_path": "/y67LB6lz4J9HRXJ2MiWoPD3q3pV.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Pain",
+        "overview": "Lt. Tamara Johansen tries to track down what is causing the crew to hallucinate.",
+        "air_date": "2010-05-14",
+        "runtime": 44,
+        "still_path": "/dCGli6d8NeWydJhMSZEVORYYLQR.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Subversion",
+        "overview": "Earth\u0027s Stargate Program isn\u0027t the only group in the Milky Way that\u0027s interested in the Ancients\u0027 Destiny. What\u0027s worse, this long-time foe may have a spy among those closest to the Icarus project.",
+        "air_date": "2010-05-21",
+        "runtime": 44,
+        "still_path": "/fqmTtlnMaqW6rR74jp8RFt0wVuJ.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Incursion (1)",
+        "overview": "An enemy from the Milky Way has boarded the Destiny and has taken hostages. Is it possible that they know how to get back or have they stranded themselves as well?",
+        "air_date": "2010-06-04",
+        "runtime": 44,
+        "still_path": "/ou49VVLVg3fnQXXZCLI2Fpz80Mw.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Incursion (2)",
+        "overview": "As Young and Camille attempt to resolve the hostage crisis with Kiva, Destiny suffers from power fluctuations and blackouts due to its proximity to a binary pulsar.",
+        "air_date": "2010-06-11",
+        "runtime": 44,
+        "still_path": "/j8RhBfK3v3EWO5iQbkaPCNnVMYt.jpg"
+      }
+    ]
+  }
+}

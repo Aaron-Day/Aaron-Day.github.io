@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 529203,
+    "title": "The Croods: A New Age",
+    "overview": "Searching for a safer habitat, the prehistoric Crood family discovers an idyllic, walled-in paradise that meets all of its needs. Unfortunately, they must also learn to live with the Bettermans -- a family that\u0027s a couple of steps above the Croods on the evolutionary ladder. As tensions between the new neighbors start to rise, a new threat soon propels both clans on an epic adventure that forces them to embrace their differences, draw strength from one another, and survive together.",
+    "tagline": "The future ain\u0027t what it used to be.",
+    "runtime": 95,
+    "release_date": "2020-11-25",
+    "vote_average": 7.435,
+    "poster_path": "/tbVZ3Sq88dZaCANlUcewQuHQOaE.jpg",
+    "backdrop_path": "/ytTQoYkdpsgtfDWrNFCei8Mfbxu.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 464577,
+      "name": "The Croods Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Nicolas Cage",
+      "character": "Grug (voice)",
+      "profile_path": "/y1RtezurZYveYkVNRht7CwEgSYY.jpg"
+    },
+    {
+      "name": "Emma Stone",
+      "character": "Eep (voice)",
+      "profile_path": "/ak2Y9wOI3wi2pNQU6OWSvVvWPj5.jpg"
+    },
+    {
+      "name": "Ryan Reynolds",
+      "character": "Guy (voice)",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Catherine Keener",
+      "character": "Ugga (voice)",
+      "profile_path": "/n4CTwGszs6cwS1wJRlDQ5Mlh7Ex.jpg"
+    }
+  ]
+}

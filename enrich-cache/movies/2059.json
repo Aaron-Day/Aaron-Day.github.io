@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2059,
+    "title": "National Treasure",
+    "overview": "Modern treasure hunters, led by archaeologist Ben Gates, search for a chest of riches rumored to have been stashed away by George Washington, Thomas Jefferson and Benjamin Franklin during the Revolutionary War. The chest\u0027s whereabouts may lie in secret clues embedded in the Constitution and the Declaration of Independence, and Gates is in a race to find the gold before his enemies do.",
+    "tagline": "In order to break the code, one man will have to break all the rules.",
+    "runtime": 131,
+    "release_date": "2004-11-19",
+    "vote_average": 6.657,
+    "poster_path": "/jKbZBMRFpF2EfFuvrsDZ2uQYsEQ.jpg",
+    "backdrop_path": "/9EnZD3ZWjpJy4IPoQkqTzxvZrso.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 52984,
+      "name": "National Treasure Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Nicolas Cage",
+      "character": "Ben Gates",
+      "profile_path": "/y1RtezurZYveYkVNRht7CwEgSYY.jpg"
+    },
+    {
+      "name": "Diane Kruger",
+      "character": "Abigail Chase",
+      "profile_path": "/o5gVowcjVw4ThYi0L3883Y4X7kH.jpg"
+    },
+    {
+      "name": "Justin Bartha",
+      "character": "Riley Poole",
+      "profile_path": "/AalKjN8nR8RZ8g6ZdWV2smnQq4d.jpg"
+    },
+    {
+      "name": "Sean Bean",
+      "character": "Ian Howe",
+      "profile_path": "/tAPWubSNDEGzA3AzUAmMiBAZfCe.jpg"
+    }
+  ]
+}

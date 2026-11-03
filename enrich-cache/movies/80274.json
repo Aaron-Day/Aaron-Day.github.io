@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 80274,
+    "title": "Ender\u0027s Game",
+    "overview": "Based on the classic novel by Orson Scott Card, Ender\u0027s Game is the story of the Earth\u0027s most gifted children training to defend their homeplanet in the space wars of the future.",
+    "tagline": "This is not a game.",
+    "runtime": 114,
+    "release_date": "2013-10-24",
+    "vote_average": 6.595,
+    "poster_path": "/pVcRI5YKnkkgaAD876jBeKb189d.jpg",
+    "backdrop_path": "/zWvOs6lepfOI0dPa1ANVcdbkBuY.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Asa Butterfield",
+      "character": "Ender Wiggin",
+      "profile_path": "/1IoQIesuvI9o1IpYZqdjBWvKhRf.jpg"
+    },
+    {
+      "name": "Hailee Steinfeld",
+      "character": "Petra Arkanian",
+      "profile_path": "/qDInsG0cxWNxS1X4t59TBZ5S6x5.jpg"
+    },
+    {
+      "name": "Harrison Ford",
+      "character": "Colonel Hyrum Graff",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Viola Davis",
+      "character": "Major Gwen Anderson",
+      "profile_path": "/xDssw6vpYNRjsybvMPRE30e0dPN.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 505026,
+    "title": "Death on the Nile",
+    "overview": "Belgian sleuth Hercule Poirot\u0027s Egyptian vacation aboard a glamorous river steamer turns into a terrifying search for a murderer when a picture-perfect couple\u0027s idyllic honeymoon is tragically cut short.",
+    "tagline": "Murder was just the beginning.",
+    "runtime": 127,
+    "release_date": "2022-02-09",
+    "vote_average": 6.409,
+    "poster_path": "/kVr5zIAFSPRQ57Y1zE7KzmhzdMQ.jpg",
+    "backdrop_path": "/lRbDyjI7HEaXxflFQbYpqHRGFBJ.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 735384,
+      "name": "Hercule Poirot (Kenneth Branagh) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kenneth Branagh",
+      "character": "Hercule Poirot",
+      "profile_path": "/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
+    },
+    {
+      "name": "Tom Bateman",
+      "character": "Bouc",
+      "profile_path": "/6elQzmY4EJHlLvHsaeoeo2dXOQ1.jpg"
+    },
+    {
+      "name": "Annette Bening",
+      "character": "Euphemia Bouc",
+      "profile_path": "/kGslMAWcpv8MKzODhDRDkFE0uX7.jpg"
+    },
+    {
+      "name": "Russell Brand",
+      "character": "Windlesham",
+      "profile_path": "/AzRt43rdeK5nH7w6uWyyVwYla0.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 62213,
+    "title": "Dark Shadows",
+    "overview": "Vampire Barnabas Collins is inadvertently freed from his tomb and emerges into the very changed world of 1972. He returns to Collinwood Manor to find that his once-grand estate and family have fallen into ruin.",
+    "tagline": "Every family has its demons.",
+    "runtime": 113,
+    "release_date": "2012-05-09",
+    "vote_average": 6.107,
+    "poster_path": "/fd9Ck4cxVlmtXsbeGtQW7WFuUFI.jpg",
+    "backdrop_path": "/cJYerfZVf2rNwfGMK3MQ8lTbMnY.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Johnny Depp",
+      "character": "Barnabas Collins",
+      "profile_path": "/k2xt6EUxQDwYRKIyI4IBdZxfs8n.jpg"
+    },
+    {
+      "name": "Michelle Pfeiffer",
+      "character": "Elizabeth Collins Stoddard",
+      "profile_path": "/8qwNMFzmM3BxGKIj1iIqiHHBpx3.jpg"
+    },
+    {
+      "name": "Eva Green",
+      "character": "Angelique Bouchard",
+      "profile_path": "/vwjOWfUeDk5fQr8jraKlR1Yfxxq.jpg"
+    },
+    {
+      "name": "Helena Bonham Carter",
+      "character": "Dr. Julia Hoffman",
+      "profile_path": "/hJMbNSPJ2PCahsP3rNEU39C8GWU.jpg"
+    }
+  ]
+}

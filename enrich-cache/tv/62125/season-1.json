@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Family Reunion: Episode 1",
+        "overview": "Mari McCabe, an orphan young woman, is chased through the city exactly 3 days after she was bailed out of jail by her foster father. She squares off with The Flash and Arrow.",
+        "air_date": "2015-08-25",
+        "runtime": 4,
+        "still_path": "/5i2xmEvzEKPrWqIMzlGTGBN3iH8.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Family Reunion: Episode 2",
+        "overview": "Vixen hones her skills and learns about her past.",
+        "air_date": "2015-09-01",
+        "runtime": 6,
+        "still_path": "/6tmDL2aLgrkdmFFXvalDnrcegZJ.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Family Reunion: Episode 3",
+        "overview": "Vixen gets an unexpected house call from a couple of heroes.",
+        "air_date": "2015-09-08",
+        "runtime": 4,
+        "still_path": "/EAnbGQKzgXMg1HAiy4ObWnaGXa.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Family Reunion: Episode 4",
+        "overview": "Vixen pushes her abilities to the limit to escape The Flash and Arrow.",
+        "air_date": "2015-09-15",
+        "runtime": 6,
+        "still_path": "/sOkNPhwLrlllFv6bkHFSBl2J1jU.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Family Reunion: Episode 5",
+        "overview": "Mari McCabe discovers her past.",
+        "air_date": "2015-09-22",
+        "runtime": 7,
+        "still_path": "/pQ5PEW3yiSACkYEUpzhF9oz0kB.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Family Reunion: Episode 6",
+        "overview": "Mari embraces her destiny as Vixen.",
+        "air_date": "2015-09-29",
+        "runtime": 7,
+        "still_path": "/mRFY9gpX9ngx9F1ZaygHaH1HE33.jpg"
+      }
+    ]
+  }
+}

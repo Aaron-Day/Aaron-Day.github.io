@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Freshman",
+        "overview": "Buffy feels like a fish out of water in her first year at college, but the mysterious disappearance of a fellow student puts her back in her element.",
+        "air_date": "1999-10-05",
+        "runtime": 45,
+        "still_path": "/fQjH38AoYFuts4bLqCX1ep2Zl5f.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Living Conditions",
+        "overview": "Buffy finds herself at odds with her new roommate and is troubled by a series of disturbing dreams involving a soul-sucking demon.",
+        "air_date": "1999-10-12",
+        "runtime": 43,
+        "still_path": "/3WxkbbZINKt6WCRm9QaEi8vDfwC.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Harsh Light of Day",
+        "overview": "As Buffy gets to know a charming student named Parker, Spike searches obsessively for a possibly-mythical treasure.",
+        "air_date": "1999-10-19",
+        "runtime": 44,
+        "still_path": "/bZuebbRzEVV7snffPsOLnWgDHlY.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Fear, Itself",
+        "overview": "On Halloween, Buffy and her friends find themselves trapped inside a haunted frat house complete with real bats, zombies, and a terrifying demon.",
+        "air_date": "1999-10-26",
+        "runtime": 43,
+        "still_path": "/a75JZnKRZX5LTSs8bxzk2GJV6Sc.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Beer Bad",
+        "overview": "Xander finds employment as a bartender at a pub where some of Buffy\u0027s friends turn into terrifying Cro-Magnon creatures.",
+        "air_date": "1999-11-02",
+        "runtime": 44,
+        "still_path": "/cy282Kg6ecBDk9jTyjavkydPwJV.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Wild at Heart",
+        "overview": "When Oz falls hard for a sexy singer who also happens to be a werewolf, he must choose between Willow and his own animal instincts.",
+        "air_date": "1999-11-09",
+        "runtime": 44,
+        "still_path": "/ujO4SJu5V6YYtnBe4441H658TLL.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Initiative",
+        "overview": "Spike finds himself targeted by a group of commandos after he escapes from a military lab underneath the Sunnydale campus.",
+        "air_date": "1999-11-16",
+        "runtime": 45,
+        "still_path": "/jLaxNmVueJACgJx9t5r1x1U36i0.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Pangs",
+        "overview": "On Thanksgiving, Buffy encounters the spirit of a Native American warrior whose people were wiped out by settlers.",
+        "air_date": "1999-11-23",
+        "runtime": 45,
+        "still_path": "/aYLvBvOQSmKwl9FfspwG8Kn3VJZ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Something Blue",
+        "overview": "One of Willow\u0027s spells causes her statements to become reality, with consequences both entertaining and life-threatening.",
+        "air_date": "1999-11-30",
+        "runtime": 45,
+        "still_path": "/szE1l8QavgGapRqSAoxPcSHk6NC.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Hush",
+        "overview": "When everyone in Sunnydale loses their voice, the Scooby Gang must silently solve the mystery of the monsters who stole their ability to speak.",
+        "air_date": "1999-12-14",
+        "runtime": 45,
+        "still_path": "/1tBCCCMfUufE8lNjWn2rQU5A1V1.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Doomed",
+        "overview": "While attempting to redefine her relationship with Riley, Buffy must also stop demons that are determined to reopen the Hellmouth.",
+        "air_date": "2000-01-18",
+        "runtime": 45,
+        "still_path": "/tb4lBgc4TEonuN2zUzIqW7xnHHn.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "A New Man",
+        "overview": "Ethan Rayne returns to town and transforms Giles into a demon. Spike is the only one who can help.",
+        "air_date": "2000-01-25",
+        "runtime": 43,
+        "still_path": "/7acBLaZucNSkcjDcrOh5gZWZc6s.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The I in Team",
+        "overview": "Buffy teams with Riley after she is allowed access to the Initiative; Spike is targeted by commandos.",
+        "air_date": "2000-02-08",
+        "runtime": 43,
+        "still_path": "/31D6OfuzXX7Chw3unVs70myNfXL.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Goodbye Iowa",
+        "overview": "Tension erupts between Buffy and an ailing Riley as they pursue Professor Maggie Walsh\u0027s killer.",
+        "air_date": "2000-02-15",
+        "runtime": 43,
+        "still_path": "/yIFR9eBUFei7n1fnanS7qMlZCHu.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "This Year\u0027s Girl (1)",
+        "overview": "Faith awakens from her coma and seeks revenge against Buffy.",
+        "air_date": "2000-02-22",
+        "runtime": 43,
+        "still_path": "/2omrOjkV70i2H91t2lJR5Cq5vkO.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Who Are You? (2)",
+        "overview": "Having switched bodies with Buffy, Faith enjoys freedom. Meanwhile, Buffy finds herself at the mercy of the Watcher\u0027s Council.",
+        "air_date": "2000-02-29",
+        "runtime": 43,
+        "still_path": "/wytKtOJwUo4gFbgDJEYwA8LOgFR.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Superstar",
+        "overview": "Buffy senses that something is amiss when Jonathan becomes a hero to everyone in Sunnydale.",
+        "air_date": "2000-04-04",
+        "runtime": 43,
+        "still_path": "/xx7qvkIFPDt71veDTRp6NTgpDpW.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Where the Wild Things Are",
+        "overview": "Buffy and Riley\u0027s passionate lovemaking energizes supernatural elements inside a frat house.",
+        "air_date": "2000-04-25",
+        "runtime": 43,
+        "still_path": "/ggdRogAZIV4GjT1i9y5Wpy8w0rL.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "New Moon Rising",
+        "overview": "Oz\u0027s return to Sunnydale leads to his incarceration by the Initiative and complicates the relationship between Willow and Tara.",
+        "air_date": "2000-05-02",
+        "runtime": 43,
+        "still_path": "/hnBzxkT3HIQFT2sK9LoRKtYuljq.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Yoko Factor (1)",
+        "overview": "After joining forces with Adam, Spike drives a wedge between Buffy and her friends. Meanwhile, Angel\u0027s return to Sunnydale leads to a violent confrontation with Riley.",
+        "air_date": "2000-05-09",
+        "runtime": 43,
+        "still_path": "/k7TRAKEZkHCs3qODR1zxB7rrRkn.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Primeval (2)",
+        "overview": "Having gained control of Riley\u0027s mind, Adam sets in motion his plot to create an army of unstoppable soldiers and destroy the Initiative.",
+        "air_date": "2000-05-16",
+        "runtime": 43,
+        "still_path": "/rEeMeY33ffWQibhJTgMuF7V4yns.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Restless",
+        "overview": "Buffy, Willow, Xander, and Giles experience dreams in which they are pursued by a mysterious figure.",
+        "air_date": "2000-05-23",
+        "runtime": 43,
+        "still_path": "/xN6rLfDR7ATzRkXoAlMWSviRMTP.jpg"
+      }
+    ]
+  }
+}

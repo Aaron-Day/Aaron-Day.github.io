@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1949,
+    "title": "Zodiac",
+    "overview": "Police conduct a manhunt for the Zodiac Killer, a serial killer who terrorized the San Francisco Bay Area during the late 1960s and early 1970s, taunting police with letters, bloodstained clothing, and ciphers mailed to newspapers.",
+    "tagline": "There\u0027s more than one way to lose your life to a killer.",
+    "runtime": 157,
+    "release_date": "2007-03-02",
+    "vote_average": 7.534,
+    "poster_path": "/6YmeO4pB7XTh8P8F960O1uA14JO.jpg",
+    "backdrop_path": "/3zCPI4JFc54xvLaJ71oI2KoP3az.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jake Gyllenhaal",
+      "character": "Robert Graysmith",
+      "profile_path": "/ct2Gh2sJSxd4yaMrSsqSt1HpIC3.jpg"
+    },
+    {
+      "name": "Mark Ruffalo",
+      "character": "David Toschi",
+      "profile_path": "/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg"
+    },
+    {
+      "name": "Anthony Edwards",
+      "character": "William Armstrong",
+      "profile_path": "/rP88gP87pa3je6Viem3081tESIV.jpg"
+    },
+    {
+      "name": "Robert Downey Jr.",
+      "character": "Paul Avery",
+      "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+    }
+  ]
+}

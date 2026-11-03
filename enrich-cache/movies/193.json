@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 193,
+    "title": "Star Trek: Generations",
+    "overview": "Captain Jean-Luc Picard and the crew of the Enterprise-D find themselves at odds with the renegade scientist Soran who is destroying entire star systems. Only one man can help Picard stop Soran\u0027s scheme...and he\u0027s been dead for seventy-eight years.",
+    "tagline": "Two captains. One destiny.",
+    "runtime": 118,
+    "release_date": "1994-11-18",
+    "vote_average": 6.526,
+    "poster_path": "/wqU1XiJgvgJVrFCWjZEqat3icMT.jpg",
+    "backdrop_path": "/mNdsbVuRdsyo8eitW2IBW2BWRkU.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 115570,
+      "name": "Star Trek: The Next Generation Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Patrick Stewart",
+      "character": "Captain Jean-Luc Picard",
+      "profile_path": "/ufqtnLh3JJjPbEgxEag3MM5nZyv.jpg"
+    },
+    {
+      "name": "Jonathan Frakes",
+      "character": "Commander William T. Riker",
+      "profile_path": "/b1C2FQzQPp4GsY0mGMxfvZCsKam.jpg"
+    },
+    {
+      "name": "Brent Spiner",
+      "character": "Lt. Commander Data",
+      "profile_path": "/wHaOTfxOEKOPssDYaSSB5zenml4.jpg"
+    },
+    {
+      "name": "LeVar Burton",
+      "character": "Lt. Commander Geordi La Forge",
+      "profile_path": "/tC74tISKpFGmJkrw24MMLix5nNa.jpg"
+    }
+  ]
+}

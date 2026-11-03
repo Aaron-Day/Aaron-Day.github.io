@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1824,
+    "title": "50 First Dates",
+    "overview": "Henry is a player skilled at seducing women. But when this veterinarian meets Lucy, a girl with a quirky problem when it comes to total recall, he realizes it\u0027s possible to fall in love all over again\u2026and again, and again. That\u0027s because the delightful Lucy has no short-term memory, so Henry must woo her day after day until he finally sweeps her off her feet.",
+    "tagline": "Imagine having to win over the girl of your dreams... every friggin\u0027 day.",
+    "runtime": 99,
+    "release_date": "2004-02-13",
+    "vote_average": 6.883,
+    "poster_path": "/lzUI2Cg7OMfcUNv3f7MywYNBjs6.jpg",
+    "backdrop_path": "/v8lPo8UWKyP2tIXD8N64HfNP4Pw.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Henry Roth",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Drew Barrymore",
+      "character": "Lucy Whitmore",
+      "profile_path": "/8qvMFslwrC3w1OwJYqE3mHPvffr.jpg"
+    },
+    {
+      "name": "Rob Schneider",
+      "character": "Ula",
+      "profile_path": "/nGHHon86e0rxVV1GVMRuKheqf6L.jpg"
+    },
+    {
+      "name": "Sean Astin",
+      "character": "Doug Whitmore",
+      "profile_path": "/As3ctGUtBYmG4zj4Ifyrcqd71HP.jpg"
+    }
+  ]
+}

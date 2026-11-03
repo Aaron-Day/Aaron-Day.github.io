@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 400155,
+    "title": "Hotel Transylvania 3: Summer Vacation",
+    "overview": "Dracula, Mavis, Johnny and the rest of the Drac Pack take a vacation on a luxury Monster Cruise Ship, where Dracula falls in love with the ship\u2019s captain, Ericka, who\u2019s secretly a descendant of Abraham Van Helsing, the notorious monster slayer.",
+    "tagline": "He\u0027s going to need a vacation after this vacation.",
+    "runtime": 97,
+    "release_date": "2018-06-28",
+    "vote_average": 6.842,
+    "poster_path": "/lzE5BwGQea1nek7TPXUuC5AZ6rq.jpg",
+    "backdrop_path": "/gvUYIHWzq7r3KuzAaKvly2h0SjM.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 185103,
+      "name": "Hotel Transylvania Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Dracula (voice)",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Kathryn Hahn",
+      "character": "Ericka (voice)",
+      "profile_path": "/9sVllAKfEls3SJD3GoPm2JEZoa5.jpg"
+    },
+    {
+      "name": "Selena Gomez",
+      "character": "Mavis (voice)",
+      "profile_path": "/fLjGtchxniZtAxnZsFzDn2lsWmY.jpg"
+    },
+    {
+      "name": "Jim Gaffigan",
+      "character": "Van Helsing (voice)",
+      "profile_path": "/dhguhHxIrb26jvPznBt8y25Fb2U.jpg"
+    }
+  ]
+}

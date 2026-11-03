@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Old Wounds",
+        "overview": "It\u0027s 2417, and the Planetary Union promotes Ed Mercer to Captain of the exploratory vessel The U.S.S. Orville. Ed\u0027s enthusiasm for his new position is dampened when his ex-wife, Kelly Grayson, is assigned to be his First Officer. While on their first routine mission, the Orville crew is ambushed by the Krill, a vicious alien race, who are bent on stealing a device that can cause time to accelerate.",
+        "air_date": "2017-09-10",
+        "runtime": 45,
+        "still_path": "/qILXQtrmHVDTUzrEm6b7UWdA8Ig.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Command Performance",
+        "overview": "When Ed and Kelly are tricked by a hologram of a ship in distress and find themselves prisoners in a replica of their former home, Alara must step up in her first command of the Orville and attempt a heroic rescue. Meanwhile, Bortus and Klyden receive some happy, yet unexpected news.",
+        "air_date": "2017-09-17",
+        "runtime": 44,
+        "still_path": "/nZ5Xuz47Cog4VZ5NYhJfybLXyii.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "About a Girl",
+        "overview": "The Orville crew is divided between cultures when Bortus and Klyden debate if their newly born offspring should receive a controversial surgery.",
+        "air_date": "2017-09-21",
+        "runtime": 44,
+        "still_path": "/5asQV8b5zCaSNK90UZvCeJICv3M.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "If the Stars Should Appear",
+        "overview": "Ed and the Orville crew encounter a massive vessel adrift in space, which is in danger of colliding with a star. While some of the crew set out to help the ship\u0027s inhabitants, Bortus, Gordon, and John stay behind and fend off a Krill attack on another Union ship",
+        "air_date": "2017-09-28",
+        "runtime": 43,
+        "still_path": "/hdCeCrNByCX0EfJRNOn0pIQDrjZ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Pria",
+        "overview": "After the crew saves a stranded ship and its attractive captain, Ed becomes smitten with the Orville\u2019s new guest, while Kelly suspects all is not what it seems. Meanwhile, Gordon attempts to teach Isaac the art of pulling off a practical joke.",
+        "air_date": "2017-10-05",
+        "runtime": 44,
+        "still_path": "/q8Xsl2FBs8DzbjCywydDm3TUssq.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Krill",
+        "overview": "After the Orville crew defeats a Krill attack on a brand-new colony, the Union sends Ed and Gordon on a dangerous undercover mission to infiltrate a Krill ship and obtain a copy of the Krill bible, the \u0022Anhkana,\u0022 to better understand the enemy.",
+        "air_date": "2017-10-12",
+        "runtime": 44,
+        "still_path": "/s6zPCOk0jvItzX7mWMJSiC4BETu.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Majority Rule",
+        "overview": "When two Union anthropologists go missing on a planet similar to 21st century Earth, Ed sends a team led by Kelly to find them, but the mission quickly goes awry when they realize the society\u2019s government is completely based on a public voting system to determine punishment.",
+        "air_date": "2017-10-26",
+        "runtime": 44,
+        "still_path": "/e2ypuZNmiuFqpdQsXrRfi7Q3lbQ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Into the Fold",
+        "overview": "Ed and the crew set out to save Dr. Finn, her two sons and Isaac after their shuttle gets thrown into uncharted space and they crash-land on a moon that is light years from the Orville.",
+        "air_date": "2017-11-02",
+        "runtime": 44,
+        "still_path": "/1TDBeI7OZOuihFYPfaCIL1QwgcW.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Cupid\u0027s Dagger",
+        "overview": "The Orville is called to mediate a peace treaty between two warring cultures, but tensions run even higher between Ed and Kelly when a familiar face boards the ship. Meanwhile Yaphit declares his love for Dr. Finn with surprising results.",
+        "air_date": "2017-11-09",
+        "runtime": 44,
+        "still_path": "/8vpHQYCYBDRNegCeKDbJKnIAtB7.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Firestorm",
+        "overview": "When a fire breaks out on The Orville and a crew member dies, Alara begins to question if she is fit for her job, just as unusual and terrifying things start happening on the ship.",
+        "air_date": "2017-11-16",
+        "runtime": 43,
+        "still_path": "/emAk47b9FIGS3UqJoDhkqZ6DcPs.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "New Dimensions",
+        "overview": "Kelly discovers that Lt. John Lamarr is smarter than he lets on. So, she pushes Ed to consider him for a key leadership position on the ship after The Orville gets damaged by a mysterious spatial anomaly causing harrowing effects to all things living.",
+        "air_date": "2017-11-30",
+        "runtime": 44,
+        "still_path": "/1keja0nI5MM1QdULSLI5vTOiYq.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Mad Idolatry",
+        "overview": "Ed and Kelly consider the possibility of reforging their relationship, but Kelly soon crash-lands on a planet in another universe with Isaac and Gordon.",
+        "air_date": "2017-12-07",
+        "runtime": 44,
+        "still_path": "/6F52TF09EnS5v5fOiV3WHlCbvD6.jpg"
+      }
+    ]
+  }
+}

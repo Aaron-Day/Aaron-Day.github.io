@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1642,
+    "title": "The Net",
+    "overview": "Angela Bennett is a freelance computer systems analyst who tracks down software viruses. At night, she hooks up to the internet and chats to others \u0027surfing the net\u0027. While de-bugging a new high-tech game for a cyber friend, she comes across a top secret program and becomes the target of a mysterious organization, who will stop at nothing to erase her identity and her existence in order to protect the project.",
+    "tagline": "Her driver\u0027s license. Her credit cards. Her bank accounts. Her identity. DELETED.",
+    "runtime": 114,
+    "release_date": "1995-07-28",
+    "vote_average": 6.058,
+    "poster_path": "/dtupntUFMD5iXBo8HLfALt2ET4R.jpg",
+    "backdrop_path": "/dDE6EIaFsPFJPLXHG1ghuPQc7ST.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 328073,
+      "name": "The Net Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sandra Bullock",
+      "character": "Angela Bennett",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "Jeremy Northam",
+      "character": "Jack Devlin",
+      "profile_path": "/lnvV2sEAl1oUkUuUEr51UjxIuRr.jpg"
+    },
+    {
+      "name": "Dennis Miller",
+      "character": "Alan Champion",
+      "profile_path": "/AdO5Dm8xyuYvXIQEuzpBi6nG9QF.jpg"
+    },
+    {
+      "name": "Diane Baker",
+      "character": "Mrs. Bennett",
+      "profile_path": "/doyBqSMhFzf4XJgOQJxJCYe5n54.jpg"
+    }
+  ]
+}

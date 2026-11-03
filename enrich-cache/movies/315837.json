@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 315837,
+    "title": "Ghost in the Shell",
+    "overview": "In the near future, Major is the first of her kind: a human saved from a terrible crash, then cyber-enhanced to be a perfect soldier devoted to stopping the world\u0027s most dangerous criminals.",
+    "tagline": "There\u0027s nothing sadder than a puppet without a ghost.",
+    "runtime": 107,
+    "release_date": "2017-03-29",
+    "vote_average": 6.118,
+    "poster_path": "/zCtL3UBgCoZzd7XTVGhvl6XY75E.jpg",
+    "backdrop_path": "/dDVqfmCzSy3TKSmiS2pJ9QB5E3P.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Scarlett Johansson",
+      "character": "Major Mira Killian / Motoko Kusanagi",
+      "profile_path": "/mjReG6rR7NPMEIWb1T4YWtV11ty.jpg"
+    },
+    {
+      "name": "Takeshi Kitano",
+      "character": "Aramaki",
+      "profile_path": "/6pnXXkCx8wkCHvOrcWjaY58KA7k.jpg"
+    },
+    {
+      "name": "Pilou Asb\u00E6k",
+      "character": "Batou",
+      "profile_path": "/hUJAtjbYG7rqm54aoWtNWeeKjTY.jpg"
+    },
+    {
+      "name": "Michael Pitt",
+      "character": "Kuze",
+      "profile_path": "/mKSjyfqcXTVjFhIFw6Esjlz1Tps.jpg"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Exodus",
+        "overview": "Holden tries to convince Fred Johnson to destroy the last sample of protomolecule. Naomi gets an important lead to her son. On Luna, Avasarala begins to hunt for Marco Inaros.",
+        "air_date": "2020-12-16",
+        "runtime": 53,
+        "still_path": "/1QuHHmcPUsl0pPsqesVQN68f8VU.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Churn",
+        "overview": "Holden and Fred deal with infiltrators on Tycho. Drummer\u0027s past comes back to haunt her. Amos returns to Baltimore. Alex and Bobbie\u0027s investigation on Mars leads to rogue soldiers.",
+        "air_date": "2020-12-16",
+        "runtime": 54,
+        "still_path": "/jlp5fXHpHqkqzFrjQGwzNzJwdwQ.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Mother",
+        "overview": "Naomi comes face to face with Filip. Holden and Fred turn the tables. Avasarala closes in on Marco\u0027s plot.",
+        "air_date": "2020-12-16",
+        "runtime": 53,
+        "still_path": "/4ZX9LYNKgo8HWjVMOXfYCazieLr.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Gaugamela",
+        "overview": "Marco\u0027s grand plan shocks Earth, Mars and the Belt.",
+        "air_date": "2020-12-23",
+        "runtime": 47,
+        "still_path": "/xzFAPvoqQ5FJDUxHEsK58FpitXB.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Down and Out",
+        "overview": "Amos and Clarissa are trapped in a collapsed building. Naomi contends with her old family. Holden assembles a new crew on the Roci. Alex and Bobbie make a dangerous discovery in the Belt.",
+        "air_date": "2020-12-30",
+        "runtime": 50,
+        "still_path": "/pE9KN9NrSseAkyyY2kUoLhL2xj9.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Tribes",
+        "overview": "Holden and the Roci go on the hunt. Amos and Clarissa seek shelter on a devastated Earth. Bobbie and Alex fight a desperate battle. Marco makes Drummer an offer she can\u0027t refuse. Avasarala returns to a position of power.",
+        "air_date": "2021-01-06",
+        "runtime": 53,
+        "still_path": "/1481Rcqal4A0livQ442QUnhySww.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Oyedeng",
+        "overview": "Naomi makes a desperate attempt to save her son from Marco. On the Roci, Holden battles for the last sample of protomolecule.",
+        "air_date": "2021-01-13",
+        "runtime": 49,
+        "still_path": "/u1IUqcbbO19bVjxz8CVQ58rO3HF.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Hard Vacuum",
+        "overview": "Amos returns to Baltimore with Clarissa. On Luna, Avasarala\u0027s alliances begin to shift. Alone and adrift, Naomi becomes a deadly lure.",
+        "air_date": "2021-01-20",
+        "runtime": 55,
+        "still_path": "/fZQN787eGIDVdacRQ7ZzLVy43T9.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Winnipesaukee",
+        "overview": "Amos, Clarissa, and a gang of thieves work together to leave Earth. Avasarala tries to head off a brutal military strike. Drummer\u0027s new family bonds are tested as Naomi\u0027s life hangs in the balance.",
+        "air_date": "2021-01-27",
+        "runtime": 53,
+        "still_path": "/7FEzJvWQ8ZKdl98B8UyC0J65Dnb.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Nemesis Games",
+        "overview": "Holden and the Roci face off against Marco\u0027s forces and Drummer, while Alex and Bobbie attempt a dangerous rescue of Naomi, and the balance of power in the Solar System shifts.",
+        "air_date": "2021-02-03",
+        "runtime": 58,
+        "still_path": "/jpVmMnaGZMwjDHxvYMZV0srljmd.jpg"
+      }
+    ]
+  }
+}

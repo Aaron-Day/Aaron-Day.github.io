@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 82675,
+    "title": "Taken 2",
+    "overview": "In Istanbul, retired CIA operative Bryan Mills and his wife are taken hostage by the father of a kidnapper Mills killed while rescuing his daughter.",
+    "tagline": "First they took his daughter. Now they\u0027re coming for him.",
+    "runtime": 91,
+    "release_date": "2012-09-27",
+    "vote_average": 6.371,
+    "poster_path": "/yzAlcuJhpnxRPjaj7AHBRbNPQCJ.jpg",
+    "backdrop_path": "/5M92Rtz6r01HLrN0TMrU8jCbyVm.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 135483,
+      "name": "Taken Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Liam Neeson",
+      "character": "Bryan Mills",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Maggie Grace",
+      "character": "Kim Mills",
+      "profile_path": "/fEZSGno4ooPgFjuGzE7ogsWEHsh.jpg"
+    },
+    {
+      "name": "Famke Janssen",
+      "character": "Lenore St. John",
+      "profile_path": "/uvZGwNsLqe9NyA57Qlt46IkO8Bd.jpg"
+    },
+    {
+      "name": "Leland Orser",
+      "character": "Sam Gilroy",
+      "profile_path": "/vvVcWhActW8k2gQz95UatVP4Duf.jpg"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "Detective James Gordon performs his work in the dangerously corrupt city of Gotham, which consistently teeters between good and evil.",
+        "air_date": "2014-09-22",
+        "runtime": 51,
+        "still_path": "/yQKuW0jqdVy5ENGlvcKsB82IWwY.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Selina Kyle",
+        "overview": "Detectives Gordon and Bullock investigate a child trafficking ring preying on Gotham\u0027s street kids, including Selina Kyle. Meanwhile, Penguin resurfaces in the countryside and begins to make his way back to Gotham.",
+        "air_date": "2014-09-29",
+        "runtime": 44,
+        "still_path": "/aNr0SSWvVYOsZWfkgB8XGKjzlJv.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Balloonman",
+        "overview": "Gordon and Bullock track down a vigilante who uses weather balloons to kill corrupt citizens; Cobblepot gets a job close to a major figure in the underworld.",
+        "air_date": "2014-10-06",
+        "runtime": 44,
+        "still_path": "/dXMWKaQlIcFibGMUGIzPj7Io7hn.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Arkham",
+        "overview": "As a contentious city council vote on the future of the Arkham district approaches, politicians from both sides are in danger. Gordon and Bullock must race to protect the council and an old friend visits Gordon.",
+        "air_date": "2014-10-13",
+        "runtime": 45,
+        "still_path": "/aGfFxQsw8fjGzG3kuMXLBvWvMrI.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Viper",
+        "overview": "Gordon and Bullock search for the source of a new street drug that causes euphoria then death. Oswald Cobblepot works his way deeper into Maroni\u0027s inner circle. Fish Mooney continues to plot against Falcone.",
+        "air_date": "2014-10-20",
+        "runtime": 45,
+        "still_path": "/4a77nHzrTD57leSW549e08RBLpi.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Spirit of the Goat",
+        "overview": "When a killer begins targeting the first born of Gotham\u0027s elite, Bullock is forced to confront traumatic memories from a nearly identical case he worked in the past. Gordon is confronted by past decisions.",
+        "air_date": "2014-10-27",
+        "runtime": 44,
+        "still_path": "/w9FCVBhMbmfbJXeyjPUrxkyOJ68.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Penguin\u0027s Umbrella",
+        "overview": "As violence between Maroni and Falcone continues to escalate, Penguin reveals a new element of his manipulative strategy, forcing Gordon to deal with the consequences of his decision to spare Penguin\u2019s life",
+        "air_date": "2014-11-03",
+        "runtime": 45,
+        "still_path": "/nBGkjkDdmve7jGQYVOnrxk3Pq5K.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Mask",
+        "overview": "Gordon and Bullock investigate a Gothamite who runs a deadly fight club for candidates applying to work at his financial firm. Bruce returns to school and gets a visit from a new friend.",
+        "air_date": "2014-11-10",
+        "runtime": 45,
+        "still_path": "/soQZpvY4alB84VKhqUmKyCyS0vv.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Harvey Dent",
+        "overview": "Trying to close the Wayne murder case, a young Harvey Dent and Gordon team up, much to Mayor James\u2019 chagrin. Meanwhile, Penguin makes contact with Mooney\u2019s secret weapon, Liza.",
+        "air_date": "2014-11-17",
+        "runtime": 44,
+        "still_path": "/lnHZjZ9zZP4Xj79i2yEebdOpzGk.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Lovecraft",
+        "overview": "Following a misstep, Gordon is reassigned to duty at Arkham Asylum. Meanwhile, Selina leads a new friend on a perilous journey through Gotham to evade the assassins after her.",
+        "air_date": "2014-11-24",
+        "runtime": 44,
+        "still_path": "/xPhv1UOnPVYMjFrNxfxE4Ezko75.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Rogues\u0027 Gallery",
+        "overview": "Gordon\u2019s assignment at Arkham Asylum gets off to a rocky start when the murder of a guard ignites an investigation, leading him to meet Dr. Leslie Thompkins. Cobblepot continues to build his army.",
+        "air_date": "2015-01-05",
+        "runtime": 45,
+        "still_path": "/tBwLH1LfjP0IeseTJ3xC3NMZCcX.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "What the Little Bird Told Him",
+        "overview": "In an attempt to get his job back, Gordon seeks to capture Jack Gruber, a deranged electrical genius who escapes Arkham Asylum. Meanwhile, Falcone struggles to hold onto his empire after Fish Mooney makes her next move.",
+        "air_date": "2015-01-19",
+        "runtime": 45,
+        "still_path": "/rBZYi9LNTUkALQ7HTvqa6bgZwwH.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Welcome Back, Jim Gordon",
+        "overview": "When the key witness in a homicide ends up dead while being held for questioning by the police, Gordon suspects that it\u2019s an inside job and looks to an old friend for information. Meanwhile, Oswald Cobblepot takes control of one of Fish Mooney\u2019s prized possessions, as she gets a gets a small taste of her own medicine.",
+        "air_date": "2015-01-26",
+        "runtime": 45,
+        "still_path": "/20kdH7IfYw9oHujYbvwqoXNyDHq.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Fearsome Dr. Crane",
+        "overview": "Fish Mooney reveals a secret of Oswald Cobblepot\u0027s, prompting Maroni to take him on a trip to test his loyalty. Meanwhile, Gordon and Bullock hunt down a killer who targets victims with severe phobias and Bruce Wayne confronts Gordon for failing to make progress on his parents\u0027 murder case.",
+        "air_date": "2015-02-02",
+        "runtime": 45,
+        "still_path": "/iydo65SG7UUAglMryXLws41jibT.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Scarecrow",
+        "overview": "Gordon and Bullock set out to stop Gerald Crane, a biology teacher who has been harvesting the glands of his murder victims. Meanwhile, after finding herself in an unusual setting, Mooney continues plotting to gain power, and Falcone attempts to change Maroni\u0027s plan for the Penguin.",
+        "air_date": "2015-02-09",
+        "runtime": 44,
+        "still_path": "/fvP8ukS6GU8GY2NJxZPsBEm29n5.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Blind Fortune Teller",
+        "overview": "Gordon takes Dr. Leslie Thompkins to the circus, but the day turns quickly when the circus comes under attack. Then, Falcone enlists Butch Gilzean to help Penguin with the nightclub, while Fish Mooney is otherwise occupied. Also, Bruce Wayne schedules a meeting with the Wayne Enterprises board.",
+        "air_date": "2015-02-16",
+        "runtime": 45,
+        "still_path": "/7zRBAwaXmmSNT6lYkLz3XjOCD9H.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Red Hood",
+        "overview": "Following several bank robberies, Gordon and Bullock investigate the Red Hood gang. Selina Kyle continues to bond with Barbara, and Fish Mooney tries to reclaim her position in the underworld.",
+        "air_date": "2015-02-23",
+        "runtime": 45,
+        "still_path": "/gyDPSymw0x1rBgfjcgF4Ow5RKsP.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Everyone Has a Cobblepot",
+        "overview": "Gordon seeks information about the controversy involving Loeb; Fish\u0027s allegiance with the prisoners is questioned; and Bruce copes with the aftermath of an attack close to home.",
+        "air_date": "2015-03-02",
+        "runtime": 44,
+        "still_path": "/9wJMNhbbdmXjW19JtEWDxEUf1KY.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Beasts of Prey",
+        "overview": "Gordon and Bullock inspect a cold case involving \u0022the Ogre\u0022, a serial killer who targets young women in Gotham City. Meanwhile, Fish plots her escape from the Dollmaker, and Bruce and Selina confront Reggie.",
+        "air_date": "2015-04-13",
+        "runtime": 43,
+        "still_path": "/xhmdj5OopDxNVkXAw91HIxncGB0.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Under the Knife",
+        "overview": "Gordon and Bullock continue their investigation of the Ogre, who begins to make his move on someone close to Gordon. Meanwhile, Bruce and Selina team up to expose a corrupt Wayne Enterprises employee and Nygma comes to Kristin Kringle\u2019s defense.",
+        "air_date": "2015-04-20",
+        "runtime": 44,
+        "still_path": "/ifxOv0w2nORja6n2ypMNcYOIS4A.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Anvil or the Hammer",
+        "overview": "The Ogre breaks down Barbara\u2019s emotions, while Gordon and Bullock go to great lengths to track him down. Meanwhile, Penguin leads a massacre, beginning an epic war, while Bruce learns the truth about Wayne Enterprises and Nygma deals with his recent actions.",
+        "air_date": "2015-04-27",
+        "runtime": 45,
+        "still_path": "/tM8zixSVsT9wyy03nnm5Sh9KUJv.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "All Happy Families Are Alike",
+        "overview": "As Gotham City\u2019s gang war reaches its boiling point, Fish Mooney goes head-to-head with Maroni and Penguin in an attempt to re-stake her claim on the city. Meanwhile, Barbara and Leslie Thompkins are brought together after recent events, and Bruce searches Wayne Manor for any hints that his father might have left behind.",
+        "air_date": "2015-05-04",
+        "runtime": 45,
+        "still_path": "/8LQ3EodJDoZzMp3LgP1GOcdsV5x.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10693,
+    "title": "Peter Pan",
+    "overview": "Leaving the safety of their nursery behind, Wendy, Michael and John follow Peter Pan to a magical world where childhood lasts forever. But while in Neverland, the kids must face Captain Hook and foil his attempts to get rid of Peter for good.",
+    "tagline": "It will live in your heart forever!",
+    "runtime": 77,
+    "release_date": "1953-02-05",
+    "vote_average": 7.188,
+    "poster_path": "/fJJOs1iyrhKfZceANxoPxPwNGF1.jpg",
+    "backdrop_path": "/vwcfvPzYO3Gz975yRXp6DYSSbzo.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 55422,
+      "name": "Peter Pan Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bobby Driscoll",
+      "character": "Peter Pan (voice)",
+      "profile_path": "/9eLGaM1C4pAfTODHlHupHmEVCX3.jpg"
+    },
+    {
+      "name": "Kathryn Beaumont",
+      "character": "Wendy Darling (voice)",
+      "profile_path": "/dHQ51n2i2vjdt4bdgAYXWvJQips.jpg"
+    },
+    {
+      "name": "Hans Conried",
+      "character": "Captain Hook / Mr. Darling (voice)",
+      "profile_path": "/rftuT9tTEqVoEDqqJZEQicnXHVH.jpg"
+    },
+    {
+      "name": "Bill Thompson",
+      "character": "Mr. Smee (voice)",
+      "profile_path": "/4l8jV6jZ9k06B62MH1rdtCho3Ag.jpg"
+    }
+  ]
+}

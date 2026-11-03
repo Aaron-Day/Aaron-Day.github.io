@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 621,
+    "title": "Grease",
+    "overview": "Australian good girl Sandy and greaser Danny fell in love over the summer. But when they unexpectedly discover they\u0027re now in the same high school, will they be able to rekindle their romance despite their eccentric friends?",
+    "tagline": "Grease is the word.",
+    "runtime": 110,
+    "release_date": "1978-06-16",
+    "vote_average": 7.363,
+    "poster_path": "/2rM7fQKpb7cs1Iq7IBqub9LFDzJ.jpg",
+    "backdrop_path": "/2SRJMIoJzABzgyGw01U6VbQbvJD.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86083,
+      "name": "Grease Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Olivia Newton-John",
+      "character": "Sandy",
+      "profile_path": "/pPgHm4ToBirjWcuOTrEMxS82stP.jpg"
+    },
+    {
+      "name": "John Travolta",
+      "character": "Danny",
+      "profile_path": "/ap8eEYfBKTLixmVVpRlq4NslDD5.jpg"
+    },
+    {
+      "name": "Stockard Channing",
+      "character": "Rizzo",
+      "profile_path": "/fsk0HkOVKtdcbHfsc99bQvMJep3.jpg"
+    },
+    {
+      "name": "Jeff Conaway",
+      "character": "Kenickie",
+      "profile_path": "/wsgupkvJSLM1bOCOXGRtgyPtgAh.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1892,
+    "title": "Return of the Jedi",
+    "overview": "Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, the Emperor prepares to crush the Rebellion with a more powerful Death Star, and the Rebel fleet mounts a massive attack on the space station. Luke Skywalker confronts Darth Vader in a final climactic duel before the evil Emperor.",
+    "tagline": "Return to a galaxy far far away.",
+    "runtime": 132,
+    "release_date": "1983-05-25",
+    "vote_average": 7.912,
+    "poster_path": "/jQYlydvHm3kUix1f8prMucrplhm.jpg",
+    "backdrop_path": "/ziECpBRIyclmBNaFSWlvCfsKbMD.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10,
+      "name": "Star Wars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mark Hamill",
+      "character": "Luke Skywalker",
+      "profile_path": "/zMQ93JTLW8KxusKhOlHFZhih3YQ.jpg"
+    },
+    {
+      "name": "Harrison Ford",
+      "character": "Han Solo",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Carrie Fisher",
+      "character": "Princess Leia",
+      "profile_path": "/of4yHmryKPy92eeskUQ7MRmjC3l.jpg"
+    },
+    {
+      "name": "Billy Dee Williams",
+      "character": "Lando Calrissian",
+      "profile_path": "/AwFFWuXJbGCXb0cA5uZvCNtg68H.jpg"
+    }
+  ]
+}

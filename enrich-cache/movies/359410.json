@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 359410,
+    "title": "Road House",
+    "overview": "Ex-UFC fighter Dalton takes a job as a bouncer at a Florida Keys roadhouse, only to discover that this paradise is not all it seems.",
+    "tagline": "Take it outside.",
+    "runtime": 121,
+    "release_date": "2024-03-08",
+    "vote_average": 6.9,
+    "poster_path": "/fDEdtS4P0gJsxHDIt8dG8TR5dx1.jpg",
+    "backdrop_path": "/clFFCapyGpE7KD4Jsu5pUbFBZF4.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1290597,
+      "name": "Road House (Remake) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jake Gyllenhaal",
+      "character": "Dalton",
+      "profile_path": "/ct2Gh2sJSxd4yaMrSsqSt1HpIC3.jpg"
+    },
+    {
+      "name": "Conor McGregor",
+      "character": "Knox",
+      "profile_path": "/cDuLU8HyMzKo0UyGrQ6sJQPLN4t.jpg"
+    },
+    {
+      "name": "Billy Magnussen",
+      "character": "Ben Brandt",
+      "profile_path": "/ugyx7Wn2uAWsNlR5eX4yWFsGV2Y.jpg"
+    },
+    {
+      "name": "Travis Van Winkle",
+      "character": "Dex",
+      "profile_path": "/o4WW1KYWKF2oVxUc22fYeDr6ZhZ.jpg"
+    }
+  ]
+}

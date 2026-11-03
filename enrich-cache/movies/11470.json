@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11470,
+    "title": "Jason X",
+    "overview": "In the year 2455, Old Earth is now a contaminated planet abandoned for centuries -- a brown world of violent storms, toxic landmasses and poisonous seas. Yet humans have returned to the deadly place that they once fled, not to live, but to research the ancient, rusting artifacts of the long-gone civilizations. But it\u0027s not the harmful environment that could prove fatal to the intrepid, young explorers who have just landed on Old Earth. For them, it\u0027s Friday the 13th, and Jason lives!",
+    "tagline": "Evil gets an upgrade.",
+    "runtime": 91,
+    "release_date": "2001-11-09",
+    "vote_average": 4.872,
+    "poster_path": "/ggOND0hfoE0f3K857joSzEeIchb.jpg",
+    "backdrop_path": "/fR5Hkf4OH6aLExl2qP2ucMV2Xdt.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9735,
+      "name": "Friday the 13th Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Lexa Doig",
+      "character": "Rowan",
+      "profile_path": "/yMQ5Cr5W7CsATDqiDlw5zFFkIBI.jpg"
+    },
+    {
+      "name": "Lisa Ryder",
+      "character": "Kay-Em 14",
+      "profile_path": "/trvgfnULUcQiSQKJWi31csZgNl6.jpg"
+    },
+    {
+      "name": "Chuck Campbell",
+      "character": "Tsunaron",
+      "profile_path": "/vLDW9j4LIIgbHwUpWSzCqy5lNY6.jpg"
+    },
+    {
+      "name": "Jonathan Potts",
+      "character": "Professor Lowe",
+      "profile_path": "/wQgtJsdFJI7FNYiRPlfYx9Y4zeB.jpg"
+    }
+  ]
+}

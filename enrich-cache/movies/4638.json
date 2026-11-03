@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4638,
+    "title": "Hot Fuzz",
+    "overview": "Former London constable Nicholas Angel finds it difficult to adapt to his new assignment in the sleepy British village of Sandford. Not only does he miss the excitement of the big city, but he also has a well-meaning oaf for a partner. However, when a series of grisly accidents rocks Sandford, Angel smells something rotten in the idyllic village.",
+    "tagline": "Big cops. Small town. Moderate violence.",
+    "runtime": 121,
+    "release_date": "2007-02-14",
+    "vote_average": 7.571,
+    "poster_path": "/zPib4ukTSdXvHP9pxGkFCe34f3y.jpg",
+    "backdrop_path": "/9rMSCFH9zhv1vILpEZQlUJs9iUm.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Simon Pegg",
+      "character": "Nicholas Angel",
+      "profile_path": "/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg"
+    },
+    {
+      "name": "Nick Frost",
+      "character": "PC Danny Butterman",
+      "profile_path": "/2CHS4t6miNGLgMQAjhFqb4fFuKS.jpg"
+    },
+    {
+      "name": "Jim Broadbent",
+      "character": "Inspector Frank Butterman",
+      "profile_path": "/jTyvGwwR1NFpvgDhcmuWZCM241w.jpg"
+    },
+    {
+      "name": "Paddy Considine",
+      "character": "DS Andy Wainwright",
+      "profile_path": "/yFDFSlF4J1m9P0kVwBTKIHB8LYk.jpg"
+    }
+  ]
+}

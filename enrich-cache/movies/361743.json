@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 361743,
+    "title": "Top Gun: Maverick",
+    "overview": "After more than thirty years of service as one of the Navy\u2019s top aviators, and dodging the advancement in rank that would ground him, Pete \u201CMaverick\u201D Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission the likes of which no living pilot has ever seen.",
+    "tagline": "Feel the need... The need for speed.",
+    "runtime": 131,
+    "release_date": "2022-05-21",
+    "vote_average": 8.158,
+    "poster_path": "/n0YuM4f5lvGAP6MAW2kBIzugXnc.jpg",
+    "backdrop_path": "/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531330,
+      "name": "Top Gun Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Capt. Pete \u0027Maverick\u0027 Mitchell",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Miles Teller",
+      "character": "Lt. Bradley \u0027Rooster\u0027 Bradshaw",
+      "profile_path": "/kDf3sW3USjEBDQ3Ua7lbwOfwty6.jpg"
+    },
+    {
+      "name": "Jennifer Connelly",
+      "character": "Penny Benjamin",
+      "profile_path": "/wdmcJagSRJ65AuJ4IUCzuHAdvgy.jpg"
+    },
+    {
+      "name": "Bashir Salahuddin",
+      "character": "Wo-1. Bernie \u0027Hondo\u0027 Coleman",
+      "profile_path": "/ZL5MRzjd6kWkvQXqh5mgPY1CKP.jpg"
+    }
+  ]
+}

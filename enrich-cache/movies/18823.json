@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18823,
+    "title": "Clash of the Titans",
+    "overview": "Born of a god but raised as a man, Perseus is helpless to save his family from Hades, vengeful god of the underworld. With nothing to lose, Perseus volunteers to lead a dangerous mission to defeat Hades before he can seize power from Zeus and unleash hell on earth. Battling unholy demons and fearsome beasts, Perseus and his warriors will only survive if Perseus accepts his power as a god, defies fate and creates his own destiny.",
+    "tagline": "The clash begins.",
+    "runtime": 106,
+    "release_date": "2010-03-26",
+    "vote_average": 5.922,
+    "poster_path": "/6iHYLipwEyZUPNO8MM3l1yHDaFE.jpg",
+    "backdrop_path": "/zRx1HyM1wF6wqEvxV12Ha2WrvlJ.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86780,
+      "name": "Clash of the Titans Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sam Worthington",
+      "character": "Perseus",
+      "profile_path": "/mflBcox36s9ZPbsZPVOuhf6axaJ.jpg"
+    },
+    {
+      "name": "Gemma Arterton",
+      "character": "Io",
+      "profile_path": "/Alfm28oyHNiYweNCUaMmrVjVMAT.jpg"
+    },
+    {
+      "name": "Mads Mikkelsen",
+      "character": "Draco",
+      "profile_path": "/AsX4bdvZ8UCayWTmAf9lAqOA8V7.jpg"
+    },
+    {
+      "name": "Alexa Davalos",
+      "character": "Andromeda",
+      "profile_path": "/9kgPMNyjc7TTRReF5Gv0d3tMkBk.jpg"
+    }
+  ]
+}

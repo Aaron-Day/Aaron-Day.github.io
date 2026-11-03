@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 167032,
+    "title": "Curse of Chucky",
+    "overview": "After her mother\u0027s mysterious death, Nica begins to suspect that the talking, red-haired doll her visiting niece has been playing with may be the key to the mounting bloodshed and chaos.",
+    "tagline": "Fear has a new home.",
+    "runtime": 97,
+    "release_date": "2013-10-08",
+    "vote_average": 5.957,
+    "poster_path": "/x9DzkDWp8O82Wzxk6otuD9bce9a.jpg",
+    "backdrop_path": "/jAZ0hMGVgb5beOXy20iU49Cr3RQ.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10455,
+      "name": "Child\u0027s Play Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Fiona Dourif",
+      "character": "Nica",
+      "profile_path": "/gs0aMwWWJ2FRY4sSvvAefIT5sAC.jpg"
+    },
+    {
+      "name": "Brad Dourif",
+      "character": "Charles Lee Ray / Chucky (voice)",
+      "profile_path": "/ex7AmuHM3owhUetYZAyOmN1ehWS.jpg"
+    },
+    {
+      "name": "Danielle Bisutti",
+      "character": "Barb",
+      "profile_path": "/3LoExh69atk7LoAC5TmxfRJGMLm.jpg"
+    },
+    {
+      "name": "Summer H. Howell",
+      "character": "Alice",
+      "profile_path": "/x5kNBofVWhE0fDY9r89gi5LsNGh.jpg"
+    }
+  ]
+}

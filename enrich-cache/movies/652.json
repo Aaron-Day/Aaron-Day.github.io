@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 652,
+    "title": "Troy",
+    "overview": "In year 1250 B.C. during the late Bronze age, two emerging nations begin to clash. Paris, the Trojan prince, convinces Helen, Queen of Sparta, to leave her husband Menelaus, and sail with him back to Troy. After Menelaus finds out that his wife was taken by the Trojans, he asks his brother Agamemnon to help him get her back. Agamemnon sees this as an opportunity for power. They set off with 1,000 ships holding 50,000 Greeks to Troy.",
+    "tagline": "For passion. For honor. For destiny. For victory. For love.",
+    "runtime": 163,
+    "release_date": "2004-05-13",
+    "vote_average": 7.2,
+    "poster_path": "/a07wLy4ONfpsjnBqMwhlWTJTcm.jpg",
+    "backdrop_path": "/ZPcC5hJh21QiW0jmhMQhZeSoGu.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Brad Pitt",
+      "character": "Achilles",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "Orlando Bloom",
+      "character": "Paris",
+      "profile_path": "/lwQoA0qJTCZ6l2FH6PjmhRQjiaB.jpg"
+    },
+    {
+      "name": "Eric Bana",
+      "character": "Hector",
+      "profile_path": "/l9yoDgw3YFC2gMD1HTo5djGOwSY.jpg"
+    },
+    {
+      "name": "Brian Cox",
+      "character": "Agamemnon",
+      "profile_path": "/scSjbFCTRngXlkJRoKptM5kQGw7.jpg"
+    }
+  ]
+}

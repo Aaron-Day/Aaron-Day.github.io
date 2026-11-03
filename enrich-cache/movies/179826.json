@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 179826,
+    "title": "Odd Thomas",
+    "overview": "In a California desert town, a short-order cook with clairvoyant abilities encounters a mysterious man with a link to dark, threatening forces.",
+    "tagline": "I might see dead people... But then, by God, I do something about it.",
+    "runtime": 97,
+    "release_date": "2013-01-29",
+    "vote_average": 6.957,
+    "poster_path": "/skBMhQjHLTU1rp4gutxHp0JuY1C.jpg",
+    "backdrop_path": "/zoz4vZPe95m0RiUZtMyGeto5L02.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Anton Yelchin",
+      "character": "Odd Thomas",
+      "profile_path": "/uOMWKYOLezo4ETMtrQt7uQBLSBh.jpg"
+    },
+    {
+      "name": "Addison Timlin",
+      "character": "Stormy Llewellyn",
+      "profile_path": "/ropQg0oZZP0R3xkWxYNdMx8glHi.jpg"
+    },
+    {
+      "name": "Willem Dafoe",
+      "character": "Wyatt Porter",
+      "profile_path": "/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg"
+    },
+    {
+      "name": "Gugu Mbatha-Raw",
+      "character": "Viola Peabody",
+      "profile_path": "/sHAnv0kw5JHzWBOP7gAezwqgl8J.jpg"
+    }
+  ]
+}

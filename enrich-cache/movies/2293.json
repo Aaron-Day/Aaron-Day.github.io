@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2293,
+    "title": "Mallrats",
+    "overview": "Both dumped by their girlfriends, two best friends seek refuge in the local mall. Eventually, they decide to try and win back their significant others and take care of their respective nemeses.",
+    "tagline": "They\u0027re not there to shop. They\u0027re not there to work. They\u0027re just there.",
+    "runtime": 95,
+    "release_date": "1995-10-20",
+    "vote_average": 6.751,
+    "poster_path": "/2ip0sGIMPN0XEN6q3lQIoaNI6tP.jpg",
+    "backdrop_path": "/h8fMLx6zJ5qfp8uT2DXzbHCFoJC.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jason Lee",
+      "character": "Brodie",
+      "profile_path": "/64tEXo3xR9IFXsIJKSlJ2LUrrEA.jpg"
+    },
+    {
+      "name": "Jeremy London",
+      "character": "T.S. Quint",
+      "profile_path": "/2eSv6kcfWinz0xDoAclyCVsArhu.jpg"
+    },
+    {
+      "name": "Shannen Doherty",
+      "character": "Rene",
+      "profile_path": "/c3EXtxx7x4inTlf1O1GgKD5kYZa.jpg"
+    },
+    {
+      "name": "Claire Forlani",
+      "character": "Brandi",
+      "profile_path": "/e0Uk6QphxHZ9VTtxUT0ZkPgYWNs.jpg"
+    }
+  ]
+}

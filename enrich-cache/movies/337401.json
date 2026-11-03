@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 337401,
+    "title": "Mulan",
+    "overview": "When the Emperor of China issues a decree that one man per family must serve in the Imperial Chinese Army to defend the country from Huns, Hua Mulan, the eldest daughter of an honored warrior, steps in to take the place of her ailing father. She is spirited, determined and quick on her feet. Disguised as a man by the name of Hua Jun, she is tested every step of the way and must harness her innermost strength and embrace her true potential.",
+    "tagline": "Loyal. Brave. True.",
+    "runtime": 115,
+    "release_date": "2020-09-04",
+    "vote_average": 6.812,
+    "poster_path": "/aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg",
+    "backdrop_path": "/zMrk2G3XsnfYKiIp1NEfdtvDyBH.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Liu Yifei",
+      "character": "Hua Mulan",
+      "profile_path": "/cL6JccAYqiZQEAIEFObEUC9LTt7.jpg"
+    },
+    {
+      "name": "Donnie Yen",
+      "character": "Commander Tung",
+      "profile_path": "/hTlhrrZMj8hZVvD17j4KyAFWBHc.jpg"
+    },
+    {
+      "name": "Gong Li",
+      "character": "Xian Niang",
+      "profile_path": "/kMdN44dyjTRZvagI5nKwbZYwda9.jpg"
+    },
+    {
+      "name": "Jet Li",
+      "character": "The Emperor",
+      "profile_path": "/c4s8INzU0ZAujCQ1YmphCmcsNzl.jpg"
+    }
+  ]
+}

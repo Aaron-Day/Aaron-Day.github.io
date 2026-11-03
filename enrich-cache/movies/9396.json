@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9396,
+    "title": "Crocodile Dundee II",
+    "overview": "Australian outback expert protects his New York love from gangsters who\u0027ve followed her down under.",
+    "tagline": "The world\u0027s favorite adventurer is back for more. Much more!",
+    "runtime": 111,
+    "release_date": "1988-05-19",
+    "vote_average": 5.866,
+    "poster_path": "/2Nf0xeDuToLHysdkWj3aT5r42rC.jpg",
+    "backdrop_path": "/9OHuCKzTFwLetq8dhgyG7XxcetB.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9332,
+      "name": "Crocodile Dundee Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Paul Hogan",
+      "character": "Michael J. \u0027Crocodile\u0027 Dundee",
+      "profile_path": "/1QQURn65Q2yeDCaGIaLktd6kUPx.jpg"
+    },
+    {
+      "name": "Linda Kozlowski",
+      "character": "Sue Charlton",
+      "profile_path": "/38jMpI4xsicdENV8a3K89NnXmTo.jpg"
+    },
+    {
+      "name": "John Meillon",
+      "character": "Walter Reilly",
+      "profile_path": "/k9x2VwKqiTxTKP1WIgOM1AtZf2G.jpg"
+    },
+    {
+      "name": "Ernie Dingo",
+      "character": "Charlie",
+      "profile_path": "/6xOMTFEQQIEi7BHuIicG5vqzyqU.jpg"
+    }
+  ]
+}

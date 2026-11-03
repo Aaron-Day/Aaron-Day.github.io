@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9598,
+    "title": "Babe",
+    "overview": "Babe is a little pig who doesn\u0027t quite know his place in the world. With a bunch of odd friends, like Ferdinand the duck who thinks he is a rooster and Fly the dog he calls mum, Babe realises that he has the makings to become the greatest sheep pig of all time, and Farmer Hoggett knows it. With the help of the sheep dogs, Babe learns that a pig can be anything that he wants to be.",
+    "tagline": "A little pig goes a long way.",
+    "runtime": 92,
+    "release_date": "1995-07-18",
+    "vote_average": 6.298,
+    "poster_path": "/zKuQMtnbVTz9DsOnOJmlW71v4qH.jpg",
+    "backdrop_path": "/agkZziO4ZPAsVfKUrJD68lys08P.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9435,
+      "name": "Babe Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Christine Cavanaugh",
+      "character": "Babe (voice)",
+      "profile_path": "/8fDGffuBfbMTRTALHpSQQvuzSuO.jpg"
+    },
+    {
+      "name": "Miriam Margolyes",
+      "character": "Fly (voice)",
+      "profile_path": "/vsnCGCp0nhJTag56HP8XFhXnZo9.jpg"
+    },
+    {
+      "name": "Danny Mann",
+      "character": "Ferdinand (voice)",
+      "profile_path": "/980QYqXIZCMn5Knx0vjROkw9vKo.jpg"
+    },
+    {
+      "name": "Hugo Weaving",
+      "character": "Rex (voice)",
+      "profile_path": "/lSC8Et0PYi5zeQb3IpPkFje7hgR.jpg"
+    }
+  ]
+}

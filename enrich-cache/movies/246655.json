@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 246655,
+    "title": "X-Men: Apocalypse",
+    "overview": "After the re-emergence of the world\u0027s first mutant, world-destroyer Apocalypse, the X-Men must unite to defeat his extinction level plan.",
+    "tagline": "Only the strong will survive.",
+    "runtime": 144,
+    "release_date": "2016-05-18",
+    "vote_average": 6.5,
+    "poster_path": "/ikA8UhYdTGpqbatFa93nIf6noSr.jpg",
+    "backdrop_path": "/sTQNRqLbfCXolrb5CizAW1dj528.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 748,
+      "name": "X-Men Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "James McAvoy",
+      "character": "Professor Charles Xavier",
+      "profile_path": "/u4REKbm3zhFI2J5tVyqRovGRYUJ.jpg"
+    },
+    {
+      "name": "Michael Fassbender",
+      "character": "Erik Lehnsherr / Magneto",
+      "profile_path": "/xvbnUiB2ZBR3QIt595OzNy657Vw.jpg"
+    },
+    {
+      "name": "Jennifer Lawrence",
+      "character": "Raven / Mystique",
+      "profile_path": "/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+    },
+    {
+      "name": "Nicholas Hoult",
+      "character": "Hank McCoy / Beast",
+      "profile_path": "/pXm8GWTm9eIA8pUGOjvmYjlxamu.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11418,
+    "title": "National Lampoon\u0027s European Vacation",
+    "overview": "The Griswolds win a vacation to Europe on a game show, and so pack their bags for the continent. They do their best to catch the flavor of Europe, but they just don\u0027t know how to be be good tourists. Besides, they have trouble taking holidays in countries where they CAN speak the language.",
+    "tagline": "For over two thousand years, Europe has survived many great disasters. Now for the real test. Chevy Chase \u0026 his family are coming from America!",
+    "runtime": 95,
+    "release_date": "1985-07-25",
+    "vote_average": 6.172,
+    "poster_path": "/hZL7g1oSDrA0Lx5wcHpEl99MYKi.jpg",
+    "backdrop_path": "/2vwdO2ist8YgKg60p4N7S8Hwd0A.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 108693,
+      "name": "National Lampoon\u0027s Vacation Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chevy Chase",
+      "character": "Clark Griswold",
+      "profile_path": "/A1X2BvR8vEXvwXdJa5uYAYVCO2k.jpg"
+    },
+    {
+      "name": "Beverly D\u0027Angelo",
+      "character": "Ellen Griswold",
+      "profile_path": "/8fYQIA8dAaA4GOTxOFSKIvTqzi.jpg"
+    },
+    {
+      "name": "Dana Hill",
+      "character": "Audrey Griswold",
+      "profile_path": "/kLFYJSiPfBmXTla2MKInPi4YAqX.jpg"
+    },
+    {
+      "name": "Jason Lively",
+      "character": "Rusty Griswold",
+      "profile_path": "/zLU4UL8oPlSzCmeY3DCBA2yulQV.jpg"
+    }
+  ]
+}

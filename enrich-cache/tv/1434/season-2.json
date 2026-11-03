@@ -1,0 +1,176 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Peter, Peter, Caviar Eater",
+        "overview": "Lois\u0027 aunt dies and leaves her mansion to the Griffins.",
+        "air_date": "1999-09-23",
+        "runtime": 23,
+        "still_path": "/yyJ7amwesHCgO1GwFtvgbUOObUV.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Holy Crap",
+        "overview": "Peter\u0027s very religious father comes to live with the family after he is forced to retire from his lifelong job at the Mill.",
+        "air_date": "1999-09-30",
+        "runtime": 23,
+        "still_path": "/8LVwCbxsKrAcJ3PnE6T0REefJHK.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Da Boom",
+        "overview": "Paranoid about Y2K, Peter herds the family into the basement for protection.",
+        "air_date": "1999-12-26",
+        "runtime": 23,
+        "still_path": "/7LRupEpZPr3w2X9YROouBimoiHZ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Brian in Love",
+        "overview": "A therapist tells Brian his carpet-wetting is the result of his repressed feelings for Lois.",
+        "air_date": "2000-03-07",
+        "runtime": 23,
+        "still_path": "/fyNRzjUeg8Mx61uRyNMtq96Ah5.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Love Thy Trophy",
+        "overview": "The Griffins and their neighbors build a festival float; waitress Meg schemes to get bigger tips.",
+        "air_date": "2000-03-14",
+        "runtime": 23,
+        "still_path": "/peOEDL8IsxJVeSrMgHllfUWr56c.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Death Is a Bitch",
+        "overview": "When Peter tries to get out of paying a doctors bill by faking his own death, he is visited by Death himself, who wants to take Peter away. After Death twists his ankle while chasing Peter, everyone on Earth becomes immortal while death is incapacitated.",
+        "air_date": "2000-03-21",
+        "runtime": 23,
+        "still_path": "/pCTooyWYjgRj06NKOrJuju3oQAR.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The King Is Dead",
+        "overview": "When Lois become the director of the Quahog Players production of \u0022The King and I\u0022 Peter wants a part. He finds himself in the Producer\u0027s Chair and starts to make some \u0022artistic changes\u0022 to the script that involve scantily-clad women and cyborgs.",
+        "air_date": "2000-03-28",
+        "runtime": 23,
+        "still_path": "/pkWnQR9fkDkkjU4RjzxP1NIbypG.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "I Am Peter, Hear Me Roar",
+        "overview": "Forced to go to a women\u0027s retreat for telling sexist jokes at work, Peter resists the idea at first. After two weeks, however, Peter becomes a sensitive male. No one likes the new Peter, especially Lois. While attending a charity dinner, Lois does something that snaps Peter out of his feminine phase.",
+        "air_date": "2000-03-28",
+        "runtime": 23,
+        "still_path": "/lKnyOOma9MqVkxVE1AQhJxRaK2N.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "If I\u0027m Dyin\u0027, I\u0027m Lyin\u0027",
+        "overview": "Peter makes Chris pretend he\u0027s dying, in order to save a television program.",
+        "air_date": "2000-04-04",
+        "runtime": 23,
+        "still_path": "/wyQMhgonxK8bnxXqnqhUeLAPMq2.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Running Mates",
+        "overview": "Peter runs against Lois for a seat on the school board.",
+        "air_date": "2000-04-11",
+        "runtime": 23,
+        "still_path": "/fDZ0LTS4LtsGohcy9Zf21qRfq1P.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "A Picture Is Worth a 1,000 Bucks",
+        "overview": "Peter is envious of an old friend\u0027s success; Chris\u0027 painting gets serious attention.",
+        "air_date": "2000-04-18",
+        "runtime": 23,
+        "still_path": "/jkgfx4Z2i31V8ra1DNrLhXAEEpd.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Fifteen Minutes of Shame",
+        "overview": "Meg exposes her family on a talk show.",
+        "air_date": "2000-04-25",
+        "runtime": 23,
+        "still_path": "/drPfq8eY5eu3RuK6gaIY47k8tkR.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Road to Rhode Island",
+        "overview": "Stewie misbehaves while visiting his grandparents.",
+        "air_date": "2000-05-30",
+        "runtime": 23,
+        "still_path": "/5w19RwRqkjYCL2AYBxjrxbNOq0V.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Let\u0027s Go to the Hop",
+        "overview": "Peter infiltrates Quahog High School as a new student.",
+        "air_date": "2000-06-06",
+        "runtime": 23,
+        "still_path": "/o2PUEatXWSkQa1BGiMsIGYHIvFT.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Dammit Janet",
+        "overview": "Lois enrolls Stewie at a day care center.",
+        "air_date": "2000-06-13",
+        "runtime": 23,
+        "still_path": "/kJL5h706NrbJI2PMJMbbQR7fzm0.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "There\u0027s Something About Paulie",
+        "overview": "As a favor, Peter takes a mobster\u0027s nephew to a movie.",
+        "air_date": "2000-06-27",
+        "runtime": 23,
+        "still_path": "/qE1c6JzRwyhsMF2AY4ljXBD2fIB.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "He\u0027s Too Sexy for His Fat",
+        "overview": "Peter talks himself into getting liposuction and other plastic surgery.",
+        "air_date": "2000-06-27",
+        "runtime": 23,
+        "still_path": "/jMAshvBE3EBKDSdnKySfUnzq0o0.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "E. Peterbus Unum",
+        "overview": "After learning that his property is not officially part of the United States, Peter forms his own country.",
+        "air_date": "2000-07-12",
+        "runtime": 23,
+        "still_path": "/zvG26tk6qFfQHeZqFAgX6gKZPQq.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Story on Page One",
+        "overview": "Meg writes for the school paper to improve her Ivy League chances.",
+        "air_date": "2000-07-18",
+        "runtime": 23,
+        "still_path": "/apw3j2fORfcEyTU3wJyQ9FraTte.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Wasted Talent",
+        "overview": "Peter and his friends go on a drinking binge to find a winning ticket in a bottle; Lois works Ling too hard for a competition.",
+        "air_date": "2000-07-25",
+        "runtime": 23,
+        "still_path": "/fqoioRaKakBkklHIhVtNkYFTb4U.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Fore Father",
+        "overview": "Chris gets a job picking up golf balls; Peter ignores Chris in favor of Cleveland Jr.",
+        "air_date": "2000-08-01",
+        "runtime": 23,
+        "still_path": "/pzDkpGaYi5RRJmOLlZVb0XkChHX.jpg"
+      }
+    ]
+  }
+}

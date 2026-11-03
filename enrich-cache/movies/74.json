@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 74,
+    "title": "War of the Worlds",
+    "overview": "Ray Ferrier is a divorced dockworker and less-than-perfect father. Soon after his ex-wife and her new husband drop off his teenage son and young daughter for a rare weekend visit, a strange and powerful lightning storm touches down.",
+    "tagline": "They\u0027re already here.",
+    "runtime": 117,
+    "release_date": "2005-06-28",
+    "vote_average": 6.578,
+    "poster_path": "/6Biy7R9LfumYshur3YKhpj56MpB.jpg",
+    "backdrop_path": "/bInicBgSHfQiWLbnRT5jxw9Grvm.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Ray",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Dakota Fanning",
+      "character": "Rachel",
+      "profile_path": "/hwcO08SVWkelfvgfIa5HsTMxsK8.jpg"
+    },
+    {
+      "name": "Miranda Otto",
+      "character": "Mary Ann",
+      "profile_path": "/szME1IBVTLgiKrO5D5wvOGnvUDW.jpg"
+    },
+    {
+      "name": "Justin Chatwin",
+      "character": "Robbie",
+      "profile_path": "/nEHYlooGSwRzkhze1rQ7DOpJXLD.jpg"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10555,
+    "title": "Shark Tale",
+    "overview": "Oscar is a small fish whose big aspirations often get him into trouble. Meanwhile, Lenny is a great white shark with a surprising secret that no sea creature would guess: He\u0027s a vegetarian. When a lie turns Oscar into an improbable hero and Lenny becomes an outcast, the two form an unlikely friendship.",
+    "tagline": "Behind every little fish is a great white lie.",
+    "runtime": 90,
+    "release_date": "2004-09-20",
+    "vote_average": 6.048,
+    "poster_path": "/r08DpyPyhXcJTfNZAICNGMzcQ8l.jpg",
+    "backdrop_path": "/7ZmZxar3bYORcl0TPA4oceyxcaE.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "Oscar (voice)",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Robert De Niro",
+      "character": "Don Lino (voice)",
+      "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+    },
+    {
+      "name": "Ren\u00E9e Zellweger",
+      "character": "Angie (voice)",
+      "profile_path": "/iNnPqkEF0hPWhmWpjyuLuUdbKN8.jpg"
+    },
+    {
+      "name": "Jack Black",
+      "character": "Lenny (voice)",
+      "profile_path": "/rtCx0fiYxJVhzXXdwZE2XRTfIKE.jpg"
+    }
+  ]
+}

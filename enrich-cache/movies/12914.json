@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12914,
+    "title": "Stargate: Continuum",
+    "overview": "Ba\u0027al travels back in time and prevents the Stargate program from being started. SG-1 must somehow restore history.",
+    "tagline": "History may never repeat itself again.",
+    "runtime": 98,
+    "release_date": "2008-07-29",
+    "vote_average": 7.126,
+    "poster_path": "/1rQUvblJHU8766FatqTtCMiRhph.jpg",
+    "backdrop_path": "/qW8APNYqbDccHSFJ9r9MMjA1CuF.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 44215,
+      "name": "Stargate SG-1 Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Browder",
+      "character": "Colonel Cameron Mitchell",
+      "profile_path": "/28gdcjphnh7zjpWxgWWVvv9XMA7.jpg"
+    },
+    {
+      "name": "Amanda Tapping",
+      "character": "Colonel Samantha Carter",
+      "profile_path": "/8ZiETPxUFtgrtWL0LgMwPP8ytuK.jpg"
+    },
+    {
+      "name": "Christopher Judge",
+      "character": "Teal\u0027c",
+      "profile_path": "/bh3HnGPQuditlNI1yVSCmIzs6xE.jpg"
+    },
+    {
+      "name": "Michael Shanks",
+      "character": "Dr. Daniel Jackson",
+      "profile_path": "/4YkOrSUmfKljqTMwGIo50oviKe1.jpg"
+    }
+  ]
+}

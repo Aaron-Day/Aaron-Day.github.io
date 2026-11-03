@@ -1,0 +1,368 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Shift into Turbo (1)",
+        "overview": "Divatox returns to Earth seeking vengeance against the Power Rangers.",
+        "air_date": "1997-04-19",
+        "runtime": 22,
+        "still_path": "/7HifHmxEiz5SgNxltLlw3LEMFqs.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Shift into Turbo (2)",
+        "overview": "The Turbo Rangers race to stop Divatox from destroying the Angel Grove power plant during their graduation ceremony.",
+        "air_date": "1997-04-26",
+        "runtime": 22,
+        "still_path": "/mASJxAW12CLrAoqOl3us8LhVgZP.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Shift into Turbo (3)",
+        "overview": "Zordon and Alpha 5 bid farewell to the planet Earth as Divatox escalates her assault on Angel Grove.",
+        "air_date": "1997-04-30",
+        "runtime": 22,
+        "still_path": "/70I3VttB9ugGkpJmPduIPRdHDN.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Shadow Rangers",
+        "overview": "Divatox\u0027s Chromite steals the Turbo Rangers\u0027 morphing energy to create evil shadow Rangers.",
+        "air_date": "1997-05-01",
+        "runtime": 22,
+        "still_path": "/iWB1V3ix9x83YPWBLD1VhF9fmeH.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Transmission Impossible",
+        "overview": "A messenger from Dimitria\u0027s homeworld journeys to Earth with important news.",
+        "air_date": "1997-05-02",
+        "runtime": 22,
+        "still_path": "/6lFhnyTMM3qIZrz09YzSxYeeT2Y.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Rally Ranger",
+        "overview": "Justin competes in the Soap Box Derby while Porto goes AWOL from the Subcraft.",
+        "air_date": "1997-05-05",
+        "runtime": 22,
+        "still_path": "/70DhrarzyYAdagx1LgdVjWJu8Wh.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Built for Speed",
+        "overview": "Adam battles the lightning-quick Demon Racer as he tries to stop his peers from a dangerous drag race.",
+        "air_date": "1997-05-06",
+        "runtime": 22,
+        "still_path": "/bVIu9QwysjBJnmcENw0ZDadhKsS.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Bicycle Built for the Blues",
+        "overview": "Justin is trapped on a speeding bicycle in an explosive countdown to zero.",
+        "air_date": "1997-05-07",
+        "runtime": 22,
+        "still_path": "/48XMFkzzmY1pHf0QY9WDpYULxYl.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Whole Lie",
+        "overview": "Divatox\u0027s Mouth Piece Monster makes Justin lie constantly with a Piranhatron appearing for every lie.",
+        "air_date": "1997-05-08",
+        "runtime": 22,
+        "still_path": "/qt7gwToK9Wc0J7Af7fxrDtAp3qT.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Glyph Hanger",
+        "overview": "Divatox summons her ancient Egyptian ex-fiance Pharaoh to battle the Turbo Rangers.",
+        "air_date": "1997-05-10",
+        "runtime": 22,
+        "still_path": "/iw0CnI9eaezlS46008wpntNExsB.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Weight and See",
+        "overview": "Divatox sends Numbor to cause Angel Grove to sink into the ocean while Kat worries about her weight.",
+        "air_date": "1997-05-12",
+        "runtime": 22,
+        "still_path": "/qMtUM149QpNw5IvNUVlDNFCfYxy.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Alarmed and Dangerous",
+        "overview": "Divatox\u0027s forces set off false fire alarms all over Angel Grove as Justin deals with school bullies.",
+        "air_date": "1997-05-13",
+        "runtime": 22,
+        "still_path": "/nssJbDyZm6XKGByp8MOYzOpTMDB.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Millenium Message",
+        "overview": "The Blue Senturion time travels to present-day Angel Grove with a message from the future for Dimitria.",
+        "air_date": "1997-05-17",
+        "runtime": 22,
+        "still_path": "/ApFOerjgAMzgLgOmftRpcBubpGU.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "A Drive to Win",
+        "overview": "Divatox sends Electrovolt to Angel Grove to ruin Adam\u0027s soccer team.",
+        "air_date": "1997-05-19",
+        "runtime": 22,
+        "still_path": "/986tJzqlJQqpYusow6OpXpGznvg.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Cars Attacks",
+        "overview": "Wolfgang Amadeus Griller comes to Angel Grove in order to transform automobiles to life.",
+        "air_date": "1997-05-20",
+        "runtime": 22,
+        "still_path": "/w6cg2BZ1BaQMKhqNq0IYGRvZr0L.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Honey, I Shrunk The Rangers (1)",
+        "overview": "The Power Rangers are shrunk to the size of insects.",
+        "air_date": "1997-05-21",
+        "runtime": 22,
+        "still_path": "/dOIzLVbSabGha8PJ1BdOtEHhv9R.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Honey, I Shrunk The Rangers (2)",
+        "overview": "The micronized Turbo Rangers go on an action-packed trip trying to escape from Divatox\u0027s Subcraft.",
+        "air_date": "1997-09-09",
+        "runtime": 22,
+        "still_path": "/4L3IlyfYdw06MtXC0tlKZCqIFOP.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Passing the Torch (1)",
+        "overview": "The Rangers prepare for their final assignment while Divatox decides to capture Tommy.",
+        "air_date": "1997-09-10",
+        "runtime": 22,
+        "still_path": "/mLKioiyWr08zPyNOy4T7IPec1Ft.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Passing the Torch (2)",
+        "overview": "Tommy, Kat, Adam, and Tanya pass their powers on to a new generation of Power Rangers.",
+        "air_date": "1997-09-11",
+        "runtime": 22,
+        "still_path": "/cN9sV38CmKCGrFkBX9zX7n5jXCi.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Stitch Witchery",
+        "overview": "Divatox uses Ashley\u0027s fashion jacket to control the minds of the citizens of Angel Grove as well as the Blue Senturion.",
+        "air_date": "1997-09-12",
+        "runtime": 22,
+        "still_path": "/scLlCnVZcYUzNEGklwolAf1ACsV.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Wheel of Fate",
+        "overview": "Two intelligent cars from outer space called Lightning Cruiser and Storm Blaster travel to Earth.",
+        "air_date": "1997-09-15",
+        "runtime": 22,
+        "still_path": "/pFfnsOMQ81GtMh4V8s4RMaDPW8I.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Trouble by the Slice",
+        "overview": "Divatox is struck by amnesia while the Power Rangers battle evil pizzas.",
+        "air_date": "1997-09-16",
+        "runtime": 22,
+        "still_path": "/p1wsLMECCnB0tg28A9KE6C7srI2.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Phantom Phenomenon",
+        "overview": "The mysterious Phantom Ranger appears on Earth to assist the Power Rangers.",
+        "air_date": "1997-09-17",
+        "runtime": 22,
+        "still_path": "/qEP2rhAxo8jYg6eNlEGYMqs5YSO.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Vanishing Act",
+        "overview": "The Rangers try to uncover why everything around them is disappearing including the Power Chamber.",
+        "air_date": "1997-09-18",
+        "runtime": 22,
+        "still_path": "/uiiLvRVGHMwM8DWcdMoFKkWUgpC.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "When Time Freezes Over",
+        "overview": "Divatox attempts to control time in order to freeze the planet Earth.",
+        "air_date": "1997-09-19",
+        "runtime": 22,
+        "still_path": "/wVIx94YCkkaiakK6QUEhqoaaJLQ.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "The Darkest Day",
+        "overview": "General Havoc reinforces Divatox helping her capture the Turbo Megazord.",
+        "air_date": "1997-09-22",
+        "runtime": 22,
+        "still_path": "/acrUiULSPMWDlz2K2gDHlx55jIz.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "One Last Hope",
+        "overview": "With no way to defend Angel Grove, the Rangers turn to the Phantom Ranger for assistance.",
+        "air_date": "1997-09-23",
+        "runtime": 22,
+        "still_path": "/skbE7P7i19Dgdi65zGQ5YTgZJgv.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "The Fall of the Phantom",
+        "overview": "General Havoc and Divatox set a trap for the Phantom Ranger in order to capture his powerful Phantom Ruby.",
+        "air_date": "1997-09-25",
+        "runtime": 22,
+        "still_path": "/5ur9noPaa9CZSjbrL1FkaidbCe1.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Clash of the Megazords",
+        "overview": "The Turbo Rangers race to stop the Turbo Megazord and save the Phantom Ranger as his life force ebbs away.",
+        "air_date": "1997-09-26",
+        "runtime": 22,
+        "still_path": "/qMJjfnFPqjdFDIt6mMUBe9jCbzd.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "The Robot Ranger",
+        "overview": "Justin suspects that his fellow Rangers have been replaced by robots.",
+        "air_date": "1997-10-03",
+        "runtime": 22,
+        "still_path": "/gzQRzeleziucCbjnl4j8jetrMS2.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Beware the Third Wish",
+        "overview": "The Wicked Wisher grants Divatox three wishes. One of which she uses to turn the Blue Senturion evil.",
+        "air_date": "1997-10-17",
+        "runtime": 22,
+        "still_path": "/3Rke1ehdmSkz9ODGX83vxpRJjGz.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "The Gardener of Evil",
+        "overview": "The Power Rangers hurry to find the third wishing coin and restore the Blue Senturion.",
+        "air_date": "1997-10-20",
+        "runtime": 22,
+        "still_path": "/bDWcE57kI5ZK4q2AGrSQ58TeVxN.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "Fire in Your Tank",
+        "overview": "The Torch Tiger steals the Turbo Rangers\u0027 super fuel turning him into an arsonist nightmare.",
+        "air_date": "1997-10-30",
+        "runtime": 22,
+        "still_path": "/xXqmNKb4dGs0xIRY37JyIykvsmF.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "The Turn of the Wretched Wrench",
+        "overview": "Ashley finds her auto mechanics class more difficult than she anticipated which is further complicated by her fellow student, the Maniac Mechanic.",
+        "air_date": "1997-10-31",
+        "runtime": 22,
+        "still_path": "/ccRKudzcCdDLtfJIblzjs0HaRMe.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Spirit of the Woods",
+        "overview": "T.J. meets a mysterious young boy in the forest named Erutan.",
+        "air_date": "1997-11-03",
+        "runtime": 22,
+        "still_path": "/438VisI2U5etyAfCSZMiwRPnRxU.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "The Song of Confusion",
+        "overview": "Cassie\u0027s new rock band turns out to be more than she bargained for.",
+        "air_date": "1997-11-07",
+        "runtime": 22,
+        "still_path": "/tWI9rhl5YAEPSZuY8jFQ2X3JVPW.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "The Accident",
+        "overview": "When Carlos injures a rival, even he isn\u0027t sure if it was really by accident.",
+        "air_date": "1997-11-10",
+        "runtime": 22,
+        "still_path": "/7ZIAf0Nl0ueQbgKcgCi3hgokD9.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "Cassie\u2019s Best Friend",
+        "overview": "As Elgar repairs his Zord, Cassie loses her dog Jetson, but meets a mysterious new friend who knows her better than anyone.",
+        "air_date": "1997-11-11",
+        "runtime": 22,
+        "still_path": "/8eJsdSOZfCmczMnXH4ahzahmfGw.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "The Curve Ball",
+        "overview": "T.J. needs to learn how to hit a curve ball if he\u0027s going to save his baseball team\u0027s chances of victory as well as the world.",
+        "air_date": "1997-11-12",
+        "runtime": 22,
+        "still_path": "/c469WQpsE1TxnGWm3RGaDRIwfk3.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "Carlos and the Count",
+        "overview": "An encounter with a mutated lunar bat leaves Carlos with an aversion to sunlight, and a powerful thirst - for blood!",
+        "air_date": "1997-11-13",
+        "runtime": 22,
+        "still_path": "/sWakuEjbD5cN77FA68rKLZUf3Tn.jpg"
+      },
+      {
+        "episode_number": 41,
+        "name": "Little Strong Man",
+        "overview": "Justin is given superhuman strength when a radioactive ant bites him. Meanwhile, Divatox pilots the first of her Divazords into battle against the Rangers.",
+        "air_date": "1997-11-14",
+        "runtime": 22,
+        "still_path": "/48IADTLok2yMlRl8tA7Z8TM6KT1.jpg"
+      },
+      {
+        "episode_number": 42,
+        "name": "The Rival Rangers",
+        "overview": "Cassie and Ashley compete for the new kid in school\u0027s affections while Porto pilots the Shark Zord into battle.",
+        "air_date": "1997-11-17",
+        "runtime": 22,
+        "still_path": "/5HKOyqeSMnPUrpoWYAACO7vDM3k.jpg"
+      },
+      {
+        "episode_number": 43,
+        "name": "Parts and Parcel",
+        "overview": "T.J. tries to help Bulk and Skull find out who is raiding Angel Grove for spare parts.",
+        "air_date": "1997-11-18",
+        "runtime": 22,
+        "still_path": "/6xBQng7FebEbpPDIS28OXP8b32w.jpg"
+      },
+      {
+        "episode_number": 44,
+        "name": "Chase Into Space (1)",
+        "overview": "Justin faces the possibility of having to move away as against overwhelming odds, the Turbo Rangers charge into their final battle.",
+        "air_date": "1997-11-21",
+        "runtime": 22,
+        "still_path": "/qfSPMSVNyjrCNpbogMbrBFlBkl9.jpg"
+      },
+      {
+        "episode_number": 45,
+        "name": "Chase Into Space (2)",
+        "overview": "The remaining Power Rangers blast off into outer space to try and save Zordon.",
+        "air_date": "1997-11-24",
+        "runtime": 22,
+        "still_path": "/cn3ThkRnLJqUfTq8wz2qwmZlNwV.jpg"
+      }
+    ]
+  }
+}

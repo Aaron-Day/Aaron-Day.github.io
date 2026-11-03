@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2787,
+    "title": "Pitch Black",
+    "overview": "When their ship crash-lands on a remote planet, the marooned passengers soon learn that escaped convict Riddick isn\u0027t the only thing they have to fear. Deadly creatures lurk in the shadows, waiting to attack in the dark, and the planet is rapidly plunging into the utter blackness of a total eclipse. With the body count rising, the doomed survivors are forced to turn to Riddick with his eerie eyes to guide them through the darkness to safety. With time running out, there\u0027s only one rule: Stay in the light.",
+    "tagline": "Don\u0027t be afraid of the dark. Be afraid of what\u0027s in the dark.",
+    "runtime": 108,
+    "release_date": "2000-02-18",
+    "vote_average": 6.872,
+    "poster_path": "/3AnlxZ5CZnhKKzjgFyY6EHxmOyl.jpg",
+    "backdrop_path": "/bMJdVmo6QqoUHpUsjWyei6MN02x.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2794,
+      "name": "The Chronicles of Riddick Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vin Diesel",
+      "character": "Richard B. Riddick",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Radha Mitchell",
+      "character": "Carolyn Fry",
+      "profile_path": "/8EVKyEkwPfIA6GxlIo0PJv0A5mm.jpg"
+    },
+    {
+      "name": "Cole Hauser",
+      "character": "William J. Johns",
+      "profile_path": "/1SNoIDILoXtAUJu4f7nDCPVQH5j.jpg"
+    },
+    {
+      "name": "Lewis Fitz-Gerald",
+      "character": "Paris P. Ogilvie",
+      "profile_path": "/a9lcVSoFNqUuhboYvz0we6yEH5X.jpg"
+    }
+  ]
+}

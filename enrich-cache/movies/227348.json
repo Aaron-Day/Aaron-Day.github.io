@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 227348,
+    "title": "Paranormal Activity: The Marked Ones",
+    "overview": "Seventeen-year-old Jesse has been hearing terrifying sounds coming from his neighbor\u2019s apartment, but when he turns on his camera and sets out to uncover their source, he encounters an ancient evil that won\u2019t rest until it\u2019s claimed his very soul.",
+    "tagline": "You\u0027re one of us now.",
+    "runtime": 84,
+    "release_date": "2014-01-01",
+    "vote_average": 5.437,
+    "poster_path": "/2o4vBAnORr9UnLMvWHhULGDHfzH.jpg",
+    "backdrop_path": "/eAISoFMi29BVBKH1VRpne4mJ26K.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 41437,
+      "name": "Paranormal Activity Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Andrew Jacobs",
+      "character": "Jesse Arista",
+      "profile_path": "/vWN5qDL4OBSLl1CzstwSZGPM444.jpg"
+    },
+    {
+      "name": "Jorge Diaz",
+      "character": "Hector",
+      "profile_path": "/gt6c8DRRnAJyHECoVZwEy6x9rpd.jpg"
+    },
+    {
+      "name": "Gabrielle Walsh",
+      "character": "Marisol Vargas",
+      "profile_path": "/z7ZSuPsB6DTUpl72PF2yFlHAUUx.jpg"
+    },
+    {
+      "name": "Ren\u00E9e Victor",
+      "character": "Irma Arista",
+      "profile_path": "/wAVDqwFhQsRQgO6VIYq6T9Wbbx8.jpg"
+    }
+  ]
+}

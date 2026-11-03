@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11918,
+    "title": "Superhero Movie",
+    "overview": "Rick Riker is a nerdy teen imbued with superpowers by a radioactive dragonfly. And because every hero needs a nemesis, enter Lou Landers, aka the villainously goofy Hourglass.",
+    "tagline": "The greatest Superhero movie of all time! (not counting all the others)",
+    "runtime": 82,
+    "release_date": "2008-03-28",
+    "vote_average": 5.335,
+    "poster_path": "/4MtvQdh5VP7jMSydhggp1P80FMj.jpg",
+    "backdrop_path": "/d6E8KUsRleStQKXWLGYsHsegIoj.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Drake Bell",
+      "character": "Rick Riker / Dragonfly",
+      "profile_path": "/6KxFiHrqiniS3oxV4NCz0sYNTuo.jpg"
+    },
+    {
+      "name": "Sara Paxton",
+      "character": "Jill Johnson",
+      "profile_path": "/DWrjFhjSLY4EFanCMKNPrUmP2p.jpg"
+    },
+    {
+      "name": "Christopher McDonald",
+      "character": "Lou Landers",
+      "profile_path": "/gK1XhbfD9Xd8s3VXRPpgDCluyZp.jpg"
+    },
+    {
+      "name": "Leslie Nielsen",
+      "character": "Uncle Albert Adams",
+      "profile_path": "/rMz3ZUmFE7lQCP51Ql7IcMHJIUZ.jpg"
+    }
+  ]
+}

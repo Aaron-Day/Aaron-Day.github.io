@@ -1,0 +1,66 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1499,
+    "title": "Teenage Mutant Ninja Turtles III",
+    "overview": "The four turtles travel back in time to the days of the legendary and deadly samurai in ancient Japan, where they train to perfect the art of becoming one. The turtles also assist a small village in an uprising.",
+    "tagline": "The Turtles are back... in time.",
+    "runtime": 95,
+    "release_date": "1993-03-17",
+    "vote_average": 5.504,
+    "poster_path": "/fwX5RdPDBFsbEAXc46DrvRz5Bca.jpg",
+    "backdrop_path": "/jIZ67qdDawus6s3Aua96e7nV7eM.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1582,
+      "name": "Teenage Mutant Ninja Turtles Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brian Tochi",
+      "character": "Leonardo (voice)",
+      "profile_path": "/oFmxzHpo3bw9wn8yx5fNCt9xTC7.jpg"
+    },
+    {
+      "name": "Tim Kelleher",
+      "character": "Raphael (voice)",
+      "profile_path": "/8W3KgoIPUMNjqb3CxC9B8QjBsjM.jpg"
+    },
+    {
+      "name": "Corey Feldman",
+      "character": "Donatello (voice)",
+      "profile_path": "/9n5xDsrBFY0AFESmXOJEzEj4ezx.jpg"
+    },
+    {
+      "name": "Robbie Rist",
+      "character": "Michelangelo (voice)",
+      "profile_path": "/xaDQBCyjEOtgsto7xTiVRP0PsKe.jpg"
+    }
+  ]
+}

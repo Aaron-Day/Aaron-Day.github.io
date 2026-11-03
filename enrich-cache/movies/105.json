@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 105,
+    "title": "Back to the Future",
+    "overview": "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents\u0027 first meeting and attracting his mother\u0027s romantic interest. Marty must repair the damage to history by rekindling his parents\u0027 romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.",
+    "tagline": "He was never in time for his classes... He wasn\u0027t in time for his dinner... Then one day... he wasn\u0027t in his time at all.",
+    "runtime": 116,
+    "release_date": "1985-07-03",
+    "vote_average": 8.332,
+    "poster_path": "/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg",
+    "backdrop_path": "/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 264,
+      "name": "Back to the Future Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael J. Fox",
+      "character": "Marty McFly",
+      "profile_path": "/2JB4FMgQmnhbBlQ4SxWFN9EIVDi.jpg"
+    },
+    {
+      "name": "Christopher Lloyd",
+      "character": "Emmett Brown",
+      "profile_path": "/nxVjpyb3UrfbPZnEyDNlQVlFAs5.jpg"
+    },
+    {
+      "name": "Crispin Glover",
+      "character": "George McFly",
+      "profile_path": "/imBnLpSXvg61qDDdEfvL6R4ITKt.jpg"
+    },
+    {
+      "name": "Lea Thompson",
+      "character": "Lorraine Baines",
+      "profile_path": "/85E9NTEfkRdUdK4kTrrnk5of25w.jpg"
+    }
+  ]
+}

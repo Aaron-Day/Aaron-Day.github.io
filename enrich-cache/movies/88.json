@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 88,
+    "title": "Dirty Dancing",
+    "overview": "Expecting the usual tedium that accompanies a summer in the Catskills with her family, 17-year-old Frances \u0027Baby\u0027 Houseman is surprised to find herself stepping into the shoes of a professional hoofer\u2014and unexpectedly falling in love.",
+    "tagline": "First dance. First love. The time of your life.",
+    "runtime": 100,
+    "release_date": "1987-08-21",
+    "vote_average": 7.323,
+    "poster_path": "/9Jw6jys7q9gjzVX5zm1z0gC8gY9.jpg",
+    "backdrop_path": "/6iDQCBUSZKzY8Rnu8ECwl2gXcfG.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86058,
+      "name": "Dirty Dancing Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jennifer Grey",
+      "character": "Baby Houseman",
+      "profile_path": "/nFjdCB9uKbhJ6QYCSF7UDdC6FBK.jpg"
+    },
+    {
+      "name": "Patrick Swayze",
+      "character": "Johnny Castle",
+      "profile_path": "/ys8dRhQRsS0nLPTXXEHyuFhXCYO.jpg"
+    },
+    {
+      "name": "Jerry Orbach",
+      "character": "Jake Houseman",
+      "profile_path": "/C0n4GfMUoesutHPbquKw9JANtW.jpg"
+    },
+    {
+      "name": "Cynthia Rhodes",
+      "character": "Penny Johnson",
+      "profile_path": "/sqLHvm1kKfIn17RZDgzNVrhNrvK.jpg"
+    }
+  ]
+}

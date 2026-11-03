@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 459151,
+    "title": "The Boss Baby: Family Business",
+    "overview": "The Templeton brothers \u2014 Tim and his Boss Baby little bro Ted \u2014 have become adults and drifted away from each other. But a new boss baby with a cutting-edge approach and a can-do attitude is about to bring them together again \u2026 and inspire a new family business.",
+    "tagline": "Playtime is over.",
+    "runtime": 107,
+    "release_date": "2021-07-01",
+    "vote_average": 7.318,
+    "poster_path": "/aQ7huOn3F0iJCJrFezS8p9WEsri.jpg",
+    "backdrop_path": "/yBov7O4eXDcBLDpZrOHZzFr8rIl.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 519457,
+      "name": "The Boss Baby Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "James Marsden",
+      "character": "Tim (voice)",
+      "profile_path": "/lf7OnfKZnMgNh9b98764tqSocGK.jpg"
+    },
+    {
+      "name": "Alec Baldwin",
+      "character": "Boss Baby (Ted) (voice)",
+      "profile_path": "/hzKy7x574eeUS3wt1R3yvWBRpeR.jpg"
+    },
+    {
+      "name": "Amy Sedaris",
+      "character": "Tina (voice)",
+      "profile_path": "/AjVjRYI1PaC11i4FqGSK1TkwOmq.jpg"
+    },
+    {
+      "name": "Ariana Greenblatt",
+      "character": "Tabitha (voice)",
+      "profile_path": "/lp7lzzBE7EYTMvSb4foN5LyZUkP.jpg"
+    }
+  ]
+}

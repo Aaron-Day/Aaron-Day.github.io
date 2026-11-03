@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 620,
+    "title": "Ghostbusters",
+    "overview": "After losing their university jobs, three parapsychologists start a ghost-catching business in New York City and uncover a supernatural threat that could destroy the world.",
+    "tagline": "They\u0027re here to save the world.",
+    "runtime": 105,
+    "release_date": "1984-06-08",
+    "vote_average": 7.497,
+    "poster_path": "/7E8nLijS9AwwUEPu2oFYOVKhdFA.jpg",
+    "backdrop_path": "/c6yfABGVKuB5cjoOwdX4AJMlzUz.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2980,
+      "name": "Ghostbusters Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bill Murray",
+      "character": "Dr. Peter Venkman",
+      "profile_path": "/nnCsJc9x3ZiG3AFyiyc3FPehppy.jpg"
+    },
+    {
+      "name": "Dan Aykroyd",
+      "character": "Dr. Raymond Stantz",
+      "profile_path": "/iVMmeVJx8IpCEjlGBZWzIWvX5Qo.jpg"
+    },
+    {
+      "name": "Harold Ramis",
+      "character": "Dr. Egon Spengler",
+      "profile_path": "/kmTMTxthkDAsygk3Am4IUSVYYRi.jpg"
+    },
+    {
+      "name": "Sigourney Weaver",
+      "character": "Dana Barrett",
+      "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+    }
+  ]
+}

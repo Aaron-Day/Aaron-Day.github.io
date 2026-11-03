@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8681,
+    "title": "Taken",
+    "overview": "Bryan Mills, a former government operative, is trying to reconnect with his teenage daughter Kim. After reluctantly agreeing with his ex-wife to let Kim go to Paris on vacation with a friend, his worst nightmare comes true. While on the phone with his daughter shortly after she arrives in Paris, she and her friend are abducted by a gang of human traffickers. Working against the clock, Bryan relies on his extensive training and skills to track down the ruthless gang that abducted her and launch a one-man war to rescue his daughter.",
+    "tagline": "They took his daughter. He\u0027ll take their lives.",
+    "runtime": 94,
+    "release_date": "2008-02-18",
+    "vote_average": 7.418,
+    "poster_path": "/ognkaUSNgJe1a2pjB4UNdzEo5jT.jpg",
+    "backdrop_path": "/ysCmtf9Y9fLDChZ88PXId5RbLP1.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 135483,
+      "name": "Taken Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Liam Neeson",
+      "character": "Bryan Mills",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Maggie Grace",
+      "character": "Kim Mills",
+      "profile_path": "/fEZSGno4ooPgFjuGzE7ogsWEHsh.jpg"
+    },
+    {
+      "name": "Famke Janssen",
+      "character": "Lenore St. John",
+      "profile_path": "/uvZGwNsLqe9NyA57Qlt46IkO8Bd.jpg"
+    },
+    {
+      "name": "Olivier Rabourdin",
+      "character": "Jean-Claude Pitrel",
+      "profile_path": "/r15C7VnXnyMJk8JyNQOJGaauiKA.jpg"
+    }
+  ]
+}

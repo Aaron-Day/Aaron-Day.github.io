@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36643,
+    "title": "The World Is Not Enough",
+    "overview": "Greed, revenge, world dominance and high-tech terrorism \u2013 it\u0027s all in a day\u0027s work for Bond, who\u0027s on a mission to protect a beautiful oil heiress from a notorious terrorist. In a race against time that culminates in a dramatic submarine showdown, Bond works to defuse the international power struggle that has the world\u0027s oil supply hanging in the balance.",
+    "tagline": "As the countdown begins for the new millennium there is still one number you can always count on.",
+    "runtime": 128,
+    "release_date": "1999-11-17",
+    "vote_average": 6.291,
+    "poster_path": "/wCb2msgoZPK01WIqry24M4xsM73.jpg",
+    "backdrop_path": "/n2jVDMcBEWsLFooO7W1ZkcMUtWS.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Pierce Brosnan",
+      "character": "James Bond",
+      "profile_path": "/dzXVwwJLPwiZeXOnf7YxorqVEEM.jpg"
+    },
+    {
+      "name": "Sophie Marceau",
+      "character": "Elektra",
+      "profile_path": "/b56TRCVVMZ2LMZqzXg0FxeGMd0u.jpg"
+    },
+    {
+      "name": "Robert Carlyle",
+      "character": "Renard",
+      "profile_path": "/dLNeFPfJACiCiUz3oEdAjeKIwvZ.jpg"
+    },
+    {
+      "name": "Denise Richards",
+      "character": "Christmas Jones",
+      "profile_path": "/i1MDAhdjiqXWwEhr7ujnlk8ksdl.jpg"
+    }
+  ]
+}

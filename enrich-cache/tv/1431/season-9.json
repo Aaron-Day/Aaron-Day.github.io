@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 9,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "For Warrick",
+        "overview": "After Warrick is shot in a Las Vegas alley, the CSI team comes together to deal with the aftermath.",
+        "air_date": "2008-10-09",
+        "runtime": 45,
+        "still_path": "/7bSd16TdFRkDdoGkDPZFiQSiI5u.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Happy Place",
+        "overview": "A hypnotist bank robber becomes the prime suspect in a murder investigation.",
+        "air_date": "2008-10-16",
+        "runtime": 44,
+        "still_path": "/7sOw6DSQS2yheQhBr0gjJlVuCTA.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Art Imitates Life",
+        "overview": "After several victims are found dead while performing normal, everyday activities, the CSIs must find the reason as to why each of the victims remain upright after dying.",
+        "air_date": "2008-10-23",
+        "runtime": 45,
+        "still_path": "/aZWU1Egz7B4ZugkCzXJsxDN0VB2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Let It Bleed",
+        "overview": "The team investigates the death of a woman who turns out to be the daughter of a wanted criminal.",
+        "air_date": "2008-10-30",
+        "runtime": 44,
+        "still_path": "/zCUtCbau51DHNZ0USuLLpb5NyLc.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Leave out All the Rest",
+        "overview": "Grissom asks Lady Heather for help when the team investigates a case connected to the world of domination.",
+        "air_date": "2008-11-06",
+        "runtime": 44,
+        "still_path": "/lv7uaXY1JoFWvLzlKIL7ruF4z4z.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Say Uncle",
+        "overview": "The team has a hard time investigating a shooting in Koreatown when none of the witnesses will talk about the crime.",
+        "air_date": "2008-11-13",
+        "runtime": 44,
+        "still_path": "/mM16ZRmfx0FucrxjkRUqYxeEEYR.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Woulda, Coulda, Shoulda",
+        "overview": "The murder of a mother and her child seems to be connected to a murder case from 12 years earlier.",
+        "air_date": "2008-11-20",
+        "runtime": 41,
+        "still_path": "/yYdK3K9utbxDrWMqRUheWwxkDFZ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Young Man with a Horn",
+        "overview": "A popular young singer is found dead outside an infamous Las Vegas nightclub, leading the CSI team to uncover a link between that crime and a murder 50 years earlier.",
+        "air_date": "2008-12-04",
+        "runtime": 44,
+        "still_path": "/8BT7cudWEZZZ7p88cuzKJM5t5T1.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "CSI-19 down",
+        "overview": "When the team discovers a connection between a new murder and a serial killer, Grissom secretly joins the class of a criminal pathologist (Laurence Fishburne) to help crack the case.",
+        "air_date": "2008-12-11",
+        "runtime": 45,
+        "still_path": "/yaB5GYV6XRwG1yX0kIcdukVDqlJ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "One to Go",
+        "overview": "The CSI team is shocked and saddened when, after working with Dr. Raymond Langston (Fishburne) on the \u0022Dick \u0026 Jane\u0022 murders, Grissom announces that his time as a CSI has come to an end and offers Langston a permanent position on the CSI team.",
+        "air_date": "2009-01-15",
+        "runtime": 44,
+        "still_path": "/qigBzYFoF0UHBoIeyiDBeOQwugu.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Grave Shift",
+        "overview": "The first day on the job for Dr. Langston turns from bad to worse when a simple burglary case quickly overlaps with a complicated arson and homicide case.",
+        "air_date": "2009-01-22",
+        "runtime": 44,
+        "still_path": "/fj6r9Pchi3DEdksJ0BcFPITlJ8o.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Disarmed and Dangerous",
+        "overview": "The detectives search for the murderer of FBI agent Billy Ray Jackson, only Billy Ray isn\u0027t really an FBI agent, and neither are his impressively capable partners, Miles Baker and Emma Solomon.",
+        "air_date": "2009-01-29",
+        "runtime": 44,
+        "still_path": "/hhgNCwnqxAUM9XNC7W2lRte1EhQ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Deep Fried and Minty Fresh",
+        "overview": "Langston and Nick are called to investigate a murder at a fast food restaurant and have quite a task ahead of them when they discover that much of the evidence is coated in cooking oil.",
+        "air_date": "2009-02-12",
+        "runtime": 44,
+        "still_path": "/iQFZIJNKxPJcNMgDSPFt7xI2LOC.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Miscarriage of Justice",
+        "overview": "While Langston testifies in the trial of a respected Congressman, new evidence sends the CSIs back to the lab to reopen the investigation.",
+        "air_date": "2009-02-19",
+        "runtime": 43,
+        "still_path": "/rutKkQYQ6Tvq04BOabTPP1LMXbQ.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Kill Me If You Can",
+        "overview": "The CSI are called to three different crime scenes in one night that are seemingly unrelated, but each case\u0027s forensic evidence reveals a common link",
+        "air_date": "2009-02-26",
+        "runtime": 45,
+        "still_path": "/1aavVRMl7dW8xoMv6amSbfy7M1F.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Turn, Turn, Turn",
+        "overview": "When the CSIs are called to a murder scene at a familiar motel, Nick is thrown for a loop as he pieces together three separate murder investigations that all took place at the same establishment over the course of a year.",
+        "air_date": "2009-03-05",
+        "runtime": 45,
+        "still_path": "/bGvCqzsqbhgJEMr6jH5AcRKV1FC.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "No Way Out",
+        "overview": "Langston and Riley are taken hostage during the aftermath of a shootout in an usually calm Las Vegas community.",
+        "air_date": "2009-03-12",
+        "runtime": 43,
+        "still_path": "/oMUQnO52gI5lqgiyPwzzY8zLyOd.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Mascara",
+        "overview": "Langston is shocked when his former student is found murdered and becomes the focus of a CSI investigation into the world of Mexican wrestling.",
+        "air_date": "2009-04-02",
+        "runtime": 44,
+        "still_path": "/3tSMh6vFSKdZEqwB60U64Q05rDL.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Descent of Man",
+        "overview": "When a seasoned sky diver is paralyzed after free falling to earth when his parachute doesn\u0027t deploy, he turns out to be linked to the strange death-by-airborne-toxins of two wealthy men with ties to Iran.",
+        "air_date": "2009-04-09",
+        "runtime": 43,
+        "still_path": "/AgMUQuBmZmAZzxmkttVSICZ634e.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "A Space Oddity",
+        "overview": "When the producer of the reboot of a classic SF show is murdered at a Las Vegas science-fiction convention attended by both Hodges and Wendy (both, unknown to each other, fans of the original show), they find a connection with each other as the team investigates the crime.",
+        "air_date": "2009-04-16",
+        "runtime": 43,
+        "still_path": "/yBnLpIHDPnrqBewVEi7BbrKAqgj.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "If I Had A Hammer",
+        "overview": "Catherine revisits one of the very first cases she worked as a CSI when the convicted felon in the murder claims the verdict was based on faulty evidence.",
+        "air_date": "2009-04-23",
+        "runtime": 45,
+        "still_path": "/ux5YDavffK8Ya7oyOPKlJyPCWS3.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Gone Dead Train",
+        "overview": "A series of indeterminate deaths test the deductive powers of the CSI team, who fear that a public health emergency may be in the offing. Meanwhile, a friendly rivalry over who will win an upcoming bikini contest takes a deadly turn...",
+        "air_date": "2009-04-30",
+        "runtime": 45,
+        "still_path": "/jaJ8gA0W5pspNw6Tzu8SMpNDjBI.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Hog Heaven",
+        "overview": "A band of vicious bikers is given the go-ahead to take down one of their own when it\u0027s discovered that the guy is an undercover cop.",
+        "air_date": "2009-05-07",
+        "runtime": 44,
+        "still_path": "/mpPUSkIwhCVYpfU1Sim07DGsv8f.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "All In",
+        "overview": "A cache of missing chips from a closed down casino turn up in Vegas and a string of murders follow, leading Langston to use deadly force for the first time in his career as a CSI.",
+        "air_date": "2009-05-14",
+        "runtime": 45,
+        "still_path": "/8OrzIvVOvSjryv02a6nuvwYUgDm.jpg"
+      }
+    ]
+  }
+}

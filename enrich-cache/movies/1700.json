@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1700,
+    "title": "Misery",
+    "overview": "After an accident, acclaimed novelist Paul Sheldon is rescued by a nurse who claims to be his biggest fan.  Her obsession takes a dark turn when she holds him captive in her remote Colorado home and forces him to write back to life the popular literary character he killed off.",
+    "tagline": "Paul Sheldon used to write for a living. Now, he\u2019s writing to stay alive.",
+    "runtime": 107,
+    "release_date": "1990-11-30",
+    "vote_average": 7.754,
+    "poster_path": "/klPO5oh1LOxiPpdDXZo1ADgpKcw.jpg",
+    "backdrop_path": "/rUAn3Ul1tL7JXMjZ951UOI3F0UA.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kathy Bates",
+      "character": "Annie Wilkes",
+      "profile_path": "/3MsayDvY73uXGVbCFHyy1ABTacV.jpg"
+    },
+    {
+      "name": "James Caan",
+      "character": "Paul Sheldon",
+      "profile_path": "/z2Lz3rtxZ7aJjzBUkCnExvo8stn.jpg"
+    },
+    {
+      "name": "Richard Farnsworth",
+      "character": "Buster",
+      "profile_path": "/zwomo8lekrM7dkJ00JmqsslwrIB.jpg"
+    },
+    {
+      "name": "Lauren Bacall",
+      "character": "Marcia Sindell",
+      "profile_path": "/iCOzbSzCSUC6D9EcyXtVb2FRNu0.jpg"
+    }
+  ]
+}

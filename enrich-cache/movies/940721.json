@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 940721,
+    "title": "Godzilla Minus One",
+    "overview": "In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror.",
+    "tagline": "\u6226\u5F8C\u3001\u65E5\u672C\u3002\u7121\uFF08\u30BC\u30ED\uFF09\u304B\u3089\u8CA0\uFF08\u30DE\u30A4\u30CA\u30B9\uFF09\u3078\u3002",
+    "runtime": 125,
+    "release_date": "2023-11-03",
+    "vote_average": 7.6,
+    "poster_path": "/2E2WTX0TJEflAged6kzErwqX1kt.jpg",
+    "backdrop_path": "/oHBhHoNe59VH6bUMazDtJmWOFSS.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1474814,
+      "name": "Godzilla Minus Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ryunosuke Kamiki",
+      "character": "Koichi Shikishima",
+      "profile_path": "/ut7ewXjdgUmgkhJ1EtbOo9tbc7s.jpg"
+    },
+    {
+      "name": "Minami Hamabe",
+      "character": "Noriko Oishi",
+      "profile_path": "/eQN8N2chINckvQDiNqzDXI0v9vN.jpg"
+    },
+    {
+      "name": "Yuki Yamada",
+      "character": "Shiro Mizushima",
+      "profile_path": "/1oRe8UYddBYzyqAjlSwMTIFgg4K.jpg"
+    },
+    {
+      "name": "Munetaka Aoki",
+      "character": "Sosaku Tachibana",
+      "profile_path": "/l5GdFPBBz717Kiimyqp5ieaglVo.jpg"
+    }
+  ]
+}

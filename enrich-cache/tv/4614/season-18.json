@@ -1,0 +1,136 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 18,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Sturgeon Season",
+        "overview": "Gibbs and Fornell attempt to track down the leader of a drug ring who supplied drugs to Fornell\u0027s daughter.",
+        "air_date": "2020-11-17",
+        "runtime": 45,
+        "still_path": "/tThwJrv5oQ5Q4Qbj9WPV9EtR59C.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Everything Starts Somewhere",
+        "overview": "Flashbacks reveal the murder case that first introduced young Gibbs to NCIS and his introduction to young, new-to-America Ducky.",
+        "air_date": "2020-11-24",
+        "runtime": 45,
+        "still_path": "/orcQqdzFWQw6Nfdros7TsX44ojA.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Blood And Treasure",
+        "overview": "The discovery of two dead bodies leads the NCIS team into the wild world of modern-day treasure hunting.",
+        "air_date": "2020-12-08",
+        "runtime": 45,
+        "still_path": "/5QgIXFRmE7LW997e0YY2LXWn4Ez.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Sunburn",
+        "overview": "McGee and his wife Delilah\u0027s Bahamian vacation turns into a high-stakes mission when a case NCIS is tracking of a dead escape room manager has ties to the island.",
+        "air_date": "2021-01-19",
+        "runtime": 45,
+        "still_path": "/bGGvSEAzPa6IlsM6YtC8wteZ6zw.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Head of the Snake",
+        "overview": "Gibbs and Fornell\u0027s crusade to find the head of the drug ring responsible for Fornell\u0027s daughter Emily\u0027s overdose comes to a climax.",
+        "air_date": "2021-01-19",
+        "runtime": 45,
+        "still_path": "/5cUFaWfvjBjRvwoFFZDpoHU11SP.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "1mm",
+        "overview": "Following a tip about smuggled weapons, Bishop and Torres engage in a shootout in a former sheriff\u0027s residence that\u0027s now a historical site, only to find themselves locked in abandoned jail cells there.",
+        "air_date": "2021-01-26",
+        "runtime": 45,
+        "still_path": "/A0Rjvp7BSanT7hx1yh1Urgs9lAs.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The First Day",
+        "overview": "NCIS investigates the murder of a Navy officer who was killed while driving home a recently released inmate.",
+        "air_date": "2021-02-09",
+        "runtime": 45,
+        "still_path": "/9FKJ64wMjo7alfbuwtwlAXU1zZM.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "True Believer",
+        "overview": "When Sloane\u2019s name is discovered in Afghanistan at the site of an abandoned bus with a dead driver, Gibbs accompanies her on a trip to find a group of girls who were kidnapped from the bus.",
+        "air_date": "2021-03-02",
+        "runtime": 45,
+        "still_path": "/ecrds5ripoy4Fq8ugdIYmLVu3Nx.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Winter Chill",
+        "overview": "NCIS dives into the competitive world of food trucks after finding a man frozen to death in the back of one.",
+        "air_date": "2021-03-09",
+        "runtime": 45,
+        "still_path": "/kvZzkwynU8m1Ot9zQhV1VOPMJxn.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Watchdog",
+        "overview": "NCIS uncovers a secret dogfighting ring, which leads to an unexpected move by one of the team members.",
+        "air_date": "2021-03-16",
+        "runtime": 45,
+        "still_path": "/pJa5aLufNKU23KqFO0tNw5f7iz6.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Gut Punch",
+        "overview": "Vance assigns McGee, Torres, and Bishop to Covid compliance duty at a foreign affairs summit, where they discover a link to another NCIS team\u0027s murder case.",
+        "air_date": "2021-04-06",
+        "runtime": 45,
+        "still_path": "/g2oC7NM05DZjt5S72Js6MQw43W2.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Sangre",
+        "overview": "Evidence from the stabbing of a Marine Sergeant leads Torres to meet his father who left when he was a child.",
+        "air_date": "2021-04-27",
+        "runtime": 45,
+        "still_path": "/egQUHdbQhghtcM6bceIwu3yKtCA.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Misconduct",
+        "overview": "The team investigates a cyclist killed in a hit and run. Gibbs prepares to testify against a financial advisor who stole millions from his Navy clients.",
+        "air_date": "2021-05-04",
+        "runtime": 45,
+        "still_path": "/f00ULeYDQK5l6OTmlhDFZp0eP2c.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Unseen Improvements",
+        "overview": "NCIS tracks a stolen laptop to the uncle of a young boy, Phineas, Gibbs\u2019 former neighbor.",
+        "air_date": "2021-05-11",
+        "runtime": 45,
+        "still_path": "/43wytDdgC6fH8R5IHDcN9XCXJKh.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Blown Away",
+        "overview": "When members of an NCIS Regional Enforcement Action Capabilities Training Team (REACT) are killed during an explosion, NCIS Special Agent Jessica Knight, the lone surviving member, helps crack the case using high tech body armor.",
+        "air_date": "2021-05-18",
+        "runtime": 45,
+        "still_path": "/zodGiL6FErRhLjnlQ7TQUfUDObf.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Rule 91",
+        "overview": "While pursuing a dangerous arms dealer, the team is shocked when Bishop is implicated in an old NSA leak while Gibbs and Marcie realize the killer they\u0027ve been tracking may be onto them.",
+        "air_date": "2021-05-25",
+        "runtime": 45,
+        "still_path": "/AllX1J4IsSLdtEpP63SrPDRM4M6.jpg"
+      }
+    ]
+  }
+}

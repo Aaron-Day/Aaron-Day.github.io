@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 75,
+    "title": "Mars Attacks!",
+    "overview": "A fleet of Martian spacecraft surrounds the world\u0027s major cities and all of humanity waits to see if the extraterrestrial visitors have, as they claim, \u0022come in peace.\u0022 U.S. President James Dale receives assurance from science professor Donald Kessler that the Martians\u0027 mission is a friendly one. But when a peaceful exchange ends in the total annihilation of the U.S. Congress, military men call for a full-scale nuclear retaliation.",
+    "tagline": "Nice planet. We\u0027ll take it!",
+    "runtime": 106,
+    "release_date": "1996-12-13",
+    "vote_average": 6.435,
+    "poster_path": "/m6BxrwE9RL6ly1B7841n7UTSCQE.jpg",
+    "backdrop_path": "/ELsTifJ2lu4vsMhoHeZ5EnncHw.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jack Nicholson",
+      "character": "President Dale / Art Land",
+      "profile_path": "/6h12pZsgj3WWjMtykUgfLkLEBWz.jpg"
+    },
+    {
+      "name": "Glenn Close",
+      "character": "Marsha Dale",
+      "profile_path": "/4VHZ1GfLwN7MUgApy0LCBzdDF9L.jpg"
+    },
+    {
+      "name": "Annette Bening",
+      "character": "Barbara Land",
+      "profile_path": "/kGslMAWcpv8MKzODhDRDkFE0uX7.jpg"
+    },
+    {
+      "name": "Pierce Brosnan",
+      "character": "Donald Kessler",
+      "profile_path": "/dzXVwwJLPwiZeXOnf7YxorqVEEM.jpg"
+    }
+  ]
+}

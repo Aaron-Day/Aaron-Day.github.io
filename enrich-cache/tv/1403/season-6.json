@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Missing Pieces",
+        "overview": "Scattered across the galaxy, the team works to find their footing in the wake of losing Coulson.",
+        "air_date": "2019-05-10",
+        "runtime": 44,
+        "still_path": "/8Oi4EnmkjvKvRcr6Gl55AZPZafS.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Window of Opportunity",
+        "overview": "While Fitz and Enoch struggle in space, Sarge and his team move forward with their mysterious mission on Earth.",
+        "air_date": "2019-05-17",
+        "runtime": 45,
+        "still_path": "/6hGD1KKJ5WsrEDr09AQXjFunx7B.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Fear and Loathing on the Planet of Kitson",
+        "overview": "It\u2019s a wild night out on the planet of Kitson for the agents. While Leo and Enoch try their luck at the casino, nearby, Daisy and Simmons find themselves in a much... groovier situation.",
+        "air_date": "2019-05-24",
+        "runtime": 45,
+        "still_path": "/cs8UQk3j0pthMFcEvj06h6mPQEF.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Code Yellow",
+        "overview": "Yo-Yo and Keller take things public; parasitic aliens threaten the human race; and someone really needs boba.",
+        "air_date": "2019-05-31",
+        "runtime": 43,
+        "still_path": "/r6G5BoHmrA15MsMwwDPJY6x38f1.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Other Thing",
+        "overview": "Sarge has May; Atarah has Daisy, Enoch and Simmons; and now, there are two planets that need saving.",
+        "air_date": "2019-06-14",
+        "runtime": 45,
+        "still_path": "/soFPb57Fmcx3zOjxflS5L6QWjpg.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Inescapable",
+        "overview": "They\u0027ve fought through space, time and alternate realities to find each other, and now, closer than ever, only their own demons can stop FitzSimmons\u0027 reunion.",
+        "air_date": "2019-06-21",
+        "runtime": 45,
+        "still_path": "/3KvpgeeQEJ1Fu1cH4YPvd4RCoRR.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Toldja",
+        "overview": "After finding themselves in yet another gambling dilemma, a mysterious stranger offers Enoch and FitzSimmons a ride home where, it turns out, two shrikes aren\u2019t better than one.",
+        "air_date": "2019-06-28",
+        "runtime": 44,
+        "still_path": "/aCKSrJYMGZPXSW0PRuMBCJta5z2.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Collision Course (1)",
+        "overview": "To face The Galaxy-Hopping Hate-Beast That Eats Planets, the team on Earth asks for help in all the wrong places. While back on the Lazy Comet, something weird is going on with Izel\u2019s crew, and it\u2019s not just the puffies.",
+        "air_date": "2019-07-05",
+        "runtime": 44,
+        "still_path": "/pBvPVdJvKzDj7I8vWGZfl7oHWpJ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Collision Course (2)",
+        "overview": "No time for the team to play catch-up, there\u0027s a planet to save.",
+        "air_date": "2019-07-12",
+        "runtime": 44,
+        "still_path": "/pzzfipYotpyi3ETxKMxBvbDXHFl.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Leap",
+        "overview": "The party\u2019s over, and now the team must trust each other in order to face impending doom and an enemy that\u2019s closer than they think.",
+        "air_date": "2019-07-19",
+        "runtime": 44,
+        "still_path": "/nJCHJRs6CtluaXxNDwWLeNO1iqd.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "From the Ashes",
+        "overview": "Out of answers and running out of time, the agents must face the ghosts of their past in order to move forward.",
+        "air_date": "2019-07-26",
+        "runtime": 45,
+        "still_path": "/pyCuhWEU2q7PkQVfpMUxKXqfetx.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Sign",
+        "overview": "With time running short, the team will have to go to hell and back to stop the end of everything.",
+        "air_date": "2019-08-02",
+        "runtime": 43,
+        "still_path": "/giYsOCMPfRjf1xjdGuzXnH24Ejg.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "New Life",
+        "overview": "Who will survive? It all comes down to this.",
+        "air_date": "2019-08-02",
+        "runtime": 45,
+        "still_path": "/jRrgeEvci7Bk54zyhNI4nfjqYP4.jpg"
+      }
+    ]
+  }
+}

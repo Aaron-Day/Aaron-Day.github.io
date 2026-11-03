@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 302946,
+    "title": "The Accountant",
+    "overview": "As a math savant uncooks the books for a new client, the Treasury Department closes in on his activities and the body count starts to rise.",
+    "tagline": "Calculate your choices.",
+    "runtime": 128,
+    "release_date": "2016-10-13",
+    "vote_average": 7.142,
+    "poster_path": "/fceheXB5fC4WrLVuWJ6OZv9FXYr.jpg",
+    "backdrop_path": "/dTGECn8He16tZeBHQTLf6rVydE8.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 870339,
+      "name": "The Accountant Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Affleck",
+      "character": "Christian Wolff",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Anna Kendrick",
+      "character": "Dana Cummings",
+      "profile_path": "/i2HIJQcBsUQ3o9HwEeDwou45D60.jpg"
+    },
+    {
+      "name": "J.K. Simmons",
+      "character": "Ray King",
+      "profile_path": "/ScmKoJ9eiSUOthAt1PDNLi8Fkw.jpg"
+    },
+    {
+      "name": "Jon Bernthal",
+      "character": "Brax",
+      "profile_path": "/bjcglF1IpDcZNs1HwFxakGpzBo6.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 566525,
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "overview": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+    "tagline": "You can\u0027t outrun your destiny.",
+    "runtime": 132,
+    "release_date": "2021-09-01",
+    "vote_average": 7.481,
+    "poster_path": "/9f2Q0U3IOsLgrI2HkvldwSABZy5.jpg",
+    "backdrop_path": "/r7K6Xt0RX4Mw0cAbZVw5cyb1Tux.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Simu Liu",
+      "character": "Shaun / Shang-Chi",
+      "profile_path": "/cCx2OghLj9KN73oyRZe92i2p3Ih.jpg"
+    },
+    {
+      "name": "Tony Leung Chiu-wai",
+      "character": "Xu Wenwu",
+      "profile_path": "/idGzkwbm0BiLdrrKfcXecFNXbDu.jpg"
+    },
+    {
+      "name": "Awkwafina",
+      "character": "Katy",
+      "profile_path": "/l5AKkg3H1QhMuXmTTmq1EyjyiRb.jpg"
+    },
+    {
+      "name": "Ben Kingsley",
+      "character": "Trevor Slattery",
+      "profile_path": "/k3Dmu49B2akwDvgqy52MOxznI59.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 591,
+    "title": "The Da Vinci Code",
+    "overview": "A murder in Paris\u2019 Louvre Museum and cryptic clues in some of Leonardo da Vinci\u2019s most famous paintings lead to the discovery of a religious mystery. For 2,000 years a secret society closely guards information that \u2014 should it come to light \u2014 could rock the very foundations of Christianity.",
+    "tagline": "Seek the truth.",
+    "runtime": 149,
+    "release_date": "2006-05-17",
+    "vote_average": 6.735,
+    "poster_path": "/9ejKfNk0LBhSI9AahH4f9NJNZNM.jpg",
+    "backdrop_path": "/4NsQl44oXVMiuIM9t7ZsVgYzOkv.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 115776,
+      "name": "Robert Langdon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Robert Langdon",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Audrey Tautou",
+      "character": "Sophie Neveu",
+      "profile_path": "/d1HVrV8zXy1FJVptmOCkHWG8Jf2.jpg"
+    },
+    {
+      "name": "Ian McKellen",
+      "character": "Sir Leigh Teabing",
+      "profile_path": "/5cnnnpnJG6TiYUSS7qgJheUZgnv.jpg"
+    },
+    {
+      "name": "Jean Reno",
+      "character": "Captain Bezu Fache",
+      "profile_path": "/mw0EZJYz3kiFq9fNxsML773gotF.jpg"
+    }
+  ]
+}

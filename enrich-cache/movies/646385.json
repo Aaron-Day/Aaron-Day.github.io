@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 646385,
+    "title": "Scream",
+    "overview": "Twenty-five years after a streak of brutal murders shocked the quiet town of Woodsboro, a new killer has donned the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town\u2019s deadly past.",
+    "tagline": "It\u0027s always someone you know.",
+    "runtime": 114,
+    "release_date": "2022-01-12",
+    "vote_average": 6.674,
+    "poster_path": "/nD4M4Bx457ryLuKYpxFwQ2IBJ5w.jpg",
+    "backdrop_path": "/ifUfE79O1raUwbaQRIB7XnFz5ZC.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2602,
+      "name": "Scream Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Melissa Barrera",
+      "character": "Sam Carpenter",
+      "profile_path": "/5oeFHUwrFz2UylWdYEXXJxfUUqL.jpg"
+    },
+    {
+      "name": "Jenna Ortega",
+      "character": "Tara Carpenter",
+      "profile_path": "/cV4x7jNmsGLdKZn5I6xVF3Ltnmg.jpg"
+    },
+    {
+      "name": "Mason Gooding",
+      "character": "Chad Meeks-Martin",
+      "profile_path": "/bmlry1xqBzNgv8Chm783ss93Cvg.jpg"
+    },
+    {
+      "name": "Jasmin Savoy Brown",
+      "character": "Mindy Meeks-Martin",
+      "profile_path": "/yWaCA2iKmVps20SFxwiB1DvbN6j.jpg"
+    }
+  ]
+}

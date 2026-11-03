@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 27,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Believe It or Not",
+        "overview": "The Rangers are skeptical when Steel says he\u0027s found clues that proves Evox may have returned.",
+        "air_date": "2020-02-22",
+        "runtime": 22,
+        "still_path": "/d3g8IcV0JfzlU7ahp8XE4pKd7yf.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Save Our Shores",
+        "overview": "A huge trash spill at the beach endangers the local wildlife; Scrozzle sets about finding reinforcements.",
+        "air_date": "2020-02-29",
+        "runtime": 22,
+        "still_path": "/sURJIQGFn96TYG1JZ2n7Wo8LTz6.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Game On!",
+        "overview": "It\u2019s not all fun and games when Devon\u2019s favorite video game is brought to life in the form of a new Robotron.",
+        "air_date": "2020-03-07",
+        "runtime": 22,
+        "still_path": "/tkKGVEcUiquAc0euv1LnKnnnVkE.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Artist Anonymous",
+        "overview": "Ravi secretly repaints a local art mural, but a strange artist arrives and claims the work as his own.",
+        "air_date": "2020-03-14",
+        "runtime": 22,
+        "still_path": "/lPy7jLpoBUfgGUvknODBnAAujk6.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Cruisin\u0027 for a Bruisin\u0027",
+        "overview": "Devon discovers that Cruise has some skills that will help the Rangers in battle and pushes him to join the team.",
+        "air_date": "2020-03-28",
+        "runtime": 22,
+        "still_path": "/j2UxpN8dmkZ2cPc6XiCIwxw81sO.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Blame Game",
+        "overview": "Steel learns the concept of discipline and takes it too far, putting one of the Rangers in real danger.",
+        "air_date": "2020-04-04",
+        "runtime": 22,
+        "still_path": "/nlvLq09XvZrG2ql99mUI6bd7W1H.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Beast King Rampage",
+        "overview": "The Rangers are given access to a powerful new Zord, but Evox has designs to steal it for himself.",
+        "air_date": "2020-04-11",
+        "runtime": 22,
+        "still_path": "/lxd72AtJOEuMUuYflnTzyZkfHty.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Boxed In",
+        "overview": "The Pan Global Games arrive in Coral Harbor, but Ranger duties prevent the teens from attending any of the events.",
+        "air_date": "2020-04-18",
+        "runtime": 22,
+        "still_path": "/gzR6Jm0zFBSlC2vfzgrVSo49xvH.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Secret Struggle",
+        "overview": "Steel learns that Nate and Zoey have feelings for each other and tries to bring them together, despite the strict Grid Battleforce rules that forbid relationships between Rangers.",
+        "air_date": "2020-04-25",
+        "runtime": 22,
+        "still_path": "/t42WX2ZZj9kWPjPCsR63UnWJgS.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Evox Snare",
+        "overview": "Grid Battleforce shuts down the Morph-X towers to lure Evox into a trap.",
+        "air_date": "2020-09-19",
+        "runtime": 22,
+        "still_path": "/g52WJuVf6XriHzZG37HcECe7QEh.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Intruder Alert!",
+        "overview": "The Rangers receive a strange message from outer space warning of an impending threat.",
+        "air_date": "2020-09-26",
+        "runtime": 22,
+        "still_path": "/uoV5f8JK7wUM8WkCwFlYAmQ9xuV.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Greater Good",
+        "overview": "The Rangers do everything they can to help their new ally return home.",
+        "air_date": "2020-10-03",
+        "runtime": 22,
+        "still_path": "/aSahP6efwes1qxqiIuDYW0MmuVU.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Finders Keepers",
+        "overview": "A hasty decision by Zoey puts an old friend in danger.",
+        "air_date": "2020-10-10",
+        "runtime": 22,
+        "still_path": "/jRmbCEFA4Um41IepwfHAahXXtSI.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Making Bad",
+        "overview": "Evox decides to add a new villain to his team and commands his minions to find the evilest villain of all time.",
+        "air_date": "2020-10-17",
+        "runtime": 22,
+        "still_path": "/wPUJbD1rUCbkNPnWtVtVdhBzWBl.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Grid Connection",
+        "overview": "In an epic battle, the Beast Morphers team up with the Dino Thunder, Dino Charge, and Mighty Morphin Power Rangers to defeat the newest member of Evox\u0027s team.",
+        "air_date": "2020-10-24",
+        "runtime": 22,
+        "still_path": "/dZfpEneyUwtpbI2f0lFvKPfOvTp.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Golden Opportunity",
+        "overview": "Nate is reunited with his do-gooder parents, who offer him a compelling and difficult choice.",
+        "air_date": "2020-10-31",
+        "runtime": 22,
+        "still_path": "/cc0VEaODOpPo7Ibogu6IE5hbkoJ.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Goin\u0027 Ape",
+        "overview": "Ravi and Roxy\u0027s anniversary hits a major snag when a misunderstanding gets out of control.",
+        "air_date": "2020-11-07",
+        "runtime": 22,
+        "still_path": "/7MR72kGUESuuh6bNBlFjPd1f6Wp.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Silva Switch",
+        "overview": "Nate and Steel accidentally swap bodies!",
+        "air_date": "2020-11-14",
+        "runtime": 22,
+        "still_path": "/gk2v6CXHeSgYuLzW7nIHVSDoxUa.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Fossil Frenzy",
+        "overview": "When Zoey accidentally ruins her brother\u0027s chances for a scholarship, she\u2019ll do anything to make it right.",
+        "air_date": "2020-11-21",
+        "runtime": 22,
+        "still_path": "/m6NkoSZyp55es79BVEoPNa8l2Ij.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Crunch Time",
+        "overview": "Devon falls victim to a bad influence, which affects his relationship with Cruise.",
+        "air_date": "2020-11-28",
+        "runtime": 22,
+        "still_path": "/wvzARbmtjQ8QHiZBDSERb0t9ihi.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Source Code",
+        "overview": "Nate makes a horrifying discovery and must rely on the wisdom of an ally to help him work through it.",
+        "air_date": "2020-12-05",
+        "runtime": 22,
+        "still_path": "/hH1IkXqXvH9Rq1IHxouFJu7MHwM.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Evox Unleashed",
+        "overview": "Evox finally executes his master plan, and the Rangers must do everything they can to stop him, even potentially sacrifice one of their own.",
+        "air_date": "2020-12-12",
+        "runtime": 22,
+        "still_path": "/sutmlJvuLInbaujqtXXQ2AL0kPP.jpg"
+      }
+    ]
+  }
+}

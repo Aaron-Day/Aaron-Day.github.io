@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Return of the Shredder",
+        "overview": "Just when the Turtles believe themselves rid of Shredder, tin-grin is able to persuade Krang to return him to Earth.",
+        "air_date": "1988-10-01",
+        "runtime": 22,
+        "still_path": "/5FC2ALahCio1v1GIzLOc4psHuTC.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Incredible Shrinking Turtles",
+        "overview": "While practicing their martial arts in Central Park, the Turtles witness an alien spaceship crash into a small pond. The pilot warns them that they must find the three fragments of the Eye of Zarnof.",
+        "air_date": "1988-10-08",
+        "runtime": 22,
+        "still_path": "/qS7Hkt0a1iqfJTmXxQXjwupL12N.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "It Came from Beneath the Sewers",
+        "overview": "While the Turtles and April O\u0027Neil scour the city for the Second Fragment of the Eye of Zarnov, Shredder sheepishly reports to Krang that he has lost the First Fragment.",
+        "air_date": "1988-10-15",
+        "runtime": 22,
+        "still_path": "/bBukg5YQDK2HYJc2NoTsF5XjMFT.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Mean Machines",
+        "overview": "After the batteries died in the alien crystal converger, Donatello, using spare circuits from the space ship, builds a tracking device to help locate the second fragment of the Eye of Zarnov.",
+        "air_date": "1988-10-22",
+        "runtime": 22,
+        "still_path": "/pEDGYKBV8EAma2PT07CORLtGObD.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Curse of the Evil Eye",
+        "overview": "The Turtles are still on the search for the last fragment. Shredder finds the last fragment and connects all three to his helmet.",
+        "air_date": "1988-10-29",
+        "runtime": 22,
+        "still_path": "/bLO8YjHgAlZ8mWHTadwiKofgFc.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Case of the Killer Pizzas",
+        "overview": "Krang finally relents and provides Shredder with help in defeating the Turtles.",
+        "air_date": "1988-11-05",
+        "runtime": 22,
+        "still_path": "/sbrUtsVFi6wyYHC31yt7XYNOB1m.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Enter: The Fly",
+        "overview": "Frustrated at Baxter\u0027s latest failure, Shredder contacts Krang in Dimension X and demands that Rocksteady and Bebop be sent to aid him.",
+        "air_date": "1988-11-12",
+        "runtime": 22,
+        "still_path": "/gjyQAkDB9GwovGtm1ReuAsVbHEQ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Invasion of the Punk Frogs",
+        "overview": "Shredder plans to acquire more mutagen and create more mutants. An ion storm in Dimension X interferes with the dimensional portal.",
+        "air_date": "1988-11-19",
+        "runtime": 22,
+        "still_path": "/jeU266ZVYztmkH8XROtQmK6SZnx.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Splinter No More",
+        "overview": "Sensing Master Splinter\u0027s despair at his new life as a rat, the Turtles agree to use the small amount of mutagen that they have left to concoct a formula that will revert Splinter back into Yoshi.",
+        "air_date": "1988-11-26",
+        "runtime": 22,
+        "still_path": "/5WWms7NVJsPrX6fyV6sgGtfMnYH.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "New York\u0027s Shiniest",
+        "overview": "Shredder learns that the police have created a robotic cop and plans to steal then clone it. April gets a tip about the new experimental cop Rex-1 and breaks into the lab with her news camera for an exclusive story.",
+        "air_date": "1988-12-03",
+        "runtime": 22,
+        "still_path": "/8ZSJqWEu2hcvKJZbYD9pW97hERv.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Teenagers from Dimension X",
+        "overview": "While cruising around Dimension X, the Nutrinos decide to buzz the Technodrome. The Nutrinos learn of Krang \u0026 Shredder\u0027s latest plan to destroy the Turtles.",
+        "air_date": "1988-12-10",
+        "runtime": 22,
+        "still_path": "/ngqpXeS844LXyoBHUAjDrd6612D.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Catwoman from Channel Six",
+        "overview": "While experimenting with a matter transporter in his secret hideout, Shredder sends Rocksteady and Bebop to a nearby garbage dump. Through a series of mishaps, Rocksteady and Bebop find themselves in the Turtles\u0027 Lair.",
+        "air_date": "1988-12-17",
+        "runtime": 22,
+        "still_path": "/5VR6W7jhCAMZUcpFIHGIVTNpwWY.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Return of the Technodrome",
+        "overview": "Krang, sick of Shredder\u0027s constant failings, resolves to return the Technodrome to Earth.",
+        "air_date": "1988-12-24",
+        "runtime": 22,
+        "still_path": "/yIbouMT3d7cCZ3sXecBcrYPb91N.jpg"
+      }
+    ]
+  }
+}

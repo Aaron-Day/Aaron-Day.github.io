@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8619,
+    "title": "Master and Commander: The Far Side of the World",
+    "overview": "After an abrupt and violent encounter with a French warship inflicts severe damage upon his ship, a captain of the British Royal Navy begins a chase over two oceans to capture or destroy the enemy, though he must weigh his commitment to duty and ferocious pursuit of glory against the safety of his devoted crew, including the ship\u0027s thoughtful surgeon, his best friend.",
+    "tagline": "The courage to do the impossible lies in the hearts of men.",
+    "runtime": 138,
+    "release_date": "2003-11-14",
+    "vote_average": 7.208,
+    "poster_path": "/7ZUHF6P0vcA5v1Gm8NbRYyd9w4N.jpg",
+    "backdrop_path": "/zMHyNxNt4zhL939XX8QLBW3gWfu.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Russell Crowe",
+      "character": "Captain Jack Aubrey",
+      "profile_path": "/3IBZF0qCZMZ7zJYlgrH0sQzNZV.jpg"
+    },
+    {
+      "name": "Paul Bettany",
+      "character": "Dr. Stephen Maturin",
+      "profile_path": "/awlH20l93cgHOIDPNP6FCnGuIJy.jpg"
+    },
+    {
+      "name": "James D\u0027Arcy",
+      "character": "1st Lt. Thomas Pullings",
+      "profile_path": "/6CInTvBeLwXLx2id9TgaULaVEO4.jpg"
+    },
+    {
+      "name": "Robert Pugh",
+      "character": "Mr. Allen, Master",
+      "profile_path": "/rHThJc9AxpeoOkPuAHixVfN9AqV.jpg"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 9,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The One Amigo",
+        "overview": "After Bender sells an NFT representing the \u0022Concept of Bender\u0022, he feels lost and returns to his ancestral village in Mexico to rediscover himself.",
+        "air_date": "2024-07-29",
+        "runtime": 26,
+        "still_path": "/fCXX7n0MRqwXd1jTOekzhZsbCsy.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Quids Game",
+        "overview": "Bizarre aliens force the crew to reenact all the classic children\u0027s games Fry played at his 8th birthday party... except this time, they are played TO THE DEATH!",
+        "air_date": "2024-08-05",
+        "runtime": 25,
+        "still_path": "/gUyR5whYSSHJPMUhLccffVE91f8.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Temp",
+        "overview": "A mysterious temp worker takes over Fry\u0027s job... as well as his entire life.",
+        "air_date": "2024-08-12",
+        "runtime": 24,
+        "still_path": "/6egDa0rWmYGL5HajYAYli5EwwBP.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Beauty and the Bug",
+        "overview": "Bender becomes a matador in the sport of \u0022Bug Fighting.\u0022",
+        "air_date": "2024-08-19",
+        "runtime": 25,
+        "still_path": "/pioIkZv11ybjFeEQefs2epY1MOq.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "One Is Silicon and the Other Gold",
+        "overview": "Leela becomes friends with a jealous chatbot.",
+        "air_date": "2024-08-26",
+        "runtime": 25,
+        "still_path": "/k62Zjm2GLdTZpGG9rWcq7w8fYRh.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Attack of the Clothes",
+        "overview": "The Professor\u0027s fast-fashion clothes are a smash hit, but an environmental disaster.",
+        "air_date": "2024-09-02",
+        "runtime": 25,
+        "still_path": "/sNOL224DqwaIiucgfpmwNjCRCEl.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Planet Espresso",
+        "overview": "Hermes inherits a Jamaican coffee farm that holds the ruins of an ancient spaceship.",
+        "air_date": "2024-09-09",
+        "runtime": 25,
+        "still_path": "/3aT5GpJ9Gg4Bb6qNupTR52oDweC.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Cuteness Overload",
+        "overview": "Amy sets out to collect the cutest toys in the universe \u2013 but they are not as harmless as they appear.",
+        "air_date": "2024-09-16",
+        "runtime": 25,
+        "still_path": "/6cwghRGSMxYvkwyfLe8kO7h8Mpg.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Futurama Mystery Liberry",
+        "overview": "Futurama is reimagined in the form of classic children\u0027s mystery books.",
+        "air_date": "2024-09-23",
+        "runtime": 25,
+        "still_path": "/a5lzpcAFYBoJCzyUFHfKSkVu1oP.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Otherwise",
+        "overview": "When Fry proposes to Leela, he is overcome by a near-fatal attack of d\u00E9j\u00E0 vu.",
+        "air_date": "2024-09-30",
+        "runtime": 25,
+        "still_path": "/iA7A9PBQmDkSBRoYWMBNIrYD6TL.jpg"
+      }
+    ]
+  }
+}

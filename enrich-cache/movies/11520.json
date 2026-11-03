@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11520,
+    "title": "Grumpy Old Men",
+    "overview": "For decades, next-door neighbors and former friends John and Max have feuded, trading insults and wicked pranks. When an attractive widow moves in nearby, their bad blood erupts into a high-stakes rivalry full of naughty jokes and adolescent hijinks.",
+    "tagline": "The best of enemies until something came between them.",
+    "runtime": 103,
+    "release_date": "1993-12-25",
+    "vote_average": 6.7,
+    "poster_path": "/iMY7yFn4gMvGaQYMGWnyX2QgvHZ.jpg",
+    "backdrop_path": "/vKEtCExyFwVFo2KEBSb3dvGLFUH.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 119050,
+      "name": "Grumpy Old Men Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jack Lemmon",
+      "character": "John Gustafson",
+      "profile_path": "/7jWVWLr1VJqQrN3d4YJaATCIHRw.jpg"
+    },
+    {
+      "name": "Walter Matthau",
+      "character": "Max Goldman",
+      "profile_path": "/oAMxqfGR0C5Ru5vER9Y4OP6P0xR.jpg"
+    },
+    {
+      "name": "Ann-Margret",
+      "character": "Ariel Truax",
+      "profile_path": "/z20lA2EyYbLcZn5GV1deMQDUCEc.jpg"
+    },
+    {
+      "name": "Burgess Meredith",
+      "character": "Grandpa Gustafson",
+      "profile_path": "/2ozNyIbHChcqIBANwvCDpUZGA9b.jpg"
+    }
+  ]
+}

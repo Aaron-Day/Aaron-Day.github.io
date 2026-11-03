@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 260514,
+    "title": "Cars 3",
+    "overview": "Blindsided by a new generation of blazing-fast racers, the legendary Lightning McQueen finds himself pushed to the brink\u2014and suddenly, the champion who once ruled the track is fighting just to stay in the race. With his career hanging in the balance, McQueen must turn to an ambitious young race technician with a plan of her own, draw strength from the legacy of the late Fabulous Hudson Hornet, and risk everything on one last shot at glory.",
+    "tagline": "From this moment, everything will change.",
+    "runtime": 102,
+    "release_date": "2017-06-15",
+    "vote_average": 6.866,
+    "poster_path": "/zg5RDxvIIAKsucjuU2EZJIHEIvz.jpg",
+    "backdrop_path": "/4mlS1MitcOqdPLhxEFyk9Qwf5rr.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87118,
+      "name": "Cars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Owen Wilson",
+      "character": "Lightning McQueen (voice)",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    },
+    {
+      "name": "Cristela Alonzo",
+      "character": "Cruz Ramirez (voice)",
+      "profile_path": "/h4nQQZtVbB5Oimhu73eWmTbHtI4.jpg"
+    },
+    {
+      "name": "Chris Cooper",
+      "character": "Smokey (voice)",
+      "profile_path": "/sJKghcu9wRDIvKM0cI7kqNXYRfS.jpg"
+    },
+    {
+      "name": "Nathan Fillion",
+      "character": "Sterling (voice)",
+      "profile_path": "/aW6vCxkUZtwb6iH2Wf88Uq0XNVv.jpg"
+    }
+  ]
+}

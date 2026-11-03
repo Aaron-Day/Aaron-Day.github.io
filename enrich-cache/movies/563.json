@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 563,
+    "title": "Starship Troopers",
+    "overview": "Set in the future, the story follows a young soldier named Johnny Rico and his exploits in the Mobile Infantry. Rico\u0027s military career progresses from recruit to non-commissioned officer and finally to officer against the backdrop of an interstellar war between mankind and an arachnoid species known as \u0022the Bugs.\u0022",
+    "tagline": "A new kind of enemy. A new kind of war.",
+    "runtime": 129,
+    "release_date": "1997-11-07",
+    "vote_average": 7.12,
+    "poster_path": "/cxCmv23O7p3hyHwqoktHYkZcGsY.jpg",
+    "backdrop_path": "/7iEfnj3rfyunky6BzvnlwqfoEF0.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10522,
+      "name": "Starship Troopers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Casper Van Dien",
+      "character": "Johnny D. Rico",
+      "profile_path": "/jxRmw8gJYsJ7IG5n9B0PFzy2nHO.jpg"
+    },
+    {
+      "name": "Dina Meyer",
+      "character": "Dizzy Flores",
+      "profile_path": "/1AQEXem8soBEKjjDhE0mOyXtjCG.jpg"
+    },
+    {
+      "name": "Denise Richards",
+      "character": "Carmen Iba\u00F1ez",
+      "profile_path": "/i1MDAhdjiqXWwEhr7ujnlk8ksdl.jpg"
+    },
+    {
+      "name": "Jake Busey",
+      "character": "Private Ace Levy",
+      "profile_path": "/3WknfRePAvwFJfrbYVvfYXTQCh9.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 747,
+    "title": "Shaun of the Dead",
+    "overview": "Shaun lives a supremely uneventful life, which revolves around his girlfriend, his mother, and, above all, his local pub. This gentle routine is threatened when the dead return to life and make strenuous attempts to snack on ordinary Londoners.",
+    "tagline": "A romantic comedy. With zombies.",
+    "runtime": 99,
+    "release_date": "2004-04-09",
+    "vote_average": 7.546,
+    "poster_path": "/dgXPhzNJH8HFTBjXPB177yNx6RI.jpg",
+    "backdrop_path": "/wb34q3VgzHgL8frVMywrN3wXmqx.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Simon Pegg",
+      "character": "Shaun",
+      "profile_path": "/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg"
+    },
+    {
+      "name": "Nick Frost",
+      "character": "Ed",
+      "profile_path": "/2CHS4t6miNGLgMQAjhFqb4fFuKS.jpg"
+    },
+    {
+      "name": "Kate Ashfield",
+      "character": "Liz",
+      "profile_path": "/rtuYpo9W4AsCvI1I6brIdHe7qi.jpg"
+    },
+    {
+      "name": "Lucy Davis",
+      "character": "Dianne",
+      "profile_path": "/A1ymILbxQA5w5TduCNaU0xD9C5a.jpg"
+    }
+  ]
+}

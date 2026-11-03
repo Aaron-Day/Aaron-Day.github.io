@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11411,
+    "title": "Superman IV: The Quest for Peace",
+    "overview": "With global superpowers engaged in an increasingly hostile arms race, Superman leads a crusade to rid the world of nuclear weapons. But Lex Luthor, recently sprung from jail, is declaring war on the Man of Steel and his quest to save the planet. Using a strand of Superman\u0027s hair, Luthor synthesizes a powerful ally known as Nuclear Man and ignites an epic battle spanning Earth and space.",
+    "tagline": "Nuclear Power. In the best hands, it is dangerous. In the hands of Lex Luthor, it is pure evil. This is Superman\u0027s greatest battle. And it is for all of us.",
+    "runtime": 90,
+    "release_date": "1987-07-24",
+    "vote_average": 4.591,
+    "poster_path": "/vhs3P0JwqzlgfBqhjnCWDEOtDmS.jpg",
+    "backdrop_path": "/pMNlspaO16rf3eBlqrCwaKFOUlz.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8537,
+      "name": "Superman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Christopher Reeve",
+      "character": "Clark Kent / Superman",
+      "profile_path": "/vAGrPf3ajy6OVE3FhgABynZfybP.jpg"
+    },
+    {
+      "name": "Margot Kidder",
+      "character": "Lois Lane",
+      "profile_path": "/uJI4BwpmD9fX8D8jBdn2jT5rpvo.jpg"
+    },
+    {
+      "name": "Gene Hackman",
+      "character": "Lex Luthor",
+      "profile_path": "/zDlv9vXjnRsvwNI0bARG0uOt5CJ.jpg"
+    },
+    {
+      "name": "Mariel Hemingway",
+      "character": "Lacy Warfield",
+      "profile_path": "/8SVp3IGeItoZjP7II5zedIU8Y5X.jpg"
+    }
+  ]
+}

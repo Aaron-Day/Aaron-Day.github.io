@@ -1,0 +1,128 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "Superman and Lois\u0027 return to idyllic Smallville is set to be upended by mysterious strangers.",
+        "air_date": "2021-02-23",
+        "runtime": 64,
+        "still_path": "/3TSEyrqaRN6jwTwnRbp8jUvpeHj.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Heritage",
+        "overview": "While adjusting to their new lives in Smallville, Lois and Clark make an important decision concerning one of their sons. Meanwhile, tensions begin to rise between Lois and Morgan Edge. Lastly, Lana Lang Cushing invites the Kent family over for a barbecue.",
+        "air_date": "2021-03-02",
+        "runtime": 45,
+        "still_path": "/qio46neIDQi9KxkmXBeE3l5baUu.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Perks of Not Being a Wallflower",
+        "overview": "Clark shares some of his Kryptonian history with Jordan and Jonathan during a family breakfast. Meanwhile, Lois and Chrissy dig deeper to uncover the truth about Morgan Edge.",
+        "air_date": "2021-03-09",
+        "runtime": 43,
+        "still_path": "/ungDvMQ8KWumq6ZKC0zqHoxXDyF.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Haywire",
+        "overview": "While sitting in the stands at the high school football game, Lois and Chrissy spot fish out of water Morgan Edge conversing with Mayor Dean and Kyle Kushing, and the two see right through this insincere move to try to win over the town. Meanwhile, Clark agrees to help Lois out at a town hall meeting, but things get tense when he finds himself pulled in two different directions. Lastly, Jonathan is having mixed emotions about Jordan\u0027s newfound status.",
+        "air_date": "2021-03-16",
+        "runtime": 43,
+        "still_path": "/ApicPh8pXQb8jdOpdXULk1qPr1u.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Best of Smallville",
+        "overview": "As Smallville celebrates its first Harvest Festival since Martha\u2019s passing, Clark is reminded what his mother meant to him and learns a lesson that will help him move past her death. Meanwhile, Lois makes a breakthrough in the investigation of Morgan Edge. Lastly, Kyle tries to reconnect with Lana, but it seems like he might be falling back into his old ways.",
+        "air_date": "2021-03-23",
+        "runtime": 42,
+        "still_path": "/cegH7Mm6AuaeVQAcds1yJObqQsS.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Broken Trust",
+        "overview": "Clark reconsiders his decision to let Jordan play football. Meanwhile, Lois\u0027 continued investigation of Morgan Edge requires her to trust an unexpected ally.",
+        "air_date": "2021-05-18",
+        "runtime": 44,
+        "still_path": "/d8pgDI9ErtWGXrHI4Dpsi3mRotn.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Man of Steel",
+        "overview": "Clark struggles to help Jordan who is grappling with a new power. Meanwhile, Lois enlists Clark\u0027s help which leads to a surprise encounter.",
+        "air_date": "2021-05-25",
+        "runtime": 42,
+        "still_path": "/leNoTFhHHKWUSgBznVBS5U5Efde.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Holding the Wrench",
+        "overview": "Clark encourages Lois to reach out for help after noticing her reaching a breaking point. Meanwhile, Jonathan finds himself in a dangerous situation. Lastly, Kyle encourages Sarah to audition for the musical revue at school.",
+        "air_date": "2021-06-01",
+        "runtime": 44,
+        "still_path": "/kkRYWgwJqHEVktKff23Gu2DvJIM.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Loyal Subjekts",
+        "overview": "Chrissy and Clark team up to piece together the significance of Smallville to Morgan Edge.",
+        "air_date": "2021-06-08",
+        "runtime": 44,
+        "still_path": "/g3Zy6aww3Y7QeiztqLcv99pPnJS.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "O Mother, Where Art Thou?",
+        "overview": "Lana reaches out to Lois and Clark when Kyle starts behaving strangely. Meanwhile, Jonathan opens up to Jordan. Lastly, Sarah storms out after accusing her mom of always covering for her dad.",
+        "air_date": "2021-06-15",
+        "runtime": 44,
+        "still_path": "/aBLOannUBHqKhZarsvwcyBPUIYi.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "A Brief Reminiscence In-Between Cataclysmic Events",
+        "overview": "Clark makes a startling discovery about Morgan Edge.",
+        "air_date": "2021-06-22",
+        "runtime": 42,
+        "still_path": "/jzhdGOIL7yrPSU0WVFBshZSQgct.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Through the Valley of Death",
+        "overview": "Lois and John Henry Irons can\u0027t seem to agree on the best way to stop Morgan Edge. Meanwhile, Jonathan encourages Jordan to focus on strengthening his powers to help locate their dad. Lastly, an old friend is brought in to help with the search.",
+        "air_date": "2021-07-13",
+        "runtime": 42,
+        "still_path": "/A5j4Tpv8IYbxkzP9ztT4rsC7piJ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Fail Safe",
+        "overview": "Superman pays a visit to Morgan Edge. Meanwhile, Lois and Chrissy work together on a story. Lastly, Jonathan finds a welcome distraction during a very stressful school day.",
+        "air_date": "2021-07-20",
+        "runtime": 44,
+        "still_path": "/6PaZkQH6Z4b3QjZw67kSV90Qefl.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Eradicator",
+        "overview": "Lois is worried about Jordan as he and Sarah continue to grow closer. Meanwhile, Clark pays Lana a visit. Lastly, Jonathan has been spending more and more time with John Henry.",
+        "air_date": "2021-08-10",
+        "runtime": 40,
+        "still_path": "/1SQJ3naZU6d9MpwLCIDS6EKOK8q.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Last Sons of Krypton",
+        "overview": "Superman\u0027s worst nightmare comes to life and Lois confronts Leslie Larr. Meanwhile, Lana, Kyle and Sarah agree to stay to help General Lane.",
+        "air_date": "2021-08-17",
+        "runtime": 45,
+        "still_path": "/7e7rWunMqZoYBz1prynZvHfoSaJ.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 8,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Lock, Stock, Some Smoking Barrels and Burton Guster\u0027s Goblet of Fire",
+        "overview": "Stylish art thief Pierre Despereaux summons Shawn to London to help on an undercover operation.",
+        "air_date": "2014-01-08",
+        "runtime": 43,
+        "still_path": "/393vPwYDMkvYn6OQHvuklDyxEPf.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "S.E.I.Z.E. the Day",
+        "overview": "Lassiter receives some life-changing news and begins to lose his nerve on the job. As a result, he enlists Shawn and Gus to help him take down a dangerous criminal who tried to kill the SBPD\u2019s Interim Chief while he was giving a speech at a press conference.",
+        "air_date": "2014-01-15",
+        "runtime": 43,
+        "still_path": "/2F5A1vs79m0LMHWxHrYEOinJpfl.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Remake A.K.A. Cloudy... With a Chance of Improvement",
+        "overview": "A star studded cast of Psych ALL STARS joins our crew as they dive back into 2006 and re-tell the story of Sandra Panitch, a woman wrongfully accused of the murder of local weatherman Jackson Hale.",
+        "air_date": "2014-01-22",
+        "runtime": 43,
+        "still_path": "/vpEXGmcb5CxkyKzi4f1UT3EQyVs.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Someone\u0027s Got a Woody",
+        "overview": "A man enters the morgue and tells Woody that he was framed for the murder of the person lying dead on the slab. When Woody won\u2019t let him take the body, the man pulls a gun on him and holds Woody hostage in order to get what he wants. Shawn, Gus, Lassiter and Juliet try to resolve the situation calmly and carefully, but Interim Chief Trout has a plan of his own.",
+        "air_date": "2014-01-29",
+        "runtime": 43,
+        "still_path": "/vRAmvjrOlu1rJ3L9Y2EZs540Cel.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Cog Blocked",
+        "overview": "Gus is determined to solve the murder of a man whose life was strangely similar to his own. Along the way, Gus hits it off with a beautiful Private Investigator named Emanuelle. Meanwhile, Shawn realizes he\u0027s been mooching off of Gus, Henry and Juliet, so he tries desperately to make up for it.",
+        "air_date": "2014-02-05",
+        "runtime": 43,
+        "still_path": "/uTIVwRMf4vmSGahmWr0NqvcT7mD.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "1967: A Psych Odyssey",
+        "overview": "Lassiter is determined to be appointed Chief of Police, so he sets out to prove himself worthy of the job by solving the murder of the Mayor\u2019s beloved uncle, Archie Baxter, who was killed back in the 60s but the case was never solved. Meanwhile, Juliet receives some news that tests her relationship with Shawn.",
+        "air_date": "2014-02-26",
+        "runtime": 43,
+        "still_path": "/3fyTzs2gNlC87UukJj8WHYncfg3.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Shawn and Gus Truck Things Up",
+        "overview": "Shawn and Gus are bummed to find out the owner of their favorite food truck has been murdered. The two of them go undercover to learn the food truck ropes and find out who the killer is. While working on the case, Marlowe visits them to cure a pregnancy craving and goes into labor at the most inconvenient time.",
+        "air_date": "2014-03-05",
+        "runtime": 43,
+        "still_path": "/cloDWX3vORy0duKjI79XpnnoAtZ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "A Touch of Sweevil",
+        "overview": "Shawn is ecstatic when he discovers he\u2019s finally been invited to a prestigious paranormal convention for police consultants. As the main event begins, the leader collapses on stage, and it is clear he has been murdered. All of the police consultants on the panel jump to solve the murder, and everyone\u2019s unorthodox crime solving skills are put together to catch the culprit.",
+        "air_date": "2014-03-12",
+        "runtime": 43,
+        "still_path": "/pstLHLGnyRAr6jkQbGZjwtDyZ5o.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "A Nightmare on State Street",
+        "overview": "Gus\u0027 nightmares start to feel like reality when he and Shawn work to solve an unlikely case for the SBPD.",
+        "air_date": "2014-03-19",
+        "runtime": 43,
+        "still_path": "/yUMUpt1gAK9o0jzTkaOi22RoGiX.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Break-Up",
+        "overview": "Shawn and Gus help Detective Lassiter enlist the help of Henry and Woody to solve the murder of a real estate executive. Meanwhile, Shawn struggles with a life decision.",
+        "air_date": "2014-03-26",
+        "runtime": 43,
+        "still_path": "/jeN4eXbcNU8IM4modxmi2U2MSqj.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "eps1.0_hellofriend.mov",
+        "overview": "Elliot, a cyber-security engineer by day and vigilante hacker by night, is recruited by a mysterious underground group to destroy the firm he\u0027s paid to protect. Elliot must decide how far he\u0027ll go to expose the forces he believes are running (and ruining) the world.",
+        "air_date": "2015-06-24",
+        "runtime": 65,
+        "still_path": "/eyB7NyLPmaWep3Vzu8IwGowLBBA.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "eps1.1_ones-and-zer0es.mpeg",
+        "overview": "Elliot is torn between accepting a job offer from Evil Corp and joining the fsociety hacker group. At the same time Elliot needs to make decision that could harm people around him.",
+        "air_date": "2015-07-01",
+        "runtime": 48,
+        "still_path": "/rjM4hZGeTSG1ckxWa91DBUIWD5S.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "eps1.2_d3bug.mkv",
+        "overview": "Elliot tries to lead a normal life, but can\u0027t escape fsociety. Gideon, meanwhile, grows suspicious, and Tyrell plays dirty.",
+        "air_date": "2015-07-08",
+        "runtime": 46,
+        "still_path": "/hXTn6GbzIWcHBas0jQNOvJMofZN.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "eps1.3_da3m0ns.mp4",
+        "overview": "Elliot\u0027s inner-demons threaten an fsociety operation.",
+        "air_date": "2015-07-15",
+        "runtime": 46,
+        "still_path": "/2nRIQc1kKfS5RTkLeVQYJauW3QU.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "eps1.4_3xpl0its.wmv",
+        "overview": "Fsociety attempts to penetrate Steel Mountain, the most secure data facility in America.",
+        "air_date": "2015-07-22",
+        "runtime": 45,
+        "still_path": "/h3MJRJQRdCTsDWEOUzpatZqwkIR.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "eps1.5_br4ve-trave1er.asf",
+        "overview": "Elliot attempts to hack Vera out of jail in order to save someone he cares about. Meanwhile, Tyrell\u0027s \u0022game\u0022 gets crazy and Angela digs deeper into her mother\u0027s death.",
+        "air_date": "2015-07-29",
+        "runtime": 45,
+        "still_path": "/1RjEUBkw9Xnsq8doMw9K2NnRmsX.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "eps1.6_v1ew-s0urce.flv",
+        "overview": "Elliott goes missing. Mr. Robot tries to pull fsociety back together. Angela goes head-to-head with an old nemesis.",
+        "air_date": "2015-08-05",
+        "runtime": 45,
+        "still_path": "/8Ap8xEHmk9rJ5DqN6c9enca7sVP.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "eps1.7_wh1ter0se.m4v",
+        "overview": "Allsafe is controlled, the Dark Army is ready to meet Elliot \u0026 Tyrell and Joanna\u0027s plan goes into effect.",
+        "air_date": "2015-08-12",
+        "runtime": 46,
+        "still_path": "/tlMYjW7bTMizWFlvsnt2yAEOgWw.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "eps1.8_m1rr0r1ng.qt",
+        "overview": "The Evil Corp hack is threatened by a mystery man from Elliot\u0027s past.",
+        "air_date": "2015-08-19",
+        "runtime": 45,
+        "still_path": "/giXxuHQ9LhcndP3caA5nGD3IMI2.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "eps1.9_zer0-day.avi",
+        "overview": "Mr. Robot and Tyrell are MIA and a past hack haunts Elliot.",
+        "air_date": "2015-09-02",
+        "runtime": 54,
+        "still_path": "/hNpNO4IchQMWyhgS1Lt9QX3TBwl.jpg"
+      }
+    ]
+  }
+}

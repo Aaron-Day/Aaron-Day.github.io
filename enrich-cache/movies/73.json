@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 73,
+    "title": "American History X",
+    "overview": "Derek Vineyard is paroled after serving 3 years in prison for killing two African-American men. Through his brother, Danny Vineyard\u0027s narration, we learn that before going to prison, Derek was a skinhead and the leader of a violent white supremacist gang that committed acts of racial crime throughout L.A. and his actions greatly influenced Danny. Reformed and fresh out of prison, Derek severs contact with the gang and becomes determined to keep Danny from going down the same violent path as he did.",
+    "tagline": "Some legacies must end.",
+    "runtime": 119,
+    "release_date": "1998-07-01",
+    "vote_average": 8.323,
+    "poster_path": "/x2drgoXYZ8484lqyDj7L1CEVR4T.jpg",
+    "backdrop_path": "/6qHI1IYj7QlLSCwHRzkL62X175s.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Edward Norton",
+      "character": "Derek",
+      "profile_path": "/8nytsqL59SFJTVYVrN72k6qkGgJ.jpg"
+    },
+    {
+      "name": "Edward Furlong",
+      "character": "Danny",
+      "profile_path": "/e221dMIBgb6Lk092GIkHB9ohQF1.jpg"
+    },
+    {
+      "name": "Beverly D\u0027Angelo",
+      "character": "Doris",
+      "profile_path": "/8fYQIA8dAaA4GOTxOFSKIvTqzi.jpg"
+    },
+    {
+      "name": "Jennifer Lien",
+      "character": "Davina",
+      "profile_path": "/5wafpjORY55TY5OC6d9Cyb36O2r.jpg"
+    }
+  ]
+}

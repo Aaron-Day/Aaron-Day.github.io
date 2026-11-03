@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 602734,
+    "title": "Spiral: From the Book of Saw",
+    "overview": "Working in the shadow of an esteemed police veteran, brash Detective Ezekiel \u201CZeke\u201D Banks and his rookie partner take charge of a grisly investigation into murders that are eerily reminiscent of the city\u2019s gruesome past.  Unwittingly entrapped in a deepening mystery, Zeke finds himself at the center of the killer\u2019s morbid game.",
+    "tagline": "A new game begins.",
+    "runtime": 93,
+    "release_date": "2021-05-12",
+    "vote_average": 5.866,
+    "poster_path": "/cTvSDfBuXTZTdRCNduGMANd7VEP.jpg",
+    "backdrop_path": "/g15PR8eQV9DehSWlagvdnJZqoRq.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 656,
+      "name": "Saw Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Rock",
+      "character": "Zeke Banks",
+      "profile_path": "/5lILFeBvX3sC0EfbHhrvMEc7bPD.jpg"
+    },
+    {
+      "name": "Max Minghella",
+      "character": "William Schenk",
+      "profile_path": "/AhVDxsOOoAnwwVBL7ZY8W0mGsYJ.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Marcus Banks",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Marisol Nichols",
+      "character": "Angie Garza",
+      "profile_path": "/xgCZ4aebwqSACsL8SHbdEDNfdyC.jpg"
+    }
+  ]
+}

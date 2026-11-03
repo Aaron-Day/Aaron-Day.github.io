@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 675353,
+    "title": "Sonic the Hedgehog 2",
+    "overview": "After settling in Green Hills, Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns, this time with a new partner, Knuckles, in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.",
+    "tagline": "Welcome to the next level.",
+    "runtime": 123,
+    "release_date": "2022-03-30",
+    "vote_average": 7.411,
+    "poster_path": "/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg",
+    "backdrop_path": "/xuLA0pii2IMJW2puT7EvJtgpg0H.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 720879,
+      "name": "Sonic the Hedgehog Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Schwartz",
+      "character": "Sonic (voice)",
+      "profile_path": "/hWEQe66jXUAGVhbU5dy8s0IrrAQ.jpg"
+    },
+    {
+      "name": "James Marsden",
+      "character": "Tom Wachowski",
+      "profile_path": "/lf7OnfKZnMgNh9b98764tqSocGK.jpg"
+    },
+    {
+      "name": "Tika Sumpter",
+      "character": "Maddie Wachowski",
+      "profile_path": "/1zTXufyuQFPXVthryH7KVoZAfb7.jpg"
+    },
+    {
+      "name": "Colleen O\u0027Shaughnessey",
+      "character": "Tails (voice)",
+      "profile_path": "/y3Kl5tCX1XD6uyL9wefTRbEXTwj.jpg"
+    }
+  ]
+}

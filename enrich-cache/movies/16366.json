@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 16366,
+    "title": "Joseph: King of Dreams",
+    "overview": "In this animated retelling of the story from the Bible\u0027s Book of Genesis, Joseph\u0027s gift of dream interpretation and his brilliantly colored coat inspires jealousy in his brothers.",
+    "tagline": "",
+    "runtime": 74,
+    "release_date": "2000-11-07",
+    "vote_average": 6.945,
+    "poster_path": "/sUKImRHScrjrvaG2FwxCRY5ldtx.jpg",
+    "backdrop_path": "/wdPMV9AieVr38ox3l0rAGDIJFUW.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1734218,
+      "name": "Dreamworks\u0027 Pentateuch"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Affleck",
+      "character": "Joseph (voice)",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Mark Hamill",
+      "character": "Judah (voice)",
+      "profile_path": "/zMQ93JTLW8KxusKhOlHFZhih3YQ.jpg"
+    },
+    {
+      "name": "Richard Herd",
+      "character": "Jacob (voice)",
+      "profile_path": "/e9ZYBIiIr2qLbeNxOXABgYOjzpW.jpg"
+    },
+    {
+      "name": "Maureen McGovern",
+      "character": "Rachel (voice)",
+      "profile_path": "/uHjt5bMdBoDy9UHputxlzrYggJ0.jpg"
+    }
+  ]
+}

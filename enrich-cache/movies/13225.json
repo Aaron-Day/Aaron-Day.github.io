@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13225,
+    "title": "FernGully: The Last Rainforest",
+    "overview": "When a sprite named Crysta shrinks a human boy, Zak, down to her size, he vows to help the magical fairy folk stop a greedy logging company from destroying their home: the pristine rainforest known as FernGully. Zak and his new friends fight to defend FernGully from lumberjacks \u2014 and the vengeful spirit they accidentally unleash after chopping down a magic tree.",
+    "tagline": "Just beyond your dreams lives a secret world. Where every tree is a home. Every sound is a song. And humans only exist in fairy tales. Until now...",
+    "runtime": 76,
+    "release_date": "1992-04-10",
+    "vote_average": 6.4,
+    "poster_path": "/xkJxdeaibcrcsi1XHvT0IuOjdzB.jpg",
+    "backdrop_path": "/yEWh2uS2hYEMxfMKasrf0ysw874.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 19160,
+      "name": "FernGully Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Samantha Mathis",
+      "character": "Crysta (voice)",
+      "profile_path": "/7J7gvH1uRqfPAPlg7b35rrxSbLB.jpg"
+    },
+    {
+      "name": "Jonathan Ward",
+      "character": "Zak Young (voice)",
+      "profile_path": "/8cpTuZ9ZMWKnUPSuyTPIqPmJibq.jpg"
+    },
+    {
+      "name": "Christian Slater",
+      "character": "Pips (voice)",
+      "profile_path": "/6ww3uweEEXMlvtNjTlgBHxLErPF.jpg"
+    },
+    {
+      "name": "Robin Williams",
+      "character": "Batty Koda (voice)",
+      "profile_path": "/lu0gIoH4Bi2CiuMc6WHF9ZIK4PS.jpg"
+    }
+  ]
+}

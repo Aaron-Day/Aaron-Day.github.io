@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 564,
+    "title": "The Mummy",
+    "overview": "Dashing legionnaire Rick O\u0027Connell stumbles upon the hidden ruins of Hamunaptra while in the midst of a battle to claim the area in 1920s Egypt. It has been over three thousand years since former High Priest Imhotep suffered a fate worse than death as a punishment for a forbidden love\u2014along with a curse that guarantees eternal doom upon the world if he is ever awoken.",
+    "tagline": "The sands will rise. The heavens will part. The power will be unleashed.",
+    "runtime": 124,
+    "release_date": "1999-04-16",
+    "vote_average": 7.003,
+    "poster_path": "/yhIsVvcUm7QxzLfT6HW2wLf5ajY.jpg",
+    "backdrop_path": "/8zLS8p1tRyWFLRFfmgQq0j5WE6z.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1733,
+      "name": "The Mummy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brendan Fraser",
+      "character": "Rick O\u0027Connell",
+      "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg"
+    },
+    {
+      "name": "Rachel Weisz",
+      "character": "Evelyn Carnahan",
+      "profile_path": "/9tfHL5tholha1YF6bSKt422ETPM.jpg"
+    },
+    {
+      "name": "John Hannah",
+      "character": "Jonathan Carnahan",
+      "profile_path": "/8GzJhaZrChZpv84SU4vAsvsR3cl.jpg"
+    },
+    {
+      "name": "Arnold Vosloo",
+      "character": "Imhotep",
+      "profile_path": "/o23Z1EvWEYR7PArq2w5UpreVipV.jpg"
+    }
+  ]
+}

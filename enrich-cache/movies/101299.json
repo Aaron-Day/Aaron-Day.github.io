@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 101299,
+    "title": "The Hunger Games: Catching Fire",
+    "overview": "After surviving the Hunger Games, Katniss and Peeta struggle with the consequences of their victory as unrest spreads across Panem. Forced back into the spotlight, they become symbols of hope and resistance while the Capitol prepares a new and deadly challenge that will change the future of the nation forever.",
+    "tagline": "Remember who the enemy is.",
+    "runtime": 146,
+    "release_date": "2013-11-15",
+    "vote_average": 7.424,
+    "poster_path": "/vrQHDXjVmbYzadOXQ0UaObunoy2.jpg",
+    "backdrop_path": "/eHaazLxM5LRMh0ySkVy7SK6wUWt.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131635,
+      "name": "The Hunger Games Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jennifer Lawrence",
+      "character": "Katniss Everdeen",
+      "profile_path": "/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+    },
+    {
+      "name": "Josh Hutcherson",
+      "character": "Peeta Mellark",
+      "profile_path": "/GqIyK5mCJXFUXW4FwLM3Zj7UtK.jpg"
+    },
+    {
+      "name": "Liam Hemsworth",
+      "character": "Gale Hawthorne",
+      "profile_path": "/7UIm9RoBnlqS1uLlbElAY8urdWD.jpg"
+    },
+    {
+      "name": "Woody Harrelson",
+      "character": "Haymitch Abernathy",
+      "profile_path": "/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg"
+    }
+  ]
+}

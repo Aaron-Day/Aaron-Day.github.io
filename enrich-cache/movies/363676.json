@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 363676,
+    "title": "Sully",
+    "overview": "On 15 January 2009, the world witnessed the \u0027Miracle on the Hudson\u0027 when Captain \u0027Sully\u0027 Sullenberger glided his disabled plane onto the Hudson River, saving the lives of all 155 souls aboard. However, even as Sully was being heralded by the public and the media for his unprecedented feat of aviation skill, an investigation was unfolding that threatened to destroy his reputation and career.",
+    "tagline": "The untold story behind the miracle on the Hudson.",
+    "runtime": 96,
+    "release_date": "2016-09-07",
+    "vote_average": 7.206,
+    "poster_path": "/4vs83YcJ8TsabADDtaeCJ6ZTjYY.jpg",
+    "backdrop_path": "/oQ024BtJgArg8WI4zfuc2vkCJno.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Chesley \u0027Sully\u0027 Sullenberger",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Aaron Eckhart",
+      "character": "Jeff Skiles",
+      "profile_path": "/u5JjnRMr9zKEVvOP7k3F6gdcwT6.jpg"
+    },
+    {
+      "name": "Anna Gunn",
+      "character": "Elizabeth Davis",
+      "profile_path": "/adppyeu1a4REN3khtgmXusrapFi.jpg"
+    },
+    {
+      "name": "Holt McCallany",
+      "character": "Mike Cleary",
+      "profile_path": "/b1FEXFQ8ZnvXhVrMqCv5mTJ8aW3.jpg"
+    }
+  ]
+}

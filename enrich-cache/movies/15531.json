@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 15531,
+    "title": "Get Smart\u0027s Bruce and Lloyd Out of Control",
+    "overview": "Bumbling R\u0026D inventors Bruce and Lloyd get out of the lab and into the field as they search to locate their latest invention - which has somehow gone missing. When you\u0027re used to spending your day inventing the most cutting edge spy equipment known to man, adapting the stealth and guile needed to become a true secret agent doesn\u0027t come naturally. Unfortunately the invisibility cloak that the pair recently collaborated on has disappeared, and in order to ensure that it doesn\u0027t fall into the hands of KAOS they will have to master the skills of a true spy. But how exactly does one find an object that\u0027s invisible to begin with? As the search gets underway, these brainy inventors are given an eye-opening crash course in high-level espionage.",
+    "tagline": "Loved Get Smart? Get more!",
+    "runtime": 72,
+    "release_date": "2008-07-01",
+    "vote_average": 5.1,
+    "poster_path": "/trazfJKPyhC6PVSFnzHmegYzw4i.jpg",
+    "backdrop_path": "/fKhzA76gT3cl56XrQ5oSnFwZxJX.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Masi Oka",
+      "character": "Bruce",
+      "profile_path": "/hNBA8J45AY2djhPbLXP3sbXgygI.jpg"
+    },
+    {
+      "name": "Nate Torrence",
+      "character": "Lloyd",
+      "profile_path": "/yT9o149xPygdY0NsF9sNgiQwuru.jpg"
+    },
+    {
+      "name": "Jayma Mays",
+      "character": "Nina",
+      "profile_path": "/n8tY5eVXje0vXTws66YAdEeHMy5.jpg"
+    },
+    {
+      "name": "Marika Domi\u0144czyk",
+      "character": "Isabella",
+      "profile_path": "/zlSDXLpCEjkwfnoE0XGW9BRQKDg.jpg"
+    }
+  ]
+}

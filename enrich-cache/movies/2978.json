@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2978,
+    "title": "Ghostbusters II",
+    "overview": "The discovery of a massive river of ectoplasm and a resurgence of spectral activity allows the staff of Ghostbusters to revive the business.",
+    "tagline": "Guess who\u0027s coming to save the world again?",
+    "runtime": 108,
+    "release_date": "1989-06-16",
+    "vote_average": 6.605,
+    "poster_path": "/iUZPi31KDP0n5ycpycEsvl51BdV.jpg",
+    "backdrop_path": "/tgHO1DdnaS0xHcRxBHxE4kOQeIm.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2980,
+      "name": "Ghostbusters Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bill Murray",
+      "character": "Dr. Peter Venkman",
+      "profile_path": "/nnCsJc9x3ZiG3AFyiyc3FPehppy.jpg"
+    },
+    {
+      "name": "Dan Aykroyd",
+      "character": "Dr. Raymond Stantz",
+      "profile_path": "/iVMmeVJx8IpCEjlGBZWzIWvX5Qo.jpg"
+    },
+    {
+      "name": "Sigourney Weaver",
+      "character": "Dana Barrett",
+      "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+    },
+    {
+      "name": "Harold Ramis",
+      "character": "Dr. Egon Spengler",
+      "profile_path": "/kmTMTxthkDAsygk3Am4IUSVYYRi.jpg"
+    }
+  ]
+}

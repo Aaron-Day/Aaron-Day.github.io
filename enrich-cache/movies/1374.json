@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1374,
+    "title": "Rocky IV",
+    "overview": "Rocky Balboa holds the world heavyweight championship, but a new challenger has stepped forward: Drago, a six-foot-four, 261-pound fighter who has the backing of the Soviet Union. This time, Rocky\u0027s training regimen takes him to Siberia, where he prepares for a globally televised match in the heart of Moscow. But nothing can truly prepare him for what he\u0027s about to face \u2013 a fight to the finish, in which he must defend not only himself, but also the honor of his country!",
+    "tagline": "He\u0027s facing the ultimate challenge. And fighting for his life.",
+    "runtime": 91,
+    "release_date": "1985-11-21",
+    "vote_average": 7.092,
+    "poster_path": "/2MHUit4H6OK5adcOjnCN6suCKOl.jpg",
+    "backdrop_path": "/uiUb4KJ6tadldqlJme49TW1r3jA.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1575,
+      "name": "Rocky Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Robert \u0022Rocky\u0022 Balboa",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Dolph Lundgren",
+      "character": "Ivan Drago",
+      "profile_path": "/fB1tOws6Gav0xE8LYlELEb82hJt.jpg"
+    },
+    {
+      "name": "Carl Weathers",
+      "character": "Apollo Creed",
+      "profile_path": "/oUwtC5hEbcIZv53WPerZ9HhlSJR.jpg"
+    },
+    {
+      "name": "Talia Shire",
+      "character": "Adrianna \u0022Adrian\u0022 Balboa",
+      "profile_path": "/oktJmlLeyYKBCWPNjHskDwAfjct.jpg"
+    }
+  ]
+}

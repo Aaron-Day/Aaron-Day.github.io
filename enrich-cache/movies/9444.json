@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9444,
+    "title": "Anastasia",
+    "overview": "Ten years after she was separated from her family, an eighteen-year-old orphan with vague memories of the past sets out to Paris in hopes of reuniting with her grandmother. She is accompanied by two con men, who intend to pass her off as the Grand Duchess Anastasia to the Dowager Empress for a reward.",
+    "tagline": "Discover the adventure behind the greatest mystery of our time.",
+    "runtime": 94,
+    "release_date": "1997-11-20",
+    "vote_average": 7.6,
+    "poster_path": "/bppGWGA8zq1sRvTdDJnUzVW9GcH.jpg",
+    "backdrop_path": "/h6VshReCGaGQoaGZwT2wqiqrcZW.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 920650,
+      "name": "Anastasia Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Meg Ryan",
+      "character": "Anastasia (voice)",
+      "profile_path": "/pxfTSfJ4yJWq52uomSWKzigngOa.jpg"
+    },
+    {
+      "name": "John Cusack",
+      "character": "Dimitri (voice)",
+      "profile_path": "/aCwCx6JU7Jxbg6Q1ygcnLY750le.jpg"
+    },
+    {
+      "name": "Kelsey Grammer",
+      "character": "Vladimir (voice)",
+      "profile_path": "/qn38jJHEqRBsj50Gqo2uM38fgJx.jpg"
+    },
+    {
+      "name": "Christopher Lloyd",
+      "character": "Rasputin (voice)",
+      "profile_path": "/nxVjpyb3UrfbPZnEyDNlQVlFAs5.jpg"
+    }
+  ]
+}

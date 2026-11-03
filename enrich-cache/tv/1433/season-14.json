@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 14,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Father\u0027s Daze",
+        "overview": "Stan can\u0027t escape a recurring Father\u0027s Day.",
+        "air_date": "2016-11-07",
+        "runtime": 22,
+        "still_path": "/zCNEiWfOZo1GCT9e6PeHeldAQON.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Fight and Flight",
+        "overview": "Steve becomes a pilot.",
+        "air_date": "2016-11-14",
+        "runtime": 22,
+        "still_path": "/wRx1HeXezkjaAcY9rGI3sjU82aU.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Enlightenment of Ragi-Baba",
+        "overview": "Stan and Steve become sushi chefs.",
+        "air_date": "2016-11-21",
+        "runtime": 22,
+        "still_path": "/gRlEVDqcBZIBx3FtthwXIjDgEi2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Portrait of Francine\u0027s Genitals",
+        "overview": "A mold of Francine\u0027s vagina is displayed in a museum.",
+        "air_date": "2016-11-28",
+        "runtime": 22,
+        "still_path": "/yVHkkOtBZKk1Vl6a6p1U9YxMkQs.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Bahama Mama",
+        "overview": "Stan is upset at the idea of becoming a grandfather after Hayley and Jeff announce they\u0027re trying to have a baby. Steve and Klaus join a drug gang after Steve decides to take being an uncle extra seriously.",
+        "air_date": "2016-12-05",
+        "runtime": 22,
+        "still_path": "/zsy9iWXBfNyZwcrZHFEM4srZVcR.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Roger\u0027s Baby",
+        "overview": "Hayley experiences what pregnancy would be like after Roger agrees to give birth to Jeff so he can be human again. Snot\u0027s feelings are hurt when Steve secretly signs him up for a makeover.",
+        "air_date": "2016-12-12",
+        "runtime": 22,
+        "still_path": "/tjhCFNK0J7jhomdGCakG3F1JFp7.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Ninety North, Zero West",
+        "overview": "The Smith family must rescue Steve after he is kidnapped and taken to the North Pole. There, Santa Claus is using children to mine for precious stones that he needs to perform an ancient ritual.",
+        "air_date": "2016-12-19",
+        "runtime": 22,
+        "still_path": "/evtQqAfY3xD22iEEvZNCpM0bKyK.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Whole Slotta Love",
+        "overview": "Francine becomes less attracted to Stan when he gets involved with slot car racing. Roger becomes a stewardess to perform comedy routines on the plane but is upset when another stewardess is funnier than him.",
+        "air_date": "2017-04-10",
+        "runtime": 22,
+        "still_path": "/xQ5iFB9J01ImREjWbxUKM0BzTI4.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Witches of Langley",
+        "overview": "Steve and his friends take up witchcraft to gain power and popularity at school. Stan and Klaus become obsessed with remembering 90s bands.",
+        "air_date": "2017-04-17",
+        "runtime": 22,
+        "still_path": "/fbcfQQB4EFJ4KfvhWayhzxDkIPH.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "A Nice Night for a Drive",
+        "overview": "Klaus gets transferred into the navigation system of Stan\u0027s car when Stan refuses to pay for life-saving surgery; Steve and his friends prank Roger, who then terrorizes them for revenge.",
+        "air_date": "2017-04-24",
+        "runtime": 22,
+        "still_path": "/As6DBs5yNIiXuijQWaejDTrqHOo.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Casino Normale",
+        "overview": "Francine steals from the CIA and pretends to be a super villain to incite Stan to be more seductive. Meanwhile, Roger tricks Hayley and Steve into trapping Jay Leno so he can take revenge.",
+        "air_date": "2017-05-01",
+        "runtime": 22,
+        "still_path": "/dFXwvf9E4iEqF2KYEtBNJyoNEd3.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Bazooka Steve",
+        "overview": "Steve becomes the town pariah after he convinces the star quarterback of the Bazooka Sharks arena football team to stop playing. Meanwhile, Roger forces Hayley to become a cab driver to pay him back for her gambling debts.",
+        "air_date": "2017-05-29",
+        "runtime": 22,
+        "still_path": "/5UrnZmKDP6ecT1UsxUlo61X7bPS.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Camp Campawanda",
+        "overview": "Steve is upset when Snot threatens their summer camp fun by becoming a counselor-in-training. Meanwhile, Hayley and Jeff become suspicious of Roger when he organizes a \u0022Burning Man\u0022 reenactment for their anniversary.",
+        "air_date": "2017-06-05",
+        "runtime": 22,
+        "still_path": "/sgjGvm7mqvS3HYS4DAvcFQrT8wZ.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Julia Rogerts",
+        "overview": "Roger runs off in disguise as a Julia Roberts character to a small town after Stan hurts his feelings; Steve plans a meeting when he finds out that Jeff and Barry have never met.",
+        "air_date": "2017-06-12",
+        "runtime": 22,
+        "still_path": "/sNJgcQrou7xPrdwvrdEEsZh303C.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Life and Times of Stan Smith",
+        "overview": "Stan becomes addicted to dying after Roger tricks him into thinking he had a heart attack; Klaus takes Steve to the Arizona State University for a college visit, where a fraternity hazes him.",
+        "air_date": "2017-07-24",
+        "runtime": 22,
+        "still_path": "/mFJzUtBV8ORcNHpCgt7cbo00plh.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Bitchin\u0027 Race",
+        "overview": "The family competes on the reality show, The Bitchin\u0027 Race but after Stan and Hayley ditch the less-motivated Steve and Francine to team up, they end up in a Tunisian labor prison.",
+        "air_date": "2017-07-31",
+        "runtime": 21,
+        "still_path": "/tk7iW8Bmzt1c5TpAEtLvdKZZPcd.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Family Plan",
+        "overview": "Francine reconnects with her birth family when she starts craving the experience of having a big family. Meanwhile, Stan becomes a Picker based on his obsession with American Pickers.",
+        "air_date": "2017-08-07",
+        "runtime": 22,
+        "still_path": "/pDaVu37JHT5G2oRztkSbVpOuV2C.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Long Bomb",
+        "overview": "While having trouble communicating, Stan and Hayley team up to stop a terrorist plot to blow up the Bazooka Sharks arena. Meanwhile, Roger pretends to be an escort.",
+        "air_date": "2017-08-14",
+        "runtime": 22,
+        "still_path": "/gsDov9SrLuIB6ZGt9JdqYZ1GKCJ.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Kloger",
+        "overview": "Roger and Klaus start having a secret affair after they accidentally end up on an online date together. Meanwhile, Steve tries to catch Hayley\u0027s pink eye to get out of doing a fitness test at school.",
+        "air_date": "2017-08-21",
+        "runtime": 21,
+        "still_path": "/70wVJMDuRk2CdsSePJdVrtj35Zh.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Garbage Stan",
+        "overview": "Stan and Steve open up their own father-son garbage business after Stan inherits his father\u0027s old truck. Meanwhile, Roger finds Hayley is a natural at bumper pool and brings her to play with the best player in town.",
+        "air_date": "2017-08-28",
+        "runtime": 21,
+        "still_path": "/v4YhCY8VXhkezleMLbFd89QyrTy.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Talented Mr. Dingleberry",
+        "overview": "Roger becomes a marionette and injures other students to help Steve win the school talent show. Meanwhile, Stan, Hayley and Klaus start their own local honey business.",
+        "air_date": "2017-09-04",
+        "runtime": 22,
+        "still_path": "/muQTpgCfuK3VpI2wQfYveVkacQa.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "West to Mexico",
+        "overview": "Stan becomes a wanted man, running from Roger the bounty hunter, and ends up in a town in need of a good guy to help Principal Lewis, Francine, Steve and Hayley.",
+        "air_date": "2017-09-11",
+        "runtime": 21,
+        "still_path": "/rMXTxNUiYelFfKUnwXcxIzY0WnT.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "In the year 2048, an unprecedented increase in the crime rate has made being a cop only more dangerous than it is today, necessitating that every police officer partner with an android. John Kennex, a detective and sole survivor of a devastating police ambush, and his robot partner, Dorian, solve cases and fight to keep the lid on dangerously evolved criminals in this futuristic landscape.",
+        "air_date": "2013-11-17",
+        "runtime": 45,
+        "still_path": "/bs2Hj3xWGcj0763mHLPOMn38wNX.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Skin",
+        "overview": "Detective John Kennex and Dorian are dispatched to investigate a murder and high-profile missing persons case that lead them into the highly profitable world of IRCs \u2013 Intimate Robot Companions \u2013 also known as sexbots. Meanwhile, Kennex looks to reconcile a part of his troubled past.",
+        "air_date": "2013-11-18",
+        "runtime": 45,
+        "still_path": "/4FJ1ltltItmpE1EVISWXuI9Tgiu.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Are You Receiving?",
+        "overview": "The thrilling action continues in another all-new, adrenaline-fueled episode. Detective Kennex and Dorian battle an intense and futuristic hostage situation, while Captain Maldonado (Lili Taylor) attempts to meet the terrorist\u2019s demands, hoping to protect innocent people.",
+        "air_date": "2013-11-25",
+        "runtime": 45,
+        "still_path": "/t6JfZOvqk9QaTLqVBkaDTKAgAsw.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Bends",
+        "overview": "An old cop friend of Detective Kennex\u0027s goes undercover, posing as a \u0022cook\u0022 of a highly addictive street drug called \u0022The Bends.\u0022 But his cover is blown. As the scope of the intense drug investigation unfolds, a determined Kennex and Dorian call on Rudy Lom for assistance.",
+        "air_date": "2013-12-02",
+        "runtime": 45,
+        "still_path": "/1QPQQlK1NZOpAywu5kNyRrxiAPK.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Blood Brothers",
+        "overview": "Kennex and Dorian must protect a witness in a major murder trial; Capt. Maldonado butts heads with a defendant.",
+        "air_date": "2013-12-09",
+        "runtime": 44,
+        "still_path": "/b3TYWWJau49WdND1hYwa75g63gm.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Arrhythmia",
+        "overview": "Detective John Kennex and Dorian respond to a suspicious death at a hospital where - before having a fatal cardiac arrest - a man claimed someone was trying to kill him, and inexplicably knew his exact time of death. As the investigation unfolds, a black market for vital organs is uncovered in which bio-mechanical hearts can be resold and remotely \u0022shut off.\u0022 As the team fights to find the pulse of this 2048 tech-centric crime, Dorian reconnects with a decommissioned DRN",
+        "air_date": "2013-12-16",
+        "runtime": 43,
+        "still_path": "/u0Ep5epuXuP6WWymjOL8KGr3esI.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Simon Says",
+        "overview": "Det. Kennex and Dorian investigate Simon, a psychopathic killer who is strapping bombs to his victims\u0027 neck and broadcasting their final moments over the internet. When Simon targets Kennex, the team is in a nail-biting race against time to save his life. Meanwhile, a power deficiency affects Dorian\u0027s energy level, causing him to have unexpected outbursts",
+        "air_date": "2014-01-06",
+        "runtime": 44,
+        "still_path": "/5C645fP8skl7wG1Iznelcqbi2h0.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "You Are Here",
+        "overview": "Det. Kennex and Dorian investigate a crime scene involving a self-guided bullet that can track, target and kill specific people at any moment. Meanwhile, Maldonado revisits the deadly ambush that almost killed Kennex.",
+        "air_date": "2014-01-13",
+        "runtime": 43,
+        "still_path": "/ttVBDmeJtWdcxqDOgiSi97mTtbb.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Unbound",
+        "overview": "A refurbished, advanced DRN (Gina Carano) that operates like a soldier goes on a rampage, resulting in casualties; Dorian and Kennex ask a genius roboticist and DRN creator for help.",
+        "air_date": "2014-02-03",
+        "runtime": 43,
+        "still_path": "/l7n3YY6S508XfgTH189oEvIkKrJ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Perception",
+        "overview": "When Det. Kennex and Dorian investigate the simultaneous and sudden deaths of two genetically-enhanced - or \u0022chrome\u0022 - children, a fatal dose of the perfect designer drug appears to be the cause. As the investigation unfolds and a recent drowning victim is mysteriously connected, the case takes an unexpected turn. Meanwhile, Kennex endures painful flashes from the past and pays a visit to the recollectionist",
+        "air_date": "2014-02-10",
+        "runtime": 44,
+        "still_path": "/uVlztN2beieVPVQitB23XNa0hAn.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Disrupt",
+        "overview": "Kennex and Dorian investigate when a smart home turns on its occupants.",
+        "air_date": "2014-02-17",
+        "runtime": 43,
+        "still_path": "/p0iTD4VtYuEuQyrmfwHFbDWI9uo.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Beholder",
+        "overview": "When Det. Kennex and Dorian investigate the murder of a \u0022chrome,\u0022 there are no signs of trauma, other than a very small pinprick on the back of his neck. As the investigation unfolds, it\u2019s revealed that the murder suspect is tapping into the DNA of his victims in pursuit of perfection.",
+        "air_date": "2014-02-24",
+        "runtime": 43,
+        "still_path": "/sYH8rJCJg3ZVMX4NvRBU91k8uqR.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Straw Man",
+        "overview": "A series of murders are committed by someone copying a serial killer who was put in jail by Kennex\u0027s father.",
+        "air_date": "2014-03-03",
+        "runtime": 42,
+        "still_path": "/nm1NJjXFO6JkQqrQhtK2DuIjsCi.jpg"
+      }
+    ]
+  }
+}

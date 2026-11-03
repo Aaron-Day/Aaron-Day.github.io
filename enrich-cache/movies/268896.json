@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 268896,
+    "title": "Pacific Rim: Uprising",
+    "overview": "It has been ten years since The Battle of the Breach and the oceans are still, but restless. Vindicated by the victory at the Breach, the Jaeger program has evolved into the most powerful global defense force in human history. The PPDC now calls upon the best and brightest to rise up and become the next generation of heroes when the Kaiju threat returns.",
+    "tagline": "Rise up.",
+    "runtime": 111,
+    "release_date": "2018-03-21",
+    "vote_average": 6.111,
+    "poster_path": "/nFWhttU8PM50t25NPdy7PE7rv3G.jpg",
+    "backdrop_path": "/oMaj75G2WFw66xI1TREg1hrToSg.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 363369,
+      "name": "Pacific Rim Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "John Boyega",
+      "character": "Jake Pentecost",
+      "profile_path": "/3153CfpgZQXTzCY0i74WpJumMQe.jpg"
+    },
+    {
+      "name": "Scott Eastwood",
+      "character": "Nate Lambert",
+      "profile_path": "/tKJEy1bFNxvIj7sivsB7Us2ThmY.jpg"
+    },
+    {
+      "name": "Cailee Spaeny",
+      "character": "Amara Namani",
+      "profile_path": "/6gUzyMnwo7TjZA7E1Amd1GI8JGw.jpg"
+    },
+    {
+      "name": "Jing Tian",
+      "character": "Liwen Shao",
+      "profile_path": "/7jP3VMJOMjx90EalALHnlWKU36n.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 22,
+    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "overview": "When wily pirate Captain Barbossa seizes Jack Sparrow\u2019s beloved ship, the Black Pearl, and kidnaps the governor\u2019s daughter, Elizabeth Swann, blacksmith Will Turner reluctantly teams up with the unpredictable pirate Jack to rescue her\u2014only to uncover a terrifying curse that turns Barbossa\u2019s crew into the undead.",
+    "tagline": "Prepare to be blown out of the water.",
+    "runtime": 143,
+    "release_date": "2003-07-09",
+    "vote_average": 7.838,
+    "poster_path": "/poHwCZeWzJCShH7tOjg8RIoyjcw.jpg",
+    "backdrop_path": "/uRNgkJSkNBFbbn9fPsEjDIy8Sh3.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 295,
+      "name": "Pirates of the Caribbean Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Johnny Depp",
+      "character": "Jack Sparrow",
+      "profile_path": "/k2xt6EUxQDwYRKIyI4IBdZxfs8n.jpg"
+    },
+    {
+      "name": "Geoffrey Rush",
+      "character": "Barbossa",
+      "profile_path": "/npXFjaFQzBNroCEPllGPTZ5IisA.jpg"
+    },
+    {
+      "name": "Orlando Bloom",
+      "character": "Will Turner",
+      "profile_path": "/lwQoA0qJTCZ6l2FH6PjmhRQjiaB.jpg"
+    },
+    {
+      "name": "Keira Knightley",
+      "character": "Elizabeth Swann",
+      "profile_path": "/bRC1B2VwV0wK3ElciFAK6QZf2wD.jpg"
+    }
+  ]
+}

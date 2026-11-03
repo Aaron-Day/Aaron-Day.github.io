@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4543,
+    "title": "Monty Python\u0027s The Meaning of Life",
+    "overview": "Life\u0027s questions are \u0027answered\u0027 in a series of outrageous vignettes, beginning with a staid London insurance company which transforms before our eyes into a pirate ship. Then there\u0027s the National Health doctors who try to claim a healthy liver from a still-living donor. The world\u0027s most voracious glutton brings the art of vomiting to new heights before his spectacular demise.",
+    "tagline": "It took God six days to create the heavens and the earth...and Monty Python ninety minutes to screw it up.",
+    "runtime": 107,
+    "release_date": "1983-03-31",
+    "vote_average": 7.317,
+    "poster_path": "/9yavZ9WgEZIpWi2EbVW8At9RPdo.jpg",
+    "backdrop_path": "/eIcJq4QDmToJeu4g6fS4iLPKY8n.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Terry Gilliam",
+      "character": "Various Roles",
+      "profile_path": "/7qBkaXxANmnb6hqQCBc4iWqXEL6.jpg"
+    },
+    {
+      "name": "Graham Chapman",
+      "character": "Various Roles",
+      "profile_path": "/qmTXDGNxuuwQ4IGNHwxmCdjuTGk.jpg"
+    },
+    {
+      "name": "John Cleese",
+      "character": "Various Roles",
+      "profile_path": "/nQpBf77cStmR35V0XOinm2zZMWG.jpg"
+    },
+    {
+      "name": "Eric Idle",
+      "character": "Various Roles",
+      "profile_path": "/1Vj7Lvrl8OHby7AeOK1Z07JyeMp.jpg"
+    }
+  ]
+}

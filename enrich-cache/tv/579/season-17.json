@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 17,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Money Hungry",
+        "overview": "",
+        "air_date": "2016-01-04",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 2,
+        "name": "Taste Test / Keep On Truckin\u0027",
+        "overview": "Contestants go to a food court and field trivia questions about unhealthy food before visiting a medical research facility. Later, they pull food trucks, and the winners get tips from Lorenza Garcia while the losing team must eat from the food trucks.",
+        "air_date": "2016-01-11",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 3,
+        "name": "Hooked On \u0027Tronics / The Big Switch",
+        "overview": "",
+        "air_date": "2016-01-18",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 4,
+        "name": "Ready? Set. Auction!; Ship Shape",
+        "overview": "An auction is held and contestants win top-notch prizes, including a solo workout with Bob Harper. Later, one team win a day of relaxation on a yacht, which they can trade for exclusive gym access.",
+        "air_date": "2016-01-25",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 5,
+        "name": "Homeward Bound/Real World Problems",
+        "overview": "One contestant sends two others home for a week in the first half of this combined episode. In the second half, all the players leave the ranch for a week to see how they face daily real-world challenges.",
+        "air_date": "2016-02-01",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 6,
+        "name": "Makeover Week",
+        "overview": "It\u0027s one of the most eagerly anticipated events of \u0027The Biggest Loser\u0027 season - the fan-favorite makeover episode! Fashion expert Tim Gunn and celebrity hair stylist Ken Paves return to create amazing and inspirational transformations with the remaining seven contestants. And though they still have to stick to their weight-loss routines, there will be no temptation this week. After getting a brand new look from head to toe, the players get to show off their new slimmer selves to loved ones flown in to celebrate their big day. Later, they learn they\u0027re competing in a Last Chance Challenge with one of their loved ones for an advantage at this week\u0027s weigh in.",
+        "air_date": "2016-02-08",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 7,
+        "name": "I Got The Power/The Final Cut",
+        "overview": "With only two weeks left on the ranch, Bob welcomes the contestants at a challenge that will tempt the winner with a prize that could change the course of the entire competition. Not only will they win a one-pound advantage for themselves, they\u0027ll gain the ultimate power in the game with the ability to give a one-pound disadvantage to one of their remaining opponents. THE FINAL CUT The five remaining players gather for their final challenge, a time-honored tradition of contestants putting back on all the weight they\u0027ve lost over the course of the season and then shedding it one last time at different stages. The winner receives a coveted prize that could secure their spot as a finalist as the competition goes from five players to three, before next week\u0027s live finale when the Biggest Loser and winner of the $250,000 prize will be chosen.",
+        "air_date": "2016-02-15",
+        "runtime": 90,
+        "still_path": null
+      },
+      {
+        "episode_number": 8,
+        "name": "Live Finale",
+        "overview": "In this must-see live finale, the 16 contestants from this season return for a special reunion and a chance to weigh in one last time and show America how much weight they\u0027ve lost since beginning their weight-loss journeys. Those who have been eliminated will compete for the $100,000 \u0022at home\u0022 prize. Then it\u0027s the moment viewers have been waiting for, when one of the three finalists will be named this season\u0027s \u0022Biggest Loser\u0022 and win the coveted grand prize of $250,000.",
+        "air_date": "2016-02-22",
+        "runtime": 90,
+        "still_path": null
+      }
+    ]
+  }
+}

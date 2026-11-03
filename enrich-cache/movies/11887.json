@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11887,
+    "title": "High School Musical 3: Senior Year",
+    "overview": "As seniors in high school, Troy and Gabriella struggle with the idea of being separated from one another as college approaches. Along with the rest of the Wildcats, they stage a spring musical to address their experiences, hopes and fears about their future.",
+    "tagline": "The year of their lives begins.",
+    "runtime": 112,
+    "release_date": "2008-10-11",
+    "vote_average": 6.541,
+    "poster_path": "/aq2o1wT0crBOTxof36O6KTyjpgE.jpg",
+    "backdrop_path": "/spyZFUG0lR6FEbvMn3YBcxT8vdx.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87253,
+      "name": "High School Musical Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Zac Efron",
+      "character": "Troy Bolton",
+      "profile_path": "/pdWXP7XG6qqOoxoLid1DWYwmaMY.jpg"
+    },
+    {
+      "name": "Vanessa Hudgens",
+      "character": "Gabriella Montez",
+      "profile_path": "/lZQPTRoJLgfsARWdpxQid2dDzhr.jpg"
+    },
+    {
+      "name": "Ashley French",
+      "character": "Sharpay Evans",
+      "profile_path": "/ot6ib67jxvKVG1JCBl0ROPGtdeP.jpg"
+    },
+    {
+      "name": "Lucas Grabeel",
+      "character": "Ryan Evans",
+      "profile_path": "/tyhpSWU7YDKntONxqC83Ifat2w6.jpg"
+    }
+  ]
+}

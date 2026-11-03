@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9352,
+    "title": "EuroTrip",
+    "overview": "When Scott learns that his longtime cyber-buddy from Berlin is a gorgeous young woman, he and his friends embark on a trip across Europe.",
+    "tagline": "No actual Europeans were harmed in the making of this film.",
+    "runtime": 92,
+    "release_date": "2004-02-20",
+    "vote_average": 6.631,
+    "poster_path": "/iLdO4PwbZCCQSa9rchZMwuJm9xe.jpg",
+    "backdrop_path": "/kg8na5u6qdCydm7cK7p2I0zQmgr.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Scott Mechlowicz",
+      "character": "Scott Thomas",
+      "profile_path": "/pNHExC1ZJiuEvR4XVqkW63oDNqY.jpg"
+    },
+    {
+      "name": "Jacob Pitts",
+      "character": "Cooper Harris",
+      "profile_path": "/hSgGV6HNDk9GHObRkOGyFue0WUu.jpg"
+    },
+    {
+      "name": "Michelle Trachtenberg",
+      "character": "Jenny",
+      "profile_path": "/8eb8ts6E7gM5SgEFn8VcXfGc39r.jpg"
+    },
+    {
+      "name": "Travis Wester",
+      "character": "Jamie",
+      "profile_path": "/hg6T7SuR67Cb9CKXhbrVBj1H1gz.jpg"
+    }
+  ]
+}

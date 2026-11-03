@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4523,
+    "title": "Enchanted",
+    "overview": "The beautiful princess Giselle is banished by an evil queen from her magical, musical animated land and finds herself in the gritty reality of the streets of modern-day Manhattan. Shocked by this strange new environment that doesn\u0027t operate on a \u0022happily ever after\u0022 basis, Giselle is now adrift in a chaotic world badly in need of enchantment. But when Giselle begins to fall in love with a charmingly flawed divorce lawyer who has come to her aid - even though she is already promised to a perfect fairy tale prince back home - she has to wonder: Can a storybook view of romance survive in the real world?",
+    "tagline": "The real world and the animated world collide.",
+    "runtime": 107,
+    "release_date": "2007-11-20",
+    "vote_average": 6.9,
+    "poster_path": "/8KCNzCArLlvLdQoHx6npua2VSVc.jpg",
+    "backdrop_path": "/u4UpRDi0w84aNrigr9p049rMHiy.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531799,
+      "name": "Enchanted Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Amy Adams",
+      "character": "Giselle",
+      "profile_path": "/gn0K6c6d1L6qQrRc86iL8uyIqiF.jpg"
+    },
+    {
+      "name": "Patrick Dempsey",
+      "character": "Robert Philip",
+      "profile_path": "/2PpaYtXdaDmNi3jap4qPIdyVesL.jpg"
+    },
+    {
+      "name": "James Marsden",
+      "character": "Prince Edward",
+      "profile_path": "/lf7OnfKZnMgNh9b98764tqSocGK.jpg"
+    },
+    {
+      "name": "Timothy Spall",
+      "character": "Nathaniel",
+      "profile_path": "/pcR6t8kpAgGwIUo4UjlP5gyKkNA.jpg"
+    }
+  ]
+}

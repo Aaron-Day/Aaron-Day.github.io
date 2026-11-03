@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8587,
+    "title": "The Lion King",
+    "overview": "Young lion prince Simba, eager to one day become king of the Pride Lands, grows up under the watchful eye of his father Mufasa; all the while his villainous uncle Scar conspires to take the throne for himself. Amid betrayal and tragedy, Simba must confront his past and find his rightful place in the Circle of Life.",
+    "tagline": "The greatest adventure of all is finding our place in the Circle of Life.",
+    "runtime": 89,
+    "release_date": "1994-06-15",
+    "vote_average": 8.25,
+    "poster_path": "/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+    "backdrop_path": "/wXsQvli6tWqja51pYxXNG1LFIGV.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 94032,
+      "name": "The Lion King Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Matthew Broderick",
+      "character": "Simba (voice)",
+      "profile_path": "/papqFgpyroZJEqd7WvuNGN8ti2k.jpg"
+    },
+    {
+      "name": "Moira Kelly",
+      "character": "Nala (voice)",
+      "profile_path": "/3yQRnGSfbPWQDInZHTzzXsrAhUR.jpg"
+    },
+    {
+      "name": "Jeremy Irons",
+      "character": "Scar (voice)",
+      "profile_path": "/w8Ct1q02Ht3sWdOSqfp3B85TzT.jpg"
+    },
+    {
+      "name": "Nathan Lane",
+      "character": "Timon (voice)",
+      "profile_path": "/jLPp3RoDhwOpLimKj3NhhBofPfT.jpg"
+    }
+  ]
+}

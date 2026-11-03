@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 408,
+    "title": "Snow White and the Seven Dwarfs",
+    "overview": "A beautiful girl, Snow White, takes refuge in the forest in the house of seven dwarfs to hide from her stepmother, the wicked Queen. The Queen is jealous because she wants to be known as \u0022the fairest in the land,\u0022 and Snow White\u0027s beauty surpasses her own.",
+    "tagline": "The Happiest, Dopiest, Grumpiest, Sneeziest movie of the year.",
+    "runtime": 83,
+    "release_date": "1938-01-22",
+    "vote_average": 7.13,
+    "poster_path": "/3VAHfuNb6Z7UiW12iYKANSPBl8m.jpg",
+    "backdrop_path": "/4yWayBvwl9gHXaWrDrAslxjL7mh.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Adriana Caselotti",
+      "character": "Snow White (voice) (uncredited)",
+      "profile_path": "/7nOCtRQnfH6RQ39IZBDffIadgR7.jpg"
+    },
+    {
+      "name": "Lucille La Verne",
+      "character": "Queen / Witch (voice) (uncredited)",
+      "profile_path": "/6L3j9U9IkxJhatF8ASsO3PtNZUN.jpg"
+    },
+    {
+      "name": "Harry Stockwell",
+      "character": "Prince (voice) (uncredited)",
+      "profile_path": "/k5fxPKEpZ6Cgxckca9cCkc0CK5X.jpg"
+    },
+    {
+      "name": "Roy Atwell",
+      "character": "Doc (voice) (uncredited)",
+      "profile_path": "/huVgxMlWdN6VvIzfiMLEZi4Zlbu.jpg"
+    }
+  ]
+}

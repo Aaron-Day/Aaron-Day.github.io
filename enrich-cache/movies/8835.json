@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8835,
+    "title": "Legally Blonde",
+    "overview": "Fashionable sorority queen Elle Woods has it all, but, she wants nothing more than to be Mrs. Warner Huntington III. But he dumps her before heading to Harvard Law School. Elle rallies all of her resources and gets into Harvard, determined to win him back. While there, she figures out that there is more to herself than just good looks.",
+    "tagline": "Boldly going where no blonde has gone.",
+    "runtime": 96,
+    "release_date": "2001-07-13",
+    "vote_average": 6.817,
+    "poster_path": "/9ohlMrJHQqKhfUKh7Zr3JQqHNLZ.jpg",
+    "backdrop_path": "/viU23X3BIycUFf6TOlm9c7TxLgM.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86024,
+      "name": "Legally Blonde Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Reese Witherspoon",
+      "character": "Elle Woods",
+      "profile_path": "/mfjunuTHrd0wnh8UG1ImMN9FSws.jpg"
+    },
+    {
+      "name": "Luke Wilson",
+      "character": "Emmetten Richmond",
+      "profile_path": "/nH1h9dZGSBuWIOyX27HpYyYykvr.jpg"
+    },
+    {
+      "name": "Selma Blair",
+      "character": "Vivian Kensington",
+      "profile_path": "/2rO5eN6hDB0JxMMZHxNKEuMRm1m.jpg"
+    },
+    {
+      "name": "Matthew Davis",
+      "character": "Warner Huntington III",
+      "profile_path": "/9QsCJBQ45iR5R36F0LAuzvY1zuO.jpg"
+    }
+  ]
+}

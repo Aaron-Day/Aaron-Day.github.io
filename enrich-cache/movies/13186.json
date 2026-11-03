@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13186,
+    "title": "Wrong Turn 2: Dead End",
+    "overview": "Retired military commander Colonel Dale Murphy hosts the simulated post-apocalyptic reality show where participants are challenged to survive a remote West Virginia wasteland. But the show turns into a nightmarish showdown when each realizes they are being hunted by an inbred family of cannibals determined to make them all dinner!",
+    "tagline": "Evil awaits.",
+    "runtime": 97,
+    "release_date": "2007-08-25",
+    "vote_average": 6.179,
+    "poster_path": "/iQ37ygxcpJNZp1XdHMantumylmw.jpg",
+    "backdrop_path": "/o2SeAw8ARPB1D8oudCRJcxW3w60.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 52985,
+      "name": "Wrong Turn Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Erica Leerhsen",
+      "character": "Nina Papas",
+      "profile_path": "/hZFJGXbDmoolt16m4Lj4gLSrkBs.jpg"
+    },
+    {
+      "name": "Henry Rollins",
+      "character": "Dale Murphy",
+      "profile_path": "/2E0cZdoJsdt1Lv4waG3s6fsfJeU.jpg"
+    },
+    {
+      "name": "Texas Battle",
+      "character": "Jake Washington",
+      "profile_path": "/zPzagAtKxbHKrQLAQ69KSYLZxjA.jpg"
+    },
+    {
+      "name": "Aleksa Palladino",
+      "character": "Mara",
+      "profile_path": "/dJCeWrRBNKy8tEUQBlrZDvynwcd.jpg"
+    }
+  ]
+}

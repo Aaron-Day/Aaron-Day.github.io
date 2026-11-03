@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2294,
+    "title": "Jay and Silent Bob Strike Back",
+    "overview": "When Jay and Silent Bob learn that their comic-book alter egos, Bluntman and Chronic, have been sold to Hollywood as part of a big-screen movie that leaves them out of any royalties, the pair travel to Tinseltown to sabotage the production.",
+    "tagline": "Hollywood had it coming.",
+    "runtime": 104,
+    "release_date": "2001-08-22",
+    "vote_average": 6.279,
+    "poster_path": "/aEsAdMAhwKYFgnHHxMOknktQYKK.jpg",
+    "backdrop_path": "/2K4ZRi6bYrl9Ha53uRi4ZyoYuft.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 726870,
+      "name": "Jay and Silent Bob Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Mewes",
+      "character": "Jay",
+      "profile_path": "/jVL4WC8NbJFL894Z2FBYY3XuHW5.jpg"
+    },
+    {
+      "name": "Kevin Smith",
+      "character": "Silent Bob",
+      "profile_path": "/g8sC36zUTkSTh7y9HjWa4Rbr0JP.jpg"
+    },
+    {
+      "name": "Ben Affleck",
+      "character": "Holden McNeil / Ben Affleck",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Shannon Elizabeth",
+      "character": "Justice",
+      "profile_path": "/1H99EVPLMQx3C0DKrVCiFKPpDB5.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 32302,
+    "title": "3 Ninjas: High Noon at Mega Mountain",
+    "overview": "Three young boys, Rocky, Colt and Tum Tum together with their neighbor girl, computer whiz Amanda are visiting Mega Mountain amusement park when it is invaded by an army of ninjas led by evil Medusa, who wants to take over the park and hold the owners for ransom. Kids and retired TV star Dave Dragon, who made his farewell appearance at the park at the time the ninjas appeared, have to break Medusa\u0027s vicious plans.",
+    "tagline": "Saving the day the ninja way!",
+    "runtime": 93,
+    "release_date": "1998-03-26",
+    "vote_average": 4.851,
+    "poster_path": "/7jKefCfhcXLd1qVnmc1zBhSgPjh.jpg",
+    "backdrop_path": "/q7soebyjssEwNulE3SsWX96UfSb.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 71458,
+      "name": "3 Ninja Kids Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Victor Wong",
+      "character": "Grandpa Mori",
+      "profile_path": "/3XvU2mK3i5V8Un7HyZn5pVnp4qw.jpg"
+    },
+    {
+      "name": "Mathew Botuchis",
+      "character": "Rocky",
+      "profile_path": "/2TdtJvfGFE7XhGMD1gBEhUZyrTs.jpg"
+    },
+    {
+      "name": "Hulk Hogan",
+      "character": "Dave Dragon",
+      "profile_path": "/i27iSeP7hhtlFOeVnthRQ9Ox2m4.jpg"
+    },
+    {
+      "name": "Loni Anderson",
+      "character": "Medusa",
+      "profile_path": "/vxygylfk2IVBUoXRyKAPNwPWPsf.jpg"
+    }
+  ]
+}

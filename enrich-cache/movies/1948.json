@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1948,
+    "title": "Crank",
+    "overview": "Chev Chelios, a hit man wanting to go straight, lets his latest target slip away. Then he awakes the next morning to a phone call that informs him he has been poisoned and has only an hour to live unless he keeps adrenaline coursing through his body while he searches for an antidote.",
+    "tagline": "There are a thousand ways to raise your adrenaline. Today, Chev Chelios will need every single one.",
+    "runtime": 88,
+    "release_date": "2006-08-31",
+    "vote_average": 6.676,
+    "poster_path": "/rsKmhnvzJezjwC1Ud2Hh37oNpdQ.jpg",
+    "backdrop_path": "/8JPz1636hMcaADngF4H4KOxXfp1.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 64751,
+      "name": "Crank Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Statham",
+      "character": "Chev",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Amy Smart",
+      "character": "Eve",
+      "profile_path": "/9GQwkmqd5klfXvhd29YI5OKAx3N.jpg"
+    },
+    {
+      "name": "Jose Pablo Cantillo",
+      "character": "Verona",
+      "profile_path": "/qtNesvN1bAQ779gJBt3LYDsm8f7.jpg"
+    },
+    {
+      "name": "Efren Ramirez",
+      "character": "Kaylo",
+      "profile_path": "/vo4IDt4NeNCHBXLz58Wjlx5994a.jpg"
+    }
+  ]
+}

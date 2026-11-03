@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 114,
+    "title": "Pretty Woman",
+    "overview": "Vivian is a carefree, streetwise diamond in the rough when she meets sophisticated billionaire Edward in a chance encounter that turns into a week-long business arrangement. But Vivian\u0027s energetic spirit challenges Edward\u0027s no-nonsense approach to life, and soon they are teaching each other \u2013 and falling in love!",
+    "tagline": "She walked off the street, into his life and stole his heart.",
+    "runtime": 120,
+    "release_date": "1990-03-23",
+    "vote_average": 7.441,
+    "poster_path": "/oVKX1Pt1q7jXTkTk51mu2S0sAB0.jpg",
+    "backdrop_path": "/rleTwPqymtOpeD2bR7asJGEmldV.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Julia Roberts",
+      "character": "Vivian Ward",
+      "profile_path": "/fQacAdIa1WUNChQ6FgEko13eqOA.jpg"
+    },
+    {
+      "name": "Richard Gere",
+      "character": "Edward Lewis",
+      "profile_path": "/i7wcBNmFldh2E4QInCvmv7CPSIR.jpg"
+    },
+    {
+      "name": "Ralph Bellamy",
+      "character": "James Morse",
+      "profile_path": "/vC6cdrUUewgurTlVXt36eRAtQKb.jpg"
+    },
+    {
+      "name": "Jason Alexander",
+      "character": "Philip Stuckey",
+      "profile_path": "/qRezZ2yhM2bmBERt7jVcxo8RVSA.jpg"
+    }
+  ]
+}

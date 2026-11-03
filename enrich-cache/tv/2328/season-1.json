@@ -1,0 +1,488 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Day of the Dumpster",
+        "overview": "Rita Repulsa escapes after 10,000 years of imprisonment determined to conquer Earth but a team of teenagers with attitude stands in her way.",
+        "air_date": "1993-08-28",
+        "runtime": 21,
+        "still_path": "/870eA45xdZS5hrXTey4cmFJDEiT.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Food Fight",
+        "overview": "Bulk and his gang seek to ruin the food festival while Rita sends a gluttonous pig to eat everything on Earth.",
+        "air_date": "1993-09-04",
+        "runtime": 20,
+        "still_path": "/pos46Q8tRCsTjMiUd1IEXruGZZ6.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "High Five",
+        "overview": "Trini must overcome her fear of heights to save Billy.",
+        "air_date": "1993-09-07",
+        "runtime": 20,
+        "still_path": "/dw1Eo0UAezsscjqkjWoxHZRkb6U.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Teamwork",
+        "overview": "Kimberly and Trini gather signatures to close down a nearby dumpsite while convincing their teammates to work together more.",
+        "air_date": "1993-09-08",
+        "runtime": 20,
+        "still_path": "/vtGEpQ0kazjhrQmUrzyhiC8Ngar.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "A Pressing Engagement",
+        "overview": "Jason battles King Sphinx while trying to break a bench press record at the Angel Grove Gym \u0026 Juice Bar.",
+        "air_date": "1993-09-09",
+        "runtime": 20,
+        "still_path": "/k1zpSfW9UzP3zZeQAy7KmAZ7kDF.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Different Drum",
+        "overview": "Kimberly\u0027s deaf friend is the only hope to rescue a group of girls captured by the Gnarly Gnome and his hypnotic accordion.",
+        "air_date": "1993-09-10",
+        "runtime": 20,
+        "still_path": "/mes6aVKlTOUyJF9wzMgG3th74bC.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "I, Eye Guy",
+        "overview": "Rita sends her monster Eye Guy to kidnap Billy\u0027s bright young prot\u00E9g\u00E9.",
+        "air_date": "1993-09-14",
+        "runtime": 19,
+        "still_path": "/uJZf76MfF3rjnPArCrk7tmFkoZu.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "For Whom the Bell Trolls",
+        "overview": "Trini\u0027s favorite doll is brought to life by Rita Repulsa and commanded to capture the Rangers inside bottles.",
+        "air_date": "1993-09-15",
+        "runtime": 19,
+        "still_path": "/6zNdfg6djtcaaTqeIToYOPKiZOw.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Happy Birthday, Zack",
+        "overview": "Zack worries that his friends have forgotten today is his birthday while Rita sends him an unwelcome present.",
+        "air_date": "1993-09-16",
+        "runtime": 20,
+        "still_path": "/3f5HVLT81EMuophwJy8SC0eIUfZ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "No Clowning Around",
+        "overview": "The gang fights Rita\u0027s minions at a carnival in order to save Trini\u0027s cousin Sylvia.",
+        "air_date": "1993-09-17",
+        "runtime": 20,
+        "still_path": "/r2YkzATrOHr01fJk5DTTe2DgVHM.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Power Ranger Punks",
+        "overview": "The gang fights Rita\u0027s minions at a carnival in order to save Trini\u0027s cousin Sylvia.",
+        "air_date": "1993-09-20",
+        "runtime": 20,
+        "still_path": "/3wEL8yO6lzjk6FN6oWqgkCoF7qn.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Peace, Love and Woe",
+        "overview": "Baboo sneaks a magic potion into Kimberly and Billy\u0027s drinks that turns them into angry punks.",
+        "air_date": "1993-09-21",
+        "runtime": 20,
+        "still_path": "/k5DMSRvNF6IrkOIqAKJ04TERN0A.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Foul Play in the Sky",
+        "overview": "Billy draws on the powers of his friends to rescue the girl of his dreams.",
+        "air_date": "1993-09-22",
+        "runtime": 20,
+        "still_path": "/4dt0rfT3zlLBzBYzPerTDZ1w3bu.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Dark Warrior",
+        "overview": "Billy is inspired by Trini\u0027s uncle Howard - a brilliant scientist and expert in martial arts.",
+        "air_date": "1993-09-28",
+        "runtime": 20,
+        "still_path": "/l3q9M6NVm4ywIKEHceXRrWqwoZB.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Big Sisters",
+        "overview": "Kimberly and Trini look after a mischievous little girl named Maria.",
+        "air_date": "1993-09-30",
+        "runtime": 19,
+        "still_path": "/qFxpRILqQx8TCM1ZhZrg2dSIOOI.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Switching Places",
+        "overview": "Billy\u0027s latest invention goes haywire causing him and Kimberly to switch bodies.",
+        "air_date": "1993-10-04",
+        "runtime": 22,
+        "still_path": "/rJmwR266bRVno6a3wdg36twgyFw.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Green with Evil Part 1: Out of Control",
+        "overview": "Rita creates her own evil Green Ranger to beat the Power Rangers at their own game.",
+        "air_date": "1993-10-05",
+        "runtime": 22,
+        "still_path": "/lg6itRi3iRSB4YwJfEd6cocy7L.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Green with Evil Part 2: Jason\u0027s Battle",
+        "overview": "The Power Rangers work to restore Zordon and Alpha unaware that the new kid in school is actually Rita\u0027s evil Green Ranger.",
+        "air_date": "1993-10-06",
+        "runtime": 22,
+        "still_path": "/wFBjaYPW1Q0PStVnAl1BsoonMID.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Green with Evil Part 3: The Rescue",
+        "overview": "Femme fatale Scorpina joins Rita as the Green Ranger continues to battle the Power Rangers.",
+        "air_date": "1993-10-07",
+        "runtime": 22,
+        "still_path": "/peX3KEMkRKVpNqE4mU16aqjFvOZ.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Green with Evil Part 4: Eclipsing Megazord",
+        "overview": "An eclipse of the sun saps the Megazord\u0027s power as Rita\u0027s forces launch a full scale assault on Angel Grove.",
+        "air_date": "1993-10-08",
+        "runtime": 22,
+        "still_path": "/kh9gdCjV1IDUOX68l0fqN37wwEC.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Green with Evil Part 5: Breaking the Spell",
+        "overview": "The mighty Dragonzord awakes after thousands of years as the Rangers try to break the spell over the Green Ranger once and for all.",
+        "air_date": "1993-10-09",
+        "runtime": 22,
+        "still_path": "/jx1BBBkx6LthlX9I2YxFxh3n442.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Trouble with Shellshock",
+        "overview": "Squatt and Baboo create their own Shellshock monster to impress Rita.",
+        "air_date": "1993-10-11",
+        "runtime": 22,
+        "still_path": "/zl3pJZEVUdVgpuyZQD7KX6d01rv.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Spit Flower",
+        "overview": "Rita and her evil Spit Flower monster set out to ruin Kimberly\u0027s design for a float in the world peace parade.",
+        "air_date": "1993-10-13",
+        "runtime": 20,
+        "still_path": "/pqmjfWHbLc6zgjHz6h3SHLputCD.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Itsy Bitsy Spider",
+        "overview": "Zack must overcome his fear of spiders to face Rita\u0027s newest monster.",
+        "air_date": "1993-10-19",
+        "runtime": 20,
+        "still_path": "/hGOI8lGQwNqhAQWlntKOrhiix2l.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Life\u0027s a Masquerade",
+        "overview": "Rita\u0027s Frankenstein monster crashes the Power Rangers\u0027 Halloween costume party.",
+        "air_date": "1993-10-30",
+        "runtime": 20,
+        "still_path": "/oksywj1O7bjfTPnngZ9Drjd1o5e.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Gung Ho!",
+        "overview": "Jason and Tommy must learn to work together to stop Rita\u0027s Super Putties.",
+        "air_date": "1993-11-04",
+        "runtime": 20,
+        "still_path": "/onFpon96iqd91jnMTLG1MNCBGy.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Wheel of Misfortune",
+        "overview": "Rita turns Kimberly\u0027s grandmother\u0027s spinning wheel into her dangerous new weapon.",
+        "air_date": "1993-11-05",
+        "runtime": 22,
+        "still_path": "/zie9Kph98dsAxgrGCTIJbdBxTYh.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Island of Illusion (1)",
+        "overview": "Rita traps the Power Rangers on the Island of Illusion, where their greatest fears can destroy them.",
+        "air_date": "1993-11-08",
+        "runtime": 20,
+        "still_path": "/kvcagjeZk6Zw8dTI8tWjofJvMDM.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Island of Illusion (2)",
+        "overview": "The Rangers must overcome their own fears to escape Rita\u0027s Island of Illusion.",
+        "air_date": "1993-11-09",
+        "runtime": 20,
+        "still_path": "/wH4cYiUtQTna9m0bzQc7jqFuZrA.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "The Rockstar",
+        "overview": "Jason and his cousin Jeremy find a map that leads to a powerful ancient mirror.",
+        "air_date": "1993-11-10",
+        "runtime": 22,
+        "still_path": "/5Ze8OAVXFHmaDIaCOZkm5Hmde5P.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Calamity Kimberly",
+        "overview": "Kimberly\u0027s day goes from bad to worse when the Samurai Fanman captures her.",
+        "air_date": "1993-11-12",
+        "runtime": 22,
+        "still_path": "/9tYrdKDAMplpe5eZinRJMoJ4kA1.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "A Star is Born",
+        "overview": "Tommy is called to rescue his friends while given the opportunity to audition for a martial arts commercial.",
+        "air_date": "1993-11-15",
+        "runtime": 22,
+        "still_path": "/9ojfJwKNguEYU1TY348QVGL4nGU.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "The Yolk\u0027s on You!",
+        "overview": "With the Angel Grove High talent show around the corner, the Rangers have a lot to deal with when Tommy is kidnapped and imprisoned by putties, and Finster creates the Fang monster in celebration of Rita\u0027s birthday.",
+        "air_date": "1993-11-16",
+        "runtime": 22,
+        "still_path": "/nauREnMyvTJASFyE0UR8tPDmvIf.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "The Green Candle (1)",
+        "overview": "Rita uses a green candle to wipe out the Green Ranger once and for all.",
+        "air_date": "1993-11-17",
+        "runtime": 22,
+        "still_path": "/udBsggkIfx5czXol427NiPgW1Ts.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "The Green Candle (2)",
+        "overview": "As Jason journeys to the dimensional prison to stop the green candle from burning out, Tommy battles the Cyclops with the Dragonzord.",
+        "air_date": "1993-11-18",
+        "runtime": 22,
+        "still_path": "/hSXTH4yuDapjFwkEYK6IwYc2C0H.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "Birds of a Feather",
+        "overview": "While Zack trains a young student for a karate tournament, Rita sends her Hatchasaurus monster down to Earth.",
+        "air_date": "1993-11-22",
+        "runtime": 22,
+        "still_path": "/uLurnu2Q5Q6qlKyH0nXypA7SqY7.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "Clean-Up Club",
+        "overview": "The Ranger teens form a Clean-Up Club and take part in cleaning up Angel Grove Park, but Rita has plans of her own and sends the Polluticorn monster after them.",
+        "air_date": "1993-11-23",
+        "runtime": 22,
+        "still_path": "/kaNTTpMLtX2nLYtEiZd76BR7Nna.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "A Bad Reflection on You",
+        "overview": "Rita creates a team of evil duplicates of the Power Rangers to frame them.",
+        "air_date": "1993-11-27",
+        "runtime": 22,
+        "still_path": "/yl18Xpoxoj5NTXhrLegnrznQlbM.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "Doomsday (1)",
+        "overview": "Rita unveils her own evil Zord as she brings her entire palace from the Moon to Angel Grove.",
+        "air_date": "1993-11-29",
+        "runtime": 22,
+        "still_path": "/8mllWVXGaskWvnqDYjiDVFsOZO9.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "Doomsday (2)",
+        "overview": "The Power Rangers fight to rescue the citizens of Angel Grove from Rita, Lokar and Cyclopsis.",
+        "air_date": "1993-11-30",
+        "runtime": 22,
+        "still_path": "/iJZ29TTfko906xiLQ3eOt2Ewek8.jpg"
+      },
+      {
+        "episode_number": 41,
+        "name": "Rita\u0027s Seed of Evil",
+        "overview": "While the Rangers plant trees in the park, Squatt plants an evil seed that grows into the Octoplant.",
+        "air_date": "1994-02-07",
+        "runtime": 22,
+        "still_path": "/a3WP24066YQsksOG9WLcUMfJgts.jpg"
+      },
+      {
+        "episode_number": 42,
+        "name": "A Pig Surprise",
+        "overview": "Rita casts a spell on a helpless pig turning him into the Pudgy Pig monster.",
+        "air_date": "1994-02-08",
+        "runtime": 22,
+        "still_path": "/wsmLYvpShVGyKqNMl3e9wY4elNT.jpg"
+      },
+      {
+        "episode_number": 43,
+        "name": "Something Fishy",
+        "overview": "Billy must overcome his fear of fish to save his friends from Rita\u0027s fishy new monster.",
+        "air_date": "1994-02-09",
+        "runtime": 22,
+        "still_path": "/orB4YoQ7HDdSJikx11kDhRR90BU.jpg"
+      },
+      {
+        "episode_number": 44,
+        "name": "Lions \u0026 Blizzards",
+        "overview": "Zack finally gets a date with the girl of his dreams at the same time as Rita turns the Noble Lion Trophy into her latest monster.",
+        "air_date": "1994-02-10",
+        "runtime": 22,
+        "still_path": "/yJUGJ3eSFg7y3KUf7c7ZqjsKlIn.jpg"
+      },
+      {
+        "episode_number": 45,
+        "name": "Crystal of Nightmares",
+        "overview": "The teens go to the mountains for the weekend to study for a test while Goldar readies the Crystal of Nightmares to infiltrate the Rangers\u0027 dreams.",
+        "air_date": "1994-02-14",
+        "runtime": 22,
+        "still_path": "/lwg1A9TmtNDFWrxcwLTXRlYJzRL.jpg"
+      },
+      {
+        "episode_number": 46,
+        "name": "To Flea or Not to Flee",
+        "overview": "Jason tries to find the owner of a stray dog while the Rangers try to save Ernie\u0027s Gym \u0026 Juice Bar from going out of business.",
+        "air_date": "1994-02-15",
+        "runtime": 22,
+        "still_path": "/fI8RjKplcwbfjUu8Ql4Ldec6uuA.jpg"
+      },
+      {
+        "episode_number": 47,
+        "name": "Reign of the Jellyfish",
+        "overview": "Rita--determined to prevent future generations from remembering the Power Rangers--tries to stop them from burying a time capsule.",
+        "air_date": "1994-02-16",
+        "runtime": 22,
+        "still_path": "/buyyliwla1Gf5d8ZKjbtXIw6Pyj.jpg"
+      },
+      {
+        "episode_number": 48,
+        "name": "Plague of the Mantis",
+        "overview": "Trini struggles to learn praying mantis style kung fu to defeat Rita\u0027s latest monster.",
+        "air_date": "1994-02-17",
+        "runtime": 22,
+        "still_path": "/oNXuBXSpQ9DlRWg3he7h9sS3iP9.jpg"
+      },
+      {
+        "episode_number": 49,
+        "name": "Return of an Old Friend (1)",
+        "overview": "Rita demands the Power Rangers hand over their Power Coins if they ever want to see their parents again.",
+        "air_date": "1994-02-28",
+        "runtime": 22,
+        "still_path": "/4hIV0ME0D38tZd3LbmR09Y003ts.jpg"
+      },
+      {
+        "episode_number": 50,
+        "name": "Return of an Old Friend (2)",
+        "overview": "With their Power Coins in the hands of the enemy the Rangers have no choice but to turn to Tommy once more for help.",
+        "air_date": "1994-03-01",
+        "runtime": 22,
+        "still_path": "/vmsZSY4VjbSxgJdFXk4yxcN1O0L.jpg"
+      },
+      {
+        "episode_number": 51,
+        "name": "Grumble Bee",
+        "overview": "Billy gets his first \u0027B\u0027 on a science test giving Rita the idea to send her Grumble Bee to Earth.",
+        "air_date": "1994-04-28",
+        "runtime": 22,
+        "still_path": "/9AIHlIyFccsP1w0DjbWyZiR2rns.jpg"
+      },
+      {
+        "episode_number": 52,
+        "name": "Two Heads are Better Than One",
+        "overview": "Jason and Tommy teach a self-defense class to women while the Rangers fight a two-headed parrot monster.",
+        "air_date": "1994-04-29",
+        "runtime": 22,
+        "still_path": "/azOn44o4nasXgl7cFJhewdXR8DY.jpg"
+      },
+      {
+        "episode_number": 53,
+        "name": "Fowl Play",
+        "overview": "Zack juggles watching over a group of children with battling the Peckster.",
+        "air_date": "1994-05-02",
+        "runtime": 22,
+        "still_path": "/9PkNsaiqe3AlVq1lSIBwtsab58K.jpg"
+      },
+      {
+        "episode_number": 54,
+        "name": "Trick or Treat",
+        "overview": "Kimberly competes against Skull on a game show for a chance to win a brand new car while the Pumpkin Rapper seeks to ambush the Rangers.",
+        "air_date": "1994-05-03",
+        "runtime": 22,
+        "still_path": "/2hVBmVR5r003sIbustkxaor2fRs.jpg"
+      },
+      {
+        "episode_number": 55,
+        "name": "Second Chance",
+        "overview": "Jason and Zack coach a young boy to help him make Ernie\u0027s junior soccer team.",
+        "air_date": "1994-05-04",
+        "runtime": 22,
+        "still_path": "/1BPpqNb3gO5KDwzdu6GNsOMWbiK.jpg"
+      },
+      {
+        "episode_number": 56,
+        "name": "On Fins and Needles",
+        "overview": "The Slippery Shark monster casts a spell over Jason and Tommy causing them to fight amongst each other.",
+        "air_date": "1994-05-05",
+        "runtime": 22,
+        "still_path": "/8CWLOMjial2Rcqw2dlRxSGTwm8A.jpg"
+      },
+      {
+        "episode_number": 57,
+        "name": "Enter... The Lizzinator",
+        "overview": "Kimberly helps her younger cousin try out for the Angel Grove Junior High cheerleading team while Rita sends the mighty Lizzinator to Earth.",
+        "air_date": "1994-05-06",
+        "runtime": 22,
+        "still_path": "/vareOaYGMWIxb2s8XHzAgdRQUVd.jpg"
+      },
+      {
+        "episode_number": 58,
+        "name": "Football Season",
+        "overview": "Tommy tries to learn how to play football in time to make the high school team and to stop Rita\u0027s Rhino Blaster.",
+        "air_date": "1994-05-09",
+        "runtime": 22,
+        "still_path": "/qLbyBknhq0p58LbbHfdbfNXy1oj.jpg"
+      },
+      {
+        "episode_number": 59,
+        "name": "Mighty Morphin\u0027 Mutants",
+        "overview": "Tommy works on improving his memory while Rita creates a team of evil Mutant Rangers led by Commander Crayfish.",
+        "air_date": "1994-05-16",
+        "runtime": 22,
+        "still_path": "/8pTjKeyUg2V9IdKUMvndCAbVJxE.jpg"
+      },
+      {
+        "episode_number": 60,
+        "name": "An Oyster Stew",
+        "overview": "Zack seeks to impress Angela by giving her a pair of pearl earrings, unaware they are Rita\u0027s cursed Pearls of Stillness.",
+        "air_date": "1994-05-23",
+        "runtime": 22,
+        "still_path": "/sca6tm3Et5sXkamDtmfky9aXHFU.jpg"
+      }
+    ]
+  }
+}

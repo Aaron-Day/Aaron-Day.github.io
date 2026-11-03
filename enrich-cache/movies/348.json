@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 348,
+    "title": "Alien",
+    "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
+    "tagline": "In space no one can hear you scream.",
+    "runtime": 117,
+    "release_date": "1979-05-25",
+    "vote_average": 8.174,
+    "poster_path": "/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+    "backdrop_path": "/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8091,
+      "name": "Alien Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Skerritt",
+      "character": "Dallas",
+      "profile_path": "/oWFCyBLm1lsbsbT5Nmx3SPMaqFZ.jpg"
+    },
+    {
+      "name": "Sigourney Weaver",
+      "character": "Ripley",
+      "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+    },
+    {
+      "name": "Veronica Cartwright",
+      "character": "Lambert",
+      "profile_path": "/1CiknHO8ssMM4bWPsIMMzCTVHeB.jpg"
+    },
+    {
+      "name": "Harry Dean Stanton",
+      "character": "Brett",
+      "profile_path": "/9zOTpVMwMHNjPFBNoPy9vOBT1NC.jpg"
+    }
+  ]
+}

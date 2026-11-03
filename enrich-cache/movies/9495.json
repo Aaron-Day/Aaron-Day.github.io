@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9495,
+    "title": "The Crow",
+    "overview": "Exactly one year after young rock guitarist Eric Draven and his fianc\u00E9e are brutally killed by a ruthless gang of criminals, Draven, watched over by a hypnotic crow, returns from the grave to exact revenge.",
+    "tagline": "Believe in angels.",
+    "runtime": 102,
+    "release_date": "1994-05-11",
+    "vote_average": 7.534,
+    "poster_path": "/rMMB3v6jYHjsvXRNJYESacoTD7j.jpg",
+    "backdrop_path": "/2VN9umruwVZsT1Pr1NMCV71HpUu.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9436,
+      "name": "The Crow Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brandon Lee",
+      "character": "Eric",
+      "profile_path": "/reUcEvW2GoKWfQyFy7TCmNAQTXz.jpg"
+    },
+    {
+      "name": "Rochelle Davis",
+      "character": "Sarah",
+      "profile_path": "/89FluwJCKBVj6JmvB9VI4DodSTy.jpg"
+    },
+    {
+      "name": "Ernie Hudson",
+      "character": "Albrecht",
+      "profile_path": "/kgAdQA2ItCDVvKXufeDHc6Omiso.jpg"
+    },
+    {
+      "name": "Michael Wincott",
+      "character": "Top Dollar",
+      "profile_path": "/z6FtWACKaIivi0khxM6vEHoUH0.jpg"
+    }
+  ]
+}

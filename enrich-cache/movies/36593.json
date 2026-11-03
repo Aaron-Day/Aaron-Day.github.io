@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36593,
+    "title": "Naked Gun 33\u2153: The Final Insult",
+    "overview": "Frank Drebin is persuaded out of retirement to go undercover in a state prison. There he has to find out what top terrorist, Rocco, has planned for when he escapes. Adding to his problems, Frank\u0027s wife, Jane, is desperate for a baby.",
+    "tagline": "Mostly all new jokes.",
+    "runtime": 83,
+    "release_date": "1994-03-18",
+    "vote_average": 6.518,
+    "poster_path": "/p0AYsdgkudR9P5fNV5AjzbwQt8W.jpg",
+    "backdrop_path": "/rZBc0S32bVNYOGJ5sKYsHhOwIT5.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 37139,
+      "name": "The Naked Gun Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Leslie Nielsen",
+      "character": "Lt. Frank Drebin",
+      "profile_path": "/rMz3ZUmFE7lQCP51Ql7IcMHJIUZ.jpg"
+    },
+    {
+      "name": "Priscilla Presley",
+      "character": "Jane Spencer",
+      "profile_path": "/AkHLzziAPK1NVI5lfELYt6u0kRP.jpg"
+    },
+    {
+      "name": "George Kennedy",
+      "character": "Ed Hocken",
+      "profile_path": "/fIVmcPEcPmh0Rbx4mYf9aneCmDe.jpg"
+    },
+    {
+      "name": "O. J. Simpson",
+      "character": "Nordberg",
+      "profile_path": "/3q6XMf1L5zCApoUsiAMoFS9ADXY.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 196,
+    "title": "Back to the Future Part III",
+    "overview": "The final installment finds Marty digging the trusty DeLorean out of a mineshaft and looking for Doc in the Wild West of 1885. But when their time machine breaks down, the travelers are stranded in a land of spurs. More problems arise when Doc falls for pretty schoolteacher Clara Clayton, and Marty tangles with Buford Tannen.",
+    "tagline": "They\u0027ve saved the best trip for last... But this time they may have gone too far.",
+    "runtime": 119,
+    "release_date": "1990-05-25",
+    "vote_average": 7.495,
+    "poster_path": "/crzoVQnMzIrRfHtQw0tLBirNfVg.jpg",
+    "backdrop_path": "/AtF7TESJEMmImBRUj9Z7HmW2ZH0.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 264,
+      "name": "Back to the Future Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael J. Fox",
+      "character": "Marty McFly / Seamus McFly",
+      "profile_path": "/2JB4FMgQmnhbBlQ4SxWFN9EIVDi.jpg"
+    },
+    {
+      "name": "Christopher Lloyd",
+      "character": "Doctor Emmett Brown",
+      "profile_path": "/nxVjpyb3UrfbPZnEyDNlQVlFAs5.jpg"
+    },
+    {
+      "name": "Mary Steenburgen",
+      "character": "Clara Clayton",
+      "profile_path": "/yJhfuqS3yXW7kLSyvRU6n3b35mq.jpg"
+    },
+    {
+      "name": "Thomas F. Wilson",
+      "character": "Buford \u0027Mad Dog\u0027 Tannen / Biff Tannen",
+      "profile_path": "/mVhm65ZVBIRIptWGiMIvoUy0Khi.jpg"
+    }
+  ]
+}

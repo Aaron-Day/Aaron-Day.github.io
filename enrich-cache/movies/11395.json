@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11395,
+    "title": "The Santa Clause",
+    "overview": "On Christmas Eve, divorced dad Scott Calvin and his son discover Santa Claus has fallen off their roof. When Scott takes the reins of the magical sleigh, he finds he is now the new Santa, and must convince a world of disbelievers, including himself.",
+    "tagline": "This Christmas, the snow hits the fan.",
+    "runtime": 97,
+    "release_date": "1994-11-11",
+    "vote_average": 6.533,
+    "poster_path": "/hvV2rI60qOYELT7tHHLpxtafnBZ.jpg",
+    "backdrop_path": "/p89QeYRc2u0rX0eKKU4TLJStwHO.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 53159,
+      "name": "The Santa Clause Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tim Allen",
+      "character": "Scott Calvin",
+      "profile_path": "/k8XPNHBO459FaqkqqM4tfX5GMKk.jpg"
+    },
+    {
+      "name": "Judge Reinhold",
+      "character": "Neal",
+      "profile_path": "/6R0vCxzSx1CaDAM9y9ZgmejUdiL.jpg"
+    },
+    {
+      "name": "Wendy Crewson",
+      "character": "Laura",
+      "profile_path": "/6hplkzK8KV5Cw8Z8SVKwlt3nU5I.jpg"
+    },
+    {
+      "name": "Eric Lloyd",
+      "character": "Charlie",
+      "profile_path": "/huFLxPMJIPpOFDzdQR7JeQ4Nnr.jpg"
+    }
+  ]
+}

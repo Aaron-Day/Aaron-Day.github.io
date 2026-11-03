@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 493922,
+    "title": "Hereditary",
+    "overview": "When the matriarch of the Graham family passes away, her daughter begins to unravel cryptic and increasingly terrifying secrets about her ancestry.",
+    "tagline": "Every family tree hides a secret.",
+    "runtime": 128,
+    "release_date": "2018-06-07",
+    "vote_average": 7.297,
+    "poster_path": "/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
+    "backdrop_path": "/pS9Aub8MPyQbENblGD8mHeaqMuv.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Toni Collette",
+      "character": "Annie Graham",
+      "profile_path": "/lzXRh16qe4HHeBN6tMyw0DHvaMn.jpg"
+    },
+    {
+      "name": "Alex Wolff",
+      "character": "Peter Graham",
+      "profile_path": "/7PMu5zFOEH7PqFDzrKThgKD4Ndf.jpg"
+    },
+    {
+      "name": "Gabriel Byrne",
+      "character": "Steve Graham",
+      "profile_path": "/9r9oDGENg92VYYFMkV4C09IUlrb.jpg"
+    },
+    {
+      "name": "Milly Shapiro",
+      "character": "Charlie Graham",
+      "profile_path": "/5QVwZttyqVDl0M3AKwe0SDU8S5R.jpg"
+    }
+  ]
+}

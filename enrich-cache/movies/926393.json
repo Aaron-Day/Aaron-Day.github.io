@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 926393,
+    "title": "The Equalizer 3",
+    "overview": "Robert McCall finds himself at home in Southern Italy but he discovers his friends are under the control of local crime bosses. As events turn deadly, McCall knows what he has to do: become his friends\u0027 protector by taking on the mafia.",
+    "tagline": "Justice knows no borders",
+    "runtime": 109,
+    "release_date": "2023-08-30",
+    "vote_average": 7.288,
+    "poster_path": "/b0Ej6fnXAP8fK75hlyi2jKqdhHz.jpg",
+    "backdrop_path": "/gystuaqp5AkVqqu3Nf0564zeOv4.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 523855,
+      "name": "The Equalizer Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "Robert McCall",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Dakota Fanning",
+      "character": "Emma Collins",
+      "profile_path": "/hwcO08SVWkelfvgfIa5HsTMxsK8.jpg"
+    },
+    {
+      "name": "Eugenio Mastrandrea",
+      "character": "Gio Bonucci",
+      "profile_path": "/tFvgQP7j3F0ATXxzLS2yOaeU05Q.jpg"
+    },
+    {
+      "name": "David Denman",
+      "character": "Frank Conroy",
+      "profile_path": "/4I06ZD8SQ6pU1QYShiUXb711fJW.jpg"
+    }
+  ]
+}

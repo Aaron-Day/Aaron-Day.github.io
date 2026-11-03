@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 365222,
+    "title": "Ip Man 3",
+    "overview": "When a band of brutal gangsters led by a crooked property developer make a play to take over the city, Master Ip is forced to take a stand.",
+    "tagline": "The legend continues, the grandmaster returns.",
+    "runtime": 105,
+    "release_date": "2015-12-24",
+    "vote_average": 7,
+    "poster_path": "/8PvinaGEqzf1rrfFAxiXujJnCtI.jpg",
+    "backdrop_path": "/kFHmrWUp3FUlmW7S68KCwDuowJD.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 70068,
+      "name": "Ip Man Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Donnie Yen",
+      "character": "Ip Man",
+      "profile_path": "/hTlhrrZMj8hZVvD17j4KyAFWBHc.jpg"
+    },
+    {
+      "name": "Max Zhang",
+      "character": "Cheung Tin-Chi",
+      "profile_path": "/vGJ0Jox8VCKpX4e6COT6KPYYeHJ.jpg"
+    },
+    {
+      "name": "Lynn Hung Doi-Lam",
+      "character": "Cheung Wing-Sing",
+      "profile_path": "/jSLg8PqxdwDWfCChU2RG0B6HmCX.jpg"
+    },
+    {
+      "name": "Patrick Tam Yiu-Man",
+      "character": "Ma King-Sang",
+      "profile_path": "/aOus8OyhjMqJxnZsI0r5krej8TU.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9358,
+    "title": "Final Destination 2",
+    "overview": "When Kimberly has a violent premonition of a highway pileup she blocks the freeway, keeping a few others meant to die, safe...Or are they? The survivors mysteriously start dying and it\u0027s up to Kimberly to stop it before she\u0027s next.",
+    "tagline": "For every beginning there is an end.",
+    "runtime": 90,
+    "release_date": "2003-01-31",
+    "vote_average": 6.325,
+    "poster_path": "/vnFgxRlLTA9fDNcGXLiHmgwmIEo.jpg",
+    "backdrop_path": "/tKnmfO5lAyu8hpTZMyMaI4lhZpJ.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8864,
+      "name": "Final Destination Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "A.J. Cook",
+      "character": "Kimberly Corman",
+      "profile_path": "/tvEjGDQVuu7jiOvWXwEU6tEE7NW.jpg"
+    },
+    {
+      "name": "Ali Larter",
+      "character": "Clear Rivers",
+      "profile_path": "/5qaQFxx8Az83ycd4LHyQ39HXaEJ.jpg"
+    },
+    {
+      "name": "Michael Landes",
+      "character": "Thomas Burke",
+      "profile_path": "/2EdaNaUQdWi7Vi0pLNaS9Ys9fVi.jpg"
+    },
+    {
+      "name": "David Paetkau",
+      "character": "Evan Lewis",
+      "profile_path": "/c2LHO9ERSk8D5SW4vgRvgS9sSmb.jpg"
+    }
+  ]
+}

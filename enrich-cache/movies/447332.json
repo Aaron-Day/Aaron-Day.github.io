@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 447332,
+    "title": "A Quiet Place",
+    "overview": "A family is forced to live in silence while hiding from creatures that hunt by sound.",
+    "tagline": "If they hear you, they hunt you.",
+    "runtime": 91,
+    "release_date": "2018-04-03",
+    "vote_average": 7.4,
+    "poster_path": "/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+    "backdrop_path": "/nHRUtBwFNnNN70vcQ7lAsjc2T6S.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 521226,
+      "name": "A Quiet Place Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Emily Blunt",
+      "character": "Evelyn Abbott",
+      "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+    },
+    {
+      "name": "John Krasinski",
+      "character": "Lee Abbott",
+      "profile_path": "/pmVGDb6Yl6OyFcHVGbu1EYNfyFK.jpg"
+    },
+    {
+      "name": "Millicent Simmonds",
+      "character": "Regan Abbott",
+      "profile_path": "/clNmG7JlsI5qZTVjYoXiGZ3Pvbq.jpg"
+    },
+    {
+      "name": "Noah Jupe",
+      "character": "Marcus Abbott",
+      "profile_path": "/xbswZN0SHgeCbyo5GQ0xfZKH3vs.jpg"
+    }
+  ]
+}

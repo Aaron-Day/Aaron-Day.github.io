@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "My Bad",
+        "overview": "Dexter must make a choice; Quinn stirs up trouble for Dexter but supports Deb.",
+        "air_date": "2010-09-26",
+        "runtime": 54,
+        "still_path": "/lNMSOuA1LTp71hSFsb25G6w9Gxq.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Hello, Bandit",
+        "overview": "Dexter tries to focus his energy on his kids and fight his dark urges, but a shocking discovery puts him on the trail of a new victim; Debra hosts her brother and his children but finds herself squeezed out of her own place, and ends up on Quinn\u0027s doorstep.",
+        "air_date": "2010-10-03",
+        "runtime": 49,
+        "still_path": "/yqTBpVchb5WndUMXkbRlYKpSg1A.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Practically Perfect",
+        "overview": "In an effort to create more free time to stalk and kill victims, Dexter hires a nanny; Debra is annoyed by her new partner, a rookie with her own theories on a bizarre double homicide; Quinn pursues the theory that Trinity did not kill Rita.",
+        "air_date": "2010-10-10",
+        "runtime": 49,
+        "still_path": "/mS2DyP1K7MbA1IybP68umiXsFeW.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Beauty and the Beast",
+        "overview": "Dexter finds himself in a strange situation when, instead of taking a life, he has to save one. Deb has a scary confrontation with a key suspect in the Santa Muerte murder cases; Quinn continues following up on the strange similarities between \u0022Kyle Butler\u0022 and Dexter Morgan.",
+        "air_date": "2010-10-17",
+        "runtime": 50,
+        "still_path": "/82SPJjIJP7xvViWD0xOgDLezdOs.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "First Blood",
+        "overview": "When Dexter is saddled with an unwanted conspirator, he is forced to make some hard decisions about her fate; meanwhile, Dexter wonders if Rita\u0027s death has awakened a darkness inside Harrison; due to Quinn\u0027s recent suspension, Debra works the Santa Muerte case alone, leaving Quinn time to enlist an old friend to look into Dexter.",
+        "air_date": "2010-10-24",
+        "runtime": 51,
+        "still_path": "/eR3jzZ6WKD09ocsxq5fRGHuGqMX.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Everything Is Illumenated",
+        "overview": "Trying to get his life back on track, Dexter hunts a new target, but is distracted and drawn into a precarious situation while helping his troubled acquaintance; Batista discovers an interesting lead in the Santa Muerte murder cases; Quinn learns some new information about Dexter from a questionable source.",
+        "air_date": "2010-10-31",
+        "runtime": 50,
+        "still_path": "/kpa3E6ynZdFORmEJzvjzMnEukOM.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Circle Us",
+        "overview": "While helping Lumen, Dexter finds himself on a collision course with Debra and the rest of Homicide when he is called to investigate a horrifying crime scene; the Santa Muerte case leads to a violent standoff between Debra and the killers.",
+        "air_date": "2010-11-07",
+        "runtime": 48,
+        "still_path": "/yWmgJkvzS1zx7YhqCfgVf1r1Ovq.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Take It!",
+        "overview": "While attending a self-help seminar, Dexter and Lumen stalk a violent killer; Debra gets into unexpected trouble from the fallout of the Santa Muerte case, forcing Batista to make a difficult decision.",
+        "air_date": "2010-11-14",
+        "runtime": 52,
+        "still_path": "/sxQcDzAseVJkiUXqIXfWaTiRYYw.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Teenage Wasteland",
+        "overview": "In the midst of hunting their next victim, Dexter and Lumen are surprised by the return of an unannounced guest; Debra is assigned to the file room, but manages to uncover new evidence in the Barrel Girl case.",
+        "air_date": "2010-11-21",
+        "runtime": 55,
+        "still_path": "/eoxBiNdnAxI1mTcIdHXcn6jSoN0.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "In the Beginning",
+        "overview": "Dexter discovers a possible ally in the pursuit of Lumen\u0027s former captors, but he and Lumen are forced to step down when homicide uncovers evidence linked to one of their prior victims; Debra identifies two more suspects in the Barrel Girls case.",
+        "air_date": "2010-11-28",
+        "runtime": 54,
+        "still_path": "/s9xVM0xayQbGaGD6ttARrSVsySm.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Hop a Freighter",
+        "overview": "Dexter is forced to do damage control after he concedes that someone outside of Miami Metro has taken an interest in him and Lumen; Debra\u0027s speculation on the missing Barrel Girl suspects begins to take shape; Quinn becomes more involved in a homicide than he\u0027d like to be.",
+        "air_date": "2010-12-05",
+        "runtime": 47,
+        "still_path": "/xJw2WiS3uHpMaFmwv90oY7Mq6qC.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Big One",
+        "overview": "Dexter realizes that he and Lumen are being lured into a trap and risks everything to escape; Debra lets her personal feelings overwhelm her instincts in the Barrel Girls case; Quinn needs help that only Dexter can provide.",
+        "air_date": "2010-12-12",
+        "runtime": 55,
+        "still_path": "/fbAGakIEtwPpqi573MsseIDXE9s.jpg"
+      }
+    ]
+  }
+}

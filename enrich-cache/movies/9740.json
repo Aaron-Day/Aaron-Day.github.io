@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9740,
+    "title": "Hannibal",
+    "overview": "After having successfully eluded the authorities for years, Hannibal peacefully lives in Italy in disguise as an art scholar. Trouble strikes again when he\u0027s discovered leaving a deserving few dead in the process. He returns to America to make contact with now disgraced Agent Clarice Starling, who is suffering the wrath of a malicious FBI rival as well as the media.",
+    "tagline": "His genius undeniable. His evil unspeakable. His name...Hannibal.",
+    "runtime": 131,
+    "release_date": "2001-02-08",
+    "vote_average": 6.783,
+    "poster_path": "/v5wAZwRqpGWmyAaaJ8BBHYuNXnj.jpg",
+    "backdrop_path": "/3Nb9AQaq3elLNCUBxG8VprmqfhZ.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9743,
+      "name": "The Hannibal Lecter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anthony Hopkins",
+      "character": "Dr. Hannibal Lecter",
+      "profile_path": "/iaf7SHSkGDpnyrDh1Jolilwk2TD.jpg"
+    },
+    {
+      "name": "Julianne Moore",
+      "character": "Clarice M. Starling",
+      "profile_path": "/3YF19rWusxWfEI59ZM33dFhasRq.jpg"
+    },
+    {
+      "name": "Gary Oldman",
+      "character": "Mason Verger",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    },
+    {
+      "name": "Ray Liotta",
+      "character": "Paul Krendler",
+      "profile_path": "/ve9sB0o1MYTaL2SXEisVW2RMkD5.jpg"
+    }
+  ]
+}

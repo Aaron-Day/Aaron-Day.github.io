@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 87101,
+    "title": "Terminator Genisys",
+    "overview": "The year is 2029. John Connor, leader of the resistance continues the war against the machines. At the Los Angeles offensive, John\u0027s fears of the unknown future begin to emerge when TECOM spies reveal a new plot by SkyNet that will attack him from both fronts; past and future, and will ultimately change warfare forever.",
+    "tagline": "Reset the future.",
+    "runtime": 126,
+    "release_date": "2015-06-23",
+    "vote_average": 5.965,
+    "poster_path": "/oZRVDpNtmHk8M1VYy1aeOWUXgbC.jpg",
+    "backdrop_path": "/wvlIoof1FnKPLv9jAYanuP31V0C.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 528,
+      "name": "The Terminator Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Guardian / The Terminator",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Jason Clarke",
+      "character": "John Connor",
+      "profile_path": "/quH4y2dto3UAgZOfaM0QriyRLPN.jpg"
+    },
+    {
+      "name": "Emilia Clarke",
+      "character": "Sarah Connor",
+      "profile_path": "/iFY6t7Ux9r70WB7Sp0TTVz6eGtm.jpg"
+    },
+    {
+      "name": "Jai Courtney",
+      "character": "Kyle Reese",
+      "profile_path": "/6vEaNwbOKov6yzQx15CdtrqfK3L.jpg"
+    }
+  ]
+}

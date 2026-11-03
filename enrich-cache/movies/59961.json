@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 59961,
+    "title": "Safe House",
+    "overview": "A dangerous CIA renegade resurfaces after a decade on the run. When the safe house he\u0027s remanded to is attacked by mercenaries, a rookie operative escapes with him. Now, the unlikely allies must stay alive long enough to uncover who wants them dead.",
+    "tagline": "No one is safe",
+    "runtime": 115,
+    "release_date": "2012-02-08",
+    "vote_average": 6.497,
+    "poster_path": "/7SYBPjv5ywF6cI4BSFFtlDyChT2.jpg",
+    "backdrop_path": "/kXRskNzFiTxi5xwsM6hDmOTGae7.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "Tobin Frost",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Ryan Reynolds",
+      "character": "Matt Weston",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Vera Farmiga",
+      "character": "Catherine Linklater",
+      "profile_path": "/5Vs7huBmTKftwlsc2BPAntyaQYj.jpg"
+    },
+    {
+      "name": "Brendan Gleeson",
+      "character": "David Barlow",
+      "profile_path": "/ctPPJu5ZYDZr1IPmzoNpezczrm0.jpg"
+    }
+  ]
+}

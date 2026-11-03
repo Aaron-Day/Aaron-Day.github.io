@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Nameless, Faceless",
+        "overview": "As Rossi, Morgan and JJ profile a killer who is targeting an emergency room doctor, Prentiss realizes that Hotch is missing.",
+        "air_date": "2009-09-23",
+        "runtime": 42,
+        "still_path": "/Cqc30tsxumKZ2iJBjgRNRbvaEP.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Haunted",
+        "overview": "The BAU must determine what caused a disturbed man to murder several people at a pharmacy before he harms anyone else.",
+        "air_date": "2009-09-30",
+        "runtime": 40,
+        "still_path": "/t2XbEuauEWGmvef3FacS2Rdsaq9.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Reckoner",
+        "overview": "The BAU investigates a case in Rossi\u0027s hometown that involves both his personal and professional life.",
+        "air_date": "2009-10-07",
+        "runtime": 40,
+        "still_path": "/qmv4tofcM2l1QbBKVPikHHU6gir.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Hopeless",
+        "overview": "A group of suspects with a pack mentality who kill for the thrill of it are the subjects of a BAU manhunt.",
+        "air_date": "2009-10-14",
+        "runtime": 42,
+        "still_path": "/mHtUeDxOkmoFCy8UB8EkgXQ5xPS.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Cradle to Grave",
+        "overview": "The team hunts a suspect who impregnates young women and has them give birth before murdering them.",
+        "air_date": "2009-10-21",
+        "runtime": 41,
+        "still_path": "/xdHp3xcrfL4kw1MrQIUPz9bDh9H.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Eyes Have It",
+        "overview": "The BAU team tracks a serial killer who keeps the eyes of his victims as souvenirs.",
+        "air_date": "2009-11-04",
+        "runtime": 42,
+        "still_path": "/bT54VCTy2SUWrMvq7NhyrJgOos5.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Performer",
+        "overview": "The BAU team investigates the mystery behind a trail of murders that all seem to align with the tour schedule of a rock star.",
+        "air_date": "2009-11-11",
+        "runtime": 40,
+        "still_path": "/iY77PKHFjO6u2K13EnumLkIV2jZ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Outfoxed",
+        "overview": "The BAU team is tracking down a family annihilator, but needs to take a break from the case to get advice from \u0022The Fox\u0022, who is an horrific killer from the team\u0027s past. \u0022The Fox\u0022 surprises the team with a ominous message for Agent Hotchner.",
+        "air_date": "2009-11-18",
+        "runtime": 39,
+        "still_path": "/4I8mRuAzZQKpUx9yY5fUt0EwmDQ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "100",
+        "overview": "The BAU team races to help Hotchner find The Reaper and save his family before it\u0027s too late.",
+        "air_date": "2009-11-25",
+        "runtime": 42,
+        "still_path": "/w03lmgzuOqS0Rw32NFr3y3FSV84.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Slave of Duty",
+        "overview": "The team needs to reunite in order to solve a home invasion case, while Agent Hotchner may have to leave the team.",
+        "air_date": "2009-12-09",
+        "runtime": 42,
+        "still_path": "/cZkIjvCjXyJ1MAnZ31nVOihR4Tr.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Retaliation",
+        "overview": "The BAU is called upon to profile the past of an ex-convict and help stop him after he escapes from custody and embarks on a violent killing spree.",
+        "air_date": "2009-12-16",
+        "runtime": 40,
+        "still_path": "/6KV3cqaxz2VJof5sH7KP4v0A21X.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Uncanny Valley",
+        "overview": "An unusual personal obsession is at the center of a BAU abduction case. Meanwhile, Hotch struggles with his return to work.",
+        "air_date": "2010-01-13",
+        "runtime": 41,
+        "still_path": "/fGdOzXRAuo6O6EjQwOIPGZV29PZ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Risky Business",
+        "overview": "A rash of startling teen suicides in a small Wyoming town is the focus of a BAU investigation.",
+        "air_date": "2010-01-20",
+        "runtime": 40,
+        "still_path": "/q7nfYwohpo1sTrE32A3JvfEtSnV.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Parasite",
+        "overview": "The BAU follows the mental decline of a con artist whose schemes have become so complicated that he begins to eliminate the people involved in them.",
+        "air_date": "2010-02-03",
+        "runtime": 39,
+        "still_path": "/9FylLrJNxZdsBd86S4ODAnCtkQ3.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Public Enemy",
+        "overview": "A serial killer who targets random victims in highly visible places to create a sense of public fear is the subject of a BAU investigation.",
+        "air_date": "2010-02-10",
+        "runtime": 42,
+        "still_path": "/cPNHM4GhH5qt15YiTFWWsjqLfkg.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Mosley Lane",
+        "overview": "The BAU is called by local authorities in Ashburn, Virginia, to profile a predator who may have been abducting children for at least eight years.",
+        "air_date": "2010-03-03",
+        "runtime": 42,
+        "still_path": "/p4645g2qcjH7f8ZvF8f7a3XbLAT.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Solitary Man",
+        "overview": "A truck driver is kidnapping women and disposing of them in random locations and the BAU must find out his motive in order to catch him.",
+        "air_date": "2010-03-10",
+        "runtime": 41,
+        "still_path": "/htBw8JA1hyIYIWCkO2fL66Y31Pi.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Fight",
+        "overview": "The BAU team travels to San Francisco to investigate the murders of several homeless men and teams up with a separate group of BAU operatives who are working another case they think is connected.",
+        "air_date": "2010-04-07",
+        "runtime": 42,
+        "still_path": "/obuEgLMoMHghC572KnzLzx6ZSaX.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Rite of Passage",
+        "overview": "The BAU team heads to Texas to track a serial killer targeting illegal immigrants attempting to make safe passage into the U.S.",
+        "air_date": "2010-04-14",
+        "runtime": 39,
+        "still_path": "/bx5XUQ0FPLGE4ia2nRSMg8EuFLi.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "...A Thousand Words",
+        "overview": "The BAU team must profile a serial killer covered in tattoos who commits suicide, but leaves clues to the whereabouts of his last victim.",
+        "air_date": "2010-05-05",
+        "runtime": 39,
+        "still_path": "/cj7mx6BN42sgvXGsGsrkRp2jotq.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Exit Wounds",
+        "overview": "Garcia plays a crucial role in a case when she travels to Alaska with the BAU team to investigate the murders of several members of a small town.",
+        "air_date": "2010-05-12",
+        "runtime": 42,
+        "still_path": "/LrKYxkbHBpjHI0yPTjtxPZ88sa.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Internet Is Forever",
+        "overview": "The BAU team profiles a serial killer who uses the Internet as his hunting ground, bringing a whole meaning to the term \u0022social networking\u0022.",
+        "air_date": "2010-05-19",
+        "runtime": 41,
+        "still_path": "/xdPAPJVMsTtW6CdnumBq44DxBY8.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Our Darkest Hour",
+        "overview": "A series of rolling blackouts in the city of Los Angeles lures a serial killer out of hiding, giving him renewed opportunities to continue his killing spree.",
+        "air_date": "2010-05-26",
+        "runtime": 41,
+        "still_path": "/1ahaBTlWwvnF6WYFPzrpODknoIh.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 41436,
+    "title": "Paranormal Activity 2",
+    "overview": "Just as Daniel and Kristi welcome a newborn baby into their home, a demonic presence begins terrorizing them, tearing apart their perfect world and turning it into an inescapable nightmare.",
+    "tagline": "In 2009 you demanded it. Nothing can prepare you for what\u0027s next.",
+    "runtime": 91,
+    "release_date": "2010-10-20",
+    "vote_average": 5.803,
+    "poster_path": "/gfdrkBZAyUUXJJ2iLQe03SAYRD3.jpg",
+    "backdrop_path": "/lcw9r76AzazaUxRWVgC7YSPA4ua.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 41437,
+      "name": "Paranormal Activity Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sprague Grayden",
+      "character": "Kristi Rey",
+      "profile_path": "/dhWyIHiG9fYMkcd3pUK3Q7kFm37.jpg"
+    },
+    {
+      "name": "Brian Boland",
+      "character": "Daniel Rey",
+      "profile_path": "/1sW3fZlsI1W0ctHUQXEC3hJkBQ4.jpg"
+    },
+    {
+      "name": "Molly Ephraim",
+      "character": "Ali Rey",
+      "profile_path": "/hiYUdTuZHbInzqLYGCPb1P7TO9m.jpg"
+    },
+    {
+      "name": "Katie Featherston",
+      "character": "Katie Featherston",
+      "profile_path": "/mdbMy2B70PiFp0ckLo6WhSLDbR2.jpg"
+    }
+  ]
+}

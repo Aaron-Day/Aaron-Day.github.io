@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 482373,
+    "title": "Don\u0027t Breathe 2",
+    "overview": "The Blind Man has been hiding out for several years in an isolated cabin and has taken in and raised a young girl orphaned from a devastating house fire. Their quiet life together is shattered when a group of criminals kidnap the girl, forcing the Blind Man to leave his safe haven to save her.",
+    "tagline": "Bad things happen to bad people.",
+    "runtime": 98,
+    "release_date": "2021-08-12",
+    "vote_average": 6.96,
+    "poster_path": "/aOu6PJVO9RyGAzdUwG6fupu0gpz.jpg",
+    "backdrop_path": "/3ULzK4XTSC1wal11K7459fxnjjA.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 748919,
+      "name": "Don\u0027t Breathe Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Stephen Lang",
+      "character": "The Blind Man",
+      "profile_path": "/gnO5VfkDgA2fsHweD0622LUY3Hu.jpg"
+    },
+    {
+      "name": "Madelyn Grace",
+      "character": "Phoenix",
+      "profile_path": "/pzK2HNgDSBat6estnAvm2Dj68L9.jpg"
+    },
+    {
+      "name": "Brendan Sexton III",
+      "character": "Raylan",
+      "profile_path": "/kfvO3Mdk5yqzuaN8aIeaFfVl4T5.jpg"
+    },
+    {
+      "name": "Adam Young",
+      "character": "Jim-Bob",
+      "profile_path": "/dMp9t3CnylsSL1lLniCjZUhqblx.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 299534,
+    "title": "Avengers: Endgame",
+    "overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos\u0027 actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+    "tagline": "Avenge the fallen.",
+    "runtime": 181,
+    "release_date": "2019-04-24",
+    "vote_average": 8.247,
+    "poster_path": "/jtDv3lCnST0fZRvdYFwR5CVwK2x.jpg",
+    "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86311,
+      "name": "The Avengers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robert Downey Jr.",
+      "character": "Tony Stark / Iron Man",
+      "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+    },
+    {
+      "name": "Chris Evans",
+      "character": "Steve Rogers / Captain America",
+      "profile_path": "/3bOGNsHlrswhyW79uvIHH1V43JI.jpg"
+    },
+    {
+      "name": "Mark Ruffalo",
+      "character": "Bruce Banner / Hulk",
+      "profile_path": "/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg"
+    },
+    {
+      "name": "Chris Hemsworth",
+      "character": "Thor",
+      "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    }
+  ]
+}

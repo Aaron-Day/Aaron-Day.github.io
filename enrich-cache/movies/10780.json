@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10780,
+    "title": "Overboard",
+    "overview": "Heiress Joanna Stayton hires carpenter Dean Proffitt to build a closet on her yacht\u2014and refuses to pay him for the project when it\u0027s done. But after Joanna accidentally falls overboard and loses her memory, Dean sees an opportunity to get even.",
+    "tagline": "From opulence... to rags... to love.",
+    "runtime": 112,
+    "release_date": "1987-12-16",
+    "vote_average": 6.87,
+    "poster_path": "/v9MVFgUTvNRXmm2WWOzST6UXb5x.jpg",
+    "backdrop_path": "/lekXv2HA6pbhNicUGgGn74yhKFK.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Goldie Hawn",
+      "character": "Joanna Stayton / Annie Proffitt",
+      "profile_path": "/fz4VjpUJO5i0BHhEgLs9HAUD2fJ.jpg"
+    },
+    {
+      "name": "Kurt Russell",
+      "character": "Dean Proffitt",
+      "profile_path": "/6g1d98oH4miG4k0ZiZWmF3Dt0bO.jpg"
+    },
+    {
+      "name": "Edward Herrmann",
+      "character": "Grant Stayton III",
+      "profile_path": "/ov33sPPuTzw21KYwAkkAB8AmjIV.jpg"
+    },
+    {
+      "name": "Mike Hagerty",
+      "character": "Billy Pratt",
+      "profile_path": "/qoAlWEhWMNE7vOOXZPvnz7PcDBt.jpg"
+    }
+  ]
+}

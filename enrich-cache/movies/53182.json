@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 53182,
+    "title": "300: Rise of an Empire",
+    "overview": "Greek general Themistocles attempts to unite all of Greece by leading the charge that will change the course of the war. Themistocles faces the massive invading Persian forces led by mortal-turned-god, Xerxes and Artemesia, the vengeful commander of the Persian navy.",
+    "tagline": "Seize your glory!",
+    "runtime": 102,
+    "release_date": "2014-03-05",
+    "vote_average": 6.124,
+    "poster_path": "/wYDdWN1McB1Sio4z1dPSkb40Z78.jpg",
+    "backdrop_path": "/chjkfyo57JexWo1YeIZRMk8wA4m.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 125570,
+      "name": "300 Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sullivan Stapleton",
+      "character": "Themistocles",
+      "profile_path": "/vWadhfczxktoYQBC6TaAk6bE6Ci.jpg"
+    },
+    {
+      "name": "Eva Green",
+      "character": "Artemisia",
+      "profile_path": "/vwjOWfUeDk5fQr8jraKlR1Yfxxq.jpg"
+    },
+    {
+      "name": "Lena Headey",
+      "character": "Queen Gorgo",
+      "profile_path": "/cDyZLf8ddz0EgoUjpv4jjzy7qxA.jpg"
+    },
+    {
+      "name": "Callan Mulvey",
+      "character": "Scylias",
+      "profile_path": "/wJ8P1yNVmkx1PS1mc6Pi48tphfG.jpg"
+    }
+  ]
+}

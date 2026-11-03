@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Kobayashi Maru",
+        "overview": "After months spent reconnecting the Federation with distant worlds, Captain Michael Burnham and the crew of the U.S.S. Discovery are sent to assist a damaged space station \u2013 a seemingly routine mission that reveals the existence of a terrifying new threat.",
+        "air_date": "2021-11-18",
+        "runtime": 52,
+        "still_path": "/6RsRTvxI2Sv6mNmBOOLuEmiAEcy.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Anomaly",
+        "overview": "Saru returns to help the U.S.S. Discovery uncover the mystery of an unusually destructive new force. As Burnham leads the crew, she must also find a way to help Book cope with an unimaginable loss.",
+        "air_date": "2021-11-25",
+        "runtime": 49,
+        "still_path": "/3FZ6ZAKxQaVS84uymVdYzwOGUOa.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Choose to Live",
+        "overview": "Burnham and Tilly hunt the killer of a Starfleet officer as Stamets and the science team race against the clock to prevent the anomaly from killing anyone else.",
+        "air_date": "2021-12-02",
+        "runtime": 55,
+        "still_path": "/8tx3avvVJHrXFDIeCafbXn0H2gB.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "All Is Possible",
+        "overview": "Tilly and Adira lead a team of Starfleet Academy cadets on a training mission that takes a dangerous turn. Meanwhile, Burnham is pulled into tense negotiations on Ni\u2019Var.",
+        "air_date": "2021-12-09",
+        "runtime": 54,
+        "still_path": "/ahkPNBqicfkfvhhAaopPSl6NrPI.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Examples",
+        "overview": "Burnham and Book race to evacuate a group of stranded colonists in the anomaly\u2019s path as one of the Federation\u2019s brightest scientists comes aboard the U.S.S. Discovery to do high-stakes research with Saru and Stamets.",
+        "air_date": "2021-12-16",
+        "runtime": 51,
+        "still_path": "/b6x4x2z2XflPcmh3iRGr37CdsxS.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Stormy Weather",
+        "overview": "Seeking answers, the U.S.S. Discovery ventures into a subspace rift created by the Dark Matter Anomaly. Meanwhile, Book faces a strange visitor from his past.",
+        "air_date": "2021-12-23",
+        "runtime": 46,
+        "still_path": "/vOaVmVveQjU5EbSHlNFIr3HxsVQ.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "...But to Connect",
+        "overview": "Tensions rise as representatives from across the galaxy gather to confront the threat of the Dark Matter Anomaly. Zora\u0027s new sentience raises difficult questions.",
+        "air_date": "2021-12-30",
+        "runtime": 45,
+        "still_path": "/bHOTOQeL7j480JQ3SlC4r8E7yjK.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "All In",
+        "overview": "Following a hunch, Captain Burnham tracks Book to an old haunt from their courier days and gets drawn into a high-stakes competition for a powerful weapon.",
+        "air_date": "2022-02-10",
+        "runtime": 51,
+        "still_path": "/bsXxuEJnwrycdWnFIhlQ2KoGslt.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Rubicon",
+        "overview": "Captain Burnham and the U.S.S. Discovery race to stop Book and Ruon Tarka from launching a rogue plan that could inadvertently endanger the galaxy.",
+        "air_date": "2022-02-17",
+        "runtime": 44,
+        "still_path": "/p1qtFPO84IQsyHgtZtp2vv492Gi.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Galactic Barrier",
+        "overview": "Captain Burnham and her crew must go where few have gone before: beyond the Galactic Barrier. Meanwhile, Book learns the truth of what drives Ruon Tarka.",
+        "air_date": "2022-02-24",
+        "runtime": 51,
+        "still_path": "/r5OYdsKMaLH0p4Z1te1bKD5VXGK.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Rosetta",
+        "overview": "While Captain Burnham leads an away mission to a planet that was once home to the aliens responsible for the DMA, Book and Tarka secretly infiltrate the U.S.S. Discovery.",
+        "air_date": "2022-03-03",
+        "runtime": 49,
+        "still_path": "/AlDYsOnyCCSZRtqrP6oCZgateW5.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Species Ten-C",
+        "overview": "As the DMA approaches Earth and Ni\u2019Var, Captain Burnham and the crew of the U.S.S. Discovery attempt to make First Contact with the powerful species responsible before it\u2019s too late.",
+        "air_date": "2022-03-10",
+        "runtime": 51,
+        "still_path": "/fTaX2TfdeGFe7K7TRJDdtDUZTQR.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Coming Home",
+        "overview": "The DMA approaches Earth and Ni\u2019Var. With evacuations underway, Burnham and the team aboard the U.S.S. Discovery must find a way to communicate and connect with a species far different from their own before time runs out.",
+        "air_date": "2022-03-17",
+        "runtime": 60,
+        "still_path": "/8aqDSsMHFPReRhzwTcFmXBGQ2A2.jpg"
+      }
+    ]
+  }
+}

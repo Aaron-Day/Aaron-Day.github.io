@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9471,
+    "title": "Charlie\u0027s Angels: Full Throttle",
+    "overview": "The Angels are charged with finding a pair of missing rings that are encoded with the personal information of members of the Witness Protection Program. As informants are killed, the ladies target a rogue agent who might be responsible.",
+    "tagline": "This summer the Angels are back.",
+    "runtime": 106,
+    "release_date": "2003-06-25",
+    "vote_average": 5.481,
+    "poster_path": "/n4cdJ0Wqxb7C0HmZbcaC4eYnkIf.jpg",
+    "backdrop_path": "/rS3QJdsCPyhhQ0mJEr8VirNmOMm.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86029,
+      "name": "Charlie\u0027s Angels Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Cameron Diaz",
+      "character": "Natalie Cook",
+      "profile_path": "/tIWUyvmJayu8gtbrzCWC0L3H8kH.jpg"
+    },
+    {
+      "name": "Drew Barrymore",
+      "character": "Dylan Sanders",
+      "profile_path": "/8qvMFslwrC3w1OwJYqE3mHPvffr.jpg"
+    },
+    {
+      "name": "Lucy Liu",
+      "character": "Alex Munday",
+      "profile_path": "/9nbtjqsx3De7hO2XDtrBQ7M9VCH.jpg"
+    },
+    {
+      "name": "Demi Moore",
+      "character": "Madison Lee",
+      "profile_path": "/wApParZYBDi4yxekjfxjKEifJYh.jpg"
+    }
+  ]
+}

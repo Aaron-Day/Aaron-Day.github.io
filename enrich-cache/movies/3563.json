@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 3563,
+    "title": "I Now Pronounce You Chuck \u0026 Larry",
+    "overview": "Firefighters Chuck Ford and Larry Valentine are guy\u0027s guys, loyal to the core\u2014which is why when widower Larry asks Chuck to pose as his lover so that he can get domestic partner benefits for his kids, his buddy agrees. However, things get dicey when a bureaucrat comes calling, and the boys are forced to present a picture of domestic bliss.",
+    "tagline": "They\u0027re as straight as can be, but don\u0027t tell anyone.",
+    "runtime": 115,
+    "release_date": "2007-07-12",
+    "vote_average": 6.095,
+    "poster_path": "/vF0yEaGyXYsHWRTMmeJaJKp43bj.jpg",
+    "backdrop_path": "/yMMz1odQRQJu2YV7FJdod5Zderj.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Chuck Levine",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Kevin James",
+      "character": "Larry Valentine",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    },
+    {
+      "name": "Jessica Biel",
+      "character": "Alex McDonough",
+      "profile_path": "/u5DzbWKvAzS0M4ZhYqpUR9MZr2M.jpg"
+    },
+    {
+      "name": "Dan Aykroyd",
+      "character": "Captain Tucker",
+      "profile_path": "/iVMmeVJx8IpCEjlGBZWzIWvX5Qo.jpg"
+    }
+  ]
+}

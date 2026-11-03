@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10112,
+    "title": "The Aristocats",
+    "overview": "When Madame Adelaide Bonfamille leaves her fortune to Duchess and her children\u2014Bonfamille\u2019s beloved family of cats\u2014the butler plots to steal the money and kidnaps the legatees, leaving them out on a country road. All seems lost until the wily Thomas O\u2019Malley Cat and his jazz-playing alley cats come to the aristocats\u2019 rescue.",
+    "tagline": "Meet the cats who know where it\u0027s at... for fun, music and adventure!",
+    "runtime": 78,
+    "release_date": "1970-12-24",
+    "vote_average": 7.3,
+    "poster_path": "/aOWs5XMJEABN6SKCTJBCoeD1kCA.jpg",
+    "backdrop_path": "/rnMwOM8gMqo6Gf6XXMpaJEayUwk.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Phil Harris",
+      "character": "O\u0027Malley (voice)",
+      "profile_path": "/rmwonhlAdVHs2D2u7kGOYqLiMT1.jpg"
+    },
+    {
+      "name": "Eva Gabor",
+      "character": "Duchess (voice)",
+      "profile_path": "/gApDSJixCnXin3LYmAbMx7Ly4VV.jpg"
+    },
+    {
+      "name": "Sterling Holloway",
+      "character": "Roquefort (voice)",
+      "profile_path": "/86gGSpQcfgQrumwwvOmO6DtTWkP.jpg"
+    },
+    {
+      "name": "Scatman Crothers",
+      "character": "Scat Cat (voice)",
+      "profile_path": "/ughfThqQuuoPLSsC9HfkxwX370w.jpg"
+    }
+  ]
+}

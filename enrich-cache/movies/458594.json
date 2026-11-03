@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 458594,
+    "title": "Peppermint",
+    "overview": "A grieving mother transforms herself into a vigilante following the murders of her husband and daughter, eluding the authorities to deliver her own personal brand of justice.",
+    "tagline": "The system failed. She won\u0027t.",
+    "runtime": 102,
+    "release_date": "2018-09-06",
+    "vote_average": 6.743,
+    "poster_path": "/jrzxS0vcbzIIay1sdYm0rgI2QfJ.jpg",
+    "backdrop_path": "/14HPHJnNUVAdbYKnG46WnBh4OD6.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jennifer Garner",
+      "character": "Riley North",
+      "profile_path": "/eiX083VOa0RCGSgwENZgVi5MgDi.jpg"
+    },
+    {
+      "name": "John Gallagher Jr.",
+      "character": "Detective Stan Carmichael",
+      "profile_path": "/e4eEg5lH6Yk0OkpieUoUYdzl2Ui.jpg"
+    },
+    {
+      "name": "John Ortiz",
+      "character": "Detective Moises Beltran",
+      "profile_path": "/o2SOFI53N6Gv5S3fDEBNbeimbzY.jpg"
+    },
+    {
+      "name": "Juan Pablo Raba",
+      "character": "Diego Garcia",
+      "profile_path": "/xXgB3pOpYWs8NlePS0QrRiYV5FD.jpg"
+    }
+  ]
+}

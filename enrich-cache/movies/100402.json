@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 100402,
+    "title": "Captain America: The Winter Soldier",
+    "overview": "After the cataclysmic events in New York with The Avengers, Steve Rogers, aka Captain America is living quietly in Washington, D.C. and trying to adjust to the modern world. But when a S.H.I.E.L.D. colleague comes under attack, Steve becomes embroiled in a web of intrigue that threatens to put the world at risk. Joining forces with the Black Widow, Captain America struggles to expose the ever-widening conspiracy while fighting off professional assassins sent to silence him at every turn. When the full scope of the villainous plot is revealed, Captain America and the Black Widow enlist the help of a new ally, the Falcon. However, they soon find themselves up against an unexpected and formidable enemy\u2014the Winter Soldier.",
+    "tagline": "In heroes we trust.",
+    "runtime": 136,
+    "release_date": "2014-03-20",
+    "vote_average": 7.7,
+    "poster_path": "/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg",
+    "backdrop_path": "/jJvrPQAHFKmz4pVano4UtWTsRgA.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131295,
+      "name": "Captain America Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Evans",
+      "character": "Steve Rogers / Captain America",
+      "profile_path": "/3bOGNsHlrswhyW79uvIHH1V43JI.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Nick Fury",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Scarlett Johansson",
+      "character": "Natasha Romanoff / Black Widow",
+      "profile_path": "/mjReG6rR7NPMEIWb1T4YWtV11ty.jpg"
+    },
+    {
+      "name": "Robert Redford",
+      "character": "Alexander Pierce",
+      "profile_path": "/m5ayL8ASLdaaFYzqJZNYvrKRuhD.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 351286,
+    "title": "Jurassic World: Fallen Kingdom",
+    "overview": "Three years after Jurassic World was destroyed, Isla Nublar now sits abandoned. When the island\u0027s dormant volcano begins roaring to life, Owen and Claire mount a campaign to rescue the remaining dinosaurs from this extinction-level event.",
+    "tagline": "The park is gone.",
+    "runtime": 129,
+    "release_date": "2018-06-06",
+    "vote_average": 6.52,
+    "poster_path": "/x2Us3jR6ToMJjbcPbLimYoxf6xr.jpg",
+    "backdrop_path": "/gBmrsugfWpiXRh13Vo3j0WW55qD.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 328,
+      "name": "Jurassic Park Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Pratt",
+      "character": "Owen Grady",
+      "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Bryce Dallas Howard",
+      "character": "Claire Dearing",
+      "profile_path": "/6yhDkPXythZavS6Wk57XQ2sg5AW.jpg"
+    },
+    {
+      "name": "Rafe Spall",
+      "character": "Eli Mills",
+      "profile_path": "/zcqUqAvO7RQnitcCNNfTVPaiQtS.jpg"
+    },
+    {
+      "name": "Justice Smith",
+      "character": "Franklin Webb",
+      "profile_path": "/htJrcOzYkLVcnF4ExT4O1bDN5e5.jpg"
+    }
+  ]
+}

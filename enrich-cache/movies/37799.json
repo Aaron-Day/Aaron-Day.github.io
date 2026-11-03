@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 37799,
+    "title": "The Social Network",
+    "overview": "In 2003, Harvard undergrad and computer programmer Mark Zuckerberg begins work on a new concept that eventually turns into the global social network known as Facebook. Six years later, Mark is one of the youngest billionaires ever, but his unprecedented success leads to both personal and legal complications when he ends up on the receiving end of two lawsuits, one involving his former friend.",
+    "tagline": "You don\u0027t get to 500 million friends without making a few enemies.",
+    "runtime": 121,
+    "release_date": "2010-10-01",
+    "vote_average": 7.379,
+    "poster_path": "/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
+    "backdrop_path": "/1PXwh3nJzgRkkYnqfWInJNypeL4.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1504252,
+      "name": "The Social Network Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jesse Eisenberg",
+      "character": "Mark Zuckerberg",
+      "profile_path": "/2ojZrkt5rdkUi857WSeCatxXdGS.jpg"
+    },
+    {
+      "name": "Andrew Garfield",
+      "character": "Eduardo Saverin",
+      "profile_path": "/5ydZ6TluPtxlz5G8nlWMB7SGmow.jpg"
+    },
+    {
+      "name": "Armie Hammer",
+      "character": "Cameron Winklevoss / Tyler Winklevoss",
+      "profile_path": "/4Z5nLW2biRjqstDMKqSaeQYAesK.jpg"
+    },
+    {
+      "name": "Justin Timberlake",
+      "character": "Sean Parker",
+      "profile_path": "/6Yk5t9RwkdkAT8Qv45934Eez2CA.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9772,
+    "title": "Air Force One",
+    "overview": "When Russian neo-nationalists hijack Air Force One, the world\u0027s most secure and extraordinary aircraft, the President is faced with a nearly impossible decision to give in to terrorist demands or sacrifice not only the country\u0027s dignity, but the lives of his wife and daughter.",
+    "tagline": "The fate of the nation rests on the courage of one man.",
+    "runtime": 124,
+    "release_date": "1997-07-25",
+    "vote_average": 6.467,
+    "poster_path": "/evO1iENjLpUnbwjnt5XK85jRYob.jpg",
+    "backdrop_path": "/8IFCWQ0fQEukqNY7LAljl7DuFZf.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "James Marshall",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Gary Oldman",
+      "character": "Ivan Korshunov",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    },
+    {
+      "name": "Glenn Close",
+      "character": "Kathryn Bennett",
+      "profile_path": "/4VHZ1GfLwN7MUgApy0LCBzdDF9L.jpg"
+    },
+    {
+      "name": "Wendy Crewson",
+      "character": "Grace Marshall",
+      "profile_path": "/6hplkzK8KV5Cw8Z8SVKwlt3nU5I.jpg"
+    }
+  ]
+}

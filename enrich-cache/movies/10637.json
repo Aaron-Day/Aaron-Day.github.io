@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10637,
+    "title": "Remember the Titans",
+    "overview": "After leading his football team to 15 winning seasons, coach Bill Yoast is demoted and replaced by Herman Boone \u2013 tough, opinionated and as different from the beloved Yoast as he could be. The two men learn to overcome their differences and turn a group of hostile young men into champions.",
+    "tagline": "History is written by the winners.",
+    "runtime": 113,
+    "release_date": "2000-09-29",
+    "vote_average": 7.672,
+    "poster_path": "/825ohvC4wZ3gCuncCaqkWeQnK8h.jpg",
+    "backdrop_path": "/7lwo8VLHD8Va49DKuszabpm41V9.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "Coach Herman Boone",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Will Patton",
+      "character": "Coach Bill Yoast",
+      "profile_path": "/1V4DbU1mfEim4oaA5bvJywDAKwB.jpg"
+    },
+    {
+      "name": "Wood Harris",
+      "character": "Julius Campbell",
+      "profile_path": "/v3puIl2KncqUd6amDyD1Y0crzkF.jpg"
+    },
+    {
+      "name": "Ryan Hurst",
+      "character": "Gerry Bertier",
+      "profile_path": "/467wpYYeeDyF4MeoDMuNp4bwgzH.jpg"
+    }
+  ]
+}

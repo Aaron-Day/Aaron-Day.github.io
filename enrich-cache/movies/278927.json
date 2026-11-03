@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 278927,
+    "title": "The Jungle Book",
+    "overview": "After a threat from the tiger Shere Khan, Mowgli, a man-cub fostered by wolves, is forced to flee the jungle, and he embarks on a journey of self-discovery with the help of the panther, Bagheera, and the free-spirited bear, Baloo.",
+    "tagline": "The legend comes to life.",
+    "runtime": 106,
+    "release_date": "2016-04-07",
+    "vote_average": 6.88,
+    "poster_path": "/2Epx7F9X7DrFptn4seqn4mzBVks.jpg",
+    "backdrop_path": "/8oYykF1Qhrb8fC2qZqD71EzRywg.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Neel Sethi",
+      "character": "Mowgli",
+      "profile_path": "/aPAStca2iW94rfiosXWvGi6xRGM.jpg"
+    },
+    {
+      "name": "Bill Murray",
+      "character": "Baloo (voice)",
+      "profile_path": "/nnCsJc9x3ZiG3AFyiyc3FPehppy.jpg"
+    },
+    {
+      "name": "Ben Kingsley",
+      "character": "Bagheera (voice)",
+      "profile_path": "/k3Dmu49B2akwDvgqy52MOxznI59.jpg"
+    },
+    {
+      "name": "Idris Elba",
+      "character": "Shere Khan (voice)",
+      "profile_path": "/be1bVF7qGX91a6c5WeRPs5pKXln.jpg"
+    }
+  ]
+}

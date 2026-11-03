@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10437,
+    "title": "The Muppet Christmas Carol",
+    "overview": "A retelling of the classic Dickens tale of Ebenezer Scrooge, miser extraordinaire. He is held accountable for his dastardly ways during nighttime visitations by the Ghosts of Christmas Past, Present and Future.",
+    "tagline": "",
+    "runtime": 86,
+    "release_date": "1992-12-11",
+    "vote_average": 7.452,
+    "poster_path": "/ssrV29QSVVJuemBHho0Qx7pFYak.jpg",
+    "backdrop_path": "/kLVWvnUdqQ07WjbAYGpmiD2ZFQa.jpg",
+    "genres": [
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Michael Caine",
+      "character": "Ebenezer Scrooge",
+      "profile_path": "/bVZRMlpjTAO2pJK6v90buFgVbSW.jpg"
+    },
+    {
+      "name": "Dave Goelz",
+      "character": "The Great Gonzo as Charles Dickens / Robert Marley / Dr. Bunsen Honeydew / Betina Cratchit / Rat / Zoot (voice)",
+      "profile_path": "/tBJDwH008IVSeTCB5e2P856NbIv.jpg"
+    },
+    {
+      "name": "Steve Whitmire",
+      "character": "Kermit the Frog as Bob Cratchit / Rizzo the Rat / Beaker / Bean Bunny / Belinda Cratchit / Beetle / Lips / Pig Gentleman (voice)",
+      "profile_path": "/q1EVmCM1lKjI5OJOCmnvmYPWztp.jpg"
+    },
+    {
+      "name": "Jerry Nelson",
+      "character": "Tiny Tim Cratchit / Jacob Marley / Ghost of Christmas Present / Lew Zealand / Ma Bear / Mouse / Mr. Applegate / Penguin / Pig Gentleman / Pops / Rat (voice)",
+      "profile_path": "/daCTg4kX7AjrWj54qmRH2Po3znW.jpg"
+    }
+  ]
+}

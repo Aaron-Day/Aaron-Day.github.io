@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 8,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Spider and the Fly",
+        "overview": "Gibbs must take desperate measures to protect his loved ones with Paloma Reynosa still on the loose.",
+        "air_date": "2010-09-21",
+        "runtime": 44,
+        "still_path": "/jKNVBWjs2ARN8RdrCoUdSu1YGUZ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Worst Nightmare",
+        "overview": "The NCIS team has to find a young girl that was kidnapped, but their investigation turns into something else when her grandfather gets way too involved.",
+        "air_date": "2010-09-28",
+        "runtime": 43,
+        "still_path": "/pOsd7hK0EIG5VZhVfNppv58ZpAi.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Short Fuse",
+        "overview": "The team investigates a bomb tech\u0027s guarded personal life after she is attacked.",
+        "air_date": "2010-10-05",
+        "runtime": 42,
+        "still_path": "/iPB3COSiUFr6lmQZN7dnE6AXqRy.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Royals and Loyals",
+        "overview": "The team hopes to avoid an international incident when an American officer is killed on a British ship.",
+        "air_date": "2010-10-12",
+        "runtime": 43,
+        "still_path": "/iyHovnmXLtsXcCCe5UJc285oSM0.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Dead Air",
+        "overview": "The team uncovers a sinister plan when a controversial DJ and a Naval officer are shot to death.",
+        "air_date": "2010-10-19",
+        "runtime": 43,
+        "still_path": "/d9mxhK4lRbv17sQ2e6fHQiBYFs.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Cracked",
+        "overview": "Abby becomes fixated on solving a murder, while DiNozzo\u0027s latest fling leads to an interesting Halloween.",
+        "air_date": "2010-10-26",
+        "runtime": 44,
+        "still_path": "/lvCnKkrHoLGonsIB2d2stFHI2M7.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Broken Arrow",
+        "overview": "The team is surprised when Gibbs asks Tony\u0027s father to join them in a murder investigation.",
+        "air_date": "2010-11-09",
+        "runtime": 43,
+        "still_path": "/mo4iYhP6tdZwBNrxDbDbBVl97KH.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Enemies Foreign (1)",
+        "overview": "The team is assigned to protect Ziva\u0027s father, when his attendance at a NCIS conference leads to some unexpected surprises.",
+        "air_date": "2010-11-16",
+        "runtime": 44,
+        "still_path": "/74EXpaqz5422T8px4eUv3O5zzyQ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Enemies Domestic (2)",
+        "overview": "The team scrambles for answers after a shocking ambush reveals a new twist to their current investigation.",
+        "air_date": "2010-11-23",
+        "runtime": 44,
+        "still_path": "/7vqXXTBLFGHihoCJCIvYha50GfI.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "False Witness",
+        "overview": "The NCIS team investigates the disappearance of a Petty Officer who is the sole witness in an upcoming murder trial.",
+        "air_date": "2010-12-14",
+        "runtime": 44,
+        "still_path": "/yWC1gbrdMIeDdN3v8AFa0tG2RoN.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Ships in the Night",
+        "overview": "Gibbs and the NCIS team partner with a Coast Guard Investigative Service (CGIS) Agent to solve the murder of a Marine gunned down on a dinner boat.",
+        "air_date": "2011-01-11",
+        "runtime": 43,
+        "still_path": "/oUOLzt3utFfeTqPv0Bzxrlx4TiL.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Recruited",
+        "overview": "A Petty Officer\u0027s recruitment session at a college fair comes to a fatal end, prompting the NCIS team, accompanied by Dr. Mallard\u0027s predecessor, to solve his murder.",
+        "air_date": "2011-01-18",
+        "runtime": 44,
+        "still_path": "/jqvjjEmqAMLhQHNgR4sNI3YbeUC.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Freedom",
+        "overview": "The NCIS team springs into action to find the assailant responsible for beating a Marine to death in his own backyard.",
+        "air_date": "2011-02-01",
+        "runtime": 42,
+        "still_path": "/roHiO3ILOkgUil4hbzTcRlOoLiu.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "A Man Walks Into a Bar ...",
+        "overview": "The NCIS team undergoes mandatory psych evaluations while investigating the death of a Naval Commander.",
+        "air_date": "2011-02-08",
+        "runtime": 44,
+        "still_path": "/4nNobOmJLVNmq1xrrBNEHZHZKQ4.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Defiance",
+        "overview": "A botched assassination attempt in Belgravia forces NCIS to protect the Defense Minister\u0027s daughter, who is studying in the U.S. and smitten with McGee.",
+        "air_date": "2011-02-15",
+        "runtime": 43,
+        "still_path": "/8XeJUmlcSxN8zXdPkL6rhk9HTiM.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Kill Screen",
+        "overview": "The dismembered fingertips and teeth of a murdered Marine are discovered in the stolen purse of a pickpocketer, launching NCIS on a mission to find a cold-blooded killer.",
+        "air_date": "2011-02-22",
+        "runtime": 43,
+        "still_path": "/jLkIw251J0msDFgFCFGECqhPkrs.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "One Last Score",
+        "overview": "NCIS discovers that one of its former investigative assistants found brutally stabbed to death was selling details for how to rob a warehouse full of valuable possessions belonging to a woman convicted of fraud.",
+        "air_date": "2011-03-01",
+        "runtime": 42,
+        "still_path": "/34ayfHyjbjuoronPJHtJqmznq7d.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Out of the Frying Pan...",
+        "overview": "Gibbs questions Vance\u0027s motives when he is asked to interrogate a teenage boy accused of killing his retired Marine father.",
+        "air_date": "2011-03-22",
+        "runtime": 44,
+        "still_path": "/spXRtoPfd8aPBR9yys0l2WoNfuq.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Tell-All",
+        "overview": "NCIS connects a message in blood left by a murdered Navy commander to a manuscript that may contain classified military information.",
+        "air_date": "2011-03-29",
+        "runtime": 43,
+        "still_path": "/b0wPW42twM4YEXtJltbp871sd0.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Two-Faced",
+        "overview": "To Gibbs\u0027 displeasure, Special Agent E.J. Barrett returns to lead the investigation of a seaman\u0027s death that may be connected to a series of port-related murders.",
+        "air_date": "2011-04-05",
+        "runtime": 43,
+        "still_path": "/5eyPJ886TnGuxgXJEoJ3HSA0UmZ.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Dead Reflection",
+        "overview": "The NCIS team tracks a Navy Lieutenant\u0027s killer after a Pentagon security camera reveals a Petty Officer committing the crime.",
+        "air_date": "2011-04-12",
+        "runtime": 43,
+        "still_path": "/zh4KyzPud61rEJ0fGsmvTOiAmsr.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Baltimore",
+        "overview": "After Tony\u0027s ex-partner, Danny Price, appears to be the Port-to-Port Killer\u0027s latest victim, he revisits his days as a detective in Baltimore, including his first encounter with Gibbs.",
+        "air_date": "2011-05-03",
+        "runtime": 43,
+        "still_path": "/oi2BtlvMfntuw2hNLXWSmO70tvZ.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Swan Song",
+        "overview": "After new evidence reveals that the Port-to-Port Killer has infiltrated the agency, the NCIS team chases every lead in a race to track him down.",
+        "air_date": "2011-05-10",
+        "runtime": 43,
+        "still_path": "/n7Ozv51tAxH7FnZIOlte4GKnAfr.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Pyramid",
+        "overview": "The lives of NCIS members are in jeopardy when they come face-to-face with the infamous Port-to-Port Killer.",
+        "air_date": "2011-05-17",
+        "runtime": 44,
+        "still_path": "/8EGX70teSilnBWcbHEVh3oM2TCk.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 384018,
+    "title": "Fast \u0026 Furious Presents: Hobbs \u0026 Shaw",
+    "overview": "Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have traded smack talk and body blows. But when cyber-genetically enhanced anarchist Brixton\u0027s ruthless actions threaten the future of humanity, they join forces to defeat him.",
+    "tagline": "Nothing is stronger than family.",
+    "runtime": 137,
+    "release_date": "2019-07-31",
+    "vote_average": 6.815,
+    "poster_path": "/qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg",
+    "backdrop_path": "/hpgda6P9GutvdkDX5MUJ92QG9aj.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9485,
+      "name": "The Fast and the Furious Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dwayne Johnson",
+      "character": "Luke Hobbs",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Jason Statham",
+      "character": "Deckard Shaw",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Idris Elba",
+      "character": "Brixton",
+      "profile_path": "/be1bVF7qGX91a6c5WeRPs5pKXln.jpg"
+    },
+    {
+      "name": "Vanessa Kirby",
+      "character": "Hattie Shaw",
+      "profile_path": "/a8a9U00KL2JJkkekzhNnueIGKKF.jpg"
+    }
+  ]
+}

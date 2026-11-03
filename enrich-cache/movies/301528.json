@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 301528,
+    "title": "Toy Story 4",
+    "overview": "Woody has always been confident about his place in the world, devoted to taking care of his kid\u2014whether that\u0027s Andy or Bonnie. But after Bonnie creates a reluctant new toy called \u0022Forky\u0022, a road trip adventure alongside old and new friends challenges everything Woody believes about loyalty, purpose, and what it truly means to be a toy.",
+    "tagline": "The adventure of a lifetime.",
+    "runtime": 100,
+    "release_date": "2019-06-19",
+    "vote_average": 7.462,
+    "poster_path": "/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg",
+    "backdrop_path": "/q62bpQ67qaXY0u6b2wFEnQYIbPd.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10194,
+      "name": "Toy Story Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Woody (voice)",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Tim Allen",
+      "character": "Buzz Lightyear (voice)",
+      "profile_path": "/k8XPNHBO459FaqkqqM4tfX5GMKk.jpg"
+    },
+    {
+      "name": "Annie Potts",
+      "character": "Bo Peep (voice)",
+      "profile_path": "/nugPVN28qOhOIoHawrDJ6fIfrxR.jpg"
+    },
+    {
+      "name": "Tony Hale",
+      "character": "Forky (voice)",
+      "profile_path": "/3dEyZgTye0Ec17VGKp0mJ3aU6ty.jpg"
+    }
+  ]
+}

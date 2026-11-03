@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 424783,
+    "title": "Bumblebee",
+    "overview": "On the run in the year 1987, Bumblebee finds refuge in a junkyard in a small Californian beach town. Charlie, on the cusp of turning 18 and trying to find her place in the world, discovers Bumblebee, battle-scarred and broken.  When Charlie revives him, she quickly learns this is no ordinary yellow VW bug.",
+    "tagline": "Every hero has a beginning.",
+    "runtime": 114,
+    "release_date": "2018-11-22",
+    "vote_average": 6.731,
+    "poster_path": "/fw02ONlDhrYjTSZV8XO6hhU3ds3.jpg",
+    "backdrop_path": "/hMANgfPHR1tRObNp2oPiOi9mMlz.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dylan O\u0027Brien",
+      "character": "B-127 / Bumblebee (voice)",
+      "profile_path": "/xN3GdvIlqsR838gDoblhPH0numP.jpg"
+    },
+    {
+      "name": "Hailee Steinfeld",
+      "character": "Charlie Watson",
+      "profile_path": "/qDInsG0cxWNxS1X4t59TBZ5S6x5.jpg"
+    },
+    {
+      "name": "John Cena",
+      "character": "Jack Burns",
+      "profile_path": "/rgB2eIOt7WyQjdgJCOuESdDlrjg.jpg"
+    },
+    {
+      "name": "Jorge Lendeborg Jr.",
+      "character": "Memo Gutierrez",
+      "profile_path": "/1633mS58BuM33No4kTPsusePEJa.jpg"
+    }
+  ]
+}

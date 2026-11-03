@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 943,
+    "title": "Lethal Weapon 3",
+    "overview": "Riggs and Murtaugh pursue a former officer who uses his knowledge of police procedure and policies to steal and sell confiscated guns and ammunition to local street gangs.",
+    "tagline": "The magic is back again!",
+    "runtime": 118,
+    "release_date": "1992-05-15",
+    "vote_average": 6.732,
+    "poster_path": "/8FnOudDHPOY7MFJnvQMR1qpuyek.jpg",
+    "backdrop_path": "/kmt9XmhmX36sJduuDVFlTgEWh9U.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 945,
+      "name": "Lethal Weapon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mel Gibson",
+      "character": "Martin Riggs",
+      "profile_path": "/jnqHMaOslt8cef2atSmOpGRvNla.jpg"
+    },
+    {
+      "name": "Danny Glover",
+      "character": "Roger Murtaugh",
+      "profile_path": "/7ZyztVlG7OpqD0EhzG8iwYNcd1s.jpg"
+    },
+    {
+      "name": "Joe Pesci",
+      "character": "Leo Getz",
+      "profile_path": "/pEHQoL8yOndOq59iXlgsOpUTcTk.jpg"
+    },
+    {
+      "name": "Rene Russo",
+      "character": "Lorna Cole",
+      "profile_path": "/yWPSqrv3nfPPKC6I2S0sRTWZ5Yi.jpg"
+    }
+  ]
+}

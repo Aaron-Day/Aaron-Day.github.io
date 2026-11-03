@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 51876,
+    "title": "Limitless",
+    "overview": "The life of an unsuccessful writer is transformed by a top-secret \u0027smart drug\u0027 that allows him to use 100% of his brain and become a perfect version of himself. His enhanced abilities soon attract shadowy forces that threaten his new life.",
+    "tagline": "What if a pill could make you rich and powerful?",
+    "runtime": 106,
+    "release_date": "2011-03-17",
+    "vote_average": 7.205,
+    "poster_path": "/r8anWUCVK7MZEolcfPrM9eFkRO4.jpg",
+    "backdrop_path": "/9V6Yq2ZVUmyAPcPyDcCBPnkluKF.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Bradley Cooper",
+      "character": "Edward Morra",
+      "profile_path": "/5Dhy50qOMOHfR1NZifKIfffjV9X.jpg"
+    },
+    {
+      "name": "Robert De Niro",
+      "character": "Carl Van Loon",
+      "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+    },
+    {
+      "name": "Abbie Cornish",
+      "character": "Lindy",
+      "profile_path": "/AgIA8uPnwySIbqaPjr5jEXwZbS.jpg"
+    },
+    {
+      "name": "Andrew Howard",
+      "character": "Gennady",
+      "profile_path": "/kba1JeCUYHufjB933G5xPRhO8lV.jpg"
+    }
+  ]
+}

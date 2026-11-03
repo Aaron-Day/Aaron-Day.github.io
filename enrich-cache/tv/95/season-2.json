@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "When She Was Bad",
+        "overview": "Buffy returns from summer vacation sporting an attitude and suffers from recurring nightmares involving the Master. Meanwhile, the Anointed One and his followers plot their revenge.",
+        "air_date": "1997-09-15",
+        "runtime": 43,
+        "still_path": "/mNQjSaz3IaWizrU0YNHiCEmnJQU.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Some Assembly Required",
+        "overview": "Two science club nerds use body parts to create the \u0022perfect girlfriend\u0022 for a teenager who has been brought back from the dead.",
+        "air_date": "1997-09-22",
+        "runtime": 42,
+        "still_path": "/gS27RTXMXAwFvXD4dSGne9Pe9nD.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "School Hard",
+        "overview": "Buffy\u0027s mother and friends become trapped inside Sunnydale High School when a vampire named Spike launches an attack against the Slayer on Parent-Teacher night.",
+        "air_date": "1997-09-29",
+        "runtime": 43,
+        "still_path": "/59PDZdtM0Jpl8PJQLCEubQco8xV.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Inca Mummy Girl",
+        "overview": "An Incan Princess mummy is reanimated in Sunnydale where she sucks the life force from others in order to stay alive.",
+        "air_date": "1997-10-06",
+        "runtime": 43,
+        "still_path": "/8HVA2KkwU6C3JEzXpLhDitLLW2w.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Reptile Boy",
+        "overview": "Buffy and Cordelia inadvertently attend a frat party hosted by a murderous cult.",
+        "air_date": "1997-10-13",
+        "runtime": 42,
+        "still_path": "/yNVIdRQz6zYbPXgPalHsMuSkt1o.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Halloween",
+        "overview": "On Halloween, Buffy and her friends patronize an unusual costume shop where customers turn into whatever costume they are wearing.",
+        "air_date": "1997-10-27",
+        "runtime": 42,
+        "still_path": "/z5jnWdxcKgM83y5QwpMGAYpO7aY.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Lie to Me",
+        "overview": "Buffy is lured into a trap by a group of undead wannabes who hope that Spike will make them vampires in exchange for giving him the Slayer.",
+        "air_date": "1997-11-03",
+        "runtime": 43,
+        "still_path": "/4OIsSti8CGPynj2KcxbaEiEc9tB.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Dark Age",
+        "overview": "Giles\u0027 past comes back to haunt him as a demon he and Ethan Rayne summoned in their wild youth seeks them out in Sunnydale.",
+        "air_date": "1997-11-10",
+        "runtime": 43,
+        "still_path": "/kLMZDKMxrWbwysuK7QSYrJwqPaE.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "What\u0027s My Line? (1)",
+        "overview": "Spike brings in three professional bounty hunters to eliminate Buffy while she ponders on what her profession might be if her fate wasn\u0027t already sealed.",
+        "air_date": "1997-11-17",
+        "runtime": 42,
+        "still_path": "/cw8gzJAPCNRG381EVVAVQGT9rK.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "What\u0027s My Line? (2)",
+        "overview": "Buffy joins forces with another Slayer in hopes of saving Angel from the clutches of Spike and Drusilla.",
+        "air_date": "1997-11-24",
+        "runtime": 41,
+        "still_path": "/xfNp76oMVRPrS5eyN8NM7j5FyT3.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Ted",
+        "overview": "Buffy\u0027s mom introduces her new boyfriend, who charms everyone except Buffy. When she confronts his dark side, she is left questioning her actions.",
+        "air_date": "1997-12-08",
+        "runtime": 43,
+        "still_path": "/493y8Wd1575gZCd2GR388cBNYgB.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Bad Eggs",
+        "overview": "Buffy and her friends are given eggs to take care of for a health class assignment, but aren\u0027t prepared for what hatches.",
+        "air_date": "1998-01-12",
+        "runtime": 43,
+        "still_path": "/s5c3IaAcN868gehK1BvodWU6grJ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Surprise (1)",
+        "overview": "To give Buffy a surprise on her 17th birthday, Drusilla and Spike bring together the body parts of a dismembered demon who cannot be killed.",
+        "air_date": "1998-01-19",
+        "runtime": 43,
+        "still_path": "/9VgzHK1x3ITg3NHZoozQUVmNgAr.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Innocence (2)",
+        "overview": "Buffy and her friends battle the Judge and face unexpected danger from Angel, who has lost his soul after experiencing a moment of true happiness.",
+        "air_date": "1998-01-20",
+        "runtime": 42,
+        "still_path": "/jCqZrES4ePu4kqmanbqqAGNWoQw.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Phases",
+        "overview": "Buffy and her friends discover secrets about themselves as they battle a werewolf, its hunter, and their own emotions.",
+        "air_date": "1998-01-27",
+        "runtime": 42,
+        "still_path": "/oG9u8zCafCH5w4IOqcdwvaLImYO.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Bewitched, Bothered and Bewildered",
+        "overview": "As Valentine\u0027s Day approaches, Xander tries to improve his love life through witchcraft and finds himself with too much of a good thing.",
+        "air_date": "1998-02-10",
+        "runtime": 43,
+        "still_path": "/yrzlSS3whVHdxj5UI3pLsrfoiVt.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Passion",
+        "overview": "Angel steps up his torment of Buffy and her friends as Jenny searches for a way to restore his soul.",
+        "air_date": "1998-02-24",
+        "runtime": 42,
+        "still_path": "/1pnlKr9lNPOGrJhuIJj3T8iG9jZ.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Killed by Death",
+        "overview": "While hospitalized with a severe case of the flu, Buffy investigates the young patients\u0027 fear that Death is stalking the children\u0027s ward.",
+        "air_date": "1998-03-03",
+        "runtime": 41,
+        "still_path": "/wrMbQMsBl4wbGdm4a2cjCZE7ndf.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "I Only Have Eyes for You",
+        "overview": "Sunnydale High School is haunted by the ghosts of a former student and teacher who reenact their tragic romance through the bodies of the school\u0027s current inhabitants.",
+        "air_date": "1998-04-28",
+        "runtime": 43,
+        "still_path": "/p1v3IAhrzsOJAvdf7T25ZcmrPOT.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Go Fish",
+        "overview": "Members of the Sunnydale swim team are killed by a gill monster of unknown origins.",
+        "air_date": "1998-05-05",
+        "runtime": 41,
+        "still_path": "/8IftbK2tZb22LRDKFeOVbXkuWa9.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Becoming (1)",
+        "overview": "Angel plots to revive an ancient demon bent on sweeping everything on earth into hell itself.",
+        "air_date": "1998-05-12",
+        "runtime": 43,
+        "still_path": "/rTa54XapJvTvxrxa55WGDqWymbd.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Becoming (2)",
+        "overview": "Spike strikes an unlikely alliance with Buffy to keep Angel from destroying the world.",
+        "air_date": "1998-05-19",
+        "runtime": 42,
+        "still_path": "/nxpLOKH2rg2gswf6dLxYgmJKq8t.jpg"
+      }
+    ]
+  }
+}

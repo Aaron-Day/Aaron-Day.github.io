@@ -1,0 +1,136 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Hangman",
+        "overview": "Don and his team are out to protect former radical Benjamin Polk from a determined sniper who wants him dead, and who is leading the FBI on a cat-and-mouse chase as he closes in on his prey.",
+        "air_date": "2009-09-25",
+        "runtime": 44,
+        "still_path": "/8unWETQUYqhSFOXb0qLwqLyLvsN.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Friendly Fire",
+        "overview": "When two FBI agents, part of a unit headed by Don\u0027s former mentor, are killed during a shootout with bank robbers, the team must investigate what exactly happened. Also, Charlie and Amita worry when Larry opts not to attend a conference in Geneva.",
+        "air_date": "2009-10-02",
+        "runtime": 41,
+        "still_path": "/kkSXyGHfQiLRCUeGqmee4LX6izB.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "7 Men Out",
+        "overview": "Don and his team are called in to investigate who is behind a deadly gambling ring that is running a high-stakes Russian roulette tournament. Also, Don and Charlie become concerned about Alan\u0027s financial health.",
+        "air_date": "2009-10-09",
+        "runtime": 41,
+        "still_path": "/9rlI1RSV5LujBhPDXd95laU5uTW.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Where Credit\u0027s Due",
+        "overview": "As Larry prepares to embark on his adventure, the team must investigate a string of murders. The case takes an interesting turn when it is discovered that the murders mimic scenes from a movie that hasn\u0027t even been released yet.",
+        "air_date": "2009-10-16",
+        "runtime": 44,
+        "still_path": "/sO2OoEsykPTm5txU9OoShltlpZ0.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Hydra",
+        "overview": "The team attempts to find the daughter of a geneticist who they suspect was kidnapped by the unstable mother. However, they become concerned about the case when they find evidence that suggests the young girl was a clone. Meanwhile, Charlie and Amita discuss having kids and Liz reveals a dark secret.",
+        "air_date": "2009-10-23",
+        "runtime": 43,
+        "still_path": "/9DcyYvgZy9lnY705xP7MVITYdj5.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Dreamland",
+        "overview": "The team investigates a decommissioned air base after a woman is found dead there, but their investigation is interrupted by paranormal happenings.",
+        "air_date": "2009-10-30",
+        "runtime": 43,
+        "still_path": "/zrdkjfLWpiFfUYCG5jjcSkoPaNu.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Shadow Markets",
+        "overview": "A shrewd computer hacker cuts the ground from up under an undercover sting operation to bag a cyber crime lord. His actions trigger a turf war putting his life in peril.",
+        "air_date": "2009-11-06",
+        "runtime": 39,
+        "still_path": "/1WgmX2mIODAGVrzKTQL3JTxfeWc.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Ultimatum",
+        "overview": "While tracking down a felon running a heroin ring inside a prison, Agent Ian Edgerton becomes a murder suspect when the informant he meets with ends up dead, sending a desperate Edgerton over the edge when he takes a member of Don\u0027s team hostage.",
+        "air_date": "2009-11-13",
+        "runtime": 41,
+        "still_path": "/xrBCWmaGuHxgPf6zZSkFIynQ5y8.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Con Job",
+        "overview": "Charlie and Don reluctantly enlist the help of imprisoned con man John Buckley to help them catch a crook who\u0027s using Buckley\u0027s M.O. to rob the Diamond Exchange..",
+        "air_date": "2009-11-20",
+        "runtime": 41,
+        "still_path": "/oLyYNpn4ArsOQbyFkDqBFZ1ukzM.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Old Soldiers",
+        "overview": "When the team foils a robbery of an armored car full of Federal Reserve money and recover bills that trace back to the infamous D.B. Cooper heist, they call on Agent Roger Bloom, who worked on the Cooper case, for help with the investigation. Henry Winkler returns as former FBI Agent Roger Bloom, and Michael Hogan, the uncle of the slain armored car driver and a key player in the investigation.",
+        "air_date": "2009-12-04",
+        "runtime": 44,
+        "still_path": "/rwoKphvyRJMd6CTKMY3ZR8WvXXS.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Scratch",
+        "overview": "Charlie meets his mathematical equivalent when lottery agent Jane assists in the investigation into a complex scam that involves thefts of unsold lottery tickets.",
+        "air_date": "2010-01-08",
+        "runtime": 41,
+        "still_path": "/9TcLxRZ4ChTzCgAA4WX2uXX8dah.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Arm in Arms",
+        "overview": "The gang uses their math--and a reluctant gun merchant named Randall P. -- to track down a missing shipment of new, deadly but defective assault weapons which are hidden among the thousands of containers in one of L.A.\u0027s busiest ports.",
+        "air_date": "2010-01-15",
+        "runtime": 44,
+        "still_path": "/mc4X2LpZ3cUDiTY6rGmINBndHPg.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Devil Girl",
+        "overview": "The Numbers team tracks a serial killer who targets johns.",
+        "air_date": "2010-01-29",
+        "runtime": 41,
+        "still_path": "/vZfYe5kLmxC7Qczy6LHTmUMHWb.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "And the Winner Is...",
+        "overview": "The Numbers team hunts for a gang of criminals who targeted an unlikely scene of the crime: a televised entertainment awards show.",
+        "air_date": "2010-02-05",
+        "runtime": 44,
+        "still_path": "/mXQ7dzGuXuGLboaEB44Lk3rgR5W.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Growin\u0027 Up",
+        "overview": "The team investigates the deaths of two men who were part of a group of friends that had been sexually assaulted by a teacher when they were young boys. Also, Charlie and Amita get a fantastic job opportunity that could put a wrinkle in their wedding plans.",
+        "air_date": "2010-03-05",
+        "runtime": 44,
+        "still_path": "/ibaV8n6ti45PRL3vKrZoSrsR3Ey.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Cause and Effect",
+        "overview": "After Charlie and Amita get married and begin preparations for their London adventure, they put a slight hold on their wedded bliss when they assist the team in helping Don track down the whereabouts of his gun after it goes missing.",
+        "air_date": "2010-03-12",
+        "runtime": 43,
+        "still_path": "/rVONm4x03gAMhuwz7u3HUaxncXa.jpg"
+      }
+    ]
+  }
+}

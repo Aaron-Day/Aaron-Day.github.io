@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 320288,
+    "title": "Dark Phoenix",
+    "overview": "The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she\u0027s hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Grey\u0027s new abilities to rule the galaxy.",
+    "tagline": "A Phoenix will rise. The X-Men will fall.",
+    "runtime": 114,
+    "release_date": "2019-06-05",
+    "vote_average": 5.96,
+    "poster_path": "/cCTJPelKGLhALq3r51A9uMonxKj.jpg",
+    "backdrop_path": "/j9ZV0UOagjQ4seR8Hd5N6JfwdTP.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 748,
+      "name": "X-Men Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sophie Turner",
+      "character": "Jean Grey / Dark Phoenix",
+      "profile_path": "/8ur4aHFakVCinWk0cvrGO8qAUhv.jpg"
+    },
+    {
+      "name": "James McAvoy",
+      "character": "Charles Xavier / Professor X",
+      "profile_path": "/u4REKbm3zhFI2J5tVyqRovGRYUJ.jpg"
+    },
+    {
+      "name": "Nicholas Hoult",
+      "character": "Hank McCoy / Beast",
+      "profile_path": "/pXm8GWTm9eIA8pUGOjvmYjlxamu.jpg"
+    },
+    {
+      "name": "Tye Sheridan",
+      "character": "Scott Summers / Cyclops",
+      "profile_path": "/d5ZS2fjqC98cIGkhEGX0fRYhku4.jpg"
+    }
+  ]
+}

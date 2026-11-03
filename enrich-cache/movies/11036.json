@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11036,
+    "title": "The Notebook",
+    "overview": "An epic love story centered around an older man who reads aloud to a woman with Alzheimer\u0027s. From a faded notebook, the old man\u0027s words bring to life the story about a couple who is separated by World War II, and is then passionately reunited, seven years later, after they have taken different paths.",
+    "tagline": "Behind every great love is a great story.",
+    "runtime": 123,
+    "release_date": "2004-06-25",
+    "vote_average": 7.89,
+    "poster_path": "/rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg",
+    "backdrop_path": "/zdXnJqBaGFVtLoPNuMeKfEYUViZ.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ryan Gosling",
+      "character": "Noah Calhoun",
+      "profile_path": "/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg"
+    },
+    {
+      "name": "Rachel McAdams",
+      "character": "Allie Hamilton",
+      "profile_path": "/2DPh6KoNg0p57vvGc6N468zr3ct.jpg"
+    },
+    {
+      "name": "Gena Rowlands",
+      "character": "Older Allie",
+      "profile_path": "/j6Op08k2AkPGrNHpMNp30Pu8t36.jpg"
+    },
+    {
+      "name": "James Garner",
+      "character": "Older Noah \u0027Duke\u0027",
+      "profile_path": "/67CRvu5Ac76uJL5WD4Z4Db4mx6x.jpg"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Broken Bow",
+        "overview": "The Enterprise, under Captain Jonathan Archer, sets off on its maiden voyage with a mission to return a wounded Klingon to his people.",
+        "air_date": "2001-09-26",
+        "runtime": 86,
+        "still_path": "/kSt9qWkOsLGfTlAHUlSrAc6a3cM.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Fight or Flight",
+        "overview": "Captain Archer wants to convert curiosity into deeds and decides to enter a ship floating in space. Hoshi has trouble adjusting to life on Enterprise.",
+        "air_date": "2001-10-03",
+        "runtime": 44,
+        "still_path": "/7z8mZ53bUgDJRZHlTXB5A8aLbfG.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Strange New World",
+        "overview": "Archer sends an away team to a habitable, luscious planet for observation. But when a storm occurs, the team begins to experience paranoid delusions.",
+        "air_date": "2001-10-10",
+        "runtime": 44,
+        "still_path": "/6ZmzB11hahFiihVs9fuVj0SI86b.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Unexpected",
+        "overview": "When Trip is dispatched to assist a Xyrillian ship with its power source problems, he is delighted to have a friendly encounter with one of the ship\u0027s female engineers. However, shortly after returning to Enterprise, he discovers that their seemingly innocuous interaction has led to a surprising result.",
+        "air_date": "2001-10-17",
+        "runtime": 44,
+        "still_path": "/mHoZ2EndKQWLW5FkBTDMibrgoSk.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Terra Nova",
+        "overview": "The Enterprise crew alters course to investigate the mystery of Terra Nova, a legendary Earth colony whose inhabitants mysteriously disappeared decades ago. But when they arrive, they confront descendents of the colonists who have become more alien than Archer could ever have imagined.",
+        "air_date": "2001-10-24",
+        "runtime": 44,
+        "still_path": "/lQQqfcNvWfjkRKc01oEcNGQ9KYR.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Andorian Incident",
+        "overview": "Enterprise visits an ancient Vulcan spiritual sanctuary, despite T\u0027Pol\u0027s concerns that her human colleagues will be an awkward and disruptive presence there. Upon landing, they discover that the monastery has been forcibly taken over by the Andorians, a paranoid and highly excitable race of aliens with a long history of conflict with the Vulcans.",
+        "air_date": "2001-10-31",
+        "runtime": 44,
+        "still_path": "/bSt5rbYVIy5VpdZXiXNTiKmcmU.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Breaking the Ice",
+        "overview": "A Vulcan starship interferes with Archer\u0027s probe of an oversized comet.",
+        "air_date": "2001-11-07",
+        "runtime": 44,
+        "still_path": "/dzaXurkuouyPjykmmrN3xZs3de0.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Civilization",
+        "overview": "Captain Archer and the crew discover a fully inhabited, civilized though less advanced Earth-like planet. Disguised to look like its inhabitants, they pay the planet an exploratory visit where they learn that a pernicious illness is afflicting the local population. As Archer seeks to help them find the malady\u0027s source, he finds himself in a close encounter with a comely female alien.",
+        "air_date": "2001-11-14",
+        "runtime": 44,
+        "still_path": "/ueF8G6OOzkV5dQxJllgCpfqcR1F.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Fortunate Son",
+        "overview": "The Enterprise crew is dispatched by Starfleet Command to assist Fortunate, a human freight vessel that has been attacked by Nausicaan pirates. On arriving, they are surprised to find that Fortunate\u0027s crew is resistant to Archer\u0027s efforts to help them and determined to seek revenge against their attackers, no matter the repercussions.",
+        "air_date": "2001-11-21",
+        "runtime": 44,
+        "still_path": "/pvbchZuvGUurZuuhPNxOFWBKpmw.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Cold Front",
+        "overview": "When the Enterprise comes in contact with an alien vessel transporting stargazers to observe a spectacular stellar event, Archer invites them aboard the ship not realizing that Silik, a Suliban enemy, is among them. Archer quickly realizes that Silik is engaged in a nefarious time-travelling mission and must stop him before he can tamper with the course of history.",
+        "air_date": "2001-11-28",
+        "runtime": 44,
+        "still_path": "/dmHucOog1LiWb3Tp6govyictYIl.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Silent Enemy",
+        "overview": "When Enterprise is attacked by an unidentified enemy ship, the crew must work frantically to get their new phase canons to operate. Meanwhile, the captain charges Hoshi with finding out Malcolm\u0027s favorite food in time for a surprise birthday dinner.",
+        "air_date": "2002-01-16",
+        "runtime": 44,
+        "still_path": "/gAwGlbId6yt7YxKwLfx4WvPxW8f.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Dear Doctor",
+        "overview": "The crew discovers a new planet with two races, one in desperate need of medical and scientific assistance. In the course of trying to help, Dr. Phlox recalls his own Denobulan past to address the ethical dilemmas that arise in the present.",
+        "air_date": "2002-01-23",
+        "runtime": 44,
+        "still_path": "/uZMUn0LsIkNHTc57Im9YYBQUgJX.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Sleeping Dogs",
+        "overview": "While investigating a gas giant, Enterprise comes across a damaged vessel hovering in the atmosphere, and T\u0027Pol, Hoshi and Malcolm board the vessel to investigate. However, once aboard, they are ambushed by a hostile female Klingon who hijacks their shuttlepod and strands them on the Klingon ship, which threatens to implode under the pressure of the planet\u0027s atmosphere.",
+        "air_date": "2002-01-30",
+        "runtime": 44,
+        "still_path": "/qick3RGQX5weixVaaA2UUuUdcUE.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Shadows of P\u0027Jem",
+        "overview": "Archer and the crew are disappointed to discover that T\u0027Pol has been ordered by the Vulcan High Command to leave Enterprise--and equally frustrated at her seeming indifference to leaving their ranks. T\u0027Pol\u0027s last mission as a Starfleet officer, however, proves eventful when she and Archer are kidnapped by a militant faction on an alien planet.",
+        "air_date": "2002-02-06",
+        "runtime": 44,
+        "still_path": "/uo1KtkWb1D13L54MurbAguDv58n.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Shuttlepod One",
+        "overview": "Tucker and Reed set out on a mission in a shuttlepod, as Enterprise is busy investigating an asteroid field. Disaster strikes while the pair are away, leaving the shuttlepod damaged and the warp drive inoperable. They manage to make it back to the rendezvous coordinates only to discover Enterprise was apparently destroyed when it crashed into an asteroid. With the ship seemingly no more, the pair are left abandoned in the middle of nowhere with only a few days of air remaining.",
+        "air_date": "2002-02-13",
+        "runtime": 45,
+        "still_path": "/hwfkIqtywXObvg4anIDMZFxXf57.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Fusion",
+        "overview": "Enterprise encounters a group of Vulcan civilians who have split off from the normal way of Vulcan life in an effort to explore their emotions. T\u0027Pol is disturbed by the new visitors and warns the Captain that all attempts in the past to integrate Vulcan emotions into their lives has proven disastrous. Meanwhile, a message from Admiral Forrest leaves the Captain with the difficult task of trying to convince one of the visiting Vulcans to call home to speak with his dying father.",
+        "air_date": "2002-02-27",
+        "runtime": 44,
+        "still_path": "/t9iTgkJeRrOT5DLOykdwpcbadZx.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Rogue Planet",
+        "overview": "While exploring an uncharted planet, Enterprise crew members encounter a group of aliens who are hunting down indigenous creatures for recreation. During their exploration, Archer is mesmerized by visions of an elusive, yet familiar woman who needs his help.",
+        "air_date": "2002-03-20",
+        "runtime": 44,
+        "still_path": "/cihc4tni6IInLpbUCfZJgn53blO.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Acquisition",
+        "overview": "Enterprise encounters Ferengi pirates who use a booby-trapped artifact to gas the crew into unconsciousness, then pillage the ship for treasures. But they haven\u0027t counted on Tucker, who happens to be in the decon chamber and avoids the gas, and attempts to win back the ship from the pirates.",
+        "air_date": "2002-03-27",
+        "runtime": 44,
+        "still_path": "/4JrImkT0XJizuG5oKO7JpWSlI5v.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Oasis",
+        "overview": "While exploring a crashed vessel on a desolate planet, the Enterprise crew is haunted by some ghostly figures, and they encounter an alien race that has survived despite insurmountable odds. Trip helps repair their derelict vessel and is befriended by Liana, an attractive humanoid alien who develops feelings for him.",
+        "air_date": "2002-04-03",
+        "runtime": 44,
+        "still_path": "/m3WOV48SxaviDEj8tIYaoPlA1DI.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Detained",
+        "overview": "While exploring a planet, Archer and Mayweather enter a \u201Cmilitary zone\u201D and are detained in an internment prison by an alien race called Tandarans, who are at war with the Suliban. While the Enterprise crew\u0027s previous encounters with the Suliban have been disastrous, Archer and Mayweather find themselves sharing a cell with some Suliban detainees who they believe may be wrongly imprisoned.",
+        "air_date": "2002-04-24",
+        "runtime": 44,
+        "still_path": "/zVgO6MuFsxVcZFqWUUz3TTrPHbj.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Vox Sola",
+        "overview": "A strange, alien creature comes aboard Enterprise, and captures several crew members in its cocoon-like web. With her crewmates\u0027 lives in jeopardy, Hoshi faces her biggest challenge yet, in trying to communicate with the lifeform, in order to return it to its home planet.",
+        "air_date": "2002-05-01",
+        "runtime": 44,
+        "still_path": "/wEKGloDAIp18hpeglOFuxnIgLrN.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Fallen Hero",
+        "overview": "Enterprise is sent to the planet Mazar to pick up a Vulcan ambassador who has been expelled for misconduct.",
+        "air_date": "2002-05-08",
+        "runtime": 44,
+        "still_path": "/7rbum6UkJh6G6DNSYQZLmGkL2SJ.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Desert Crossing",
+        "overview": "When Archer and Trip are invited to a desert-like planet by an alien leader, they discover he is a terrorist who has lured them there under false pretences. Meanwhile, T\u0027Pol, while in command, faces a tough decision when she cannot locate Archer and Trip in the desert.",
+        "air_date": "2002-05-08",
+        "runtime": 44,
+        "still_path": "/6hByIMBLkW3v7uG3HKcKpsNhC7r.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Two Days and Two Nights",
+        "overview": "Archer, Hoshi, Travis, Malcolm and Trip have decidedly different experiences during shore leave on Risa. Meanwhile, on Enterprise, Phlox enters his annual hibernation cycle.",
+        "air_date": "2002-05-15",
+        "runtime": 44,
+        "still_path": "/brECUMLHblfAdIuYJ4LmOx49cXh.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Shockwave (1)",
+        "overview": "Starfleet orders Enterprise to return home when the crew seemingly causes the destruction of an alien planet. However, a visit from Crewman Daniels leads Archer to believe that this disaster was the plot of one of the factions from the temporal cold war.",
+        "air_date": "2002-05-22",
+        "runtime": 44,
+        "still_path": "/2TkSclIk5dyFmwzYER9IM8w1y3t.jpg"
+      }
+    ]
+  }
+}

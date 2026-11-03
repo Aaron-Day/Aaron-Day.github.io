@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 49013,
+    "title": "Cars 2",
+    "overview": "Star race car Lightning McQueen and his pal Mater head overseas to compete in the World Grand Prix race. But the road to the championship becomes rocky as Mater gets caught up in an intriguing adventure of his own: international espionage.",
+    "tagline": "The mission begins.",
+    "runtime": 106,
+    "release_date": "2011-06-11",
+    "vote_average": 6.198,
+    "poster_path": "/okIz1HyxeVOMzYwwHUjH2pHi74I.jpg",
+    "backdrop_path": "/robYRZk9LxJTwD7GlZCginji5k.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87118,
+      "name": "Cars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Larry the Cable Guy",
+      "character": "Mater (voice)",
+      "profile_path": "/34pX2sQj9DddaQWRBGukSWYdXxS.jpg"
+    },
+    {
+      "name": "Owen Wilson",
+      "character": "Lightning McQueen (voice)",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    },
+    {
+      "name": "Michael Caine",
+      "character": "Finn McMissile (voice)",
+      "profile_path": "/bVZRMlpjTAO2pJK6v90buFgVbSW.jpg"
+    },
+    {
+      "name": "Emily Mortimer",
+      "character": "Holley Shiftwell (voice)",
+      "profile_path": "/oZ4CZW2eW8lL2alD1mwZrFkfACI.jpg"
+    }
+  ]
+}

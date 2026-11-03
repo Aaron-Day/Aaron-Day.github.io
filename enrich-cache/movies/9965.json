@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9965,
+    "title": "Wake Up, Ron Burgundy: The Lost Movie",
+    "overview": "While Ron Burgundy\u0027s rivalry with Veronica Corningstone escalates quickly, a group of unprofessional thieves better known as \u0027The Alarm Clock\u0027 try to make the truth known, whatever that may mean...",
+    "tagline": "the Adventure Continues...",
+    "runtime": 93,
+    "release_date": "2004-12-28",
+    "vote_average": 6,
+    "poster_path": "/6M4YGhWZWRYQgwkPhfwgvrq52xk.jpg",
+    "backdrop_path": "/k9VedeyX1SR7ut2oU7PnhgbCfRX.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Will Ferrell",
+      "character": "Ron Burgundy",
+      "profile_path": "/yjGbyQzVjpQl8xFkFGa7JxKZWQb.jpg"
+    },
+    {
+      "name": "Christina Applegate",
+      "character": "Veronica Corningstone",
+      "profile_path": "/ncWS3iguCMCQ53ewacGpMGA6MHv.jpg"
+    },
+    {
+      "name": "Paul Rudd",
+      "character": "Brian Fantana",
+      "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+    },
+    {
+      "name": "Steve Carell",
+      "character": "Brick Tamland",
+      "profile_path": "/sSxw69G0znJuettMYGDCAXfSwSY.jpg"
+    }
+  ]
+}

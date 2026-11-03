@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 663,
+    "title": "Saw IV",
+    "overview": "Despite Jigsaw\u0027s death, and in order to save the lives of two of his colleagues, Lieutenant Rigg is forced to take part in a new game, which promises to test him to the limit.",
+    "tagline": "You thought it was over...but the games have just begun.",
+    "runtime": 93,
+    "release_date": "2007-10-25",
+    "vote_average": 6.173,
+    "poster_path": "/ku1QdCXOU4ckz3zxLLlis8MIJVm.jpg",
+    "backdrop_path": "/3lrNJ5jNqKq9UpQrXo8FNFzyoE4.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 656,
+      "name": "Saw Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tobin Bell",
+      "character": "Jigsaw / John",
+      "profile_path": "/wyyfG5Pml4G1Y3Aw873LIe32wsl.jpg"
+    },
+    {
+      "name": "Costas Mandylor",
+      "character": "Hoffman",
+      "profile_path": "/yPkQdbhCj2EJM0cjDtkuJTlFp86.jpg"
+    },
+    {
+      "name": "Scott Patterson",
+      "character": "Agent Strahm",
+      "profile_path": "/qTm0LFuV8DktunzKa5T3UZoq1tC.jpg"
+    },
+    {
+      "name": "Betsy Russell",
+      "character": "Jill",
+      "profile_path": "/kXXYUAwC1HGTzIyyHEdw7WeXnuL.jpg"
+    }
+  ]
+}

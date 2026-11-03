@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 273248,
+    "title": "The Hateful Eight",
+    "overview": "Bounty hunters seek shelter from a raging blizzard and get caught up in a plot of betrayal and deception.",
+    "tagline": "No one comes up here without a damn good reason.",
+    "runtime": 188,
+    "release_date": "2015-12-25",
+    "vote_average": 7.756,
+    "poster_path": "/jIywvdPjia2t3eKYbjVTcwBQlG8.jpg",
+    "backdrop_path": "/7g1zO5t0bd27Iqn5ZUDJmksOGPJ.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Major Marquis Warren",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Kurt Russell",
+      "character": "John \u0027The Hangman\u0027 Ruth",
+      "profile_path": "/6g1d98oH4miG4k0ZiZWmF3Dt0bO.jpg"
+    },
+    {
+      "name": "Jennifer Jason Leigh",
+      "character": "Daisy Domergue",
+      "profile_path": "/7DbG2AO3nygHAkNC866HLPKkxv9.jpg"
+    },
+    {
+      "name": "Walton Goggins",
+      "character": "Sheriff Chris Mannix",
+      "profile_path": "/5lcVMJbWrNDFiWa1WxK4oR8zwev.jpg"
+    }
+  ]
+}

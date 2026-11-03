@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9313,
+    "title": "The Man in the Iron Mask",
+    "overview": "Years have passed since the Three Musketeers, Aramis, Athos and Porthos, have fought together with their friend, D\u0027Artagnan. But with the tyrannical King Louis using his power to wreak havoc in the kingdom while his twin brother, Philippe, remains imprisoned, the Musketeers reunite to abduct Louis and replace him with Philippe.",
+    "tagline": "For the honor of a king. And the destiny of a country. All for one.",
+    "runtime": 132,
+    "release_date": "1998-03-12",
+    "vote_average": 6.651,
+    "poster_path": "/zHE9yRURvA7DyhYtQxkGTfE1Ywi.jpg",
+    "backdrop_path": "/uhhtglfXNaTavkKtjer38qHLfVi.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Leonardo DiCaprio",
+      "character": "King Louis XIV / Philippe",
+      "profile_path": "/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
+    },
+    {
+      "name": "Gabriel Byrne",
+      "character": "D\u0027Artagnan",
+      "profile_path": "/9r9oDGENg92VYYFMkV4C09IUlrb.jpg"
+    },
+    {
+      "name": "Jeremy Irons",
+      "character": "Aramis",
+      "profile_path": "/w8Ct1q02Ht3sWdOSqfp3B85TzT.jpg"
+    },
+    {
+      "name": "John Malkovich",
+      "character": "Athos",
+      "profile_path": "/7GoOdGNc4ra1L0F5nJTkmIB37iu.jpg"
+    }
+  ]
+}

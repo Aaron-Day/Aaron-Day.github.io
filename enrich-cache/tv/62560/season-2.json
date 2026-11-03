@@ -1,0 +1,104 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "eps2.0_unm4sk-pt1.tc",
+        "overview": "one month later and omfg, five/nine changed the world. elliot in seclusion. darlene takes the lead. fsociety delivers malicious payload. TANGO DOWN? tbc.",
+        "air_date": "2016-07-13",
+        "runtime": 41,
+        "still_path": "/tZJEVPYBtkcYctpqVDlAyR4nNY3.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "eps2.0_unm4sk-pt2.tc",
+        "overview": "angela happy at evil corp. tyrell MIA and joanna has a new bf? wtf? dom leads fbi investigation into five/nine. elliot demands answers from mr. robot.",
+        "air_date": "2016-07-13",
+        "runtime": 42,
+        "still_path": "/dmC940qVfZyRwObYnRYIezqBZFz.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "eps2.1_k3rnel-pan1c.ksd",
+        "overview": "elliot vows to beat mr. robot but it aint easy, smh. angela sees behind the scenes at evil corp. sh*t",
+        "air_date": "2016-07-20",
+        "runtime": 64,
+        "still_path": "/iSKjRqP0nfBjS1rP4OOT2wWhgYN.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "eps2.2_init_1.asec",
+        "overview": "elliot friends ray, hopes he can help finally delete mr. robot. dom makes a big discovery. darlene wonders whos the bigger threat-- fbi or dark army?",
+        "air_date": "2016-07-27",
+        "runtime": 66,
+        "still_path": "/lGMk2uU1cuzybVKwNQXyRunTq7y.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "eps2.3_logic-b0mb.hc",
+        "overview": "elliot cant quit the game but tbh it proves bigger than expected. dom and fbi go to china to investigate five/nine. joanna is haunted-- or hunted? darlene calls on angela for help.",
+        "air_date": "2016-08-03",
+        "runtime": 52,
+        "still_path": "/yxlfZiBHYoX3QFfoMiYV2U5VuPM.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "eps2.4_m4ster-s1ave.aes",
+        "overview": "mr. robot attempts to show elliot that he can be useful. darlene and angelas plan doesnt go as expected.",
+        "air_date": "2016-08-10",
+        "runtime": 50,
+        "still_path": "/cRHPHyhAjy6EDdg5TrMwtw1fNuc.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "eps2.5_h4ndshake.sme",
+        "overview": "happy 4th. mr. robot and elliot try to make nice. fsociety releases a holiday video in honor of uncle sam. fsociety FTW. darlene acts on a desire from long ago.",
+        "air_date": "2016-08-17",
+        "runtime": 49,
+        "still_path": "/xvvFhZsUqgxf2FqzJLyCNqnewaC.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "eps2.6_succ3ss0r.p12",
+        "overview": "elliot realizes the repercussions of a power vacuum. fsociety begins to fracture and darlene is forced to make hard decisions.",
+        "air_date": "2016-08-24",
+        "runtime": 47,
+        "still_path": "/2YfhnDVZDjd4UGGjRupDVBsYxmJ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "eps2.7_init_5.fve",
+        "overview": "angela wants more from evil corp than they want to give her. unsure if dark army is working w/ or against them, elliot and darlene seek answers. the truth is out there.",
+        "air_date": "2016-08-31",
+        "runtime": 49,
+        "still_path": "/p0i7MIpPXxM449A2hJc48AECZyR.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "eps2.8_h1dden-pr0cess.axx",
+        "overview": "elliot starts to wonder if mr. robot has been lying to him. darlene tries to do the right thing. dom and fbi get closer.",
+        "air_date": "2016-09-07",
+        "runtime": 43,
+        "still_path": "/gi9d34DqQaD6cWUkTzyjGFRkrd7.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "eps2.9_pyth0n-pt1.p7z",
+        "overview": "angela makes an unexpected acquaintance. elliot does the same. dom engages in an interesting ama.",
+        "air_date": "2016-09-14",
+        "runtime": 48,
+        "still_path": "/iJh2GC7fyIQv8V3MYVoVLcUjeIT.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "eps2.9_pyth0n-pt2.p7z",
+        "overview": "fsociety is in too deep rn. an old friend reveals all to elliot. sh*t gets real af.",
+        "air_date": "2016-09-21",
+        "runtime": 48,
+        "still_path": "/ccTAczqSjtHjJFuKVIXS84PjgcU.jpg"
+      }
+    ]
+  }
+}

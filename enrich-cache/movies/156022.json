@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 156022,
+    "title": "The Equalizer",
+    "overview": "McCall believes he has put his mysterious past behind him and dedicated himself to beginning a new, quiet life. But when he meets Teri, a young girl under the control of ultra-violent Russian gangsters, he can\u2019t stand idly by \u2013 he has to help her. Armed with hidden skills that allow him to serve vengeance against anyone who would brutalize the helpless, McCall comes out of his self-imposed retirement and finds his desire for justice reawakened. If someone has a problem, if the odds are stacked against them, if they have nowhere else to turn, McCall will help. He is The Equalizer.",
+    "tagline": "What do you see when you look at me?",
+    "runtime": 132,
+    "release_date": "2014-09-24",
+    "vote_average": 7.298,
+    "poster_path": "/9u4yW7yPA0BQ2pv9XwiNzItwvp8.jpg",
+    "backdrop_path": "/9vAoubhoZE8aSkUZoSfxs3UWZhO.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 523855,
+      "name": "The Equalizer Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "Robert McCall",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Marton Csokas",
+      "character": "Teddy",
+      "profile_path": "/gmeUY7FR0bFLdu7Ma5kvpH3Gt6B.jpg"
+    },
+    {
+      "name": "Chlo\u00EB Grace Moretz",
+      "character": "Teri",
+      "profile_path": "/yq4rYmaTRC5degaOYmJQFpaiho1.jpg"
+    },
+    {
+      "name": "David Harbour",
+      "character": "Masters",
+      "profile_path": "/qMFtMWlYVtFVyBoBhX5IoA5sN5a.jpg"
+    }
+  ]
+}

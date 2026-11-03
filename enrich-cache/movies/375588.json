@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 375588,
+    "title": "Robin Hood",
+    "overview": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown.",
+    "tagline": "The legend you know. The story you don\u2019t.",
+    "runtime": 116,
+    "release_date": "2018-11-03",
+    "vote_average": 5.9,
+    "poster_path": "/AiRfixFcfTkNbn2A73qVJPlpkUo.jpg",
+    "backdrop_path": "/9KKT8qPAII0VJMpviThOTMLN0Wt.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Taron Egerton",
+      "character": "Robin of Loxley",
+      "profile_path": "/uCaPhyKAQIfEzAWWCYIrO2004CB.jpg"
+    },
+    {
+      "name": "Jamie Foxx",
+      "character": "Yahya / John",
+      "profile_path": "/zD8Nsy4Xrghp7WunwpCj5JKBPeU.jpg"
+    },
+    {
+      "name": "Ben Mendelsohn",
+      "character": "Sheriff of Nottingham",
+      "profile_path": "/pA9mu9D2IolVA0v2Yo0tJm6uUyI.jpg"
+    },
+    {
+      "name": "Eve Hewson",
+      "character": "Marian",
+      "profile_path": "/1OlMfQrXEujIPTBUWt3AM0J0hJa.jpg"
+    }
+  ]
+}

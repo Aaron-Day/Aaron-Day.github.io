@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13313,
+    "title": "Beauty and the Beast: The Enchanted Christmas",
+    "overview": "Astonished to find the Beast has a deep-seated hatred for the Christmas season, Belle endeavors to change his mind on the matter.",
+    "tagline": "All the magic of Disney\u0027s legendary classic continues.",
+    "runtime": 72,
+    "release_date": "1997-11-11",
+    "vote_average": 6.233,
+    "poster_path": "/l1Tb0fvnj9wnCgm5qnTRoO6OxDT.jpg",
+    "backdrop_path": "/cJb3cXT8Zx3VdXTKDyR3O5SbVKv.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 153010,
+      "name": "Beauty and the Beast Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Paige O\u0027Hara",
+      "character": "Belle (voice)",
+      "profile_path": "/g61DJhK2rUOJJ2Rk4Kw0svUPWRh.jpg"
+    },
+    {
+      "name": "Robby Benson",
+      "character": "Beast (voice)",
+      "profile_path": "/rYcDiM9LrStdlcb80N3WAR2CsHX.jpg"
+    },
+    {
+      "name": "Jerry Orbach",
+      "character": "Lumiere (voice)",
+      "profile_path": "/C0n4GfMUoesutHPbquKw9JANtW.jpg"
+    },
+    {
+      "name": "David Ogden Stiers",
+      "character": "Cogsworth (voice)",
+      "profile_path": "/cgCTQt3RZVkhkusG77l4HwHEH6A.jpg"
+    }
+  ]
+}

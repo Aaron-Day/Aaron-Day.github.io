@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 19273,
+    "title": "Dr. Dolittle: Million Dollar Mutts",
+    "overview": "Maya Dolittle can talk to animals. She gets discovered and Tiffany Monaco, a Hollywood star, brings her to L.A. to help her little puppy, who turns out to be a boy.",
+    "tagline": "Lucky superstar!",
+    "runtime": 90,
+    "release_date": "2009-04-08",
+    "vote_average": 5.5,
+    "poster_path": "/5MttL2NNQzUeR7MnGd5JHjkcNrk.jpg",
+    "backdrop_path": "/oSF5BHpzxwCLVTlkXNoG1mhp6Qz.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 3169,
+      "name": "Dr. Dolittle Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kyla Pratt",
+      "character": "Maya Dolittle",
+      "profile_path": "/y02hmYVndLlJbOYkNDu3Ksdsiib.jpg"
+    },
+    {
+      "name": "Tegan Moss",
+      "character": "Tiffany Monaco",
+      "profile_path": "/cL5x8rK0L6cMMZbfgrqMKEMtCPj.jpg"
+    },
+    {
+      "name": "Judge Reinhold",
+      "character": "Network Executive",
+      "profile_path": "/6R0vCxzSx1CaDAM9y9ZgmejUdiL.jpg"
+    },
+    {
+      "name": "Fred Stoller",
+      "character": "Fluffernufferman (voice)",
+      "profile_path": "/zKdycmQYPQe7OoYWaz0KU5yCqXx.jpg"
+    }
+  ]
+}

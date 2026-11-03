@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 289728,
+    "title": "Jingle All the Way 2",
+    "overview": "Larry\u0027s daughter wants only one thing for Christmas - a talking bear. His daughter\u0027s step-dad intends to make sure that Larry can\u0027t get one.",
+    "tagline": "Two dads. One mission. Double the holiday fun!",
+    "runtime": 93,
+    "release_date": "2014-12-02",
+    "vote_average": 5.2,
+    "poster_path": "/x8JinWPxZIZY9HzJvvsC5puYsNu.jpg",
+    "backdrop_path": "/A0Ztc54ESXnT7Qq8u1VyY95GDcm.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 307637,
+      "name": "Jingle All the Way Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Larry the Cable Guy",
+      "character": "Larry",
+      "profile_path": "/34pX2sQj9DddaQWRBGukSWYdXxS.jpg"
+    },
+    {
+      "name": "Brian Stepanek",
+      "character": "Victor Baxter",
+      "profile_path": "/oxBgwkiEZtoHE4Uqi7GMwM3sK9x.jpg"
+    },
+    {
+      "name": "Lauren K. Robek",
+      "character": "Trish",
+      "profile_path": "/iqcerFwPYnWjoTu3jgs38PDUuqJ.jpg"
+    },
+    {
+      "name": "Lindsay Maxwell",
+      "character": "Attractive Employee",
+      "profile_path": "/iiYTb5LgEP6RMrF5piLX5PflBEU.jpg"
+    }
+  ]
+}

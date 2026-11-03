@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 184345,
+    "title": "A Haunted House 2",
+    "overview": "After exorcising the demons of his ex, Malcolm starts afresh with his new girlfriend and her two children. After moving into their dream home, Malcolm is once again plagued by bizarre paranormal events.",
+    "tagline": "It\u0027ll scare the #2 out of you.",
+    "runtime": 87,
+    "release_date": "2014-04-17",
+    "vote_average": 6.199,
+    "poster_path": "/M82KKqtHFaqkyuwxG5QfShzIRL.jpg",
+    "backdrop_path": "/6gycezbvc8iHSune1Evq79dcYIY.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 251937,
+      "name": "A Haunted House Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Marlon Wayans",
+      "character": "Malcolm",
+      "profile_path": "/7LYnX3vluHFBs1WCRKUjSIEDEkn.jpg"
+    },
+    {
+      "name": "Jaime Pressly",
+      "character": "Megan",
+      "profile_path": "/sST9yap7qQXr6Us9rg6w9GwaFDH.jpg"
+    },
+    {
+      "name": "Essence Atkins",
+      "character": "Kisha",
+      "profile_path": "/bgc46LlDEBzf0paajpn471dPxZA.jpg"
+    },
+    {
+      "name": "Gabriel Iglesias",
+      "character": "Miguel",
+      "profile_path": "/8Bjy3RZ5TfNs3oUOUpxTv84G01f.jpg"
+    }
+  ]
+}

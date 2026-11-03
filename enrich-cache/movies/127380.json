@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 127380,
+    "title": "Finding Dory",
+    "overview": "Dory is reunited with her friends Nemo and Marlin in the search for answers about her past. What can she remember? Who are her parents? And where did she learn to speak Whale?",
+    "tagline": "An unforgettable journey she probably won\u0027t remember.",
+    "runtime": 97,
+    "release_date": "2016-06-16",
+    "vote_average": 7.044,
+    "poster_path": "/3UVe8NL1E2ZdUZ9EDlKGJY5UzE.jpg",
+    "backdrop_path": "/wijltj1toRcicHlCn8Cpsp4yPXe.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 137697,
+      "name": "Finding Nemo Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ellen DeGeneres",
+      "character": "Dory (voice)",
+      "profile_path": "/z8IEEid4z63CBlJtxrTKEfsW7NA.jpg"
+    },
+    {
+      "name": "Albert Brooks",
+      "character": "Marlin (voice)",
+      "profile_path": "/8iDSGu5l93N7benjf6b3AysBore.jpg"
+    },
+    {
+      "name": "Ed O\u0027Neill",
+      "character": "Hank (voice)",
+      "profile_path": "/4RrxSno3UEtGWuMm4yJoaFzckpL.jpg"
+    },
+    {
+      "name": "Hayden Rolence",
+      "character": "Nemo (voice)",
+      "profile_path": "/7VVdyfGSiq9asqfaUw4gDBLopun.jpg"
+    }
+  ]
+}

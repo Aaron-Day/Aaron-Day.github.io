@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The North Remembers",
+        "overview": "Tyrion arrives to save Joffrey\u0027s crown from threats old and new; Daenerys searches for allies and water in the Red Waste.",
+        "air_date": "2012-04-01",
+        "runtime": 53,
+        "still_path": "/gGHtlTvHpSGZ8DIrxMyK3Ewkc1Y.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Night Lands",
+        "overview": "Arya shares a secret with a familiar recruit; a scout returns to Dany with disturbing news; Theon comes home to the Iron Islands.",
+        "air_date": "2012-04-08",
+        "runtime": 54,
+        "still_path": "/3EW7wYNXUVaHT4XRuIoNFrqhZh5.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "What Is Dead May Never Die",
+        "overview": "Tyrion roots out a spy; Catelyn meets a new king and queen; Bran dreams; Theon drowns.",
+        "air_date": "2012-04-15",
+        "runtime": 53,
+        "still_path": "/neKkHgfX7dgi4E47GKT7bYciq93.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Garden of Bones",
+        "overview": "Catelyn tries to save two kings from themselves; Tyrion practices coercion; Robb meets a foreigner; Dany finds her ally.",
+        "air_date": "2012-04-22",
+        "runtime": 51,
+        "still_path": "/5LhAdNG7NGipDOv2dF9ZPMAe2qh.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Ghost of Harrenhal",
+        "overview": "The Baratheon rivalry ends; Tyrion learns of Cersei\u0027s secret weapon; Dany suffers a loss; Arya collects a debt she didn\u0027t know was owed.",
+        "air_date": "2012-04-29",
+        "runtime": 55,
+        "still_path": "/h7HHSQtEyf7cNBYR2G9DjQ78EgV.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Old Gods and the New",
+        "overview": "Arya has a surprise visitor; Dany vows to take what is hers; Joffrey meets his subjects; Qhorin gives Jon a chance to prove himself.",
+        "air_date": "2012-05-06",
+        "runtime": 54,
+        "still_path": "/zUgvLgKhI7XbjU4cAW9qffL6ImQ.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "A Man Without Honor",
+        "overview": "Jaime meets a distant relative; Dany receives an invitation; Theon leads a search party; Jon loses his way in the wilderness.",
+        "air_date": "2012-05-13",
+        "runtime": 56,
+        "still_path": "/oB8TBIIf0MT4W3oqZKEANHdS8rj.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Prince of Winterfell",
+        "overview": "Theon holds down the fort; Arya calls in her debt with Jaqen; Robb is betrayed; Stannis and Davos approach their destination.",
+        "air_date": "2012-05-20",
+        "runtime": 54,
+        "still_path": "/4W90HbZcVG54m8HoxaZmXc8rzjy.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Blackwater",
+        "overview": "Tyrion and the Lannisters fight for their lives as Stannis\u0027 fleet assaults King\u0027s Landing.",
+        "air_date": "2012-05-27",
+        "runtime": 55,
+        "still_path": "/rX44Vfd0iiZDIJWHYZg9j4yLSP9.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Valar Morghulis",
+        "overview": "Tyrion wakes up in a new world; Dany goes to a strange place; Jon proves himself.",
+        "air_date": "2012-06-03",
+        "runtime": 64,
+        "still_path": "/u46jn12qEyaCOe1oqJBwPvL5d7R.jpg"
+      }
+    ]
+  }
+}

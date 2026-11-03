@@ -1,0 +1,120 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Ja\u0027loja",
+        "overview": "As The Orville heads towards Moclus for Bortus\u0027 special once-a-year ceremony, Ed discovers Kelly has moved on and has started dating. Meanwhile, Gordon asks for John\u0027s help in getting game, and Claire turns to Isaac for parenting advice.",
+        "air_date": "2018-12-30",
+        "runtime": 48,
+        "still_path": "/poBrT3HUYP7O5cWlUHW9NxT7nVq.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Primal Urges",
+        "overview": "Ed and the crew race to save a small group of survivors on a planet about to be destroyed by its sun. Meanwhile, Bortus and Klyden start marriage counseling when Bortus\u0027 obsession with the ship\u0027s simulation room gets out of hand.",
+        "air_date": "2019-01-03",
+        "runtime": 48,
+        "still_path": "/anPyr3a2h2neiokbrcHY8UOkQc5.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Home",
+        "overview": "Ed, Gordon and Alara visit Alara\u0027s home planet of Xelayah.",
+        "air_date": "2019-01-10",
+        "runtime": 48,
+        "still_path": "/lt4fFdUM44LaTRtIFqFCI6GZ7le.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Nothing Left on Earth Excepting Fishes",
+        "overview": "Ed finds himself behind enemy lines when he crash-lands on a mysterious planet. Meanwhile, Kelly questions why Gordon wants to take the Command Test.",
+        "air_date": "2019-01-17",
+        "runtime": 48,
+        "still_path": "/mpkwLmnjjgYuaODgTtNtpfhSMhd.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "All the World is Birthday Cake",
+        "overview": "The Orville makes First Contact and a new crew member joins the ship.",
+        "air_date": "2019-01-24",
+        "runtime": 48,
+        "still_path": "/Aqg96AsS08hFFNg6dQgvmM9Qagx.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "A Happy Refrain",
+        "overview": "The Orville crew is surprised when Claire\u0027s personal life takes an unexpected turn, and Gordon makes an unusual grooming suggestion to Bortus.",
+        "air_date": "2019-01-31",
+        "runtime": 48,
+        "still_path": "/gYVA52V2NDk7ZjINzcEDDbiwn1P.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Deflectors",
+        "overview": "One of Bortus\u0027s old lovers is assigned to help upgrade the ships defences and makes a surprising admission to Talla.",
+        "air_date": "2019-02-14",
+        "runtime": 48,
+        "still_path": "/u04rhsCXLcWT5O1vCHMXl38GA9n.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Identity (1)",
+        "overview": "Ed and the crew travel to Isaac\u0027s home planet, Kaylon.",
+        "air_date": "2019-02-21",
+        "runtime": 48,
+        "still_path": "/aTds37QtFPIhXcmFOcxfxj1bL8a.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Identity (2)",
+        "overview": "The Kaylons take control of the Orville with the intention of destroying all biological lifeforms.",
+        "air_date": "2019-02-28",
+        "runtime": 48,
+        "still_path": "/vdTZFGUJe9YuWTGgCGESVi7j26k.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Blood of Patriots",
+        "overview": "Ed must initiate peace talks with the Krill.",
+        "air_date": "2019-03-07",
+        "runtime": 48,
+        "still_path": "/irf7bplsoiS3SHSL3TNL9CYj3rs.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Lasting Impressions",
+        "overview": "The Orville crew members open a time capsule from 2015.",
+        "air_date": "2019-03-21",
+        "runtime": 48,
+        "still_path": "/8fChEqkdxKod5Oq5RCnclhRQ81S.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Sanctuary",
+        "overview": "Ed discovers that Moclans aboard The Orville are harboring a secret.",
+        "air_date": "2019-04-11",
+        "runtime": 46,
+        "still_path": "/2kyK1MXupsK6a1uH85x7QhLOvoL.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Tomorrow, and Tomorrow, and Tomorrow",
+        "overview": "A time distortion affects Ed and Kelly\u0027s relationship.",
+        "air_date": "2019-04-18",
+        "runtime": 48,
+        "still_path": "/zw1ekulO8E7jclr46KvA7bk4wg0.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Road Not Taken",
+        "overview": "The crew must contend with the disastrous fallout from Kelly\u0027s decision.",
+        "air_date": "2019-04-25",
+        "runtime": 48,
+        "still_path": "/hopZ1A3YKEfQp64cKzStj9dFVvr.jpg"
+      }
+    ]
+  }
+}

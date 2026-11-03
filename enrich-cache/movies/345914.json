@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 345914,
+    "title": "The House",
+    "overview": "When Scott and Kate Johansen\u2019s daughter gets into the college of her dreams it\u2019s cause for celebration. That is, until Scott and Kate learn that the scholarship they were counting on didn\u2019t come through, and they\u2019re now on the hook for tuition they can\u2019t begin to afford. With the help of their friend and neighbor Frank also in need of a major payday they decide to open an illegal casino in his suburban house, risking everything together on a Vegas-style bacchanal where money flows, inhibitions are checked at the door, and all bets are off.",
+    "tagline": "If you can\u0027t beat the house, be the house.",
+    "runtime": 88,
+    "release_date": "2017-06-29",
+    "vote_average": 5.644,
+    "poster_path": "/hkmWkVgirei79bwds23Hr0lWSXS.jpg",
+    "backdrop_path": "/piRIyhNNSIbAus9oYBRdiOKgnZ2.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Amy Poehler",
+      "character": "Kate Johansen",
+      "profile_path": "/rwmvRonpluV6dCPiQissYrchvSD.jpg"
+    },
+    {
+      "name": "Will Ferrell",
+      "character": "Scott Johansen/The Butcher",
+      "profile_path": "/yjGbyQzVjpQl8xFkFGa7JxKZWQb.jpg"
+    },
+    {
+      "name": "Jason Mantzoukas",
+      "character": "Frank",
+      "profile_path": "/sCG3UAdoxCy39gMd9ILlAFJbApS.jpg"
+    },
+    {
+      "name": "Ryan Simpkins",
+      "character": "Alex Johansen",
+      "profile_path": "/iwbcrrYEGv9RWIV62vqcXNRYwXl.jpg"
+    }
+  ]
+}

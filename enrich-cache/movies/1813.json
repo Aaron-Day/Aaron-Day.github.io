@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1813,
+    "title": "The Devil\u0027s Advocate",
+    "overview": "Aspiring Florida defense lawyer Kevin Lomax accepts a job at a New York law firm. With the stakes getting higher every case, Kevin quickly learns that his boss has something far more evil planned.",
+    "tagline": "The newest attorney at the world\u0027s most powerful law firm has never lost a case. But he\u0027s about to lose his soul.",
+    "runtime": 144,
+    "release_date": "1997-10-17",
+    "vote_average": 7.482,
+    "poster_path": "/5ZzBGpxy55OQzHxKVY11IpY6a0o.jpg",
+    "backdrop_path": "/bFRyrzb16IqM8hTmxT0z1nCaqhr.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Kevin Lomax",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Al Pacino",
+      "character": "John Milton",
+      "profile_path": "/m8HAAjq1T75JypKk0v1FFQn4ysZ.jpg"
+    },
+    {
+      "name": "Charlize Theron",
+      "character": "Mary Ann Lomax",
+      "profile_path": "/gd7ShD0yt4bsR2STeQ19KQ6hvXL.jpg"
+    },
+    {
+      "name": "Jeffrey Jones",
+      "character": "Eddie Barzoon",
+      "profile_path": "/zLodpqWUb9OzQLpK1ZY9im1Lh0p.jpg"
+    }
+  ]
+}

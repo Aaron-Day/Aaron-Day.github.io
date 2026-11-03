@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12118,
+    "title": "Police Academy 3: Back in Training",
+    "overview": "When police funding is cut, the Governor announces he must close one of the academies. To make it fair, the two police academies must compete against each other to stay in operation. Mauser persuades two officers in Lassard\u0027s academy to better his odds, but things don\u0027t quite turn out as expected...",
+    "tagline": "Run for cover!",
+    "runtime": 84,
+    "release_date": "1986-03-20",
+    "vote_average": 5.8,
+    "poster_path": "/pBxGgWSR0CMaCVMA2kQS5MWU1z3.jpg",
+    "backdrop_path": "/zIp8rPr0UzL2QhB5JCU04DqPeHQ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9338,
+      "name": "Police Academy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Guttenberg",
+      "character": "Carey Mahoney",
+      "profile_path": "/ghTMepliFNcRQHNELs8pgNDsZyW.jpg"
+    },
+    {
+      "name": "Bubba Smith",
+      "character": "Moses Hightower",
+      "profile_path": "/ew7CpCLyD4FP1zqgtxUV8jDg8cX.jpg"
+    },
+    {
+      "name": "David Graf",
+      "character": "Tackleberry",
+      "profile_path": "/oAVx2Ea0qrND2wn78m2wQtGGlz1.jpg"
+    },
+    {
+      "name": "Michael Winslow",
+      "character": "Larvell Jones",
+      "profile_path": "/uSRS2MOI1fNFAdvUgrhatBvfsvv.jpg"
+    }
+  ]
+}

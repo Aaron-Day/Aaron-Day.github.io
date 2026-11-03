@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 396535,
+    "title": "Train to Busan",
+    "overview": "When a zombie virus pushes Korea into a state of emergency, those trapped on an express train to Busan must fight for their own survival.",
+    "tagline": "Get on board to stay alive",
+    "runtime": 118,
+    "release_date": "2016-07-20",
+    "vote_average": 7.75,
+    "poster_path": "/vNVFt6dtcqnI7hqa6LFBUibuFiw.jpg",
+    "backdrop_path": "/brnfCYyz8EMbBrHgmh8sCwBi5i1.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 619537,
+      "name": "Train to Busan Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Gong Yoo",
+      "character": "Seok-woo",
+      "profile_path": "/ocGoFb6TrK3uWGXt4WnuibUG1vD.jpg"
+    },
+    {
+      "name": "Kim Su-an",
+      "character": "Soo-ahn",
+      "profile_path": "/hmPZhhoeUY89Rys6LrsjpTMeoEN.jpg"
+    },
+    {
+      "name": "Jung Yu-mi",
+      "character": "Sung-gyeong",
+      "profile_path": "/pU8iBcZHhuc4kQe6HHZVcommefG.jpg"
+    },
+    {
+      "name": "Don Lee",
+      "character": "Sang-hwa",
+      "profile_path": "/xqnARIEzfyr3BalhFBWHmCusLKH.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9714,
+    "title": "Home Alone 3",
+    "overview": "9-year-old Alex Pruitt is home alone with the chicken pox. Turns out, due to a mix-up among nefarious spies, Alex was given a toy car concealing a top-secret microchip. Now Alex must fend off the spies as they try to break into his house to get it back.",
+    "tagline": "There\u0027s a new kid on the block.",
+    "runtime": 102,
+    "release_date": "1997-12-12",
+    "vote_average": 5.278,
+    "poster_path": "/6uOadrCfle0n2LOOxHbgWEdnrm2.jpg",
+    "backdrop_path": "/oHsiqHajO9v8YTuonvcMCkxtpSq.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9888,
+      "name": "Home Alone Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Alex D. Linz",
+      "character": "Alex Pruitt",
+      "profile_path": "/fdBKV6tWgZS3IiNVXYuXak6vJIj.jpg"
+    },
+    {
+      "name": "Olek Krupa",
+      "character": "Peter Beaupre",
+      "profile_path": "/fKI4Upr3oEvJlv1mNuIRhHDDXBf.jpg"
+    },
+    {
+      "name": "Rya Kihlstedt",
+      "character": "Alice Ribbons",
+      "profile_path": "/86ysgxNPkckt8jp715X79CdopB7.jpg"
+    },
+    {
+      "name": "Lenny Von Dohlen",
+      "character": "Burton Jernigan",
+      "profile_path": "/7DZcWpMvIDVKClySYlgErSbPWFA.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36669,
+    "title": "Die Another Day",
+    "overview": "James Bond is sent to investigate the connection between a North Korean terrorist and a diamond mogul, who is funding the development of an international space weapon.",
+    "tagline": "He\u0027s never been cooler.",
+    "runtime": 133,
+    "release_date": "2002-11-17",
+    "vote_average": 6.001,
+    "poster_path": "/bZmGqOhMhaLn8AoFMvFDct4tbrL.jpg",
+    "backdrop_path": "/orI5mvpksYIlhJqzdmeipys6sHQ.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Pierce Brosnan",
+      "character": "James Bond",
+      "profile_path": "/dzXVwwJLPwiZeXOnf7YxorqVEEM.jpg"
+    },
+    {
+      "name": "Halle Berry",
+      "character": "Jinx",
+      "profile_path": "/84HRDZodRCuBSpYGSc3ow8WucI4.jpg"
+    },
+    {
+      "name": "Toby Stephens",
+      "character": "Gustav Graves",
+      "profile_path": "/1NCqxC8kMiKABrZ9Xgt4nNHGxaI.jpg"
+    },
+    {
+      "name": "Rosamund Pike",
+      "character": "Miranda Frost",
+      "profile_path": "/8ObNklHDi2hjdz0ayzJFB9jtqzm.jpg"
+    }
+  ]
+}

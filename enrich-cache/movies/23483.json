@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 23483,
+    "title": "Kick-Ass",
+    "overview": "Dave Lizewski is an unnoticed high school student and comic book fan who one day decides to become a super-hero, even though he has no powers, training or meaningful reason to do so.",
+    "tagline": "Shut up. Kick-ass.",
+    "runtime": 118,
+    "release_date": "2010-03-26",
+    "vote_average": 7.126,
+    "poster_path": "/iHMbrTHJwocsNvo5murCBw0CwTo.jpg",
+    "backdrop_path": "/P4bGyJQF0shAcRku3I2perNUQR.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 179892,
+      "name": "Kick-Ass Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Aaron Taylor-Johnson",
+      "character": "Dave Lizewski / Kick-Ass",
+      "profile_path": "/pFtHhih2XEaFaD3qOFyQW6q83br.jpg"
+    },
+    {
+      "name": "Chlo\u00EB Grace Moretz",
+      "character": "Mindy Macready / Hit Girl",
+      "profile_path": "/yq4rYmaTRC5degaOYmJQFpaiho1.jpg"
+    },
+    {
+      "name": "Nicolas Cage",
+      "character": "Damon Macready / Big Daddy",
+      "profile_path": "/y1RtezurZYveYkVNRht7CwEgSYY.jpg"
+    },
+    {
+      "name": "Lyndsy Fonseca",
+      "character": "Katie Deauxma",
+      "profile_path": "/xPbbiLpUpmaHIVnyR3BAfG1tm5S.jpg"
+    }
+  ]
+}

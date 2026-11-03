@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9426,
+    "title": "The Fly",
+    "overview": "When brilliant, eccentric scientist Seth Brundle makes a huge technological breakthrough in teleportation, he decides to test it on himself. Unbeknownst to him, a common housefly manages to get inside the device and the two become one.",
+    "tagline": "Be afraid. Be very afraid.",
+    "runtime": 96,
+    "release_date": "1986-08-15",
+    "vote_average": 7.449,
+    "poster_path": "/8gZWMhJHRvaXdXsNhERtqNHYpH3.jpg",
+    "backdrop_path": "/g1FzhbtWYKk9WMJYi1X26kf2Q4Q.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 109609,
+      "name": "The Fly (1986) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jeff Goldblum",
+      "character": "Seth Brundle",
+      "profile_path": "/kcyEPgYtBP5Pm6LLeLGfXKjYovL.jpg"
+    },
+    {
+      "name": "Geena Davis",
+      "character": "Veronica Quaife",
+      "profile_path": "/jNsZLedzKPuyUmgnvpRpP5oG3Wr.jpg"
+    },
+    {
+      "name": "John Getz",
+      "character": "Stathis Borans",
+      "profile_path": "/NL52y1nH5SZMlJKfKpPBnofoJk.jpg"
+    },
+    {
+      "name": "Joy Boushel",
+      "character": "Tawny",
+      "profile_path": "/8dRLwnJOQvcQRaRaCiN27MEn87T.jpg"
+    }
+  ]
+}

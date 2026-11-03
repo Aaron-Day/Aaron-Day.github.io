@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7364,
+    "title": "Sahara",
+    "overview": "Seasoned adventurer and treasure hunter Dirk Pitt, a former Navy SEAL, sets out for the African desert with his wisecracking buddy Al in search of a confederate ironclad battleship rumored to have vanished long ago, the main draw being the treasure supposedly hidden within the lost vessel. When the daring duo come across Dr. Eva Rojas, a beautiful scientist who is juggling an escape from a warlord and a mission to stop the spread of a powerful plague, their desert expedition begins to heat up.",
+    "tagline": "Adventure has a new destination.",
+    "runtime": 124,
+    "release_date": "2005-04-06",
+    "vote_average": 5.9,
+    "poster_path": "/kyY1onYxkKBDlJsheRsVbMaoQEM.jpg",
+    "backdrop_path": "/CXQ9wYj4n9MBwy2TQ92YaRygWj.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matthew McConaughey",
+      "character": "Dirk Pitt",
+      "profile_path": "/lCySuYjhXix3FzQdS4oceDDrXKI.jpg"
+    },
+    {
+      "name": "Pen\u00E9lope Cruz",
+      "character": "Dr. Eva Rojas",
+      "profile_path": "/n5SFgmvJSENQt8poE4qYacUnKOi.jpg"
+    },
+    {
+      "name": "Steve Zahn",
+      "character": "Al Giordino",
+      "profile_path": "/rwrPdKGwXnByxUVMxMf8Y7oswi3.jpg"
+    },
+    {
+      "name": "Lennie James",
+      "character": "General Zateb Kazim",
+      "profile_path": "/lUcouck90jXNzyJr5uBJJiYMHAN.jpg"
+    }
+  ]
+}

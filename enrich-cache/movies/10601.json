@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10601,
+    "title": "Peter Pan",
+    "overview": "In stifling Edwardian London, Wendy Darling mesmerizes her brothers every night with bedtime tales of swordplay, swashbuckling and the fearsome Captain Hook. But the children become the heroes of an even greater story, when Peter Pan flies into their nursery one night and leads them over moonlit rooftops through a galaxy of stars and to the lush jungles of Neverland.",
+    "tagline": "All children grow up except one.",
+    "runtime": 113,
+    "release_date": "2003-12-18",
+    "vote_average": 7.129,
+    "poster_path": "/6QdU3TZZrIvXFzoHOwafZAynFjB.jpg",
+    "backdrop_path": "/zyWbOvKCdA9V9P5xuUG2eiPYsUo.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jeremy Sumpter",
+      "character": "Peter Pan",
+      "profile_path": "/pycR7N2pLA1fYFdySq1fP2wW7rN.jpg"
+    },
+    {
+      "name": "Jason Isaacs",
+      "character": "James Hook / George Darling",
+      "profile_path": "/s6XRFjqUsrDJfDQuXPOoExAYPmb.jpg"
+    },
+    {
+      "name": "Rachel Hurd-Wood",
+      "character": "Wendy Darling",
+      "profile_path": "/9OMWHFdFAk45dF00BgZR4BcjANI.jpg"
+    },
+    {
+      "name": "Ludivine Sagnier",
+      "character": "Tinker Bell",
+      "profile_path": "/hd4fLjgtgNEidJOjuLNGfK1sOhm.jpg"
+    }
+  ]
+}

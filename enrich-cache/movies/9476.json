@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9476,
+    "title": "A Knight\u0027s Tale",
+    "overview": "William Thatcher, a knight\u0027s peasant apprentice, gets a chance at glory when the knight dies suddenly mid-tournament. Posing as a knight himself, William won\u0027t stop until he\u0027s crowned tournament champion\u2014assuming matters of the heart don\u0027t get in the way.",
+    "tagline": "He will rock you.",
+    "runtime": 133,
+    "release_date": "2001-05-11",
+    "vote_average": 6.895,
+    "poster_path": "/srb1XnrlDZHcdpjBKqUu4qAzxKU.jpg",
+    "backdrop_path": "/gkT737kgnmI6jZyXbUBJRwVbGkW.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Heath Ledger",
+      "character": "William Thatcher",
+      "profile_path": "/p2z2bURSg7nuMsN9P2s61e2RvNz.jpg"
+    },
+    {
+      "name": "Rufus Sewell",
+      "character": "Count Adhemar",
+      "profile_path": "/yc2EWyg45GO03YqDttaEhjvegiE.jpg"
+    },
+    {
+      "name": "Shannyn Sossamon",
+      "character": "Jocelyn",
+      "profile_path": "/h7oiKMaoq0J5DM3PBZxffF9uJo4.jpg"
+    },
+    {
+      "name": "Paul Bettany",
+      "character": "Geoffrey Chaucer",
+      "profile_path": "/awlH20l93cgHOIDPNP6FCnGuIJy.jpg"
+    }
+  ]
+}

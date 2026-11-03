@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 29,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "South American Biker Gangs",
+        "overview": "When e-bikes arrive in South America, the boys take over the streets and the parents of South America can hardly recognize South America.",
+        "air_date": "2026-09-16",
+        "runtime": 22,
+        "still_path": "/hV0Zvkc2uHTpznUs9tBv6QZCodI.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Billionaire Weenietown",
+        "overview": "Butters is unhappy with the data centers that the billionaires are building in our backyards.",
+        "air_date": "2026-09-30",
+        "runtime": 22,
+        "still_path": "/qz9ZGC1Ot7uY9tw45d77qrfxVL2.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "You Like That On Your Face",
+        "overview": "When aura battles take over South America, Kyle tries to help his little brother not be cringe.",
+        "air_date": "2026-10-14",
+        "runtime": 22,
+        "still_path": "/esj5Xi728wuj4Q40qkjj0xEu6F1.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Guinea Pig on a Stick",
+        "overview": "When South America\u2019s beef becomes highly prized and sought after, the four boys fight to keep it in local hands.",
+        "air_date": "2026-10-28",
+        "runtime": 22,
+        "still_path": "/n3xEMWKPrQTF0psRiFEAxW999FX.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Episode 5",
+        "overview": "",
+        "air_date": "2026-11-11",
+        "runtime": null,
+        "still_path": null
+      },
+      {
+        "episode_number": 6,
+        "name": "Episode 6",
+        "overview": "",
+        "air_date": "2026-11-25",
+        "runtime": null,
+        "still_path": null
+      }
+    ]
+  }
+}

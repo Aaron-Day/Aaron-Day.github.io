@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 363088,
+    "title": "Ant-Man and the Wasp",
+    "overview": "Just when his time under house arrest is about to end, Scott Lang once again puts his freedom at risk to help Hope van Dyne and Dr. Hank Pym dive into the quantum realm and try to accomplish, against time and any chance of success, a very dangerous rescue mission.",
+    "tagline": "Real heroes. Not actual size.",
+    "runtime": 119,
+    "release_date": "2018-07-04",
+    "vote_average": 6.893,
+    "poster_path": "/cFQEO687n1K6umXbInzocxcnAQz.jpg",
+    "backdrop_path": "/iYdgEUE2W2aJkgqfSjf1x3gFfuV.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 422834,
+      "name": "Ant-Man Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Paul Rudd",
+      "character": "Scott Lang / Ant-Man",
+      "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+    },
+    {
+      "name": "Evangeline Lilly",
+      "character": "Hope Van Dyne / Wasp",
+      "profile_path": "/pJHX2jd7ytre3NQbF9nlyWUqxH3.jpg"
+    },
+    {
+      "name": "Michael Douglas",
+      "character": "Dr. Hank Pym",
+      "profile_path": "/kVYGPIZowzXLEQfAGUNOqKjAbBb.jpg"
+    },
+    {
+      "name": "Hannah John-Kamen",
+      "character": "Ava / Ghost",
+      "profile_path": "/2fqNQQW3B7upH4rBubhxXkIIoGk.jpg"
+    }
+  ]
+}

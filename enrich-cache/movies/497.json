@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 497,
+    "title": "The Green Mile",
+    "overview": "A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people\u0027s ailments. When the cell block\u0027s head guard, Paul Edgecomb, recognizes Coffey\u0027s miraculous gift, he tries desperately to help stave off the condemned man\u0027s execution.",
+    "tagline": "Paul Edgecomb didn\u0027t believe in miracles. Until the day he met one.",
+    "runtime": 189,
+    "release_date": "1999-12-10",
+    "vote_average": 8.505,
+    "poster_path": "/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg",
+    "backdrop_path": "/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Paul Edgecomb",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "David Morse",
+      "character": "Brutus \u0027Brutal\u0027 Howell",
+      "profile_path": "/A6zGbkFjM3uajIakgsSeNTmSKqY.jpg"
+    },
+    {
+      "name": "Bonnie Hunt",
+      "character": "Jan Edgecomb",
+      "profile_path": "/tT9C6uLztgN8OxJULq6F9iEzqlA.jpg"
+    },
+    {
+      "name": "Michael Clarke Duncan",
+      "character": "John Coffey",
+      "profile_path": "/3RX8OBqt3gbvFwKYZqiom4O3Ta6.jpg"
+    }
+  ]
+}

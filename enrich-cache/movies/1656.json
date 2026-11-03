@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1656,
+    "title": "The Legend of Zorro",
+    "overview": "Despite trying to keep his swashbuckling to a minimum, a threat to California\u0027s pending statehood causes the adventure-loving Don Alejandro de la Vega and his wife, Elena, to take action.",
+    "tagline": "Adventure begins with a Z.",
+    "runtime": 130,
+    "release_date": "2005-10-24",
+    "vote_average": 6.119,
+    "poster_path": "/93iEBX1QbsxAv8eSybe8lhLXY1A.jpg",
+    "backdrop_path": "/2b3PSB97qrxQduzquYihf7u3uwV.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1657,
+      "name": "Zorro Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Antonio Banderas",
+      "character": "Don Alejandro de la Vega / Zorro",
+      "profile_path": "/lpzfDt22374NPhOXZpUq74e9mfw.jpg"
+    },
+    {
+      "name": "Catherine Zeta-Jones",
+      "character": "Elena",
+      "profile_path": "/2fAo0jWy8zPl9jgR4DH5nLyL8Xa.jpg"
+    },
+    {
+      "name": "Adrian Alonso",
+      "character": "Joaquin",
+      "profile_path": "/eAuuznlFGH9DDpCzYGeLE8c0k46.jpg"
+    },
+    {
+      "name": "Julio Oscar Mechoso",
+      "character": "Frey Felipe",
+      "profile_path": "/2m1vtlRlSxozMOoHeobCY2pbrPi.jpg"
+    }
+  ]
+}

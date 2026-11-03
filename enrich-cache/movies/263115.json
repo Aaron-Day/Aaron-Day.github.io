@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 263115,
+    "title": "Logan",
+    "overview": "In the near future, a weary Logan cares for an ailing Professor X in a hideout on the Mexican border. But Logan\u0027s attempts to hide from the world and his legacy are upended when a young mutant arrives, pursued by dark forces.",
+    "tagline": "Someone has come along.",
+    "runtime": 137,
+    "release_date": "2017-02-28",
+    "vote_average": 7.822,
+    "poster_path": "/fnbjcRDYn6YviCcePDnGdyAkYsB.jpg",
+    "backdrop_path": "/4DZxWNSAyksN6N3JkvpJ53Yq6zU.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 453993,
+      "name": "The Wolverine Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Hugh Jackman",
+      "character": "Logan / X-24",
+      "profile_path": "/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Dafne Keen",
+      "character": "Laura",
+      "profile_path": "/34BhddK5z2YHjfppOleezVrQ7Jt.jpg"
+    },
+    {
+      "name": "Patrick Stewart",
+      "character": "Charles",
+      "profile_path": "/ufqtnLh3JJjPbEgxEag3MM5nZyv.jpg"
+    },
+    {
+      "name": "Elizabeth Rodriguez",
+      "character": "Gabriela",
+      "profile_path": "/9f851DP7NHAOKvvlZdXxYigDYbl.jpg"
+    }
+  ]
+}

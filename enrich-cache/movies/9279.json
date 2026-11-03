@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9279,
+    "title": "Jingle All the Way",
+    "overview": "Howard Langston, a salesman for a mattress company, is constantly kept busy at his job, disappointing his son. After he misses his son\u0027s karate exposition, Howard vows to make it up to him by buying an action figure of his son\u0027s favorite television hero for Christmas. Unfortunately for Howard, it is Christmas Eve, and every store is sold out of Turbo Man. Now, Howard must travel all over town and compete with everybody else to find a Turbo Man action figure.",
+    "tagline": "Two dads, one toy, no prisoners.",
+    "runtime": 89,
+    "release_date": "1996-11-21",
+    "vote_average": 6.078,
+    "poster_path": "/vhdLrQ3P2JxlxsTREUsr2nbtnjS.jpg",
+    "backdrop_path": "/rnn6sGMGPpM8VfVmCMFxsjKvz7q.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 307637,
+      "name": "Jingle All the Way Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Howard Langston",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Sinbad",
+      "character": "Myron Larabee",
+      "profile_path": "/heuiXoUOWDvoeBd9VLKryt4C1rs.jpg"
+    },
+    {
+      "name": "Phil Hartman",
+      "character": "Ted Maltin",
+      "profile_path": "/m3QyeaVLzIo2fZJZaGbJalfD56t.jpg"
+    },
+    {
+      "name": "Jake Lloyd",
+      "character": "Jamie Langston",
+      "profile_path": "/tp5PRiy8Ip8Vs70pUY1jeHbk2wH.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8699,
+    "title": "Anchorman: The Legend of Ron Burgundy",
+    "overview": "It\u0027s the 1970s and San Diego anchorman Ron Burgundy is the top dog in local TV, but that\u0027s all about to change when ambitious reporter Veronica Corningstone arrives as a new employee at his station.",
+    "tagline": "They bring you the news so you don\u0027t have to get it yourself.",
+    "runtime": 95,
+    "release_date": "2004-06-28",
+    "vote_average": 6.705,
+    "poster_path": "/mhZIcRePT7U8viFQVjt1ZjYIsR4.jpg",
+    "backdrop_path": "/qWSI9Lpq8K4o1n9ZD9zUVD4Gds1.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 93791,
+      "name": "Anchorman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Ferrell",
+      "character": "Ron Burgundy",
+      "profile_path": "/yjGbyQzVjpQl8xFkFGa7JxKZWQb.jpg"
+    },
+    {
+      "name": "Christina Applegate",
+      "character": "Veronica Corningstone",
+      "profile_path": "/ncWS3iguCMCQ53ewacGpMGA6MHv.jpg"
+    },
+    {
+      "name": "Paul Rudd",
+      "character": "Brian Fantana",
+      "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+    },
+    {
+      "name": "Steve Carell",
+      "character": "Brick Tamland",
+      "profile_path": "/sSxw69G0znJuettMYGDCAXfSwSY.jpg"
+    }
+  ]
+}

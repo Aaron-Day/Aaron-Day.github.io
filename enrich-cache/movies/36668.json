@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36668,
+    "title": "X-Men: The Last Stand",
+    "overview": "When a cure is found to treat mutations, lines are drawn amongst the X-Men led by Professor Charles Xavier, and Magneto\u0027s Brotherhood of Mutants.",
+    "tagline": "Take a stand.",
+    "runtime": 104,
+    "release_date": "2006-05-24",
+    "vote_average": 6.429,
+    "poster_path": "/a2xicU8DpKtRizOHjQLC1JyCSRS.jpg",
+    "backdrop_path": "/nLMXULCGLnzRxz11txPzPqbOHSz.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 748,
+      "name": "X-Men Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Hugh Jackman",
+      "character": "Logan / Wolverine",
+      "profile_path": "/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Halle Berry",
+      "character": "Ororo Munroe / Storm",
+      "profile_path": "/84HRDZodRCuBSpYGSc3ow8WucI4.jpg"
+    },
+    {
+      "name": "Ian McKellen",
+      "character": "Erik Lehnsherr / Magneto",
+      "profile_path": "/5cnnnpnJG6TiYUSS7qgJheUZgnv.jpg"
+    },
+    {
+      "name": "Patrick Stewart",
+      "character": "Professor Charles Xavier",
+      "profile_path": "/ufqtnLh3JJjPbEgxEag3MM5nZyv.jpg"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 19,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Now and Then",
+        "overview": "The BAU hunts kidnappers targeting couples as Elias Voit faces a familiar darkness in prison.",
+        "air_date": "2026-05-28",
+        "runtime": 60,
+        "still_path": "/c0y03Hzr3fZN64zsLFi1GbsPmXt.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Cluster",
+        "overview": "The BAU investigates a veteran\u0027s death as Prentiss and Voit move to shut down a podcast from conspiracy theorist Brian Garrity.",
+        "air_date": "2026-05-28",
+        "runtime": 58,
+        "still_path": "/Abm9eHconbHg88K3YaFnejt7QPS.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Body Count",
+        "overview": "When new bodies are linked to Sicarius, the BAU takes Voit into the field to verify the killings.",
+        "air_date": "2026-06-04",
+        "runtime": 50,
+        "still_path": "/2ntH3Alr4SUwYrSES6upPzN57Ud.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Witching Hour",
+        "overview": "An UnSub terrorizes spouses before killing one and sparing the other. Meanwhile, Voit receives disturbing mail from The Fan, a mysterious admirer.",
+        "air_date": "2026-06-11",
+        "runtime": 52,
+        "still_path": "/9xoIUCPB09dGtWFja2Z4Hol8ssN.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Friendly Fire",
+        "overview": "Alvez and Tyler team up to investigate the murder of an FBI training instructor, while the rest of the BAU explore ways to lure out The Fan.",
+        "air_date": "2026-06-18",
+        "runtime": 56,
+        "still_path": "/fvJWgbars6fSCKVCuVEY6GAWjR6.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Proxy",
+        "overview": "The team investigates The Fan, while Brian Garrity questions the damage caused by his podcast.",
+        "air_date": "2026-06-25",
+        "runtime": 52,
+        "still_path": "/9Uz9usAyEVzUmCo14chtfkA3uCN.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Furies",
+        "overview": "While the BAU investigates a cop killer, Voit receives an enigmatic new visitor.",
+        "air_date": "2026-07-02",
+        "runtime": 55,
+        "still_path": "/evYzOTpgSBi4HbeCHKAIRNdleZY.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Requiem",
+        "overview": "Voit asks the BAU for help after he is threatened by The Fan, and the team must race to stop an UnSub before he can finish his chilling work with his latest victim.",
+        "air_date": "2026-07-09",
+        "runtime": 50,
+        "still_path": "/uc2wIP65I8cMhsTdaicHGMVyq03.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Special Agent Garrity",
+        "overview": "After The Fan sets his sights on Brian Garrity and Voit devises a strategy to deal with his nemesis, the BAU must use their profiling prowess to identify The Fan and save their ally.",
+        "air_date": "2026-07-16",
+        "runtime": 57,
+        "still_path": "/wKoaFrGVOkS27LhYm4slPZZxNnx.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Bad Blood",
+        "overview": "The Fan\u0027s twisted past and the ultimate showdown will be revealed in the climactic finale to Season Nineteen.",
+        "air_date": "2026-07-23",
+        "runtime": 54,
+        "still_path": "/eSbmOraqOcp0ElBeNWlAX6YpF07.jpg"
+      }
+    ]
+  }
+}

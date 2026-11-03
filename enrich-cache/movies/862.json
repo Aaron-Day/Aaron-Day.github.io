@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 862,
+    "title": "Toy Story",
+    "overview": "Led by Woody, Andy\u0027s toys live happily in his room until Andy\u0027s birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy\u0027s heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
+    "tagline": "Hang on for the comedy that goes to infinity and beyond!",
+    "runtime": 81,
+    "release_date": "1995-11-22",
+    "vote_average": 7.99,
+    "poster_path": "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+    "backdrop_path": "/3Rfvhy1Nl6sSGJwyjb0QiZzZYlB.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10194,
+      "name": "Toy Story Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Woody (voice)",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Tim Allen",
+      "character": "Buzz Lightyear (voice)",
+      "profile_path": "/k8XPNHBO459FaqkqqM4tfX5GMKk.jpg"
+    },
+    {
+      "name": "Don Rickles",
+      "character": "Mr. Potato Head (voice)",
+      "profile_path": "/iGMOVxIQoTPepRvqSCtRulfpx7u.jpg"
+    },
+    {
+      "name": "Jim Varney",
+      "character": "Slinky Dog (voice)",
+      "profile_path": "/zvBFmvKUrPvE6FW35O3RP4i1ZPp.jpg"
+    }
+  ]
+}

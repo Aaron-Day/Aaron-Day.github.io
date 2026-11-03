@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "Pilot episode. After returning to Washington, D.C., renowned forensic anthropologist Dr. Temperance Brennan is called in by FBI Special Agent Seeley Booth to aid an FBI investigation involving a set of bones found hidden in a lake.",
+        "air_date": "2005-09-13",
+        "runtime": 44,
+        "still_path": "/frAUQbLiCqMwlBdkfnJ118HYD1N.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Man in the S.U.V.",
+        "overview": "When a man is killed driving an SUV registered to a Middle Eastern man, Dr. Brennan and her team find themselves tracking a terrorist.",
+        "air_date": "2005-09-20",
+        "runtime": 44,
+        "still_path": "/gCJZenmQgYRMFugtfcTZW7Gq0T4.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "A Boy in a Tree",
+        "overview": "When the decaying corpse of the Venezuelan Ambassador\u0027s son is found hanging from a tree on the campus of an exclusive private school, a simple suicide case quickly turns into a web of lies, sex and scandal involving the school\u0027s staff and students.",
+        "air_date": "2005-09-27",
+        "runtime": 43,
+        "still_path": "/oorylu7oCTNFY7E0jUaTYr5iBEs.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Man in the Bear",
+        "overview": "Brennan and Booth travel to Washington to investigate a human arm that was found in the stomach of a black bear.",
+        "air_date": "2005-11-01",
+        "runtime": 43,
+        "still_path": "/4XKBp2988opGxkTugNSiPEvnfTL.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "A Boy in a Bush",
+        "overview": "Booth asks Brennan to help locate and identify the remains of a six-year-old boy, Charlie, who went missing from a local park.",
+        "air_date": "2005-11-08",
+        "runtime": 44,
+        "still_path": "/vyIThgmABhrHYHiEB2wB0RGiVzi.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Man in the Wall",
+        "overview": "When Brennan and Angela get caught in a fight in a dance club, Brennan kicks someone into a wall, which causes the wall to break open and reveal a mummified corpse and a meth stash.",
+        "air_date": "2005-11-15",
+        "runtime": 43,
+        "still_path": "/hKqeNbQf51DVYgbtqWZbnzExsho.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "A Man on Death Row",
+        "overview": "A death row inmate asks for Booth\u0027s help to prove his innocence before he is scheduled to be executed. Booth agrees and asks Brennan and her team to help him out.",
+        "air_date": "2005-11-22",
+        "runtime": 44,
+        "still_path": "/xVbbPFJLoUIUzLuEYNHJgwLrW6F.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Girl in the Fridge",
+        "overview": "Brennan is about to go out for dinner with her old professor and ex-lover when Booth asks her and her team to help identify the remains of a young woman found in a refrigerator.",
+        "air_date": "2005-11-29",
+        "runtime": 44,
+        "still_path": "/cX7mMyAhk5ITgdppqVUxGwae96E.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Man in the Fallout Shelter",
+        "overview": "Brennan and her team are brought in to identify the body of a man found in a fallout shelter. While cutting into the bones of the man, Zach accidentally  releases a deadly fungus, causing the team to be quarantined over Christmas.",
+        "air_date": "2005-12-13",
+        "runtime": 44,
+        "still_path": "/kJ3zIvzwx8plrFLf3Y3onyNiGVu.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Woman at the Airport",
+        "overview": "Brennan and Booth investigate the body parts of a woman found near L.A. International Airport.  Their investigation is slowed due to extensive cosmetic surgery the victim had done.",
+        "air_date": "2006-01-25",
+        "runtime": 44,
+        "still_path": "/fDjwrpCS7AWFjtV1Lg1n1QlzPJW.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Woman in the Car",
+        "overview": "When a woman\u2019s burned body is found in a car with signs that her child was kidnapped, Brennan and Booth suspect the father, Carl Decker. But things get complicated when Decker turns out to be in the Witness Protection program.",
+        "air_date": "2006-02-01",
+        "runtime": 44,
+        "still_path": "/6bKtERErQgT8v9z1Eu5miEoQ5x3.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Superhero in the Alley",
+        "overview": "Brennan and Booth investigate the origins of a decomposed body that\u0027s been found in a local alley and determine it\u0027s the remains of a shy teen with an alter ego.",
+        "air_date": "2006-02-08",
+        "runtime": 42,
+        "still_path": "/gz2Bd82oNFliylWE1LLCHL9AlGv.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Woman in the Garden",
+        "overview": "Booth and Brennan investigate when a dug up corpse is found in the back of a gang member\u0027s car.  While being questioned, a drive-by shooting allows him to escape.  Booth and Brennan follow the clues, which lead them to an empty grave and another body in a grave at a wealthy senator\u0027s house, where the gang member used to work.",
+        "air_date": "2006-02-15",
+        "runtime": 43,
+        "still_path": "/5mLgkq5QNqtzDTO4ZF58R7xRhC7.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Man on the Fairway",
+        "overview": "Brennan and Zach investigate a small jet crash that was carrying some Chinese diplomats and a woman.  At the crash site, Brennan finds some bone fragments that do not belong to any of the passengers, but might belong to a man who has been missing for five years.  Although ordered to work only on the diplomats, Brennan and her team go rogue to try to discover the identity of the extra bones.",
+        "air_date": "2006-03-08",
+        "runtime": 44,
+        "still_path": "/wXt870zeCIQEcIa6sQqxRxEtOOL.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Two Bodies in the Lab",
+        "overview": "When Brennan decides to give online dating a try, she ends up the target of a shooting at the local restaurant where she\u0027s meeting her date. The resulting investigation reveals that the shooter could be connected to either of the two cases she\u0027s currently working on.",
+        "air_date": "2006-03-15",
+        "runtime": 44,
+        "still_path": "/mWdUVpsoU4tNU3UZd7Ppj6f5pN1.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Woman in the Tunnel",
+        "overview": "Brennan and Booth stumble upon a subterranean world of homeless people when they find the remains of a filmmaker in the ventilation shaft of an underground tunnel.",
+        "air_date": "2006-03-22",
+        "runtime": 44,
+        "still_path": "/1i3NQoUG1mXkF21bowzZJVTJjXT.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Skull in the Desert",
+        "overview": "While on vacation, Angela\u0027s boyfriend goes missing . When a skull shows up, she asks Brennan for help in identification, concerned it might be her boyfriend or the female guide who went missing with him. The investigation leads the team to a violent boyfriend, the local sheriff and ultimately to a counterfeiting ring setup in the desert.",
+        "air_date": "2006-03-29",
+        "runtime": 44,
+        "still_path": "/dxpOfYPyp3veMfji9LOB97imrTh.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Man with the Bone",
+        "overview": "A human finger bone found in the clutches of a drowning victim leads to a search for buried treasure.",
+        "air_date": "2006-04-05",
+        "runtime": 43,
+        "still_path": "/utf0BOeZHzjW00cOlQ0Zz9YXlVZ.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Man in the Morgue",
+        "overview": "A trip to New Orleans leaves Bones beaten, bloodied, and suspected of murder while plunged into the world of voodoo.",
+        "air_date": "2006-04-19",
+        "runtime": 43,
+        "still_path": "/ApHNrvKpNBdRWxr79HXkrIDv7hO.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Graft in the Girl",
+        "overview": "The team helps Deputy Director Sam Cullen\u0027s daughter, Amy, when she contracts a rare form of lung cancer after receiving a bone graft.  Booth and Brennan learn she is not the only victim with this rare form of cancer.",
+        "air_date": "2006-04-26",
+        "runtime": 43,
+        "still_path": "/tTOGX4hkxMmXbHEa4k0R17gQc1c.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Soldier on the Grave",
+        "overview": "Brennan and Booth investigate an apparent suicide in Arlington National Cemetery, but soon discover it is a murder linked to a military cover-up.",
+        "air_date": "2006-05-10",
+        "runtime": 44,
+        "still_path": "/d8LgzSWnyi8bDWYiEfKV8YVOmRI.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Woman in Limbo",
+        "overview": "Brennan receives some bones to identify, but is stunned when she discovers that the remains are those of her mother who disappeared when she was 15 years old. The determined date of her mother\u0027s death leaves Bones confused and angry.",
+        "air_date": "2006-05-17",
+        "runtime": 43,
+        "still_path": "/6QP4Qe6YO8SswBsFAJM1WsXJA7D.jpg"
+      }
+    ]
+  }
+}

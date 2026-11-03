@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 197,
+    "title": "Braveheart",
+    "overview": "Enraged at the slaughter of Murron, his new bride and childhood love, Scottish warrior William Wallace slays a platoon of the local English lord\u0027s soldiers. This leads the village to revolt and, eventually, the entire country to rise up against English rule.",
+    "tagline": "Every man dies, not every man really lives.",
+    "runtime": 178,
+    "release_date": "1995-05-24",
+    "vote_average": 7.947,
+    "poster_path": "/or1gBugydmjToAEq7OZY0owwFk.jpg",
+    "backdrop_path": "/1m1c5gIWWkb1FEC9lzsoXHhhs7b.jpg",
+    "genres": [
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1432360,
+      "name": "Braveheart Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mel Gibson",
+      "character": "William Wallace",
+      "profile_path": "/jnqHMaOslt8cef2atSmOpGRvNla.jpg"
+    },
+    {
+      "name": "Catherine McCormack",
+      "character": "Murron MacClannough",
+      "profile_path": "/vYyMCGKeIUTZMdEgVwQCgX7q1T3.jpg"
+    },
+    {
+      "name": "Sophie Marceau",
+      "character": "Princess Isabelle",
+      "profile_path": "/b56TRCVVMZ2LMZqzXg0FxeGMd0u.jpg"
+    },
+    {
+      "name": "Patrick McGoohan",
+      "character": "King Edward",
+      "profile_path": "/xtUMgFYGF7KmJg1KqiYQuwYTTe3.jpg"
+    }
+  ]
+}

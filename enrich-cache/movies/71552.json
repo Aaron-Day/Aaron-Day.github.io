@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 71552,
+    "title": "American Reunion",
+    "overview": "The characters we met a little more than a decade ago return to East Great Falls for their high school reunion. In one long-overdue weekend, they will discover what has changed, who hasn\u2019t, and that time and distance can\u2019t break the bonds of friendship.",
+    "tagline": "Save the best piece for last.",
+    "runtime": 113,
+    "release_date": "2012-04-04",
+    "vote_average": 6.398,
+    "poster_path": "/de5QBIdVR4dnkBZ4a0zjkS4lTg.jpg",
+    "backdrop_path": "/lroojUACXVHdnjVYQXgts5IhqGr.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2806,
+      "name": "American Pie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Biggs",
+      "character": "Jim Levenstein",
+      "profile_path": "/3nRgOQylYbNuDiddtNoh8uWTz5P.jpg"
+    },
+    {
+      "name": "Alyson Hannigan",
+      "character": "Michelle Levenstein",
+      "profile_path": "/bO16z8rAzZWdjCga8dcbJ2AFAh2.jpg"
+    },
+    {
+      "name": "Seann William Scott",
+      "character": "Steve Stifler",
+      "profile_path": "/AftiUFP4rYcl3SG3xllxyiLiuXS.jpg"
+    },
+    {
+      "name": "Chris Klein",
+      "character": "Chris \u0027Oz\u0027 Ostreicher",
+      "profile_path": "/56kCtPVfvjm5IRPa2GyaQHTPIOy.jpg"
+    }
+  ]
+}

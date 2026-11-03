@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 38757,
+    "title": "Tangled",
+    "overview": "Feisty teenager Rapunzel, who has long and magical hair, wants to go and see sky lanterns on her eighteenth birthday, but she\u0027s bound to a tower by her overprotective mother. She strikes a deal with Flynn Rider, a charming wanted thief, and the duo set off on an action-packed escapade.",
+    "tagline": "They\u0027re taking adventure to new lengths.",
+    "runtime": 100,
+    "release_date": "2010-11-24",
+    "vote_average": 7.617,
+    "poster_path": "/ym7Kst6a4uodryxqbGOxmewF235.jpg",
+    "backdrop_path": "/cWczNud8Y8i8ab0Z4bxos4myWYO.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1268789,
+      "name": "Tangled Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mandy Moore",
+      "character": "Rapunzel (voice)",
+      "profile_path": "/2n0rqUGojRNEHrmtPeCEptHREEY.jpg"
+    },
+    {
+      "name": "Zachary Levi",
+      "character": "Flynn Rider (voice)",
+      "profile_path": "/1W8L3kEMMPF9umT3ZGaNIiCYKfZ.jpg"
+    },
+    {
+      "name": "Donna Murphy",
+      "character": "Mother Gothel (voice)",
+      "profile_path": "/nbhjInhXh1puhwnfRU7Ov1XFmD0.jpg"
+    },
+    {
+      "name": "Ron Perlman",
+      "character": "Stabbington Brother (voice)",
+      "profile_path": "/nfky6J9ueey1gMdWMNU9k9YdfGP.jpg"
+    }
+  ]
+}

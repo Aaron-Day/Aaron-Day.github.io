@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 6278,
+    "title": "Reign of Fire",
+    "overview": "In post-apocalyptic England, an American volunteer and a British survivor team up to fight off a brood of fire-breathing dragons seeking to return to global dominance after centuries of rest underground. The Brit\u2014leading a clan of survivors to hunt down the King of the Dragons\u2014has much at stake: his mother was killed by a dragon, but his love is still alive.",
+    "tagline": "They\u0027re extremely intelligent. Highly evolved. And they don\u0027t like sharing the planet.",
+    "runtime": 101,
+    "release_date": "2002-07-09",
+    "vote_average": 6.224,
+    "poster_path": "/vZVXCj3jXzIPJUHLaQohzt2uTM3.jpg",
+    "backdrop_path": "/gAozjuCvXYyrxhpkb0P4SuLnEkV.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Christian Bale",
+      "character": "Quinn Abercromby",
+      "profile_path": "/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg"
+    },
+    {
+      "name": "Matthew McConaughey",
+      "character": "Denton Van Zan",
+      "profile_path": "/lCySuYjhXix3FzQdS4oceDDrXKI.jpg"
+    },
+    {
+      "name": "Izabella Scorupco",
+      "character": "Alex Jensen",
+      "profile_path": "/Av7fykzXL701au42sTbhufHpwwv.jpg"
+    },
+    {
+      "name": "Gerard Butler",
+      "character": "Creedy",
+      "profile_path": "/i54XoxYieuff2w6MwyfwVUBvmR0.jpg"
+    }
+  ]
+}

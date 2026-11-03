@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11017,
+    "title": "Billy Madison",
+    "overview": "Billy Madison is the 27 year-old son of Bryan Madison, a very rich man who has made his living in the hotel industry. Billy stands to inherit his father\u0027s empire, but only if he can make it through all 12 grades, 2 weeks per grade, to prove that he has what it takes to run the family business.",
+    "tagline": "To inherit his family\u0027s fortune, Billy is going back to school... Way back.",
+    "runtime": 90,
+    "release_date": "1995-02-10",
+    "vote_average": 6.187,
+    "poster_path": "/sOdgtJdFalL9kRKaeJItARLTAEq.jpg",
+    "backdrop_path": "/xtgQkD280doGaFOL3c2LVokz3tt.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Billy Madison",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Bradley Whitford",
+      "character": "Eric Gordon",
+      "profile_path": "/oeDv2qZWTxELLaNtOIoeG72leNY.jpg"
+    },
+    {
+      "name": "Josh Mostel",
+      "character": "Principal Max Anderson",
+      "profile_path": "/zX8vyQ9JdWsr1cmPvvyrw01aPiQ.jpg"
+    },
+    {
+      "name": "Bridgette Wilson",
+      "character": "Veronica Vaughn",
+      "profile_path": "/cnupaYpuHkkXDEHgyd1CsWpTf84.jpg"
+    }
+  ]
+}

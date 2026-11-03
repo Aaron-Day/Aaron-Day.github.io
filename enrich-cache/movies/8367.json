@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8367,
+    "title": "Robin Hood: Prince of Thieves",
+    "overview": "Nobleman crusader Robin of Locksley breaks out of a Jerusalem prison with the help of Moorish fellow prisoner Azeem and travels back home to England. But upon arrival he discovers his dead father in the ruins of his family estate, killed by the vicious sheriff of Nottingham, Robin and Azeem join forces with outlaws Little John and Will Scarlett to save the kingdom from the sheriff\u0027s villainy.",
+    "tagline": "For the good of all men, and the love of one woman, he fought to uphold justice by breaking the law.",
+    "runtime": 143,
+    "release_date": "1991-06-14",
+    "vote_average": 6.857,
+    "poster_path": "/hbRnWUNJkKKVN5mkcuC5ooqjE4e.jpg",
+    "backdrop_path": "/kuLk79GQq8WQb8fZxc6MtvIhPaC.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kevin Costner",
+      "character": "Robin of Locksley / Robin Hood",
+      "profile_path": "/bykmxJHLfbFM3NT05RZXhx8YTzF.jpg"
+    },
+    {
+      "name": "Morgan Freeman",
+      "character": "Azeem",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    },
+    {
+      "name": "Mary Elizabeth Mastrantonio",
+      "character": "Marian",
+      "profile_path": "/vbZ1E557K5oj34xLHR5ErO8wPCi.jpg"
+    },
+    {
+      "name": "Christian Slater",
+      "character": "Will Scarlett",
+      "profile_path": "/6ww3uweEEXMlvtNjTlgBHxLErPF.jpg"
+    }
+  ]
+}

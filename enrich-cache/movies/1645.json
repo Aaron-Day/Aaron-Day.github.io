@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1645,
+    "title": "A Time to Kill",
+    "overview": "A young lawyer defends a black man accused of murdering two white men who raped his 10-year-old daughter, sparking a rebirth of the KKK.",
+    "tagline": "Experience a time you\u0027ll never forget.",
+    "runtime": 149,
+    "release_date": "1996-07-24",
+    "vote_average": 7.393,
+    "poster_path": "/w8UCke112E9jrhjKcwG32kyhTx5.jpg",
+    "backdrop_path": "/bwLQCW6LqmrJ6aJsevypcg93JCU.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matthew McConaughey",
+      "character": "Jake Brigance",
+      "profile_path": "/lCySuYjhXix3FzQdS4oceDDrXKI.jpg"
+    },
+    {
+      "name": "Sandra Bullock",
+      "character": "Ellen Roark",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Carl Lee Hailey",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Kevin Spacey",
+      "character": "Rufus Buckley",
+      "profile_path": "/nPrUZDEbGQe6jwpVbHKJCXsMd7r.jpg"
+    }
+  ]
+}

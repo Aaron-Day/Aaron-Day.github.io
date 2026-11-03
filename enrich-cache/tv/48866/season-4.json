@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Echoes",
+        "overview": "Clarke and her friends struggle with how to proceed after the fate of the world is revealed.",
+        "air_date": "2017-02-01",
+        "runtime": 43,
+        "still_path": "/wTSxOuEkLCCsPCSTOhe84GYPLPp.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Heavy Lies the Crown",
+        "overview": "The burden of leading weighs heavily upon Clarke and Bellamy when different challenges force them to determine who will live and die.",
+        "air_date": "2017-02-08",
+        "runtime": 42,
+        "still_path": "/6S7HePaErvRUSaluljq9tsDyEN6.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Four Horsemen",
+        "overview": "Jaha leads Clarke and Bellamy down a road to possible salvation while tensions rise in Arkadia and Polis.",
+        "air_date": "2017-02-15",
+        "runtime": 41,
+        "still_path": "/5EaRbbNkY7kjJCmUCSjqRNRGXVN.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "A Lie Guarded",
+        "overview": "Continued struggles with leadership and trust in Arkadia and Polis take violent turns while Abby leads a team to a distant location hoping to find answers.",
+        "air_date": "2017-02-22",
+        "runtime": 42,
+        "still_path": "/pwM1E2SsvyFUSmh7BmT68dVdhiR.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Tinder Box",
+        "overview": "Clarke makes a desperate plea with a former allied force in an attempt to avoid a war and ensure the survival of her people.",
+        "air_date": "2017-03-01",
+        "runtime": 40,
+        "still_path": "/ljl7hd4RuicnfrNGhUo8lAtBH4b.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "We Will Rise",
+        "overview": "Clarke and Roan are forced to work together when they are tasked to deliver a dangerous but crucial asset to Abby through enemy territories.",
+        "air_date": "2017-03-15",
+        "runtime": 42,
+        "still_path": "/v131MISmWphOckgxKqDHuEMAHK6.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Gimme Shelter",
+        "overview": "Clarke\u0027s arrival on the island quickly takes a turn for the worse. Meanwhile, Bellamy tries to avoid further tragedy in Arkadia.",
+        "air_date": "2017-03-22",
+        "runtime": 42,
+        "still_path": "/7OVuhckKovYACB4UqTcC9vwmmAl.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "God Complex",
+        "overview": "After a disappointing discovery, Clarke and Abby question how far they\u0027re willing to go. Meanwhile, Jaha finds a lead to the mysterious Second Dawn.",
+        "air_date": "2017-03-29",
+        "runtime": 42,
+        "still_path": "/eLvFhMLKcOuWFzDwGeIXU5b7sDH.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "DNR",
+        "overview": "Jasper and Bellamy go on a quest. Meanwhile, Clarke struggles to keep the peace after word of Jaha\u0027s discovery spreads.",
+        "air_date": "2017-04-26",
+        "runtime": 42,
+        "still_path": "/oMmqZKoC6GTDQFTI1u2rBgEfeCL.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Die All, Die Merrily",
+        "overview": "Octavia fights in the final battle for her people\u0027s survival, but not everyone is willing to play fair.",
+        "air_date": "2017-05-03",
+        "runtime": 42,
+        "still_path": "/hvXDwX9gbqC1rXSsr3LcSVDIaIN.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Other Side",
+        "overview": "Clarke faces the consequences of her fateful choice.",
+        "air_date": "2017-05-10",
+        "runtime": 42,
+        "still_path": "/9sYlQPfDiszPjjSllll5qtKcY4H.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Chosen",
+        "overview": "Jaha and Kane disagree over how to handle their grim reality. Meanwhile, Clarke leads a group to save a friend.",
+        "air_date": "2017-05-17",
+        "runtime": 42,
+        "still_path": "/fAgQ0XBGRunNCJVO9uv0QNXhFLx.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Praimfaya",
+        "overview": "It\u0027s a race against the end of the world as Praimfaya arrives forcing our heroes to make impossible decisions to ensure their survival.",
+        "air_date": "2017-05-24",
+        "runtime": 41,
+        "still_path": "/6eZMGcdGFD4P0c1vXidTOoNwrrt.jpg"
+      }
+    ]
+  }
+}

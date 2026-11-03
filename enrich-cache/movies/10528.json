@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10528,
+    "title": "Sherlock Holmes",
+    "overview": "Eccentric consulting detective Sherlock Holmes and Doctor John Watson battle to bring down a new nemesis and unravel a deadly plot that could destroy England.",
+    "tagline": "Nothing escapes him.",
+    "runtime": 129,
+    "release_date": "2009-12-23",
+    "vote_average": 7.224,
+    "poster_path": "/momkKuWburNTqKBF6ez7rvhYVhE.jpg",
+    "backdrop_path": "/85g84VtSf9tu1A9JqqruXEHspb7.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 102322,
+      "name": "Sherlock Holmes Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robert Downey Jr.",
+      "character": "Sherlock Holmes",
+      "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+    },
+    {
+      "name": "Jude Law",
+      "character": "Dr. John Watson",
+      "profile_path": "/6UadpSbfC39WMChAcdnNunzwDxv.jpg"
+    },
+    {
+      "name": "Rachel McAdams",
+      "character": "Irene Adler",
+      "profile_path": "/2DPh6KoNg0p57vvGc6N468zr3ct.jpg"
+    },
+    {
+      "name": "Mark Strong",
+      "character": "Lord Henry Blackwood",
+      "profile_path": "/3cNmatYsoifytg7TfQhI1EHow3v.jpg"
+    }
+  ]
+}

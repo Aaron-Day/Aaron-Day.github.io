@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 297762,
+    "title": "Wonder Woman",
+    "overview": "An Amazon princess comes to the world of Man in the grips of the First World War to confront the forces of evil and bring an end to human conflict.",
+    "tagline": "Power. Grace. Wisdom. Wonder.",
+    "runtime": 141,
+    "release_date": "2017-05-30",
+    "vote_average": 7.198,
+    "poster_path": "/v4ncgZjG2Zu8ZW5al1vIZTsSjqX.jpg",
+    "backdrop_path": "/AaABt75ZzfMGrscUR2seabz4PEX.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 468552,
+      "name": "Wonder Woman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Gal Gadot",
+      "character": "Diana",
+      "profile_path": "/AbXKtWQwuDiwhoQLh34VRglwuBE.jpg"
+    },
+    {
+      "name": "Chris Pine",
+      "character": "Steve Trevor",
+      "profile_path": "/vSe6sIsdtcoqBhuWRXynahFg8Vf.jpg"
+    },
+    {
+      "name": "Connie Nielsen",
+      "character": "Hippolyta",
+      "profile_path": "/gSQ3O3PJ6ly6nT63joOtfZyscFP.jpg"
+    },
+    {
+      "name": "Robin Wright",
+      "character": "Antiope",
+      "profile_path": "/d3rIv0y2p0jMsQ7ViR7O1606NZa.jpg"
+    }
+  ]
+}

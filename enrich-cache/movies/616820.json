@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 616820,
+    "title": "Halloween Ends",
+    "overview": "Four years after the events of Halloween in 2018, Laurie has decided to liberate herself from fear and rage and embrace life. But when a young man is accused of killing a boy he was babysitting, it ignites a cascade of violence and terror that will force Laurie to finally confront the evil she can\u2019t control, once and for all.",
+    "tagline": "Only one of them will survive.",
+    "runtime": 111,
+    "release_date": "2022-10-12",
+    "vote_average": 6.02,
+    "poster_path": "/q06saepaXeBdkMibuN4R2fXmgIw.jpg",
+    "backdrop_path": "/aTovumsNlDjof7YVoU5nW2RHaYn.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91361,
+      "name": "Halloween Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jamie Lee Curtis",
+      "character": "Laurie",
+      "profile_path": "/eWKubKAAssRzmFwCZKh1mdYqGCH.jpg"
+    },
+    {
+      "name": "Andi Matichak",
+      "character": "Allyson",
+      "profile_path": "/8XGIcVo5flyPKIbaEQiw8cMXgBj.jpg"
+    },
+    {
+      "name": "James Jude Courtney",
+      "character": "The Shape",
+      "profile_path": "/3bE8jZyPaOASww11gOwLP7QW0IY.jpg"
+    },
+    {
+      "name": "Rohan Campbell",
+      "character": "Corey",
+      "profile_path": "/r1PDcoPF1NDvvxwqkOJTrFaT1za.jpg"
+    }
+  ]
+}

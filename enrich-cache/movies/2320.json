@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2320,
+    "title": "Executive Decision",
+    "overview": "Terrorists hijack a 747 inbound to Washington D.C., demanding the release of their imprisoned leader. Intelligence expert David Grant suspects another reason and he is soon the reluctant member of a special assault team that is assigned to intercept the plane and hijackers.",
+    "tagline": "Five miles above the earth, an elite team of six men must make an air to air transfer, in order to save 400 lives on board a 747...and 40 million below.",
+    "runtime": 132,
+    "release_date": "1996-03-15",
+    "vote_average": 6.3,
+    "poster_path": "/hLjXkFr9fHlWzRVwu1T31QSVHRq.jpg",
+    "backdrop_path": "/ct9dN0QUh5SMAexvyQ9IaA7HpOP.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kurt Russell",
+      "character": "David Grant",
+      "profile_path": "/6g1d98oH4miG4k0ZiZWmF3Dt0bO.jpg"
+    },
+    {
+      "name": "Steven Seagal",
+      "character": "Lt. Colonel Austin Travis",
+      "profile_path": "/fGNIEpn3JqOckY3ahnJX9x3qA94.jpg"
+    },
+    {
+      "name": "Halle Berry",
+      "character": "Jean",
+      "profile_path": "/84HRDZodRCuBSpYGSc3ow8WucI4.jpg"
+    },
+    {
+      "name": "John Leguizamo",
+      "character": "Rat",
+      "profile_path": "/kwYCdxTlDh9zauUCg4mp2XTCQTw.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9907,
+    "title": "Barnyard",
+    "overview": "Otis is a mischievous, carefree Holstein cow who lives on a farm where, unbeknownst to humans, the animals are anthropomorphic. He prefers having fun with his best friends: Pip the mouse, Freddy the ferret, Peck the rooster, and Pig the pig - rather than following strict rules and accepting responsibility. But when his adoptive father is killed in a coyote attack, he has a heavy responsibility thrust upon him to become leader of his farm home\u0027s community.",
+    "tagline": "The secret lives of animals revealed!",
+    "runtime": 90,
+    "release_date": "2006-08-04",
+    "vote_average": 5.986,
+    "poster_path": "/qB9jFInwUEb2VLhMeKQX17Vdrnp.jpg",
+    "backdrop_path": "/gwX3SeLU9vX3NYJPDW79Vn8bEJN.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kevin James",
+      "character": "Otis (voice)",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    },
+    {
+      "name": "Courteney Cox",
+      "character": "Daisy (voice)",
+      "profile_path": "/cSOORhCRPJiwKghozXVXrOBi3Tp.jpg"
+    },
+    {
+      "name": "Sam Elliott",
+      "character": "Ben (voice)",
+      "profile_path": "/zE1fpXlIUo7fcujlVlGvHdDiCv6.jpg"
+    },
+    {
+      "name": "Danny Glover",
+      "character": "Miles (voice)",
+      "profile_path": "/7ZyztVlG7OpqD0EhzG8iwYNcd1s.jpg"
+    }
+  ]
+}

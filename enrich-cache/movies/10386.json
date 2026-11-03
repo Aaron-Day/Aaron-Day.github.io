@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10386,
+    "title": "The Iron Giant",
+    "overview": "In the small town of Rockwell, Maine in October 1957, a giant metal machine befriends a nine-year-old boy and ultimately finds its humanity by unselfishly saving people from their own fears and prejudices.",
+    "tagline": "It came from outer space!",
+    "runtime": 86,
+    "release_date": "1999-08-06",
+    "vote_average": 7.966,
+    "poster_path": "/k1Cv5CHJvqGWK1xJDUJz8DojFEy.jpg",
+    "backdrop_path": "/gZ78dyRH9hXeH94ASjuvD9Vw4b5.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jennifer Aniston",
+      "character": "Annie Hughes (voice)",
+      "profile_path": "/PBSCmHDFdCMBhjx0EbXpTw4Z94.jpg"
+    },
+    {
+      "name": "Harry Connick Jr.",
+      "character": "Dean McCoppin (voice)",
+      "profile_path": "/il1t0cshowbZ6mMtH1930baQx9n.jpg"
+    },
+    {
+      "name": "Vin Diesel",
+      "character": "The Iron Giant (voice)",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "James Gammon",
+      "character": "Foreman Marv Loach / Floyd Turbeaux (voice)",
+      "profile_path": "/ar7am7PST1c91LYPYnrmJJxc9zH.jpg"
+    }
+  ]
+}

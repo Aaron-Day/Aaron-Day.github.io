@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 146301,
+    "title": "Paranormal Activity: The Ghost Dimension",
+    "overview": "Using a special camera that can see spirits, a family must protect their daughter from an evil entity with a sinister plan.",
+    "tagline": "For the first time you will see the activity.",
+    "runtime": 87,
+    "release_date": "2015-10-21",
+    "vote_average": 5.3,
+    "poster_path": "/1YpFQ2MQKzlDoa8diLWkapdRI8t.jpg",
+    "backdrop_path": "/fk362aOdhEC6rGAQW082GIbavhO.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 41437,
+      "name": "Paranormal Activity Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris J. Murray",
+      "character": "Ryan",
+      "profile_path": "/6D6TL8SmpECyBYAsYnqtdImU2rG.jpg"
+    },
+    {
+      "name": "Brit Shaw",
+      "character": "Emily",
+      "profile_path": "/bfxu8bpzXc273Uamnviada7rh3y.jpg"
+    },
+    {
+      "name": "Ivy George",
+      "character": "Leila",
+      "profile_path": "/dNN7foEH43717FlKOR0soQ0trc9.jpg"
+    },
+    {
+      "name": "Dan Gill",
+      "character": "Mike",
+      "profile_path": "/5kIX2YA95ixPL95RafnI7UOR2pX.jpg"
+    }
+  ]
+}

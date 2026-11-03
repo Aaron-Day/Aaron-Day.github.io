@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9398,
+    "title": "Zoolander",
+    "overview": "Clear the runway for Derek Zoolander, VH1\u0027s three-time male model of the year. His face falls when hippie-chic Hansel scooters in to steal this year\u0027s award. The evil fashion guru Mugatu seizes the opportunity to turn Derek into a killing machine. It\u0027s a well-designed conspiracy and only with the help of Hansel and a few well-chosen accessories like Matilda can Derek make the world safe for male models everywhere.",
+    "tagline": "3% body fat. 1% brain activity.",
+    "runtime": 89,
+    "release_date": "2001-09-28",
+    "vote_average": 6.233,
+    "poster_path": "/qdrbSneHZjJG2Dj0hhBxzzAo4HB.jpg",
+    "backdrop_path": "/lIyyiBOuyokL82rPEDcZaMKleA3.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 352789,
+      "name": "Zoolander Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Stiller",
+      "character": "Derek Zoolander",
+      "profile_path": "/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg"
+    },
+    {
+      "name": "Owen Wilson",
+      "character": "Hansel",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    },
+    {
+      "name": "Christine Taylor",
+      "character": "Matilda Jeffries",
+      "profile_path": "/oeuYnwazeIJowHUAPfm086P87Gi.jpg"
+    },
+    {
+      "name": "Will Ferrell",
+      "character": "Mugatu",
+      "profile_path": "/yjGbyQzVjpQl8xFkFGa7JxKZWQb.jpg"
+    }
+  ]
+}

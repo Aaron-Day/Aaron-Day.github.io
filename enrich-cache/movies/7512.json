@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7512,
+    "title": "Idiocracy",
+    "overview": "To test its top-secret Human Hibernation Project, the Pentagon picks the most average European-Americans it can find - an Army private and a prostitute - and sends them to the year 2505 after a series of freak events. But when they arrive, they find a civilization so dumbed-down that they\u0027re the smartest people around.",
+    "tagline": "In the future, intelligence is extinct.",
+    "runtime": 85,
+    "release_date": "2006-09-01",
+    "vote_average": 6.386,
+    "poster_path": "/6cTHBq49ApwsJaRr3ojlY1cmiXk.jpg",
+    "backdrop_path": "/9Z4msMhKvNp63sOB1ZvxPMPvqz3.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Luke Wilson",
+      "character": "Joe Bauers",
+      "profile_path": "/nH1h9dZGSBuWIOyX27HpYyYykvr.jpg"
+    },
+    {
+      "name": "Maya Rudolph",
+      "character": "Rita",
+      "profile_path": "/bpEVMFMyHEQ8wLdii9WKB279w8p.jpg"
+    },
+    {
+      "name": "Dax Shepard",
+      "character": "Frito",
+      "profile_path": "/aaUGRjfghjgysn5grVdm8kyYN4V.jpg"
+    },
+    {
+      "name": "Terry Crews",
+      "character": "President Camacho",
+      "profile_path": "/pxTY4SglLo5hFcMH00MxPeC5u55.jpg"
+    }
+  ]
+}

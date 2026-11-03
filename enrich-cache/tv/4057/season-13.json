@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 13,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Wheels Up",
+        "overview": "In the wake of a devastating attack, the BAU works with former International Response Team member Matthew Simmons to save one of their own from escaped serial killer Peter Lewis.",
+        "air_date": "2017-09-27",
+        "runtime": 42,
+        "still_path": "/yONUsV6toyAiFSjMA58d6k8zU8P.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "To a Better Place",
+        "overview": "The BAU investigates three similar crimes in which victims\u0027 remains are discovered in old suitcases.",
+        "air_date": "2017-10-04",
+        "runtime": 42,
+        "still_path": "/oT1LWF4ShEioX7jG3DgejfxlQUF.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Blue Angel",
+        "overview": "When successful businessmen in Detroit are targeted by an anger-driven power-assertive Unsub, the BAU is called in to investigate.",
+        "air_date": "2017-10-11",
+        "runtime": 42,
+        "still_path": "/4yvZRV8oOzHMPoHU5ODUWM621Ue.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Killer App",
+        "overview": "The BAU investigates a workplace shooting committed by a state-of-the-art drone in Silicon Valley.",
+        "air_date": "2017-10-18",
+        "runtime": 42,
+        "still_path": "/kDqlKDKQaV91DWNh7OjV0k1vBti.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Lucky Strikes",
+        "overview": "Morgan lends emotional support to Garcia when she experiences anxiety over a case that is personal to her from her past.",
+        "air_date": "2017-10-25",
+        "runtime": 42,
+        "still_path": "/pgQqCebZOk762ObXKE87KUCL7IE.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Bunker",
+        "overview": "Several women go missing in Virginia and the BAU must figure out what they all have in common in order to find them.",
+        "air_date": "2017-11-08",
+        "runtime": 42,
+        "still_path": "/kUOx0zTquEAW5XYlD1nBC2wM72T.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Dust and Bones",
+        "overview": "The BAU searches for an unsub in Austin, Texas, who is targeting prominent members of the community.",
+        "air_date": "2017-11-15",
+        "runtime": 42,
+        "still_path": "/8HZiPkA57sO5VmzWlZWHc2fNNsi.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Neon Terror",
+        "overview": "When an UnSub in Miami sensationalizes his crimes by giving the local media exclusive footage, the BAU is called in to investigate.",
+        "air_date": "2017-11-22",
+        "runtime": 42,
+        "still_path": "/gpt24wTwdcS2MDxfHbqMb2QuFU4.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "False Flag",
+        "overview": "When two members of a conspiracy group in Roswell, N.M., perish in quick succession, the BAU is called to investigate.",
+        "air_date": "2017-12-06",
+        "runtime": 42,
+        "still_path": "/n3KYF9JvSs9mmLuSSwUGVTp45ll.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Submerged",
+        "overview": "When a series of backyard pool homicides are reported in California, the BAU team searches for an UnSub with a puzzling past.",
+        "air_date": "2018-01-03",
+        "runtime": 42,
+        "still_path": "/1i1QGHtgfnxoDtbx1vmUVbekzzW.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Full-Tilt Boogie",
+        "overview": "The BAU team\u2019s investigation into the home invasion and attempted homicide of a police chief\u2019s wife uncovers a world of secrets in a small town in Virginia.",
+        "air_date": "2018-01-10",
+        "runtime": 42,
+        "still_path": "/wC0yKnHxTKTYLdT2Sfsk3UKF6Ty.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Bad Moon on the Rise",
+        "overview": "The BAU is called to New York when several casualties of a brutal nature are reported in Central Park.",
+        "air_date": "2018-01-17",
+        "runtime": 42,
+        "still_path": "/95uroCXo1bp9Gita9ZbDSNafnSQ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Cure",
+        "overview": "The BAU is called to investigate a series of D.C. homicides where cryptic messages are found inside the mouths of each victim.",
+        "air_date": "2018-01-24",
+        "runtime": 42,
+        "still_path": "/uGqgKAtAwfqbJvZciTd7MeYHUME.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Miasma",
+        "overview": "The BAU is called when the New Orleans P.D. discovers a mass grave inside a vandalized above-ground crypt in a local cemetery.",
+        "air_date": "2018-01-31",
+        "runtime": 42,
+        "still_path": "/xp2gjOzsVsXgiRAxumbRxcloe07.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Annihilator",
+        "overview": "The FBI\u0027s assistant director of national security, Linda Barnes, joins the BAU as they investigate a quadruple homicide of a group of roommates in St. Louis.",
+        "air_date": "2018-03-07",
+        "runtime": 42,
+        "still_path": "/8Y6rW8HVn0PHeBHvmxikPHYRAkP.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Last Gasp",
+        "overview": "Away from the watchful eye of the FBI\u0027s assistant director of national security, Linda Barnes, the BAU meets in secret to investigate an UnSub who appears to be kidnapping and photographing young women.",
+        "air_date": "2018-03-14",
+        "runtime": 42,
+        "still_path": "/nL6z7R2EQcAU4KhqXVzeS1wMZB1.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Capilanos",
+        "overview": "The BAU is called to Oklahoma to investigate a murderous clown terrorizing the sleepy town of Guymon.",
+        "air_date": "2018-03-21",
+        "runtime": 42,
+        "still_path": "/gHnvgH9CNrfrdth5IRQVscfZmcD.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Dance of Love",
+        "overview": "The BAU travels to Chicago to investigate an unsub who leaves red roses on each victim. Also, Rossi gets an unexpected visit from his ex-wife, Krystall Richards.",
+        "air_date": "2018-03-28",
+        "runtime": 42,
+        "still_path": "/2MQDvgTZL6oFgpJMID4aaqsN6GM.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Ex Parte",
+        "overview": "The BAU takes charge of a hostage situation at a law firm in D.C., where Matt Simmons\u2019 wife, Kristy works.",
+        "air_date": "2018-04-04",
+        "runtime": 42,
+        "still_path": "/k4DrD8zw9ioQjMzqiNWIaVd8noB.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "All You Can Eat",
+        "overview": "The BAU is called to investigate a series of deaths in Virginia suspected by the Center for Disease Control to be caused by bio-terrorism; Garcia visits her stepbrother to take care of a family issue.",
+        "air_date": "2018-04-11",
+        "runtime": 42,
+        "still_path": "/8hC8waQZmK4ciRSpsGX3KXbnEj6.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Mixed Signals",
+        "overview": "The BAU is called to Taos, N.M. to investigate an UnSub who is targeting his victims\u0027 temporal lobes.",
+        "air_date": "2018-04-18",
+        "runtime": 42,
+        "still_path": "/aD23xnDy3i1enpZMYjE5gYkAmNr.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Believer",
+        "overview": "When Reid discovers former FBI Special Agent Owen Quinn locked inside a storage unit, the BAU questions the credibility of Quinn\u0027s bizarre accounts of searching for an UnSub that he named \u0022The Strangler\u0022.",
+        "air_date": "2018-04-18",
+        "runtime": 42,
+        "still_path": "/l5mAHFdR2sqLwEJSEhb32a1rUcH.jpg"
+      }
+    ]
+  }
+}

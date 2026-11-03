@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 217,
+    "title": "Indiana Jones and the Kingdom of the Crystal Skull",
+    "overview": "Set during the Cold War, the Soviets\u2014led by sword-wielding Irina Spalko\u2014are in search of a crystal skull which has supernatural powers related to a mystical Lost City of Gold. Indy is coerced to head to Peru at the behest of a young man whose friend\u2014and Indy\u0027s colleague\u2014Professor Oxley has been captured for his knowledge of the skull\u0027s whereabouts.",
+    "tagline": "The adventure continues...",
+    "runtime": 122,
+    "release_date": "2008-05-21",
+    "vote_average": 6.028,
+    "poster_path": "/56As6XEM1flWvprX4LgkPl8ii4K.jpg",
+    "backdrop_path": "/p96949hcwUG2BwE6MgKmw0uYNCx.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 84,
+      "name": "Indiana Jones Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "Indiana Jones",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Cate Blanchett",
+      "character": "Irina Spalko",
+      "profile_path": "/1Rd567YFdGfkJjSlhNPR8joYkaX.jpg"
+    },
+    {
+      "name": "Karen Allen",
+      "character": "Marion Ravenwood",
+      "profile_path": "/eJszpndpRzrXbSlz7RUlApoTykn.jpg"
+    },
+    {
+      "name": "Shia LaBeouf",
+      "character": "Mutt Williams",
+      "profile_path": "/egvlIdeizCkSkuHVoDuuduIThFA.jpg"
+    }
+  ]
+}

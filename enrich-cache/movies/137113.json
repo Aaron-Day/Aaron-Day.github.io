@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 137113,
+    "title": "Edge of Tomorrow",
+    "overview": "Major Bill Cage is an officer who has never seen a day of combat when he is unceremoniously demoted and dropped into combat. Cage is killed within minutes, managing to take an alpha alien down with him. He awakens back at the beginning of the same day and is forced to fight and die again... and again - as physical contact with the alien has thrown him into a time loop.",
+    "tagline": "Live. Die. Repeat.",
+    "runtime": 114,
+    "release_date": "2014-05-27",
+    "vote_average": 7.6,
+    "poster_path": "/nBM9MMa2WCwvMG4IJ3eiGUdbPe6.jpg",
+    "backdrop_path": "/4V1yIoAKPMRQwGBaSses8Bp2nsi.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Cage",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Emily Blunt",
+      "character": "Rita",
+      "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+    },
+    {
+      "name": "Brendan Gleeson",
+      "character": "General Brigham",
+      "profile_path": "/ctPPJu5ZYDZr1IPmzoNpezczrm0.jpg"
+    },
+    {
+      "name": "Bill Paxton",
+      "character": "Master Sergeant Farell",
+      "profile_path": "/aLdNe6mt1cSi2zWlUYRregzfis5.jpg"
+    }
+  ]
+}

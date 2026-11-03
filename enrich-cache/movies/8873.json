@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8873,
+    "title": "Wayne\u0027s World 2",
+    "overview": "A message from Jim Morrison in a dream prompts cable access TV stars Wayne and Garth to put on a rock concert, \u0022Waynestock,\u0022 with Aerosmith as headliners. But amid the preparations, Wayne frets that a record producer is putting the moves on his girlfriend, Cassandra, while Garth handles the advances of mega-babe Honey Horn\u00E9e.",
+    "tagline": "You\u0027ll laugh again! You\u0027ll cry again!! You\u0027ll hurl again!!!",
+    "runtime": 95,
+    "release_date": "1993-12-10",
+    "vote_average": 6.103,
+    "poster_path": "/72TBNPN06oo1myHqihwcCQVDl48.jpg",
+    "backdrop_path": "/lehbmczbRb97gpufaAy6NFRSaUP.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8979,
+      "name": "Wayne\u0027s World Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mike Myers",
+      "character": "Wayne Campbell",
+      "profile_path": "/gjfDl52Kk02MPgUYFjs9bOy33OY.jpg"
+    },
+    {
+      "name": "Dana Carvey",
+      "character": "Garth Algar",
+      "profile_path": "/qlb0apjFhoQ9UwCcvzrLm1mTIx0.jpg"
+    },
+    {
+      "name": "Christopher Walken",
+      "character": "Bobby Cahn",
+      "profile_path": "/ApgDL7nudR9T2GpjCG4vESgymO2.jpg"
+    },
+    {
+      "name": "Tia Carrere",
+      "character": "Cassandra Wong",
+      "profile_path": "/vNpUUXtTcU9svzOZS4x4is669vc.jpg"
+    }
+  ]
+}

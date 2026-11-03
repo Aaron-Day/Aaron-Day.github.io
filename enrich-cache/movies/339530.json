@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 339530,
+    "title": "Tremors 5: Bloodlines",
+    "overview": "When Gummer is hired to capture a deadly creature terrorizing South Africa, he and his new sidekick, Travis Welker, engage in another battle of survival against the fiercely aggressive Graboids.",
+    "tagline": "",
+    "runtime": 99,
+    "release_date": "2015-10-06",
+    "vote_average": 5.549,
+    "poster_path": "/xGoCQeYGW63Is0iaAxVEcpCFNwY.jpg",
+    "backdrop_path": "/7dp89ED6xDTNYMIHOzRXbr9niQQ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91799,
+      "name": "Tremors Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael Gross",
+      "character": "Burt Gummer",
+      "profile_path": "/467FG7f1rXkG9ZzU8IumVkBHi0v.jpg"
+    },
+    {
+      "name": "Jamie Kennedy",
+      "character": "Travis Welker",
+      "profile_path": "/ipfv0IU3VYGOz5OBmi9WJi5autF.jpg"
+    },
+    {
+      "name": "Pearl Thusi",
+      "character": "Dr. Nandi Montabu",
+      "profile_path": "/fQ3NvEYj7ocRYVM3U9GVEU0CQHg.jpg"
+    },
+    {
+      "name": "Rea Rangaka",
+      "character": "Baruti",
+      "profile_path": "/7Y11HcZRde0qccJpHlVw0PuK7Lj.jpg"
+    }
+  ]
+}

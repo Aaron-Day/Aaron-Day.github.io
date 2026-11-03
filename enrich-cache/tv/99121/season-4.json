@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Quiet",
+        "overview": "It\u0027s Walker\u0027s birthday and Geri is pulling out all the stops, but her plans are thwarted.",
+        "air_date": "2024-04-03",
+        "runtime": 43,
+        "still_path": "/bAqcikT8BeGM3t0nF2kaxubdmG0.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Maybe It\u0027s Maybelline",
+        "overview": "Walker, Cassie and Trey are charged with keeping an 80-year-old grandmother and witness safe.",
+        "air_date": "2024-04-10",
+        "runtime": 42,
+        "still_path": "/rDs5rW5lwZuAKalk2nWj9iHbDBq.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Lessons from the Gift Shop",
+        "overview": "Trey and Liam try to help Walker figure out his next steps with Geri; Liam confides in Walker.",
+        "air_date": "2024-04-17",
+        "runtime": 40,
+        "still_path": "/bd5SoKNQPudyzmLiTpVNovKEstF.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Insane B.S. and Bloodshed",
+        "overview": "Walker\u0027s lies about the Jackal case finally catch up to him; Stella makes a shocking realization.",
+        "air_date": "2024-04-24",
+        "runtime": 42,
+        "still_path": "/z8eTekdo16pq4FWRdkxj8vL6O6G.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "We\u0027ve Been Here Before",
+        "overview": "Geri is presented with an interesting offer, and Liam jumps in to help.",
+        "air_date": "2024-05-01",
+        "runtime": 42,
+        "still_path": "/stHZecgOdZ6EI1r9WRewERV5yAB.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "We All Fall Down",
+        "overview": "Walker, Trey and Cassie prepare for what Captain James has in store for them at HQ.",
+        "air_date": "2024-05-08",
+        "runtime": 43,
+        "still_path": "/laWjjQ6gHNIsjPRkrfIVkkUtCqY.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Hold Me Now",
+        "overview": "Stella goes to Bonham for self-defense training; August excels in his boot camp training.",
+        "air_date": "2024-05-15",
+        "runtime": 42,
+        "still_path": "/tAItGb4RH64tOYIaaooDejnpjus.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Witt\u0027s End",
+        "overview": "Stella continues her search for the necklace and starts putting together the pieces of the mystery.",
+        "air_date": "2024-05-22",
+        "runtime": 41,
+        "still_path": "/gXJTyqZIoOMu7T1Uix6Ry8hjItz.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "A History of Horrors and Other Tales",
+        "overview": "James, Cassie and Trey appear to make some headway in their investigation.",
+        "air_date": "2024-05-29",
+        "runtime": 42,
+        "still_path": "/vAKcdltf10VUrtzbKY4Bpq5HWll.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "End This Way",
+        "overview": "Walker sets out on a mission; August opens up to Geri and Liam; Luna introduces Cassie to a friend.",
+        "air_date": "2024-06-05",
+        "runtime": 42,
+        "still_path": "/6Fs5V1bRm1lqmimhvHABJiJgaAE.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Let\u0027s Go, Let\u0027s Go",
+        "overview": "Cassie, James, Trey and Luna start to put together the pieces of the Jackal case.",
+        "air_date": "2024-06-12",
+        "runtime": 42,
+        "still_path": "/hx6dYEMDZSSwa0TqyqCCI46lnwM.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Letting Go",
+        "overview": "Geri is upset with Walker for not opening up to her; Cassie, Trey and James conduct more interviews.",
+        "air_date": "2024-06-19",
+        "runtime": 43,
+        "still_path": "/2uZGtj25RpT2F7byd5XoVUfPhpn.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "See You Sometime",
+        "overview": "Walker tries to make up for lost time and wants to be what Geri deserves. Cassie and Trey have their final interviews for the lieutenant position. Captain James advises Cassie and Trey. Stella discusses with Liam what she may want for her future. Bonham and Abby admit to each other what they really want for the next phase of their lives. August\u0027s graduation brings everyone together to celebrate.",
+        "air_date": "2024-06-26",
+        "runtime": 45,
+        "still_path": "/7OVs3MVS4sB7WRVM7gl4SMt252k.jpg"
+      }
+    ]
+  }
+}

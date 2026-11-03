@@ -1,0 +1,264 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 16,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Welcome to the Jungle (1)",
+        "overview": "Theo, Lily and rookie Casey are chosen to become the latest guardians of Dai Shi, an ancient imprisoned spirit.",
+        "air_date": "2008-02-18",
+        "runtime": 22,
+        "still_path": "/8gFwNvnuLjEyM8fvI9fsxZ4pnMs.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Welcome to the Jungle (2)",
+        "overview": "With Mantor still plaguing the city, the Rangers are in desperate need of learning the ability to bring themselves up to his size.",
+        "air_date": "2008-02-18",
+        "runtime": 22,
+        "still_path": "/yhShY4Hat3agNSEYua689RdC1w8.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Sigh of the Tiger",
+        "overview": "Casey requests extra training from RJ, the spirit of the buffalo is harnessed for evil, and Fran protects the pizza parlor from a children\u0027s party.",
+        "air_date": "2008-02-25",
+        "runtime": 22,
+        "still_path": "/zloJMnvUdHVEhTtIY6Sd5VclOyn.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "A Taste of Poison",
+        "overview": "The Five Fingers of Poison are brought forth by Dai Shi, who doubly stuns the Rangers by finally revealing his human form to be the face of Jarrod.",
+        "air_date": "2008-03-03",
+        "runtime": 22,
+        "still_path": "/wYyCQbzSgdmqEp9y6MLE8kDYTyJ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Can\u0027t Win Them All",
+        "overview": "The second Finger of Poison, Gakko, uses his wall-sticking skills to humiliate the Rangers when they try to face him on his own turf.",
+        "air_date": "2008-03-10",
+        "runtime": 22,
+        "still_path": "/fl3Uax6pqgoWMROP2beSWDGQiwx.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Dance the Night Away",
+        "overview": "The friendship between Theo and Lily is tested by the Yellow Ranger\u0027s budding platonic relationship with Casey.",
+        "air_date": "2008-03-17",
+        "runtime": 22,
+        "still_path": "/uY9BtoM73cS4dqSzLPhZcNjmc0C.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Pizza Slice of Life",
+        "overview": "With RJ out of town, Casey is left in charge of Jungle Karma Pizza. Instead of asserting himself as the boss, he creates chaos in the pizza parlor.",
+        "air_date": "2008-03-24",
+        "runtime": 22,
+        "still_path": "/3peo4B6BuIybwctnerkqsZUF4rf.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Way of the Master",
+        "overview": "The heavily armored Pangolin proves to be too tough of a nut for the Rangers to crack. Their only hope is a powerful weapon called the Jungle Mace.",
+        "air_date": "2008-03-31",
+        "runtime": 22,
+        "still_path": "/uMR7t2XUuyYyqzP3sO1sO42hPyY.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Good Karma, Bad Karma",
+        "overview": "Casey loses his $5 tip to a young boy named Josh, who wants to buy himself a kite.",
+        "air_date": "2008-04-21",
+        "runtime": 22,
+        "still_path": "/9ZX0D85nJLzmJJz0V8ZYHX6mrb9.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Blind Leading the Blind",
+        "overview": "Theo spreads his focus too thin, leading his teammates to question his effectiveness in battle. Blind Master Swoop teaches him Bat Spirit techniques.",
+        "air_date": "2008-04-27",
+        "runtime": 22,
+        "still_path": "/4AJUKStZDETBDYUPGSXZESXv9YX.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Pushed to the Edge",
+        "overview": "Believing that Carnisoar\u0027s training methods are too harsh, Camille decides to find him a new master and revives Jellica, the Sea Overlord.",
+        "air_date": "2008-05-05",
+        "runtime": 22,
+        "still_path": "/nn81SF5xGT60N3FIDWC0zXtFRKe.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "One Master Too Many",
+        "overview": "Casey anxiously awaits the arrival of his second master, but RJ begins to feel forgotten as a result.",
+        "air_date": "2008-05-12",
+        "runtime": 22,
+        "still_path": "/y1ipe212edRFe2ji6uIdfua2RXK.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Ghost of a Chance (1)",
+        "overview": "After another victorious battle against Camille\u0027s monsters, the Rangers feel they are unstoppable. But RJ warns them about being overconfident.",
+        "air_date": "2008-05-19",
+        "runtime": 22,
+        "still_path": "/eMmqtR5v0kU3lvHWnD5PqsaLFqh.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Ghost of a Chance (2)",
+        "overview": "With RJ captured, the Rangers must travel to the spirit world to find the last three remaining masters.",
+        "air_date": "2008-05-19",
+        "runtime": 22,
+        "still_path": "/dbqhaQdssDaBTHHHCFgoexQuE0S.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Bad to the Bone",
+        "overview": "Everyone makes fun of Lily for being too nice. Lily gets fed up and starts to show her bad side, refusing to help the other Rangers.",
+        "air_date": "2008-06-02",
+        "runtime": 22,
+        "still_path": "/qMbomC4qbGys2D2GfgUKTdZmz1k.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Friends Don\u0027t Fade Away",
+        "overview": "After his last battle, RJ has major problems controlling his animal spirit. He turns into a werewolf and becomes a big threat to anyone around him.",
+        "air_date": "2008-06-16",
+        "runtime": 22,
+        "still_path": "/acLF7KdauFWIVmh1c0AIZOpzk8t.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "No \u0022I\u0022 in Leader",
+        "overview": "Casey really has grown and stepped up to being the leader of the group. But now, with RJ as a Ranger, Casey feels like a cub all over again.",
+        "air_date": "2008-06-23",
+        "runtime": 22,
+        "still_path": "/v3KhE5urxcW5x6OX51CPBfZdQvK.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "True Friends, True Spirits",
+        "overview": "Grizzaka sends an evil spirit to cause trouble between RJ and his animal spirit again. The hero in RJ causes him to save Flit.",
+        "air_date": "2008-06-30",
+        "runtime": 22,
+        "still_path": "/oiMqXNkc513nK67nj4b12bHh7DC.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Path of the Rhino",
+        "overview": "Dominic was sent out by Master Mao to find purpose for his life. He finds out that RJ and the others are Power Rangers and he wants to join them.",
+        "air_date": "2008-07-07",
+        "runtime": 22,
+        "still_path": "/3QupTmvkBcona7mQaJ4GG8lYxkb.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Dash for the Dagger",
+        "overview": "Jarrod has found the Rhino Nexus. Dominic is startled by a dream telling him to protect the Control Dagger, as it holds the key to his destiny.",
+        "air_date": "2008-07-14",
+        "runtime": 22,
+        "still_path": "/2kF6I4Fy0gIDyGbVfCuERsdx0E0.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Race to the Nexus",
+        "overview": "The Overlords won\u0027t grant the Nexus to the Rangers. Yet, having searched all his life for his destiny, Dominic won\u0027t let them stand in his way.",
+        "air_date": "2008-07-21",
+        "runtime": 22,
+        "still_path": "/enRe4ccfrxU8ozzDqqayksCIwRB.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Arise the Crystal Eyes",
+        "overview": "The Phantom Beasts were a notorious force in the Beast Wars. The crystal eyes hold the power to bring back these Phantom Beasts.",
+        "air_date": "2008-07-28",
+        "runtime": 22,
+        "still_path": "/xohyYvA4WtWsHwoIXNz4OiRRBwT.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Fear and the Phantoms",
+        "overview": "The Phantom Beasts have been brought back to life. Dai Shi has them prove their loyalty by capturing the three masters.",
+        "air_date": "2008-08-04",
+        "runtime": 22,
+        "still_path": "/b6R6cjM4hsjSEEd5bAz4iG3ukG3.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Blue Ranger, Twin Danger",
+        "overview": "The Phantom Beasts call forth the Spirit Rangers, who look and fight exactly like Power Rangers. Our heroes are in for a real fight!",
+        "air_date": "2008-08-11",
+        "runtime": 22,
+        "still_path": "/9BscYObwr0SkMZFynAWFeasU4r7.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "One Last Second Chance",
+        "overview": "To stop the Spirit Rangers, RJ risks destroying his father. Trusting his instincts, he finds that his dad was prepared if this should happen.",
+        "air_date": "2008-08-18",
+        "runtime": 22,
+        "still_path": "/5Dcyi5iIAIzt6prNj5ULkFUnmKD.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Don\u0027t Blow That Dough",
+        "overview": "The Rangers get sucked into a cheesy game show about the past season. Camille hosts the game show and a wrong answer could result in being canceled!",
+        "air_date": "2008-09-29",
+        "runtime": 22,
+        "still_path": "/uih1550zvJESjT8jRErSjj1J6Uz.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Tigers Fall, Lions Rise",
+        "overview": "Dai Shi becomes the Phantom Beast King. Weakened with the loss of his spirit, Casey must summon all the energy he has left to stay alive.",
+        "air_date": "2008-10-06",
+        "runtime": 22,
+        "still_path": "/lEB9DoHkvf5yNnhBuOwyF3ZIvO1.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "The Spirit of Kindness",
+        "overview": "Whiger was only able to steal the Tiger Spirit from Casey, but not destroy Casey. For his failure, Dai Shi strips him of his power.",
+        "air_date": "2008-10-13",
+        "runtime": 22,
+        "still_path": "/44Rb1txt4KqnpD8ZLPw1S2Dsvc2.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Maryl and the Monkeys",
+        "overview": "Camille steals a cloning formula from Maryl. The monkeys duplicate and Camille\u0027s plan just might work, but Scorch and Snapper sabotage her plan.",
+        "air_date": "2008-10-20",
+        "runtime": 22,
+        "still_path": "/A6tmA7jP7Lbp5UvyCZVhKmOLKEM.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "To Earn Your Stripes",
+        "overview": "The day has arrived for the three to get their master stripes. Lily and Theo pass the test to become masters. Casey does not.",
+        "air_date": "2008-10-27",
+        "runtime": 22,
+        "still_path": "/jIyVlBKmeoqLYEMV9ZQJ0wxiDRj.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Path of the Righteous",
+        "overview": "Nobody believes him, but Casey knows that Jarrod still lives inside of Dai Shi. He goes off on his own to save Jarrod.",
+        "air_date": "2008-11-03",
+        "runtime": 22,
+        "still_path": "/b5GsnF80A0pZJiO8FKBAnos8xSP.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Now the Final Fury",
+        "overview": "A new war is about to begin as Dai Shi opens a vortex and resurrects all his fallen warriors. Outnumbered, the Rangers do their best to battle evil.",
+        "air_date": "2008-11-03",
+        "runtime": 22,
+        "still_path": "/qva94HCZ63QsvcvU6yB3WCCXAwP.jpg"
+      }
+    ]
+  }
+}

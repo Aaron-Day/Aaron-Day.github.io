@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1894,
+    "title": "Star Wars: Episode II - Attack of the Clones",
+    "overview": "Following an assassination attempt on Senator Padm\u00E9 Amidala, Jedi Knights Anakin Skywalker and Obi-Wan Kenobi investigate a mysterious plot into the heart of the Separatist movement and the beginning of the Clone Wars.",
+    "tagline": "A Jedi shall not know anger. Nor hatred. Nor love.",
+    "runtime": 142,
+    "release_date": "2002-05-15",
+    "vote_average": 6.597,
+    "poster_path": "/oZNPzxqM2s5DyVWab09NTQScDQt.jpg",
+    "backdrop_path": "/cxvr2IOTwHcQa3EqMoQ8RHCkqBG.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10,
+      "name": "Star Wars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Hayden Christensen",
+      "character": "Anakin Skywalker",
+      "profile_path": "/hqEgJYEUvZvL9ytmmiYBbbt63qd.jpg"
+    },
+    {
+      "name": "Ewan McGregor",
+      "character": "Obi-Wan Kenobi",
+      "profile_path": "/q2UDxfwWnmXTB7khOUF3J9puBVP.jpg"
+    },
+    {
+      "name": "Natalie Portman",
+      "character": "Padm\u00E9 Amidala",
+      "profile_path": "/edPU5HxncLWa1YkgRPNkSd68ONG.jpg"
+    },
+    {
+      "name": "Christopher Lee",
+      "character": "Count Dooku",
+      "profile_path": "/dA26fBr3t7mKqjn3OYW6kbD1LXM.jpg"
+    }
+  ]
+}

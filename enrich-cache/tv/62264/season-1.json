@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "El Jefe",
+        "overview": "Ash is baaack! 30 years after his last Deadite fight, badass monster fighter Ash Williams unleashes the Evil in an act of stupidity, bringing Deadite mayhem into his life again.",
+        "air_date": "2015-10-31",
+        "runtime": 41,
+        "still_path": "/jjn4rqMeqKJpf1PVEGsZeSHLYMZ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Bait",
+        "overview": "Special Agent Fisher is tracking Ash. Pablo gets his first taste of blood in a manic battle, and a revelation changes Kelly\u2019s life forever.",
+        "air_date": "2015-11-07",
+        "runtime": 28,
+        "still_path": "/86qwh6frw46DMY2vACACSRCLoGS.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Books from Beyond",
+        "overview": "A mysterious woman finds the destruction at Kelly\u2019s parents\u2019 farm. Meanwhile, Ash, Pablo and Kelly reach Books from Beyond with the Necronomicon and Fisher finds herself in another terrifying, inexplicable situation.",
+        "air_date": "2015-11-14",
+        "runtime": 28,
+        "still_path": "/kbR1K3A3nl6Km0bb9bSP46cZh4h.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Brujo",
+        "overview": "Ruby helps Fisher and reveals her family\u2019s connection to the Evil Dead. Ash and team follow a clue from the demon Eligos, but Kelly pays a price.",
+        "air_date": "2015-11-21",
+        "runtime": 29,
+        "still_path": "/iqGOflN5tGuqRPiQ0xAEwkNpXEI.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Host",
+        "overview": "Kelly\u2019s current state puts others in jeopardy. This forces Pablo to make a brave move and Ash to reveal a new side to his character. Ruby and Fisher join forces in pursuit of Ash.",
+        "air_date": "2015-11-28",
+        "runtime": 27,
+        "still_path": "/quEuKLrnIATUAhwD2Fd4rPBc9Dc.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Killer of Killers",
+        "overview": "Thanks to his drug-induced vision, Ash knows what to do with the Necronomicon. Pablo and Kelly notice something ominous. Ash promises to visit Lem, but Fisher shows up for an almighty showdown with her former boss.",
+        "air_date": "2015-12-05",
+        "runtime": 26,
+        "still_path": "/qmvZYpNcBb6xHofAf3wUNrCpq9e.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Fire in the Hole",
+        "overview": "Ash, Pablo and Kelly, now joined by Fisher, arrive at the survivalist camp in the midst of chaos and must go to extreme measures to escape. Meanwhile, more is revealed of Ruby\u2019s mission.",
+        "air_date": "2015-12-12",
+        "runtime": 26,
+        "still_path": "/wwxL9nL7Whvns08L9JHfQADLNMH.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Ashes to Ashes",
+        "overview": "Ash attempts to bury the book to end the Evil, but first he must contend with other, more physical things from his past. Fisher faces a horrific change in Ash.",
+        "air_date": "2015-12-19",
+        "runtime": 27,
+        "still_path": "/tgXx94YHx2jNx9ncTvjekPIAa2L.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Bound in Flesh",
+        "overview": "Ash battles someone all too familiar, and later hears a message from the Necronomicon. Meanwhile, the deadliest Deadite attacks.",
+        "air_date": "2015-12-26",
+        "runtime": 28,
+        "still_path": "/ka06pRSe84krCyBQGJsdbbEotA0.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Dark One",
+        "overview": "A  last ditch effort to rid the world of Evil could leave Ash a changed man, as well as changing mankind forever.",
+        "air_date": "2016-01-02",
+        "runtime": 35,
+        "still_path": "/bKrPWl7u8T7X8ZMzuLSYTO2b5Kn.jpg"
+      }
+    ]
+  }
+}

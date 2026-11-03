@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 377,
+    "title": "A Nightmare on Elm Street",
+    "overview": "Teenagers in a small town are dropping like flies, apparently in the grip of mass hysteria causing their suicides. A cop\u0027s daughter, Nancy Thompson, traces the cause to child molester Fred Krueger, who was burned alive by angry parents many years before. Krueger has now come back in the dreams of his killers\u0027 children, claiming their lives as his revenge. Nancy and her boyfriend, Glen, must devise a plan to lure the monster out of the realm of nightmares and into the real world...",
+    "tagline": "If Nancy doesn\u0027t wake up screaming, she won\u0027t wake up at all.",
+    "runtime": 91,
+    "release_date": "1984-11-09",
+    "vote_average": 7.4,
+    "poster_path": "/wGTpGGRMZmyFCcrY2YoxVTIBlli.jpg",
+    "backdrop_path": "/nzSjTiecdosBfwMGAdpt9CxltCI.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8581,
+      "name": "A Nightmare on Elm Street Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Heather Langenkamp",
+      "character": "Nancy Thompson",
+      "profile_path": "/1v3qxca6jvgTAo0T1CqC64DDpbK.jpg"
+    },
+    {
+      "name": "Robert Englund",
+      "character": "Fred Krueger",
+      "profile_path": "/cjGEkiavinHa1dnetDvnEhlD2Wm.jpg"
+    },
+    {
+      "name": "Johnny Depp",
+      "character": "Glen Lantz",
+      "profile_path": "/k2xt6EUxQDwYRKIyI4IBdZxfs8n.jpg"
+    },
+    {
+      "name": "Amanda Wyss",
+      "character": "Tina Gray",
+      "profile_path": "/9vSHplyPkPVyBo7OjdWTOVgYumn.jpg"
+    }
+  ]
+}

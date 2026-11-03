@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Child",
+        "overview": "Stardate: 42073.1. Troi undergoes a mysterious pregnancy when the Enterprise tries to escape from a system that has recently fallen victim to a deadly plague.",
+        "air_date": "1988-11-21",
+        "runtime": 46,
+        "still_path": "/uY8hu899b7Zz7ueYmiYZ8OzpNaI.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Where Silence Has Lease",
+        "overview": "Stardate: 42193.6. A mysterious life form known as the \u0027Nagilum\u0027 threatens the life of the crew in his attempt to understand humanity.",
+        "air_date": "1988-11-28",
+        "runtime": 46,
+        "still_path": "/ckD1WFbehdYqi6SJfQUW5y4AxdA.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Elementary, Dear Data",
+        "overview": "Stardate: 42286.3. Data and Geordi become involved with a holodeck program about Sherlock Holmes and his investigations, when they create Sherlock\u0027s arch nemesis, Moriarty; however, modifications to the Moriarty character include the capability of out-smarting Data, which leads to some unexpected consequences.",
+        "air_date": "1988-12-05",
+        "runtime": 46,
+        "still_path": "/oXlgCMXPLbvjb2q2k0rN8qXHryh.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Outrageous Okona",
+        "overview": "Stardate: 42402.7. The Enterprise is placed in a compromising situation when the captain of a disabled starship places the crew in the middle of a love triangle.",
+        "air_date": "1988-12-12",
+        "runtime": 46,
+        "still_path": "/3dVyuT7MdxMajD4ZZ39fxpzuI2a.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Loud as a Whisper",
+        "overview": "Stardate: 42477.2. A deaf-mute mediator meets with disaster while being escorted by the Enterprise.",
+        "air_date": "1989-01-09",
+        "runtime": 46,
+        "still_path": "/cYiMgSqZxy7e1pvnTaOWTAR0P0c.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Schizoid Man",
+        "overview": "Stardate: 42437.5. Data is possessed by the consciousness of a brilliant scientist. However, it has a disturbing impact on Data\u0027s personality.",
+        "air_date": "1989-01-23",
+        "runtime": 46,
+        "still_path": "/tVFOetrLjdNGbI1XiUL41vMJ64J.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Unnatural Selection",
+        "overview": "Stardate: 42494.8. A mysterious hyper-ageing sickness kills the crew of a Federation cargo ship, and Dr. Pulaski must race against time to find a cure.",
+        "air_date": "1989-01-30",
+        "runtime": 45,
+        "still_path": "/WBVNHTqOzCtImarNMXpgcavNgJ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "A Matter of Honor",
+        "overview": "Commander Riker participates in an officer\u0027s exchange program which lands him an assignment on a Klingon Bird-of-Prey.  Meanwhile, a Bezite ensign has trouble assimilating to the routines of the Enterprise.",
+        "air_date": "1989-02-06",
+        "runtime": 46,
+        "still_path": "/5jfiXTsWXVpRZ3n57CFW6IXQ8Pu.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Measure of a Man",
+        "overview": "Stardate: 42523.7. When Data\u0027s rights as a sentient individual are placed under trial, Starfleet forces Riker into a position where he must prove that Data is only an Android.",
+        "air_date": "1989-02-13",
+        "runtime": 46,
+        "still_path": "/6aL9k5NktAIZH22AV1lpmOkDhop.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Dauphin",
+        "overview": "Stardate: 42568.8. Wesley falls in love with a passenger the Enterprise is escorting, who has the secret ability to shape-shift.",
+        "air_date": "1989-02-20",
+        "runtime": 46,
+        "still_path": "/vbPX8M4ZiBSHI2LbFDJpCfyQYXC.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Contagion",
+        "overview": "Stardate: 42609.1. A strange power source disables the Enterprise\u0027s computer systems, damages Data\u0027s programming and leaves the ship and crew vulnerable to a Romulan attack.",
+        "air_date": "1989-03-20",
+        "runtime": 46,
+        "still_path": "/7ZpxyjlZfgviLx5Ajc1QdHP75WA.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Royale",
+        "overview": "Stardate: 42625.4. An away team is trapped in an alien environment based around a novel entitled \u0027The Hotel Royale.\u0027",
+        "air_date": "1989-03-27",
+        "runtime": 46,
+        "still_path": "/kKps2wj1WwTReUqTgo4REvOfM1T.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Time Squared",
+        "overview": "Stardate: 42679.2. Picard encounters his double from six hours in the future, whose Enterprise had been destroyed.",
+        "air_date": "1989-04-03",
+        "runtime": 46,
+        "still_path": "/kqF81z2mMzDIkeLpHQa94rNpkZb.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Icarus Factor",
+        "overview": "Stardate: 42686.4. Riker is promoted to Captain of another Federation ship. Worf must confront his past and his Klingon heritage.",
+        "air_date": "1989-04-24",
+        "runtime": 46,
+        "still_path": "/ffTMcPms5gqGM3UiFgErQodTCCC.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Pen Pals",
+        "overview": "Stardate: 42695.3. Wesley must investigate the causes of strange tectonic activity on the planet where Data\u0027s pen pal lives.",
+        "air_date": "1989-05-01",
+        "runtime": 46,
+        "still_path": "/qH9CgijwOUzfC9hvRHALPYAQaef.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Q Who",
+        "overview": "Stardate: 42761.3. Q hurls the Enterprise into the Delta Quadrant and introduces the Federation to a powerful new enemy that may destroy the Alpha Quadrant: The Borg.",
+        "air_date": "1989-05-08",
+        "runtime": 46,
+        "still_path": "/7mp2AGdizeDFGSmNRG1dcAcCMJg.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Samaritan Snare",
+        "overview": "Stardate: 42779.1. A race known as the Pakleds kidnap Geordi La Forge. Picard must face surgery when he is left in a near-dead state.",
+        "air_date": "1989-05-15",
+        "runtime": 46,
+        "still_path": "/5P7eE2ULzIPByMLbNi2X4PY0O6C.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Up the Long Ladder",
+        "overview": "Stardate: 42823.2. Picard must convince two dying civilizations that they must co-exist on the same planet to survive, however, they have other plans to ensure their survival: in the form of clones of the Enterprise crew.",
+        "air_date": "1989-05-22",
+        "runtime": 46,
+        "still_path": "/2vpwjO0b8cgEGJ6npAVcenRjAmc.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Manhunt",
+        "overview": "Stardate: 42859.2. While being escorted to a Federation conference by the Enterprise, Lwaxana hunts for a man to satisfy her needs when her sex-drive is quadrupled during a natural mid-life cycle.",
+        "air_date": "1989-06-19",
+        "runtime": 46,
+        "still_path": "/h9jEYRTi0ug36UR8I4SOqEZSwqs.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Emissary",
+        "overview": "Stardate: 42901.3. Worf is re-united with his former lover, K\u0027Ehleyr, while the Enterprise is ordered to intercept a Klingon ship whose crew has been in stasis for a century.",
+        "air_date": "1989-06-29",
+        "runtime": 46,
+        "still_path": "/5bvkq7oZrF1rWQBYA7oSgYCgS8E.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Peak Performance",
+        "overview": "Stardate: 42923.4. Trouble begins when a Ferengi warship stumbles over a war simulation between Riker and Picard, each on different ships, and begins attacking them.",
+        "air_date": "1989-07-10",
+        "runtime": 46,
+        "still_path": "/uo3Zrcb12xKZKPwZ3YkhARw3nxH.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Shades of Gray",
+        "overview": "Stardate: 42976.1. Riker is infected with an alien organism that takes over his mind. Dr. Pulaski must force Riker\u0027s mind back to a state where it can access primitive survival skills.",
+        "air_date": "1989-07-17",
+        "runtime": 46,
+        "still_path": "/8WBCx1Cj0akiTPik8RcCie9mByV.jpg"
+      }
+    ]
+  }
+}

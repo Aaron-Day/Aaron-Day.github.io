@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Second Contact",
+        "overview": "Ensign Tendi has her first day of work on Starfleet\u0027s USS Cerritos, where she meets fellow support crew members. Boimler is tasked with a secret special assignment. Rutherford attempts to keep his dating life intact while a disaster strikes the ship.",
+        "air_date": "2020-08-06",
+        "runtime": 26,
+        "still_path": "/AvZAQtOAO8n9zj5LMKpkF0ZiwWM.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Envoys",
+        "overview": "Ensigns Boimler and Mariner embark on a shuttle mission to a Klingon compound while Ensigns Tendi and Rutherford spend time together back on the USS Cerritos.",
+        "air_date": "2020-08-13",
+        "runtime": 26,
+        "still_path": "/zT0rLKFtbijTTzkkLzK8SGBeS94.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Temporal Edict",
+        "overview": "A new work protocol eliminating \u0022buffer time\u0022 has the Lower Decks crew running ragged as they try to keep up with their tightened schedules. Ensign Mariner and Commander Ransom\u0027s mutual lack of respect comes to a head during an away mission.",
+        "air_date": "2020-08-20",
+        "runtime": 25,
+        "still_path": "/2SgcWq5W7SO7ijY8WmStJhbkxHB.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Moist Vessel",
+        "overview": "Captain Freeman seeks the ultimate payback after Mariner blatantly disrespects her in front of the crew. A well-meaning Tendi accidentally messes up a Lieutenant\u0027s attempt at spiritual ascension and tries to make it right.",
+        "air_date": "2020-08-27",
+        "runtime": 27,
+        "still_path": "/fs0ts9KqgHv6LRyzBkRDCLTXcsV.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Cupid\u0027s Errant Arrow",
+        "overview": "Ensign Boimler welcomes his girlfriend Barb onto the USS Cerritos, much to Ensign Mariner\u2019s dismay \u2014 while Ensigns Ruthford and Tendi have starship envy when the Cerritos rendezvous with the more-advanced USS Vancouver.",
+        "air_date": "2020-09-03",
+        "runtime": 26,
+        "still_path": "/aR0HdWbTHN7DZIGF08usvaWiJG6.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Terminal Provocations",
+        "overview": "The lovable but awkward Ensign Fletcher makes work difficult for Mariner and Boimler. Rutherford introduces Tendi to a holodeck training program he created.",
+        "air_date": "2020-09-10",
+        "runtime": 26,
+        "still_path": "/yAfaNq1IlmpttMR53vIMhPb4fT1.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Much Ado About Boimler",
+        "overview": "Mariner tries to impress her best friend from Starfleet Academy who is now a visiting Captain. Boimler is sent to a Starfleet medical ship after a transporter accident puts him \u201Cout of phase.\u201D",
+        "air_date": "2020-09-17",
+        "runtime": 27,
+        "still_path": "/posmARKCowthrzUleFGZRA9jgq0.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Veritas",
+        "overview": "Mariner, Boimler, Tendi and Rutherford are caught off guard when aliens force them to testify about a series of seemingly unrelated events.",
+        "air_date": "2020-09-24",
+        "runtime": 26,
+        "still_path": "/oHGqURpKvn0b8k6o8Mazomd7YHl.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Crisis Point",
+        "overview": "Mariner repurposes Boimler\u0027s holodeck program to cast herself as the villain in a Lower Decks style movie.",
+        "air_date": "2020-10-01",
+        "runtime": 28,
+        "still_path": "/gb2MuxjKWgQt4Ucdq8tkNXxT3Ln.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "No Small Parts",
+        "overview": "The USS Cerritos encounters a familiar enemy. Tendi helps a struggling recruit find her footing.",
+        "air_date": "2020-10-08",
+        "runtime": 30,
+        "still_path": "/mjNqH0027pwphoZVJVa6ChqSoDt.jpg"
+      }
+    ]
+  }
+}

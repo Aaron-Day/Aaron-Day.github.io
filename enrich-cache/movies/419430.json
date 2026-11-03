@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 419430,
+    "title": "Get Out",
+    "overview": "Chris and his girlfriend Rose go upstate to visit her parents for the weekend. At first, Chris reads the family\u0027s overly accommodating behavior as nervous attempts to deal with their daughter\u0027s interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he never could have imagined.",
+    "tagline": "Just because you\u0027re invited, doesn\u0027t mean you\u0027re welcome.",
+    "runtime": 104,
+    "release_date": "2017-02-24",
+    "vote_average": 7.625,
+    "poster_path": "/tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg",
+    "backdrop_path": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Daniel Kaluuya",
+      "character": "Chris Washington",
+      "profile_path": "/jj2kZqJobjom36wlhlYhc38nTwN.jpg"
+    },
+    {
+      "name": "Allison Williams",
+      "character": "Rose Armitage",
+      "profile_path": "/5Jy9HELKS1OYg7moRl8870OSfJq.jpg"
+    },
+    {
+      "name": "Catherine Keener",
+      "character": "Missy Armitage",
+      "profile_path": "/n4CTwGszs6cwS1wJRlDQ5Mlh7Ex.jpg"
+    },
+    {
+      "name": "Bradley Whitford",
+      "character": "Dean Armitage",
+      "profile_path": "/oeDv2qZWTxELLaNtOIoeG72leNY.jpg"
+    }
+  ]
+}

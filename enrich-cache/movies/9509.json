@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9509,
+    "title": "Man on Fire",
+    "overview": "Jaded ex-CIA operative John Creasy reluctantly accepts a job as the bodyguard for a 10-year-old girl in Mexico City. They clash at first, but eventually bond, and when she\u0027s kidnapped he\u0027s consumed by fury and will stop at nothing to save her life.",
+    "tagline": "Creasy\u0027s art is death, and he is about to paint his masterpiece.",
+    "runtime": 146,
+    "release_date": "2004-04-23",
+    "vote_average": 7.469,
+    "poster_path": "/grCGLCcTHv9TChibzOwzUpykcjB.jpg",
+    "backdrop_path": "/6c7j7MQCczzNVvcrNEiXbs8Kt2p.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Denzel Washington",
+      "character": "John W. Creasy",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Dakota Fanning",
+      "character": "Lupita Ramos",
+      "profile_path": "/hwcO08SVWkelfvgfIa5HsTMxsK8.jpg"
+    },
+    {
+      "name": "Christopher Walken",
+      "character": "Paul Rayburn",
+      "profile_path": "/ApgDL7nudR9T2GpjCG4vESgymO2.jpg"
+    },
+    {
+      "name": "Radha Mitchell",
+      "character": "Lisa Ramos",
+      "profile_path": "/8EVKyEkwPfIA6GxlIo0PJv0A5mm.jpg"
+    }
+  ]
+}

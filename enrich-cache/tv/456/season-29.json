@@ -1,0 +1,176 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 29,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Serfsons",
+        "overview": "In a magical medieval world, Marge\u0027s mother is turned into an Ice Walker and the only way for Homer to afford the cure is to force Lisa to use illegal magic. When the King discovers this, he kidnaps Lisa, and Homer must lead a feudal uprising to save her.",
+        "air_date": "2017-10-01",
+        "runtime": 23,
+        "still_path": "/csK3VayctCvMdHYWbP09ewJoaTn.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Springfield Splendor",
+        "overview": "Marge and Lisa turn Lisa\u2019s sad experience into a successful graphic novel-turned-Broadway show, but they struggle with creative differences and ego.",
+        "air_date": "2017-10-08",
+        "runtime": 23,
+        "still_path": "/lX0bZl41mmk9Nl2BoqRYeuUd1xO.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Whistler\u0027s Father",
+        "overview": "Homer discovers that Maggie is a whistling savant and launches her baby-celebrity career. Meanwhile, Marge impresses Fat Tony with her interior design taste, and he hires her to style his brothel.",
+        "air_date": "2017-10-15",
+        "runtime": 22,
+        "still_path": "/papSI0pHVV4h2lKUIdpw7cNDoPZ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Treehouse of Horror XXVIII",
+        "overview": "Maggie becomes possessed by an ancient demon, Lisa discovers a creepy/perfect version of her family in an alternate universe and Homer cannibalizes himself.",
+        "air_date": "2017-10-22",
+        "runtime": 22,
+        "still_path": "/uPkAbZgpfLjgC2sX6zUrC1oXbfG.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Grampy Can Ya Hear Me",
+        "overview": "Grampa gets a hearing aid and finally hears what everyone has been saying about him. Meanwhile, Mr. Skinner discovers that his mother has kept the ultimate secret from him.",
+        "air_date": "2017-11-05",
+        "runtime": 22,
+        "still_path": "/lDCyaJopKH2HqBYAj83ZWhwa1Bu.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Old Blue Mayor She Ain\u0027t What She Used to Be",
+        "overview": "Frustrated with the local government, Marge decides to run for Mayor. To win public support, she begins making Homer the butt of her jokes.",
+        "air_date": "2017-11-12",
+        "runtime": 22,
+        "still_path": "/jarP9LgPeyzrX9VYqYG9BgpwOXw.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Singin\u0027 in the Lane",
+        "overview": "Homer and the guys try helping Moe cheer up by getting their old bowling team back together again, but they soon face a team of arrogant millionaires.",
+        "air_date": "2017-11-19",
+        "runtime": 22,
+        "still_path": "/xokeqqBWmtkZFNH0GXxHOVrkQ4c.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Mr. Lisa\u0027s Opus",
+        "overview": "As future Lisa writes her college application essay for Harvard, she recalls past disappointing birthdays that helped shape her.",
+        "air_date": "2017-12-03",
+        "runtime": 22,
+        "still_path": "/5RweFPSkWH9j62LXWwxPSKdPAIE.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Gone Boy",
+        "overview": "When Bart goes missing, the town puts together a search party to find him. After most give up hope, Sideshow Bob manipulates Millhouse into revealing where Bart is hiding.",
+        "air_date": "2017-12-10",
+        "runtime": 22,
+        "still_path": "/auoDQnBbgVbcSqFY57439SNcnbX.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Haw-Haw Land",
+        "overview": "When the Simpsons go to a STEM conference, Lisa falls for a crooning jazz pianist named Brendan. Meanwhile, Bart discovers that he has an affinity for chemistry",
+        "air_date": "2018-01-07",
+        "runtime": 23,
+        "still_path": "/zgCNktdN5no3AtQUK6xiOtQu2x0.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Frink Gets Testy",
+        "overview": "Mr. Burns will build a doomsday ark after he believes that the end of the world is near when he sees an old Orson Welles show about Nostradamus. Meanwhile, Professor Frink comes up with a new way of testing everyone in Springfield after Burns wants a test to determine who should go on a spaceship with him.",
+        "air_date": "2018-01-14",
+        "runtime": 22,
+        "still_path": "/jcDVdXfLK57taEaWjeMKGny1ihQ.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Homer Is Where the Art Isn\u0027t",
+        "overview": "When Homer is accused of stealing a million-dollar painting, only a detective from the 1970s can clear his name.",
+        "air_date": "2018-03-18",
+        "runtime": 22,
+        "still_path": "/t1R1Uj9Grkk0uiIhpyQdRCxKN42.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "3 Scenes Plus a Tag from a Marriage",
+        "overview": "Homer and Marge recount the story of their transition from loving their life without kids to being miserable parents.",
+        "air_date": "2018-03-25",
+        "runtime": 23,
+        "still_path": "/4AYrp5yrCi4v091wSu7rgcMSCB7.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Fears of a Clown",
+        "overview": "Everybody is now horrified of clowns after Bart\u0027s prank using clown masks, which also causes  Krusty to lose his job. He attempts a comeback as a dramatic actor in the play \u0022The Salesman\u0027s Bad Day\u0022, with Llewellyn Sinclair as his director.",
+        "air_date": "2018-04-01",
+        "runtime": 22,
+        "still_path": "/9njnp3OVM4vkoTJokVsiR9PVVhm.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "No Good Read Goes Unpunished",
+        "overview": "In an attempt to bring the family together, Marge forces everyone to hand in their electronics and take a trip to a book store.",
+        "air_date": "2018-04-08",
+        "runtime": 22,
+        "still_path": "/qEa4laSNeDybr5AcwUoTFBfGiEh.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "King Leer",
+        "overview": "Homer and Marge follow Moe after the bar closes early and discover him and his father fighting. The Simpsons, after finding out that Moe has been excommunicated from his family for years, attempt to bring them back together.",
+        "air_date": "2018-04-15",
+        "runtime": 23,
+        "still_path": "/5DFeYabkwwGlhLZB2V2mpDAADOn.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Lisa Gets the Blues",
+        "overview": "When the Simpsons\u0027 flight to Gainesville gets re-routed to New Orleans, Lisa is forced to face her failures, and regain her confidence as a jazz musician. Meanwhile, Bart is intrigued by the voodoo in Louisiana, and Homer is intrigued by the drinking.",
+        "air_date": "2018-04-22",
+        "runtime": 22,
+        "still_path": "/2SVgo3u0XGKnl8wWyBUSvAgYocR.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Forgive and Regret",
+        "overview": "Grampa makes a confession to Homer while on his deathbed. After his recovery, he comes to realize that this issue will not be easy to reconcile.",
+        "air_date": "2018-04-29",
+        "runtime": 23,
+        "still_path": "/1BfpwVk4zHjR8dho1awKzq37peJ.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Left Behind",
+        "overview": "Homer gets Flanders a job at the plant, and he soon learns that no good deed goes unpunished when Flanders starts to insist on carpools and demands more from Homer\u0027s work performance. Meanwhile, Marge feels as though their marriage has lost its spark.",
+        "air_date": "2018-05-06",
+        "runtime": 22,
+        "still_path": "/lhLOI59Iyb0P3tFZzMKO9vgJMEM.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Throw Grampa from the Dane",
+        "overview": "The Simpsons go to Denmark so Grampa can benefit from its free health-care system.",
+        "air_date": "2018-05-13",
+        "runtime": 23,
+        "still_path": "/diuLjXgMbZYnSHSAalOV8iJYlmx.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Flanders\u0027 Ladder",
+        "overview": "Bart falls into a coma after being struck by lightning.",
+        "air_date": "2018-05-20",
+        "runtime": 22,
+        "still_path": "/2bCGg8OPsg09SRSkWnfOBk6TMXG.jpg"
+      }
+    ]
+  }
+}

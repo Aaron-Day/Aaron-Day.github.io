@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 44833,
+    "title": "Battleship",
+    "overview": "When mankind beams a radio signal into space, a reply comes from \u2018Planet G\u2019, in the form of several alien crafts that splash down in the waters off Hawaii. Lieutenant Alex Hopper is a weapons officer assigned to the USS John Paul Jones, part of an international naval coalition which becomes the world\u0027s last hope for survival as they engage the hostile alien force of unimaginable strength. While taking on the invaders, Hopper must also try to live up to the potential that his brother, and his fianc\u00E9e\u0027s father\u2014an Admiral\u2014expect of him.",
+    "tagline": "The battle for Earth begins at sea.",
+    "runtime": 131,
+    "release_date": "2012-04-11",
+    "vote_average": 5.949,
+    "poster_path": "/9b0Im7SfedHiajTwzSL9zGyBI7M.jpg",
+    "backdrop_path": "/85PMh0cKywekAJYDnRXfezYAmEc.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Taylor Kitsch",
+      "character": "Lieutenant Alex Hopper",
+      "profile_path": "/pTFkwvE2URbbftiaofexfolhkH9.jpg"
+    },
+    {
+      "name": "Alexander Skarsg\u00E5rd",
+      "character": "Commander Stone Hopper",
+      "profile_path": "/6VNNddrSrIVgdzhXr4Zg89gmOzY.jpg"
+    },
+    {
+      "name": "Rihanna",
+      "character": "Petty Officer Cora \u0022Weps\u0022 Raikes",
+      "profile_path": "/piXUA7L0gWQNtnDPXtBe24C9FF6.jpg"
+    },
+    {
+      "name": "Brooklyn Decker",
+      "character": "Sam",
+      "profile_path": "/x3JWepaXTopE9k0g87Q9diRM5Nc.jpg"
+    }
+  ]
+}

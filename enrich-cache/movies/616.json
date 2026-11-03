@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 616,
+    "title": "The Last Samurai",
+    "overview": "Nathan Algren is an American hired to instruct the Japanese army in the ways of modern warfare, which finds him learning to respect the samurai and the honorable principles that rule them. Pressed to destroy the samurai\u0027s way of life in the name of modernization and open trade, Algren decides to become an ultimate warrior himself and to fight for their right to exist.",
+    "tagline": "In the face of an enemy, in the heart of one man, lies the soul of a warrior.",
+    "runtime": 154,
+    "release_date": "2003-12-05",
+    "vote_average": 7.614,
+    "poster_path": "/a8jmJPs5eZBARmnuEEvZwbjwyz4.jpg",
+    "backdrop_path": "/z354BaTVzKj7E60WLzDoSmUuO4u.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Nathan Algren",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Ken Watanabe",
+      "character": "Moritsugu Katsumoto",
+      "profile_path": "/psAXOYp9SBOXvg6AXzARDedNQ9P.jpg"
+    },
+    {
+      "name": "Timothy Spall",
+      "character": "Simon Graham",
+      "profile_path": "/pcR6t8kpAgGwIUo4UjlP5gyKkNA.jpg"
+    },
+    {
+      "name": "Tony Goldwyn",
+      "character": "Col. Benjamin Bagley",
+      "profile_path": "/A3hXimbzDtFxQ1PXNo8gG7RZeN4.jpg"
+    }
+  ]
+}

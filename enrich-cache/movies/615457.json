@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 615457,
+    "title": "Nobody",
+    "overview": "Hutch Mansell, a suburban dad, overlooked husband, nothing neighbor \u2014 a \u0022nobody.\u0022 When two thieves break into his home one night, Hutch\u0027s unknown long-simmering rage is ignited and propels him on a brutal path that will uncover dark secrets he fought to leave behind.",
+    "tagline": "Never underestimate a nobody.",
+    "runtime": 91,
+    "release_date": "2021-03-18",
+    "vote_average": 7.855,
+    "poster_path": "/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg",
+    "backdrop_path": "/61MrK5U4w4MVL1vfwoG12zYPJ8B.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1129084,
+      "name": "Nobody Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bob Odenkirk",
+      "character": "Hutch Mansell",
+      "profile_path": "/rF0Lb6SBhGSTvjRffmlKRSeI3jE.jpg"
+    },
+    {
+      "name": "Aleksey Serebryakov",
+      "character": "Yulian Kuznetsov",
+      "profile_path": "/ch67oszo5D7lK64xnDp9JFcmGLp.jpg"
+    },
+    {
+      "name": "Connie Nielsen",
+      "character": "Becca Mansell",
+      "profile_path": "/gSQ3O3PJ6ly6nT63joOtfZyscFP.jpg"
+    },
+    {
+      "name": "Christopher Lloyd",
+      "character": "David Mansell",
+      "profile_path": "/nxVjpyb3UrfbPZnEyDNlQVlFAs5.jpg"
+    }
+  ]
+}

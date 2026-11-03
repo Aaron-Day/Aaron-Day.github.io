@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 7443,
+    "title": "Chicken Run",
+    "overview": "The creators of Wallace \u0026 Gromit bring you an exciting and original story about a group of chickens determined to fly the coop\u2013even if they can\u2019t fly! It\u2019s hardly poultry in motion when Rocky attempts to teach Ginger and her feathered friends to fly\u2026but, with teamwork, determination and a little bit o\u2019 cluck, the fearless flock plots one last attempt in a spectacular bid for freedom.",
+    "tagline": "There\u0027s nothing more determined than poultry with a plan.",
+    "runtime": 84,
+    "release_date": "2000-06-23",
+    "vote_average": 6.855,
+    "poster_path": "/8XgmIsbpVamdhwcNVsYzohFZTtT.jpg",
+    "backdrop_path": "/3eYkMSjWbvTaZso7ow5ub9ikNNq.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 718551,
+      "name": "Chicken Run Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Julia Sawalha",
+      "character": "Ginger (voice)",
+      "profile_path": "/nSybe0Djsf49lS3HxLyvFnchkh.jpg"
+    },
+    {
+      "name": "Mel Gibson",
+      "character": "Rocky (voice)",
+      "profile_path": "/jnqHMaOslt8cef2atSmOpGRvNla.jpg"
+    },
+    {
+      "name": "Imelda Staunton",
+      "character": "Bunty (voice)",
+      "profile_path": "/tABRYOHUQeaUCAqrelJV5ZHjl1W.jpg"
+    },
+    {
+      "name": "Jane Horrocks",
+      "character": "Babs (voice)",
+      "profile_path": "/phYKQdBZgRwMT8w6ZEhvGc8zgvB.jpg"
+    }
+  ]
+}

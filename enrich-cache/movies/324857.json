@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 324857,
+    "title": "Spider-Man: Into the Spider-Verse",
+    "overview": "Struggling to find his place in the world while juggling school and family, Brooklyn teenager Miles Morales is unexpectedly bitten by a radioactive spider and develops unfathomable powers just like the one and only Spider-Man. While wrestling with the implications of his new abilities, Miles discovers a super collider created by the madman Wilson \u0022Kingpin\u0022 Fisk, causing others from across the Spider-Verse to be inadvertently transported to his dimension.",
+    "tagline": "Enter a universe where more than one wears the mask.",
+    "runtime": 117,
+    "release_date": "2018-12-06",
+    "vote_average": 8.404,
+    "poster_path": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+    "backdrop_path": "/1ntePsIqeklfmrQJqZPncCydsqY.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 573436,
+      "name": "Spider-Man: Spider-Verse Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Shameik Moore",
+      "character": "Miles Morales (voice)",
+      "profile_path": "/ovUKfVOwJ7CadEHaG3NDsfA5xRq.jpg"
+    },
+    {
+      "name": "Jake Johnson",
+      "character": "Peter B. Parker (voice)",
+      "profile_path": "/3UNfW2qZgRkW81neNVfQvaRC92K.jpg"
+    },
+    {
+      "name": "Hailee Steinfeld",
+      "character": "Gwen Stacy (voice)",
+      "profile_path": "/qDInsG0cxWNxS1X4t59TBZ5S6x5.jpg"
+    },
+    {
+      "name": "Mahershala Ali",
+      "character": "Uncle Aaron (voice)",
+      "profile_path": "/9ZmSejm5lnUVY5IJ1iNx2QEjnHb.jpg"
+    }
+  ]
+}

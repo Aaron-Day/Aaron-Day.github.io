@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 8,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Get Shredder!",
+        "overview": "Shredder \u0026 Krang are still loose on Earth, but without the resources of the Technodrome, they plan to steal equipment from the abandoned Hall of Science at the World Fair. Krang\u0027s former weapons engineer, Drakus, using the guise of Beserko, also shows up to cause trouble.",
+        "air_date": "1994-09-17",
+        "runtime": 23,
+        "still_path": "/xp3VK0HPTya6Zse6NO2E4HtDzOX.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Wrath of the Rat King",
+        "overview": "Burne has created a hot line for callers to use should they spot those responsible for the destruction of the Channel Six News Building. Inside the Hall of Science, Shredder is fearful that the Turtles will eventually find a way into the building and decides to seek out an old friend in the sewers: the Rat King!",
+        "air_date": "1994-09-24",
+        "runtime": 23,
+        "still_path": "/9e14gjS9bSxC02oF8BaIFRCZdJ.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "State of Shock",
+        "overview": "After defeating a mysterious group of ninjas at the Emeryville Power Station, the Turtles decode part of a map that they were able to liberate from the would-be thieves.",
+        "air_date": "1994-10-01",
+        "runtime": 23,
+        "still_path": "/xKH4RnShsKu7DxYAPApREeWLgzX.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Cry H.A.V.O.C.!",
+        "overview": "The Turtles get the drop on masked thieves hijacking a jewellery store, only to have themselves arrested for the crime! Before the turtles can be booked, they are rescued by the mutants Amok and Overdrive.",
+        "air_date": "1994-10-08",
+        "runtime": 23,
+        "still_path": "/4cu6iErm4puGHYbqytsxkJYs8X8.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "H.A.V.O.C. in the Streets",
+        "overview": "Titanus sends of couple of his H.A.V.O.C. mutants to bust into the aerospace plant and steal some much needed equipment. Only problem is that the Turtles were waiting for them.",
+        "air_date": "1994-10-15",
+        "runtime": 23,
+        "still_path": "/7ozY3L0DWR6e57xJdMGZ845cFS9.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Enter: Krakus",
+        "overview": "Krakus, a cop from the future, arrives and thinking that the Turtles are in league with Titanus, shakes them down for information.",
+        "air_date": "1994-10-22",
+        "runtime": 23,
+        "still_path": "/xJo4qXwIWNWhUbLF7vlj2VEDVNe.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Cyber-Turtles",
+        "overview": "While investigating the theft of a rare telescope, the Astro-Viewer, the Turtles discover odd tracks leading away from the National Space Exploration Center.",
+        "air_date": "1994-10-29",
+        "runtime": 23,
+        "still_path": "/zYDzji50WGUCDenshbXyfUKB8Yk.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Turtle Trek",
+        "overview": "Krang activates his new dimensional portal, thanks to Shredder\u0027s installation of the Energy Transmitter at the Power Relay Station, giving him access to Dimension X.",
+        "air_date": "1994-11-05",
+        "runtime": 23,
+        "still_path": "/4fH5YEdec7u1tSXDd7S8UYvw9iC.jpg"
+      }
+    ]
+  }
+}

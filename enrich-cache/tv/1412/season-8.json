@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 8,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Starling City",
+        "overview": "Oliver returns to Starling City on Earth-2, where he encounters familiar faces while trying to decipher the Monitor\u0027s mission. Meanwhile, Mia and William\u0027s team clash with a new foe.",
+        "air_date": "2019-10-15",
+        "runtime": 42,
+        "still_path": "/2CvyZm8rnkcTyAYxxsZlJfrl4gw.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Welcome to Hong Kong",
+        "overview": "Oliver, John, Laurel, and Tatsu seek out an important person within the Monitor\u0027s plan. Connor has a heart to heart with his brother.",
+        "air_date": "2019-10-22",
+        "runtime": 42,
+        "still_path": "/skUsPwXvwgeUM6GWST4jvMQksYt.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Leap of Faith",
+        "overview": "Reunited with his sister, Oliver and Thea find themselves searching through a familiar maze of catacombs. Meanwhile, John and Lyla partner on a special ops mission.",
+        "air_date": "2019-10-29",
+        "runtime": 42,
+        "still_path": "/5bx7Yso1vtF8pw1b2GTlGGlOU7O.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Present Tense",
+        "overview": "When a mysterious new Deathstroke appears in Star City, Oliver and Team Arrow insist on taking down this villain themselves. Meanwhile reeling from the loss of one of their own, the future Team Arrow figures out a new way to try and stop JJ.",
+        "air_date": "2019-11-05",
+        "runtime": 42,
+        "still_path": "/rUzFOgPQAeSgP595sMV16um07cT.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Prochnost",
+        "overview": "Upon learning the key to oppose The Monitor, Oliver and team return to Russia on a mission to gather the necessary materials. Connor reunites with a figure from his past.",
+        "air_date": "2019-11-19",
+        "runtime": 42,
+        "still_path": "/p4a65rbBGkyBtntLR14NDPoAQ5G.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Reset",
+        "overview": "After being double-crossed by Lyla, Oliver finds himself facing a life or death situation that seems very familiar. Laurel has the opportunity to make amends with the past.",
+        "air_date": "2019-11-26",
+        "runtime": 42,
+        "still_path": "/crOv7aIpdZA7YW6iyRBR9nAiEUr.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Purgatory",
+        "overview": "Oliver\u0027s mission takes him to Lian Yu where he tries to ignore the repercussions of the looming Crisis until he receives help from an old friend. Meanwhile, a united Team Arrow faces a recognisable villain.",
+        "air_date": "2019-12-03",
+        "runtime": 42,
+        "still_path": "/lKkwtnAdMRn6i6oh6lscLNNtLww.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Crisis on Infinite Earths: Part Four (IV)",
+        "overview": "Stuck in the Vanishing Point, the Paragons search for a way to escape. The futility of the situation is compounded by The Flash\u0027s disappearance. However, hope appears in the form of Oliver, who reveals that he has become something else. Meanwhile, the origin stories for The Monitor and Anti-Monitor are revealed\n\nThis crossover begins on Supergirl S5E09, Batwoman S1E09, and The Flash S6E09 and concludes on Legends of Tomorrow S05E01.",
+        "air_date": "2020-01-14",
+        "runtime": 42,
+        "still_path": "/sNeXDfwMeE0s82aGGxo34A12H3Y.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Green Arrow \u0026 The Canaries",
+        "overview": "It\u2019s the year 2040 in Star City and Mia Queen has everything she could have ever wanted. However, when Laurel and Dinah suddenly show up in her life again, things take a shocking turn and her perfect world is upended. Laurel and Dinah are tracking a kidnapping victim with direct ties to Mia and they need her help. Knowing it will change everything, Mia can\u2019t help but be a hero and she, Laurel and Dinah suit up once again to save the city.",
+        "air_date": "2020-01-21",
+        "runtime": 42,
+        "still_path": "/z5XMKTLtnqCVl4RhWy5DyYMq4yk.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Fadeout",
+        "overview": "After eight seasons, and the launch of countless superheroes, the series wraps up the story of the Green Arrow.",
+        "air_date": "2020-01-28",
+        "runtime": 43,
+        "still_path": "/x2uJkULqhVhosfjlqTknZtv1QyZ.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 324786,
+    "title": "Hacksaw Ridge",
+    "overview": "WWII American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people and becomes the first Conscientious Objector in American history to receive the Congressional Medal of Honor.",
+    "tagline": "One of the greatest heroes in American history never fired a bullet.",
+    "runtime": 139,
+    "release_date": "2016-10-07",
+    "vote_average": 8.193,
+    "poster_path": "/fnOMP6mjmOmZwmlC1n0K7ivrzt1.jpg",
+    "backdrop_path": "/vDKRMZGFTKP9nQolzeSB1rB1w6p.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Andrew Garfield",
+      "character": "Desmond T. Doss",
+      "profile_path": "/5ydZ6TluPtxlz5G8nlWMB7SGmow.jpg"
+    },
+    {
+      "name": "Sam Worthington",
+      "character": "Captain Glover",
+      "profile_path": "/mflBcox36s9ZPbsZPVOuhf6axaJ.jpg"
+    },
+    {
+      "name": "Vince Vaughn",
+      "character": "Sgt Howell",
+      "profile_path": "/qImHvsd7SFJh46Ujx50xUfkeMNz.jpg"
+    },
+    {
+      "name": "Teresa Palmer",
+      "character": "Dorothy Schuttle",
+      "profile_path": "/sjSiLSCp9LS1Z0nyGpmquTBuUyr.jpg"
+    }
+  ]
+}

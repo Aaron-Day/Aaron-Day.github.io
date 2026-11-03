@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Twilight Ozone",
+        "overview": "The team explores the Outback, and the scientists who are experimenting with lifeforms that thrive on deadly levels of UV radiation.",
+        "air_date": "1994-09-10",
+        "runtime": 25,
+        "still_path": "/5aH4DTXdVufESnfjZeI4cnw8NAM.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Hollywaste",
+        "overview": "Strange accidents on a film set point to Dr. Blight\u0027s starlet sister Bambi.",
+        "air_date": "1994-09-17",
+        "runtime": 25,
+        "still_path": "/g7hdAO6jOjJybZ0DcTPi8xbr0ZP.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Ghost of Porkaloin Past",
+        "overview": "Greedly turns his grandfather\u0027s estate into a wasteful desert golf course.",
+        "air_date": "1994-09-24",
+        "runtime": 25,
+        "still_path": "/g7hdAO6jOjJybZ0DcTPi8xbr0ZP.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Disoriented Express",
+        "overview": "Blight kidnaps the benefactor of a smog-reducing railway system.",
+        "air_date": "1994-10-01",
+        "runtime": 25,
+        "still_path": "/3nCbSkj5waVoi3belFtyeJoup0B.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Horns a\u0027Plenty",
+        "overview": "The Planeteers fight rhino poachers who have joined forces with L\u002BPlunder and Mame Slaughter.",
+        "air_date": "1994-11-05",
+        "runtime": 25,
+        "still_path": "/oIgnuoQEwgs8tyAm6oeGcp7fRTR.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "A River Ran Through It",
+        "overview": "The Planeteers are drawn into a controversial battle between loggers and fishermen.",
+        "air_date": "1994-11-12",
+        "runtime": 25,
+        "still_path": "/hDaSRGjWXiZHwk8dFMfJVncAP77.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "No Place Like Home",
+        "overview": "Gaia is transformed into a homeless person through Blight\u0027s experiments, but if she\u0027s not back on Hope Island by sunrise, the Earth will lose its spirit.",
+        "air_date": "1994-11-19",
+        "runtime": 25,
+        "still_path": "/olX5tYhQ999qzWyn37JF6HrXypJ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Little Crop of Horrors",
+        "overview": "Blight\u0027s experimental plant turns violent, threatening an entire village.",
+        "air_date": "1994-11-26",
+        "runtime": 25,
+        "still_path": "/2ArhGwy9jZLxPXwRJ5ARdbP6HqE.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "In Zarm\u0027s Way",
+        "overview": "Zarm bets Gaia that she can\u0027t prove humans are naturally good.",
+        "air_date": "1995-02-04",
+        "runtime": 25,
+        "still_path": "/rSfFkTXjPiRVmMqoEr2aZv4dzcP.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "No Small Problem",
+        "overview": "The Planeteers struggle to survive when Sludge turns his new garbage-reducing ray on them and shrinks them down.",
+        "air_date": "1995-02-11",
+        "runtime": 25,
+        "still_path": "/gSHV0GOjAXoVb6AIYMe3HWYRPUm.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Numbers Game",
+        "overview": "A single birthday kiss leads Wheeler to marriage, a pack of children and a clear-cut Hope Island.",
+        "air_date": "1995-02-18",
+        "runtime": 25,
+        "still_path": "/7I1ALaqW1Z44t4wSEFEgYfM7cbn.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Nothing\u0027s Sacred",
+        "overview": "Skumm steals a sacred Indian relic, infuriating Ma-ti.",
+        "air_date": "1995-02-25",
+        "runtime": 25,
+        "still_path": "/mdG2EL4g3JgqIcviyp71alicmcu.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Who\u0027s Running the Show?",
+        "overview": "The villains hijack a television station to expound their violent and anti- environmental message.",
+        "air_date": "1995-05-13",
+        "runtime": 25,
+        "still_path": "/7wtkXoNO58gwVxFGOmayWC162we.jpg"
+      }
+    ]
+  }
+}

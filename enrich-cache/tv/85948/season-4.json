@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Twovix",
+        "overview": "The Cerritos ensigns must assist a caretaker on the voyage of a historically significant starship.",
+        "air_date": "2023-09-07",
+        "runtime": 26,
+        "still_path": "/oIfbPn5o7CxfawFPgu2FOG5hgnO.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "I Have No Bones Yet I Must Flee",
+        "overview": "Mariner tries to get demoted, Rutherford tries to get promoted, and Boimler makes a big move.",
+        "air_date": "2023-09-07",
+        "runtime": 24,
+        "still_path": "/4v2lKiVo5DfKEExAV3ehsIX568g.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "In the Cradle of Vexilon",
+        "overview": "Boimler leads his first away mission on an alien megastructure.",
+        "air_date": "2023-09-14",
+        "runtime": 25,
+        "still_path": "/q3AKGdWLwFN09gwXo7UmPrYa2FL.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Something Borrowed, Something Green",
+        "overview": "Tendi is summoned back to Orion for a wedding.",
+        "air_date": "2023-09-21",
+        "runtime": 26,
+        "still_path": "/p5bvnB0myao8Ia5k1MikAYOY03L.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Empathalogical Fallacies",
+        "overview": "A trio of Betazoids cause chaos on the Cerritos.",
+        "air_date": "2023-09-28",
+        "runtime": 26,
+        "still_path": "/4DxWfzWjrt63PI6RhWbweFZFuhC.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Parth Ferengi\u0027s Heart Place",
+        "overview": "The Cerritos visits the Ferengi homeworld.",
+        "air_date": "2023-10-05",
+        "runtime": 26,
+        "still_path": "/f6kw8OSob18OOxBK03bxWHHXCT2.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "A Few Badgeys More",
+        "overview": "Three computerized villains return to cause problems for the Cerritos crew.",
+        "air_date": "2023-10-12",
+        "runtime": 27,
+        "still_path": "/z1qtzDwP5dBoTixlKRXmTfFHeiV.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Caves",
+        "overview": "The Lower Deckers go on a classic cave mission.",
+        "air_date": "2023-10-19",
+        "runtime": 26,
+        "still_path": "/wnIzkI64ECtQU8NPQR4SFo2b91m.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Inner Fight (1)",
+        "overview": "Captain Freeman assigns the Lower Deckers an overly safe mission to try and keep a self-destructive Mariner out of danger.",
+        "air_date": "2023-10-26",
+        "runtime": 27,
+        "still_path": "/pncQ7xQ6YraaGPkIqC6E1K4GGdt.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Old Friends, New Planets (2)",
+        "overview": "Mariner faces her past.",
+        "air_date": "2023-11-02",
+        "runtime": 31,
+        "still_path": "/q9yuVJnVjDqkro2yaFoXM4bjlBK.jpg"
+      }
+    ]
+  }
+}

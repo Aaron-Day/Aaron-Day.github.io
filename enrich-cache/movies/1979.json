@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1979,
+    "title": "Fantastic Four: Rise of the Silver Surfer",
+    "overview": "The Fantastic Four return to the big screen as a new and all powerful enemy threatens the Earth. The seemingly unstoppable \u0027Silver Surfer\u0027, but all is not what it seems and there are old and new enemies that pose a greater threat than the intrepid superheroes realize.",
+    "tagline": "Discover the secret of the Surfer.",
+    "runtime": 92,
+    "release_date": "2007-06-13",
+    "vote_average": 5.638,
+    "poster_path": "/9wRfzTcMyyzkQxVDqBHv8RwuZOv.jpg",
+    "backdrop_path": "/o2wYH40zW0JIYiYUTu6L4gsNy7E.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9744,
+      "name": "Fantastic Four Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ioan Gruffudd",
+      "character": "Reed Richards",
+      "profile_path": "/h2pg2XwJPcOWotHgiohXjEZUBLa.jpg"
+    },
+    {
+      "name": "Jessica Alba",
+      "character": "Sue Richards",
+      "profile_path": "/hPoy6FRfiCIxguX3w2CoBbDoaEV.jpg"
+    },
+    {
+      "name": "Chris Evans",
+      "character": "Johnny Storm",
+      "profile_path": "/3bOGNsHlrswhyW79uvIHH1V43JI.jpg"
+    },
+    {
+      "name": "Michael Chiklis",
+      "character": "Ben Grimm",
+      "profile_path": "/pAkKjbzxP6Z6Y5zAGpwmWQo1iji.jpg"
+    }
+  ]
+}

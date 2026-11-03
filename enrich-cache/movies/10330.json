@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10330,
+    "title": "Freaky Friday",
+    "overview": "Mother and daughter bicker over everything -- what Anna wears, whom she likes and what she wants to do when she\u0027s older. In turn, Anna detests Tess\u0027s fianc\u00E9. When a magical fortune cookie switches their personalities, they each get a peek at how the other person feels, thinks and lives.",
+    "tagline": "Mondays are manic. Wednesdays are wild. And Fridays are about to get a little freaky.",
+    "runtime": 97,
+    "release_date": "2003-08-05",
+    "vote_average": 6.593,
+    "poster_path": "/y6kn3tUb4qrNZvV4TDIIjskZ9eV.jpg",
+    "backdrop_path": "/cTGeY2fdf0eLubvEFZAGcr2PfLZ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1125292,
+      "name": "Freaky Friday Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Lindsay Lohan",
+      "character": "Anna Coleman",
+      "profile_path": "/hwgyUEM7UuKTVhFcFoorx72pn1j.jpg"
+    },
+    {
+      "name": "Jamie Lee Curtis",
+      "character": "Tess Coleman",
+      "profile_path": "/eWKubKAAssRzmFwCZKh1mdYqGCH.jpg"
+    },
+    {
+      "name": "Harold Gould",
+      "character": "Grandpa",
+      "profile_path": "/34OhfMWScEyQpy0bdnhta9mUvqV.jpg"
+    },
+    {
+      "name": "Chad Michael Murray",
+      "character": "Jake",
+      "profile_path": "/jIkzUQUVLkgn3HFMFRJBDAD0OLj.jpg"
+    }
+  ]
+}

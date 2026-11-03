@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 691,
+    "title": "The Spy Who Loved Me",
+    "overview": "Russian and British submarines with nuclear missiles on board both vanish from sight without a trace. England and Russia both blame each other as James Bond tries to solve the riddle of the disappearing ships. But the KGB also has an agent on the case.",
+    "tagline": "It\u0027s the BIGGEST. It\u0027s the BEST. It\u0027s BOND. And B-E-Y-O-N-D.",
+    "runtime": 125,
+    "release_date": "1977-07-07",
+    "vote_average": 6.821,
+    "poster_path": "/3ZxHKFxMYvAko680DsRgAZKWcLi.jpg",
+    "backdrop_path": "/lhPq8R8qgoyLNWvVTiqZSkYGLPX.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Roger Moore",
+      "character": "James Bond",
+      "profile_path": "/qUjeguNlZzpwh2bGUwEq2n2GNPx.jpg"
+    },
+    {
+      "name": "Barbara Bach",
+      "character": "Major Anya Amasova",
+      "profile_path": "/vatmATSQfdi1JFu6g2VImlS7GQb.jpg"
+    },
+    {
+      "name": "Curd J\u00FCrgens",
+      "character": "Karl Stromberg",
+      "profile_path": "/ewM6Zh2XGxFuxQ2Ec8zBKJWn4Cq.jpg"
+    },
+    {
+      "name": "Richard Kiel",
+      "character": "Jaws",
+      "profile_path": "/wop4KV2ywl6gdYnCUs1OthtGylM.jpg"
+    }
+  ]
+}

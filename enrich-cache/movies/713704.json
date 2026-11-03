@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 713704,
+    "title": "Evil Dead Rise",
+    "overview": "A reunion between two estranged sisters gets cut short by the rise of flesh-possessing demons, thrusting them into a primal battle for survival as they face the most nightmarish version of family imaginable.",
+    "tagline": "Mommy loves you to death.",
+    "runtime": 96,
+    "release_date": "2023-04-12",
+    "vote_average": 6.95,
+    "poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+    "backdrop_path": "/7bWxAsNPv9CXHOhZbJVlj2KxgfP.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Lily Sullivan",
+      "character": "Beth",
+      "profile_path": "/sLjxpxV2JX8k3k9VWoIPrzqlh5J.jpg"
+    },
+    {
+      "name": "Alyssa Sutherland",
+      "character": "Ellie",
+      "profile_path": "/tPxURKufpOddRYTgg5FuBwNK4iT.jpg"
+    },
+    {
+      "name": "Morgan Davies",
+      "character": "Danny",
+      "profile_path": "/tRo3puQuNnfXtV0N6VAuSpSq5FB.jpg"
+    },
+    {
+      "name": "Gabrielle Echols",
+      "character": "Bridget",
+      "profile_path": "/1f7Yk5VU2NsY5hZ4cqf4PxnZqdd.jpg"
+    }
+  ]
+}

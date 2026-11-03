@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 170,
+    "title": "28 Days Later",
+    "overview": "Twenty-eight days after a killer virus was accidentally unleashed from a British research facility, a small group of London survivors are caught in a desperate struggle to protect themselves from the infected. Carried by animals and humans, the virus turns those it infects into homicidal maniacs -- and it\u0027s absolutely impossible to contain.",
+    "tagline": "The days are numbered.",
+    "runtime": 113,
+    "release_date": "2002-10-31",
+    "vote_average": 7.244,
+    "poster_path": "/sQckQRt17VaWbo39GIu0TMOiszq.jpg",
+    "backdrop_path": "/aJFwk1clMal1prxAvKAgHxKPAf.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1565,
+      "name": "28 Days/Weeks/Years Later Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Cillian Murphy",
+      "character": "Jim",
+      "profile_path": "/2lKs67r7FI4bPu0AXxMUJZxmUXn.jpg"
+    },
+    {
+      "name": "Naomie Harris",
+      "character": "Selena",
+      "profile_path": "/41TVAcYqKKF7PGf3x7QfaLvkLSW.jpg"
+    },
+    {
+      "name": "Brendan Gleeson",
+      "character": "Frank",
+      "profile_path": "/ctPPJu5ZYDZr1IPmzoNpezczrm0.jpg"
+    },
+    {
+      "name": "Megan Burns",
+      "character": "Hannah",
+      "profile_path": "/xOZbpZH5E6YlUvsM2DDd6iYpsnk.jpg"
+    }
+  ]
+}

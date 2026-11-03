@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1366,
+    "title": "Rocky",
+    "overview": "Rocky Balboa is a Philadelphia club fighter who seems to be going nowhere. But when a stroke of fate puts him in the ring with a world heavyweight champion, Rocky knows that it\u0027s his one shot at the big time \u2014 a once-in-a-lifetime opportunity to go the distance and come out a winner!",
+    "tagline": "His whole life was a million-to-one shot.",
+    "runtime": 120,
+    "release_date": "1976-12-03",
+    "vote_average": 7.801,
+    "poster_path": "/raayaQ9WTUGolsYHPWc2bGonu58.jpg",
+    "backdrop_path": "/bacOuUnRBoAO1NjMfsAGX2EKRrS.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1575,
+      "name": "Rocky Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Robert \u0027Rocky\u0027 Balboa",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Talia Shire",
+      "character": "Adrianna \u0027Adrian\u0027 Pennino",
+      "profile_path": "/oktJmlLeyYKBCWPNjHskDwAfjct.jpg"
+    },
+    {
+      "name": "Burt Young",
+      "character": "Paulie Pennino",
+      "profile_path": "/6QWnsSbjYog0D6hkPhg7Frty54D.jpg"
+    },
+    {
+      "name": "Carl Weathers",
+      "character": "Apollo Creed",
+      "profile_path": "/oUwtC5hEbcIZv53WPerZ9HhlSJR.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 115,
+    "title": "The Big Lebowski",
+    "overview": "Jeffrey \u0027The Dude\u0027 Lebowski, a Los Angeles slacker who only wants to bowl and drink White Russians, is mistaken for another Jeffrey Lebowski, a wheelchair-bound millionaire, and finds himself dragged into a strange series of events involving nihilists, adult film producers, ferrets, errant toes, and large sums of money.",
+    "tagline": "Times like these call for a Big Lebowski.",
+    "runtime": 117,
+    "release_date": "1998-03-06",
+    "vote_average": 7.855,
+    "poster_path": "/3bv6WAp6BSxxYvB5ozKFUYuRA8C.jpg",
+    "backdrop_path": "/77ElMccPnTMPouRxSdbJ4nEjf69.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jeff Bridges",
+      "character": "The Dude",
+      "profile_path": "/xms1RAY6q7Lzp7wNeRCB0kzhucn.jpg"
+    },
+    {
+      "name": "John Goodman",
+      "character": "Walter Sobchak",
+      "profile_path": "/yyYqoyKHO7hE1zpgEV2XlqYWcNV.jpg"
+    },
+    {
+      "name": "Julianne Moore",
+      "character": "Maude Lebowski",
+      "profile_path": "/3YF19rWusxWfEI59ZM33dFhasRq.jpg"
+    },
+    {
+      "name": "Steve Buscemi",
+      "character": "Donny",
+      "profile_path": "/n0pZumkrcZrAPMoPq684RhYnjPV.jpg"
+    }
+  ]
+}

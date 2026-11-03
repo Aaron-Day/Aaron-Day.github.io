@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8814,
+    "title": "Doom",
+    "overview": "A team of space marines known as the Rapid Response Tactical Squad, led by Sarge, is sent to a science facility on Mars after somebody reports a security breach. There, they learn that the alert came after a test subject, a mass murderer purposefully injected with alien DNA, broke free and began killing people. Dr. Grimm, who is related to team member Reaper, informs them all that the chromosome can mutate humans into monsters -- and is highly infectious.",
+    "tagline": "No one gets out alive.",
+    "runtime": 105,
+    "release_date": "2005-10-20",
+    "vote_average": 5.212,
+    "poster_path": "/nkzyhae9Eb9Eglbi6T5iEuPD6L.jpg",
+    "backdrop_path": "/9EpgaLS44zlXoTSAOhGiJmkIA4B.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 634390,
+      "name": "Doom Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dwayne Johnson",
+      "character": "Sarge",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Karl Urban",
+      "character": "John \u0022Reaper\u0022 Grimm",
+      "profile_path": "/7Y96dAfg0HcFrcLjlD5eD9N0uj4.jpg"
+    },
+    {
+      "name": "Rosamund Pike",
+      "character": "Samantha Grimm",
+      "profile_path": "/8ObNklHDi2hjdz0ayzJFB9jtqzm.jpg"
+    },
+    {
+      "name": "Deobia Oparei",
+      "character": "Destroyer",
+      "profile_path": "/kcw8vNMlYgK8peuN80zhX6TqeNk.jpg"
+    }
+  ]
+}

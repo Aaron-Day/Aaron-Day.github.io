@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 88751,
+    "title": "Journey to the Center of the Earth",
+    "overview": "On a quest to find out what happened to his missing brother, a scientist, his nephew and their mountain guide discover a fantastic and dangerous lost world in the center of the earth.",
+    "tagline": "Same planet. Different world.",
+    "runtime": 93,
+    "release_date": "2008-07-10",
+    "vote_average": 6.102,
+    "poster_path": "/kL55wY0s2H9JdwfjoWIp9plvYnl.jpg",
+    "backdrop_path": "/Adlc8JMVEXOelFO6hYpIYcGBx2T.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 605516,
+      "name": "Journey Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brendan Fraser",
+      "character": "Trevor Anderson",
+      "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg"
+    },
+    {
+      "name": "Josh Hutcherson",
+      "character": "Sean Anderson",
+      "profile_path": "/GqIyK5mCJXFUXW4FwLM3Zj7UtK.jpg"
+    },
+    {
+      "name": "Anita Briem",
+      "character": "Hannah \u00C1sgeirsson",
+      "profile_path": "/8M6MkLKpAXKRoYlhOH5LzBhBGFv.jpg"
+    },
+    {
+      "name": "Seth Meyers",
+      "character": "Professor Alan Kitzens",
+      "profile_path": "/nCcvpJFHWYHfu5oPxTOyA1uSdqA.jpg"
+    }
+  ]
+}

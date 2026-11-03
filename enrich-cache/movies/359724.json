@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 359724,
+    "title": "Ford v Ferrari",
+    "overview": "American car designer Carroll Shelby and the British-born driver Ken Miles work together to battle corporate interference, the laws of physics, and their own personal demons to build a revolutionary race car for Ford Motor Company and take on the dominating race cars of Enzo Ferrari at the 24 Hours of Le Mans in France in 1966.",
+    "tagline": "They took the American dream for a ride.",
+    "runtime": 153,
+    "release_date": "2019-11-13",
+    "vote_average": 8.009,
+    "poster_path": "/dR1Ju50iudrOh3YgfwkAU1g2HZe.jpg",
+    "backdrop_path": "/2vq5GTJOahE03mNYZGxIynlHcWr.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matt Damon",
+      "character": "Carroll Shelby",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    },
+    {
+      "name": "Christian Bale",
+      "character": "Ken Miles",
+      "profile_path": "/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg"
+    },
+    {
+      "name": "Jon Bernthal",
+      "character": "Lee Iacocca",
+      "profile_path": "/bjcglF1IpDcZNs1HwFxakGpzBo6.jpg"
+    },
+    {
+      "name": "Caitr\u00EDona Balfe",
+      "character": "Mollie Miles",
+      "profile_path": "/lerCNTjO6FQIam2lF5SXHA4dY7H.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10025,
+    "title": "Just My Luck",
+    "overview": "Manhattanite Ashley is known to many as the luckiest woman around. After a chance encounter with a down-and-out young man, however, she realizes that she\u0027s swapped her fortune for his.",
+    "tagline": "Everything changed in the wink of an eye.",
+    "runtime": 103,
+    "release_date": "2006-05-12",
+    "vote_average": 6.193,
+    "poster_path": "/wWpqG3zrrPZhvNLflYJdbW1NgY3.jpg",
+    "backdrop_path": "/tBLg1E9bQa7drOFZqQQLoNFfHqd.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Lindsay Lohan",
+      "character": "Ashley Albright",
+      "profile_path": "/hwgyUEM7UuKTVhFcFoorx72pn1j.jpg"
+    },
+    {
+      "name": "Chris Pine",
+      "character": "Jake Hardin",
+      "profile_path": "/vSe6sIsdtcoqBhuWRXynahFg8Vf.jpg"
+    },
+    {
+      "name": "Samaire Armstrong",
+      "character": "Maggie",
+      "profile_path": "/bZnUqJp89MiVOJTLfRuVA2cmwq7.jpg"
+    },
+    {
+      "name": "Bree Turner",
+      "character": "Dana",
+      "profile_path": "/sg3oQRV4oiVLePatDsDGgUTTK67.jpg"
+    }
+  ]
+}

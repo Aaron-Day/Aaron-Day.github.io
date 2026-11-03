@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Rise of the Villains: Damned If You Do...",
+        "overview": "Penguin is King of Gotham and after a shakeup at the GCPD, Detective James Gordon\u0027s moral compass wavers, as he seeks help from Penguin. Meanwhile, Bruce Wayne continues to explore the secrets from his father\u0027s office, and Gotham newcomers Theo Galavan and his sister, Tabitha, make friends with some unlikely allies - a group of dangerous inmates from Arkham.",
+        "air_date": "2015-09-21",
+        "runtime": 45,
+        "still_path": "/ou2LS0R044oEwhJo1jgYhr50vrE.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Rise of the Villains: Knock, Knock",
+        "overview": "On the heels of his reinstatement, Gordon is thrust onto the high-profile case tracking the deadly inmate escape from Arkham Asylum. Meanwhile, Galavan plans his next move, while Bruce asks for help from his father\u0027s old friend to unlock the secrets in his office, and Nygma asks out Kristin Kringle on a date.",
+        "air_date": "2015-09-28",
+        "runtime": 45,
+        "still_path": "/dnu1kwQECBKzeKLm043VaXiMh2J.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Rise of the Villains: The Last Laugh",
+        "overview": "Gordon and Bullock track down a nemesis from the past, leading to a standoff between Jerome and Gordon. Meanwhile, a magic show at the Gotham Children\u0027s Hospital gala turns into a hostage situation.",
+        "air_date": "2015-10-05",
+        "runtime": 43,
+        "still_path": "/iF2r2f6RFyWd3PsiBBET1cU0rH8.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Rise of the Villains: Strike Force",
+        "overview": "Captain Barnes is called to duty to create a law-abiding task force, with the help of Gordon. Meanwhile, Penguin gets caught up in a favor for Galavan, and Nygma asks Kringle out on a date.",
+        "air_date": "2015-10-12",
+        "runtime": 43,
+        "still_path": "/hFGjoqnPSN5271QzxU2Dv6EDviX.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Rise of the Villains: Scarification",
+        "overview": "Galavan and Penguin join forces with a dangerous family in Gotham. Then, as the rivalry between the Waynes and the Galavans resurfaces, Gordon struggles to maintain order in the city.",
+        "air_date": "2015-10-19",
+        "runtime": 42,
+        "still_path": "/xvqIful6Qgg107jTlQKwNs628ZN.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Rise of the Villains: By Fire",
+        "overview": "After Bridgit Pike rejoins her brothers, a new spark of courage ignites within her, as she chooses to take control of her future. Meanwhile, Kringle and Nygma\u0027s relationship will take a new step and Penguin and Galavan continue to battle for control of Gotham City\u0027s underworld.",
+        "air_date": "2015-10-26",
+        "runtime": 43,
+        "still_path": "/u0eHa7TGmqOLsIf2yI5H4RNLc5t.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Rise of the Villains: Mommy\u0027s Little Monster",
+        "overview": "Butch leads Penguin and his men to the warehouse where Gertrude is being held, as Penguin plots his revenge on Galavan for kidnapping his mother. Meanwhile, Nygma deals with the aftermath of a deadly accident.",
+        "air_date": "2015-11-02",
+        "runtime": 43,
+        "still_path": "/5nd2fmKvzhLX6tghfupfQUnsQQM.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Rise of the Villains: Tonight\u0027s the Night",
+        "overview": "Galavan sends Barbara after Jim Gordon, while he tries to make a business deal with Bruce Wayne. Barnes and Bullock are hot on Barbara\u0027s trail, and Nygma has a run-in with a familiar face.",
+        "air_date": "2015-11-09",
+        "runtime": 43,
+        "still_path": "/dn6E22HzmO4XW0744pNWVoi70oA.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Rise of the Villains: A Bitter Pill to Swallow",
+        "overview": "Gordon and Barnes continue cleaning up Gotham, and Gordon comes face-to-face with one of the city\u0027s most dangerous hitmen, Eduardo Flamingo. Meanwhile, Nygma and Penguin cross paths again, and Bruce pressures Galavan into handing over the name of his parents\u0027 murderer.",
+        "air_date": "2015-11-16",
+        "runtime": 43,
+        "still_path": "/iYc72nLmQpnOF70BdMQXFHWFEXQ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Rise of the Villains: The Son of Gotham",
+        "overview": "Gordon confronts a suspect who is connected to Galavan, but falls short of obtaining any information. Meanwhile, Bruce gets one step closer to discovering the name of his parent\u0027s killer.",
+        "air_date": "2015-11-23",
+        "runtime": 43,
+        "still_path": "/mw4oLzDWVomhZzhTkrUWauhYNrv.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Rise of the Villains: Worse than a Crime",
+        "overview": "When Bruce Wayne is kidnapped, Gordon must look to some unlikely and dangerous allies for help. It is a battle of the villains, and not everyone makes it out alive.",
+        "air_date": "2015-11-30",
+        "runtime": 42,
+        "still_path": "/vNiE7MPWDsCKJ5xtuvgeyiRlJSH.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Wrath of the Villains: Mr. Freeze",
+        "overview": "Penguin takes a hit for Galavan\u0027s murder, but doesn\u0027t let Gordon off easily. Meanwhile, Gordon and Bullock investigate the body-snatching spree of Victor Fries, one of Gotham\u0027s preeminent cryogenics engineers.",
+        "air_date": "2016-02-29",
+        "runtime": 42,
+        "still_path": "/mv455YzsNZ9qjdqQf420Uz3BsNu.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Wrath of the Villains: A Dead Man Feels No Cold",
+        "overview": "As Gordon, Bullock and Barnes continue the search for Victor Fries, they are forced to look to his wife, Nora, for help. Meanwhile, Penguin is introduced to Hugo Strange, and Alfred reveals some crucial information to Bruce about his parents\u0027 murderer.",
+        "air_date": "2016-03-07",
+        "runtime": 42,
+        "still_path": "/xDHnpJWvUrjdTiP7Osr0k17bfJe.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Wrath of the Villains: This Ball of Mud and Meanness",
+        "overview": "Alfred and Selina help Bruce search for his parents\u0027 killer, Matches Malone; Gordon goes to Edward Nygma with Kristen Kringle\u0027s whereabouts; Hugo Strange continues working to reduce the Penguin\u0027s aggression.",
+        "air_date": "2016-03-14",
+        "runtime": 43,
+        "still_path": "/dclrl5BkcpFXV0E1GGlLeCamL2J.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Wrath of the Villains: Mad Grey Dawn",
+        "overview": "Gordon and Bullock follow a trail of clues in a robbery, not knowing they were left by Nygma; Gordon receives an anonymous threat; Penguin meets his father; Bruce works on his street smarts.",
+        "air_date": "2016-03-21",
+        "runtime": 43,
+        "still_path": "/dPJ8VOCSgLkLlKjUdfujDkdBKYI.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Wrath of the Villains: Prisoners",
+        "overview": "After Gordon is removed from protective custody, he begin\u0027s to face new threat\u0027s and danger\u0027s inside prison wall\u0027s in order to survive he must rely on a new friend as well as Bullock and other outside help. Meanwhile, Penguin grow\u0027s closer to his Father, while his step-mother and step-siblings move forward with their own plan\u0027s for the family.",
+        "air_date": "2016-03-28",
+        "runtime": 43,
+        "still_path": "/mc22uWl67UjqhFb6DGV8ZUAw287.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Wrath of the Villains: Into the Woods",
+        "overview": "In an attempt to clear his name, Gordon steals his case file and approaches Nygma for help. Meanwhile, Penguin discovers his step-family\u0027s role in his father\u0027s death, and awakens from his conditioning.",
+        "air_date": "2016-04-11",
+        "runtime": 43,
+        "still_path": "/4LGQABh17KRyBhQheCjalo5jETw.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Wrath of the Villains: Pinewood",
+        "overview": "After leaving Arkham Asylum, Barbara attempts to make amends with Gordon. Then, Bruce and Alfred track down one of Thomas Wayne\u0027s former friends from Project Chimera, but Hugo Strange disrupts their plans.",
+        "air_date": "2016-04-18",
+        "runtime": 41,
+        "still_path": "/ftRSlHklsclJpe2gmysLJr1e15X.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Wrath of the Villains: Azrael",
+        "overview": "Gordon and Bruce question Professor Strange about project chimera which leads Strange to send the newly resurrected Galavan to confront Gordon. Meanwhile, Gordon investigate\u0027s who Professor Strange is.",
+        "air_date": "2016-05-02",
+        "runtime": 43,
+        "still_path": "/8W8sjk71VLXb802Wwh4wNk34yQt.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Wrath of the Villains: Unleashed",
+        "overview": "Azrael is on the loose in Gotham City, which sparks Penguin\u0027s need for revenge. Meanwhile, Bruce enlists the help of Selina Kyle to help track down Professor Strange, as he evades arrest for his experiments.",
+        "air_date": "2016-05-09",
+        "runtime": 42,
+        "still_path": "/nfGKBLDcDzhyiDg8jDWSsewDEhT.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Wrath of the Villains: A Legion of Horribles",
+        "overview": "Hugo Strange welcomes a familiar face to Gotham after he resurrects Fish Mooney in Indian Hill. Later, Bruce discovers a friend is in danger and teams up with Gordon, Alfred and Lucius, while uncovering more of Strange\u0027s experiments.",
+        "air_date": "2016-05-16",
+        "runtime": 41,
+        "still_path": "/jAXP3dYu4vUOn86gYa0ZaZWVhEr.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Wrath of the Villains: Transference",
+        "overview": "While Gordon, Bruce and Lucius remain at Indian Hill, the city of Gotham will be met with a new threat as Hugo Strange\u0027s inmates devise a plan to escape and start their new lives in Gotham.",
+        "air_date": "2016-05-23",
+        "runtime": 42,
+        "still_path": "/rvtLuA9V1tqFxxFGhGEL1WXX5P.jpg"
+      }
+    ]
+  }
+}

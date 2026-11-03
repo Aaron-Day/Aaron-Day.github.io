@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9377,
+    "title": "Ferris Bueller\u0027s Day Off",
+    "overview": "After high school slacker Ferris Bueller successfully fakes an illness in order to skip school for the day, he goes on a series of adventures throughout Chicago with his girlfriend Sloane and best friend Cameron, all the while trying to outwit his wily school principal and fed-up sister.",
+    "tagline": "Leisure rules.",
+    "runtime": 103,
+    "release_date": "1986-06-11",
+    "vote_average": 7.558,
+    "poster_path": "/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg",
+    "backdrop_path": "/jehzP4JKiFzgTWIaASLFOJocJke.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matthew Broderick",
+      "character": "Ferris Bueller",
+      "profile_path": "/papqFgpyroZJEqd7WvuNGN8ti2k.jpg"
+    },
+    {
+      "name": "Alan Ruck",
+      "character": "Cameron Frye",
+      "profile_path": "/hj7CuWinT12hMKjRhSO4XEMVq7w.jpg"
+    },
+    {
+      "name": "Mia Sara",
+      "character": "Sloane Peterson",
+      "profile_path": "/gF1hYh0Rw5qCryiwGAWDdmiLufc.jpg"
+    },
+    {
+      "name": "Jeffrey Jones",
+      "character": "Ed Rooney",
+      "profile_path": "/zLodpqWUb9OzQLpK1ZY9im1Lh0p.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 6283,
+    "title": "MouseHunt",
+    "overview": "Down-on-their luck brothers, Lars and Ernie Smuntz, aren\u0027t happy with the crumbling old mansion they inherit... until they discover the estate is worth millions. Before they can cash in, they have to rid the house of its single, stubborn occupant\u2014a tiny and tenacious mouse.",
+    "tagline": "Who\u0027s hunting who?",
+    "runtime": 98,
+    "release_date": "1997-12-19",
+    "vote_average": 6.565,
+    "poster_path": "/aqBPrWOzXEO3rWEk3DYTHBjXNZb.jpg",
+    "backdrop_path": "/3YV8gxpLA3WYkLaQcejI4uti1hf.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Nathan Lane",
+      "character": "Ernie Smuntz",
+      "profile_path": "/jLPp3RoDhwOpLimKj3NhhBofPfT.jpg"
+    },
+    {
+      "name": "Lee Evans",
+      "character": "Lars Smuntz",
+      "profile_path": "/2BZeVCqFjYQ826ROkJaG4gehbmy.jpg"
+    },
+    {
+      "name": "Vicki Lewis",
+      "character": "April Smuntz",
+      "profile_path": "/dwTjtleLh1uu8n9AvUCv0n3mi2R.jpg"
+    },
+    {
+      "name": "Maury Chaykin",
+      "character": "Alexander Falko",
+      "profile_path": "/Aqmsu1UHo40Md4RlLGfotSt8Lrr.jpg"
+    }
+  ]
+}

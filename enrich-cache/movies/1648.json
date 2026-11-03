@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1648,
+    "title": "Bill \u0026 Ted\u0027s Excellent Adventure",
+    "overview": "Two rock-\u0027n-rolling teens, on the verge of failing their class, set out on a quest to make the ultimate school history report after being presented with a time machine.",
+    "tagline": "History is about to be rewritten by two guys who can\u0027t spell.",
+    "runtime": 90,
+    "release_date": "1989-02-17",
+    "vote_average": 6.8,
+    "poster_path": "/tV25lGWGWGEqUe3U0xjQTBgilSx.jpg",
+    "backdrop_path": "/aMASmAmkn7NT0nEq8PBZEgwBfGN.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91746,
+      "name": "Bill \u0026 Ted Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Ted \u0027Theodore\u0027 Logan",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Alex Winter",
+      "character": "Bill S. Preston",
+      "profile_path": "/7wPi7qrHrsqy1VJ2wQTatIwKjHH.jpg"
+    },
+    {
+      "name": "George Carlin",
+      "character": "Rufus",
+      "profile_path": "/2No6PxJbTGtawVJh0ivUiXfVprH.jpg"
+    },
+    {
+      "name": "Terry Camilleri",
+      "character": "Napoleon",
+      "profile_path": "/7snba5wE56wgHLUrASQxZySSm8C.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 49538,
+    "title": "X-Men: First Class",
+    "overview": "Before Charles Xavier and Erik Lensherr took the names Professor X and Magneto, they were two young men discovering their powers for the first time. Before they were arch-enemies, they were closest of friends, working together with other mutants (some familiar, some new), to stop the greatest threat the world has ever known.",
+    "tagline": "Witness the moment that will change our world.",
+    "runtime": 132,
+    "release_date": "2011-06-01",
+    "vote_average": 7.308,
+    "poster_path": "/hNEokmUke0dazoBhttFN0o3L7Xv.jpg",
+    "backdrop_path": "/yhp5Pt4GugkCs5mz63qWz5khHXe.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 748,
+      "name": "X-Men Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "James McAvoy",
+      "character": "Charles Xavier (24 Years)",
+      "profile_path": "/u4REKbm3zhFI2J5tVyqRovGRYUJ.jpg"
+    },
+    {
+      "name": "Michael Fassbender",
+      "character": "Erik Lehnsherr",
+      "profile_path": "/xvbnUiB2ZBR3QIt595OzNy657Vw.jpg"
+    },
+    {
+      "name": "Jennifer Lawrence",
+      "character": "Raven / Mystique",
+      "profile_path": "/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+    },
+    {
+      "name": "Rose Byrne",
+      "character": "Moira MacTaggert",
+      "profile_path": "/wR8YZlrewVW2FixRBrJcxaXU3R1.jpg"
+    }
+  ]
+}

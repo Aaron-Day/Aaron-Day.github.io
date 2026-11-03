@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 765,
+    "title": "Evil Dead II",
+    "overview": "Ash Williams and his girlfriend Linda find a log cabin in the woods with a voice recording from an archeologist who had recorded himself reciting ancient chants from \u0022The Book of the Dead.\u0022 As they play the recording an evil power is unleashed taking over Linda\u0027s body.",
+    "tagline": "Kiss your nerves goodbye!",
+    "runtime": 84,
+    "release_date": "1987-03-13",
+    "vote_average": 7.533,
+    "poster_path": "/4zqCKJVHUolGs6C5AZwAZqLWixW.jpg",
+    "backdrop_path": "/j1CqN4ypo3lFJJA5C7mYJzBaXoL.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1960,
+      "name": "Evil Dead Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bruce Campbell",
+      "character": "Ash",
+      "profile_path": "/p9335ljr7luOWsfwZSOlsIzFJKE.jpg"
+    },
+    {
+      "name": "Sarah Berry",
+      "character": "Annie",
+      "profile_path": "/3mIrEco33KaUIlMIALN7xYkROsk.jpg"
+    },
+    {
+      "name": "Dan Hicks",
+      "character": "Jake",
+      "profile_path": "/qBrRAMJ29R59jiGB2vJQ51ZJEBN.jpg"
+    },
+    {
+      "name": "Kassie DePaiva",
+      "character": "Bobby Joe",
+      "profile_path": "/7MhZiKHkLuGQuX4j96nVsNh0Icp.jpg"
+    }
+  ]
+}

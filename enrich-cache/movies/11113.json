@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11113,
+    "title": "My Fair Lady",
+    "overview": "A snobbish phonetics professor agrees to a wager that he can take a flower girl and make her presentable in high society.",
+    "tagline": "The loverliest motion picture of them all!",
+    "runtime": 173,
+    "release_date": "1964-12-01",
+    "vote_average": 7.483,
+    "poster_path": "/bTXVc29lGSNclf94VIZ49W4gGKl.jpg",
+    "backdrop_path": "/xMoQjqa3JUc2unO4nF9PmM1JTQu.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Audrey Hepburn",
+      "character": "Eliza Doolittle",
+      "profile_path": "/wg3RRHA5jV755dV0ksQ9g0Nc2xE.jpg"
+    },
+    {
+      "name": "Rex Harrison",
+      "character": "Professor Henry Higgins",
+      "profile_path": "/hy8cyCpmV0iRSl4Thby01anz4FY.jpg"
+    },
+    {
+      "name": "Stanley Holloway",
+      "character": "Alfred P. Doolittle",
+      "profile_path": "/3FLfK05mtqhF0mtuWVVWQCYwbA9.jpg"
+    },
+    {
+      "name": "Wilfrid Hyde-White",
+      "character": "Colonel Hugh Pickering",
+      "profile_path": "/dqdw6iQgMxHp7v5wdI5a2VI6Rwp.jpg"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 177572,
+    "title": "Big Hero 6",
+    "overview": "A special bond develops between plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who team up with a group of friends to form a band of high-tech heroes.",
+    "tagline": "Drop everything. Save the world.",
+    "runtime": 102,
+    "release_date": "2014-10-24",
+    "vote_average": 7.725,
+    "poster_path": "/2mxS4wUimwlLmI1xp6QW6NSU361.jpg",
+    "backdrop_path": "/4s2d3xdyqotiVNHTlTlJjrr3q0H.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Scott Adsit",
+      "character": "Baymax (voice)",
+      "profile_path": "/hhFWlYAasLldXD1fvzwmmzo9X43.jpg"
+    },
+    {
+      "name": "Ryan Potter",
+      "character": "Hiro Hamada (voice)",
+      "profile_path": "/f5AwjHKCWFD5K6YbesbMGSHEchs.jpg"
+    },
+    {
+      "name": "Daniel Henney",
+      "character": "Tadashi Hamada (voice)",
+      "profile_path": "/elAolohpUG5nS99EZxHZjd44DsS.jpg"
+    },
+    {
+      "name": "T.J. Miller",
+      "character": "Fred (voice)",
+      "profile_path": "/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg"
+    }
+  ]
+}

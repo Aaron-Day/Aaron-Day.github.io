@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36586,
+    "title": "Blade II",
+    "overview": "Blade forms an uneasy alliance with the vampire council in order to combat the Reapers, who are feeding on vampires.",
+    "tagline": "Faster. Sharper. Deadlier.",
+    "runtime": 117,
+    "release_date": "2002-03-22",
+    "vote_average": 6.577,
+    "poster_path": "/wAn6VYamKbnOtfyTZ6arVtkMzDv.jpg",
+    "backdrop_path": "/86b0NGY1i0bt3ckhkcHxiCSMxk1.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 735,
+      "name": "Blade Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Wesley Snipes",
+      "character": "Blade",
+      "profile_path": "/oOjRfYKQOBS6XsRyXaZktmSQBph.jpg"
+    },
+    {
+      "name": "Kris Kristofferson",
+      "character": "Whistler",
+      "profile_path": "/efD2Uu8QYBN7ZWSFa79mm3Pkk4L.jpg"
+    },
+    {
+      "name": "Ron Perlman",
+      "character": "Reinhardt",
+      "profile_path": "/nfky6J9ueey1gMdWMNU9k9YdfGP.jpg"
+    },
+    {
+      "name": "Leonor Varela",
+      "character": "Nyssa",
+      "profile_path": "/ooZQvMganzssNGoTKaIgFXM38U7.jpg"
+    }
+  ]
+}

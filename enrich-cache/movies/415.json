@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 415,
+    "title": "Batman \u0026 Robin",
+    "overview": "Batman and his sidekick Robin attempt to the foil the sinister schemes of a deranged set of new villains, most notably the melancholy Mr. Freeze, who wants to make Gotham City into an arctic region, and the sultry Poison Ivy, a botanical femme fatale. As the Dynamic Duo contend with these bad guys, a third hero, Batgirl, joins the ranks of the city\u0027s crime-fighters.",
+    "tagline": "Strength now. Courage always. Family, above all. Batman and Robin!",
+    "runtime": 125,
+    "release_date": "1997-06-20",
+    "vote_average": 4.395,
+    "poster_path": "/i7hEUpDuMN2LOrCEifFyGSHZQSY.jpg",
+    "backdrop_path": "/kEuQWHte2erRpAICrYqkAZaZAAY.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 120794,
+      "name": "Batman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "George Clooney",
+      "character": "Batman / Bruce Wayne",
+      "profile_path": "/dt0a7DT0SQeHb7NpURD6ifyEzsN.jpg"
+    },
+    {
+      "name": "Chris O\u0027Donnell",
+      "character": "Robin / Dick Grayson",
+      "profile_path": "/KvWBFg1aMBdu4X2PihXYL8xcFD.jpg"
+    },
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Mr. Freeze / Dr. Victor Fries",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Uma Thurman",
+      "character": "Poison Ivy / Dr. Pamela Isley",
+      "profile_path": "/sBgAZWi3o4FsnaTvnTNtK6jpQcF.jpg"
+    }
+  ]
+}

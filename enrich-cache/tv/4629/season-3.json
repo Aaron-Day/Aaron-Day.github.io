@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Into the Fire (2)",
+        "overview": "O\u0027Neill, Carter and Jackson must escape Hathor\u0027s clutches, while Teal\u0027c tries to raise a Jaffa army on Chulak. General Hammond must take desperate measures to rescue the team.",
+        "air_date": "1999-06-25",
+        "runtime": 44,
+        "still_path": "/cgsfTVOPgWkAYSpUjigB2nkAps.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Seth",
+        "overview": "SG-1 must find a renegade Goa\u0027uld who has been hiding on Earth for thousands of years.",
+        "air_date": "1999-07-02",
+        "runtime": 44,
+        "still_path": "/lyRVEg0xQrcO3couN944jRCzlgq.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Fair Game",
+        "overview": "The Asgard aid Earth in negotiating a nonagression treaty with the Goa\u0027uld System Lords.",
+        "air_date": "1999-07-09",
+        "runtime": 44,
+        "still_path": "/169bkx0bjLizegLTUOr3zDIURgT.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Legacy",
+        "overview": "When Daniel goes insane, SG-1 must deal with the legacy of Machello\u0027s anti-Goa\u0027uld technology.",
+        "air_date": "1999-07-16",
+        "runtime": 44,
+        "still_path": "/aUEqfAPirhMvzJDfOBtTv0y44t9.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Learning Curve",
+        "overview": "SG-1 discovers a planet where children are used to acquire knowledge for the entire population, then discarded.",
+        "air_date": "1999-07-23",
+        "runtime": 44,
+        "still_path": "/fbB4i8hCz1QFm2CabajjEqxAEcV.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Point of View",
+        "overview": "SG-1 must free an alternate reality Earth from a Goa\u0027uld invasion after duplicates of Samantha Carter and Charles Kawalsky come through the quantum mirror.",
+        "air_date": "1999-07-30",
+        "runtime": 44,
+        "still_path": "/zmFyooXZkHTnwg0Wz5B4zVkcYSj.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Deadman Switch",
+        "overview": "SG-1 is taken captive by an alien bounty hunter with uncertain loyalties.",
+        "air_date": "1999-08-06",
+        "runtime": 44,
+        "still_path": "/6ZzH2eVNvRgN5oWsSoIkUhew82p.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Demons",
+        "overview": "SG-1 finds a medieval Christian society terrorized by Sokar and the Unas, and is accused of being possessed by demons.",
+        "air_date": "1999-08-13",
+        "runtime": 44,
+        "still_path": "/9ZeY7NGfjLP6pxuGIDyPFeszG0Z.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Rules of Engagement",
+        "overview": "SG-1 discovers a military camp where young men are trained to impersonate SGC personnel to infiltrate Earth.",
+        "air_date": "1999-08-20",
+        "runtime": 44,
+        "still_path": "/4kDGXrwuu3xJW9qOUzGCgdVH0aD.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Forever in a Day",
+        "overview": "Jackson deals with the apparent death of his wife, Sha\u0027re, at the hands of Teal\u0027c.",
+        "air_date": "1999-10-08",
+        "runtime": 44,
+        "still_path": "/bN8EaVif4WXv4FBkfLURkKujylp.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Past and Present",
+        "overview": "SG-1 encounters an entire planet suffering from amnesia.  The planet\u0027s leader returns to Earth with SG-1 to find a cure,  but SG-1 suspects she may not be who she appears to be.",
+        "air_date": "1999-10-15",
+        "runtime": 44,
+        "still_path": "/xXXZLWfbAOGPXmvVECeNBLKys3W.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Jolinar\u0027s Memories (1)",
+        "overview": "When Major Carter\u0027s father Jacob is kidnapped by Sokar, the SG-1 team must infiltrate a prison moon designed to look like hell to rescue him.",
+        "air_date": "1999-10-22",
+        "runtime": 44,
+        "still_path": "/iGZwwE40IEJdmeuPbPMZt8p9LlZ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Devil You Know (2)",
+        "overview": "SG-1 must escape a hellish prison moon, and one of their worst enemies.",
+        "air_date": "1999-10-29",
+        "runtime": 44,
+        "still_path": "/tGsqQCu9Yd21vmvo1Dtc0w9snnX.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Foothold",
+        "overview": "SG-1 returns from a mission and discovers that metamorphic aliens have taken over the complex.",
+        "air_date": "1999-11-05",
+        "runtime": 44,
+        "still_path": "/kephC80iLP5gj5bt9mvq0hHs8Fl.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Pretense",
+        "overview": "The Tollan put Skaara and Klorel on trial to determine who will control the host body.",
+        "air_date": "2000-01-21",
+        "runtime": 44,
+        "still_path": "/zm1vcjyMEOK2maWDubFlOTVn3HZ.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Urgo",
+        "overview": "SG-1 receives alien brain implants that manifest themselves as a bizarre man, who tells them that they would not survive the procedure to remove him.",
+        "air_date": "2000-01-28",
+        "runtime": 44,
+        "still_path": "/bfr3BFB1atpWSQ3KwrSwAtSpLIq.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "A Hundred Days",
+        "overview": "After a meteor strike buries the Stargate, O\u0027Neill finds himself stranded on a planet with no hope of rescue.",
+        "air_date": "2000-02-04",
+        "runtime": 44,
+        "still_path": "/tDqBW9KFktVUPXTEWueEEFOWnXB.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Shades of Grey",
+        "overview": "O\u0027Neill steals technology from the Tollan, and is forced to leave the Stargate program. Maybourne offers an intriguing proposal.",
+        "air_date": "2000-02-11",
+        "runtime": 44,
+        "still_path": "/jBn8shQqAPGzq21EHAopgE5rEQb.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "New Ground",
+        "overview": "The members of SG-1 are imprisoned on a planet and become pawns in a war of ideology.",
+        "air_date": "2000-02-18",
+        "runtime": 44,
+        "still_path": "/urWdU1NvMjGK5akX1PEtGt1GEZ7.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Maternal Instinct",
+        "overview": "SG-1 discovers the mystical planet Kheb, and must find the Harcesis child of Apophis and Sha\u0027re before Apophis\u0027s army does.",
+        "air_date": "2000-02-25",
+        "runtime": 44,
+        "still_path": "/4T25XvBwlZKsnU36kU7myPVNQhU.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Crystal Skull",
+        "overview": "An alien artifact causes Daniel to disappear, and the team looks for help from his institutionalized grandfather.",
+        "air_date": "2000-03-03",
+        "runtime": 44,
+        "still_path": "/6HW4QU6h9IUAjW2f86h3DF8SMTl.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Nemesis (1)",
+        "overview": "SG-1 faces creatures of mass destruction that even the Asgard can\u0027t control, and must destroy Thor\u0027s infested vessel before the Replicator bugs reach Earth.",
+        "air_date": "2000-03-10",
+        "runtime": 44,
+        "still_path": "/8ldP2OrK1x9NyayOCNXYJ2GKZF3.jpg"
+      }
+    ]
+  }
+}

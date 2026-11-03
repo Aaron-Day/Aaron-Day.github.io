@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9101,
+    "title": "Down Periscope",
+    "overview": "Maverick Navy Lieutenant Commander Tom Dodge will never be a textbook officer, but he\u0027s a brilliant seaman who\u0027s always wanted to command a nuclear submarine \u2014 he\u0027s been given one last chance to clean up his record. Unfortunately, Admiral Graham, his nemesis, would rather sink the fleet than give Dodge his own boat. So, Graham stacks the deck against him and assigns Dodge to the Stingray, a diesel-powered WW2 submarine that can barely keep afloat. To make matters worse, Dodge\u0027s crew is a collection of maladjusted, mistake-prone misfits. Then, he\u0027s tagged the \u0022enemy\u0022 in a crucial war game, and ordered to take on the U.S. Navy\u0027s best.",
+    "tagline": "A rusty sub. A rebel commander. A renegade crew. When destiny called, they should have hung up.",
+    "runtime": 92,
+    "release_date": "1996-03-01",
+    "vote_average": 6.4,
+    "poster_path": "/brleKcHsirTw7lFqcgUMOfgL2nl.jpg",
+    "backdrop_path": "/waytOOLxw9IDbo0hNKZLk1z4lzI.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kelsey Grammer",
+      "character": "Lt. Commander Tom Dodge",
+      "profile_path": "/qn38jJHEqRBsj50Gqo2uM38fgJx.jpg"
+    },
+    {
+      "name": "Lauren Holly",
+      "character": "Lt. Emily Lake",
+      "profile_path": "/uJoOKPd6resnq9qA0ChbiNIk7ob.jpg"
+    },
+    {
+      "name": "Rob Schneider",
+      "character": "Lt. Marty Pascal",
+      "profile_path": "/nGHHon86e0rxVV1GVMRuKheqf6L.jpg"
+    },
+    {
+      "name": "Harry Dean Stanton",
+      "character": "Lt. Howard",
+      "profile_path": "/9zOTpVMwMHNjPFBNoPy9vOBT1NC.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2268,
+    "title": "The Golden Compass",
+    "overview": "In a parallel universe, after overhearing a shocking secret, precocious orphan Lyra Belacqua trades her carefree existence roaming the halls of Jordan College for an otherworldly adventure in the far North, unaware that it\u0027s part of her destiny.",
+    "tagline": "There are worlds beyond our own. The compass will show the way.",
+    "runtime": 113,
+    "release_date": "2007-12-04",
+    "vote_average": 6.089,
+    "poster_path": "/6DTH9poR8RAw859L6OuokT7z993.jpg",
+    "backdrop_path": "/qifYc5jT4CZxmLH9DfOlipioSPp.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dakota Blue Richards",
+      "character": "Lyra Belacqua",
+      "profile_path": "/1sonpTIY8JoxHSDzV40QMRkQSEw.jpg"
+    },
+    {
+      "name": "Nicole Kidman",
+      "character": "Marisa Coulter",
+      "profile_path": "/4KSQDodyBtTDMaREYgMdWD1LbH1.jpg"
+    },
+    {
+      "name": "Daniel Craig",
+      "character": "Lord Asriel",
+      "profile_path": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
+    },
+    {
+      "name": "Ben Walker",
+      "character": "Roger Parslow",
+      "profile_path": "/u4eEdilSy1HMTFseGMY44kYAuRO.jpg"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The 37\u0027s",
+        "overview": "Stardate: 48975.1. The crew happen upon a 1936 Ford truck adrift in space, leading to the discovery of a cryogenic chamber of humans abducted in the 1930s, including Amelia Earhart.",
+        "air_date": "1995-08-28",
+        "runtime": 46,
+        "still_path": "/fPRiZZQQ8WrXe7iVrZUkMcPiALf.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Initiations",
+        "overview": "Stardate: 49005.3. A young Kazon, desperate to prove himself and earn his name, tries to attack Chakotay.",
+        "air_date": "1995-09-04",
+        "runtime": 46,
+        "still_path": "/yMqTcG8VSiD79QH5qvTmGmrMTFH.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Projections",
+        "overview": "Stardate: 48892.1. The Emergency Medical Hologram is activated during a red alert and finds the ship has been abandoned after an unknown emergency. As he explores, evidence mounts that the Doctor may in fact be the only real human in a holo-program called Voyager.",
+        "air_date": "1995-09-11",
+        "runtime": 46,
+        "still_path": "/kPdw1N83DPceSYtoOwU6bcpu06h.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Elogium",
+        "overview": "Stardate: 48921.3. While the crew of Voyager investigate a cluster of space-borne life forms, Kes begins exhibiting strange intense symptoms.",
+        "air_date": "1995-09-18",
+        "runtime": 46,
+        "still_path": "/z8QloTTsGUpb6Kkf2rhCvnS6vKO.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Non Sequitur",
+        "overview": "Stardate: 49011. Harry Kim arises one morning to find he is back in San Francisco on Earth with his girlfriend Libby. In order to help him restore reality, he enlists the help of a shady figure in France by the name of Tom Paris, who has no idea who Harry is.",
+        "air_date": "1995-09-25",
+        "runtime": 46,
+        "still_path": "/7mU18XAw5EiFYQRJXt8yBocVVKu.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Twisted",
+        "overview": "Stardate: Unknown. Voyager enters a spatial distortion ring, which causes the ship\u2019s layout to shift in confusing ways.",
+        "air_date": "1995-10-02",
+        "runtime": 46,
+        "still_path": "/ikv5yYuZ4xh1mZKuSlZYjNnzeKz.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Parturition",
+        "overview": "Stardate: Unknown. Tom Paris and Neelix, while fighting over Kes\u2019s affections, crash-land on a dangerous planet and become responsible for a sickly baby creature.",
+        "air_date": "1995-10-09",
+        "runtime": 46,
+        "still_path": "/qUoeXa720l1OkFkVVcFCrGWTchG.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Persistence of Vision",
+        "overview": "Stardate: Unknown. Captain Janeway starts seeing characters and objects from her holo-novel around the ship. Soon afterwards the crew begins entering a catatonic state one by one, while only Kes and the Doctor remain unaffected.",
+        "air_date": "1995-10-30",
+        "runtime": 46,
+        "still_path": "/hCXQBQW1hZKxNSB8TIX3qkq25z3.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Tattoo",
+        "overview": "Stardate: Unknown. Upon discovering a cultural symbol drawn in the ground on a planet that was used by his ancestors to \u0027heal the land\u0027, Chakotay tries to contact the beings his tribe called the \u0027Sky Spirits.\u0027",
+        "air_date": "1995-11-06",
+        "runtime": 46,
+        "still_path": "/geLWqjnWelCaT9peKqYVD7IObjY.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Cold Fire",
+        "overview": "Stardate: 49164.8. The crew of Voyager make contact with the Caretaker\u0027s mate, Suspiria, and a community of Ocampa that have been living on her Array. One of the Ocampa begins to train Kes in growing her psychic abilities, but pushes her to become more powerful than she can control.",
+        "air_date": "1995-11-13",
+        "runtime": 46,
+        "still_path": "/mwigkDhm1keQNePHtXYkBD6nLjO.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Maneuvers",
+        "overview": "Stardate: Unknown. After the Kazon steal some Federation technology Chakotay goes after them on his own and is captured.",
+        "air_date": "1995-11-20",
+        "runtime": 46,
+        "still_path": "/kHGfZiOywMC5UiQqFzbOOPp5sZ2.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Resistance",
+        "overview": "Stardate: Unknown. Tuvok and B\u0027Elanna are captured and imprisoned after an away mission to obtain a chemical vital to Voyager\u0027s systems from a black market go wrong. Janeway is knocked unconscious and is rescued by a man who believes that she is his daughter.",
+        "air_date": "1995-11-27",
+        "runtime": 46,
+        "still_path": "/ypgVbWY2xzYzdaX6GFaZ8Nazyby.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Prototype",
+        "overview": "Stardate: Unknown. After finding and repairing a robot found drifting in space, B\u0027Elanna is abducted and forced to design a new prototype or Voyager will be destroyed.",
+        "air_date": "1996-01-15",
+        "runtime": 46,
+        "still_path": "/tfASwkkY4KzWV5fOZVJRDBUaWyk.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Alliances",
+        "overview": "Stardate: Unknown. Janeway tries to make an alliance with a Kazon sect for their own protection and so they can continue their journey through the Delta Quadrant.",
+        "air_date": "1996-01-22",
+        "runtime": 46,
+        "still_path": "/3ryqpvTrxLXg8ePCpkrj7rlcfbz.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Threshold",
+        "overview": "Stardate: Unknown. After finding a type of dilithium that can survive at a higher temperatures, Tom Paris comes up with the ingenious idea of attempting to cross the transwarp threshold in an attempt to find a way to get home faster.",
+        "air_date": "1996-01-29",
+        "runtime": 46,
+        "still_path": "/1ZFu70JfA123dX6gje2lKfjcM7j.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Meld",
+        "overview": "Stardate: Unknown. In order to help out Lon Suder, a psychopath who killed a crewmember, Tuvok performs a mind meld. Soon after, he begins showing violent tendencies, which develop until he loses control.",
+        "air_date": "1996-02-05",
+        "runtime": 46,
+        "still_path": "/5y9HHs5W1CjFou1qHWGPlnA6CrM.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Dreadnought",
+        "overview": "Stardate: 49447. When Voyager encounters a Cardassian missile ship in the Delta Quadrant named \u0027Dreadnought\u0027, B\u0027Elanna must disarm it before it destroys a planet with millions of innocent people.",
+        "air_date": "1996-02-12",
+        "runtime": 46,
+        "still_path": "/eUTSjqHH0nbU2xA9lBnpaapqNr1.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Death Wish",
+        "overview": "Stardate: 49301.2. A suicidal Q threatens the future of the Q-Continuum after he requests asylum aboard Voyager.",
+        "air_date": "1996-02-19",
+        "runtime": 46,
+        "still_path": "/yFn75jNlMTcVTILzvh06eNmiotI.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Lifesigns",
+        "overview": "Stardate: 46504.3. After receiving a Vidiian patient who is about to die from the Phage, the doctor transfers her consciousness into the ship\u0027s computer and creates a holographic body. He soon finds himself becoming deeply attracted to her.",
+        "air_date": "1996-02-26",
+        "runtime": 46,
+        "still_path": "/ejjSsTDcfhXbDAQv2kaErHxuRRa.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Investigations",
+        "overview": "Stardate: 49485.2. After weeks of erratic behavior, Tom Paris leaves Voyager and joins a Talaxian convoy.",
+        "air_date": "1996-03-13",
+        "runtime": 46,
+        "still_path": "/vnyVNGsxzAlvKXS8igbTmlywNCN.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Deadlock",
+        "overview": "Stardate: 49548.7. An accident in a plasma cloud duplicates Voyager after they are attacked by the Vidiians. During the aftermath, the ship is severely damaged, Ensign Wildman\u0027s baby dies and Harry Kim is sucked into space through a hull breach.",
+        "air_date": "1996-03-18",
+        "runtime": 46,
+        "still_path": "/wyNHNMFfTbFCUN352Rt0EYp1Euw.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Innocence",
+        "overview": "Stardate: Unknown. When Tuvok crashes on a moon, he discovers three small children who believe they are about to die.",
+        "air_date": "1996-04-08",
+        "runtime": 46,
+        "still_path": "/e19ysGeJMTn0OFohPJKHDpXg1AN.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "The Thaw",
+        "overview": "Stardate: Unknown. The crew of Voyager encounters a planet that has recently entered an ice age. They discover a series of stasis chambers where a small group of people are mentally connected to an artificial environment that turned horribly wrong.",
+        "air_date": "1996-04-29",
+        "runtime": 46,
+        "still_path": "/3J5uXXLEFysvHtT35Oq4C4DUcbK.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Tuvix",
+        "overview": "Stardate: 49655.2. A transporter accident merges Tuvok and Neelix into one new being who calls himself \u0027Tuvix.\u0027",
+        "air_date": "1996-05-06",
+        "runtime": 46,
+        "still_path": "/hDa3pU23Ykq7n8TuVWj8Caj6pg5.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Resolutions",
+        "overview": "Stardate: 49690.1. When Captain Janeway and Chakotay contract an incurable virus they are left on a planet that shield them from its effects. While Janeway searches for a cure, she begins to form a deeper relationship with her first officer. Onboard Voyager, Tuvok, who is now in command, faces a near mutiny.",
+        "air_date": "1996-05-13",
+        "runtime": 46,
+        "still_path": "/rgjKrj5RX2iUmgIzlOMXUynvIFb.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Basics (1)",
+        "overview": "Stardate: Unknown. Voyager receives a distress signal from Seska, who claims that Maje Cullah is going to take her baby away from her, a baby she says is Chakotay\u0027s. Chakotay is skeptical, but can\u0027t take the risk of abandoning his child, should it really prove to be his. Janeway authorises a mission to rescue Chakotay\u0027s child and the ship moves deep into Kazon Nistrim territory. However: was Seska for real, or is this all an elaborate trap?",
+        "air_date": "1996-05-20",
+        "runtime": 46,
+        "still_path": "/khT24UC33x46RZOTDzS5FaMuXJB.jpg"
+      }
+    ]
+  }
+}

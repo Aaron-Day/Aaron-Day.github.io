@@ -1,0 +1,176 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 19,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Blood in the Water",
+        "overview": "As the NCIS team searches for Gibbs after wreckage from his boat is discovered, they find out he was tracking a serial killer with journalist Marcie Warren, who wrote an expos\u00E9 on him.",
+        "air_date": "2021-09-20",
+        "runtime": 45,
+        "still_path": "/mMobF6gFLTSj0XoVHam70imCt7w.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Nearly Departed",
+        "overview": "While trying to find the serial killer Gibbs was after, the NCIS team discovers another person has been tracking the case as well.",
+        "air_date": "2021-09-27",
+        "runtime": 45,
+        "still_path": "/txdEWLibheWMEb00P8pYoNch4gz.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Road to Nowhere",
+        "overview": "Gibbs and Parker go on a road trip to find one of the serial killer\u0027s victims. Also, Agent Knight goes undercover at a large manufacturing company with ties to the murders.",
+        "air_date": "2021-10-04",
+        "runtime": 45,
+        "still_path": "/wDw3VKbxW6qr5wSwhpnA7XA7dWc.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Great Wide Open",
+        "overview": "Gibbs and McGee head to Alaska while the team works at home to uncover the conspiracy behind the serial killer.",
+        "air_date": "2021-10-11",
+        "runtime": 45,
+        "still_path": "/eGWeW0ZChX43G0YSTtGik2jIcDi.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Face the Strange",
+        "overview": "The NCIS team investigates the death of a Navy officer whose body suddenly explodes before Jimmy can examine it.",
+        "air_date": "2021-10-18",
+        "runtime": 45,
+        "still_path": "/iWM780infuavHASgUW0SvZk8ptt.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "False Start",
+        "overview": "NCIS investigates the death of a beloved Navy commander who trained some of the top athletes in the country.",
+        "air_date": "2021-11-01",
+        "runtime": 45,
+        "still_path": "/7dghCOKSalQXeZ1ljTMPX7HgA4Z.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Docked",
+        "overview": "NCIS investigates the death of a man on a cruise ship whose body is discovered in the ship\u0027s sauna by none other than McGee\u0027s mother-in-law, Judy.",
+        "air_date": "2021-11-08",
+        "runtime": 45,
+        "still_path": "/odILTsF052wJgdmRqOh8FOMwcj6.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Peacekeeper",
+        "overview": "NCIS investigates the case of a Navy reservist whose body is found in a beat-up car at the end of a gun range.",
+        "air_date": "2021-11-29",
+        "runtime": 45,
+        "still_path": "/k2LvucMkBeGsXUTSkSzT6Vs7BtH.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Collective Memory",
+        "overview": "When a hotshot financial advisor is found shot at a Naval station, NCIS investigates the case by interviewing the victim\u2019s three-dimensional hologram of herself, which she created before her death.",
+        "air_date": "2021-12-06",
+        "runtime": 45,
+        "still_path": "/pH3fkwOVX2Wvtj3j2LWVwoFR7T5.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Pledge of Allegiance",
+        "overview": "NCIS is called in when Navy Chief Warrant Officer Rafi Nazar is suspected of trying to sell stolen classified Navy software used to pilot combat drones.",
+        "air_date": "2022-01-03",
+        "runtime": 45,
+        "still_path": "/n22H93XEYuKmsWuIYu3OnEtP8uF.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "All Hands",
+        "overview": "After a civilian research vessel in the North Atlantic picks up a small boat of wounded Navy officers, NCIS arrives on the ship and is forced to hide after discovering terrorists on board.",
+        "air_date": "2022-01-17",
+        "runtime": 45,
+        "still_path": "/jOQm30mvQhonTp82aINqrCBqEcT.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Fight or Flight",
+        "overview": "When the body of a Navy Lieutenant is discovered missing an eye, the NCIS investigation leads to the world of cage fighting.",
+        "air_date": "2022-01-24",
+        "runtime": 45,
+        "still_path": "/zXsOvxGgoGdfPo1DLqpMVITxG1y.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Helpers",
+        "overview": "While investigating the death of an intruder at Quantico, Jimmy and Kasie are exposed to a deadly biotoxin. The NCIS team calls on Dr. Carol Wilson for help as they race to find the antidote.",
+        "air_date": "2022-02-28",
+        "runtime": 45,
+        "still_path": "/kyPRHhGtUDj0cGSqZacbfeKB8Qm.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "First Steps",
+        "overview": "As NCIS investigates the cause of death of a reservist Navy SEAL surgeon, they\u0027re forced to bring Vance\u0027s daughter to help with a highly dangerous mission.",
+        "air_date": "2022-03-07",
+        "runtime": 45,
+        "still_path": "/9RpMSoGHlAIVrX0ytdcVy1j1km1.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Thick as Thieves",
+        "overview": "Parker\u0027s delinquent past resurfaces when NCIS is called to Philadelphia to investigate the death of a Petty Officer.",
+        "air_date": "2022-03-14",
+        "runtime": 45,
+        "still_path": "/viiVQv0YezFpJo6SS9lEgcMGXTv.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Wake",
+        "overview": "A gruesome mishap at a Petty Officer\u2019s gender-reveal party leads NCIS to the case of a missing teacher that was popularized on a true crime podcast.",
+        "air_date": "2022-03-21",
+        "runtime": 45,
+        "still_path": "/pAJcFnSrqRmU6ZAXLzyVZdrf4pf.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Starting Over (I)",
+        "overview": "NCIS investigates the apparent suicide of a retired Navy officer who was in Palmer and Knight\u0027s grief group; Torres gets a call from NCIS Special Agent Jane Tennant to come to Hawai\u0027i.\n\nThe crossover continues on NCIS: Hawai\u0027i S01E18 T\u0027N\u0027T (II).",
+        "air_date": "2022-03-28",
+        "runtime": 45,
+        "still_path": "/8defjzI1x3uzdORc6C2jnOboWgK.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Last Dance",
+        "overview": "When an infamous arms dealer, Reymundo Diaz, is released from prison and bodies start piling up, Torres is forced to face the repercussions of his actions during an undercover operation he worked on years ago.",
+        "air_date": "2022-04-18",
+        "runtime": 45,
+        "still_path": "/jwzQuFOpvtrEh4ujxOfaNCPR1x8.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Brat Pack",
+        "overview": "NCIS investigates a ring of clever teenage partygoers when a string of break-ins takes place at Marine Base Quantico.",
+        "air_date": "2022-05-02",
+        "runtime": 45,
+        "still_path": "/fNcAyfX3pYedbFZWpqvDf1ks3tm.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "All or Nothing",
+        "overview": "NCIS investigates the unexpected death of a Navy reservist who was an investigative journalist.",
+        "air_date": "2022-05-16",
+        "runtime": 45,
+        "still_path": "/7Wny9WHUtmLaYDsvQvSo7NoCrAP.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Birds of a Feather",
+        "overview": "When Agent Parker is framed for murder, the team puts their jobs and lives on the line to buy time and uncover the truth.",
+        "air_date": "2022-05-23",
+        "runtime": 45,
+        "still_path": "/5RADGfzUPWFN0JWhzTzOyY4Gh4c.jpg"
+      }
+    ]
+  }
+}

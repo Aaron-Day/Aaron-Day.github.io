@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 438695,
+    "title": "Sing 2",
+    "overview": "Buster and his new cast now have their sights set on debuting a new show at the Crystal Tower Theater in glamorous Redshore City. But with no connections, he and his singers must sneak into the Crystal Entertainment offices, run by the ruthless wolf mogul Jimmy Crystal, where the gang pitches the ridiculous idea of casting the lion rock legend Clay Calloway in their show. Buster must embark on a quest to find the now-isolated Clay and persuade him to return to the stage.",
+    "tagline": "Where will your dreams take you?",
+    "runtime": 110,
+    "release_date": "2021-12-01",
+    "vote_average": 7.831,
+    "poster_path": "/aWeKITRFbbwY8txG5uCj4rMCfSP.jpg",
+    "backdrop_path": "/ztiFxuG0gC6wQ8y7JZFYbCQyN4Y.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 544670,
+      "name": "Sing Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Matthew McConaughey",
+      "character": "Buster Moon (voice)",
+      "profile_path": "/lCySuYjhXix3FzQdS4oceDDrXKI.jpg"
+    },
+    {
+      "name": "Reese Witherspoon",
+      "character": "Rosita (voice)",
+      "profile_path": "/mfjunuTHrd0wnh8UG1ImMN9FSws.jpg"
+    },
+    {
+      "name": "Scarlett Johansson",
+      "character": "Ash (voice)",
+      "profile_path": "/mjReG6rR7NPMEIWb1T4YWtV11ty.jpg"
+    },
+    {
+      "name": "Taron Egerton",
+      "character": "Johnny (voice)",
+      "profile_path": "/uCaPhyKAQIfEzAWWCYIrO2004CB.jpg"
+    }
+  ]
+}

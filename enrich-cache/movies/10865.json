@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10865,
+    "title": "Atlantis: The Lost Empire",
+    "overview": "A young linguist named Milo Thatch joins an intrepid group of explorers to find the mysterious lost continent of Atlantis.",
+    "tagline": "Atlantis is waiting...",
+    "runtime": 95,
+    "release_date": "2001-06-02",
+    "vote_average": 7.053,
+    "poster_path": "/oK8yR6xSQreWf1ouP1VpXKwoop5.jpg",
+    "backdrop_path": "/4eTiLRTYwAVQyQAjuFuf3BXAony.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 100965,
+      "name": "Atlantis Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael J. Fox",
+      "character": "Milo (voice)",
+      "profile_path": "/2JB4FMgQmnhbBlQ4SxWFN9EIVDi.jpg"
+    },
+    {
+      "name": "Cree Summer",
+      "character": "Princess Kida (voice)",
+      "profile_path": "/7DRq0zPUUWu55pUbnc2roVnzOJ9.jpg"
+    },
+    {
+      "name": "James Garner",
+      "character": "Rourke (voice)",
+      "profile_path": "/67CRvu5Ac76uJL5WD4Z4Db4mx6x.jpg"
+    },
+    {
+      "name": "Claudia Christian",
+      "character": "Helga (voice)",
+      "profile_path": "/bwmh731OxEyzgtR95nRraLDZLyB.jpg"
+    }
+  ]
+}

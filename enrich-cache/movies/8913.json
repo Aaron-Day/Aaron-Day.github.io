@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8913,
+    "title": "Pet Sematary",
+    "overview": "After the Creed family\u0027s cat is accidentally killed, a friendly neighbor advises its burial in a mysterious nearby cemetery.",
+    "tagline": "Sometimes dead is better.",
+    "runtime": 103,
+    "release_date": "1989-04-21",
+    "vote_average": 6.662,
+    "poster_path": "/8ZtH1V4rhrtP53ezlEWrCaMALXF.jpg",
+    "backdrop_path": "/xWq3T9P4NU2pTdZ3hXFygsNnAq4.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10789,
+      "name": "Pet Sematary Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dale Midkiff",
+      "character": "Louis Creed",
+      "profile_path": "/5intcDI6ntzDD6VyRA3FSqXrBdK.jpg"
+    },
+    {
+      "name": "Fred Gwynne",
+      "character": "Jud Crandall",
+      "profile_path": "/nO5ufGwURxJ20zYnSgb6l4nYDQO.jpg"
+    },
+    {
+      "name": "Denise Crosby",
+      "character": "Rachel Creed",
+      "profile_path": "/1Eoo8o3xRGflJ9kHxg1eFVwAwQa.jpg"
+    },
+    {
+      "name": "Brad Greenquist",
+      "character": "Victor Pascow",
+      "profile_path": "/kbucYMeLCNUk03HuP9SxQajEBnI.jpg"
+    }
+  ]
+}

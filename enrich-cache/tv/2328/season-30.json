@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 30,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Lightning Strikes",
+        "overview": "Bajillia enlists Lord Zedd to lead her armies in an intergalactic war \u2014 and things only get worse when the two capture a Power Ranger for their team.",
+        "air_date": "2023-09-29",
+        "runtime": 25,
+        "still_path": "/hAKgemaW6xfqJxHXGvIUmybKjRo.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Beyond Repair",
+        "overview": "Team Cosmic Fury prepares for a possible invasion from Lord Zedd while Amelia tries to cure an evilized Ranger and Javi learns to accept his new loss.",
+        "air_date": "2023-09-29",
+        "runtime": 25,
+        "still_path": "/vM28iyPEhpeSzoyOxARTkFyohTK.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Off Grid",
+        "overview": "Stranded on a faraway planet with no powers, Team Cosmic Fury scrambles to figure out a way home while Earth suffers an invasion from enemy forces.",
+        "air_date": "2023-09-29",
+        "runtime": 25,
+        "still_path": "/8rZusV4kpSSnoJY5Eb3uLkCTPld.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Team Work",
+        "overview": "Ollie races Team Cosmic Fury to find Zayto, but the Zenith Ranger\u0027s location is anyone\u0027s guess. They\u0027d better move fast though: Lord Zedd\u0027s forces loom!",
+        "air_date": "2023-09-29",
+        "runtime": 25,
+        "still_path": "/aF9gT0hVsMUIWZPnIZj7Z271pxr.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Rock Out",
+        "overview": "When Bajillia discovers a long-lost Zord on a mining planet, the Rangers must create a musical distraction to stop her from using it as a war weapon.",
+        "air_date": "2023-09-29",
+        "runtime": 25,
+        "still_path": "/iqRHb08WNP2aQpx54HzRImyQxO0.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Take Off",
+        "overview": "Solon goes missing right as the Rangers prepare to fly the base back to Earth. But the team has bigger problems: Ollie\u0027s tracker has led him to Erridus.",
+        "air_date": "2023-09-29",
+        "runtime": 25,
+        "still_path": "/amzzd5i82diRPV2vzxE5UnJvWIg.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Operation Seasoning",
+        "overview": "To save Pine Ridge, Team Cosmic Fury must dismantle the system of Squidrills creating an anti-Zord forcefield around Earth \u2014\u00A0with the help of a spy.",
+        "air_date": "2023-09-29",
+        "runtime": 25,
+        "still_path": "/tJlJQztNDI6XY7yqdjHNOnlQoIz.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Switching Sides",
+        "overview": "Two ex-villains should be the last people to cure Ollie, but Aiyon has a plan that just might work. Meanwhile, Zayto\u0027s secret becomes harder to hide.",
+        "air_date": "2023-09-29",
+        "runtime": 25,
+        "still_path": "/lXnMJHUMK9ustv3f6kVa1ckvdN1.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Master Plan",
+        "overview": "The connection to the Morphin Grid is in danger, unless the team can travel to Eltar and take back the Master Captivator and Ollie \u2014 without backup.",
+        "air_date": "2023-09-29",
+        "runtime": 25,
+        "still_path": "/fnKokufsoW4lifjMcnTnhQtyJIB.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The End",
+        "overview": "If Team Cosmic Fury can\u0027t stabilize the Master Captivator, a wave of pure evil threatens to wipe out all the good in the universe. No pressure, right?",
+        "air_date": "2023-09-29",
+        "runtime": 25,
+        "still_path": "/pwRrh0ZDCEKdgoWPnVwlpbn5UGj.jpg"
+      }
+    ]
+  }
+}

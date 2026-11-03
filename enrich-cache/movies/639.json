@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 639,
+    "title": "When Harry Met Sally...",
+    "overview": "Sex always gets in the way of friendships between men and women. At least, that\u0027s what Harry Burns believes. So when Harry meets Sally Albright and a deep friendship blossoms between them, Harry\u0027s determined not to let his attraction to Sally destroy it. But when a night of weakness ends in a morning of panic, can the pair avoid succumbing to Harry\u0027s fears by remaining friends and admitting they just might be the perfect match for each other?",
+    "tagline": "Can two friends sleep together and still love each other in the morning?",
+    "runtime": 96,
+    "release_date": "1989-07-12",
+    "vote_average": 7.409,
+    "poster_path": "/rFOiFUhTMtDetqCGClC9PIgnC1P.jpg",
+    "backdrop_path": "/xd5SYDUhNVGLUeK2epbEjnVBpPN.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Billy Crystal",
+      "character": "Harry Burns",
+      "profile_path": "/jfcCceTnP7rrHz1pSjCxiqRosw3.jpg"
+    },
+    {
+      "name": "Meg Ryan",
+      "character": "Sally Albright",
+      "profile_path": "/pxfTSfJ4yJWq52uomSWKzigngOa.jpg"
+    },
+    {
+      "name": "Carrie Fisher",
+      "character": "Marie",
+      "profile_path": "/of4yHmryKPy92eeskUQ7MRmjC3l.jpg"
+    },
+    {
+      "name": "Bruno Kirby",
+      "character": "Jess",
+      "profile_path": "/rCYOMk34rqf28KusLKi002RNbFg.jpg"
+    }
+  ]
+}

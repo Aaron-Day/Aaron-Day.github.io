@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 533535,
+    "title": "Deadpool \u0026 Wolverine",
+    "overview": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.",
+    "tagline": "Come together.",
+    "runtime": 128,
+    "release_date": "2024-07-24",
+    "vote_average": 7.588,
+    "poster_path": "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+    "backdrop_path": "/by8z9Fe8y7p4jo2YlW2SZDnptyT.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 448150,
+      "name": "Deadpool Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ryan Reynolds",
+      "character": "Wade Wilson / Deadpool / Nicepool",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Hugh Jackman",
+      "character": "Logan / Wolverine",
+      "profile_path": "/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Emma Corrin",
+      "character": "Cassandra Nova",
+      "profile_path": "/miSbXJBlq6S3dVvOr7OoNL4axW6.jpg"
+    },
+    {
+      "name": "Matthew Macfadyen",
+      "character": "Mr. Paradox",
+      "profile_path": "/sFaIfkykJdftwrc3BdEfpdg2mYW.jpg"
+    }
+  ]
+}

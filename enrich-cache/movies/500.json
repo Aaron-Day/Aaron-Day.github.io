@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 500,
+    "title": "Reservoir Dogs",
+    "overview": "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic parolee Mr. Blonde, bickering weasel Mr. Pink and Nice Guy Eddie -- unravel.",
+    "tagline": "Every dog has his day.",
+    "runtime": 99,
+    "release_date": "1992-09-02",
+    "vote_average": 8.109,
+    "poster_path": "/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg",
+    "backdrop_path": "/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Harvey Keitel",
+      "character": "Mr. White / Larry Dimmick",
+      "profile_path": "/7P30hza1neYWW3r7rSQOC736K2Z.jpg"
+    },
+    {
+      "name": "Tim Roth",
+      "character": "Mr. Orange / Freddy Newandyke",
+      "profile_path": "/qSizF2i9gz6c6DbAC5RoIq8sVqX.jpg"
+    },
+    {
+      "name": "Michael Madsen",
+      "character": "Mr. Blonde / Vic Vega",
+      "profile_path": "/fvr2EXEPrVwsF2JlfRp0Olbj4g8.jpg"
+    },
+    {
+      "name": "Chris Penn",
+      "character": "\u0022Nice Guy\u0022 Eddie Cabot",
+      "profile_path": "/rePKftsRntg7gO8vPzDDAOddXmC.jpg"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Fallout",
+        "overview": "Oliver deals with the fallout of the explosion on the island.",
+        "air_date": "2017-10-12",
+        "runtime": 42,
+        "still_path": "/tku04rIOjFHIwdkjeSGi6DQiOQp.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Tribute",
+        "overview": "Oliver tries to balance being the mayor, Green Arrow and a father to William. Anatoly returns to Star City with a deadly agenda.",
+        "air_date": "2017-10-19",
+        "runtime": 42,
+        "still_path": "/eGwGlULe1PLqEtJf2yllWhVVrhv.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Next of Kin",
+        "overview": "A rogue black ops team led by Onyx breaks into Kord Industries and steals something lethal. Oliver struggles to connect with William so he reaches out to a surprising source for help.",
+        "air_date": "2017-10-26",
+        "runtime": 42,
+        "still_path": "/oSpZyzjBqKPdIpbPAbYLyd7dSDv.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Reversal",
+        "overview": "Just as Oliver starts to get things in order, Black Siren launches another attack on the citizens of Star City.",
+        "air_date": "2017-11-02",
+        "runtime": 42,
+        "still_path": "/4vZfTCKJiCAMLIMduyVhMcZ9WdT.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Deathstroke Returns",
+        "overview": "Slade returns and asks Oliver for help in tracking down his son. When they learn Joe has been taken hostage by mercenaries, their mission to save him gets complicated by a terrible revelation that could shatter Slade\u0027s hopes of reunion forever. Meanwhile, Vigilante reappears in Star City.",
+        "air_date": "2017-11-09",
+        "runtime": 42,
+        "still_path": "/iKpNoDp4onqXa0PtiA6jrBhT1Sv.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Promises Kept",
+        "overview": "As Slade continues to uncover clues about his son\u0027s last few years, Oliver makes a big decision. Meanwhile, the Green Arrow leads the team into battle against \u0022The Dragon,\u0022 a villain who is stealing valuable tech in Star City.",
+        "air_date": "2017-11-16",
+        "runtime": 42,
+        "still_path": "/6fGdUj9jrxeUJAu6y9wZRb98Nb0.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Thanksgiving",
+        "overview": "Oliver celebrates Thanksgiving with his family but the happy moment is interrupted. Meanwhile, Black Siren returns to wreak havoc on the holiday.",
+        "air_date": "2017-11-23",
+        "runtime": 42,
+        "still_path": "/adarSKMQhzSmupOpMlEx0P54pu4.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Crisis on Earth-X (II)",
+        "overview": "Barry and Iris\u2019s wedding brings the gang together, but things go awry when villains from Earth-X attack the ceremony. All of the superheroes band together with help from their super friends like Citizen Cold, The Ray, Felicity Smoak, Iris West and Alex Danvers to take on their most formidable villains yet. Earth\u2019s mightiest heroes \u2013 Green Arrow, Supergirl, The Flash and White Canary \u2013 lead their teams into battle to save the world.\n\nThe crossover starts on Supergirl S03E08 Crisis on Earth X (I). It continues on The Flash S04E08 Crisis on Earth-X (III) and DC\u0027s Legends of Tomorrow S03E08 Crisis on Earth X (IV).",
+        "air_date": "2017-11-27",
+        "runtime": 42,
+        "still_path": "/8uBnSngtwBE5MaMweQOf32h6sOl.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Irreconcilable Differences",
+        "overview": "Quentin Lance is kidnapped by Black Siren and Cayden James, who are looking to trade Lance\u0027s life for a weapon of mass destruction. Oliver and Team Green Arrow must figure out a way to save Lance while still keeping the city safe.",
+        "air_date": "2017-12-07",
+        "runtime": 42,
+        "still_path": "/674MdRWyRSEYkzzKuY7K0m92cAd.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Divided",
+        "overview": "Despite losing half his team, Oliver remains confident that he, Felicity and Diggle can stop Cayden James and Black Siren. However, when he discovers one of Cayden\u0027s secrets, he decides to team up with an unlikely ally. Meanwhile, Dinah spends time with Vince.",
+        "air_date": "2018-01-18",
+        "runtime": 42,
+        "still_path": "/4SzRLUqe0sVkxMwVPXtu4q7sYo3.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "We Fall",
+        "overview": "Cayden James ups the ante by launching his plan to take control of every aspect of the city. Despite the scope of Cayden\u0027s plan, Oliver is determined to foil it with just the Original Team Arrow \u2013 and without the aid of Rene, Dinah, or Curtis. But things get complicated when William is endangered as a result of Cayden\u0027s handiwork.",
+        "air_date": "2018-01-25",
+        "runtime": 42,
+        "still_path": "/ez3yUFmi2EtjH9ZPugyUnB1WGO4.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "All for Nothing",
+        "overview": "Oliver continues his battle with Cayden James. Dinah and Oliver have a major disagreement that endangers the life of one of their own.",
+        "air_date": "2018-02-01",
+        "runtime": 42,
+        "still_path": "/cd5CjXF1Xd7zCaN7493VvUGn1s4.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Devil\u0027s Greatest Trick",
+        "overview": "Cayden James discovers a secret about the Green Arrow that pushes him over the edge. Knowing everyone and everything he loves is in danger, Oliver must decide if he can do this alone or if he needs to turn to his old teammates for help. William starts to demand more of Oliver\u0027s time.",
+        "air_date": "2018-02-08",
+        "runtime": 42,
+        "still_path": "/ajU4z8pP9oCPx0HIaEwRnPj22E7.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Collision Course",
+        "overview": "Oliver, Diggle and Felicity disagree with Dinah, Curtis and Rene on how to handle Black Siren. The two teams face off and a fight ensues.",
+        "air_date": "2018-03-01",
+        "runtime": 42,
+        "still_path": "/3qxzSeID32pkNzd4liVvWxOUpdS.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Doppelganger",
+        "overview": "Oliver and Thea are shocked to hear that Roy Harper is back in Star City. However, when they discover the circumstances of Roy\u0027s return, Oliver and Thea realize that Roy is in trouble and jump in to save him. Black Siren makes a shocking decision.",
+        "air_date": "2018-03-08",
+        "runtime": 42,
+        "still_path": "/FyxBXoa2ZwpuNN94pAU25gZ6vN.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Thanatos Guild",
+        "overview": "Nyssa Al Ghul returns to Star City to warn Thea that a group of renegade League of Assassins members are planning to attack her. This group, led by Athena, is intent on finding a mysterious box that Malcolm left behind and will stop at nothing to get it. Nyssa helps Oliver come to a life-changing realization.",
+        "air_date": "2018-03-29",
+        "runtime": 42,
+        "still_path": "/v7sBGkfvxylH1aP5ZEsPGd0XTJw.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Brothers in Arms",
+        "overview": "Oliver and Diggle face their biggest challenge yet. Curtis is disappointed to find out his new boyfriend has a firm anti-vigilante stance.",
+        "air_date": "2018-04-05",
+        "runtime": 42,
+        "still_path": "/e24WMrUA1H8Uutj2ipo0CZdWpZ1.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Fundamentals",
+        "overview": "In his darkest place yet, Oliver wonders if he has failed at everything \u2013 being a father, a mayor and a hero. His frustration rising, Oliver lashes out at Felicity and William. A surprising visit from an old friend has Oliver questioning his next move.",
+        "air_date": "2018-04-12",
+        "runtime": 42,
+        "still_path": "/aBfCd3WaEPKUL5G3hWTuNjQijoU.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Dragon",
+        "overview": "Looking to expand his empire, Diaz and Laurel meet with The Quadrant, a coalition of mafia families who run national organized crime. Meanwhile, after Oliver\u0027s recent decision, Felicity and Curtis double their efforts on building Helix Dynamics.",
+        "air_date": "2018-04-19",
+        "runtime": 42,
+        "still_path": "/bDe17biudys90VpMvYxdv1cLlSM.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Shifting Allegiances",
+        "overview": "Oliver turns to an old friend to help battle Diaz; Rene is out of the hospital but has a hard time readjusting to life as Wild Dog; Lance discovers something shocking about Black Siren.",
+        "air_date": "2018-04-26",
+        "runtime": 42,
+        "still_path": "/qTFEkwjqJj3ejLcT9OlrknoFI1s.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Docket No. 11-19-41-73",
+        "overview": "The pressure mounts for Oliver who begins to wonder if he will lose everything in his battle to save Star City. A familiar face returns.",
+        "air_date": "2018-05-03",
+        "runtime": 42,
+        "still_path": "/31FdFHr4eritXAAREyi5QcqEbon.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Ties That Bind",
+        "overview": "Diaz targets Team Arrow and their loved ones. Oliver struggles with Felicity putting herself in danger when she gets the chance to stop Diaz for good.",
+        "air_date": "2018-05-10",
+        "runtime": 42,
+        "still_path": "/e4WB4PCgA5N57avMupNLHEyaVPI.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Life Sentence",
+        "overview": "With a new ally on his team, Oliver engages Diaz in an epic final battle.",
+        "air_date": "2018-05-17",
+        "runtime": 42,
+        "still_path": "/cknHTRfyBpPFwiZtytY5xbDxONu.jpg"
+      }
+    ]
+  }
+}

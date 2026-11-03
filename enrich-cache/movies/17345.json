@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 17345,
+    "title": "Flywheel",
+    "overview": "Jay Austin wants to sell you a used car, but watch out! Many victims have fallen prey to his smiling face and hasty promises. Austin does everything his way until his dishonesty and manipulation are exposed. Like many men, he becomes disgusted by the masks he wears and the lies he tells. In every man\u0027s life, there can be a turning point. When Jay makes his turn, he never looks back.",
+    "tagline": "In every man\u0027s life, there is a turning point",
+    "runtime": 120,
+    "release_date": "2003-07-25",
+    "vote_average": 7.258,
+    "poster_path": "/5M5h80QGQq5BXxcpoT1wkaxPdwm.jpg",
+    "backdrop_path": "/6ogrLzrUbeJn1zPbfIHgAfWHYf3.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Alex Kendrick",
+      "character": "Jay Austin",
+      "profile_path": "/9n7UKpTp7KNjL2qm2k0qAOuiNCC.jpg"
+    },
+    {
+      "name": "Janet Lee Dapper",
+      "character": "Judy Austin",
+      "profile_path": null
+    },
+    {
+      "name": "Richie Hunnewell",
+      "character": "Todd Austin",
+      "profile_path": null
+    },
+    {
+      "name": "Roger Breland",
+      "character": "Mr. Austin",
+      "profile_path": null
+    }
+  ]
+}

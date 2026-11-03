@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Here We Woe Again",
+        "overview": "After a productive summer break, Wednesday returns to Nevermore as a grudging campus celebrity \u2014 and the target of a dangerous stalker.",
+        "air_date": "2025-08-06",
+        "runtime": 61,
+        "still_path": "/1L5TJquVHoCp19w5tKy48DfcCnZ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Devil You Woe",
+        "overview": "Chaos reigns on campus as Nevermore celebrates its annual Prank Day. Wednesday confronts an old enemy and gains an unwanted ally.",
+        "air_date": "2025-08-06",
+        "runtime": 62,
+        "still_path": "/k5g6TAHMpXC8o85OZAOW2rfEWcG.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Call of the Woe",
+        "overview": "Stripped of both her ability and Goody\u0027s book, Wednesday is forced to do some old-fashioned detective work on a school camping trip.",
+        "air_date": "2025-08-06",
+        "runtime": 60,
+        "still_path": "/75n29ly38Sx4XNqXHkIRLpUcIfm.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "If These Woes Could Talk",
+        "overview": "It\u0027s an Addams family investigation as Fester and Thing commit themselves to Wednesday\u0027s case. Trying to conceal one secret, Bianca stumbles on another.",
+        "air_date": "2025-08-06",
+        "runtime": 61,
+        "still_path": "/irw76zkymiXrrAyC1ftq8Jomsuh.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Hyde and Woe Seek",
+        "overview": "With Tyler on the loose, Wednesday readies for a risky D\u00EDa de los Muertos showdown. Slurp\u0027s growing hunger poses problems for Pugsley.",
+        "air_date": "2025-09-03",
+        "runtime": 52,
+        "still_path": "/7ophg7pjLtQhLsLiD46aTTAnpbY.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Woe Thyself",
+        "overview": "An encounter with a spirit from Nevermore\u0027s past gives Wednesday and Enid a new perspective on one another \u2014 and puts one of their classmates in danger.",
+        "air_date": "2025-09-03",
+        "runtime": 70,
+        "still_path": "/dXZnTHnv0wHwFWfTqfhs5A0z7ZO.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Woe Me the Money",
+        "overview": "As the school gala looms, Wednesday digs up dirt on Dort, Enid tries not to wolf out and Morticia engages in a battle of wills with Grandmama.",
+        "air_date": "2025-09-03",
+        "runtime": 56,
+        "still_path": "/eDtRN5bifoC2Zur9pjYQpSuqzWM.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "This Means Woe",
+        "overview": "When buried family secrets are unearthed, Wednesday must race against time to prevent a dark prophecy from being realized.",
+        "air_date": "2025-09-03",
+        "runtime": 49,
+        "still_path": "/eqCAySjP9dXS4xgtbVAx1UjEi7D.jpg"
+      }
+    ]
+  }
+}

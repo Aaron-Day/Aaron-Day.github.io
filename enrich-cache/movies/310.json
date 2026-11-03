@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 310,
+    "title": "Bruce Almighty",
+    "overview": "Bruce Nolan toils as a \u0022human interest\u0022 television reporter in Buffalo, NY, but despite his high ratings and the love of his beautiful girlfriend, Bruce remains unfulfilled. At the end of the worst day in his life, he angrily ridicules God \u2014 and the Almighty responds, endowing Bruce with all of His divine powers.",
+    "tagline": "In Bruce we trust?",
+    "runtime": 101,
+    "release_date": "2003-05-23",
+    "vote_average": 6.73,
+    "poster_path": "/wqkWrOFtYnZSvIMu8Lsmz7WIvKC.jpg",
+    "backdrop_path": "/m0eJc9CwCy5nowYQdNEaxkHHmj4.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 124949,
+      "name": "Almighty Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jim Carrey",
+      "character": "Bruce Nolan",
+      "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+    },
+    {
+      "name": "Morgan Freeman",
+      "character": "God",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    },
+    {
+      "name": "Jennifer Aniston",
+      "character": "Grace Connelly",
+      "profile_path": "/PBSCmHDFdCMBhjx0EbXpTw4Z94.jpg"
+    },
+    {
+      "name": "Philip Baker Hall",
+      "character": "Jack Baylor",
+      "profile_path": "/mC1wmuGSCyIQ7ABkfRe1jJV1FGV.jpg"
+    }
+  ]
+}

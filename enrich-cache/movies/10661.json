@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10661,
+    "title": "You Don\u0027t Mess with the Zohan",
+    "overview": "An Israeli counterterrorism soldier with a secretly fabulous ambition to become a Manhattan hairstylist. Zohan\u0027s desire runs so deep that he\u0027ll do anything -- including faking his own death and going head-to-head with an Arab cab driver -- to make his dreams come true.",
+    "tagline": "Lather. Rinse. Save the world.",
+    "runtime": 113,
+    "release_date": "2008-06-05",
+    "vote_average": 5.722,
+    "poster_path": "/gBhLQmpCPoKFMCGsulMbIFzrBID.jpg",
+    "backdrop_path": "/tfUotS2rLaIu7ieJPDonyDn5EqQ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Zohan Dvir",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Emmanuelle Chriqui",
+      "character": "Dalia Hakbarah",
+      "profile_path": "/5ll30bFOYMlIucGNrqWQ4bAA14U.jpg"
+    },
+    {
+      "name": "John Turturro",
+      "character": "Fatoush \u0027The Phantom\u0027 Hakbarah",
+      "profile_path": "/6O9W9cJW0kCqMzYeLupV9oH0ftn.jpg"
+    },
+    {
+      "name": "Nick Swardson",
+      "character": "Michael Klayman",
+      "profile_path": "/eyZkNQvpvNzYBg9oXh2IM6zOE5G.jpg"
+    }
+  ]
+}

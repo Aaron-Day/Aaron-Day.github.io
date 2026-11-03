@@ -1,0 +1,48 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 28,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Twisted Christian",
+        "overview": "Cartman is possessed and may be the key to stopping the Antichrist.",
+        "air_date": "2025-10-15",
+        "runtime": 23,
+        "still_path": "/uDBALP5majTX7HzQRC8NhIuVqhr.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Woman in the Hat",
+        "overview": "The White House deals with a disruptive spirit from the east wing. Meanwhile, Stan worries that South Park has become too political.",
+        "air_date": "2025-10-31",
+        "runtime": 23,
+        "still_path": "/xtnpWCqvYfU6RWszHMAXouGkesO.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Sora Not Sorry",
+        "overview": "Butters\u0027 Al revenge plan backfires, igniting an epidemic of fake videos at school that leaves Detective Harris struggling to tell fantasy from reality.",
+        "air_date": "2025-11-12",
+        "runtime": 22,
+        "still_path": "/uycmvin8xErvF5CBxNda4VOCoYu.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Turkey Trot",
+        "overview": "The town\u0027s annual Turkey Trot turns chaotic when Cartman uses questionable cutting-edge science to win the race.",
+        "air_date": "2025-11-26",
+        "runtime": 22,
+        "still_path": "/bOBHrO1crVQ9PErpjfvLaugB18L.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Crap Out",
+        "overview": "Satan\u0027s due, Stan\u0027s praying, and only a Christmas miracle can deliver the Antichrist on time.",
+        "air_date": "2025-12-10",
+        "runtime": 26,
+        "still_path": "/6XUCxqs7eejaVz4zxJlJTIA9wy0.jpg"
+      }
+    ]
+  }
+}

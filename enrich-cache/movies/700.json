@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 700,
+    "title": "Octopussy",
+    "overview": "James Bond is sent to investigate after a fellow \u201C00\u201D agent is found dead with a priceless Faberg\u00E9 egg. Bond follows the mystery and uncovers a smuggling scandal and a Russian General who wants to provoke a new World War.",
+    "tagline": "James Bond\u2019s all time high!",
+    "runtime": 131,
+    "release_date": "1983-06-05",
+    "vote_average": 6.358,
+    "poster_path": "/yoosZitM9igSk3Sd0sBXIhKlAh1.jpg",
+    "backdrop_path": "/xTS1qCmhzH3vq7cuextO5vQA6eW.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Roger Moore",
+      "character": "James Bond",
+      "profile_path": "/qUjeguNlZzpwh2bGUwEq2n2GNPx.jpg"
+    },
+    {
+      "name": "Maud Adams",
+      "character": "Octopussy",
+      "profile_path": "/iJMwjbngYgfh4LELSV8HPI9QeJT.jpg"
+    },
+    {
+      "name": "Louis Jourdan",
+      "character": "Kamal Khan",
+      "profile_path": "/bk2tjpWGRx1O46QzQ9LSp1SdhoP.jpg"
+    },
+    {
+      "name": "Kristina Wayborn",
+      "character": "Magda",
+      "profile_path": "/taa97RZeY6XpqEemhPHCtwaH8rV.jpg"
+    }
+  ]
+}

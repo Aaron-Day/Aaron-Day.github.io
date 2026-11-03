@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 278154,
+    "title": "Ice Age: Collision Course",
+    "overview": "Set after the events of Continental Drift, Scrat\u0027s epic pursuit of his elusive acorn catapults him outside of Earth, where he accidentally sets off a series of cosmic events that transform and threaten the planet. To save themselves from peril, Manny, Sid, Diego, and the rest of the herd leave their home and embark on a quest full of thrills and spills, highs and lows, laughter and adventure while traveling to exotic new lands and locations.",
+    "tagline": "They\u2019re going out with a bang.",
+    "runtime": 95,
+    "release_date": "2016-06-23",
+    "vote_average": 6.118,
+    "poster_path": "/tFzUkdhPOForVrEfvxydXfPLrZR.jpg",
+    "backdrop_path": "/rBEH34dgPMy1WuqZ0AFXR2ThmNo.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8354,
+      "name": "Ice Age Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ray Romano",
+      "character": "Manny (voice)",
+      "profile_path": "/zWT03QvuVYySlrjmHCojKrNYjoC.jpg"
+    },
+    {
+      "name": "John Leguizamo",
+      "character": "Sid (voice)",
+      "profile_path": "/kwYCdxTlDh9zauUCg4mp2XTCQTw.jpg"
+    },
+    {
+      "name": "Denis Leary",
+      "character": "Diego (voice)",
+      "profile_path": "/tAOziVWQBnrW9eR442M6g9SQkmA.jpg"
+    },
+    {
+      "name": "Adam Devine",
+      "character": "Julian (voice)",
+      "profile_path": "/8zU8zMs7cpjVzkBXis6I3wO3YeQ.jpg"
+    }
+  ]
+}

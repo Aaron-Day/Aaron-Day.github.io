@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4248,
+    "title": "Scary Movie 2",
+    "overview": "A group of students visit a mansion called \u0022Hell House,\u0022 and murderous high jinks ensue.",
+    "tagline": "No more mercy. No more shame. No more sequels - honest! - We lied.",
+    "runtime": 82,
+    "release_date": "2001-07-04",
+    "vote_average": 5.848,
+    "poster_path": "/7Eb1JWK0Cb0rbfsYjwfc9g0PbQH.jpg",
+    "backdrop_path": "/cjSB3ZjaMpaa9oHFyeYha3KG0mp.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 4246,
+      "name": "Scary Movie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anna Faris",
+      "character": "Cindy",
+      "profile_path": "/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+    },
+    {
+      "name": "Regina Hall",
+      "character": "Brenda",
+      "profile_path": "/jiFZ4xNrvUUZLBHnJu71CvdN4kj.jpg"
+    },
+    {
+      "name": "Marlon Wayans",
+      "character": "Shorty",
+      "profile_path": "/7LYnX3vluHFBs1WCRKUjSIEDEkn.jpg"
+    },
+    {
+      "name": "Shawn Wayans",
+      "character": "Ray",
+      "profile_path": "/Cat25uXhB680QLmvg9Tu16W563.jpg"
+    }
+  ]
+}

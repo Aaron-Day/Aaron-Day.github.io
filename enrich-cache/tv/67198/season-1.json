@@ -1,0 +1,128 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Vulcan Hello",
+        "overview": "While patrolling Federation space, the U.S.S. Shenzhou encounters an object of unknown origin, putting First Officer Michael Burnham to her greatest test yet.",
+        "air_date": "2017-09-24",
+        "runtime": 42,
+        "still_path": "/kdE6I9aLZgPJMdFkCuQ0YzemP14.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Battle at the Binary Stars",
+        "overview": "Face to face with Klingon vessels, the U.S.S. Shenzhou prepares for the possibility of war if negotiations fail. Amidst the turmoil, Burnham looks back to her Vulcan upbringing for guidance.",
+        "air_date": "2017-09-24",
+        "runtime": 38,
+        "still_path": "/sg0tltyFlESVGISvxHlsWnW2pVC.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Context Is for Kings",
+        "overview": "Burnham finds herself aboard the U.S.S. Discovery where she quickly realizes things are not as they seem, including the mysterious Captain Gabriel Lorca.",
+        "air_date": "2017-10-01",
+        "runtime": 48,
+        "still_path": "/AamOrCV7i2COmHPmbfsw0MKnOUm.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Butcher\u0027s Knife Cares Not for the Lamb\u0027s Cry",
+        "overview": "With tensions and stakes high as Starfleet continues in their efforts to end the war with Klingons, Burnham begins to settle in to her new position aboard the U.S.S. Discovery.",
+        "air_date": "2017-10-08",
+        "runtime": 49,
+        "still_path": "/1Ic1cFpOw1E79PZlZGrp8gHo6z7.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Choose Your Pain",
+        "overview": "Lorca unexpectedly finds himself in the company of a prisoner of war, Starfleet Lieutenant Ash Tyler, and a notorious intergalactic criminal, Harry Mudd. Meanwhile, Burnham voices her concerns about the repercussions of the spore drive jumps on \u201CRipper.\u201D",
+        "air_date": "2017-10-15",
+        "runtime": 47,
+        "still_path": "/3DFM8C3dJDVg7wX161vq7FaLP8M.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Lethe",
+        "overview": "The U.S.S. Discovery crew is intrigued by new addition, Lt. Ash Tyler. Sarek seeks Burnham\u0027s help, rekindling memories from her past. Admiral Cornwell questions Lorca\u0027s tactics.",
+        "air_date": "2017-10-22",
+        "runtime": 44,
+        "still_path": "/ijKL65XIokHKi8DQJfWEIwbPFlk.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Magic to Make the Sanest Man Go Mad",
+        "overview": "As the U.S.S. Discovery crew attempts to let loose at a party, an unwelcome visitor comes aboard bringing about a problematic and twisted sequence of events.",
+        "air_date": "2017-10-29",
+        "runtime": 47,
+        "still_path": "/j6gpzxVAW3ewd2MGqPTz0CKsKRv.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Si Vis Pacem, Para Bellum",
+        "overview": "The U.S.S. Discovery is tasked with a high priority mission to planet Pahvo and learn the science behind the Klingon\u0027s cloaking technology.",
+        "air_date": "2017-11-05",
+        "runtime": 42,
+        "still_path": "/mETRqM74dY79tBJlwSKVIoXM7gR.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Into the Forest I Go",
+        "overview": "Bypassing Starfleet\u0027s orders, Lorca uses the U.S.S. Discovery crew\u0027s ultimate asset, the ship itself, in an effort to end the war with the Klingons once and for all.",
+        "air_date": "2017-11-12",
+        "runtime": 47,
+        "still_path": "/8sisA21eGQqrTViVITSbHHowUFl.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Despite Yourself",
+        "overview": "While in unfamiliar territory, the U.S.S. Discovery crew is forced to get creative in their next efforts to survive opposing and unprecedented forces and return home.",
+        "air_date": "2018-01-07",
+        "runtime": 48,
+        "still_path": "/i3s3R4XjO1DmaffdSOZf0XTiUfT.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Wolf Inside",
+        "overview": "The crew continues their guise, and Burnham is ordered on a merciless mission to end the resistance in hopes of returning home. Meanwhile, Tilly works on restoring Stamets\u2019 neurofunction.",
+        "air_date": "2018-01-14",
+        "runtime": 49,
+        "still_path": "/aX43537EoHEq0eFVrWNofm0yewF.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Vaulting Ambition",
+        "overview": "Burnham heads to the ISS Charon with a special \u0022gift\u0022 for the Emperor. With the help of an unexpected source, Stamets gains clarity while trapped inside the mycelial network. Saru asks for L\u0027Rell\u0027s help.",
+        "air_date": "2018-01-21",
+        "runtime": 38,
+        "still_path": "/8JZsBmPBXgVaLk9z5Kt188KSaFc.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "What\u0027s Past is Prologue",
+        "overview": "Lorca plans to move forward with a coup against the Emperor, propelling Burnham to make a quick decision to save not only herself, but the U.S.S. Discovery.",
+        "air_date": "2018-01-28",
+        "runtime": 44,
+        "still_path": "/zUrMldisIBxHjbHzAIPmZBwwYZO.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The War Without, The War Within",
+        "overview": "Burnham and the U.S.S. Discovery crew are faced with the harsh reality of the war during their absence. In order to move forward, Starfleet must use unconventional tactics and sources to take their next action against the Klingons.",
+        "air_date": "2018-02-04",
+        "runtime": 49,
+        "still_path": "/4IQLqwohAzzdhCFPn2h7tYaqUmz.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Will You Take My Hand?",
+        "overview": "With Georgiou at the helm of the plan to end the Klingon war once and for all, the U.S.S. Discovery crew struggles to fathom and tolerate her hostile tactics. Memories of past hardships are rekindled within Burnham.",
+        "air_date": "2018-02-11",
+        "runtime": 45,
+        "still_path": "/vfuT4QAhqT2yB1UXGp6guwVXAHv.jpg"
+      }
+    ]
+  }
+}

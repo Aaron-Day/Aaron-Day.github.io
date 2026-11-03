@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 19994,
+    "title": "Jennifer\u0027s Body",
+    "overview": "Jennifer, a gorgeous, seductive cheerleader takes evil to a whole new level after she\u0027s possessed by a sinister demon. Now it\u0027s up to her best friend to stop Jennifer\u0027s reign of terror before it\u0027s too late.",
+    "tagline": "She\u0027s evil... and not just high school evil.",
+    "runtime": 107,
+    "release_date": "2009-09-18",
+    "vote_average": 6.013,
+    "poster_path": "/wrkjsGcFJxcQqR56kJUYAEKKg2T.jpg",
+    "backdrop_path": "/rNvn89IcEJPqRKxIgwTAPXl9qjJ.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1799552,
+      "name": "Jennifer\u0027s Body Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Megan Fox",
+      "character": "Jennifer",
+      "profile_path": "/9khvk5svs81TLqIGlI3ZJqYtqaY.jpg"
+    },
+    {
+      "name": "Amanda Seyfried",
+      "character": "Needy",
+      "profile_path": "/gtBUIpZ3dvLpOMIVORxE6sHSyZj.jpg"
+    },
+    {
+      "name": "Johnny Simmons",
+      "character": "Chip",
+      "profile_path": "/51LZiAAI3ZW4vabNOQnd3weYgUm.jpg"
+    },
+    {
+      "name": "Adam Brody",
+      "character": "Nikolai",
+      "profile_path": "/qKBWrohBYegm6AAaLrtxEqqouIK.jpg"
+    }
+  ]
+}

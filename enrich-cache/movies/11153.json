@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11153,
+    "title": "National Lampoon\u0027s Vacation",
+    "overview": "Clark Griswold is on a quest to take his family to the Walley World theme park for a vacation, but things don\u0027t go exactly as planned.",
+    "tagline": "Every summer Chevy Chase takes his family on a little trip. This year he went too far.",
+    "runtime": 99,
+    "release_date": "1983-07-29",
+    "vote_average": 7.11,
+    "poster_path": "/q3DvoqY06yZnRp9faH6uge7n7VP.jpg",
+    "backdrop_path": "/rBL73dGfdEqTr7Xj0HytF9s9SbM.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 108693,
+      "name": "National Lampoon\u0027s Vacation Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chevy Chase",
+      "character": "Clark Griswold",
+      "profile_path": "/A1X2BvR8vEXvwXdJa5uYAYVCO2k.jpg"
+    },
+    {
+      "name": "Beverly D\u0027Angelo",
+      "character": "Ellen Griswold",
+      "profile_path": "/8fYQIA8dAaA4GOTxOFSKIvTqzi.jpg"
+    },
+    {
+      "name": "Anthony Michael Hall",
+      "character": "Rusty Griswold",
+      "profile_path": "/nLthzoCuNxxd3KteIrnnMg1066G.jpg"
+    },
+    {
+      "name": "Imogene Coca",
+      "character": "Aunt Edna",
+      "profile_path": "/jHvjlAGwQVUdlrwgWAcolkLHuLP.jpg"
+    }
+  ]
+}

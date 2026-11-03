@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 207932,
+    "title": "Inferno",
+    "overview": "After waking up in a hospital with amnesia, professor Robert Langdon and a doctor must race against time to foil a deadly global plot.",
+    "tagline": "His greatest challenge. Humanity\u0027s last hope.",
+    "runtime": 122,
+    "release_date": "2016-10-13",
+    "vote_average": 6.106,
+    "poster_path": "/5T6iVetK5AB1kgwAEKbDM2hTZJU.jpg",
+    "backdrop_path": "/y3w1fdR3QfYy22ryvhRl6YyHohs.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 115776,
+      "name": "Robert Langdon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Hanks",
+      "character": "Robert Langdon",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Felicity Jones",
+      "character": "Sienna Brooks",
+      "profile_path": "/35KdWSfTldNEdsn4MUGFIRoxJEu.jpg"
+    },
+    {
+      "name": "Omar Sy",
+      "character": "Christoph Bouchard",
+      "profile_path": "/Uuy6WuizieB4fOIGFp0gY90Yq2.jpg"
+    },
+    {
+      "name": "Irrfan Khan",
+      "character": "Harry Sims",
+      "profile_path": "/qkA9PpWJRw3rNjVkWfNZdwLvRZx.jpg"
+    }
+  ]
+}

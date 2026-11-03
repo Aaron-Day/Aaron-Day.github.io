@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 193610,
+    "title": "The Other Woman",
+    "overview": "After discovering her boyfriend is married, Carly soon meets the wife he\u0027s been cheating on. And when yet another affair is discovered, all three women team up to plot mutual revenge on the three-timing SOB.",
+    "tagline": "The oddest friends are about to get even",
+    "runtime": 109,
+    "release_date": "2014-04-16",
+    "vote_average": 6.421,
+    "poster_path": "/yHnbb6z8REuFIyBLT2Nj3MX54dY.jpg",
+    "backdrop_path": "/vqL1DAd9FbU2CvnG6hLX82bQM0q.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Cameron Diaz",
+      "character": "Carly Whitten",
+      "profile_path": "/tIWUyvmJayu8gtbrzCWC0L3H8kH.jpg"
+    },
+    {
+      "name": "Leslie Mann",
+      "character": "Kate King",
+      "profile_path": "/x3OS9RL3qsv50kzRtpR2OhbuTkr.jpg"
+    },
+    {
+      "name": "Kate Upton",
+      "character": "Amber",
+      "profile_path": "/g2jEEc3TbMo0W9t1DTQHn5qyY7X.jpg"
+    },
+    {
+      "name": "Nikolaj Coster-Waldau",
+      "character": "Mark King",
+      "profile_path": "/rpFOERbHkj7GWxkinUNiQ76sSGk.jpg"
+    }
+  ]
+}

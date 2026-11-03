@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 774714,
+    "title": "Out of Death",
+    "overview": "As Shannon, a woman who wants to put her father\u0027s ashes away in the woods witnesses a corrupt cop dealing drugs with a junkie, she has to try and run away after she gets rampaged by two discreditable cops after they see her taking secret photographs of their crime maneuver. They then do a cat-and-mouse game around the woods as Shannon teams up with a retired sheriff along the way for more reinforcement. It\u0027s just a diversion of survival and egalitarianism.",
+    "tagline": "Justice is just a moving target.",
+    "runtime": 95,
+    "release_date": "2021-07-16",
+    "vote_average": 5.305,
+    "poster_path": "/zan6xYKNGKgkp2hFajU398I1iTD.jpg",
+    "backdrop_path": "/cjcEZW4DzJgdzF3MeA9XhIdq4z5.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jaime King",
+      "character": "Shannon Mathers",
+      "profile_path": "/3cG2nVdwERtI6UvCHFa1F0HGAEG.jpg"
+    },
+    {
+      "name": "Bruce Willis",
+      "character": "Jack Harris",
+      "profile_path": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+    },
+    {
+      "name": "Lala Kent",
+      "character": "Billie Stanhope",
+      "profile_path": "/y4HvEI3lYgqxCy4RZM9mMERbhb0.jpg"
+    },
+    {
+      "name": "Tyler Jon Olson",
+      "character": "Tom Rivers",
+      "profile_path": "/g24QNOmUiax9E4bqfi3ERIJtJA4.jpg"
+    }
+  ]
+}

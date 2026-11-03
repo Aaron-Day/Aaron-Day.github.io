@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 330457,
+    "title": "Frozen II",
+    "overview": "Elsa, Anna, Kristoff and Olaf head far into the forest to learn the truth about an ancient mystery of their kingdom.",
+    "tagline": "The past is not what it seems.",
+    "runtime": 103,
+    "release_date": "2019-11-20",
+    "vote_average": 7.219,
+    "poster_path": "/mINJaa34MtknCYl5AjtNJzWj8cD.jpg",
+    "backdrop_path": "/AoSZyb37ljMAxw0RdeQEBHKtgcc.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 386382,
+      "name": "Frozen Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kristen Bell",
+      "character": "Anna (voice)",
+      "profile_path": "/rP74dJXl7EjinGM0shQtUOlH5s2.jpg"
+    },
+    {
+      "name": "Idina Menzel",
+      "character": "Elsa (voice)",
+      "profile_path": "/eGsyJmAZNV5tUU4RYy2DIRlFVpW.jpg"
+    },
+    {
+      "name": "Josh Gad",
+      "character": "Olaf (voice)",
+      "profile_path": "/17iKlfWZBDTAucqjkhRKHr9xjIz.jpg"
+    },
+    {
+      "name": "Evan Rachel Wood",
+      "character": "Iduna (voice)",
+      "profile_path": "/oVp8ctWKjskREG5bPoMGL1NOGdt.jpg"
+    }
+  ]
+}

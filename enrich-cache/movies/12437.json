@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12437,
+    "title": "Underworld: Rise of the Lycans",
+    "overview": "A prequel to the first two Underworld films, this fantasy explains the origins of the feud between the Vampires and the Lycans. Aided by his secret love, Sonja, courageous Lucian leads the Lycans in battle against brutal Vampire king Viktor. Determined to break the king\u0027s enslavement of his people, Lucian faces off against the Death Dealer army in a bid for Lycan independence.",
+    "tagline": "Every war has a beginning.",
+    "runtime": 92,
+    "release_date": "2009-01-22",
+    "vote_average": 6.54,
+    "poster_path": "/yW9gF7rGn8EoV8B8rxOx1xjxVZf.jpg",
+    "backdrop_path": "/agQrynTKEWWKAowcf7Dvb3I2F9A.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2326,
+      "name": "Underworld Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Rhona Mitra",
+      "character": "Sonja",
+      "profile_path": "/1YThpok3Wk3BBy0pcUTcpuZyOBB.jpg"
+    },
+    {
+      "name": "Bill Nighy",
+      "character": "Viktor",
+      "profile_path": "/ixFI2YCGNGJfwlpI8iyhvVZRg8C.jpg"
+    },
+    {
+      "name": "Michael Sheen",
+      "character": "Lucian",
+      "profile_path": "/nGxIcIcfJjdPN3k8zFabtA1gRqL.jpg"
+    },
+    {
+      "name": "Shane Brolly",
+      "character": "Kraven",
+      "profile_path": "/Arw4qi3nvBhp34hSaMFFk0xIUnf.jpg"
+    }
+  ]
+}

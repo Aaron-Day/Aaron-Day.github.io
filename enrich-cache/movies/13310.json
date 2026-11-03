@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13310,
+    "title": "Let the Right One In",
+    "overview": "When Oskar, a sensitive, bullied 12-year-old boy, meets his new neighbor, the mysterious and moody Eli, they strike up a friendship. Initially reserved with each other, Oskar and Eli slowly form a close bond, but it soon becomes apparent that she is no ordinary young girl.",
+    "tagline": "Eli is 12 years old. She\u0027s been 12 for over 200 years, and she just moved in next door.",
+    "runtime": 115,
+    "release_date": "2008-10-24",
+    "vote_average": 7.543,
+    "poster_path": "/7IG4WjaAOVDlLvLUkh513HSwhW8.jpg",
+    "backdrop_path": "/mSl9sxOFwBtl2f1FMprrlLqJqON.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "K\u00E5re Hedebrant",
+      "character": "Oskar",
+      "profile_path": "/t1hmgD3UPSDn0uxJadm0gkj8v2s.jpg"
+    },
+    {
+      "name": "Lina Leandersson",
+      "character": "Eli",
+      "profile_path": "/47FUQfaf1VsNM3FYnztt96HcTVv.jpg"
+    },
+    {
+      "name": "Per Ragnar",
+      "character": "H\u00E5kan",
+      "profile_path": "/hj9WITIP1S64017rZQtnvWmZ40C.jpg"
+    },
+    {
+      "name": "Henrik Dahl",
+      "character": "Erik",
+      "profile_path": null
+    }
+  ]
+}

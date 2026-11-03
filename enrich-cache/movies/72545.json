@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 72545,
+    "title": "Journey 2: The Mysterious Island",
+    "overview": "Sean Anderson partners with his mom\u0027s boyfriend on a mission to find his grandfather, who is thought to be missing on a mythical island.",
+    "tagline": "Believe the impossible. Discover the incredible.",
+    "runtime": 94,
+    "release_date": "2012-01-19",
+    "vote_average": 6.156,
+    "poster_path": "/uFm2vnp9LhHx5MNo1Ego6O3vUhl.jpg",
+    "backdrop_path": "/fZvAroq9Vb5hhyKT6TxsjxJW7nm.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 605516,
+      "name": "Journey Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Dwayne Johnson",
+      "character": "Hank Parsons",
+      "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+    },
+    {
+      "name": "Josh Hutcherson",
+      "character": "Sean Anderson",
+      "profile_path": "/GqIyK5mCJXFUXW4FwLM3Zj7UtK.jpg"
+    },
+    {
+      "name": "Vanessa Hudgens",
+      "character": "Kailani Laguatan",
+      "profile_path": "/lZQPTRoJLgfsARWdpxQid2dDzhr.jpg"
+    },
+    {
+      "name": "Luis Guzm\u00E1n",
+      "character": "Gabato Laguatan",
+      "profile_path": "/kSdxUckOJj9R5VKrLUnRy14YhNV.jpg"
+    }
+  ]
+}

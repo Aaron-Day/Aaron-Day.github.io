@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 424,
+    "title": "Schindler\u0027s List",
+    "overview": "The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.",
+    "tagline": "Whoever saves one life, saves the world entire.",
+    "runtime": 195,
+    "release_date": "1993-12-15",
+    "vote_average": 8.57,
+    "poster_path": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+    "backdrop_path": "/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Liam Neeson",
+      "character": "Oskar Schindler",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Ben Kingsley",
+      "character": "Itzhak Stern",
+      "profile_path": "/k3Dmu49B2akwDvgqy52MOxznI59.jpg"
+    },
+    {
+      "name": "Ralph Fiennes",
+      "character": "Amon Goeth",
+      "profile_path": "/tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg"
+    },
+    {
+      "name": "Caroline Goodall",
+      "character": "Emilie Schindler",
+      "profile_path": "/4cagGtMqACvkuw6Llq8Li8UJ1AR.jpg"
+    }
+  ]
+}

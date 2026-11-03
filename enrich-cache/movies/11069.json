@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11069,
+    "title": "Tremors 2: Aftershocks",
+    "overview": "Earl Bassett\u0027s celebrity after defeating the Graboid attack against the town of Perfection has proved short-lived, until he\u0027s recruited by a Mexican oil company whose workers have found more than they bargained for under the soil.",
+    "tagline": "The Worms have turned.",
+    "runtime": 100,
+    "release_date": "1996-04-09",
+    "vote_average": 6.336,
+    "poster_path": "/hvBYCgG62Fk8cYIsUtrfP5iw3K8.jpg",
+    "backdrop_path": "/dh6BVPe2v5ftSRol4dS09uMw51I.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91799,
+      "name": "Tremors Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Fred Ward",
+      "character": "Earl Bassett",
+      "profile_path": "/t3tZduAwP1LMR8Vc13HZ39wKJ1q.jpg"
+    },
+    {
+      "name": "Helen Shaver",
+      "character": "Kate \u0027White\u0027 Reilly",
+      "profile_path": "/aSkTE6QggiwF0h0oU8neg4Xb5PL.jpg"
+    },
+    {
+      "name": "Chris Gartin",
+      "character": "Grady Hoover",
+      "profile_path": "/6Oy9QRX9BjMc7rHFC0ttaI778i0.jpg"
+    },
+    {
+      "name": "Michael Gross",
+      "character": "Burt Gummer",
+      "profile_path": "/467FG7f1rXkG9ZzU8IumVkBHi0v.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9610,
+    "title": "Conan the Destroyer",
+    "overview": "Conan is commissioned by the evil queen Taramis to safely escort a teen princess and her powerful bodyguard to a far away castle to retrieve the magic Horn of Dagoth. Unknown to Conan, the queen plans to sacrifice the princess when she returns and inherit her kingdom after the bodyguard kills Conan. The queen\u0027s plans fail to take into consideration Conan\u0027s strength and cunning and the abilities of his sidekicks: the eccentric wizard Akiro, the warrior woman Zula, and the inept Malak. Together the hero and his allies must defeat both mortal and supernatural foes in this voyage to sword-and-sorcery land.",
+    "tagline": "The most powerful legend of all is back in a new adventure.",
+    "runtime": 103,
+    "release_date": "1984-06-29",
+    "vote_average": 6.142,
+    "poster_path": "/m5i7S46DT1ESy7URkh2l92awGRr.jpg",
+    "backdrop_path": "/kAhjS7czQu0gtMVwDqfSBR2KjTF.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 43055,
+      "name": "Conan the Barbarian Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Conan",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Grace Jones",
+      "character": "Zula",
+      "profile_path": "/uelIBmzuRiwnBjqibPGbX58ULUe.jpg"
+    },
+    {
+      "name": "Wilt Chamberlain",
+      "character": "Bombaata",
+      "profile_path": "/7rbSh29n6TC5Hor7zomO5V8xPnl.jpg"
+    },
+    {
+      "name": "Mako",
+      "character": "Akiro \u0027The Wizard\u0027",
+      "profile_path": "/x0dZQHKQOZ1ancuRw8slO3rAiPq.jpg"
+    }
+  ]
+}

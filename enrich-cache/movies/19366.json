@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 19366,
+    "title": "Josie and the Pussycats",
+    "overview": "Josie, Melody and Val are three small-town girl musicians determined to take their rock band out of their garage and straight to the top, while remaining true to their look, style and sound. They get a record deal which brings fame and fortune but soon realize they are pawns of two people who want to control the youth of America. They must clear their names, even if it means losing fame and fortune.",
+    "tagline": "Here kitty, kitty, kitty...",
+    "runtime": 98,
+    "release_date": "2001-04-06",
+    "vote_average": 6.594,
+    "poster_path": "/mHOix87RdBO3YQuyvFFZAZxpt5P.jpg",
+    "backdrop_path": "/wkQAYth62cJXsvqkYbDH8b1cqES.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Rachael Leigh Cook",
+      "character": "Josie McCoy",
+      "profile_path": "/3ylMsV6dqo5ojKjuMz9xvkEreAA.jpg"
+    },
+    {
+      "name": "Rosario Dawson",
+      "character": "Valerie Brown",
+      "profile_path": "/siTzOI810a0K46wv1TORXMw5N7J.jpg"
+    },
+    {
+      "name": "Tara Reid",
+      "character": "Melody Valentine",
+      "profile_path": "/c2RYIMfmDGjIxTJT3MMsabutA5o.jpg"
+    },
+    {
+      "name": "Alan Cumming",
+      "character": "Wyatt Frame",
+      "profile_path": "/axil8ufunARfqyU4ceZNh36fkVQ.jpg"
+    }
+  ]
+}

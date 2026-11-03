@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11249,
+    "title": "Seed of Chucky",
+    "overview": "This time around, Chucky and his homicidal honey, Tiffany, are brought back to life by their orphan offspring, Glen. Then the horror goes Hollywood as Chucky unleashes his own brand of murderous mayhem!",
+    "tagline": "Fear the second coming.",
+    "runtime": 86,
+    "release_date": "2004-11-12",
+    "vote_average": 5.51,
+    "poster_path": "/vd9K93gQ9whMKjXzADZanxWpIXM.jpg",
+    "backdrop_path": "/eZOt0qAmxwCXyJHLgEIEKdjQVM8.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10455,
+      "name": "Child\u0027s Play Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brad Dourif",
+      "character": "Chucky (voice)",
+      "profile_path": "/ex7AmuHM3owhUetYZAyOmN1ehWS.jpg"
+    },
+    {
+      "name": "Jennifer Tilly",
+      "character": "Tiffany (voice) / Jennifer Tilly",
+      "profile_path": "/9vYoYF385cVq9oDO3pDpXihP4vz.jpg"
+    },
+    {
+      "name": "Billy Boyd",
+      "character": "Glen / Glenda (voice)",
+      "profile_path": "/jluumxuDr7rm2f97NFf9LydBdaZ.jpg"
+    },
+    {
+      "name": "Redman",
+      "character": "Redman",
+      "profile_path": "/kdHkOC3ebLZDSecOrQF9XsXTNjb.jpg"
+    }
+  ]
+}

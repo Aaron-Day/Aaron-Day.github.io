@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 6145,
+    "title": "Fracture",
+    "overview": "A husband is on trial for the attempted murder of his wife, in what is seemingly an open/shut case for the ambitious district attorney trying to put him away. However, there are surprises for both around every corner, and, as a suspenseful game of cat-and-mouse is played out, each must manipulate and outwit the other.",
+    "tagline": "I shot my wife... prove it.",
+    "runtime": 113,
+    "release_date": "2007-04-19",
+    "vote_average": 7.258,
+    "poster_path": "/qNen8x5gaikjIg9CFihgxYcJwQe.jpg",
+    "backdrop_path": "/mujUrk2diGe5vRCb3kdpHZeobRs.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Anthony Hopkins",
+      "character": "Ted Crawford",
+      "profile_path": "/iaf7SHSkGDpnyrDh1Jolilwk2TD.jpg"
+    },
+    {
+      "name": "Ryan Gosling",
+      "character": "Willy Beachum",
+      "profile_path": "/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg"
+    },
+    {
+      "name": "David Strathairn",
+      "character": "Joe Lobruto",
+      "profile_path": "/w5YM2cGefPnkoyIXCi2UrCQW53r.jpg"
+    },
+    {
+      "name": "Rosamund Pike",
+      "character": "Nikki Gardner",
+      "profile_path": "/8ObNklHDi2hjdz0ayzJFB9jtqzm.jpg"
+    }
+  ]
+}

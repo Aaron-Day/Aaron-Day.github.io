@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11622,
+    "title": "Blast from the Past",
+    "overview": "Following a bomb scare in the 1960s that locked the Webbers into their bomb shelter for 35 years, Adam now ventures forth into Los Angeles to obtain food and supplies for his family, and a non-mutant wife for himself.",
+    "tagline": "She\u0027d never met anyone like him. He\u0027s never met anyone... Period.",
+    "runtime": 112,
+    "release_date": "1999-02-12",
+    "vote_average": 6.8,
+    "poster_path": "/qVN4bbVX2tzaNbAdEJT5eOPq26c.jpg",
+    "backdrop_path": "/qr3yKVRrPmPCpxqtEeFkdisGE4n.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Brendan Fraser",
+      "character": "Adam",
+      "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg"
+    },
+    {
+      "name": "Alicia Silverstone",
+      "character": "Eve",
+      "profile_path": "/pyxqkP4i0ubVdoRe5hoiiiwkHkb.jpg"
+    },
+    {
+      "name": "Christopher Walken",
+      "character": "Calvin",
+      "profile_path": "/ApgDL7nudR9T2GpjCG4vESgymO2.jpg"
+    },
+    {
+      "name": "Sissy Spacek",
+      "character": "Helen",
+      "profile_path": "/xAxenjxjLNQFq4v1ccS2to3Mnoq.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10131,
+    "title": "A Nightmare on Elm Street 4: The Dream Master",
+    "overview": "Freddy Krueger returns once again to terrorize the dreams of the remaining Dream Warriors, as well as those of a young woman who may be able to defeat him for good.",
+    "tagline": "Terror beyond your wildest dreams.",
+    "runtime": 93,
+    "release_date": "1988-08-19",
+    "vote_average": 5.892,
+    "poster_path": "/boStYG7jKdoIZTduiOOsUVknD13.jpg",
+    "backdrop_path": "/eMzBeFVxYS63O7lf1S2QYUJRB3Z.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8581,
+      "name": "A Nightmare on Elm Street Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Lisa Wilcox",
+      "character": "Alice",
+      "profile_path": "/hmYgN7mygzXMwO0cxOGsst4oSLB.jpg"
+    },
+    {
+      "name": "Robert Englund",
+      "character": "Freddy Krueger",
+      "profile_path": "/cjGEkiavinHa1dnetDvnEhlD2Wm.jpg"
+    },
+    {
+      "name": "Rodney Eastman",
+      "character": "Joey",
+      "profile_path": "/orGHxNB2n9ZZ0QHHMohyvWiNKec.jpg"
+    },
+    {
+      "name": "Danny Hassel",
+      "character": "Dan",
+      "profile_path": "/6JVIfjmN0qoMtBlbIIX4FpWSA4l.jpg"
+    }
+  ]
+}

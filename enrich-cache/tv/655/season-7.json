@@ -1,0 +1,208 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Descent (2)",
+        "overview": "Stardate: 47025.4. Data abducts Picard, Troi and Geordi and holds them prisoners of the Borg, while he derives pleasure from being evil. Dr. Crusher is left in command of the Enterprise as it comes under attack from a Borg vessel.",
+        "air_date": "1993-09-20",
+        "runtime": 45,
+        "still_path": "/5nx4uuNdT7qw1QmxuHMFDSluADo.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Liaisons",
+        "overview": "Stardate: Unknown. During an exchange program, Picard\u0027s shuttle crashes on an unknown planet where he is rescued by the sole survivor of another crash.",
+        "air_date": "1993-09-27",
+        "runtime": 45,
+        "still_path": "/1ruclbBDrgZV8crCokjC0AlG1py.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Interface",
+        "overview": "Stardate: 47215.5. Geordi defies direct orders from Captain Picard in an attempt to rescue his mother who had recently been reported as missing.",
+        "air_date": "1993-10-04",
+        "runtime": 45,
+        "still_path": "/6oUu3B0Qf9ZY3P2az5BoVZXEad1.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Gambit (1)",
+        "overview": "Stardate: 47135.2. An away team investigates the apparent death of Jean-Luc Picard who was supposedly killed in a bar fight. When Riker is abducted by a band of criminals who loot archaeological digs, he is shocked to find Picard alive and well, and undercover as a renegade archaeologist.",
+        "air_date": "1993-10-11",
+        "runtime": 45,
+        "still_path": "/59NGV4AHXW0PQbhwWK5aU2C6alq.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Gambit (2)",
+        "overview": "Stardate: 47160.1. Picard and Riker covertly work together in an attempt to find out why the criminals are looting archaeological digs.",
+        "air_date": "1993-10-18",
+        "runtime": 45,
+        "still_path": "/iM76OmQV1Zt3RJpR7bj95ESgQVr.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Phantasms",
+        "overview": "Stardate: 47225.7. Data\u0027s new dream subroutine causes him to experience nightmares which provide a unique insight into strange events that are occurring on board the Enterprise.",
+        "air_date": "1993-10-25",
+        "runtime": 45,
+        "still_path": "/mIRiD06kLMsROtTQMQRg4xDZCea.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Dark Page",
+        "overview": "Stardate: 47254.1. Lwaxana Troi collapses with a repressed memory related illness. Her only chance for survival is if Deanna can probe her subconscious and find out what is killing her. However, the secret Lwaxana holds is deeper than Deanna imagined.",
+        "air_date": "1993-11-01",
+        "runtime": 45,
+        "still_path": "/lKQRIcHZZ3flssojrisPa636NfZ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Attached",
+        "overview": "Stardate: 47304.2. While on a a diplomatic mission, Dr. Crusher and Picard are captured and imprisoned. As a result, they are linked together via a telepathic device.",
+        "air_date": "1993-11-08",
+        "runtime": 45,
+        "still_path": "/rEAmqiiCLSDVL509WxyG4CAfRP1.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Force of Nature",
+        "overview": "Stardate: 47310.2. The Enterprise is drawn to a region of space where many starships have been mysteriously disabled. They soon learn that a brother and sister team has been working together to bring attention to the fact that frequent high-warp travel is damaging the very fabric of space/time.",
+        "air_date": "1993-11-15",
+        "runtime": 45,
+        "still_path": "/7EHRzbKYDZHhREyoArTt6EkbzyN.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Inheritance",
+        "overview": "Stardate: 47410.2. Data is disturbed by the claims of a woman who says she is Noonien Soong\u0027s ex-wife.",
+        "air_date": "1993-11-22",
+        "runtime": 45,
+        "still_path": "/9JAmD9pJ4K1NW01URIlhSwufJi7.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Parallels",
+        "overview": "Stardate: 47391.2. Worf returns from a Klingon competition to find that he is shifting through different realities.",
+        "air_date": "1993-11-29",
+        "runtime": 45,
+        "still_path": "/zIQ4EmUGxpw0CIStZntF1X2EfEe.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Pegasus",
+        "overview": "Stardate: 47457.1. Riker is placed on a covert mission to find the missing starship he was once a member aboard, but the mission holds a secret that could destroy the peace treaty between the Federation and the Romulans.",
+        "air_date": "1994-01-10",
+        "runtime": 45,
+        "still_path": "/nAupr45vAKxghouNMVvFYSir2Q2.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Homeward",
+        "overview": "Stardate: 47423.9. Worf\u0027s adoptive brother violates the Prime Directive to save an alien society whose planet is dying.",
+        "air_date": "1994-01-17",
+        "runtime": 45,
+        "still_path": "/cuL8dJ6qZJDtj7e3JKIfutuJy1k.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Sub Rosa",
+        "overview": "Stardate: Unknown. Dr. Crusher attends her grandmother\u0027s funeral, to find that she had been in romantic encounters with a mysterious man who had been haunting the Howard family women for generations.",
+        "air_date": "1994-01-31",
+        "runtime": 45,
+        "still_path": "/u7tRn6Fu678HI6Gyqrw5GTP5hrj.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Lower Decks",
+        "overview": "Stardate: 47566.7. Four young ensigns compete for a promotion that only one of them will receive. However, they are soon placed on a top secret mission that places some of their lives in danger.",
+        "air_date": "1994-02-07",
+        "runtime": 45,
+        "still_path": "/tSZEvMRLB4CMoLolUNWMTxXv2xI.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Thine Own Self",
+        "overview": "Stardate: 47611.2. Data find himself mysteriously stranded on a planet with no recollection of who he is or how he arrived there. Soon he is accused of spreading a plague among the inhabitants. Troi takes the bridge officer\u0027s test in an attempt to gain the rank of Commander.",
+        "air_date": "1994-02-14",
+        "runtime": 45,
+        "still_path": "/m4CV3c0cGvSl5k3uaZEviFY8qlg.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Masks",
+        "overview": "Stardate: 47615.2. The Enterprise is slowly transformed into an ancient alien temple when Data discovers an alien archive full of information about an ancient culture. Shortly after opening the archive, Data becomes possessed with several different personalities.",
+        "air_date": "1994-02-21",
+        "runtime": 45,
+        "still_path": "/3hqbRYD3lRyv5IXRMyGAnSMtHJV.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Eye of the Beholder",
+        "overview": "Stardate: 47622.1. While investigating the mysterious suicide of a crew member, Troi and Worf begin to show romantic feeling towards one another.",
+        "air_date": "1994-02-28",
+        "runtime": 45,
+        "still_path": "/dBTaRlmvy1mrbb1fHvYkvRJxlXX.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Genesis",
+        "overview": "Stardate: 47653.2. Upon returning from an away mission, Picard and Data find the ship drifting in space, and the crew de-evolving into their animal ancestors.",
+        "air_date": "1994-03-21",
+        "runtime": 45,
+        "still_path": "/7hBBfJMrq6Tn6wCXo3gObNF72jU.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Journey\u0027s End",
+        "overview": "Stardate: 47751.2. Under the terms of the new Federation/Cardassian alliance, Picard is ordered to evacuate a colony of native Americans, but protests from Wesley hamper the process. Wesley\u0027s destiny is finally revealed to him when the Traveler returns.",
+        "air_date": "1994-03-28",
+        "runtime": 45,
+        "still_path": "/65rs5pydeQMbnSfMXxE13kKHa1x.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Firstborn",
+        "overview": "Stardate: 47779.4. A disinterested Alexander must face his first Right of Ascension passage, but a mysterious warrior by the name of K\u0027Mtar brings with him a disturbing request.",
+        "air_date": "1994-04-25",
+        "runtime": 45,
+        "still_path": "/1kOINsR9j4owAZs4rQ2Auh8THSM.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Bloodlines",
+        "overview": "Stardate: 47829.1. Picard tries to save his newly-discovered son from the retaliation of a vengeful Ferengi whose only son was killed by Picard during the Battle of Maxia many years before.",
+        "air_date": "1994-05-02",
+        "runtime": 45,
+        "still_path": "/8sNFbUiw4ahEp5Zb6BmdXbYULCc.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Emergence",
+        "overview": "Stardate: 47869.2. The Enterprise\u0027s computer systems starts having repeated malfunctions, leading the crew to believe that it may be evolving into a new life form.",
+        "air_date": "1994-05-09",
+        "runtime": 45,
+        "still_path": "/aHL5OKLosZ2qFH1Jfy11zoUSGIm.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Preemptive Strike",
+        "overview": "Stardate: 47941.7. Fresh from Starfleet\u0027s Advanced Tactical Training course, Ro Laren is assigned to infiltrate the Maquis. However, over time she begins to sympathize with them, which forces her to choose between her loyalty to the Federation, and her new friends in the Maquis.",
+        "air_date": "1994-05-16",
+        "runtime": 45,
+        "still_path": "/x5FW8If7Bv2kZHqSi11rWxsljFw.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "All Good Things...",
+        "overview": "Stardate: 47988.0. Shortly after Picard is diagnosed with a long-term, potentially debilitating brain disorder, he starts experiencing bizarre shifts into three main time periods: 25 years into the future, a few days before the Enterprise-D is sent on its mission to Farpoint station, and the present. Picard realizes that Q is behind these shifts through time.\n\nStardate:  47988.1. After his encounter with Q, Picard assembles the senior staff, and wonders if Q is actually giving him a chance to save humanity by showing him that the spatial anomaly also exists in the past. As they talk, the ship reaches the Neutral Zone, then Picard returns to the future, where Beverly\u0027s ship is also on the edge of the Neutral Zone. He convinces a reluctant Worf to accompany the group into Klingon territory, and then travels to the past, where he orders the crew into the Devron system.",
+        "air_date": "1994-05-23",
+        "runtime": 92,
+        "still_path": "/yBS5Zba5poZ8xzgGZqeLNoelXR2.jpg"
+      }
+    ]
+  }
+}

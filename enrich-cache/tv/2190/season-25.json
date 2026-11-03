@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 25,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pajama Day",
+        "overview": "The 4th grade class is banned from wearing their pajamas to school on the most important day of the year.",
+        "air_date": "2022-02-02",
+        "runtime": 23,
+        "still_path": "/p2rgTlwEVf91BLNwkpgZcGItlqR.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Big Fix",
+        "overview": "Stan\u2019s horrified to realize he\u2019s misinterpreted some of the greatest writing of all time.",
+        "air_date": "2022-02-09",
+        "runtime": 23,
+        "still_path": "/KQLZI8HoDi6CUhHcWpCf9Ui1Dm.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "City People",
+        "overview": "Cartman is not happy when his mom gets a new job.",
+        "air_date": "2022-02-16",
+        "runtime": 23,
+        "still_path": "/xOgfl4MEHv2ZnPuB9dtQjY8Q907.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Back to the Cold War",
+        "overview": "A lot is riding on Butter\u2019s ability to crush the competition in the all-important dressage championship.",
+        "air_date": "2022-03-02",
+        "runtime": 23,
+        "still_path": "/iKyQEpwtRcthb50p6ZbQy5ownwr.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Help, My Teenager Hates Me!",
+        "overview": "The boys find out that the joys of playing Airsoft come with the challenges of dealing with teenagers.",
+        "air_date": "2022-03-09",
+        "runtime": 23,
+        "still_path": "/unIbKG38hI8jyuXp6G6bsO2YygP.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Credigree Weed St. Patrick\u0027s Day Special",
+        "overview": "Butters is shocked to learn that people in South Park don\u2019t understand what St. Patrick\u2019s Day is really about.",
+        "air_date": "2022-03-16",
+        "runtime": 23,
+        "still_path": "/rIXElaZcRVrn3mYIj76vxebSygW.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 423204,
+    "title": "Angel Has Fallen",
+    "overview": "After a treacherous attack, Secret Service agent Mike Banning is charged with attempting to assassinate President Trumbull. Chased by his own colleagues and the FBI, Banning begins a race against the clock to clear his name.",
+    "tagline": "Loyalty is under fire.",
+    "runtime": 122,
+    "release_date": "2019-08-21",
+    "vote_average": 6.61,
+    "poster_path": "/fapXd3v9qTcNBTm39ZC4KUVQDNf.jpg",
+    "backdrop_path": "/sGqqnvOqJg2HDHrjtCPIlCwF4Mu.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 386534,
+      "name": "Has Fallen Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Gerard Butler",
+      "character": "Mike Banning",
+      "profile_path": "/i54XoxYieuff2w6MwyfwVUBvmR0.jpg"
+    },
+    {
+      "name": "Morgan Freeman",
+      "character": "Alan Trumbull",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    },
+    {
+      "name": "Jada Pinkett Smith",
+      "character": "Agent Thompson",
+      "profile_path": "/3RyvVVSlgRbZANDFkYiAsRMaHW.jpg"
+    },
+    {
+      "name": "Nick Nolte",
+      "character": "Clay Banning",
+      "profile_path": "/jpYzFBi6zfn8CHVaXmqgiOTas4V.jpg"
+    }
+  ]
+}

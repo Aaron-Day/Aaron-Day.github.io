@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12279,
+    "title": "Spy Kids 3-D: Game Over",
+    "overview": "Carmen\u0027s caught in a virtual reality game designed by the Kids\u0027 new nemesis, the Toymaker. It\u0027s up to Juni to save his sister, and ultimately the world.",
+    "tagline": "3rd mission. 3rd dimension.",
+    "runtime": 84,
+    "release_date": "2003-07-25",
+    "vote_average": 5.145,
+    "poster_path": "/buA8dN4zLNr0dYBeKfHfMnEfdLE.jpg",
+    "backdrop_path": "/bmuTrxbPcr1nKCsV5YWWJi73PGR.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86486,
+      "name": "Spy Kids Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daryl Sabara",
+      "character": "Juni Cortez",
+      "profile_path": "/eZfWmQqNgmuveRWSYuvnQyLXM0d.jpg"
+    },
+    {
+      "name": "Ricardo Montalban",
+      "character": "Grandfather",
+      "profile_path": "/cadERRbhUJ0674YiIwKOwmeDOgE.jpg"
+    },
+    {
+      "name": "Alexa PenaVega",
+      "character": "Carmen Cortez",
+      "profile_path": "/11m8ff0YwS64Z04DJhupNQpwmCZ.jpg"
+    },
+    {
+      "name": "Sylvester Stallone",
+      "character": "Toymaker",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9387,
+    "title": "Conan the Barbarian",
+    "overview": "A horde of rampaging warriors massacre the parents of young Conan and enslave the young child for years on The Wheel of Pain. As the sole survivor of the childhood massacre, Conan is released from slavery and taught the ancient arts of fighting. Transforming himself into a killing machine, Conan travels into the wilderness to seek vengeance on Thulsa Doom, the man responsible for killing his family. In the wilderness, Conan takes up with the thieves Valeria and Subotai. The group comes upon King Osric, who wants the trio of warriors to help rescue his daughter who has joined Doom in the hills.",
+    "tagline": "Thief. Warrior. Gladiator. King.",
+    "runtime": 130,
+    "release_date": "1982-03-16",
+    "vote_average": 6.811,
+    "poster_path": "/qw2A587Ee61IwcSOLNFRhuOACZZ.jpg",
+    "backdrop_path": "/fNp2ikvY8WZTyVbK1iXW84RLbO5.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 43055,
+      "name": "Conan the Barbarian Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Conan",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "James Earl Jones",
+      "character": "Thulsa Doom",
+      "profile_path": "/sgc8yxYr8ecNn1TXjWXWx3wmUYA.jpg"
+    },
+    {
+      "name": "Sandahl Bergman",
+      "character": "Valeria",
+      "profile_path": "/rRlwEULbawB228RN78MDgTCBbqe.jpg"
+    },
+    {
+      "name": "Ben Davidson",
+      "character": "Rexor",
+      "profile_path": "/53Zit51GVxeHkQbjXHXwLVErvCN.jpg"
+    }
+  ]
+}

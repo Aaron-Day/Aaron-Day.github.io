@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10545,
+    "title": "The Hunchback of Notre Dame",
+    "overview": "Isolated in the bell tower of Notre Dame, Quasimodo longs to experience the world beyond the cathedral walls, despite the wishes of his stern guardian, the Judge of Paris Claude Frollo. His first venture into the city leads him to Esmeralda, a fearless Romani woman whose defiance of Frollo\u0027s tyranny draws her\u2014and Quasimodo\u2014into his dangerous obsession.",
+    "tagline": "He dared to dream, he dared to love. This is the tale of a man\u2026 and a monster.",
+    "runtime": 91,
+    "release_date": "1996-06-21",
+    "vote_average": 7.137,
+    "poster_path": "/dmMBtXuFzZzLYgeQXkOkg98w2Ak.jpg",
+    "backdrop_path": "/k4HIk81b03lLeNo7I0dHxD3VPKD.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 97456,
+      "name": "The Hunchback of Notre Dame Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Hulce",
+      "character": "Quasimodo (voice)",
+      "profile_path": "/sQslzbyYZr4Qjv55VseLbbjpuMY.jpg"
+    },
+    {
+      "name": "Demi Moore",
+      "character": "Esmeralda (voice)",
+      "profile_path": "/wApParZYBDi4yxekjfxjKEifJYh.jpg"
+    },
+    {
+      "name": "Kevin Kline",
+      "character": "Phoebus (voice)",
+      "profile_path": "/ArH5dACd9AmWNNMnI6bGEkiFYIM.jpg"
+    },
+    {
+      "name": "Tony Jay",
+      "character": "Frollo (voice)",
+      "profile_path": "/rlL918sjBA5m6qVEjYDCKmxU7QO.jpg"
+    }
+  ]
+}

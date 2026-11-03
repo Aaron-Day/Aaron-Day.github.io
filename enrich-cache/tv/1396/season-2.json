@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Seven Thirty-Seven",
+        "overview": "Walt and Jesse are vividly reminded of Tuco\u2019s volatile nature, and try to figure a way out of their business partnership. Hank attempts to mend fences between the estranged Marie and Skyler.",
+        "air_date": "2009-03-08",
+        "runtime": 48,
+        "still_path": "/6Uo1z56uKnX60JXvYYFWACHR31u.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Grilled",
+        "overview": "Walt and Jesse find themselves in close quarters with an unhinged Tuco. Marie and Hank comfort Skyler, who is distraught over Walt\u2019s disappearance. Hank pays a visit to Mrs. Pinkman on some not-so-official business.",
+        "air_date": "2009-03-15",
+        "runtime": 48,
+        "still_path": "/th3SNe0gNgRguv8VveLd4f2JcaH.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Bit by a Dead Bee",
+        "overview": "Walt and Jesse become short on cash when they try to cover their tracks. Meanwhile, the DEA has a lead that could them straight to Walt and Jesse.",
+        "air_date": "2009-03-22",
+        "runtime": 47,
+        "still_path": "/abgJTOWYPdZGxAWhsg6lmtM8qcU.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Down",
+        "overview": "Walt attempts to reconnect with his family, while Jesse struggles to rebuild his life.",
+        "air_date": "2009-03-29",
+        "runtime": 48,
+        "still_path": "/gMXeL0qcQZi5Tfd4UhnkRJeI9oa.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Breakage",
+        "overview": "Hank suffers from the aftermath of his encounter with Tuco. Meanwhile, Jesse hires a crew to get their product out on the streets.",
+        "air_date": "2009-04-05",
+        "runtime": 48,
+        "still_path": "/bPQxF63jhfT5eNYjhzuGEO7oMQg.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Peekaboo",
+        "overview": "Walt\u0027s secret is in jeopardy when Skyler thanks Gretchen for paying for his treatment.",
+        "air_date": "2009-04-12",
+        "runtime": 48,
+        "still_path": "/tfCuh20gNHGGF6A1te3NmiqML6D.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Negro y Azul",
+        "overview": "Jesse and Walt discuss expanding into new territories; Hank struggles to fit in; Skyler pursues a new job opportunity; Jesse gets to know his landlord.",
+        "air_date": "2009-04-19",
+        "runtime": 48,
+        "still_path": "/1IOnhCCeru1BZUPeppu7tMmtxvL.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Better Call Saul",
+        "overview": "Walt and Jesse seek advice from a shady attorney when Badger gets in trouble with the law; the DEA believes they have caught up with \u0022Heisenberg\u0022 ; Hank returns.",
+        "air_date": "2009-04-26",
+        "runtime": 48,
+        "still_path": "/KmFdF23FtbPwwz3FJF2T885r2Z.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "4 Days Out",
+        "overview": "Walt and his family wait for news after he undergoes a PET-CT scan. Walt follows Saul\u0027s advice; Jesse\u0027s relationship with Jane is put on hold when he and Walt head to the desert for a marathon of cooking.",
+        "air_date": "2009-05-03",
+        "runtime": 48,
+        "still_path": "/etUWlVbdQ7PzbGeUOBNpmFRm1Z9.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Over",
+        "overview": "Walt and Hank get into a heated argument at a party. Skyler opens up to her boss. Jane hides her relationship with Jesse from her father.",
+        "air_date": "2009-05-10",
+        "runtime": 48,
+        "still_path": "/3HkNEX9JEpFBOWF2e4FPu0ctFPe.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Mandala",
+        "overview": "As the end of her pregnancy finds Skyler conflicted about her feelings, a dealer\u0027s death forces Walt to look for somewhere to unload a load of meth.",
+        "air_date": "2009-05-17",
+        "runtime": 48,
+        "still_path": "/4NTvAU3WwavUHGv42bESzWA1nqU.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Phoenix",
+        "overview": "As Walt explores money laundering options, he and Jesse spar over the profits from their latest deal. Jesse and Jane clash with her father. Walt makes a fatal decision.",
+        "air_date": "2009-05-24",
+        "runtime": 48,
+        "still_path": "/gMO9Jgkakq8s9lNzDsJxkTIl5o9.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "ABQ",
+        "overview": "Skyler confronts Walt about his secrecy; Jesse falls apart; and Jane\u0027s grief-stricken father takes action that results in further tragedy.",
+        "air_date": "2009-05-31",
+        "runtime": 48,
+        "still_path": "/nNAYdHo3v3c043XKgn3wrVnjoXr.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 9,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Inspiration (1)",
+        "overview": "The hunt for a methodical killer takes the BAU to Arizona to search for an increasingly devolving unsub, and the team speculates that Hotch is in the running to be the new BAU Section Chief following the death of Erin Strauss.",
+        "air_date": "2013-09-25",
+        "runtime": 42,
+        "still_path": "/et9KRmVjntBe6FqIhFYDC0RoS4a.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Inspired (2)",
+        "overview": "As the BAU zeroes in on the suspect of the ritualistic killings they\u0027ve been investigating in Arizona, a bizarre connection within the unsub\u0027s family could lead them to finally nab the suspect.",
+        "air_date": "2013-10-02",
+        "runtime": 42,
+        "still_path": "/jNXQHS9SiLgeVX4khVODl6L3k0E.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Final Shot",
+        "overview": "When a sniper strikes Dallas, the BAU investigates whether the upcoming anniversary of the Kennedy assassination is a motivating factor or if something else is driving the unsub.",
+        "air_date": "2013-10-09",
+        "runtime": 42,
+        "still_path": "/rPtsEAJ3hRAVurY7qa4oNgyj7XE.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "To Bear Witness",
+        "overview": "The BAU meets their new section chief, Mateo Cruz, who, unbeknownst to them, shares a long work history with JJ. Cruz joins the team as they comb the streets of Baltimore for an unsub who leaves victims unable to communicate.",
+        "air_date": "2013-10-16",
+        "runtime": 42,
+        "still_path": "/AtuC7ljN4FcxTbOZ0TmTlJKYatO.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Route 66",
+        "overview": "As Hotch fights for his life due to complications from his stabbing at the hands of George Foyet, a.k.a. \u0022The Reaper,\u0022 he experiences visions of his late wife, Haley, and his nemesis, Foyet. Meanwhile, the BAU searches for a missing teenager and investigate her estranged father as a suspect in her disappearance.",
+        "air_date": "2013-10-23",
+        "runtime": 42,
+        "still_path": "/connaT77ioK6FvGOtpS1cf4iMxA.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "In the Blood",
+        "overview": "The BAU are called to Utah to investigate the murder of a women who died by being buried under stones. All while Penelope plans a Day of the Dead party.",
+        "air_date": "2013-10-30",
+        "runtime": 42,
+        "still_path": "/gaIKpLrOlMA6Q8qOT5H8P0WIKGh.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Gatekeeper",
+        "overview": "Though Rossi is sad because his favorite bar is closing, the team goes to Boston to solve a series of strangulations.",
+        "air_date": "2013-11-06",
+        "runtime": 42,
+        "still_path": "/hm0v3IdzhnF1IJc7ySD6Hy8Okwx.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Return",
+        "overview": "When teenagers who were reported missing are suspected of a series of mass murders in Chicago, the BAU investigates their whereabouts to find a motive for the crimes. Also, Morgan has conflicting feelings when his girlfriend takes her job at a hospital as seriously as he takes his.",
+        "air_date": "2013-11-13",
+        "runtime": 42,
+        "still_path": "/6gm95OwJ6a1FB1e0c5RAyvB1o5H.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Strange Fruit",
+        "overview": "When skeletons are discovered in the backyard of a home in Virginia, family secrets and past racial divisions are brought to light.",
+        "air_date": "2013-11-20",
+        "runtime": 42,
+        "still_path": "/zs2uVwnzculoarW0N139XpXzZCL.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Caller",
+        "overview": "When a young boy goes missing from his home in St. Louis, the BAU reinvestigates a similar cold case to search for the UnSub.",
+        "air_date": "2013-11-27",
+        "runtime": 42,
+        "still_path": "/vDusz53q4DDF7q0MdiKdqzkN50k.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Bully",
+        "overview": "When the BAU is called to Kansas City to investigate a series of murders, a tense reunion ensues between Blake and her father, a retired police captain, and her brother, a detective, who must work together to help solve the crime.",
+        "air_date": "2013-12-11",
+        "runtime": 42,
+        "still_path": "/kMGkhGw1gXVn11MPD17G4yFAXpO.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Black Queen",
+        "overview": "A murder investigation leads to Garcia delving into her hacker past -- and reconnecting with her former love.",
+        "air_date": "2014-01-15",
+        "runtime": 42,
+        "still_path": "/zQPG2sScUm5dMzwutG3vKoRcFwm.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Road Home (1)",
+        "overview": "As the team searches for a vigilante killer in Cleveland, Rossi\u0027s former Marine sergeant goes missing in Los Angeles; J.J.\u0027s secret catches up with her.",
+        "air_date": "2014-01-22",
+        "runtime": 42,
+        "still_path": "/wPZkahyxcRYo4W3zt5j1U1vJTRv.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "200 (2)",
+        "overview": "When JJ is kidnapped, the BAU delves into her time at the State Department to find clues to her disappearance and uncover a secret mission that now puts her life in danger. To help with their search for JJ, the team calls upon Prentiss to help in the crisis",
+        "air_date": "2014-02-05",
+        "runtime": 42,
+        "still_path": "/edVIHNerZRFaPDjDESiGZGGaGaA.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Mr. \u0026 Mrs. Anderson",
+        "overview": "The BAU travels to Pittsburgh on the hunt for a pair of suspects that appear to be working together as a team; Garcia and Morgan reveal their Valentine\u0027s Day plans for their respective significant others to each other.",
+        "air_date": "2014-02-19",
+        "runtime": 42,
+        "still_path": "/3to48UNcYGlS1uCMaQbhmDlAI4C.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Gabby",
+        "overview": "When a 4-year-old girl goes missing while staying with a relative in Mississippi, the BAU uncovers some startling truths as the team races to find the child and bring her to safety.",
+        "air_date": "2014-02-26",
+        "runtime": 42,
+        "still_path": "/4bOv1PoTachZCHlNBdnkdieuHUd.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Persuasion",
+        "overview": "The BAU must determine the true cause and motive when several drowned people are discovered in the Las Vegas desert.",
+        "air_date": "2014-03-05",
+        "runtime": 42,
+        "still_path": "/1b7TiOM9HGVArx1OhGA7zil1kid.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Rabid",
+        "overview": "When three bodies are found with animal and human bite marks in a shallow grave near Milwaukee, the BAU has puzzling questions to answer. Meanwhile, Reid and Garcia work out for a company fitness test, but try to hide their preparation from Morgan.",
+        "air_date": "2014-03-12",
+        "runtime": 42,
+        "still_path": "/niwXuZvTLJzs5TG8vQkoh6DhVcw.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Edge of Winter",
+        "overview": "Morgan\u0027s visit with a survivor of unusual stabbings in upstate New York leads to more questions about the case.",
+        "air_date": "2014-03-19",
+        "runtime": 42,
+        "still_path": "/eqt7WQBUdbdfZZIDKtBPbxCebeL.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Blood Relations",
+        "overview": "Two murder victims are found in a West Virginia backwoods community. The investigation reveals that the homicides may be linked to a long-simmering feud between two families.",
+        "air_date": "2014-04-02",
+        "runtime": 42,
+        "still_path": "/3LRptkCaklGiT2uEcWm8zAYGJvC.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "What Happens in Mecklinburg...",
+        "overview": "The team searches for a commonality when a series of target abductions take place; Savannah is frustrated with Morgan\u0027s traveling.",
+        "air_date": "2014-04-09",
+        "runtime": 42,
+        "still_path": "/tbRlkDJ2ygbFpPs1YU0sBmpupJD.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Fatal",
+        "overview": "Victims of arsenic poisoning are found in Long Beach. The investigation reveals that the killer has a fascination with Greek mythology, based on handwritten death threats to the deceased and other mysterious clues. Meanwhile, Hotch becomes concerned about participating in Jack\u0027s third-grade career day.",
+        "air_date": "2014-04-30",
+        "runtime": 42,
+        "still_path": "/rRtE0MSJAKqfKQnLyt2z5rZ9e4H.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Angels (1)",
+        "overview": "When prostitutes are murdered in Texas, their deaths seem to have religious overtones; members of the team are put at risk throughout the course of the investigation.",
+        "air_date": "2014-05-07",
+        "runtime": 42,
+        "still_path": "/cIXOOJw0MPHjq82HdtYTOtfYut3.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Demons (2)",
+        "overview": "The investigation in Texas reveals a deep web of corruption; Garcia must save a friend.",
+        "air_date": "2014-05-14",
+        "runtime": 42,
+        "still_path": "/6nmtiF3Hv886nSLoUTuy6lNQRzA.jpg"
+      }
+    ]
+  }
+}

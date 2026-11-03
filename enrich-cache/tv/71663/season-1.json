@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Resurrection",
+        "overview": "Jefferson Pierce is a man wrestling with a secret. As the father of Anissa and Jennifer, and principal of a charter high school that also serves as a safe-haven for young people in a neighborhood overrun by gang violence, he is a hero in his community. Nine years ago, Pierce was a hero of a different sort. Gifted with the superhuman power to harness and control electricity, he used those powers to keep his hometown streets safe as the masked vigilante Black Lightning, but he left the Superhero days behind. Almost a decade later, Pierce\u2019s crime-fighting days are long behind him\u2026or so he thought.",
+        "air_date": "2018-01-16",
+        "runtime": 43,
+        "still_path": "/zJTAERUTt97rzVVFzqvt1qAvF2n.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Lawanda: The Book of Hope",
+        "overview": "As the community struggles with the violence surrounding them, a glimmer of hope appears: Is Black Lightning back? Lynn Stewart, noticing the changes in the community, is also left wondering. While Jefferson Pierce struggles with his decision, Gambi urges him to take up the mantle once more and return to life as Black Lightning. Anissa and Jennifer try to deal with the aftermath of their jolting experience.",
+        "air_date": "2018-01-23",
+        "runtime": 43,
+        "still_path": "/hyK67Sr1Z9F2vRLyhnZeuzmkpRY.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Lawanda: The Book of Burial",
+        "overview": "As Jefferson Pierce tries to determine if the community can survive without the help of Black Lightning, Anissa starts to come into her own. Meanwhile, Jefferson and Lynn try and figure out their new dynamic. Finally, Jennifer reveals to her parents that she has been grappling with something big.",
+        "air_date": "2018-01-30",
+        "runtime": 43,
+        "still_path": "/6HZmOCmpG6WTVLOsLB1fRUqWBWz.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Black Jesus",
+        "overview": "Black Lightning is recruited to rally against The 100 gang. Anissa investigates the new drug hitting the streets. Meanwhile, familiar faces begin to reappear.",
+        "air_date": "2018-02-06",
+        "runtime": 43,
+        "still_path": "/qWSZxZUczOHiL7a3Fc4XMT60BhT.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "And Then the Devil Brought the Plague: The Book of Green Light",
+        "overview": "An unexpected phone call unearths the long-buried need for Jefferson to investigate the murder of his father. Meanwhile, Annisa wrestles with the fact that her actions have dire consequences. Lastly, Jennifer learns the importance of controlling her temper \u2013 in all situations.",
+        "air_date": "2018-02-13",
+        "runtime": 43,
+        "still_path": "/w41yqEqNxjdlYYDHofG024cWVm9.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Three Sevens: The Book of Thunder",
+        "overview": "Jefferson is on the hunt for his father\u0027s killer, while Anissa uses her new powers to rectify a wrong after a protest fails. Jennifer grapples with some difficult choices. Elsewhere, Gambi begs for help from Lynn.",
+        "air_date": "2018-02-27",
+        "runtime": 43,
+        "still_path": "/uY0u9Uasn7lFDTNe3NEeAA6WgSa.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Equinox: The Book of Fate",
+        "overview": "Black Lightning\u2019s pursuit for Tobias continues. Anissa continues to find herself in the new normal.",
+        "air_date": "2018-03-06",
+        "runtime": 42,
+        "still_path": "/yqvDSDgpYN05zkk8N1IVc8mK3QN.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Book of Revelations",
+        "overview": "Black Lightning works with Anissa to help find information to clear Black Lightning\u2019s name. Jennifer begins interning for Lynn. Meanwhile, Gambi finds himself in a precarious situation.",
+        "air_date": "2018-03-13",
+        "runtime": 42,
+        "still_path": "/52GkO29vzCCAzhzK5I6q4g94zdK.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Book of Little Black Lies",
+        "overview": "In the aftermath of the latest killing, Black Lightning works to clear his name while also hunting down the person responsible for his father\u2019s death, and anyone else involved. Tensions remain high between Black Lightning and Gambi.",
+        "air_date": "2018-03-20",
+        "runtime": 43,
+        "still_path": "/bbZlpEifxs03pw3T9YVVFXjDn8e.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Sins of the Father: The Book of Redemption",
+        "overview": "Black Lightning attempts to rescue several long-missing children reveals a secret he did not anticipate, and its resulting connections. Gambi struggles to stay strong while in a compromising position. Jefferson begins to view things differently.",
+        "air_date": "2018-03-27",
+        "runtime": 43,
+        "still_path": "/7NTEYqbjY27b3lHoybvuMraB3X7.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Black Jesus: The Book of Crucifixion",
+        "overview": "As suspicions grow that Jefferson Pierce is Black Lightning, the ASA arranges to have him arrested.  Lynn seeks help from Detective Henderson. Meanwhile, as Jefferson is in custody, Gambi and Anissa work together to show Black Lightning is still running around the streets of Freeland.",
+        "air_date": "2018-04-03",
+        "runtime": 40,
+        "still_path": "/pr2dsQkeP46KTpoI9L57scNZwdx.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Resurrection and the Light: The Book of Pain",
+        "overview": "Tobias returns to Freeland. He is tasked to capture \u2013 not kill \u2013 Black Lightning with the help of an unexpected source. After a battle of epic proportions, Anissa and Jennifer provide surprising aid.",
+        "air_date": "2018-04-10",
+        "runtime": 43,
+        "still_path": "/yoUEwxG9lXeITRhdsCFJTaztGq.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Shadow of Death: The Book of War",
+        "overview": "The aftermath of the showdown with Black Lightning leaves everyone reeling. Meanwhile, Tobias gathers his forces.",
+        "air_date": "2018-04-17",
+        "runtime": 43,
+        "still_path": "/dbcNCme0IceCesEOe8UAXNX0Axi.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12208,
+    "title": "Casino Royale",
+    "overview": "Sir James Bond is called back out of retirement to stop SMERSH. In order to trick SMERSH, James thinks up the ultimate plan - that every agent will be named \u0027James Bond\u0027. One of the Bonds, whose real name is Evelyn Tremble is sent to take on Le Chiffre in a game of baccarat, but all the Bonds get more than they can handle.",
+    "tagline": "Casino Royale is too much for one James Bond!",
+    "runtime": 131,
+    "release_date": "1967-04-18",
+    "vote_average": 5.245,
+    "poster_path": "/9wdw5H018bgIM8bK2HuDvh8BwOh.jpg",
+    "backdrop_path": "/bzd7Uph8qfAB3fi488rIE3x2pWg.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Peter Sellers",
+      "character": "Evelyn Tremble",
+      "profile_path": "/sCVIv2DGoC9U16anTjLwMxKBPZ.jpg"
+    },
+    {
+      "name": "Ursula Andress",
+      "character": "Vesper Lynd",
+      "profile_path": "/mZSFE3vayIgXmfot4btC7K1rECZ.jpg"
+    },
+    {
+      "name": "David Niven",
+      "character": "James Bond",
+      "profile_path": "/ioW2DU6T2HPvTdqUSaLLQmGPb38.jpg"
+    },
+    {
+      "name": "Orson Welles",
+      "character": "Le Chiffre",
+      "profile_path": "/p5JF3pnAHDy4JSNPJBatM5Ttdam.jpg"
+    }
+  ]
+}

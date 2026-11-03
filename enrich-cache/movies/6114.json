@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 6114,
+    "title": "Bram Stoker\u0027s Dracula",
+    "overview": "Count Dracula, a 15th-century prince, is condemned to live off the blood of the living for eternity. Young lawyer Jonathan Harker is sent to Dracula\u0027s castle to finalise a land deal, but when the Count sees a photo of Harker\u0027s fianc\u00E9e, Mina, the spitting image of his dead wife, he imprisons him and sets off for London to track her down.",
+    "tagline": "Love never dies.",
+    "runtime": 128,
+    "release_date": "1992-11-13",
+    "vote_average": 7.438,
+    "poster_path": "/wpRrdm6g8zWtJnzVqME5QwSKkn7.jpg",
+    "backdrop_path": "/fGuhbAlDpvmNuC0vkz1vsIzYwsq.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Gary Oldman",
+      "character": "Dracula",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    },
+    {
+      "name": "Winona Ryder",
+      "character": "Mina Murray / Elisabeta",
+      "profile_path": "/8RVrlgtua8b53wmK7oZAAkm0N5O.jpg"
+    },
+    {
+      "name": "Anthony Hopkins",
+      "character": "Professor Abraham Van Helsing",
+      "profile_path": "/iaf7SHSkGDpnyrDh1Jolilwk2TD.jpg"
+    },
+    {
+      "name": "Keanu Reeves",
+      "character": "Jonathan Harker",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 28178,
+    "title": "Hachi: A Dog\u0027s Tale",
+    "overview": "Professor Wilson discovers a lost Akita puppy on his way home. Despite objections from his wife, Hachi endears himself to the family and grows to be Parker\u0027s loyal companion. As their bond grows deeper, a beautiful relationship unfolds.",
+    "tagline": "A true story of faith, devotion and undying love.",
+    "runtime": 93,
+    "release_date": "2009-06-08",
+    "vote_average": 8.007,
+    "poster_path": "/lsy3aEsEfYIHdLRk4dontZ4s85h.jpg",
+    "backdrop_path": "/gOeSj4YzwxZb6FgcYPRK2hEzTdt.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Richard Gere",
+      "character": "Parker Wilson",
+      "profile_path": "/i7wcBNmFldh2E4QInCvmv7CPSIR.jpg"
+    },
+    {
+      "name": "Joan Allen",
+      "character": "Cate Wilson",
+      "profile_path": "/aLYQFv11lb8hyBuP7ewkuxWbK8q.jpg"
+    },
+    {
+      "name": "Sarah Roemer",
+      "character": "Andy",
+      "profile_path": "/cD3bfcFmxoUC5U0ADMd9uHlDyFY.jpg"
+    },
+    {
+      "name": "Cary-Hiroyuki Tagawa",
+      "character": "Ken",
+      "profile_path": "/5F8MQ4J4qIqUwGIfcWN4osrTUtP.jpg"
+    }
+  ]
+}

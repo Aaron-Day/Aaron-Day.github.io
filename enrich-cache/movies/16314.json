@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 16314,
+    "title": "3 Ninjas",
+    "overview": "Each year, three brothers Samuel, Jeffrey and Michael Douglas visits their Japanese grandfather, Mori Shintaro whom the boys affectionately refer to as Grandpa, for the summer. Mori is a highly skilled in the fields of Martial arts and Ninjutsu, and for years he has trained the boys in his techniques. After an organized crime ring proves to be too much for the FBI, it\u0027s time for the 3 brother NINJAS! To use their martial arts skills, they team up to battle the crime ring and outwit some very persistent kidnappers!",
+    "tagline": "Tum Tum, Colt and Rocky Ready for a Ninja Summer!",
+    "runtime": 96,
+    "release_date": "1992-08-07",
+    "vote_average": 5.7,
+    "poster_path": "/fhGyCrKke6KImUQtprqsICYHnkX.jpg",
+    "backdrop_path": "/qoSIw7XPwpbo5p3WuQoc5AvKZ4.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 71458,
+      "name": "3 Ninja Kids Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Victor Wong",
+      "character": "Grandpa",
+      "profile_path": "/3XvU2mK3i5V8Un7HyZn5pVnp4qw.jpg"
+    },
+    {
+      "name": "Michael Treanor",
+      "character": "Rocky",
+      "profile_path": "/xIucsSiBsqV6cjjfmZwhCm07L6q.jpg"
+    },
+    {
+      "name": "Max Elliott Slade",
+      "character": "Colt",
+      "profile_path": "/s22j7jmD5hUnBU835T3NsCtT6ao.jpg"
+    },
+    {
+      "name": "Chad Power",
+      "character": "Tum Tum",
+      "profile_path": null
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8078,
+    "title": "Alien Resurrection",
+    "overview": "Two hundred years after Lt. Ripley died, a group of scientists clone her, hoping to breed the ultimate weapon. But the new Ripley is full of surprises \u2026 as are the new aliens. Ripley must team with a band of smugglers to keep the creatures from reaching Earth.",
+    "tagline": "It\u0027s already too late.",
+    "runtime": 109,
+    "release_date": "1997-11-12",
+    "vote_average": 6.172,
+    "poster_path": "/9aRDMlU5Zwpysilm0WCWzU2PCFv.jpg",
+    "backdrop_path": "/ikr0UILfvRerzMNoBTtJtyuWAEV.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8091,
+      "name": "Alien Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sigourney Weaver",
+      "character": "Ripley",
+      "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+    },
+    {
+      "name": "Winona Ryder",
+      "character": "Call",
+      "profile_path": "/8RVrlgtua8b53wmK7oZAAkm0N5O.jpg"
+    },
+    {
+      "name": "Dominique Pinon",
+      "character": "Vriess",
+      "profile_path": "/rIPUhNwGSglgKLgMQWz0JNCqIzf.jpg"
+    },
+    {
+      "name": "Ron Perlman",
+      "character": "Johner",
+      "profile_path": "/nfky6J9ueey1gMdWMNU9k9YdfGP.jpg"
+    }
+  ]
+}

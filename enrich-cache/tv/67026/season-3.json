@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "#thesystemisbroken",
+        "overview": "Now running for office for the first time, Kirkman and his nascent campaign stumble out of the gate. Wells gets a critical reassignment.",
+        "air_date": "2019-06-07",
+        "runtime": 50,
+        "still_path": "/vPNRBmQaQeTij6Y86eRiXetruRZ.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "#slipperyslope",
+        "overview": "A heated debate over child marriage roils Kirkman\u0027s staff. Opioid addiction hits home for Mars. A biohacker turns Wells onto a chilling new threat.",
+        "air_date": "2019-06-07",
+        "runtime": 49,
+        "still_path": "/k1AI9t3UXEoULi3lpCkDGSMwPqv.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "#privacyplease",
+        "overview": "A political attack on Kirkman puts privacy and transgender rights in the spotlight. Aaron weighs a major decision. Wells and Eli track a bioterrorist.",
+        "air_date": "2019-06-07",
+        "runtime": 46,
+        "still_path": "/qlnDWbPPjrGfyWjE9TYd4ZcdJnA.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "#makehistory",
+        "overview": "Aaron\u0027s heritage and a widespread teachers\u0027 strike become polarizing issues, and Wells discovers a sinister pattern in a flu outbreak.",
+        "air_date": "2019-06-07",
+        "runtime": 50,
+        "still_path": "/ccBrybQx1AyKZNcM8uGxzI4vHpD.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "#nothingpersonal",
+        "overview": "Emotions run high after despicable fake news goes viral, Isabel makes waves with a controversial appeal, and Wells finds a clue pointing to conspiracy.",
+        "air_date": "2019-06-07",
+        "runtime": 51,
+        "still_path": "/mTNz837onr3IBRenBVJnXjOgJ1E.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "#whocares",
+        "overview": "A dying Guatemalan child in a Texas hospital brings immigration to the fore. A mugging opens Kirkman\u0027s eyes to the realities of life in the capital.",
+        "air_date": "2019-06-07",
+        "runtime": 51,
+        "still_path": "/o18KD6roQFPctZv1RitB1e993Io.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "#identity/crisis",
+        "overview": "A stray Russian bomber jeopardizes Seattle, Mars crusades against a drug company, and an event from Aaron\u0027s childhood vexes Kirkman\u0027s campaign.",
+        "air_date": "2019-06-07",
+        "runtime": 52,
+        "still_path": "/saXkjiDiJBNEW1PedvmDQookAQ4.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "#scaredsh*tless",
+        "overview": "Kirkman mobilizes a frantic hunt for the bioterrorist. Lorraine plays hardball and pushes the opioid epidemic into the campaign fray.",
+        "air_date": "2019-06-07",
+        "runtime": 51,
+        "still_path": "/94OqmfNnmnYxo4kDgOYV4CQ539W.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "#undecided",
+        "overview": "Trailing in the polls, Kirkman weighs forcing the FBI\u0027s hand over the bioterrorism plot. Emily struggles with her mother\u0027s final wishes.",
+        "air_date": "2019-06-07",
+        "runtime": 47,
+        "still_path": "/l0hRcK0y54R8XtYz6IQJAL8nst6.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "#truthorconsequences",
+        "overview": "On election day, Kirkman turns to his therapist to assuage his conscience about the events -- and his own decisions -- of the momentous prior 36 hours.",
+        "air_date": "2019-06-07",
+        "runtime": 53,
+        "still_path": "/cpy3uV100RyZuvJN535JLTrj4Nz.jpg"
+      }
+    ]
+  }
+}

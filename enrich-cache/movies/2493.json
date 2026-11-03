@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2493,
+    "title": "The Princess Bride",
+    "overview": "In this enchantingly cracked fairy tale, the beautiful Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness amid six-fingered swordsmen, murderous princes, Sicilians and rodents of unusual size. But even death can\u0027t stop these true lovebirds from triumphing.",
+    "tagline": "It\u0027s as real as the feelings you feel.",
+    "runtime": 99,
+    "release_date": "1987-09-25",
+    "vote_average": 7.712,
+    "poster_path": "/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg",
+    "backdrop_path": "/onACwa3TjpeaY7EVHSZZbeNkd2q.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Cary Elwes",
+      "character": "Westley",
+      "profile_path": "/9UszBdQJ9PmyBydIeIBxlStozhW.jpg"
+    },
+    {
+      "name": "Robin Wright",
+      "character": "The Princess Bride",
+      "profile_path": "/d3rIv0y2p0jMsQ7ViR7O1606NZa.jpg"
+    },
+    {
+      "name": "Mandy Patinkin",
+      "character": "Inigo Montoya",
+      "profile_path": "/1PeZ6roZvkcoyZZbvoSIWTgGe3a.jpg"
+    },
+    {
+      "name": "Chris Sarandon",
+      "character": "Prince Humperdinck",
+      "profile_path": "/jP92Lq3JHl8mbdxzcZ6PyCQDwa5.jpg"
+    }
+  ]
+}

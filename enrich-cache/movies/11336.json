@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11336,
+    "title": "The Dead Zone",
+    "overview": "Johnny Smith is a schoolteacher with his whole life ahead of him but, after leaving his fiancee\u0027s home one night, is involved in a car crash which leaves him in a coma for 5 years. When he wakes, he discovers he has an ability to see into the past, present and future life of anyone with whom he comes into physical contact.",
+    "tagline": "In his mind, he has the power to see the future. In his hands, he has the power to change it.",
+    "runtime": 103,
+    "release_date": "1983-10-21",
+    "vote_average": 7.011,
+    "poster_path": "/9yTVaeS8eIkOpbwIycVFm7EQrgF.jpg",
+    "backdrop_path": "/icvgQHxrKEDx92VQ5WHiEmEAUKH.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Christopher Walken",
+      "character": "Johnny Smith",
+      "profile_path": "/ApgDL7nudR9T2GpjCG4vESgymO2.jpg"
+    },
+    {
+      "name": "Brooke Adams",
+      "character": "Sarah Bracknell",
+      "profile_path": "/qF0ttWN6X44GIQIzOUFVYh3IOcX.jpg"
+    },
+    {
+      "name": "Tom Skerritt",
+      "character": "Sheriff Bannerman",
+      "profile_path": "/oWFCyBLm1lsbsbT5Nmx3SPMaqFZ.jpg"
+    },
+    {
+      "name": "Herbert Lom",
+      "character": "Dr. Sam Weizak",
+      "profile_path": "/1sqfpn8EzsCgQdwmB8NP4bLWYlP.jpg"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 41759,
+    "title": "Man\u0027s Best Friend",
+    "overview": "A genetic research facility worker exposes animal abuses there to a local TV reporter, who frees and takes in a genetically altered dog from the lab, unaware that he has a violent streak.",
+    "tagline": "Companion. Protector. Killer.",
+    "runtime": 97,
+    "release_date": "1993-11-19",
+    "vote_average": 5.9,
+    "poster_path": "/dRDOrszc2X9bWsE2LhJuJ6WbVEp.jpg",
+    "backdrop_path": "/fRQNUm33JDwWeUGQG0sVmesNlc1.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ally Sheedy",
+      "character": "Lori Tanner",
+      "profile_path": "/dV6eGZm2HNEN2sfa4abTa2QtwOH.jpg"
+    },
+    {
+      "name": "Lance Henriksen",
+      "character": "Dr. Jarret",
+      "profile_path": "/1PkFmD5HdjmRa2DumtwINnnAjTH.jpg"
+    },
+    {
+      "name": "Robert Costanzo",
+      "character": "Detective Kovacs",
+      "profile_path": "/vyUeNk56Yv7xyHztgVa8UBEIasu.jpg"
+    },
+    {
+      "name": "Fredric Lehne",
+      "character": "Perry",
+      "profile_path": "/qjtfC2QWLukoNVnDjp8QZF6E6Xz.jpg"
+    }
+  ]
+}

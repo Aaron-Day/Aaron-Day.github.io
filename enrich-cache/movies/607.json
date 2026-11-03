@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 607,
+    "title": "Men in Black",
+    "overview": "After a police chase with an otherworldly being, a New York City cop is recruited as an agent in a top-secret organization established to monitor and police alien activity on Earth: the Men in Black. Agent K and new recruit Agent J find themselves in the middle of a deadly plot by an intergalactic terrorist who has arrived on Earth to assassinate two ambassadors from opposing galaxies.",
+    "tagline": "Protecting the Earth from the scum of the universe.",
+    "runtime": 98,
+    "release_date": "1997-07-02",
+    "vote_average": 7.233,
+    "poster_path": "/uLOmOF5IzWoyrgIF5MfUnh5pa1X.jpg",
+    "backdrop_path": "/aJMhYOP80cVBtq5ku3uyqASF3Ol.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86055,
+      "name": "Men in Black Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tommy Lee Jones",
+      "character": "Kay",
+      "profile_path": "/mCiZNRAzbnPojJEZwVZWLw9kzxR.jpg"
+    },
+    {
+      "name": "Will Smith",
+      "character": "Jay",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Linda Fiorentino",
+      "character": "Laurel",
+      "profile_path": "/kG0O5DRNJfIgxqv9eXkCq8eeR9U.jpg"
+    },
+    {
+      "name": "Vincent D\u0027Onofrio",
+      "character": "Edgar",
+      "profile_path": "/qkyiLolEqYMGH25xD4sFIXAjZQB.jpg"
+    }
+  ]
+}

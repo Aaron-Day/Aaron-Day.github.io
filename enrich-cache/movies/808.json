@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 808,
+    "title": "Shrek",
+    "overview": "It ain\u0027t easy bein\u0027 green -- especially if you\u0027re a likable (albeit smelly) ogre named Shrek. On a mission to retrieve a gorgeous princess from the clutches of a fire-breathing dragon, Shrek teams up with an unlikely compatriot -- a wisecracking donkey.",
+    "tagline": "The greatest fairy tale never told.",
+    "runtime": 90,
+    "release_date": "2001-05-18",
+    "vote_average": 7.782,
+    "poster_path": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg",
+    "backdrop_path": "/w0eKUOEog2ImtktCHAMUZws8qif.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2150,
+      "name": "Shrek Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mike Myers",
+      "character": "Shrek / Blind Mouse (voice)",
+      "profile_path": "/gjfDl52Kk02MPgUYFjs9bOy33OY.jpg"
+    },
+    {
+      "name": "Eddie Murphy",
+      "character": "Donkey (voice)",
+      "profile_path": "/qgjMfefsKwSYsyCaIX46uyOXIpy.jpg"
+    },
+    {
+      "name": "Cameron Diaz",
+      "character": "Princess Fiona (voice)",
+      "profile_path": "/tIWUyvmJayu8gtbrzCWC0L3H8kH.jpg"
+    },
+    {
+      "name": "John Lithgow",
+      "character": "Lord Farquaad (voice)",
+      "profile_path": "/ajfuBSm1HuVqFJlbTmAlza62Xxr.jpg"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Encounter at Farpoint",
+        "overview": "Stardate: 41153.7. The new commander of the recently built U.S.S. Enterprise (NCC1701-D), Captain Jean-Luc Picard  takes the crew on their first mission to discover the secret of Farpoint Station. During their journey, they encounter an omnipotent being known as Q. Q accuses humanity of barbarism, and places humanity on trial. Jean-Luc must prove otherwise or the human race will be annihilated.",
+        "air_date": "1987-09-28",
+        "runtime": 91,
+        "still_path": "/y5UXwnxTTSW8vPmIBwP0BffodQA.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Naked Now",
+        "overview": "Stardate: 41209.2. The crew of the Enterprise are infected with a virus contracted by the away team while they were investigating  the mysterious deaths of the entire crew of the Starship Tsilkovsky.",
+        "air_date": "1987-10-05",
+        "runtime": 46,
+        "still_path": "/mhDWO4T9GvrWKY95ZdyJX4oMd3g.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Code of Honor",
+        "overview": "Stardate: 41235.25. Tasha Yar must fight for her life and a vaccine to save a race of people when she is kidnapped and forced to battle with her abductor\u0027s wife.",
+        "air_date": "1987-10-12",
+        "runtime": 46,
+        "still_path": "/iArvevcAuymdhe2WlcmmaQ2XALD.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Last Outpost",
+        "overview": "Stardate: 41386.4. A powerful entity disables the Enterprise and a Ferengi ship. Their only means of escape is if they can correctly answer the riddles he asks.",
+        "air_date": "1987-10-19",
+        "runtime": 46,
+        "still_path": "/5xh0aAaEhxyBXDVo7bxMy0qZC3W.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Where No One Has Gone Before",
+        "overview": "Stardate: 41263.1. The Enterprise is flung across space into a distant galaxy billions of light years away when a propulsion engineer and his mysterious companion, attempt to re-design the ship\u0027s engine systems.",
+        "air_date": "1987-10-26",
+        "runtime": 46,
+        "still_path": "/xjxMagQIXYiYkrSaI5T6fkO6yo5.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Lonely Among Us",
+        "overview": "Stardate: 41249.3. Picard\u0027s mind is taken over by an energy field that the Enterprise passes through.",
+        "air_date": "1987-11-02",
+        "runtime": 46,
+        "still_path": "/gs5JpbqZOgmhsruKTCeRS5MBdDx.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Justice",
+        "overview": "Stardate: 41255.6. Picard is forced to choose between friendship and the Prime Directive when Wesley Crusher is sentenced to death for accidentally breaking the law on Rubicon III.",
+        "air_date": "1987-11-09",
+        "runtime": 46,
+        "still_path": "/trvcmdI2kbwnKxi6uYcjXCUfKMh.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Battle",
+        "overview": "Stardate: 41723.9. The Ferengi hand over an old ship which Picard once captained, the U.S.S. Stargazer. The Ferengi have installed a mind altering device that alters Picard\u0027s mind to make him think that he is reliving a past battle, and the target is the Enterprise.",
+        "air_date": "1987-11-16",
+        "runtime": 46,
+        "still_path": "/8l6tDcrJzHh4mUcDPxAt4PFiUyi.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Hide and Q",
+        "overview": "Stardate: 41590.5. Q places the senior crew of the Enterprise in a war game that pits them against a boar-faced, Napoleonic enemy.",
+        "air_date": "1987-11-23",
+        "runtime": 46,
+        "still_path": "/5jM7aB9t8TdSrOkDhf2sD1QgZ2v.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Haven",
+        "overview": "Stardate: 41294.5. The mother of Deanna Troi, Lwaxana,  pays a surprise visit to the Enterprise and announces the prearranged marriage of Deanna to the son of her mother\u0027s late husband\u0027s best friend.",
+        "air_date": "1987-11-30",
+        "runtime": 46,
+        "still_path": "/y9IwQKZFVi5uRrZcYLiZH0yqyxj.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Big Goodbye",
+        "overview": "Stardate: 41997.7. Picard, Dr. Crusher and Data are placed in great danger when the holodeck malfunctions while they are running a Dixon Hill program, which pits them against 1940\u0027s mobsters.",
+        "air_date": "1988-01-11",
+        "runtime": 46,
+        "still_path": "/qpsg0V1vy7eUgAbqnn6L8rMpMMp.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Datalore",
+        "overview": "Stardate: 41242.4.  While exploring his homeworld, the crew of the Enterprise find android parts that are identical to Data\u0027s. When assembled, an \u0027evil\u0027 twin of Data named Lore is revived.",
+        "air_date": "1988-01-18",
+        "runtime": 46,
+        "still_path": "/rCTtAQaHRMPDFNft1UgiXJHPNeo.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Angel One",
+        "overview": "Stardate: 41636.9. The Enterprise discovers the male crew of a crashed Federation freighter are hiding as fugitives on the planet Angel One, which is dominated and ruled by women.",
+        "air_date": "1988-01-25",
+        "runtime": 46,
+        "still_path": "/jvYDpyI9TEm8ok6Vn5z4x3srG7Y.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "11001001",
+        "overview": "Stardate: 41365.9. While undergoing repairs, the Bynar Engineers steal the Enterprise to save their planet from destruction.",
+        "air_date": "1988-02-01",
+        "runtime": 46,
+        "still_path": "/hEKcK2GCdHqXLw9OQNi1mld7bHJ.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Too Short a Season",
+        "overview": "Stardate: 41309.5. The aging and terminally ill Starfleet Admiral Mark Jameson, who is negotiating the release of hostages, suddenly begins growing younger through an unexplained phenomenon.",
+        "air_date": "1988-02-08",
+        "runtime": 46,
+        "still_path": "/95d2Zh8xzzJTaYlvGcagJP6Ke74.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "When the Bough Breaks",
+        "overview": "Stardate: 41509.1. The children of the Enterprise, including Wesley Crusher, are abducted by a race of sterile people who are unable to have children of their own.",
+        "air_date": "1988-02-15",
+        "runtime": 46,
+        "still_path": "/q8rkEAvnu3e9M5jbrdcIGnDDrMt.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Home Soil",
+        "overview": "Stardate: 41463.9. The members of an away team investigating the death of an engineer encounter vengeful microscopic life forms.",
+        "air_date": "1988-02-22",
+        "runtime": 46,
+        "still_path": "/vFdoBdTjLZ7HStOuf3f0VmwX8Jx.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Coming of Age",
+        "overview": "Stardate: 41416.2. While Wesley takes the entrance exam to Starfleet Academy, the Enterprise is investigated by the Inspector General\u0027s office and Picard\u0027s competency is questioned.",
+        "air_date": "1988-03-14",
+        "runtime": 46,
+        "still_path": "/5KWy4qmCRiw1STSYquMmgUxmEAu.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Heart of Glory",
+        "overview": "Stardate: 41503.7. Two Klingons, rescued by the Enterprise, try to take over the ship.",
+        "air_date": "1988-03-21",
+        "runtime": 46,
+        "still_path": "/nFsh5KFS5Wu53iwrrmN39D6sefm.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Arsenal of Freedom",
+        "overview": "Stardate: 41798.2. The crew encounters bizarre phenomena while searching for the missing U.S.S. Drake.",
+        "air_date": "1988-04-11",
+        "runtime": 46,
+        "still_path": "/7jVabDT4WdbuH7kYfHZmY4sUBcy.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Symbiosis",
+        "overview": "Stardate: Unknown. Picard attempts to break an ancient co-dependency between two species on one planet without violating the Prime Directive.",
+        "air_date": "1988-04-18",
+        "runtime": 46,
+        "still_path": "/5z4RbWeiCPZ4KBza5pp0Yet4WRm.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Skin of Evil",
+        "overview": "Stardate: 41601.3. When Troi\u0027s shuttle crashes on an alien planet, a new being is discovered: an entity that thrives on the suffering of others.",
+        "air_date": "1988-04-25",
+        "runtime": 46,
+        "still_path": "/lUGIGfmU81NQsgHdC64S0RkzZar.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "We\u0027ll Always Have Paris",
+        "overview": "Stardate: 41697.9. Picard meets an old flame, whose husband has created a haywire dimensional experiment.",
+        "air_date": "1988-05-02",
+        "runtime": 46,
+        "still_path": "/u2Em614jAh1L9lwG480KmK3zDAz.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Conspiracy",
+        "overview": "Stardate: 41775.5. The strange behavior of high-ranking officers leads Picard to uncover a twisted alien conspiracy within Starfleet.",
+        "air_date": "1988-05-09",
+        "runtime": 46,
+        "still_path": "/gSN6vCu6MfcLvGyAsn62GqM7St4.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "The Neutral Zone",
+        "overview": "Stardate: 41986.0. A derelict satellite is found with cryonically frozen humans aboard as the USS Enterprise is sent to investigate the destruction of outposts near Romulan space.",
+        "air_date": "1988-05-16",
+        "runtime": 46,
+        "still_path": "/xubo0bohwfjAVQJtmLyvjcBoIjV.jpg"
+      }
+    ]
+  }
+}

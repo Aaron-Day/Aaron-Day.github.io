@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1865,
+    "title": "Pirates of the Caribbean: On Stranger Tides",
+    "overview": "When Jack crosses paths with a woman from his past, he\u0027s not sure if it\u0027s love...or if she\u0027s a ruthless con artist using him to find the fabled Fountain of Youth.",
+    "tagline": "Live forever or die trying.",
+    "runtime": 136,
+    "release_date": "2011-05-15",
+    "vote_average": 6.576,
+    "poster_path": "/keGfSvCmYj7CvdRx36OdVrAEibE.jpg",
+    "backdrop_path": "/uzIGtyS6bbnJzGsPL93WCF1FWm8.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 295,
+      "name": "Pirates of the Caribbean Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Johnny Depp",
+      "character": "Jack Sparrow",
+      "profile_path": "/k2xt6EUxQDwYRKIyI4IBdZxfs8n.jpg"
+    },
+    {
+      "name": "Pen\u00E9lope Cruz",
+      "character": "Angelica",
+      "profile_path": "/n5SFgmvJSENQt8poE4qYacUnKOi.jpg"
+    },
+    {
+      "name": "Geoffrey Rush",
+      "character": "Hector Barbossa",
+      "profile_path": "/npXFjaFQzBNroCEPllGPTZ5IisA.jpg"
+    },
+    {
+      "name": "Ian McShane",
+      "character": "Edward \u0022Blackbeard\u0022 Teach",
+      "profile_path": "/rteBJYNgD1yGsHg2HGZAIrYHz1t.jpg"
+    }
+  ]
+}

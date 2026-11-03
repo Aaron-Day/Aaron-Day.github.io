@@ -1,0 +1,136 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Book of Consequences: Chapter One: Rise of the Green Light Babies",
+        "overview": "Jefferson Pierce and his family may have survived Tobias\u2019s attack, but they\u2019re not out of the woods yet. Concerned for the safety of Garfield\u2019s students, the board considers a motion to shut down the school, forcing Jefferson to go to Napier Frank to sway the vote. Jennifer struggles with her powers and her actions have unforeseen repercussions. Meanwhile, Anissa finds a new way to give back to Freeland. Lastly, Lynn continues her quest much to the dismay of Agent Odell.",
+        "air_date": "2018-10-09",
+        "runtime": 43,
+        "still_path": "/8rb8OcA85mBR1YmZoUIC1SWwcIi.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Book of Consequences: Chapter Two: Black Jesus Blues",
+        "overview": "Jefferson must break the news to his students and faculty that he is stepping down. Struggling with his new life as Painkiller, Kahlil pays a visit to Jennifer in hopes of mending things. Meanwhile, Tobias continues to enact his plan.",
+        "air_date": "2018-10-16",
+        "runtime": 43,
+        "still_path": "/yUUo00yvwAzmvi40RVyKnFWhtw5.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Book of Consequences: Chapter Three: Master Lowry",
+        "overview": "Jefferson is forced to watch as all his good work is undone before his eyes when his replacement arrives and begins implementing sweeping changes. Meanwhile, Anissa continues to play Robin Hood by stealing from one of the most powerful crime syndicates in Freeland.",
+        "air_date": "2018-10-23",
+        "runtime": 43,
+        "still_path": "/fAHHGEEWT7rIUe4QImg6K94F1Wx.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Book of Consequences: Chapter Four: Translucent Freak",
+        "overview": "Jefferson confronts Anissa about her reckless and irresponsible behavior leading to a fierce disagreement.",
+        "air_date": "2018-10-30",
+        "runtime": 43,
+        "still_path": "/mGNFasOWHXTZr4CwZW5c1mONITe.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Book of Blood: Chapter One: Requiem",
+        "overview": "Jefferson and Anissa work together investigating the hometown of a creepy man at the clinic and make a shocking discovery. Meanwhile, with Syonide gone, Tobias puts an increasing amount of pressure on Khalil to help fill some of the void left in the organization.",
+        "air_date": "2018-11-13",
+        "runtime": 43,
+        "still_path": "/oGtcSnSJj8UsltPcsE4DAR0C9oV.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Book of Blood: Chapter Two: The Perdi",
+        "overview": "Black Lightning and Thunder return to South Freeland in an attempt to figure out what is going on. When they arrive, they are directed to a nearby wood where they are surrounded by a clan of mixed-race moonshiners called the Perdi. Meanwhile, Lynn, feeling tremendous guilt, falls into a deep depression. Lastly, Tobias finds that his plan is falling apart.",
+        "air_date": "2018-11-20",
+        "runtime": 43,
+        "still_path": "/9rp1fcofPP7cK7XoGy3Q9FFeU18.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Book of Blood: Chapter Three: The Sange",
+        "overview": "When Black Lightning and Thunder are attacked by Looker and her clan, they fight to get her to release control over the Sange. Meanwhile, Jennifer and Khalil continue to grow closer.",
+        "air_date": "2018-11-27",
+        "runtime": 43,
+        "still_path": "/xrJnNtyPFw63d8Pnfw4OJaUIBxc.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Book of Rebellion: Chapter One: Exodus",
+        "overview": "The Pierce family is reeling in the wake of Jennifer\u0027s disappearance. Jefferson, Lynn and Anissa all gather to discuss the most effective way to find her. After learning that Jennifer is with Khalil, Lynn goes to Detective Henderson to ask him to issue a warrant for Khalil\u0027s arrest. Meanwhile, Jennifer and Khalil are doing their best to stay off the grid but Tobias\u0027s new henchwoman Cutter is closing in on them.",
+        "air_date": "2018-12-04",
+        "runtime": 42,
+        "still_path": "/feoVfARczn2F8To9k9V1ra8oNjR.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Book of Rebellion: Chapter Two: Gift of the Magi",
+        "overview": "After Jennifer and Khalil escape, they take refuge in a barn and Jennifer desperately tries to save a now feverish Khalil, who has grown worse from Cutter\u0027s poisonous blade. Meanwhile, Jefferson, Lynn and Anissa try everything they can to track down Jennifer and Khalil.",
+        "air_date": "2018-12-11",
+        "runtime": 43,
+        "still_path": "/72NucmnWck0HN1I47h7bpP9r03N.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Book of Rebellion: Chapter Three: Angelitos Negros",
+        "overview": "Still on the run, Jennifer and Khalil succumb to their feelings for one another and begin planning their future together. Meanwhile, Jefferson approaches Henderson with a favor.",
+        "air_date": "2019-01-21",
+        "runtime": 43,
+        "still_path": "/4aaqoZUtBOkgeHzPo7Mj3ZzXjr8.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Book of Secrets: Chapter One: Prodigal Son",
+        "overview": "Jefferson suspects that Tobias is behind a recent malicious attack. He brings this news to Henderson but doesn\u2019t get the answer he was looking for. Meanwhile, Lynn is confronted by her past.",
+        "air_date": "2019-01-28",
+        "runtime": 43,
+        "still_path": "/kdogBeZBstxXNSEnT6PGtGdnHUL.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Book of Secrets: Chapter Two: Just and Unjust",
+        "overview": "When Anissa returns to work at the clinic, she meets a domestic violence victim who motivates her to take action. Meanwhile, Gambi makes a discovery.",
+        "air_date": "2019-02-04",
+        "runtime": 43,
+        "still_path": "/euXfgyhC4gmaj5ETtpzpiYhMkIv.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Book of Secrets: Chapter Three: Pillar of Fire",
+        "overview": "Lynn works on two of the pod kids in a segregated safe room. Meanwhile, Jennifer plots revenge and Jefferson receives some interesting news. Lastly, Anissa makes a shocking discovery.",
+        "air_date": "2019-02-11",
+        "runtime": 43,
+        "still_path": "/og1SOI1ksc4VN4SFF7RC6uWy1Ub.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Book of Secrets: Chapter Four: Original Sin",
+        "overview": "Looking for answers, a worried Anissa sets out to find Grace.",
+        "air_date": "2019-03-04",
+        "runtime": 42,
+        "still_path": "/mAw5scAiClVIIOBvklqyMl0N0Qc.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Book of the Apocalypse: Chapter One: The Alpha",
+        "overview": "Lynn counsels former pod kid, Wendy, in how to live in a world that\u0027s new to her but the fate of the other pod kids remains in doubt. Meanwhile, Anissa figures out Grace\u0027s secret. Lastly, Jefferson tries to install a superhero code for his metahuman offspring, but Jennifer insists on taking revenge on Tobias for her boyfriend\u0027s death.",
+        "air_date": "2019-03-11",
+        "runtime": 42,
+        "still_path": "/gBR2Oikb1Rqndw9MdYr492ve4YN.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Book of the Apocalypse: Chapter Two: The Omega",
+        "overview": "Lynn goes head to head with Dr. Jace once and for all. Meanwhile, Gambi risks his life to save Jennifer. Lastly, Tobias makes a major move to cripple Freeland and kill Black Lightning, requiring our superhero family to step up like never before.",
+        "air_date": "2019-03-18",
+        "runtime": 43,
+        "still_path": "/A4wrD8nSEM5EdoVnlGvcR6gAlzH.jpg"
+      }
+    ]
+  }
+}

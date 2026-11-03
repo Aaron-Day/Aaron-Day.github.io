@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 628,
+    "title": "Interview with the Vampire",
+    "overview": "A vampire relates his epic life story of love, betrayal, loneliness, and dark hunger to an over-curious reporter.",
+    "tagline": "Drink from me and live forever.",
+    "runtime": 123,
+    "release_date": "1994-11-11",
+    "vote_average": 7.386,
+    "poster_path": "/t7NU8IcmcNBrlunCxiycX9JV7Rp.jpg",
+    "backdrop_path": "/3fChciF2G1wXHsyTfJD9y7uN6Il.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 217704,
+      "name": "The Vampire Chronicles Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Lestat",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Brad Pitt",
+      "character": "Louis",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "Antonio Banderas",
+      "character": "Armand",
+      "profile_path": "/lpzfDt22374NPhOXZpUq74e9mfw.jpg"
+    },
+    {
+      "name": "Christian Slater",
+      "character": "Malloy",
+      "profile_path": "/6ww3uweEEXMlvtNjTlgBHxLErPF.jpg"
+    }
+  ]
+}

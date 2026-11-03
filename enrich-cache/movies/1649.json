@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1649,
+    "title": "Bill \u0026 Ted\u0027s Bogus Journey",
+    "overview": "Amiable slackers Bill and Ted are once again roped into a fantastical adventure when De Nomolos, a villain from the future, sends evil robot duplicates of the two lads to terminate and replace them. The robot doubles actually succeed in killing Bill and Ted, but the two are determined to escape the afterlife, challenging the Grim Reaper to a series of games in order to return to the land of the living.",
+    "tagline": "Once... they made history. Now... they are history.",
+    "runtime": 93,
+    "release_date": "1991-07-19",
+    "vote_average": 6.303,
+    "poster_path": "/tldtDfLnPFOtTWp758EmIP2Hbz5.jpg",
+    "backdrop_path": "/4PMSgLOzPFgyzARQBhhX4vS9oOW.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91746,
+      "name": "Bill \u0026 Ted Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "Ted",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Alex Winter",
+      "character": "Bill / Granny Preston",
+      "profile_path": "/7wPi7qrHrsqy1VJ2wQTatIwKjHH.jpg"
+    },
+    {
+      "name": "William Sadler",
+      "character": "Grim Reaper",
+      "profile_path": "/rWeb2kjYCA7V9MC9kRwRpm57YoY.jpg"
+    },
+    {
+      "name": "Joss Ackland",
+      "character": "De Nomolos",
+      "profile_path": "/k8GQrf54DLILcLBmnMq94xijA6z.jpg"
+    }
+  ]
+}

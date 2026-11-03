@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 259693,
+    "title": "The Conjuring 2",
+    "overview": "Lorraine and Ed Warren travel to north London to help a single mother raising four children alone in a house plagued by malicious spirits.",
+    "tagline": "The next true story from the case files of Ed and Lorraine Warren.",
+    "runtime": 134,
+    "release_date": "2016-06-08",
+    "vote_average": 7.297,
+    "poster_path": "/zEqyD0SBt6HL7W9JQoWwtd5Do1T.jpg",
+    "backdrop_path": "/hD9zZYKYb1xBgcm8XIfyvclSkjs.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 313086,
+      "name": "The Conjuring Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vera Farmiga",
+      "character": "Lorraine Warren",
+      "profile_path": "/5Vs7huBmTKftwlsc2BPAntyaQYj.jpg"
+    },
+    {
+      "name": "Patrick Wilson",
+      "character": "Ed Warren",
+      "profile_path": "/oym6H2QD9esk4yABjCHaUoNAOa8.jpg"
+    },
+    {
+      "name": "Madison Wolfe",
+      "character": "Janet Hodgson",
+      "profile_path": "/pbhvWMvBKw41xb7dbLOJJ5fS9hz.jpg"
+    },
+    {
+      "name": "Frances O\u0027Connor",
+      "character": "Peggy Hodgson",
+      "profile_path": "/tWGMS7DciV43tlxA6UEc2UqxrhL.jpg"
+    }
+  ]
+}

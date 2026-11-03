@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8859,
+    "title": "Dude, Where\u0027s My Car?",
+    "overview": "Two stoners wake up after a night of partying and cannot remember where they parked their car.",
+    "tagline": "After a night they can\u0027t remember, comes a day they\u0027ll never forget.",
+    "runtime": 83,
+    "release_date": "2000-12-15",
+    "vote_average": 5.5,
+    "poster_path": "/A5FBQplPsSVVvdYn4NHgtWYF8un.jpg",
+    "backdrop_path": "/4GV1PNVIGmbwqnNvpwp7t7vLFct.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ashton Kutcher",
+      "character": "Jesse",
+      "profile_path": "/qJlM29jTncF9GpmE0PPVwbp5iPB.jpg"
+    },
+    {
+      "name": "Seann William Scott",
+      "character": "Chester",
+      "profile_path": "/AftiUFP4rYcl3SG3xllxyiLiuXS.jpg"
+    },
+    {
+      "name": "Jennifer Garner",
+      "character": "Wanda",
+      "profile_path": "/eiX083VOa0RCGSgwENZgVi5MgDi.jpg"
+    },
+    {
+      "name": "Marla Sokoloff",
+      "character": "Wilma",
+      "profile_path": "/9al9Fhb4cNRIx3YSp2DlzWpWfi3.jpg"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 136799,
+    "title": "Trolls",
+    "overview": "After the monstrous Bergens invade Troll Village, Princess Poppy, the happiest Troll ever born, and overly-cautious, curmudgeonly outcast Branch set off on a journey to rescue her friends. Their mission is full of adventure and mishaps, as this mismatched duo try to tolerate each other long enough to get the job done.",
+    "tagline": "Find your happy place.",
+    "runtime": 92,
+    "release_date": "2016-10-13",
+    "vote_average": 6.624,
+    "poster_path": "/9VlK2j0THZWzhQPq0W3Oc0IIdBB.jpg",
+    "backdrop_path": "/gXyYOWAkk4FdQU3adK8WFj8nN9J.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 489724,
+      "name": "The Trolls Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anna Kendrick",
+      "character": "Poppy (voice)",
+      "profile_path": "/i2HIJQcBsUQ3o9HwEeDwou45D60.jpg"
+    },
+    {
+      "name": "Justin Timberlake",
+      "character": "Branch (voice)",
+      "profile_path": "/6Yk5t9RwkdkAT8Qv45934Eez2CA.jpg"
+    },
+    {
+      "name": "Zooey Deschanel",
+      "character": "Bridget (voice)",
+      "profile_path": "/30KQyjsXfrdm4Dcori7bDFTg9Le.jpg"
+    },
+    {
+      "name": "Christopher Mintz-Plasse",
+      "character": "King Gristle (voice)",
+      "profile_path": "/dnj2qyxmPt5JF5uurbXQLegppAx.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9362,
+    "title": "Tremors",
+    "overview": "Val McKee and Earl Bassett are in a fight for their lives when they discover that their desolate town has been infested with gigantic, man-eating creatures that live below the ground.",
+    "tagline": "They say there\u0027s nothing new under the sun. But under the ground\u2026",
+    "runtime": 96,
+    "release_date": "1990-01-19",
+    "vote_average": 6.955,
+    "poster_path": "/cA4ggkZ3r1d5r9hOAUWC8x5ul2i.jpg",
+    "backdrop_path": "/3L3DUwfRLW18OUiLSdmovfICyY3.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91799,
+      "name": "Tremors Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kevin Bacon",
+      "character": "Valentine McKee",
+      "profile_path": "/rjX2Oz3tCZMfSwOoIAyEhdtXnTE.jpg"
+    },
+    {
+      "name": "Fred Ward",
+      "character": "Earl Bassett",
+      "profile_path": "/t3tZduAwP1LMR8Vc13HZ39wKJ1q.jpg"
+    },
+    {
+      "name": "Finn Carter",
+      "character": "Rhonda LeBeck",
+      "profile_path": "/fzPKYx7CvTrSffYD9P8AVx3hBHy.jpg"
+    },
+    {
+      "name": "Michael Gross",
+      "character": "Burt Gummer",
+      "profile_path": "/467FG7f1rXkG9ZzU8IumVkBHi0v.jpg"
+    }
+  ]
+}

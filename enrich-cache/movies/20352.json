@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 20352,
+    "title": "Despicable Me",
+    "overview": "Determined to prove he\u0027s the world\u0027s greatest supervillain, Gru hatches an audacious plan to steal the Moon. To pull it off, he adopts three orphaned girls\u2014Margo, Edith, and Agnes\u2014intending to use them as pawns in his scheme. But the unexpected bond they form forces him to question the criminal life he\u0027s always known.",
+    "tagline": "Superbad. Superdad.",
+    "runtime": 95,
+    "release_date": "2010-07-08",
+    "vote_average": 7.263,
+    "poster_path": "/b1BT309QWjtFUlJPLmXmrcHOWEL.jpg",
+    "backdrop_path": "/2XSeKDmIa2KxaiJy4J9e8FrIZhk.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86066,
+      "name": "Despicable Me Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Carell",
+      "character": "Gru (voice)",
+      "profile_path": "/sSxw69G0znJuettMYGDCAXfSwSY.jpg"
+    },
+    {
+      "name": "Jason Segel",
+      "character": "Vector (voice)",
+      "profile_path": "/aG6tVNSbl1YEjN65G3luFYnWbUM.jpg"
+    },
+    {
+      "name": "Russell Brand",
+      "character": "Dr Nefario (voice)",
+      "profile_path": "/AzRt43rdeK5nH7w6uWyyVwYla0.jpg"
+    },
+    {
+      "name": "Miranda Cosgrove",
+      "character": "Margo (voice)",
+      "profile_path": "/qIGeoyXEVu1LxTH34TWx1YSHyQr.jpg"
+    }
+  ]
+}

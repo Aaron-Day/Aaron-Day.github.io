@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 56292,
+    "title": "Mission: Impossible - Ghost Protocol",
+    "overview": "Ethan Hunt and his team are racing against time to track down a dangerous terrorist named Hendricks, who has gained access to Russian nuclear launch codes and is planning a strike on the United States. An attempt to stop him ends in an explosion causing severe destruction to the Kremlin and the IMF to be implicated in the bombing, forcing the President to disavow them. No longer being aided by the government, Ethan and his team chase Hendricks around the globe, although they might still be too late to stop a disaster.",
+    "tagline": "No plan. No backup. No choice.",
+    "runtime": 133,
+    "release_date": "2011-12-07",
+    "vote_average": 7.121,
+    "poster_path": "/eRZTGx7GsiKqPch96k27LK005ZL.jpg",
+    "backdrop_path": "/hqyjzDRCs1N5gEsh2gklzPdsEFD.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87359,
+      "name": "Mission: Impossible Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Ethan Hunt",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Paula Patton",
+      "character": "Jane",
+      "profile_path": "/afEkMmwkHkmBsOHeor2vZKWzeGf.jpg"
+    },
+    {
+      "name": "Simon Pegg",
+      "character": "Benji",
+      "profile_path": "/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg"
+    },
+    {
+      "name": "Jeremy Renner",
+      "character": "Brandt",
+      "profile_path": "/yB84D1neTYXfWBaV0QOE9RF2VCu.jpg"
+    }
+  ]
+}

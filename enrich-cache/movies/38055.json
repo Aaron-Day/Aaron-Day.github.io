@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 38055,
+    "title": "Megamind",
+    "overview": "After Megamind, a highly intelligent alien supervillain, defeats his long-time nemesis Metro Man, Megamind creates a new hero to fight, but must act to save the city when his \u0022creation\u0022 becomes an even worse villain than he was.",
+    "tagline": "A superhero movie with a mind of its own.",
+    "runtime": 96,
+    "release_date": "2010-10-28",
+    "vote_average": 7.043,
+    "poster_path": "/uZ9ytt3sPTx62XTfN56ILSuYWRe.jpg",
+    "backdrop_path": "/irpJXGiVr539uuspcQcNdkhS2lq.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1239518,
+      "name": "Megamind Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Will Ferrell",
+      "character": "Megamind (voice)",
+      "profile_path": "/yjGbyQzVjpQl8xFkFGa7JxKZWQb.jpg"
+    },
+    {
+      "name": "Brad Pitt",
+      "character": "Metro Man (voice)",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "Tina Fey",
+      "character": "Roxanne Ritchi (voice)",
+      "profile_path": "/yPTAi1iucXf85UpiFPtyiTSM6do.jpg"
+    },
+    {
+      "name": "Jonah Hill",
+      "character": "Tighten (voice)",
+      "profile_path": "/cymlWttB83MsAGR2EkTgANtjeRH.jpg"
+    }
+  ]
+}

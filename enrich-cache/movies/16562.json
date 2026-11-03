@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 16562,
+    "title": "The Cutting Edge",
+    "overview": "Two former Olympians, one a figure skater and the other a hockey player, pin their hopes of one last shot at Olympic glory on one another. That is, of course, if they can keep from killing each other in the process...",
+    "tagline": "The ultimate love/skate relationship.",
+    "runtime": 102,
+    "release_date": "1992-03-27",
+    "vote_average": 7.3,
+    "poster_path": "/sx4qf2XoW0xaLITQLpajsYc4mcj.jpg",
+    "backdrop_path": "/pNGrPhlOt76pkC5VAPR76mQrgin.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 110179,
+      "name": "The Cutting Edge Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "D. B. Sweeney",
+      "character": "Doug Dorsey",
+      "profile_path": "/enY28APVRWfyHjGAkh6VCkYCWOA.jpg"
+    },
+    {
+      "name": "Moira Kelly",
+      "character": "Kate Moseley",
+      "profile_path": "/3yQRnGSfbPWQDInZHTzzXsrAhUR.jpg"
+    },
+    {
+      "name": "Roy Dotrice",
+      "character": "Anton Pamchenko",
+      "profile_path": "/etXS22XFmYmHiQ7RDYf72pPO4fp.jpg"
+    },
+    {
+      "name": "Terry O\u0027Quinn",
+      "character": "Jack Moseley",
+      "profile_path": "/kSweOGPprLe1vDvu38wJQaWIih7.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 718930,
+    "title": "Bullet Train",
+    "overview": "Unlucky assassin Ladybug is determined to do his job peacefully after one too many gigs gone off the rails. Fate, however, may have other plans, as Ladybug\u0027s latest mission puts him on a collision course with lethal adversaries from around the globe\u2014all with connected, yet conflicting, objectives\u2014on the world\u0027s fastest train.",
+    "tagline": "The end of the line is just the beginning.",
+    "runtime": 126,
+    "release_date": "2022-08-03",
+    "vote_average": 7.404,
+    "poster_path": "/j8szC8OgrejDQjjMKSVXyaAjw3V.jpg",
+    "backdrop_path": "/y2Ca1neKke2mGPMaHzlCNDVZqsK.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Brad Pitt",
+      "character": "Ladybug",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "Joey King",
+      "character": "Prince",
+      "profile_path": "/94c69mPYSK9jFsAEu0OKB7Qs684.jpg"
+    },
+    {
+      "name": "Aaron Taylor-Johnson",
+      "character": "Tangerine",
+      "profile_path": "/pFtHhih2XEaFaD3qOFyQW6q83br.jpg"
+    },
+    {
+      "name": "Brian Tyree Henry",
+      "character": "Lemon",
+      "profile_path": "/2MsJh0bpyzwvOUnXOltHp3j85Pb.jpg"
+    }
+  ]
+}

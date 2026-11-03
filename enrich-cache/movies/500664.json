@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 500664,
+    "title": "Upgrade",
+    "overview": "A brutal mugging leaves Grey Trace paralyzed in the hospital and his beloved wife dead. A billionaire inventor soon offers Trace a cure \u2014 an artificial intelligence implant called STEM that will enhance his body. Now able to walk, Grey finds that he also has superhuman strength and agility \u2014 skills he uses to seek revenge against the thugs who destroyed his life.",
+    "tagline": "Not man. Not machine. More.",
+    "runtime": 100,
+    "release_date": "2018-05-31",
+    "vote_average": 7.518,
+    "poster_path": "/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
+    "backdrop_path": "/oiPUcD1IIZrYGTSIpvTmd3dRmPo.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Logan Marshall-Green",
+      "character": "Grey Trace",
+      "profile_path": "/oogXh2Osxw43bfjMVCcCH8SGsUB.jpg"
+    },
+    {
+      "name": "Betty Gabriel",
+      "character": "Detective Cortez",
+      "profile_path": "/n67i3H3VM5quDQfcS591EbotPby.jpg"
+    },
+    {
+      "name": "Harrison Gilbertson",
+      "character": "Eron Keen",
+      "profile_path": "/qlB00ZkN8LCReIje5PGDJ2UeCAg.jpg"
+    },
+    {
+      "name": "Melanie Vallejo",
+      "character": "Asha Trace",
+      "profile_path": "/yhMBK3mLfEoXBh12bOqbgpumRG1.jpg"
+    }
+  ]
+}

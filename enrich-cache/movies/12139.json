@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12139,
+    "title": "Dennis the Menace",
+    "overview": "Mr. Wilson\u0027s ever-present annoyance comes in the form of one mischievous kid named Dennis. But he\u0027ll need Dennis\u0027s tricks to uncover a collection of gold coins that go missing when a shady drifter named Switchblade Sam comes to town.",
+    "tagline": "He\u0027s armed... He\u0027s adorable... And he\u0027s out of school for the entire summer.",
+    "runtime": 96,
+    "release_date": "1993-06-09",
+    "vote_average": 5.885,
+    "poster_path": "/t642WwGifbQ2fEuKTJRgpPzsgtX.jpg",
+    "backdrop_path": "/r0MDuymjP02XA3BtC2qp0sLXU1c.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 195441,
+      "name": "Dennis the Menace Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Walter Matthau",
+      "character": "Mr. Wilson",
+      "profile_path": "/oAMxqfGR0C5Ru5vER9Y4OP6P0xR.jpg"
+    },
+    {
+      "name": "Mason Gamble",
+      "character": "Dennis Mitchell",
+      "profile_path": "/sKsfz1K5HDBoMr4sxekuvtenQNo.jpg"
+    },
+    {
+      "name": "Joan Plowright",
+      "character": "Martha Wilson",
+      "profile_path": "/un5wsOnz22Rvl82niE0LGAVxggQ.jpg"
+    },
+    {
+      "name": "Christopher Lloyd",
+      "character": "Switchblade Sam",
+      "profile_path": "/nxVjpyb3UrfbPZnEyDNlQVlFAs5.jpg"
+    }
+  ]
+}

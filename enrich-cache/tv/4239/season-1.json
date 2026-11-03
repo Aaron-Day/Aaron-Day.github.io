@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Pilot",
+        "overview": "In this pilot we meet Al and Peg Bundy, a very dysfunctional Chicago family. In the pilot, Al and Peg, who have no friends, meet their new neighbors Steve and Marcy Rhoades. Steve and Marcy are a very happily married couple until they learn from the Bundys.",
+        "air_date": "1987-04-05",
+        "runtime": 22,
+        "still_path": "/7RJc4G9o1LLQOPmLrfllp3QhCnT.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Thinnergy",
+        "overview": "Marcy gives Peggy the book \u0022Thinnergy\u0022, which is a book about health. Very inspired by the book, Peggy goes on a diet and tries to convince the family to join in, but they refuse.   When the diet makes Peggy really annoying, Steve convinces Al to join the diet, and persuades Peggy to quit.",
+        "air_date": "1987-04-12",
+        "runtime": 22,
+        "still_path": "/ydCKRNhtBW1OWCkFLYy2tyIhijA.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "But I Didn\u0027t Shoot the Deputy",
+        "overview": "The Bundys and the Rhoades\u0027 hear of crime in the neighborhood. Al buys a gun, and the Rhoades\u0027 buy a dog. Al hears a noise and accidentally kills the dog, thinking it was a burglar.",
+        "air_date": "1987-04-19",
+        "runtime": 22,
+        "still_path": "/gASG5kgc1JMokybm9g2U6W54DWf.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Whose Room Is It Anyway",
+        "overview": "Steve and Marcy plan on adding another room to their house with their tax refund. Al tries to coax Steve into building a pool room, while Peg and Marcy decide on an exercise room. Who will win?",
+        "air_date": "1987-04-26",
+        "runtime": 22,
+        "still_path": "/batRAHimtgrPPFvaKypd76pwnIk.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Have You Driven a Ford Lately?",
+        "overview": "Al and Steve draw closer together when they try to restore a 1965 Mustang. Peg and Marcy on the other hand can\u0027t stop from despising their husbands.",
+        "air_date": "1987-05-03",
+        "runtime": 22,
+        "still_path": "/g4K912gSE8JoTff9Ilg1sWYbONI.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Sixteen Years and What Do You Get?",
+        "overview": "Al is unable to purchase a gift for Peg on their 16th wedding anniversary as his credit card seemed to be maxed out.",
+        "air_date": "1987-05-10",
+        "runtime": 22,
+        "still_path": "/gq5cdvrIx6vM6FfrpiBr3OdrA54.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Married... Without Children",
+        "overview": "In an attempt to spice up their marriage, Al and Peg check in at a hotel, while Steve and Marcy babysit Bud and Kelly. The Rhoades\u0027 learn that babysitting the young Bundys is a mistake when the kids turn their home into a rioting party.",
+        "air_date": "1987-05-17",
+        "runtime": 22,
+        "still_path": "/2eyrYhzCtofY7VwK2Xz20PsbcG.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Poker Game",
+        "overview": "Al invites Steve to play poker, but Steve ends up losing his paycheck to Al. Afraid to tell Marcy the truth, Steve tries to convince Peggy to give him the check back.",
+        "air_date": "1987-05-24",
+        "runtime": 22,
+        "still_path": "/7TxSsnBEvhEra66X6BLe5Mxst0t.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Peggy Sue Got Work",
+        "overview": "Peg wants a VCR and Al won\u0027t get it for her. She ends up working at a department store for money, which disrupts her and Al\u0027s relationship.",
+        "air_date": "1987-05-31",
+        "runtime": 22,
+        "still_path": "/DEb8ZUfbH7pRfFcnjFFWtNISp.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Al Loses His Cherry",
+        "overview": "Al spends some time at Luke Ventura\u0027s apartment after running out from a fight with Peg.",
+        "air_date": "1987-06-07",
+        "runtime": 22,
+        "still_path": "/dW3iIRflkFu6SLDRkhjI3xKACLD.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Nightmare on Al\u0027s Street",
+        "overview": "Steve is away on business and Marcy is having sexual fantasies with Al involuntarily. Marcy becomes so disgusted and she tells Peg, who tries to give her tips on how to avoid them.",
+        "air_date": "1987-06-14",
+        "runtime": 22,
+        "still_path": "/iZnRYg0R0AeAwUJUeDhsnO6SCJ2.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Where\u0027s the Boss?",
+        "overview": "After thinking that his boss is dead, Al tries to find another job unless he gets some appreciation and credit for his work.",
+        "air_date": "1987-06-21",
+        "runtime": 22,
+        "still_path": "/hNUWKc9he7rYElbT0zbl1Mo5bVU.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Johnny Be Gone",
+        "overview": "Al and Peggy delay going to a closing of their favorite hamburger joint when Bud and Kelly run into a problem. Meanwhile, Steve and Marcy prepare a party for some executive big-shots.",
+        "air_date": "1987-06-28",
+        "runtime": 22,
+        "still_path": "/rIIDfeLBVQETKk0Q8XQDHuG9mBc.jpg"
+      }
+    ]
+  }
+}

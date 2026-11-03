@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 531309,
+    "title": "Brightburn",
+    "overview": "What if a child from another world crash-landed on Earth, but instead of becoming a hero to mankind, he proved to be something far more sinister?",
+    "tagline": "He\u0027s not here to save the world.",
+    "runtime": 91,
+    "release_date": "2019-05-09",
+    "vote_average": 6.179,
+    "poster_path": "/sJWwkYc9ajwnPRSkqj8Aue5JbKz.jpg",
+    "backdrop_path": "/j3w3lT3ABvJsVE3byNOMCYmnGMB.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jackson A. Dunn",
+      "character": "Brandon Breyer",
+      "profile_path": "/xtqXTJgfWl9lfoUylaVmVTllrNv.jpg"
+    },
+    {
+      "name": "Elizabeth Banks",
+      "character": "Tori Breyer",
+      "profile_path": "/hQ7IwCQjlpsBPSpnnjjhH3rjwSJ.jpg"
+    },
+    {
+      "name": "David Denman",
+      "character": "Kyle Breyer",
+      "profile_path": "/4I06ZD8SQ6pU1QYShiUXb711fJW.jpg"
+    },
+    {
+      "name": "Matt Jones",
+      "character": "Noah McNichol",
+      "profile_path": "/x13vFDaJHY1CxNvSPWujYe12bMc.jpg"
+    }
+  ]
+}

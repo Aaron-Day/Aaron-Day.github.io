@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 440762,
+    "title": "Jay and Silent Bob Reboot",
+    "overview": "Jay and Silent Bob embark on a cross-country mission to stop Hollywood from rebooting a film based on their comic book characters Bluntman and Chronic.",
+    "tagline": "Weed love to tell you a story...",
+    "runtime": 105,
+    "release_date": "2019-10-15",
+    "vote_average": 5.7,
+    "poster_path": "/5uGl5lbcpGLTvtLwBMnfRC0Az5u.jpg",
+    "backdrop_path": "/z7U3MXCHsnIBiYOMXnXZSiapmyc.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 726870,
+      "name": "Jay and Silent Bob Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Mewes",
+      "character": "Jay",
+      "profile_path": "/jVL4WC8NbJFL894Z2FBYY3XuHW5.jpg"
+    },
+    {
+      "name": "Kevin Smith",
+      "character": "Silent Bob / Kevin Smith",
+      "profile_path": "/g8sC36zUTkSTh7y9HjWa4Rbr0JP.jpg"
+    },
+    {
+      "name": "Harley Quinn Smith",
+      "character": "Milly",
+      "profile_path": "/6aUlJSKXJrRc2GzcSr9gsrg6wZH.jpg"
+    },
+    {
+      "name": "Aparna Brielle",
+      "character": "Jihad",
+      "profile_path": "/sECIiW4qrjAjrgUpZy73n6tx72X.jpg"
+    }
+  ]
+}

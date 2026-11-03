@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 707,
+    "title": "A View to a Kill",
+    "overview": "A newly-developed microchip designed by Zorin Industries for the British Government that can survive the electromagnetic radiation caused by a nuclear explosion has landed in the hands of the KGB. James Bond must find out how and why. His suspicions soon lead him to big industry leader Max Zorin who forms a plan to destroy his only competition in Silicon Valley by triggering a massive earthquake in the San Francisco Bay.",
+    "tagline": "Has James Bond finally met his match?",
+    "runtime": 131,
+    "release_date": "1985-05-24",
+    "vote_average": 6.258,
+    "poster_path": "/arJF829RP9cYvh0NU70dC5TtXSa.jpg",
+    "backdrop_path": "/hvGWyyC8wER1I8ExSXNtFBs7Mgd.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Roger Moore",
+      "character": "James Bond",
+      "profile_path": "/qUjeguNlZzpwh2bGUwEq2n2GNPx.jpg"
+    },
+    {
+      "name": "Tanya Roberts",
+      "character": "Stacey Sutton",
+      "profile_path": "/5HXVOsPCvwNuaAgVBhBrzuhlCVA.jpg"
+    },
+    {
+      "name": "Christopher Walken",
+      "character": "Max Zorin",
+      "profile_path": "/ApgDL7nudR9T2GpjCG4vESgymO2.jpg"
+    },
+    {
+      "name": "Grace Jones",
+      "character": "May Day",
+      "profile_path": "/uelIBmzuRiwnBjqibPGbX58ULUe.jpg"
+    }
+  ]
+}

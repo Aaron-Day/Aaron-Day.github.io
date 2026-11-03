@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 879,
+    "title": "Hook",
+    "overview": "The boy who wasn\u0027t supposed to grow up\u2014Peter Pan\u2014does just that, becoming a soulless corporate lawyer whose workaholism could cost him his wife and kids. During his trip to see Granny Wendy in London, the vengeful Capt. Hook kidnaps Peter\u0027s kids and forces Peter to return to Neverland.",
+    "tagline": "To live would be an awfully big adventure.",
+    "runtime": 142,
+    "release_date": "1991-04-10",
+    "vote_average": 6.845,
+    "poster_path": "/a6rB1lGXoGms7gWxRfJneQmAjNV.jpg",
+    "backdrop_path": "/39OxcFZjX4uc6vYzexUh5qXghxE.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dustin Hoffman",
+      "character": "Captain Hook",
+      "profile_path": "/yFjTzJHE6AFbwQifOlnNDzmiwlq.jpg"
+    },
+    {
+      "name": "Robin Williams",
+      "character": "Peter Banning / Peter Pan",
+      "profile_path": "/lu0gIoH4Bi2CiuMc6WHF9ZIK4PS.jpg"
+    },
+    {
+      "name": "Julia Roberts",
+      "character": "Tinkerbell",
+      "profile_path": "/fQacAdIa1WUNChQ6FgEko13eqOA.jpg"
+    },
+    {
+      "name": "Bob Hoskins",
+      "character": "Smee",
+      "profile_path": "/qOeE7bVHAsNTbP77Qk6TwrrWHZc.jpg"
+    }
+  ]
+}

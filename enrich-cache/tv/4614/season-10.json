@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 10,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Extreme Prejudice",
+        "overview": "With NCIS headquarters damaged by the bomb, Gibbs goes on the hunt for Harper Dearing to bring him down once and for all.",
+        "air_date": "2012-09-25",
+        "runtime": 44,
+        "still_path": "/uEEgjx7KjUdSxkhZaKxhRdzY4dU.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Recovery",
+        "overview": "When the body of a missing NCIS facilities manager is found four months after disappearing on the day of the Navy Yard bombings, the NCIS team is assigned to investigate the strange case for one of their own.",
+        "air_date": "2012-10-02",
+        "runtime": 44,
+        "still_path": "/zcbp5hovpNYOgQrumnJ9tKoWZT4.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Phoenix",
+        "overview": "While on medical leave, Ducky orders the exhumation of a Navy Commander\u0027s body from a case closed 12 years ago. As a result, Gibbs tasks Ducky with a slightly different role on the investigation.",
+        "air_date": "2012-10-09",
+        "runtime": 42,
+        "still_path": "/uz3HXs5RVEtrJxwhv56NnZSXIRP.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Lost at Sea",
+        "overview": "When a helicopter crew is adrift at sea and later discovered on shore, the NCIS team must determine the cause of the crash and locate the missing pilot.",
+        "air_date": "2012-10-23",
+        "runtime": 41,
+        "still_path": "/e5a6cd4keKDgH4bdEWkDCaCI0Sm.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Namesake",
+        "overview": "A Petty Officer is gunned down in a billionaire\u2019s Ferrari and the investigation leads the NCIS team to discover a link to a man Gibbs was named after.",
+        "air_date": "2012-10-30",
+        "runtime": 44,
+        "still_path": "/8KtxXoFfyAlKPIHxnPB0U7306Uf.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Shell Shock (1)",
+        "overview": "When a Navy Lieutenant who recently returned home from the Middle East is found dead from a brutal attack, the NCIS team questions the victim\u2019s friend, Marine Captain Joe Wescott.",
+        "air_date": "2012-11-13",
+        "runtime": 42,
+        "still_path": "/r5BZ19aCtw4DbqWmLJnv9VY166O.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Shell Shock (2)",
+        "overview": "Gibbs continues to work with Captain Wescott while he retraces his steps in order to help the NCIS team track down a terrorist.",
+        "air_date": "2012-11-20",
+        "runtime": 43,
+        "still_path": "/r3MFQzfJsJJcc3hXm5sELaOM0xa.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Gone",
+        "overview": "As the NCIS team investigates a teenage girl\u2019s abduction, Ziva and Abby work closely with her young friend who witnessed the kidnapping. As the investigation unfolds, Gibbs seeks help from a past contact, Miranda Pennebaker, a well-connected woman with questionable morals.",
+        "air_date": "2012-11-27",
+        "runtime": 42,
+        "still_path": "/916Izq6EWwutv7MnlWwE0uVbt1K.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Devil\u0027s Trifecta",
+        "overview": "Gibbs teams up with FBI Agent Fornell on a joint NCIS/FBI investigation after Fornell becomes the target of a shooting, but they face an unexpected twist in the case when their mutual ex-wife, Diane Sterling, gets involved.",
+        "air_date": "2012-12-11",
+        "runtime": 43,
+        "still_path": "/85aoWkhHIPbxAWxKQpAeszRzjWc.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "You Better Watch Out",
+        "overview": "It\u2019s Christmas time and Tony DiNozzo can\u2019t decide if he\u2019ll be naughty or nice when his dad, Anthony DiNozzo, Sr., comes to town for a visit.",
+        "air_date": "2012-12-18",
+        "runtime": 43,
+        "still_path": "/k45fqbcEUoC0UI4qgG8QHllJxAZ.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Shabbat Shalom",
+        "overview": "While the NCIS team investigates the link between a dead journalist and a Petty Officer, Ziva is taken aback by the sudden emotional visit by her father, who she hasn\u0027t seen in more than two years.",
+        "air_date": "2013-01-08",
+        "runtime": 41,
+        "still_path": "/dfCI0h7LUnvF6tdC9KWu62kXbJU.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Shiva",
+        "overview": "In the aftermath of an event that strikes close to home, the NCIS team unites to seek answers and demand justice in order to protect their most vulnerable colleagues.",
+        "air_date": "2013-01-15",
+        "runtime": 44,
+        "still_path": "/sQeT9AKjDg5v2CzFLyC2gwb6lEq.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Hit and Run",
+        "overview": "The NCIS team investigates a Marine\u2019s car accident and ignites some upsetting past memories for Abby as a young girl on the trail of her first \u201Ccase\u201D.",
+        "air_date": "2013-01-29",
+        "runtime": 44,
+        "still_path": "/y58thwXnoILwZ9ZiX4yaL4rhG0M.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Canary",
+        "overview": "The NCIS team takes on a renowned hacker who could hold the key to tracking down the most-wanted cyber-terrorist in the world.",
+        "air_date": "2013-02-05",
+        "runtime": 44,
+        "still_path": "/u1wfLrY8QxShMNwBomXm1QUOoYd.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Hereafter",
+        "overview": "On leave from NCIS while still grieving the loss of his wife and his kids\u2019 mother, Director Vance discovers unexpected personal information that causes him to question everything.",
+        "air_date": "2013-02-19",
+        "runtime": 41,
+        "still_path": "/mlOvAnewXAzH9PfliQhAHWrCAzG.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Detour",
+        "overview": "The NCIS team races to track down Ducky and Jimmy after the two disappear while transporting a body from a crime scene.",
+        "air_date": "2013-02-26",
+        "runtime": 43,
+        "still_path": "/2tpiqGhU4TMkLijvWy8vcwD4yYc.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Prime Suspect",
+        "overview": "A media frenzy surrounding an unidentified criminal prompts Gibbs\u2019 barber to question his son\u2019s involvement and ask for Gibbs\u2019 help in ruling out his son as a prime suspect.",
+        "air_date": "2013-03-05",
+        "runtime": 43,
+        "still_path": "/nQRMX614zn7XsykScu1uvAEbVwq.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Seek",
+        "overview": "A widowed Marine wife, whose husband was seemingly killed by a Taliban sniper, asks Gibbs for help to find out the truth.",
+        "air_date": "2013-03-19",
+        "runtime": 44,
+        "still_path": "/cEwZQAPRUKxCedTDp3qBUqwv5e3.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Squall",
+        "overview": "The team investigates death of a Navy medical officer aboard a ship that went through a storm.",
+        "air_date": "2013-03-26",
+        "runtime": 44,
+        "still_path": "/gp2p1U3IHzKomh6lrzG3XjVBn0m.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Chasing Ghosts",
+        "overview": "While the team takes a missing person case, Tony is disturbed by Ziva\u0027s way of coping with her father\u0027s death.",
+        "air_date": "2013-04-09",
+        "runtime": 41,
+        "still_path": "/mG9XKVQBDRKxKiWhuIwa7IMhfGi.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Berlin",
+        "overview": "Ziva continues to pursue revenge against Eli\u0027s killer, Ilan Bodnar, and Vance continues to endorse her actions despite orders from Homeland Security to rein them in.",
+        "air_date": "2013-04-23",
+        "runtime": 43,
+        "still_path": "/gzNh9zbotIbWfpMYXe2Zfzijf2W.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Revenge",
+        "overview": "In retaliation for the murders of Eli David and Jackie Vance, the NCIS team feverishly searches for Bodnar despite orders from Homeland Security to relinquish the case.",
+        "air_date": "2013-04-30",
+        "runtime": 43,
+        "still_path": "/jv73xAQYPglppEhlkWrvnrdwTvL.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Double Blind",
+        "overview": "The team examines whether a Petty Officer is suffering from paranoia or if his claims of being followed are tied to a matter of national security.",
+        "air_date": "2013-05-07",
+        "runtime": 42,
+        "still_path": "/ovc29iwtyDIaqRD8BjMyyZkYsWi.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Damned If You Do",
+        "overview": "The international manhunt for Eli David\u0027s killer turns into a federal witch hunt against Gibbs and the team, which questions their unconventional methods and threatens their future at the agency.",
+        "air_date": "2013-05-14",
+        "runtime": 44,
+        "still_path": "/8GtMVVeyVO8ZjCKZYfSc31AmYhM.jpg"
+      }
+    ]
+  }
+}

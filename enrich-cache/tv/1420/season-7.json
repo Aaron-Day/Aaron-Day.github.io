@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "About Three Years Later",
+        "overview": "Jess and Nick come back from a book tour for \u0022The Pepperwood Chronicles\u0022 across Europe.",
+        "air_date": "2018-04-10",
+        "runtime": 22,
+        "still_path": "/9SGDuMoLXDQ4Ui8f8vQ4qp9Nc8v.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Tuesday Meeting",
+        "overview": "Over a drunken power lunch, Jess and Cece decide to stand up to Russell and demand Jess be given more responsibility in her new job. Meanwhile, Nick struggles to come up with ideas for a new book and Schmidt is desperate to get Ruth to sleep.",
+        "air_date": "2018-04-17",
+        "runtime": 22,
+        "still_path": "/tqDRIxvTd4AQxs4fYq4stzR9OnC.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Lillypads",
+        "overview": "Nervous about Ruth\u0027s interview at a prestigious pre-school, Schmidt recruits Jess to help her prepare. Meanwhile, Nick procrastinates writing, and Winston prepares to confront his fear of testifying in court.",
+        "air_date": "2018-04-24",
+        "runtime": 22,
+        "still_path": "/o9uZftTtmp2cXn4fv9ztd2Lh1UP.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Where the Road Goes",
+        "overview": "The gang gathers for a one-year memorial service for a beloved friend. Meanwhile, Jess discovers Coach owes Nick a large sum of money.",
+        "air_date": "2018-05-01",
+        "runtime": 22,
+        "still_path": "/yNrrrUR7Arqikfyx5cZsJht1w8h.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Godparents",
+        "overview": "Jess tries to appease Winston\u0027s anxiety about his impending fatherhood by tracking down his long lost dad. Meanwhile, Schmidt goes back to work for the first time since Ruth\u0027s birth.",
+        "air_date": "2018-05-08",
+        "runtime": 22,
+        "still_path": "/zjIsq3aeBKFR3oRAE7TZXzhjnCZ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Mario",
+        "overview": "Nick\u0027s plan to propose to Jess is thrown off-course when they decide to get a dog, Winston sees color for the first time and Schmidt worries about Cece getting pregnant again.",
+        "air_date": "2018-05-08",
+        "runtime": 22,
+        "still_path": "/xzijgJvBp40E9fRWBFfNivsokkH.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Curse of the Pirate Bride",
+        "overview": "Jess and Nick make two life-changing decisions and Winston and Aly\u0027s big day arrives.",
+        "air_date": "2018-05-15",
+        "runtime": 22,
+        "still_path": "/kPoEYlKhBoFXBhcO74Gx9HB2k7L.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Engram Pattersky",
+        "overview": "The gang takes a tour down memory lane, which includes a final round of \u0022True American.\u0022",
+        "air_date": "2018-05-15",
+        "runtime": 22,
+        "still_path": "/46RACqQypJIBAetJWZJksssrkIF.jpg"
+      }
+    ]
+  }
+}

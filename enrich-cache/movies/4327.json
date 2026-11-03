@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4327,
+    "title": "Charlie\u0027s Angels",
+    "overview": "The captivating crime-fighting trio who are masters of disguise, espionage and martial arts are back! When a devious mastermind embroils them in a plot to destroy individual privacy, the Angels, aided by their loyal sidekick Bosley, set out to bring down the bad guys. But when a terrible secret is revealed, it makes the Angels targets for assassination.",
+    "tagline": "Get some action.",
+    "runtime": 98,
+    "release_date": "2000-11-02",
+    "vote_average": 5.854,
+    "poster_path": "/paDTaHGLxhacythNZCT86VPanm6.jpg",
+    "backdrop_path": "/oq3IOr7QvEmei0eXsXacqaMPqlV.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86029,
+      "name": "Charlie\u0027s Angels Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Cameron Diaz",
+      "character": "Natalie Cook",
+      "profile_path": "/tIWUyvmJayu8gtbrzCWC0L3H8kH.jpg"
+    },
+    {
+      "name": "Drew Barrymore",
+      "character": "Dylan Sanders",
+      "profile_path": "/8qvMFslwrC3w1OwJYqE3mHPvffr.jpg"
+    },
+    {
+      "name": "Lucy Liu",
+      "character": "Alex Munday",
+      "profile_path": "/9nbtjqsx3De7hO2XDtrBQ7M9VCH.jpg"
+    },
+    {
+      "name": "Bill Murray",
+      "character": "John Bosley",
+      "profile_path": "/nnCsJc9x3ZiG3AFyiyc3FPehppy.jpg"
+    }
+  ]
+}

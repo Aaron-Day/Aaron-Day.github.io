@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1493,
+    "title": "Miss Congeniality",
+    "overview": "When the local FBI office receives a letter from a terrorist known only as \u0027The Citizen\u0027, it\u0027s quickly determined that he\u0027s planning his next act at the Miss America beauty pageant. Because tough-as-nails Gracie Hart is the only female agent at the office, she\u0027s chosen to go undercover as the contestant from New Jersey.",
+    "tagline": "Unpolished. Unkempt. Unleashed. Undercover.",
+    "runtime": 110,
+    "release_date": "2000-12-22",
+    "vote_average": 6.535,
+    "poster_path": "/pat3vKaRlB70he4ghwTMydR4TvP.jpg",
+    "backdrop_path": "/bTpjn4OEeoLEJYjRvEvkPfPQZdb.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 93220,
+      "name": "Miss Congeniality Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sandra Bullock",
+      "character": "Gracie Hart",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "Michael Caine",
+      "character": "Victor Melling",
+      "profile_path": "/bVZRMlpjTAO2pJK6v90buFgVbSW.jpg"
+    },
+    {
+      "name": "Benjamin Bratt",
+      "character": "Eric Matthews",
+      "profile_path": "/hBenHPT4iJEG2kt5z2TOGnkRZwh.jpg"
+    },
+    {
+      "name": "Candice Bergen",
+      "character": "Kathy Morningside",
+      "profile_path": "/yDthvXPRkcwSVcPj9QZz3Z7ZH5B.jpg"
+    }
+  ]
+}

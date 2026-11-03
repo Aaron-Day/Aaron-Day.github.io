@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 600,
+    "title": "Full Metal Jacket",
+    "overview": "A pragmatic U.S. Marine observes the dehumanizing effects the U.S.-Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
+    "tagline": "In Vietnam, the wind doesn\u0027t blow. It sucks.",
+    "runtime": 117,
+    "release_date": "1987-06-26",
+    "vote_average": 8.119,
+    "poster_path": "/kMKyx1k8hWWscYFnPbnxxN4Eqo4.jpg",
+    "backdrop_path": "/3k2TRmqMjgt7tcwkYwZQdctnty3.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matthew Modine",
+      "character": "Pvt. Joker",
+      "profile_path": "/z974QEHL12qUvLyk6hlWGAmDgom.jpg"
+    },
+    {
+      "name": "Adam Baldwin",
+      "character": "Animal Mother",
+      "profile_path": "/lfbyJWNWGbiYfU0Yr1tjn6Trd2V.jpg"
+    },
+    {
+      "name": "Vincent D\u0027Onofrio",
+      "character": "Pvt. Pyle",
+      "profile_path": "/qkyiLolEqYMGH25xD4sFIXAjZQB.jpg"
+    },
+    {
+      "name": "R. Lee Ermey",
+      "character": "Gny. Sgt. Hartman",
+      "profile_path": "/aXFJlEGHlQT7bwxkKwq6Sx7PeEp.jpg"
+    }
+  ]
+}

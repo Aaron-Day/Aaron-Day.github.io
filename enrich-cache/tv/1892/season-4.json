@@ -1,0 +1,216 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Where There\u0027s a Will, There\u0027s a Way (1)",
+        "overview": "Will and Carlton begin their first year of college by moving into their own apartment, while Philip and Vivian enjoy their newborn son. Hilary learns that Trevor plans to propose marriage to her during an elaborate stunt on his TV news show.",
+        "air_date": "1993-09-20",
+        "runtime": 22,
+        "still_path": "/2JbPHgnQtSOD5WOPWaSeBAARoOj.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Where There\u0027s a Will, There\u0027s a Way (2)",
+        "overview": "Will and Carlton begin their first year of college by moving into their own apartment, while Philip and Vivian enjoy their newborn son. Hilary learns that Trevor plans to propose marriage to her during an elaborate stunt on his TV news show.",
+        "air_date": "1993-09-20",
+        "runtime": 23,
+        "still_path": "/nj8WM0xkvSfis4o59OzXVHgIu8d.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "All Guts, No Glory",
+        "overview": "Registration day finds Will signing up for no-brainer classes, plus one that might truly challenge him - a philosophy course he takes to meet a girl.",
+        "air_date": "1993-09-27",
+        "runtime": 23,
+        "still_path": "/8E1WNduBQ8MDErsAY9e8MM7zmM6.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Father of the Year",
+        "overview": "Stuck with caring for Nicky for the day, Will soon discovers the benefits of baby-sitting: he\u0027s suddenly a big man on campus with the women so long as he poses as a single dad.",
+        "air_date": "1993-10-04",
+        "runtime": 23,
+        "still_path": "/pi9JfWoNzwBtDVR3NGvyxceftBK.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "It\u0027s Better to Have Loved and Lost It...",
+        "overview": "After Will\u0027s friends guys rib Carlton about being a virgin, Miss Right appears and sweeps Carlton off his feet. Elsewhere, Geoffrey confesses a secret of his own.",
+        "air_date": "1993-10-11",
+        "runtime": 23,
+        "still_path": "/wOt8UTU9pJcXAA9jhCtRPySdqO8.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Will Goes a-Courtin\u0027",
+        "overview": "When Phillip sues Will and Carlton for unpaid rent, two different versions of the dispute are aired - neither entirely truthful.",
+        "air_date": "1993-10-18",
+        "runtime": 23,
+        "still_path": "/5N4rpRufYI9qztYfRarGiKQMDfS.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Hex and the Single Guy",
+        "overview": "Will disses a seance - until the spiritualist zaps him with a hex that (uh-oh) seems to work.",
+        "air_date": "1993-10-25",
+        "runtime": 23,
+        "still_path": "/gH54DD9rkgYR3AhaESmj0wNguup.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Blood is Thicker Than Mud",
+        "overview": "A bro with dough? Carlton\u0027s upper-class upbringing may make him unwelcome at a black fraternity.",
+        "air_date": "1993-11-01",
+        "runtime": 22,
+        "still_path": "/n5uqMpik60V8renGld1SxIIqahr.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Fresh Prince After Dark",
+        "overview": "Will breaks a date with Jackie to accompany Hilary to a Playboy Mansion reception for weather reporters being photographed for the magazine.",
+        "air_date": "1993-11-08",
+        "runtime": 23,
+        "still_path": "/mnXycA7BoAinlW4vkm0tBo8n9AY.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Home is Where the Heart Attack Is",
+        "overview": "Will sneaks greasy, high-fat foods to Philip after he promises to diet and exercise, then blames himself when Philip has a heart attack.",
+        "air_date": "1993-11-15",
+        "runtime": 23,
+        "still_path": "/w9hcfx4yivRZqYEpbjcQBoo7M6e.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Take My Cousin... Please",
+        "overview": "On academic probation, Will schemes to improve his grades by fixing up a newly divorced English professor with Hilary, who soon finds fault with the man, further jeopardizing Will\u0027s academic future.",
+        "air_date": "1993-11-22",
+        "runtime": 23,
+        "still_path": "/bKjG6eHIFNFrwAlfkuG8tEi4YZS.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "You\u0027ve Got to Be a Football Hero",
+        "overview": "Will uses booze to prove his manliness while competing with a hulking football hero who wants to score points with Jackie, and his fraternity brothers leave drunken Will in a cemetery, where he is haunted. Meanwhile, Ashley learns that beauty is in the eye of the beholder.",
+        "air_date": "1993-11-29",
+        "runtime": 23,
+        "still_path": "/3M6QmoNN1IjQ2mQCGeoK2taNh4s.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "\u0027Twas the Night Before Christening",
+        "overview": "Vivian promises god-motherhood of her child to both of her sisters, while Will hatches a harebrained scheme to get Boyz II Men to perform at baby Nicky\u0027s christening.",
+        "air_date": "1993-12-20",
+        "runtime": 23,
+        "still_path": "/p4r5FmhcnfnhnPUBMBLbGS4jdih.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Sleepless in Bel-Air",
+        "overview": "Will pays for putting off studying for a midterm until the last minute, and Ashley pays for staying out late on her first date.",
+        "air_date": "1994-01-03",
+        "runtime": 23,
+        "still_path": "/uloPwgpfeI7iMQDm3WuKL1py9nW.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Who\u0027s the Boss",
+        "overview": "Carlton in charge. Will gets his feathers ruffled when his cousin becomes his boss at the Peacock Stop.",
+        "air_date": "1994-01-10",
+        "runtime": 23,
+        "still_path": "/81CDleIjt9ZefXetdzkdNosO9Rz.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "I Know Why the Caged Bird Screams",
+        "overview": "Bird is the word when Carlton, ULA\u0027s peacock mascot, is kidnapped by a rival school before the big game.",
+        "air_date": "1994-01-24",
+        "runtime": 23,
+        "still_path": "/zhudf25oSUjavgzKGuXWbdfc2ve.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "When You Hit Upon a Star",
+        "overview": "Will becomes a jet-setter while dating a pop star.",
+        "air_date": "1994-01-31",
+        "runtime": 23,
+        "still_path": "/fdHJZfb8fJu8eEnsmL0Alhzem19.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Stop Will! In the Name of Love",
+        "overview": "A Valentine\u0027s double date finds Will treating Ashley like a kid and Ashley demanding r-e-s-p-e-c-t.",
+        "air_date": "1994-02-14",
+        "runtime": 23,
+        "still_path": "/eBshKRqtqg1Cj2MMPJUDDQPgyoU.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "You\u0027d Better Shop Around",
+        "overview": "A car dealer hires Will, then persuades him to drop out of college.",
+        "air_date": "1994-02-21",
+        "runtime": 22,
+        "still_path": "/14iqbRa8yQXs2FGESSDXhSUn4O2.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "The Ol\u0027 Ball and Chain",
+        "overview": "Jazz\u0027s bride has a couple of teensy character flaws: She\u0027s a convict. And she puts the moves on Will.",
+        "air_date": "1994-02-28",
+        "runtime": 23,
+        "still_path": "/16kSwtzAN06fhhXlPaFnDT1LwVN.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Harder They Fall",
+        "overview": "Will finds himself stranded in a mountain forest with his new girlfriend\u0027s disagreeable father after they parachute out of his disabled plane.",
+        "air_date": "1994-03-14",
+        "runtime": 23,
+        "still_path": "/lEC2qBa0brkBeT0VtozxN6D2PmV.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "M is for the Many Things She Gave Me",
+        "overview": "It\u0027s double trouble for Will when Philip\u0027s old flame visits with her daughter, who\u0027s attracted to Will.",
+        "air_date": "1994-04-25",
+        "runtime": 23,
+        "still_path": "/arIaArtWAoj31kTgyqe04m7yk1B.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Mother\u0027s Day",
+        "overview": "Say, homie, could you do me a favor? Just-married Jazz makes a surprising request of Will.",
+        "air_date": "1994-05-02",
+        "runtime": 23,
+        "still_path": "/q5Yr66L2CjLbfKjUV9HFcQ2GQDq.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Papa\u0027s Got a Brand-New Excuse",
+        "overview": "Ben Vereen plays Will\u0027s long-lost father, who breezes into town and promises Will the moon, which angers an unforgiving Philip.",
+        "air_date": "1994-05-09",
+        "runtime": 23,
+        "still_path": "/wtyVijMchSn0dsUCrkQHgLlNH0H.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "For Sale by Owner",
+        "overview": "A stranger makes a generous offer for the Banks estate, which prompts the family to reminisce about their good times there.",
+        "air_date": "1994-05-16",
+        "runtime": 23,
+        "still_path": "/uIn5YlvFQa8NLV6Ak02emy6q13P.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "The Philadelphia Story",
+        "overview": "Will returns to the City of Brotherly Love and discovers he\u0027s the butt of old friends\u0027 jokes, prompting him to go into training to settle an old score and clear his reputation as a chicken.",
+        "air_date": "1994-05-23",
+        "runtime": 23,
+        "still_path": "/2yinzeZsSwJHt6ripg1d3d2iisx.jpg"
+      }
+    ]
+  }
+}

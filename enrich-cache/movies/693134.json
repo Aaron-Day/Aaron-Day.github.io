@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 693134,
+    "title": "Dune: Part Two",
+    "overview": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.",
+    "tagline": "Long live the fighters.",
+    "runtime": 167,
+    "release_date": "2024-02-27",
+    "vote_average": 8.144,
+    "poster_path": "/6izwz7rsy95ARzTR3poZ8H6c5pp.jpg",
+    "backdrop_path": "/eZ239CUp1d6OryZEBPnO2n87gMG.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 726871,
+      "name": "Dune Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Timoth\u00E9e Chalamet",
+      "character": "Paul Atreides",
+      "profile_path": "/dFxpwRpmzpVfP1zjluH68DeQhyj.jpg"
+    },
+    {
+      "name": "Zendaya",
+      "character": "Chani",
+      "profile_path": "/qGkBlyn1AwQpuFnRARMRwj0iHZp.jpg"
+    },
+    {
+      "name": "Rebecca Ferguson",
+      "character": "Jessica",
+      "profile_path": "/ty8ZPzaCBBlqIr5qzpOXI24iC8j.jpg"
+    },
+    {
+      "name": "Javier Bardem",
+      "character": "Stilgar",
+      "profile_path": "/zfRID0jx8DKBluPGU9xtk9sZWUt.jpg"
+    }
+  ]
+}

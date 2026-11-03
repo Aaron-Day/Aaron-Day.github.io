@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Non Est Asylum",
+        "overview": "Seasoned demon hunter and master of the occult John Constantine takes on a rising darkness as he fights to reclaim his soul.",
+        "air_date": "2014-10-24",
+        "runtime": 42,
+        "still_path": "/e0Od0VL3gsQRyG6SyZGJbAuKfWO.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Darkness Beneath",
+        "overview": "Deep in the mountains of Pennsylvania, John is a small mining community\u0027s only defense against an ancient Welsh spirit. John finds a vital new ally in a mysterious woman named Zed.",
+        "air_date": "2014-10-31",
+        "runtime": 42,
+        "still_path": "/16sA98poTFgNpFfTqKReGDo5gBe.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Devil\u0027s Vinyl",
+        "overview": "John and Zed face down evil to save a woman and her family from sinister forces, forcing John to confront the darkness in his own life - and Papa Midnite.",
+        "air_date": "2014-11-07",
+        "runtime": 42,
+        "still_path": "/zE7FGU6j4MvrARNqTpvJARu2KL1.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "A Feast of Friends",
+        "overview": "Constantine\u0027s old friend Gary Lester unleashes a powerful demon in Atlanta.",
+        "air_date": "2014-11-14",
+        "runtime": 42,
+        "still_path": "/k8jfg4xneF0kbdJD6HY4xXpJ4wE.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Danse Vaudou",
+        "overview": "Constantine forms an unholy alliance with Papa Midnite when a ritual turns deadly.",
+        "air_date": "2014-11-21",
+        "runtime": 42,
+        "still_path": "/evrv6JV0o3YNaOrfs0hi8dn0uay.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Rage of Caliban",
+        "overview": "When a young boy is taken over by a malevolent spirit, John must put aside his misgivings over exorcising a child and convince the parents that their boy is not all that he seems.",
+        "air_date": "2014-11-28",
+        "runtime": 41,
+        "still_path": "/s5xcToalypAKX7LxJQWopzA8xck.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Blessed Are the Damned",
+        "overview": "Zed has a bizarre vision of snakes that leads her and John to a small town where a preacher has mysteriously gained the miraculous ability to heal his congregation.",
+        "air_date": "2014-12-05",
+        "runtime": 42,
+        "still_path": "/vHTOuq1L8idPYFr08hJp3ul2zfk.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Saint of Last Resorts (1)",
+        "overview": "When an ancient evil surfaces in Mexico, an old friend of John\u0027s ends for his help bringing him close to the source of The Rising Darkness.",
+        "air_date": "2014-12-12",
+        "runtime": 43,
+        "still_path": "/gcdQYESDGaIsidCCb5Z0wzf1dd9.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Saint of Last Resorts (2)",
+        "overview": "In order to fend off a vicious attack, John summons a demon into himself. Chas, Zed and Anne Marie race against time to save John before it\u2019s too late.",
+        "air_date": "2015-01-16",
+        "runtime": 43,
+        "still_path": "/pHYvX2z8nc4zVP6OWx8Qx8vwER9.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Quid Pro Quo",
+        "overview": "When thousands of people in New York slip into a mysterious coma, John must find the evil behind it and defeat it before it consumes the city.",
+        "air_date": "2015-01-23",
+        "runtime": 43,
+        "still_path": "/jbmnxeyP8X0ugoI3dYbp4q3DXsc.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "A Whole World Out There",
+        "overview": "John helps his old University friend Ritchie Simpson, whose students have found a way into an alternate dimension only to unleash a maniacal killer.",
+        "air_date": "2015-01-30",
+        "runtime": 43,
+        "still_path": "/bOaiqIdb0clRcwgEKKJikjp0sgy.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Angels and Ministers of Grace",
+        "overview": "When John enlists an unwitting Manny to investigate an ancient evil that\u0027s resurfaced in a hospital, a health scare causes Zed to question the source of her visions.",
+        "air_date": "2015-02-06",
+        "runtime": 43,
+        "still_path": "/77K7BV4UQRkRBxiP31u8NQkCNTh.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Waiting for the Man",
+        "overview": "John and Zed return to New Orleans when Detective Jim Corrigan asks for their help in the case of a missing girl. Papa Midnite takes steps toward exacting his revenge on John and the truth behind the Rising Darkness comes to light.",
+        "air_date": "2015-02-13",
+        "runtime": 43,
+        "still_path": "/obBfqBsWok2BeDqlBEA0LoDiEM6.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11211,
+    "title": "Bring It On: All or Nothing",
+    "overview": "A transfer student at a rough high school tries joining the cheer-leading squad and finds that she not only has to face off against the head cheerleader, but also against her former school in preparation for a cheer-off competition.",
+    "tagline": "",
+    "runtime": 99,
+    "release_date": "2006-07-18",
+    "vote_average": 6.9,
+    "poster_path": "/3UqEB9uR3z3BDxYFyn7YDZRLFZ6.jpg",
+    "backdrop_path": "/1C8aqNN4LG8RAOdWtj3HkeI3hhd.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 430186,
+      "name": "Bring It On Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Hayden Panettiere",
+      "character": "Britney",
+      "profile_path": "/beFQeFN0KcF2MsM5DRFE8YTMDjQ.jpg"
+    },
+    {
+      "name": "Solange",
+      "character": "Camille",
+      "profile_path": "/v8HJlZXQMNrl5M7r1PWt6mHHSyb.jpg"
+    },
+    {
+      "name": "Jake McDorman",
+      "character": "Brad Warner",
+      "profile_path": "/zjAyeIH98VIO6udwdlzeGWtbTfv.jpg"
+    },
+    {
+      "name": "Kiersten Warren",
+      "character": "Pam Allen",
+      "profile_path": "/83lqGpKZP61OPsfj6TfmX8jVCVt.jpg"
+    }
+  ]
+}

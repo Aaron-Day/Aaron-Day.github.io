@@ -1,0 +1,264 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 17,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Road to Corinth",
+        "overview": "The Venjix computer network is laying ruin to the entire planet, and the human race has retreated into the environmentally shielded city of Corinth.",
+        "air_date": "2009-03-07",
+        "runtime": 22,
+        "still_path": "/uaP2sdlyFJ2URzUixhlR5XW36Sk.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Fade to Black",
+        "overview": "As Venjix grows stronger, it becomes clear that the Rangers need more than three operators to defend the city.",
+        "air_date": "2009-03-07",
+        "runtime": 22,
+        "still_path": "/n8Sno8fs3PGX9cdrcR61y0lMmE4.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Rain",
+        "overview": "Dillon goes through a series of tests to see if he even is Ranger material, but the real test comes when he is faced with the choice of seeking out his past or helping the Rangers as promised.",
+        "air_date": "2009-03-14",
+        "runtime": 22,
+        "still_path": "/9j3By9URTafa1Ay1japkugb5OdG.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Go for the Green",
+        "overview": "When Ziggy is charged with finding the new Green Ranger, he finds the perfect candidate in Tenaya 7, until he realizes she\u0027s a machine working for Venjix!",
+        "air_date": "2009-03-21",
+        "runtime": 22,
+        "still_path": "/5hKdEnB2C1Za9FNUul3Kweo4xBA.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Handshake",
+        "overview": "When Dillon struggles to activate the invincibility mode of his suit, he challenges Dr. K to come out from behind their protective screen.",
+        "air_date": "2009-03-28",
+        "runtime": 22,
+        "still_path": "/igcqOKqtVrgkTh42gpJq0KtXccs.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Ranger Green",
+        "overview": "Ziggy\u0027s recruitment as Ranger Green is put into question when parts of his shady past are revealed. Should the Rangers work with someone who is hated by all seven of Corinth\u0027s cartels?",
+        "air_date": "2009-04-04",
+        "runtime": 22,
+        "still_path": "/aaSFd3ROds2Kf9Rhc99C8ulOccH.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Ranger Red",
+        "overview": "Scott is flooded with memories of his brother when he returns to Marcus\u0027 crash site in order to retrieve an over thruster core the Rangers need for the new Megazord configuration.",
+        "air_date": "2009-04-11",
+        "runtime": 22,
+        "still_path": "/2pwFbRbhvog8xDUx73bIQ32JCT7.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Ranger Yellow (1)",
+        "overview": "Mr. and Mrs. Landsdown suddenly reappear in Summer\u0027s life, intent on making their daughter live up to her promise to marry into a wealthy family.",
+        "air_date": "2009-04-18",
+        "runtime": 22,
+        "still_path": "/ucMbqBftXndglxI2Ku2n6teAgIh.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Ranger Yellow (2)",
+        "overview": "Diamonds and pretty dresses are no longer important to Summer, who finds her true meaning in what she does with the Rangers.",
+        "air_date": "2009-04-25",
+        "runtime": 22,
+        "still_path": "/hpUPgvJR92rJgH4D2EBdqkCa6Ck.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Ranger Blue",
+        "overview": "All his life, all Flynn ever wanted to do was to help people, but his heroics as the Blue Ranger are cut short when there is a malfunction in his suit.",
+        "air_date": "2009-05-02",
+        "runtime": 22,
+        "still_path": "/l4yUBaUgtNXxJAFeU0gfVn1LS22.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Doctor K",
+        "overview": "While attempting to overcome a power problem with the Rangers\u0027 new Zord configuration, Doctor K is haunted by a terrible mistake.",
+        "air_date": "2009-05-09",
+        "runtime": 22,
+        "still_path": "/f2pfAQS7K2Xmcd2NmE3nxZJgQDU.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Blitz",
+        "overview": "When Venjix sends an attack bot from Dillon\u0027s past to infiltrate the city, Dillon is torn between destroying the bot, or finally finding the answers to his past.",
+        "air_date": "2009-05-16",
+        "runtime": 22,
+        "still_path": "/9RzWInxY5eSC6K1PWPIxzdHjcww.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Brother\u2019s Keeper",
+        "overview": "As the Venjix Virus comes closer to taking over Dillon entirely, the other Rangers and Dr. K race to find a way to slow the growth rate of the virus.",
+        "air_date": "2009-05-23",
+        "runtime": 22,
+        "still_path": "/6yVgbJ6Iy1ucxyp1zZC3nygWEq5.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Embodied",
+        "overview": "Seeking answers to Dillon\u0027s past, the Rangers go outside Corinth to a place Dillon thinks he remembers, unaware that it\u0027s a trap set by Venjix himself.",
+        "air_date": "2009-06-13",
+        "runtime": 22,
+        "still_path": "/aVg7MFlbu7b9oxv37ZjtdScrs9T.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Ghosts",
+        "overview": "The Rangers once again find themselves saved by the Gold and Silver Rangers.",
+        "air_date": "2009-06-20",
+        "runtime": 22,
+        "still_path": "/wgCdi4NZaZBuJasnNAOs7o5SOek.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "In or Out",
+        "overview": "As the Rangers take a more offensive approach against Venjix, the virus traps the citizens of Corinth inside their own dome and proceeds to suck all the air out of the city.",
+        "air_date": "2009-07-04",
+        "runtime": 22,
+        "still_path": "/8T48nPV0zLuJ5gfjVkf4fIaQpSv.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Prisoners",
+        "overview": "Dillon discovers that his sister might be a prison in the same factory where Gem \u0026 Gemma were once held prisoner by Venjix.",
+        "air_date": "2009-07-11",
+        "runtime": 22,
+        "still_path": "/AlSwXYweSLkbho4unaEboUao9G4.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Belly of the Beast",
+        "overview": "The Rangers learn they must return to the factory and destroy the Venjix Doomsday Box that is being built.",
+        "air_date": "2009-08-01",
+        "runtime": 22,
+        "still_path": "/qUlSVkRwJanqt5dR3CA4JkIT5fT.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Three\u0027s a Crowd",
+        "overview": "When Gem \u0026 Gemma\u0027s spontaneous antics nearly get them caught in a trap, they realize that they must work together as a team with the other Rangers.",
+        "air_date": "2009-08-08",
+        "runtime": 22,
+        "still_path": "/cZNFyRhiynhM8C1AGdjh5B7Tod5.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Heroes Among Us",
+        "overview": "In an effort to impress his father, Scott makes a reckless trip out to the wasteland.",
+        "air_date": "2009-08-15",
+        "runtime": 22,
+        "still_path": "/bTNgh66CKlRQ0kcCRqKeEwA17qe.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Not So Simple",
+        "overview": "With their resources dangerously low, Dr. K has to trust the untested technology of the WheelZord to try and destroy the latest attack bot.",
+        "air_date": "2009-08-22",
+        "runtime": 22,
+        "still_path": "/mqR4j5MDSeKhv2349xpdlXXXICP.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "The Dome Dolls",
+        "overview": "When an Attack Bot puts all of Corinth\u0027s men to sleep, it is up to the girls to suit up and defend Corinth.",
+        "air_date": "2009-09-05",
+        "runtime": 22,
+        "still_path": "/amLVMKYTxh0B7hk79rww6ZdbXjz.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "And\u2026 Action",
+        "overview": "For the first time ever, join Ziggy as he takes you behind the scenes of the Power Rangers.",
+        "air_date": "2009-09-12",
+        "runtime": 22,
+        "still_path": "/eVR2nJDYVV5tVyjH0vtrRkXvyPl.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Ancient History",
+        "overview": "Truman discovers that Dr. K was responsible for creating the Venjix Virus.",
+        "air_date": "2009-09-19",
+        "runtime": 22,
+        "still_path": "/50JdxqQKQx5pw5bn0eaQFe4gSXG.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Key to the Past",
+        "overview": "When Dillon discovers that the two keys to his watch fit together to play another song, he uses it to try to reach Tenaya 7.",
+        "air_date": "2009-09-26",
+        "runtime": 22,
+        "still_path": "/wsTx8giugOAaUEUi1ouI88oe419.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Beyond a Doubt",
+        "overview": "Dillon is betrayed after he and Tenaya 7 break into the Venjix Palace to retrieve codes that are needed to stop an attack bot.",
+        "air_date": "2009-09-26",
+        "runtime": 22,
+        "still_path": "/2Mn2d6otPCtxzrGAXhnzTrX7MiQ.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Control-Alt-Delete",
+        "overview": "Dillon\u0027s search for Tenaya is put on hold when Scott is shot with a key that allows Shifter to control him.",
+        "air_date": "2009-10-03",
+        "runtime": 22,
+        "still_path": "/d2iTrClJb8YJV45cicYHw4KhO7g.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Run Ziggy Run",
+        "overview": "Ziggy must pay back the $5 million he owes Fresno Bob.",
+        "air_date": "2009-10-03",
+        "runtime": 22,
+        "still_path": "/t4A1tZvKRlCBs9RZJn2cEaQ8vQC.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "If Venjix Won",
+        "overview": "Ziggy accidentally teleports himself and Dr. K into a cave.",
+        "air_date": "2009-12-19",
+        "runtime": 22,
+        "still_path": "/iS0vXlb9Lrnos943borYEXNYYds.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "End Game",
+        "overview": "Dillon fears the virus will take him over.",
+        "air_date": "2009-12-19",
+        "runtime": 22,
+        "still_path": "/1GXxpSTvWgmWtcl1U2HViNUjS36.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Danger and Destiny (1)",
+        "overview": "When the magnetic blast goes off and all the electricity goes out in Corinth, Venjix moves to take the city.",
+        "air_date": "2009-12-26",
+        "runtime": 22,
+        "still_path": "/dPGEfdjWAX2mTKP5gGZuYZcfKuO.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Danger and Destiny (2)",
+        "overview": "The Rangers race to insert a virus into Venjix before he takes over Corinth.",
+        "air_date": "2009-12-26",
+        "runtime": 22,
+        "still_path": "/l0RStHMXK0yDbZTBej7ocnKfVFH.jpg"
+      }
+    ]
+  }
+}

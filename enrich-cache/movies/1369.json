@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1369,
+    "title": "Rambo: First Blood Part II",
+    "overview": "John Rambo is released from prison by the government for a top-secret covert mission to the last place on Earth he\u0027d want to return - the jungles of Vietnam.",
+    "tagline": "No man, no law, no war can stop him.",
+    "runtime": 96,
+    "release_date": "1985-05-22",
+    "vote_average": 6.672,
+    "poster_path": "/fVwRtWqEPdsCH21BVDGqgkAQcff.jpg",
+    "backdrop_path": "/aPlgkT2FlD7EcE6Vi10I4RTzRqb.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 5039,
+      "name": "Rambo Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "John J. Rambo",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Richard Crenna",
+      "character": "Col. Samuel Trautman",
+      "profile_path": "/7mKmqNaOpYxUSUO9gmlJa98iZ9j.jpg"
+    },
+    {
+      "name": "Charles Napier",
+      "character": "Marshall Murdock",
+      "profile_path": "/w16LEJlHDtqGWeFCk5a7a2GDeBK.jpg"
+    },
+    {
+      "name": "Steven Berkoff",
+      "character": "Lt. Col. Podovsky",
+      "profile_path": "/3u4gxLWmDXAtY37GvkyCN05X2zw.jpg"
+    }
+  ]
+}

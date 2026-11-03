@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1452,
+    "title": "Superman Returns",
+    "overview": "Superman returns to discover his 5-year absence has allowed Lex Luthor to walk free, and that those he was closest to felt abandoned and have moved on. Luthor plots his ultimate revenge that could see millions killed and change the face of the planet forever, as well as ridding himself of the Man of Steel.",
+    "tagline": "Look up in the sky!",
+    "runtime": 154,
+    "release_date": "2006-06-28",
+    "vote_average": 5.83,
+    "poster_path": "/385XwTQZDpRX2d3kxtnpiLrjBXw.jpg",
+    "backdrop_path": "/8eRscFbRYl681zDfkjv1jjW1KAA.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Brandon Routh",
+      "character": "Clark Kent / Superman",
+      "profile_path": "/iPonANuyk3eOHjADqd4h9sBwvX1.jpg"
+    },
+    {
+      "name": "Kate Bosworth",
+      "character": "Lois Lane",
+      "profile_path": "/ezaM2jsyrxXWVFN1SbH3UfAgZaG.jpg"
+    },
+    {
+      "name": "Kevin Spacey",
+      "character": "Lex Luthor",
+      "profile_path": "/nPrUZDEbGQe6jwpVbHKJCXsMd7r.jpg"
+    },
+    {
+      "name": "James Marsden",
+      "character": "Richard White",
+      "profile_path": "/lf7OnfKZnMgNh9b98764tqSocGK.jpg"
+    }
+  ]
+}

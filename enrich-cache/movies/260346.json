@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 260346,
+    "title": "Taken 3",
+    "overview": "Ex-government operative Bryan Mills finds his life is shattered when he\u0027s falsely accused of a murder that hits close to home. As he\u0027s pursued by a savvy police inspector, Mills employs his particular set of skills to track the real killer and exact his unique brand of justice.",
+    "tagline": "It ends here.",
+    "runtime": 109,
+    "release_date": "2014-12-16",
+    "vote_average": 6.27,
+    "poster_path": "/vzvMXMypMq7ieDofKThsxjHj9hn.jpg",
+    "backdrop_path": "/vFm4pF0BgaWPj0i2zEiZO6TqEQ0.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 135483,
+      "name": "Taken Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Liam Neeson",
+      "character": "Bryan Mills",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Forest Whitaker",
+      "character": "Inspector Frank Dotzler",
+      "profile_path": "/4w7l5JUwnwFNBy7J93ZwYN1nihm.jpg"
+    },
+    {
+      "name": "Maggie Grace",
+      "character": "Kim Mills",
+      "profile_path": "/fEZSGno4ooPgFjuGzE7ogsWEHsh.jpg"
+    },
+    {
+      "name": "Dougray Scott",
+      "character": "Stuart St. John",
+      "profile_path": "/fDjTHSZuUIEstxxBvHApLrU1fWz.jpg"
+    }
+  ]
+}

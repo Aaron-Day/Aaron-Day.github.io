@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 945961,
+    "title": "Alien: Romulus",
+    "overview": "While scavenging the deep ends of a derelict space station, a group of young space colonizers come face to face with the most terrifying life form in the universe.",
+    "tagline": "In space, no one can hear you.",
+    "runtime": 119,
+    "release_date": "2024-08-13",
+    "vote_average": 7.157,
+    "poster_path": "/2uSWRTtCG336nuBiG8jOTEUKSy8.jpg",
+    "backdrop_path": "/iYqSQaWDttQIQzsxg9xHyg0bttG.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1434946,
+      "name": "Alien: Romulus Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Cailee Spaeny",
+      "character": "Rain",
+      "profile_path": "/6gUzyMnwo7TjZA7E1Amd1GI8JGw.jpg"
+    },
+    {
+      "name": "David Jonsson",
+      "character": "Andy",
+      "profile_path": "/2ZZNGZw57KKMrVIr27g7W16G0jV.jpg"
+    },
+    {
+      "name": "Archie Renaux",
+      "character": "Tyler",
+      "profile_path": "/uTd18t2VJovN2jSJyhuG8Yy3PV6.jpg"
+    },
+    {
+      "name": "Isabela Merced",
+      "character": "Kay",
+      "profile_path": "/7O5GWIH8IHwU4kGZIhC3JkGDiZr.jpg"
+    }
+  ]
+}

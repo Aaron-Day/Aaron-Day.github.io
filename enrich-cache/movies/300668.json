@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 300668,
+    "title": "Annihilation",
+    "overview": "A biologist signs up for a dangerous, secret expedition into a mysterious zone where the laws of nature don\u0027t apply.",
+    "tagline": "Fear what\u0027s inside.",
+    "runtime": 115,
+    "release_date": "2018-02-22",
+    "vote_average": 6.453,
+    "poster_path": "/4YRplSk6BhH6PRuE9gfyw9byUJ6.jpg",
+    "backdrop_path": "/9trZvBr44UGedUOiGo3jgSUw13e.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Natalie Portman",
+      "character": "Lena",
+      "profile_path": "/edPU5HxncLWa1YkgRPNkSd68ONG.jpg"
+    },
+    {
+      "name": "Jennifer Jason Leigh",
+      "character": "Dr Ventress",
+      "profile_path": "/7DbG2AO3nygHAkNC866HLPKkxv9.jpg"
+    },
+    {
+      "name": "Gina Rodriguez",
+      "character": "Anya Thorensen",
+      "profile_path": "/2Mw6L8gpAhnXAgmJZkz85YxVmOt.jpg"
+    },
+    {
+      "name": "Tessa Thompson",
+      "character": "Josie Radek",
+      "profile_path": "/19ze60jXlb2j7dXc2UpA3MujXA8.jpg"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Crimson Ticket",
+        "overview": "While Jane tries to decipher Lorelei\u2019s connection to Red John, the CBI team is forced to partner with the FBI to solve the murder of a hotel employee.",
+        "air_date": "2012-09-30",
+        "runtime": 41,
+        "still_path": "/vxGnPnb9wzz2D8Zeu5ty837cjYG.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Devil\u0027s Cherry",
+        "overview": "While the team investigates the murder of a diamond cutter, Jane meets a girl who claims to be his late daughter, Charlotte.",
+        "air_date": "2012-10-07",
+        "runtime": 43,
+        "still_path": "/vJISe5uemqI3FmVMlUJFCmfx0c3.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Not One Red Cent",
+        "overview": "A bank employee is murdered during a heist and Jane and the team must work to track down the killer. Meanwhile, Lisbon is pulled deeper into the CBI/FBI rivalry.",
+        "air_date": "2012-10-14",
+        "runtime": 43,
+        "still_path": "/xGiGqTcXgLv3hI2HFG6LaJSm2jB.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Blood Feud",
+        "overview": "When Rigsby\u2019s father is found injured at a crime scene, the team must find out if it is the result of a long-standing small-town gang war.",
+        "air_date": "2012-10-21",
+        "runtime": 41,
+        "still_path": "/ruzr7509B2jjPT8A5CbFbISWVoD.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Red Dawn",
+        "overview": "See how Jane met Lisbon and the rest of the CBI team for the first time.",
+        "air_date": "2012-10-28",
+        "runtime": 43,
+        "still_path": "/7Er2lXBf6aISRPtoPdOuWibBvgZ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Cherry Picked",
+        "overview": "The team investigates the kidnapping of a couple that may be the victim of mistaken identity, while Jane continues his investigation into Lorelei\u0027s whereabouts.",
+        "air_date": "2012-11-04",
+        "runtime": 41,
+        "still_path": "/58P1vF3eBzUPjl1wgsRQPcmz0pg.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "If It Bleeds, It Leads",
+        "overview": "The team investigates the murder of a reporter who may have become too close to her story, while Jane insists on pursuing his own leads to find Lorelei.",
+        "air_date": "2012-11-11",
+        "runtime": 41,
+        "still_path": "/4unBzhXuyipi1Z4hp7LlFQeXFyG.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Red Sails in the Sunset",
+        "overview": "With the help of Brett Stiles, Jane orchestrates an elaborate plan to break Lorelei Martins out of prison in the hopes of her leading him to Red John.",
+        "air_date": "2012-11-18",
+        "runtime": 43,
+        "still_path": "/1zXeZvNaTnhFtgPYJDOvJeTD8qD.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Black Cherry",
+        "overview": "The CBI team investigates the murder of a real estate agent with former gang ties, while Jane searches for leads on his new connection to Red John.",
+        "air_date": "2012-11-25",
+        "runtime": 43,
+        "still_path": "/6qP7K9HmrB9Gr9OHAEQbmrG5ojj.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Panama Red",
+        "overview": "The death of a young botanist leads the team into the lucrative world of medical marijuana, while Cho\u2019s work with the rapid response team brings him back into contact with Summer.",
+        "air_date": "2012-12-09",
+        "runtime": 43,
+        "still_path": "/uc4SNoVFhX5LmvPDbN5p1I03UBy.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Days of Wine and Roses",
+        "overview": "The CBI team visits a high-end California rehab center in order to investigate the death of a young model who was a patient there, while Lisbon ramps up her investigation into Tommy Volker.",
+        "air_date": "2013-01-06",
+        "runtime": 42,
+        "still_path": "/yqyvWsf6Zbvsyd06lUFtJtkhTUf.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Little Red Corvette",
+        "overview": "The CBI investigates the death of a geologist, which Lisbon is convinced is the key to bringing down Tommy Volker.",
+        "air_date": "2013-01-13",
+        "runtime": 42,
+        "still_path": "/3kBULPI3lreQQlGvj2eblaAGX0S.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Red Barn",
+        "overview": "The team investigates a 25-year-old case that seems to involve both Red John and the Visualize group, and Lisbon contemplates her future.",
+        "air_date": "2013-01-27",
+        "runtime": 42,
+        "still_path": "/rr7aNj4Z6bzHG27bj0Yds88lKUJ.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Red in Tooth and Claw",
+        "overview": "The team delves into the surprisingly cutthroat world of academics in a case involving a graduate student at a natural history museum.",
+        "air_date": "2013-02-17",
+        "runtime": 40,
+        "still_path": "/v5nVxxtmxIhLYKJs4yFHeBAvNlY.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Red Lacquer Nail Polish",
+        "overview": "Jane and the team investigate the murder of an elderly heiress whose remains are found in the living room of her spooky mansion.",
+        "air_date": "2013-03-03",
+        "runtime": 42,
+        "still_path": "/1L3YvPnk3vDpMhykEoXyA8eNnb9.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "There Will Be Blood",
+        "overview": "Lorelei Martins returns, determined to find out if Red John had a role in her sister\u0027s death, and Jane is forced to confess to Lisbon his part in Lorelei\u0027s prison escape.",
+        "air_date": "2013-03-10",
+        "runtime": 43,
+        "still_path": "/OIkrP6cT0FCxwL9WAcPzbP4AKe.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Red, White and Blue",
+        "overview": "The CBI team investigates when the body of a female army medic who worked with soldiers with PTSD is found near a military base.",
+        "air_date": "2013-03-17",
+        "runtime": 43,
+        "still_path": "/f4GHX9tCvwNSlAq5K6QnJZQ9mF4.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Behind the Red Curtain",
+        "overview": "The CBI team investigates when the young lead of a local theater production dies on the eve of the opening. Meanwhile, Jane hopes to get more information about Red John from the comatose Jason Lennon.",
+        "air_date": "2013-03-24",
+        "runtime": 42,
+        "still_path": "/skSKhyLFFDeo3HYR2We50PlC212.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Red Letter Day",
+        "overview": "The CBI team heads out to a run-down Wild West tourist town to investigate the death of the town\u0027s owner. Meanwhile, Kirkland tries to uncover the extent of Jane\u0027s knowledge about Red John.",
+        "air_date": "2013-04-14",
+        "runtime": 42,
+        "still_path": "/ifH4nB6JvR37GSXoUJqfIFqJags.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Red Velvet Cupcakes",
+        "overview": "Rigsby and Van Pelt go undercover as a couple with relationship problems to investigate the death of a woman who received advice from a radio love doctor.",
+        "air_date": "2013-04-21",
+        "runtime": 43,
+        "still_path": "/A5LzJk5UkjIWhNnvbSHnLngi1tH.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Red and Itchy",
+        "overview": "J.J. LaRoche personally requests Jane\u2019s help when the mysterious container he\u2019s been hiding for nine years is stolen from his home.",
+        "air_date": "2013-04-28",
+        "runtime": 42,
+        "still_path": "/dTJE35jKtUfDrOgDaox0rwVWKU5.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Red John\u0027s Rules",
+        "overview": "Just as Jane narrows down the Red John suspect list to seven, Red John strikes again, and the victim has a link to Jane\u2019s past.",
+        "air_date": "2013-05-05",
+        "runtime": 43,
+        "still_path": "/ejmAc9Jq0rTmFErf7USZLZUJKxY.jpg"
+      }
+    ]
+  }
+}

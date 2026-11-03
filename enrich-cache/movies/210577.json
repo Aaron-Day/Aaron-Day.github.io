@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 210577,
+    "title": "Gone Girl",
+    "overview": "With his wife\u0027s disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it\u0027s suspected that he may not be innocent.",
+    "tagline": "You don\u0027t know what you\u0027ve got \u0027til it\u0027s...",
+    "runtime": 149,
+    "release_date": "2014-10-01",
+    "vote_average": 7.89,
+    "poster_path": "/ts996lKsxvjkO2yiYG0ht4qAicO.jpg",
+    "backdrop_path": "/iWak7wT0j6ycCc8lKr4NBz9c7n5.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Affleck",
+      "character": "Nick Dunne",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Rosamund Pike",
+      "character": "Amy Dunne",
+      "profile_path": "/8ObNklHDi2hjdz0ayzJFB9jtqzm.jpg"
+    },
+    {
+      "name": "Neil Patrick Harris",
+      "character": "Desi Collings",
+      "profile_path": "/r2twLWLwDpKJ7JyhWsD1YsL7rJV.jpg"
+    },
+    {
+      "name": "Tyler Perry",
+      "character": "Tanner Bolt",
+      "profile_path": "/8KU0OizemVLrERXt5HJIa0PAkIN.jpg"
+    }
+  ]
+}

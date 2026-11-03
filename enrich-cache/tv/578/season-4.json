@@ -1,0 +1,152 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Trust Metric",
+        "overview": "After the events of \u0022The Janus List,\u0022 Colby escapes from custody.  Don and the team go after him, but everything may not be as it seems.",
+        "air_date": "2007-09-28",
+        "runtime": 43,
+        "still_path": "/xSbr0CrDPVMVK1zNwGB3GeOMjlc.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Hollywood Homicide",
+        "overview": "An actor on his way to stardom finds himself in the middle of a murder investigation when a young woman is murdered in his house.",
+        "air_date": "2007-10-05",
+        "runtime": 43,
+        "still_path": "/sdlxEPAWoAcGmoB1bCkHdVFjr5m.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Velocity",
+        "overview": "When a car crashes into a busy coffee shop, the team discovers the fatal act might not have been an accident.",
+        "air_date": "2007-10-12",
+        "runtime": 41,
+        "still_path": "/mY8klpjWfbMAwxh8bTR3ocgwABt.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Thirteen",
+        "overview": "Don, Charlie, and the team attempt to stop a serial killer who is seemingly obsessed with people resembling Biblical figures.",
+        "air_date": "2007-10-19",
+        "runtime": 43,
+        "still_path": "/o2Njq8xO2Xqgmm8TY6vzmx8fXS0.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Robin Hood",
+        "overview": "Robberies the storybook hero would have been proud to claim plague Don and Charlie as they attempt to catch a do-good thief who is donating his spoils to charity.",
+        "air_date": "2007-10-26",
+        "runtime": 42,
+        "still_path": "/lysgALKG7SrxwNdWtpmaRt7BgeJ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "In Security",
+        "overview": "Don feels responsible for a life lost.  The victim was in the Witness Protection Program, but she wasn\u0027t the only one keeping secrets...what is Don hiding?",
+        "air_date": "2007-11-02",
+        "runtime": 43,
+        "still_path": "/hGdMpL3JfrWqRpPXqQfovypCmbA.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Primacy",
+        "overview": "When a man is found dead, the team enters the world of alternate reality gaming.  However, their investigation leads to a danger for a loved one.",
+        "air_date": "2007-11-09",
+        "runtime": 43,
+        "still_path": "/gdcY0Sq73Rc81glLp2bAEXvOClm.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Tabu",
+        "overview": "When a wealthy heiress is kidnapped, Don and the team race against the clock in hopes to find her.  However, the motivations behind her disappearance aren\u0027t what they seem.",
+        "air_date": "2007-11-16",
+        "runtime": 41,
+        "still_path": "/4RyY8CLQHwtkYQ8ccNc1VNTR1hF.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Graphic",
+        "overview": "The team investigates the theft of a graphic comic book.",
+        "air_date": "2007-11-23",
+        "runtime": 43,
+        "still_path": "/fO69TrC5Pv2Ar869zam0h59hil.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Chinese Box",
+        "overview": "Don and the team are left with little recourse when a former FBI subcontractor takes a team member hostage.",
+        "air_date": "2007-12-14",
+        "runtime": 44,
+        "still_path": "/scmhGcYHCWxF7b5R6RbCZvJoCzG.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Breaking Point",
+        "overview": "Charlie\u0027s life is put in danger when Don brings him in on the case of a missing reporter.",
+        "air_date": "2008-01-11",
+        "runtime": 40,
+        "still_path": "/ybrw8GRRas6qMSSv4X7vRAAa9O1.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Power",
+        "overview": "A bad case becomes worse when Don and the team must pursue a police officer believed to have committed unspeakable crimes.",
+        "air_date": "2008-01-18",
+        "runtime": 43,
+        "still_path": "/nfI5rf7sM4nkXkeHTylmZXzr76F.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Black Swan",
+        "overview": "Don and the team bust a meth lab, but when Don has a feeling there\u0027s more to the organization than just what\u0027s on the surface, his intuition is put to the test.",
+        "air_date": "2008-04-04",
+        "runtime": 41,
+        "still_path": "/hExuupl069nZxyYcRJpWLW4WM6X.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Checkmate",
+        "overview": "Don runs into Robin Brooks during an investigation concerning informants and a chess master.",
+        "air_date": "2008-04-11",
+        "runtime": 44,
+        "still_path": "/mjI0sapRhs1MY75Ajc9uTDWIs1Q.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "End Game",
+        "overview": "Don and his team hunt for an ex-Marine wanted for murder.  Things become confusing, however, when the Marine\u0027s family is kidnapped.  Is there more to this case than meets the eye?",
+        "air_date": "2008-04-25",
+        "runtime": 43,
+        "still_path": "/cYtqdEvb2Q4nNv4OFo56TnG1BVI.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Atomic No. 33",
+        "overview": "Don and the team must investigate a religious cult after scores of followers are poisoned.",
+        "air_date": "2008-05-02",
+        "runtime": 43,
+        "still_path": "/xOLTcv2i0AtABw5THHehi5PStG5.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Pay to Play",
+        "overview": "When a musician is murdered, Don and his team must race to find the culprits.  They need Charlie\u0027s help, but he is busy with Amita\u0027s parents coming for a visit.",
+        "air_date": "2008-05-09",
+        "runtime": 42,
+        "still_path": "/gBfedMJX66kAYmbXerAHx4Eo3f2.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "When World\u0027s Collide",
+        "overview": "In the season finale, Don and Charlie work together on a case that ends up with them going head to head about their personal beliefs, and one team member will walk away forever.",
+        "air_date": "2008-05-16",
+        "runtime": 42,
+        "still_path": "/dW9Rd4L46UmHFvfDwdhEIWZeggz.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2255,
+    "title": "Chasing Amy",
+    "overview": "Holden and Banky are comic book artists. Everything is going good for them until they meet Alyssa, also a comic book artist. Holden falls for her, but his hopes are crushed when he finds out she\u0027s a lesbian.",
+    "tagline": "It\u0027s not who you love. It\u0027s how.",
+    "runtime": 114,
+    "release_date": "1997-04-04",
+    "vote_average": 6.747,
+    "poster_path": "/tqydORBcNlQxy3ijgSpPurgDHM2.jpg",
+    "backdrop_path": "/9dsOweKYJ6XAJteBIKEGOI0T2bf.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Affleck",
+      "character": "Holden McNeil",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Joey Lauren Adams",
+      "character": "Alyssa Jones",
+      "profile_path": "/A7p7Rrda5tmYQvlcCY5UXCpT5tq.jpg"
+    },
+    {
+      "name": "Jason Lee",
+      "character": "Banky Edwards",
+      "profile_path": "/64tEXo3xR9IFXsIJKSlJ2LUrrEA.jpg"
+    },
+    {
+      "name": "King Mustafa Obafemi",
+      "character": "Hooper LaMont",
+      "profile_path": "/awCQ9N004ths2XwHSUpMAUJeJzR.jpg"
+    }
+  ]
+}

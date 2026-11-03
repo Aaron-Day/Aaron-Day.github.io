@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 3602,
+    "title": "I\u0027ll Always Know What You Did Last Summer",
+    "overview": "Several teenagers in a small-town in Colorado concoct a July 4th prank based on a frightening legend that goes awry when their friend ends up accidentally killed; however, the teens agree to keep their involvement a secret from the authorities, who continue to search for the man who apparently killed their friend. A year later, with the July 4th celebration coming up again, the teenagers realize that they\u0027re being stalked by someone who clearly intends on keeping the horrible legend alive by killing them off.",
+    "tagline": "What he knows might kill you\u2026",
+    "runtime": 92,
+    "release_date": "2006-06-24",
+    "vote_average": 4.143,
+    "poster_path": "/4gDbZ60YJ6WDstT0XOBABq4bQtO.jpg",
+    "backdrop_path": "/pbyV9R16jbLbeUreN8KSztN0Zn4.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 3601,
+      "name": "I Know What You Did Last Summer Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brooke Nevin",
+      "character": "Amber Williams",
+      "profile_path": "/tVtVgUauFOWRZf5euyxLP9rn9LX.jpg"
+    },
+    {
+      "name": "David Paetkau",
+      "character": "Colby Patterson",
+      "profile_path": "/c2LHO9ERSk8D5SW4vgRvgS9sSmb.jpg"
+    },
+    {
+      "name": "Torrey DeVitto",
+      "character": "Zoe",
+      "profile_path": "/mLRBWh6j0Jmgles7PLdEW3N63Ne.jpg"
+    },
+    {
+      "name": "Ben Easter",
+      "character": "Lance",
+      "profile_path": "/yNxV8ZVcqTIQCooKRe22XWaRK2l.jpg"
+    }
+  ]
+}

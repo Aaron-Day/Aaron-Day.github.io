@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 57165,
+    "title": "Wrath of the Titans",
+    "overview": "Perseus tries to live a quieter life as a village fisherman while \u2013 dangerously weakened by humanity\u0027s lack of devotion \u2013 the gods are losing control of the long-imprisoned Titans and their ferocious leader, Kronos.",
+    "tagline": "Feel the Wrath.",
+    "runtime": 99,
+    "release_date": "2012-03-28",
+    "vote_average": 5.771,
+    "poster_path": "/b9n2R3xZWQ8MVZgndQoV34stS0h.jpg",
+    "backdrop_path": "/g6Bppew6A1PxpHfraNroo0mRBcm.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86780,
+      "name": "Clash of the Titans Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sam Worthington",
+      "character": "Perseus",
+      "profile_path": "/mflBcox36s9ZPbsZPVOuhf6axaJ.jpg"
+    },
+    {
+      "name": "Liam Neeson",
+      "character": "Zeus",
+      "profile_path": "/sRLev3wJioBgun3ZoeAUFpkLy0D.jpg"
+    },
+    {
+      "name": "Ralph Fiennes",
+      "character": "Hades",
+      "profile_path": "/tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg"
+    },
+    {
+      "name": "Rosamund Pike",
+      "character": "Andromeda",
+      "profile_path": "/8ObNklHDi2hjdz0ayzJFB9jtqzm.jpg"
+    }
+  ]
+}

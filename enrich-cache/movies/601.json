@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 601,
+    "title": "E.T. the Extra-Terrestrial",
+    "overview": "An alien is left behind on Earth and saved by the 10-year-old Elliott who decides to keep him hidden in his home. While a task force hunts for the extra-terrestrial, Elliott, his brother, and his little sister Gertie form an emotional bond with their new friend, and try to help him find his way home.",
+    "tagline": "He is afraid. He is totally alone. He is 3,000,000 light years from home.",
+    "runtime": 115,
+    "release_date": "1982-06-11",
+    "vote_average": 7.518,
+    "poster_path": "/an0nD6uq6byfxXCfk6lQBzdL2J1.jpg",
+    "backdrop_path": "/mXLVA0YL6tcXi6SJSuAh9ONXFj5.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Henry Thomas",
+      "character": "Elliott",
+      "profile_path": "/tyTcpTMIAyIIy30u8N59G0PI06f.jpg"
+    },
+    {
+      "name": "Drew Barrymore",
+      "character": "Gertie",
+      "profile_path": "/8qvMFslwrC3w1OwJYqE3mHPvffr.jpg"
+    },
+    {
+      "name": "Robert MacNaughton",
+      "character": "Michael",
+      "profile_path": "/fYsyr42druY9iPNOiH7QsCob2TU.jpg"
+    },
+    {
+      "name": "Peter Coyote",
+      "character": "Keys",
+      "profile_path": "/AglpxXP9wBM567UMGL9DAMbid1V.jpg"
+    }
+  ]
+}

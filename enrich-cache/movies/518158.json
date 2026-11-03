@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 518158,
+    "title": "Leprechaun Returns",
+    "overview": "A group of unwitting sorority sisters accidentally awaken the serial-killing Leprechaun after they build a sorority house on his hunting grounds.",
+    "tagline": "Be careful what you wish for.",
+    "runtime": 93,
+    "release_date": "2018-12-11",
+    "vote_average": 6.13,
+    "poster_path": "/7kToQsV04Jel1ob7VJ471LDz7wD.jpg",
+    "backdrop_path": "/bdF98wEoQupFimI4bEIbfpVLKM1.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 19285,
+      "name": "Leprechaun Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Taylor Spreitler",
+      "character": "Lila",
+      "profile_path": "/5sAmpcNJiNeRV77CXJ2SWPsStkP.jpg"
+    },
+    {
+      "name": "Pepi Sonuga",
+      "character": "Katie",
+      "profile_path": "/ySgVYbU00lohcpnD178ewvILCWC.jpg"
+    },
+    {
+      "name": "Sai Bennett",
+      "character": "Rose",
+      "profile_path": "/u1kUF1bM6Mppf5SpkqEWV49Ql4i.jpg"
+    },
+    {
+      "name": "Emilie Reid",
+      "character": "Meredith",
+      "profile_path": "/qCDLJYaX5FJEnRLr1H3tGrEgCkA.jpg"
+    }
+  ]
+}

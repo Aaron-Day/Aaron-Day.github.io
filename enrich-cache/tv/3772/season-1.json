@@ -1,0 +1,32 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "One Riot, One Ranger",
+        "overview": "During a bank robbery in Dallas, Walker\u0027s partner is killed. Trying to solve this case, Walker finds out that this raid could have been only a test for a much bigger goal: simultaneously robbing four banks lying next to each other. No one believes him. After a bomb explodes in a far away bank, which has just gotten a valuable load, everyone goes there. When the actual raid starts Walker must face the gang alone.",
+        "air_date": "1993-04-21",
+        "runtime": 60,
+        "still_path": "/69HTeQ7w8ZY8rFtLFNJYWRKfO9R.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Borderline",
+        "overview": "Walker must help Alex when she is stalked by an ex-convict whom she convicted back in the day.",
+        "air_date": "1993-04-24",
+        "runtime": 60,
+        "still_path": null
+      },
+      {
+        "episode_number": 3,
+        "name": "A Shadow in the Night",
+        "overview": "When a powerful Japanese Yazuka is killed by Congressman Cabe\u0027s assistant, the Yazuka come to America, seeking revenge, and Walker and Trivette are assigned to protect the congressman.",
+        "air_date": "1993-05-01",
+        "runtime": 60,
+        "still_path": "/jhZ7eQe5AE9odkCr4DIyOkzfEyb.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 10,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Return of Dregg",
+        "overview": "While the Turtles work on using fragments of the Vortex Crystal to stabilize their mutations, Lord Dregg plans to use the fragments to create another Vortex Crystal to power his Vortex Transporter.",
+        "air_date": "1996-09-14",
+        "runtime": 23,
+        "still_path": "/9lBOLwPfRJl56BpusrU6HLQ12zH.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Beginning of the End",
+        "overview": "While Raphael, Michaelangelo, Donatello and Carter work on restoring Leonardo to his regular self, Mung steals all the plutonium from a power plant in order for Dregg to build a Plutonium Ray to turn Leonardo into a radioactive killer.",
+        "air_date": "1996-09-21",
+        "runtime": 23,
+        "still_path": "/oMoFU2Dz9k3uD2NsLJRiGdfgofj.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Power of Three",
+        "overview": "Mungg informs Dregg that he came across two individuals who claimed they were old acquaintances of the turtles: Shredder and Krang!",
+        "air_date": "1996-09-28",
+        "runtime": 23,
+        "still_path": "/87683VXJn7BEhzuVNEXPwHnJkSy.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "A Turtle in Time",
+        "overview": "The Turtles\u0027, Shredder\u0027s and Krang\u0027s battles skills, powers, and memories are absorbed into Dregg.",
+        "air_date": "1996-10-05",
+        "runtime": 23,
+        "still_path": "/iK3H8qYgeZQffS9nnGwyzSnutTm.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Turtles to the Second Power",
+        "overview": "Dregg and his crew plan an invasion Earth to make it his new home base, but first he has to get his transporter chip back from Shredder.",
+        "air_date": "1996-10-12",
+        "runtime": 23,
+        "still_path": "/aetFxg6Z0LuqIfb4bEZxT7vfjX0.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Mobster from Dimension X",
+        "overview": "Dr. Alvin Huxley has demonstrated his breakthrough invention: a computer that thinks as fast as a human mind. The Globfather is on Earth and wants to get the protein computer for someone who is willing to pay a lot for it.",
+        "air_date": "1996-10-19",
+        "runtime": 23,
+        "still_path": null
+      },
+      {
+        "episode_number": 7,
+        "name": "The Day the Earth Disappeared",
+        "overview": "With the city breaking apart, the Turtles head to the street to investigate and see the Dreggnaut appear in the sky. With Mung\u0027s help, Dregg reprograms the transporter to open a warp in space.",
+        "air_date": "1996-10-26",
+        "runtime": 23,
+        "still_path": "/nHkssRa5mLPXihHaiU8kVKEB016.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Divide and Conquer",
+        "overview": "Lord Dregg launches a final attack on the Ninja Turtles.",
+        "air_date": "1996-11-02",
+        "runtime": 23,
+        "still_path": "/eIONMPy3MuYJLPAwCZY73XjnXgC.jpg"
+      }
+    ]
+  }
+}

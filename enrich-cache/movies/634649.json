@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 634649,
+    "title": "Spider-Man: No Way Home",
+    "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+    "tagline": "Enter the Multiverse.",
+    "runtime": 148,
+    "release_date": "2021-12-15",
+    "vote_average": 7.948,
+    "poster_path": "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    "backdrop_path": "/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 531241,
+      "name": "Spider-Man (MCU) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Holland",
+      "character": "Peter Parker / Spider-Man",
+      "profile_path": "/5OK84Wn1bIEIThFKcVoaN087mLj.jpg"
+    },
+    {
+      "name": "Zendaya",
+      "character": "MJ",
+      "profile_path": "/qGkBlyn1AwQpuFnRARMRwj0iHZp.jpg"
+    },
+    {
+      "name": "Benedict Cumberbatch",
+      "character": "Doctor Strange",
+      "profile_path": "/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg"
+    },
+    {
+      "name": "Jacob Batalon",
+      "character": "Ned Leeds",
+      "profile_path": "/53YhaL4xw4Sb1ssoHkeSSBaO29c.jpg"
+    }
+  ]
+}

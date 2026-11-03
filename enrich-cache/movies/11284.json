@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11284,
+    "title": "Freddy\u0027s Dead: The Final Nightmare",
+    "overview": "Just when you thought it was safe to sleep, Freddy Krueger returns in this sixth installment of the Nightmare on Elm Street films, as psychologist Maggie Burroughs, tormented by recurring nightmares, meets a patient with the same horrific dreams. Their quest for answers leads to a certain house on Elm Street -- where the nightmares become reality.",
+    "tagline": "They saved the best for last.",
+    "runtime": 89,
+    "release_date": "1991-09-05",
+    "vote_average": 5.288,
+    "poster_path": "/e4qh58n2WaG4Gyh9VhjOUeN9Mhv.jpg",
+    "backdrop_path": "/j0ZugvhxSwvAIDpAKDdtPBjETMy.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8581,
+      "name": "A Nightmare on Elm Street Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Lisa Zane",
+      "character": "Maggie Burroughs",
+      "profile_path": "/g4Q4T0masimLt6qWw2ZdPuSxMhR.jpg"
+    },
+    {
+      "name": "Robert Englund",
+      "character": "Freddy Krueger",
+      "profile_path": "/cjGEkiavinHa1dnetDvnEhlD2Wm.jpg"
+    },
+    {
+      "name": "Shon Greenblatt",
+      "character": "John Doe",
+      "profile_path": "/9HqYm3tmfCmNI0FOcRVOGTvOvU2.jpg"
+    },
+    {
+      "name": "Lezlie Deane",
+      "character": "Tracy",
+      "profile_path": "/5W2Eq48gn8hTPGr2FLGrMGOieS8.jpg"
+    }
+  ]
+}

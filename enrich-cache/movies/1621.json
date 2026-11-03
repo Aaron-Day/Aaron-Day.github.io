@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1621,
+    "title": "Trading Places",
+    "overview": "A snobbish investor and a wily street con-artist find their positions reversed as part of a bet by two callous millionaires.",
+    "tagline": "They\u0027re not just getting rich... They\u0027re getting even.",
+    "runtime": 116,
+    "release_date": "1983-06-07",
+    "vote_average": 7.231,
+    "poster_path": "/8mBuLCOcpWnmYtZc4aqtvDXslv6.jpg",
+    "backdrop_path": "/3FO1kbQmRlU1H6Kmn7sTfmd7mw9.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Dan Aykroyd",
+      "character": "Louis Winthorpe III",
+      "profile_path": "/iVMmeVJx8IpCEjlGBZWzIWvX5Qo.jpg"
+    },
+    {
+      "name": "Eddie Murphy",
+      "character": "Billy Ray Valentine",
+      "profile_path": "/qgjMfefsKwSYsyCaIX46uyOXIpy.jpg"
+    },
+    {
+      "name": "Ralph Bellamy",
+      "character": "Randolph Duke",
+      "profile_path": "/vC6cdrUUewgurTlVXt36eRAtQKb.jpg"
+    },
+    {
+      "name": "Don Ameche",
+      "character": "Mortimer Duke",
+      "profile_path": "/p2Q0LE3SECDvb5W2yAvvfRtzIyo.jpg"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "King Me",
+        "overview": "Uncle King Julien abdicates his throne, handing off his crown to Prince Julien. Let the reign of King Julien the Thirteenth begin!",
+        "air_date": "2014-12-19",
+        "runtime": 23,
+        "still_path": "/sP60K8ZHklPcuN5tMqjuqpcc1h7.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Poll Position",
+        "overview": "King Julien learns that 99% of the lemurs love him, so he makes it his mission to find and convert his one \u0022hater.\u0022",
+        "air_date": "2014-12-19",
+        "runtime": 23,
+        "still_path": "/gaaU7KNRqpD752tbb4qu1rNZyoy.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Enter the Fanaloka",
+        "overview": "The evil genius Karl sets out to destroy King Julien. When both Clover and Maurice are captured, King Julien must save them from his new nemesis.",
+        "air_date": "2014-12-19",
+        "runtime": 23,
+        "still_path": "/8F6Qviuq4qkklxFJbPGZ055e70O.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Empty is the Head",
+        "overview": "Exhausted from settling his subjects\u0027 disputes, King Julien replaces himself with a dummy king so he can play hooky, unwittingly sparking a rebellion.",
+        "air_date": "2014-12-19",
+        "runtime": 23,
+        "still_path": "/6m4DjxHvjCIAriPaseqIvGUsayT.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Return of the Uncle King",
+        "overview": "Set on reclaiming his throne, Uncle King Julien convinces Julien to go into Foosa territory. Julien creates a disguise and forces Maurice to join him.",
+        "air_date": "2014-12-19",
+        "runtime": 23,
+        "still_path": "/yRG9weAQ9s47jqrw1FpkhRn1lrt.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Eat Pray Shove",
+        "overview": "Clover is forced to take a vacation, and while she\u0027s away, she meets the handsome and free-spirited Sage Moondancer.",
+        "air_date": "2015-04-07",
+        "runtime": 23,
+        "still_path": "/fgQwauFgigPsdzduJfyFhKczLPJ.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "He Blinded Me with Science",
+        "overview": "Julien teams up with Timo the tenrec, a scientist who the king enlists to automate everything in the kingdom.",
+        "air_date": "2015-04-07",
+        "runtime": 23,
+        "still_path": "/mTvXGV24uaw9tQtcok91MAenT7P.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Viva Mort",
+        "overview": "When Julien embarrasses Maurice, he tries to make up for his transgression, while Mort inadvertently joins an anti-King Julien group.",
+        "air_date": "2015-04-07",
+        "runtime": 23,
+        "still_path": "/qXGk30GW24il2RrY1EtfRnIJo7g.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Really Really Big Lie",
+        "overview": "Julien concocts an elaborate lie, blaming a giant \u0022mega-gecko\u0022 for ruining a young lemur\u0027s birthday party.",
+        "air_date": "2015-04-07",
+        "runtime": 23,
+        "still_path": "/m3qL06JgluEySLzKYTbd5rtQfsb.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "One More Cup",
+        "overview": "Julien finds a bag of coffee beans in the Cove of Wonders and gets the entire lemur community hooked on caffeine.",
+        "air_date": "2015-04-07",
+        "runtime": 23,
+        "still_path": "/doQZdyAXyKIcVkGwyERMPQEsnEs.jpg"
+      }
+    ]
+  }
+}

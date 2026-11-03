@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 23202,
+    "title": "Trick \u0027r Treat",
+    "overview": "Four interwoven stories that occur on Halloween: an everyday high school principal has a secret life as a serial killer; a college virgin might have just met the one guy for her; a group of teenagers pull a mean prank, and a bitter old recluse receives an uninvited guest.",
+    "tagline": "Poison, drowning, claw, or knife. So many ways to take a life.",
+    "runtime": 82,
+    "release_date": "2007-12-09",
+    "vote_average": 7,
+    "poster_path": "/w0nmol4g7n6MFfhfphV7GzHHYjB.jpg",
+    "backdrop_path": "/wYI3r4DGKhwjPoDpfPfGdLMrPLt.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Brian Cox",
+      "character": "Mr. Kreeg",
+      "profile_path": "/scSjbFCTRngXlkJRoKptM5kQGw7.jpg"
+    },
+    {
+      "name": "Quinn Lord",
+      "character": "Sam / Peeping Tommy",
+      "profile_path": "/aWeDDDxf88l6y1QhOffOcR3IYpf.jpg"
+    },
+    {
+      "name": "Anna Paquin",
+      "character": "Laurie",
+      "profile_path": "/5FjBCsn3kujldP8LizoCrc3hsHp.jpg"
+    },
+    {
+      "name": "Dylan Baker",
+      "character": "Steven",
+      "profile_path": "/4mw6xj8Aj3ixjjeUj9pZdZPTbvz.jpg"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10357,
+    "title": "Volcano",
+    "overview": "An earthquake shatters a peaceful Los Angeles morning and opens a fissure deep into the earth, causing lava to start bubbling up. As a volcano begins forming in the La Brea Tar Pits, the director of the city\u0027s emergency management service, working with a geologist, must then use every resource in the city to try and stop the volcano from consuming LA.",
+    "tagline": "It\u0027s hotter than hell.",
+    "runtime": 104,
+    "release_date": "1997-04-25",
+    "vote_average": 5.991,
+    "poster_path": "/5xIjktjXuro7anZ6AR58t5ZYWjQ.jpg",
+    "backdrop_path": "/lYpScP0hkba0X3HY1VrKZ7LOMxS.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tommy Lee Jones",
+      "character": "Mike Roark",
+      "profile_path": "/mCiZNRAzbnPojJEZwVZWLw9kzxR.jpg"
+    },
+    {
+      "name": "Anne Heche",
+      "character": "Dr. Amy Barnes",
+      "profile_path": "/65LVuA01bmKCmr8yqY2Ae3IgeC4.jpg"
+    },
+    {
+      "name": "Gaby Hoffmann",
+      "character": "Kelly Roark",
+      "profile_path": "/bMdxuHqCJkf4dAFKleYRs2GXDN9.jpg"
+    },
+    {
+      "name": "Don Cheadle",
+      "character": "Emmit Reese",
+      "profile_path": "/umhTmcVF26qZKEpSfG1ZNpcbs9D.jpg"
+    }
+  ]
+}

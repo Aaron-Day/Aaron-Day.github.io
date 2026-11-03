@@ -1,0 +1,208 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Client",
+        "overview": "Will revels in Ashley\u0027s music industry success, but both Will and Ashley are about to have a rude surprise.",
+        "air_date": "1994-09-19",
+        "runtime": 23,
+        "still_path": "/9Kta3WTL2ggR52hFTZulRCUphES.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "What\u0027s Will Got to Do With It?",
+        "overview": "Will helps Ashley make a big impression on a recording executive, but Philip is adamantly against her pursuing a singing career.",
+        "air_date": "1994-09-19",
+        "runtime": 23,
+        "still_path": "/eqdPGuc1fLjr2fO12MPdhsBDqEb.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Reality Bites",
+        "overview": "Will loses points as a role model for Nicky while visiting an ever-positive kiddie hero who brings joy to youngsters - but not to Will.",
+        "air_date": "1994-09-26",
+        "runtime": 23,
+        "still_path": "/fqUqzDQXwVW5oW2Xmo89JSJyYnt.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Grumpy Young Men",
+        "overview": "War breaks out when the girl Will likes plants a big one on Carlton.",
+        "air_date": "1994-10-03",
+        "runtime": 23,
+        "still_path": "/abbt9Ojnu2lvy0H6Yngt83ZLckZ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Fresh Prince: The Movie",
+        "overview": "Will tells a tall tale about seeing a mob killing, then being placed in a witness-protection program in the backwoods of Alabama.",
+        "air_date": "1994-10-10",
+        "runtime": 23,
+        "still_path": "/wH7wMl7BlTgdfZAKVqCPOohzICd.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Will\u0027s Misery",
+        "overview": "The Banks hate the ugly golf shirts Hilary gives them - until they see Kareem Abdul-Jabbar wearing the same design.",
+        "air_date": "1994-10-17",
+        "runtime": 23,
+        "still_path": "/mx0EViLfNMwMWgPDyP0EUOy3rMt.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Father Knows Best",
+        "overview": "To help Ashley out of a jam at school, Will poses as her father. Oh yeah, this is gonna work.",
+        "air_date": "1994-10-24",
+        "runtime": 23,
+        "still_path": "/g1Yeyzcz7umG9ofkQsH67nhIuHt.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Soooooooul Train",
+        "overview": "At a Soul Train reunion, middle-aged Philip feels like his train has left the station.",
+        "air_date": "1994-11-07",
+        "runtime": 23,
+        "still_path": "/89HIcYvUc5s6yPlyivgq7NLmGE9.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Love Hurts",
+        "overview": "Lisa humiliates Will by knocking out a guy with her self-defense moves.",
+        "air_date": "1994-11-14",
+        "runtime": 23,
+        "still_path": "/AeDkKBAVCSUxtVtrjaJ580hJRNU.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Will\u0027s Up a Dirt Road",
+        "overview": "Will tries his hand at journalism to prove something to Lisa, but his efforts get him sued for libel - by Jay Leno.",
+        "air_date": "1994-11-21",
+        "runtime": 23,
+        "still_path": "/tvnruLGYKzhVHHxWzpgfJ5FNS2w.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Will Steps Out",
+        "overview": "To understand Philip\u0027s battle with the scale, Will dons a fat suit and gets a big fat lesson in empathy.",
+        "air_date": "1994-11-28",
+        "runtime": 23,
+        "still_path": "/f5CmbE6unIzGhE4flcForkK2C1b.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Same Game, Next Season",
+        "overview": "Will works so hard to impress Lisa\u0027s dad that he spends all his free time with his new best buddy.",
+        "air_date": "1994-12-12",
+        "runtime": 23,
+        "still_path": "/kV9TRukw0Y64Zx96eZhahwN77jn.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Three\u0027s a Crowd",
+        "overview": "Will gets roped into a weekend ski trip with Carlton that quickly turns to disaster when their party arrives; meanwhile, back home, Hilary prepares to leave the nest.",
+        "air_date": "1995-01-09",
+        "runtime": 23,
+        "still_path": "/yQ38qex2gntivN1Yqv3Z1pRgqba.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "It\u0027s a Wonderful Lie",
+        "overview": "The party\u0027s over. Will and Lisa tell each other lies so they can sneak off to the (uh-oh) same party.",
+        "air_date": "1995-01-23",
+        "runtime": 23,
+        "still_path": "/pWAfYwnAeD45yGzjOUUtobE5dVP.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Bullets Over Bel-Air",
+        "overview": "A planned camping trip is cut short for Carlton and Will when a robber approaches them at an automated bank-teller machine - and fires a gun.",
+        "air_date": "1995-02-06",
+        "runtime": 23,
+        "still_path": "/hCLuVBT5mwtQn7PPUTsj6ZIkEL2.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "A Decent Proposal",
+        "overview": "Mr. and Mrs. Smith? Will pops the question from his hospital room. And Lisa\u0027s answer is...",
+        "air_date": "1995-02-13",
+        "runtime": 23,
+        "still_path": "/b0WWzvzsjdqC5c0A30rvTZTr6Wr.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Will is from Mars...",
+        "overview": "Thanks to relationship counseling, Will and Lisa hop to move on up to a new understanding in preparation for marriage. Meanwhile Hillary wants Geoffrey to work at her new home.",
+        "air_date": "1995-02-20",
+        "runtime": 23,
+        "still_path": "/wzxHy7IfVb1At176xVIlFkcSHHq.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "The Wedding Show (Psyche!)",
+        "overview": "Shafted! The engaged couple opts for flashy Vegas vows, complete with costumes. The tasteful theme: Shaft.",
+        "air_date": "1995-02-27",
+        "runtime": 23,
+        "still_path": "/baKpIF2Dbb3rU8cygV4RyIxGATm.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Slum Like It... Not!",
+        "overview": "Will vows Philip with his sound investment advice to buy Jazz\u0027s apartment building - but the tenants scream slumlord after Philip acts on Will\u0027s moneymaking tip.",
+        "air_date": "1995-03-13",
+        "runtime": 23,
+        "still_path": "/nRb4chpAO3yuS8xigh9P0clVkux.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "As the Will Turns",
+        "overview": "Will inadvertently finds himself in the right place at the right time and lands a part in a daytime soap opera.",
+        "air_date": "1995-04-10",
+        "runtime": 23,
+        "still_path": "/5R9gbyYVG6pNYYuz5LoUzgsXqOJ.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Save the Last Trance for Me",
+        "overview": "Put into a trance by a stage hypnotist, Will behaves like a 4-year-old just as the family gears up for an interview with the admissions head of a private school.",
+        "air_date": "1995-04-17",
+        "runtime": 23,
+        "still_path": "/b3YdN7an7SjhE6WtVf7gDtcsSvt.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "To Thine Own Self Be Blue... and Gold",
+        "overview": "A dream job for Will with a businessman friend of Philip\u0027s turns into a nightmare when the man offers him a bonus to help bribe a councilman.",
+        "air_date": "1995-04-24",
+        "runtime": 23,
+        "still_path": "/97m2w0fqMJzSZkrqOMLUR5P3U9c.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Cold Feet, Hot Body",
+        "overview": "Dinner date. The Banks host a gorgeous girl from Philly who tries to lure Will away from Lisa.",
+        "air_date": "1995-05-01",
+        "runtime": 23,
+        "still_path": "/1IHARIa9jTEt4CgF0kHCNT5Aqsw.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Love in an Elevator",
+        "overview": "Stuck and out of luck, Will spends his bachelor party trapped in an elevator with a feuding Carlton and Jazz.",
+        "air_date": "1995-05-08",
+        "runtime": 23,
+        "still_path": "/1sjyw0yMcfGJYwhAs1dG3lCJ7hz.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "For Whom the Wedding Bells Toll",
+        "overview": "Husband-to-be Will has the bride, the ring, the date...and second thoughts about the whole idea.",
+        "air_date": "1995-05-15",
+        "runtime": 23,
+        "still_path": "/lxh3bBZwUMotZFQralWUvF2wVpW.jpg"
+      }
+    ]
+  }
+}

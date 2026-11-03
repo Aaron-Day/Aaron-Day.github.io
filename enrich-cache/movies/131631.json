@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 131631,
+    "title": "The Hunger Games: Mockingjay - Part 1",
+    "overview": "After surviving the Quarter Quell, Katniss finds herself in the hidden stronghold of District 13, where the rebellion against the Capitol is gaining momentum. Struggling with the weight of becoming the symbol of resistance, she must navigate fragile alliances while trying to protect those she loves. As propaganda battles rage and Panem moves closer to full-scale war, Katniss is forced to confront the true cost of revolution.",
+    "tagline": "Fire burns brighter in the darkness.",
+    "runtime": 123,
+    "release_date": "2014-11-19",
+    "vote_average": 6.815,
+    "poster_path": "/meSGXQ8MXqiC8bXxkKu7lPqnu0L.jpg",
+    "backdrop_path": "/lV1P1Q5gLDXVG1ZYCxZHStkcQC3.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131635,
+      "name": "The Hunger Games Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jennifer Lawrence",
+      "character": "Katniss Everdeen",
+      "profile_path": "/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+    },
+    {
+      "name": "Josh Hutcherson",
+      "character": "Peeta Mellark",
+      "profile_path": "/GqIyK5mCJXFUXW4FwLM3Zj7UtK.jpg"
+    },
+    {
+      "name": "Liam Hemsworth",
+      "character": "Gale Hawthorne",
+      "profile_path": "/7UIm9RoBnlqS1uLlbElAY8urdWD.jpg"
+    },
+    {
+      "name": "Woody Harrelson",
+      "character": "Haymitch Abernathy",
+      "profile_path": "/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg"
+    }
+  ]
+}

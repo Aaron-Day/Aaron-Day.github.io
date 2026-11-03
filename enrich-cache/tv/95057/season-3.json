@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Closer",
+        "overview": "Lois\u0027 undercover assignment reveals a deadly foe that promises to change the Kent family forever. Meanwhile, the Kent boys find themselves being pulled in opposite directions.",
+        "air_date": "2023-03-14",
+        "runtime": 43,
+        "still_path": "/fIg2xkbdx9YS0WaKDPh2VmFZVTR.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Uncontrollable Force",
+        "overview": "Clark and Chrissy both notice a small crack in Lois\u0027 game face. Sarah and Jordan have an awkward encounter, and Lana receives a panicked phone call.",
+        "air_date": "2023-03-21",
+        "runtime": 42,
+        "still_path": "/mdReaxUd6SGpHkCUUl5IsC3fsrh.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "In Cold Blood",
+        "overview": "Lois and Chrissy pursue a new lead in the Mannheim investigation against Clark\u0027s wishes. Meanwhile, Jonathan, Jordan, and Nat face an unexpected obstacle.",
+        "air_date": "2023-03-28",
+        "runtime": 43,
+        "still_path": "/6rL9qW66zLg1fXdRGwhzZ48lDSQ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Too Close to Home",
+        "overview": "Lois interrupts an intense conversation between Clark and John Henry. Meanwhile, Jonathan has a heated discussion with Candice\u0027s dad.",
+        "air_date": "2023-04-04",
+        "runtime": 43,
+        "still_path": "/gcfXB30CYMGu8Nd5JQrpYkNsK9e.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Head On",
+        "overview": "Clark and General Lane are both having a hard time giving Lois room to make her own decisions. Meanwhile, Lana and Sarah have a run-in with an old friend at the diner.",
+        "air_date": "2023-04-11",
+        "runtime": 43,
+        "still_path": "/gO1VrHarrBZCCe03lkOCKaCDymE.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Of Sound Mind",
+        "overview": "Clark finds himself in uncharted territory, and Lois bonds with a new friend. Meanwhile, Superman pays Bruno Mannheim a surprise visit.",
+        "air_date": "2023-04-25",
+        "runtime": 43,
+        "still_path": "/qr9TDAEia5dIrzrnRFuG5qhwGoV.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Forever and Always",
+        "overview": "Lois and Clark dig deeper on Bruno Mannheim, starting with his connections to Hob\u0027s Bay Medical Center, while Jonathan and Jordan panic at home over Lois\u0027 dire diagnosis.",
+        "air_date": "2023-05-02",
+        "runtime": 43,
+        "still_path": "/cXw6NrdAaICCW2migrFJZdClNPK.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Guess Who\u0027s Coming to Dinner",
+        "overview": "After learning about Bruno and Peia, Clark works to reignite Lois\u0027 interest in taking Bruno down; elsewhere, Natalie meets Matteo\u0027s parents, with disastrous consequences.",
+        "air_date": "2023-05-09",
+        "runtime": 43,
+        "still_path": "/5KRpGhduUdYSHLj0QjetGwk8LZk.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Dress",
+        "overview": "Superman and John Henry clash over how to handle Bruno Mannheim, while Lois worries over upcoming treatments and confides in Lana about her early courtship with Clark.",
+        "air_date": "2023-05-23",
+        "runtime": 42,
+        "still_path": "/f7E4PDfTP76LJd5vS0XG16qP4gZ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Collision Course",
+        "overview": "Lois attempts to interview Peia in the hopes of unearthing the truth about an old case, while Clark struggles to spend quality time with the boys.",
+        "air_date": "2023-05-30",
+        "runtime": 42,
+        "still_path": "/aRU8KSSFzZvyxR9R8CDIfn5wt1T.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Complications",
+        "overview": "Clark helps Lois prepare for a procedure but must leave the boys with her to help John Henry and General Lane track down the Mannheims.",
+        "air_date": "2023-06-06",
+        "runtime": 43,
+        "still_path": "/67JVyR0vCnAXFJ3SArLwJN50ss0.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Injustice",
+        "overview": "Finally, after seventeen years behind bars, Lex Luthor is set to be released from prison. Lois and Clark clash with Jordan over his carelessness around using his powers in public, while Jonathan struggles with Kyle\u0027s change in behavior at the firehouse.",
+        "air_date": "2023-06-20",
+        "runtime": 43,
+        "still_path": "/tKdoKMTq3tzJEDVQKfCFCiCs902.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "What Kills You Only Makes You Stronger",
+        "overview": "All of Smallville comes together to view a meteor shower, and Lex Luthor makes his move to take down Superman and Lois.",
+        "air_date": "2023-06-27",
+        "runtime": 43,
+        "still_path": "/nv1KShmLNtOD4iIIVuLxSWrtlQN.jpg"
+      }
+    ]
+  }
+}

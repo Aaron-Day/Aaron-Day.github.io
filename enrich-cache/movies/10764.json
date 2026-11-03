@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10764,
+    "title": "Quantum of Solace",
+    "overview": "Betrayed by Vesper, the woman he loved, 007 fights the urge to make his latest mission personal. Pursuing his determination to uncover the truth, Bond and M interrogate Mr. White, who reveals that the organization that blackmailed Vesper is far more complex and dangerous than anyone had imagined.",
+    "tagline": "Have regrets. Get revenge.",
+    "runtime": 106,
+    "release_date": "2008-10-29",
+    "vote_average": 6.347,
+    "poster_path": "/e3DXXLJHGqMx9yYpXsql1XNljmM.jpg",
+    "backdrop_path": "/uGs5Z7dMguf7kxWubGFcp9EhKcy.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Craig",
+      "character": "James Bond",
+      "profile_path": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
+    },
+    {
+      "name": "Olga Kurylenko",
+      "character": "Camille",
+      "profile_path": "/ei6eYUhQFw2AaV6U5fyPptBaPF0.jpg"
+    },
+    {
+      "name": "Mathieu Amalric",
+      "character": "Dominic Greene",
+      "profile_path": "/fMhfoTbjlXQy2Iojp7oYx49hLQl.jpg"
+    },
+    {
+      "name": "Judi Dench",
+      "character": "M",
+      "profile_path": "/cpna5VGvAxuKuC31xJPBKy9zbnv.jpg"
+    }
+  ]
+}

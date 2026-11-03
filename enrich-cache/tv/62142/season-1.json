@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Camille",
+        "overview": "Residents of the small mountain town of Caldwell, Washington grapple with the mysterious return of their dead loved ones. With no memory of their deaths, and no awareness of the time that has passed in their absence, the returned struggle to reintegrate into a world that has changed without them.",
+        "air_date": "2015-03-09",
+        "runtime": 46,
+        "still_path": "/nt212kJvFvUCuDeOO4E5UqRsG37.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Simon",
+        "overview": "Simon pursues Rowan, complicating her feelings for Tommy. Jack and Claire decide to hide Camille\u0027s return while Tommy investigates a brutal attack in town that has similarities to attacks that occurred years before.",
+        "air_date": "2015-03-16",
+        "runtime": 43,
+        "still_path": "/nKCrw5qLgmXKbXxZ28eVtIAzL0l.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Julie",
+        "overview": "Jack and Claire want to move so Camille doesn\u0027t have to hide, but Camille pretends to be a cousin so she can get out of the house. Lena discovers a mysterious scar on her back, and Victor has a run-in with a nosy neighbor.",
+        "air_date": "2015-03-23",
+        "runtime": 43,
+        "still_path": "/dDLkBeJhfoNEqoqzDKbfZPYFuW7.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Victor",
+        "overview": "Lena is rushed to the hospital because of her scar, accusing Camille of hurting her. Rowan grows closer to Simon and discovers Tommy has an obsessive secret. Julie learns Victor may be involved in a horrific death.",
+        "air_date": "2015-03-30",
+        "runtime": 46,
+        "still_path": "/gD4fSzszy71Nv8KeoZYd1mLhKJw.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Tony and Adam",
+        "overview": "Victor\u0027s disappearance from the community center brings Julie and Nikki together to look for him. Tony makes a confession that has a profound impact on Adam and Helen suspects the town may be evil.",
+        "air_date": "2015-04-06",
+        "runtime": 43,
+        "still_path": "/AeuxI0ddzTY6PRYq3V73AkEHFjx.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Lucy",
+        "overview": "Lucy miraculously recovers from the stabbing but realizes she is irrevocably changed. Claire and Jack scramble to find Lena as she receives help from Adam. Peter makes a frightening confession to Victor.",
+        "air_date": "2015-04-13",
+        "runtime": 45,
+        "still_path": "/1iglKOvzpPETcrLwkSAtYhh54Ba.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Rowan",
+        "overview": "Camille opens up to the parents of the support group and tries to help them. Victor comes between Julie and Nikki. Rowan lashes out at Simon and makes a surprising choice.",
+        "air_date": "2015-04-20",
+        "runtime": 42,
+        "still_path": "/hWGjo5D3hJTKJp68moREujbfExB.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Claire",
+        "overview": "Claire\u0027s secret is revealed and Lena returns home. Police arrest the suspected killer who makes a full confession. Victor goes to extreme measures to protect Julie. Camille discovers her attempt to help has led to a horrifying result.",
+        "air_date": "2015-04-27",
+        "runtime": 43,
+        "still_path": "/cwJp67ZkFx1aJjABH43f9we5NGI.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Helen",
+        "overview": "Someone unexpectedly shows up and puts Chloe in danger. Peter makes a startling announcement and Helen sets her deadly plan for the town in motion.",
+        "air_date": "2015-05-04",
+        "runtime": 43,
+        "still_path": "/cdCMs2GzhTT9xYMqAWM86ZcYYnD.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Peter",
+        "overview": "Rowan and Tommy\u0027s celebration is overshadowed by a mysterious premonition. Julie makes Victor face his tragic past. Camille realizes she will never be normal and Helen\u0027s plan meets a mysterious end.",
+        "air_date": "2015-05-11",
+        "runtime": 46,
+        "still_path": "/hlvrlVBaYRbzFMQLtF6DkcNIwry.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Family",
+        "overview": "After being the hero of Elk Grove by defeating evil and saving humanity, Ash settles in and opens a hardware store; his peace is short lived when evil returns with a target close to his heart.",
+        "air_date": "2018-02-25",
+        "runtime": 28,
+        "still_path": "/oNV1srvQs4MO9CSwJkYcVgVDhNo.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Booth Three",
+        "overview": "Ruby gives birth to a form of evil and disguises herself to bond with Brandy. Kelly returns with a friend who is leading the search for The One to defeat The Dark One, while Ash realizes evil is out to get his daughter.",
+        "air_date": "2018-03-04",
+        "runtime": 29,
+        "still_path": "/zZtRskxwOeNF50C84o0eQHb6o16.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Apparently Dead",
+        "overview": "Ruby reveals herself to Ash as she tries to strengthen her bond with Brandy to defeat The Prophesized One; Pablo and Dalton continue to spar, unsure of one another.",
+        "air_date": "2018-03-11",
+        "runtime": 29,
+        "still_path": "/wrGvPDO1VHWhVyk3o72awYYE0PN.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Unfinished Business",
+        "overview": "Brock warns Ash of an otherworldly hurricane brewing; Ash and Pablo make a discovery at the hardware store; Kelly and Brandy face a familiar foe.",
+        "air_date": "2018-03-18",
+        "runtime": 28,
+        "still_path": "/j0o40WDJHGU8oHHHApooqMAHezA.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Baby Proof",
+        "overview": "Ruby\u0027s house of horrors reveals her master plan as well as a little bundle of joy that terrorizes Ash; Pablo\u0027s Brujo ties bring him back to the path he needs to take.",
+        "air_date": "2018-03-25",
+        "runtime": 28,
+        "still_path": "/7x9Ahrf2jbSzj0QYglzgw65VzBZ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Tales from the Rift",
+        "overview": "Ash\u0027s bond with his daughter strengthens as more Knights of Sumeria join Pablo and him to defeat evil; Kelly decides to go after Ruby while Ash, team, and the knights enter the rift and face a battle of their own.",
+        "air_date": "2018-04-01",
+        "runtime": 28,
+        "still_path": "/asjkTLAxZCop9mMycTC6CItTXKF.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Twist and Shout",
+        "overview": "Ruby\u0027s latest creation is her most diabolical plan yet to turn Brandy against Ash; Pablo suspects something isn\u0027t right with Kelly when she meets him and Ash at the school; chaos ensues when evil shows up at the dance.",
+        "air_date": "2018-04-08",
+        "runtime": 27,
+        "still_path": "/tYgWWBMLF8pHOkAMi5cLD8DfURG.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Rifting Apart",
+        "overview": "Ash and Pablo realize the rift in the cellar is the key to saving humanity and devise a plan to save the ones they love.",
+        "air_date": "2018-04-15",
+        "runtime": 28,
+        "still_path": "/pRkPDhK7FZ6ebYsPzaO71KDAyfi.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Judgement Day",
+        "overview": "Pablo\u0027s role as Brujo Especiale has him straddle the worlds of good and evil to keep the rift open for Ash to save Brandy and Kelly, but they run into a snag; Ruby and Kaya faceoff with The Dark One.",
+        "air_date": "2018-04-22",
+        "runtime": 29,
+        "still_path": "/620EJmWoYYU3FsKLykkwJvzHK2s.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Mettle of Man",
+        "overview": "Elk Grove undergoes a major battle that takes place on the streets, Ash rides high in a military tank, speeding across shaky, post-apocalyptic Elk Grove. Ash fights the biggest battle of them all - a sixty foot tall Kandarian demon.",
+        "air_date": "2018-04-29",
+        "runtime": 30,
+        "still_path": "/mkyZYgWiMWtoWCPrdeSuhkqC19G.jpg"
+      }
+    ]
+  }
+}

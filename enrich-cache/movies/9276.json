@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9276,
+    "title": "The Faculty",
+    "overview": "When creepy things start happening at Herrington High, the students begin to suspect that their faculty is being controlled by body-snatching aliens.",
+    "tagline": "These six students are about to discover their teachers really are from another planet.",
+    "runtime": 104,
+    "release_date": "1998-12-25",
+    "vote_average": 6.573,
+    "poster_path": "/5XetJwmAiDC0EtH23NIXaqFn3Wl.jpg",
+    "backdrop_path": "/oJRlYxfG10h4sxk2A7fpeOZnaFi.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Josh Hartnett",
+      "character": "Zeke",
+      "profile_path": "/5eMo8D7h1XrSu6ZN4UXhPcS6YNG.jpg"
+    },
+    {
+      "name": "Elijah Wood",
+      "character": "Casey",
+      "profile_path": "/7UKRbJBNG7mxBl2QQc5XsAh6F8B.jpg"
+    },
+    {
+      "name": "Jordana Brewster",
+      "character": "Delilah",
+      "profile_path": "/ceL0zxeVbWfCfhoIDZIE1NYqBWb.jpg"
+    },
+    {
+      "name": "Clea DuVall",
+      "character": "Stokely",
+      "profile_path": "/yueygn1Lmmni7EaMQD9LslexDlu.jpg"
+    }
+  ]
+}

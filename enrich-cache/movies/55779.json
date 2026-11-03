@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 55779,
+    "title": "Final Destination 5",
+    "overview": "Death is just as omnipresent as ever, and is unleashed after one man\u2019s premonition saves a group of coworkers from a terrifying suspension bridge collapse. But this group of unsuspecting souls was never supposed to survive, and, in a terrifying race against time, the ill-fated group frantically tries to discover a way to escape Death\u2019s sinister agenda.",
+    "tagline": "Death has never been closer.",
+    "runtime": 91,
+    "release_date": "2011-08-12",
+    "vote_average": 6.163,
+    "poster_path": "/Akx1Po4ZLetOWfYJhQf75tbhTtK.jpg",
+    "backdrop_path": "/5cG2XcylxUIclQsGPBKTtfoqcBV.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8864,
+      "name": "Final Destination Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Nicholas D\u0027Agosto",
+      "character": "Sam",
+      "profile_path": "/pKLIlotHTzciDyaDxAMUACjxNLS.jpg"
+    },
+    {
+      "name": "Emma Bell",
+      "character": "Molly",
+      "profile_path": "/nWsmC9JQcg27WcD7X9MxCAMWEox.jpg"
+    },
+    {
+      "name": "Miles Fisher",
+      "character": "Peter Friedkin",
+      "profile_path": "/shf8LrQ1hmXut0PoYjNHjFuOwqk.jpg"
+    },
+    {
+      "name": "Ellen Wroe",
+      "character": "Candice Hooper",
+      "profile_path": "/qF0w43ICIOceZgXjFaFU2XvV1JJ.jpg"
+    }
+  ]
+}

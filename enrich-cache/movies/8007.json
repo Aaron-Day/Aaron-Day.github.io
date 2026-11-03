@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8007,
+    "title": "Behind Enemy Lines",
+    "overview": "While flying a routine reconnaissance mission over Bosnia, fighter pilot Lt. Chris Burnett photographs something he wasn\u0027t supposed to see and gets shot down behind enemy lines, where he must outrun an army led by a ruthless Serbian general. With time running out and a deadly tracker on his trail, Burnett\u0027s commanding officer, Admiral Reigart, decides to risk his career and launch a renegade rescue mission to save his life.",
+    "tagline": "His only weapon is his will to survive.",
+    "runtime": 106,
+    "release_date": "2001-11-30",
+    "vote_average": 6.466,
+    "poster_path": "/fZReMWU3zszvaktDUqOoWCzHssZ.jpg",
+    "backdrop_path": "/lEdy2A62qCwJPffMLVyByRxUpfd.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 98513,
+      "name": "Behind Enemy Lines Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Owen Wilson",
+      "character": "Lt. Chris \u0027Longhorn\u0027 Burnett",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    },
+    {
+      "name": "Gene Hackman",
+      "character": "Admiral Leslie Reigart, Commander Adriatic Battle Group",
+      "profile_path": "/zDlv9vXjnRsvwNI0bARG0uOt5CJ.jpg"
+    },
+    {
+      "name": "Gabriel Macht",
+      "character": "Lt. Jeremy \u0027Smoke\u0027 Stackhouse",
+      "profile_path": "/lacMH4Ju1x9AsKXm7mDkklSsPyV.jpg"
+    },
+    {
+      "name": "Olek Krupa",
+      "character": "General Miroslav Lokar",
+      "profile_path": "/fKI4Upr3oEvJlv1mNuIRhHDDXBf.jpg"
+    }
+  ]
+}

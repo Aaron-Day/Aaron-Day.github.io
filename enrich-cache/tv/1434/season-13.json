@@ -1,0 +1,152 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 13,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Simpsons Guy",
+        "overview": "In a special hour-long crossover with The Simpsons, the Griffins meet the Simpson family when they end up in Springfield after their car is stolen. Stewie takes lessons in pranks and skateboarding from Bart, while Lisa discovers - to her annoyance - that Meg is as good at playing the saxophone as she is. Peter bonds with Homer as they locate the missing car, but then they fight after Peter loses his job when Pawtucket Patriot is revealed to be a copy of Duff Beer.",
+        "air_date": "2014-09-28",
+        "runtime": 46,
+        "still_path": "/bpkZvvNHcVYIbZsxbldgjGP6Fm6.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Book of Joe",
+        "overview": "Peter helps Joe fulfill his dream of getting a book published, only to take over as the writer. In the meantime, Brian develops an extreme thirst for exercise.",
+        "air_date": "2014-10-05",
+        "runtime": 24,
+        "still_path": "/orgpH3f0wX4vLsdkG1UwDH0mPtQ.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Baking Bad",
+        "overview": "Peter and Lois decide to open a cookie store, but Peter ruins things when he decides to bring clients in his own way.",
+        "air_date": "2014-10-19",
+        "runtime": 24,
+        "still_path": "/s04VL57qtN41cRvJLfeBBAjL2Nd.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Brian the Closer",
+        "overview": "Brian\u0027s cosmetic surgery leads him down a new career path as a real estate agent, which gets him into trouble with Quagmire.",
+        "air_date": "2014-11-09",
+        "runtime": 24,
+        "still_path": "/waTtR1eTbOZgtID804tNBZrT7rd.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Turkey Guys",
+        "overview": "On the night before Thanksgiving, Brian and Peter drunkenly devour the holiday bird, and then must go out to find a replacement. In Peter absence, Chris attempts to step up and become the man of the house.",
+        "air_date": "2014-11-16",
+        "runtime": 24,
+        "still_path": "/8ZOiaXeYQIi61xu7rv48LoZr5QL.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The 2,000-Year-Old Virgin",
+        "overview": "After running into Jesus at the Quahog Mall, Peter is stunned to discover that the Son of God is still a virgin. So, he enlists Quagmire and Cleveland to help him throw Jesus the best birthday ever by finding a way to help him become a man.",
+        "air_date": "2014-12-07",
+        "runtime": 24,
+        "still_path": "/68xsP0h41DkkHhhFVSODQMShrAO.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Stewie, Chris \u0026 Brian\u0027s Excellent Adventure",
+        "overview": "To help Chris ace his ninth grade history class, Stewie and Brian employ the time travel machine for educational purposes. Not surprisingly, all three get stuck in the past.",
+        "air_date": "2015-01-04",
+        "runtime": 24,
+        "still_path": "/shI1TSpgqakxgatAIaAaQDU1fP0.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Our Idiot Brian",
+        "overview": "When Brian takes the SATs for Meg but doesn\u0027t do very well, the family starts to doubt his intelligence; Peter tries to show Brian the upside of being stupid.",
+        "air_date": "2015-01-11",
+        "runtime": 24,
+        "still_path": "/iTP88d5htFclX96DKEOOJjnSUtD.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "This Little Piggy",
+        "overview": "Meg is thrilled to be recruited as a model, but it turns out to be for a very specific type of modeling: the foot-fetish industry. Meanwhile, Brian accompanies Stewie on an open-road adventure when Stewie decides he wants to experience life outside of preschool.",
+        "air_date": "2015-01-25",
+        "runtime": 24,
+        "still_path": "/90zSGoguUW5UQW4c5Az9SVQACrI.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Quagmire\u0027s Mom",
+        "overview": "After discovering his checks are actually a large size post-it pad, Peter demands he have access to the checking account. While at the bank, Peter \u0026 Lois discover that his first name is actually Justin, so Peter embraces his new partying \u0022bro\u0022 lifestyle. Meanwhile, Joe arrests Glenn after he sleeps with an underage girl, which leads to an unexpected reunion.",
+        "air_date": "2015-02-08",
+        "runtime": 24,
+        "still_path": "/aGQFikpVdlGkInwBnkB3gDgKdPI.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Encyclopedia Griffin",
+        "overview": "Peter, Quagmire, Joe and Cleveland form a neighborhood detective agency, and are stunned to discover that Chris is a thief. Meanwhile, Lois is worried about Chris\u0027 delusional relationship with his new girlfriend, but also sees it as an opportunity for Peter to copy Chris\u0027 romantic gestures.",
+        "air_date": "2015-02-15",
+        "runtime": 23,
+        "still_path": "/kXtMScpq43PvJwbQxgYei5DXtC.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Stewie Is Enceinte",
+        "overview": "Brian decides he doesn\u0027t want to hang out with Stewie anymore, so Stewie tries to save their relationship by having a baby ... or seven ... by using Brian\u0027s DNA to impregnate himself. Meanwhile, Peter, Joe, Quagmire and Cleveland attempt to make a viral video.",
+        "air_date": "2015-03-08",
+        "runtime": 24,
+        "still_path": "/hq2z4EtdjVE0sQj9u1cbAuHz9LK.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Dr. C and the Women",
+        "overview": "Meg gets a new job at the airport, where she\u0027s instantly popular for being the hottest employee there. Meanwhile, Cleveland becomes a therapist and starts giving Peter and Lois relationship advice, but Peter quickly becomes frustrated and threatens to tell Donna a big secret about what went down at Cleveland\u0027s bachelor party.",
+        "air_date": "2015-03-15",
+        "runtime": 24,
+        "still_path": "/aLKJAZwZcByRqEOi39h8wfOhG1o.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "#JOLO",
+        "overview": "When Peter accidentally discovers a missing child, he is hailed as town hero. Meanwhile, Joe quits his job and heads to Niagara Falls to live life to the fullest.",
+        "air_date": "2015-04-12",
+        "runtime": 23,
+        "still_path": "/vzEgKkZscr5YTDHaPnmdsoQcw3M.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Once Bitten",
+        "overview": "After attending obedience school, Brian becomes much more submissive, and Peter realizes he misses his old, feistier pal. Meanwhile, Chris makes a new friend at school, but feels betrayed when he discovers it was all a ploy to get closer to Meg.",
+        "air_date": "2015-04-19",
+        "runtime": 24,
+        "still_path": "/dMZeUEoPeQ3xTE0XHZVxWIBUi7d.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Roasted Guy",
+        "overview": "Peter\u0027s friends roast him. With his feelings hurt, he seeks refuge by befriending a group of gossipy women.",
+        "air_date": "2015-04-26",
+        "runtime": 24,
+        "still_path": "/hdBMNRTBmUU99ln5uPm4e3ksvnX.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Fighting Irish",
+        "overview": "Peter claims he would beat Liam Neeson (guest voice Liam Neeson) in a fight, but when he is put to the test, he learns that winning is tougher than it seems. Meanwhile, Stewie becomes jealous when Lois decides to be a class mom and starts paying more attention to the other kids over him.",
+        "air_date": "2015-05-03",
+        "runtime": 24,
+        "still_path": "/pRdJJeBGiRn5ja5SKiOJw3fIEGt.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Take My Wife",
+        "overview": "Lois books a fun couple\u0027s vacation in the Bahamas. But, much to Peter\u0027s surprise, it turns out to be a marriage counseling program instead. Meanwhile, Carter watches the kids at home and becomes frustrated that they\u0027re too into their electronics to play games the old-fashioned way. So he tries to fix it himself.",
+        "air_date": "2015-05-17",
+        "runtime": 24,
+        "still_path": "/nZtFksvrzXjv9WF9Du8VqCcVMmg.jpg"
+      }
+    ]
+  }
+}

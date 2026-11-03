@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13761,
+    "title": "Pocahontas II: Journey to a New World",
+    "overview": "When news of John Smith\u0027s death reaches America, Pocahontas is devastated. She sets off to London with John Rolfe, to meet with the King of England on a diplomatic mission: to create peace and respect between the two great lands. However, Governor Ratcliffe is still around; he wants to return to Jamestown and take over. He will stop at nothing to discredit the young princess.",
+    "tagline": "A new journey begins!",
+    "runtime": 72,
+    "release_date": "1998-08-04",
+    "vote_average": 5.559,
+    "poster_path": "/sUvNHmUGJP3RkYpE65i7ZF0v0nE.jpg",
+    "backdrop_path": "/fzAnRGmaKJtm8sZuZ8a1nwSNTd3.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 136214,
+      "name": "Pocahontas Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Irene Bedard",
+      "character": "Pocahontas (voice)",
+      "profile_path": "/9q6ad1uihRROKM8FWv2Asb8sj5j.jpg"
+    },
+    {
+      "name": "Billy Zane",
+      "character": "John Rolfe (voice)",
+      "profile_path": "/wr4fuwLzQvW1G0MS7cmQ3ObFjvL.jpg"
+    },
+    {
+      "name": "Jim Cummings",
+      "character": "King James (voice)",
+      "profile_path": "/c0sQPRCM5Ri3F4gVyxPr4AcPmIq.jpg"
+    },
+    {
+      "name": "David Ogden Stiers",
+      "character": "Ratcliffe (voice)",
+      "profile_path": "/cgCTQt3RZVkhkusG77l4HwHEH6A.jpg"
+    }
+  ]
+}

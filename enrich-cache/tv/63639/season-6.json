@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Strange Dogs",
+        "overview": "The Rocinante crew make a startling discovery on an asteroid. Avasarala and Bobbie contend with the devastation on Earth. Drummer and her family must make a heartbreaking decision. On Ceres, Marco and Filip\u0027s struggles turn inward.",
+        "air_date": "2021-12-09",
+        "runtime": 46,
+        "still_path": "/sl1vTgXrZwh9ZfWhj2uBcNEvUYW.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Azure Dragon",
+        "overview": "With an unexpected passenger aboard the Rocinante, Holden and crew undertake a dangerous mission that could shift the balance of power in the war. Drummer decides to make an uneasy alliance. Filip wrestles with his guilt.",
+        "air_date": "2021-12-16",
+        "runtime": 44,
+        "still_path": "/vyT1EYwM1gs1pOgvSlKsQGFBjJQ.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Force Projection",
+        "overview": "Avasarala, with the Combined Fleet of Earth and Mars, takes the war to Marco. Filip and Marco\u0027s relationship is tested. The war becomes more perilous and personal for Holden and Naomi when the Rocinante is suddenly forced into a battle.",
+        "air_date": "2021-12-23",
+        "runtime": 43,
+        "still_path": "/t20lW6sKFgLLYdNE2AJweJcKjrO.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Redoubt",
+        "overview": "Holden finds himself at odds with his crew when a controversial decision is uncovered. On Ceres, Avasarala struggles to contain an escalating humanitarian crisis. Drummer\u0027s growing faction stage a daring raid with dire stakes. Filip, demoted to repair skiff duty, makes an unexpected discovery.",
+        "air_date": "2021-12-30",
+        "runtime": 47,
+        "still_path": "/2mUFeFhgaLkrFD4URs56LZeuu1J.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Why We Fight",
+        "overview": "Paths converge on Ceres when Drummer and her fleet arrive to aid the relief effort. Holden tries to convince Avasarala to release crucial information that might avert catastrophe, but she has her own request of him. As Amos and Bobbie get a little R\u0026R at the station, Naomi has a difficult and long-awaited reunion.",
+        "air_date": "2022-01-06",
+        "runtime": 48,
+        "still_path": "/8gPJZHVzieleYuBXyb7nNhnblAV.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Babylon\u0027s Ashes",
+        "overview": "In the thrilling season finale, Inners and Belters fight side by side with the crew of the Rocinante in a last, massive, desperate battle with Marco and his Free Navy, with the fate of the Solar System, the Ring Gates, and of all humanity hanging in the balance.",
+        "air_date": "2022-01-13",
+        "runtime": 63,
+        "still_path": "/tzXQdklwgEGOOHSE4ynN4imjz0K.jpg"
+      }
+    ]
+  }
+}

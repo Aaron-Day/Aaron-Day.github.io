@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1734,
+    "title": "The Mummy Returns",
+    "overview": "Rick and Evelyn O\u2019Connell, along with their 8-year-old son Alex, discover the key to the legendary Scorpion King\u2019s might: the fabled Bracelet of Anubis. Unfortunately, a newly resurrected Imhotep has designs on the bracelet as well, and isn\u2019t above kidnapping its new bearer, Alex, to gain control of Anubis\u2019s otherworldly army.",
+    "tagline": "Adventure is reborn.",
+    "runtime": 130,
+    "release_date": "2001-05-04",
+    "vote_average": 6.42,
+    "poster_path": "/kdJsW7hcy1lrj7tdMPycTAQPAiR.jpg",
+    "backdrop_path": "/7s7WkAFPBsMTprYMbqbgKoppQsR.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1733,
+      "name": "The Mummy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brendan Fraser",
+      "character": "Rick O\u0027Connell",
+      "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg"
+    },
+    {
+      "name": "Rachel Weisz",
+      "character": "Evelyn O\u0027Connell / Nefertiri",
+      "profile_path": "/9tfHL5tholha1YF6bSKt422ETPM.jpg"
+    },
+    {
+      "name": "John Hannah",
+      "character": "Jonathan Carnahan",
+      "profile_path": "/8GzJhaZrChZpv84SU4vAsvsR3cl.jpg"
+    },
+    {
+      "name": "Oded Fehr",
+      "character": "Ardeth Bay",
+      "profile_path": "/xt50Z02mO5pLTW0cNLZhIsiequJ.jpg"
+    }
+  ]
+}

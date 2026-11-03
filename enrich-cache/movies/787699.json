@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 787699,
+    "title": "Wonka",
+    "overview": "Willy Wonka \u2013 chock-full of ideas and determined to change the world one delectable bite at a time \u2013 is proof that the best things in life begin with a dream, and if you\u2019re lucky enough to meet Willy Wonka, anything is possible.",
+    "tagline": "Every good thing in this world started with a dream.",
+    "runtime": 117,
+    "release_date": "2023-12-06",
+    "vote_average": 7.031,
+    "poster_path": "/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
+    "backdrop_path": "/uIk2g2bRkNwNywKZIhC5oIU94Kh.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1393821,
+      "name": "Wonka Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Timoth\u00E9e Chalamet",
+      "character": "Willy Wonka",
+      "profile_path": "/dFxpwRpmzpVfP1zjluH68DeQhyj.jpg"
+    },
+    {
+      "name": "Calah Lane",
+      "character": "Noodle",
+      "profile_path": "/rhEcrfvtkIuzjOvt010xHiVHWXY.jpg"
+    },
+    {
+      "name": "Keegan-Michael Key",
+      "character": "Chief of Police",
+      "profile_path": "/xmdzYXP9j87a43FSiL138nLesuS.jpg"
+    },
+    {
+      "name": "Hugh Grant",
+      "character": "Oompa Loompa",
+      "profile_path": "/dvV843fOuzsEPXHtFvdzsHpy1rC.jpg"
+    }
+  ]
+}

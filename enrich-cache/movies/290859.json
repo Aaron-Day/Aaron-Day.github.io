@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 290859,
+    "title": "Terminator: Dark Fate",
+    "overview": "Decades after Sarah Connor prevented Judgment Day, a lethal new Terminator is sent to eliminate the future leader of the resistance. In a fight to save mankind, battle-hardened Sarah Connor teams up with an unexpected ally and an enhanced super soldier to stop the deadliest Terminator yet.",
+    "tagline": "Welcome to the day after judgement day.",
+    "runtime": 128,
+    "release_date": "2019-10-23",
+    "vote_average": 6.417,
+    "poster_path": "/vqzNJRH4YyquRiWxCCOH0aXggHI.jpg",
+    "backdrop_path": "/a6cDxdwaQIFjSkXf7uskg78ZyTq.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 528,
+      "name": "The Terminator Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Linda Hamilton",
+      "character": "Sarah Connor",
+      "profile_path": "/7FNn9Z5xkRS9EFbGL2tpmpph9xV.jpg"
+    },
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "T-800 / Carl",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Mackenzie Davis",
+      "character": "Grace",
+      "profile_path": "/ekQbEIKh26jbz17P0wwLbo6uNs9.jpg"
+    },
+    {
+      "name": "Natalia Reyes",
+      "character": "Daniella \u0022Dani\u0022 Ramos",
+      "profile_path": "/9N7FNKUhjtinrNPy8ANvXrB7iEr.jpg"
+    }
+  ]
+}

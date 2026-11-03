@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 64690,
+    "title": "Drive",
+    "overview": "Driver is a skilled Hollywood stuntman who moonlights as a getaway driver for criminals. Though he projects an icy exterior, lately he\u0027s been warming up to a pretty neighbor named Irene and her young son, Benicio. When Irene\u0027s husband gets out of jail, he enlists Driver\u0027s help in a million-dollar heist. The job goes horribly wrong, and Driver must risk his life to protect Irene and Benicio from the vengeful masterminds behind the robbery.",
+    "tagline": "There are no clean getaways.",
+    "runtime": 100,
+    "release_date": "2011-09-15",
+    "vote_average": 7.581,
+    "poster_path": "/602vevIURmpDfzbnv5Ubi6wIkQm.jpg",
+    "backdrop_path": "/hoyAALgfmjMEK7O1wZ4r8wT91RP.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ryan Gosling",
+      "character": "Driver",
+      "profile_path": "/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg"
+    },
+    {
+      "name": "Carey Mulligan",
+      "character": "Irene",
+      "profile_path": "/iwVHhqoz5b62FR0SDpZ7wfsuTBI.jpg"
+    },
+    {
+      "name": "Bryan Cranston",
+      "character": "Shannon",
+      "profile_path": "/7Jahy5LZX2Fo8fGJltMreAI49hC.jpg"
+    },
+    {
+      "name": "Albert Brooks",
+      "character": "Bernie Rose",
+      "profile_path": "/8iDSGu5l93N7benjf6b3AysBore.jpg"
+    }
+  ]
+}

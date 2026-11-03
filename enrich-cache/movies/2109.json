@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2109,
+    "title": "Rush Hour",
+    "overview": "When Hong Kong Inspector Lee is summoned to Los Angeles to investigate a kidnapping, the FBI doesn\u0027t want any outside help and assigns cocky LAPD Detective James Carter to distract Lee from the case. Not content to watch the action from the sidelines, Lee and Carter form an unlikely partnership and investigate the case themselves.",
+    "tagline": "The fastest hands in the East meet the biggest mouth in the West.",
+    "runtime": 97,
+    "release_date": "1998-09-18",
+    "vote_average": 7.09,
+    "poster_path": "/nwPhAsfnb7f46bZkWLG7IRP5HXr.jpg",
+    "backdrop_path": "/9FrpAtF87VKblKkDEiIZzYgO40K.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 90863,
+      "name": "Rush Hour Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jackie Chan",
+      "character": "Lee",
+      "profile_path": "/nraZoTzwJQPHspAVsKfgl3RXKKa.jpg"
+    },
+    {
+      "name": "Chris Tucker",
+      "character": "Carter",
+      "profile_path": "/rE5OaSWp45pNpMm2TYbAwLgYoCn.jpg"
+    },
+    {
+      "name": "Tom Wilkinson",
+      "character": "Griffin",
+      "profile_path": "/d5yLk0PK8q7EKR3E3G2txO758IW.jpg"
+    },
+    {
+      "name": "Philip Baker Hall",
+      "character": "Captain Diel",
+      "profile_path": "/mC1wmuGSCyIQ7ABkfRe1jJV1FGV.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 133805,
+    "title": "Carrie",
+    "overview": "An awkward, telekinetic teenage girl is the object of relentless bullying at school and an oppressively religious mother at home.",
+    "tagline": "You will know her name.",
+    "runtime": 101,
+    "release_date": "2013-10-16",
+    "vote_average": 6.075,
+    "poster_path": "/kloXz9qwO23z9Kbt3z3MgnjF4xO.jpg",
+    "backdrop_path": "/ffi2k8g5NOXbfwYhpg0HyZfx5Vz.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chlo\u00EB Grace Moretz",
+      "character": "Carrie White",
+      "profile_path": "/yq4rYmaTRC5degaOYmJQFpaiho1.jpg"
+    },
+    {
+      "name": "Julianne Moore",
+      "character": "Margaret White",
+      "profile_path": "/3YF19rWusxWfEI59ZM33dFhasRq.jpg"
+    },
+    {
+      "name": "Gabriella Wilde",
+      "character": "Sue Snell",
+      "profile_path": "/peAqNFZWHjpzKqK2TlrGTnfXptT.jpg"
+    },
+    {
+      "name": "Ansel Elgort",
+      "character": "Tommy Ross",
+      "profile_path": "/pbU6qz8eudly20UE6u9T7jUXTgT.jpg"
+    }
+  ]
+}

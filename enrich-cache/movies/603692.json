@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 603692,
+    "title": "John Wick: Chapter 4",
+    "overview": "With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+    "tagline": "No way back, one way out.",
+    "runtime": 170,
+    "release_date": "2023-03-21",
+    "vote_average": 7.71,
+    "poster_path": "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+    "backdrop_path": "/7I6VUdPj6tQECNHdviJkUHD2u89.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 404609,
+      "name": "John Wick Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Keanu Reeves",
+      "character": "John Wick",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Donnie Yen",
+      "character": "Caine",
+      "profile_path": "/hTlhrrZMj8hZVvD17j4KyAFWBHc.jpg"
+    },
+    {
+      "name": "Bill Skarsg\u00E5rd",
+      "character": "Marquis",
+      "profile_path": "/xBXLx1m0uzhXIbY3wN8lmPGeUHl.jpg"
+    },
+    {
+      "name": "Ian McShane",
+      "character": "Winston",
+      "profile_path": "/rteBJYNgD1yGsHg2HGZAIrYHz1t.jpg"
+    }
+  ]
+}

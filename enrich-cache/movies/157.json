@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 157,
+    "title": "Star Trek III: The Search for Spock",
+    "overview": "A surprise visit from Spock\u0027s father provides a startling revelation: McCoy is harboring Spock\u0027s living essence.",
+    "tagline": "A dying planet. A fight for life. The search for Spock.",
+    "runtime": 105,
+    "release_date": "1984-06-01",
+    "vote_average": 6.589,
+    "poster_path": "/yqEj0oPfKBMCz7YcCARHDgH7VFm.jpg",
+    "backdrop_path": "/hFXXFpqrD0tvZPhILN4uqtNZDpY.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 151,
+      "name": "Star Trek: The Original Series Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "William Shatner",
+      "character": "Admiral James T. Kirk",
+      "profile_path": "/8X9RuRmwOYQewfCvGg8zFZejC6U.jpg"
+    },
+    {
+      "name": "DeForest Kelley",
+      "character": "Dr. Leonard \u0027Bones\u0027 McCoy",
+      "profile_path": "/lBFQdiLYeSN7eZ6ddOXTGc7loQf.jpg"
+    },
+    {
+      "name": "James Doohan",
+      "character": "Captain Montgomery \u0027Scotty\u0027 Scott",
+      "profile_path": "/lsI15wIkmcKVTM8qu8ooukaLShi.jpg"
+    },
+    {
+      "name": "George Takei",
+      "character": "Cmdr. Hikaru Sulu",
+      "profile_path": "/kfpkgfcuxcOrw2OCoAyQpPamQVv.jpg"
+    }
+  ]
+}

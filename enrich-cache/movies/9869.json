@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9869,
+    "title": "Patriot Games",
+    "overview": "When CIA Analyst Jack Ryan interferes with an IRA assassination, a renegade faction targets Jack and his family as revenge.",
+    "tagline": "Not for honor. Not for country. For his wife and child.",
+    "runtime": 117,
+    "release_date": "1992-06-04",
+    "vote_average": 6.683,
+    "poster_path": "/9IT7gnszrRthduYxCLqaIkM55Un.jpg",
+    "backdrop_path": "/26Ftg4S0uORiachoSFR59biJC9c.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 192492,
+      "name": "The Jack Ryan Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "Jack Ryan",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Anne Archer",
+      "character": "Dr. Caroline \u0022Cathy\u0022 Ryan",
+      "profile_path": "/y1uFANprVvJ9cCqVKSl0umIpIXw.jpg"
+    },
+    {
+      "name": "Thora Birch",
+      "character": "Sally Ryan",
+      "profile_path": "/xJ6Bb3C8f0ior5LlWdNzxlb8cgV.jpg"
+    },
+    {
+      "name": "Sean Bean",
+      "character": "Sean Miller",
+      "profile_path": "/tAPWubSNDEGzA3AzUAmMiBAZfCe.jpg"
+    }
+  ]
+}

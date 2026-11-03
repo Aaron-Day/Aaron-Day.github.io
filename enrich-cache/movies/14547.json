@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 14547,
+    "title": "Delta Farce",
+    "overview": "Three bumbling Army reservists are hustled onto a plane headed for combat in Iraq -- but the fact that the plane drops them in Mexico doesn\u0027t stop them from \u0022liberating\u0022 what they believe to be the Middle East.",
+    "tagline": "A funny thing happened on the way to Iraq.",
+    "runtime": 90,
+    "release_date": "2007-05-11",
+    "vote_average": 4.617,
+    "poster_path": "/8OkLfZGETr199O1hBV2iC95UBuB.jpg",
+    "backdrop_path": "/m6a2m5fiw4SdOVRNwlWqzPCk9e.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Larry the Cable Guy",
+      "character": "Larry",
+      "profile_path": "/34pX2sQj9DddaQWRBGukSWYdXxS.jpg"
+    },
+    {
+      "name": "Bill Engvall",
+      "character": "Bill",
+      "profile_path": "/bUn1oGOLqhQB2KDJBMXR54MuXJB.jpg"
+    },
+    {
+      "name": "DJ Qualls",
+      "character": "Everett",
+      "profile_path": "/mzA2ZxEcBHlUvSjlYRZzH5bVAGL.jpg"
+    },
+    {
+      "name": "Christina Moore",
+      "character": "Karen",
+      "profile_path": "/kbv3pHnb1w0JkUfiseamJ91VgMB.jpg"
+    }
+  ]
+}

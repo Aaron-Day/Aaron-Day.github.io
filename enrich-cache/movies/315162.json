@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 315162,
+    "title": "Puss in Boots: The Last Wish",
+    "overview": "Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.",
+    "tagline": "Say hola to his little friends.",
+    "runtime": 103,
+    "release_date": "2022-12-07",
+    "vote_average": 8.218,
+    "poster_path": "/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
+    "backdrop_path": "/jr8tSoJGj33XLgFBy6lmZhpGQNu.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 94602,
+      "name": "Puss in Boots Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Antonio Banderas",
+      "character": "Puss in Boots (voice)",
+      "profile_path": "/lpzfDt22374NPhOXZpUq74e9mfw.jpg"
+    },
+    {
+      "name": "Salma Hayek Pinault",
+      "character": "Kitty Softpaws (voice)",
+      "profile_path": "/3j8MpAjyopkAc8mbNiDeXyqBmcS.jpg"
+    },
+    {
+      "name": "Harvey Guill\u00E9n",
+      "character": "Perrito (voice)",
+      "profile_path": "/yiNBonobPwqMVweB02JWufzp2l9.jpg"
+    },
+    {
+      "name": "Wagner Moura",
+      "character": "Wolf (voice)",
+      "profile_path": "/53IbAed4t1dOWxY3iygbRYZBBnm.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11596,
+    "title": "Wes Craven\u0027s New Nightmare",
+    "overview": "A demonic force has chosen Freddy Krueger as its portal to the real world. Can Heather Langenkamp play the part of Nancy one last time and trap the evil trying to enter our world?",
+    "tagline": "This time the terror doesn\u0027t stop at the screen.",
+    "runtime": 112,
+    "release_date": "1994-10-13",
+    "vote_average": 6.452,
+    "poster_path": "/q5BWxfL1x34nyYSvA3Qo5odleGW.jpg",
+    "backdrop_path": "/kolwCcefajS4OrNKfXsEBmQoor4.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8581,
+      "name": "A Nightmare on Elm Street Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Heather Langenkamp",
+      "character": "Heather Langenkamp / Nancy Thompson",
+      "profile_path": "/1v3qxca6jvgTAo0T1CqC64DDpbK.jpg"
+    },
+    {
+      "name": "Robert Englund",
+      "character": "Robert Englund / Freddy Krueger",
+      "profile_path": "/cjGEkiavinHa1dnetDvnEhlD2Wm.jpg"
+    },
+    {
+      "name": "Miko Hughes",
+      "character": "Dylan Porter",
+      "profile_path": "/6oBM2RVDryymOi966ZkCNEDEsws.jpg"
+    },
+    {
+      "name": "Wes Craven",
+      "character": "Wes Craven",
+      "profile_path": "/eqwl6owrYykeTGTpKxwcAkbEJmg.jpg"
+    }
+  ]
+}

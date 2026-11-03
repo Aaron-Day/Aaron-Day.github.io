@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 274854,
+    "title": "The Last Witch Hunter",
+    "overview": "The modern world holds many secrets, but by far the most astounding is that witches still live among us; vicious supernatural creatures intent on unleashing the Black Death upon the world and putting an end to the human race once and for all. Armies of witch hunters have battled this unnatural enemy for centuries, including Kaulder, a valiant warrior who many years ago slayed the all-powerful Witch Queen, decimating her followers in the process. In the moments right before her death, the Queen cursed Kaulder with immortality, forever separating him from his beloved wife and daughter. Today, Kaulder is the last living hunter who has spent his immortal life tracking down rogue witches, all the while yearning for his long-lost family.",
+    "tagline": "Live forever. Hunt forever.",
+    "runtime": 106,
+    "release_date": "2015-10-21",
+    "vote_average": 6.028,
+    "poster_path": "/dS9YdnJkxtKE2PKCSsxTaO7Jpf5.jpg",
+    "backdrop_path": "/mXmvN6drkdU1PWFF92AGklEVIa3.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1543569,
+      "name": "The Last Witch Hunter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vin Diesel",
+      "character": "Kaulder",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Rose Leslie",
+      "character": "Chloe",
+      "profile_path": "/4XD7YmJ0W2P8iIOCy0sdtM2ABr7.jpg"
+    },
+    {
+      "name": "Elijah Wood",
+      "character": "Dolan 37th",
+      "profile_path": "/7UKRbJBNG7mxBl2QQc5XsAh6F8B.jpg"
+    },
+    {
+      "name": "\u00D3lafur Darri \u00D3lafsson",
+      "character": "Belial",
+      "profile_path": "/5ZlxkgsiKh9d4fWzR23sDf8d3HO.jpg"
+    }
+  ]
+}

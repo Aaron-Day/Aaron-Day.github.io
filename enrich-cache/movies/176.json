@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 176,
+    "title": "Saw",
+    "overview": "Two men wake up to find themselves shackled in a grimy, abandoned bathroom. As they struggle to comprehend their predicament, they discover a disturbing tape left behind by the sadistic mastermind known as Jigsaw. With a chilling voice and cryptic instructions, Jigsaw informs them that they must partake in a gruesome game in order to secure their freedom.",
+    "tagline": "How much blood would you shed to stay alive?",
+    "runtime": 103,
+    "release_date": "2004-10-01",
+    "vote_average": 7.43,
+    "poster_path": "/rLNSOudrayDBo1uqXjrhxcjODIC.jpg",
+    "backdrop_path": "/ok4ot3YbfDYZcINXf91JUfq3maB.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 656,
+      "name": "Saw Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Leigh Whannell",
+      "character": "Adam",
+      "profile_path": "/wvoTbsROOHfCqJ3Voe9zpal429L.jpg"
+    },
+    {
+      "name": "Cary Elwes",
+      "character": "Lawrence Gordon",
+      "profile_path": "/9UszBdQJ9PmyBydIeIBxlStozhW.jpg"
+    },
+    {
+      "name": "Tobin Bell",
+      "character": "Jigsaw",
+      "profile_path": "/wyyfG5Pml4G1Y3Aw873LIe32wsl.jpg"
+    },
+    {
+      "name": "Danny Glover",
+      "character": "David Tapp",
+      "profile_path": "/7ZyztVlG7OpqD0EhzG8iwYNcd1s.jpg"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 20856,
+    "title": "Aliens in the Attic",
+    "overview": "A group of kids must protect their vacation home from invading aliens.",
+    "tagline": "The aliens vs. the Pearsons.",
+    "runtime": 86,
+    "release_date": "2009-07-30",
+    "vote_average": 5.71,
+    "poster_path": "/bb8ym5zSRGmhNx3gyDnzSN2waS4.jpg",
+    "backdrop_path": "/s78mmP6T0Jn23Jgu4KYXbcFe6HJ.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Carter Jenkins",
+      "character": "Tom Pearson",
+      "profile_path": "/fGVndWC3hgwK1uVrhiyzTUyIaxW.jpg"
+    },
+    {
+      "name": "Austin Butler",
+      "character": "Jake Pearson",
+      "profile_path": "/atdAs4pFGjUQ4m2W8kJYly7N6cC.jpg"
+    },
+    {
+      "name": "Ashley French",
+      "character": "Bethany Pearson",
+      "profile_path": "/ot6ib67jxvKVG1JCBl0ROPGtdeP.jpg"
+    },
+    {
+      "name": "Ashley Boettcher",
+      "character": "Hannah Pearson",
+      "profile_path": "/h4bdCoXgQH4s6KR1ejNuOFEyr4h.jpg"
+    }
+  ]
+}

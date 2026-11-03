@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The End \u0026 the Beginning",
+        "overview": "Superman is in a brutal battle with Luthor\u0027s monster; Lois and the boys race to save General Lane.",
+        "air_date": "2024-10-07",
+        "runtime": 43,
+        "still_path": "/kL2xXGMULYt89cSZyiZlECh1Cf.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A World Without",
+        "overview": "Lana and Sarah join the fight against Luthor; Jordan and Jonathan butt heads over a decision.",
+        "air_date": "2024-10-07",
+        "runtime": 43,
+        "still_path": "/jfiJxE2iOUzX2uEjzlrJxlnl4sU.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Always My Hero",
+        "overview": "Reeling from failure, Jordan begins to spiral; Jonathan discovers newfound strength.",
+        "air_date": "2024-10-14",
+        "runtime": 43,
+        "still_path": "/fjktNo6rKD9avMPnNcMsUdB7Wpc.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "A Perfectly Good Wedding",
+        "overview": "Lois helps throw Kyle and Chrissy an impromptu wedding that doesn\u0027t quite go as planned.",
+        "air_date": "2024-10-21",
+        "runtime": 43,
+        "still_path": "/kX6DzqRNTQXhGBmnFdVWBLgAcrR.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Break the Cycle",
+        "overview": "Lois takes bolder actions to stop Luthor; Jonathan juggles personal life and responsibilities; Clark discovers an unsettling truth.",
+        "air_date": "2024-10-28",
+        "runtime": 43,
+        "still_path": "/4DwD4GfR17Jp8ZE3F89Gv90Hyb7.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "When the Lights Come On",
+        "overview": "Luthor plans to move LuthorCorp to Smallville, but finds opposition in Lana.",
+        "air_date": "2024-11-04",
+        "runtime": 43,
+        "still_path": "/q59dLUo2JrZkBq3rtvn5F6kGOUi.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "A Regular Guy",
+        "overview": "After some concerning interactions in town, Clark is determined to protect the secret that he\u0027s Superman \u2013 a task complicated by Jonathan and Jordan.",
+        "air_date": "2024-11-11",
+        "runtime": 43,
+        "still_path": "/5SLywz7zR8EeJ82nYyBkJJRQLcQ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Sharp Dressed Man",
+        "overview": "Luthor challenges Lois to a live telecast debate, though not everything is as it seems; John Henry and Clark face a troubling possibility.",
+        "air_date": "2024-11-18",
+        "runtime": 43,
+        "still_path": "/ArwFCLJmGEr4L3JaQjw9QNwnJGL.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "To Live and Die Again",
+        "overview": "Lois struggles against the fallout of the debate. Clark uses Luthor\u0027s tactics against him, while Jonathan and Jordan prepare for an impending battle.",
+        "air_date": "2024-11-25",
+        "runtime": 43,
+        "still_path": "/c2QtXsK9qBNwwfFNlGJQEKEuOL2.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "It Went By So Fast",
+        "overview": "The Kents fight with everything they have as Luthor makes his final move on Smallville.",
+        "air_date": "2024-12-02",
+        "runtime": 43,
+        "still_path": "/fKAvQrI1P3MmOObMZ8KwM2iDAyR.jpg"
+      }
+    ]
+  }
+}

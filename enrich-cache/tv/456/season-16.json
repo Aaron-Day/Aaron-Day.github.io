@@ -1,0 +1,176 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 16,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Treehouse of Horror XV",
+        "overview": "Ned Flanders\u0027 head injury gives him the power to predict others\u0027 deaths, Bart and Lisa play detective when a string of Victorian-era prostitutes are murdered by Jack the Ripper, and the Simpsons go on a fantastic voyage inside Mr. Burns\u0027 body to save Maggie.",
+        "air_date": "2004-11-07",
+        "runtime": 23,
+        "still_path": "/cIegZWMyMbDf4fcbROoAdSkmcT8.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "All\u0027s Fair in Oven War",
+        "overview": "Marge gets her kitchen remodeled and the dishes she makes inside it get rave reviews. The suggestion of Ned Flanders leads her to enter a cooking contest. However, Marge realizes the competition is harder than it seems. Meanwhile, Bart finds Homer\u0027s vintage Playdude magazines and decides to adopt the lifestyle he sees within the articles.",
+        "air_date": "2004-11-14",
+        "runtime": 23,
+        "still_path": "/8fFlKw3mxl4mF3ap1iedj3XWzlH.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Sleeping with the Enemy",
+        "overview": "Marge finds Nelson and acts as a mother figure towards him due to her children\u0027s loss of interest in her. Meanwhile, Lisa gets teased about her big butt, and becomes obsessed with her weight.",
+        "air_date": "2004-11-21",
+        "runtime": 23,
+        "still_path": "/mFCQZODjiABQfZhaYNil8tTyNkC.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "She Used to Be My Girl",
+        "overview": "Marge meets up with a former high-school pal who is now a famous news anchor, and she wonders if she made the right life choice.",
+        "air_date": "2004-12-05",
+        "runtime": 23,
+        "still_path": "/tGQe5a7xP6QQYPe1mSxi05eCUBM.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Fat Man and Little Boy",
+        "overview": "When Bart writes slogans on T-shirts, he catches the attention of Goose Gladwell, a gag-gift entrepreneur, and soon becomes a T-shirt mogul; Homer feels he no longer has a place in the family when Bart becomes the breadwinner.",
+        "air_date": "2004-12-12",
+        "runtime": 23,
+        "still_path": "/zpBSxQCreIqumutE5NYWJjlrqoi.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Midnight Rx",
+        "overview": "Homer, Grampa, Apu and Flanders travel to Canada to buy sorely needed prescription drugs with fake Canadian health-care cards.",
+        "air_date": "2005-01-16",
+        "runtime": 23,
+        "still_path": "/cNcMDFq6780J5XJOfPhmwOyLdfy.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Mommie Beerest",
+        "overview": "When Marge discovers Homer has remortgaged the house to help Moe\u0027s bar, she takes over as landlady. Little does Homer know, Moe and Marge are a match made in pub heaven.",
+        "air_date": "2005-01-30",
+        "runtime": 23,
+        "still_path": "/oEBLTwO4oZMyJVXMrRSkBaFQojA.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Homer and Ned\u0027s Hail Mary Pass",
+        "overview": "Homer\u0027s impromptu dance at a carnival leads to a job choreographing victory dances for sports stars Tom Brady, Warren Sapp, Michelle Kwan, Yao Ming and LeBron James.",
+        "air_date": "2005-02-06",
+        "runtime": 23,
+        "still_path": "/bkmO9JSYuex1CJVoqD2pdfSWGiC.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Pranksta Rap",
+        "overview": "Bart fakes his own kidnapping to get out of being punished for going to a rap concert, but the ruse goes too far when Milhouse\u0027s father is implicated as the kidnapper and Chief Wiggum sees this as an opportunity to make a name for himself as a competent police officer.",
+        "air_date": "2005-02-13",
+        "runtime": 23,
+        "still_path": "/anh348oDmgjyXrlyP29ASsFOTei.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "There\u0027s Something About Marrying",
+        "overview": "Springfield legalizes same-sex marriage to increase tourism. After becoming a minister, Homer starts to wed people to make money. Meanwhile, Marge\u0027s sister Patty comes out as a lesbian and reveals that she is going to marry a woman named Veronica.",
+        "air_date": "2005-02-20",
+        "runtime": 23,
+        "still_path": "/A7wvixQZTp8odbWTVJR3MXULS9W.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "On a Clear Day I Can\u0027t See My Sister",
+        "overview": "Lisa does what every little sister has dreamed of - she gets a restraining order put on her big brother. Bart is forced to live in the back garden, but soon realises the joy of communing with nature.",
+        "air_date": "2005-03-06",
+        "runtime": 23,
+        "still_path": "/cbgDP4UUmAbFqGOFfQJ0WuknkmG.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Goo Goo Gai Pan",
+        "overview": "Selma decides to adopt a child from China, but when the rules say she must be married, Homer must pose as her husband for the fearsome adoption agent Madame Wu.",
+        "air_date": "2005-03-13",
+        "runtime": 23,
+        "still_path": "/78J2T5QApIJ0LRKgdpthH6pMD8n.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Mobile Homer",
+        "overview": "When Marge starts economising, Homer thinks he\u0027s being left out of the family\u0027s important financial decisions, so splashes out on an expensive camper van and sets up camp on the driveway.",
+        "air_date": "2005-03-20",
+        "runtime": 23,
+        "still_path": "/dxQxDXg5eglNsZXSktyJusG1DX0.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Seven-Beer Snitch",
+        "overview": "After Shelbyville accuses Springfield of being hicks, Marge convinces the townspeople to fund a Frank Gehry-designed concert hall, which is then converted to a prison when the concert hall goes bankrupt on opening night. Meanwhile, Bart and Lisa investigate Snowball II\u0027s recent weight gain.",
+        "air_date": "2005-04-03",
+        "runtime": 23,
+        "still_path": "/8QOalo6N5YkreJ75nT99PpxVnBn.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Future-Drama",
+        "overview": "Through Professor Frink\u0027s future machine, Bart and Lisa see their lives in the year 2013, where Bart steals Lisa\u0027s chances at going to an Ivy League school in order to impress a skater girl named Jenda while Homer (now separated from Marge and living in an underwater apartment) fights Krusty the Clown after Marge begins dating him.",
+        "air_date": "2005-04-17",
+        "runtime": 23,
+        "still_path": "/9uO6tGnUf2cVuyO0VOJ9XbSYwW1.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Don\u0027t Fear the Roofer",
+        "overview": "Homer meets a new friend, Ray the Roofer, but gets confined to a mental institution when his friends and family believe he made him up.",
+        "air_date": "2005-05-01",
+        "runtime": 23,
+        "still_path": "/hVgo1dZYlsGQRysgnnDmiyJhwpk.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Heartbroke Kid",
+        "overview": "When Bart endangers his health by bingeing on vending-machine food, the Simpsons turn their home into a hostel in order to afford sending him to a forced starvation facility.",
+        "air_date": "2005-05-01",
+        "runtime": 23,
+        "still_path": "/1lX4Xw1ymrofXWllfqaRLfvYZt1.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "A Star Is Torn",
+        "overview": "Lisa agrees to enter a Krusty-sponsored \u0022Li\u0027l Starmaker\u0022 competition and panics when another contestant outperforms her.",
+        "air_date": "2005-05-08",
+        "runtime": 23,
+        "still_path": "/ggexJ2b4ItLjmF7zsf2Xpp2uMLz.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Thank God It\u0027s Doomsday",
+        "overview": "Homer sees a movie about the end of the world and fears the same thing will happen in real life after seeing a chain of random occurrences and doing a complicated math equation that predicts the end will come on May 18th.",
+        "air_date": "2005-05-08",
+        "runtime": 23,
+        "still_path": "/tBvDIitMJAYc2T4iQT9ewC1Nr3N.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Home Away from Homer",
+        "overview": "Flanders rents a room to two college girls who, without his knowledge, use the spare room to broadcast live softcore pornographic web videos of themselves.",
+        "air_date": "2005-05-15",
+        "runtime": 23,
+        "still_path": "/3OQe3snLwnsST7Y1HfnGNAbNpkQ.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Father, the Son and the Holy Guest Star",
+        "overview": "Bart gets expelled from school and transfers to a Catholic school, where a hip priest named Father Sean tries to convert Bart and Homer to Catholicism, which worries Marge when she believes that Catholics do not go to the same heaven as Protestants and discovers that Catholic women do not use birth control.",
+        "air_date": "2005-05-15",
+        "runtime": 23,
+        "still_path": "/saGVLIAVPbbovIudWU4RDCwK0tS.jpg"
+      }
+    ]
+  }
+}

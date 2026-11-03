@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 76163,
+    "title": "The Expendables 2",
+    "overview": "Mr. Church reunites the Expendables for what should be an easy paycheck, but when one of their men is murdered on the job, their quest for revenge puts them deep in enemy territory and up against an unexpected threat.",
+    "tagline": "Back for War.",
+    "runtime": 103,
+    "release_date": "2012-08-15",
+    "vote_average": 6.354,
+    "poster_path": "/74rTIGyGoIu5KSxDVMdr8H3MtMo.jpg",
+    "backdrop_path": "/ihKsZZYMbyHXC1L7s90WDLITdC5.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 126125,
+      "name": "The Expendables Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Barney Ross",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Jason Statham",
+      "character": "Lee Christmas",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Jet Li",
+      "character": "Yin Yang",
+      "profile_path": "/c4s8INzU0ZAujCQ1YmphCmcsNzl.jpg"
+    },
+    {
+      "name": "Dolph Lundgren",
+      "character": "Gunner Jensen",
+      "profile_path": "/fB1tOws6Gav0xE8LYlELEb82hJt.jpg"
+    }
+  ]
+}

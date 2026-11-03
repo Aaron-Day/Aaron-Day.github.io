@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 87826,
+    "title": "Here Comes the Boom",
+    "overview": "A high school biology teacher moonlights as a mixed-martial arts fighter in an effort to raise money to save the school\u0027s music program.",
+    "tagline": "No one will fight for his students like Mr. Voss.",
+    "runtime": 105,
+    "release_date": "2012-10-10",
+    "vote_average": 6.231,
+    "poster_path": "/g3ZjNkQP4M7Cs0clPD9q7EO2P1g.jpg",
+    "backdrop_path": "/5WhsVxBqjy4eg6QkmVcnl11bhv4.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kevin James",
+      "character": "Scott Voss",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    },
+    {
+      "name": "Salma Hayek Pinault",
+      "character": "Bella Flores",
+      "profile_path": "/3j8MpAjyopkAc8mbNiDeXyqBmcS.jpg"
+    },
+    {
+      "name": "Henry Winkler",
+      "character": "Marty Streb",
+      "profile_path": "/5Y51B0maVYvKRoS43lwlYh1M52X.jpg"
+    },
+    {
+      "name": "Greg Germann",
+      "character": "Duke Betcher",
+      "profile_path": "/cRLbrKwasOiBj68pORvrZTPHRfB.jpg"
+    }
+  ]
+}

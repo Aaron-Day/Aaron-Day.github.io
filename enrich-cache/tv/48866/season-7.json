@@ -1,0 +1,136 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "From the Ashes",
+        "overview": "Clarke  and her friends attempt to rebuild Sanctum as a new threat rises in the woods.",
+        "air_date": "2020-05-20",
+        "runtime": 41,
+        "still_path": "/oBxyJWUCqrZ9kjcK2yzzRsjehLH.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Garden",
+        "overview": "Echo and Gabriel learn more about Hope and her mysterious past.",
+        "air_date": "2020-05-27",
+        "runtime": 42,
+        "still_path": "/4vIJORH8PE19GIkkw4vUPrCb2Cc.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "False Gods",
+        "overview": "Raven faces an unexpected threat. Clarke must keep the peace among opposing factions in Sanctum.",
+        "air_date": "2020-06-03",
+        "runtime": 42,
+        "still_path": "/gZGyhRTAHSPn3FjBWzMqMFsMeFe.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Hesperides",
+        "overview": "Mysterious outsiders arrive with news of Clarke\u0027s missing people.",
+        "air_date": "2020-06-10",
+        "runtime": 42,
+        "still_path": "/1pXGLPRv9MwLZQ7Utle7TJMTHa1.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Welcome to Bardo",
+        "overview": "Octavia gets to know a whole new world. Meanwhile, Murphy and Emori play make believe.",
+        "air_date": "2020-06-17",
+        "runtime": 42,
+        "still_path": "/qr1hu3MmpUCPZdbhinMDstZ1Xvx.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Nakara",
+        "overview": "Clarke and her friends find themselves on a planet that is not what it seems.",
+        "air_date": "2020-06-24",
+        "runtime": 42,
+        "still_path": "/wN2jKNIZrDAADXdj6dfF4ert8yh.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Queen\u0027s Gambit",
+        "overview": "Emori tries to heal Sanctum\u0027s old familial wounds while Echo, Octavia and Diyoza struggle with new ones.",
+        "air_date": "2020-07-01",
+        "runtime": 41,
+        "still_path": "/5CY79ewUpcmK0FewSbv46c8V41M.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Anaconda",
+        "overview": "Clarke confronts a new adversary. A surprising connection takes us back to the past and to the nuclear apocalypse that destroyed the Earth.",
+        "air_date": "2020-07-08",
+        "runtime": 41,
+        "still_path": "/fZj6iUHQhd1YgCDvhcRdCcVySLJ.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Flock",
+        "overview": "Murphy and Indra must defuse a tense situation. Old friends make new allegiances.",
+        "air_date": "2020-07-15",
+        "runtime": 41,
+        "still_path": "/xZUAhZlj9BOIeFo2soDRIWoLcGf.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "A Little Sacrifice",
+        "overview": "Sheidheda makes his move. A Disciple goes rogue.",
+        "air_date": "2020-08-05",
+        "runtime": 42,
+        "still_path": "/kvgpGFaDEJMk05BXRZ4MpXEa80a.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Etherea",
+        "overview": "Where in the universe is Bellamy Blake?",
+        "air_date": "2020-08-12",
+        "runtime": 42,
+        "still_path": "/h1AZ4xfLMtqSF7ULCPOaOyyGDPD.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "The Stranger",
+        "overview": "It\u0027s a new day in Sanctum. Clarke, Octavia, Raven and Echo struggle with a new foe.",
+        "air_date": "2020-08-19",
+        "runtime": 42,
+        "still_path": "/hsVZkqirhrw3T0jFvyDuxF9mrw1.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Blood Giant",
+        "overview": "The red sun derails Clarke\u0027s plans.",
+        "air_date": "2020-09-09",
+        "runtime": 41,
+        "still_path": "/r61WmOBHnwLWyuX61HvTOKsRChl.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "A Sort of Homecoming",
+        "overview": "Clarke and her friends reckon with all that has happened only to find an unexpected threat looming.",
+        "air_date": "2020-09-16",
+        "runtime": 42,
+        "still_path": "/bcImqW5fBFCJkAHQmyO0sy8Z6Ix.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Dying of the Light",
+        "overview": "Clarke and Octavia mount a desperate rescue mission as the Disciples close in on what they want.",
+        "air_date": "2020-09-23",
+        "runtime": 42,
+        "still_path": "/fzRtic9p1FVJsFdJ4M8LSYzNKcN.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Last War",
+        "overview": "After all the fighting and loss, Clarke and her friends have reached the final battle. But is humanity worthy of something greater?",
+        "air_date": "2020-09-30",
+        "runtime": 43,
+        "still_path": "/zUZTFrSu7OSq53FVBm99wolZFSa.jpg"
+      }
+    ]
+  }
+}

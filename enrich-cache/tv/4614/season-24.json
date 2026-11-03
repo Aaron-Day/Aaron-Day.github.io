@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 24,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Wayward Son",
+        "overview": "While dealing with the fallout from the shooting involving McGee\u2019s son, the team investigates a mysterious new threat to the Secretary of the Navy and receives help from an unexpected source: Tony DiNozzo, newly arrived in D.C. to open a satellite office of his private security firm.",
+        "air_date": "2026-10-06",
+        "runtime": 43,
+        "still_path": "/xmIOHzKDxcAR6dM4HTWZUyGZMBo.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Clean Slate",
+        "overview": "When a man is murdered after a neighborhood dinner party, the team discovers every guest is lying \u2013 about the strange break-in at the victim\u2019s house, what they were burning in their backyards and who they really are. And the deeper the team digs, the less they can agree on what kind of case they\u2019re even working.",
+        "air_date": "2026-10-13",
+        "runtime": null,
+        "still_path": "/3Ez8MoMoOt4mR5MYI1QPBLpEGVd.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Sleeping Dogs",
+        "overview": "When Torres\u2019 retired undercover identity is used to commit a string of murders, he\u2019s forced to team up with his grizzled old-school former handler, Walt Keller, and confront a darker version of himself that he thought he\u2019d left behind.",
+        "air_date": "2026-10-20",
+        "runtime": null,
+        "still_path": "/1rQ10EoULWlqkG9y1UJyYcwjR09.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Like and Subscribe",
+        "overview": "When a sailor moonlighting as a contestant on an online game show turns up murdered, the team discovers his death has nothing to do with the show\u2019s prize money. Also, Tony faces a threat far more intimidating than any killer.",
+        "air_date": "2026-10-27",
+        "runtime": null,
+        "still_path": "/1k9W3gEZIgxyRhtxZdM509bdK9u.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Speechless",
+        "overview": "",
+        "air_date": "2026-11-10",
+        "runtime": null,
+        "still_path": null
+      },
+      {
+        "episode_number": 6,
+        "name": "Ride or Die",
+        "overview": "",
+        "air_date": "2026-11-17",
+        "runtime": null,
+        "still_path": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 671,
+    "title": "Harry Potter and the Philosopher\u0027s Stone",
+    "overview": "Harry Potter has lived under the stairs at his aunt and uncle\u0027s house his whole life. But on his 11th birthday, he learns he\u0027s a powerful wizard\u2014with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school\u0027s kindly headmaster, Harry uncovers the truth about his parents\u0027 deaths\u2014and about the villain who\u0027s to blame.",
+    "tagline": "Let the magic begin.",
+    "runtime": 152,
+    "release_date": "2001-11-16",
+    "vote_average": 7.906,
+    "poster_path": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+    "backdrop_path": "/bfh9Z3Ghz4FOJAfLOAhmc3ccnHU.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1241,
+      "name": "Harry Potter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Radcliffe",
+      "character": "Harry Potter",
+      "profile_path": "/uUFfo8RANo7tuckB6AZAnESne55.jpg"
+    },
+    {
+      "name": "Rupert Grint",
+      "character": "Ron Weasley",
+      "profile_path": "/iFlkpTaOF6fGLqxz8b0PhI0i0zN.jpg"
+    },
+    {
+      "name": "Emma Watson",
+      "character": "Hermione Granger",
+      "profile_path": "/mf0OANvWYSzU1d8yggrhyw8IbIz.jpg"
+    },
+    {
+      "name": "Richard Harris",
+      "character": "Albus Dumbledore",
+      "profile_path": "/oJIS8QUOCfLUhsfK7kROkLHVyJh.jpg"
+    }
+  ]
+}

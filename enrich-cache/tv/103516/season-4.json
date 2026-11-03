@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 4,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Valles Marineris",
+        "overview": "Pike leads the crew into a stellar storm, sending the Enterprise back 65 million years.",
+        "air_date": "2026-07-23",
+        "runtime": 59,
+        "still_path": "/dkplcEqCZV5nNmsUm12CimwDqjy.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Griffin Incident",
+        "overview": "La\u0027An, Spock, and Kirk get trapped on a mysterious, long-lost Federation ship.",
+        "air_date": "2026-07-30",
+        "runtime": 59,
+        "still_path": "/nPOUZeuggzzmE0QAPpgKX4TJNJ6.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Human Best Friend",
+        "overview": "The Enterprise crew visits a shore-leave planet that guarantees fun in an inebriating atmosphere.",
+        "air_date": "2026-08-06",
+        "runtime": 48,
+        "still_path": "/8jWf8FFnOsR5pO4cPUY8WnRx8C5.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "A Case of Chiaroscuro",
+        "overview": "Una is mistaken for a virtuous kingpin against a Klingon occupation.",
+        "air_date": "2026-08-13",
+        "runtime": 51,
+        "still_path": "/kAggRfHzsWUlaev0bAemIxEBHQg.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Level-Five Transporter Accident",
+        "overview": "A transporter accident turns everyone but Spock into puppets as pirates invade the ship.",
+        "air_date": "2026-08-20",
+        "runtime": 55,
+        "still_path": "/zRbCF9m3D2RxTQscbkKrbNeEVKr.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Off-Hour",
+        "overview": "The Enterprise falls into a slipstream that pushes them to a catastrophic warp threshold.",
+        "air_date": "2026-08-27",
+        "runtime": 57,
+        "still_path": "/rC7ndGGi9MBPB6ySgMc2pSSjvfX.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Like Chronitons Through the Hourglass",
+        "overview": "A space trickster traps the Enterprise crew in a soap opera as Pike mourns a lost life.",
+        "air_date": "2026-09-03",
+        "runtime": 46,
+        "still_path": "/23wx52OoqyQZJrFsZAbY55BvJD0.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Orders of Magnitude",
+        "overview": "Enterprise is commandeered by Admiral Reeger to track down an alien ship.",
+        "air_date": "2026-09-10",
+        "runtime": 63,
+        "still_path": "/rsebMAmYaq1x8LDTueJcG1U5wpg.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Once La\u0027an a Time",
+        "overview": "We return to the Elysian Kingdom, but this time on a real fantasy planet.",
+        "air_date": "2026-09-17",
+        "runtime": 50,
+        "still_path": "/bSOn0OpOr7K952B7kOFljIJlWD3.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Tomorrow\u0027s Enterprise",
+        "overview": "A time ripple damages the Enterprise, forcing young and old Uhura to cooperate and fix the timeline.",
+        "air_date": "2026-09-24",
+        "runtime": 62,
+        "still_path": "/vpqU4iWHOoPj98Y7BUlv46UNtjQ.jpg"
+      }
+    ]
+  }
+}

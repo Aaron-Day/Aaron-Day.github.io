@@ -1,0 +1,32 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "A Scandal in Belgravia",
+        "overview": "Blackmail threatens the monarchy and Sherlock is about to meet the woman who beats him.",
+        "air_date": "2012-01-01",
+        "runtime": 90,
+        "still_path": "/9fmNcR20uEnMeAKmUucJnCPeUJg.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Hounds of Baskerville",
+        "overview": "A hound from hell. Sherlock\u0027s most famous case. But is a monster really stalking Dartmoor?",
+        "air_date": "2012-01-08",
+        "runtime": 89,
+        "still_path": "/vjUsJUsF5RcTRKn2prGHCW9Nxro.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Reichenbach Fall",
+        "overview": "The return of Moriarty. The crime of the century. Can Sherlock possibly survive?",
+        "air_date": "2012-01-15",
+        "runtime": 89,
+        "still_path": "/PVxRD2JqT2QM4t1Cih0v2AoRSR.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 9,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Love, AD Style",
+        "overview": "When Roger hires Hayley as a singer in his new bar, he becomes enthralled by her voice; Stan tries to prove his masculinity by negotiating a good deal on a new car.",
+        "air_date": "2012-09-30",
+        "runtime": 22,
+        "still_path": "/deJoKqLhC1bjYScks9O5A1yhwwj.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Killer Vacation",
+        "overview": "During the Smith family\u0027s tropical vacation, Stan is ordered to kill the activities director at their resort; Jeff and Hayley try to rekindle their romance.",
+        "air_date": "2012-10-07",
+        "runtime": 22,
+        "still_path": "/hUSxsLKsxQMZbp0Pcmxs5NV0peq.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Can I Be Frank with You?",
+        "overview": "Francine thinks Stan spends too much time with his friends; a boy band recruits Steve and his friends for a music video.",
+        "air_date": "2012-11-04",
+        "runtime": 22,
+        "still_path": "/yiaFsDlDxASGAhtsbw9t58lbSv2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "American Stepdad",
+        "overview": "When Stan invites his recently widowed mother to move in, she and Roger fall in love and wed; Steve and his friends find a lost movie script.",
+        "air_date": "2012-11-18",
+        "runtime": 22,
+        "still_path": "/vpydoPR2KZittOOH1rZZRJphCkP.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Why Can\u0027t We Be Friends?",
+        "overview": "When Stan decides that Snot isn\u0027t cool enough to be Steve\u0027s best friend, he tries to separate them by staging a shooting at an ice cream parlor.",
+        "air_date": "2012-12-02",
+        "runtime": 22,
+        "still_path": "/7NUBCjfvG5DkLhgJO4tay4QbYBD.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Adventures in Hayleysitting",
+        "overview": "When Steve\u0027s baby sitter is unavailable, Stan and Francine decide to leave him with Hayley; Steve sneaks out to a party to prove he\u0027s not a goody-goody.",
+        "air_date": "2012-12-09",
+        "runtime": 22,
+        "still_path": "/z4VFSgtArlEjrLPKimSAUU789Nu.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "National Treasure 4: Baby Franny: She\u0027s Doing Well: The Hole Story",
+        "overview": "A talk show reveals that Francine was the toddler who, famously, was rescued from a well by a firefighter; Francine makes a discovery when she falls down the well on the anniversary of her rescue; Stan and Roger come up with a business idea.",
+        "air_date": "2012-12-23",
+        "runtime": 22,
+        "still_path": "/8UxixVov0EYadiIRGDND6RnCUZ5.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Finger Lenting Good",
+        "overview": "The Smiths get drunk at Roger\u0027s Mardi Gras party and make a pact with Bullock; Roger tries to find the person who left a pastie in the attic.",
+        "air_date": "2013-01-06",
+        "runtime": 22,
+        "still_path": "/8tcR5jnOMF0lINjk0SbZ7sZM3ZU.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "The Adventures of Twill Ongenbone and His Boy Jabari",
+        "overview": "Francine regrets deciding to teach Roger the value of hard work; Steve interviews Stan for a school project.",
+        "air_date": "2013-01-13",
+        "runtime": 22,
+        "still_path": "/ltoVHHiL3pc2QhHMwMaVcbXbm9t.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Blood Crieth Unto Heaven",
+        "overview": "When Francine invites Stan\u0027s father to a party, a dark secret about the Smith family\u0027s past is revealed.",
+        "air_date": "2013-01-27",
+        "runtime": 22,
+        "still_path": "/aBtCmVWrUxZj5WXNBxw6mpZVPnX.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Max Jets",
+        "overview": "Roger announces that Max Jets, a character who showers the Smith family with money, is making a return; a gold-digging waitress romances Max and threatens the family\u0027s inheritance.",
+        "air_date": "2013-02-10",
+        "runtime": 22,
+        "still_path": "/eE9m5LRMTO13a6tv6fEEJmwznyn.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Naked to the Limit, One More Time",
+        "overview": "Roger pretends to be Jeff\u0027s imaginary friend so he can roam around the house without a disguise; when Jeff realizes Roger is an alien, Stan issues an ultimatum -- either Roger or Jeff must be killed; Steve becomes insecure about his body.",
+        "air_date": "2013-02-17",
+        "runtime": 22,
+        "still_path": "/no59Iru7WrWAKvKxRWMoR3J2hVA.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "For Black Eyes Only",
+        "overview": "When Black Villain shoots Stan\u0027s new wife, Sexpun Tocome, on their honeymoon, Stan teams up with his nemesis to take him down.",
+        "air_date": "2013-03-10",
+        "runtime": 22,
+        "still_path": "/oGBXCFizqVwaX5Zf0gXi4IODoRp.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Spelling Bee My Baby",
+        "overview": "Francine tries to rig the school spelling bee so that Steve will win; Stan and Roger try to rush Hayley\u0027s grieving process so she will be available to judge their badminton game.",
+        "air_date": "2013-03-24",
+        "runtime": 22,
+        "still_path": "/r9LVYoikBPgzSA7JwktOH3x6gCE.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Missing Kink",
+        "overview": "Francine tries to get Stan to spice up their sex life; Hayley tries to get back into dating and accepts a date with Snot.",
+        "air_date": "2013-04-14",
+        "runtime": 22,
+        "still_path": "/zx4QPRVaH0lVpowL0YJ7DhbuDRs.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Boring Identity",
+        "overview": "When Stan gets amnesia, Francine tries to turn him into her ideal husband; Steve is drawn into the corrupt side of Roger\u0027s paper route business.",
+        "air_date": "2013-04-21",
+        "runtime": 22,
+        "still_path": "/6YBfay2c1VmDaosOU9wbVAeN1nc.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Full Cognitive Redaction of Avery Bullock by the Coward Stan Smith",
+        "overview": "Stan is shocked when he is told that Deputy Director Bullock is showing early signs of dementia and needs his memory erased; Roger hires an old friend to help Steve with a bully at school.",
+        "air_date": "2013-04-28",
+        "runtime": 22,
+        "still_path": "/dIkEkk4DoDOlgA5hPXMuR7jMwR0.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Lost in Space",
+        "overview": "Jeff must prove his love for Hayley to Emperor Zing in order to find his way home from the spaceship that abducted him.",
+        "air_date": "2013-05-05",
+        "runtime": 22,
+        "still_path": "/JHSPxikGmRwv1PEH4W6ldrm1EZ.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Da Flippity Flop",
+        "overview": "When Stan refuses to switch Klaus back into his original body, he steals Stan\u0027s body; Roger builds a gym in the attic.",
+        "air_date": "2013-05-12",
+        "runtime": 22,
+        "still_path": "/aEGfSm3xHWzguFq5js8o7tzzpFN.jpg"
+      }
+    ]
+  }
+}

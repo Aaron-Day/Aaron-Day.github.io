@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11881,
+    "title": "Miracle on 34th Street",
+    "overview": "Kris Kringle, seemingly the embodiment of Santa Claus, is asked to portray the jolly old fellow at Macy\u0027s following his performance in the Thanksgiving Day parade. His portrayal is so complete that many begin to question if he truly is Santa Claus, while others question his sanity.",
+    "tagline": "Capture the spirit of Christmas with this timeless classic!",
+    "runtime": 96,
+    "release_date": "1947-06-04",
+    "vote_average": 7.368,
+    "poster_path": "/vehuIm3y6BeMI7mYjxzaA1H8M0k.jpg",
+    "backdrop_path": "/rSnMQ82mFlpBLRt2UvohO6sgemd.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Maureen O\u0027Hara",
+      "character": "Doris Walker",
+      "profile_path": "/yGNh18kBF7afOdjTcEP2zFCxzCH.jpg"
+    },
+    {
+      "name": "John Payne",
+      "character": "Fred Gailey",
+      "profile_path": "/sesIuEnKJfbTnf3ds2WSRFsmlGQ.jpg"
+    },
+    {
+      "name": "Edmund Gwenn",
+      "character": "Kris Kringle",
+      "profile_path": "/9xUiHCycn0WsxqiqFjq2fI40FpQ.jpg"
+    },
+    {
+      "name": "Gene Lockhart",
+      "character": "Judge Harper",
+      "profile_path": "/8lSQRefIA5kNylZOF7anexkDxqQ.jpg"
+    }
+  ]
+}

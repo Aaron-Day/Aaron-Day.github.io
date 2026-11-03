@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10280,
+    "title": "Thinner",
+    "overview": "An obese lawyer finds himself growing \u0022Thinner\u0022 when an old Romani man places a hex on him. Now the lawyer must call upon his friends in organized crime to help him persuade the old man to lift the curse. Time is running out for the desperate lawyer as he draws closer to his own death, and grows ever thinner.",
+    "tagline": "Let the curse fit the crime.",
+    "runtime": 92,
+    "release_date": "1996-10-25",
+    "vote_average": 5.893,
+    "poster_path": "/qGj0B5yx9FPTjTKODOUzccjhG5F.jpg",
+    "backdrop_path": "/3xLT29KkCwLqRgRRtaUHGG6OaZ5.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Robert John Burke",
+      "character": "Billy Halleck",
+      "profile_path": "/uWEaY5gypb6cp1bdUYG4uCKw4sK.jpg"
+    },
+    {
+      "name": "Michael Constantine",
+      "character": "Tadzu Lempke",
+      "profile_path": "/i4m5kiXONOfWqfdGSsTGba7iZax.jpg"
+    },
+    {
+      "name": "Lucinda Jenney",
+      "character": "Heidi Halleck",
+      "profile_path": "/ahR0bNUJRi9Phpd7RZWx4ILiMEb.jpg"
+    },
+    {
+      "name": "Kari W\u00FChrer",
+      "character": "Gina Lempke",
+      "profile_path": "/sTWVUK4WBcSpuIotCjlU7sRaEH7.jpg"
+    }
+  ]
+}

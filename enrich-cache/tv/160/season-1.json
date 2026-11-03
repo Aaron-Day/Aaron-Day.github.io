@@ -1,0 +1,48 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Turtle Tracks",
+        "overview": "April O\u0027Neil, ace reporter for Channel 6, investigates recent break-ins, allegedly by Ninjas, which have resulted in the thefts of numerous technologies. A chance encounter with a gang of thieves soon leads her to a bigger story when she is saved from the criminals by four Ninja trained, mutated Turtles.",
+        "air_date": "1987-12-14",
+        "runtime": 22,
+        "still_path": "/fyScQS3oUYxPcsgHXUBCNJrHANp.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Enter: The Shredder",
+        "overview": "The Shredder kidnaps Splinter in an attempt to lure the Turtles to his own cause. In order to rescue Splinter the Turtles must enter the Shredder\u0027s mobile fortress and brave it\u0027s dangerous weaponry.",
+        "air_date": "1987-12-15",
+        "runtime": 22,
+        "still_path": "/nBvtUtJ15H9qLj4tSY1dhdcA2Ur.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "A Thing about Rats",
+        "overview": "Baxter Stockman, a mad scientist, is showing an exterminator his new invention: a rat catching robot called Mousers.",
+        "air_date": "1987-12-16",
+        "runtime": 22,
+        "still_path": "/4cE0cVaLABiOBhwBCx6RFlJddic.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Hot Rodding Teenagers from Dimension X",
+        "overview": "Shredder experiments with the Inter-Dimensional Portal, hoping to contact Krangs\u0027 Rock Soldiers and prepare an invasion of Earth, but a group of fun-loving aliens called the Neutrionos, renegades in Krang\u0027s dimension, take advantage of the Portal\u0027s opening and use it to arrive on Earth.",
+        "air_date": "1987-12-17",
+        "runtime": 22,
+        "still_path": "/8BQmPlpXuLCPZKQ6hdtFxqVNXtI.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Shredder \u0026 Splintered",
+        "overview": "As Shredder lures Splinter into he Technodrome, this time with the promise that a weapon in his possession can restore the sensei to human form, the Turtles confront a giant-sized Krang, now in a new body, in the heart of New York City.",
+        "air_date": "1987-12-18",
+        "runtime": 22,
+        "still_path": "/wZlElkyO4qA35mWQA1HWN8bjqcJ.jpg"
+      }
+    ]
+  }
+}

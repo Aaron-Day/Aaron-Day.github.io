@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 546554,
+    "title": "Knives Out",
+    "overview": "When renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From Harlan\u0027s dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan\u0027s untimely death.",
+    "tagline": "Hell, any of them could have done it.",
+    "runtime": 131,
+    "release_date": "2019-11-27",
+    "vote_average": 7.844,
+    "poster_path": "/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
+    "backdrop_path": "/4HWAQu28e2yaWrtupFPGFkdNU7V.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 722971,
+      "name": "Knives Out Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Daniel Craig",
+      "character": "Benoit Blanc",
+      "profile_path": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
+    },
+    {
+      "name": "Chris Evans",
+      "character": "Ransom Drysdale",
+      "profile_path": "/3bOGNsHlrswhyW79uvIHH1V43JI.jpg"
+    },
+    {
+      "name": "Ana de Armas",
+      "character": "Marta Cabrera",
+      "profile_path": "/ngHnBOofQzCO3AvMyuW3UMRWg1B.jpg"
+    },
+    {
+      "name": "Jamie Lee Curtis",
+      "character": "Linda Drysdale",
+      "profile_path": "/eWKubKAAssRzmFwCZKh1mdYqGCH.jpg"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 211672,
+    "title": "Minions",
+    "overview": "Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.",
+    "tagline": "Go back to where it all began.",
+    "runtime": 91,
+    "release_date": "2015-06-17",
+    "vote_average": 6.427,
+    "poster_path": "/dr02BdCNAUPVU07aOodwPYv6HCf.jpg",
+    "backdrop_path": "/wKrxeY6lbu7KFBsWVcMH6M8avwr.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 544669,
+      "name": "Minions Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Pierre Coffin",
+      "character": "The Minions (voice)",
+      "profile_path": "/eAA9uWRqHlm1LT3nZfXb7UuPfVb.jpg"
+    },
+    {
+      "name": "Sandra Bullock",
+      "character": "Scarlet Overkill (voice)",
+      "profile_path": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+    },
+    {
+      "name": "Jon Hamm",
+      "character": "Herb Overkill (voice)",
+      "profile_path": "/mrXE5fZbEDPc7BEE5G21J6qrwzi.jpg"
+    },
+    {
+      "name": "Michael Keaton",
+      "character": "Walter Nelson (voice)",
+      "profile_path": "/tYSja1KByFnZ4Hkp3stPqkKHnNL.jpg"
+    }
+  ]
+}

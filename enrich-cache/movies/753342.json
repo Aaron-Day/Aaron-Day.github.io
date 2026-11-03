@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 753342,
+    "title": "Napoleon",
+    "overview": "An epic that details the checkered rise and fall of French Emperor Napoleon Bonaparte and his relentless journey to power through the prism of his addictive, volatile relationship with his wife, Josephine.",
+    "tagline": "He came from nothing. He conquered everything.",
+    "runtime": 158,
+    "release_date": "2023-11-22",
+    "vote_average": 6.305,
+    "poster_path": "/ytFOXyghxLzAM4KZyazDdEkM66q.jpg",
+    "backdrop_path": "/33pMXav77ICRnceEBLhL8lXTywv.jpg",
+    "genres": [
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Joaquin Phoenix",
+      "character": "Napoleon Bonaparte",
+      "profile_path": "/u38k3hQBDwNX0VA22aQceDp9Iyv.jpg"
+    },
+    {
+      "name": "Vanessa Kirby",
+      "character": "Josephine Bonaparte",
+      "profile_path": "/a8a9U00KL2JJkkekzhNnueIGKKF.jpg"
+    },
+    {
+      "name": "Tahar Rahim",
+      "character": "Paul Barras",
+      "profile_path": "/r1SJ9nkG9q4JbPHbtcvcVxmRcHw.jpg"
+    },
+    {
+      "name": "Rupert Everett",
+      "character": "Duke of Wellington",
+      "profile_path": "/g0kqfIxf9eIV7rOMQcbebsgMS9Z.jpg"
+    }
+  ]
+}

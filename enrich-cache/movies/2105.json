@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2105,
+    "title": "American Pie",
+    "overview": "At a high-school party, four friends find that losing their collective virginity isn\u0027t as easy as they had thought. But they still believe that they need to do so before college. To motivate themselves, they enter a pact to all \u0022score\u0022 by their senior prom.",
+    "tagline": "There\u0027s nothing like your first piece.",
+    "runtime": 95,
+    "release_date": "1999-07-09",
+    "vote_average": 6.681,
+    "poster_path": "/5P68by2Thn8wHAziyWGEw2O7hco.jpg",
+    "backdrop_path": "/cvH1gNIMRITdLzoWv1HNAbRyH3n.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2806,
+      "name": "American Pie Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Biggs",
+      "character": "Jim Levenstein",
+      "profile_path": "/3nRgOQylYbNuDiddtNoh8uWTz5P.jpg"
+    },
+    {
+      "name": "Chris Klein",
+      "character": "Chris \u0027Oz\u0027 Ostreicher",
+      "profile_path": "/56kCtPVfvjm5IRPa2GyaQHTPIOy.jpg"
+    },
+    {
+      "name": "Thomas Ian Nicholas",
+      "character": "Kevin Meyers",
+      "profile_path": "/hQo2P9vwjJW6A1b327nl71a2JEW.jpg"
+    },
+    {
+      "name": "Alyson Hannigan",
+      "character": "Michelle Flaherty",
+      "profile_path": "/bO16z8rAzZWdjCga8dcbJ2AFAh2.jpg"
+    }
+  ]
+}

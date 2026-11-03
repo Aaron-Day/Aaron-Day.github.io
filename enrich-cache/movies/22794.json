@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 22794,
+    "title": "Cloudy with a Chance of Meatballs",
+    "overview": "Inventor Flint Lockwood creates a machine that makes clouds rain food, enabling the down-and-out citizens of Chewandswallow to feed themselves. But when the falling food reaches gargantuan proportions, Flint must scramble to avert disaster. Can he regain control of the machine and put an end to the wild weather before the town is destroyed?",
+    "tagline": "Prepare to get served.",
+    "runtime": 90,
+    "release_date": "2009-09-17",
+    "vote_average": 6.674,
+    "poster_path": "/qhOhIKf7QEyQ5dMrRUqs5eTX1Oq.jpg",
+    "backdrop_path": "/doNIj6jX27hhfcbD6GEb22ydLSF.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 177467,
+      "name": "Cloudy with a Chance of Meatballs Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bill Hader",
+      "character": "Flint Lockwood (voice)",
+      "profile_path": "/qyT50vQ9PQIEctE1IxDTEsBKstU.jpg"
+    },
+    {
+      "name": "Anna Faris",
+      "character": "Sam Sparks (voice)",
+      "profile_path": "/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+    },
+    {
+      "name": "James Caan",
+      "character": "Tim Lockwood (voice)",
+      "profile_path": "/z2Lz3rtxZ7aJjzBUkCnExvo8stn.jpg"
+    },
+    {
+      "name": "Andy Samberg",
+      "character": "\u0022Baby\u0022 Brent (voice)",
+      "profile_path": "/jMXU5oG3i93SH1yhkpbBGskFiJl.jpg"
+    }
+  ]
+}

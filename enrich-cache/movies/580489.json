@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 580489,
+    "title": "Venom: Let There Be Carnage",
+    "overview": "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.",
+    "tagline": "You are what you eat.",
+    "runtime": 97,
+    "release_date": "2021-09-30",
+    "vote_average": 6.72,
+    "poster_path": "/pzKsRuKLFmYrW5Q0q8E8G78Tcgo.jpg",
+    "backdrop_path": "/eENEf62tMXbhyVvdcXlnQz2wcuT.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 558216,
+      "name": "Venom Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Hardy",
+      "character": "Eddie Brock / Venom",
+      "profile_path": "/d81K0RH8UX7tZj49tZaQhZ9ewH.jpg"
+    },
+    {
+      "name": "Woody Harrelson",
+      "character": "Cletus Kasady / Carnage",
+      "profile_path": "/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg"
+    },
+    {
+      "name": "Michelle Williams",
+      "character": "Anne Weying",
+      "profile_path": "/jn3BVMVbIptz2gc6Fhxo1qwJVvW.jpg"
+    },
+    {
+      "name": "Naomie Harris",
+      "character": "Frances Louise Barrison / Shriek",
+      "profile_path": "/41TVAcYqKKF7PGf3x7QfaLvkLSW.jpg"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18360,
+    "title": "Night at the Museum: Battle of the Smithsonian",
+    "overview": "Hapless museum night watchman Larry Daley must help his living, breathing exhibit friends out of a pickle now that they\u0027ve been transferred to the archives at the Smithsonian Institution. Larry\u0027s (mis)adventures this time include close encounters with Amelia Earhart, Abe Lincoln and Ivan the Terrible.",
+    "tagline": "When the lights go off the battle is on.",
+    "runtime": 105,
+    "release_date": "2009-05-20",
+    "vote_average": 6.154,
+    "poster_path": "/l9yAQn6TyrA3gv5xZZkiMMoZsiw.jpg",
+    "backdrop_path": "/zdhICEDUlBTQ43fQMa2KJt8fDFX.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 85943,
+      "name": "Night at the Museum Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Stiller",
+      "character": "Larry Daley",
+      "profile_path": "/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg"
+    },
+    {
+      "name": "Amy Adams",
+      "character": "Amelia Earhart / Tess",
+      "profile_path": "/gn0K6c6d1L6qQrRc86iL8uyIqiF.jpg"
+    },
+    {
+      "name": "Owen Wilson",
+      "character": "Jedediah Smith",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    },
+    {
+      "name": "Hank Azaria",
+      "character": "Kahmunrah / The Thinker / Abe Lincoln",
+      "profile_path": "/yFDw4b0jucuFWNnGcBPfpYUtn16.jpg"
+    }
+  ]
+}

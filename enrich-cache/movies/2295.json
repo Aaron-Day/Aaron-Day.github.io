@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2295,
+    "title": "Clerks II",
+    "overview": "A calamity at Dante and Randall\u0027s shops sends them looking for new horizons - but they ultimately settle at Mooby\u0027s, a fictional Disney-McDonald\u0027s-style fast-food empire.",
+    "tagline": "With no power comes no responsibility.",
+    "runtime": 97,
+    "release_date": "2006-07-21",
+    "vote_average": 6.907,
+    "poster_path": "/cLSW0nW94XT0DmBS69ublcLfQ9c.jpg",
+    "backdrop_path": "/9qaTlXgurqg85Ya5AW4Ab8RixqD.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 182813,
+      "name": "Clerks Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Brian O\u0027Halloran",
+      "character": "Dante",
+      "profile_path": "/c8bhTxVxhN4DMrJeCnu5usutbY5.jpg"
+    },
+    {
+      "name": "Jeff Anderson",
+      "character": "Randal",
+      "profile_path": "/edwQlYwAWWHQC9um89c5CQpFYof.jpg"
+    },
+    {
+      "name": "Rosario Dawson",
+      "character": "Becky",
+      "profile_path": "/siTzOI810a0K46wv1TORXMw5N7J.jpg"
+    },
+    {
+      "name": "Jason Mewes",
+      "character": "Jay",
+      "profile_path": "/jVL4WC8NbJFL894Z2FBYY3XuHW5.jpg"
+    }
+  ]
+}

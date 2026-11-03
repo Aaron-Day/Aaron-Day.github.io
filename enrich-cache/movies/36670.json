@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36670,
+    "title": "Never Say Never Again",
+    "overview": "James Bond returns as the secret agent 007 to battle the evil organization SPECTRE. Bond must defeat Largo, who has stolen two atomic warheads for nuclear blackmail. But Bond has an ally in Largo\u0027s girlfriend, the willowy Domino, who falls for Bond and seeks revenge.",
+    "tagline": "Sean Connery is James Bond 007",
+    "runtime": 134,
+    "release_date": "1983-10-07",
+    "vote_average": 6.084,
+    "poster_path": "/zhoAL4o1STGgLbLxJ9r1ijfyHC9.jpg",
+    "backdrop_path": "/45uCcAUB8Ljz3uKb1y1JHtT5aCT.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sean Connery",
+      "character": "James Bond",
+      "profile_path": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+      "name": "Klaus Maria Brandauer",
+      "character": "Maximilian Largo",
+      "profile_path": "/mE4polIdi4QdzDvIuHgfM37n7l9.jpg"
+    },
+    {
+      "name": "Max von Sydow",
+      "character": "Ernst Stavro Blofeld",
+      "profile_path": "/u16BsGyT6v9yuO7wWAF62NayDth.jpg"
+    },
+    {
+      "name": "Barbara Carrera",
+      "character": "Fatima Blush",
+      "profile_path": "/q9XOgZ5wocNPbgotNctkczF8D54.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 335977,
+    "title": "Indiana Jones and the Dial of Destiny",
+    "overview": "Finding himself in a new era, and approaching retirement, Indy wrestles with fitting into a world that seems to have outgrown him. But as the tentacles of an all-too-familiar evil return in the form of an old rival, Indy must don his hat and pick up his whip once more to make sure an ancient and powerful artifact doesn\u0027t fall into the wrong hands.",
+    "tagline": "A legend will face his destiny.",
+    "runtime": 155,
+    "release_date": "2023-06-25",
+    "vote_average": 6.491,
+    "poster_path": "/Af4bXE63pVsb2FtbW8uYIyPBadD.jpg",
+    "backdrop_path": "/57JocxmicOoAMhkUSmdKBlpZWMT.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 84,
+      "name": "Indiana Jones Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Harrison Ford",
+      "character": "Indiana Jones",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Phoebe Waller-Bridge",
+      "character": "Helena",
+      "profile_path": "/5VbadQsYCKdiJysP01LJFPmYB8A.jpg"
+    },
+    {
+      "name": "Mads Mikkelsen",
+      "character": "Dr. Voller",
+      "profile_path": "/AsX4bdvZ8UCayWTmAf9lAqOA8V7.jpg"
+    },
+    {
+      "name": "Boyd Holbrook",
+      "character": "Klaber",
+      "profile_path": "/xmkpedcct3ey1d1HGDNsUMQPHcB.jpg"
+    }
+  ]
+}

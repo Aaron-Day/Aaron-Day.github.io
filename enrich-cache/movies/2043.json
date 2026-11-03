@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2043,
+    "title": "Along Came a Spider",
+    "overview": "After the harrowing death of his partner, forensic psychologist and best-selling author Alex Cross cannot forgive himself and has retreated to the peace of retirement. But when a brilliant criminal kidnaps a senator\u0027s young daughter, he is lured back into action as the kidnapper wants to deal with Alex personally. Teamed with Jezzie Flanigan, the Secret Service agent assigned to protect the missing girl, Alex follows a serpentine trail of clues that leads him to a stunning discovery - the kidnapper wants more than just ransom.",
+    "tagline": "The game is far from over.",
+    "runtime": 104,
+    "release_date": "2001-04-06",
+    "vote_average": 6.352,
+    "poster_path": "/1YtsND7vSNymylnOSzgg3DdVFMB.jpg",
+    "backdrop_path": "/5C6njaciKvyZlKWUrQX7mjdl4D1.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 142680,
+      "name": "Alex Cross Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Morgan Freeman",
+      "character": "Alex Cross",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    },
+    {
+      "name": "Monica Potter",
+      "character": "Jezzie Flannigan",
+      "profile_path": "/jCFOlFAjNPMkX9pJF2Au0cquZ6v.jpg"
+    },
+    {
+      "name": "Michael Wincott",
+      "character": "Gary Soneji",
+      "profile_path": "/z6FtWACKaIivi0khxM6vEHoUH0.jpg"
+    },
+    {
+      "name": "Dylan Baker",
+      "character": "Ollie McArthur",
+      "profile_path": "/4mw6xj8Aj3ixjjeUj9pZdZPTbvz.jpg"
+    }
+  ]
+}

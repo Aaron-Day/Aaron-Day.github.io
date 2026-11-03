@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13475,
+    "title": "Star Trek",
+    "overview": "The fate of the galaxy rests in the hands of bitter rivals. One, James Kirk, is a delinquent, thrill-seeking Iowa farm boy. The other, Spock, a Vulcan, was raised in a logic-based society that rejects all emotion. As fiery instinct clashes with calm reason, their unlikely but powerful partnership is the only thing capable of leading their crew through unimaginable danger, boldly going where no one has gone before. The human adventure has begun again.",
+    "tagline": "The future begins.",
+    "runtime": 127,
+    "release_date": "2009-05-06",
+    "vote_average": 7.439,
+    "poster_path": "/lV5OpzAss1z06YNagOVap1I35mH.jpg",
+    "backdrop_path": "/cqXEwYFcwyKPZCKl1jAPaG3cMsl.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 115575,
+      "name": "Star Trek: Alternate Reality Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chris Pine",
+      "character": "Cadet James T. Kirk",
+      "profile_path": "/vSe6sIsdtcoqBhuWRXynahFg8Vf.jpg"
+    },
+    {
+      "name": "Zachary Quinto",
+      "character": "Commander Spock",
+      "profile_path": "/lNRhutc6s5soEAsPAird3W3sZdy.jpg"
+    },
+    {
+      "name": "Leonard Nimoy",
+      "character": "Ambassador Spock",
+      "profile_path": "/9KaiO5eNzJtB4zB2inmNWR0GTRI.jpg"
+    },
+    {
+      "name": "Eric Bana",
+      "character": "Captain Nero",
+      "profile_path": "/l9yoDgw3YFC2gMD1HTo5djGOwSY.jpg"
+    }
+  ]
+}

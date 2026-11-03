@@ -1,0 +1,160 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Making the Grade",
+        "overview": "With the kids at school, Carol decides to take some college courses--the same ones Karen is taking. Meanwhile, Dana tells Rich to get serious about his education.",
+        "air_date": "1997-09-19",
+        "runtime": 22,
+        "still_path": "/9zdnelZPcjEI308VCdcpLfYRF64.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Star is Born",
+        "overview": "Al lands a part in a movie and dreams of a career in Hollywood; Carol gets in a bake-sale battle.",
+        "air_date": "1997-09-26",
+        "runtime": 22,
+        "still_path": "/YNu3MCp8v2SykR9WrDWUWohm80.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Your Cheatin\u0027 Heart",
+        "overview": "Rich secretly takes dancing lessons to impress Dana at a wedding, but she thinks he\u0027s cheating on her.",
+        "air_date": "1997-10-03",
+        "runtime": 22,
+        "still_path": "/ovSR9e8ixckNPIBhjz8t8o0PE1c.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Take This Job and ...",
+        "overview": "JT\u0027s job at a garage is an accident waiting to happen; Frank is obsessed with restoring a boat docked in the backyard.",
+        "air_date": "1997-10-10",
+        "runtime": 22,
+        "still_path": "/PvxPSOd4RGVE7eiagQCD4TjmqW.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Poetic Justice",
+        "overview": "The teaching assistant who\u0027s been giving A\u0027s to Karen now wants something in return; Mark dates a slacker girl.",
+        "air_date": "1997-10-17",
+        "runtime": 22,
+        "still_path": "/tWSLdVrC5PWmoPPJ57wrtlNnaKH.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Can\u0027t Buy Me Love",
+        "overview": "Carol tries to convince an old classmate, now a rich developer, to hire Frank; Karen wants Dana to join a sorority.",
+        "air_date": "1997-10-24",
+        "runtime": 22,
+        "still_path": "/zhvP5vxOQlRBPCMQad4XAHA1zO.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Dream Lover",
+        "overview": "Two Halloween parties result in a lesson about being scared for Lilly and a ghostly encounter for JT.",
+        "air_date": "1997-10-31",
+        "runtime": 22,
+        "still_path": "/jAIR8zyCruoJd75NlkhWLhr4A16.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Girls Just Wanna Have Fun",
+        "overview": "Dana feels compelled to compete with an old female buddy of Rich\u0027s; Frank\u0027s troublesome cousin Bert reappears.",
+        "air_date": "1997-11-07",
+        "runtime": 22,
+        "still_path": "/9Mu18Wl0zPXYHGSpbLZVkZ01S8N.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Goodbye, Mr. Chip",
+        "overview": "Rich and JT feud; meanwhile, Karen takes advantage of boyfriend Chip\u0027s easy nature.",
+        "air_date": "1997-12-05",
+        "runtime": 22,
+        "still_path": "/pXry9n78Mhl0lnKCZSP5AhUmITg.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Too Many Santas",
+        "overview": "Lilly has a crisis of faith when she discovers that the department store Santa is really JT.",
+        "air_date": "1997-12-19",
+        "runtime": 22,
+        "still_path": "/krN5kgdH7utTVDABK7kitWyAQrU.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Phoney Business",
+        "overview": "Al gets a job modeling on a TV commercial, only to discover it was re-dubbed as a phone-sex ad.",
+        "air_date": "1998-01-09",
+        "runtime": 22,
+        "still_path": "/vCuGpV5NnGCP8ECnzGHtebO6JWX.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Goin\u0027 to the Chapel",
+        "overview": "JT falls for an aerobics instructor; Carol has a fight with Dana, who decides to get even by eloping with Rich.",
+        "air_date": "1998-01-16",
+        "runtime": 22,
+        "still_path": "/7yhdL3iFoGLYIa8LPkeDnxMAQJ1.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Feet of Clay",
+        "overview": "Dana talks Rich into taking a pottery class; Carol and Frank\u0027s \u0022role playing\u0022 is misinterpreted by the kids.",
+        "air_date": "1998-01-23",
+        "runtime": 22,
+        "still_path": "/9PRJktvI81y0L9R9Z1xWlKNFsxp.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Pain in the Class",
+        "overview": "Frank and Carol attend their 25th high-school reunion, along with Frank\u0027s old rival; Rich and JT charge pals to watch a bikini contest on TV.",
+        "air_date": "1998-01-30",
+        "runtime": 22,
+        "still_path": null
+      },
+      {
+        "episode_number": 15,
+        "name": "The Half Monty",
+        "overview": "JT and Rich enter a male-stripper contest for quick cash to take their girlfriends on a promised ski trip.",
+        "air_date": "1998-02-27",
+        "runtime": 22,
+        "still_path": null
+      },
+      {
+        "episode_number": 16,
+        "name": "And Justice for Some",
+        "overview": "A truck giveaway causes friction between Frank and JT; a women\u0027s safety seminar is a big hit thanks to a hunky cop.",
+        "air_date": "1998-06-05",
+        "runtime": 22,
+        "still_path": "/7EJYbIC7KSuqxeEBfpfFH7V4Lu2.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Understudy",
+        "overview": "Al, angry about being an understudy at a local play, refuses to learn her lines--something she regrets when the leading lady gets sick opening night.",
+        "air_date": "1998-06-12",
+        "runtime": 22,
+        "still_path": null
+      },
+      {
+        "episode_number": 18,
+        "name": "We\u0027re in the Money",
+        "overview": "Cody returns and gives Frank and Carol $50,000, which causes nothing but trouble as they decide how to spend it.",
+        "air_date": "1998-06-19",
+        "runtime": 22,
+        "still_path": "/fMP5clEhCu1peFeixOwGNwBsAoR.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Movin\u0027 On Up",
+        "overview": "Everybody is excited about the prospect of moving into a brand-new house--except Lilly.",
+        "air_date": "1998-06-26",
+        "runtime": 22,
+        "still_path": "/5Lm6rJGozaJJyg3lVM9guqtv0fd.jpg"
+      }
+    ]
+  }
+}

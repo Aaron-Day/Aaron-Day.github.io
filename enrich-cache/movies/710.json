@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 710,
+    "title": "GoldenEye",
+    "overview": "When a powerful secret defense system is stolen, James Bond is assigned to stop a Russian crime syndicate from using it.",
+    "tagline": "No limits. No fears. No substitutes.",
+    "runtime": 130,
+    "release_date": "1995-11-16",
+    "vote_average": 6.901,
+    "poster_path": "/z0ljRnNxIO7CRBhLEO0DvLgAFPR.jpg",
+    "backdrop_path": "/fIWsCpYR9iGDMSbMTSAzy8L7Kg5.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Pierce Brosnan",
+      "character": "James Bond",
+      "profile_path": "/dzXVwwJLPwiZeXOnf7YxorqVEEM.jpg"
+    },
+    {
+      "name": "Sean Bean",
+      "character": "Alec Trevelyan",
+      "profile_path": "/tAPWubSNDEGzA3AzUAmMiBAZfCe.jpg"
+    },
+    {
+      "name": "Izabella Scorupco",
+      "character": "Natalya Simonova",
+      "profile_path": "/Av7fykzXL701au42sTbhufHpwwv.jpg"
+    },
+    {
+      "name": "Famke Janssen",
+      "character": "Xenia Onatopp",
+      "profile_path": "/uvZGwNsLqe9NyA57Qlt46IkO8Bd.jpg"
+    }
+  ]
+}

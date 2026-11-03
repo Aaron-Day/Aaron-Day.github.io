@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10206,
+    "title": "Buffy the Vampire Slayer",
+    "overview": "Blonde, bouncy Buffy is your typical high school cheerleader. But all that changes when a strange man informs her she\u0027s been chosen by fate to kill vampires.",
+    "tagline": "She knows a sucker when she sees one.",
+    "runtime": 85,
+    "release_date": "1992-07-24",
+    "vote_average": 5.6,
+    "poster_path": "/tcF3S4UdFpuoZEWovMDq5AXazNF.jpg",
+    "backdrop_path": "/qMf1MuY9u6BfBYTscEjWbIlWMrg.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kristy Swanson",
+      "character": "Buffy Summers",
+      "profile_path": "/8gPVElKDCBllmfIP0pjZL9zISKv.jpg"
+    },
+    {
+      "name": "Donald Sutherland",
+      "character": "Merrick Jamison-Smythe",
+      "profile_path": "/t9rN5Vni7GYmqqNi9nANCZbmewx.jpg"
+    },
+    {
+      "name": "Paul Reubens",
+      "character": "Amilyn",
+      "profile_path": "/7T0ExonMf6PAvphKVaTm73BXdLW.jpg"
+    },
+    {
+      "name": "Rutger Hauer",
+      "character": "Lothos",
+      "profile_path": "/xyag0LbjocTwx2Ht7B3RofvCNMT.jpg"
+    }
+  ]
+}

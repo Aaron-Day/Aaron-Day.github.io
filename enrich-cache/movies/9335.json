@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9335,
+    "title": "Transporter 2",
+    "overview": "Professional driver, and former Special Forces officer, Frank Martin is living in Miami, where he is temporarily filling in for a friend as the chauffeur for a government narcotics control policy director and his family. The young boy in the family is targeted for kidnapping, and Frank immediately becomes involved in protecting the child and exposing the kidnappers.",
+    "tagline": "The best in the business is back in the game.",
+    "runtime": 88,
+    "release_date": "2005-08-03",
+    "vote_average": 6.333,
+    "poster_path": "/cdm17vK8PxHfTi7ayZf6WKbOgUO.jpg",
+    "backdrop_path": "/lbs1ood36hzj0O0cqW2a8MqptOh.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9518,
+      "name": "The Transporter Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Statham",
+      "character": "Frank Martin",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Amber Valletta",
+      "character": "Audrey Billings",
+      "profile_path": "/6KSsLN9XFucycN5yw4FGeByHrVx.jpg"
+    },
+    {
+      "name": "Alessandro Gassmann",
+      "character": "Gianni Chellini",
+      "profile_path": "/1RgJdkPXpwfQWumzZ4h3KKxVv4V.jpg"
+    },
+    {
+      "name": "Kate Nauta",
+      "character": "Lola",
+      "profile_path": "/cbTZfha344j1vshNuITeupmnK2C.jpg"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 5,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Legacy",
+        "overview": "A deadly new criminal, Tobias Church, threatens Star City, which forces Oliver to consider forming a new team of superheroes to help him do battle. In flashbacks, Oliver faces off against the Bratva in Russia.",
+        "air_date": "2016-10-05",
+        "runtime": 42,
+        "still_path": "/uJmQsMSHKJiNuTSpYpJRWtRssCK.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Recruits",
+        "overview": "Oliver recruits Curtis, Wild Dog and Evelyn Sharp for his team, but his training methods prove to be too much for some to handle. In flashbacks, Oliver continues his initiation into the Bratva.",
+        "air_date": "2016-10-12",
+        "runtime": 42,
+        "still_path": "/FwIJiupVE8PEffNjjEzMJfYLpo.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "A Matter of Trust",
+        "overview": "The Green Arrow is forced to face a powerful new drug dealer when Wild Dog goes off on his own.",
+        "air_date": "2016-10-19",
+        "runtime": 42,
+        "still_path": "/AuhEfrU3I7zCcMb9arnBPsN7h4h.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Penance",
+        "overview": "Oliver and Lyla team up on a secret mission for Diggle. Felicity finds out and disapproves of the plan and opts to stay behind. When Tobias Church launches a deadly assault against the city, Felicity must decide if she wants to send the recruits out sans the Green Arrow.",
+        "air_date": "2016-10-26",
+        "runtime": 42,
+        "still_path": "/9Iq4p2MYVwA8DdEzWNdhtVm9ktX.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Human Target",
+        "overview": "When Tobias Church captures and tortures one of Oliver\u0027s new recruits, Oliver must turn to an old friend, Christopher Chance AKA the Human Target, for help. Meanwhile, Felicity\u0027s worlds collide when Detective Malone joins the ACU.",
+        "air_date": "2016-11-02",
+        "runtime": 42,
+        "still_path": "/hQqNO7WpQpgr0ovEXb8aDg8i3Ab.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "So It Begins",
+        "overview": "Prometheus claims two more victims, and Oliver realizes that the killings are related to the people on his father\u0027s list. His recruits aren\u0027t happy to hear that Oliver used to be a serial killer. In the past, Oliver finally meets Kovar and may not live to regret it.",
+        "air_date": "2016-11-09",
+        "runtime": 41,
+        "still_path": "/mrlg1ubymy0SJHHbkegqM330Hre.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Vigilante",
+        "overview": "When the bodies of two criminals are dropped at SCPD, Oliver realizes there is a new Vigilante in Star City. The team is split about whether they should stop someone who is helping keep the city safe. Diggle is frustrated with his new situation and Thea fights for Lance who confesses a shocking secret. Meanwhile, in the flashbacks, Oliver finally sits down with Konstantin Kovar.",
+        "air_date": "2016-11-16",
+        "runtime": 42,
+        "still_path": "/4DEg0SWCsu0wS72OL4BX7lKmYeo.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Invasion! (III)",
+        "overview": "Oliver wakes up to a life where he never got on The Queen\u2019s Gambit. Robert and Moira Queen are alive and well. Laurel is his loving fianc\u00E9e and their wedding is imminent. Everything seems perfect, but Oliver starts to notice small imperfections that make him question this new reality. Meanwhile, Felicity and the recruits take on a new threat with help from The Flash and Supergirl.\n\nThe crossover starts on Supergirl S02E08 Medusa (I) and The Flash S03E08 Invasion! (II). It continues on DC\u0027s Legends of Tomorrow S02E07 Invasion! (IV).",
+        "air_date": "2016-11-30",
+        "runtime": 42,
+        "still_path": "/jKLvEq99daTLF6is02b7bFxmS3B.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "What We Leave Behind",
+        "overview": "After Prometheus attacks Curtis, Oliver realizes Prometheus knows all of Team Arrow\u0027s secret identities and is planning to come for them one by one. Felicity and Detective Malone discover a clue that links Prometheus to Oliver\u0027s past.",
+        "air_date": "2016-12-07",
+        "runtime": 42,
+        "still_path": "/d47U5EEg6B9G4WglRHPUNW5CMwz.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Who Are You?",
+        "overview": "Worried that Prometheus is right and he is truly a killer at heart, Oliver looks for any ray of hope and finds it in what seems to be the miraculous return of Laurel Lance. However Felicity, still reeling from Detective Malone\u0027s murder, is bent on revenge - she wants to stop Prometheus at any cost. While in prison, Diggle fights for his life.",
+        "air_date": "2017-01-25",
+        "runtime": 42,
+        "still_path": "/zy3NwKnTfmXdwgs9WqiYDE9sSYX.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Second Chances",
+        "overview": "In his quest to take down Kovar, Oliver gets help from a surprising source - Talia al Ghul. However, when she reveals what she wants from him in exchange, Oliver isn\u0027t sure he can accept her help. Felicity attempts to hack the NSA to help free Diggle but when her online efforts are flagged, she faces off against an unknown adversary. Meanwhile, Curtis tells the team about a female vigilante, Tina Boland, he uncovered online who has been wreaking havoc all over the country.",
+        "air_date": "2017-02-01",
+        "runtime": 42,
+        "still_path": "/yIPNGfOOVVQVOEeHSakhm1DI0fN.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Bratva",
+        "overview": "A mission takes Oliver, Felicity and team to Russia where they meet up with Oliver\u0027s old friend, Anatoly. Meanwhile, fresh out of rehab, Lance returns to the mayor\u0027s office ready to get back to work. However, when Susan asks for an interview with Lance to discuss his addiction, he balks and it\u0027s up to Rene to help keep things on track.",
+        "air_date": "2017-02-08",
+        "runtime": 42,
+        "still_path": "/1zOf7TzIIZhOZseyLtNDroanDVZ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Spectre of the Gun",
+        "overview": "A traumatic attack on City Hall triggers painful memories for Rene about his family. Flashbacks reveal how Rene went from simple family man to a hero named Wild Dog. Meanwhile, Oliver must deal with the perpetrator behind the attack and realizes the best way to do so is as Mayor Queen instead of the Green Arrow. Tensions run high in the Arrow bunker.",
+        "air_date": "2017-02-15",
+        "runtime": 41,
+        "still_path": "/zYSQ8TLS7kjPlXZ3jXMmHlL18JU.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "The Sin-Eater",
+        "overview": "China White, Cupid and Liza Warner break out of Iron Heights and head to Star City for revenge. Oliver tries to bring in the newly formed girl gang but the ACU intervenes mid-fight. To his surprise, they are there to arrest the Green Arrow for the murder of Det. Malone. Meanwhile, Lance feels responsible for the prison break after Warner tells him she heard about him working with Damien Darhk.",
+        "air_date": "2017-02-22",
+        "runtime": 42,
+        "still_path": "/tH7XBOwuEjB7mj7SqxtxEKj99Ov.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Fighting Fire with Fire",
+        "overview": "Oliver faces his biggest challenge yet as mayor. Felicity continues down her dark path with Helix. After Vigilante attacks Oliver while he\u0027s acting as the mayor, Diggle leads the team in a mission to stop Vigilante once and for all.",
+        "air_date": "2017-03-01",
+        "runtime": 42,
+        "still_path": "/wTLSWi9EYFtBUatV31lzqtdc0nL.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Checkmate",
+        "overview": "Oliver gets closer to the truth about Prometheus. Meanwhile, Helix refuses to continue helping Felicity until she does a favor for them.",
+        "air_date": "2017-03-15",
+        "runtime": 42,
+        "still_path": "/mj9661jaFhqrjpTkdXrARlVx6DE.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Kapiushon",
+        "overview": "Prometheus goes to extreme lengths to destroy Oliver. In flashbacks, Oliver\u0027s violent tendencies come to a head in a confrontation with Anatoly.",
+        "air_date": "2017-03-22",
+        "runtime": 42,
+        "still_path": "/bBxSGVY50HFL6LT4x5d7dfEOpH5.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Disbanded",
+        "overview": "Diggle and Felicity are shocked by Oliver\u0027s decision to ask the Bratva for help in taking down Prometheus.",
+        "air_date": "2017-03-29",
+        "runtime": 42,
+        "still_path": "/hND92lNzMQ7KtShpoNHhhm2Chq3.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Dangerous Liaisons",
+        "overview": "Oliver, Team Arrow, ARGUS and the SCPD kick off a citywide manhunt for Adrian Chase. Helix tells Felicity they have a way to find Chase but they will need something big, and illegal, from her in return.",
+        "air_date": "2017-04-26",
+        "runtime": 42,
+        "still_path": "/8kgbz2PstsjzX5nLJty0Y6GJrnc.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Underneath",
+        "overview": "Oliver and Felicity get trapped in the bunker together, while Diggle and Lyla deal with marital issues.",
+        "air_date": "2017-05-03",
+        "runtime": 42,
+        "still_path": "/xD9bWz3IrgzB883zxdSD7KPo8zj.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Honor Thy Fathers",
+        "overview": "Oliver faces the forced release of criminals prosecuted by Adrian Chase, while a crate is delivered to Oliver\u0027s office containing a corpse in concrete.",
+        "air_date": "2017-05-10",
+        "runtime": 42,
+        "still_path": "/euQliOnoOwleq5pHSDyUqXmG8iK.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Missing",
+        "overview": "Black Siren returns to give Chase help; Felicity plans a birthday party for Oliver; Lance is angry with Rene for missing the custody hearing about his daughter.",
+        "air_date": "2017-05-17",
+        "runtime": 42,
+        "still_path": "/dkxVb0DumloXzWUYFsNCSHWfL2W.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Lian Yu",
+        "overview": "Oliver assembles a group of unlikely allies - Slade, Nyssa, Merlyn and Digger Harkness - to engage in an epic battle against Chase and his army.",
+        "air_date": "2017-05-24",
+        "runtime": 42,
+        "still_path": "/apGODUKLMgUVz7e1tEUHUkybCTd.jpg"
+      }
+    ]
+  }
+}

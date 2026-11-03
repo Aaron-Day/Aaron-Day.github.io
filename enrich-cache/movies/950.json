@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 950,
+    "title": "Ice Age: The Meltdown",
+    "overview": "Diego, Manny and Sid return in this sequel to the hit animated movie Ice Age. This time around, the deep freeze is over, and the ice-covered earth is starting to melt, which will destroy the trio\u0027s cherished valley. The impending disaster prompts them to reunite and warn all the other beasts about the desperate situation.",
+    "tagline": "Kiss your nuts goodbye.",
+    "runtime": 91,
+    "release_date": "2006-03-29",
+    "vote_average": 6.731,
+    "poster_path": "/zDduhCHasKQ9YOTvlOreHem7Wbi.jpg",
+    "backdrop_path": "/o1jr0UqVjxIZ1JnFzuVLN4ulWey.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8354,
+      "name": "Ice Age Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ray Romano",
+      "character": "Manny (voice)",
+      "profile_path": "/zWT03QvuVYySlrjmHCojKrNYjoC.jpg"
+    },
+    {
+      "name": "John Leguizamo",
+      "character": "Sid (voice)",
+      "profile_path": "/kwYCdxTlDh9zauUCg4mp2XTCQTw.jpg"
+    },
+    {
+      "name": "Denis Leary",
+      "character": "Diego (voice)",
+      "profile_path": "/tAOziVWQBnrW9eR442M6g9SQkmA.jpg"
+    },
+    {
+      "name": "Queen Latifah",
+      "character": "Ellie (voice)",
+      "profile_path": "/zKJ0fZ7ne57fTWWd3WP1OVvoLS6.jpg"
+    }
+  ]
+}

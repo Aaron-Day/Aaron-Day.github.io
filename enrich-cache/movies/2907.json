@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2907,
+    "title": "The Addams Family",
+    "overview": "When a man claiming to be long-lost Uncle Fester reappears after 25 years lost, the family plans a celebration to wake the dead. But the kids barely have time to warm up the electric chair before Morticia begins to suspect Fester is fraud when he can\u0027t recall any of the details of Fester\u0027s life.",
+    "tagline": "Weird is relative.",
+    "runtime": 100,
+    "release_date": "1991-11-22",
+    "vote_average": 7.084,
+    "poster_path": "/qFf8anju5f2epI0my8RdwwIXFIP.jpg",
+    "backdrop_path": "/7OxGhxUYAdtuike29VMzEFxJx7y.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 11716,
+      "name": "Addams Family Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ra\u00FAl Juli\u00E1",
+      "character": "Gomez Addams",
+      "profile_path": "/zRvv5vdqCxdio38gx0WWmof4cO5.jpg"
+    },
+    {
+      "name": "Anjelica Huston",
+      "character": "Morticia Addams",
+      "profile_path": "/6hnYeHa7Rc1w1MmQ3JsLSIb7yCX.jpg"
+    },
+    {
+      "name": "Christopher Lloyd",
+      "character": "Uncle Fester",
+      "profile_path": "/nxVjpyb3UrfbPZnEyDNlQVlFAs5.jpg"
+    },
+    {
+      "name": "Dan Hedaya",
+      "character": "Tully Alford",
+      "profile_path": "/evL3mV8hNIjZOb1XG3qtgmiTgS5.jpg"
+    }
+  ]
+}

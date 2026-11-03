@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 39691,
+    "title": "Cats \u0026 Dogs: The Revenge of Kitty Galore",
+    "overview": "The ongoing war between the canine and feline species is put on hold when they join forces to thwart a rogue cat spy with her own sinister plans for conquest.",
+    "tagline": "Just like real spies... only furrier.",
+    "runtime": 82,
+    "release_date": "2010-07-29",
+    "vote_average": 5.212,
+    "poster_path": "/syV2naEnz7wbakOOk7XanPX8MjL.jpg",
+    "backdrop_path": "/uR8JBSxkctCr4LofMGoeri4oljj.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87014,
+      "name": "Cats \u0026 Dogs Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "James Marsden",
+      "character": "Diggs (voice)",
+      "profile_path": "/lf7OnfKZnMgNh9b98764tqSocGK.jpg"
+    },
+    {
+      "name": "Nick Nolte",
+      "character": "Butch (voice)",
+      "profile_path": "/jpYzFBi6zfn8CHVaXmqgiOTas4V.jpg"
+    },
+    {
+      "name": "Christina Applegate",
+      "character": "Catherine (voice)",
+      "profile_path": "/ncWS3iguCMCQ53ewacGpMGA6MHv.jpg"
+    },
+    {
+      "name": "Katt Williams",
+      "character": "Seamus (voice)",
+      "profile_path": "/fYnrBTxywuWTHqoRkXj1lEvcNaO.jpg"
+    }
+  ]
+}

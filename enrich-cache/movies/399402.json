@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 399402,
+    "title": "Hunter Killer",
+    "overview": "Untested American submarine commander, Capt. Joe Glass of the USS Arkansas, is on the hunt for a U.S. sub in distress in the Arctic Ocean. He soon learns a secret Russian coup is in the offing, a conspiracy that threatens to dismantle the world order. With crew and country on the line, Glass must coordinate with an elite group of Navy SEALs to sneak through enemy waters, rescue the kidnapped Russian president, and hopefully prevent World War III.",
+    "tagline": "Courage runs deep.",
+    "runtime": 121,
+    "release_date": "2018-10-19",
+    "vote_average": 6.898,
+    "poster_path": "/a0j18XNVhP4RcW3wXwsqT0kVoQm.jpg",
+    "backdrop_path": "/gCIB3DdK00DyfwosVGf7pnFFdK3.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Gerard Butler",
+      "character": "Captain Joe Glass",
+      "profile_path": "/i54XoxYieuff2w6MwyfwVUBvmR0.jpg"
+    },
+    {
+      "name": "Gary Oldman",
+      "character": "CJCS Charles Donnegan",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    },
+    {
+      "name": "Toby Stephens",
+      "character": "Bill Beaman",
+      "profile_path": "/1NCqxC8kMiKABrZ9Xgt4nNHGxaI.jpg"
+    },
+    {
+      "name": "Common",
+      "character": "RA John Fisk",
+      "profile_path": "/eggJAnJxpn8wYraX7ea5svETB54.jpg"
+    }
+  ]
+}

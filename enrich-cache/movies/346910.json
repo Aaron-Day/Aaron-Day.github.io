@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 346910,
+    "title": "The Predator",
+    "overview": "When a young boy accidentally triggers the universe\u0027s most lethal hunters\u0027 return to Earth, only a ragtag crew of ex-soldiers and a disgruntled scientist can prevent the end of the human race.",
+    "tagline": "The hunt has evolved.",
+    "runtime": 107,
+    "release_date": "2018-09-05",
+    "vote_average": 5.617,
+    "poster_path": "/a3eWGF6YPF7No5Rbtjc8QpDvz7l.jpg",
+    "backdrop_path": "/b96OdaJce7Zu70NYe8vmlfOQUUN.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 399,
+      "name": "Predator Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Boyd Holbrook",
+      "character": "Quinn McKenna",
+      "profile_path": "/xmkpedcct3ey1d1HGDNsUMQPHcB.jpg"
+    },
+    {
+      "name": "Trevante Rhodes",
+      "character": "Nebraska Williams",
+      "profile_path": "/mx11nZOnT5nZbuzFi3TPVBQBZr.jpg"
+    },
+    {
+      "name": "Sterling K. Brown",
+      "character": "Traeger",
+      "profile_path": "/uq4kBHad6mOA4iXpX8f16PQJBEA.jpg"
+    },
+    {
+      "name": "Jacob Tremblay",
+      "character": "Rory McKenna",
+      "profile_path": "/h8CXDp86Y36CUENF4SXJq5ZRTsf.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11546,
+    "title": "Police Academy: Mission to Moscow",
+    "overview": "The Russians seek help in dealing with the Mafia from the veterans of the Police Academy. They head off to Moscow, in order to find evidence against Konstantin Konali, who marketed a computer game that everyone in the world is playing.",
+    "tagline": "Just when we thought the Cold War was over, leave it to these guys to heat it up again.",
+    "runtime": 83,
+    "release_date": "1994-06-09",
+    "vote_average": 4.6,
+    "poster_path": "/3517XQ9LpoEykyYq2TuDNS45MPP.jpg",
+    "backdrop_path": "/rF060JFEDVmBUe2BRvUKQXe2O02.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9338,
+      "name": "Police Academy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "George Gaynes",
+      "character": "Commandant Lassard",
+      "profile_path": "/6NrhrTrjwpR55wffPDdCz7lNNHA.jpg"
+    },
+    {
+      "name": "Michael Winslow",
+      "character": "Jones",
+      "profile_path": "/uSRS2MOI1fNFAdvUgrhatBvfsvv.jpg"
+    },
+    {
+      "name": "David Graf",
+      "character": "Tackleberry",
+      "profile_path": "/oAVx2Ea0qrND2wn78m2wQtGGlz1.jpg"
+    },
+    {
+      "name": "Leslie Easterbrook",
+      "character": "Callahan",
+      "profile_path": "/cgivmDAMFWTMGKGr12Z0HjEcBgN.jpg"
+    }
+  ]
+}

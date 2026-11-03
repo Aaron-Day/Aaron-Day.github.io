@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 955,
+    "title": "Mission: Impossible II",
+    "overview": "With computer genius Luther Stickell at his side and a beautiful thief on his mind, agent Ethan Hunt races across Australia and Spain to stop a former IMF agent from unleashing a genetically engineered biological weapon called Chimera. This mission, should Hunt choose to accept it, plunges him into the center of an international crisis of terrifying magnitude.",
+    "tagline": "Expect the impossible again.",
+    "runtime": 123,
+    "release_date": "2000-05-24",
+    "vote_average": 6.137,
+    "poster_path": "/hfnrual76gPeNFduhD4xzHWpfTw.jpg",
+    "backdrop_path": "/24DZfupDlhXeTchmcOkoGRhP5Vg.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87359,
+      "name": "Mission: Impossible Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Ethan Hunt",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Dougray Scott",
+      "character": "Sean Ambrose",
+      "profile_path": "/fDjTHSZuUIEstxxBvHApLrU1fWz.jpg"
+    },
+    {
+      "name": "Thandiwe Newton",
+      "character": "Nyah Hall",
+      "profile_path": "/hZQLvxj7nV7pBrRyWTvWVz1CDi8.jpg"
+    },
+    {
+      "name": "Ving Rhames",
+      "character": "Luther Stickell",
+      "profile_path": "/tOVDvu1EQP78AwaUw6uh1wN818E.jpg"
+    }
+  ]
+}

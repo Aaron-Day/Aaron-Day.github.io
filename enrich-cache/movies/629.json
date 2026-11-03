@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 629,
+    "title": "The Usual Suspects",
+    "overview": "The lone survivor of an explosive heist gone wrong recounts for interrogators the events that began with five disparate criminals assembled for a police lineup - with alleged criminal mastermind Keyser Soze at the center of it all.",
+    "tagline": "Five criminals. One line up. No coincidence.",
+    "runtime": 106,
+    "release_date": "1995-07-19",
+    "vote_average": 8.162,
+    "poster_path": "/99X2SgyFunJFXGAYnDv3sb9pnUD.jpg",
+    "backdrop_path": "/hy0Hx9fMPk2fmw26Li60z1S2giU.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Stephen Baldwin",
+      "character": "McManus",
+      "profile_path": "/w2nZjBsEsjboQDZJXEkysuGgue4.jpg"
+    },
+    {
+      "name": "Gabriel Byrne",
+      "character": "Keaton",
+      "profile_path": "/9r9oDGENg92VYYFMkV4C09IUlrb.jpg"
+    },
+    {
+      "name": "Benicio del Toro",
+      "character": "Fenster",
+      "profile_path": "/aYomJWx0B2B8ra6Rmgt8lr0XCrw.jpg"
+    },
+    {
+      "name": "Kevin Pollak",
+      "character": "Hockney",
+      "profile_path": "/ss4vL5itVF1I2AEC64k1vb79GEq.jpg"
+    }
+  ]
+}

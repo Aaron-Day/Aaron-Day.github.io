@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2665,
+    "title": "Airplane II: The Sequel",
+    "overview": "A faulty computer causes a passenger space shuttle to head straight for the sun, and man-with-a-past Ted Striker must save the day and get the shuttle back on track \u2013 again \u2013 all the while trying to patch up his relationship with Elaine.",
+    "tagline": "For the ride of your life... All you need for Christmas are your two front seats!",
+    "runtime": 84,
+    "release_date": "1982-12-10",
+    "vote_average": 6.081,
+    "poster_path": "/zs7Pjyabt0fwe2XqIx0gnF9Q4np.jpg",
+    "backdrop_path": "/mtRGjKv3ky39BGXfwJDwoKumVIT.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91663,
+      "name": "Airplane Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Robert Hays",
+      "character": "Ted Striker",
+      "profile_path": "/pqu0hSAdHGItjP0iqkbTg4Ocv9w.jpg"
+    },
+    {
+      "name": "Julie Hagerty",
+      "character": "Elaine Dickinson",
+      "profile_path": "/bQZ0bcFNyE4a3GDNfYMmfO7eWMl.jpg"
+    },
+    {
+      "name": "Lloyd Bridges",
+      "character": "Steve McCroskey",
+      "profile_path": "/lO4HWxYvneC0dMFckK2WrKPZa9o.jpg"
+    },
+    {
+      "name": "Chad Everett",
+      "character": "Simon Kurtz",
+      "profile_path": "/MEJZrjnprFI8JtDCDoqys8cc3i.jpg"
+    }
+  ]
+}

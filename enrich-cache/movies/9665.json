@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9665,
+    "title": "Glory",
+    "overview": "Robert Gould Shaw leads the US Civil War\u0027s first all-black volunteer company, fighting prejudices of both his own Union army and the Confederates.",
+    "tagline": "Their innocence. Their heritage. Their lives.",
+    "runtime": 122,
+    "release_date": "1989-12-15",
+    "vote_average": 7.492,
+    "poster_path": "/pGDzBjZvzmSCIEduQBfESLMiwtp.jpg",
+    "backdrop_path": "/3yHddfnAwI1kWOGjoQXZoqhnU5Z.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 10752,
+        "name": "War"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Matthew Broderick",
+      "character": "Col. Robert Gould Shaw",
+      "profile_path": "/papqFgpyroZJEqd7WvuNGN8ti2k.jpg"
+    },
+    {
+      "name": "Denzel Washington",
+      "character": "Pvt. Trip",
+      "profile_path": "/jj2Gcobpopokal0YstuCQW0ldJ4.jpg"
+    },
+    {
+      "name": "Cary Elwes",
+      "character": "Maj. Cabot Forbes",
+      "profile_path": "/9UszBdQJ9PmyBydIeIBxlStozhW.jpg"
+    },
+    {
+      "name": "Morgan Freeman",
+      "character": "Sgt. Maj. John Rawlins",
+      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+    }
+  ]
+}

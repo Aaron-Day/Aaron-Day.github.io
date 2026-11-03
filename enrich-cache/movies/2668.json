@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2668,
+    "title": "Sleepy Hollow",
+    "overview": "Skeptical young detective Ichabod Crane gets transferred to the hamlet of Sleepy Hollow, New York, where he is tasked with investigating the decapitations of three people \u2013 murders the townsfolk attribute to a legendary specter, The Headless Horseman.",
+    "tagline": "Heads will roll.",
+    "runtime": 105,
+    "release_date": "1999-11-19",
+    "vote_average": 7.201,
+    "poster_path": "/1GuK965FLJxqUw9fd1pmvjbFAlv.jpg",
+    "backdrop_path": "/m8t7K3LcAY7bpyQ7iQ5kGsrcjnh.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Johnny Depp",
+      "character": "Ichabod Crane",
+      "profile_path": "/k2xt6EUxQDwYRKIyI4IBdZxfs8n.jpg"
+    },
+    {
+      "name": "Christina Ricci",
+      "character": "Katrina Van Tassel",
+      "profile_path": "/m2cY5Er1loPgHkZYdFMEz6YeiwG.jpg"
+    },
+    {
+      "name": "Miranda Richardson",
+      "character": "Lady Mary Van Tassel / Crone Witch",
+      "profile_path": "/2IEW3fxqHb4AHBl5xU8JuipJbNK.jpg"
+    },
+    {
+      "name": "Michael Gambon",
+      "character": "Baltus Van Tassel",
+      "profile_path": "/3jdWkDKf4IODbG4JKTeaC7AzxZH.jpg"
+    }
+  ]
+}

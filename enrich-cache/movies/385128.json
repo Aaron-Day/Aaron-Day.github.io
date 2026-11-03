@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 385128,
+    "title": "F9",
+    "overview": "Dominic Toretto and his crew battle the most skilled assassin and high-performance driver they\u0027ve ever encountered: his forsaken brother.",
+    "tagline": "Not all blood is family.",
+    "runtime": 143,
+    "release_date": "2021-05-19",
+    "vote_average": 6.968,
+    "poster_path": "/deEmLILTPejEb6OGsXRJ5MCvyDW.jpg",
+    "backdrop_path": "/xXHZeb1yhJvnSHPzZDqee0zfMb6.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9485,
+      "name": "The Fast and the Furious Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vin Diesel",
+      "character": "Dominic Toretto",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Michelle Rodriguez",
+      "character": "Letty Ortiz",
+      "profile_path": "/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
+    },
+    {
+      "name": "Tyrese Gibson",
+      "character": "Roman Pearce",
+      "profile_path": "/jxoy4fbXNKFQtBdK73cLXEz3ufS.jpg"
+    },
+    {
+      "name": "Ludacris",
+      "character": "Tej Parker",
+      "profile_path": "/2hmnLauYxQJSBDL2VCcq9NHWIY8.jpg"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Lessons",
+        "overview": "Sunnydale High is re-opened, with a new designed campus and a new principal, Robin Wood. It is Dawn\u0027s first day at school there and Buffy accompanies her to class, only to discover evil spirits lurking in the basement.",
+        "air_date": "2002-09-24",
+        "runtime": 43,
+        "still_path": "/tdSm1ATMjUSYwYF5XPpQ3Z3lyu5.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Beneath You",
+        "overview": "The gang meet a young woman who is being chased by a giant worm.",
+        "air_date": "2002-10-01",
+        "runtime": 43,
+        "still_path": "/irXvq6LP87M5aPLFlTkfNLjRnJs.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Same Time, Same Place",
+        "overview": "Willow returns to Sunnydale, but fears her friends have abandoned her when she finds herself completely unable to find them.",
+        "air_date": "2002-10-08",
+        "runtime": 43,
+        "still_path": "/lkqn9yIsz8Glst7PVuHuWaZQUNz.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Help",
+        "overview": "Buffy begins a new job as school counsellor at Sunnydale High. On her first day she encounters a troubled young girl who is convinced she is about to die.",
+        "air_date": "2002-10-15",
+        "runtime": 43,
+        "still_path": "/ljtqnF28bHRGctgqHlAoYz6ltlh.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Selfless",
+        "overview": "Anya\u0027s violent and deadly act of vengeance leaves everyone stunned. Buffy must put aside her feelings and take action before more people die.",
+        "air_date": "2002-10-22",
+        "runtime": 43,
+        "still_path": "/kuzjA68LYsH4MQrg2WN1LHaVi0b.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Him",
+        "overview": "Xander and Spike search for the source of a spell that has bewitched the girls into competing for the affections of the high school quarterback.",
+        "air_date": "2002-11-05",
+        "runtime": 43,
+        "still_path": "/5IqUpTsMJeke54X1OLO0MBnoOUn.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Conversations with Dead People",
+        "overview": "Buffy talks through her troubles with an old high school classmate who has recently become a vampire. Cassie, the late student Buffy tried to help, appears to Willow with a posthumous message from Tara. Dawn experiences a terrifying haunting. And Andrew and Jonathan return to Sunnydale High on a mission.",
+        "air_date": "2002-11-12",
+        "runtime": 43,
+        "still_path": "/mKJraddhP9FLH5FqpBTPcx7XkXd.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Sleeper",
+        "overview": "Buffy and her friends fear Spike may be to blame when a number of people around town mysteriously disappear.",
+        "air_date": "2002-11-19",
+        "runtime": 43,
+        "still_path": "/lUg1VeBvDdfAj19vGgwG6pvxEiL.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Never Leave Me",
+        "overview": "Buffy and the gang capture and interrogate Spike and Andrew.",
+        "air_date": "2002-11-26",
+        "runtime": 43,
+        "still_path": "/tTifo52KzGHHDH0FHciUkwpshCA.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Bring on the Night",
+        "overview": "Giles returns to Sunnydale with three potential slayers, whom Buffy must protect from a ferocious Uber-vampire from the Hellmouth.",
+        "air_date": "2002-12-17",
+        "runtime": 43,
+        "still_path": "/rWRAMyH1h7FNk5tME7fBO0CgibU.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Showtime",
+        "overview": "Buffy has to keep the ever increasing number of potential Slayers from panicking while Giles and Anya seek answers from the Beljoxa\u0027s Eye.",
+        "air_date": "2003-01-07",
+        "runtime": 43,
+        "still_path": "/40VwaImda6bMP0UlJBPK6AF5yIy.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Potential",
+        "overview": "Willow casts a spell to seek out the next Potential, leading her to believe that Dawn may be a future slayer.",
+        "air_date": "2003-01-21",
+        "runtime": 43,
+        "still_path": "/4WjNUOBtqQJW7IakVcVkuk7PlKh.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Killer in Me",
+        "overview": "Kennedy, a potential Slayer, takes Willow on a date, which is interrupted when Willow finds herself transformed into Warren. Spike\u0027s chip is having agonizing malfunctions, and he and Buffy return to the Initiative to search for a fix.",
+        "air_date": "2003-02-04",
+        "runtime": 43,
+        "still_path": "/gtMxkVbaqrZ7iSNTBiCevLJsxXW.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "First Date",
+        "overview": "Buffy accepts a dinner invitation from Principal Wood, and tries to figure out his true intentions.",
+        "air_date": "2003-02-11",
+        "runtime": 43,
+        "still_path": "/lbNaXfr5kcIVkF7UduQYZ0cgBbV.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Get It Done",
+        "overview": "Buffy introduces Principal Wood to the rest of the team. He brings an artifact that transports Buffy to see the origin of the Slayer, but the others must face a powerful demon to bring her back.",
+        "air_date": "2003-02-18",
+        "runtime": 43,
+        "still_path": "/AsRAu3wdKdhZuGUJFZDDqYHEXtr.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Storyteller",
+        "overview": "Andrew creates a documentary called \u0022Buffy, Slayer of the Vampyres\u0022, a record of the current situation in Sunnydale to show to future generations. But Buffy needs to tear him away from his filmmaking, because the Seal of Danzalthar is active and Andrew may hold the key to closing it before it destroys the town.",
+        "air_date": "2003-02-25",
+        "runtime": 43,
+        "still_path": "/eMSOsCq2ozuFUua318IVv9mzpC5.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Lies My Parents Told Me",
+        "overview": "Robin Wood seeks revenge on Spike for killing his mother nearly 30 years ago, whilst everyone else tries to find out how The First has control over him.",
+        "air_date": "2003-03-25",
+        "runtime": 43,
+        "still_path": "/s2BBmfSdsyMIMf7DK13n40qlpZs.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Dirty Girls",
+        "overview": "Faith returns to Sunnydale just as a new villain, Caleb, arrives and sends Buffy a message in the form of a badly beaten Potential.",
+        "air_date": "2003-04-15",
+        "runtime": 43,
+        "still_path": "/dWhxndckmwvuHeu68SRkuycenvM.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Empty Places",
+        "overview": "After their horrifying loss at the vineyard, the gang turn against Buffy. Meanwhile, Spike and Andrew travel to an old church to question a priest about Caleb.",
+        "air_date": "2003-04-29",
+        "runtime": 43,
+        "still_path": "/e9oYMFunoe23CZlXkwWlQPo4Nov.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Touched",
+        "overview": "After being ousted from the group, Buffy tries to figure out how to move forward. Faith and the Potentials plan to interrogate a Bringer for information on Caleb and the First.",
+        "air_date": "2003-05-06",
+        "runtime": 43,
+        "still_path": "/x8mVXHOEO0Mj9teTbxuyFPfYcRK.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "End of Days",
+        "overview": "Buffy has a powerful new weapon, but the gang cannot find any information about the origins of the mysterious scythe. The Slayer goes by herself in search of knowledge, and finds a new ally, an old friend, and great danger.",
+        "air_date": "2003-05-13",
+        "runtime": 43,
+        "still_path": "/llYiCp5xBnGm92KO5xxopbdW0rn.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Chosen",
+        "overview": "Buffy conceives a plan to defeat the First once and for all.",
+        "air_date": "2003-05-20",
+        "runtime": 43,
+        "still_path": "/yRaLZCHG2wvagDY6hPDo6mXqITc.jpg"
+      }
+    ]
+  }
+}

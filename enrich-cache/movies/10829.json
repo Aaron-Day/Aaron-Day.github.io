@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10829,
+    "title": "Tremors 3: Back to Perfection",
+    "overview": "Survivalist Burt Gummer returns home to Perfection, to find that the little town has been shaken up again by morphing, man-eating Graboids.",
+    "tagline": "The Food Chain Just Grew Another Link.",
+    "runtime": 104,
+    "release_date": "2001-10-02",
+    "vote_average": 5.818,
+    "poster_path": "/mnMryfLgC2fuW3nfY36QfWx0hBL.jpg",
+    "backdrop_path": "/yoq6WVqA2kB8nDNG0xX16kPBvfB.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91799,
+      "name": "Tremors Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael Gross",
+      "character": "Burt Gummer",
+      "profile_path": "/467FG7f1rXkG9ZzU8IumVkBHi0v.jpg"
+    },
+    {
+      "name": "Shawn Christian",
+      "character": "Desert Jack Sawyer",
+      "profile_path": "/A81YwcqkVNtQ71FMa77zAfiGxrY.jpg"
+    },
+    {
+      "name": "Susan Chuang",
+      "character": "Jodi Chang",
+      "profile_path": "/bj3w5esnk92cK8b9gcRHmV5VXyc.jpg"
+    },
+    {
+      "name": "Charlotte Stewart",
+      "character": "Nancy Sterngood",
+      "profile_path": "/2q8O8fpP5e0yvKJkrR45qbHCq6n.jpg"
+    }
+  ]
+}

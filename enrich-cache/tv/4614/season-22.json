@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 22,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Empty Nest",
+        "overview": "NCIS searches for a missing undercover agent in the midst of an active hostage situation.",
+        "air_date": "2024-10-14",
+        "runtime": 44,
+        "still_path": "/cESqJt4s3RViXTKHYXnQfHc2SCR.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Foreign Bodies",
+        "overview": "As Vance prepares to host diplomatic talks with Venezuela, the team is called in to investigate the dead body of one of his inside men.",
+        "air_date": "2024-10-21",
+        "runtime": 43,
+        "still_path": "/xVfCbKUKD0d4TGafq4QgH3p5o3N.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Trouble with Hal",
+        "overview": "NCIS is called in to investigate when a Lieutenant returns home on the eve of Halloween to find a surprise party being thrown for someone else at his place.",
+        "air_date": "2024-10-28",
+        "runtime": 42,
+        "still_path": "/oTYd7lwkxI3E4JthhLXhgkUrjvT.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Sticks \u0026 Stones",
+        "overview": "After receiving intelligence on deadly threats to multiple locations that could lead to a catastrophic war, NCIS is called in to try to neutralize the danger.",
+        "air_date": "2024-11-04",
+        "runtime": 44,
+        "still_path": "/hv4R2uTLYz9sLOuuoihpKCa3bX2.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "In from the Cold",
+        "overview": "NCIS works with the CIA to discover what secrets are being kept by Captain Butler, an elderly former spy with dementia.",
+        "air_date": "2024-11-11",
+        "runtime": 42,
+        "still_path": "/hnIwgbSFuCqxre2cLfJLxSKxgvc.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Knight and Day",
+        "overview": "Things become tense when Knight is assigned to protect his wife after the home of a high-level defense contractor is attacked.",
+        "air_date": "2024-11-25",
+        "runtime": 43,
+        "still_path": "/5EamzhOz660xLwDlBeA6EWScaEv.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Hardboiled",
+        "overview": "Torres receives intel from a confidential informant regarding top secret Naval information that\u0027s at risk of being sold.",
+        "air_date": "2024-12-02",
+        "runtime": 43,
+        "still_path": "/rPZ9wOJDyIS5XiQqs8yKV2OXlK9.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Out of Control",
+        "overview": "NCIS investigates a murder related to a car that begins driving on its own.",
+        "air_date": "2024-12-09",
+        "runtime": 43,
+        "still_path": "/bPVk6pEpqwXE59SDS34jekDxLJk.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Humbug",
+        "overview": "When a shocking tell-all threatens to ruin Christmas for a decorated Marine, NCIS must uncover the truth and deliver a holiday miracle - before the book hits shelves and turns a hero\u0027s legacy into a holiday disaster.",
+        "air_date": "2024-12-16",
+        "runtime": 43,
+        "still_path": "/glk53LHVh3hfHghsLqAD7ZJZ9PI.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Baker\u0027s Man",
+        "overview": "After NCIS learns that the owner of Parker\u0027s favorite bakery is being blackmailed, they hatch a plan to save her from the perpetrators.",
+        "air_date": "2025-01-27",
+        "runtime": 43,
+        "still_path": "/sQWbWyoyfK5RFeEdVbHv47Jsf0f.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "For Better or Worse",
+        "overview": "NCIS stages a fake wedding for two of its own in an attempt to take down the mob.",
+        "air_date": "2025-02-03",
+        "runtime": 43,
+        "still_path": "/w7NBNbIksgGB9FSaxadGPfpR8hv.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Fun and Games",
+        "overview": "NCIS investigates the fatal poisoning of one of Kasie\u0027s forensic scientists.",
+        "air_date": "2025-02-10",
+        "runtime": 43,
+        "still_path": "/c2upzX68oup4PFbMgYksNUk0WFZ.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Bad Blood",
+        "overview": "NCIS investigates the case of a Navy Lieutenant found dead at a blood donation bank.",
+        "air_date": "2025-02-24",
+        "runtime": 43,
+        "still_path": "/e0RYxmYsaTJaVwbjB6cdvinP1q2.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Close to Home",
+        "overview": "When Torres receives a text from Jimmy\u0027s daughter saying she has discovered a large sum of money near a Naval library, the team works together to investigate.",
+        "air_date": "2025-03-03",
+        "runtime": 43,
+        "still_path": "/89HqdnGnNZA9rNeXB5Nyifdx2MG.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Moonlit",
+        "overview": "After a Navy Lieutenant\u0027s death reveals ties to Special Agent Sawyer, Torres and Knight uncover a murder linked to a wealthy family.",
+        "air_date": "2025-03-24",
+        "runtime": 43,
+        "still_path": "/MXmM0wmIrRPRDf22v93rKXT3NP.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Ladies\u0027 Night",
+        "overview": "A girls\u0027 night out takes an unexpected turn when NCIS is called to investigate the motive of a possible arsonist.",
+        "air_date": "2025-03-31",
+        "runtime": 43,
+        "still_path": "/1yr73lvjrtcLI2hpanzxkaLaIim.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Killer Instinct",
+        "overview": "After NCIS captures the hitman known as \u0022The Poet,\u0022 the team races to uncover who ordered the assassination of a Navy chief.",
+        "air_date": "2025-04-14",
+        "runtime": 43,
+        "still_path": "/6SQtOENDGJazte0IXJjWjcDI922.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "After the Storm",
+        "overview": "When a trio of combat vets are found murdered in a D.C. motel room, NCIS tracks down a suspect who refuses to talk to anyone but Sam Hanna.",
+        "air_date": "2025-04-21",
+        "runtime": 43,
+        "still_path": "/7vPwjXpEzzos10yM9saCQoK27Ap.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Irreconcilable Differences",
+        "overview": "McGee\u0027s career and credibility are on the line when he investigates the Deputy Director for corruption.",
+        "air_date": "2025-04-28",
+        "runtime": 43,
+        "still_path": "/jy1oLJ8YhpwPviIE79KlNAY3GLn.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Nexus",
+        "overview": "As NCIS investigates a dangerous connection between the Nexus cartel and Parker\u0027s longtime nemesis, mob boss Carla Marino, the team uncovers a high-stakes plot involving stolen nuclear material.",
+        "air_date": "2025-05-05",
+        "runtime": 43,
+        "still_path": "/gVibhEdIR3hpAfrkQcW17RY1nhV.jpg"
+      }
+    ]
+  }
+}

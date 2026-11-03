@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 476669,
+    "title": "The King\u0027s Man",
+    "overview": "As a collection of history\u0027s worst tyrants and criminal masterminds gather to plot a war to wipe out millions, one man must race against time to stop them.",
+    "tagline": "Witness the bloody origin.",
+    "runtime": 131,
+    "release_date": "2021-12-22",
+    "vote_average": 6.704,
+    "poster_path": "/iMjSfMUuCkCE7z5fzGtjeDusPD3.jpg",
+    "backdrop_path": "/oQPbZ5e6J9fuAyv4Gl0mMZMIyPI.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 391860,
+      "name": "Kingsman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ralph Fiennes",
+      "character": "Orlando Oxford",
+      "profile_path": "/tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg"
+    },
+    {
+      "name": "Gemma Arterton",
+      "character": "Polly",
+      "profile_path": "/Alfm28oyHNiYweNCUaMmrVjVMAT.jpg"
+    },
+    {
+      "name": "Rhys Ifans",
+      "character": "Grigori Rasputin",
+      "profile_path": "/5X8XcIqCDxsQYyHdx7mBwPVkSTs.jpg"
+    },
+    {
+      "name": "Matthew Goode",
+      "character": "Morton",
+      "profile_path": "/3XaKKl0bKswTWbJ0Lh9nZ4UdAQo.jpg"
+    }
+  ]
+}

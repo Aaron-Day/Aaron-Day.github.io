@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 4233,
+    "title": "Scream 2",
+    "overview": "Two years after the Woodsboro murders, Sidney Prescott acclimates to college life while someone donning the Ghostface costume begins a new string of killings.",
+    "tagline": "Someone has taken their love of sequels one step too far.",
+    "runtime": 120,
+    "release_date": "1997-12-12",
+    "vote_average": 6.514,
+    "poster_path": "/dORlVasiaDkJXTqt9bdH7nFNs6C.jpg",
+    "backdrop_path": "/lVmcX3hlJqsUGkEOEZkRFiOQdLv.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2602,
+      "name": "Scream Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Neve Campbell",
+      "character": "Sidney Prescott",
+      "profile_path": "/zQzNg6Kiufj2VCltprI6jilNtl3.jpg"
+    },
+    {
+      "name": "Courteney Cox",
+      "character": "Gale Weathers",
+      "profile_path": "/cSOORhCRPJiwKghozXVXrOBi3Tp.jpg"
+    },
+    {
+      "name": "David Arquette",
+      "character": "Dewey Riley",
+      "profile_path": "/74wJjoywG7zCrNMWbRxwoyOj7Ub.jpg"
+    },
+    {
+      "name": "Jerry O\u0027Connell",
+      "character": "Derek",
+      "profile_path": "/siMZhO5SIUc6K5sTKyVJRXmkoiG.jpg"
+    }
+  ]
+}

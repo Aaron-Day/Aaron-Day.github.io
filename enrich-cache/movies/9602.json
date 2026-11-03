@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9602,
+    "title": "Coming to America",
+    "overview": "An African prince decides it\u2019s time for him to find a princess... and his mission leads him and his most loyal friend to Queens, New York. In disguise as an impoverished immigrant, the pampered prince quickly finds himself a new job, new friends, new digs, new enemies and lots of trouble.",
+    "tagline": "This summer, Prince Akeem discovers America.",
+    "runtime": 117,
+    "release_date": "1988-06-29",
+    "vote_average": 6.885,
+    "poster_path": "/djRAvxyvvN2yqlJKDbT3uy4vOBw.jpg",
+    "backdrop_path": "/vsCIw7ARCKQVPT2K2hkkFVl7yo5.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 647077,
+      "name": "Coming to America Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Eddie Murphy",
+      "character": "Prince Akeem / Clarence / Randy Watson / Saul",
+      "profile_path": "/qgjMfefsKwSYsyCaIX46uyOXIpy.jpg"
+    },
+    {
+      "name": "Shari Headley",
+      "character": "Lisa McDowell",
+      "profile_path": "/laMYj9qo3mFXKGPfFylmxY1DZk6.jpg"
+    },
+    {
+      "name": "Arsenio Hall",
+      "character": "Semmi / Extremely Ugly Girl / Morris / Reverend Brown",
+      "profile_path": "/8oqVGysLVXkWlTOWIWkWIbL4i2q.jpg"
+    },
+    {
+      "name": "James Earl Jones",
+      "character": "King Jaffe Joffer",
+      "profile_path": "/sgc8yxYr8ecNn1TXjWXWx3wmUYA.jpg"
+    }
+  ]
+}

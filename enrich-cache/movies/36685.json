@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 36685,
+    "title": "The Rocky Horror Picture Show",
+    "overview": "After getting a flat tire in the middle of nowhere, newly engaged couple Brad and Janet encounter the eerie mansion of the flamboyant, seductive Dr Frank-N-Furter and a variety of eccentric characters. Through elaborate dance and rock music, the mad scientist unveils his latest creation: a perfect, muscular man.",
+    "tagline": "A different set of jaws.",
+    "runtime": 100,
+    "release_date": "1975-08-14",
+    "vote_average": 7.441,
+    "poster_path": "/3pyE6ZqDbuJi7zrNzzQzcKTWdmN.jpg",
+    "backdrop_path": "/54aVU7tnvDKkX6ibzFg6ke03BV.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 694606,
+      "name": "The Rocky Horror Picture Show Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tim Curry",
+      "character": "Dr. Frank-N-Furter",
+      "profile_path": "/8ZsGg3N3OZgxshqLOtA2kl5ckOP.jpg"
+    },
+    {
+      "name": "Susan Sarandon",
+      "character": "Janet Weiss",
+      "profile_path": "/jR6l2EfvvGA8qCzZ7MB5FT9ZLkq.jpg"
+    },
+    {
+      "name": "Barry Bostwick",
+      "character": "Brad Majors",
+      "profile_path": "/z2jlL5g5PMxelSHMXFF03fTSsLl.jpg"
+    },
+    {
+      "name": "Richard O\u0027Brien",
+      "character": "Riff Raff",
+      "profile_path": "/9FMfj8IcXuwKrfBvdNRBKv6WPC1.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 97,
+    "title": "Tron",
+    "overview": "When brilliant video game maker Flynn hacks the mainframe of his ex-employer, he is beamed inside an astonishing digital world and becomes part of the very game he is designing. In his mission through cyberspace, Flynn matches wits with a maniacal Master Control Program and teams up with Tron, a security measure created to bring balance to the digital environment.",
+    "tagline": "Journey now into a startling new dimension where energy lives and breathes. A world inside the computer where man has never been. Never before now.",
+    "runtime": 96,
+    "release_date": "1982-07-09",
+    "vote_average": 6.624,
+    "poster_path": "/jigY9B6TKz4qlfikZcd18qtzTK4.jpg",
+    "backdrop_path": "/vUmeBHiGp5r2ydd8aEvbNLamTVD.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 63043,
+      "name": "TRON Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jeff Bridges",
+      "character": "Kevin Flynn / Clu",
+      "profile_path": "/xms1RAY6q7Lzp7wNeRCB0kzhucn.jpg"
+    },
+    {
+      "name": "Bruce Boxleitner",
+      "character": "Alan Bradley / Tron",
+      "profile_path": "/fff4NtuRhJbKUrIHCo96X9XAh4z.jpg"
+    },
+    {
+      "name": "David Warner",
+      "character": "Ed Dillinger / Sark",
+      "profile_path": "/AlsZcAY2c4chfOxMW69gHQzH1B2.jpg"
+    },
+    {
+      "name": "Cindy Morgan",
+      "character": "Lora / Yori",
+      "profile_path": "/w6nGl3cS4N9kpaus3kkMGVf1cqq.jpg"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 35,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Homer\u0027s Crossing",
+        "overview": "Feeling worthless at work, Homer volunteers to be a school crossing guard. But when his safety squad receives too much funding, the crossing guards become a force to be feared.",
+        "air_date": "2023-10-01",
+        "runtime": 22,
+        "still_path": "/3h5vxJqazJLCPQZH4Z8TOuCUpRC.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Mid-Childhood Night\u0027s Dream",
+        "overview": "Marge feels an overwhelming dread of the empty nest.",
+        "air_date": "2023-10-08",
+        "runtime": 22,
+        "still_path": "/ayfdkVnD1VUPq9aVjEPBQd4cUW6.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "McMansion \u0026 Wife",
+        "overview": "When a new neighbor showers him with kindness, Homer thinks he\u0027s being tricked into buying a sports car at the dealership where the neighbor works - but the truth turns out to be even more sinister; Lisa neutralizes Nelson after he goes on a bullying spree.",
+        "air_date": "2023-10-22",
+        "runtime": 22,
+        "still_path": "/jNL3OGGBwcckAhMihExkfHTowvJ.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Thirst Trap: A Corporate Love Story",
+        "overview": "In a parody documentary, a young college-dropout CEO embraces the Silicon Valley \u0022fake it until you make it\u0022 philosophy and bewitches Mr. Burns into funding her highly dubious dream project.",
+        "air_date": "2023-10-29",
+        "runtime": 22,
+        "still_path": "/hD87XVYM80Ge6F0j1tIRk4Akg4b.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Treehouse of Horror XXXIV",
+        "overview": "After Bart is turned into an NFT, Marge fights though the blockchain to rescue her son. To track down a gruesome serial killer, Lisa turns to a murderer from her past. An outbreak transforms Springfielders into a plague of lazy, beer-loving oafs.",
+        "air_date": "2023-11-05",
+        "runtime": 22,
+        "still_path": "/223RAYPMWtXHSTFMtujdl9UBjzW.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Iron Marge",
+        "overview": "When Marge\u0027s heart is broken by a bad birthday present, Bart and Lisa must dig into their mom\u0027s past to show that they really know her. Homer becomes a neighborhood fear-monger.",
+        "air_date": "2023-11-12",
+        "runtime": 22,
+        "still_path": "/zWH62bFjvNLDO7XUVzEp0soAt8d.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "It\u0027s a Blunderful Life",
+        "overview": "Lisa recounts the story of how Homer was scapegoated for a power outage that plunged Springfield into darkness days before Thanksgiving.",
+        "air_date": "2023-11-19",
+        "runtime": 22,
+        "still_path": "/r5T5bIU4WFzAAQYAjnmEmAIdTlY.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "AE Bonny Romance",
+        "overview": "When Groundskeeper Willie is kidnapped to Scotland, Bart and the Simpsons follow - only to discover that what awaits is Homer\u0027s worst nightmare.",
+        "air_date": "2023-12-03",
+        "runtime": 22,
+        "still_path": "/wUrJIPl9p4F90LMoInSzIWXXhZG.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Murder, She Boat",
+        "overview": "Lisa must solve a closed-boat mystery when Comic Book Guy\u0027s million-dollar action figure is \u0022murdered\u0022 on a pop culture cruise.",
+        "air_date": "2023-12-17",
+        "runtime": 22,
+        "still_path": "/cTy8XUHtauX9KGq3Y9OJItjI7Yx.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Do the Wrong Thing",
+        "overview": "Homer and Bart become kings of the blue-collar sports circuit, but Marge suspects something dishonest at the core of their father-son bond.",
+        "air_date": "2023-12-24",
+        "runtime": 22,
+        "still_path": "/dhKRa54vkk2ZjonY3MK0d9pRXhJ.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Frinkenstein\u0027s Monster",
+        "overview": "Professor Frink secretly helps Homer, through a zoom interview, land a high-level position at a state-of-the-art nuclear plant in Shelbyville. But since Homer lacks the skills to actually perform the job, Frink must monitor Homer\u0027s work situation remotely and dictate his every word... causing Frink to fear he\u0027s created a monster.",
+        "air_date": "2024-02-18",
+        "runtime": 22,
+        "still_path": "/sEytloGFMuecXQgoT7d2G5lXHrh.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Lisa Gets an F1",
+        "overview": "Lisa feels a need for speed as well a need for control of her anxiety when she becomes a pro kid go-cart racer.",
+        "air_date": "2024-02-25",
+        "runtime": 22,
+        "still_path": "/1Ri7zmWEjRSyRbVrvumqrGQjQO2.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Clan of the Cave Mom",
+        "overview": "A parenting disagreement between Marge and Luann Van Houten escalates into a life-or-death struggle for survival.",
+        "air_date": "2024-03-24",
+        "runtime": 22,
+        "still_path": "/rWwzaSeNUmCOGO3stvXkzQp67sY.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Night of the Living Wage",
+        "overview": "Marge gets a job in a high-pressure ghost kitchen, but when she tries to start a union, she gets more than she (collectively) bargained for.",
+        "air_date": "2024-04-07",
+        "runtime": 22,
+        "still_path": "/34mUZgzijYYfAh3IP0jFSIgHVFO.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Cremains of the Day",
+        "overview": "When someone in Homer\u0027s life passes away, he and guys from Moe\u0027s go on a road trip to scatter the ashes... but will their friendship die as well?",
+        "air_date": "2024-04-21",
+        "runtime": 22,
+        "still_path": "/laaQgbaGVnJ9SJdTpVVAOiFy7ry.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Tell-Tale Pants",
+        "overview": "Marge comes upon a surprising windfall and, angry with Homer, spends it secretly on herself.",
+        "air_date": "2024-05-05",
+        "runtime": 22,
+        "still_path": "/sspLwqIbKUo5IgeWeuSuzLEaxk5.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Tipping Point",
+        "overview": "Homer loses his mind over tipping culture run amok.",
+        "air_date": "2024-05-12",
+        "runtime": 22,
+        "still_path": "/yuk7qzLWifdyCxx8xQdtGZGKH7t.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Bart\u0027s Brain",
+        "overview": "Bart makes a new friend.",
+        "air_date": "2024-05-19",
+        "runtime": 22,
+        "still_path": "/yJ25Jz4HUBZHryrjUTBXVr3X4nt.jpg"
+      }
+    ]
+  }
+}

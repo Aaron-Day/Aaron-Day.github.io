@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 928,
+    "title": "Gremlins 2: The New Batch",
+    "overview": "Young sweethearts Billy and Kate move to the Big Apple, land jobs in a high-tech office park and soon reunite with the friendly and lovable Gizmo. But a series of accidents creates a whole new generation of Gremlins. The situation worsens when the devilish green creatures invade a top-secret laboratory and develop genetically altered powers, making them even harder to destroy!",
+    "tagline": "Here they grow again.",
+    "runtime": 106,
+    "release_date": "1990-06-15",
+    "vote_average": 6.521,
+    "poster_path": "/35F5yD7MljvBE2AC0NHAVCoPGEi.jpg",
+    "backdrop_path": "/iR3tV8NXFls4UKzPA60D4zrI7Jh.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 89151,
+      "name": "The Gremlins Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Zach Galligan",
+      "character": "Billy Peltzer",
+      "profile_path": "/mIqahCZcPw63km6dFnm1B1coAiY.jpg"
+    },
+    {
+      "name": "Phoebe Cates",
+      "character": "Kate Beringer",
+      "profile_path": "/nh2jiRCFa7TQdGB87k557LG0PtY.jpg"
+    },
+    {
+      "name": "John Glover",
+      "character": "Daniel Clamp",
+      "profile_path": "/aPmq20MXqFALrUxaaJoC2Xonumo.jpg"
+    },
+    {
+      "name": "Robert Prosky",
+      "character": "Grandpa Fred",
+      "profile_path": "/yV95RE8UGyN8rZYF9W4fOGaAV6U.jpg"
+    }
+  ]
+}

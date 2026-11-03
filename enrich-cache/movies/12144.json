@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12144,
+    "title": "The Land Before Time",
+    "overview": "An orphaned brontosaurus named Littlefoot sets off in search of the legendary Great Valley. A land of lush vegetation where the dinosaurs can thrive and live in peace. Along the way he meets four other young dinosaurs, each one a different species, and they encounter several obstacles as they learn to work together in order to survive.",
+    "tagline": "It is the dawn of time, the land of the dinosaur. Lost and alone, Littlefoot and his friends are about to embark on the journey of a lifetime.",
+    "runtime": 69,
+    "release_date": "1988-11-18",
+    "vote_average": 7.168,
+    "poster_path": "/7phV1ETZnQrLsEeuk4hNeceEl25.jpg",
+    "backdrop_path": "/sXfQGa7juaTpZ5IF17Xa6hI53nx.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 19163,
+      "name": "The Land Before Time Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Gabriel Damon",
+      "character": "Littlefoot (voice)",
+      "profile_path": "/3egsFiVNyHSVlMsgbwgDEinACTT.jpg"
+    },
+    {
+      "name": "Candace Hutson",
+      "character": "Cera (voice)",
+      "profile_path": "/dk9GTF1KV6CrfqxweYQb6tkS04Q.jpg"
+    },
+    {
+      "name": "Will Ryan",
+      "character": "Petrie (voice)",
+      "profile_path": "/qRkyGcSju2VmEb7RTBM3Wpa0rvI.jpg"
+    },
+    {
+      "name": "Judith Barsi",
+      "character": "Ducky (voice)",
+      "profile_path": "/erZLiFH7hiQvgfNa3xe1D398RzN.jpg"
+    }
+  ]
+}

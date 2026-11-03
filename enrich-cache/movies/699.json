@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 699,
+    "title": "For Your Eyes Only",
+    "overview": "A British spy ship has sunk and on board was a hi-tech encryption device. James Bond is sent to find the device that holds British launching instructions before the enemy Soviets get to it first.",
+    "tagline": "No one comes close to James Bond, 007.",
+    "runtime": 128,
+    "release_date": "1981-06-24",
+    "vote_average": 6.549,
+    "poster_path": "/xV4Nnr6DjjERlqNikqDQX8LUgua.jpg",
+    "backdrop_path": "/z7Jp7HAsY7MqXzPYzTjJnmOQk2r.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 645,
+      "name": "James Bond Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Roger Moore",
+      "character": "James Bond",
+      "profile_path": "/qUjeguNlZzpwh2bGUwEq2n2GNPx.jpg"
+    },
+    {
+      "name": "Carole Bouquet",
+      "character": "Melina Havelock",
+      "profile_path": "/nCyI95wVvhXFH1GiornFHsL9YOx.jpg"
+    },
+    {
+      "name": "Chaim Topol",
+      "character": "Milos Columbo",
+      "profile_path": "/Ah6ZOrg9AmeqPU04qUGF5eon2Fv.jpg"
+    },
+    {
+      "name": "Julian Glover",
+      "character": "Aristotle Kristatos",
+      "profile_path": "/diwVEgax6O2YwJu2VcW8zC0qhot.jpg"
+    }
+  ]
+}

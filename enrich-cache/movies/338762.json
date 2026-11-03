@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 338762,
+    "title": "Bloodshot",
+    "overview": "After he and his wife are murdered, marine Ray Garrison is resurrected by a team of scientists. Enhanced with nanotechnology, he becomes a superhuman, biotech killing machine\u2014\u0027Bloodshot\u0027. As Ray first trains with fellow super-soldiers, he cannot recall anything from his former life. But when his memories flood back and he remembers the man that killed both him and his wife, he breaks out of the facility to get revenge, only to discover that there\u0027s more to the conspiracy than he thought.",
+    "tagline": "Being a superhero is in his blood.",
+    "runtime": 110,
+    "release_date": "2020-03-05",
+    "vote_average": 6.666,
+    "poster_path": "/8WUVHemHFH2ZIP6NWkwlHWsyrEL.jpg",
+    "backdrop_path": "/zlqMASc3vEtdym2OvXgE7fC6onT.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Vin Diesel",
+      "character": "Ray Garrison / Bloodshot",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Eiza Gonz\u00E1lez",
+      "character": "KT",
+      "profile_path": "/v8CnaoJqdPwkQhJeGwgJDnESOd6.jpg"
+    },
+    {
+      "name": "Sam Heughan",
+      "character": "Jimmy Dalton",
+      "profile_path": "/f35MnE74N2U0Dq6CVKwzF7DL8nN.jpg"
+    },
+    {
+      "name": "Toby Kebbell",
+      "character": "Martin Axe",
+      "profile_path": "/mlYytYJvoEHmhDH2enLtES1098Q.jpg"
+    }
+  ]
+}

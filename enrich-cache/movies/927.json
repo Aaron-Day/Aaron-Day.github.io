@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 927,
+    "title": "Gremlins",
+    "overview": "After receiving an exotic small animal as a Christmas gift, a young man inadvertently breaks three important rules concerning his new pet, which unleashes a horde of malevolently mischievous creatures on a small town.",
+    "tagline": "Cute. Clever. Mischievous. Intelligent. Dangerous.",
+    "runtime": 106,
+    "release_date": "1984-06-08",
+    "vote_average": 7.147,
+    "poster_path": "/6m0F7fsXjQvUbCZrPWcJNrjvIui.jpg",
+    "backdrop_path": "/5UX6M0aEphiW6Xmy5rpYX75glbo.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 89151,
+      "name": "The Gremlins Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Zach Galligan",
+      "character": "Billy",
+      "profile_path": "/mIqahCZcPw63km6dFnm1B1coAiY.jpg"
+    },
+    {
+      "name": "Phoebe Cates",
+      "character": "Kate",
+      "profile_path": "/nh2jiRCFa7TQdGB87k557LG0PtY.jpg"
+    },
+    {
+      "name": "Hoyt Axton",
+      "character": "Rand Peltzer",
+      "profile_path": "/ko67ZaIC0rd6uaSOM619RjapQvO.jpg"
+    },
+    {
+      "name": "Frances Lee McCain",
+      "character": "Lynn Peltzer",
+      "profile_path": "/8KL73kRxsLDdrXPuMfiPET1EqH6.jpg"
+    }
+  ]
+}

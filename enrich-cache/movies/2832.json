@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2832,
+    "title": "Identity",
+    "overview": "Complete strangers stranded at a remote desert motel during a raging storm soon find themselves the target of a deranged murderer. As their numbers thin out, the travelers begin to turn on each other, as each tries to figure out who the killer is.",
+    "tagline": "The secret lies within.",
+    "runtime": 90,
+    "release_date": "2003-04-25",
+    "vote_average": 7.183,
+    "poster_path": "/sYgimsiBywqVwJI8H4sETke8m7v.jpg",
+    "backdrop_path": "/iiPBXynI88EgnpunHoUlBCnLpSE.jpg",
+    "genres": [
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "John Cusack",
+      "character": "Ed",
+      "profile_path": "/aCwCx6JU7Jxbg6Q1ygcnLY750le.jpg"
+    },
+    {
+      "name": "Ray Liotta",
+      "character": "Rhodes",
+      "profile_path": "/ve9sB0o1MYTaL2SXEisVW2RMkD5.jpg"
+    },
+    {
+      "name": "Amanda Peet",
+      "character": "Paris",
+      "profile_path": "/5TfyCj0X9ftKO11FN057P05s78C.jpg"
+    },
+    {
+      "name": "John Hawkes",
+      "character": "Larry",
+      "profile_path": "/c0mDB6TApVcJ3LLM1gicjyUeD5A.jpg"
+    }
+  ]
+}

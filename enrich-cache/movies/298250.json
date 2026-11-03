@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 298250,
+    "title": "Jigsaw",
+    "overview": "Law enforcement finds itself chasing the ghost of a man dead for over a decade, embroiled in a diabolical new game that\u0027s only just begun.",
+    "tagline": "The game continues.",
+    "runtime": 91,
+    "release_date": "2017-10-25",
+    "vote_average": 6.211,
+    "poster_path": "/7RwHxhdUNS996JPFNB9a7CJtlwR.jpg",
+    "backdrop_path": "/ucLGZ3zBRFDhdlRNhvXdkjXkNyd.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 656,
+      "name": "Saw Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tobin Bell",
+      "character": "Jigsaw / John Kramer",
+      "profile_path": "/wyyfG5Pml4G1Y3Aw873LIe32wsl.jpg"
+    },
+    {
+      "name": "Matt Passmore",
+      "character": "Logan Nelson",
+      "profile_path": "/wpEuBfFMvL6dAOFFQsZW2JtcYTj.jpg"
+    },
+    {
+      "name": "Callum Keith Rennie",
+      "character": "Detective Halloran",
+      "profile_path": "/zOeA4IR4xYde2VlDsHZy2SoPZkc.jpg"
+    },
+    {
+      "name": "Hannah Emily Anderson",
+      "character": "Eleanor Bonneville",
+      "profile_path": "/fSyNGF4pZQj9Ne9IKv9kfimECzk.jpg"
+    }
+  ]
+}

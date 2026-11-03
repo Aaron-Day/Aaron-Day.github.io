@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8960,
+    "title": "Hancock",
+    "overview": "Hancock is a down-and-out superhero who\u0027s forced to employ a PR expert to help repair his image when the public grows weary of all the damage he\u0027s inflicted during his lifesaving heroics. The agent\u0027s idea of imprisoning the antihero to make the world miss him proves successful, but will Hancock stick to his new sense of purpose or slip back into old habits?",
+    "tagline": "There are heroes. There are superheroes. And then there\u0027s Hancock.",
+    "runtime": 92,
+    "release_date": "2008-07-01",
+    "vote_average": 6.358,
+    "poster_path": "/7DyuV2G0hLEqHeueDfOqhZ2DVut.jpg",
+    "backdrop_path": "/xh0ZRdnL4pSqfW73HBf97xiNEFP.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Will Smith",
+      "character": "John Hancock",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg"
+    },
+    {
+      "name": "Charlize Theron",
+      "character": "Mary",
+      "profile_path": "/gd7ShD0yt4bsR2STeQ19KQ6hvXL.jpg"
+    },
+    {
+      "name": "Jason Bateman",
+      "character": "Ray",
+      "profile_path": "/8e6mt0vGjPo6eW52gqRuXy5YnfN.jpg"
+    },
+    {
+      "name": "Jae Head",
+      "character": "Aaron",
+      "profile_path": "/nNh2DiYXZneyeiYDitKT6s1AwEy.jpg"
+    }
+  ]
+}

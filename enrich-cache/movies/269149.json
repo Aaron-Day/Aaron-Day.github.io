@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 269149,
+    "title": "Zootopia",
+    "overview": "Determined to prove herself, Officer Judy Hopps, the first bunny on Zootopia\u0027s police force, jumps at the chance to crack her first case - even if it means partnering with scam-artist fox Nick Wilde to solve the mystery.",
+    "tagline": "Welcome to the urban jungle.",
+    "runtime": 109,
+    "release_date": "2016-02-11",
+    "vote_average": 7.765,
+    "poster_path": "/hlK0e0wAQ3VLuJcsfIYPvb4JVud.jpg",
+    "backdrop_path": "/9tOkjBEiiGcaClgJFtwocStZvIT.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1084247,
+      "name": "Zootopia Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ginnifer Goodwin",
+      "character": "Judy Hopps (voice)",
+      "profile_path": "/eByMpalFhQxUYuzA0srCN8rnfOZ.jpg"
+    },
+    {
+      "name": "Jason Bateman",
+      "character": "Nick Wilde (voice)",
+      "profile_path": "/8e6mt0vGjPo6eW52gqRuXy5YnfN.jpg"
+    },
+    {
+      "name": "Idris Elba",
+      "character": "Chief Bogo (voice)",
+      "profile_path": "/be1bVF7qGX91a6c5WeRPs5pKXln.jpg"
+    },
+    {
+      "name": "Jenny Slate",
+      "character": "Bellwether (voice)",
+      "profile_path": "/mMxsNO6r966ut0sordYzj2iDOb6.jpg"
+    }
+  ]
+}

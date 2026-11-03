@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 365942,
+    "title": "The Space Between Us",
+    "overview": "A young man raised by scientists on Mars returns to Earth to find his father.",
+    "tagline": "What\u0027s your favorite thing about Earth?",
+    "runtime": 121,
+    "release_date": "2017-01-26",
+    "vote_average": 7.036,
+    "poster_path": "/lRBl9mfvUbZeaAyXoP09XwPOo0W.jpg",
+    "backdrop_path": "/5SGAJrTVpWXKNdEwspTG9s60YOp.jpg",
+    "genres": [
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Asa Butterfield",
+      "character": "Gardner Elliot",
+      "profile_path": "/1IoQIesuvI9o1IpYZqdjBWvKhRf.jpg"
+    },
+    {
+      "name": "Britt Robertson",
+      "character": "Tulsa",
+      "profile_path": "/6lnipeQ6auGaxn4gQ8UX68xoxOy.jpg"
+    },
+    {
+      "name": "Carla Gugino",
+      "character": "Kendra Wyndham",
+      "profile_path": "/dAqGOsHSzlP6RhaUURX2NrwITaq.jpg"
+    },
+    {
+      "name": "Gary Oldman",
+      "character": "Nathaniel Shepherd",
+      "profile_path": "/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg"
+    }
+  ]
+}

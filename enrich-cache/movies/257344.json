@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 257344,
+    "title": "Pixels",
+    "overview": "Video game experts are recruited by the military to fight 1980s-era video game characters who\u0027ve attacked New York.",
+    "tagline": "Play for the planet.",
+    "runtime": 106,
+    "release_date": "2015-07-16",
+    "vote_average": 5.792,
+    "poster_path": "/d26S5EfVXLNxRXqyFy1yyl3qRq3.jpg",
+    "backdrop_path": "/6UFnKzVzFqKDjs4iCVLJdneK3ch.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Brenner",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Kevin James",
+      "character": "Cooper",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    },
+    {
+      "name": "Michelle Monaghan",
+      "character": "Violet",
+      "profile_path": "/z5j4HVHEYf1RR9eiz1QkcxaSExZ.jpg"
+    },
+    {
+      "name": "Peter Dinklage",
+      "character": "Eddie",
+      "profile_path": "/9CAd7wr8QZyIN0E7nm8v1B6WkGn.jpg"
+    }
+  ]
+}

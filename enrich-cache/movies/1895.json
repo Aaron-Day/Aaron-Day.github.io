@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1895,
+    "title": "Star Wars: Episode III - Revenge of the Sith",
+    "overview": "When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker must choose a side.",
+    "tagline": "Every story has a hero. Every hero has a destiny. Every saga has an end.",
+    "runtime": 140,
+    "release_date": "2005-05-17",
+    "vote_average": 7.479,
+    "poster_path": "/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg",
+    "backdrop_path": "/5vDuLrjJXFS9PTF7Q1xzobmYKR9.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 10,
+      "name": "Star Wars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Hayden Christensen",
+      "character": "Anakin Skywalker / Darth Vader",
+      "profile_path": "/hqEgJYEUvZvL9ytmmiYBbbt63qd.jpg"
+    },
+    {
+      "name": "Ewan McGregor",
+      "character": "Obi-Wan Kenobi",
+      "profile_path": "/q2UDxfwWnmXTB7khOUF3J9puBVP.jpg"
+    },
+    {
+      "name": "Natalie Portman",
+      "character": "Padm\u00E9 Amidala",
+      "profile_path": "/edPU5HxncLWa1YkgRPNkSd68ONG.jpg"
+    },
+    {
+      "name": "Ian McDiarmid",
+      "character": "Chancellor Palpatine / Darth Sidious",
+      "profile_path": "/9OSZMsnwNtM8JrHrEdgQEwyTaPj.jpg"
+    }
+  ]
+}

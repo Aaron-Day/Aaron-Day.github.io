@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10198,
+    "title": "The Princess and the Frog",
+    "overview": "A waitress, desperate to fulfill her dreams as a restaurant owner, is set on a journey to turn a frog prince back into a human being, but she has to face the same problem after she kisses him.",
+    "tagline": "Every love story begins with a kiss...",
+    "runtime": 98,
+    "release_date": "2009-12-08",
+    "vote_average": 7.241,
+    "poster_path": "/yprv5PbnEksoVj2v6XEnDBg9joR.jpg",
+    "backdrop_path": "/y5tad0a4yRbxYgOHGllEIEeCCKt.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Anika Noni Rose",
+      "character": "Tiana (voice)",
+      "profile_path": "/d7aLtuNXBqVtqNnZl8wXsFV4ML5.jpg"
+    },
+    {
+      "name": "Bruno Campos",
+      "character": "Prince Naveen (voice)",
+      "profile_path": "/lktLbyUXwNX0FV38v0JBJIbbJZr.jpg"
+    },
+    {
+      "name": "Jim Cummings",
+      "character": "Ray (voice)",
+      "profile_path": "/c0sQPRCM5Ri3F4gVyxPr4AcPmIq.jpg"
+    },
+    {
+      "name": "Michael-Leon Wooley",
+      "character": "Louis (voice)",
+      "profile_path": "/tMUNtp3xPTHRBUhnOiHcU5sjBDS.jpg"
+    }
+  ]
+}

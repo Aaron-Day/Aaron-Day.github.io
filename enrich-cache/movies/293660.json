@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 293660,
+    "title": "Deadpool",
+    "overview": "The origin story of former Special Forces operative turned mercenary Wade Wilson, who, after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life.",
+    "tagline": "Feel the love.",
+    "runtime": 108,
+    "release_date": "2016-02-09",
+    "vote_average": 7.626,
+    "poster_path": "/3E53WEZJqP6aM84D8CckXx4pIHw.jpg",
+    "backdrop_path": "/rFj9IKlL75B2pXhZA60jkNWvxeW.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 448150,
+      "name": "Deadpool Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ryan Reynolds",
+      "character": "Wade / Deadpool",
+      "profile_path": "/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Morena Baccarin",
+      "character": "Vanessa",
+      "profile_path": "/4gyHyg6FJ1oFczOm5pmMkdEEo2J.jpg"
+    },
+    {
+      "name": "Ed Skrein",
+      "character": "Ajax",
+      "profile_path": "/btJvbQbWf3ciYM4SM5tMWSJEkXX.jpg"
+    },
+    {
+      "name": "T.J. Miller",
+      "character": "Weasel",
+      "profile_path": "/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg"
+    }
+  ]
+}

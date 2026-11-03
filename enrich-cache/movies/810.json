@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 810,
+    "title": "Shrek the Third",
+    "overview": "After the King of Far Far Away dies, Shrek and Fiona are to succede. However, Shrek wants to return to his cozy swamp and live in peace and quiet, so when he finds out there is another heir to the throne, he and Donkey set off to bring him back to rule the kingdom.",
+    "tagline": "He\u0027s in for the royal treatment.",
+    "runtime": 93,
+    "release_date": "2007-05-17",
+    "vote_average": 6.317,
+    "poster_path": "/n4SexGGQzI26E269tfpa80MZaGV.jpg",
+    "backdrop_path": "/wvXxKpFGXvQJRB0nvvfURhRD3C0.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2150,
+      "name": "Shrek Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mike Myers",
+      "character": "Shrek (voice)",
+      "profile_path": "/gjfDl52Kk02MPgUYFjs9bOy33OY.jpg"
+    },
+    {
+      "name": "Eddie Murphy",
+      "character": "Donkey (voice)",
+      "profile_path": "/qgjMfefsKwSYsyCaIX46uyOXIpy.jpg"
+    },
+    {
+      "name": "Cameron Diaz",
+      "character": "Princess Fiona (voice)",
+      "profile_path": "/tIWUyvmJayu8gtbrzCWC0L3H8kH.jpg"
+    },
+    {
+      "name": "Antonio Banderas",
+      "character": "Puss in Boots (voice)",
+      "profile_path": "/lpzfDt22374NPhOXZpUq74e9mfw.jpg"
+    }
+  ]
+}

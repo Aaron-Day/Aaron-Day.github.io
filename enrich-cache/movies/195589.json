@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 195589,
+    "title": "Neighbors",
+    "overview": "A couple with a newborn baby face unexpected difficulties after they are forced to live next to a fraternity house.",
+    "tagline": "Family vs. Frat",
+    "runtime": 97,
+    "release_date": "2014-05-08",
+    "vote_average": 6.176,
+    "poster_path": "/sN1RU08CMi8xkRIibremh3AOdgw.jpg",
+    "backdrop_path": "/hwn0kQiRXhF8G1bEA8NqhIApkXd.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 400700,
+      "name": "Neighbors Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Seth Rogen",
+      "character": "Mac Radner",
+      "profile_path": "/nYl9bvQzaPQLzlf0wf75clLN6Hi.jpg"
+    },
+    {
+      "name": "Zac Efron",
+      "character": "Teddy Sanders",
+      "profile_path": "/pdWXP7XG6qqOoxoLid1DWYwmaMY.jpg"
+    },
+    {
+      "name": "Rose Byrne",
+      "character": "Kelly Radner",
+      "profile_path": "/wR8YZlrewVW2FixRBrJcxaXU3R1.jpg"
+    },
+    {
+      "name": "Dave Franco",
+      "character": "Pete Regazolli",
+      "profile_path": "/to7ee1xcCOpDSKMXjBIRuYEfbEc.jpg"
+    }
+  ]
+}

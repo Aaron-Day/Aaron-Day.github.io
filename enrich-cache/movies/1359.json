@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1359,
+    "title": "American Psycho",
+    "overview": "A wealthy New York investment banking executive hides his alternate psychopathic ego from his co-workers and friends as he escalates deeper into his illogical, gratuitous fantasies.",
+    "tagline": "Killer looks.",
+    "runtime": 102,
+    "release_date": "2000-04-13",
+    "vote_average": 7.4,
+    "poster_path": "/9uGHEgsiUXjCNq8wdq4r49YL8A1.jpg",
+    "backdrop_path": "/5oaMV2q0qzxkIW2ukU3lldLu5q2.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86105,
+      "name": "American Psycho Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Christian Bale",
+      "character": "Patrick Bateman",
+      "profile_path": "/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg"
+    },
+    {
+      "name": "Justin Theroux",
+      "character": "Timothy Bryce",
+      "profile_path": "/6YuPMsLDMoD5BRkzWIjllwFFt5Y.jpg"
+    },
+    {
+      "name": "Josh Lucas",
+      "character": "Craig McDermott",
+      "profile_path": "/ueR4CH32f22DGjFxuhnW1o3YKB3.jpg"
+    },
+    {
+      "name": "Bill Sage",
+      "character": "David Van Patten",
+      "profile_path": "/3q2r6eDcC843GgVHVA7mSehcqC9.jpg"
+    }
+  ]
+}

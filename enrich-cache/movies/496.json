@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 496,
+    "title": "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan",
+    "overview": "Kazakh journalist Borat Sagdiyev travels to America to make a documentary. As he zigzags across the nation, Borat meets real people in real situations with hysterical consequences. His backwards behavior generates strong reactions around him exposing prejudices and hypocrisies in American culture.",
+    "tagline": "Come to Kazakhstan, it\u0027s nice!",
+    "runtime": 84,
+    "release_date": "2006-11-01",
+    "vote_average": 6.792,
+    "poster_path": "/7g9kBHMN2KTr5KUf8aen187Mdn.jpg",
+    "backdrop_path": "/mEagEZkyUp18shDqX05w4zxTnEM.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 747168,
+      "name": "Borat Moviefilms Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sacha Baron Cohen",
+      "character": "Borat",
+      "profile_path": "/bGzXHu8zwWqUY5gEExSh3deQd2j.jpg"
+    },
+    {
+      "name": "Ken Davitian",
+      "character": "Azamat",
+      "profile_path": "/odykKQKSJDDJ5O5Drq1RVNaTbqM.jpg"
+    },
+    {
+      "name": "Luenell",
+      "character": "Luenell",
+      "profile_path": "/5Mz0UEpcu1PHftgmKgoEhSSaiiA.jpg"
+    },
+    {
+      "name": "Alex Daniels",
+      "character": "Naked Fight Coordinator",
+      "profile_path": "/5kK09c7VM4PoiV2AYwmqmxhuVqj.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 27578,
+    "title": "The Expendables",
+    "overview": "Barney Ross leads a band of highly skilled mercenaries including knife enthusiast Lee Christmas, a martial arts expert Yin Yang, heavy weapons specialist Hale Caesar, demolitionist Toll Road, and a loose-cannon sniper Gunner Jensen. When the group is commissioned by the mysterious Mr. Church to assassinate the dictator of a small South American island, Barney and Lee visit the remote locale to scout out their opposition and discover the true nature of the conflict engulfing the city.",
+    "tagline": "Choose your weapon.",
+    "runtime": 103,
+    "release_date": "2010-08-07",
+    "vote_average": 6.253,
+    "poster_path": "/j09ZkH6R4JWVylBcDai1laCmGw7.jpg",
+    "backdrop_path": "/yBv9RxlWPXRCvjMFsrmB1pxwWo6.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 126125,
+      "name": "The Expendables Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Barney Ross",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Jason Statham",
+      "character": "Lee Christmas",
+      "profile_path": "/8l6lmrmKFDvhDjMJPj6tBpJdhaA.jpg"
+    },
+    {
+      "name": "Jet Li",
+      "character": "Yin Yang",
+      "profile_path": "/c4s8INzU0ZAujCQ1YmphCmcsNzl.jpg"
+    },
+    {
+      "name": "Dolph Lundgren",
+      "character": "Gunner Jensen",
+      "profile_path": "/fB1tOws6Gav0xE8LYlELEb82hJt.jpg"
+    }
+  ]
+}

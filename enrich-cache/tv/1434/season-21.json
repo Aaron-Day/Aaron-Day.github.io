@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 21,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Oscars Guy",
+        "overview": "\u0022Family Guy\u0022 retells three Oscar-winning stories: \u0022Silence of the Lambs,\u0022 \u0022American Beauty\u0022 and \u0022Forrest Gump\u0022.",
+        "air_date": "2022-09-25",
+        "runtime": 22,
+        "still_path": "/sgzVYKtr4NnAaOeTJ59zwUCyFIX.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Bend or Blockbuster",
+        "overview": "Resolved to enjoy a family movie night, the Griffins take a road trip to Bend, Oregon, to rent a VHS from the last Blockbuster in existence.",
+        "air_date": "2022-10-02",
+        "runtime": 22,
+        "still_path": "/czA61vsl9E5gRewaMh8nzhT1jtI.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "A Wife-Changing Experience",
+        "overview": "Joe accidentally sees Lois naked, leading to a reinvigoration of his sex life with Bonnie. Meanwhile, Stewie is gifted an electric SUV and quickly embodies the \u0022Range Rover\u0022 lifestyle.",
+        "air_date": "2022-10-09",
+        "runtime": 22,
+        "still_path": "/xz0ZPvhPRC8RbPxVTlS9vJqBmDx.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Munchurian Candidate",
+        "overview": "Lois hypnotizes Peter into satisfying her sexual proclivities. Meanwhile, Stewie renovates his treehouse in an attempt to win over Brian and Chris.",
+        "air_date": "2022-10-16",
+        "runtime": 22,
+        "still_path": "/vFwWsqD4BZDrLhIwZnoibKjsotj.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Unzipped Code",
+        "overview": "Cleveland is fired as a mailman after an ignominious mishap, but flourishes in his new job at the brewery.",
+        "air_date": "2022-10-23",
+        "runtime": 22,
+        "still_path": "/1cpLa9HQ5CfyrsGOblivUr8Ptc5.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Happy Holo-ween",
+        "overview": "Peter makes a hologram of himself in order to get out of menial household duties.",
+        "air_date": "2022-10-30",
+        "runtime": 22,
+        "still_path": "/xhdYIATbrPIr8FVEQNS77aQmQ4I.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Stewaway",
+        "overview": "During a game of \u0022hide and seek,\u0022 Stewie takes refuge in Quagmire\u0027s suitcase, only to wind up in Paris. Meanwhile, Peter and Lois take a getaway to Vermont, where Lois is intent on breaking Bonnie\u0027s Instagram \u0022like\u0022 record.",
+        "air_date": "2022-11-13",
+        "runtime": 22,
+        "still_path": "/1MgG1wzKOpo3TPRjSVA80AN4LC0.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Get Stewie",
+        "overview": "Stewie finds himself in public disgrace after a popstar unleashes her fan base on him for a benign comment. Meanwhile, Peter gets lap band surgery and enjoys the merriment of excess skin.",
+        "air_date": "2022-11-20",
+        "runtime": 22,
+        "still_path": "/fC9QhPXmdCsJzrn30EzBoeEQFqy.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Carny Knowledge",
+        "overview": "Peter and Chris finish last in a \u0022Generation Gap\u0022 game at a carnival, forcing them to try to reconnect. Brian starts to date a carny, whom he can\u0027t break up with even after witnessing some of her crude habits.",
+        "air_date": "2022-12-04",
+        "runtime": 22,
+        "still_path": "/fmPqo8YzArxHU3lm7fskxtkgYuP.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Candidate",
+        "overview": "Stewie and Doug compete for the honor of class \u0022snack captain\u0022.",
+        "air_date": "2022-12-11",
+        "runtime": 22,
+        "still_path": "/bOwN24Mpjsh2ZSSMiIhobWPzQuo.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Love Story Guy",
+        "overview": "The guys recount their first true love stories, leading to parodies of \u0022Castaway,\u0022 \u0022Dirty Dancing\u0022 and various Meg Ryan rom-coms.",
+        "air_date": "2023-01-08",
+        "runtime": 22,
+        "still_path": "/u0nxLu9xZBjjFCmtSyi6uazULTx.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Old West",
+        "overview": "The guys try to help Mayor Wild West reconnect with his estranged father, Old West.",
+        "air_date": "2023-02-19",
+        "runtime": 22,
+        "still_path": "/hvhRB97MqlLvWYwq6o11jqrZgUD.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Single White Dad",
+        "overview": "Peter is mistaken for being a single parent, and relishes in the perks that come with it.",
+        "air_date": "2023-02-26",
+        "runtime": 22,
+        "still_path": "/Ao8A4QCvpcnl5n3gOuItewKdWvV.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "White Meg Can\u0027t Jump",
+        "overview": "Meg joins the Adam West High basketball team, and her play is fueled by Peter\u0027s lambasting from the crowd. Meanwhile, Stewie goes down a rabbit hole of conspiracies, which ultimately ends with him developing multiple personalities.",
+        "air_date": "2023-03-05",
+        "runtime": 22,
+        "still_path": "/mytawT2pfaNRqyvRjodS9EPCsFj.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Adoptation",
+        "overview": "To restore his public image, Carter adopts a young girl from an orphanage, drawing jealousy from Lois.",
+        "air_date": "2023-03-12",
+        "runtime": 22,
+        "still_path": "/vaeksLWOxPIqRDbe7CDJB9bHuTY.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "The Bird Reich",
+        "overview": "To take advantage of a work policy granting leave in the event of a pet\u0027s death, Peter adopts the oldest bird he can find... and realizes it used to belong to Hitler. Meanwhile, after giving Stewie a signed copy of his book, Brian finds it in a free library, causing Brian to give up writing.",
+        "air_date": "2023-04-16",
+        "runtime": 22,
+        "still_path": "/mr6MLjLJ2KtuMLkNPb1aqnUVDsN.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "A Bottle Episode",
+        "overview": "Lois is blocked from a vacation rental app and accused of stealing after the family\u0027s trip to Nantucket. Meanwhile, Stewie and Brian buy saltwater taffy in bulk, and try their hands at door-to-door sales in the community.",
+        "air_date": "2023-04-16",
+        "runtime": 22,
+        "still_path": "/bxHkLC8O3eU8alXGxBORTXYP5Lz.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Vat Man \u0026 Rob \u0027Em",
+        "overview": "When Peter gets a job as the new night watchman, he and the guys turn Pawtucket Brewery into an after-hours bar. Meanwhile, Stewie and Brian\u0027s plan to collect \u0022lost dog\u0022 return money backfires when Brian is used for a dangerous TikTok stunt.",
+        "air_date": "2023-04-23",
+        "runtime": 22,
+        "still_path": "/5it9Vnq00Y5z1vKGBtboQ98CdUf.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "From Russia with Love",
+        "overview": "After Brian\u0027s Instagram is hacked, Meg takes Stewie and Brian to Russia, only to realize she\u0027d rather stay there. Meanwhile, Lois reverts to her tormented teenage self when Quagmire starts dating her high school bully.",
+        "air_date": "2023-04-30",
+        "runtime": 22,
+        "still_path": "/2ou0R4ULaJO4GiOZkk0bbPDM0Rh.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Adult Education",
+        "overview": "Meg gets married in Russia but returns home after discovering she was used for a green card marriage. Meanwhile, Chris, in need of an extracurricular activity, joins Principal Shepherd in shooting pornos at the high school.",
+        "air_date": "2023-05-07",
+        "runtime": 22,
+        "still_path": "/qbXutJ5V2QNetbAlsbliwvVDFIW.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 85446,
+    "title": "Step Up Revolution",
+    "overview": "Emily arrives in Miami with aspirations to become a professional dancer. She sparks with Sean, the leader of a dance crew whose neighborhood is threatened by Emily\u0027s father\u0027s development plans.",
+    "tagline": "One step can change your world.",
+    "runtime": 99,
+    "release_date": "2012-07-26",
+    "vote_average": 6.9,
+    "poster_path": "/jMpwxmk3r7Aq36GcqMbCuP9DJYQ.jpg",
+    "backdrop_path": "/9qM08KBrvuzENc0G9RzlzyVjkSm.jpg",
+    "genres": [
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86092,
+      "name": "Step Up Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kathryn McCormick",
+      "character": "Emily Anderson",
+      "profile_path": "/bCuPpLsZ5btYaqtNe7NeceIZp9G.jpg"
+    },
+    {
+      "name": "Ryan Guzman",
+      "character": "Sean Asa",
+      "profile_path": "/5WFKnf0VaoRc1MgnxHrXl4cA3Hu.jpg"
+    },
+    {
+      "name": "Misha Gabriel",
+      "character": "Eddy",
+      "profile_path": "/1vePzg2hdpNR9cdKLbzw9ZiL4KD.jpg"
+    },
+    {
+      "name": "Stephen \u0027tWitch\u0027 Boss",
+      "character": "Jason Hardlerson",
+      "profile_path": "/2DjfxXDVK9ccXfZbvH0QNhXTQka.jpg"
+    }
+  ]
+}

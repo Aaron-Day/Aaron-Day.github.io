@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13207,
+    "title": "Friday the 13th",
+    "overview": "A group of young adults visit a boarded up campsite named Crystal Lake where they soon encounter the mysterious Jason Voorhees and his deadly intentions.",
+    "tagline": "Welcome to Crystal Lake.",
+    "runtime": 97,
+    "release_date": "2009-02-11",
+    "vote_average": 5.792,
+    "poster_path": "/88wlJ4teYlck4hJ2bnlxBrAVh0m.jpg",
+    "backdrop_path": "/xECaVCK8nT1KCKdGg01mQgizuOd.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jared Padalecki",
+      "character": "Clay Miller",
+      "profile_path": "/dTV5ImKP5uIdFShiG3VFbbjLFWo.jpg"
+    },
+    {
+      "name": "Danielle Panabaker",
+      "character": "Jenna",
+      "profile_path": "/faX0EDc44GL5ZcsEcxTOBcfWpCP.jpg"
+    },
+    {
+      "name": "Amanda Righetti",
+      "character": "Whitney Miller",
+      "profile_path": "/7kKpYggBan6rYKFumeRSm0eDGqA.jpg"
+    },
+    {
+      "name": "Travis Van Winkle",
+      "character": "Trent",
+      "profile_path": "/o4WW1KYWKF2oVxUc22fYeDr6ZhZ.jpg"
+    }
+  ]
+}

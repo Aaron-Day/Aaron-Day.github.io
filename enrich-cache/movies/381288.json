@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 381288,
+    "title": "Split",
+    "overview": "Though Kevin has evidenced 23 personalities to his trusted psychiatrist, Dr. Fletcher, there remains one still submerged who is set to materialize and dominate all the others. Compelled to abduct three teenage girls led by the willful, observant Casey, Kevin reaches a war for survival among all of those contained within him \u2014 as well as everyone around him \u2014 as the walls between his compartments shatter apart.",
+    "tagline": "Kevin has 23 distinct personalities. The 24th is about to be unleashed.",
+    "runtime": 117,
+    "release_date": "2017-01-19",
+    "vote_average": 7.34,
+    "poster_path": "/ow2BSQGKJtZpH2zZY1rmX8eXKAi.jpg",
+    "backdrop_path": "/9pkZesKMnblFfKxEhQx45YQ2kIe.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "James McAvoy",
+      "character": "Dennis / Patricia / Hedwig / The Beast / Kevin Wendell Crumb / Barry / Orwell / Jade",
+      "profile_path": "/u4REKbm3zhFI2J5tVyqRovGRYUJ.jpg"
+    },
+    {
+      "name": "Anya Taylor-Joy",
+      "character": "Casey Cooke",
+      "profile_path": "/qYNofOjlRke2MlJVihmJmEdQI4v.jpg"
+    },
+    {
+      "name": "Haley Lu Richardson",
+      "character": "Claire Benoit",
+      "profile_path": "/iTNWzU5FlKT8s0CBZQyMIvebBPh.jpg"
+    },
+    {
+      "name": "Jessica Sula",
+      "character": "Marcia",
+      "profile_path": "/2lLET7EhRy98ad5Mgc9jMk4Sb0S.jpg"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 24,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Pandemic Special",
+        "overview": "Randy comes to terms with his hand in the pandemic as the town learns to cope with this new normal. The children return to school to find out everything is different.",
+        "air_date": "2020-09-30",
+        "runtime": 48,
+        "still_path": "/paSznMWSqKapPaz0OtjFubdRYcN.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "South ParQ Vaccination Special",
+        "overview": "The citizens of South ParQ are clamoring for the COVID-19 vaccine. A hilarious new militant group tries to stop the boys from getting their teacher vaccinated.",
+        "air_date": "2021-03-10",
+        "runtime": 47,
+        "still_path": "/b8M1G78J3U6MH3cwMNal8qfROJY.jpg"
+      }
+    ]
+  }
+}

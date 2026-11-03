@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10014,
+    "title": "A Nightmare on Elm Street Part 2: Freddy\u0027s Revenge",
+    "overview": "A teenage boy is haunted in his dreams by deceased child murderer Freddy Krueger, who is out to possess him in order to continue his reign of terror in the real world.",
+    "tagline": "The man of your dreams is back.",
+    "runtime": 87,
+    "release_date": "1985-11-01",
+    "vote_average": 5.801,
+    "poster_path": "/53kxYw0G3o55yJ23K7s7KMaOyAM.jpg",
+    "backdrop_path": "/8cxB1CiiODiWFayDPxLsAeviZvc.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8581,
+      "name": "A Nightmare on Elm Street Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mark Patton",
+      "character": "Jesse Walsh",
+      "profile_path": "/5v6dcMn2WXYPJRqHrIkOzwoxW7M.jpg"
+    },
+    {
+      "name": "Robert Englund",
+      "character": "Freddy Krueger",
+      "profile_path": "/cjGEkiavinHa1dnetDvnEhlD2Wm.jpg"
+    },
+    {
+      "name": "Kim Myers",
+      "character": "Lisa Webber",
+      "profile_path": "/2OG4T9eycO57rZn7tLDWcTOW3Nw.jpg"
+    },
+    {
+      "name": "Robert Rusler",
+      "character": "Ron Grady",
+      "profile_path": "/dZ9ZU5afsftWHThl3YmoekhzJNA.jpg"
+    }
+  ]
+}

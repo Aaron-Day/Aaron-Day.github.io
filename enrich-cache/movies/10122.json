@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10122,
+    "title": "Flight of the Navigator",
+    "overview": "12-year-old David is accidentally knocked out in the forest near his home, but when he awakens eight years have passed. His family is overjoyed to have him back, but is just as perplexed as he is that he hasn\u0027t aged. When a NASA scientist discovers a UFO nearby, David gets the chance to unravel the mystery and recover the life he lost.",
+    "tagline": "David Freeman is eight years late for dinner, and his family wants to know why. But David\u0027s got an absolutely fantastic excuse.",
+    "runtime": 90,
+    "release_date": "1986-07-30",
+    "vote_average": 6.969,
+    "poster_path": "/tdRgQWMximj0tL6OWu9kRTtePmI.jpg",
+    "backdrop_path": "/i4f3rnvwY70SMsajTt3LIlmYdBf.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Joey Cramer",
+      "character": "David Scott Freeman",
+      "profile_path": "/hdgQwRAlLyMimqvcgHPixhn9Qlv.jpg"
+    },
+    {
+      "name": "Paul Reubens",
+      "character": "Max (voice)",
+      "profile_path": "/7T0ExonMf6PAvphKVaTm73BXdLW.jpg"
+    },
+    {
+      "name": "Veronica Cartwright",
+      "character": "Helen Freeman",
+      "profile_path": "/1CiknHO8ssMM4bWPsIMMzCTVHeB.jpg"
+    },
+    {
+      "name": "Cliff DeYoung",
+      "character": "Bill Freeman",
+      "profile_path": "/clSxOXAj3nZSN5gzzVo1UHIZqC9.jpg"
+    }
+  ]
+}

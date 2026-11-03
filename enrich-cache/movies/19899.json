@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 19899,
+    "title": "Couples Retreat",
+    "overview": "Four couples, all friends, descend on a tropical island resort. Though one husband and wife are there to work on their marriage, the others just want to enjoy some fun in the sun. They soon find, however, that paradise comes at a price: Participation in couples therapy sessions is mandatory. What started out as a cut-rate vacation turns into an examination of the common problems many face.",
+    "tagline": "It may be paradise... but it\u0027s no vacation.",
+    "runtime": 113,
+    "release_date": "2009-09-19",
+    "vote_average": 5.558,
+    "poster_path": "/igXVSRZsNX3TZsKrQqSyEJvzHRF.jpg",
+    "backdrop_path": "/uKrfP5T5EwlR5RPGDEbFzDSaljJ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Vince Vaughn",
+      "character": "Dave",
+      "profile_path": "/qImHvsd7SFJh46Ujx50xUfkeMNz.jpg"
+    },
+    {
+      "name": "Jason Bateman",
+      "character": "Jason",
+      "profile_path": "/8e6mt0vGjPo6eW52gqRuXy5YnfN.jpg"
+    },
+    {
+      "name": "Jon Favreau",
+      "character": "Joey",
+      "profile_path": "/8MtRRnEHaBSw8Ztdl8saXiw1egP.jpg"
+    },
+    {
+      "name": "Faizon Love",
+      "character": "Shane",
+      "profile_path": "/dK3hUGpG3SzmqTCy6rQzyK6YaCy.jpg"
+    }
+  ]
+}

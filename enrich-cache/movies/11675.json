@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11675,
+    "title": "Halloween H20: 20 Years Later",
+    "overview": "Two decades after surviving a massacre on October 31, 1978, former baby sitter Laurie Strode finds herself hunted by persistent knife-wielder Michael Myers. Laurie now lives in Northern California under an assumed name, where she works as the headmistress of a private school. But it\u0027s not far enough to escape Myers, who soon discovers her whereabouts. As Halloween descends upon Laurie\u0027s peaceful community, a feeling of dread weighs upon her -- with good reason.",
+    "tagline": "This summer, terror won\u0027t be taking a vacation.",
+    "runtime": 86,
+    "release_date": "1998-08-05",
+    "vote_average": 6.031,
+    "poster_path": "/lqLXUm3oK59sGJKRH2Zjj2m3iMg.jpg",
+    "backdrop_path": "/A1LU0zDxrEhtMYpqDHbXkBJT6aP.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91361,
+      "name": "Halloween Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jamie Lee Curtis",
+      "character": "Laurie Strode / Keri Tate",
+      "profile_path": "/eWKubKAAssRzmFwCZKh1mdYqGCH.jpg"
+    },
+    {
+      "name": "Josh Hartnett",
+      "character": "John",
+      "profile_path": "/5eMo8D7h1XrSu6ZN4UXhPcS6YNG.jpg"
+    },
+    {
+      "name": "Adam Arkin",
+      "character": "Will Brennan",
+      "profile_path": "/66CugPTyelfdtYe0IV0U0LQP1sA.jpg"
+    },
+    {
+      "name": "Michelle Williams",
+      "character": "Molly",
+      "profile_path": "/jn3BVMVbIptz2gc6Fhxo1qwJVvW.jpg"
+    }
+  ]
+}

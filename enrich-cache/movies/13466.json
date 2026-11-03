@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 13466,
+    "title": "October Sky",
+    "overview": "The true story of Homer Hickam, a coal miner\u0027s son who was inspired by the first Sputnik launch to take up rocketry against his father\u0027s wishes.",
+    "tagline": "Sometimes one dream is enough to light up the whole sky.",
+    "runtime": 107,
+    "release_date": "1999-02-19",
+    "vote_average": 7.678,
+    "poster_path": "/umWrXCIWdcYPf764ruvMRCpG3cA.jpg",
+    "backdrop_path": "/c6uIPrMgvDzhEGSKuZc8aw6NfC.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 36,
+        "name": "History"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jake Gyllenhaal",
+      "character": "Homer Hickam",
+      "profile_path": "/ct2Gh2sJSxd4yaMrSsqSt1HpIC3.jpg"
+    },
+    {
+      "name": "Chris Cooper",
+      "character": "John Hickam",
+      "profile_path": "/sJKghcu9wRDIvKM0cI7kqNXYRfS.jpg"
+    },
+    {
+      "name": "Chris Owen",
+      "character": "Quentin Wilson",
+      "profile_path": "/lbpz1BSNahnkyE7FZ1tWcIy35w0.jpg"
+    },
+    {
+      "name": "Laura Dern",
+      "character": "Miss Riley",
+      "profile_path": "/gB9PnGEvxKg33OSlcqptQwTBwPE.jpg"
+    }
+  ]
+}

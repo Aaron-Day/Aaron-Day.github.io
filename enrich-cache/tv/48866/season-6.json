@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 6,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Sanctum",
+        "overview": "Still reeling after receiving Monty\u2019s message, a small group goes down to explore the mysterious new planet. Back on the Mothership, several members of Wonkru face the consequences of their decisions.",
+        "air_date": "2019-04-30",
+        "runtime": 42,
+        "still_path": "/rlMqEawRiHQPVdaCGNKcnk59WNt.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Red Sun Rising",
+        "overview": "The team on the ground flights to survive the threat they face on the new planet. Meanwhile, Raven must join forces with an unlikely ally to save everyone on board the Mothership.",
+        "air_date": "2019-05-07",
+        "runtime": 42,
+        "still_path": "/yJKTDjnWn6tDFI32ss3DZoNJdE1.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Children of Gabriel",
+        "overview": "Clarke tries to win over the leaders of Sanctum in order to let her people stay. Meanwhile, Bellamy, Echo and Octavia discover a new threat while on a mission to retrieve the transport ship.",
+        "air_date": "2019-05-14",
+        "runtime": 42,
+        "still_path": "/qrk8TdSEXg6jlwcw60e93qH0M7R.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Face Behind the Glass",
+        "overview": "Clarke embraces the traditions of Sanctum and tries to make amends for her past actions.",
+        "air_date": "2019-05-21",
+        "runtime": 42,
+        "still_path": "/wzF7lUcYRJySgsURQr0bhWibcu6.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Gospel of Josephine",
+        "overview": "Jordan investigates Sanctum. Meanwhile, Octavia and Diyoza discover the threats of the new planet firsthand. Lastly, Bellamy and Clarke butt heads.",
+        "air_date": "2019-05-28",
+        "runtime": 40,
+        "still_path": "/vIZPo7EZePdoYtUE09msXGEkZr6.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Memento Mori",
+        "overview": "Diyoza learns more about the mysterious Children of Gabriel while Abby continues searching for a way to save Kane.",
+        "air_date": "2019-06-11",
+        "runtime": 42,
+        "still_path": "/3ndZzRY19pYS5XeTFS1KF33S9KP.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Nevermind",
+        "overview": "Clarke\u2019s past catches up to her.",
+        "air_date": "2019-06-18",
+        "runtime": 42,
+        "still_path": "/kkmvYqXQA4zDBFsstzX1BntQnsZ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Old Man and the Anomaly",
+        "overview": "Octavia and Diyoza make their way to the mysterious anomaly in search of the Old Man. Meanwhile, Murphy  has an offer for Emori.",
+        "air_date": "2019-06-25",
+        "runtime": 41,
+        "still_path": "/qP9jVlVWI1rXLjZmhYqDuCFREEy.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "What You Take with You",
+        "overview": "Bellamy must venture into enemy territory with an unlikely companion. Meanwhile, Octavia is forced to confront her past.",
+        "air_date": "2019-07-09",
+        "runtime": 42,
+        "still_path": "/ckYny8nadEeYkTfsEm5oLXbSnOJ.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Matryoshka",
+        "overview": "Russell seeks justice. Meanwhile, Gabriel must make a difficult choice. Lastly, the Blake siblings reunite.",
+        "air_date": "2019-07-16",
+        "runtime": 42,
+        "still_path": "/g5znG4J9D66qq5lfNzqCglug184.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Ashes to Ashes",
+        "overview": "Bellamy and Octavia must work together to save their friends. Echo is forced to face her past.",
+        "air_date": "2019-07-23",
+        "runtime": 42,
+        "still_path": "/efYEcVpBOkoJVQis3d2ViJQqFHW.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Adjustment Protocol",
+        "overview": "A special Naming Day changes everything in Sanctum. Gabriel comes face to face with an old friend.",
+        "air_date": "2019-07-30",
+        "runtime": 42,
+        "still_path": "/5MqBYIoVKgiSXAQy82AET8PDfoq.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "The Blood of Sanctum",
+        "overview": "Sanctum becomes a battleground between the devout and the non-believers. The mystery of the anomaly deepens.",
+        "air_date": "2019-08-06",
+        "runtime": 42,
+        "still_path": "/eCOBBsR7SXNjRGg4qAgucwHEYEk.jpg"
+      }
+    ]
+  }
+}

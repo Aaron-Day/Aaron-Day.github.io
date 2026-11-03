@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 107846,
+    "title": "Escape Plan",
+    "overview": "Ray Breslin is the world\u0027s foremost authority on structural security. After analyzing every high security prison and learning a vast array of survival skills so he can design escape-proof prisons, his skills are put to the test. He\u0027s framed and incarcerated in a master prison he designed himself. He needs to escape and find the person who put him behind bars.",
+    "tagline": "No one breaks out alone.",
+    "runtime": 115,
+    "release_date": "2013-10-09",
+    "vote_average": 6.717,
+    "poster_path": "/qOZPLflxDqKogu9v9hYw3lolxGs.jpg",
+    "backdrop_path": "/ix9WYBqQ2xSZCgyeQ1vVdrbaFa4.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 525891,
+      "name": "Escape Plan Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sylvester Stallone",
+      "character": "Ray Breslin",
+      "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+    },
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Emil Rottmayer",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Jim Caviezel",
+      "character": "Willard Hobbes",
+      "profile_path": "/3dwavYsGYA6zzzipfdLIHbudIZW.jpg"
+    },
+    {
+      "name": "50 Cent",
+      "character": "Hush",
+      "profile_path": "/7VfwFIwBxy7qBUErosWRDQOovl9.jpg"
+    }
+  ]
+}

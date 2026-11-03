@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 14438,
+    "title": "Fireproof",
+    "overview": "A heroic fire captain values dedication and service to others above all else, but the most important partnership in his life, his marriage, is about to go up in smoke.",
+    "tagline": "Never leave your partner behind.",
+    "runtime": 118,
+    "release_date": "2008-09-26",
+    "vote_average": 7.699,
+    "poster_path": "/hfoCG75j1YaNyfZGPg0rWy3nFmU.jpg",
+    "backdrop_path": "/3gMtnO5vDznlKsUW7sU9EfRufIc.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kirk Cameron",
+      "character": "Caleb Holt",
+      "profile_path": "/oloVIPnlEBff1gXmzGlY7Fk1KWn.jpg"
+    },
+    {
+      "name": "Erin Bethea",
+      "character": "Catherine Holt",
+      "profile_path": "/5xFkd3BepC87fPHP9ONH7wH1feV.jpg"
+    },
+    {
+      "name": "Ken Bevel",
+      "character": "Michael Simmons",
+      "profile_path": "/ie9O6VL9DFPrCG2vyemrGzxq9MZ.jpg"
+    },
+    {
+      "name": "Stephen Dervan",
+      "character": "Wayne Floyd",
+      "profile_path": null
+    }
+  ]
+}

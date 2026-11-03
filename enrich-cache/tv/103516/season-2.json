@@ -1,0 +1,88 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 2,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Broken Circle",
+        "overview": "A distress call from Lt. Noonien-Singh compels Spock to disobey orders and take the U.S.S. Enterprise and its crew into disputed space, risking renewed hostilities with the Klingons in a bid to aid their shipmate.",
+        "air_date": "2023-06-15",
+        "runtime": 53,
+        "still_path": "/laHGPCjO9wJx52pIPvqMBt2Is9g.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Ad Astra per Aspera",
+        "overview": "Commander Una faces court-martial along with possible imprisonment and dishonorable dismissal from Starfleet, and her defense is in the hands of a lawyer who\u2019s also a childhood friend with whom she had a terrible falling out.",
+        "air_date": "2023-06-22",
+        "runtime": 58,
+        "still_path": "/xmDChudvEB7eq7DlKlljjrqUiFg.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Tomorrow and Tomorrow and Tomorrow",
+        "overview": "La\u0027an travels back in time to twenty-first-century Earth to prevent an attack which will alter humanity\u2019s future history\u2014and bring her face to face with her own contentious legacy.",
+        "air_date": "2023-06-29",
+        "runtime": 61,
+        "still_path": "/f4FRVjwKKwM37g55Y32ule1wvIh.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Among the Lotus Eaters",
+        "overview": "Returning to a planet that dredges up tragic memories, Captain Pike and his landing party find themselves forgetting everything, including their own identities as he confronts a ghost from his past.",
+        "air_date": "2023-07-06",
+        "runtime": 58,
+        "still_path": "/jJi2VGuS0tyXKtuqgCjsNIOztUY.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Charades",
+        "overview": "A shuttle accident leads to Spock\u0027s Vulcan DNA being removed by aliens, making him fully human and completely unprepared to face T\u0027Pring\u0027s family during an important ceremonial dinner.",
+        "air_date": "2023-07-13",
+        "runtime": 61,
+        "still_path": "/An9V1HboTzyLOCzEBygUHZiEmRG.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Lost in Translation",
+        "overview": "Uhura seems to be the only one who can hear a strange sound. When the noise triggers terrifying hallucinations, she enlists an unlikely assistant to help her track down the source.",
+        "air_date": "2023-07-20",
+        "runtime": 55,
+        "still_path": "/wvAbW0YLMeOHjUIdd7N8euPBc4f.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Those Old Scientists",
+        "overview": "An accident while investigating a time portal sends Ensign Brad Boimler through time from the twenty-fourth century, and Captain Pike and his crew must get him back where he belongs before he can somehow alter the timeline.",
+        "air_date": "2023-07-22",
+        "runtime": 49,
+        "still_path": "/cUXmAvXYhi7zBIzoFgIzbxmf6QI.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Under the Cloak of War",
+        "overview": "Captain Pike and his crew welcome a Klingon defector aboard the U.S.S. Enterprise, but his presence triggers the revelation of some shocking secrets.",
+        "air_date": "2023-07-27",
+        "runtime": 50,
+        "still_path": "/6UHcQZJjC5StPGkzq6sZAsBLGqx.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Subspace Rhapsody",
+        "overview": "An accident with an experimental quantum probability field causes everyone on the U.S.S. Enterprise to break uncontrollably into song, but the real danger is that the field is expanding and beginning to impact other ships\u2014allies and enemies alike.",
+        "air_date": "2023-08-03",
+        "runtime": 63,
+        "still_path": "/a7Cu3KpMBkCh8Tgxgja87WgFE6u.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Hegemony (1)",
+        "overview": "When the U.S.S. Enterprise investigates an attack on a colony at the edge of Federation space, Captain Pike and his crew face the return of a formidable enemy.",
+        "air_date": "2023-08-10",
+        "runtime": 54,
+        "still_path": "/rwqAAZjadCcmzfpLFvScBmzl274.jpg"
+      }
+    ]
+  }
+}

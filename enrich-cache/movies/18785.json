@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18785,
+    "title": "The Hangover",
+    "overview": "When three friends finally come to after a raucous night of bachelor-party revelry, they find a baby in the closet and a tiger in the bathroom. But they can\u0027t seem to locate their best friend, Doug \u2013 who\u0027s supposed to be tying the knot. Launching a frantic search for Doug, the trio perseveres through a nasty hangover to try to make it to the church on time.",
+    "tagline": "Some guys just can\u0027t handle Vegas.",
+    "runtime": 100,
+    "release_date": "2009-06-02",
+    "vote_average": 7.34,
+    "poster_path": "/A0uS9rHR56FeBtpjVki16M5xxSW.jpg",
+    "backdrop_path": "/iuRVt8tFiXDPGgzavhuSa3QHRxD.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 86119,
+      "name": "The Hangover Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Bradley Cooper",
+      "character": "Phil Wenneck",
+      "profile_path": "/5Dhy50qOMOHfR1NZifKIfffjV9X.jpg"
+    },
+    {
+      "name": "Ed Helms",
+      "character": "Stu Price",
+      "profile_path": "/gPZ8tZaNQGAc3KZRIPp9rgGbEnN.jpg"
+    },
+    {
+      "name": "Zach Galifianakis",
+      "character": "Alan Garner",
+      "profile_path": "/qsDfoUlRnXHUiqZeBPWHzmgmKGX.jpg"
+    },
+    {
+      "name": "Justin Bartha",
+      "character": "Doug Billings",
+      "profile_path": "/AalKjN8nR8RZ8g6ZdWV2smnQq4d.jpg"
+    }
+  ]
+}

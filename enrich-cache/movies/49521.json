@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 49521,
+    "title": "Man of Steel",
+    "overview": "A young boy learns that he has extraordinary powers and is not of this earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind.",
+    "tagline": "You are not alone.",
+    "runtime": 143,
+    "release_date": "2013-06-12",
+    "vote_average": 6.663,
+    "poster_path": "/8GFtkImmK0K1VaUChR0n9O61CFU.jpg",
+    "backdrop_path": "/69EFgWWPFWbRNHmQgYdSnyJ94Ge.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 209131,
+      "name": "Man of Steel Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Henry Cavill",
+      "character": "Clark Kent / Kal-El",
+      "profile_path": "/dgTD7Q9owL3DyX9uYoSX9KZeUUz.jpg"
+    },
+    {
+      "name": "Amy Adams",
+      "character": "Lois Lane",
+      "profile_path": "/gn0K6c6d1L6qQrRc86iL8uyIqiF.jpg"
+    },
+    {
+      "name": "Michael Shannon",
+      "character": "General Zod",
+      "profile_path": "/6mMczfjM8CiS1WuBOgo5Xom1TcR.jpg"
+    },
+    {
+      "name": "Diane Lane",
+      "character": "Martha Kent",
+      "profile_path": "/6OfP3vFMuCL51zamFKgb8aS74hs.jpg"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 12242,
+    "title": "Mulan II",
+    "overview": "Fa Mulan gets the surprise of her young life when her love, Captain Li Shang asks for her hand in marriage. Before the two can have their happily ever after, the Emperor assigns them a secret mission, to escort three princesses to Chang\u0027an, China. Mushu is determined to drive a wedge between the couple after he learns that he will lose his guardian job if Mulan marries into the Li family.",
+    "tagline": "She\u0027s primped. She\u0027s engaged. She\u0027s back.",
+    "runtime": 79,
+    "release_date": "2004-11-03",
+    "vote_average": 6.525,
+    "poster_path": "/mIHE3BKyAKG8ocRAoZuCQN1NTv9.jpg",
+    "backdrop_path": "/2Zv86BI4QqztR19fwFErXyr59h.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87236,
+      "name": "Mulan Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ming-Na Wen",
+      "character": "Mulan (voice)",
+      "profile_path": "/eqCzFF83It56cUdjpskzvg8jgq.jpg"
+    },
+    {
+      "name": "BD Wong",
+      "character": "Shang (voice)",
+      "profile_path": "/w7Hs9m6ocS2qlibvrLOvmyCKbAN.jpg"
+    },
+    {
+      "name": "Mark Moseley",
+      "character": "Mushu (voice)",
+      "profile_path": "/1I65kWE6cM25G14Wz3TanpTtYev.jpg"
+    },
+    {
+      "name": "Lucy Liu",
+      "character": "Mei (voice)",
+      "profile_path": "/9nbtjqsx3De7hO2XDtrBQ7M9VCH.jpg"
+    }
+  ]
+}

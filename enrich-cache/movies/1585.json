@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1585,
+    "title": "It\u0027s a Wonderful Life",
+    "overview": "George Bailey has spent his entire life giving to the people of Bedford Falls.  All that prevents rich skinflint Mr. Potter from taking over the entire town is George\u0027s modest building and loan company.  But on Christmas Eve the business\u0027s $8,000 is lost and George\u0027s troubles begin.",
+    "tagline": "It\u0027s a wonderful laugh! It\u0027s a wonderful love!",
+    "runtime": 131,
+    "release_date": "1946-12-20",
+    "vote_average": 8.279,
+    "poster_path": "/bSqt9rhDZx1Q7UZ86dBPKdNomp2.jpg",
+    "backdrop_path": "/ch3lDc4xQ9MpsNEpnRhvR8PIxxK.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "James Stewart",
+      "character": "George Bailey",
+      "profile_path": "/3CU3yG3rCTlG3SwxI9iUOzfHtfX.jpg"
+    },
+    {
+      "name": "Donna Reed",
+      "character": "Mary Hatch",
+      "profile_path": "/gO2sb3qfGWn9beecguFErp0tlv9.jpg"
+    },
+    {
+      "name": "Lionel Barrymore",
+      "character": "Mr. Potter",
+      "profile_path": "/1Tp5aKxF8n6iwTpviwLrxe1krm3.jpg"
+    },
+    {
+      "name": "Thomas Mitchell",
+      "character": "Uncle Billy",
+      "profile_path": "/uOhcftGVj7tPrCKBYHYtYPlQKUP.jpg"
+    }
+  ]
+}

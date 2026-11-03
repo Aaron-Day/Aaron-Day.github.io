@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 76285,
+    "title": "Percy Jackson: Sea of Monsters",
+    "overview": "In their quest to confront the ultimate evil, Percy and his friends battle swarms of mythical creatures to find the mythical Golden Fleece and to stop an ancient evil from rising.",
+    "tagline": "Where There Are Gods, There Are Monsters.",
+    "runtime": 106,
+    "release_date": "2013-08-07",
+    "vote_average": 6.026,
+    "poster_path": "/tAu90qEpLqwqiZLsMqpaMVr55oN.jpg",
+    "backdrop_path": "/fvrGb6zfQaQ8RD9pC8o9vv1b7W2.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 179919,
+      "name": "Percy Jackson Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Logan Lerman",
+      "character": "Percy Jackson",
+      "profile_path": "/ckcpgSvSWOhi8mvAfR1Cpsakg3S.jpg"
+    },
+    {
+      "name": "Brandon T. Jackson",
+      "character": "Grover Underwood",
+      "profile_path": "/vkaHkhqqBreqAXARXspFvcjMuiu.jpg"
+    },
+    {
+      "name": "Alexandra Daddario",
+      "character": "Annabeth Chase",
+      "profile_path": "/6qiLUZZYBE4FsrG8irWbb3I7P1n.jpg"
+    },
+    {
+      "name": "Douglas Smith",
+      "character": "Tyson",
+      "profile_path": "/rHZPWNxjIrpiHQnEOttscjTVvnm.jpg"
+    }
+  ]
+}

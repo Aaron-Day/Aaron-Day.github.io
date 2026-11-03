@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 609972,
+    "title": "Paranormal Activity: Next of Kin",
+    "overview": "Margot is a documentary filmmaker looking to meet her long-lost mother and extended family in a secluded Amish community. She and her film crew soon realize the family that welcomes them into their home might be hiding a sinister secret.",
+    "tagline": "The activity is reborn.",
+    "runtime": 98,
+    "release_date": "2021-10-29",
+    "vote_average": 6.116,
+    "poster_path": "/wRy3SwJFE55iL2bfKqECzP2qyrd.jpg",
+    "backdrop_path": "/xAnSELun945cE4kFUD9mI7W3puI.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 41437,
+      "name": "Paranormal Activity Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Emily Bader",
+      "character": "Margot",
+      "profile_path": "/xWJWSOS3bWZJz26yW5DwKRZdE1t.jpg"
+    },
+    {
+      "name": "Ari Notartomaso",
+      "character": "Clara",
+      "profile_path": "/b5OEmyhksVH1O0wAXMf9CU178md.jpg"
+    },
+    {
+      "name": "Alexa Shae Niziak",
+      "character": "Mary",
+      "profile_path": "/gk03n5MzWwdNljq1yGL4hv390YP.jpg"
+    },
+    {
+      "name": "Dan Lippert",
+      "character": "Dale",
+      "profile_path": "/1fr9gOBqnoJQwhMdoH1mmDuVFUY.jpg"
+    }
+  ]
+}

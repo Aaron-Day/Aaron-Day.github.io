@@ -1,0 +1,64 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Dragonstone",
+        "overview": "Jon Snow organizes the defense of the North. Cersei tries to even the odds. Daenerys comes home.",
+        "air_date": "2017-07-16",
+        "runtime": 59,
+        "still_path": "/3SB4PUzZAnY6HnZbVbktIZoopGs.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Stormborn",
+        "overview": "Daenerys receives an unexpected visitor. Jon faces a revolt. Sam risks his career and life. Tyrion plans the conquest of Westeros.",
+        "air_date": "2017-07-23",
+        "runtime": 59,
+        "still_path": "/6ZLuB2YZeXTCEETnbPe5MNKCsio.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Queen\u0027s Justice",
+        "overview": "Daenerys holds court. Tyrion backchannels. Cersei returns a gift. Jaime learns from his mistakes.",
+        "air_date": "2017-07-30",
+        "runtime": 63,
+        "still_path": "/xSqdpR6qADmjsdlcJLX5LXRToQP.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Spoils of War",
+        "overview": "The Lannisters pay their debts. Daenerys weighs her options. Arya comes home.",
+        "air_date": "2017-08-06",
+        "runtime": 50,
+        "still_path": "/hH9gSHcisHqoux734Q2SdLPLmsL.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Eastwatch",
+        "overview": "Daenerys offers a choice. Arya grows suspicious. Tyrion answers a good question.",
+        "air_date": "2017-08-13",
+        "runtime": 59,
+        "still_path": "/3iaJDPtj75z1YpLDMKR17JRXQdP.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Beyond the Wall",
+        "overview": "Jon and the Brotherhood hunt the dead. Arya confronts Sansa. Tyrion thinks about the future.",
+        "air_date": "2017-08-20",
+        "runtime": 70,
+        "still_path": "/3cUZWo0YrAkBT64uzim542ypeF7.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The Dragon and the Wolf",
+        "overview": "Tyrion tries to save Westeros from itself. Sansa questions loyalties.",
+        "air_date": "2017-08-27",
+        "runtime": 80,
+        "still_path": "/w4N4xxFrfjUyk7wE5hgcoAy0tDc.jpg"
+      }
+    ]
+  }
+}

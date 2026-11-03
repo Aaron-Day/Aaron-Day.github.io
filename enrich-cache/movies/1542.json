@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1542,
+    "title": "Office Space",
+    "overview": "A depressed white-collar worker tries hypnotherapy, only to find himself in a perpetual state of devil-may-care bliss that prompts him to start living by his own rules, and hatch a hapless attempt to embezzle money from his soul-killing employers.",
+    "tagline": "Work sucks.",
+    "runtime": 90,
+    "release_date": "1999-02-19",
+    "vote_average": 7.382,
+    "poster_path": "/iEmTwOkUaLziMQCUZii5wPQBIAO.jpg",
+    "backdrop_path": "/g7o5O6xRWkMiwHXiYMPC690YEL4.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ron Livingston",
+      "character": "Peter",
+      "profile_path": "/pr5CjWnkaf5WKTIYh8wtNufjmyb.jpg"
+    },
+    {
+      "name": "Jennifer Aniston",
+      "character": "Joanna",
+      "profile_path": "/PBSCmHDFdCMBhjx0EbXpTw4Z94.jpg"
+    },
+    {
+      "name": "David Herman",
+      "character": "Michael Bolton",
+      "profile_path": "/wexIWmxk2uigMRLJ1WXYHroODuU.jpg"
+    },
+    {
+      "name": "Ajay Naidu",
+      "character": "Samir",
+      "profile_path": "/tOvD8yveJ4Aq10LICADK3wS3dwE.jpg"
+    }
+  ]
+}

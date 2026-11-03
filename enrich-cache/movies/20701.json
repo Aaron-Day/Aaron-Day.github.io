@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 20701,
+    "title": "Tales from the Darkside: The Movie",
+    "overview": "A young boy tells three stories of horror to distract a witch who plans to eat him.",
+    "tagline": "Four Ghoulish Fables In One Modern Nightmare!",
+    "runtime": 93,
+    "release_date": "1990-05-03",
+    "vote_average": 6.2,
+    "poster_path": "/5q8WK4gW45Knxhpb29IVOCbbfI7.jpg",
+    "backdrop_path": "/fGEOTZQHYrfB509jdhmfo1rpref.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Debbie Harry",
+      "character": "Betty (Wraparound Story)",
+      "profile_path": "/ac225GAGPJKGUKdyQ0F5NFeaPpM.jpg"
+    },
+    {
+      "name": "Matthew Lawrence",
+      "character": "Timmy (Wraparound Story)",
+      "profile_path": "/gT55TawgeA4B1Q0SHsVj9RsK9rQ.jpg"
+    },
+    {
+      "name": "David Forrester",
+      "character": "Priest (Wraparound Story)",
+      "profile_path": null
+    },
+    {
+      "name": "Christian Slater",
+      "character": "Andy (segment \u2018Lot 249\u2019)",
+      "profile_path": "/6ww3uweEEXMlvtNjTlgBHxLErPF.jpg"
+    }
+  ]
+}

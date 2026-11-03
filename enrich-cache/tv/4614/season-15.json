@@ -1,0 +1,200 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 15,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "House Divided",
+        "overview": "The NCIS team tirelessly search for Gibbs and McGee two months after they were last seen fighting an elusive group of rebels in a Paraguay jungle.",
+        "air_date": "2017-09-26",
+        "runtime": 43,
+        "still_path": "/910LwyOMd7sfnEkMHwlVYyqGpN0.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Twofer",
+        "overview": "NCIS investigates when the body of a murdered Navy Lieutenant, who disappeared over a year ago, is found by a cemetery grounds crew while relocating caskets on the property.",
+        "air_date": "2017-10-03",
+        "runtime": 43,
+        "still_path": "/oI0OZ1mCtzz94Dk70L2ffzpufZU.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Exit Strategy",
+        "overview": "Torres\u0027 partner mysteriously vanishes during a stakeout with Metro P.D. The investigation uncovers new evidence from a decade-old murder case.",
+        "air_date": "2017-10-10",
+        "runtime": 43,
+        "still_path": "/9jQipW2Rgg3xjkMe5X9UQa6JqPN.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Skeleton Crew",
+        "overview": "NCIS Special Agent Jacqueline Sloane, a forensic psychologist, joins the team just as a horrific storm shuts down Washington, D.C. During the power outage, a sailor is kidnapped, and Torres and Bishop go out to sea to track evidence.",
+        "air_date": "2017-10-17",
+        "runtime": 43,
+        "still_path": "/rQcEq63U8qm21dLybSGm5HBdFuW.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Fake It \u2018Till You Make It",
+        "overview": "Reeves sees his friend get kidnapped and the investigation reveals the primary suspect disappeared two days earlier with confidential military information.",
+        "air_date": "2017-10-24",
+        "runtime": 43,
+        "still_path": "/1lZzAOj1vomEhMlbHoNoNopZZfh.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Trapped",
+        "overview": "A Petty Officer is found murdered on a golf course, and McGee spends hours on the victim\u2019s ham radio trying to locate a key witness.",
+        "air_date": "2017-10-31",
+        "runtime": 42,
+        "still_path": "/80S9iXwK8F53LdkGpbMD10klze.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Burden of Proof",
+        "overview": "A convicted felon claims NCIS framed him for murder a decade ago, so Gibbs investigates and asks Ducky to conduct a new autopsy. Senior FBI agent Fornell joins the probe, since he was the lead investigator in the original joint FBI and NCIS case.",
+        "air_date": "2017-11-07",
+        "runtime": 43,
+        "still_path": "/gk02unpodzNaUjWWnk5M7pH8ChB.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Voices",
+        "overview": "An NCIS person of interest in a bribery and fraud case is found murdered after a runner is led to his body by a strange voice.",
+        "air_date": "2017-11-14",
+        "runtime": 43,
+        "still_path": "/2Dd7iuesmYj1xJEb84ph8MFWP47.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Ready or Not",
+        "overview": "The team tracks an elusive international arms dealer who recently murdered an MI6 officer.",
+        "air_date": "2017-11-21",
+        "runtime": 40,
+        "still_path": "/jeRulwIhlijg1TlsspeqvuNCu69.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Double Down",
+        "overview": "As Torres and Sloane run protection detail for U.S. Senator John Phillips in Afghanistan for the holidays, they must urgently return to the States after hearing the senator\u2019s son is in the ICU.",
+        "air_date": "2017-12-12",
+        "runtime": 43,
+        "still_path": "/m2fRYlz4Ttsf4vb8rHGsikffliA.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "High Tide",
+        "overview": "Torres and Bishop go undercover as a criminal couple available for hire, during an NCIS sting operation tracking illegal drug-running out of the Norfolk civilian marina.",
+        "air_date": "2018-01-02",
+        "runtime": 42,
+        "still_path": "/4rOHgKH1GuLGOeWEF03NZlPllok.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Dark Secrets",
+        "overview": "After a seemingly happy and successful Navy Lieutenant appears to have taken her own life, Gibbs and the team conduct a thorough investigation, interviewing family and friends from her past and present.",
+        "air_date": "2018-01-09",
+        "runtime": 41,
+        "still_path": "/mkNP105pRXrjJnBKVXS0cdUt1KE.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Family Ties",
+        "overview": "After McGee and Torres visit the home of a high schooler who witnessed a hit-and-run, her parents flee with their daughter, leaving NCIS in the lurch.",
+        "air_date": "2018-01-23",
+        "runtime": 43,
+        "still_path": "/3z9cOOuJvxVEs1E9eu4rT2wHEsV.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Keep Your Friends Close",
+        "overview": "After the body of a missing Navy commander is found, Vance orders Gibbs and the team to work with former FBI Agent Tobias \u0022T.C.\u0022 Fornell, the private investigator who was hired to locate him.",
+        "air_date": "2018-02-06",
+        "runtime": 43,
+        "still_path": "/qzyCE0EMorZ2WmVtvCXGgRTrlOJ.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Keep Your Enemies Closer",
+        "overview": "NCIS strikes a deal with convicted murderer Paul Triff, giving him a 48-hour furlough at his former residence, now McGee\u0027s home, in exchange for information that can convict his former cellmate, Gabriel Hicks, the murderer who deceived Gibbs and Fornell.",
+        "air_date": "2018-02-27",
+        "runtime": 43,
+        "still_path": "/wSe8pVZjiq3cVxQs7fX5GUDov0S.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Handle with Care",
+        "overview": "Gibbs and the team work to clear the name of retired Marine Sergeant John Ross when cyanide is found in one of the hundreds of care packages he sends to active-duty Marines.",
+        "air_date": "2018-03-06",
+        "runtime": 43,
+        "still_path": "/8XvpdgFIgXWpdrBEZwWCDw8SQ1o.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "One Man\u0027s Trash",
+        "overview": "Gibbs and Ducky are watching TV when they see the host handling a 200-year-old war stick that could be a match from a decade-old cold case.",
+        "air_date": "2018-03-13",
+        "runtime": 43,
+        "still_path": "/5VV9diNZ0eaoAe0Jgzoab0HcNG4.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Death from Above",
+        "overview": "The NCIS headquarters are evacuated after the team discovers a body as well as bomb materials on the roof of the squad room.",
+        "air_date": "2018-03-27",
+        "runtime": 43,
+        "still_path": "/uENMgscW87NejwZ9xMk9eUseCNJ.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Numerical Limit",
+        "overview": "Gibbs is granted protective custody of a ten-year-old orphaned refugee, Elena, when an NCIS case reveals she is the target of a violent gang.",
+        "air_date": "2018-04-03",
+        "runtime": 43,
+        "still_path": "/8whkVGxLQsjY8ky5OqtHPPauSUi.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Sight Unseen",
+        "overview": "NCIS searches for a Petty Officer suspected of assault who escapes when the sheriff transporting him crashes into a lake.",
+        "air_date": "2018-04-17",
+        "runtime": 43,
+        "still_path": "/vhbDQIg9y2DKWd11YmDF682wqSj.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "One Step Forward",
+        "overview": "Sara Carter begs Gibbs to investigate her mother\u0027s murder - she believes the wrong man was convicted.",
+        "air_date": "2018-05-01",
+        "runtime": 43,
+        "still_path": "/mwpxCBIF4b8Sx8iM4mH1RazNxO.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Two Steps Back",
+        "overview": "When evidence reveals an NCIS team member is a hitman\u2019s latest target, the team must search through old case files to determine who is seeking vengeance.",
+        "air_date": "2018-05-08",
+        "runtime": 43,
+        "still_path": "/gQ5BSNQj0VX2BGWK0DiGvjJWn9B.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Fallout",
+        "overview": "While Gibbs attends the memorial service for a friend who was lost at sea, he discovers that the deceased, Navy Captain Phillip Brooks, has been hiding in a fallout shelter after his boat was attacked and he swam to shore.",
+        "air_date": "2018-05-15",
+        "runtime": 43,
+        "still_path": "/id1OXfnmUjifcgX1CFpynbSKSBs.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Date with Destiny",
+        "overview": "Sloane is adamant that a man who held her hostage and tortured her years ago in Afghanistan, and was believed to have been killed following her rescue, is alive and in D.C.",
+        "air_date": "2018-05-22",
+        "runtime": 43,
+        "still_path": "/qvPY2q1LttmbuuVfHtio8h7G4d2.jpg"
+      }
+    ]
+  }
+}

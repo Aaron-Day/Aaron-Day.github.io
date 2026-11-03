@@ -1,0 +1,352 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "A Friend in Need (1)",
+        "overview": "The Rangers travel to Edenoi to check on Alpha\u0027s creator, when they encounter the Masked Rider, who believes they have come to harm him.",
+        "air_date": "1995-09-02",
+        "runtime": 22,
+        "still_path": "/8QnMTYdicaTAILlf4mNU9dxBTvL.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "A Friend in Need (2)",
+        "overview": "The Rangers and the Masked Rider team up to fight Count Dregon\u0027s warriors.",
+        "air_date": "1995-09-09",
+        "runtime": 22,
+        "still_path": "/8ZMw9Bz0TLPdCwRgO1kCAjatu84.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "A Friend in Need (3)",
+        "overview": "The Rangers rush back to Earth to fight off an attack by Repelletor.",
+        "air_date": "1995-09-09",
+        "runtime": 22,
+        "still_path": "/4V4k1K8UrtkCyuVOFMHQcL3LNH1.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Ninja Quest (1)",
+        "overview": "Rita\u0027s brother, Rito Revolto, promises to destroy the Power Rangers as a late wedding present for his sister.",
+        "air_date": "1995-09-11",
+        "runtime": 22,
+        "still_path": "/loBSN7BmVkwAfKsdqyL0BEADWfD.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Ninja Quest (2)",
+        "overview": "The Rangers search for the mythical sage Ninjor in an effort to restore their lost powers.",
+        "air_date": "1995-09-12",
+        "runtime": 22,
+        "still_path": "/8w1cIlYMx5jSnlXYBT7DH3HRxok.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Ninja Quest (3)",
+        "overview": "The Rangers receive new Ninja Powers and new Zords to battle Rito Revolto in his attempt to destroy Angel Grove.",
+        "air_date": "1995-09-13",
+        "runtime": 22,
+        "still_path": "/AqKdmycbIlpQsHVPjIpIkQyDZ1O.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Ninja Quest (4)",
+        "overview": "Rita and Zedd unleash Vampirus against the Ranger\u0027s new Zords.",
+        "air_date": "1995-09-14",
+        "runtime": 22,
+        "still_path": "/jGgG4dtGh0gtrQMqzlkCgiy4DwE.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "A Brush with Destiny",
+        "overview": "Based on Kimberly\u0027s dream, Rita and Zedd create the Artistmole monster who steals the color out of life.",
+        "air_date": "1995-09-18",
+        "runtime": 22,
+        "still_path": "/qvrgKC9SvPd7kgyl4NBeyyElAXb.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Passing the Lantern",
+        "overview": "Rita and Zedd attempt to steal Adam\u0027s heirloom lantern for its power.",
+        "air_date": "1995-09-19",
+        "runtime": 22,
+        "still_path": "/jrGiRDoMBsvLUZmNLi2cOboi6gu.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Wizard for a Day",
+        "overview": "Rito and Zedd turn a science teacher into \u0022Marvo the Meanie\u0022 as Rocky attempts to teach his class.",
+        "air_date": "1995-09-20",
+        "runtime": 22,
+        "still_path": "/u55n08XjrLgD0wKDHeMKqZZgN9D.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Fourth Down and Long",
+        "overview": "Rocky must drop kick Rita and Zedd to save the Rangers from Centiback, a monster who changes people into footballs.",
+        "air_date": "1995-09-23",
+        "runtime": 22,
+        "still_path": "/oeW86i0BvR6sNKpY4GUhwRFYlYx.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Stop the Hate Master (1)",
+        "overview": "The Hate Master causes the Power Rangers to fight among themselves and make plans to quit.",
+        "air_date": "1995-09-25",
+        "runtime": 22,
+        "still_path": "/6ULuRWvfLoDGLPscd1F2qcRYcW9.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Stop the Hate Master (2)",
+        "overview": "Aisha holds the secret to stopping the Hate Master and reuniting the Rangers.",
+        "air_date": "1995-09-26",
+        "runtime": 22,
+        "still_path": "/gqShYR2GHhhEPVXaOhcnmL6zjaA.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Final Face-Off",
+        "overview": "The Face Stealer monster mugs Bulk and Skull for their mugs until it\u0027s faced with its own medicine.",
+        "air_date": "1995-10-02",
+        "runtime": 22,
+        "still_path": "/sGTGLxYEoLgHxfcvQoYq16U3pkz.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Potion Notion",
+        "overview": "Rito\u0027s love potion creates havoc in Angel Grove.",
+        "air_date": "1995-10-09",
+        "runtime": 22,
+        "still_path": "/ldTbzf3ieKErvfuoAMkAEkmzyIj.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "A Ranger Catastrophe (1)",
+        "overview": "The Rangers must choose between saving Tommy or stopping Rito\u0027s destructive rampage.",
+        "air_date": "1995-10-16",
+        "runtime": 22,
+        "still_path": "/tZdPCZTwRrYBq67wxo9b9l7YwhJ.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "A Ranger Catastrophe (2)",
+        "overview": "Tommy is forced to defend himself against Goldar and Rito.",
+        "air_date": "1995-10-17",
+        "runtime": 22,
+        "still_path": "/a10rZmcP0f1gxORoRs0baLfUKUt.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Changing of the Zords (1)",
+        "overview": "Zedd and Rita capture Ninjor and his power source with plans to activate a set of dormant Zords.",
+        "air_date": "1995-10-31",
+        "runtime": 22,
+        "still_path": "/no0icCjGF8CPmE7hN4KdrBJ6gxM.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Changing of the Zords (2)",
+        "overview": "Zedd uses the kidnapped Kimberly to blackmail the Rangers.",
+        "air_date": "1995-11-01",
+        "runtime": 22,
+        "still_path": "/8St1UbwweaLwP7uVxACPNNNOuE1.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Changing of the Zords (3)",
+        "overview": "Kimberly\u0027s safety depends on the Rangers piloting Zedd\u0027s Zords.",
+        "air_date": "1995-11-02",
+        "runtime": 22,
+        "still_path": "/2WPlt5CR9tDoeBmdL854cZrcrGb.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Follow that Cab!",
+        "overview": "Kimberly, Bulk, and Skull are taken on a wild ride by the Crabbie Cabbie monster.",
+        "air_date": "1995-11-04",
+        "runtime": 22,
+        "still_path": "/gAvCkJi8V1zkJICxltkjnY7pTNy.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "A Different Shade of Pink (1)",
+        "overview": "Rita vows to keep Kimberly out of the gymnastics competition for the Pan Global Games.",
+        "air_date": "1995-11-06",
+        "runtime": 22,
+        "still_path": "/9t0U8C14Yr5EvKfQ1hN0q6B66T7.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "A Different Shade of Pink (2)",
+        "overview": "Rita and Zedd use Ninjor to bargain for the return of Katherine.",
+        "air_date": "1995-11-07",
+        "runtime": 22,
+        "still_path": "/vxk3ZbE80LeoZWXnaze9hzsv7hn.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "A Different Shade of Pink (3)",
+        "overview": "Kimberly has to make the most critical decision of her life, to stay a Power Ranger, or follow her dream to become a world class gymnast.",
+        "air_date": "1995-11-08",
+        "runtime": 22,
+        "still_path": "/a7FT40eGRLn0Qmc6VOyBsGJX1Rp.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Rita\u0027s Pita",
+        "overview": "The junk food Ravenator threatens to destroy Tommy -- from the inside out.",
+        "air_date": "1995-11-11",
+        "runtime": 22,
+        "still_path": "/grnuTpSEyTjlrix2ItW2MiuFsUf.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Another Brick in the Wall",
+        "overview": "Katherine and Billy try to save the other Rangers from the Brick Bully.",
+        "air_date": "1995-11-13",
+        "runtime": 22,
+        "still_path": "/9tgcYAd6Jqe3d3zXZDBavvzXYAY.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "A Chimp in Charge",
+        "overview": "Rita and Zedd change a pet chimp used by Katherine and Aisha for a school project into a Sinister Simian.",
+        "air_date": "1995-11-18",
+        "runtime": 22,
+        "still_path": "/aizI4ltA46bs1UYo2fcD7d3CICw.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "Master Vile and the Metallic Armor (1)",
+        "overview": "Rita\u0027s father, Master Vile, arrives to do what she and Zedd have failed to do -- destroy the Rangers.",
+        "air_date": "1995-11-20",
+        "runtime": 22,
+        "still_path": "/a0HJVc8Yi7bV94rm54YYMjYcFv4.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Master Vile and the Metallic Armor (2)",
+        "overview": "Master Vile and his evil crew appear to be winning the battle against the Power Rangers.",
+        "air_date": "1995-11-21",
+        "runtime": 22,
+        "still_path": "/hWHHHNO6mGWUHUE2QG2hNM7DHIQ.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Master Vile and the Metallic Armor (3)",
+        "overview": "The Rangers decide the only way to win against Master Vile is to journey to a distant galaxy.",
+        "air_date": "1995-11-22",
+        "runtime": 22,
+        "still_path": "/rxZ2DyDlKuMgtyqi5hKolWI5oGs.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "I\u0027m Dreaming of a White Ranger",
+        "overview": "The Power Rangers are forced to try to save Christmas -- without their powers.",
+        "air_date": "1995-11-23",
+        "runtime": 22,
+        "still_path": "/5PbZFJv07aoNxS2b6JiKCvqs6MM.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "The Sound of Dischordia",
+        "overview": "Master Vile has sent the devious Dischordia to put the Power Rangers under a terrible tune.",
+        "air_date": "1995-11-25",
+        "runtime": 22,
+        "still_path": "/6UQ0sL5HTM97FMYCMebgZorxKfW.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "Rangers in Reverse",
+        "overview": "Master Vile turns back time to gain control of the Earth and turn the Rangers into helpless children.",
+        "air_date": "1995-11-27",
+        "runtime": 22,
+        "still_path": "/yj0J7e1jYsDPPu3qFGXn7T5U2Lc.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Alien Rangers of Aquitar (1)",
+        "overview": "Zordon calls on the Alien Rangers to help defend the Earth after the Power Rangers are made helpless.",
+        "air_date": "1996-02-05",
+        "runtime": 22,
+        "still_path": "/uwDkMXoFZ3VMwAXYzwVIWaaXYQ0.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Alien Rangers of Aquitar (2)",
+        "overview": "Alien Rangers defends the Earth against Master Vile and his army of monsters.",
+        "air_date": "1996-02-06",
+        "runtime": 22,
+        "still_path": "/uyX4glPwVsRfMyzKEdEe4su2BV2.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "Climb Every Fountain",
+        "overview": "Billy and the young Rangers devise a scheme to outsmart the monsters.",
+        "air_date": "1996-02-07",
+        "runtime": 22,
+        "still_path": "/2gwXALoqmpelDFaAtV0znWLaAtK.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "The Alien Trap",
+        "overview": "Billy and the young Rangers attempt to free the Alien Rangers from a toxic lake.",
+        "air_date": "1996-02-08",
+        "runtime": 22,
+        "still_path": "/nWdykMr8829h8Cstz6jZ9arazbz.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "Attack of the 60\u0027 Bulk",
+        "overview": "Rita and Zedd turn Bulk into the Brat Boy monster.",
+        "air_date": "1996-02-10",
+        "runtime": 22,
+        "still_path": "/54Kj7EVeDjBk9XFqwVBdIAWsN9n.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "Water You Thinking?",
+        "overview": "The young Rangers search for their pieces of the Zeo Crystal to recover their powers.",
+        "air_date": "1996-02-12",
+        "runtime": 22,
+        "still_path": "/iNXr9rcUVKSboRvCLVczmfu5QkP.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "Along Came a Spider",
+        "overview": "In the distant past, Adam searches across Korea for his Zeo Crystal.",
+        "air_date": "1996-02-13",
+        "runtime": 22,
+        "still_path": "/kCUi3XDXLPgdMuYOW8dc62PzA8Z.jpg"
+      },
+      {
+        "episode_number": 41,
+        "name": "Sowing the Seas of Evil",
+        "overview": "Tommy and Katherine continue their search for their individual Zeo Crystals.",
+        "air_date": "1996-02-14",
+        "runtime": 22,
+        "still_path": "/5RK24JWS3PzmDtEbFXtvSTgXUH8.jpg"
+      },
+      {
+        "episode_number": 42,
+        "name": "Hogday Afternoon (1)",
+        "overview": "Zedd and Rita send the Hydro Hog to Earth to suck up all the water.",
+        "air_date": "1996-02-15",
+        "runtime": 22,
+        "still_path": "/jcSx22ZRhaaTmJEJzIuwbAf0nPx.jpg"
+      },
+      {
+        "episode_number": 43,
+        "name": "Hogday Afternoon (2)",
+        "overview": "Aisha faces a difficult decision in her Zeo Quest while the Alien Rangers battle Hydro Hog.",
+        "air_date": "1996-02-17",
+        "runtime": 22,
+        "still_path": "/1XgQrFiG6euwR3SZRnFl74RQiN8.jpg"
+      }
+    ]
+  }
+}

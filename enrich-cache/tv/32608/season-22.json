@@ -1,0 +1,128 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 22,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Skulls of the Gods",
+        "overview": "In every corner of the world, archaeologists have found strange, elongated skulls. Did our ancestors modify the shape of their skulls to resemble extraterrestrials? And might it even be possible that some of these skulls are of otherworldly origin?",
+        "air_date": "2026-01-15",
+        "runtime": 42,
+        "still_path": "/2mI9FcQzBSte5b4LyupUIsDSxUb.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Egypt\u0027s Lost Pyramids",
+        "overview": "High above the Giza Plateau stands Egypt\u0027s most mysterious ancient site: the Lost Pyramid of Abu Rawash; today, it lies in ruins, but some researchers believe these stone blocks hold profound secrets about an extraterrestrial civilization that existed in ancient Egypt long before our recorded history.",
+        "air_date": "2026-01-22",
+        "runtime": 42,
+        "still_path": "/r9cPArXwAe6oMcGHfyo0zzrWGMY.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Island of the Gods",
+        "overview": "In the western Pacific Ocean is a vast area known as Oceania that is home to the world\u0027s most remote and mysterious islands. They are known for massive stone structures, statuary strange figures, and countless legends of otherworldly visitors. Could it be that these islands are the remnants of a lost alien civilization?",
+        "air_date": "2026-01-29",
+        "runtime": 42,
+        "still_path": "/teugOaFqGLmKtNhs4l4A59fndii.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Extraterrestrial Engineering",
+        "overview": "Host Giorgio Tsoukalos probes the series archives to explore remarkable ancient structures that defy conventional explanation. From the precisely cut stone blocks at Puma Punku, to the gigantic temples of Malta, and the megalithic city of Nan Madol, could these mysterious sites contain evidence of extraterrestrial contact in the distant past?",
+        "air_date": "2026-02-05",
+        "runtime": 42,
+        "still_path": "/hrmVMDxW0TLWabTcamGipzXuwJS.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "UFO Hot Spots",
+        "overview": "Found along the California coast to New York\u2019s Hudson Valley, and Northern England to Southern Chile, could these mysterious locations provide evidence of an extraterrestrial presence on Earth?",
+        "air_date": "2026-02-26",
+        "runtime": 42,
+        "still_path": "/7a60AGCcQPq4qO4bJf86TPerGp2.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Mysterious Monuments",
+        "overview": "From a stone circle in Turkey that challenges the timeline of human history to gigantic stone spheres in Bosnia and Egypt\u2019s most unusual tombs, could these monuments provide proof of extraterrestrial visitation?",
+        "air_date": "2026-03-05",
+        "runtime": 42,
+        "still_path": "/93sKBgIdgt04EODbL5qgbN1ClmB.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Underwater Alien Bases",
+        "overview": "The oceans are the most mysterious places on Earth. Countless legends tell of powerful beings living in the waters, and today they are major hotspots for UFOs. Is it possible that the deepest depths of our planet\u2014are home to otherworldly beings?",
+        "air_date": "2026-06-11",
+        "runtime": 42,
+        "still_path": "/wmaBsoDjwpyQj3yxeQAaeTjdoNt.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Secrets of the Vedas",
+        "overview": "Ancient scriptures called the Vedas form the foundation of Hinduism. These manuscripts are thousands of years old and describe a time when Earth was inhabited by gods who traveled the skies in flying machines and possessed extraordinary technology. Might the secrets of the Vedas reveal the truth about extraterrestrial contact in the distant past?",
+        "air_date": "2026-06-18",
+        "runtime": 42,
+        "still_path": "/8LQVJx82HN78pFKzHVSL0QULfXX.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Wars of the Gods",
+        "overview": "Ancient legends describe a war in heaven that was fought by otherworldly beings with extraordinary weapons. Is it possible that our planet still bears the scars of battles fought by extraterrestrials?",
+        "air_date": "2026-06-25",
+        "runtime": 42,
+        "still_path": "/pSTvdXk399oCCsGnKz4wjZHprDo.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "UFO Sightings",
+        "overview": "Host Giorgio Tsoukalos probes the series archives to present the most compelling UFO SIGHTINGS. From footage of extraordinary aircraft taken by fighter pilots to a strange object filmed flying over a military base in Iraq and mysterious glowing orbs that are reported all over the world, are these remarkable sightings evidence of extraterrestrial visitation?",
+        "air_date": "2026-07-02",
+        "runtime": 42,
+        "still_path": "/AwD5EchoUQGVCNz7s2eayIp0cxL.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Alien A.I.",
+        "overview": "The rapid development of artificial intelligence has made it a powerful tool for historians and archaeologists. But might it also reveal evidence of an extraterrestrial presence on Earth?",
+        "air_date": "2026-07-09",
+        "runtime": 42,
+        "still_path": "/xSxOTFxLSplNmQF71roqVNSGUTV.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Hidden Messages",
+        "overview": "Host Giorgio Tsoukalos examines series archives to investigate theories of historical extraterrestrial contact; the broadcast reviews aerial geoglyphs, crop circles and mathematical codes embedded in ancient global architecture to assess claims of early astronomical communication.",
+        "air_date": "2026-07-16",
+        "runtime": 42,
+        "still_path": "/xtj83ouFFDEhZofpoQhNtFvzjMb.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Secrets of the Amazon",
+        "overview": "A documentary examines how researchers utilize remote-sensing technology, such as lidar, to map previously undocumented ancient urban networks beneath the Amazon canopy; the broadcast investigates alternative history theories regarding potential extraterrestrial influence at these newly mapped archaeological sites, evaluating whether the design of these pre-Columbian settlements aligns with ancient astronomical patterns or cosmic structures.",
+        "air_date": "2026-07-23",
+        "runtime": 42,
+        "still_path": "/Amqot88c1FKncqBQezZgjw9ngjs.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Alien Investigators",
+        "overview": "Host Giorgio Tsoukalos opens the series archives to celebrate ALIEN INVESTIGATORS that have been brave enough to ask the question, \u0022Are we alone in the universe?\u0022 Could these investigators have uncovered proof of an alien presence on earth?",
+        "air_date": "2026-07-30",
+        "runtime": 42,
+        "still_path": "/kHHTs7o8YBiBAQPXfP6OPgCf16Y.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Africa\u0027s Extraterrestrial Contact",
+        "overview": "The origins of humanity can be traced back to Africa, and some of the oldest religious traditions across the continent describe mysterious beings who descended from the sky in thunderous vehicles. Could it be that the ancient mythology of Africa describes our first encounters with extraterrestrials?",
+        "air_date": "2026-08-06",
+        "runtime": 42,
+        "still_path": "/9kos8Rx1fEsyCIxRLNg1SAOwvLk.jpg"
+      }
+    ]
+  }
+}

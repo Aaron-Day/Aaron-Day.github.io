@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 325133,
+    "title": "Neighbors 2: Sorority Rising",
+    "overview": "A sorority moves in next door to the home of Mac and Kelly Radner who have a young child. The Radner\u0027s enlist their former nemeses from the fraternity to help battle the raucous sisters.",
+    "tagline": "It\u0027s parenthood vs. sisterhood.",
+    "runtime": 92,
+    "release_date": "2016-05-04",
+    "vote_average": 5.813,
+    "poster_path": "/eyjcLLwxuRXACbglIbwWwaXK9DN.jpg",
+    "backdrop_path": "/zgckZ4VZM4UoZlwVS1Dk8mPwqiZ.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 400700,
+      "name": "Neighbors Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Seth Rogen",
+      "character": "Mac Radner",
+      "profile_path": "/nYl9bvQzaPQLzlf0wf75clLN6Hi.jpg"
+    },
+    {
+      "name": "Zac Efron",
+      "character": "Teddy Sanders",
+      "profile_path": "/pdWXP7XG6qqOoxoLid1DWYwmaMY.jpg"
+    },
+    {
+      "name": "Rose Byrne",
+      "character": "Kelly Radner",
+      "profile_path": "/wR8YZlrewVW2FixRBrJcxaXU3R1.jpg"
+    },
+    {
+      "name": "Chlo\u00EB Grace Moretz",
+      "character": "Shelby",
+      "profile_path": "/yq4rYmaTRC5degaOYmJQFpaiho1.jpg"
+    }
+  ]
+}

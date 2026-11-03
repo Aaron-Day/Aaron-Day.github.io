@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 39939,
+    "title": "Super Troopers",
+    "overview": "Five bored, occasionally high and always ineffective Vermont state troopers must prove their worth to the governor or lose their jobs. After stumbling on a drug ring, they plan to make a bust, but a rival police force is out to steal the glory.",
+    "tagline": "In their town, you don\u0027t screw with the law, the law screws with you.",
+    "runtime": 100,
+    "release_date": "2001-02-15",
+    "vote_average": 6.545,
+    "poster_path": "/yJyxPItcLNVfYr7idOphQTmQ9hK.jpg",
+    "backdrop_path": "/syJIWYB1L14wdIiiH9Q7pft4ga5.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 449462,
+      "name": "Super Troopers Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jay Chandrasekhar",
+      "character": "Thorny",
+      "profile_path": "/kPBrBwm6BzUZhYPzdYcRwMPkgPf.jpg"
+    },
+    {
+      "name": "Kevin Heffernan",
+      "character": "Farva",
+      "profile_path": "/2FgG3oPF1A7d6W4KaNNZV7kJ83g.jpg"
+    },
+    {
+      "name": "Steve Lemme",
+      "character": "Mac",
+      "profile_path": "/iQnIsjeUA34B2w4EuM8mR1TglJZ.jpg"
+    },
+    {
+      "name": "Paul Soter",
+      "character": "Foster",
+      "profile_path": "/avsOygcEmFUB5INWGoexgaTJ2u0.jpg"
+    }
+  ]
+}

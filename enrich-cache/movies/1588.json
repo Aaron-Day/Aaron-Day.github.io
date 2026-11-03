@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1588,
+    "title": "Bring It On",
+    "overview": "The Toro cheerleading squad from Rancho Carne High School in San Diego has got spirit, spunk, sass and a killer routine that\u0027s sure to land them the national championship trophy for the sixth year in a row. But for newly-elected team captain Torrance, the Toros\u0027 road to total cheer glory takes a shady turn when she discovers that their perfectly-choreographed routines were in fact stolen.",
+    "tagline": "May the best moves win.",
+    "runtime": 99,
+    "release_date": "2000-08-25",
+    "vote_average": 6.3,
+    "poster_path": "/bnVby0qI0dS7YunbShP7mw68HY3.jpg",
+    "backdrop_path": "/3XpxR3cSQJou79KBQpPCcpZzmhj.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 430186,
+      "name": "Bring It On Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kirsten Dunst",
+      "character": "Torrance Shipman",
+      "profile_path": "/yhLKGjuiMMdbGnFrR8AREkCZcVF.jpg"
+    },
+    {
+      "name": "Eliza Dushku",
+      "character": "Missy Pantone",
+      "profile_path": "/lvu4Vo9GL7uOjtU59MDiy3QDPAZ.jpg"
+    },
+    {
+      "name": "Jesse Bradford",
+      "character": "Cliff Pantone",
+      "profile_path": "/aT3eZzGDMKrwlYgHtwBH4KHKa64.jpg"
+    },
+    {
+      "name": "Gabrielle Union",
+      "character": "Isis",
+      "profile_path": "/toeSCybsYufRKfgz77AKy4C8axD.jpg"
+    }
+  ]
+}

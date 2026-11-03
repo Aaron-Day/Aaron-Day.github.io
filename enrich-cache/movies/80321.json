@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 80321,
+    "title": "Madagascar 3: Europe\u0027s Most Wanted",
+    "overview": "Animal pals Alex, Marty, Melman, and Gloria are still trying to make it back to New York\u0027s Central Park Zoo. They are forced to take a detour to Europe to find the penguins and chimps who broke the bank at a Monte Carlo casino. When French animal-control officer Capitaine Chantel DuBois picks up their scent, Alex and company are forced to hide out in a traveling circus.",
+    "tagline": "They have one shot to get back home.",
+    "runtime": 93,
+    "release_date": "2012-06-06",
+    "vote_average": 6.654,
+    "poster_path": "/ekraj4ksvIKeuvQVEevEJkuybZd.jpg",
+    "backdrop_path": "/uDR9UjSuykTL8g3N3bh3siZ4n3C.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 14740,
+      "name": "Madagascar Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Stiller",
+      "character": "Alex (voice)",
+      "profile_path": "/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg"
+    },
+    {
+      "name": "Chris Rock",
+      "character": "Marty (voice)",
+      "profile_path": "/5lILFeBvX3sC0EfbHhrvMEc7bPD.jpg"
+    },
+    {
+      "name": "David Schwimmer",
+      "character": "Melman (voice)",
+      "profile_path": "/XtKzJ9lM5Xwa7vCmE4xNHy6Owf.jpg"
+    },
+    {
+      "name": "Jada Pinkett Smith",
+      "character": "Gloria (voice)",
+      "profile_path": "/3RyvVVSlgRbZANDFkYiAsRMaHW.jpg"
+    }
+  ]
+}

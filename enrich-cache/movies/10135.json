@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10135,
+    "title": "Road House",
+    "overview": "The Double Deuce is the meanest, loudest and rowdiest bar south of the Mason-Dixon Line, and Dalton has been hired to clean it up. He might not look like much, but the Ph.D.-educated bouncer proves he\u0027s more than capable \u2013 busting the heads of troublemakers and turning the roadhouse into a jumping hot spot. But Dalton\u0027s romance with the gorgeous Dr. Clay puts him on the bad side of cutthroat local big shot Brad Wesley.",
+    "tagline": "Dalton lives like a loner, fights like a professional. And loves like there\u0027s no tomorrow.",
+    "runtime": 114,
+    "release_date": "1989-05-19",
+    "vote_average": 6.764,
+    "poster_path": "/n7Ra0BRYQVn47kiqOMyS8vdY0QS.jpg",
+    "backdrop_path": "/cUrFALlZP6Zh5SYRPSUnOYXfMhr.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 224976,
+      "name": "Road House Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Patrick Swayze",
+      "character": "James Dalton",
+      "profile_path": "/ys8dRhQRsS0nLPTXXEHyuFhXCYO.jpg"
+    },
+    {
+      "name": "Kelly Lynch",
+      "character": "Dr. Elizabeth Clay",
+      "profile_path": "/lYpcMbWOpZ552VHPCjwjyZ2jvvw.jpg"
+    },
+    {
+      "name": "Sam Elliott",
+      "character": "Wade Garrett",
+      "profile_path": "/zE1fpXlIUo7fcujlVlGvHdDiCv6.jpg"
+    },
+    {
+      "name": "Ben Gazzara",
+      "character": "Brad Wesley",
+      "profile_path": "/eGvi9AtDsxB3HYarc3hB512R0Gn.jpg"
+    }
+  ]
+}

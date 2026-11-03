@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 75656,
+    "title": "Now You See Me",
+    "overview": "An FBI agent and an Interpol detective track a team of illusionists who pull off bank heists during their performances and reward their audiences with the money.",
+    "tagline": "The closer you look, the less you\u2019ll see.",
+    "runtime": 116,
+    "release_date": "2013-05-29",
+    "vote_average": 7.323,
+    "poster_path": "/tWsNYbrqy1p1w6K9zRk0mSchztT.jpg",
+    "backdrop_path": "/xEY0MV2jSQBz9iOJfCFvLTiPGMA.jpg",
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 382685,
+      "name": "Now You See Me Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jesse Eisenberg",
+      "character": "J. Daniel Atlas",
+      "profile_path": "/2ojZrkt5rdkUi857WSeCatxXdGS.jpg"
+    },
+    {
+      "name": "Woody Harrelson",
+      "character": "Merritt McKinney",
+      "profile_path": "/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg"
+    },
+    {
+      "name": "Isla Fisher",
+      "character": "Henley Reeves",
+      "profile_path": "/vVeKcMyFMPcIDLYNAnGSGnQrJ3k.jpg"
+    },
+    {
+      "name": "Dave Franco",
+      "character": "Jack Wilder",
+      "profile_path": "/to7ee1xcCOpDSKMXjBIRuYEfbEc.jpg"
+    }
+  ]
+}

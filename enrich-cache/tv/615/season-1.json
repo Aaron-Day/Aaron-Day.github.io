@@ -1,0 +1,80 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Space Pilot 3000",
+        "overview": "On New Year\u0027s Eve 1999, Pizza Delivery boy Philip J. Fry accidentally falls into a cryogenic chamber and is frozen for 1,000 years. Finally unfrozen, he explores New New York, meets his new best friend (a kleptomaniacal robot named Bender) and goes to work for his great-great-great-great-grand-nephew\u0027s space delivery business.",
+        "air_date": "1999-03-28",
+        "runtime": 22,
+        "still_path": "/cmMqr0jEjKn5sdeMcqhSshueEPR.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Series Has Landed",
+        "overview": "For the crew\u0027s first mission, they must deliver a crate full of toys for an arcade game to the moon. Fry is very excited, while it is not really a big deal in the year 3000. Fry tries to persuade Leela to go exploring on the moon, while Amy tries to recover the keys to the Planet Express Ship.",
+        "air_date": "1999-04-04",
+        "runtime": 22,
+        "still_path": "/eaTsjWXFpySli5ZUgHG1vM3uD1J.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "I, Roommate",
+        "overview": "When it is discovered that Philip has been living in the Planet Express office, he is forced to move out. Trying to sleep standing up in Bender\u0027s closet-sized apartment doesn\u0027t work, so they go looking for a place both can be comfortable. Unfortunately, Bender is incompatible with the ideal apartment they do find until he has a radical... modification which makes him less than happy.",
+        "air_date": "1999-04-06",
+        "runtime": 22,
+        "still_path": "/zkGFQZejCzqfXzbPdRTgsvSh6p8.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Love\u0027s Labours Lost in Space",
+        "overview": "On a mission intended to save endangered animals on a collapsing planet, Leela and the crew run into legendary starship captain Zapp Brannigan. A self-proclaimed ladies man, Zapp sees Leela as a potential new conquest. When the captain refuses to aid the animal rescue, Leela and her crew try to leave Zapp\u0027s starship. But Zapp throws Fry and Bender in jail, and summons Leela to his \u0022Lovenasium\u0022. They ultimately escape and arrive on the doomed planet, where Leela finally finds love - with a cute, and very useful, creature named Nibbler.",
+        "air_date": "1999-04-13",
+        "runtime": 22,
+        "still_path": "/rCue74nS7rdAwePEvOI2KRbigh7.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Fear of a Bot Planet",
+        "overview": "Fry and Leela disguise themselves as robots to find Bender after he fails to return from a delivery to a robot planet, only to learn that he has become a celebrity in a culture which fears humans.",
+        "air_date": "1999-04-20",
+        "runtime": 22,
+        "still_path": "/jJTSRsiZUZivsJWxgR8Q1HnryQF.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "A Fishful of Dollars",
+        "overview": "Fry discovers his bank account interest has made him a billionaire and buys the one thing the year 3000 doesn\u0027t have, anchovies.",
+        "air_date": "1999-04-27",
+        "runtime": 22,
+        "still_path": "/SKGp9RnGMGFQQ1bzguy4kj6YmE.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "My Three Suns",
+        "overview": "Delivery Boy Philip J. Fry is promoted to Emperor after accidentally drinking his fluid-based predecessor.",
+        "air_date": "1999-05-04",
+        "runtime": 22,
+        "still_path": "/q7iq39dlq8A8cpWIO4aV6vpmgfi.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "A Big Piece of Garbage",
+        "overview": "A big piece of garbage that was released a thousand years ago is now on the way to Earth to destroy it. After Fry, Leela and Bender fail on placing a bomb on it, the city has to build another big piece of garbage, yet that may be a problem since trash doesn\u0027t exist in year 3000.",
+        "air_date": "1999-05-11",
+        "runtime": 22,
+        "still_path": "/zofFgn2I2MYza7bRbqJO7sUlNnS.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Hell Is Other Robots",
+        "overview": "During a Beastie Boys concert, Bender runs into a high school buddy, Fender. He invites him to a party, which turns out to be robots getting high off of electricity, or \u0022jacking on\u0022. After one try, Bender is hooked.",
+        "air_date": "1999-05-18",
+        "runtime": 22,
+        "still_path": "/2bPXyxhhUkB1uBHZQHqGkYZdDLA.jpg"
+      }
+    ]
+  }
+}

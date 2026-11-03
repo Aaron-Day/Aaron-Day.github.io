@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 11566,
+    "title": "Dave",
+    "overview": "A sweet-natured Temp Agency operator and amateur Presidential look-alike is recruited by the Secret Service to become a temporary stand-in for the President of the United States.",
+    "tagline": "In a country where anybody can become President, anybody just did.",
+    "runtime": 110,
+    "release_date": "1993-05-07",
+    "vote_average": 6.7,
+    "poster_path": "/n7wQlcexeER5bW7DvV8sji2vRRH.jpg",
+    "backdrop_path": "/lpBqjU3OyG9DnIy5BHt0zNw8n0q.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kevin Kline",
+      "character": "Dave Kovic / Bill Mitchell",
+      "profile_path": "/ArH5dACd9AmWNNMnI6bGEkiFYIM.jpg"
+    },
+    {
+      "name": "Sigourney Weaver",
+      "character": "Ellen Mitchell",
+      "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+    },
+    {
+      "name": "Frank Langella",
+      "character": "Bob Alexander",
+      "profile_path": "/86DEo3sBguyc1l46606yVKD28T4.jpg"
+    },
+    {
+      "name": "Kevin Dunn",
+      "character": "Alan Reed",
+      "profile_path": "/7dqLQjMNCQnuxQJQwQ5Ozz16LBq.jpg"
+    }
+  ]
+}

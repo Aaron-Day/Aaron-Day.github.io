@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9806,
+    "title": "The Incredibles",
+    "overview": "Bob Parr has given up his superhero days to log in time as an insurance adjuster and raise his three children with his formerly heroic wife in suburbia. But when he receives a mysterious assignment, it\u0027s time to get back into costume.",
+    "tagline": "Super strength can\u2019t carry a family.",
+    "runtime": 115,
+    "release_date": "2004-10-27",
+    "vote_average": 7.731,
+    "poster_path": "/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg",
+    "backdrop_path": "/lxwzY9vNwjDgxWKt3zZ6zcU6rEJ.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 468222,
+      "name": "The Incredibles Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Craig T. Nelson",
+      "character": "Bob Parr / Mr. Incredible (voice)",
+      "profile_path": "/rMh8qdexFKmc7mq7oLzsLLvCCjs.jpg"
+    },
+    {
+      "name": "Holly Hunter",
+      "character": "Helen Parr / Elastigirl (voice)",
+      "profile_path": "/kC7KX03VAWvogOCuwKbMo4V6TuU.jpg"
+    },
+    {
+      "name": "Sarah Vowell",
+      "character": "Violet Parr (voice)",
+      "profile_path": "/dP1hMYTk2q4voIUxtgmvD81nMty.jpg"
+    },
+    {
+      "name": "Spencer Fox",
+      "character": "Dashiell \u0027Dash\u0027 Parr (voice)",
+      "profile_path": "/vMyWK5qZWEG0GZh4FXCDXx4Jqfm.jpg"
+    }
+  ]
+}

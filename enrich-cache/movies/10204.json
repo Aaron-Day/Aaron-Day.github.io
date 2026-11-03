@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10204,
+    "title": "Around the World in 80 Days",
+    "overview": "A bet pits a British inventor, a Chinese thief and a French artist on a worldwide adventure that they can circle the globe in 80 days.",
+    "tagline": "Let your imagination soar.",
+    "runtime": 120,
+    "release_date": "2004-06-16",
+    "vote_average": 5.955,
+    "poster_path": "/bBiMw6Jtg8tSTcEq8jFV7qk9TRW.jpg",
+    "backdrop_path": "/lpZPrfmWrcSkYQx8JHT9APj2uPB.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Jackie Chan",
+      "character": "Passepartout / Lau Xing",
+      "profile_path": "/nraZoTzwJQPHspAVsKfgl3RXKKa.jpg"
+    },
+    {
+      "name": "Steve Coogan",
+      "character": "Phileas Fogg",
+      "profile_path": "/tT7OXc2qA6hlREHXdwGLp0XihzA.jpg"
+    },
+    {
+      "name": "C\u00E9cile de France",
+      "character": "Monique La Roche",
+      "profile_path": "/8nzL3XON3VfUevvP2KvYbnbF5sT.jpg"
+    },
+    {
+      "name": "Jim Broadbent",
+      "character": "Lord Kelvin",
+      "profile_path": "/jTyvGwwR1NFpvgDhcmuWZCM241w.jpg"
+    }
+  ]
+}

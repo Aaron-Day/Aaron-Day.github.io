@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 834,
+    "title": "Underworld: Evolution",
+    "overview": "As the war between the vampires and the Lycans rages on, Selene, a former member of the Death Dealers (an elite vampire special forces unit that hunts werewolves), and Michael, the werewolf hybrid, work together in an effort to unlock the secrets of their respective bloodlines.",
+    "tagline": "A new race. A new battle. A new hero...",
+    "runtime": 106,
+    "release_date": "2006-01-12",
+    "vote_average": 6.605,
+    "poster_path": "/4yoynvNuQtK3g5RfCuaQMvujSoL.jpg",
+    "backdrop_path": "/wBiSklv702D0KEnhPEZLgHxTm1w.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 2326,
+      "name": "Underworld Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kate Beckinsale",
+      "character": "Selene",
+      "profile_path": "/aoIQJzrWRtq9mOeaPadzpUCAaVd.jpg"
+    },
+    {
+      "name": "Scott Speedman",
+      "character": "Michael Corvin",
+      "profile_path": "/tGgD96WOhmuQU4e6ZTU5IEx4W9E.jpg"
+    },
+    {
+      "name": "Tony Curran",
+      "character": "Marcus Corvinus",
+      "profile_path": "/s50kh2ubcoCV6rvXobebvcyNALE.jpg"
+    },
+    {
+      "name": "Shane Brolly",
+      "character": "Kraven",
+      "profile_path": "/Arw4qi3nvBhp34hSaMFFk0xIUnf.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 8989,
+    "title": "Harry and the Hendersons",
+    "overview": "Returning from a hunting trip in the forest, the Henderson family\u0027s car hits an animal in the road. At first they fear it was a man, but when they examine the \u0022body\u0022 they find it\u0027s a \u0022bigfoot\u0022. They think it\u0027s dead so they decide to take it home (there could be some money in this). As you guessed, it isn\u0027t dead. Far from being the ferocious monster they fear \u0022Harry\u0022 to be, he\u0027s a friendly giant.",
+    "tagline": "When you can\u0027t believe your eyes, trust your heart.",
+    "runtime": 110,
+    "release_date": "1987-06-05",
+    "vote_average": 6.121,
+    "poster_path": "/5ZNWhOEsuNHIQ1gbtwdTGK7srCr.jpg",
+    "backdrop_path": "/4DGZNuxMMcCjVjmn2INTUu66mWX.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "John Lithgow",
+      "character": "George Henderson",
+      "profile_path": "/ajfuBSm1HuVqFJlbTmAlza62Xxr.jpg"
+    },
+    {
+      "name": "Melinda Dillon",
+      "character": "Nancy Henderson",
+      "profile_path": "/biM3R6qURBprG9U8tIvpOk8WjOw.jpg"
+    },
+    {
+      "name": "Kevin Peter Hall",
+      "character": "Harry",
+      "profile_path": "/wdW2sUAQPonZcQo8oDY1j60h7DP.jpg"
+    },
+    {
+      "name": "Margaret Langrick",
+      "character": "Sarah Henderson",
+      "profile_path": "/axFEaAGgLxEgeaupsRRLndASyYw.jpg"
+    }
+  ]
+}

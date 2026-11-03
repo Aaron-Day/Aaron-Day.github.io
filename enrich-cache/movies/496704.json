@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 496704,
+    "title": "Tremors: A Cold Day in Hell",
+    "overview": "Burt Gummer and Travis Welker find themselves in a fight for survival after investigating deadly giant worm attacks in the Canadian arctic.",
+    "tagline": "",
+    "runtime": 98,
+    "release_date": "2018-05-01",
+    "vote_average": 5.84,
+    "poster_path": "/aFOdiHaRjeTmHG67e5B7md2Q1cq.jpg",
+    "backdrop_path": "/s24IEZ2wWCEHImaAwBZxXLEKUUT.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91799,
+      "name": "Tremors Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael Gross",
+      "character": "Burt Gummer",
+      "profile_path": "/467FG7f1rXkG9ZzU8IumVkBHi0v.jpg"
+    },
+    {
+      "name": "Jamie Kennedy",
+      "character": "Travis Welker",
+      "profile_path": "/ipfv0IU3VYGOz5OBmi9WJi5autF.jpg"
+    },
+    {
+      "name": "Tanya van Graan",
+      "character": "Dr. Rita Sims",
+      "profile_path": "/xeTvZH86esj3tuErPv0relTqPOY.jpg"
+    },
+    {
+      "name": "Stephanie Schildknecht",
+      "character": "Aussie",
+      "profile_path": "/nIc0obIVby8ajONxAKyvfGDykv9.jpg"
+    }
+  ]
+}

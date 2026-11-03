@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 425,
+    "title": "Ice Age",
+    "overview": "Manny the mammoth, Sid the loquacious sloth, and Diego the sabre-toothed tiger go on a comical quest to return a human baby back to his father, across a world on the brink of an ice age.",
+    "tagline": "Sub-zero heroes.",
+    "runtime": 81,
+    "release_date": "2002-03-14",
+    "vote_average": 7.388,
+    "poster_path": "/gLhHHZUzeseRXShoDyC4VqLgsNv.jpg",
+    "backdrop_path": "/tyVAGH1vw9JDgxPyTUQPn91nIYc.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8354,
+      "name": "Ice Age Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ray Romano",
+      "character": "Manfred \u0027Manny\u0027 (voice)",
+      "profile_path": "/zWT03QvuVYySlrjmHCojKrNYjoC.jpg"
+    },
+    {
+      "name": "John Leguizamo",
+      "character": "Sid (voice)",
+      "profile_path": "/kwYCdxTlDh9zauUCg4mp2XTCQTw.jpg"
+    },
+    {
+      "name": "Denis Leary",
+      "character": "Diego (voice)",
+      "profile_path": "/tAOziVWQBnrW9eR442M6g9SQkmA.jpg"
+    },
+    {
+      "name": "Goran Vi\u0161nji\u0107",
+      "character": "Soto (voice)",
+      "profile_path": "/2jFpq46QPjCbRmmGYdW9WSVC47W.jpg"
+    }
+  ]
+}

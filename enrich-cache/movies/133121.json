@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 133121,
+    "title": "Resident Evil: Damnation",
+    "overview": "U.S. federal agent Leon S. Kennedy sneaks into the \u0022East Slavic Republic\u0022 to verify rumors that Bio-Organic Weapons (BOWs) are being used in the country\u0027s civil war, which the U.S. and Russia are making preparations to jointly intervene in. Right after his infiltration, the U.S. government orders him to leave immediately. Determined to uncover the truth, Leon ignores the order and enters the battlefield to end the chain of tragedies caused by the BOWs.",
+    "tagline": "When terror crawls, evil is unleashed.",
+    "runtime": 100,
+    "release_date": "2012-09-25",
+    "vote_average": 6.9,
+    "poster_path": "/zkHSURVCrt7rpvDDgUXO75CV1v4.jpg",
+    "backdrop_path": "/xbjOkrAaT4CAIrNJ38oQSBomHvg.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 133352,
+      "name": "Resident Evil (Animated) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Matthew Mercer",
+      "character": "Leon S. Kennedy (voice)",
+      "profile_path": "/fe1S317253vfMuNuIDjhp9vtNSs.jpg"
+    },
+    {
+      "name": "Courtenay Taylor",
+      "character": "Ada Wong (voice)",
+      "profile_path": "/f58KNRoimAh5Irddrek2mtPEBam.jpg"
+    },
+    {
+      "name": "Robin Sachs",
+      "character": "Ataman / Ivan Judanovich (voice)",
+      "profile_path": "/7jv3xDoP9JBHUvoYefwFhRj3SUj.jpg"
+    },
+    {
+      "name": "Dave Wittenberg",
+      "character": "Buddy / Alexander \u0027Sasha\u0027 Kozachenko (voice)",
+      "profile_path": "/jqKxWh9Kyd0WmKiLRrtThDZHSYZ.jpg"
+    }
+  ]
+}

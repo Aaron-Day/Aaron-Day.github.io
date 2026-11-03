@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 417859,
+    "title": "Puss in Boots",
+    "overview": "Long before he even met Shrek, the notorious fighter, lover and outlaw Puss in Boots becomes a hero when he sets off on an adventure with the tough and street smart Kitty Softpaws and the mastermind Humpty Dumpty to save his town. This is the true story of The Cat, The Myth, The Legend... The Boots.",
+    "tagline": "Live for danger. Fight for justice. Pray for mercy.",
+    "runtime": 90,
+    "release_date": "2011-10-27",
+    "vote_average": 6.62,
+    "poster_path": "/7a5Jzjr9TmffGy76y1SZhn3sCiz.jpg",
+    "backdrop_path": "/c5MCkebYhFuhmi32x760HfcvLIO.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 94602,
+      "name": "Puss in Boots Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Antonio Banderas",
+      "character": "Puss in Boots (voice)",
+      "profile_path": "/lpzfDt22374NPhOXZpUq74e9mfw.jpg"
+    },
+    {
+      "name": "Salma Hayek Pinault",
+      "character": "Kitty Softpaws (voice)",
+      "profile_path": "/3j8MpAjyopkAc8mbNiDeXyqBmcS.jpg"
+    },
+    {
+      "name": "Zach Galifianakis",
+      "character": "Humpty Alexander Dumpty (voice)",
+      "profile_path": "/qsDfoUlRnXHUiqZeBPWHzmgmKGX.jpg"
+    },
+    {
+      "name": "Billy Bob Thornton",
+      "character": "Jack (voice)",
+      "profile_path": "/uJBFml6efjg34u2jvT5ugVa1cPI.jpg"
+    }
+  ]
+}

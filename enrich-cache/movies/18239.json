@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18239,
+    "title": "The Twilight Saga: New Moon",
+    "overview": "Forks, Washington resident Bella Swan is reeling from the departure of her vampire love, Edward Cullen, and finds comfort in her friendship with Jacob Black, a werewolf. But before she knows it, she\u0027s thrust into a centuries-old conflict, and her desire to be with Edward at any cost leads her to take greater and greater risks.",
+    "tagline": "Forbidden to remember. Terrified to forget.",
+    "runtime": 131,
+    "release_date": "2009-11-18",
+    "vote_average": 5.983,
+    "poster_path": "/k2qTooPlHffgNABNWxeJdGMglPK.jpg",
+    "backdrop_path": "/dF2c20sRDgySZLaLS2OUerL07sz.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 33514,
+      "name": "Twilight Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kristen Stewart",
+      "character": "Bella Swan",
+      "profile_path": "/xldswdQ1VnpcOf2wZMPguZ3avgO.jpg"
+    },
+    {
+      "name": "Robert Pattinson",
+      "character": "Edward Cullen",
+      "profile_path": "/3qZ09UE7lN6AtorfXFRYpEtSY93.jpg"
+    },
+    {
+      "name": "Taylor Lautner",
+      "character": "Jacob Black",
+      "profile_path": "/xyRXoKM7UQdijwmjpiCcLGPzcc7.jpg"
+    },
+    {
+      "name": "Dakota Fanning",
+      "character": "Jane",
+      "profile_path": "/hwcO08SVWkelfvgfIa5HsTMxsK8.jpg"
+    }
+  ]
+}

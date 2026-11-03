@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 395,
+    "title": "AVP: Alien vs. Predator",
+    "overview": "When scientists discover something near Antarctica that appears to be a buried Pyramid, they send a research team out to investigate. Little do they know that they are about to step into a hunting ground where Aliens are grown as sport for the Predator race.",
+    "tagline": "Whoever wins... we lose.",
+    "runtime": 101,
+    "release_date": "2004-08-12",
+    "vote_average": 5.964,
+    "poster_path": "/2DKoPom57PVtJWcJlq7bS7JpahU.jpg",
+    "backdrop_path": "/xvq1RLaiwSdHwPHe7WUhqZa1rCA.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 115762,
+      "name": "AVP Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sanaa Lathan",
+      "character": "Alexa Woods",
+      "profile_path": "/t08niOXSbsqPUoUn8NwbjPtycFs.jpg"
+    },
+    {
+      "name": "Lance Henriksen",
+      "character": "Charles Bishop Weyland",
+      "profile_path": "/1PkFmD5HdjmRa2DumtwINnnAjTH.jpg"
+    },
+    {
+      "name": "Ian Whyte",
+      "character": "Scar",
+      "profile_path": "/svlJyDgPbTHoGjbQKU4S2J6g5hi.jpg"
+    },
+    {
+      "name": "Raoul Bova",
+      "character": "Sebastian de Rosa",
+      "profile_path": "/hJQCTTCB6mCspjjhOkXQ5u0ekWj.jpg"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 57800,
+    "title": "Ice Age: Continental Drift",
+    "overview": "Manny, Diego, and Sid embark upon another adventure after their continent is set adrift. Using an iceberg as a ship, they encounter sea creatures and battle pirates as they explore a new world.",
+    "tagline": "The end of the world is just the tip of the iceberg.",
+    "runtime": 88,
+    "release_date": "2012-06-27",
+    "vote_average": 6.396,
+    "poster_path": "/dfp1BZF7FxbBUyzHvMOI9t8NWDD.jpg",
+    "backdrop_path": "/scLQDnf1m2AqEEQSjAEdMRD6K9I.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8354,
+      "name": "Ice Age Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ray Romano",
+      "character": "Manny (voice)",
+      "profile_path": "/zWT03QvuVYySlrjmHCojKrNYjoC.jpg"
+    },
+    {
+      "name": "John Leguizamo",
+      "character": "Sid (voice)",
+      "profile_path": "/kwYCdxTlDh9zauUCg4mp2XTCQTw.jpg"
+    },
+    {
+      "name": "Denis Leary",
+      "character": "Diego (voice)",
+      "profile_path": "/tAOziVWQBnrW9eR442M6g9SQkmA.jpg"
+    },
+    {
+      "name": "Seann William Scott",
+      "character": "Crash (voice)",
+      "profile_path": "/AftiUFP4rYcl3SG3xllxyiLiuXS.jpg"
+    }
+  ]
+}

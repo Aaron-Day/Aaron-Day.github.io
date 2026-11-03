@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 106646,
+    "title": "The Wolf of Wall Street",
+    "overview": "A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort\u0027s autobiography.",
+    "tagline": "Earn. Spend. Party.",
+    "runtime": 180,
+    "release_date": "2013-12-25",
+    "vote_average": 8.027,
+    "poster_path": "/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg",
+    "backdrop_path": "/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Leonardo DiCaprio",
+      "character": "Jordan Belfort",
+      "profile_path": "/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
+    },
+    {
+      "name": "Jonah Hill",
+      "character": "Donnie Azoff",
+      "profile_path": "/cymlWttB83MsAGR2EkTgANtjeRH.jpg"
+    },
+    {
+      "name": "Margot Robbie",
+      "character": "Naomi Lapaglia",
+      "profile_path": "/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg"
+    },
+    {
+      "name": "Matthew McConaughey",
+      "character": "Mark Hanna",
+      "profile_path": "/lCySuYjhXix3FzQdS4oceDDrXKI.jpg"
+    }
+  ]
+}

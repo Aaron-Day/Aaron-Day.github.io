@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10157,
+    "title": "Police Academy 2: Their First Assignment",
+    "overview": "Officer Carey Mahoney and his cohorts have finally graduated from the Police Academy and are about to hit the streets on their first assignment. Question is, are they ready to do battle with a band of graffiti-tagging terrorists? Time will tell, but don\u0027t sell short this cheerful band of doltish boys in blue.",
+    "tagline": "To protect, to serve... and make you laugh. America\u0027s funniest crimebusters are back!",
+    "runtime": 87,
+    "release_date": "1985-03-28",
+    "vote_average": 6.099,
+    "poster_path": "/xyljfyGSJOdghPsycreHMsnhpU9.jpg",
+    "backdrop_path": "/2xpxgucXMQRfzlkumna1DXsxFPk.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9338,
+      "name": "Police Academy Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Steve Guttenberg",
+      "character": "Carey Mahoney",
+      "profile_path": "/ghTMepliFNcRQHNELs8pgNDsZyW.jpg"
+    },
+    {
+      "name": "Bubba Smith",
+      "character": "Moses Hightower",
+      "profile_path": "/ew7CpCLyD4FP1zqgtxUV8jDg8cX.jpg"
+    },
+    {
+      "name": "David Graf",
+      "character": "Tackleberry",
+      "profile_path": "/oAVx2Ea0qrND2wn78m2wQtGGlz1.jpg"
+    },
+    {
+      "name": "Michael Winslow",
+      "character": "Larvell Jones",
+      "profile_path": "/uSRS2MOI1fNFAdvUgrhatBvfsvv.jpg"
+    }
+  ]
+}

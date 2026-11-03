@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2112,
+    "title": "Payback",
+    "overview": "With friends like these, who needs enemies? That\u0027s the question bad guy Porter is left asking after his wife and partner steal his heist money and leave him for dead -- or so they think. Five months and an endless reservoir of bitterness later, Porter\u0027s partners and the crooked cops on his tail learn how bad payback can be.",
+    "tagline": "Get ready to root for the bad guy.",
+    "runtime": 100,
+    "release_date": "1999-02-05",
+    "vote_average": 6.84,
+    "poster_path": "/8Bqlv2kbOyZFqfiPNgzdBscqYPn.jpg",
+    "backdrop_path": "/fP9QYH8T9LBnsvnQvcqetB4nuwX.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Mel Gibson",
+      "character": "Porter",
+      "profile_path": "/jnqHMaOslt8cef2atSmOpGRvNla.jpg"
+    },
+    {
+      "name": "Gregg Henry",
+      "character": "Val Resnick",
+      "profile_path": "/j17nuAFulrbYP34g4Qw8SZRDNUo.jpg"
+    },
+    {
+      "name": "Maria Bello",
+      "character": "Rosie",
+      "profile_path": "/it1f5mxiGIWO0DzTBfwtLTjphZb.jpg"
+    },
+    {
+      "name": "David Paymer",
+      "character": "Arthur Stegman",
+      "profile_path": "/owoOdDFgXpls1OFKwmQ104Nkl5.jpg"
+    }
+  ]
+}

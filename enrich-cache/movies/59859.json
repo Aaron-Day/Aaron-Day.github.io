@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 59859,
+    "title": "Kick-Ass 2",
+    "overview": "After Kick-Ass\u0027 insane bravery inspires a new wave of self-made masked crusaders, he joins a patrol led by the Colonel Stars and Stripes. When these amateur superheroes are hunted down by Red Mist \u2014 reborn as The Mother Fucker \u2014 only the blade-wielding Hit-Girl can prevent their annihilation.",
+    "tagline": "You can\u0027t fight your destiny.",
+    "runtime": 103,
+    "release_date": "2013-07-17",
+    "vote_average": 6.406,
+    "poster_path": "/1go2A3gdQjaMuHWquybgoJlQRcX.jpg",
+    "backdrop_path": "/dHBYguQvCDa00GMoidNYa7IOD8y.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 179892,
+      "name": "Kick-Ass Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Aaron Taylor-Johnson",
+      "character": "Dave Lizewski / Kick-Ass",
+      "profile_path": "/pFtHhih2XEaFaD3qOFyQW6q83br.jpg"
+    },
+    {
+      "name": "Chlo\u00EB Grace Moretz",
+      "character": "Mindy Macready / Hit Girl",
+      "profile_path": "/yq4rYmaTRC5degaOYmJQFpaiho1.jpg"
+    },
+    {
+      "name": "Christopher Mintz-Plasse",
+      "character": "Chris D\u0027Amico / The Motherfucker",
+      "profile_path": "/dnj2qyxmPt5JF5uurbXQLegppAx.jpg"
+    },
+    {
+      "name": "Lyndsy Fonseca",
+      "character": "Katie Deauxma",
+      "profile_path": "/xPbbiLpUpmaHIVnyR3BAfG1tm5S.jpg"
+    }
+  ]
+}

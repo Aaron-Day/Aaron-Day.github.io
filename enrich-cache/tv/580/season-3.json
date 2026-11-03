@@ -1,0 +1,216 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Search (1)",
+        "overview": "Stardate: 48213.1. Instead of waiting for the Jem\u0027Hadar to attack, Sisko wants to try a different approach. He wants to take a new class starship to try to find the Founders.",
+        "air_date": "1994-09-26",
+        "runtime": 45,
+        "still_path": "/1qyoJHrQ6FBrmjrUIrBQOLdXOTS.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Search (2)",
+        "overview": "Stardate: 48213.1. Odo has found his home and is introduced. Meanwhile Sisko finds out peace talks between the Dominion and the Federation have already started.",
+        "air_date": "1994-10-03",
+        "runtime": 45,
+        "still_path": "/mRjuqCnPWhcnwQcAQnsivLBRJGI.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The House of Quark",
+        "overview": "Stardate: Unknown. Quark tries to boost his reputation by taking credit for the accidental death of a Klingon in his bar, but lands himself in the middle of a Klingon political struggle.",
+        "air_date": "1994-10-10",
+        "runtime": 45,
+        "still_path": "/sln7QYv1v0SVWNEhj9NiCi04MyW.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Equilibrium",
+        "overview": "Stardate: Unknown. The Trill homeworld is the setting, as Sisko and Bashir take Jadzia home for treatment when she begins experiencing hallucinations after playing a tune she can\u0027t recall.",
+        "air_date": "1994-10-17",
+        "runtime": 45,
+        "still_path": "/zm21Cs56vns15qjfKEy1IGb6Bic.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Second Skin",
+        "overview": "Stardate: Unknown. Kira finds herself on Cardassia as a Cardassian. She is told she is called Iliana Ghemor and was a Cardassian spy.",
+        "air_date": "1994-10-24",
+        "runtime": 45,
+        "still_path": "/kOaSHAnEm0WZPZLhQ9lAgVMEzpa.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "The Abandoned",
+        "overview": "Stardate: Unknown. Odo tries to bond with an alien child Quark finds in a load of salvage, while Sisko tries to break his son\u0027s relationship with a 20 year old Dabo girl.",
+        "air_date": "1994-10-31",
+        "runtime": 45,
+        "still_path": "/j3aXfIjZrdS85Naa3e94VpbvF0a.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Civil Defense",
+        "overview": "Stardate: Unknown. The station goes into lockdown and the crew is endangered when an old Cardassian security program is accidentally activated.",
+        "air_date": "1994-11-07",
+        "runtime": 45,
+        "still_path": "/9vSpSLx0Jo2jMAXCUrUsUzjq2vl.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Meridian",
+        "overview": "Stardate: 48423.2. Dax falls in love with one of the residents of a multi-dimensional planet, while on DS9 an alien requests a holosuite program of Kira from Quark.",
+        "air_date": "1994-11-14",
+        "runtime": 45,
+        "still_path": "/jBGUx3HmlgkVe12HrCtUP3lu8dp.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Defiant",
+        "overview": "Stardate: 48467.3. The DS9 crew welcomes a visit from William Riker of the Enterprise, but the lieutenant\u2019s hidden agenda leads to a tense standoff deep in Cardassian space.",
+        "air_date": "1994-11-21",
+        "runtime": 45,
+        "still_path": "/mJTCnp194jSHBoQgOslqJWa0OxH.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Fascination",
+        "overview": "Stardate: Unknown. As Lwaxanna Troi visits the station for a Bajoran festival, the crew is stricken with intense romantic attractions to one another.",
+        "air_date": "1994-11-28",
+        "runtime": 45,
+        "still_path": "/p6BRorM7LVBcJfQOEn0ZWB4TofJ.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Past Tense (1)",
+        "overview": "Stardate: 48481.2. Sisko, Bashir and Dax are accidentally sent to San Francisco in the 21st century due to a transporter malfunction, and must figure out how to get back without changing the time line.",
+        "air_date": "1995-01-02",
+        "runtime": 45,
+        "still_path": "/7GsNwl2q82zjK1hYPmXSlqZdDn6.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Past Tense (2)",
+        "overview": "Stardate: 48481.2. Sisko is forced to take the place of a key historical figure on Earth in 2024 in order to preserve the timeline.",
+        "air_date": "1995-01-09",
+        "runtime": 45,
+        "still_path": "/zdypdymPnksiO2gUVqvatKqaDIv.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Life Support",
+        "overview": "Stardate: 48498.4. Dr. Bashir must use extraordinary measures to prolong Vedek Bareil\u0027s life long enough to allow Bareil to complete sensitive peace negotiations between the Bajorans and the Cardassians.",
+        "air_date": "1995-01-30",
+        "runtime": 45,
+        "still_path": "/h9hQ1yCBaadlwleTK1Ao9SYUfhf.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Heart of Stone",
+        "overview": "Stardate: 48521.5. After chasing a fugitive into a cave, Kira gets stuck and is slowly encapsulated by a growing crystal stone while Odo tries to figure out how to free her.",
+        "air_date": "1995-02-06",
+        "runtime": 45,
+        "still_path": "/97EeHUvX4FjdfhGcb7qKsfTXMLV.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Destiny",
+        "overview": "Stardate: 48543.2. Sisko faces a conflict between his Starfleet duties and his role as the Bajoran Emissary when an ancient Bajoran prophecy predicts that a joint Federation-Cardassian project will lead to the destruction of the wormhole.",
+        "air_date": "1995-02-13",
+        "runtime": 45,
+        "still_path": "/gSMtnUbROxCChcG25JuVSN1LCu8.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Prophet Motive",
+        "overview": "Stardate: Unknown. Grand Nagus Zek is acting bizarre by giving away money and rewriting the Rules of Acquisition. Quark attempts to get the old Nagus back.",
+        "air_date": "1995-02-20",
+        "runtime": 45,
+        "still_path": "/olg6X2mNMvUggpA1JmfO0qj9Cez.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Visionary",
+        "overview": "Stardate: Unknown. While a Romulan delegation tries to get information about the Dominion, O\u0027Brien gets visions of unpleasant things that are about to happen in the future.",
+        "air_date": "1995-02-27",
+        "runtime": 45,
+        "still_path": "/49a3DGhNvsMMX1KNmAdoYyBdR4w.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Distant Voices",
+        "overview": "Stardate: Unknown. After being attacked in the infirmary, Dr. Bashir has a dual mystery on his hands: what has happened to the station while he was out and why is he aging so rapidly now?",
+        "air_date": "1995-04-10",
+        "runtime": 45,
+        "still_path": "/xCM5TgANoekj4WrmQcD0wfXG0Cn.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Through the Looking Glass",
+        "overview": "Stardate: Unknown. Sisko is kidnapped to impersonate his deceased, mirror universe self to gain Jennifer Sisko\u0027s loyalty in the Rebel Alliance.",
+        "air_date": "1995-04-17",
+        "runtime": 45,
+        "still_path": "/xaG8cptFHs3aNyP1klwNHBLdJxe.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Improbable Cause (1)",
+        "overview": "Stardate: Unknown. After an attempt is made on Garak\u0027s life, Odo conducts the investigation on who tried to murder the Cardassian tailor - and why.",
+        "air_date": "1995-04-24",
+        "runtime": 45,
+        "still_path": "/tbFc5UBqsp74OqSrV3Vs7kHb7Cz.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "The Die Is Cast (2)",
+        "overview": "Stardate: Unknown. Now rejoined with his former mentor, Garak is ordered to interrogate Odo about the secrets of his people, while the joined Romulan/Cardassian attack fleet moves towards the Founders\u0027 home world on a mission of destruction.",
+        "air_date": "1995-05-01",
+        "runtime": 45,
+        "still_path": "/cv2WqgVCpCfdyik6uKzCpmNXJOu.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Explorers",
+        "overview": "Stardate: Unknown. Sisko rebuilds an ancient Bajoran space vessel from the blueprints, and he and Jake take the ship on a trip, attempting to prove that the ancient Bajorans went beyond their solar system without warp drive.",
+        "air_date": "1995-05-08",
+        "runtime": 45,
+        "still_path": "/k8VtJ4E26vz3XacKTKHT6SSLyPP.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Family Business",
+        "overview": "Stardate: Unknown. Quark and Rom return to the Ferengi home world because their mother has broken the law - by wearing clothes and earning profits, forbidden for women in Ferengi society.",
+        "air_date": "1995-05-15",
+        "runtime": 45,
+        "still_path": "/zWTu06Kt7kWSm2i6YeSNQEn2ZSI.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "Shakaar",
+        "overview": "Stardate: Unknown. News arrives that Kai Winn has also become Bajor\u0027s political leader. She asks Kira to negotiate with an old resistance friend about returning soil reclamators.",
+        "air_date": "1995-05-22",
+        "runtime": 45,
+        "still_path": "/k6weMvj9taR86nHf5UeCVlu5Eat.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Facets",
+        "overview": "Stardate: Unknown. Dax asks the crew to join her Zhian\u0027tara ritual. The memories of her former hosts will take over their bodies. Nog is preparing for Starfleet Academy.",
+        "air_date": "1995-06-12",
+        "runtime": 45,
+        "still_path": "/5PdBSt4iTuYzuQFb13UUSVMbMAX.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "The Adversary",
+        "overview": "Stardate: 48959.1. The Defiant is off to show the Federation\u0027s presence to the new Tzenkethi government. While underway the ship malfunctions and Bashir is suspected of sabotage.",
+        "air_date": "1995-06-19",
+        "runtime": 45,
+        "still_path": "/9FlJdJQ8ggAbOL8fCOOaZ3yYFJX.jpg"
+      }
+    ]
+  }
+}

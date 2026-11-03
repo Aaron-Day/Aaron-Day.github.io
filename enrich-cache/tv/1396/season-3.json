@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "No M\u00E1s",
+        "overview": "Walt faces a new threat, on a new front and deals with an increasingly angry Skyler, who must consider what to do next with her life and the kids. Meanwhile, Jesse comes face-to-face with some startling self-revelations.",
+        "air_date": "2010-03-21",
+        "runtime": 48,
+        "still_path": "/g4taqxGFx9z8ovHhiaa2jvQFd0Z.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Caballo sin Nombre",
+        "overview": "Despite ever-increasing tension between Walt and Skyler, he pulls out all the stops in an effort to reconcile with the family. Elsewhere, Saul is instrumental in getting Jesse involved in a most-unusual investment opportunity.",
+        "air_date": "2010-03-28",
+        "runtime": 48,
+        "still_path": "/eQYTr6cH834QyF3cE1VQymwolE1.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "I.F.T.",
+        "overview": "Walt ignores Skyler\u0027s demands, furthering the rift between them and pushing her to break bad. Still suffering from panic and anxiety attacks, Hank crosses a line at work.",
+        "air_date": "2010-04-04",
+        "runtime": 48,
+        "still_path": "/jH2nkMFxuX5tXc832jyDNU4AjKq.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Green Light",
+        "overview": "Walt loses control as he reacts to Skyler\u0027s news, endangering his job and relationships with Saul and Jesse. Hank throws himself into his blue meth investigation. Jesse enacts a new plan.",
+        "air_date": "2010-04-11",
+        "runtime": 48,
+        "still_path": "/1Se5PpvIgUey9MgXmrKkgO8HVye.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "M\u00E1s",
+        "overview": "Gus increases his efforts to lure Walt back into business, forcing a rift between Walt and Jesse. Skyler doubts her new relationship. Marie confides in Skyler about her concern for Hank\u0027s well-being.",
+        "air_date": "2010-04-18",
+        "runtime": 48,
+        "still_path": "/m2cipfAKEdLR4MIZKA3EiOcTYiZ.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Sunset",
+        "overview": "Walt settles into his new surroundings; Walt, Jr. wants answers about his parents\u0027 relationship; Hank\u0027s investigation causes problems for Walt and Jesse.",
+        "air_date": "2010-04-25",
+        "runtime": 48,
+        "still_path": "/sl5zRr0u0kYcIyCdQjOTsexq4bL.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "One Minute",
+        "overview": "Hank\u0027s increasing volatility forces a confrontation with Jesse and trouble at work. Skyler pressures Walt to make a deal. Gus\u0027 actions have severe consequences.",
+        "air_date": "2010-05-02",
+        "runtime": 48,
+        "still_path": "/4yyVAkAQhzc5URhJJiy21biH3FJ.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "I See You",
+        "overview": "The family waits for news about Hank. While Jesse covers at the lab, Walt attempts to placate Gus. After witnessing a disturbing outburst, Walt worries he and his family are in danger.",
+        "air_date": "2010-05-09",
+        "runtime": 48,
+        "still_path": "/vTP1Z3Ysmj7BCudHKOh4zHiSyPf.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Kafkaesque",
+        "overview": "As Hank\u0027s hospital bills stack up, Skyler hatches a plan. Walt and Gus come to a better understanding. Jesse, looking for more independence, pursues a new opportunity.",
+        "air_date": "2010-05-16",
+        "runtime": 48,
+        "still_path": "/ztG7AnGy4YKs1vxLbpK9euPwjaK.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Fly",
+        "overview": "Walt becomes obsessed with a contaminant in the lab and refuses to finish the cook until it is eliminated. A frustrated Jesse attempts to get Walt back on track.",
+        "air_date": "2010-05-23",
+        "runtime": 48,
+        "still_path": "/3ns0vN3bEl7elFWoodHJ9nDBogC.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Abiquiu",
+        "overview": "Skyler gets involved with Walt\u0027s business. Hank struggles with his recovery. Jesse makes a startling discovery after meeting a girl at group therapy.",
+        "air_date": "2010-05-30",
+        "runtime": 48,
+        "still_path": "/llw7fwOmOMs6OSqwK96XrPPQZD3.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Half Measures",
+        "overview": "Against Walt\u0027s advice, Jesse lashes out. Fearing for Jesse\u0027s safety, Walt takes drastic action to intervene and tragic event leads to a shocking confrontation.",
+        "air_date": "2010-06-06",
+        "runtime": 48,
+        "still_path": "/mOvMekI0YKm20I42XK93mPCQ4ru.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Full Measure",
+        "overview": "With Jesse on the run and Mike in hot pursuit, Walt negotiates a bargain with Gus and concocts a disturbing plan to provide for his and Jesse\u0027s safety.",
+        "air_date": "2010-06-13",
+        "runtime": 48,
+        "still_path": "/mDUs18asTVVfqd56scRQ7W9r781.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 324849,
+    "title": "The Lego Batman Movie",
+    "overview": "A cooler-than-ever Batman must face the usual villains as the Joker plots a takeover of Gotham City. But when Bruce Wayne accidentally adopts a teenage orphan who wishes to become his sidekick, he\u2019s forced to give up his lone-vigilante ways and learn to work with others.",
+    "tagline": "Always be yourself... unless you can be Batman.",
+    "runtime": 104,
+    "release_date": "2017-02-08",
+    "vote_average": 7.265,
+    "poster_path": "/e1TliRWOdXQ73pRunbpFiGst6Kd.jpg",
+    "backdrop_path": "/rWYtghaUJSDvQm4jmXiCPXBHUdQ.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Will Arnett",
+      "character": "Batman / Bruce Wayne (voice)",
+      "profile_path": "/cXupYqk2ERP13XBkw816skYdVDO.jpg"
+    },
+    {
+      "name": "Michael Cera",
+      "character": "Robin / Dick Grayson (voice)",
+      "profile_path": "/qjhNKsw0OLyZQgK4srhelBafcCf.jpg"
+    },
+    {
+      "name": "Rosario Dawson",
+      "character": "Batgirl / Barbara Gordon (voice)",
+      "profile_path": "/siTzOI810a0K46wv1TORXMw5N7J.jpg"
+    },
+    {
+      "name": "Ralph Fiennes",
+      "character": "Alfred Pennyworth (voice)",
+      "profile_path": "/tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10439,
+    "title": "Hocus Pocus",
+    "overview": "After 300 years of slumber, three sister witches are accidentally resurrected in Salem on Halloween night, and it is up to three kids and their newfound feline friend to put an end to the witches\u0027 reign of terror once and for all.",
+    "tagline": "It\u0027s just a bunch of Hocus Pocus.",
+    "runtime": 96,
+    "release_date": "1993-07-16",
+    "vote_average": 7.05,
+    "poster_path": "/by4D4Q9NlUjFSEUA1yrxq6ksXmk.jpg",
+    "backdrop_path": "/ncr6KR7bBF8cps6yZKiTAwClpn1.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 751156,
+      "name": "Hocus Pocus Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Omri Katz",
+      "character": "Max Dennison",
+      "profile_path": "/wY3NxTyXhzJ8BkmBZcQuSE7WtoC.jpg"
+    },
+    {
+      "name": "Thora Birch",
+      "character": "Dani Dennison",
+      "profile_path": "/xJ6Bb3C8f0ior5LlWdNzxlb8cgV.jpg"
+    },
+    {
+      "name": "Vinessa Shaw",
+      "character": "Allison",
+      "profile_path": "/qqSpAMH1lYMNxnHkDHB1JpNa086.jpg"
+    },
+    {
+      "name": "Bette Midler",
+      "character": "Winifred Sanderson",
+      "profile_path": "/ooPKeoLvwacY6BRj99u7uvZCYlF.jpg"
+    }
+  ]
+}

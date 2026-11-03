@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 18009,
+    "title": "Leprechaun 2",
+    "overview": "A thousand years ago, the Leprechaun left a bloody trail when he ripped through the countryside in search of his stolen gold. Now he\u0027s back in the big city using all of his deadly tricks to snare the girl of his nightmares. His bloody quest becomes more deadly when her boyfriend steals one of the Leprechaun\u0027s gold coins. The town soon discovers two dead bodies and a trail of gold dust leads them to the Leprechaun\u0027s lair.",
+    "tagline": "This time... luck has nothing to do with it.",
+    "runtime": 85,
+    "release_date": "1994-04-08",
+    "vote_average": 5.445,
+    "poster_path": "/fnCLZ3rpy3enYSHrzcBxnx3fozK.jpg",
+    "backdrop_path": "/yvtMS504Fvqxs613lD7hAGI51Dd.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 19285,
+      "name": "Leprechaun Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Warwick Davis",
+      "character": "The Leprechaun",
+      "profile_path": "/vUwjgAYcBEcCv0OVAN00qUUXX3V.jpg"
+    },
+    {
+      "name": "Charlie Heath",
+      "character": "Cody",
+      "profile_path": null
+    },
+    {
+      "name": "Shevonne Durkin",
+      "character": "Bridget / William\u0027s Daughter",
+      "profile_path": "/x73ScecPxFhrabaOFrwPFfjlnlP.jpg"
+    },
+    {
+      "name": "Adam Biesk",
+      "character": "Ian",
+      "profile_path": null
+    }
+  ]
+}

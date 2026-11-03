@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 134,
+    "title": "O Brother, Where Art Thou?",
+    "overview": "In the deep south during the 1930s, three escaped convicts search for hidden treasure while a relentless lawman pursues them.",
+    "tagline": "They have a plan, but not a clue.",
+    "runtime": 107,
+    "release_date": "2000-08-30",
+    "vote_average": 7.329,
+    "poster_path": "/2YztYilviFCYcEtDAnrOstUWGie.jpg",
+    "backdrop_path": "/rbsm633lnt3hKHEpk7FOt3dy82a.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "George Clooney",
+      "character": "Everett",
+      "profile_path": "/dt0a7DT0SQeHb7NpURD6ifyEzsN.jpg"
+    },
+    {
+      "name": "John Turturro",
+      "character": "Pete Hogwallop",
+      "profile_path": "/6O9W9cJW0kCqMzYeLupV9oH0ftn.jpg"
+    },
+    {
+      "name": "Tim Blake Nelson",
+      "character": "Delmar O\u0027Donnell",
+      "profile_path": "/rWuTGiAMaaHIJ30eRkQS23LbRSW.jpg"
+    },
+    {
+      "name": "John Goodman",
+      "character": "Big Dan Teague",
+      "profile_path": "/yyYqoyKHO7hE1zpgEV2XlqYWcNV.jpg"
+    }
+  ]
+}

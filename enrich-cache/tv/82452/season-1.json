@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Aang",
+        "overview": "An Airbender comes to grips with his new reality as war erupts. A century later, a pair of Water Tribe siblings make a discovery that changes everything.",
+        "air_date": "2024-02-22",
+        "runtime": 64,
+        "still_path": "/3eLPQfIOva0RSAoviRgNqBtqPck.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Warriors",
+        "overview": "Aang, Katara and Sokka arrive at a small Island, home to elite warriors named after Avatar Kyoshi. The Fire Nation gets wind of the Avatar\u0027s whereabouts.",
+        "air_date": "2024-02-22",
+        "runtime": 49,
+        "still_path": "/fBg3ih6klXw61XGMAhaXucHhomo.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Omashu",
+        "overview": "News of a traitor puts the trio at odds in Omashu, where a mechanist and rebels with a charming leader muddle their plans to protect the Earth Kingdom.",
+        "air_date": "2024-02-22",
+        "runtime": 53,
+        "still_path": "/k05PJk3Ym75fWZ43TzWwA6KZ202.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Into the Dark",
+        "overview": "In captivity, Aang meets a king with a taste for games. To find their friend, the siblings must navigate a dark tunnel \u2014 and put their differences aside.",
+        "air_date": "2024-02-22",
+        "runtime": 56,
+        "still_path": "/zEKE4WLjHImmn9xAl1OCFxSroVQ.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Spirited Away",
+        "overview": "When the group lands in the Spirit World for a rescue mission, they come face to face with dangerous threats, painful memories and a mysterious entity.",
+        "air_date": "2024-02-22",
+        "runtime": 53,
+        "still_path": "/cVbAWz6K87JgF8iYjzZL1DA3BEl.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Masks",
+        "overview": "A desperate Aang visits Avatar Roku for help on his journey as the Fire Nation closes in on him. At their fortress, a masked intruder breaks Aang out.",
+        "air_date": "2024-02-22",
+        "runtime": 57,
+        "still_path": "/ydSEm8QnzgMDWYz4Z3dvhbsmhZH.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "The North",
+        "overview": "As an attack on the Northern Water Tribe looms, Katara challenges a master Waterbender, Sokka meets a princess, and Aang takes Kuruk\u0027s words to heart.",
+        "air_date": "2024-02-22",
+        "runtime": 47,
+        "still_path": "/l5n5OwFQPH0NyuBA4NEySAoO8hL.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Legends",
+        "overview": "Zhao leads the Fire Nation into the North with a bold plan to weaken the Water Tribe. When the battle takes a dark turn, Aang enters a powerful state.",
+        "air_date": "2024-02-22",
+        "runtime": 58,
+        "still_path": "/ms2trhGJv7yWUe8doDMa9EHccAS.jpg"
+      }
+    ]
+  }
+}

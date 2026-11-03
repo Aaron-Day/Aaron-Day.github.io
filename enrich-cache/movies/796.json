@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 796,
+    "title": "Cruel Intentions",
+    "overview": "Slaking a thirst for dangerous games, Kathryn challenges her stepbrother, Sebastian, to deflower their headmaster\u0027s daughter before the summer ends. If he succeeds, the prize is the chance to bed Kathryn. But if he loses, Kathryn will claim his most prized possession.",
+    "tagline": "In the game of seduction, there is only one rule: Never fall in love.",
+    "runtime": 97,
+    "release_date": "1999-03-05",
+    "vote_average": 6.847,
+    "poster_path": "/76cCsRtQ5MJBAqoigojXsLXLJwh.jpg",
+    "backdrop_path": "/qMoL7JIuyQQImeRZPadZZr2aoir.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 52789,
+      "name": "Cruel Intentions Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Sarah Michelle Gellar",
+      "character": "Kathryn Merteuil",
+      "profile_path": "/xKe52w4tpv61ohz9iz75wNdzcwZ.jpg"
+    },
+    {
+      "name": "Ryan Phillippe",
+      "character": "S\u00E9bastian Valmont",
+      "profile_path": "/fgneZFXn0fGG1o7tMzJvHqfHHF7.jpg"
+    },
+    {
+      "name": "Reese Witherspoon",
+      "character": "Annette Hargrove",
+      "profile_path": "/mfjunuTHrd0wnh8UG1ImMN9FSws.jpg"
+    },
+    {
+      "name": "Selma Blair",
+      "character": "Cecile Caldwell",
+      "profile_path": "/2rO5eN6hDB0JxMMZHxNKEuMRm1m.jpg"
+    }
+  ]
+}

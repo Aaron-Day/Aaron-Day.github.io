@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 59115,
+    "title": "Quarantine 2: Terminal",
+    "overview": "A plane is taken over by a mysterious virus. When the plane lands it is placed under quarantine. Now a group of survivors must band together to survive the quarantine.",
+    "tagline": "The most deadly mutant virus just went airborne... and escape is not an option.",
+    "runtime": 86,
+    "release_date": "2011-06-16",
+    "vote_average": 5.688,
+    "poster_path": "/ouQOquRqqaO8sPAziD4BFoNO1Pb.jpg",
+    "backdrop_path": "/mHMwoMPLkWHsMeNtFZSNSUOOJ1r.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 123932,
+      "name": "Quarantine Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Mercedes Mason",
+      "character": "Jenny",
+      "profile_path": "/18Rqx5uTRhLSo6KOmU798F1QRTj.jpg"
+    },
+    {
+      "name": "Josh Cooke",
+      "character": "Henry",
+      "profile_path": "/sudTNfRjT7oIiWBBNzAM04NOAUV.jpg"
+    },
+    {
+      "name": "Bre Blair",
+      "character": "Paula",
+      "profile_path": "/nDrqKb2I800qJ3UmME6FJEVOq0P.jpg"
+    },
+    {
+      "name": "Ignacio Serricchio",
+      "character": "Ed Ramirez",
+      "profile_path": "/12De80bakY7dgxrGxw9fuu7b4eR.jpg"
+    }
+  ]
+}

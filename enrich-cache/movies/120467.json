@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 120467,
+    "title": "The Grand Budapest Hotel",
+    "overview": "The Grand Budapest Hotel tells of a legendary concierge at a famous European hotel between the wars and his friendship with a young employee who becomes his trusted prot\u00E9g\u00E9. The story involves the theft and recovery of a priceless Renaissance painting, the battle for an enormous family fortune and the slow and then sudden upheavals that transformed Europe during the first half of the 20th century.",
+    "tagline": "A murder case of Madam D. with enormous wealth and the most outrageous events surrounding her sudden death!",
+    "runtime": 100,
+    "release_date": "2014-02-08",
+    "vote_average": 8.026,
+    "poster_path": "/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
+    "backdrop_path": "/jK65srQczOKTpW62wPxwwKztGgE.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ralph Fiennes",
+      "character": "M. Gustave",
+      "profile_path": "/tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg"
+    },
+    {
+      "name": "F. Murray Abraham",
+      "character": "Mr. Moustafa",
+      "profile_path": "/p2RYVGdrcP0m70BkkiKcwyrDeim.jpg"
+    },
+    {
+      "name": "Tony Revolori",
+      "character": "Zero",
+      "profile_path": "/tSF6XmXDikrKZbFUeoDnafXxKjT.jpg"
+    },
+    {
+      "name": "Adrien Brody",
+      "character": "Dmitri",
+      "profile_path": "/qBc7ahQrpVpcllaZ5hkivsOEb3C.jpg"
+    }
+  ]
+}

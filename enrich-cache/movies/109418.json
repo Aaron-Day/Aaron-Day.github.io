@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 109418,
+    "title": "Grown Ups 2",
+    "overview": "Lenny has relocated his family back to the small town where he and his friends grew up. This time around, the grown ups are the ones learning lessons from their kids on a day notoriously full of surprises\u2014the last day of school.",
+    "tagline": "Just because they\u0027re a little older doesn\u0027t mean they\u0027ve grown up.",
+    "runtime": 101,
+    "release_date": "2013-07-11",
+    "vote_average": 6.192,
+    "poster_path": "/hT6ijOtjtYrnyDhN7VA2QWyGFAm.jpg",
+    "backdrop_path": "/7JhsJxNmdW0y4IyNrHy10cECrAz.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 180546,
+      "name": "Grown Ups Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Adam Sandler",
+      "character": "Lenny Feder",
+      "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+    },
+    {
+      "name": "Kevin James",
+      "character": "Eric Lamonsoff",
+      "profile_path": "/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+    },
+    {
+      "name": "Chris Rock",
+      "character": "Kurt McKenzie",
+      "profile_path": "/5lILFeBvX3sC0EfbHhrvMEc7bPD.jpg"
+    },
+    {
+      "name": "David Spade",
+      "character": "Marcus Higgins",
+      "profile_path": "/8tv638lAMLmYh8bSLICqPzbW3tv.jpg"
+    }
+  ]
+}

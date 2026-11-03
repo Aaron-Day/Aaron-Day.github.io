@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9473,
+    "title": "South Park: Bigger, Longer \u0026 Uncut",
+    "overview": "The third graders of South Park sneak into an R-rated film by ultra-vulgar Canadian television personalities Terrance and Phillip, and emerge with expanded vocabularies that leave their parents and teachers scandalized. When outraged Americans try to censor the film, the controversy spirals into a call to wage war on Canada and Terrance and Phillip end up on death row, with the kids their only hope of rescue.",
+    "tagline": "Uh-oh.",
+    "runtime": 81,
+    "release_date": "1999-06-24",
+    "vote_average": 7.293,
+    "poster_path": "/tS0PedvA2mFO9VCHYwQpaU1K36U.jpg",
+    "backdrop_path": "/2q3B90h2hZ6xJTvna9CIFDNaIr4.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Trey Parker",
+      "character": "Stan Marsh / Eric Cartman / Gregory / Satan / Mr. Garrison / Mr. Hat / Phillip Niles Argyle / Randy Marsh / Clyde Donovan / Tom - News Reporter / Midget In A Bikini / Canadian Ambassador / Bombardiers / Mr. Mackey / Army General / Ned Gerblanski / Christophe - Ze Mole (or The Mole) / Big Gay Al (singing) / Adolf Hitler / Additional Voices (voice)",
+      "profile_path": "/3tJe8t90lrcQzXj9cRcpW9wmj2c.jpg"
+    },
+    {
+      "name": "Matt Stone",
+      "character": "Kyle Broflovski / Kenny McCormick / Saddam Hussein / Terrance Henry Stoot / Big Gay Al / Ticket Taker / Stuart McCormick / Jimbo Kearn / Gerald Broflovski / Butters Stotch / Additional Voices (voice)",
+      "profile_path": "/nS3BOaF0EHd7vyATV7WBnFEvTLr.jpg"
+    },
+    {
+      "name": "Mary Kay Bergman",
+      "character": "Liane Cartman / Sheila Broflovski / Sharon Marsh / Carol McCormick / Wendy Testaburger / Clitoris / Additional Voices (voice)",
+      "profile_path": "/heTLLKqi4g7QqFa2JtOfoOGNpWh.jpg"
+    },
+    {
+      "name": "Isaac Hayes",
+      "character": "Chef (voice)",
+      "profile_path": "/wHZOIi0LJNZ55dswVMX5AqKtMlT.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 3170,
+    "title": "Bambi",
+    "overview": "Bambi\u0027s tale unfolds from season to season as the young prince of the forest learns about life, love, and friends.",
+    "tagline": "Love Comes To The Forest Folk . . . and to you, in one of the world\u0027s greatest love stories!",
+    "runtime": 70,
+    "release_date": "1942-08-14",
+    "vote_average": 7.014,
+    "poster_path": "/wV9e2y4myJ4KMFsyFfWYcUOawyK.jpg",
+    "backdrop_path": "/rKgqYwlpU32ZO9UTCuXNdhdnU4B.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87250,
+      "name": "Bambi Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Donnie Dunagan",
+      "character": "Young Bambi (voice) (uncredited)",
+      "profile_path": "/sNX0mWMI9oFPErqxux0O6kiAOaU.jpg"
+    },
+    {
+      "name": "Peter Behn",
+      "character": "Young Thumper (voice) (uncredited)",
+      "profile_path": "/y5jHtmdYNmw7zpfyZj94z2ZVg1s.jpg"
+    },
+    {
+      "name": "Stan Alexander",
+      "character": "Young Flower (voice) (uncredited)",
+      "profile_path": "/1MRQC4eIhniEWcpxw1cQ4wSVwTM.jpg"
+    },
+    {
+      "name": "Cammie King",
+      "character": "Young Faline (voice) (uncredited)",
+      "profile_path": "/HHs0D30Rn7181EyOu7f0fyBo38.jpg"
+    }
+  ]
+}

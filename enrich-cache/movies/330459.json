@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 330459,
+    "title": "Rogue One: A Star Wars Story",
+    "overview": "A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.",
+    "tagline": "Empires are built on fear. Rebellions are built on hope.",
+    "runtime": 133,
+    "release_date": "2016-12-14",
+    "vote_average": 7.512,
+    "poster_path": "/i0yw1mFbB7sNGHCs7EXZPzFkdA1.jpg",
+    "backdrop_path": "/6t8ES1d12OzWyCGxBeDYLHoaDrT.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Felicity Jones",
+      "character": "Jyn Erso",
+      "profile_path": "/35KdWSfTldNEdsn4MUGFIRoxJEu.jpg"
+    },
+    {
+      "name": "Diego Luna",
+      "character": "Cassian Andor",
+      "profile_path": "/qwbjcyDN37OHiln4a6P4LP31o7F.jpg"
+    },
+    {
+      "name": "Alan Tudyk",
+      "character": "K-2SO",
+      "profile_path": "/jUuUbPuMGonFT5E2pcs4alfqaCN.jpg"
+    },
+    {
+      "name": "Donnie Yen",
+      "character": "Chirrut Imwe",
+      "profile_path": "/hTlhrrZMj8hZVvD17j4KyAFWBHc.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 19908,
+    "title": "Zombieland",
+    "overview": "Columbus has made a habit of running from what scares him. Tallahassee doesn\u0027t have fears. If he did, he\u0027d kick their ever-living ass. In a world overrun by zombies, these two are perfectly evolved survivors. But now, they\u0027re about to stare down the most terrifying prospect of all: each other.",
+    "tagline": "Nut up or shut up.",
+    "runtime": 88,
+    "release_date": "2009-10-02",
+    "vote_average": 7.26,
+    "poster_path": "/dUkAmAyPVqubSBNRjRqCgHggZcK.jpg",
+    "backdrop_path": "/oihWVx3imvRKujnGmSDYhfG1gI5.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 537982,
+      "name": "Zombieland Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jesse Eisenberg",
+      "character": "Columbus",
+      "profile_path": "/2ojZrkt5rdkUi857WSeCatxXdGS.jpg"
+    },
+    {
+      "name": "Woody Harrelson",
+      "character": "Tallahassee",
+      "profile_path": "/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg"
+    },
+    {
+      "name": "Emma Stone",
+      "character": "Wichita",
+      "profile_path": "/ak2Y9wOI3wi2pNQU6OWSvVvWPj5.jpg"
+    },
+    {
+      "name": "Abigail Breslin",
+      "character": "Little Rock",
+      "profile_path": "/1MQMfcb3fuN0lC1egdaOnHcTlm8.jpg"
+    }
+  ]
+}

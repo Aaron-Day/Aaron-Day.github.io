@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 640,
+    "title": "Catch Me If You Can",
+    "overview": "A true story about Frank Abagnale Jr. who, before his 19th birthday, successfully conned millions of dollars worth of checks as a Pan Am pilot, doctor, and legal prosecutor. An FBI agent makes it his mission to put him behind bars. But Frank not only eludes capture, he revels in the pursuit.",
+    "tagline": "The true story of a real fake.",
+    "runtime": 141,
+    "release_date": "2002-12-16",
+    "vote_average": 7.979,
+    "poster_path": "/ctjEj2xM32OvBXCq8zAdK3ZrsAj.jpg",
+    "backdrop_path": "/eS3xZQ1C8lt6mm4K5lTmjbYn2HE.jpg",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Leonardo DiCaprio",
+      "character": "Frank Abagnale Jr.",
+      "profile_path": "/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
+    },
+    {
+      "name": "Tom Hanks",
+      "character": "Carl Hanratty",
+      "profile_path": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+    },
+    {
+      "name": "Christopher Walken",
+      "character": "Frank Abagnale",
+      "profile_path": "/ApgDL7nudR9T2GpjCG4vESgymO2.jpg"
+    },
+    {
+      "name": "Martin Sheen",
+      "character": "Roger Strong",
+      "profile_path": "/m2Y3Q0uyuW6htrn2W9UWCWMkpZu.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 103,
+    "title": "Taxi Driver",
+    "overview": "Suffering from insomnia, disturbed loner Travis Bickle takes a job as a New York City cabbie, haunting the streets nightly, growing increasingly detached from reality as he dreams of cleaning up the filthy city.",
+    "tagline": "On every street in every city in this country, there\u0027s a nobody who dreams of being somebody. He\u0027s a lonely forgotten man desperate to prove that he\u0027s alive.",
+    "runtime": 114,
+    "release_date": "1976-02-09",
+    "vote_average": 8.116,
+    "poster_path": "/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+    "backdrop_path": "/9uddYYTNcLWpzUkl5iw1RUYhLhY.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Robert De Niro",
+      "character": "Travis Bickle",
+      "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+    },
+    {
+      "name": "Jodie Foster",
+      "character": "Iris",
+      "profile_path": "/5emVgsLFlU6SmeBIFsF2Y7aqwtG.jpg"
+    },
+    {
+      "name": "Cybill Shepherd",
+      "character": "Betsy",
+      "profile_path": "/ci20y6ilSmiw759cUwQVheOqNaD.jpg"
+    },
+    {
+      "name": "Harvey Keitel",
+      "character": "Sport",
+      "profile_path": "/7P30hza1neYWW3r7rSQOC736K2Z.jpg"
+    }
+  ]
+}

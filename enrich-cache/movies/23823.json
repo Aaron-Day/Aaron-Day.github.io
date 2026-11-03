@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 23823,
+    "title": "Wrong Turn 3: Left for Dead",
+    "overview": "A group of people find themselves trapped in the backwoods of West Virginia, fighting for their lives against a group of vicious and horribly disfigured inbred cannibals.",
+    "tagline": "What you don\u0027t see will kill you.",
+    "runtime": 91,
+    "release_date": "2009-10-08",
+    "vote_average": 5.712,
+    "poster_path": "/84s4LMWuGbm4xPWW5PSbHyQhh33.jpg",
+    "backdrop_path": "/8568C7FeSsjmqLGuObSB0oB6kOU.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 52985,
+      "name": "Wrong Turn Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Frederic",
+      "character": "Nate",
+      "profile_path": "/2oq8F2s2RdKfqqKRFEfYunAy0XQ.jpg"
+    },
+    {
+      "name": "Janet Montgomery",
+      "character": "Alex",
+      "profile_path": "/jn9tU6mAAkdtjgw2JPlS2vFG1jM.jpg"
+    },
+    {
+      "name": "Louise Cliffe",
+      "character": "Sophie",
+      "profile_path": "/6o1uwzAYupbQBrYtCPXD6tJInMn.jpg"
+    },
+    {
+      "name": "Jack Gordon",
+      "character": "Trey",
+      "profile_path": "/1skyaFtWdXkQqiG164kbQEBKmuW.jpg"
+    }
+  ]
+}

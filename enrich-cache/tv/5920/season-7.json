@@ -1,0 +1,112 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 7,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Nothing But Blue Skies",
+        "overview": "Jane and Lisbon decide to keep their new relationship a secret from  their colleagues as they investigate the murder of an undercover agent.  Also, young, ambitious agent Michelle Vega joins the team.",
+        "air_date": "2014-11-30",
+        "runtime": 43,
+        "still_path": "/tOXSPiCbxWbXKROy5sVPVPQyls2.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Greybar Hotel",
+        "overview": "Lisbon goes undercover as a prison inmate in order to get a convict to turn on her boyfriend, who is the leader of a high-end car theft ring.",
+        "air_date": "2014-12-07",
+        "runtime": 41,
+        "still_path": "/gUTkKMGXqEZD21Vpk3C5zKtFwcK.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Orange Blossom Ice Cream",
+        "overview": "Jane and Lisbon travel to Beirut where they must work with Jane\u0027s familiar adversary Erica Flynn, who agrees to help the FBI apprehend her boyfriend, a courier for terrorist organizations, in exchange for amnesty for her past crimes.",
+        "air_date": "2014-12-14",
+        "runtime": 43,
+        "still_path": "/2jr9FQK2Mq4kG1H1vPFmfXFsG3q.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Black Market",
+        "overview": "The team investigates a murder linked to a counterfeit diamond operation, but an illness forces Jane to direct his colleagues from the office as he recuperates. Meanwhile, Abbott is concerned that transgressions in his past could harm his wife\u2019s chance to obtain a prestigious job in Washington, D.C.",
+        "air_date": "2014-12-21",
+        "runtime": 41,
+        "still_path": "/bVJx1WAzZeG5BkHHT3QHGvRpXOB.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Silver Briefcase",
+        "overview": "A chance encounter with a military colonel leads Jane to believe the soldier is hiding something, leading him to dig into closed murder case of the man\u2019s wife.",
+        "air_date": "2014-12-28",
+        "runtime": 41,
+        "still_path": "/oqjuGBKH7Sdetr7kHOiraZqsUa.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Green Light",
+        "overview": "The team is brought in to consult on a botched DEA raid, but when Abbott\u2019s former boss tries to blackmail him into keeping the agency\u2019s missteps quiet, Abbott is forced to choose between his career and his morals.",
+        "air_date": "2015-01-07",
+        "runtime": 42,
+        "still_path": "/oeLJbMFoE5GTJVJFZR3lgFdHYtC.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Little Yellow House",
+        "overview": "A murder investigation becomes personal for Lisbon when she learns that her underachieving younger brother, Jimmy, is being sought as a key witness.",
+        "air_date": "2015-01-14",
+        "runtime": 43,
+        "still_path": "/crvrzR4rTumR84UtNFCZFJLqJBm.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Whites of His Eyes",
+        "overview": "Jane worries for Lisbon\u2019s safety when the team puts itself in the line of fire to protect the witness in a murder investigation from a skilled assassin.",
+        "air_date": "2015-01-21",
+        "runtime": 42,
+        "still_path": "/wizJqU72PpVHV2rXj2ont3AzPKM.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Copper Bullet",
+        "overview": "When Abbott\u0027s old boss, Agent Peterson, threatens Abbott\u0027s career - and possibly his freedom - Jane devises a risky plan to protect his friend\u0027s  future.",
+        "air_date": "2015-01-28",
+        "runtime": 42,
+        "still_path": "/qyw4C9d4I5tpBfMHiZ3myzg7Mfc.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Nothing Gold Can Stay",
+        "overview": "Jane takes extreme measures as the team tries to apprehend a deadly gang of armored car robbers before their desperation to remain free costs more innocent people their lives.",
+        "air_date": "2015-02-04",
+        "runtime": 41,
+        "still_path": "/njlUfEjqig2mBrkgmYea2GDNytv.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Byzantium",
+        "overview": "A young man claiming to have psychic powers offers his help to the FBI in solving a pair of murders, but when he leads them to additional victims, Jane and the team begin to suspect that he is in fact the killer they\u0027re hunting.",
+        "air_date": "2015-02-11",
+        "runtime": 42,
+        "still_path": "/vba1bnm7gwMrOURvGEGFJSFHvo6.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Brown Shag Carpet",
+        "overview": "Jane agrees to once again pretend to be a renowned psychic and be used as bait in an attempt to lure out a serial killer and give the FBI a chance to apprehend him.",
+        "air_date": "2015-02-18",
+        "runtime": 43,
+        "still_path": "/tE6WZnyyS6HI39sh24wZWIeNmd5.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "White Orchids",
+        "overview": "Lisbon accepts Jane\u0027s surprise marriage proposal, but a killer\u0027s quest for revenge may cost them the happy ending they\u0027ve worked so hard to achieve.",
+        "air_date": "2015-02-18",
+        "runtime": 42,
+        "still_path": "/wWYSMww1HqcjTVopUWpR2ohdy7Q.jpg"
+      }
+    ]
+  }
+}

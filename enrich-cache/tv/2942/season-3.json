@@ -1,0 +1,72 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 3,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Civil Unrest",
+        "overview": "King Henry marries for the third time, taking as his queen the demure noblewoman Jane Seymour. A growing number of his subjects protest the king\u0027s decision to abandon the Catholic Church.",
+        "air_date": "2009-04-05",
+        "runtime": 48,
+        "still_path": "/nNwEDSmpBZBVtt3LV2qwM1UKf87.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "The Northern Uprising",
+        "overview": "The uproar over the king\u0027s break with the Catholic Church turns into a full-blown rebellion that comes to be known as \u0022The Pilgrimage of Grace.\u0022 Immobilized by an old jousting injury, Henry sends Charles Brandon to deal with the uprising and focuses his attention on the Lady Ursula Misseldon.",
+        "air_date": "2009-04-12",
+        "runtime": 47,
+        "still_path": "/qKOdKHaP7UvFI5fVJWgICqyD9t.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Dissention and Punishment",
+        "overview": "Henry reconciles with his estranged daughters Mary and Elizabeth in time for the Christmas holidays, but betrays and brutally suppresses the rebellion against him after making conciliatory promises to the uprising\u0027s leaders.",
+        "air_date": "2009-04-19",
+        "runtime": 49,
+        "still_path": "/x84jBLWWlVyQm2SEorfG1uy4CZM.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Death of a Queen",
+        "overview": "The leaders of the Pilgrimage of Grace uprising are put to death, but Brandon is disturbed by the cruelty and mercilessness of the suppression; Henry celebrates the birth of a son but his joy is short-lived as Queen Jane dies within days.",
+        "air_date": "2009-04-26",
+        "runtime": 49,
+        "still_path": "/dSb98JKvYjBGsLx00lHltmXROKl.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Problems in the Reformation",
+        "overview": "Henry remains in seclusion while mourning the queen\u0027s death, an opportunity that enemies of the crown seize to murder several friends of the court; Cromwell is disturbed when Henry doesn\u0027t resist his new church\u0027s similarities to Catholicism.",
+        "air_date": "2009-05-03",
+        "runtime": 51,
+        "still_path": "/r6U4OiehYpbEacY92S20X7DJEB4.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Search for a New Queen",
+        "overview": "Matchmaking begins in earnest as Cromwell schemes to secure the Reformation by marrying Henry to a Protestant wife - but the king\u0027s marital reputation precedes him; the condition of Henry\u0027s wounded leg turns life-threatening.",
+        "air_date": "2009-05-10",
+        "runtime": 54,
+        "still_path": "/1hTFLGATkE62kSbZW8F2LjsdF6w.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Protestant Anne of Cleves",
+        "overview": "War looms with France and Spain aligning against England with backing from Rome, so Henry agrees to a politically fortuitous marriage with Anne of Cleves (Joss Stone), a plain and unsophisticated German aristocrat he has never met.",
+        "air_date": "2009-05-17",
+        "runtime": 52,
+        "still_path": "/g6qrMqD156CbEPAxiQbXhL0XpD.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "The Undoing of Cromwell",
+        "overview": "Henry moves swiftly to annul his loveless marriage to Anne of Cleves, and beds a new mistress, 17-year-old Katherine Howard; Princess Mary falls in love with Duke Philip of Bavaria; Cromwell\u0027s fall from favor is sudden and dramatic.",
+        "air_date": "2009-05-24",
+        "runtime": 52,
+        "still_path": "/7lu06FwcbfjBZ4ClukCpgznKkPZ.jpg"
+      }
+    ]
+  }
+}

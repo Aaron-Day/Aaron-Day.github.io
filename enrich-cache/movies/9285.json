@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 9285,
+    "title": "Road Trip",
+    "overview": "After a student at the University of Ithaca films his one-night stand with a beautiful sorority girl, he discovers one of his friends has accidentally mailed the homemade sex tape to his girlfriend in Austin. In a frenzy, he must borrow a car and hit the road in a desperate bid to intercept the tape.",
+    "tagline": "The greatest college tradition of all.",
+    "runtime": 93,
+    "release_date": "2000-05-19",
+    "vote_average": 6.3,
+    "poster_path": "/jee4eY5tZprI0V18S6PXUloBzSk.jpg",
+    "backdrop_path": "/cV0JkbhWNSgfRmENuVMkkDvNgdG.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 96679,
+      "name": "Road Trip Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Breckin Meyer",
+      "character": "Josh",
+      "profile_path": "/lKzhwW7qqQF4ZMGtRqakqrKrxzm.jpg"
+    },
+    {
+      "name": "Seann William Scott",
+      "character": "E.L.",
+      "profile_path": "/AftiUFP4rYcl3SG3xllxyiLiuXS.jpg"
+    },
+    {
+      "name": "Amy Smart",
+      "character": "Beth",
+      "profile_path": "/9GQwkmqd5klfXvhd29YI5OKAx3N.jpg"
+    },
+    {
+      "name": "Paulo Costanzo",
+      "character": "Rubin",
+      "profile_path": "/cmZ1PnKsqdycxb3FnlpzNWzV4wy.jpg"
+    }
+  ]
+}

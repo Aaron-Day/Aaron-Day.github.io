@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 610253,
+    "title": "Halloween Kills",
+    "overview": "Michael manages to free himself from Laurie Strode\u0027s trap to resume his ritual bloodbath. As she fights for her life from injuries from their last encounter, she inspires her daughter Karen, her granddaughter Allyson, and all of Haddonfield to rise up against the unstoppable monster.",
+    "tagline": "Evil dies tonight.",
+    "runtime": 105,
+    "release_date": "2021-10-14",
+    "vote_average": 6.398,
+    "poster_path": "/ir9eyz1mtgsohjvo7UYtqUfFuES.jpg",
+    "backdrop_path": "/fuuZFPc8x6gQ8mLGoBp9vrmcQMT.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91361,
+      "name": "Halloween Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jamie Lee Curtis",
+      "character": "Laurie Strode",
+      "profile_path": "/eWKubKAAssRzmFwCZKh1mdYqGCH.jpg"
+    },
+    {
+      "name": "Judy Greer",
+      "character": "Karen",
+      "profile_path": "/pTLjIjh83R424RGxIfq4U0yx947.jpg"
+    },
+    {
+      "name": "Andi Matichak",
+      "character": "Allyson",
+      "profile_path": "/8XGIcVo5flyPKIbaEQiw8cMXgBj.jpg"
+    },
+    {
+      "name": "James Jude Courtney",
+      "character": "The Shape",
+      "profile_path": "/3bE8jZyPaOASww11gOwLP7QW0IY.jpg"
+    }
+  ]
+}

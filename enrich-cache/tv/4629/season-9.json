@@ -1,0 +1,168 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 9,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Avalon (1)",
+        "overview": "An Air Force pilot attempts to reassemble SG-1 after they have gone their separate ways. An old \u0022friend\u0022 arrives on Earth asking for Daniel\u0027s help in finding an ancient treasure -- and she won\u0027t take no for an answer.",
+        "air_date": "2005-07-15",
+        "runtime": 44,
+        "still_path": "/mrtC8KpJcMErR0mo7FWZxZq5hy4.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Avalon (2)",
+        "overview": "An Ancient communications device renders Daniel and Vala unconscious, sending their minds to another galaxy -- where they inhabit the bodies of two people persecuted by the followers of an evil religion.",
+        "air_date": "2005-07-22",
+        "runtime": 44,
+        "still_path": "/p0aMJu5pl5s99dBvofGbwFnZNg1.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Origin (3)",
+        "overview": "Daniel comes face to face with the Ori, a fiery race of beings who demand the worship of mortals. Elsewhere, Stargate Command encounters the first Ori missionary in our galaxy.",
+        "air_date": "2005-07-29",
+        "runtime": 44,
+        "still_path": "/bjYjJ6sAXGftBw7UocA2kaSeXcr.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "The Ties That Bind",
+        "overview": "Jackson and Mitchell must join Vala on an interplanetary scavenger hunt when they learn that they are still bound together by an alien energy field.",
+        "air_date": "2005-08-05",
+        "runtime": 44,
+        "still_path": "/5ZeuNmAYhILpp6zCjoA7np8R3Ej.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "The Powers That Be",
+        "overview": "SG-1 visits a world whose people once worshipped Vala as a god -- and demand that she stand trial when she confesses to manipulating them.",
+        "air_date": "2005-08-12",
+        "runtime": 44,
+        "still_path": "/6V8v0W625Er77YZLkGnHcOeKs4v.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Beachhead",
+        "overview": "Samantha Carter returns to Stargate Command when the Ori seize control of a planet, using an expanding force field to gain a foothold in our galaxy.",
+        "air_date": "2005-08-19",
+        "runtime": 44,
+        "still_path": "/pjY0ezM26tIOA9mcN2pb5vIRNdx.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Ex Deus Machina",
+        "overview": "SG-1 investigates when evidence suggests that there are still Goa\u0027uld hiding on Earth -- including a former System Lord. Tensions between Earth and the Free Jaffa continue to mount.",
+        "air_date": "2005-08-26",
+        "runtime": 44,
+        "still_path": "/i66seY5GbokBtle3xT3TrxeRMIM.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Babylon",
+        "overview": "Colonel Mitchell is injured in a skirmish with a warrior from a mythic tribe of rebel Jaffa, and is trained in their fighting techniques only so that he may engage in a ritual battle to the death.",
+        "air_date": "2005-09-09",
+        "runtime": 44,
+        "still_path": "/6AVDWNcqETMT1cokvABJHEXGQe1.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Prototype",
+        "overview": "SG-1 finds a genetically advanced Goa\u0027uld-human hybrid created by Anubis, and returns him to Earth for study. But even keeping him alive may not be worth the risk.",
+        "air_date": "2005-09-16",
+        "runtime": 44,
+        "still_path": "/19EBQHQpwxmVSnQlPLj6TYtnU4I.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "The Fourth Horseman (1)",
+        "overview": "Earth is infected with a deadly Ori plague, prompting an ally from SG-1\u0027s past to come to their aid. Gerak proposes that the Free Jaffa follow the Ori religion.",
+        "air_date": "2005-09-16",
+        "runtime": 44,
+        "still_path": "/qmc7Y9AASUutaHF2leASidswyCi.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "The Fourth Horseman (2)",
+        "overview": "As the Ori plague spreads rapidly, SG-1 hopes that the Prior who caused the disease may hold the key to its cure. Gerak tries to rally the Jaffa to the Ori\u0027s cause, prompting Teal\u0027c and Bra\u0027tac to initiate a resistance.",
+        "air_date": "2006-01-06",
+        "runtime": 44,
+        "still_path": "/k46ImssdY52Oz7juEWKg7VIdu6F.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Collateral Damage",
+        "overview": "When SG-1 travels to an Asgard Protected Planet, Colonel Mitchell is accused of a murder he did not commit.",
+        "air_date": "2006-01-13",
+        "runtime": 44,
+        "still_path": "/q4d56NnEP6St9hz3OLgLRtEKna1.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "Ripple Effect",
+        "overview": "Multiple SG-1s show up at Stargate Command, leading the \u0022real\u0022 team to conclude that they have each been inadvertantly displaced from different parallel realities.",
+        "air_date": "2006-01-20",
+        "runtime": 44,
+        "still_path": "/dToCo7QP5aFxEqOHzibaigBiJbl.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Stronghold",
+        "overview": "Baal kidnaps Teal\u0027c as part of a plot to brainwash those Jaffa advocating a move toward democracy. Cameron Mitchell learns that an old friend is about to die.",
+        "air_date": "2006-01-27",
+        "runtime": 44,
+        "still_path": "/fUOawcW1KlV1BxLkpu5DcHpXS3w.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Ethon",
+        "overview": "Daniel is imprisoned on a world under the influence of the Ori, and the Prometheus is caught in a firefight when SG-1 tries to rescue him.",
+        "air_date": "2006-02-03",
+        "runtime": 44,
+        "still_path": "/gagWbDZzs7mnXPwmD9FxCWqqHX5.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Off the Grid",
+        "overview": "SG-1 is captured after a deal with the Lucian Alliance goes bad ... and the planet\u0027s Stargate goes missing. Meanwhile, a former System Lord attempts to rebuild his empire.",
+        "air_date": "2006-02-10",
+        "runtime": 43,
+        "still_path": "/fUgP7JCmEUyQQnn4vMHybXJibaT.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "The Scourge",
+        "overview": "A tour of an off-world research base for a group of foreign diplomats turns dangerous when an insidious insect species gets loose.",
+        "air_date": "2006-02-17",
+        "runtime": 44,
+        "still_path": "/wN1DBu6Ky8UKIXJMHuIyDsnJQIw.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Arthur\u0027s Mantle",
+        "overview": "Mitchell and Carter are shifted to another dimension, making them invisible to everyone at the S.G.C. Meanwhile, Teal\u0027c and SG-9 discover that the Sodan have been brutally attacked.",
+        "air_date": "2006-02-24",
+        "runtime": 44,
+        "still_path": "/vnFbKAQtJuUU3L1Iopm4eL4Dgrx.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Crusade",
+        "overview": "Vala Mal Doran makes contact with Stargate Command from the Ori home galaxy, and tells the story of her life undercover in a village of followers building the Ori\u0027s invasion fleet.",
+        "air_date": "2006-03-03",
+        "runtime": 44,
+        "still_path": "/20hnzQ8hK89Bip2FFPpAlW3ifLp.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Camelot",
+        "overview": "SG-1 discovers the village of Camelot on an alien world, and must face Merlin\u0027s security system when they go in search of an Ancient weapon. Elsewhere, Earth and its allies assemble a fleet when a working Ori Supergate is discovered.",
+        "air_date": "2006-03-10",
+        "runtime": 43,
+        "still_path": "/lbPBCriXycjy4ueBe5l7ws6LrOc.jpg"
+      }
+    ]
+  }
+}

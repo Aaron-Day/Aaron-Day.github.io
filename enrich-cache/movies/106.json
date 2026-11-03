@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 106,
+    "title": "Predator",
+    "overview": "A team of elite commandos on a secret mission in a Central American jungle come to find themselves hunted by an extraterrestrial warrior.",
+    "tagline": "Soon the hunt will begin.",
+    "runtime": 107,
+    "release_date": "1987-06-12",
+    "vote_average": 7.587,
+    "poster_path": "/k3mW4qfJo6SKqe6laRyNGnbB9n5.jpg",
+    "backdrop_path": "/YL3GPOiDcNraIJOVDCZsoOBoDy.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 399,
+      "name": "Predator Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Arnold Schwarzenegger",
+      "character": "Major Alan \u0027Dutch\u0027 Schaefer",
+      "profile_path": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+    },
+    {
+      "name": "Carl Weathers",
+      "character": "Al Dillon",
+      "profile_path": "/oUwtC5hEbcIZv53WPerZ9HhlSJR.jpg"
+    },
+    {
+      "name": "Kevin Peter Hall",
+      "character": "The Predator / Helicopter Pilot",
+      "profile_path": "/wdW2sUAQPonZcQo8oDY1j60h7DP.jpg"
+    },
+    {
+      "name": "Elpidia Carrillo",
+      "character": "Anna Gonsalves",
+      "profile_path": "/u8ZEUAUdVjUE8DTddv81rE1Qer7.jpg"
+    }
+  ]
+}

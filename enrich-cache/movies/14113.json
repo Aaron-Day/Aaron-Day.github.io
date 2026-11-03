@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 14113,
+    "title": "Zoom",
+    "overview": "Jack Shepard is an out-of-shape auto shop owner, far removed from the man who once protected the world\u0027s freedom. Reluctantly called back into action by the government, Jack is tasked with turning a ragtag group of kids with special powers into a new generation of superheroes to save the world from certain destruction.",
+    "tagline": "They\u0027re going to save the world... as long as they\u0027re home for dinner.",
+    "runtime": 88,
+    "release_date": "2006-08-11",
+    "vote_average": 5.3,
+    "poster_path": "/v4rSFmiy0v9D7qmKkaUVJn5UhZ1.jpg",
+    "backdrop_path": "/n3PvPAdpnh1eaGXzfkXDBzm9GaJ.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tim Allen",
+      "character": "Jack Sheppard / Zoom",
+      "profile_path": "/k8XPNHBO459FaqkqqM4tfX5GMKk.jpg"
+    },
+    {
+      "name": "Courteney Cox",
+      "character": "Marsha Holloway",
+      "profile_path": "/cSOORhCRPJiwKghozXVXrOBi3Tp.jpg"
+    },
+    {
+      "name": "Chevy Chase",
+      "character": "Dr. Grant",
+      "profile_path": "/A1X2BvR8vEXvwXdJa5uYAYVCO2k.jpg"
+    },
+    {
+      "name": "Spencer Breslin",
+      "character": "Tucker Willams / Mega-Boy",
+      "profile_path": "/jqZRcEjEt3iodgXoGOZUaahozjm.jpg"
+    }
+  ]
+}

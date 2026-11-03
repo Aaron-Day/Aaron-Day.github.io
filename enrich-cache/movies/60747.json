@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 60747,
+    "title": "Red Dawn",
+    "overview": "A city in Washington state awakens to the surreal sight of foreign paratroopers dropping from the sky\u2014shockingly, the U.S. has been invaded and their hometown is the initial target. Quickly and without warning, the citizens find themselves prisoners and their town under enemy occupation. Determined to fight back, a group of young patriots seek refuge in the surrounding woods, training and reorganizing themselves into a guerrilla group of fighters.",
+    "tagline": "Welcome to the home of the brave.",
+    "runtime": 93,
+    "release_date": "2012-03-15",
+    "vote_average": 5.8,
+    "poster_path": "/pwOcFK1hFZ5NJybBGfvzU6UHCPg.jpg",
+    "backdrop_path": "/jFh87Hj9Yp8QQPYmcNBAZNaa4Y.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Chris Hemsworth",
+      "character": "Jed Eckert",
+      "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    },
+    {
+      "name": "Josh Peck",
+      "character": "Matt Eckert",
+      "profile_path": "/qoapD8slSdb550o1JEoepv1SvT0.jpg"
+    },
+    {
+      "name": "Josh Hutcherson",
+      "character": "Robert Kitner",
+      "profile_path": "/GqIyK5mCJXFUXW4FwLM3Zj7UtK.jpg"
+    },
+    {
+      "name": "Isabel Lucas",
+      "character": "Erica Martin",
+      "profile_path": "/dxIZvymamZaeJ46HDJ0ldaJmG2v.jpg"
+    }
+  ]
+}

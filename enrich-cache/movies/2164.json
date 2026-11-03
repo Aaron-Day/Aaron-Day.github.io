@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 2164,
+    "title": "Stargate",
+    "overview": "An interstellar teleportation device, found in Egypt, leads to a planet with humans resembling ancient Egyptians who worship the god Ra.",
+    "tagline": "It will take you a million light years from home. But will it bring you back?",
+    "runtime": 121,
+    "release_date": "1994-10-28",
+    "vote_average": 7.037,
+    "poster_path": "/4T6Po0XnZlevmhfPh3ZfEs5butR.jpg",
+    "backdrop_path": "/s2bqHApZlliCuwgyHod0qucrYqZ.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "James Spader",
+      "character": "Dr. Daniel Jackson",
+      "profile_path": "/3gurW3OgDOD4hcqDfgcqUnoNg34.jpg"
+    },
+    {
+      "name": "Kurt Russell",
+      "character": "Colonel Jonathan \u0027Jack\u0027 O\u0027Neil",
+      "profile_path": "/6g1d98oH4miG4k0ZiZWmF3Dt0bO.jpg"
+    },
+    {
+      "name": "Jaye Davidson",
+      "character": "Ra",
+      "profile_path": "/1gvLTgrBpRreybxQ56dgjjKkVrh.jpg"
+    },
+    {
+      "name": "Viveca Lindfors",
+      "character": "Catherine",
+      "profile_path": "/MlII3ieRl1GiUlp5ayXOzJus0K.jpg"
+    }
+  ]
+}

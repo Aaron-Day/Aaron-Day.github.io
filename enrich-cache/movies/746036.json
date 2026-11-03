@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 746036,
+    "title": "The Fall Guy",
+    "overview": "Fresh off an almost career-ending accident, stuntman Colt Seavers has to track down a missing movie star, solve a conspiracy and try to win back the love of his life while still doing his day job.",
+    "tagline": "Fall hard.",
+    "runtime": 127,
+    "release_date": "2024-04-24",
+    "vote_average": 6.948,
+    "poster_path": "/e7olqFmzcIX5c23kX4zSmLPJi8c.jpg",
+    "backdrop_path": "/2rjI2uXmjitMAaXVO21r9ao7v2j.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ryan Gosling",
+      "character": "Colt Seavers",
+      "profile_path": "/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg"
+    },
+    {
+      "name": "Emily Blunt",
+      "character": "Jody Moreno",
+      "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+    },
+    {
+      "name": "Aaron Taylor-Johnson",
+      "character": "Tom Ryder",
+      "profile_path": "/pFtHhih2XEaFaD3qOFyQW6q83br.jpg"
+    },
+    {
+      "name": "Hannah Waddingham",
+      "character": "Gail Meyer",
+      "profile_path": "/eHAICyhvjiRZCgzKyJCk9hWnnjr.jpg"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 14,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Game of Drones",
+        "overview": "The NCIS team searches for a suspect and their motive following the bombing of a large facility where military combat drones are assembled. Also, Callen and Kilbride get troubling news about a body found in Syria.",
+        "air_date": "2022-10-09",
+        "runtime": 43,
+        "still_path": "/m6xBJaOXis9OIRyb52ZbzeMn32f.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Of Value",
+        "overview": "After an architect duo who specializes in designing secure buildings is kidnapped, the NCIS team mounts a search to bring them home. Also, Deeks and Kensi realize they may need to get Rosa some help with her schoolwork, and Anna considers a career outside of law enforcement.",
+        "air_date": "2022-10-16",
+        "runtime": 43,
+        "still_path": "/fEFgNNQfdawYR3dwtoFpdnqGWFL.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "The Body Stitchers",
+        "overview": "The NCIS team join forces with the FBI when a group of grisly murderers known as \u201CThe Body Stitchers\u201D returns after evading capture by NCIS years ago. Also, Sam\u2019s dad makes a new friend in Arkady.",
+        "air_date": "2022-10-23",
+        "runtime": 43,
+        "still_path": "/eovvb1nw0uhLykcBZUD1uPS52uC.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Dead Stick",
+        "overview": "When Aiden Hanna\u0027s plane crashes and he is accused of being at fault for the accident, the NCIS team must investigate to clear his name; Rountree considers how he wants to handle the aftermath of the incident with the LAPD.",
+        "air_date": "2022-10-30",
+        "runtime": 43,
+        "still_path": "/lSYz8PkfJz9VlIfQU9CzpdvhAhE.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Flesh \u0026 Blood",
+        "overview": "NCIS is called to investigate when a woman is seen fleeing the scene of her husband\u0027s murder. Also, Roberta Deeks comes into town to meet Rosa, and Sam looks for another aide for his father.",
+        "air_date": "2022-11-06",
+        "runtime": 43,
+        "still_path": "/oWe4H6H3AZW97qEpufMYNJSi872.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Glory of the Sea",
+        "overview": "NCIS is called to investigate after Rear Admiral Ted Gordon is abducted from his home. Also, Kensi struggles with being the fun parent while Deeks is apartment hunting with his mom.",
+        "air_date": "2022-11-13",
+        "runtime": 43,
+        "still_path": "/fDmkJdItswCIqcijxIOdfVzQCvq.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Survival of the Fittest",
+        "overview": "When a Marine falls ill during a training mission due to an attack by a genetic weapon, the NCIS must track down the person responsible for unleashing it. Also, Deeks struggles with balancing work and home life when Rosa comes down with the flu.",
+        "air_date": "2022-11-20",
+        "runtime": 43,
+        "still_path": "/ngSH5QHvfprgY8HwtzAH5wyZQ3k.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Let it Burn",
+        "overview": "NCIS investigates an arson attack at Global West Ventures Corp, a naval defense contractor. Also, Rountree connects with an ex and Kilbride gives Callen files on Pembrook.",
+        "air_date": "2022-11-27",
+        "runtime": 43,
+        "still_path": "/mnFeSYABDzcuTiHobXVRUk297WB.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Blood Bank",
+        "overview": "When NCIS investigates a shootout on a boat in which a rare cultural artifact is stolen, they\u2019re shocked to learn who owns the boat.",
+        "air_date": "2023-01-08",
+        "runtime": 43,
+        "still_path": "/n3yC1KR9TCKCm2IqZbepnClFzmW.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "A Long Time Coming (III)",
+        "overview": "While Agent Rountree and Fatima are searching for Kilbride, who has been MIA, they are ambushed and learn that every member of the team has a $200,000 bounty on their head via the dark web. The NCIS team must save Agent Rountree and find Kilbride while every cartel, hit man, gang and psychopath hunts them down.\n\nThe crossover starts on NCIS S20E10 Too Many Cooks (I) and NCIS: Hawai\u0027i S02E10 Deep Fake (II).",
+        "air_date": "2023-01-09",
+        "runtime": 43,
+        "still_path": "/67LYYh67wSFtaxmVofHYdDhLtU1.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Best Seller",
+        "overview": "When Sam\u0027s friend Tom Olsen finds himself being hunted down by enemies from his past, the NCIS team must find out who is after him.",
+        "air_date": "2023-01-15",
+        "runtime": 43,
+        "still_path": "/47cg5TDv2PGPijhvWkFqw1aWMf1.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "In the Name of Honor",
+        "overview": "The NCIS team must quickly find Kensi and Fatima after they are kidnapped and drugged while searching for a missing Navy lieutenant who they learn has ties to a dangerous Islamic militia.",
+        "air_date": "2023-02-19",
+        "runtime": 43,
+        "still_path": "/rPa0VIif9gT9njyqOJpjphJ36rB.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "A Farewell to Arms",
+        "overview": "When a mystery woman attacks the founder of an AI company, the NCIS team must identify the woman before the next major global conflict ensues. Also, Kilbride\u0027s ex-wife, Elizabeth, comes to visit and asks him to think about reconnecting with their son.",
+        "air_date": "2023-02-26",
+        "runtime": 43,
+        "still_path": "/2IkGWgKyciiP0CWoSunhUlxL3vV.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Shame",
+        "overview": "When a petty officer is found dead with an apparent suicide note, the NCIS team must investigate the mystery surrounding his death. Also, Callen and Anna begin wedding planning and Sam has a heart to heart with his daughter.",
+        "air_date": "2023-03-05",
+        "runtime": 43,
+        "still_path": "/rUpp3N4HsGhEzgqMHA740Nbk0lp.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "The Other Shoe",
+        "overview": "Sam Hanna must go undercover as a fighter to catch the leader of a gang dealing drugs on the streets",
+        "air_date": "2023-03-19",
+        "runtime": 43,
+        "still_path": "/tJ90PUUCXkxJ5sfA7SJbETON2dt.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Sleeping Dogs",
+        "overview": "When the NCIS team receives a cryptic, urgent message, Fatima and Rountree must work together to solve the case. Also, Kilbride plans to visit his son, and Callen asks Sam to be his best man.",
+        "air_date": "2023-03-26",
+        "runtime": 43,
+        "still_path": "/yAazZbGK4UDn4I0Aj2Wk5pB7UPx.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Maybe Today",
+        "overview": "The NCIS team is tasked with assisting NCIS\u2019 cold case homicide unit with a case from 2003 and a missing Navy petty officer. Also, Kilbride and his son, Alex, work to rebuild their relationship.",
+        "air_date": "2023-04-16",
+        "runtime": 43,
+        "still_path": "/otPpsnoL4mDYtulbfDQGWsr26g4.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "Sensu Lato",
+        "overview": "The NCIS team must investigate when a Navy reservist is stabbed and his lab full of pesticides and insects is ransacked. Kilbride offers Sam the interim operations manager position. Rountree thinks about his future.",
+        "air_date": "2023-04-23",
+        "runtime": 43,
+        "still_path": "/bqnJcp9Wbf8b9aw0Cr5sLKzsoXl.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "The Reckoning",
+        "overview": "When four people, including a CIA officer, are shot and killed in broad daylight, the NCIS team suspects the attacks have something to do with DRONA. Also, Pembrook meets with Callen and gives more insight into his past.",
+        "air_date": "2023-05-07",
+        "runtime": 43,
+        "still_path": "/ovwgs5ILP2btNglZ3lFXyc2Tf1X.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "New Beginnings (1)",
+        "overview": "When an ATF agent goes missing, the agency seeks help from the NCIS team to investigate stolen military-grade weapons and locate the agent. Also, Callen and Anna continue to plan their wedding, Rountree\u2019s sister interviews for medical school, and Sam encourages his father to take part in the drug trial.",
+        "air_date": "2023-05-14",
+        "runtime": 43,
+        "still_path": "/949mpXV0vJ6628sTyYXn69kFPLS.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "New Beginnings (2)",
+        "overview": "The NCIS team continues the case with ATF and the stolen weapons. Also, Callen and Anna decide on an impromptu wedding.",
+        "air_date": "2023-05-21",
+        "runtime": 43,
+        "still_path": "/s7DJCSgvnCuNaMkLu5sgqWvFFtg.jpg"
+      }
+    ]
+  }
+}

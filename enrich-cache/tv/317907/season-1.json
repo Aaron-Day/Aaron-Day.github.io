@@ -1,0 +1,56 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Inside The Roddenberry Vault Part I",
+        "overview": "A rare look inside Gene Roddenberry\u2019s personal archive, Part I opens the vault on long\u2011lost footage, alternate takes, and behind\u2011the\u2011scenes materials from Star Trek: The Original Series. Historians, cast members, and archivists guide viewers through newly uncovered moments that reveal how iconic scenes were crafted, how creative decisions evolved on set, and how Roddenberry\u2019s vision took shape during the show\u2019s earliest years. This first installment sets the stage for a deeper exploration of the creative process that helped define one of science fiction\u2019s most enduring franchises.",
+        "air_date": "2016-12-13",
+        "runtime": 30,
+        "still_path": "/lmNm7FyLa30ZchdvzlPn0Lu8eu9.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Inside The Roddenberry Vault Part II",
+        "overview": "Continuing the deep dive into Gene Roddenberry\u2019s personal archive, Part II uncovers even more rare footage, alternate scene takes, and behind\u2011the\u2011scenes materials from Star Trek: The Original Series. Archivists and historians piece together newly revealed production moments that highlight the creative challenges, on\u2011set improvisations, and evolving character dynamics that shaped the series. This installment expands the historical record with discoveries that illuminate how the show\u2019s groundbreaking ideas were brought to life.",
+        "air_date": "2016-12-20",
+        "runtime": 30,
+        "still_path": "/31mWT7NCvGQcYqq23aEiffBzpUC.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Inside the Roddenberry Vault Part III",
+        "overview": "The final installment of the Roddenberry Vault series brings the archival journey to its peak, revealing the last collection of rare footage, alternate takes, and behind\u2011the\u2011scenes materials from Star Trek: The Original Series. Experts and archivists connect newly uncovered moments to the show\u2019s evolving production history, highlighting creative breakthroughs, abandoned concepts, and character\u2011defining choices that never made it to air. Part III completes the trilogy with a comprehensive look at how Roddenberry\u2019s vision matured, offering fans and historians a deeper understanding of the artistry and innovation behind one of television\u2019s most influential science\u2011fiction series.",
+        "air_date": "2016-12-27",
+        "runtime": 30,
+        "still_path": "/uXC9lxRpKhnbLWQHs3ZfySl0hp1.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Revisiting A Classic",
+        "overview": "This special retrospective installment returns to Gene Roddenberry\u2019s personal archive to re\u2011examine the creative legacy of Star Trek: The Original Series. Drawing from rare footage, production artifacts, and newly contextualized behind\u2011the\u2011scenes materials, the episode explores how the show\u2019s most iconic moments were conceived, revised, and ultimately immortalized. Cast members, historians, and archivists reflect on the enduring cultural impact of the series, offering fresh insight into why this groundbreaking science\u2011fiction classic continues to inspire generations.",
+        "air_date": "2017-01-03",
+        "runtime": 30,
+        "still_path": "/sIIpS9jKI5L6IgtKLwOlhMnNbtS.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Strange new Worlds, Visualizing the Fantastic",
+        "overview": "This special installment explores how the creative team behind Star Trek: The Original Series imagined and realized its most extraordinary worlds. Drawing from rare archival materials, concept art, unused effects footage, and behind\u2011the\u2011scenes production elements, the episode reveals how designers, directors, and visual\u2011effects pioneers pushed the boundaries of 1960s television. Historians and artists trace the evolution of iconic alien landscapes, starship interiors, and fantastical imagery, offering a vivid look at the ingenuity that helped define the franchise\u2019s bold aesthetic.",
+        "air_date": "2017-01-10",
+        "runtime": 27,
+        "still_path": "/5HUJkQxoA8ckMJBwpUX8L4TQyCd.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Swept Up - Snippets From The Cutting Room Floor",
+        "overview": "This special installment explores how the creative team behind Star Trek: The Original Series imagined and realized its most extraordinary worlds. Drawing from rare archival materials, concept art, unused effects footage, and behind\u2011the\u2011scenes production elements, the episode reveals how designers, directors, and visual\u2011effects pioneers pushed the boundaries of 1960s television. Historians and artists trace the evolution of iconic alien landscapes, starship interiors, and fantastical imagery, offering a vivid look at the ingenuity that helped define the franchise\u2019s bold aesthetic.",
+        "air_date": "2017-01-17",
+        "runtime": 21,
+        "still_path": "/hjSRWAmF4zVy0Wa4dnkmpNx5Fb.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "The Element of Surprise",
+        "overview": "While ferrying several ambassadors to a conference on Ivor Prime, the U.S.S. Enterprise crew encounters a Naradan cargo vessel in apparent distress. However, there appears to be more to the ailing ship than meets the eye.",
+        "air_date": "2008-07-23",
+        "runtime": 7,
+        "still_path": null
+      },
+      {
+        "episode_number": 2,
+        "name": "And Let the Heavens Fall",
+        "overview": "The U.S.S. Enterprise crew comes across a planet with a pre-industrial civilization that seems to be sending radio transmissions into space. While rendering aid to a crippled courier ship in orbit of the planet, they wonder if the two situations are related.",
+        "air_date": "2008-09-08",
+        "runtime": 29,
+        "still_path": null
+      },
+      {
+        "episode_number": 3,
+        "name": "Ptolemy Wept",
+        "overview": "The U.S.S. Enterprise crew takes on a Federation historian to investigates an ancient space station which has suddenly appeared in orbit of a planet that the crew has visited before. After they enter the space station, they soon realize that there is much more to the ancient complex than they expected.",
+        "air_date": "2011-04-15",
+        "runtime": 66,
+        "still_path": null
+      },
+      {
+        "episode_number": 4,
+        "name": "The Quintain",
+        "overview": "On the way to pick up Captain Kirk and Science Officer Spock from a peace conference, U.S.S. Enterprise chief engineer Montgomery Scott in temporary command of the ship faces mounting difficulty on his way to the rendezvous - in the form of a menacing alien ship.",
+        "air_date": "2020-07-09",
+        "runtime": 23,
+        "still_path": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,528 @@
+{
+  "fetchedUtc": "2026-11-03T15:16:18.8951176+00:00",
+  "season": {
+    "season_number": 1,
+    "episodes": [
+      {
+        "episode_number": 1,
+        "name": "Darkly Dawns the Duck (1)",
+        "overview": "Darkwing Duck meets Launchpad McQuack! Together they try to save Gosalyn from being kidnapped and used by Taurus Bulba as a pawn in his evil plan.",
+        "air_date": "1991-09-06",
+        "runtime": 22,
+        "still_path": "/s30NgkpAKCAMWZ2mwhWhfuzvwaT.jpg"
+      },
+      {
+        "episode_number": 2,
+        "name": "Darkly Dawns the Duck (2)",
+        "overview": "Taurus nabs Gosalyn, despite the best efforts of DW and Launchpad. Can Darkwing Duck and Launchpad McQuack save the day?",
+        "air_date": "1991-09-06",
+        "runtime": 22,
+        "still_path": "/mOzayyqwm0WAy7dmYl3pzbs1b2Z.jpg"
+      },
+      {
+        "episode_number": 3,
+        "name": "Beauty and the Beet",
+        "overview": "Darkwing Duck must battle through a greenhouse of hostile plants to save Rhonda from being changed into a plant.",
+        "air_date": "1991-09-09",
+        "runtime": 22,
+        "still_path": "/mM37PeISQBDlNMS4KYNlChRPfM2.jpg"
+      },
+      {
+        "episode_number": 4,
+        "name": "Getting Antsy",
+        "overview": "Darkwing and Gosalyn take a trip to the new miniature golf course that turns out to be the hideout of Dr. Lulliput, a scientist who\u0027s shrinking the banks of St. Canard!",
+        "air_date": "1991-09-10",
+        "runtime": 22,
+        "still_path": "/lMMfyzj49WKAGbAoCS9Pin7g50L.jpg"
+      },
+      {
+        "episode_number": 5,
+        "name": "Night of the Living Spud",
+        "overview": "Bushroot, the half plant/half duck villain, tries growing a bride to keep him company.",
+        "air_date": "1991-09-11",
+        "runtime": 22,
+        "still_path": "/cs8TQSMOqLPeMTqDG7ArSbaBR5D.jpg"
+      },
+      {
+        "episode_number": 6,
+        "name": "Apes of Wrath",
+        "overview": "Shush asks Darkwing Duck to investigate the disappearance of a gorilla researcher.",
+        "air_date": "1991-09-12",
+        "runtime": 22,
+        "still_path": "/jIiyigKKJjQ6q1fm4rSM7nY9Sm7.jpg"
+      },
+      {
+        "episode_number": 7,
+        "name": "Dirty Money",
+        "overview": "Someone is scrubbing the print off the cash in bank vaults across the country and Darkwing Duck is on the case!",
+        "air_date": "1991-09-13",
+        "runtime": 22,
+        "still_path": "/cwOcHsxlvUWsjIMiG9mZMIw66A9.jpg"
+      },
+      {
+        "episode_number": 8,
+        "name": "Duck Blind",
+        "overview": "In a battle with the electrified villain, Megavolt, Darkwing Duck is blinded by a giant flashbulb.",
+        "air_date": "1991-09-16",
+        "runtime": 22,
+        "still_path": "/indP25pQpDKqS1hTET7XOG87Wsx.jpg"
+      },
+      {
+        "episode_number": 9,
+        "name": "Comic Book Capers",
+        "overview": "A comic book company wants to produce a Darkwing Duck comic book! Darkwing decides to write about his latest adventure with Megavolt.",
+        "air_date": "1991-09-17",
+        "runtime": 22,
+        "still_path": "/ah9NF2NEITgHBFBdnb19tmQehfW.jpg"
+      },
+      {
+        "episode_number": 10,
+        "name": "Water Way to Go",
+        "overview": "Darkwing Duck finds Steelbeak using a rain-making device to flood the Sahara Desert!",
+        "air_date": "1991-09-18",
+        "runtime": 22,
+        "still_path": "/vq97aA5kUp98vLVwD82fKaL1hL9.jpg"
+      },
+      {
+        "episode_number": 11,
+        "name": "Paraducks",
+        "overview": "Darkwing Duck is the brave volunteer to try out a Shush scientist\u0027s time travel machine!",
+        "air_date": "1991-09-19",
+        "runtime": 22,
+        "still_path": "/umzdlRjjB3W7Uijxv6XmCrXKu7S.jpg"
+      },
+      {
+        "episode_number": 12,
+        "name": "Easy Come, Easy Grows",
+        "overview": "Darkwing Duck is baffled by the mysterious disappearance of bank safes which seem to be literally walking away on their own.",
+        "air_date": "1991-09-20",
+        "runtime": 22,
+        "still_path": "/i0X6VnEyKue9b9h06b10Ez6vIuM.jpg"
+      },
+      {
+        "episode_number": 13,
+        "name": "A Revolution in Home Appliances",
+        "overview": "Megavolt accidentally gives life to a group of home appliances who go on a crime spree through St. Canard.",
+        "air_date": "1991-09-23",
+        "runtime": 22,
+        "still_path": "/awQSOS4ciMHc3iS8Y1ZaFo3d7sE.jpg"
+      },
+      {
+        "episode_number": 14,
+        "name": "Trading Faces",
+        "overview": "Darkwing Duck and Gosalyn are forced into action when Steelbeak and F.O.W.L. Egg Men steal a huge booster rocket from an intergalactic spacecraft!",
+        "air_date": "1991-09-24",
+        "runtime": 22,
+        "still_path": "/19pQITK4oOaVD4ZGeEmu1pTNHUU.jpg"
+      },
+      {
+        "episode_number": 15,
+        "name": "Hush, Hush Sweet Charlatan",
+        "overview": "Tuskerninni plans to take over a studio by causing \u0027accidents\u0027 to occur to the leading actors. Darkwing decides to investigate by becoming the lead in Tuskerninni\u0027s latest film!",
+        "air_date": "1991-09-25",
+        "runtime": 22,
+        "still_path": "/4bO8oMcoKCVbsdaDJb0DpQazfLk.jpg"
+      },
+      {
+        "episode_number": 16,
+        "name": "Can\u0027t Bayou Love",
+        "overview": "A Cajun crook, Jambalaya Jake, moves to the city when his pork-bellied pet gator, Gumbo, develops an allergy to swampwater. But, his crooked style is cramped by Darkwing Duck!",
+        "air_date": "1991-09-26",
+        "runtime": 22,
+        "still_path": "/mR7WGBbAoqE3RkZGYdzCz9ustvR.jpg"
+      },
+      {
+        "episode_number": 17,
+        "name": "Bearskin Thug",
+        "overview": "Gosalyn would rather be anywhere than camping, but Drake has decided it\u0027s time to hit the trail for a little father/daughter togetherness.",
+        "air_date": "1991-09-27",
+        "runtime": 22,
+        "still_path": "/y3aRr2kDMvPDZkUPHuDG1Aax9f4.jpg"
+      },
+      {
+        "episode_number": 18,
+        "name": "You Sweat Your Life",
+        "overview": "Drake is off to the health spa when he finds two of it\u0027s employees, Flex and Slim, stealing rare items from the St. Canard Museum!",
+        "air_date": "1991-09-30",
+        "runtime": 22,
+        "still_path": "/3OVz8tID8RxxvjMNeqrVQE5395B.jpg"
+      },
+      {
+        "episode_number": 19,
+        "name": "Days of Blunder",
+        "overview": "Quackerjack masquerades as a psychiatrist and convinces Darkwing Duck that he\u0027s become ineffective at his job. Darkwing then switches careers as Quackerjack goes on a crime spree.",
+        "air_date": "1991-10-01",
+        "runtime": 22,
+        "still_path": "/jLiuEkQXLsqaLWAAlLB3QSZH0TS.jpg"
+      },
+      {
+        "episode_number": 20,
+        "name": "Just Us Justice Ducks (1)",
+        "overview": "Darkwing Duck\u0027s ego gets the better of him when Negaduck teams up Darkwing\u0027s greatest foes: Megavolt, Quackerjack, Bushroot and Liquidator!",
+        "air_date": "1991-10-02",
+        "runtime": 22,
+        "still_path": "/kQAB4jtSrrT88J6vvfv2KHZ5uH0.jpg"
+      },
+      {
+        "episode_number": 21,
+        "name": "Just Us Justice Ducks (2)",
+        "overview": "The Justice Ducks are each defeated and captured by the Fearsome Five. Darkwing rushes to the rescue, and the five heroes join in battle against the five villains, with the ultimate victors deciding the fate of the whole city.",
+        "air_date": "1991-10-03",
+        "runtime": 22,
+        "still_path": "/k49EsrSxJR0b9bGJ9jdS0eC6g7D.jpg"
+      },
+      {
+        "episode_number": 22,
+        "name": "Double Darkwings",
+        "overview": "Jambalaya Jake and Gumbo obtain a bayou zombie potion to control Darkwing Duck. But Launchpad gets hit with the potion when in his Darkwing decoy outfit!",
+        "air_date": "1991-10-04",
+        "runtime": 22,
+        "still_path": "/pAyJMOzKhqDuAfNKxZtzcFNa6qQ.jpg"
+      },
+      {
+        "episode_number": 23,
+        "name": "Aduckyphobia",
+        "overview": "A mutated spider bite causes Darkwing to grow four extra arms!  When this causes hims trouble while trying to catch Moliarty, Darkwing adopts a new super-hero identity... Arachno-duck!",
+        "air_date": "1991-10-07",
+        "runtime": 22,
+        "still_path": "/i6Jazq0Kexck6bQlzVrwQeanz0u.jpg"
+      },
+      {
+        "episode_number": 24,
+        "name": "When Aliens Collide",
+        "overview": "Gosalyn comes upon a space ship that has crashed in the park. A cute alien emerges, wearing a rather restrictive collar which he doesn\u2019t seem to be fond of.",
+        "air_date": "1991-10-08",
+        "runtime": 22,
+        "still_path": "/k9oPlgCzaBdjKTKHHzRgEesXlyl.jpg"
+      },
+      {
+        "episode_number": 25,
+        "name": "Jurassic Jumble",
+        "overview": "Honker and Gosalyn track down a set of dinosaur footprints, and are led to the nefarious Dr. Fossil, duck turned dinosaur. With his de-evolution ray and the aid of a passing comet, Fossil plans to end the current life on the planet to give dinosaurs a second chance.",
+        "air_date": "1991-10-10",
+        "runtime": 22,
+        "still_path": "/fiSS5RkdS5vDLrJoLTDEMvXM89a.jpg"
+      },
+      {
+        "episode_number": 26,
+        "name": "Cleanliness is Next to Badliness",
+        "overview": "Steelbeak teams up with agent Amonia Pine to clean out banks for F.O.W.L. Gosalyn starts a Darkwing fan club.",
+        "air_date": "1991-10-15",
+        "runtime": 22,
+        "still_path": "/h5clfIDdBf16UqW8JQkbSSChA7x.jpg"
+      },
+      {
+        "episode_number": 27,
+        "name": "Smarter Than a Speeding Bullet",
+        "overview": "Comet Guy, failure superhero has come from another planet to retrieve superhero training. Steelbeak directs the theft of masses of rubber to construct a destructive F.O.W.L. device - the F.O.W.L. ball.",
+        "air_date": "1991-10-17",
+        "runtime": 22,
+        "still_path": "/iT6sgeBa1Eo6OCUxfWPXhD7FEuW.jpg"
+      },
+      {
+        "episode_number": 28,
+        "name": "All\u0027s Fahrenheit in Love and War",
+        "overview": "Launchpad and Darkwing are after a strange band of firebugs that have melted down the gold of the city banks. Icy Vanderchill, frozen duck, develops a crush on DW, and dates him, all the while hiding a plot to paint the city in a layer of gold.",
+        "air_date": "1991-10-21",
+        "runtime": 22,
+        "still_path": "/krA4kTGzabzkBJ0R6tcGQLMEbHX.jpg"
+      },
+      {
+        "episode_number": 29,
+        "name": "Whiffle While You Work",
+        "overview": "Gosalyn and Darkwing are hyped over a video game competition involving the popular \u0022\u0022Whiffle Boy\u0022\u0022. However, a toymaker gone insane, Quackerjack, is out to get revenge on the gaming industry that put him out of business.",
+        "air_date": "1991-10-23",
+        "runtime": 22,
+        "still_path": "/jHwndLnanE5yLgA8kwbOv6RxNnp.jpg"
+      },
+      {
+        "episode_number": 30,
+        "name": "Ghoul of My Dreams",
+        "overview": "Morgana is using sleep sand to rob the citizens of St. Canard while they sleepwalk. When Darkwing steps in to set things right, he ends up in dreamland. Nodoff, controller of dreamland and supplier of Morgana\u0027s sleep sand wants the entire city to snooze, and will see to it that no one gets in his way.",
+        "air_date": "1991-10-31",
+        "runtime": 22,
+        "still_path": "/cFbcjRPSj1W1W2o1aTbINK8RMui.jpg"
+      },
+      {
+        "episode_number": 31,
+        "name": "Adopt-a-Con",
+        "overview": "In this case, Adopt-a-con means the Adopt A Convict Program. The program has sent Tuskernini to Drake\u0027s house. DW is sure  that Tusker won\u0027t reform, even though he acts as if he has. Posing as Bushroot, he takes Launchpad, Gosalyn, And Drake hostages in order to fish out Darkwing. But Drake\u0027s already a hostage. How can DW pull out of this one?",
+        "air_date": "1991-11-07",
+        "runtime": 22,
+        "still_path": "/ulBmkpn43qRRLZV1Urq7MLJxrig.jpg"
+      },
+      {
+        "episode_number": 32,
+        "name": "Toys Czar Us",
+        "overview": "When Quackerjack learns that parents won\u0027t buy his dangerous toys, he decides to create a toy utopia for children, with him as the ruler. Gosalyn gets into trouble at school, causing the principal to suggest Drake take a better look at his parenting. Drake gives up Darkwing to become the perfect parent just as Quackerjack executes his insane plot.",
+        "air_date": "1991-11-11",
+        "runtime": 22,
+        "still_path": "/tTJU3Zr0Q0ARxuanxoczfoyuEsH.jpg"
+      },
+      {
+        "episode_number": 33,
+        "name": "The Secret Origins of Darkwing Duck",
+        "overview": "200 years in the future, an archaeologist tries to put the pieces of history together with the aid of a supercomputer and ends up with multiple origins of Darkwing Duck.",
+        "air_date": "1991-11-13",
+        "runtime": 22,
+        "still_path": "/f3rILiAie66lMzdSPtOYoLxT47s.jpg"
+      },
+      {
+        "episode_number": 34,
+        "name": "Up, Up, and Awry",
+        "overview": "Darkwing becomes self-conscious about not having powers, so Gizmoduck and Launchpad create a Gizmosuit for him!",
+        "air_date": "1991-11-14",
+        "runtime": 22,
+        "still_path": "/5ACqX7XzNyUwATfuD5NpYOutkP6.jpg"
+      },
+      {
+        "episode_number": 35,
+        "name": "Life, the Negaverse, and Everything",
+        "overview": "To set things \u0027right\u0027 in an alternate universe where morality is reversed, Darkwing Duck teams up with the superheroes of the world: Megavolt, Quackerjack, Bushroot and Liquidator!",
+        "air_date": "1991-11-18",
+        "runtime": 22,
+        "still_path": "/ya9UedN9njjMi6cGS6CG5UQEw1Q.jpg"
+      },
+      {
+        "episode_number": 36,
+        "name": "Dry Hard",
+        "overview": "Bud Flood, a crooked water salesman, becomes the Liquidator, seizing control of the water in St. Canard!",
+        "air_date": "1991-11-20",
+        "runtime": 22,
+        "still_path": "/gvFiJsNGm3P3O9Lt7cSce6YwVE7.jpg"
+      },
+      {
+        "episode_number": 37,
+        "name": "Heavy Mental",
+        "overview": "Launchpad gains psychic powers, but has trouble controlling them. F.O.W.L. agent, Major Synapse, steals S.H.U.S.H.\u0027s Nora Ray, and uses it on his underlings to give them super brain powers.",
+        "air_date": "1991-11-21",
+        "runtime": 22,
+        "still_path": "/yG3XBpIAwwX5msauZZhXnUSvepp.jpg"
+      },
+      {
+        "episode_number": 38,
+        "name": "Disguise the Limit",
+        "overview": "Negaduck, disguised, frames Darkwing for a series of crimes. To go into hiding, the hero uses an experimental S.H.U.S.H. design, which ends up causing him to spontaneously change into whomever he looks at.",
+        "air_date": "1991-11-26",
+        "runtime": 22,
+        "still_path": "/rzYifmAoJZYz2K5p3l8ybiGeG1b.jpg"
+      },
+      {
+        "episode_number": 39,
+        "name": "Planet of the Capes",
+        "overview": "Comet Guy returns, and he needs Darkwing to go to his planet to help him.",
+        "air_date": "1991-11-27",
+        "runtime": 22,
+        "still_path": "/55lWwVZb8APBKFT5Z8mB6krcWsh.jpg"
+      },
+      {
+        "episode_number": 40,
+        "name": "Darkwing Doubloon",
+        "overview": "300 years ago, a pirate scourge sailed the seas, striking for truth and justice. That\u0027s right, believe it or not, that was a scourge of pirates! Darkwing Doubloon and his crew, Gosalyn, Stegmutt, Launchpad, and Gizmoduck have must battle the alleged pirate Negaduck and the Fearsome Four to keep them from making off with the king\u0027s jewels.",
+        "air_date": "1991-12-16",
+        "runtime": 22,
+        "still_path": "/2ShbMleEzszPDV2MLajeTDCvTnE.jpg"
+      },
+      {
+        "episode_number": 41,
+        "name": "It\u0027s a Wonderful Leaf",
+        "overview": "A crowd of pushy holiday shopppers rub Bushroot the wrong way. He decides to ruin Christmas by taking control of all of St. Canard\u0027s Christmas trees.",
+        "air_date": "1991-12-23",
+        "runtime": 22,
+        "still_path": "/fDlcXSGec8D1Wj9JaUvZdJ35oZa.jpg"
+      },
+      {
+        "episode_number": 42,
+        "name": "Twitching Channels",
+        "overview": "Megavolt creates a way of transmitting himself as an electrical signal. Darkwing confronts the rat, and both of them get transported to the human universe. Here, the Darkwing Duck cartoon is a big seller, and DW realizes he isn\u0027t getting any of the profits. And it seems that there is no way home.",
+        "air_date": "1992-02-05",
+        "runtime": 22,
+        "still_path": "/llo4eNRwnQSBcZRj7gtIREucxQ4.jpg"
+      },
+      {
+        "episode_number": 43,
+        "name": "Dances with Bigfoot",
+        "overview": "Drake Mallard disappears and it\u2019s up to the Crimson Quackette to find him.",
+        "air_date": "1992-02-06",
+        "runtime": 22,
+        "still_path": "/d39YtOwaUiI53CQ5ZT3hjtZ9FtU.jpg"
+      },
+      {
+        "episode_number": 44,
+        "name": "Twin Beaks",
+        "overview": "When Honker\u0027s parents go missing, all clues point to the mysterious Twin Beaks. A mutated alien race of cabbages have begun their conquest of Earth from this unseemly town.",
+        "air_date": "1992-02-10",
+        "runtime": 22,
+        "still_path": "/wL85ufYVNrWd2KOlbZpmVBHcUEU.jpg"
+      },
+      {
+        "episode_number": 45,
+        "name": "The Incredible Bulk",
+        "overview": "Bushroot creates a new experimental fertilizer that causes plants to grow large and strong.",
+        "air_date": "1992-02-12",
+        "runtime": 22,
+        "still_path": "/dKvXWowhwGkQ7kRsv8ViIqjSiXH.jpg"
+      },
+      {
+        "episode_number": 46,
+        "name": "My Valentine Ghoul",
+        "overview": "Darkwing\u2019s refusal of Morgana\u2019s suggestion of help, makes her very angry, which Negaduck sees as an opportunity.",
+        "air_date": "1992-02-14",
+        "runtime": 22,
+        "still_path": "/aiHeJP2NojJEnHyM7Y3D43F0wF5.jpg"
+      },
+      {
+        "episode_number": 47,
+        "name": "Dead Duck",
+        "overview": "Chasing Megavolt, Darkwing gets into an accident and is killed. Now, on the run from Death himself, he no only plans to apprehend the villain he\u0027s after, but also has to search for a way to return to the living before it\u0027s too late.",
+        "air_date": "1992-02-17",
+        "runtime": 22,
+        "still_path": "/toK9I6iRSrBGN7gLToY7a4DyE9.jpg"
+      },
+      {
+        "episode_number": 48,
+        "name": "A Duck by Any Other Name",
+        "overview": "A news program reveals Darkwing Duck\u0027s identity as Launchpad.",
+        "air_date": "1992-02-18",
+        "runtime": 22,
+        "still_path": "/iCnaFgBL7L4GdMmWw11FcQqmwrk.jpg"
+      },
+      {
+        "episode_number": 49,
+        "name": "Let\u0027s Get Respectable",
+        "overview": "After a television program shows that Darkwing as a poor reputation with the public, Gosalyn decides that Darkwing needs an image change.",
+        "air_date": "1992-02-20",
+        "runtime": 22,
+        "still_path": "/lgvVt5RCb9SJCpWQVRm4T419PTT.jpg"
+      },
+      {
+        "episode_number": 50,
+        "name": "In Like Blunt",
+        "overview": "A nefarious criminal from the past returns, to profit by auctioning of all a complete list of S.H.U.S.H.\u0027s secret agents. J. Gander teams up Darkwing with the legendary Derek Blunt to intercept the documents before they fall into the wrong hands.",
+        "air_date": "1992-02-24",
+        "runtime": 22,
+        "still_path": "/tlt2BUOEfQjajuEhBW15rG2GbBC.jpg"
+      },
+      {
+        "episode_number": 51,
+        "name": "Quack of Ages",
+        "overview": "To prevent the invention of the yo-yo, Quackerjack travels back to the medevial land of Canardia. Posing as the king\u0027s advisor, the demented toymaker convicts Darkwing as a warlock.",
+        "air_date": "1992-02-26",
+        "runtime": 22,
+        "still_path": "/whw9nIbzSmnr7qQyeeWPmh22pzD.jpg"
+      },
+      {
+        "episode_number": 52,
+        "name": "Time and Punishment",
+        "overview": "During a battle between Darkwing, Megavolt and Quackerjack, Gosalyn ends up aboard the villains Time Top, just before it starts up and takes them to the future. There, Gosalyn finds out that Darkwing has become Darkwarrior Duck, and enforces the law with an iron fist!",
+        "air_date": "1992-02-27",
+        "runtime": 22,
+        "still_path": "/juAxhyZ4lDhCiQEj1uhxB8yYEm6.jpg"
+      },
+      {
+        "episode_number": 53,
+        "name": "Stressed to Kill",
+        "overview": "Darkwing Is getting a little bit stressted. So he goes to a stress free clinic (which is beeing runby Megavolt and QuackerJack) and they brain wash him. Now he is too calm (not even Goslyn deystroying the house can get him mad!). When Megavolt and QuackerJack start a fire that soons starts to spread, Launchpd and Goslyn have to try to get DW out of it. But when Megavolt puts out the fire, he also starts a flood. What will they do?",
+        "air_date": "1992-03-03",
+        "runtime": 22,
+        "still_path": "/8fXtSpRG0ekuEBYfdosZ5Yayffh.jpg"
+      },
+      {
+        "episode_number": 54,
+        "name": "The Darkwing Squad",
+        "overview": "J. Gander asks DW to train some of Shush\u0027s agents. That does not go over well with Agent Grizzlicoff, who joins F.O.W.L. as a double agent. Steelbeak sets a trap for the newly titled \u0022\u0022Darkwing Squad\u0022\u0022 while Grizzli faces off against Darkwing.",
+        "air_date": "1992-04-01",
+        "runtime": 22,
+        "still_path": "/1wOq5zvGUVJvXC5nTBQOGjiQxrl.jpg"
+      },
+      {
+        "episode_number": 55,
+        "name": "Inside Binkie\u0027s Brain",
+        "overview": "When Binkie Muddlefoot gets hit on the head by a bowling ball, her \u0022\u0022little hero\u0022\u0022 escapes and causes her to become the Canardian Guardian. Her endless quest for safety endangers the life of Darkwing as he tries once again to capture Megavolt.",
+        "air_date": "1992-04-01",
+        "runtime": 22,
+        "still_path": "/2ay4qFvuG0om0mRDQ6IbSQWuvKE.jpg"
+      },
+      {
+        "episode_number": 56,
+        "name": "The Haunting of Mr. Banana Brain",
+        "overview": "A Sprit named Paddywhack is unleashed from a jack in the box when Gosalyn gets into mischief, and possesses Quackerjack\u0027s doll, Mr. Banana Brain. As he causes trouble alongside the demented toymaker, he grows, feeding from the negative emotions around himself.",
+        "air_date": "1992-04-29",
+        "runtime": 22,
+        "still_path": "/2LIonDKTaJzSnzUI8CkFw9MDreO.jpg"
+      },
+      {
+        "episode_number": 57,
+        "name": "Slime OK, You\u0027re OK",
+        "overview": "Bushroot creates a formula intending to create an intelligent plant friend, and Gosalyn ends up sampling it. Now Darkwing has a limited amount of time to find a cure before Gosalyn, half-slime, half-duck, melts into a pile of goo.",
+        "air_date": "1992-05-01",
+        "runtime": 22,
+        "still_path": "/7y2ZdvvJuLhVeLACJC04bGOhyJr.jpg"
+      },
+      {
+        "episode_number": 58,
+        "name": "Whirled History",
+        "overview": "Forced to work on her boring history assignment, Gosalyn dozes off, and begins sleepwalking. She dreams herself with AstroDuck, a television show character, trying to find \u0022\u0022The Fountain Of Knowledge\u0022\u0022. While she is learning about famous explorers in her dreams, Megavolt uses her as bait to trap and kill Darkwing in the real world.",
+        "air_date": "1992-05-01",
+        "runtime": 22,
+        "still_path": "/vpakG6ezLAwCPPN5iRDxZIhqi1q.jpg"
+      },
+      {
+        "episode_number": 59,
+        "name": "U.F. Foe",
+        "overview": "Aliens kidnap Launchpad to make him ruler of the universe.",
+        "air_date": "1992-05-01",
+        "runtime": 22,
+        "still_path": "/2yvy9Lu9MgbkmSgtiFdWTBRVoQA.jpg"
+      },
+      {
+        "episode_number": 60,
+        "name": "A Star Is Scorned",
+        "overview": "Darkwing\u0027s TV producer feels that Darkwing\u0027s TV show needs a new gimmick in the form of a spin-off character, which might really be Darkwing\u0027s replacement.",
+        "air_date": "1992-05-01",
+        "runtime": 22,
+        "still_path": "/wlBC00PPMY0roTrAaiPIPXaWizl.jpg"
+      },
+      {
+        "episode_number": 61,
+        "name": "The Quiverwing Quack",
+        "overview": "Gosalyn takes up archery, and bests Negaduck with it. Against Darkwing\u0027s wishes she creates her alter-ego, the Quiverwing Quack and causes a stir of publicity. She also becomes Negaduck\u0027s new target - so he can regain his position as Public Enemy # 1.",
+        "air_date": "1992-05-16",
+        "runtime": 22,
+        "still_path": "/nmpXck5c9vy9NyzvE2gzqYgsXYh.jpg"
+      },
+      {
+        "episode_number": 62,
+        "name": "Jail Bird",
+        "overview": "Negaduck steals a dimond that can steal other peoples powers. And after he steals the powers from,bushroot, megavolt, the luiquidator, and qukerjack, they have to use there weakneses to stop mega negaduck ( as he calls him).",
+        "air_date": "1992-05-17",
+        "runtime": 22,
+        "still_path": "/5AEumyc4i9y9vLqtsqfT6aDE068.jpg"
+      },
+      {
+        "episode_number": 63,
+        "name": "Dirtysomething",
+        "overview": "It\u0027s Ammonia Pine\u0027s worst nightmare! FOWL has teamed her with her polar opposite, her filth-loving sister, Ample Grime. It WOULD be easy for Darkwing Duck to stop them. But Gosalyn, not having enough allowance to buy a video game, has discovered that she can cash in whatever she recycles... incuding the Thunderquack\u0027s engine, the Ratcatcher, a few gas guns, etc.",
+        "air_date": "1992-05-18",
+        "runtime": 22,
+        "still_path": "/esRFk3yhSrAQHTIxSx1fFP9ZEul.jpg"
+      },
+      {
+        "episode_number": 64,
+        "name": "Kung Fooled",
+        "overview": "Darkwing chases Moleiarity to the city Kung Pow where he meets up with his old martial arts instructor, Master Lee.",
+        "air_date": "1992-05-19",
+        "runtime": 22,
+        "still_path": "/pNjrukRJ7Y005N79nQO3ryOo3kL.jpg"
+      },
+      {
+        "episode_number": 65,
+        "name": "Bad Luck Duck",
+        "overview": "Darkwing Duck is accused of stealing a tribes jewel and the leader puts a curse on him. Now they have to get it back from Negabuck and sop him from using it. But where is the leader to get the curse off?",
+        "air_date": "1992-05-20",
+        "runtime": 22,
+        "still_path": "/z2ew43Vc8dKPQ0mJBO8MLR8chKQ.jpg"
+      }
+    ]
+  }
+}

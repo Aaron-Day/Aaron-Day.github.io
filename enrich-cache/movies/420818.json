@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 420818,
+    "title": "The Lion King",
+    "overview": "Simba idolizes his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub\u0027s arrival. Scar, Mufasa\u0027s brother\u2014and former heir to the throne\u2014has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba\u0027s exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.",
+    "tagline": "The king has returned.",
+    "runtime": 118,
+    "release_date": "2019-07-12",
+    "vote_average": 7.089,
+    "poster_path": "/dzBtMocZuJbjLOXvrl4zGYigDzh.jpg",
+    "backdrop_path": "/1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 762512,
+      "name": "The Lion King (Reboot) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Chiwetel Ejiofor",
+      "character": "Scar (voice)",
+      "profile_path": "/kq5DDnqqofoRI0t6ddtRlsJnNPT.jpg"
+    },
+    {
+      "name": "John Oliver",
+      "character": "Zazu (voice)",
+      "profile_path": "/wI7LRInWUT3RgCByYx69wRMqgsy.jpg"
+    },
+    {
+      "name": "Donald Glover",
+      "character": "Simba (voice)",
+      "profile_path": "/jqVkQfeeEmdga1G0jpBwwXXwwSK.jpg"
+    },
+    {
+      "name": "James Earl Jones",
+      "character": "Mufasa (voice)",
+      "profile_path": "/sgc8yxYr8ecNn1TXjWXWx3wmUYA.jpg"
+    }
+  ]
+}

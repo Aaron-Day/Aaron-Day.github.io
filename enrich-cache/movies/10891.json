@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 10891,
+    "title": "Tremors 4: The Legend Begins",
+    "overview": "In 1889, seventeen men die under mysterious circumstances, and spooked by recent events, the miners who populate the town leave in droves until there\u0027s nothing left but a shell of a community.",
+    "tagline": "A Revolution Has Begun...",
+    "runtime": 101,
+    "release_date": "2004-01-02",
+    "vote_average": 5.734,
+    "poster_path": "/yhh1zMGoy6nYSXMgrsYoNRbclJn.jpg",
+    "backdrop_path": "/8PLq5IKRuY866i5Um0uHngsMtCq.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 91799,
+      "name": "Tremors Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Michael Gross",
+      "character": "Hiram Gummer",
+      "profile_path": "/467FG7f1rXkG9ZzU8IumVkBHi0v.jpg"
+    },
+    {
+      "name": "Sara Botsford",
+      "character": "Christine Lord",
+      "profile_path": "/4gp9CnjOMjLUevoQPWo5V8S7Ge0.jpg"
+    },
+    {
+      "name": "Billy Drago",
+      "character": "Black Hand Kelly",
+      "profile_path": "/nKasMpo67KrJtKSVU14by5M6WXd.jpg"
+    },
+    {
+      "name": "Brent Roam",
+      "character": "Juan Pedilla",
+      "profile_path": "/qDbIqb3tYIDWJv6yBul1MS41Kr0.jpg"
+    }
+  ]
+}

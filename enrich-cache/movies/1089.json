@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 1089,
+    "title": "Point Break",
+    "overview": "In Los Angeles, a gang of bank robbers who call themselves The Ex-Presidents commit their crimes while wearing masks of Reagan, Carter, Nixon and Johnson. Believing that the members of the gang could be surfers, the F.B.I. sends young agent Johnny Utah to the beach undercover to mix with the surfers and gather information.",
+    "tagline": "100% pure adrenaline.",
+    "runtime": 122,
+    "release_date": "1991-07-12",
+    "vote_average": 7.152,
+    "poster_path": "/tlbERIghrQ4oofqlbF7H0K0EYnx.jpg",
+    "backdrop_path": "/yGOHbICOQwlJ20UjK8F2ChGJjvl.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Patrick Swayze",
+      "character": "Bodhi / Mask President",
+      "profile_path": "/ys8dRhQRsS0nLPTXXEHyuFhXCYO.jpg"
+    },
+    {
+      "name": "Keanu Reeves",
+      "character": "Agent Johnny Utah",
+      "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+    },
+    {
+      "name": "Lori Petty",
+      "character": "Tyler Endicott",
+      "profile_path": "/bmJFh4VxRii7h7jpo4YVC6BFeVd.jpg"
+    },
+    {
+      "name": "Gary Busey",
+      "character": "Agent Angelo Pappas",
+      "profile_path": "/8H7Hlv6b7ZoK4jZKeLnc2i4pfPL.jpg"
+    }
+  ]
+}

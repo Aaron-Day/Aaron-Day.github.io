@@ -1,0 +1,59 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 508439,
+    "title": "Onward",
+    "overview": "In a suburban fantasy world, two teenage elf brothers embark on an extraordinary quest to discover if there is still a little magic left out there.",
+    "tagline": "Their quest beginneth.",
+    "runtime": 102,
+    "release_date": "2020-02-29",
+    "vote_average": 7.63,
+    "poster_path": "/f4aul3FyD3jv3v4bul1IrkWZvzq.jpg",
+    "backdrop_path": "/bcT8CaBIj086WVD7K529h78eujb.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Holland",
+      "character": "Ian Lightfoot (voice)",
+      "profile_path": "/5OK84Wn1bIEIThFKcVoaN087mLj.jpg"
+    },
+    {
+      "name": "Chris Pratt",
+      "character": "Barley Lightfoot (voice)",
+      "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Julia Louis-Dreyfus",
+      "character": "Laurel Lightfoot (voice)",
+      "profile_path": "/iEfHQNrVbVFesDPjdySom9nqsFg.jpg"
+    },
+    {
+      "name": "Octavia Spencer",
+      "character": "The Manticore (voice)",
+      "profile_path": "/zDGydyM1fmvNWzQlTAns9IZjNxT.jpg"
+    }
+  ]
+}

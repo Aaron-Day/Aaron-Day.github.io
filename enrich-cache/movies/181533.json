@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 181533,
+    "title": "Night at the Museum: Secret of the Tomb",
+    "overview": "When the magic powers of The Tablet of Ahkmenrah begin to die out, Larry Daley spans the globe, uniting favorite and new characters while embarking on an epic quest to save the magic before it is gone forever.",
+    "tagline": "One final night to save the day.",
+    "runtime": 98,
+    "release_date": "2014-12-17",
+    "vote_average": 6.225,
+    "poster_path": "/xwgy305K6qDs3D20xUO4OZu1HPY.jpg",
+    "backdrop_path": "/1ClgfKeczI0d0KKuBs5qSIqUReT.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 85943,
+      "name": "Night at the Museum Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Ben Stiller",
+      "character": "Larry Daley / Laaa",
+      "profile_path": "/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg"
+    },
+    {
+      "name": "Robin Williams",
+      "character": "Theodore Roosevelt",
+      "profile_path": "/lu0gIoH4Bi2CiuMc6WHF9ZIK4PS.jpg"
+    },
+    {
+      "name": "Owen Wilson",
+      "character": "Jedediah Smith",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    },
+    {
+      "name": "Steve Coogan",
+      "character": "Octavius",
+      "profile_path": "/tT7OXc2qA6hlREHXdwGLp0XihzA.jpg"
+    }
+  ]
+}

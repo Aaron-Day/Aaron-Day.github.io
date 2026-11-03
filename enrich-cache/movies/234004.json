@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "movie": {
+    "id": 234004,
+    "title": "Ratchet \u0026 Clank",
+    "overview": "When the galaxy comes under the threat of a nefarious space captain, a mechanic and his newfound robot ally join an elite squad of combatants to save the universe.",
+    "tagline": "Kick some asteroid.",
+    "runtime": 94,
+    "release_date": "2016-04-13",
+    "vote_average": 5.773,
+    "poster_path": "/649xP2LST4VIrZ5cLPw7Ys9movF.jpg",
+    "backdrop_path": "/dmyWErK0752dyJnA0YT1Vfi9HzU.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "James Arnold Taylor",
+      "character": "Ratchet (voice)",
+      "profile_path": "/A6J14W5kxsuEKXaRkiOXBIROO9t.jpg"
+    },
+    {
+      "name": "David Kaye",
+      "character": "Clank (voice)",
+      "profile_path": "/izxtFSio5twcVA1oJWPvobxpcZj.jpg"
+    },
+    {
+      "name": "Jim Ward",
+      "character": "Captain Qwark (voice)",
+      "profile_path": "/7Um56ftGoxN6c5GxJSNckeARCDy.jpg"
+    },
+    {
+      "name": "Paul Giamatti",
+      "character": "Chairman Drek (voice)",
+      "profile_path": "/wbrVVJRr5TwhDZuvijBgOorzcAb.jpg"
+    }
+  ]
+}
