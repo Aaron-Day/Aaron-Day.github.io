@@ -74,7 +74,7 @@ internal static class CatalogueReconciler
     /// agrees with the film's TMDB title (<see cref="MatchScorer.TitleAgrees"/>) or it came from the Overrides tab. A row
     /// that does not speak for it is rebuilt as unmatched, but only when some other row does. When no row speaks for the
     /// id nothing in the evidence picks a winner, so nothing is rejected and the group gets one note. When every row
-    /// speaks for it the group is fine and says nothing: the owner owns two cuts of a film, which is correct.
+    /// speaks for it the group says nothing: the owner owns two cuts of a film, which is correct.
     /// </summary>
     /// <remarks>
     /// <para>An Overrides row is the owner saying "this film is TMDB id X", so it is authoritative twice over. It is never
@@ -83,8 +83,18 @@ internal static class CatalogueReconciler
     /// it speaks for the id even when its own title disagrees, so a non-override row that took the same id and does not
     /// agree on title is rejected because the id is spoken for, even if no other row agrees. Only the override row is
     /// exempt; its group is judged like any other.</para>
-    /// <para>The all-agree group is deliberately silent. Every legitimate two-cut pair is one, so a note for it is a permanent
-    /// line the owner can do nothing about, in a review section the job summary caps.</para>
+    /// <para><b>Accepted casualty.</b> A legitimate second cut is rejected when it shares an id with an Overrides row and
+    /// its own title does not fold to TMDB's: an override on <c>Superman: The Movie</c> beside a
+    /// <c>Superman: The Movie (Special Edition)</c> row that matched the same id on runtime and director alone. The rule
+    /// cannot tell that from a wrong match, because the title is the only discriminator it has. The rejection note says an
+    /// Overrides row holds the id, and the cure is an Overrides row for the second cut as well: then both speak for the id.</para>
+    /// <para><b>Confidence is ignored.</b> The rule reads titles, never <c>Mc</c>, so a row accepted at 0.80 on runtime,
+    /// director and year with no title agreement would be rejected beside an agreeing sibling. All three rejections on today's
+    /// catalogue were 0.70 (runtime and director alone), so nothing accepted is lost now; a row that was, would be named in
+    /// its rejection note.</para>
+    /// <para>The all-agree group is deliberately silent, and so is an override whose own title disagrees. Every legitimate
+    /// two-cut pair is the first, and the second is the owner's own decision: a note for either is a permanent line the owner
+    /// can do nothing about, in a review section the job summary caps.</para>
     /// </remarks>
     public static IReadOnlyList<ResolvedFilm> RejectConflictingIds(IReadOnlyList<ResolvedFilm> films, List<string> notes)
     {
@@ -103,7 +113,8 @@ internal static class CatalogueReconciler
 
             // Every row in the group holds the same film, so one row's copy of its title stands for all of them: a
             // budget-stopped run can leave a row whose payload never loaded.
-            var tmdbTitle = members.Select(i => films[i].TmdbTitle).FirstOrDefault(t => !string.IsNullOrWhiteSpace(t));
+            var tmdbTitle = members.Select(i => films[i].TmdbTitle).Where(t => !string.IsNullOrWhiteSpace(t))
+                .Order(StringComparer.Ordinal).FirstOrDefault();
             if (tmdbTitle is null)
             {
                 notes.Add($"TMDB id {id} → {members.Count} rows share this id, but its title is unavailable " +
@@ -130,22 +141,13 @@ internal static class CatalogueReconciler
                     ? "its title does not match that film and another row's does"
                     : "an Overrides row holds this id and this row's title does not match that film";
 
-                foreach (var i in rejected)
-                {
-                    result[i] = Unmatched(films[i]);
-                    notes.Add(ResolvedFilm.Line(films[i].Row,
-                        $"rejected TMDB id {id} (\"{tmdbTitle}\"): {reason}, so it is now unmatched"));
-                }
-            }
-            else
-            {
-                // Nothing was rejected. If an override is in the group and its title does not agree, say so once: it is
-                // the one case where the owner holds two rows on one id and only one of them is the film's own name.
-                var kept = members.Where(i => films[i].FromOverride && !titleAgrees.Contains(i))
-                    .Select(i => films[i].Row.Title).ToList();
-                if (kept.Count > 0)
-                    notes.Add($"{label} → {share}; Overrides rows are never rejected, so kept despite a title " +
-                              $"that does not agree: {Quoted(kept)}");
+                foreach (var i in rejected) result[i] = Unmatched(films[i]);
+
+                // Ordered by the line itself, so the notes do not depend on the order the rows arrive in.
+                notes.AddRange(rejected
+                    .Select(i => ResolvedFilm.Line(films[i].Row,
+                        $"rejected TMDB id {id} (\"{tmdbTitle}\"): {reason}, so it is now unmatched"))
+                    .Order(StringComparer.Ordinal));
             }
         }
 
@@ -183,13 +185,19 @@ internal static class CatalogueReconciler
     /// <summary>
     /// Groups the films by key. A group of more than one becomes ONE film: the row with the longest sheet title (it
     /// names the edition), ties broken ordinally, with <c>Own</c> replaced by the group's distinct non-blank values,
-    /// ordered ordinally and joined with <see cref="OwnSeparator"/>. Nothing the sheet recorded leaves the catalogue.
+    /// ordered ordinally and joined with <see cref="OwnSeparator"/>. Purchase info is the one thing merged: it is what the
+    /// sheet records about how the owner bought each edition, so none of it is lost.
     /// </summary>
     /// <remarks>
     /// Collapsing rather than disambiguating (a <c>-2</c> on the loser) is deliberate: that would make a record's key
     /// depend on whether a sibling exists, so deleting one sheet row would re-key the other and break any saved link
     /// to it. Here every surviving key stays a pure function of its own row. Every choice reads only the rows' own
     /// fields, never their order, so the same sheet always collapses the same way.
+    /// <para><b>What is not carried.</b> The survivor keeps its own Apple genre (<c>Ag</c>) and every other field of its row.
+    /// A genre on a dropped row that differs is lost: the two real Blade Runner rows are filed under "Action &amp; Adventure"
+    /// and "Sci-Fi &amp; Fantasy", and the survivor keeps the second. <c>Ag</c> is deliberately NOT merged like <c>Own</c>,
+    /// because it can feed genre filtering and a compound value would corrupt a facet. The collapse note names the genre
+    /// that was not carried, so the loss is visible.</para>
     /// </remarks>
     public static IReadOnlyList<ResolvedFilm> CollapseDuplicateKeys(IReadOnlyList<ResolvedFilm> films, List<string> notes)
     {
@@ -209,10 +217,16 @@ internal static class CatalogueReconciler
             var ranked = members
                 .OrderByDescending(m => m.Film.Record.T.Length)
                 .ThenBy(m => m.Film.Record.T, StringComparer.Ordinal)
-                // Only reachable when the titles are identical; this keeps the choice independent of the sheet's row order.
+                // Everything below is reachable only when the titles are byte-identical, and it exists for one reason: a sort
+                // that ties falls back to the order it was given, which is the sheet's order. Each step breaks a tie the
+                // one before it leaves, down to what shows in a review line, so the survivor, and everything printed about
+                // it, is the same whichever way the rows arrive. DuplicateKeyCollapseTests permutes every one of them.
                 .ThenBy(m => m.Film.Record.Ag, StringComparer.Ordinal)
                 .ThenBy(m => string.Join("&", m.Film.Record.Dir), StringComparer.Ordinal)
                 .ThenByDescending(m => m.Film.Record.Mc)
+                .ThenBy(m => m.Film.Row.Runtime, StringComparer.Ordinal)
+                .ThenBy(m => m.Film.Row.Directors, StringComparer.Ordinal)
+                .ThenBy(m => m.Film.ReviewNote, StringComparer.Ordinal)
                 .ToList();
 
             var kept = ranked[0];
@@ -222,10 +236,14 @@ internal static class CatalogueReconciler
             var gone = ranked.Skip(1).ToList();
             foreach (var m in gone) dropped.Add(m.Index);
 
+            var lostGenres = gone.Select(m => m.Film.Record.Ag).Where(g => !string.Equals(g, kept.Film.Record.Ag, StringComparison.Ordinal))
+                .Distinct(StringComparer.Ordinal).Order(StringComparer.Ordinal).ToList();
+
             notes.Add(ResolvedFilm.Line(kept.Film.Row,
                 $"duplicate key {group.Key}: kept \"{kept.Film.Record.T}\", " +
                 $"dropped {Quoted(gone.Select(m => m.Film.Record.T).Order(StringComparer.Ordinal))}" +
-                (string.Equals(own, kept.Film.Record.Own, StringComparison.Ordinal) ? "" : "; purchase info merged into Own")));
+                (string.Equals(own, kept.Film.Record.Own, StringComparison.Ordinal) ? "" : "; purchase info merged into Own") +
+                (lostGenres.Count == 0 ? "" : $"; genre kept as \"{kept.Film.Record.Ag}\" (not carried: {Quoted(lostGenres)})")));
         }
 
         return [.. result.Where((_, i) => !dropped.Contains(i))];

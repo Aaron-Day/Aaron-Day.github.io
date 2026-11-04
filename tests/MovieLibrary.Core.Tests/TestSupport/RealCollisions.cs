@@ -12,25 +12,26 @@ namespace MovieLibrary.Core.Tests;
 internal sealed record RealCollision(int Id, string TmdbTitle, RealCollision.Row First, RealCollision.Row Second)
 {
     /// <param name="Impostor">The row that does not belong to this film.</param>
-    public sealed record Row(string SheetTitle, int Runtime, double Mc = 0.85, bool Impostor = false, string? Own = null);
+    public sealed record Row(string SheetTitle, int Runtime, double Mc = 0.85, bool Impostor = false, string? Own = null, string Genre = "Drama");
 
     public IEnumerable<Row> Rows => [First, Second];
 
     public bool IsSplit => Rows.Any(r => r.Impostor);
 
     public IReadOnlyList<ResolvedFilm> Films()
-        => [.. Rows.Select(r => ResolvedFilms.Make(Id, r.SheetTitle, r.Runtime, TmdbTitle, r.Own, mc: r.Mc))];
+        => [.. Rows.Select(r => ResolvedFilms.Make(Id, r.SheetTitle, r.Runtime, TmdbTitle, r.Own, mc: r.Mc, genre: r.Genre))];
 
     public override string ToString() => $"{Id} {TmdbTitle}";
 
-    // Blade Runner's two rows are real and are different: they are two bundles the owner bought the film in.
+    // Blade Runner's two rows are real and are different: two bundles the owner bought the film in, and two Apple genres.
     public const string BladeRunnerOwn = "Blade Runner / Blade Runner: The Final Cut. Colección 2 películas";
     public const string BladeRunnerFinalCutOwn = "Warner Bros Firsts: Action & Adventure Bundle";
 
     public static readonly IReadOnlyList<RealCollision> All =
     [
         new(78, "Blade Runner",
-            new("Blade Runner", 117, Own: BladeRunnerOwn), new("Blade Runner (The Final Cut)", 117, Own: BladeRunnerFinalCutOwn)),
+            new("Blade Runner", 117, Own: BladeRunnerOwn, Genre: "Action & Adventure"),
+            new("Blade Runner (The Final Cut)", 117, Own: BladeRunnerFinalCutOwn, Genre: "Sci-Fi & Fantasy")),
         new(120, "The Lord of the Rings: The Fellowship of the Ring",
             new("The Lord of the Rings: The Fellowship of the Ring", 178), new("The Lord of the Rings: The Fellowship of the Ring (Extended Edition)", 228, 0.45)),
         new(121, "The Lord of the Rings: The Two Towers",

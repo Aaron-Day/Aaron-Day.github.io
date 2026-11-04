@@ -176,10 +176,7 @@ public class ConflictingIdRuleTests
         var (films, notes) = Run(forced, matched);
 
         Assert.Equal([forced, matched], films);
-        Assert.Equal(
-            ["Star Wars (11) → 2 rows share this TMDB id; Overrides rows are never rejected, so kept despite a title " +
-             "that does not agree: \"Star Wars: A New Hope\""],
-            notes);
+        Assert.Empty(notes);   // the owner's own decision, and every two-cut pair looks like this: not worth a line
     }
 
     [Fact]
@@ -239,7 +236,7 @@ public class ConflictingIdRuleTests
     }
 
     [Fact]
-    public void TwoOverrideRowsOnOneIdAreBothKeptAndNotedOnce()
+    public void TwoOverrideRowsOnOneIdAreBothKeptAndSilent()
     {
         var a = Make(11, "Star Wars: A New Hope", 125, "Star Wars", fromOverride: true, mc: 1d);
         var b = Make(11, "Star Wars: A New Hope (Special Edition)", 130, "Star Wars", fromOverride: true, mc: 1d);
@@ -247,10 +244,7 @@ public class ConflictingIdRuleTests
         var (films, notes) = Run(a, b);
 
         Assert.Equal([a, b], films);
-        Assert.Equal(
-            ["Star Wars (11) → 2 rows share this TMDB id; Overrides rows are never rejected, so kept despite a title " +
-             "that does not agree: \"Star Wars: A New Hope\", \"Star Wars: A New Hope (Special Edition)\""],
-            notes);
+        Assert.Empty(notes);
     }
 
     [Fact]
@@ -290,14 +284,37 @@ public class ConflictingIdRuleTests
             notes);
     }
 
-    // ---- the measured population ----------------------------------------------------------------------
-
+    // Sheet order is not stable (Apple's export), so what the owner reads must not depend on it.
     [Fact]
-    public void ThereAreSixteenCollidingGroupsAndThreeOfThemSplit()
+    public void TheRejectionNotesDoNotDependOnTheOrderTheRowsArriveIn()
     {
-        Assert.Equal(16, RealCollision.All.Count);
-        Assert.Equal(3, RealCollision.All.Count(c => c.IsSplit));
+        var real = RealFilm();
+        var one = Make(9615, "Zed Furious", 105, TokyoDrift);
+        var two = Make(9615, "Alpha Furious", 106, TokyoDrift);
+
+        var forward = Run(real, one, two).Notes;
+        var reversed = Run(two, one, real).Notes;
+
+        Assert.Equal(2, forward.Count);
+        Assert.Equal(forward, reversed);
+        Assert.StartsWith("Alpha Furious", forward[0], StringComparison.Ordinal);
     }
+
+    // Two rows holding one id can carry different copies of its TMDB title (a stale payload and a fresh one). The title the
+    // group is judged against must not depend on which row arrives first.
+    [Fact]
+    public void TheGroupsTmdbTitleDoesNotDependOnWhichRowArrivesFirst()
+    {
+        var alpha = Make(5, "Alpha", 90, "Alpha");
+        var beta = Make(5, "Beta", 91, "Beta");
+        var alpha2 = Make(5, "Alpha", 92, "Alpha");
+
+        Assert.Equal(["Beta"], Run(alpha, beta, alpha2).Films.Where(f => f.Record.I == 0).Select(f => f.Record.T));
+        Assert.Equal(["Beta"], Run(beta, alpha, alpha2).Films.Where(f => f.Record.I == 0).Select(f => f.Record.T));
+        Assert.Equal(["Beta"], Run(alpha2, alpha, beta).Films.Where(f => f.Record.I == 0).Select(f => f.Record.T));
+    }
+
+    // ---- the measured population ----------------------------------------------------------------------
 
     [Theory, MemberData(nameof(Collisions))]
     public void TheRuleSeparatesTheRealCollisionsExactly(int id)
@@ -314,7 +331,7 @@ public class ConflictingIdRuleTests
     }
 
     [Fact]
-    public void AcrossTheWholeCatalogueExactlyThreeRowsFromThreeGroupsAreRejected()
+    public void ExactlyThreeRowsFromThreeGroupsAreRejectedAcrossTheSixteenCollidingGroups()
     {
         var all = RealCollision.All.SelectMany(c => c.Films()).ToList();
 

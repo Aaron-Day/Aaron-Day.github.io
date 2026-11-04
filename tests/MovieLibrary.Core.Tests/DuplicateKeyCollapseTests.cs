@@ -105,6 +105,7 @@ public class DuplicateKeyCollapseTests
 
         var survivor = Assert.Single(films).Record;
         Assert.Equal("Blade Runner (The Final Cut)", survivor.T);
+        Assert.Equal("Sci-Fi & Fantasy", survivor.Ag);   // its own genre, not a merge of the two
         Assert.Equal(
             "Blade Runner / Blade Runner: The Final Cut. Colección 2 películas / Warner Bros Firsts: Action & Adventure Bundle",
             survivor.Own);
@@ -203,4 +204,135 @@ public class DuplicateKeyCollapseTests
         Assert.Contains(result.Films, f => f.Record.I == 0 && f.Record.T == "Fast & Furious"
                                            && f.Record.K.StartsWith("u-", StringComparison.Ordinal));
     }
+
+    // The survivor keeps its own genre. Ag can feed genre filtering, so it is deliberately NOT merged like Own, and the
+    // genre of a dropped row that differs is lost, which the note must therefore say.
+    [Fact]
+    public void TheSurvivorKeepsItsOwnGenreAndTheNoteNamesTheOneThatWasNotCarried()
+    {
+        var (films, notes) = Run(
+            Make(78, "Blade Runner", 117, "Blade Runner", genre: "Action & Adventure"),
+            Make(78, Final, 117, "Blade Runner", genre: "Sci-Fi & Fantasy"));
+
+        Assert.Equal("Sci-Fi & Fantasy", Assert.Single(films).Record.Ag);
+        Assert.Equal(
+            ["Blade Runner (The Final Cut) (1:57:00, Some Director) → duplicate key 78-117: kept \"Blade Runner (The Final Cut)\", " +
+             "dropped \"Blade Runner\"; genre kept as \"Sci-Fi & Fantasy\" (not carried: \"Action & Adventure\")"],
+            notes);
+    }
+
+    [Fact]
+    public void TheRealBladeRunnerNoteSaysBothWhatWasMergedAndWhatWasNot()
+    {
+        var (_, notes) = Run([.. RealCollision.All.Single(c => c.Id == 78).Films()]);
+
+        Assert.Equal(
+            ["Blade Runner (The Final Cut) (1:57:00, Some Director) → duplicate key 78-117: kept \"Blade Runner (The Final Cut)\", " +
+             "dropped \"Blade Runner\"; purchase info merged into Own; genre kept as \"Sci-Fi & Fantasy\" (not carried: \"Action & Adventure\")"],
+            notes);
+    }
+
+    [Fact]
+    public void TwoDroppedGenresAreBothNamedOnceEach()
+    {
+        var (_, notes) = Run(
+            Make(78, Final, 117, "Blade Runner", genre: "Sci-Fi"),
+            Make(78, "Blade Runner", 117, "Blade Runner", genre: "Action"),
+            Make(78, "Blade Runner!", 117, "Blade Runner", genre: "Action"),
+            Make(78, "Blade Runner?", 117, "Blade Runner", genre: "Drama"));
+
+        Assert.EndsWith("genre kept as \"Sci-Fi\" (not carried: \"Action\", \"Drama\")", Assert.Single(notes), StringComparison.Ordinal);
+    }
+
+    // ---- the survivor does not depend on the order the rows arrive in ---------------------------------------------
+
+    private static IEnumerable<ResolvedFilm[]> EveryOrder(ResolvedFilm[] rows, int from = 0)
+    {
+        if (from == rows.Length - 1) { yield return [.. rows]; yield break; }
+
+        for (var i = from; i < rows.Length; i++)
+        {
+            (rows[from], rows[i]) = (rows[i], rows[from]);
+            foreach (var order in EveryOrder(rows, from + 1)) yield return order;
+            (rows[from], rows[i]) = (rows[i], rows[from]);
+        }
+    }
+
+    private static void AssertTheOutcomeIsTheSameInEveryOrder(params ResolvedFilm[] group)
+    {
+        var orders = EveryOrder([.. group]).Select(Outcome).Distinct().ToList();
+        Assert.Single(orders);
+    }
+
+    private const string Final = "Blade Runner (The Final Cut)";
+
+    private static ResolvedFilm FinalCut(
+        string? own = null, string genre = "Sci-Fi & Fantasy", string directors = "Ridley Scott", double mc = 0.85,
+        string? rowRuntime = null, string? note = null)
+        => Make(78, Final, 117, "Blade Runner", own, directors: directors, mc: mc, genre: genre, rowRuntime: rowRuntime, note: note);
+
+    // (a) Two rows with byte-identical titles on one id and runtime. The title comparison ties, so without a tie-break
+    // the survivor is whichever arrived first, which is sheet order.
+    [Fact]
+    public void ByteIdenticalTitlesFallToTheGenreWhicheverOrderTheyArriveIn()
+    {
+        var scifi = FinalCut(genre: "Sci-Fi & Fantasy");
+        var action = FinalCut(genre: "Action & Adventure");
+
+        Assert.Equal("Action & Adventure", Assert.Single(Run(scifi, action).Films).Record.Ag);
+        Assert.Equal("Action & Adventure", Assert.Single(Run(action, scifi).Films).Record.Ag);
+    }
+
+    // (b) The property: reorder the rows however you like and the published output is identical. One pair per tie-break,
+    // each differing from its twin in that field alone, so deleting any one of them leaves exactly one of these failing.
+    [Fact]
+    public void TheOutcomeIsTheSameInEveryOrderWhenTheRowsDifferInGenreOnly()
+        => AssertTheOutcomeIsTheSameInEveryOrder(FinalCut(genre: "Sci-Fi & Fantasy"), FinalCut(genre: "Action & Adventure"));
+
+    // The published directors derive from the raw text, so in the pipeline they differ only when the text does. The
+    // tie-break reads the published field, though, so it is exercised here with the raw text held equal.
+    [Fact]
+    public void TheOutcomeIsTheSameInEveryOrderWhenThePublishedDirectorsDifferOnly()
+        => AssertTheOutcomeIsTheSameInEveryOrder(
+            Make(78, Final, 117, "Blade Runner", directors: "Ridley Scott", dir: ["Ridley Scott"]),
+            Make(78, Final, 117, "Blade Runner", directors: "Ridley Scott", dir: ["R. Scott"]));
+
+    [Fact]
+    public void TheOutcomeIsTheSameInEveryOrderWhenTheRawDirectorsDiffer()
+        => AssertTheOutcomeIsTheSameInEveryOrder(FinalCut(directors: "Ridley Scott"), FinalCut(directors: "R. Scott"));
+
+    [Fact]
+    public void TheOutcomeIsTheSameInEveryOrderWhenTheRowsDifferInConfidenceOnly()
+        => AssertTheOutcomeIsTheSameInEveryOrder(FinalCut(mc: 0.85), FinalCut(mc: 0.95));
+
+    [Fact]
+    public void TheOutcomeIsTheSameInEveryOrderWhenTheRowsDifferOnlyInTheSecondsOfTheirRuntime()
+        => AssertTheOutcomeIsTheSameInEveryOrder(FinalCut(rowRuntime: "1:57:10"), FinalCut(rowRuntime: "1:57:29"));
+
+    [Fact]
+    public void TheOutcomeIsTheSameInEveryOrderWhenTheRowsDifferOnlyInTheRawDirectorsText()
+        => AssertTheOutcomeIsTheSameInEveryOrder(   // the published directors are the same: the pipeline splits on '&' and trims
+            Make(78, Final, 117, "Blade Runner", directors: "Joe & Jane", dir: ["Joe", "Jane"]),
+            Make(78, Final, 117, "Blade Runner", directors: "Joe&Jane", dir: ["Joe", "Jane"]));
+
+    [Fact]
+    public void TheOutcomeIsTheSameInEveryOrderWhenTheRowsDifferOnlyInTheirOwnReviewNote()
+        => AssertTheOutcomeIsTheSameInEveryOrder(FinalCut(note: null), FinalCut(note: "Flagged at 0.85, id 78"));
+
+    [Fact]
+    public void TheOutcomeIsTheSameInEveryOrderWhenTheRowsDifferOnlyInPurchaseInfo()
+        => AssertTheOutcomeIsTheSameInEveryOrder(FinalCut(own: "Bundle B"), FinalCut(own: "Bundle A"), FinalCut(own: null));
+
+    // And all of them at once, in all 5,040 orders: a shorter title, then a ladder of byte-identical titles that tie on
+    // each field in turn.
+    [Fact]
+    public void TheOutcomeIsTheSameInAllFiveThousandOrdersOfALadderOfTiedRows()
+        => AssertTheOutcomeIsTheSameInEveryOrder(
+            Make(78, "Blade Runner", 117, "Blade Runner", "A", genre: "Sci-Fi & Fantasy"),
+            FinalCut(own: "B", genre: "Sci-Fi & Fantasy"),
+            FinalCut(own: "C", genre: "Action & Adventure"),
+            FinalCut(own: "D", genre: "Action & Adventure", directors: "R. Scott"),
+            FinalCut(own: "E", genre: "Action & Adventure", directors: "R. Scott", mc: 0.95),
+            FinalCut(own: "F", genre: "Action & Adventure", directors: "R. Scott", mc: 0.95, rowRuntime: "1:57:29"),
+            FinalCut(own: "G", genre: "Action & Adventure", directors: "R. Scott", mc: 0.95, note: "Flagged at 0.95, id 78"));
 }
