@@ -28,6 +28,11 @@ public class StyleContractTests
     [InlineData("--accent", "#f5c518")]
     [InlineData("--accent2", "#4da3ff")]
     [InlineData("--touch", "44px")]
+    // Two rules consume --bar-max by name -- #blazor-error-ui's max-height and html's
+    // scroll-padding-bottom -- so it is pinned by name here with the rest of the set. The D2 test below
+    // asserts the same value, but as part of a shape; this one is about the token existing under its name,
+    // which is the thing that fails silently, because an undefined var() is just an invalid declaration.
+    [InlineData("--bar-max", "40dvh")]
     public void TheTokenIsDefinedOnRootWithItsMeasuredValue(string name, string value)
     {
         Assert.Matches($@"{Regex.Escape(name)}\s*:\s*{Regex.Escape(value)}\s*;", Root());
@@ -119,10 +124,13 @@ public class StyleContractTests
     /// that token) because scroll-padding costs nothing: it only moves where a scroll stops.
     /// .attribution's bottom padding deliberately does NOT read the token. That is real layout space on
     /// every page load, 432px of it on a 1080px-tall viewport, and what it would buy is a static sentence
-    /// not being overlapped by an element that is display:none unless boot failed, and dismissible when
-    /// it is not. 2.4.11 is about a component with focus and does not reach that sentence, and TMDB's
-    /// terms ask only that it be displayed, which it is. Harmonising the two values, in either direction,
-    /// is the regression this test exists to catch.
+    /// not being overlapped by an element that is display:none until something throws. A failed boot is
+    /// only one way in and the least interesting one, because the page is then empty; the Blazor runtime
+    /// also reveals the bar on ANY unhandled exception during execution, which is the case worth naming,
+    /// because it is the one where catalogue data is on screen and the footer has been scrolled to. The
+    /// bar is dismissible whenever it appears. 2.4.11 is about a component with focus and does not reach
+    /// that sentence, and TMDB's terms ask only that it be displayed, which it is. Harmonising the two
+    /// values, in either direction, is the regression this test exists to catch.
     /// What it cannot prove: that a real browser actually keeps the focused control clear. That needs a
     /// viewport and a focus move, and belongs to Task 4b.
     /// </remarks>
@@ -135,12 +143,16 @@ public class StyleContractTests
         // The asymmetry is deliberate and is the point of this assertion: scroll-padding reads the cap
         // because it costs nothing, and .attribution does NOT because it is real layout space on every
         // page load -- 432px of it on a 1080px viewport -- bought against an element that is display:none
-        // unless boot failed, and dismissible when it is not. SC 2.4.11 is about a focused component and
+        // until an unhandled exception reveals it, and dismissible when one does. Not only a failed boot:
+        // an exception while the app is running is the case where this overlap can actually be seen, with
+        // the catalogue on screen and the footer scrolled to. SC 2.4.11 is about a focused component and
         // does not reach a static sentence. Harmonising these two values is the regression to catch.
         Assert.Matches(@"(?s)\.attribution\s*\{.*?padding\s*:\s*1rem 1\.5rem 6rem\s*;", AppCss);
 
-        // A bare 6rem in either reserve, or a literal cap that no longer goes through the token, is the
-        // bug coming back by the same route it arrived: two numbers for one measurement.
+        // The SCROLL reserve going bare, or a literal cap that no longer reads the token, is the bug
+        // coming back by the same route it arrived: two numbers for one measurement. The footer's bare
+        // 6rem is not that bug -- it is the deliberate asymmetry, and the assertion three lines above
+        // REQUIRES it. Do not read these two as a ban on 6rem anywhere.
         Assert.DoesNotMatch(@"scroll-padding-bottom\s*:\s*6rem\s*;", AppCss);
         Assert.DoesNotMatch(@"max-height\s*:\s*40dvh", AppCss);
     }
@@ -206,43 +218,203 @@ public class StyleContractTests
     /// renders, and prefers-reduced-motion cannot help a user staring at a blank page - so the comment now
     /// names it, and this turns the promise into something enforced rather than remembered. Task 6 adds
     /// tile hovers; a promise is only worth the test behind it.
+    /// BOTH GUARD SHAPES ARE ACCEPTED, and an earlier version of this rule accepted only one. It required
+    /// the declaration to sit INSIDE a prefers-reduced-motion block, which only the inverted
+    /// @media (prefers-reduced-motion: no-preference) form satisfies, so the canonical declaration plus
+    /// @media (prefers-reduced-motion: reduce) override failed -- while the failure message told the author
+    /// to pair the declaration with a reduced-motion block, which is exactly what it was paired with.
+    /// Following the instruction did not make the test pass, and Task 6's first tile hover would have hit
+    /// it. The two accepted forms are now: the declaration sits inside a prefers-reduced-motion block of
+    /// either polarity, or the declaration's own selector is redeclared under
+    /// @media (prefers-reduced-motion: reduce) -- the declare-then-override form, which is what most
+    /// authors write and what most linters expect, a blanket reset included.
     /// Scope: transition and animation, not transform. A static rotate() is not motion and has nothing for
     /// prefers-reduced-motion to reduce; a rule that flagged it would cry wolf, which is the one thing this
     /// gate must not do. Comments are stripped before the scan, so prose about motion cannot trip it.
     /// What this cannot catch: motion that arrives through a component's scoped .razor.css, an inline
     /// style, or a Bootstrap class. NoViewportUnitSitsBelowBodyInTheLayoutCss covers the scoped files for
-    /// its own rule; a stylesheet-wide sweep belongs with the browser pass in Task 4b.
+    /// its own rule; a stylesheet-wide sweep belongs with the browser pass in Task 4b. Nor can it check
+    /// that an override actually neutralises the motion: a reduce block naming the selector for any reason
+    /// satisfies the second form, because deciding otherwise means resolving the cascade, and a scan that
+    /// guessed at that would start rejecting correct CSS -- which is the failure this rule just had.
+    /// The rule's own logic is proven below against CSS written for the purpose, because app.css declares
+    /// motion in one place and no reduced-motion block at all, so this contract alone cannot prove it.
     /// </remarks>
     [Fact]
     public void TheOnlyMotionIsTheBootSpinnersAndAnythingElseNeedsAReducedMotionBlock()
     {
-        var motion = Declarations(WithoutComments(AppCss))
-            .Where(d => Regex.IsMatch(d.Declaration, @"^(?:transition|animation)[a-z-]*\s*:"))
-            .ToList();
+        var motion = MotionDeclarations(AppCss);
+        var guarded = SelectorsRedeclaredUnderReduce(AppCss);
 
         // Positive control. Every assertion below is a loop over `motion`, so an empty `motion` would make
         // this test green while proving nothing at all - which is the failure mode the scan exists to stop.
         Assert.Contains(motion, m => m.Context.Contains(".loading-progress"));
 
-        foreach (var (context, declaration) in motion)
-            Assert.True(
-                context.Contains("prefers-reduced-motion") || context.Contains(".loading-progress"),
-                $"`{declaration};` is declared under `{context}`, which is neither the boot spinner nor a "
-                + "@media (prefers-reduced-motion) block. A user who asks their system to reduce motion must "
-                + "get a stylesheet that honours it; the boot spinner is the one exception, because it is "
-                + "gone before the app renders. Either drop the motion or pair it with a reduced-motion "
-                + "block, and say which in app.css's closing comment.");
+        foreach (var declaration in motion)
+            Assert.True(IsGuardedAgainstReducedMotion(declaration, guarded), Unguarded(declaration));
+    }
+
+    /// <remarks>
+    /// The motion rule driven against CSS written here, good and bad, because app.css contains one guard
+    /// shape and the contract above can only ever prove what this one file happens to contain. The first
+    /// case is the pattern the rule used to reject.
+    /// </remarks>
+    [Fact]
+    public void TheMotionRuleAcceptsTheDeclareThenOverrideForm()
+    {
+        const string css = ".tile { transition: transform .2s ease; }"
+                           + "@media (prefers-reduced-motion: reduce) { .tile { transition: none; } }";
+
+        AssertEveryMotionDeclarationIsGuarded(css);
+    }
+
+    [Fact]
+    public void TheMotionRuleAcceptsTheInvertedNoPreferenceForm()
+    {
+        const string css = "@media (prefers-reduced-motion: no-preference) "
+                           + "{ .tile { transition: transform .2s ease; } }";
+
+        AssertEveryMotionDeclarationIsGuarded(css);
+    }
+
+    [Fact]
+    public void TheMotionRuleAcceptsABlanketResetUnderReduce()
+    {
+        // A universal reset under reduce is a common way to write it, and matching selector for selector
+        // would reject every declaration in a stylesheet that is in fact fully guarded.
+        const string css = ".tile { transition: transform .2s ease; }"
+                           + ".card { animation: pulse 1s infinite; }"
+                           + "@media (prefers-reduced-motion: reduce) { * { transition: none; } }";
+
+        AssertEveryMotionDeclarationIsGuarded(css);
+    }
+
+    [Fact]
+    public void TheMotionRuleAcceptsACommaSeparatedOverride()
+    {
+        const string css = ".tile { transition: transform .2s ease; }"
+                           + "@media (prefers-reduced-motion: reduce) { .tile, .card { transition: none; } }";
+
+        AssertEveryMotionDeclarationIsGuarded(css);
+    }
+
+    [Theory]
+    // Nothing guarding it at all.
+    [InlineData(".tile { transition: transform .2s ease; }")]
+    // A reduce block, but for another selector: the one the author forgot is the one still moving.
+    [InlineData(".tile { transition: transform .2s ease; }"
+                + "@media (prefers-reduced-motion: reduce) { .card { transition: none; } }")]
+    // Only half of a comma-separated pair is turned off.
+    [InlineData(".tile, .card { transition: transform .2s ease; }"
+                + "@media (prefers-reduced-motion: reduce) { .tile { transition: none; } }")]
+    public void TheMotionRuleStillRejectsMotionNothingTurnsOff(string css)
+    {
+        var motion = MotionDeclarations(css).First();
+
+        Assert.False(IsGuardedAgainstReducedMotion(motion, SelectorsRedeclaredUnderReduce(css)),
+            "accepting both guard shapes is not the same as accepting an unguarded declaration, and this "
+            + "one is unguarded: " + Unguarded(motion));
+    }
+
+    [Theory]
+    [InlineData(".tile:hover { transition: transform .2s ease }")]
+    [InlineData(".tile { animation: pulse 1s infinite }")]
+    public void TheMotionScanSeesADeclarationWithNoTrailingSemicolon(string css)
+    {
+        // The semicolon after a block's LAST declaration is optional in CSS, and a scan that yielded only
+        // on ';' never saw one that leaves it out -- the likeliest way to write a rule with a single
+        // declaration in it. Both of these are real unguarded motion, and both used to go green unseen.
+        var motion = Assert.Single(MotionDeclarations(css));
+
+        Assert.False(IsGuardedAgainstReducedMotion(motion, SelectorsRedeclaredUnderReduce(css)),
+            "the declaration was found but counted as guarded, which would be a different bug.");
+    }
+
+    private static void AssertEveryMotionDeclarationIsGuarded(string css)
+    {
+        var motion = MotionDeclarations(css);
+        var guarded = SelectorsRedeclaredUnderReduce(css);
+
+        Assert.NotEmpty(motion);
+        Assert.All(motion, m => Assert.True(IsGuardedAgainstReducedMotion(m, guarded), Unguarded(m)));
     }
 
     private static string WithoutComments(string css) => Regex.Replace(css, @"/\*.*?\*/", "", RegexOptions.Singleline);
 
+    private static IReadOnlyList<MotionDeclaration> MotionDeclarations(string css) =>
+        Declarations(WithoutComments(css))
+            .Where(d => Regex.IsMatch(d.Declaration, @"^(?:transition|animation)[a-z-]*\s*:"))
+            .ToList();
+
     /// <summary>
-    /// Every declaration in a stylesheet, paired with the nested selectors and at-rules it sits under. Not
-    /// a CSS parser: it tracks braces and semicolons only, so a semicolon inside a url() value splits that
-    /// one value in two. That is harmless for a scan that only reads the start of a declaration, and it is
-    /// the reason this is private to one test rather than offered as a utility.
+    /// The selectors a @media (prefers-reduced-motion: reduce) block redeclares. This is what makes the
+    /// declare-then-override form checkable: a motion declaration outside the media query is guarded when
+    /// its own selector is in here. Selector lists are split on the comma, so a reduce block that turns off
+    /// two selectors guards each of them separately, and a universal reset guards everything.
     /// </summary>
-    private static IEnumerable<(string Context, string Declaration)> Declarations(string css)
+    private static IReadOnlySet<string> SelectorsRedeclaredUnderReduce(string css) =>
+        Declarations(WithoutComments(css))
+            .Where(d => Regex.IsMatch(d.Context, @"prefers-reduced-motion\s*:\s*reduce"))
+            .SelectMany(d => SelectorParts(d.Selector))
+            .ToHashSet(StringComparer.Ordinal);
+
+    private static IReadOnlyList<string> SelectorParts(string selector) =>
+        selector.Split(',')
+            .Select(part => Regex.Replace(part, @"\s+", " ").Trim())
+            .Where(part => part.Length > 0)
+            .ToList();
+
+    private static bool IsGuardedAgainstReducedMotion(MotionDeclaration motion, IReadOnlySet<string> guarded)
+    {
+        // Form one: inside a prefers-reduced-motion block of either polarity -- the inverted no-preference
+        // wrapper, or a reduce block's own `transition: none`.
+        if (motion.Context.Contains("prefers-reduced-motion")) return true;
+
+        // The one exception. The boot spinner is gone before the app renders, and prefers-reduced-motion
+        // cannot help someone looking at a blank page waiting for a payload.
+        if (motion.Context.Contains(".loading-progress")) return true;
+
+        // Form two: declare-then-override. A universal reset covers every selector; otherwise every part
+        // of this declaration's own selector list has to be turned off, because the half that is not is
+        // the half still moving.
+        if (guarded.Contains("*")) return true;
+
+        var parts = SelectorParts(motion.Selector);
+        return parts.Count > 0 && parts.All(guarded.Contains);
+    }
+
+    private static string Unguarded(MotionDeclaration motion) =>
+        $"`{motion.Declaration};` is declared under `{motion.Context}`, which is neither the boot spinner "
+        + "nor guarded against prefers-reduced-motion. A user who asks their system to reduce motion must "
+        + "get a stylesheet that honours it; the boot spinner is the one exception, because it is gone "
+        + "before the app renders. Either drop the motion or guard it, in either of the two forms this "
+        + "rule accepts: move the declaration inside @media (prefers-reduced-motion: no-preference), or "
+        + $"leave it where it is and redeclare `{motion.Selector}` under "
+        + "@media (prefers-reduced-motion: reduce) to turn it off there. Then say which in app.css's "
+        + "closing comment.";
+
+    /// <summary>
+    /// One declaration, the nested selectors and at-rules it sits under, and the innermost of those on its
+    /// own -- which is the selector an override has to name for the declare-then-override form.
+    /// </summary>
+    private readonly record struct MotionDeclaration(string Context, string Selector, string Declaration);
+
+    /// <summary>
+    /// Every declaration in a stylesheet, paired with the context it sits under. Not a CSS parser: it
+    /// tracks braces and semicolons only, so a semicolon inside a url() value splits that one value in
+    /// two. That is harmless for a scan that only reads the start of a declaration, and it is the reason
+    /// this is private to one class rather than offered as a utility.
+    /// <para>
+    /// A closing brace ends a declaration as well, because the semicolon after the LAST declaration in a
+    /// block is optional in CSS. Yielding only on ';' therefore missed every declaration written without
+    /// one -- a single-declaration rule with no trailing semicolon was never seen at all, which is the
+    /// likeliest way to write one, and the motion scan passed over it with nothing in the output to
+    /// suggest it had skipped anything. A more consequential limit than the url() one, which is why it is
+    /// fixed behaviour with a regression case rather than a documented quirk:
+    /// TheMotionScanSeesADeclarationWithNoTrailingSemicolon.
+    /// </para>
+    /// </summary>
+    private static IEnumerable<MotionDeclaration> Declarations(string css)
     {
         var open = new List<string>();
         var start = 0;
@@ -256,14 +428,20 @@ public class StyleContractTests
                     start = i + 1;
                     break;
                 case '}':
+                    // Before the pop, not after: the pending text belongs to the block that is closing.
+                    var last = css[start..i].Trim();
+                    if (last.Length > 0) yield return At(open, last);
                     if (open.Count > 0) open.RemoveAt(open.Count - 1);
                     start = i + 1;
                     break;
                 case ';':
-                    yield return (string.Join(" ", open), css[start..i].Trim());
+                    yield return At(open, css[start..i].Trim());
                     start = i + 1;
                     break;
             }
         }
     }
+
+    private static MotionDeclaration At(List<string> open, string declaration) =>
+        new(string.Join(" ", open), open.Count == 0 ? "" : open[^1], declaration);
 }

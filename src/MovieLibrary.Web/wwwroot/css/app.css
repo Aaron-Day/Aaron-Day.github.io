@@ -66,7 +66,7 @@ a, button, input, select { touch-action: manipulation; }
    lands under it unless the scrollport reserves at least as much room as the bar can occupy.
    HEIGHT is the dimension that governs, not width. The old 6rem came from measuring the bar WRAPPED at
    320px - Reflow's horizontal dimension. Reflow's other dimension is a 256px viewport HEIGHT, and there
-   the bar's own --bar-max cap is 102.4px while 6rem is 96px: the mitigation was 6px short at exactly the
+   the bar's own --bar-max cap is 102.4px while 6rem is 96px: the mitigation was 6.4px short at exactly the
    size it was written for. Reading the cap keeps the reserve >= the bar at every viewport height; the
    6rem floor still matters, because the bar's real height is content-driven and scales with the reader's
    root font size while 40dvh does not. scroll-padding is scroll geometry, not layout, so this reserves
@@ -279,8 +279,11 @@ body {
    boot spinner - the static rotate(-90deg) on .loading-progress circle, and the stroke-dasharray
    tween on .loading-progress circle:last-child. They are a deliberate exception rather than an
    oversight: the spinner only exists before the app has rendered, and a prefers-reduced-motion
-   block cannot help someone who is looking at a blank page waiting for a payload. Everything
-   added after this point either declares no motion or pairs it with a prefers-reduced-motion
-   block. That is not a note to a future reader, it is a test:
+   block cannot help someone who is looking at a blank page waiting for a payload. Every
+   transition or animation added after this point must be guarded, and EITHER shape counts:
+   declare it inside @media (prefers-reduced-motion: no-preference), or declare it normally and
+   turn it off for the same selector inside @media (prefers-reduced-motion: reduce) - the
+   declare-then-override form, which is what most authors write. That is not a note to a future
+   reader, it is a test:
    StyleContractTests.TheOnlyMotionIsTheBootSpinnersAndAnythingElseNeedsAReducedMotionBlock scans
-   this file with its comments stripped, so Task 6's tile hovers cannot land without one. */
+   this file with its comments stripped, so Task 6's tile hovers cannot land unguarded. */
