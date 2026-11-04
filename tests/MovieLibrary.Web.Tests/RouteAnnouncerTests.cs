@@ -1,7 +1,6 @@
 using Bunit;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
-using MovieLibrary.Web.Pages;
 using MovieLibrary.Web.Services;
 
 namespace MovieLibrary.Web.Tests;
@@ -29,11 +28,9 @@ public class RouteAnnouncerTests : BunitContext
         nav = Services.GetRequiredService<NavigationManager>();
     }
 
-    private IRenderedComponent<App> RenderAt(string path)
-    {
-        nav.NavigateTo(path);
-        return Render<App>();
-    }
+    // Through AppUnderTest, not a local copy: MarkupContractTests renders the same way, and a service a
+    // later page needs has to be registerable in one helper rather than in each test class that renders.
+    private IRenderedComponent<App> RenderAt(string path) => this.RenderAppAt(path);
 
     private void Settle() => clock.Advance(TimeSpan.FromHours(1));
 
@@ -144,12 +141,9 @@ public class RouteAnnouncerTests : BunitContext
         Assert.Contains(string.Empty, committed);   // cleared between, never Films straight over Films
     }
 
-    public static IEnumerable<object[]> RouteTemplates() =>
-        typeof(Movies).Assembly.GetTypes()
-            .SelectMany(t => t.GetCustomAttributes(typeof(RouteAttribute), false).Cast<RouteAttribute>())
-            .Select(r => r.Template)
-            .Distinct()
-            .Select(t => new object[] { t });
+    // The walk itself lives in AppUnderTest so that MarkupContractTests drives its contracts from the same
+    // route set. This stays only as the MemberData hook xunit needs on the test class.
+    public static IEnumerable<object[]> RouteTemplates() => AppUnderTest.RouteTemplateData();
 
     // The table in RouteAnnouncer is typed by hand. A page added without an entry would be announced as
     // "Page not found" on a page that exists, which is a false statement. This turns that into a failing build.
@@ -157,7 +151,7 @@ public class RouteAnnouncerTests : BunitContext
     [MemberData(nameof(RouteTemplates))]
     public void EveryRouteTheSiteServesIsAnnouncedByTheNameItsOwnHeadingGives(string template)
     {
-        var path = System.Text.RegularExpressions.Regex.Replace(template, @"\{[^}]*\}", "1");
+        var path = AppUnderTest.AddressOf(template);
         var cut = RenderAt(template == "/not-found" ? "/movies" : "/zzz");
 
         nav.NavigateTo(path);

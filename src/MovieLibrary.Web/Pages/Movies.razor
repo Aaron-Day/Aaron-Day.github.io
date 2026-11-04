@@ -6,6 +6,11 @@
    render and never retries, and movies.json arrives long after that. *@
 <PageTitle>Films - Film and TV library</PageTitle>
 
-<h1>Films</h1>
+@* tabindex="-1" is not for FocusOnNavigate, which adds it itself: focusBySelector reads
+   `if (!element.hasAttribute('tabindex')) { element.tabIndex = -1 }` before focusing. It is for whatever
+   replaces FocusOnNavigate later. ElementReference.FocusAsync() does NOT add it, and on an element that
+   cannot take focus it fails silently - no exception, no moved focus, no failing test. Declaring it here
+   means the heading is reachable by any focus mechanism, not just the one in use today. *@
+<h1 tabindex="-1">Films</h1>
 
 <p>The film library is being built.</p>

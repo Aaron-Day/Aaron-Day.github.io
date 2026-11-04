@@ -5,6 +5,8 @@
    unknown URL would render with no main, no nav and no skip link. *@
 <PageTitle>Page not found - Film and TV library</PageTitle>
 
-<h1>Page not found</h1>
+@* tabindex="-1": see the note in Movies.razor. FocusOnNavigate adds it at runtime, ElementReference
+   .FocusAsync() does not and fails silently without it, so the heading declares it itself. *@
+<h1 tabindex="-1">Page not found</h1>
 
 <p>Sorry, nothing lives at this address. <a href="movies">Back to the library</a>.</p>

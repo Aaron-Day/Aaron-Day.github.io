@@ -9,18 +9,19 @@ namespace MovieLibrary.Web.Tests;
 /// <summary>
 /// Every route needs one h1 and a PageTitle in its FIRST render. FocusOnNavigate fires once, right after that
 /// render, and never retries, so a heading behind an <c>@if (loaded)</c> would silently never receive focus.
+/// <para>
+/// The two h1 tests that used to be here are gone, subsumed by
+/// RouteAnnouncerTests.EveryRouteTheSiteServesIsAnnouncedByTheNameItsOwnHeadingGives, which reads each
+/// route's heading through the real router, and by MarkupContractTests.EveryRouteRendersExactlyOneH1, which
+/// adds the count. The two title tests below are NOT subsumed:
+/// MarkupContractTests.EveryRouteSetsADocumentTitleOfItsOwn only asserts the shape of a title -- non-empty,
+/// ending with the site name, not the host page's -- and these assert the exact strings. A reflective check
+/// over a pattern is weaker than a literal, and both are worth having.
+/// </para>
 /// </summary>
 public class PageTests : BunitContext
 {
     public PageTests() => JSInterop.Mode = JSRuntimeMode.Loose;
-
-    [Fact]
-    public void NotFoundRendersAnH1()
-    {
-        var cut = Render<NotFound>();
-
-        Assert.Equal("Page not found", Assert.Single(cut.FindAll("h1")).TextContent.Trim());
-    }
 
     [Fact]
     public void NotFoundSetsTheDocumentTitle()
@@ -50,14 +51,6 @@ public class PageTests : BunitContext
 
         Assert.NotNull(layout);
         Assert.Equal(typeof(Layout.MainLayout), layout.LayoutType);
-    }
-
-    [Fact]
-    public void MoviesRendersOneH1InItsFirstRender()
-    {
-        var cut = Render<Movies>();
-
-        Assert.Equal("Films", Assert.Single(cut.FindAll("h1")).TextContent.Trim());
     }
 
     [Fact]
