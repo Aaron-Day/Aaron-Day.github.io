@@ -99,6 +99,23 @@ public class MoviePipelineCrossRowTests
         Assert.Equal(["11-121", "11-125"], result.Records.Select(r => r.K).Order(StringComparer.Ordinal));
     }
 
+    // Through the real pipeline: the override takes id 11, and a second row the scorer also matches to it (runtime and
+    // director, no title) is rejected because the id is spoken for, though no other row agrees on the title.
+    [Fact]
+    public async Task ARowThatTookAnOverriddenIdIsRejectedByTheRealPipeline()
+    {
+        var starWars = new FakeTmdb.Film(11, "Star Wars", 121, "George Lucas", Year: 1977);
+        var overrides = new Dictionary<string, int> { [MoviePipeline.OverrideKey("Star Wars: A New Hope", 125)] = 11 };
+
+        var result = await Tmdb(starWars).Pipeline.RunAsync(
+            [Row("Star Wars: A New Hope", "2:05:00", "George Lucas"), Row("Star Wars Holiday Special", "2:01:00", "George Lucas")],
+            overrides, CancellationToken.None);
+
+        Assert.Equal(11, Assert.Single(result.Records, r => r.T == "Star Wars: A New Hope").I);
+        Assert.Equal(0, Assert.Single(result.Records, r => r.T == "Star Wars Holiday Special").I);
+        Assert.Contains("an Overrides row holds this id", Assert.Single(result.ReviewQueue), StringComparison.Ordinal);
+    }
+
     [Fact]
     public async Task TheBladeRunnerPairCollapsesIntoOneRecordThatKeepsBothPurchases()
     {
@@ -113,9 +130,8 @@ public class MoviePipelineCrossRowTests
         Assert.Equal(
             "Blade Runner / Blade Runner: The Final Cut. Colección 2 películas / Warner Bros Firsts: Action & Adventure Bundle",
             record.Own);
-        Assert.Equal(   // rule 1 sees two agreeing rows on one id; rule 2 then collapses them
-            ["Blade Runner (78) → 2 rows share this TMDB id and all agree on its title (117 min); none rejected",
-             "Blade Runner (The Final Cut) (1:57:29, Ridley Scott) → duplicate key 78-117: kept \"Blade Runner (The Final Cut)\", " +
+        Assert.Equal(   // two agreeing rows on one id say nothing to rule 1; rule 2 then collapses them
+            ["Blade Runner (The Final Cut) (1:57:29, Ridley Scott) → duplicate key 78-117: kept \"Blade Runner (The Final Cut)\", " +
              "dropped \"Blade Runner\"; purchase info merged into Own"],
             result.ReviewQueue);
     }
@@ -130,9 +146,8 @@ public class MoviePipelineCrossRowTests
             Row(title, "2:05:15", "Joe Johnston", "Captain America 4-Movie Collection"), Row(title, "2:04:09", "Joe Johnston"));
 
         Assert.Equal(["1771-124", "1771-125"], result.Records.Select(r => r.K).Order(StringComparer.Ordinal));
-        Assert.Equal(   // rule 1's note for the group, then rule 3's
-            [$"{title} (1771) → 2 rows share this TMDB id and all agree on its title (124, 125 min); none rejected",
-             $"{title} (1771) → same title and id at 124, 125 min; probably one film listed twice"],
+        Assert.Equal(   // two agreeing rows on one id say nothing to rule 1; rule 3 notes the repeated title
+            [$"{title} (1771) → same title and id at 124, 125 min; probably one film listed twice"],
             result.ReviewQueue);
     }
 

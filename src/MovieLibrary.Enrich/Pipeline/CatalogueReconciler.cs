@@ -70,15 +70,21 @@ internal static class CatalogueReconciler
     // ---- Rule 1: a row that took another film's id --------------------------------------------------------
 
     /// <summary>
-    /// Groups the films by non-zero TMDB id. In a group of more than one, rows that agree with the film's TMDB title
-    /// (<see cref="MatchScorer.TitleAgrees"/>) are kept as they are, and rows that do not are rebuilt as unmatched,
-    /// but only when some other row agrees. When every row agrees, or none does, nothing in the evidence picks a
-    /// winner and the group gets one note instead.
+    /// Groups the films by non-zero TMDB id. In a group of more than one, a row SPEAKS for the id when its sheet title
+    /// agrees with the film's TMDB title (<see cref="MatchScorer.TitleAgrees"/>) or it came from the Overrides tab. A row
+    /// that does not speak for it is rebuilt as unmatched, but only when some other row does. When no row speaks for the
+    /// id nothing in the evidence picks a winner, so nothing is rejected and the group gets one note. When every row
+    /// speaks for it the group is fine and says nothing: the owner owns two cuts of a film, which is correct.
     /// </summary>
     /// <remarks>
-    /// A row from the Overrides tab is exempt: it is the owner's decision at confidence 1.0, and overrides exist
-    /// precisely where the TMDB title cannot fold to the sheet's (<c>Seven</c> against <c>Se7en</c>), so an override
-    /// row would otherwise be the first to be rejected and the owner could never correct a row.
+    /// <para>An Overrides row is the owner saying "this film is TMDB id X", so it is authoritative twice over. It is never
+    /// rejected itself: overrides exist precisely where the TMDB title cannot fold to the sheet's (<c>Seven</c> against
+    /// <c>Se7en</c>), so an override row would otherwise be the first to go and the owner could never correct a row. And
+    /// it speaks for the id even when its own title disagrees, so a non-override row that took the same id and does not
+    /// agree on title is rejected because the id is spoken for, even if no other row agrees. Only the override row is
+    /// exempt; its group is judged like any other.</para>
+    /// <para>The all-agree group is deliberately silent. Every legitimate two-cut pair is one, so a note for it is a permanent
+    /// line the owner can do nothing about, in a review section the job summary caps.</para>
     /// </remarks>
     public static IReadOnlyList<ResolvedFilm> RejectConflictingIds(IReadOnlyList<ResolvedFilm> films, List<string> notes)
     {
@@ -107,30 +113,36 @@ internal static class CatalogueReconciler
 
             var label = $"{tmdbTitle} ({id})";
             var share = $"{members.Count} rows share this TMDB id";
-            var disagree = members.Where(i => !MatchScorer.TitleAgrees(tmdbTitle, films[i].SheetTitle)).ToList();
+            var titleAgrees = members.Where(i => MatchScorer.TitleAgrees(tmdbTitle, films[i].SheetTitle)).ToHashSet();
+            var speaks = members.Where(i => titleAgrees.Contains(i) || films[i].FromOverride).ToList();
+            var rejected = members.Except(speaks).ToList();
 
-            if (disagree.Count == members.Count)
+            if (speaks.Count == 0)
             {
                 notes.Add($"{label} → {share} and none agrees on its title ({runtimes} min); " +
                           "nothing says which is right, so none rejected");
             }
-            else if (disagree.Count == 0)
-            {
-                notes.Add($"{label} → {share} and all agree on its title ({runtimes} min); none rejected");
-            }
-            else
+            else if (rejected.Count > 0)
             {
                 // The row's own note (Flagged at 0.70, id 9615) is not carried over: it has become false. This one
                 // replaces it, and like every line this class writes it goes in Notes, not on the row (see Reconciliation).
-                foreach (var i in disagree.Where(i => !films[i].FromOverride))
+                var reason = titleAgrees.Count > 0
+                    ? "its title does not match that film and another row's does"
+                    : "an Overrides row holds this id and this row's title does not match that film";
+
+                foreach (var i in rejected)
                 {
                     result[i] = Unmatched(films[i]);
                     notes.Add(ResolvedFilm.Line(films[i].Row,
-                        $"rejected TMDB id {id} (\"{tmdbTitle}\"): its title does not match that film and " +
-                        "another row's does, so it is now unmatched"));
+                        $"rejected TMDB id {id} (\"{tmdbTitle}\"): {reason}, so it is now unmatched"));
                 }
-
-                var kept = disagree.Where(i => films[i].FromOverride).Select(i => films[i].Row.Title).ToList();
+            }
+            else
+            {
+                // Nothing was rejected. If an override is in the group and its title does not agree, say so once: it is
+                // the one case where the owner holds two rows on one id and only one of them is the film's own name.
+                var kept = members.Where(i => films[i].FromOverride && !titleAgrees.Contains(i))
+                    .Select(i => films[i].Row.Title).ToList();
                 if (kept.Count > 0)
                     notes.Add($"{label} → {share}; Overrides rows are never rejected, so kept despite a title " +
                               $"that does not agree: {Quoted(kept)}");

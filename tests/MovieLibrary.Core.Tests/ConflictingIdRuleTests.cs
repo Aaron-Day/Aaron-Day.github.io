@@ -117,7 +117,7 @@ public class ConflictingIdRuleTests
     }
 
     [Fact]
-    public void WhenEveryRowAgreesNothingChangesAndTheGroupGetsOneNote()
+    public void WhenEveryRowAgreesNothingChangesAndNothingIsSaid()
     {
         var a = Make(120, "The Lord of the Rings: The Fellowship of the Ring", 178, "The Lord of the Rings: The Fellowship of the Ring");
         var b = Make(120, "The Lord of the Rings: The Fellowship of the Ring (Extended Edition)", 228, "The Lord of the Rings: The Fellowship of the Ring");
@@ -125,10 +125,7 @@ public class ConflictingIdRuleTests
         var (films, notes) = Run(a, b);
 
         Assert.Equal([a, b], films);
-        Assert.Equal(
-            ["The Lord of the Rings: The Fellowship of the Ring (120) → 2 rows share this TMDB id and all agree on its title " +
-             "(178, 228 min); none rejected"],
-            notes);
+        Assert.Empty(notes);   // every legitimate two-cut pair is one of these; a note for each would be permanent noise
     }
 
     [Fact]
@@ -165,9 +162,7 @@ public class ConflictingIdRuleTests
         var (films, notes) = Run(logan, wolverine, fellowship, extended);
 
         Assert.Equal([263115, 0, 120, 120], films.Select(f => f.Record.I));
-        Assert.Equal(2, notes.Count);   // groups in ascending id order: Fellowship (120) all agree, then Logan (263115) rejected
-        Assert.Contains("all agree", notes[0], StringComparison.Ordinal);
-        Assert.Contains("rejected TMDB id 263115", notes[1], StringComparison.Ordinal);
+        Assert.Contains("rejected TMDB id 263115", Assert.Single(notes), StringComparison.Ordinal);   // Fellowship's all-agree group is silent
     }
 
     // An Overrides row is the owner's decision at confidence 1.0, and exists precisely where the TMDB title cannot fold
@@ -194,9 +189,78 @@ public class ConflictingIdRuleTests
         var matched = Make(11, "Star Wars", 121, "Star Wars");
         var wrong = Make(11, "Star Trek", 122, "Star Wars");
 
-        var (films, _) = Run(forced, matched, wrong);
+        var (films, notes) = Run(forced, matched, wrong);
 
         Assert.Equal([11, 11, 0], films.Select(f => f.Record.I));
+        Assert.Contains("another row's does", Assert.Single(notes), StringComparison.Ordinal);   // a row agrees, so that is the reason
+    }
+
+    // The override is the owner saying "this film is TMDB id 11", so it is authoritative even though its own title
+    // does not fold to the TMDB one. A row that took the same id and does not agree is wrong BECAUSE the id is spoken
+    // for, and is rejected although no other row agrees. Only the override row is exempt.
+    [Fact]
+    public void ADisagreeingRowBesideAnOverrideIsRejectedBecauseTheIdIsSpokenFor()
+    {
+        var forced = Make(11, "Star Wars: A New Hope", 125, "Star Wars", fromOverride: true, mc: 1d);
+        var wrong = Make(11, "Star Wars Holiday Special", 121, "Star Wars");
+
+        var (films, notes) = Run(forced, wrong);
+
+        Assert.Same(forced, films[0]);                                       // the override row is exempt and untouched
+        Assert.Equal(0, films[1].Record.I);                                  // the other is not
+        Assert.StartsWith("u-", films[1].Record.K, StringComparison.Ordinal);
+        Assert.Equal(
+            ["Star Wars Holiday Special (2:01:00, Some Director) → rejected TMDB id 11 (\"Star Wars\"): an Overrides row holds " +
+             "this id and this row's title does not match that film, so it is now unmatched"],
+            notes);
+    }
+
+    [Fact]
+    public void EveryDisagreeingRowBesideAnOverrideIsRejectedWhicheverOrderTheyArriveIn()
+    {
+        var forced = Make(11, "Star Wars: A New Hope", 125, "Star Wars", fromOverride: true, mc: 1d);
+        var one = Make(11, "Star Trek", 122, "Star Wars");
+        var two = Make(11, "Star Fox", 123, "Star Wars");
+
+        Assert.Equal([11, 0, 0], Run(forced, one, two).Films.Select(f => f.Record.I));
+        Assert.Equal([0, 0, 11], Run(one, two, forced).Films.Select(f => f.Record.I));
+    }
+
+    [Fact]
+    public void AnOverrideThatAgreesOnTitleSpeaksForTheIdToo()
+    {
+        var forced = Make(11, "Star Wars", 121, "Star Wars", fromOverride: true, mc: 1d);
+        var wrong = Make(11, "Star Trek", 122, "Star Wars");
+
+        var (films, notes) = Run(forced, wrong);
+
+        Assert.Equal([11, 0], films.Select(f => f.Record.I));
+        Assert.Contains("another row's does", Assert.Single(notes), StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void TwoOverrideRowsOnOneIdAreBothKeptAndNotedOnce()
+    {
+        var a = Make(11, "Star Wars: A New Hope", 125, "Star Wars", fromOverride: true, mc: 1d);
+        var b = Make(11, "Star Wars: A New Hope (Special Edition)", 130, "Star Wars", fromOverride: true, mc: 1d);
+
+        var (films, notes) = Run(a, b);
+
+        Assert.Equal([a, b], films);
+        Assert.Equal(
+            ["Star Wars (11) → 2 rows share this TMDB id; Overrides rows are never rejected, so kept despite a title " +
+             "that does not agree: \"Star Wars: A New Hope\", \"Star Wars: A New Hope (Special Edition)\""],
+            notes);
+    }
+
+    [Fact]
+    public void AnOverrideThatAgreesBesideAnAgreeingRowSaysNothing()
+    {
+        var forced = Make(11, "Star Wars", 121, "Star Wars", fromOverride: true, mc: 1d);
+
+        var (_, notes) = Run(forced, Make(11, "Star Wars (Special Edition)", 130, "Star Wars"));
+
+        Assert.Empty(notes);
     }
 
     // A budget-stopped run can leave a matched film whose payload never loaded. One row's title stands for the group,
@@ -245,8 +309,8 @@ public class ConflictingIdRuleTests
         var rejected = output.Where(f => f.Record.I == 0).Select(f => f.Record.T).ToList();
         var expected = c.Rows.Where(r => r.Impostor).Select(r => r.SheetTitle).ToList();
         Assert.Equal(expected, rejected);                 // only the impostors, and all of them
-        Assert.Single(notes);                             // a clean pair is noted once; a split by its rejection, once
-        Assert.Contains(c.IsSplit ? "rejected" : "all agree", notes[0], StringComparison.Ordinal);
+        Assert.Equal(c.IsSplit ? 1 : 0, notes.Count);     // a clean pair says nothing; a split says its rejection, once
+        Assert.All(notes, n => Assert.Contains("rejected", n, StringComparison.Ordinal));
     }
 
     [Fact]
