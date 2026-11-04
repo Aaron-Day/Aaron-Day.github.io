@@ -55,6 +55,10 @@ public sealed record StoredMovie(
 /// run, but it is never cached, so the next run redoes the row instead of suppressing the film for 30 days.</para>
 /// <para><b>Freshness.</b> A stored payload older than <see cref="RefreshPolicy.Window"/> is refetched, whatever the
 /// index says. If it cannot be (budget spent) the stale copy is used for this run rather than a blank card.</para>
+/// <para><b>Cross-row rules.</b> Some conflicts only show once every row is resolved: two rows holding one TMDB id, two
+/// holding one key. After the loop, <see cref="CatalogueReconciler"/> rejects a row that took another film's id, collapses
+/// rows that still share a key, and notes a probable duplicate. It is a pure post-pass: it makes no request, so it
+/// spends none of the TMDB budget. Its review lines come first in <see cref="MoviePipelineResult.ReviewQueue"/>.</para>
 /// <para><b>Failures.</b> None of these are caught here. Transport faults, a bad status and a body that is not JSON
 /// arrive as <see cref="HttpRequestException"/>. A details body that parses but whose typed members have the wrong
 /// shape (<c>genres</c>, <c>belongs_to_collection</c>) throws <see cref="System.Text.Json.JsonException"/> out of
@@ -110,8 +114,7 @@ public sealed class MoviePipeline(
         IReadOnlyDictionary<string, int> overrides,
         CancellationToken ct)
     {
-        var records = new List<MovieRecord>(rows.Count);
-        var review = new List<string>();
+        var resolved = new List<ResolvedFilm>(rows.Count);
         var genreNames = new SortedDictionary<int, string>();   // only ids a record actually carries
         var now = clock();
 
@@ -138,11 +141,13 @@ public sealed class MoviePipeline(
             TmdbMovie? fresh = null;   // the chosen film's details, when this run's search already fetched them
             IReadOnlyList<TmdbCastMember>? freshCast = null; // and its cast, when the credits gate fetched them
             string? reviewNote = null; // why a human should look at this row, when one should
+            var fromOverride = false;  // the owner forced this id, which no later rule may withdraw
 
             if (overrides.TryGetValue(OverrideKey(title, runtime), out var forced))
             {
                 tmdbId = forced;
                 confidence = 1d;
+                fromOverride = true;
             }
             else if (cache.Resolve(key, title.Value, runtime, directors, now) is { } hit)
             {
@@ -196,15 +201,28 @@ public sealed class MoviePipeline(
                         : Describe(match.Outcome, confidence, tmdbId);
             }
 
-            records.Add(await BuildRecordAsync(row, title, runtime, key, tmdbId, confidence, fresh, freshCast, genreNames, now, ct));
-            if (reviewNote is not null)
-                review.Add($"{row.Title} ({row.Runtime}, {row.Directors}) → {reviewNote}");
+            var (record, tmdbTitle) = await BuildRecordAsync(
+                row, title, runtime, key, tmdbId, confidence, fresh, freshCast, genreNames, now, ct);
+
+            // Kept beside the record, not on it: the cross-row rules below need the sheet row, the identity key and the
+            // title TMDB gave the film, and the published record carries none of them.
+            resolved.Add(new ResolvedFilm(record, row, title, key, tmdbTitle, fromOverride, reviewNote));
 
             // After the record, so the count means rows FINISHED. The reporter decides which of these to print.
             progress?.Report(new PassProgress { Done = ++done, Total = ordered.Count });
         }
 
-        return new MoviePipelineResult(records, review, tmdb.RequestsUsed, tmdb.BudgetExhausted, genreNames);
+        // Rules that compare one row with another can only run once every row is resolved. A pure post-pass: it holds
+        // no client and makes no request, because the TMDB budget is the owner's and spending any of it here is a defect.
+        var reconciled = CatalogueReconciler.Reconcile(resolved);
+
+        // The rules' lines FIRST, then the loop's in row order. The job summary shows only the first 150 lines of the film
+        // section and the real queue is longer, so lines put last would be exactly the ones it cuts. A rejected row's own
+        // line has already been replaced by the reconciler: the one it had became false.
+        var review = reconciled.Notes.Concat(reconciled.Films.Select(f => f.ReviewLine).OfType<string>()).ToList();
+
+        return new MoviePipelineResult(
+            [.. reconciled.Films.Select(f => f.Record)], review, tmdb.RequestsUsed, tmdb.BudgetExhausted, genreNames);
     }
 
     private static string Describe(MatchOutcome outcome, double confidence, int? tmdbId)
@@ -358,7 +376,11 @@ public sealed class MoviePipeline(
         return current;
     }
 
-    private async Task<MovieRecord> BuildRecordAsync(
+    /// <returns>
+    /// The record, and the title TMDB gives the film it matched (null when unmatched, or when its details never loaded).
+    /// The record's own <c>T</c> is the sheet's title, so the TMDB one would otherwise be lost.
+    /// </returns>
+    private async Task<(MovieRecord Record, string? TmdbTitle)> BuildRecordAsync(
         SheetRow row, NormalizedTitle title, int runtime, string identityKey,
         int? tmdbId, double confidence, TmdbMovie? fresh, IReadOnlyList<TmdbCastMember>? freshCast,
         SortedDictionary<int, string> genreNames, DateTimeOffset now, CancellationToken ct)
@@ -372,7 +394,7 @@ public sealed class MoviePipeline(
         int? year = details?.ReleaseDate is { Length: >= 4 } d && int.TryParse(d[..4], out var y)
             ? y : title.YearHint;
 
-        return new MovieRecord(
+        var record = new MovieRecord(
             I: tmdbId ?? 0,
             K: RecordKey.ForFilm(tmdbId, runtime, identityKey),
             T: row.Title,
@@ -392,5 +414,7 @@ public sealed class MoviePipeline(
             // An unmatched film is always 0, even when its best candidate scored a little: the
             // scorer reports that sub-threshold score, but no match was made.
             Mc: tmdbId is null ? 0d : Math.Round(confidence, 4));
+
+        return (record, details?.Title);
     }
 }
