@@ -17,7 +17,14 @@
     --dim: #8c93a6;
     --accent: #f5c518;
     --accent2: #4da3ff;
-    --touch: 44px;   /* minimum size of every standalone control, SC 2.5.8 and the project rule */
+    --touch: 44px;   /* the size this project gives every standalone control. 44x44 is SC 2.5.5 Target
+                        Size (Enhanced), Level AAA, and that is the goal this token aims at. The criterion
+                        the project is actually held to is SC 2.5.8 Target Size (Minimum), Level AA, which
+                        is 24x24 - so every pixel above 24 here is a house rule, not a conformance
+                        requirement. Do not cite 2.5.8 for the number 44. */
+    --bar-max: 40dvh;   /* the cap on #blazor-error-ui's own height. Everything that has to reserve room
+                           for that bar reads the cap from here, so a change to one cannot leave the
+                           other behind. See html's scroll-padding-bottom. */
 }
 
 html, body {
@@ -27,8 +34,15 @@ html, body {
 body { background: var(--bg); color: var(--txt); }
 
 /* 7.40:1 on --bg, 6.35:1 on --panel2. Sets `color` itself, so Bootstrap's hover rule, which only
-   changes a custom property, cannot turn it dark blue. */
-a { color: var(--accent2); }
+   changes a custom property, cannot turn it dark blue.
+   The underline is declared HERE rather than inherited from Bootstrap's reboot. --accent2 (#4da3ff)
+   against the surrounding --txt (#e8eaf0) is 2.18:1, far below the 3:1 that SC 1.4.1 Use of Color
+   (Level A) requires before colour alone may distinguish a link inside a block of prose - technique
+   failure F73, and NotFound's "Back to the library" is exactly that shape. Reboot underlines links
+   today, so this costs nothing visually; what it buys is that the only non-colour cue the link has is
+   owned by this file, and cannot leave with a dropped stylesheet, a Bootstrap link-underline utility
+   or a later reset. Never set text-decoration: none on a link inside running text. */
+a { color: var(--accent2); text-decoration: underline; }
 
 /* One focus ring for everything, on the token palette. `:root :focus-visible` is (0,2,0) so it beats
    Bootstrap's `.form-control:focus` and `.btn:focus-visible` on load order. A bare `:focus-visible`
@@ -47,8 +61,17 @@ a, button, input, select { touch-action: manipulation; }
 :root :is(a, button):active { background-color: var(--line); }
 #blazor-error-ui .dismiss:active { background-color: var(--line); }
 
-/* A focused control must not sit under the fixed error bar (SC 2.4.11). 6rem is the wrapped bar's height at 320px. */
-html { scroll-padding-bottom: 6rem; }
+/* A focused control must not sit under the fixed error bar: SC 2.4.11 Focus Not Obscured (Minimum),
+   Level AA, new in WCAG 2.2. The bar is position:fixed at bottom:0, so anything scrolled into view
+   lands under it unless the scrollport reserves at least as much room as the bar can occupy.
+   HEIGHT is the dimension that governs, not width. The old 6rem came from measuring the bar WRAPPED at
+   320px - Reflow's horizontal dimension. Reflow's other dimension is a 256px viewport HEIGHT, and there
+   the bar's own --bar-max cap is 102.4px while 6rem is 96px: the mitigation was 6px short at exactly the
+   size it was written for. Reading the cap keeps the reserve >= the bar at every viewport height; the
+   6rem floor still matters, because the bar's real height is content-driven and scales with the reader's
+   root font size while 40dvh does not. scroll-padding is scroll geometry, not layout, so this reserves
+   no visible space. */
+html { scroll-padding-bottom: max(6rem, var(--bar-max)); }
 
 .skip-link:focus {
     position: fixed; top: .5rem; left: .5rem; z-index: 1100;
@@ -67,7 +90,7 @@ html { scroll-padding-bottom: 6rem; }
     border-top: 3px solid var(--accent);
     display: none; position: fixed; left: 0; bottom: 0; width: 100%; z-index: 1000;
     box-sizing: border-box; padding: .5rem 1rem;
-    max-height: 40dvh; overflow: auto;
+    max-height: var(--bar-max); overflow: auto;
 }
 
 #blazor-error-ui .error-ui-inner { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1rem; }
@@ -180,14 +203,19 @@ body {
     flex-wrap: wrap;              /* collapses to one column at 320px: SC 1.4.10 Reflow */
     align-items: center;
     gap: 0.75rem 1rem;            /* row-gap column-gap */
-    /* The 6rem bottom clears #blazor-error-ui, which is position:fixed, bottom:0,
-       z-index:1000 and would otherwise sit exactly where this sentence is read. The bar
-       wraps to two rows at 320px and measures 91px there (5.7rem), so the stock 3.5rem,
-       sized for a one-line bar, left its last line covered. At very large text sizes the
-       bar can grow to its own max-height (40dvh) and still cover this; it can be dismissed.
+    /* The bottom reserve clears #blazor-error-ui, which is position:fixed, bottom:0,
+       z-index:1000 and would otherwise sit exactly where this sentence is read. The stock
+       3.5rem was sized for a one-line bar; the bar wraps to two rows at 320px and measures
+       91px (5.7rem) there, which is where the 6rem floor comes from. But 320px is Reflow's
+       WIDTH, and the bar's height is capped by --bar-max, which at Reflow's 256px viewport
+       HEIGHT is 102.4px - more than 6rem. Reading the cap, as html's scroll-padding-bottom
+       does, is what makes the reserve large enough at every viewport height instead of only
+       at the one it was measured at. Unlike scroll-padding this is real layout space, and on
+       a tall viewport it is a lot of it; that is the price of the sentence never being
+       covered, and TMDB's terms are about the sentence being displayed.
        Unconditional on purpose: Blazor toggles that element's display inline, so a
        :has() conditional would depend on a style this file cannot see. */
-    padding: 1rem 1.5rem 6rem;
+    padding: 1rem 1.5rem max(6rem, var(--bar-max));
     /* A border, not a background tint: under forced-colors a border is re-coloured to
        CanvasText and survives, while a tint flattens to Canvas and takes the grouping
        cue with it. */
@@ -240,5 +268,12 @@ body {
    white plate behind it would simply be a bright box in high-contrast black. The same
    reasoning retires the Chrome Auto Dark Theme risk: auto-dark cannot make a mint-to-blue
    wordmark disappear. Re-add both the day this asset is swapped for a dark variant.
-   No transition, animation or transform is used here, so no prefers-reduced-motion block
-   is needed. Keep it that way. */
+   Motion: this block declares none, and the whole stylesheet declares exactly two, both on the
+   boot spinner - the static rotate(-90deg) on .loading-progress circle, and the stroke-dasharray
+   tween on .loading-progress circle:last-child. They are a deliberate exception rather than an
+   oversight: the spinner only exists before the app has rendered, and a prefers-reduced-motion
+   block cannot help someone who is looking at a blank page waiting for a payload. Everything
+   added after this point either declares no motion or pairs it with a prefers-reduced-motion
+   block. That is not a note to a future reader, it is a test:
+   StyleContractTests.TheOnlyMotionIsTheBootSpinnersAndAnythingElseNeedsAReducedMotionBlock scans
+   this file with its comments stripped, so Task 6's tile hovers cannot land without one. */

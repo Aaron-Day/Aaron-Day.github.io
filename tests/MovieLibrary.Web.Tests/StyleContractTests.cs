@@ -108,10 +108,29 @@ public class StyleContractTests
         Assert.DoesNotMatch(@"(?m)^a:active, button:active", AppCss);
     }
 
+    /// <remarks>
+    /// D2. SC 2.4.11 Focus Not Obscured (Minimum), Level AA, new in WCAG 2.2. #blazor-error-ui is
+    /// position:fixed at bottom:0, so a control brought into view by a focus move sits under it unless the
+    /// scrollport reserves at least the bar's height. The reserve was 6rem, measured from the bar wrapped at
+    /// 320px - Reflow's WIDTH. Reflow's other dimension is a 256px viewport HEIGHT, where the bar's own
+    /// 40dvh cap is 102.4px and 6rem is 96px, so the mitigation was 6.4px short at precisely the size it
+    /// existed for. What this pins is not the numbers but the shape: one token holds the cap, and every
+    /// reserve is written as max(floor, that token), so the two cannot drift apart again.
+    /// What it cannot prove: that a real browser actually keeps the focused control clear. That needs a
+    /// viewport and a focus move, and belongs to Task 4b.
+    /// </remarks>
     [Fact]
-    public void AFocusedControlCannotSitUnderTheFixedErrorBar()
+    public void TheRoomReservedForTheErrorBarIsNeverLessThanTheBarCanTakeUp()
     {
-        Assert.Matches(@"html\s*\{\s*scroll-padding-bottom\s*:\s*6rem\s*;\s*\}", AppCss);
+        Assert.Matches(@"--bar-max\s*:\s*40dvh\s*;", Root());
+        Assert.Matches(@"#blazor-error-ui\s*\{[^}]*max-height\s*:\s*var\(--bar-max\)", AppCss);
+        Assert.Matches(@"html\s*\{\s*scroll-padding-bottom\s*:\s*max\(6rem,\s*var\(--bar-max\)\)\s*;\s*\}", AppCss);
+        Assert.Matches(@"(?s)\.attribution\s*\{.*?padding\s*:\s*1rem 1\.5rem max\(6rem,\s*var\(--bar-max\)\)", AppCss);
+
+        // A bare 6rem in either reserve, or a literal cap that no longer goes through the token, is the
+        // bug coming back by the same route it arrived: two numbers for one measurement.
+        Assert.DoesNotMatch(@"scroll-padding-bottom\s*:\s*6rem\s*;", AppCss);
+        Assert.DoesNotMatch(@"max-height\s*:\s*40dvh", AppCss);
     }
 
     [Fact]
@@ -123,5 +142,116 @@ public class StyleContractTests
         Assert.DoesNotContain("max-width", css);
         Assert.Contains("@media (min-width: 48rem)", css);
         Assert.Matches(@"\.nav-links\.collapsed\s*\{\s*display\s*:\s*none", css);
+    }
+
+    /// <remarks>
+    /// D1. SC 1.4.1 Use of Color, Level A. NotFound's "Back to the library" sits inside a sentence of
+    /// prose, which is technique failure F73's exact shape: a link distinguished from the text around it
+    /// by colour alone needs 3:1 against that text, and --accent2 (#4da3ff) against --txt (#e8eaf0) is
+    /// 2.18:1. Nothing looked wrong because Bootstrap's reboot underlines links - which is the problem,
+    /// not the defence, because it puts the link's only non-colour cue in a file this project does not own
+    /// and would lose to a dropped stylesheet or a link-underline utility. Declaring it here makes it ours.
+    /// The second half bans text-decoration: none anywhere in this file, which is stricter than 1.4.1
+    /// needs - a standalone control that happens to be an anchor is distinguished by its own box, not by
+    /// colour inside running text. It is written this way because the only rule here that could plausibly
+    /// want it is one that also lands on the in-prose link, and a blanket ban is a cheap guard with an
+    /// obvious escape: when a later task needs one, name the exception in this test the way the motion
+    /// rule below names the boot spinner.
+    /// Comments are stripped first, so prose that mentions text-decoration cannot trip it.
+    /// What this cannot catch: a reset in a component's scoped .razor.css, an inline style, or a Bootstrap
+    /// utility class in markup. Those need the rendered page, which is Task 4b.
+    /// </remarks>
+    [Fact]
+    public void AnInProseLinkIsDistinguishedByMoreThanItsColour()
+    {
+        var css = WithoutComments(AppCss);
+
+        Assert.Matches(@"(?m)^a\s*\{[^}]*text-decoration\s*:\s*underline", css);
+        Assert.DoesNotMatch(@"text-decoration\s*:\s*none", css);
+    }
+
+    /// <remarks>
+    /// D3. The token said "SC 2.5.8" beside the value 44px. 44x44 is SC 2.5.5 Target Size (Enhanced),
+    /// Level AAA; SC 2.5.8 Target Size (Minimum) is the Level AA criterion this project is held to and it
+    /// is 24x24. Citing 2.5.8 for 44 turns a house rule into a conformance claim, and it is the same
+    /// conflation the plan already had corrected once - it had simply survived into the CSS, in the one
+    /// file the tests read. The token's VALUE is not the defect and does not change.
+    /// </remarks>
+    [Fact]
+    public void TheTouchTokenNamesTheAaaGoalItAimsAtAndTheAaMinimumTheStandardActuallyRequires()
+    {
+        var root = Root();
+
+        Assert.Matches(@"2\.5\.5[^*]*AAA", root);     // 44px is the AAA goal
+        Assert.Matches(@"2\.5\.8[^*]*24", root);      // 24px is what AA asks for
+        Assert.DoesNotMatch(@"minimum size of every standalone control, SC 2\.5\.8", root);
+    }
+
+    /// <remarks>
+    /// D4. The file's closing comment promised "No transition, animation or transform is used here, so no
+    /// prefers-reduced-motion block is needed", while the boot spinner two hundred lines above declares a
+    /// transform and a transition. The spinner is a legitimate exception - it is gone before the app
+    /// renders, and prefers-reduced-motion cannot help a user staring at a blank page - so the comment now
+    /// names it, and this turns the promise into something enforced rather than remembered. Task 6 adds
+    /// tile hovers; a promise is only worth the test behind it.
+    /// Scope: transition and animation, not transform. A static rotate() is not motion and has nothing for
+    /// prefers-reduced-motion to reduce; a rule that flagged it would cry wolf, which is the one thing this
+    /// gate must not do. Comments are stripped before the scan, so prose about motion cannot trip it.
+    /// What this cannot catch: motion that arrives through a component's scoped .razor.css, an inline
+    /// style, or a Bootstrap class. NoViewportUnitSitsBelowBodyInTheLayoutCss covers the scoped files for
+    /// its own rule; a stylesheet-wide sweep belongs with the browser pass in Task 4b.
+    /// </remarks>
+    [Fact]
+    public void TheOnlyMotionIsTheBootSpinnersAndAnythingElseNeedsAReducedMotionBlock()
+    {
+        var motion = Declarations(WithoutComments(AppCss))
+            .Where(d => Regex.IsMatch(d.Declaration, @"^(?:transition|animation)[a-z-]*\s*:"))
+            .ToList();
+
+        // Positive control. Every assertion below is a loop over `motion`, so an empty `motion` would make
+        // this test green while proving nothing at all - which is the failure mode the scan exists to stop.
+        Assert.Contains(motion, m => m.Context.Contains(".loading-progress"));
+
+        foreach (var (context, declaration) in motion)
+            Assert.True(
+                context.Contains("prefers-reduced-motion") || context.Contains(".loading-progress"),
+                $"`{declaration};` is declared under `{context}`, which is neither the boot spinner nor a "
+                + "@media (prefers-reduced-motion) block. A user who asks their system to reduce motion must "
+                + "get a stylesheet that honours it; the boot spinner is the one exception, because it is "
+                + "gone before the app renders. Either drop the motion or pair it with a reduced-motion "
+                + "block, and say which in app.css's closing comment.");
+    }
+
+    private static string WithoutComments(string css) => Regex.Replace(css, @"/\*.*?\*/", "", RegexOptions.Singleline);
+
+    /// <summary>
+    /// Every declaration in a stylesheet, paired with the nested selectors and at-rules it sits under. Not
+    /// a CSS parser: it tracks braces and semicolons only, so a semicolon inside a url() value splits that
+    /// one value in two. That is harmless for a scan that only reads the start of a declaration, and it is
+    /// the reason this is private to one test rather than offered as a utility.
+    /// </summary>
+    private static IEnumerable<(string Context, string Declaration)> Declarations(string css)
+    {
+        var open = new List<string>();
+        var start = 0;
+
+        for (var i = 0; i < css.Length; i++)
+        {
+            switch (css[i])
+            {
+                case '{':
+                    open.Add(css[start..i].Trim());
+                    start = i + 1;
+                    break;
+                case '}':
+                    if (open.Count > 0) open.RemoveAt(open.Count - 1);
+                    start = i + 1;
+                    break;
+                case ';':
+                    yield return (string.Join(" ", open), css[start..i].Trim());
+                    start = i + 1;
+                    break;
+            }
+        }
     }
 }
