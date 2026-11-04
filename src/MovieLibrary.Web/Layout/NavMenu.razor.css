@@ -11,8 +11,11 @@ nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: spac
 .nav-links.collapsed { display: none; }
 .nav-links ::deep a { display: flex; align-items: center; min-width: var(--touch); min-height: var(--touch); padding: 0 .75rem; }
 .nav-links ::deep a.active { border-bottom: 3px solid var(--accent); font-weight: 600; }
+/* No hover underline rule here. app.css's `a { text-decoration: underline }` underlines these links
+   unconditionally, so the @media (hover: hover) rule that used to sit at the end of this file was a
+   no-op - and worse, it was the declaration the review cited as evidence that someone had assumed
+   nav links were not underlined. Removed rather than left as a misleading signal. */
 @media (min-width: 48rem) {
     .nav-toggle { display: none; }
     .nav-links, .nav-links.collapsed { display: flex; flex-basis: auto; gap: 1rem; }
 }
-@media (hover: hover) { .nav-links ::deep a:hover { text-decoration: underline; } }
