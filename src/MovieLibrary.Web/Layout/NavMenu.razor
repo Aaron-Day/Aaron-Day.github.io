@@ -14,12 +14,11 @@
         <span class="visually-hidden">Menu</span>
     </button>
 
-    <ul class="nav-links @(collapsed ? "collapsed" : null)" id="nav-links" role="list"
-        @onfocusin="() => listHasFocus = true" @onfocusout="() => listHasFocus = false">
-        @foreach (var item in items)
+    <ul class="nav-links @(collapsed ? "collapsed" : null)" id="nav-links" role="list">
+        @foreach (var item in Items)
         {
             var current = IsCurrent(item);
-            <li><a class="nav-link @(current ? "active" : null)" href="@item.Href" aria-current="@(current ? "page" : null)">@item.Label</a></li>
+            <li><a class="@(current ? "active" : null)" href="@item.Href" aria-current="@(current ? "page" : null)" @onclick="OnLinkClick">@item.Label</a></li>
         }
     </ul>
 </nav>
@@ -27,23 +26,33 @@
 @code {
     // One entry per nav link. Paths lists every base-relative address that shows that link's page, because
     // NavLink can only match a single href and "/" and "/movies" are the same page. Part B adds a link by
-    // adding an entry here, and a second address for an existing page by adding to its Paths.
+    // adding an entry here, and a second address for an existing page by adding to its Paths. Matching is
+    // case-insensitive, like the router: "/Movies" is the Films page too.
     private sealed record NavItem(string Label, string Href, string[] Paths);
 
-    private static readonly NavItem[] items =
+    private static readonly NavItem[] Items =
     {
         new("Films", "movies", new[] { "", "movies" }),
     };
 
     private bool collapsed = true;
-    private bool listHasFocus;
+    private bool linkActivated;
     private bool restoreFocus;
     private string previousPath = string.Empty;
     private ElementReference toggleButton;
 
     // aria-expanded is rendered from the strings above, never from a bool: a bool attribute value is
     // present-and-empty when true and omitted when false, which ARIA reads as undefined either way.
-    private void Toggle() => collapsed = !collapsed;
+    private void Toggle()
+    {
+        collapsed = !collapsed;
+        linkActivated = false;
+    }
+
+    // A plain activation of a drawer link. The runtime ignores a click with a modifier key held (the browser
+    // opens a tab or downloads), so such a click is not an activation and navigates nowhere.
+    private void OnLinkClick(MouseEventArgs e) =>
+        linkActivated = !(e.CtrlKey || e.MetaKey || e.ShiftKey || e.AltKey);
 
     protected override void OnInitialized()
     {
@@ -54,14 +63,16 @@
     // Following a link closes the drawer. Left open it would hold the focus context inside a list the user
     // has finished with, and on a phone it covers the page they just navigated to.
     //
-    // Closing is display:none, which takes the focused link out of the tab order and drops focus to <body>.
+    // Closing is display:none, which takes the activated link out of the tab order and drops focus to <body>.
     // When the target is a different page, FocusOnNavigate moves focus to that page's h1. When it is the page
     // already showing, FocusOnNavigate does not fire at all, so put focus back on the Menu button instead.
+    // The activation is tracked from the click rather than from focus: Safari does not focus a link on tap.
     private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
     {
         var path = CurrentPath();
-        if (!collapsed && listHasFocus && IsSamePage(previousPath, path)) restoreFocus = true;
+        if (!collapsed && linkActivated && IsSamePage(previousPath, path)) restoreFocus = true;
         previousPath = path;
+        linkActivated = false;
 
         collapsed = true;
         _ = InvokeAsync(StateHasChanged);
@@ -77,10 +88,13 @@
 
     public void Dispose() => Navigation.LocationChanged -= OnLocationChanged;
 
-    private bool IsCurrent(NavItem item) => Array.IndexOf(item.Paths, CurrentPath()) >= 0;
+    private bool IsCurrent(NavItem item) => Shows(item, CurrentPath());
 
     private static bool IsSamePage(string from, string to) =>
-        items.Any(i => Array.IndexOf(i.Paths, from) >= 0 && Array.IndexOf(i.Paths, to) >= 0);
+        Items.Any(i => Shows(i, from) && Shows(i, to));
+
+    private static bool Shows(NavItem item, string path) =>
+        item.Paths.Contains(path, StringComparer.OrdinalIgnoreCase);
 
     /// <summary>The address relative to the base, without query string, fragment or trailing slash.</summary>
     private string CurrentPath()

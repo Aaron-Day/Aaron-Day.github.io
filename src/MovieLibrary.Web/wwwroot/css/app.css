@@ -41,7 +41,14 @@ a { color: var(--accent2); }
 /* Touch: no double-tap-to-zoom delay on controls. Bootstrap's reboot makes the tap highlight
    transparent, so a tap would otherwise give no feedback at all - hence :active. */
 a, button, input, select { touch-action: manipulation; }
-a:active, button:active { background-color: var(--line); }
+
+/* :root and :is() lift this to (0,2,1), above the scoped .nav-toggle rule at (0,2,0). The error bar's Dismiss
+   button is set by an ID selector at (1,1,0), so it gets its own rule below that outranks it. */
+:root :is(a, button):active { background-color: var(--line); }
+#blazor-error-ui .dismiss:active { background-color: var(--line); }
+
+/* A focused control must not sit under the fixed error bar (SC 2.4.11). 6rem is the wrapped bar's height at 320px. */
+html { scroll-padding-bottom: 6rem; }
 
 .skip-link:focus {
     position: fixed; top: .5rem; left: .5rem; z-index: 1100;

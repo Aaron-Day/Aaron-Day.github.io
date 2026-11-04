@@ -62,4 +62,37 @@ public class AppRoutingTests : BunitContext
         var focus = JSInterop.Invocations["Blazor._internal.domWrapper.focusBySelector"];
         Assert.Equal("#app h1", Assert.Single(focus).Arguments[0]);
     }
+
+    private const string FocusBySelector = "Blazor._internal.domWrapper.focusBySelector";
+
+    // The nav's "return focus to the Menu button" rule rests on this: FocusOnNavigate does not fire when the
+    // target is the page already showing. If a framework change ever makes it fire, or a Part B route splits
+    // one nav item across two page types, these fail instead of the focus rule quietly misfiring.
+    [Fact]
+    public void NavigatingBetweenTheTwoAddressesOfTheFilmsPageDoesNotRefocusTheHeading()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        RenderAt("/");
+        Assert.Single(JSInterop.Invocations[FocusBySelector]);
+
+        nav.NavigateTo("/movies");
+        Assert.Single(JSInterop.Invocations[FocusBySelector]);
+
+        // Positive control: a change of page does refocus within the same synchronous test, so the count
+        // above was not low merely because the router had not finished.
+        nav.NavigateTo("/zzz");
+        Assert.Equal(2, JSInterop.Invocations[FocusBySelector].Count);
+    }
+
+    [Fact]
+    public void NavigatingFromAnotherPageToTheFilmsPageRefocusesTheHeading()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        RenderAt("/zzz");
+        Assert.Single(JSInterop.Invocations[FocusBySelector]);
+
+        nav.NavigateTo("/movies");
+
+        Assert.Equal(2, JSInterop.Invocations[FocusBySelector].Count);
+    }
 }

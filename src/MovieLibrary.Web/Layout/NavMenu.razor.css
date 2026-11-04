@@ -8,8 +8,11 @@ nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: spac
 }
 .nav-toggle-icon { width: 1.5rem; height: 1.5rem; }
 .nav-links { flex-basis: 100%; margin: 0; padding: 0; list-style: none; }
+.nav-links.collapsed { display: none; }
 .nav-links ::deep a { display: flex; align-items: center; min-width: var(--touch); min-height: var(--touch); padding: 0 .75rem; }
 .nav-links ::deep a.active { border-bottom: 3px solid var(--accent); font-weight: 600; }
-@media (max-width: 47.99rem) { .nav-links.collapsed { display: none; } }
-@media (min-width: 48rem)   { .nav-toggle { display: none; } .nav-links { display: flex; flex-basis: auto; gap: 1rem; } }
-@media (hover: hover)       { .nav-links ::deep a:hover { text-decoration: underline; } }
+@media (min-width: 48rem) {
+    .nav-toggle { display: none; }
+    .nav-links, .nav-links.collapsed { display: flex; flex-basis: auto; gap: 1rem; }
+}
+@media (hover: hover) { .nav-links ::deep a:hover { text-decoration: underline; } }

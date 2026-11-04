@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8" />
@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="MovieLibrary.Web.styles.css" rel="stylesheet" />
+    <noscript>
+        <style>.loading-progress, .loading-progress-text, #boot-status { display: none; }</style>
+    </noscript>
     <script type="importmap"></script>
 </head>
 
@@ -29,7 +32,7 @@
 
     <div id="blazor-error-ui" role="alert">
         <div class="error-ui-inner">
-            <span>An unhandled error has occurred.</span>
+            <span>Something went wrong.</span>
             <a href="." class="reload">Reload</a>
             <button type="button" class="dismiss" aria-label="Dismiss error">
                 <span aria-hidden="true">&times;</span>
@@ -50,56 +53,100 @@
     </footer>
 
     <script>
-        // Boot watchdog. The Blazor runtime reveals #blazor-error-ui only when the app's entry point throws or
-        // after it has started. Two boot failures reveal nothing, and would leave the spinner and the polite
-        // "loading" claim up for ever: the platform failing to start (a dropped connection, a file missing
-        // mid-deploy), which is an unhandled rejection, and blazor.webassembly.js itself failing to load,
-        // which rejects no promise at all and is only a resource error on the script element.
+        // Boot watchdog. The Blazor runtime reveals #blazor-error-ui only for one kind of boot failure: when the
+        // app's own entry point throws, and then it leaves the loading UI standing. Two more kinds reveal nothing:
+        // the platform failing to start (a dropped connection, a file missing mid-deploy), which is an
+        // unhandled rejection, and blazor.webassembly.js itself failing to load, which rejects no promise and is
+        // only a resource error on the script element.
+        // All three end in ONE state: spinner and its text hidden, #boot-status turned into plain visible text
+        // that says what happened, and the bar visible. The bar is role="alert" and is the only announcer, so
+        // #boot-status loses its role first and is never a second live region.
         // Gate: Blazor replaces the children of #app when it renders, so #boot-status still being in the DOM
-        // means boot never completed. No timer: a slow phone on a cold cache is not a failure. The first
-        // trigger of either kind stands both listeners down, so a normal load leaves nothing behind.
+        // means boot never completed. No timer: a slow phone on a cold cache is not a failure.
+        // The gate is broad on purpose, so a script injected by an in-app browser can raise a false alarm. If
+        // #boot-status then disappears, Blazor booted anyway: the bar comes down again. Either way, once boot
+        // is settled every listener and observer is removed, so a healthy boot leaves nothing behind.
         (function () {
-            function stop() {
+            var failed = false;
+            var barWatch = null;
+            var appWatch = null;
+
+            function stopTriggers() {
                 window.removeEventListener('unhandledrejection', onRejection);
                 window.removeEventListener('error', onScriptError, true);
+                if (barWatch) { barWatch.disconnect(); barWatch = null; }
+            }
+
+            function standDown() {
+                stopTriggers();
+                if (appWatch) { appWatch.disconnect(); appWatch = null; }
             }
 
             function onRejection() {
-                stop();
-                fail();
+                fail(true);
             }
 
             // A resource error does not bubble, so it is only seen in the capture phase.
             function onScriptError(e) {
                 var t = e.target;
                 if (!t || t.tagName !== 'SCRIPT' || (t.src || '').indexOf('blazor.webassembly') < 0) return;
-                stop();
-                fail();
+                fail(true);
             }
 
-            function fail() {
+            // The runtime reveals the bar by writing style="display: block" itself.
+            function onBarStyle() {
+                var bar = document.getElementById('blazor-error-ui');
+                if (bar && bar.style.display === 'block') fail(false);
+            }
+
+            // Boot is settled once Blazor has replaced the children of #app.
+            function onAppChange() {
+                if (document.getElementById('boot-status')) return;
+                var bar = document.getElementById('blazor-error-ui');
+                if (failed && bar) bar.style.display = 'none';
+                standDown();
+            }
+
+            function fail(reveal) {
+                if (failed) return;
                 var status = document.getElementById('boot-status');
-                if (!status) return;
+                if (!status) { standDown(); return; }
+                failed = true;
+                stopTriggers();
 
                 var decoration = document.querySelectorAll('#app .loading-progress, #app .loading-progress-text');
                 for (var i = 0; i < decoration.length; i++) decoration[i].style.display = 'none';
 
-                // Change the text in place: the live region is already in the tree, so the change is announced.
+                // Role first, then text: a text change in a live region is announced, and the alert says it once.
+                status.removeAttribute('role');
                 status.className = 'boot-failure';
-                status.textContent = 'The library could not start. Check your connection, then reload the page.';
+                status.setAttribute('tabindex', '-1');
+                status.textContent = 'The library could not start. Reload the page to try again. If that does not help, try again in a few minutes.';
 
                 var bar = document.getElementById('blazor-error-ui');
                 if (!bar) return;
-                bar.style.display = 'block';
-                // The runtime wires Reload and Dismiss only on its own reveal, so wire them the way it does.
+                if (reveal) bar.style.display = 'block';
+                // The runtime wires Reload and Dismiss only on its own reveal, and its Dismiss drops focus to the body.
                 var reload = bar.querySelector('.reload');
                 var dismiss = bar.querySelector('.dismiss');
                 if (reload) reload.onclick = function (e) { location.reload(); e.preventDefault(); };
-                if (dismiss) dismiss.onclick = function (e) { bar.style.display = 'none'; e.preventDefault(); };
+                if (dismiss) dismiss.onclick = function (e) { bar.style.display = 'none'; status.focus(); e.preventDefault(); };
             }
 
             window.addEventListener('unhandledrejection', onRejection);
             window.addEventListener('error', onScriptError, true);
+            if (typeof MutationObserver === 'function') {
+                var bar = document.getElementById('blazor-error-ui');
+                var app = document.getElementById('app');
+                if (bar) {
+                    barWatch = new MutationObserver(onBarStyle);
+                    barWatch.observe(bar, { attributes: true, attributeFilter: ['style'] });
+                }
+                if (app) {
+                    appWatch = new MutationObserver(onAppChange);
+                    appWatch.observe(app, { childList: true });
+                }
+            }
         })();
     </script>
 

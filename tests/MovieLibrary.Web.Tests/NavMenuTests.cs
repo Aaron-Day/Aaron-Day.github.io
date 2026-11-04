@@ -1,6 +1,7 @@
 using AngleSharp.Dom;
 using Bunit;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.DependencyInjection;
 using MovieLibrary.Web.Layout;
 
@@ -113,7 +114,9 @@ public class NavMenuTests : BunitContext
     {
         var cut = Render<NavMenu>();
 
-        Assert.Equal("Film and TV library", cut.Find("a.brand").TextContent.Trim());
+        var brand = cut.Find("a.brand");
+        Assert.Equal("Film and TV library", brand.TextContent.Trim());
+        Assert.Equal("", brand.GetAttribute("href"));   // "" resolves to the base, "/", not to a page called anything
     }
 
     [Fact]
@@ -144,6 +147,8 @@ public class NavMenuTests : BunitContext
     [InlineData("/movies?genre=Drama&page=3")]
     [InlineData("/movies#results")]
     [InlineData("/movies/")]
+    [InlineData("/Movies")]   // the router is case-insensitive, so the nav has to be
+    [InlineData("/MOVIES?genre=Drama")]
     public void FilmsIsCurrentOnEveryAddressThatServesTheFilmsPage(string path)
     {
         // "/" and "/movies" are one page. NavLink cannot express "either path", so the menu computes it.
@@ -216,7 +221,7 @@ public class NavMenuTests : BunitContext
         var toggleId = cut.Find("button.nav-toggle").GetAttribute("blazor:elementreference");
         Assert.False(string.IsNullOrEmpty(toggleId));
         cut.Find("button.nav-toggle").Click();
-        cut.Find("#nav-links a").FocusIn();
+        cut.Find("#nav-links a").Click();
 
         nav.NavigateTo("/");
 
@@ -228,14 +233,14 @@ public class NavMenuTests : BunitContext
     }
 
     [Fact]
-    public void FocusIsLeftAloneWhenItWasNotInsideTheDrawer()
+    public void FocusIsLeftAloneWhenTheNavigationDidNotComeFromTheDrawerLink()
     {
         var nav = Services.GetRequiredService<NavigationManager>();
         nav.NavigateTo("/movies");
         var cut = Render<NavMenu>();
         cut.Find("button.nav-toggle").Click();
 
-        nav.NavigateTo("/");   // e.g. the brand link, or the browser's Back button
+        nav.NavigateTo("/");   // e.g. the brand link, or the browser's Back button: no activation of the link
 
         cut.WaitForAssertion(() => Assert.Contains("collapsed", cut.Find("#nav-links").ClassList));
         Assert.Empty(JSInterop.Invocations);
@@ -248,12 +253,109 @@ public class NavMenuTests : BunitContext
         nav.NavigateTo("/zzz");
         var cut = Render<NavMenu>();
         cut.Find("button.nav-toggle").Click();
-        cut.Find("#nav-links a").FocusIn();
+        cut.Find("#nav-links a").Click();
 
         nav.NavigateTo("/movies");
 
         cut.WaitForAssertion(() => Assert.Contains("collapsed", cut.Find("#nav-links").ClassList));
         Assert.Empty(JSInterop.Invocations);   // the page changed, so FocusOnNavigate moves focus to its h1
+    }
+
+    [Fact]
+    public void TheSamePageCheckIsCaseInsensitiveLikeTheRouter()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        nav.NavigateTo("/movies");
+        var cut = Render<NavMenu>();
+        var toggleId = cut.Find("button.nav-toggle").GetAttribute("blazor:elementreference");
+        cut.Find("button.nav-toggle").Click();
+        cut.Find("#nav-links a").Click();
+
+        nav.NavigateTo("/Movies");
+
+        cut.WaitForAssertion(() =>
+            Assert.Equal(toggleId, ((ElementReference)JSInterop.VerifyFocusAsyncInvoke().Arguments[0]!).Id));
+    }
+
+    [Theory]
+    [InlineData(true, false, false, false)]
+    [InlineData(false, true, false, false)]
+    [InlineData(false, false, true, false)]
+    [InlineData(false, false, false, true)]
+    public void AModifiedClickIsNotAnActivationBecauseTheRuntimeDoesNotInterceptIt(bool ctrl, bool meta, bool shift, bool alt)
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        nav.NavigateTo("/movies");
+        var cut = Render<NavMenu>();
+        cut.Find("button.nav-toggle").Click();
+        cut.Find("#nav-links a").Click(new MouseEventArgs { CtrlKey = ctrl, MetaKey = meta, ShiftKey = shift, AltKey = alt });
+
+        nav.NavigateTo("/");
+
+        cut.WaitForAssertion(() => Assert.Contains("collapsed", cut.Find("#nav-links").ClassList));
+        Assert.Empty(JSInterop.Invocations);
+    }
+
+    [Fact]
+    public void ActivatingTheLinkWhileTheDrawerIsClosedMovesNoFocus()
+    {
+        // On a wide screen the list is always visible and the drawer is never "open", so the Menu button is hidden
+        // and there is nothing to return focus to.
+        var nav = Services.GetRequiredService<NavigationManager>();
+        nav.NavigateTo("/movies");
+        var cut = Render<NavMenu>();
+        cut.Find("#nav-links a").Click();
+
+        nav.NavigateTo("/");
+
+        cut.WaitForAssertion(() => Assert.Equal("page", cut.Find("#nav-links a").GetAttribute("aria-current")));
+        Assert.Empty(JSInterop.Invocations);
+    }
+
+    [Fact]
+    public void ReopeningTheMenuForgetsAnActivationThatNeverNavigated()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        nav.NavigateTo("/movies");
+        var cut = Render<NavMenu>();
+        cut.Find("button.nav-toggle").Click();
+        cut.Find("#nav-links a").Click();                 // an activation that produced no location change
+        cut.Find("button.nav-toggle").Click();            // close
+        cut.Find("button.nav-toggle").Click();            // open again
+
+        nav.NavigateTo("/");                              // e.g. the browser's Back button
+
+        cut.WaitForAssertion(() => Assert.Contains("collapsed", cut.Find("#nav-links").ClassList));
+        Assert.Empty(JSInterop.Invocations);
+    }
+
+    [Fact]
+    public void TheSamePageCheckComparesAgainstTheLatestAddressNotTheOneTheMenuStartedOn()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        nav.NavigateTo("/zzz");
+        var cut = Render<NavMenu>();
+        var toggleId = cut.Find("button.nav-toggle").GetAttribute("blazor:elementreference");
+        cut.Find("button.nav-toggle").Click();
+        cut.Find("#nav-links a").Click();
+        nav.NavigateTo("/movies");                        // a different page: FocusOnNavigate's job
+        cut.WaitForAssertion(() => Assert.Contains("collapsed", cut.Find("#nav-links").ClassList));
+        Assert.Empty(JSInterop.Invocations);
+
+        cut.Find("button.nav-toggle").Click();
+        cut.Find("#nav-links a").Click();
+        nav.NavigateTo("/");                              // now the same page as where it already was
+
+        cut.WaitForAssertion(() =>
+            Assert.Equal(toggleId, ((ElementReference)JSInterop.VerifyFocusAsyncInvoke().Arguments[0]!).Id));
+    }
+
+    [Fact]
+    public void TheLinkCarriesNoBootstrapNavClassBecauseItsVariablesAreUndefinedOutsideANavAncestor()
+    {
+        var cut = Render<NavMenu>();
+
+        Assert.DoesNotContain("nav-link", cut.Find("#nav-links a").ClassList);
     }
 
     [Fact]

@@ -1,5 +1,4 @@
 using AngleSharp.Dom;
-using AngleSharp.Html.Parser;
 
 namespace MovieLibrary.Web.Tests;
 
@@ -9,7 +8,7 @@ namespace MovieLibrary.Web.Tests;
 /// </summary>
 public class HostPageTests
 {
-    private static readonly IDocument Doc = new HtmlParser().ParseDocument(WebRoot.Read("wwwroot", "index.html"));
+    private static readonly IDocument Doc = HostPage.Doc;
 
     [Fact]
     public void TheDocumentHasARealTitle()
@@ -77,72 +76,30 @@ public class HostPageTests
         Assert.Empty(footer.QuerySelectorAll("h1, h2, h3, h4, h5, h6"));
     }
 
-    // ---- the boot watchdog -----------------------------------------------------------------------------------
-    // The runtime reveals #blazor-error-ui only when the entry point throws or after it has started. A failed
-    // platform start (a dropped connection, a mid-deploy 404 on dotnet.js) is an unhandled rejection that reveals
-    // nothing, so without this the page claims to be loading for ever. A script cannot be executed from here; the
-    // behaviour is verified in a browser, and these tests pin the shape that verification relied on.
-
-    private static IElement Watchdog() =>
-        Assert.Single(Doc.QuerySelectorAll("script:not([src])"), s => s.TextContent.Contains("unhandledrejection"));
-
     [Fact]
-    public void TheBootStatusHasAnIdTheWatchdogCanGateOn()
+    public void TheDocumentOptsBootstrapIntoItsDarkThemeSoFormControlsAreNotWhiteOnTheDarkPage()
     {
-        var status = Assert.Single(Doc.GetElementById("app")!.QuerySelectorAll("[role='status']"));
-
-        Assert.Equal("boot-status", status.Id);
-        Assert.Contains("getElementById('boot-status')", Watchdog().TextContent);
+        // color-scheme does not do this: .form-control takes its background from --bs-body-bg.
+        Assert.Equal("dark", Doc.DocumentElement.GetAttribute("data-bs-theme"));
     }
 
     [Fact]
-    public void TheWatchdogIsRegisteredBeforeTheRuntimeCanFail()
+    public void TheBarUsesTheShortSentenceTheRuntimesOwnPathAlsoShows()
     {
-        var all = Doc.QuerySelectorAll("script").ToList();
-        var runtime = all.Single(s => (s.GetAttribute("src") ?? "").Contains("blazor.webassembly"));
+        var bar = Doc.GetElementById("blazor-error-ui")!;
 
-        Assert.True(all.IndexOf(Watchdog()) < all.IndexOf(runtime), "the watchdog must load before blazor.webassembly.js");
+        Assert.Equal("Something went wrong.", bar.QuerySelector("span")!.TextContent.Trim());
+        Assert.DoesNotContain("unhandled", bar.TextContent, StringComparison.OrdinalIgnoreCase);
     }
 
     [Fact]
-    public void TheWatchdogUsesNoTimerBecauseASlowPhoneOnAColdCacheIsNotAFailure()
+    public void AVisitorWithoutJavaScriptDoesNotSeeASpinnerOrAClaimToBeLoading()
     {
-        var code = Watchdog().TextContent;
+        var rules = HostPage.Doc.Head!.QuerySelector("noscript")?.TextContent ?? "";
 
-        Assert.DoesNotContain("setTimeout", code);
-        Assert.DoesNotContain("setInterval", code);
-    }
-
-    [Fact]
-    public void TheWatchdogRevealsTheBarWiresItsButtonsAndReplacesTheLoadingClaim()
-    {
-        var code = Watchdog().TextContent;
-
-        Assert.Contains("blazor-error-ui", code);
-        Assert.Contains("style.display = 'block'", code);
-        Assert.Contains("location.reload()", code);   // the runtime wires Reload and Dismiss only on ITS reveal
-        Assert.Contains("could not start", code);
-        Assert.DoesNotContain("Loading library", code);
-    }
-
-    [Fact]
-    public void TheWatchdogDeregistersItselfSoANormalLoadLeavesNothingBehind()
-    {
-        Assert.Contains("removeEventListener('unhandledrejection'", Watchdog().TextContent);
-        Assert.Contains("removeEventListener('error'", Watchdog().TextContent);
-    }
-
-    [Fact]
-    public void TheWatchdogAlsoCatchesTheRuntimeScriptItselfFailingToLoad()
-    {
-        // That is the first request of the boot and the likeliest to fail on a bad connection. A script that
-        // never loads rejects no promise, so the rejection listener alone would leave the spinner up for ever.
-        // A resource error does not bubble, so it has to be listened for in the capture phase.
-        var code = Watchdog().TextContent;
-
-        Assert.Contains("addEventListener('error'", code);
-        Assert.Contains("blazor.webassembly", code);
-        Assert.Contains("true);", code);
+        Assert.Contains(".loading-progress", rules);
+        Assert.Contains(".loading-progress-text", rules);
+        Assert.Contains("#boot-status", rules);
+        Assert.Contains("display: none", rules);
     }
 }
-

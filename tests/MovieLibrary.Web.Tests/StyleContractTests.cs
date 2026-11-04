@@ -98,4 +98,30 @@ public class StyleContractTests
         Assert.DoesNotContain("min-width: 641px", layoutCss);
         Assert.DoesNotContain("sidebar", layoutCss);
     }
+
+    [Fact]
+    public void PressFeedbackOutranksTheScopedToggleRuleAndTheErrorBarsIdRule()
+    {
+        // (0,2,1) beats the scoped .nav-toggle rule at (0,2,0); the Dismiss button is set at (1,1,0), so it has its own.
+        Assert.Matches(@":root :is\(a, button\):active\s*\{\s*background-color\s*:\s*var\(--line\)", AppCss);
+        Assert.Matches(@"#blazor-error-ui \.dismiss:active\s*\{\s*background-color\s*:\s*var\(--line\)", AppCss);
+        Assert.DoesNotMatch(@"(?m)^a:active, button:active", AppCss);
+    }
+
+    [Fact]
+    public void AFocusedControlCannotSitUnderTheFixedErrorBar()
+    {
+        Assert.Matches(@"html\s*\{\s*scroll-padding-bottom\s*:\s*6rem\s*;\s*\}", AppCss);
+    }
+
+    [Fact]
+    public void TheNavBreakpointsAreMobileFirstSoThereIsNoGapWhereNeitherRuleApplies()
+    {
+        var css = WebRoot.Read("Layout", "NavMenu.razor.css");
+
+        // max-width: 47.99rem against min-width: 48rem left 0.01rem where the toggle and a visible list both showed.
+        Assert.DoesNotContain("max-width", css);
+        Assert.Contains("@media (min-width: 48rem)", css);
+        Assert.Matches(@"\.nav-links\.collapsed\s*\{\s*display\s*:\s*none", css);
+    }
 }
