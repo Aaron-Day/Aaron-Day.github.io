@@ -50,11 +50,27 @@ public class LiveRegionTests : BunitContext
     [Fact]
     public void ThereAreExactlyThreeRegionsAndNeverTwoFeaturesInOne()
     {
+        // The whole inventory, not just the count and the ids: Tasks 5 to 8 all add announcements, and the two
+        // cheapest ways to add one are to reuse a region that already exists for something else, or to change
+        // what an existing one is for. A fourth region, a missing one, a renamed id, a changed role and a changed
+        // politeness all fail here. What it still cannot say is whether a reader speaks any of them.
         var cut = RenderLayout();
 
-        var regions = cut.FindAll("[aria-live], [role='status'], [role='alert'], [role='log']");
-        Assert.Equal(new[] { "alert-region", "route-announcer", "status-announcer" },
-            regions.Select(r => r.Id).OrderBy(i => i, StringComparer.Ordinal));
+        var inventory = cut.FindAll("[aria-live], [role='status'], [role='alert'], [role='log']")
+            .Select(r =>
+            {
+                var role = r.GetAttribute("role") ?? "-";
+                var live = r.GetAttribute("aria-live") ?? "-";
+                return r.Id + " role=" + role + " aria-live=" + live;
+            })
+            .OrderBy(s => s, StringComparer.Ordinal);
+
+        Assert.Equal(new[]
+        {
+            "alert-region role=alert aria-live=-",        // assertive, by role: handled failures and nothing else
+            "route-announcer role=- aria-live=polite",    // polite, by aria-live: the page name
+            "status-announcer role=status aria-live=-",   // polite, by role: counts, completions, state toggles
+        }, inventory);
     }
 
     [Fact]
@@ -62,7 +78,10 @@ public class LiveRegionTests : BunitContext
     {
         // Two sources of assertive speech exist on the page and this is the whole inventory. Announcer.Alert is for
         // failures the app HANDLED; an unhandled exception speaks through #blazor-error-ui. A code path does one
-        // or the other, never both, so the two are never heard together. Adding a third source fails here.
+        // or the other, never both, so the two are never heard together.
+        //
+        // This renders MainLayout with a stub body, so a third source inside a PAGE or a child component would be
+        // invisible here. SourceContractTests scans every .razor for that, and for the catch-Alert-rethrow shape.
         var layout = RenderLayout().FindAll("[role='alert'], [aria-live='assertive']");
         Assert.Equal("alert-region", Assert.Single(layout).Id);
 
@@ -139,6 +158,8 @@ public class LiveRegionTests : BunitContext
         await DisposeComponentsAsync();
 
         // The announcer lives for the whole session; a layout it still points at is a leak and a late render.
+        // The Listeners check is what this test rests on. The two lines below are a positive control, so a
+        // Listeners count of 0 cannot be the announcer itself having been broken or disposed by the teardown.
         Assert.Equal(0, Listeners(announcer));
         announcer.Status("12 films");
         clock.Advance(TimeSpan.FromHours(1));

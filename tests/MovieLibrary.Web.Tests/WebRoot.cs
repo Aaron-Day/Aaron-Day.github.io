@@ -15,4 +15,21 @@ internal static class WebRoot
 
     public static string Read(params string[] relativePath) =>
         File.ReadAllText(Path.Combine(new[] { Project.Value }.Concat(relativePath).ToArray()));
+
+    /// <summary>
+    /// Every hand-written file under the web project matching the search patterns, as (path relative to the
+    /// project, text) pairs. Build output is excluded: obj\ holds generated .cs that would match anything.
+    /// </summary>
+    public static IEnumerable<(string Path, string Text)> Files(params string[] patterns) =>
+        patterns
+            .SelectMany(p => Directory.EnumerateFiles(Project.Value, p, SearchOption.AllDirectories))
+            .Where(f => !Segments(f).Contains("obj") && !Segments(f).Contains("bin"))
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .OrderBy(f => f, StringComparer.OrdinalIgnoreCase)
+            .Select(f => (Path.GetRelativePath(Project.Value, f).Replace(Path.DirectorySeparatorChar, '/'),
+                          File.ReadAllText(f)))
+            .ToList();
+
+    private static string[] Segments(string path) =>
+        path.Split(new[] { Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar });
 }

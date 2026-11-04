@@ -8,8 +8,10 @@ namespace MovieLibrary.Web.Tests;
 
 /// <summary>
 /// The real router, the real layout and the real nav, with only the clock replaced. What these pin: when the route
-/// text is produced, when it is not, and that it follows the focus move rather than racing it. What they cannot
-/// pin: how a screen reader orders a focus change against a live-region update. That is the device pass.
+/// text is produced, when it is not, and that it is never written inside the synchronous navigation chain -- so the
+/// new page's render and the focus move that accompanies it always precede it, whatever order the LocationChanged
+/// handlers ran in. What they cannot pin: how a screen reader orders a focus change against a live-region update.
+/// That is the device pass.
 /// </summary>
 public class RouteAnnouncerTests : BunitContext
 {
@@ -120,8 +122,13 @@ public class RouteAnnouncerTests : BunitContext
     }
 
     [Fact]
-    public void ReturningToAPageAnnouncesItAgainEvenThoughTheTextIsTheSameAsBefore()
+    public void MovingToAnotherPageCommitsTheRegionEmptyBeforeTheNewName()
     {
+        // The old name said "even though the text is the same as before", which this does not test: the text
+        // immediately before the final leg is "Page not found" and the new text is "Films", so Contains(empty)
+        // holds for any change at all. What it does prove is that the region is committed EMPTY in a render of
+        // its own before the new name, which is the gap a reader needs. Identical-consecutive coverage belongs
+        // at Announcer level, where ARepeatedMessageIsClearedFirst... has it; do not try to recreate it here.
         var cut = RenderAt("/zzz");
         var committed = new List<string>();
         cut.OnMarkupUpdated += (_, _) => committed.Add(RouteText(cut));
@@ -161,8 +168,12 @@ public class RouteAnnouncerTests : BunitContext
     }
 
     [Fact]
-    public void TheNameIsPublishedOnlyAfterTheFocusMoveForTheSameNavigation()
+    public void TheNameIsNotWrittenSynchronouslyWithTheNavigationThatAlreadyAskedForTheFocusMove()
     {
+        // What this proves is asynchrony, not an ordering between speech events: by the time the navigation call
+        // returns the router has rendered and FocusOnNavigate has asked for the h1, and the route text is still
+        // empty, so the write cannot be part of that synchronous chain. Whether a reader then speaks the focus
+        // change before the region is a device question these tests cannot reach.
         var cut = RenderAt("/zzz");
         Assert.Single(JSInterop.Invocations[FocusBySelector]);
 
@@ -178,8 +189,11 @@ public class RouteAnnouncerTests : BunitContext
     }
 
     [Fact]
-    public void ActivatingTheNavLinkOfThePageYouAreOnMovesFocusToTheMenuButtonBeforeTheNameIsPublished()
+    public void ActivatingTheNavLinkOfThePageYouAreOnMovesFocusToTheMenuButtonAndTheNameIsStillNotWritten()
     {
+        // Same shape as above, for the one navigation FocusOnNavigate does not fire for: NavMenu puts focus back
+        // on the Menu button, and the route text is still empty when that has happened. Asynchrony, not speech
+        // order.
         var cut = RenderAt("/");
         cut.Find("button.nav-toggle").Click();
         cut.Find("#nav-links a").Click();
