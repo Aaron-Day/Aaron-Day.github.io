@@ -114,18 +114,30 @@ public class StyleContractTests
     /// scrollport reserves at least the bar's height. The reserve was 6rem, measured from the bar wrapped at
     /// 320px - Reflow's WIDTH. Reflow's other dimension is a 256px viewport HEIGHT, where the bar's own
     /// 40dvh cap is 102.4px and 6rem is 96px, so the mitigation was 6.4px short at precisely the size it
-    /// existed for. What this pins is not the numbers but the shape: one token holds the cap, and every
-    /// reserve is written as max(floor, that token), so the two cannot drift apart again.
+    /// existed for. What this pins is the shape AND one deliberate
+    /// asymmetry. One token holds the cap, and html's scroll-padding-bottom is written as max(floor,
+    /// that token) because scroll-padding costs nothing: it only moves where a scroll stops.
+    /// .attribution's bottom padding deliberately does NOT read the token. That is real layout space on
+    /// every page load, 432px of it on a 1080px-tall viewport, and what it would buy is a static sentence
+    /// not being overlapped by an element that is display:none unless boot failed, and dismissible when
+    /// it is not. 2.4.11 is about a component with focus and does not reach that sentence, and TMDB's
+    /// terms ask only that it be displayed, which it is. Harmonising the two values, in either direction,
+    /// is the regression this test exists to catch.
     /// What it cannot prove: that a real browser actually keeps the focused control clear. That needs a
     /// viewport and a focus move, and belongs to Task 4b.
     /// </remarks>
     [Fact]
-    public void TheRoomReservedForTheErrorBarIsNeverLessThanTheBarCanTakeUp()
+    public void TheScrollReserveReadsTheBarsCapAndTheFooterReserveDeliberatelyDoesNot()
     {
         Assert.Matches(@"--bar-max\s*:\s*40dvh\s*;", Root());
         Assert.Matches(@"#blazor-error-ui\s*\{[^}]*max-height\s*:\s*var\(--bar-max\)", AppCss);
         Assert.Matches(@"html\s*\{\s*scroll-padding-bottom\s*:\s*max\(6rem,\s*var\(--bar-max\)\)\s*;\s*\}", AppCss);
-        Assert.Matches(@"(?s)\.attribution\s*\{.*?padding\s*:\s*1rem 1\.5rem max\(6rem,\s*var\(--bar-max\)\)", AppCss);
+        // The asymmetry is deliberate and is the point of this assertion: scroll-padding reads the cap
+        // because it costs nothing, and .attribution does NOT because it is real layout space on every
+        // page load -- 432px of it on a 1080px viewport -- bought against an element that is display:none
+        // unless boot failed, and dismissible when it is not. SC 2.4.11 is about a focused component and
+        // does not reach a static sentence. Harmonising these two values is the regression to catch.
+        Assert.Matches(@"(?s)\.attribution\s*\{.*?padding\s*:\s*1rem 1\.5rem 6rem\s*;", AppCss);
 
         // A bare 6rem in either reserve, or a literal cap that no longer goes through the token, is the
         // bug coming back by the same route it arrived: two numbers for one measurement.

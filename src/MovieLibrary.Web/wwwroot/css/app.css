@@ -209,13 +209,20 @@ body {
        91px (5.7rem) there, which is where the 6rem floor comes from. But 320px is Reflow's
        WIDTH, and the bar's height is capped by --bar-max, which at Reflow's 256px viewport
        HEIGHT is 102.4px - more than 6rem. Reading the cap, as html's scroll-padding-bottom
-       does, is what makes the reserve large enough at every viewport height instead of only
-       at the one it was measured at. Unlike scroll-padding this is real layout space, and on
-       a tall viewport it is a lot of it; that is the price of the sentence never being
-       covered, and TMDB's terms are about the sentence being displayed.
-       Unconditional on purpose: Blazor toggles that element's display inline, so a
-       :has() conditional would depend on a style this file cannot see. */
-    padding: 1rem 1.5rem max(6rem, var(--bar-max));
+       does, would make the reserve large enough at every viewport height rather than only at
+       the one it was measured at -- and this declaration deliberately does NOT do that, which
+       is the one place in this file where the two reserves differ on purpose.
+       scroll-padding costs nothing: it only moves where a scroll stops. This is real layout
+       space on every single page load, and reading the cap would reserve 432px of blank page
+       on a 1080px-tall viewport. What it would buy is a static sentence not being overlapped
+       by an element that is display:none unless an unhandled exception has occurred, and that
+       is dismissible when it is not. SC 2.4.11 does not reach it either: that criterion is
+       about a component with focus, and this sentence is not focusable. TMDB's terms ask that
+       the sentence be displayed, and it is displayed. So the floor stays at the measured
+       320px value and the rare overlap is accepted.
+       Unconditional on purpose: Blazor toggles the bar's display inline, so a :has()
+       conditional would depend on a style this file cannot see. */
+    padding: 1rem 1.5rem 6rem;
     /* A border, not a background tint: under forced-colors a border is re-coloured to
        CanvasText and survives, while a tint flattens to Canvas and takes the grouping
        cue with it. */
