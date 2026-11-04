@@ -1,8 +1,21 @@
 @inherits LayoutComponentBase
+@implements IDisposable
+@inject Announcer Announcer
 
 <a class="skip-link visually-hidden-focusable" href="#main-content" @onclick="SkipToMain" @onclick:preventDefault>Skip to main content</a>
 
 <div class="page">
+    <RouteAnnouncer />
+
+    @* Three live regions, one per purpose, always present and empty on the first render: a region injected
+       together with its text is not announced. They are visually hidden, never hidden, display:none and
+       aria-hidden both remove a region from the accessibility tree. Only #alert-region is assertive, and only for
+       failures the app handled; an unhandled one speaks through #blazor-error-ui in index.html, so a failure
+       is heard from one assertive region, never two. aria-atomic is explicit though status and alert imply it. *@
+    <div class="visually-hidden" id="route-announcer" aria-live="polite" aria-atomic="true">@Announcer.RouteText</div>
+    <div class="visually-hidden" id="status-announcer" role="status" aria-atomic="true">@Announcer.StatusText</div>
+    <div class="visually-hidden" id="alert-region" role="alert" aria-atomic="true">@Announcer.AlertText</div>
+
     <header>
         <NavMenu />
     </header>
@@ -19,4 +32,12 @@
     // navigation to "/" and the query string is lost. Keep the real href for semantics and assistive
     // technology, stop Blazor intercepting the click, and focus the element directly instead.
     private async Task SkipToMain() => await mainElement.FocusAsync();
+
+    // The announcer outlives every component, so the subscription is removed on dispose. A notification can come
+    // from a timer callback outside the renderer's context, hence InvokeAsync.
+    protected override void OnInitialized() => Announcer.Changed += OnAnnouncement;
+
+    private void OnAnnouncement() => _ = InvokeAsync(StateHasChanged);
+
+    public void Dispose() => Announcer.Changed -= OnAnnouncement;
 }

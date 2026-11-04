@@ -1,0 +1,54 @@
+@implements IDisposable
+@inject NavigationManager Navigation
+@inject Announcer Announcer
+
+@* Renders nothing. It exists to listen, and to say the page's name when the PAGE changes.
+
+   Independent of NavMenu on purpose. Both subscribe to LocationChanged, but they share no state: NavMenu owns the
+   drawer and the focus guard, this owns one string. Sharing a subscription would couple the nav to announcements it
+   has no use for. What the two must not do is race, and they do not: the Announcer holds the name back for its
+   settle delay, so by the time it is written the render, FocusOnNavigate's h1 focus and NavMenu's Menu-button
+   focus have all happened, whichever handler ran first. The order of the two handlers is therefore irrelevant.
+
+   Silent on the first load, which the browser announces itself. Silent for a query string or fragment that
+   changes alone: filters live there, so otherwise every keystroke would announce a page change. *@
+
+@code {
+    private string lastPath = string.Empty;
+
+    // The page name for each path that serves a page. Typed by hand, and pinned two ways: a test walks every @page
+    // route and requires the announcement to equal that page's h1, so a new route without an entry fails the build
+    // rather than being announced as "Page not found" on a page that exists. The names match the h1 and the nav.
+    private static string PageNameFor(string path) => path.ToLowerInvariant() switch
+    {
+        "" or "movies" => "Films",
+        "not-found" => "Page not found",
+        _ => "Page not found",   // the router renders its not-found page for every address that matches no route
+    };
+
+    protected override void OnInitialized()
+    {
+        lastPath = PathOf(Navigation.Uri);    // first load: record, do not announce
+        Navigation.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        var path = PathOf(e.Location);
+        if (string.Equals(path, lastPath, StringComparison.OrdinalIgnoreCase)) return;   // a filter changed, not the page
+
+        lastPath = path;
+        Announcer.Route(PageNameFor(path));
+    }
+
+    /// <summary>The address relative to the base, without query string, fragment or trailing slash.</summary>
+    private string PathOf(string uri)
+    {
+        var path = Navigation.ToBaseRelativePath(uri);
+        var end = path.IndexOfAny(new[] { '?', '#' });
+        if (end >= 0) path = path[..end];
+        return path.TrimEnd('/');
+    }
+
+    public void Dispose() => Navigation.LocationChanged -= OnLocationChanged;
+}

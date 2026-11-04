@@ -13,7 +13,11 @@ namespace MovieLibrary.Web.Tests;
 /// </summary>
 public class ShellTests : BunitContext
 {
-    public ShellTests() => JSInterop.Mode = JSRuntimeMode.Loose;
+    public ShellTests()
+    {
+        JSInterop.Mode = JSRuntimeMode.Loose;
+        this.AddAnnouncer();   // MainLayout injects it; Program.cs registers the real one
+    }
 
     private IRenderedComponent<MainLayout> RenderLayout() =>
         Render<MainLayout>(p => p.Add(x => x.Body, "<h1>Page</h1>"));

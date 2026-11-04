@@ -14,6 +14,25 @@ public class SourceContractTests
     }
 
     [Fact]
+    public void ProgramRegistersTheAnnouncerBecauseTheTestsRegisterTheirOwn()
+    {
+        // Every bUnit test that renders MainLayout adds the announcer itself, so a missing line here would pass
+        // the whole suite and then fail at boot with a DI error. This is the only check on that line.
+        Assert.Matches(@"builder\.Services\.AddScoped<Announcer>\(\);", WebRoot.Read("Program.cs"));
+    }
+
+    [Fact]
+    public void MainLayoutOwnsTheSubscriptionAndMountsTheRouteAnnouncer()
+    {
+        var razor = WebRoot.Read("Layout", "MainLayout.razor");
+
+        Assert.Contains("@implements IDisposable", razor, StringComparison.Ordinal);
+        Assert.Contains("@inject Announcer Announcer", razor, StringComparison.Ordinal);
+        Assert.Contains("<RouteAnnouncer />", razor, StringComparison.Ordinal);
+        Assert.Single(Regex.Matches(razor, @"@code\s*\{"));
+    }
+
+    [Fact]
     public void TheSkipLinkDoesNotRelyOnItsOwnHref()
     {
         var razor = WebRoot.Read("Layout", "MainLayout.razor");
@@ -31,6 +50,7 @@ public class SourceContractTests
     [InlineData("App.razor")]
     [InlineData("Layout/MainLayout.razor")]
     [InlineData("Layout/NavMenu.razor")]
+    [InlineData("Layout/RouteAnnouncer.razor")]
     [InlineData("Pages/Movies.razor")]
     [InlineData("Pages/NotFound.razor")]
     public void NoComponentRedirectsAndNoFooterIsAddedInsideTheApp(string file)

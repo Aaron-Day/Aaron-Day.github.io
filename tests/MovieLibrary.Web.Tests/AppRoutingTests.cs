@@ -11,7 +11,11 @@ namespace MovieLibrary.Web.Tests;
 /// </summary>
 public class AppRoutingTests : BunitContext
 {
-    public AppRoutingTests() => JSInterop.Mode = JSRuntimeMode.Loose;
+    public AppRoutingTests()
+    {
+        JSInterop.Mode = JSRuntimeMode.Loose;
+        this.AddAnnouncer();   // MainLayout injects it; Program.cs registers the real one
+    }
 
     private IRenderedComponent<App> RenderAt(string path)
     {
