@@ -17,13 +17,25 @@ namespace MovieLibrary.Web.Tests;
 /// <para>
 /// WHY A GREEN TEST HERE IS NOT AUTOMATICALLY A COVERED ONE. Even through App, several of these rules loop
 /// over element sets that are empty or nearly empty in an app with two pages: one image, twenty controls,
-/// no positive tabindex anywhere, four id references. A loop over an empty collection PASSES and reads in
-/// the output exactly like a rule that checked something, and the usual proof -- break an assertion, watch
-/// it fail, restore it -- cannot tell the difference, because the mutation passes too. So: every rule here
-/// asserts its own subject set is non-empty, and the two rules whose subjects do not exist yet are marked
-/// Skip by hand with the task that will create them, each with a live guard beside it that fails the day
-/// they appear. A skipped test reads as not covered. A green one reads as covered. The logic of every rule,
-/// including the two skipped ones, is proven in MarkupRuleTests against markup written for the purpose.
+/// no positive tabindex anywhere, no id reference this gate can fail on at all. A loop over an empty
+/// collection PASSES and reads in the output exactly like a rule that checked something, and the usual
+/// proof -- break an assertion, watch it fail, restore it -- cannot tell the difference, because the
+/// mutation passes too. So: every rule here asserts its own subject set is non-empty, and the three rules
+/// whose subjects do not exist yet are marked Skip by hand with the task that will create them, each with a
+/// live guard beside it that fails the day they appear. A skipped test reads as not covered. A green one
+/// reads as covered. The logic of every rule, including the three skipped ones, is proven in
+/// MarkupRuleTests against markup written for the purpose.
+/// </para>
+/// <para>
+/// AND NON-EMPTY MUST MEAN NON-EMPTY AFTER THE RULE'S OWN EXEMPTIONS. A subject set that is entirely
+/// carved out is not coverage. The count has to be of what the rule can actually fail on, not of what it
+/// looked at, and where a rule has a carve-out the rule and the count share one predicate rather than each
+/// keeping its own idea of the subject set -- MarkupRules.IsExemptCollapsedControls and
+/// MarkupRules.FailableIdReferences are that shape, and a new rule with an exemption follows it.
+/// The id-reference contract below is the worked example and the reason this paragraph exists: it counted
+/// four aria-controls references and reported itself covered while every one of the four sat inside axe's
+/// collapsed-control carve-out, so the drawer's id could be renamed, the reference left dangling, and
+/// nothing anywhere went red.
 /// </para>
 /// <para>
 /// xunit 2.9.3 has no Assert.Skip. It is a v3 API; Xunit.Sdk.SkipException ships in the shared assert
@@ -76,14 +88,19 @@ public class MarkupContractTests
     {
         var addresses = AppUnderTest.Addresses();
 
-        Assert.Equal(
-            new[] { "/", "/movies", "/not-found", AppUnderTest.UnmatchedUrl },
-            addresses);
+        // The count is asserted FIRST on purpose. It is the failure mode worth a sentence -- a reflection
+        // walk that stopped matching -- and behind the exact-array comparison its message was unreachable,
+        // because any shortfall failed the equality a line earlier. The equality still follows, and still
+        // pins identity and order rather than merely the number.
         Assert.True(addresses.Count >= 4,
             "The contracts discovered " + addresses.Count + " addresses. Four exist: \"/\" and \"/movies\" "
             + "(both Movies.razor), \"/not-found\", and an unmatched URL, which reaches NotFound by the "
             + "router's NotFoundPage path rather than by its route. Fewer than four means the reflection "
             + "walk in AppUnderTest stopped finding routes, not that the site shrank.");
+
+        Assert.Equal(
+            new[] { "/", "/movies", "/not-found", AppUnderTest.UnmatchedUrl },
+            addresses);
     }
 
     /// <summary>
@@ -384,25 +401,57 @@ public class MarkupContractTests
     /// <remarks>
     /// Not a criterion of its own: a dangling IDREF breaks whichever criterion the attribute was serving --
     /// 1.3.1 for a label or a description, 4.1.2 for a name -- and it breaks it silently, because an
-    /// unresolved reference is an error nowhere. Asserted over four references, all of them NavMenu's
-    /// aria-controls="nav-links" pointing at the drawer, one per route.
+    /// unresolved reference is an error nowhere.
+    /// Skipped, and this is the contract that earned the paragraph about exemptions in the class summary.
+    /// The app has four id references and they are all the same one: NavMenu's aria-controls="nav-links",
+    /// once per address. The toggle starts collapsed, so every first render emits aria-expanded="false" --
+    /// precisely the case axe deliberately does not fail, because the controlled element may legitimately
+    /// not be in the DOM yet. 100% of the subject set is exempt, so the rule can fail on none of it:
+    /// rename the drawer's id and the aria-controls dangles with this contract still green. It read as
+    /// covered because the count was of IdReferences, which counts the exempt ones; it is now of
+    /// MarkupRules.FailableIdReferences, which is the same predicate the rule itself filters through.
+    /// The carve-out is correct and stays. Task 4b runs axe over this same markup, and a rule stricter here
+    /// than there is a rule that disagrees with the other half of its own gate.
     /// Two traps, both handled and both proven in MarkupRuleTests: these attributes take space-separated
     /// LISTS, so the first multi-id reference anyone writes would be a false failure if the value were read
-    /// as one id; and axe deliberately does not fail an aria-controls pointing at an absent element when
-    /// the control is aria-expanded="false", so that exception is carved out here too rather than letting
-    /// this half become stricter than Task 4b's.
+    /// as one id; and an aria-expanded="true" control pointing nowhere is still a failure, without which
+    /// the carve-out would amount to never checking aria-controls at all.
     /// </remarks>
-    [Fact]
+    [Fact(Skip = "The app's only id references are NavMenu's aria-controls on a control rendering "
+                 + "aria-expanded=\"false\", which axe deliberately does not fail because the controlled "
+                 + "element may legitimately not be in the DOM yet. Every subject is exempt, so the rule "
+                 + "can fail on none of them and a green run here would mean nothing. Task 8's "
+                 + "aria-labelledby and for on the filter controls are the first failable references; "
+                 + "remove this Skip then. TheIdReferenceContractIsStillSkippedForTheRightReason fails "
+                 + "when that happens.")]
     public void EveryIdReferenceResolvesToAnIdInTheSameRender()
     {
         TheRouteSetIsWhatItShouldBe();
 
-        Subjects(s => MarkupRules.IdReferences(s).Count, EveryScope(), "id reference",
-            "Mark this test Skip, naming the task that adds the next aria-labelledby or for.");
+        Subjects(s => MarkupRules.FailableIdReferences(s).Count, EveryScope(),
+            "id reference the rule can fail on, outside axe's collapsed-control carve-out",
+            "Mark this test Skip again, naming the task that will bring a failable reference back.");
 
         NoViolations(MarkupRules.EveryIdReferenceResolves, EveryScope(),
             "An attribute pointing at an id that is not in the render is silently ignored, so whatever it "
             + "was providing -- a name, a description, a relationship -- is simply absent, with nothing "
             + "anywhere reporting an error.");
+    }
+
+    [Fact]
+    public void TheIdReferenceContractIsStillSkippedForTheRightReason()
+    {
+        // The live half of the pair above. It counts only what the rule can fail on, which is the whole
+        // point of the finding behind it: the exempt references were four, and four read as coverage.
+        var failable = EveryScope()
+            .SelectMany(s => MarkupRules.FailableIdReferences(s.Root))
+            .ToList();
+
+        Assert.True(failable.Count == 0,
+            failable.Count + " id reference(s) now sit outside axe's collapsed-control carve-out, so "
+            + "EveryIdReferenceResolvesToAnIdInTheSameRender has subjects it can actually fail on and is no "
+            + "longer vacuous. Remove its Skip and delete this guard. The reference(s): "
+            + string.Join(" | ", failable.Select(
+                r => r.Attribute + "=\"" + r.Id + "\" on " + MarkupRules.Describe(r.Element))));
     }
 }

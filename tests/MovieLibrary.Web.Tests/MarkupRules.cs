@@ -278,6 +278,13 @@ internal static class MarkupRules
     public static IReadOnlyList<IElement> Headings(IElement scope) =>
         scope.QuerySelectorAll("h1, h2, h3, h4, h5, h6").Where(e => !InHiddenSubtree(e)).ToList();
 
+    /// <summary>
+    /// Every h1, hidden subtrees INCLUDED -- deliberately unlike <see cref="Headings"/>, which filters them
+    /// out. The asymmetry is load-bearing rather than an oversight: the rules built on this one exist for
+    /// App.razor's FocusOnNavigate selector, "#app h1", which is a querySelector and does not care about
+    /// hidden or aria-hidden. An h1 that no screen reader will ever announce still competes for that focus
+    /// move, so it has to be counted here while being correctly ignored by the outline rules.
+    /// </summary>
     public static IReadOnlyList<IElement> TopLevelHeadings(IElement scope) =>
         scope.QuerySelectorAll("h1").ToList();
 
@@ -504,6 +511,13 @@ internal static class MarkupRules
     /// The elements SC 2.5.3 Label in Name actually applies to: a control whose accessible name comes from
     /// an author label AND which shows visible text. A control with no visible text is outside the
     /// criterion entirely, because there is nothing a speech user could be reading off the screen.
+    /// <para>
+    /// Narrower than the criterion, and knowingly so: "author label" here means aria-label or
+    /// aria-labelledby only. A control named by title, or by a &lt;label&gt; whose text differs from the
+    /// caption beside it, is a 2.5.3 subject and is not collected -- so the rule under-reports rather than
+    /// crying wolf. Task 8's filter controls are the first that will have labels at all, and label[for] is
+    /// the case to widen this to then.
+    /// </para>
     /// </summary>
     public static IReadOnlyList<IElement> ElementsWhoseLabelReplacesVisibleText(IElement scope) =>
         InteractiveElements(scope)
@@ -578,22 +592,44 @@ internal static class MarkupRules
             .ToList();
 
     /// <summary>
+    /// axe's collapsed-control carve-out, named once so that the rule and anything measuring the rule's
+    /// coverage read the same predicate. axe deliberately does NOT fail an aria-controls pointing at an
+    /// absent element while the control says aria-expanded="false", because the controlled element may
+    /// legitimately not be in the DOM yet. Task 4b runs axe over this same markup, so carving the same case
+    /// out here is what keeps the two halves of the gate from disagreeing about correct code.
+    /// </summary>
+    public static bool IsExemptCollapsedControls(IElement e, string attribute) =>
+        attribute == "aria-controls" && e.GetAttribute("aria-expanded") == "false";
+
+    /// <summary>
+    /// References this rule can actually fail on: everything except axe's collapsed-control carve-out.
+    /// <para>
+    /// The distinction is what a coverage count has to use, and it is the one this contract got wrong. The
+    /// app's entire id-reference population is NavMenu's aria-controls="nav-links", once per address, on a
+    /// toggle whose first render is always aria-expanded="false". <see cref="IdReferences"/> therefore
+    /// reports four subjects for a rule that cannot fail on any of them: rename the drawer's id and the
+    /// reference dangles with nothing anywhere going red. A subject set that is entirely carved out is not
+    /// coverage.
+    /// </para>
+    /// </summary>
+    public static IReadOnlyList<(IElement Element, string Attribute, string Id)> FailableIdReferences(
+        IElement scope) =>
+        IdReferences(scope).Where(r => !IsExemptCollapsedControls(r.Element, r.Attribute)).ToList();
+
+    /// <summary>
     /// Not a criterion of its own: a dangling reference breaks whichever criterion the attribute was
     /// serving -- 1.3.1 for a label or a description, 4.1.2 for a name -- and it breaks it silently,
     /// because an unresolved IDREF is an error nowhere. The plan named only aria-controls; aria-labelledby,
     /// aria-describedby, aria-owns and for are the ones that cost a control its name or its description.
     /// <para>
-    /// One exception, named: axe deliberately does NOT fail an aria-controls pointing at an absent element
-    /// when the control is aria-expanded="false", because the controlled element may legitimately not be in
-    /// the DOM yet. Task 4b runs axe over this same markup, so carving the same case out here is what keeps
-    /// the two halves of the gate from disagreeing about correct code.
+    /// One exception, named and shared: <see cref="IsExemptCollapsedControls"/>. The subjects come from
+    /// <see cref="FailableIdReferences"/> rather than from <see cref="IdReferences"/>, so the rule and its
+    /// contract cannot disagree about which references are in scope.
     /// </para>
     /// </summary>
     public static IReadOnlyList<string> EveryIdReferenceResolves(IElement scope) =>
-        IdReferences(scope)
+        FailableIdReferences(scope)
             .Where(r => ById(scope, r.Id) is null)
-            .Where(r => !(r.Attribute == "aria-controls"
-                          && r.Element.GetAttribute("aria-expanded") == "false"))
             .Select(r =>
                 Describe(r.Element) + " has " + r.Attribute + " pointing at \"" + r.Id + "\", and no "
                 + "element with that id is in this render. The attribute is silently ignored, so whatever "

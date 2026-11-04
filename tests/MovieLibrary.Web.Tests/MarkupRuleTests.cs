@@ -365,4 +365,31 @@ public class MarkupRuleTests
         Allows(MarkupRules.EveryIdReferenceResolves(Markup(
             "<button type=\"button\" aria-expanded=\"true\" aria-controls=\"nav-links\">Menu</button>"
             + "<ul class=\"nav-links\" id=\"nav-links\" role=\"list\"><li><a href=\"movies\">Films</a></li></ul>")));
+
+    [Fact]
+    public void TheFailableReferenceCountLeavesOutTheOneTheRuleCanNeverFailOn()
+    {
+        // The difference the contract's coverage count has to be built on. This markup is NavMenu's shape
+        // on a first render, and it is one id reference the rule is incapable of failing: counting it
+        // reported the contract as covered over a subject set that was entirely carved out.
+        var markup = Markup(
+            "<button type=\"button\" aria-expanded=\"false\" aria-controls=\"drawer\">Menu</button>");
+
+        Assert.Single(MarkupRules.IdReferences(markup));
+        Assert.Empty(MarkupRules.FailableIdReferences(markup));
+    }
+
+    [Fact]
+    public void TheFailableReferenceCountKeepsEveryReferenceTheRuleCanStillFailOn()
+    {
+        // The other side: the carve-out is narrow -- one attribute, one state. An expanded control, a
+        // label's for and a description are all failable, which is what makes the skip expire when Task 8
+        // adds the filter controls rather than being permanent.
+        var markup = Markup(
+            "<button type=\"button\" aria-expanded=\"true\" aria-controls=\"drawer\">Menu</button>"
+            + "<label for=\"q\">Search</label>"
+            + "<input type=\"text\" id=\"q\" aria-describedby=\"hint\">");
+
+        Assert.Equal(3, MarkupRules.FailableIdReferences(markup).Count);
+    }
 }
