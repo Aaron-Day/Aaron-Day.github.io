@@ -76,4 +76,73 @@ public class HostPageTests
         Assert.Null(Doc.GetElementById("app")!.QuerySelector("footer"));
         Assert.Empty(footer.QuerySelectorAll("h1, h2, h3, h4, h5, h6"));
     }
+
+    // ---- the boot watchdog -----------------------------------------------------------------------------------
+    // The runtime reveals #blazor-error-ui only when the entry point throws or after it has started. A failed
+    // platform start (a dropped connection, a mid-deploy 404 on dotnet.js) is an unhandled rejection that reveals
+    // nothing, so without this the page claims to be loading for ever. A script cannot be executed from here; the
+    // behaviour is verified in a browser, and these tests pin the shape that verification relied on.
+
+    private static IElement Watchdog() =>
+        Assert.Single(Doc.QuerySelectorAll("script:not([src])"), s => s.TextContent.Contains("unhandledrejection"));
+
+    [Fact]
+    public void TheBootStatusHasAnIdTheWatchdogCanGateOn()
+    {
+        var status = Assert.Single(Doc.GetElementById("app")!.QuerySelectorAll("[role='status']"));
+
+        Assert.Equal("boot-status", status.Id);
+        Assert.Contains("getElementById('boot-status')", Watchdog().TextContent);
+    }
+
+    [Fact]
+    public void TheWatchdogIsRegisteredBeforeTheRuntimeCanFail()
+    {
+        var all = Doc.QuerySelectorAll("script").ToList();
+        var runtime = all.Single(s => (s.GetAttribute("src") ?? "").Contains("blazor.webassembly"));
+
+        Assert.True(all.IndexOf(Watchdog()) < all.IndexOf(runtime), "the watchdog must load before blazor.webassembly.js");
+    }
+
+    [Fact]
+    public void TheWatchdogUsesNoTimerBecauseASlowPhoneOnAColdCacheIsNotAFailure()
+    {
+        var code = Watchdog().TextContent;
+
+        Assert.DoesNotContain("setTimeout", code);
+        Assert.DoesNotContain("setInterval", code);
+    }
+
+    [Fact]
+    public void TheWatchdogRevealsTheBarWiresItsButtonsAndReplacesTheLoadingClaim()
+    {
+        var code = Watchdog().TextContent;
+
+        Assert.Contains("blazor-error-ui", code);
+        Assert.Contains("style.display = 'block'", code);
+        Assert.Contains("location.reload()", code);   // the runtime wires Reload and Dismiss only on ITS reveal
+        Assert.Contains("could not start", code);
+        Assert.DoesNotContain("Loading library", code);
+    }
+
+    [Fact]
+    public void TheWatchdogDeregistersItselfSoANormalLoadLeavesNothingBehind()
+    {
+        Assert.Contains("removeEventListener('unhandledrejection'", Watchdog().TextContent);
+        Assert.Contains("removeEventListener('error'", Watchdog().TextContent);
+    }
+
+    [Fact]
+    public void TheWatchdogAlsoCatchesTheRuntimeScriptItselfFailingToLoad()
+    {
+        // That is the first request of the boot and the likeliest to fail on a bad connection. A script that
+        // never loads rejects no promise, so the rejection listener alone would leave the spinner up for ever.
+        // A resource error does not bubble, so it has to be listened for in the capture phase.
+        var code = Watchdog().TextContent;
+
+        Assert.Contains("addEventListener('error'", code);
+        Assert.Contains("blazor.webassembly", code);
+        Assert.Contains("true);", code);
+    }
 }
+

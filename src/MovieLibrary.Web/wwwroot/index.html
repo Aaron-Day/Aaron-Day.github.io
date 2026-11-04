@@ -23,7 +23,7 @@
             <circle r="40%" cx="50%" cy="50%" />
         </svg>
         <div class="loading-progress-text" aria-hidden="true"></div>
-        <p class="visually-hidden" role="status">Loading library</p>
+        <p id="boot-status" class="visually-hidden" role="status">Loading library</p>
         <noscript>This library needs JavaScript. Turn it on and reload the page.</noscript>
     </div>
 
@@ -48,6 +48,60 @@
         <img src="tmdb-logo.svg" alt="" width="489" height="35" />
         <p>This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</p>
     </footer>
+
+    <script>
+        // Boot watchdog. The Blazor runtime reveals #blazor-error-ui only when the app's entry point throws or
+        // after it has started. Two boot failures reveal nothing, and would leave the spinner and the polite
+        // "loading" claim up for ever: the platform failing to start (a dropped connection, a file missing
+        // mid-deploy), which is an unhandled rejection, and blazor.webassembly.js itself failing to load,
+        // which rejects no promise at all and is only a resource error on the script element.
+        // Gate: Blazor replaces the children of #app when it renders, so #boot-status still being in the DOM
+        // means boot never completed. No timer: a slow phone on a cold cache is not a failure. The first
+        // trigger of either kind stands both listeners down, so a normal load leaves nothing behind.
+        (function () {
+            function stop() {
+                window.removeEventListener('unhandledrejection', onRejection);
+                window.removeEventListener('error', onScriptError, true);
+            }
+
+            function onRejection() {
+                stop();
+                fail();
+            }
+
+            // A resource error does not bubble, so it is only seen in the capture phase.
+            function onScriptError(e) {
+                var t = e.target;
+                if (!t || t.tagName !== 'SCRIPT' || (t.src || '').indexOf('blazor.webassembly') < 0) return;
+                stop();
+                fail();
+            }
+
+            function fail() {
+                var status = document.getElementById('boot-status');
+                if (!status) return;
+
+                var decoration = document.querySelectorAll('#app .loading-progress, #app .loading-progress-text');
+                for (var i = 0; i < decoration.length; i++) decoration[i].style.display = 'none';
+
+                // Change the text in place: the live region is already in the tree, so the change is announced.
+                status.className = 'boot-failure';
+                status.textContent = 'The library could not start. Check your connection, then reload the page.';
+
+                var bar = document.getElementById('blazor-error-ui');
+                if (!bar) return;
+                bar.style.display = 'block';
+                // The runtime wires Reload and Dismiss only on its own reveal, so wire them the way it does.
+                var reload = bar.querySelector('.reload');
+                var dismiss = bar.querySelector('.dismiss');
+                if (reload) reload.onclick = function (e) { location.reload(); e.preventDefault(); };
+                if (dismiss) dismiss.onclick = function (e) { bar.style.display = 'none'; e.preventDefault(); };
+            }
+
+            window.addEventListener('unhandledrejection', onRejection);
+            window.addEventListener('error', onScriptError, true);
+        })();
+    </script>
 
     <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
 </body>

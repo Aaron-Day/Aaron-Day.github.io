@@ -91,4 +91,16 @@ public class PageTests : BunitContext
         Assert.Equal(new[] { typeof(Movies) }, rootOwners);
         Assert.DoesNotContain(assembly.GetTypes(), t => t.Name.Contains("Redirect", StringComparison.OrdinalIgnoreCase));
     }
+
+    [Fact]
+    public void TheOnlyRoutesTheSiteServesAreTheFilmsPageAndNotFound()
+    {
+        // The stock /counter and /weather pages are live routes on a public site if they are left in.
+        var templates = typeof(Movies).Assembly.GetTypes()
+            .SelectMany(t => t.GetCustomAttributes<RouteAttribute>())
+            .Select(r => r.Template)
+            .OrderBy(t => t, StringComparer.Ordinal);
+
+        Assert.Equal(new[] { "/", "/movies", "/not-found" }, templates);
+    }
 }

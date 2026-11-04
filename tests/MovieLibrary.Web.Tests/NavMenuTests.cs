@@ -137,4 +137,145 @@ public class NavMenuTests : BunitContext
         Assert.DoesNotContain("active", link.ClassList);
         Assert.Null(link.GetAttribute("aria-current"));
     }
+
+    [Theory]
+    [InlineData("/")]
+    [InlineData("/movies")]
+    [InlineData("/movies?genre=Drama&page=3")]
+    [InlineData("/movies#results")]
+    [InlineData("/movies/")]
+    public void FilmsIsCurrentOnEveryAddressThatServesTheFilmsPage(string path)
+    {
+        // "/" and "/movies" are one page. NavLink cannot express "either path", so the menu computes it.
+        Services.GetRequiredService<NavigationManager>().NavigateTo(path);
+        var cut = Render<NavMenu>();
+
+        var link = cut.Find("#nav-links a");
+        Assert.Contains("active", link.ClassList);
+        Assert.Equal("page", link.GetAttribute("aria-current"));
+    }
+
+    [Theory]
+    [InlineData("/zzz")]
+    [InlineData("/not-found")]
+    [InlineData("/moviesx")]
+    [InlineData("/movies/123")]   // no detail route exists in Part A, so it is not the Films page
+    public void FilmsIsNotCurrentElsewhere(string path)
+    {
+        Services.GetRequiredService<NavigationManager>().NavigateTo(path);
+        var cut = Render<NavMenu>();
+
+        var link = cut.Find("#nav-links a");
+        Assert.DoesNotContain("active", link.ClassList);
+        Assert.Null(link.GetAttribute("aria-current"));
+    }
+
+    [Fact]
+    public void TheCurrentMarkFollowsNavigationWithoutARerenderFromOutside()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        nav.NavigateTo("/zzz");
+        var cut = Render<NavMenu>();
+        Assert.Null(cut.Find("#nav-links a").GetAttribute("aria-current"));
+
+        nav.NavigateTo("/");
+        cut.WaitForAssertion(() => Assert.Equal("page", cut.Find("#nav-links a").GetAttribute("aria-current")));
+
+        nav.NavigateTo("/zzz");
+        cut.WaitForAssertion(() => Assert.Null(cut.Find("#nav-links a").GetAttribute("aria-current")));
+    }
+
+    [Fact]
+    public void NavigatingClosesTheDrawerSoFocusIsNotLeftInsideAHiddenList()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        nav.NavigateTo("/zzz");
+        var cut = Render<NavMenu>();
+        cut.Find("button.nav-toggle").Click();
+        Assert.Equal("true", cut.Find("button.nav-toggle").GetAttribute("aria-expanded"));
+
+        nav.NavigateTo("/movies");
+
+        cut.WaitForAssertion(() =>
+        {
+            Assert.Equal("false", cut.Find("button.nav-toggle").GetAttribute("aria-expanded"));
+            Assert.Contains("collapsed", cut.Find("#nav-links").ClassList);
+        });
+    }
+
+    // Closing the drawer is display:none, which takes the link the user just activated out of the tab order.
+    // FocusOnNavigate does not fire when the target is the page already showing (observed: no focus() call
+    // at all), so without this focus drops to <body> and a keyboard user is back at the top of the document.
+    [Fact]
+    public void FollowingTheCurrentPagesOwnLinkMovesFocusToTheMenuButton()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        nav.NavigateTo("/movies");
+        var cut = Render<NavMenu>();
+        // bUnit only writes the element-reference id into the markup of the first render, so read it now.
+        var toggleId = cut.Find("button.nav-toggle").GetAttribute("blazor:elementreference");
+        Assert.False(string.IsNullOrEmpty(toggleId));
+        cut.Find("button.nav-toggle").Click();
+        cut.Find("#nav-links a").FocusIn();
+
+        nav.NavigateTo("/");
+
+        cut.WaitForAssertion(() =>
+        {
+            var focus = JSInterop.VerifyFocusAsyncInvoke();
+            Assert.Equal(toggleId, ((ElementReference)focus.Arguments[0]!).Id);
+        });
+    }
+
+    [Fact]
+    public void FocusIsLeftAloneWhenItWasNotInsideTheDrawer()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        nav.NavigateTo("/movies");
+        var cut = Render<NavMenu>();
+        cut.Find("button.nav-toggle").Click();
+
+        nav.NavigateTo("/");   // e.g. the brand link, or the browser's Back button
+
+        cut.WaitForAssertion(() => Assert.Contains("collapsed", cut.Find("#nav-links").ClassList));
+        Assert.Empty(JSInterop.Invocations);
+    }
+
+    [Fact]
+    public void FocusIsLeftToFocusOnNavigateWhenTheLinkLeadsToADifferentPage()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        nav.NavigateTo("/zzz");
+        var cut = Render<NavMenu>();
+        cut.Find("button.nav-toggle").Click();
+        cut.Find("#nav-links a").FocusIn();
+
+        nav.NavigateTo("/movies");
+
+        cut.WaitForAssertion(() => Assert.Contains("collapsed", cut.Find("#nav-links").ClassList));
+        Assert.Empty(JSInterop.Invocations);   // the page changed, so FocusOnNavigate moves focus to its h1
+    }
+
+    [Fact]
+    public async Task TheMenuUnsubscribesFromLocationChangesWhenItIsDisposed()
+    {
+        var nav = Services.GetRequiredService<NavigationManager>();
+        var before = LocationChangedSubscribers(nav);
+
+        Render<NavMenu>();
+        Assert.Equal(before + 1, LocationChangedSubscribers(nav));
+
+        await DisposeComponentsAsync();
+        Assert.Equal(before, LocationChangedSubscribers(nav));
+    }
+
+    // NavigationManager exposes no subscriber count. Reading its backing field is brittle, so a framework
+    // rename fails this helper loudly instead of letting the leak test pass vacuously.
+    private static int LocationChangedSubscribers(NavigationManager nav)
+    {
+        var field = typeof(NavigationManager).GetField("_locationChanged",
+            System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+        Assert.True(field is not null, "NavigationManager no longer has _locationChanged; update this helper");
+        return (field.GetValue(nav) as Delegate)?.GetInvocationList().Length ?? 0;
+    }
 }
