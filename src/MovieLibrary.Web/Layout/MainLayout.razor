@@ -1,16 +1,22 @@
-﻿@inherits LayoutComponentBase
+@inherits LayoutComponentBase
+
+<a class="skip-link visually-hidden-focusable" href="#main-content" @onclick="SkipToMain" @onclick:preventDefault>Skip to main content</a>
+
 <div class="page">
-    <div class="sidebar">
+    <header>
         <NavMenu />
-    </div>
+    </header>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
+    <main id="main-content" tabindex="-1" @ref="mainElement">
+        <div class="content">@Body</div>
     </main>
 </div>
+
+@code {
+    private ElementReference mainElement;
+
+    // href="#main-content" resolves against <base href="/">, so Blazor turns the click into an in-app
+    // navigation to "/" and the query string is lost. Keep the real href for semantics and assistive
+    // technology, stop Blazor intercepting the click, and focus the element directly instead.
+    private async Task SkipToMain() => await mainElement.FocusAsync();
+}

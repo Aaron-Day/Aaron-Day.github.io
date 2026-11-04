@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MovieLibrary.Web</title>
+    <title>Film and TV library</title>
+    <meta name="color-scheme" content="dark" />
     <base href="/" />
     <link rel="preload" id="webassembly" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -17,17 +18,23 @@
 
 <body>
     <div id="app">
-        <svg class="loading-progress">
+        <svg class="loading-progress" aria-hidden="true">
             <circle r="40%" cx="50%" cy="50%" />
             <circle r="40%" cx="50%" cy="50%" />
         </svg>
-        <div class="loading-progress-text"></div>
+        <div class="loading-progress-text" aria-hidden="true"></div>
+        <p class="visually-hidden" role="status">Loading library</p>
+        <noscript>This library needs JavaScript. Turn it on and reload the page.</noscript>
     </div>
 
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="." class="reload">Reload</a>
-        <span class="dismiss">🗙</span>
+    <div id="blazor-error-ui" role="alert">
+        <div class="error-ui-inner">
+            <span>An unhandled error has occurred.</span>
+            <a href="." class="reload">Reload</a>
+            <button type="button" class="dismiss" aria-label="Dismiss error">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </div>
     <!-- TMDB attribution. The sentence is fixed verbatim by TMDB's API terms and must match
          MovieLibrary.Core.Models.CatalogMeta.TmdbAttribution exactly. CatalogWriter enforces that

@@ -1,5 +1,10 @@
-﻿@page "/not-found"
+@page "/not-found"
 @layout MainLayout
 
-<h3>Not Found</h3>
-<p>Sorry, the content you are looking for does not exist.</p>
+@* @layout stays: the NotFoundPage render path may not apply the router's DefaultLayout, and without it an
+   unknown URL would render with no main, no nav and no skip link. *@
+<PageTitle>Page not found - Film and TV library</PageTitle>
+
+<h1>Page not found</h1>
+
+<p>Sorry, nothing lives at this address. <a href="movies">Back to the library</a>.</p>

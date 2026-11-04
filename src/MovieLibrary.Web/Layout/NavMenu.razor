@@ -1,39 +1,25 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">MovieLibrary.Web</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
+<nav aria-label="Main">
+    <a class="brand" href="">Film and TV library</a>
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
-</div>
+    <button type="button" class="nav-toggle"
+            aria-expanded="@(collapsed ? "false" : "true")"
+            aria-controls="nav-links"
+            @onclick="Toggle">
+        <svg class="nav-toggle-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+            <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <span class="visually-hidden">Menu</span>
+    </button>
+
+    <ul class="nav-links @(collapsed ? "collapsed" : null)" id="nav-links" role="list">
+        <li><NavLink class="nav-link" href="movies" Match="NavLinkMatch.All">Films</NavLink></li>
+    </ul>
+</nav>
 
 @code {
-    private bool collapseNavMenu = true;
+    private bool collapsed = true;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+    // aria-expanded is rendered from the strings above, never from a bool: a bool attribute value is
+    // present-and-empty when true and omitted when false, which ARIA reads as undefined either way.
+    private void Toggle() => collapsed = !collapsed;
 }
