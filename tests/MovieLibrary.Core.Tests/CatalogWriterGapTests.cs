@@ -18,14 +18,14 @@ public class CatalogWriterGapTests : IDisposable
     public void Dispose() { if (Directory.Exists(_dir)) Directory.Delete(_dir, true); }
 
     private static MovieRecord Film(int id, string title) =>
-        new(id, title, 1979, 117, "/p.jpg", "/b.jpg", [878, 27], "Sci-Fi & Fantasy", 8.1, ["Ridley Scott"],
+        new(id, id.ToString(), title, 1979, 117, "/p.jpg", "/b.jpg", [878, 27], "Sci-Fi & Fantasy", 8.1, ["Ridley Scott"],
             "In space, no one can hear you scream.", "A tagline",
             [new CastMember("Sigourney Weaver", "Ripley", "/c.jpg")],
             "Alien Collection", "Alien 4-Film Collection", 0.95);
 
     /// <summary>A film no TMDB candidate matched: sheet data only, I = 0 and Mc = 0.</summary>
     private static MovieRecord Unmatched(string title) =>
-        new(0, title, null, 90, null, null, [], "Drama", 0, [], null, null, [], null, null, 0);
+        new(0, "u-0badf11e", title, null, 90, null, null, [], "Drama", 0, [], null, null, [], null, null, 0);
 
     private static EpisodeRecord Ep(int number, string title, bool owned) =>
         new(number, title, owned, null, null, null, null);
@@ -61,6 +61,7 @@ public class CatalogWriterGapTests : IDisposable
         var films = doc.RootElement.EnumerateArray().ToList();
         Assert.Equal(new[] { 348, 0, 949 }, films.Select(f => f.GetProperty("i").GetInt32()));
         Assert.Equal(new[] { "Alien", "Home Movie", "Heat" }, films.Select(f => f.GetProperty("t").GetString()));
+        Assert.Equal(new[] { "348", "u-0badf11e", "949" }, films.Select(f => f.GetProperty("k").GetString()));
         Assert.Equal(0d, films[1].GetProperty("mc").GetDouble());
     }
 
@@ -72,7 +73,7 @@ public class CatalogWriterGapTests : IDisposable
         using var doc = await ReadAsync("movies.json");
         var film = doc.RootElement[0];
         Assert.Equal(
-            new[] { "i", "t", "y", "rt", "p", "b", "g", "ag", "vote", "dir", "ov", "tag", "cast", "col", "own", "mc" },
+            new[] { "i", "k", "t", "y", "rt", "p", "b", "g", "ag", "vote", "dir", "ov", "tag", "cast", "col", "own", "mc" },
             Names(film));
         Assert.Equal(new[] { "n", "c", "p" }, Names(film.GetProperty("cast")[0]));
     }

@@ -17,7 +17,7 @@ public class CatalogWriterAmendmentTests : IDisposable
     public void Dispose() { if (Directory.Exists(_dir)) Directory.Delete(_dir, true); }
 
     private static MovieRecord Film(int id, string title, double vote = 8.1) =>
-        new(id, title, 1979, 117, "/p.jpg", null, [878], "Sci-Fi & Fantasy", vote, ["Ridley Scott"],
+        new(id, id.ToString(), title, 1979, 117, "/p.jpg", null, [878], "Sci-Fi & Fantasy", vote, ["Ridley Scott"],
             "overview", null, [], null, null, 0.95);
 
     private static ShowRecord Series(string slug, double mc = 1d) =>

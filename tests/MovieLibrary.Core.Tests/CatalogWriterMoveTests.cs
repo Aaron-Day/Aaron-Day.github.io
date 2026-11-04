@@ -19,7 +19,7 @@ public class CatalogWriterMoveTests : IDisposable
     private static readonly string NewSeries = Path.Combine("tv", "new-series.json");
 
     private static MovieRecord Film(int id) =>
-        new(id, "Film " + id, 1979, 117, "/p.jpg", null, [878], "Drama", 8.1, ["Ridley Scott"],
+        new(id, id.ToString(), "Film " + id, 1979, 117, "/p.jpg", null, [878], "Drama", 8.1, ["Ridley Scott"],
             "overview", null, [], null, null, 0.95);
 
     private static ShowRecord Series(string slug, int id) =>

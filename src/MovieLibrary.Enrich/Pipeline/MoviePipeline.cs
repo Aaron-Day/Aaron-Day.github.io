@@ -196,7 +196,7 @@ public sealed class MoviePipeline(
                         : Describe(match.Outcome, confidence, tmdbId);
             }
 
-            records.Add(await BuildRecordAsync(row, title, runtime, tmdbId, confidence, fresh, freshCast, genreNames, now, ct));
+            records.Add(await BuildRecordAsync(row, title, runtime, key, tmdbId, confidence, fresh, freshCast, genreNames, now, ct));
             if (reviewNote is not null)
                 review.Add($"{row.Title} ({row.Runtime}, {row.Directors}) → {reviewNote}");
 
@@ -359,7 +359,7 @@ public sealed class MoviePipeline(
     }
 
     private async Task<MovieRecord> BuildRecordAsync(
-        SheetRow row, NormalizedTitle title, int runtime,
+        SheetRow row, NormalizedTitle title, int runtime, string identityKey,
         int? tmdbId, double confidence, TmdbMovie? fresh, IReadOnlyList<TmdbCastMember>? freshCast,
         SortedDictionary<int, string> genreNames, DateTimeOffset now, CancellationToken ct)
     {
@@ -374,6 +374,7 @@ public sealed class MoviePipeline(
 
         return new MovieRecord(
             I: tmdbId ?? 0,
+            K: RecordKey.ForFilm(tmdbId, identityKey),
             T: row.Title,
             Y: year,
             Rt: runtime,

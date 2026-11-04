@@ -31,9 +31,22 @@ public class FixtureGeneratorGoldenTests
         var film = FixtureGenerator.Build([Film(title)], []).Item1.Single();
 
         Assert.Equal(id, film.I);
+        Assert.Equal(id.ToString(CultureInfo.InvariantCulture), film.K);   // a matched film is keyed by its id
         Assert.Equal(year, film.Y);
         Assert.Equal(vote, film.Vote);
         Assert.Equal(overview, film.Ov);
+    }
+
+    // Worked out beforehand in a separate Python model, not by running the generator: Seed("Empty Kingdom 65") puts
+    // Pick(seed, SaltUnmatched, 80) at 0, and SHA-1("film|empty kingdom 65|90|director some") begins d2f1c6e2.
+    [Fact]
+    public void AnUnmatchedFilmHasNoIdNoConfidenceAndThisLiteralKeyInEveryProcess()
+    {
+        var film = FixtureGenerator.Build([Film("Empty Kingdom 65")], []).Item1.Single();
+
+        Assert.Equal(0, film.I);
+        Assert.Equal(0d, film.Mc);
+        Assert.Equal("u-d2f1c6e2", film.K);
     }
 
     [Theory]
@@ -54,7 +67,7 @@ public class FixtureGeneratorGoldenTests
     {
         string[] genres = ["Action & Adventure", "Comedy", "Drama", "Sci-Fi & Fantasy", "Kids & Family",
                            "Horror", "Thriller", "Documentary", "Holiday"];
-        return [.. new[] { "Alien", "Airplane!", "iqelaitl", "Amélie", "Ocean's Twelve", "Aladdin", "Aladdin" }
+        return [.. new[] { "Alien", "Airplane!", "iqelaitl", "Amélie", "Ocean's Twelve", "Aladdin", "Aladdin", "Empty Kingdom 65" }
             .Concat(Enumerable.Range(0, 80).Select(i => $"Film {i * 7 % 80}"))
             .Select((title, i) => new SheetRow(
                 title, $"{1 + i % 2}:{10 + i % 50:D2}:{i % 60:D2}", i % 3 == 0 ? "A Director & B Director" : "C Director",
@@ -109,8 +122,8 @@ public class FixtureGeneratorGoldenTests
         return Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(json))).ToLowerInvariant();
     }
 
-    // Measured over 334,855 characters of JSON (61 series: numbered, extras that claim slots, bare-only, unlisted, disagreeing, padded, fully owned); the same in separate processes and under every culture below.
-    private const string Golden = "4e284ea0a0fb9eac994a90fc823802275d52af102ab92f3ce73c666ec3218f2a";
+    // Measured over 336,644 characters of JSON (88 films, one of them unmatched; 61 series: numbered, extras that claim slots, bare-only, unlisted, disagreeing, padded, fully owned); the same in separate processes and under every culture below.
+    private const string Golden = "030e8dbed47b57bafb745a1086990631cb1ce15eb29ff4acb49cc67e93a2f44f";
 
     // A golden pins only what its input reaches. A hash that .NET randomises per process, used as a sort key in a branch
     // the input never takes, would pass everything: so this fails if the input stops reaching a branch.
@@ -133,6 +146,8 @@ public class FixtureGeneratorGoldenTests
         Assert.Contains(shows, s => s.Seasons.Any(x => x.N == 0 && x.Eps.Any(IsInvented)));
         // an owned numbered episode TMDB does not list, with nothing but a title
         Assert.Contains(shows, s => s.Seasons.Any(x => x.N > 0 && x.Eps.Any(e => IsNumbered(e) && e.Air is null && e.Rt is null)));
+        // a film no TMDB search matched: id 0, keyed by its content hash instead
+        Assert.Contains(FixtureGenerator.Build(FixedFilms(), FixedShows()).Item1, m => m.I == 0 && m.K.StartsWith("u-", StringComparison.Ordinal));
         // a series whose rows disagree
         var signals = shows.Single(s => s.T == "Mixed Signals");
         Assert.Equal("Drama", signals.Ag);

@@ -81,7 +81,7 @@ public class FixtureGeneratorCatalogueTests : IDisposable
             Assert.InRange(m.Y!.Value, 1970, 2024);
             Assert.InRange(m.Vote, 4.0, 9.9);
             Assert.Equal(Math.Round(m.Vote, 1), m.Vote);
-            Assert.InRange(m.I, 900_000, 999_999);
+            if (m.I != 0) Assert.InRange(m.I, 900_000, 999_999);   // 0 is an unmatched film, by design
             Assert.False(string.IsNullOrWhiteSpace(m.Ov));
         });
     }
@@ -91,10 +91,11 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     [Fact]
     public void MatchConfidenceIsConfidentButNeverMistakableForAHumanOverride()
     {
-        // 1.0 means "a human confirmed this" here; the best an algorithm can score is 0.95.
+        // 1.0 means "a human confirmed this" here; the best an algorithm can score is 0.95. An unmatched
+        // film (id 0) scores 0, exactly as MoviePipeline writes it.
         Assert.All(Films(), m =>
         {
-            Assert.Equal(0.95, m.Mc);
+            Assert.Equal(m.I == 0 ? 0d : 0.95, m.Mc);
             Assert.NotEqual(1.0, m.Mc);
         });
     }
@@ -171,9 +172,12 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         rows.Add(Film("Aladdin", runtime: "1:30:00"));
         rows.Add(Film("Aladdin", runtime: "2:08:00"));      // the real sheet has same-titled films
 
-        var ids = Films(rows).Select(m => m.I).ToList();
+        var films = Films(rows);
+        var ids = films.Select(m => m.I).Where(i => i != 0).ToList();   // id 0 is shared by every unmatched film
+        var keys = films.Select(m => m.K).ToList();
 
         Assert.Equal(ids.Count, ids.Distinct().Count());
+        Assert.Equal(keys.Count, keys.Distinct().Count());      // the key, unlike the id, is unique for them too
     }
 
     [Fact]
@@ -211,8 +215,8 @@ public class FixtureGeneratorCatalogueTests : IDisposable
 
         Assert.NotEqual(twins[0].I, twins[1].I);
         // Records compare arrays by reference, so compare what would be written instead.
-        Assert.Equal(JsonSerializer.Serialize(twins[0] with { I = 0 }),
-                     JsonSerializer.Serialize(twins[1] with { I = 0 }));
+        Assert.Equal(JsonSerializer.Serialize(twins[0] with { I = 0, K = "" }),
+                     JsonSerializer.Serialize(twins[1] with { I = 0, K = "" }));
     }
 
     // ---- genres --------------------------------------------------------------------------
@@ -469,7 +473,8 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         {
             Assert.Equal(4, f.GetProperty("cast").GetArrayLength());
             Assert.True(f.GetProperty("g").GetArrayLength() >= 1);
-            Assert.Equal(0.95, f.GetProperty("mc").GetDouble());
+            Assert.Equal(f.GetProperty("i").GetInt32() == 0 ? 0d : 0.95, f.GetProperty("mc").GetDouble());
+            Assert.False(string.IsNullOrEmpty(f.GetProperty("k").GetString()));
             Assert.False(f.TryGetProperty("p", out _));
             Assert.False(f.TryGetProperty("b", out _));
             Assert.All(f.GetProperty("g").EnumerateArray(), id => Assert.Contains(id.GetInt32().ToString(CultureInfo.InvariantCulture), named));

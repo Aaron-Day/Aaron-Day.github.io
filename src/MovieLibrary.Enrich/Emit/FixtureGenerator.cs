@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Globalization;
+using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Parsing;
 using MovieLibrary.Core.Text;
@@ -122,7 +123,7 @@ public static class FixtureGenerator
                       SaltTrailingSeasons = 16, SaltUnownedSeasonSize = 17, SaltYear = 18, SaltVote = 19,
                       SaltOverview = 20, SaltId = 21, SaltFirstYear = 22, SaltSeasonComplete = 23, SaltMixedSeries = 24,
                       SaltMatchShape = 25, SaltMatchRate = 26, SaltRowMatch = 27, SaltClaimOrder = 28, SaltSlotRank = 29,
-                      SaltClaimSeasonSize = 30, SaltUnlisted = 31;
+                      SaltClaimSeasonSize = 30, SaltUnlisted = 31, SaltUnmatched = 32;
 
     // Obviously synthetic, from a few words to a sentence that must wrap, because the tagline is a laid-out field.
     private static readonly string[] Taglines =
@@ -547,8 +548,18 @@ public static class FixtureGenerator
             var names = PickFour(CastNames, seed, SaltCastStart, SaltCastStride);
             var roles = PickFour(CharacterNames, seed, SaltRoleStart, SaltRoleStride);
 
+            // Every fixture film used to get a unique non-zero id, which is exactly why M122 reached production:
+            // no test could express the unmatched case. One in every 80 fixture films is now unmatched, so a
+            // fixture run carries roughly the same handful of id-0 records a real run does.
+            var unmatched = Pick(seed, SaltUnmatched, 80) == 0;
+            var tmdbId = unmatched ? (int?)null : ClaimId(movieIds, 900_000 + Pick(seed, SaltId, 90_000));
+
             movies.Add(new MovieRecord(
-                I: ClaimId(movieIds, 900_000 + Pick(seed, SaltId, 90_000)),
+                I: tmdbId ?? 0,
+                K: RecordKey.ForFilm(tmdbId, IdentityKey.ForFilm(
+                       TitleNormalizer.Normalize(row.Title),
+                       RuntimeParser.FilmMinutes(row.Runtime),
+                       TitleNormalizer.NormalizeDirectors(row.Directors))),
                 T: row.Title,
                 Y: 1970 + Pick(seed, SaltYear, 55),
                 Rt: RuntimeParser.FilmMinutes(row.Runtime),
@@ -563,7 +574,7 @@ public static class FixtureGenerator
                 Cast: [.. names.Select((name, i) => new CastMember(name, roles[i], null))],
                 Col: collections[index],
                 Own: string.IsNullOrWhiteSpace(row.PurchaseInfo) ? null : row.PurchaseInfo,
-                Mc: 0.95));
+                Mc: unmatched ? 0d : 0.95));
         }
 
         var showIds = new HashSet<int>();
