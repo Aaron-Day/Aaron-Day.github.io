@@ -39,5 +39,11 @@
 
     private void OnAnnouncement() => _ = InvokeAsync(StateHasChanged);
 
+    // Every render, not just the first. A render that commits after a message was armed is the render that
+    // carries that message's clear, and the announcer restarts the settle delay from it: a handler that
+    // announces and then re-renders half the page would otherwise flush the clear and the text together, and a
+    // repeated message would be no DOM change at all on exactly the devices that need the gap most.
+    protected override void OnAfterRender(bool firstRender) => Announcer.RenderCommitted();
+
     public void Dispose() => Announcer.Changed -= OnAnnouncement;
 }

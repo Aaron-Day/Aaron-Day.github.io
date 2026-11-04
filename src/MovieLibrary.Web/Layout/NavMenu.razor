@@ -96,12 +96,5 @@
     private static bool Shows(NavItem item, string path) =>
         item.Paths.Contains(path, StringComparer.OrdinalIgnoreCase);
 
-    /// <summary>The address relative to the base, without query string, fragment or trailing slash.</summary>
-    private string CurrentPath()
-    {
-        var path = Navigation.ToBaseRelativePath(Navigation.Uri);
-        var end = path.IndexOfAny(new[] { '?', '#' });
-        if (end >= 0) path = path[..end];
-        return path.TrimEnd('/');
-    }
+    private string CurrentPath() => PagePath.Of(Navigation, Navigation.Uri);
 }

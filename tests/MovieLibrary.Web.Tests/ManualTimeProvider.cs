@@ -1,9 +1,10 @@
 namespace MovieLibrary.Web.Tests;
 
 /// <summary>
-/// A clock that only moves when a test says so. <c>Task.Delay(delay, timeProvider)</c> creates its timer through
-/// <see cref="CreateTimer"/>, so the announcer's settle delay can be stepped across exactly, with no sleeping and
-/// no flaky "wait long enough to prove nothing happened".
+/// A clock that only moves when a test says so. The announcer arms its settle delay by calling
+/// <see cref="CreateTimer"/> directly, so the delay can be stepped across exactly, with no sleeping and no flaky
+/// "wait long enough to prove nothing happened". <see cref="ITimer.Change"/> really does reset the due time here,
+/// which is what lets a test observe the announcer re-arming a pending message when a render commits.
 /// </summary>
 internal sealed class ManualTimeProvider : TimeProvider
 {
