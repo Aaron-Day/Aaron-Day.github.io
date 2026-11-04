@@ -374,7 +374,7 @@ public sealed class MoviePipeline(
 
         return new MovieRecord(
             I: tmdbId ?? 0,
-            K: RecordKey.ForFilm(tmdbId, identityKey),
+            K: RecordKey.ForFilm(tmdbId, runtime, identityKey),
             T: row.Title,
             Y: year,
             Rt: runtime,

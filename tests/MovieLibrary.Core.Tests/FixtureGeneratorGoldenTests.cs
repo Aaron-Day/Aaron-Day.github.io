@@ -31,7 +31,7 @@ public class FixtureGeneratorGoldenTests
         var film = FixtureGenerator.Build([Film(title)], []).Item1.Single();
 
         Assert.Equal(id, film.I);
-        Assert.Equal(id.ToString(CultureInfo.InvariantCulture), film.K);   // a matched film is keyed by its id
+        Assert.Equal(id.ToString(CultureInfo.InvariantCulture) + "-90", film.K);   // its id, then Film()'s 1:30:00 in minutes
         Assert.Equal(year, film.Y);
         Assert.Equal(vote, film.Vote);
         Assert.Equal(overview, film.Ov);
@@ -122,8 +122,11 @@ public class FixtureGeneratorGoldenTests
         return Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(json))).ToLowerInvariant();
     }
 
-    // Measured over 336,644 characters of JSON (88 films, one of them unmatched; 61 series: numbered, extras that claim slots, bare-only, unlisted, disagreeing, padded, fully owned); the same in separate processes and under every culture below.
-    private const string Golden = "030e8dbed47b57bafb745a1086990631cb1ce15eb29ff4acb49cc67e93a2f44f";
+    // 336,962 characters of JSON (88 films, one of them unmatched; 61 series: numbered, extras that claim slots, bare-only, unlisted, disagreeing, padded, fully owned).
+    // Derived, not read off the generator: the previous golden (030e8dbe...f44f, 336,644 characters, K = the bare id) was reproduced
+    // byte for byte from a dump of the old output, then in Python every matched film's "K":"{id}" became "K":"{id}-{Rt}" using that
+    // film's own Rt and the hash taken again. Only those 87 substrings differ, hence +318 characters. The same in separate processes and under every culture below.
+    private const string Golden = "7c9cbfef45675349211175d7da2df5b9206a04c98d2434df2d92dda5eedef481";
 
     // A golden pins only what its input reaches. A hash that .NET randomises per process, used as a sort key in a branch
     // the input never takes, would pass everything: so this fails if the input stops reaching a branch.

@@ -7,32 +7,68 @@ public class RecordKeyTests
     private const string Key = "3f9a21c80000000000000000000000000000abcd";
 
     [Fact]
-    public void AMatchedFilmIsIdentifiedByItsTmdbId()
-        => Assert.Equal("807", RecordKey.ForFilm(807, Key));
+    public void AMatchedFilmIsIdentifiedByItsTmdbIdAndItsRuntime()
+        => Assert.Equal("807-127", RecordKey.ForFilm(807, 127, Key));
+
+    // The owner owns two cuts of 13 different films. Both cuts carry the SAME TMDB id and
+    // differ only in runtime, so a key that is the bare id merges them - which is what
+    // shipped before this test existed.
+    [Fact]
+    public void TwoCutsOfOneFilmShareAnIdButNotAKey()
+    {
+        Assert.NotEqual(
+            RecordKey.ForFilm(120, 178, Key),   // Fellowship, theatrical
+            RecordKey.ForFilm(120, 228, Key));  // Fellowship, extended
+    }
+
+    // The two keys as the URL will show them: the TMDB id stays readable, the runtime follows it.
+    [Fact]
+    public void TheTwoFellowshipCutsHaveTheseLiteralKeys()
+    {
+        Assert.Equal("120-178", RecordKey.ForFilm(120, 178, Key));
+        Assert.Equal("120-228", RecordKey.ForFilm(120, 228, Key));
+    }
+
+    // Intended: two rows that agree on id AND runtime are ONE key. The two Blade Runner rows are id 78 at
+    // 117 minutes with the same director - a genuine duplicate row in the sheet with nothing to tell them apart,
+    // so there is nothing a key could honestly separate them by.
+    [Fact]
+    public void TwoRowsThatAgreeOnIdAndRuntimeCollapseToOneKey()
+    {
+        var first = RecordKey.ForFilm(78, 117, Key);
+        var second = RecordKey.ForFilm(78, 117, "ffffffff" + Key);   // a different identity key does not matter once matched
+        Assert.Equal("78-117", first);
+        Assert.Equal(first, second);
+    }
+
+    // Different films that happen to run the same length are not confused: the id comes first.
+    [Fact]
+    public void TwoFilmsOfTheSameLengthDoNotShareAKey()
+        => Assert.NotEqual(RecordKey.ForFilm(120, 178, Key), RecordKey.ForFilm(121, 178, Key));
 
     // The 17 unmatched films all arrive as id 0. Keyed on the id they would be one record.
     [Fact]
     public void AnUnmatchedFilmIsIdentifiedByItsContentHash()
-        => Assert.Equal("u-3f9a21c8", RecordKey.ForFilm(null, Key));
+        => Assert.Equal("u-3f9a21c8", RecordKey.ForFilm(null, 90, Key));
 
     [Theory]
     [InlineData(0)]
     [InlineData(-1)]
     public void AnIdThatIsNotAPositiveNumberIsNotAnIdentity(int notAnId)
-        => Assert.StartsWith("u-", RecordKey.ForFilm(notAnId, Key));
+        => Assert.StartsWith("u-", RecordKey.ForFilm(notAnId, 90, Key));
 
     // The prefix is what keeps the two spaces from ever colliding: no TMDB id starts with "u-".
     [Fact]
     public void TheTwoFormsCannotCollide()
-        => Assert.NotEqual(RecordKey.ForFilm(3, Key), RecordKey.ForFilm(null, Key));
+        => Assert.NotEqual(RecordKey.ForFilm(3, 90, Key), RecordKey.ForFilm(null, 90, Key));
 
     [Fact]
     public void TheHashIsTakenFromTheFrontSoItIsStableAcrossKeyLengths()
-        => Assert.Equal("u-3f9a21c8", RecordKey.ForFilm(null, Key[..20]));
+        => Assert.Equal("u-3f9a21c8", RecordKey.ForFilm(null, 90, Key[..20]));
 
     [Fact]
     public void AnIdentityKeyTooShortToHashIsAProgrammerError()
-        => Assert.Throws<ArgumentException>(() => RecordKey.ForFilm(null, "3f9a"));
+        => Assert.Throws<ArgumentException>(() => RecordKey.ForFilm(null, 90, "3f9a"));
 
     // M122 reached production because every fixture film had a unique non-zero id. These two assertions
     // are about the SHAPE of a catalogue, so they hold for fixtures and for a real run alike.
@@ -51,5 +87,14 @@ public class RecordKeyTests
         Assert.NotEmpty(unmatched);   // All() over nothing passes, so the case has to exist
         Assert.All(unmatched, r => Assert.StartsWith(RecordKey.UnmatchedPrefix, r.K));
         Assert.Equal(unmatched.Count, unmatched.Select(r => r.K).Distinct().Count());
+    }
+
+    // Over a whole catalogue, a matched film's key is exactly its own id and its own runtime.
+    [Fact]
+    public void EveryMatchedFilmIsKeyedByItsIdAndItsRuntime()
+    {
+        var matched = TestCatalogue.Movies().Where(r => r.I != 0).ToList();
+        Assert.NotEmpty(matched);
+        Assert.All(matched, r => Assert.Equal($"{r.I}-{r.Rt}", r.K));
     }
 }

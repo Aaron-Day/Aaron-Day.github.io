@@ -553,16 +553,17 @@ public static class FixtureGenerator
             // fixture run carries roughly the same handful of id-0 records a real run does.
             var unmatched = Pick(seed, SaltUnmatched, 80) == 0;
             var tmdbId = unmatched ? (int?)null : ClaimId(movieIds, 900_000 + Pick(seed, SaltId, 90_000));
+            var minutes = RuntimeParser.FilmMinutes(row.Runtime);   // the key's cut-separator and the record's Rt: one parse
 
             movies.Add(new MovieRecord(
                 I: tmdbId ?? 0,
-                K: RecordKey.ForFilm(tmdbId, IdentityKey.ForFilm(
+                K: RecordKey.ForFilm(tmdbId, minutes, IdentityKey.ForFilm(
                        TitleNormalizer.Normalize(row.Title),
-                       RuntimeParser.FilmMinutes(row.Runtime),
+                       minutes,
                        TitleNormalizer.NormalizeDirectors(row.Directors))),
                 T: row.Title,
                 Y: 1970 + Pick(seed, SaltYear, 55),
-                Rt: RuntimeParser.FilmMinutes(row.Runtime),
+                Rt: minutes,
                 P: null,                       // gradient placeholder in the UI; no path, so no request
                 B: null,
                 G: GenresFor(row.Genre, seed),

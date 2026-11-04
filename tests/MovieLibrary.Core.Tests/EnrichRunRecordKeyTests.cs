@@ -24,7 +24,7 @@ public class EnrichRunRecordKeyTests
         Assert.All(films, f => Assert.Equal(["i", "k"], f.EnumerateObject().Take(2).Select(p => p.Name)));
 
         var keys = films.ToDictionary(f => f.GetProperty("t").GetString()!, f => f.GetProperty("k").GetString()!);
-        Assert.Equal("275", keys["Fargo"]);                                      // matched: its TMDB id
+        Assert.Equal("275-98", keys["Fargo"]);                                   // matched: its TMDB id, then its 1:38 runtime
         Assert.Equal(3, keys.Values.Distinct().Count());
         Assert.StartsWith("u-", keys["Zzyzx Road"], StringComparison.Ordinal);   // unmatched: id 0 for both...
         Assert.StartsWith("u-", keys["Qux Lane"], StringComparison.Ordinal);     // ...and a key of its own each

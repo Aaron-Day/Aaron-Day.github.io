@@ -18,7 +18,7 @@ public class CatalogWriterGapTests : IDisposable
     public void Dispose() { if (Directory.Exists(_dir)) Directory.Delete(_dir, true); }
 
     private static MovieRecord Film(int id, string title) =>
-        new(id, id.ToString(), title, 1979, 117, "/p.jpg", "/b.jpg", [878, 27], "Sci-Fi & Fantasy", 8.1, ["Ridley Scott"],
+        new(id, $"{id}-117", title, 1979, 117, "/p.jpg", "/b.jpg", [878, 27], "Sci-Fi & Fantasy", 8.1, ["Ridley Scott"],
             "In space, no one can hear you scream.", "A tagline",
             [new CastMember("Sigourney Weaver", "Ripley", "/c.jpg")],
             "Alien Collection", "Alien 4-Film Collection", 0.95);
@@ -61,7 +61,7 @@ public class CatalogWriterGapTests : IDisposable
         var films = doc.RootElement.EnumerateArray().ToList();
         Assert.Equal(new[] { 348, 0, 949 }, films.Select(f => f.GetProperty("i").GetInt32()));
         Assert.Equal(new[] { "Alien", "Home Movie", "Heat" }, films.Select(f => f.GetProperty("t").GetString()));
-        Assert.Equal(new[] { "348", "u-0badf11e", "949" }, films.Select(f => f.GetProperty("k").GetString()));
+        Assert.Equal(new[] { "348-117", "u-0badf11e", "949-117" }, films.Select(f => f.GetProperty("k").GetString()));
         Assert.Equal(0d, films[1].GetProperty("mc").GetDouble());
     }
 

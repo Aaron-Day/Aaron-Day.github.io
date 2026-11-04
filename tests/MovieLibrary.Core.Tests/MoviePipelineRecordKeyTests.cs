@@ -39,8 +39,29 @@ public class MoviePipelineRecordKeyTests
         Assert.Equal(2, result.Records.Select(r => r.K).Distinct().Count());
     }
 
+    // The collision this key scheme exists for, on the real pipeline: the owner owns two cuts of one film, TMDB
+    // knows them as one id, and the rows differ only in runtime. Fixtures cannot show this - they never give two rows one id.
     [Fact]
-    public async Task AMatchedFilmIsKeyedByItsTmdbId()
+    public async Task TwoCutsOfOneMatchedFilmShareAnIdButNotAKey()
+    {
+        var overrides = new Dictionary<string, int>
+        {
+            [MoviePipeline.OverrideKey("The Fellowship of the Ring", 178)] = 120,
+            [MoviePipeline.OverrideKey("The Fellowship of the Ring", 228)] = 120,
+        };
+
+        var result = await TestPipeline.ThatFailsIfSearched(tmdbId: 120).RunAsync(
+            [Row("The Fellowship of the Ring", "2:58:00", "Peter Jackson"),
+             Row("The Fellowship of the Ring", "3:48:00", "Peter Jackson")],
+            overrides, CancellationToken.None);
+
+        Assert.Equal(2, result.Records.Count);
+        Assert.All(result.Records, r => Assert.Equal(120, r.I));
+        Assert.Equal(["120-178", "120-228"], result.Records.Select(r => r.K).Order(StringComparer.Ordinal));
+    }
+
+    [Fact]
+    public async Task AMatchedFilmIsKeyedByItsTmdbIdAndRuntime()
     {
         var overrides = new Dictionary<string, int> { [MoviePipeline.OverrideKey("Halloween", 91)] = 948 };
 
@@ -49,6 +70,6 @@ public class MoviePipelineRecordKeyTests
 
         var record = Assert.Single(result.Records);
         Assert.Equal(948, record.I);
-        Assert.Equal("948", record.K);
+        Assert.Equal("948-91", record.K);   // 1:31:00 is 91 minutes
     }
 }
