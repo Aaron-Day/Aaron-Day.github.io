@@ -10,18 +10,10 @@ public class RecordKeyTests
     public void AMatchedFilmIsIdentifiedByItsTmdbIdAndItsRuntime()
         => Assert.Equal("807-127", RecordKey.ForFilm(807, 127, Key));
 
-    // The owner owns two cuts of 13 different films. Both cuts carry the SAME TMDB id and
-    // differ only in runtime, so a key that is the bare id merges them - which is what
-    // shipped before this test existed.
-    [Fact]
-    public void TwoCutsOfOneFilmShareAnIdButNotAKey()
-    {
-        Assert.NotEqual(
-            RecordKey.ForFilm(120, 178, Key),   // Fellowship, theatrical
-            RecordKey.ForFilm(120, 228, Key));  // Fellowship, extended
-    }
-
-    // The two keys as the URL will show them: the TMDB id stays readable, the runtime follows it.
+    // 16 TMDB ids are each held by two sheet rows. 15 of those pairs differ in runtime, so {id}-{runtime} separates them:
+    // 13 of the 16 are one film in two cuts the owner owns (Blade Runner is the one of them whose runtimes are equal),
+    // and 3 are wrong matches that the pipeline rejects rather than keys. Here are the two Fellowship cuts as the URL
+    // shows them: the TMDB id stays readable, the runtime follows it, and the bare id would have merged them.
     [Fact]
     public void TheTwoFellowshipCutsHaveTheseLiteralKeys()
     {

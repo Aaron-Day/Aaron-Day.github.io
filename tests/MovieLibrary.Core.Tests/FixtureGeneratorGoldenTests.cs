@@ -133,7 +133,7 @@ public class FixtureGeneratorGoldenTests
     [Fact]
     public void TheFixedInputReachesEveryBranchTheHashIsMeantToPin()
     {
-        var shows = FixtureGenerator.Build(FixedFilms(), FixedShows()).Item2;
+        var (films, shows) = FixtureGenerator.Build(FixedFilms(), FixedShows());
         bool IsExtra(EpisodeRecord e) => e.O && e.T.StartsWith("Extra ", StringComparison.Ordinal);
         bool IsNumbered(EpisodeRecord e) => e.O && e.T.StartsWith("Name ", StringComparison.Ordinal);
         bool IsInvented(EpisodeRecord e) => e.O && e.T.StartsWith("Bare only ", StringComparison.Ordinal);
@@ -150,7 +150,7 @@ public class FixtureGeneratorGoldenTests
         // an owned numbered episode TMDB does not list, with nothing but a title
         Assert.Contains(shows, s => s.Seasons.Any(x => x.N > 0 && x.Eps.Any(e => IsNumbered(e) && e.Air is null && e.Rt is null)));
         // a film no TMDB search matched: id 0, keyed by its content hash instead
-        Assert.Contains(FixtureGenerator.Build(FixedFilms(), FixedShows()).Item1, m => m.I == 0 && m.K.StartsWith("u-", StringComparison.Ordinal));
+        Assert.Contains(films, m => m.I == 0 && m.K.StartsWith("u-", StringComparison.Ordinal));
         // a series whose rows disagree
         var signals = shows.Single(s => s.T == "Mixed Signals");
         Assert.Equal("Drama", signals.Ag);

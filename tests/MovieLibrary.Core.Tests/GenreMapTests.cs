@@ -10,7 +10,7 @@ namespace MovieLibrary.Core.Tests;
 public class GenreMapTests
 {
     private static MovieRecord Film(params int[] genres)
-        => new(1, "1", "T", null, 90, null, null, genres, "", 0, [], null, null, [], null, null, 0);
+        => new(1, "1-90", "T", null, 90, null, null, genres, "", 0, [], null, null, [], null, null, 0);
 
     private static readonly IReadOnlyDictionary<int, string> Names =
         new Dictionary<int, string> { [27] = "Horror", [35] = "Comedy" };
