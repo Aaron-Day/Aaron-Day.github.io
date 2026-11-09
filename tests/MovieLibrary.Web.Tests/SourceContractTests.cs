@@ -64,6 +64,23 @@ public class SourceContractTests
     }
 
     [Fact]
+    public void TheCoreProjectCarriesNoReferencesOfItsOwn()
+    {
+        // MovieLibrary.Web.csproj's comment beside its one ProjectReference says "Core carries ZERO package
+        // references, so this adds only its own IL to the payload and no transitive dependency". That was
+        // prose with nothing behind it, and it is the claim that makes the web project's first ever
+        // ProjectReference cheap: a PackageReference added to Core comes into the browser payload with it,
+        // transitively and without anyone deciding to, and a ProjectReference brings a whole project.
+        //
+        // What this cannot catch: a dependency arriving through Directory.Build.props, a central package
+        // management file, or an SDK that is not Microsoft.NET.Sdk. It pins the ordinary spelling.
+        var core = WebRoot.ReadSibling("MovieLibrary.Core", "MovieLibrary.Core.csproj");
+
+        Assert.DoesNotContain("PackageReference", core, StringComparison.Ordinal);
+        Assert.DoesNotContain("ProjectReference", core, StringComparison.Ordinal);
+    }
+
+    [Fact]
     public void MainLayoutAnchorsTheSettleDelayToEveryRenderAndNotJustTheFirst()
     {
         // Source text, because bUnit cannot tell the wiring from its absence: its renderer commits in the same
@@ -168,7 +185,20 @@ public class SourceContractTests
     /// </para>
     /// </remarks>
     internal static IReadOnlyList<string> LiveRegionMarkers(string text) =>
-        LiveRegionMarker.Matches(text).Select(m => m.Value).Distinct(StringComparer.Ordinal).ToList();
+        AllLiveRegionMarkers(text).Distinct(StringComparer.Ordinal).ToList();
+
+    /// <summary>
+    /// Every live-region marker, duplicates included, so a count of regions can be asserted rather than a set
+    /// of spellings.
+    /// </summary>
+    /// <remarks>
+    /// The distinct set cannot count regions, and the layout's carve-out needs a count. A fourth region added
+    /// to MainLayout that REUSED an existing marker -- a second <c>role="status"</c>, by far the likeliest
+    /// accidental addition, because it is what a second polite announcement looks like -- collapses into the
+    /// same three-element set and passes.
+    /// </remarks>
+    internal static IReadOnlyList<string> AllLiveRegionMarkers(string text) =>
+        LiveRegionMarker.Matches(text).Select(m => m.Value).ToList();
 
     // The leading boundary stops data-aria-live and the like matching. Requiring the closing quote right
     // after the role word stops role="alertdialog" matching, which is a dialog and not a live region.
@@ -190,12 +220,18 @@ public class SourceContractTests
         var files = WebRoot.Files("*.razor").ToList();
         var failable = files.Where(f => f.Path != LiveRegionOwner).ToList();
 
-        // T1: the count is of what the rule can actually fail on, which is every component except the one
+        // T1: the count is of what the rule can actually fail on, which is every .razor file except the one
         // carve-out. A discovery walk that stopped matching would otherwise loop over nothing and pass.
-        Assert.True(failable.Count >= 4,
-            "This rule found " + failable.Count + " components it could fail on. There are at least five "
-            + "hand-written .razor files outside the layout's own MainLayout. Fewer means WebRoot.Files "
-            + "stopped finding them, not that the app shrank.");
+        //
+        // SIX, counted rather than guessed: App, Layout/NavMenu, Layout/RouteAnnouncer, Pages/Movies,
+        // Pages/NotFound and _Imports. _Imports is in the count because the rule can genuinely fail on it --
+        // this is a text scan, and a role="status" typed into it would be found and reported like any other.
+        // The old floor of 4 let two components fall out of WebRoot.Files before the rule noticed, which is
+        // the T1 failure mode exactly. Tasks 6 to 8 only add components, so this floor only rises.
+        Assert.True(failable.Count >= 6,
+            "This rule found " + failable.Count + " components it could fail on. There are six hand-written "
+            + ".razor files outside the layout's own MainLayout. Fewer means WebRoot.Files stopped finding "
+            + "them, not that the app shrank -- and a rule with no subjects passes over nothing.");
 
         foreach (var (path, text) in failable)
             Assert.True(LiveRegionMarkers(text).Count == 0,
@@ -206,11 +242,14 @@ public class SourceContractTests
                 + "spoken copy goes through Announcer.Status or Announcer.Alert.");
 
         // And the carve-out is not a hole. The layout owns exactly three regions and may not grow a fourth
-        // without this saying so.
+        // without this saying so -- which needs the COUNT as well as the set, because the set is distinct:
+        // a second role="status" beside the first is the likeliest fourth region and would not change it.
+        var owner = files.Single(f => f.Path == LiveRegionOwner).Text;
+
         Assert.Equal(
             new[] { "aria-live=\"polite\"", "role=\"alert\"", "role=\"status\"" },
-            LiveRegionMarkers(files.Single(f => f.Path == LiveRegionOwner).Text)
-                .OrderBy(m => m, StringComparer.Ordinal));
+            LiveRegionMarkers(owner).OrderBy(m => m, StringComparer.Ordinal));
+        Assert.Equal(3, AllLiveRegionMarkers(owner).Count);
     }
 
     [Theory]
@@ -223,6 +262,20 @@ public class SourceContractTests
     [InlineData("<div aria-live=\"off\">x</div>", "aria-live=\"off\"")]
     public void TheLiveRegionScanSeesTheMarker(string markup, string expected)
         => Assert.Equal(new[] { expected }, LiveRegionMarkers(markup));
+
+    /// <remarks>
+    /// T4 on the counting scan, which is the one thing the distinct set cannot do: two regions that share a
+    /// spelling are two regions. If this collapsed them the layout's three-region carve-out would accept a
+    /// fourth without saying anything.
+    /// </remarks>
+    [Fact]
+    public void TheCountingScanSeesTwoRegionsThatShareASpellingAsTwo()
+    {
+        const string markup = "<div role=\"status\">one</div><div role=\"status\">two</div>";
+
+        Assert.Equal(2, AllLiveRegionMarkers(markup).Count);
+        Assert.Single(LiveRegionMarkers(markup));   // the set collapses them, which is why the count exists
+    }
 
     [Theory]
     [InlineData("<p>Loading films</p>")]

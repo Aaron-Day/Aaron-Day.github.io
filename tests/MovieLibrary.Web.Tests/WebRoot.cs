@@ -3,18 +3,29 @@ namespace MovieLibrary.Web.Tests;
 /// <summary>Finds the web project's files by walking up to the solution file, as the Core tests do for wwwroot.</summary>
 internal static class WebRoot
 {
-    private static readonly Lazy<string> Project = new(() =>
+    private static readonly Lazy<string> Solution = new(() =>
     {
         var dir = new DirectoryInfo(AppContext.BaseDirectory);
         while (dir is not null && !File.Exists(Path.Combine(dir.FullName, "MovieLibrary.slnx")))
             dir = dir.Parent;
 
         Assert.NotNull(dir);   // a test that silently cannot find the repo proves nothing
-        return Path.Combine(dir.FullName, "src", "MovieLibrary.Web");
+        return dir.FullName;
     });
+
+    private static readonly Lazy<string> Project =
+        new(() => Path.Combine(Solution.Value, "src", "MovieLibrary.Web"));
 
     public static string Read(params string[] relativePath) =>
         File.ReadAllText(Path.Combine(new[] { Project.Value }.Concat(relativePath).ToArray()));
+
+    /// <summary>
+    /// A file in another project under <c>src/</c>. Only for contracts about what the web payload drags in
+    /// with it: this project's one ProjectReference is cheap because of what is NOT in the project it points
+    /// at, which is a fact about that project's file and not about this one.
+    /// </summary>
+    public static string ReadSibling(string project, params string[] relativePath) =>
+        File.ReadAllText(Path.Combine(new[] { Solution.Value, "src", project }.Concat(relativePath).ToArray()));
 
     /// <summary>
     /// Every hand-written file under the web project matching the search patterns, as (path relative to the
