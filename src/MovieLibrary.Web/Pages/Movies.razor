@@ -109,6 +109,9 @@
     // thing rule T1 forbids shipping. It is kept because the window is real, and it is kept honest by
     // MoviesStateTests.ARenderArrivingWhileTheFocusCallIsInFlightDoesNotIssueASecondOne, which holds the
     // interop call open and renders into it. Neutralise this condition and that test fails.
+    // It has a second job since the failure report was reordered: a render arriving in that window must not
+    // decide that no focus move happened and raise the alert, because the suspended pass has not finished
+    // deciding. See the Failed arm.
     private bool movingFocus;
     private bool focusHeadingAfterRetry;
     private bool countAnnounced;
