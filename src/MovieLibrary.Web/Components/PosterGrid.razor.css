@@ -1,0 +1,43 @@
+/* SC 1.4.10 Reflow requires this to be usable at 320 CSS px with no two-dimensional scrolling. It does NOT
+   require two columns -- one column is the canonical Reflow outcome and is fully conformant. The
+   two-column floor at the narrowest width is a HOUSE RULE about density, and the two halves are reported
+   separately so a later reader can tell which is which.
+   auto-fill with a rem minimum needs no media query and scales to a dense wall on a desktop. The explicit
+   two-column rule below 22.5rem stops a third cramped column appearing on a 360px phone with a narrow
+   gutter, and joins cleanly to the minmax(7rem, 1fr) rule above it.
+   align-items: start so that a tile whose title wraps to three lines does not stretch its row-mates: the
+   title is deliberately unclamped, so tiles in a row are not all the same height. */
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+  gap: .75rem; align-items: start;
+  margin: 0; padding: 0; list-style: none;   /* it is a ul; role="list" in the markup survives this */
+}
+@media (max-width: 22.5rem) { .grid { grid-template-columns: repeat(2, 1fr); gap: .5rem; } }
+
+.grid-head { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; }
+.count { color: var(--txt); margin: 0; }
+.pager { display: flex; align-items: center; gap: .5rem; }
+
+.pager button {
+  min-width: var(--touch); min-height: var(--touch);
+  border: 2px solid var(--line-strong);   /* --line is 1.18:1 on this fill and would fail SC 1.4.11 */
+  background: var(--panel2); color: var(--txt);
+  border-radius: 6px;
+}
+
+/* GREYED, NOT DISABLED: the button keeps its place in the tab order so that paging to a bound cannot
+   destroy focus. See Go() for why, and for which rule that supersedes.
+   --dim on --panel2 is 5.43:1, so the text still passes SC 1.4.3 Contrast (Minimum) -- and that number is
+   LOAD-BEARING rather than belt-and-braces: choosing aria-disabled over the disabled attribute forfeits
+   1.4.3's exemption for an inactive user interface component, because this control is still focusable and
+   still receives events.
+   opacity stays at 1. The greyed state is carried by a colour that passes contrast, never by transparency.
+   It is not conveyed by colour alone either, and the thing that saves it is not aria-disabled -- a
+   programmatic attribute does nothing for a sighted user, so it cannot answer SC 1.4.1 Use of Color. What
+   answers it is the "Page 1 of 25" between the two buttons, which tells any sighted user which bound they
+   are at; and the change here is a large luminance difference (5.43:1 against the enabled 13.85:1) rather
+   than a hue difference, so 1.4.1 does not engage in the first place. */
+.pager button[aria-disabled="true"] { color: var(--dim); opacity: 1; cursor: default; }
+
+/* No transition and no animation in this file, so no prefers-reduced-motion block is needed. The motion
+   rule in StyleContractTests reads this file by glob and will say so if that stops being true. */

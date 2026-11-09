@@ -1,0 +1,43 @@
+/* The tile declares no background of its own, so its text sits on --bg: --txt is 16.16:1 there and --dim
+   is 6.33:1, both comfortably past SC 1.4.3's 4.5:1. (An earlier note here measured them against --panel2
+   at 13.85:1, which is the ratio for a surface this tile does not have. Giving the tile a panel background
+   to make that number true would be a visual change nobody asked for, so the measurement was corrected
+   instead.) Re-measure if a token changes. */
+.tile { position: relative; }
+.tile-body { display: flex; flex-direction: column; gap: .25rem; }
+.tile img, .poster-placeholder { width: 100%; aspect-ratio: 2 / 3; border-radius: 6px; }
+
+/* --line is 1.37:1 on --bg and fails SC 1.4.11, which is fine here and only here. The placeholder is
+   outside 1.4.11 altogether because it is neither a user interface component nor a graphical object
+   required to understand the content: the title text beside it carries the whole meaning, and the box has
+   no state. (Not because it is pruned from the accessibility tree -- contrast is about visual perception,
+   so that would be the wrong reason for the right answer.) Do not promote it to --line-strong; everything
+   that IS a control's only boundary already uses that token. */
+.poster-placeholder { background: linear-gradient(160deg, var(--panel2), var(--panel)); border: 1px solid var(--line); }
+
+/* NO LINE CLAMP, deliberately, and this is the one place a reviewer is likely to want to put one back.
+   -webkit-line-clamp: 2 with overflow: hidden holds roughly 30 to 35 characters per line at this column
+   width in a semibold face. "The Lord of the Rings: The Fellowship of the Ring" is 49 and
+   "Birdman or (The Unexpected Virtue of Ignorance)" is 46, and there is a long tail behind them. With no
+   link, no title attribute and no aria-label on the tile, a sighted user would have no way at all to read
+   the rest -- and the 171 uncertain matches, which are the whole reason this page exists before the rest
+   of the pipeline work, are exactly the records whose titles need reading. A screen reader would be fine,
+   because the full text stays in the DOM; this is a low-vision and cognitive-load defect, which is why it
+   is easy to miss. Forcing the SC 1.4.12 Text Spacing overrides makes it strictly worse, because fewer
+   characters fit per line and so more text disappears.
+
+   min-height is in em rather than px so that it scales with the text it is reserving room for: the point
+   is two lines of THIS font size, and a px floor would stop being two lines the moment the reader changes
+   it. It is a MINIMUM, so a title that wraps to three lines simply grows, which is why the grid sets
+   align-items: start -- a tall tile must not stretch its row-mates. */
+.tile-title {
+  color: var(--txt); font-weight: 600;
+  min-height: 2.6em;
+}
+.tile-year { color: var(--dim); font-size: .85rem; }
+
+/* No hover rule anywhere in this file. The plan's was underlining a link, and Part A has no link. Part B
+   adds it back with the anchor, inside @media (hover: hover): a bare :hover sticks after a tap on touch
+   and leaves phantom highlighted tiles behind.
+   No transition and no animation either, so no prefers-reduced-motion block is needed. The motion rule in
+   StyleContractTests reads this file by glob and will say so if that ever stops being true. */

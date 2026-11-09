@@ -1,0 +1,220 @@
+@implements IDisposable
+@inject Announcer Announcer
+
+@* The tile wall and the controls that page it.
+
+   THE PAGER IS ABOVE THE GRID, and that ordering is the whole fix for a real problem rather than a layout
+   preference. With 60 tiles on a page, a pager underneath means scrolling to the bottom, pressing Next, and
+   then looking at the tail of the next page with the top of it a screenful above -- for every one of 25
+   pages. Put the count and the pager first and the control the user just pressed is still in view, focus
+   has not moved, and the new page's first tiles are immediately below it. The alternative was a
+   programmatic scroll, which was rejected: it needs new interop and is one smooth-scroll option away from
+   being motion the style contract cannot see. Reading order is h1, count, pager, grid.
+
+   THE WHOLE HEAD IS GATED ON HAVING TITLES, count and pager together. Gating only the count left the
+   pager asserting "Page 1 of 1" over a library with nothing in it, with no sentence anywhere to
+   contradict it -- a page stating something false. Gating on PageCount > 1 instead would be worse: a
+   filter that narrows the list to one page would then dissolve the pager while it holds focus, which is
+   the case rule R9 exists for. The grid itself is gated with it, because an empty list of tiles is
+   nothing a reader needs told about. Task 5 owns the "library is empty" sentence and Task 8 owns the
+   "nothing matches these filters" one; neither of them is this component's to write. *@
+
+@if (Items.Count > 0)
+{
+    <div class="grid-head">
+        @* Plain text, and plainness is the point: this sentence is deliberately NOT a live region of any
+           kind -- no polite or assertive attribute, no status, log or alert role. (Spelled in words
+           because SourceContractTests scans this file for the literal markers and a comment quoting one
+           fails exactly as the attribute would.) A page change is announced once, through the announcer's
+           own hidden region; two regions reporting one change would speak it twice. *@
+        <p class="count">@RangeSentence(CurrentPage, EnDash)</p>
+
+        @* A second navigation landmark, which is allowed from this task onward: the shell's is
+           nav[aria-label="Main"] and AppRoutingTests scopes its assertion to that one.
+           No aria-label on either button. "Previous" and "Next" inside a landmark named Pagination are
+           sufficient names in context, and adding a label would manufacture an SC 2.5.3 Label in Name
+           subject for no user benefit. *@
+        <nav class="pager" aria-label="Pagination">
+            <button type="button" aria-disabled="@AtFirstPage" @onclick="() => Go(CurrentPage - 1)">Previous</button>
+            <span>@PageLabelFor(CurrentPage)</span>
+            <button type="button" aria-disabled="@AtLastPage" @onclick="() => Go(CurrentPage + 1)">Next</button>
+        </nav>
+    </div>
+
+    @* role="list" is explicit and required. WebKit drops list semantics from a ul whose list-style is
+       none, and display: grid on the container is the other known trigger -- this element has both. Task 2
+       already made this call for the drawer's own ul. It is a document-structure role with no keyboard
+       contract: all it does is give each tile a boundary and the wall a count, which is what stops a
+       reader running 60 tiles together as one sentence. That is also why role="grid" and aria-rowcount
+       are NOT here: those are composite-widget semantics and would promise arrow-key navigation that does
+       not exist. If an li ever takes display: flex or display: contents, give it role="listitem". *@
+    <ul class="grid" role="list">
+        @* @key is on K and never on I. I is 0 for all 20 unmatched films, and a duplicate key within one
+           collection fails the render. K's distinctness across the whole catalogue is pinned by
+           CatalogueReconcilerTests.EveryKeyIsDistinctAfterTheRulesHaveRun,
+           DuplicateKeyCollapseTests.EveryKeyIsDistinctAfterwards and EnrichRunCrossRowTests -- the last of
+           which asserts it on the PUBLISHED json's k field, which is the artifact the browser actually
+           reads. Hence no defensive de-duplication pass here. *@
+        @foreach (var m in Items.Skip((CurrentPage - 1) * PageSize).Take(PageSize))
+        {
+            <li @key="m.K"><PosterTile Movie="m" /></li>
+        }
+    </ul>
+}
+
+@code {
+    /// <summary>
+    /// The en dash in the VISIBLE range. The spoken range uses the word "to" instead, because how a screen
+    /// reader pronounces a dash between two numbers is not something this page can decide.
+    /// </summary>
+    private const string EnDash = "–";
+
+    /// <summary>The whole list this grid pages through. Task 8 replaces it with the filtered list.</summary>
+    [Parameter, EditorRequired] public required IReadOnlyList<MovieRecord> Items { get; set; }
+
+    /// <summary>
+    /// The page the parent wants shown, one-based. This component never writes to it: a component that
+    /// mutates its own parameter fights the next render. Where the value is out of range the component
+    /// renders the clamped page and raises <see cref="PageChanged"/> so the parent converges.
+    /// </summary>
+    [Parameter] public int Page { get; set; } = 1;
+
+    [Parameter] public int PageSize { get; set; } = 60;
+
+    /// <summary>
+    /// Raised with the page the parent should adopt. The parent owns the page number, not this component,
+    /// which is the seam that lets Task 8 lift it into the query string without touching this file.
+    /// </summary>
+    [Parameter] public EventCallback<int> PageChanged { get; set; }
+
+    /// <summary>
+    /// The out-of-range <see cref="Page"/> whose correction has already been raised, so the raise happens
+    /// at most once per distinct bad value. Raising an <see cref="EventCallback"/> from a parameter hook
+    /// loops for ever against a parent that recomputes <c>Page</c> rather than adopting what it is given,
+    /// which Task 8's filter state plausibly will.
+    /// </summary>
+    private int? correctedFrom;
+
+    /// <summary>
+    /// Never 0. A naive ceiling division over an empty list yields 0 and the pager then reads "Page 1 of
+    /// 0". An empty list renders no pager at all, so that text is unreachable today; this is what makes it
+    /// unreachable rather than something the gate happens to hide.
+    /// </summary>
+    private int PageCount => Math.Max(1, (Items.Count + PageSize - 1) / PageSize);
+
+    /// <summary>
+    /// The page actually rendered. Everything computed reads this and never <see cref="Page"/> directly,
+    /// so a parent holding page 12 while a filter cuts the list to 10 titles cannot produce a grid with
+    /// nothing in it under the words "Showing 661 to 720 of 10 titles. Page 12 of 1."
+    /// </summary>
+    private int CurrentPage => Math.Clamp(Page, 1, PageCount);
+
+    // Rendered from strings and never from a bool: a bool attribute value is present-and-empty when true
+    // and omitted when false, which ARIA reads as undefined either way. The same trap as aria-expanded.
+    private string? AtFirstPage => CurrentPage <= 1 ? "true" : null;
+    private string? AtLastPage => CurrentPage >= PageCount ? "true" : null;
+
+    /// <summary>Every number on screen and every number spoken, through one format call.</summary>
+    /// <remarks>
+    /// Culture comes from the browser, which is correct behaviour and not a bug to stamp out: the project
+    /// does not set InvariantGlobalization. All of the numbers are formatted or none of them are -- a
+    /// formatted total beside an unformatted range reads "Showing 1381-1440 of 1.456 titles." under de-DE.
+    /// </remarks>
+    private static string Number(int value) => value.ToString("N0");
+
+    /// <summary>
+    /// Singular and plural, per rule R6. The regions are atomic, so the whole sentence is re-read, and a
+    /// filter narrowing the list to one title would otherwise say "of 1 titles" in both copies.
+    /// </summary>
+    private string Noun => Items.Count == 1 ? "title" : "titles";
+
+    private int FirstShownOn(int page) => Items.Count == 0 ? 0 : (page - 1) * PageSize + 1;
+
+    private int LastShownOn(int page) => Math.Min(page * PageSize, Items.Count);
+
+    /// <summary>
+    /// The pager's own visible page indicator. It is the ONLY place the page number appears: the count
+    /// sentence deliberately does not repeat it, or it would be on screen twice and read twice. It is also
+    /// the non-colour cue for which bound the user is at, which is what keeps the greyed button clear of
+    /// SC 1.4.1 Use of Color -- aria-disabled cannot do that job, because it does nothing at all for a
+    /// sighted user with low vision or a colour-vision deficiency.
+    /// </summary>
+    private string PageLabelFor(int page) => $"Page {Number(page)} of {Number(PageCount)}";
+
+    /// <param name="between">
+    /// What separates the two ends of the range: an en dash on screen, the word "to" when spoken.
+    /// </param>
+    private string RangeSentence(int page, string between) =>
+        $"Showing {Number(FirstShownOn(page))}{between}{Number(LastShownOn(page))} of "
+        + $"{Number(Items.Count)} {Noun}.";
+
+    private string Announcement(int page) => $"{PageLabelFor(page)}. {RangeSentence(page, " to ")}";
+
+    /// <remarks>
+    /// The clamp correction raises <see cref="PageChanged"/> and announces NOTHING. A deep link to page 99
+    /// is not a change the user made while reading the page, and the first render must say nothing: the
+    /// route name and the page title already cover arrival. Only <see cref="Go"/> speaks.
+    /// </remarks>
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Page == CurrentPage)
+        {
+            correctedFrom = null;
+            return;
+        }
+
+        if (correctedFrom == Page) return;
+
+        correctedFrom = Page;
+        await PageChanged.InvokeAsync(CurrentPage);
+    }
+
+    /// <summary>Moves to <paramref name="target"/> if it exists, and says so.</summary>
+    /// <remarks>
+    /// <para>
+    /// BOTH PAGER BUTTONS ARE ALWAYS RENDERED, ALWAYS ENABLED AND ALWAYS FOCUSABLE, and at a bound carry
+    /// aria-disabled while this method ignores the click. The disabled ATTRIBUTE would be a trap: press
+    /// Next on the second-to-last page and the button Blazor re-renders is disabled, a disabled button is
+    /// out of the tab order, so the element holding focus leaves the tab order and focus falls back to the
+    /// document body -- no focus indicator anywhere on the page, and the user's next Tab restarts from
+    /// above the skip link. For someone paging through 25 pages by keyboard that happens twice a visit,
+    /// silently. This is a house rule justified by that observable failure and NOT by a success criterion:
+    /// none of them cleanly applies, because after the disable no component has focus at all. WAI-ARIA
+    /// defines aria-disabled for exactly "unavailable but still perceivable and focusable", so this is the
+    /// specified mechanism rather than a workaround.
+    /// </para>
+    /// <para>
+    /// This SUPERSEDES rule R9's focus-move clause for the pager, and R9 names "Next on the last page" as
+    /// its own example, so the departure has to be written down or the next reader adds a gratuitous focus
+    /// jump. R9's remedy -- move focus deliberately and say what happened -- presumes the control was
+    /// removed or disabled. Nothing is removed or disabled here, so there is no lost focus to repair; R9's
+    /// second half, saying what happened, is honoured by the announcement below.
+    /// </para>
+    /// <para>
+    /// The announcement is the LAST statement, which is rule R4: a message raised before the new state has
+    /// been asked for starts its settle timer while the clearing render is still queued, and R4's own worst
+    /// case is "a slow phone re-rendering a full page of tiles" -- this page. It is built from
+    /// <paramref name="target"/> rather than from <see cref="CurrentPage"/>, because the new parameter has
+    /// not flowed down yet when the callback returns.
+    /// </para>
+    /// </remarks>
+    private async Task Go(int target)
+    {
+        // At a bound the click still arrives, because the button is not disabled, and is ignored here.
+        // Nothing is raised, nothing is said, and focus stays exactly where the user put it.
+        if (target < 1 || target > PageCount) return;
+
+        await PageChanged.InvokeAsync(target);
+
+        Announcer.Status(Announcement(target));
+    }
+
+    /// <remarks>
+    /// Rule R7: whoever writes a standing statement clears it. The announce and this clear are in the SAME
+    /// component on purpose -- putting the clear on the page would leave the grid's sentence standing in
+    /// the announcer any time the grid were unmounted while the page lived on, describing a page of tiles
+    /// that is no longer rendered. An empty string is a cancellation rather than a message: it takes effect
+    /// at once and speaks nothing, which is the only thing a dispose may do.
+    /// </remarks>
+    public void Dispose() => Announcer.Status("");
+}

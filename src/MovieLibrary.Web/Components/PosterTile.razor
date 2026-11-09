@@ -1,0 +1,66 @@
+@* One film, as a poster and visible text. Rendered inside PosterGrid's list item; it is not itself the
+   <li>, so this component stays renderable on its own and the list semantics stay with the grid.
+
+   NO ANCHOR AND NO INTERACTIVE ELEMENT IN PART A. There is no /movies/{key} route and RouteAnnouncer's
+   table maps only "" and "movies", so a link here would land every one of 1,456 tiles on the not-found
+   page, which announces "Page not found". The plan's cross-task section decided this: tiles are not links
+   in Part A.
+
+   WHAT PART B DOES TO THIS FILE. Wrap .tile-body -- the poster and the text block, and nothing else -- in
+   one anchor to movies/{K}, leaving ActionSlot outside it. A button inside an anchor is invalid and
+   unusable, so the favourite control Part B puts in ActionSlot has to stay a sibling of that anchor, which
+   is why ActionSlot is already a sibling of .tile-body here rather than a descendant.
+
+   WHAT PART A GIVES UP, recorded rather than left for the next reviewer to find as a regression. The
+   plan's requirement table assigned this task "a real accessible name on every tile" and "a
+   keyboard-operable grid". With no anchor the tile is not a named widget at all, so the first becomes
+   meaningful only in Part B; its Part A substitute is the list-item boundary the grid gives each tile. The
+   second is reduced to a keyboard-operable PAGER, because nothing inside the grid is focusable. *@
+
+<div class="tile">
+    <div class="tile-body">
+        @* alt="" because the title is visible text in this same tile: a description here would be the
+           title announced twice. Never an img whose src is Movie.P with an empty-string fallback -- an
+           empty src can render broken-image chrome and some browsers expose the URL as text, so the
+           no-poster case is a CSS box with no img in it at all.
+
+           width and height are the intrinsic size of a w342 poster. They reserve the box before the TMDB
+           CDN answers, which matters most under magnification, and EveryImgHasExplicitWidthAndHeight
+           requires them rather than preferring them. *@
+        @if (Movie.P is { Length: > 0 } poster)
+        {
+            <img src="@($"https://image.tmdb.org/t/p/w342{poster}")" alt=""
+                 width="342" height="513" loading="lazy" decoding="async" />
+        }
+        else
+        {
+            <span class="poster-placeholder" aria-hidden="true"></span>
+        }
+
+        @* Truncation is CSS only, and there is none of it: the full title is in the DOM and on the screen.
+           Cutting the string in C# would destroy the accessible name permanently. *@
+        <span class="tile-title">@Movie.T</span>
+
+        @* A year, so never formatted with N0: 1,995 would be wrong. Only the grid head's total is formatted. *@
+        @if (Movie.Y is { } year)
+        {
+            <span class="tile-year">@year</span>
+        }
+    </div>
+
+    @* Task 7 puts the confidence badge here, where it is outside .tile-body and so outside Part B's
+       anchor. It is deliberately absent today: Task 7 owns the degraded-record branches and has to fix
+       the fixtures first, and a badge built against fixtures that give every unmatched film a synthetic
+       year and a four-person cast would pass vacuously. *@
+    @ActionSlot
+</div>
+
+@code {
+    [Parameter, EditorRequired] public required MovieRecord Movie { get; set; }
+
+    /// <summary>
+    /// Part B's favourite or watched control. Empty in Part A, and kept as a parameter so that the slot it
+    /// occupies -- a sibling of <c>.tile-body</c> -- is fixed now rather than negotiated later.
+    /// </summary>
+    [Parameter] public RenderFragment? ActionSlot { get; set; }
+}

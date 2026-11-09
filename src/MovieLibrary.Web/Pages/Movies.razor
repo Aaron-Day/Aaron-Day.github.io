@@ -40,6 +40,18 @@
     }
 </div>
 
+@* THE GRID, AND ONLY IN THE READY STATE. Nothing else in this file is Task 6's to change: the title, the
+   heading and the one stable state container all stay exactly as Task 5 left them.
+   The page owns the page number and hands the whole list down; Task 8 replaces that with the filtered
+   list. Page size is 60, which makes 25 pages of the measured 1,456 records with 16 on the last.
+   It sits BELOW the state container, so the reading order is the heading, then the one-sentence state,
+   then the count, then the pager, then the tiles -- and the pager is above the tiles rather than below
+   them so that paging does not leave the viewport at the tail of the new page. *@
+@if (films.State == CatalogState.Ready)
+{
+    <PosterGrid Items="films.Value" Page="page" PageChanged="OnPageChanged" />
+}
+
 @code {
     /// <summary>
     /// The failure sentence. ONE constant for the visible paragraph and for the <c>Alert</c>, so the seen and
@@ -115,6 +127,14 @@
     private bool movingFocus;
     private bool focusHeadingAfterRetry;
     private bool countAnnounced;
+
+    /// <summary>
+    /// The page of tiles on show, one-based. The PAGE owns this and not the grid: the grid raises
+    /// <c>PageChanged</c> and this adopts it. That seam is what lets Task 8 lift the number into the query
+    /// string without touching the grid, and it is also how the grid corrects a value out of range --
+    /// it renders the clamped page and raises the clamped number for this to adopt.
+    /// </summary>
+    private int page = 1;
 
     /// <summary>
     /// The button stays while a retry is in flight. Removing it would blur the element the user is standing
@@ -313,6 +333,15 @@
             return false;
         }
     }
+
+    /// <summary>Adopts the page the grid asked for, and nothing else.</summary>
+    /// <remarks>
+    /// The grid announces the change itself. R7 wants whoever writes a standing statement to be whoever
+    /// clears it, and the grid is what clears the region on its own dispose, so the announce belongs there
+    /// too. Announcing here as well would speak the page twice -- and would speak it on the FIRST render,
+    /// because the grid raises this for an out-of-range correction as well as for a button press.
+    /// </remarks>
+    private void OnPageChanged(int value) => page = value;
 
     /// <remarks>
     /// R7: clear what this page set, and raise nothing new. Both calls are cancellations -- they take effect
