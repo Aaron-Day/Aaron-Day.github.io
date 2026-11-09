@@ -57,15 +57,27 @@ public class MarkupContractTests
     /// Rendered once for the whole class. Each address gets its own context so that four live routers do
     /// not react to each other's navigation, and the markup is re-parsed into a standalone document so
     /// nothing here outlives the context it came from.
+    /// <para>
+    /// There is a fifth scope: the films page with a FAILED catalogue fetch. Since Task 5 the app's markup
+    /// depends on a fetch outcome, and the Try again button exists in no other render -- so without this
+    /// scope every rule below would be checking a control that only ever appears in the one state nothing
+    /// looks at. The loading state adds no element these rules can fail on, so it has no scope of its own.
+    /// </para>
     /// </summary>
     private static readonly Lazy<IReadOnlyList<Scope>> RouteScopes = new(() =>
-        AppUnderTest.Addresses().Select(address =>
-        {
-            using var context = new BunitContext();
-            context.JSInterop.Mode = JSRuntimeMode.Loose;
-            context.AddAnnouncer();
-            return new Scope("the app at " + address, MarkupRules.Parse(context.RenderAppAt(address).Markup));
-        }).ToList());
+        AppUnderTest.Addresses()
+            .Select(address => Rendered(address, CatalogOutcome.Ready, "the app at " + address))
+            .Append(Rendered("/movies", CatalogOutcome.Failed,
+                             "the app at /movies with a failed catalogue fetch"))
+            .ToList());
+
+    private static Scope Rendered(string address, CatalogOutcome catalog, string where)
+    {
+        using var context = new BunitContext();
+        context.JSInterop.Mode = JSRuntimeMode.Loose;
+        context.AddAnnouncer(catalog);
+        return new Scope(where, MarkupRules.Parse(context.RenderAppAt(address).Markup));
+    }
 
     /// <summary>
     /// The host page is a separate scope rather than being spliced into #app, and that is a real limit
@@ -134,8 +146,9 @@ public class MarkupContractTests
     public void TheContractsRunOverEveryAddressTheSiteServes()
     {
         TheRouteSetIsWhatItShouldBe();
-        Assert.Equal(AppUnderTest.Addresses().Count, RouteOnlyScopes().Count);
-        Assert.Equal(AppUnderTest.Addresses().Count + 1, EveryScope().Count);
+        // The addresses, plus the films page's failed state, plus the host page.
+        Assert.Equal(AppUnderTest.Addresses().Count + 1, RouteOnlyScopes().Count);
+        Assert.Equal(AppUnderTest.Addresses().Count + 2, EveryScope().Count);
     }
 
     /// <remarks>

@@ -39,10 +39,13 @@ internal sealed class StubCatalog : HttpMessageHandler
         lock (gate) return asked.Count(a => string.Equals(a, path, StringComparison.Ordinal));
     }
 
+    /// <summary>A client bound to this handler, at an absolute base so the relative paths resolve.</summary>
+    public HttpClient Client() => new(this) { BaseAddress = new Uri(Base) };
+
     public CatalogService Service(out StringWriter log)
     {
         log = new StringWriter();
-        return new CatalogService(new HttpClient(this) { BaseAddress = new Uri(Base) }, log);
+        return new CatalogService(Client(), log);
     }
 
     public CatalogService Service() => Service(out _);
@@ -88,7 +91,10 @@ internal sealed class StubCatalog : HttpMessageHandler
     public static Func<Task<HttpResponseMessage>> Status(HttpStatusCode code) => () => Task.FromResult(
         new HttpResponseMessage(code) { Content = new StringContent("", Encoding.UTF8, "application/json") });
 
-    /// <summary>A 204: no body at all, which GetFromJsonAsync turns into a null value rather than an exception.</summary>
+    /// <summary>
+    /// A 204. MEASURED, because the brief assumed otherwise: GetFromJsonAsync throws JsonException on it
+    /// ("The input does not contain any JSON tokens"), so an empty body never reaches the null check at all.
+    /// </summary>
     public static Func<Task<HttpResponseMessage>> NoContent() => () => Task.FromResult(new HttpResponseMessage(HttpStatusCode.NoContent));
 
     /// <summary>Fails without ever yielding, so the whole fetch chain completes synchronously.</summary>
@@ -104,4 +110,21 @@ internal sealed class StubCatalog : HttpMessageHandler
     /// <summary>Never answers, which is what a page sitting on "Loading films..." is waiting for.</summary>
     public static Func<Task<HttpResponseMessage>> NeverAnswers() =>
         () => new TaskCompletionSource<HttpResponseMessage>().Task;
+
+    /// <summary>
+    /// Holds a response until the test releases it, so the page can be read in the MIDDLE of a fetch. Without
+    /// one, every stub answer lands inside the click handler and only the end state is ever observable.
+    /// </summary>
+    public sealed class Gate
+    {
+        private readonly TaskCompletionSource opened = new(TaskCreationOptions.RunContinuationsAsynchronously);
+
+        public Func<Task<HttpResponseMessage>> Holding(Func<Task<HttpResponseMessage>> response) => async () =>
+        {
+            await opened.Task;
+            return await response();
+        };
+
+        public void Open() => opened.TrySetResult();
+    }
 }

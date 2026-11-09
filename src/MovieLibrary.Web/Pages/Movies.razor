@@ -1,16 +1,286 @@
 @page "/"
 @page "/movies"
+@implements IDisposable
+@using System.Globalization
+@inject CatalogService Catalog
+@inject Announcer Announcer
+@inject IJSRuntime Js
 
-@* Placeholder from Task 2, so that "/" and the nav link have a real page to land on. Task 5 onward fills it.
-   Keep the h1 and the PageTitle OUTSIDE any @if (loaded) branch: FocusOnNavigate fires once after the first
-   render and never retries, and movies.json arrives long after that. *@
+@* The films page. Task 6 replaces the body of the Ready state with the tile grid and KEEPS these states.
+
+   The PageTitle and the h1 are in the first render and outside every state branch: FocusOnNavigate fires
+   once after the first render and never retries, and movies.json arrives long after that. *@
 <PageTitle>Films - Film and TV library</PageTitle>
 
 @* tabindex="-1" is not for FocusOnNavigate, which adds it itself: focusBySelector reads
-   `if (!element.hasAttribute('tabindex')) { element.tabIndex = -1 }` before focusing. It is for whatever
-   replaces FocusOnNavigate later. ElementReference.FocusAsync() does NOT add it, and on an element that
-   cannot take focus it fails silently - no exception, no moved focus, no failing test. Declaring it here
-   means the heading is reachable by any focus mechanism, not just the one in use today. *@
-<h1 tabindex="-1">Films</h1>
+   `if (!element.hasAttribute('tabindex')) { element.tabIndex = -1 }` before focusing. It is for
+   ElementReference.FocusAsync(), which does NOT add it and on an element that cannot take focus fails
+   silently -- no exception, no moved focus, no failing test. The successful-retry transition below depends
+   on this attribute, so it is a feature dependency here and not a conformance claim. *@
+<h1 tabindex="-1" @ref="heading">Films</h1>
 
-<p>The film library is being built.</p>
+@* ONE stable container, not three sibling branches that swap nodes: replacing the node would destroy the
+   node a screen reader's virtual cursor may be sitting on. The paragraph is the same element in every
+   state and only its text changes; the button is the only thing that comes and goes.
+
+   No live region of any kind in here: no alert role, no status role, no log role, and no live-region
+   attribute. (Spelled in words on purpose: SourceContractTests scans these files for the literal markers, and a
+   comment quoting one fails exactly as the attribute would.) The announcer is the only speaking
+   channel -- a region here would be a second utterance from a second assertive source, racing the hidden
+   one in an order nobody controls -- and the deterministic channel for the failure is the focus move, not
+   a region. SC 4.1.3 Status Messages, Level AA, applies only to messages that do NOT receive focus. *@
+<div class="catalog-state" tabindex="-1" @ref="stateContainer">
+    <p>@Sentence</p>
+
+    @if (ShowTryAgain)
+    {
+        @* aria-disabled, never the disabled ATTRIBUTE: disabling the focused element blurs it and drops
+           focus to <body>. The click still arrives and is ignored in TryAgain instead. *@
+        <button type="button" class="try-again" aria-disabled="@(retrying ? "true" : null)" @onclick="TryAgain">Try again</button>
+    }
+</div>
+
+@code {
+    /// <summary>
+    /// The failure sentence. ONE constant for the visible paragraph and for the <c>Alert</c>, so the seen and
+    /// the spoken copies cannot drift apart. Internal so a test can assert they are the same string rather
+    /// than two literals that happen to match today.
+    /// </summary>
+    internal const string CouldNotLoad =
+        "The film library could not be loaded. Check your connection and try again.";
+
+    /// <summary>The visible loading copy, with the ellipsis CHARACTER rather than three full stops.</summary>
+    internal const string LoadingVisible = "Loading films…";
+
+    /// <summary>
+    /// The spoken loading copy. It differs from the visible one in punctuation only, which is deliberate and
+    /// is not drift: an ellipsis is noise read aloud.
+    /// </summary>
+    internal const string LoadingSpoken = "Loading films";
+
+    /// <summary>
+    /// A successful fetch of nothing gets its own sentence. It must never reach Task 8's "No titles match
+    /// these filters.", which would be false: no filter is involved, and nothing is being hidden.
+    /// </summary>
+    internal const string EmptyLibrary = "The library is empty.";
+
+    /// <summary>
+    /// Where the PAGE puts focus, so the helper in index.html can tell "nobody has touched it" from "the
+    /// user moved it themselves". <c>&lt;body&gt;</c> and <c>&lt;html&gt;</c> are handled there.
+    /// </summary>
+    private static readonly string[] FocusKeepers = ["#main-content", "#app h1"];
+
+    private ElementReference heading;
+    private ElementReference stateContainer;
+
+    // Explicitly Loading with an EMPTY list, never default(CatalogResult<>): that default pairs Loading with
+    // a null value, and the first render would throw on Value.Count.
+    private CatalogResult<IReadOnlyList<MovieRecord>> films = new(CatalogState.Loading, []);
+
+    private bool disposed;
+    private bool retrying;
+    private bool loadingAnnounced;
+    private bool alertedFailure;
+    private bool movedFocusToFailure;
+
+    // True only while a focus call is suspended at its await. A render can arrive in that window -- the
+    // announcer delivers a message from a timer callback, MainLayout re-renders on it, and this page
+    // re-renders with it -- and THAT render's OnAfterRenderAsync would see movedFocusToFailure still false
+    // and issue a second focus call, so the page would fight itself for focus.
+    // Honest history: the symptom that first suggested this guard turned out to be a test-harness artefact,
+    // and with the guard neutralised every test still passed -- which made it unfalsifiable code, the one
+    // thing rule T1 forbids shipping. It is kept because the window is real, and it is kept honest by
+    // MoviesStateTests.ARenderArrivingWhileTheFocusCallIsInFlightDoesNotIssueASecondOne, which holds the
+    // interop call open and renders into it. Neutralise this condition and that test fails.
+    private bool movingFocus;
+    private bool focusHeadingAfterRetry;
+    private bool countAnnounced;
+
+    /// <summary>
+    /// The button stays while a retry is in flight. Removing it would blur the element the user is standing
+    /// on and drop focus to <c>&lt;body&gt;</c>, which is the same defect as using the disabled attribute.
+    /// </summary>
+    private bool ShowTryAgain => films.State == CatalogState.Failed || retrying;
+
+    /// <summary>
+    /// The one sentence on screen, per state. No count while Loading or Failed: a count is a claim about the
+    /// library, and neither of those states knows anything about the library.
+    /// </summary>
+    private string Sentence => films.State switch
+    {
+        CatalogState.Failed => CouldNotLoad,
+        CatalogState.Loading => LoadingVisible,
+        _ => films.Value.Count switch
+        {
+            0 => EmptyLibrary,
+            1 => "The library holds 1 film.",
+            var n => $"The library holds {n.ToString("N0", CultureInfo.InvariantCulture)} films.",
+        },
+    };
+
+    /// <remarks>
+    /// Nothing is announced here. Criterion 5 and rule R4: a message raised before the first render starts
+    /// its settle timer while the clearing render is still queued, so the real gap becomes "delay minus
+    /// handler time" and collapses on exactly the slow devices the gap exists for. Everything this page says
+    /// it says from <c>OnAfterRenderAsync</c>.
+    /// <para>
+    /// The fetch is awaited and never cancelled, here or on dispose. The task is shared and cached by the
+    /// service, so cancelling it would turn one user's navigation away into a Failed result for the next
+    /// visit to this page.
+    /// </para>
+    /// </remarks>
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Catalog.GetMoviesAsync();
+        if (disposed) return;
+
+        films = result;
+    }
+
+    /// <remarks>
+    /// Every announcement and every focus move, after the render that carries the new state.
+    /// </remarks>
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (disposed) return;
+
+        switch (films.State)
+        {
+            case CatalogState.Loading:
+                // Criterion 6: only because the page is STILL loading after a render, and at most once a
+                // visit. On a return visit the catalogue is cached, the task is already complete,
+                // ComponentBase produces no intermediate render and the page is Ready on the first render --
+                // so this never runs, and nothing is ever said about a page that had already loaded. A load
+                // fast enough to finish inside the settle delay says nothing either: the count supersedes
+                // this message in the same region before it is ever delivered.
+                if (!loadingAnnounced)
+                {
+                    loadingAnnounced = true;
+                    Announcer.Status(LoadingSpoken);
+                }
+
+                break;
+
+            case CatalogState.Failed:
+                // R11: one alert for one failure the user can see, in the same words that are on screen.
+                // Raised here and NEVER from the click handler, so the clear that handler wrote has reached
+                // the DOM first and the announcer can anchor its settle delay to that render. Without the
+                // gap a repeated identical sentence is no DOM change at all, and the user who retries and
+                // fails again hears silence.
+                if (!alertedFailure)
+                {
+                    alertedFailure = true;
+                    Announcer.Alert(CouldNotLoad);
+                }
+
+                // Criterion 7, the first transition: once, and only if focus is still where the page put it.
+                // On a FAILED RETRY focus is already on the Try again button, which is not one of the
+                // keepers, so the helper refuses and the user keeps their place -- the guard covers that
+                // transition without a flag of its own. The flag is set only when the move actually happened,
+                // so a user who had the drawer open when the fetch failed is not denied the move for ever.
+                if (!movedFocusToFailure && !movingFocus)
+                {
+                    movingFocus = true;
+                    try { movedFocusToFailure = await FocusIfUnmoved(stateContainer); }
+                    finally { movingFocus = false; }
+                }
+
+                break;
+
+            case CatalogState.Ready:
+                // Criterion 7, the third transition, and the order is the point. Focus first: landing on the
+                // h1 announces "Films, heading level 1", which does not tell the user the retry worked, and
+                // R3 forbids announcing the text of whatever focus has just moved to. The count therefore
+                // follows as its own statement rather than being read off the heading.
+                if (focusHeadingAfterRetry)
+                {
+                    focusHeadingAfterRetry = false;
+                    await heading.FocusAsync();
+                }
+
+                if (!countAnnounced)
+                {
+                    countAnnounced = true;
+                    Announcer.Status(Sentence);   // the same words that are on screen
+                }
+
+                break;
+        }
+    }
+
+    /// <remarks>
+    /// Nothing auto-retries and nothing auto-dismisses. The failed text is a state, not a toast: a message
+    /// that cleared itself would be a content-set time limit on reading it, SC 2.2.1 Timing Adjustable,
+    /// Level A, and an auto-retry with a visible countdown would engage the same criterion.
+    /// </remarks>
+    private async Task TryAgain()
+    {
+        // The button carries aria-disabled rather than the disabled attribute, so the click still arrives
+        // while a retry is in flight and has to be ignored here.
+        if (retrying) return;
+
+        // R5: the failure has ended as far as the user is concerned. A cancellation, not a message -- it
+        // takes effect at once and speaks nothing. The next Alert is raised from OnAfterRenderAsync and
+        // never in this handler: on a device slow enough to flush both mutations in one frame the second
+        // call would see the region already empty, mark the clear observed, and the repeated identical
+        // sentence would reach the DOM as no change at all.
+        Announcer.Alert("");
+
+        retrying = true;
+        alertedFailure = false;
+        movedFocusToFailure = false;
+        films = new(CatalogState.Loading, films.Value);   // criterion 8: the loading copy, visibly
+
+        var result = await Catalog.GetMoviesAsync();
+        if (disposed) return;
+
+        retrying = false;
+        films = result;
+        focusHeadingAfterRetry = result.State == CatalogState.Ready;
+    }
+
+    /// <summary>
+    /// Moves focus to <paramref name="element"/> unless the user has moved focus themselves, and says
+    /// whether it happened.
+    /// </summary>
+    /// <remarks>
+    /// The guard cannot be written in C#: there is no way to read <c>document.activeElement</c> from Blazor,
+    /// and <c>ElementReference.FocusAsync()</c> focuses unconditionally. index.html defines the helper and
+    /// says why the move is a conformance route rather than a workaround.
+    /// <para>
+    /// A missing or broken helper returns false rather than throwing. An escape here would reveal
+    /// <c>#blazor-error-ui</c>, which carries an assertive role of its own, on a page that is already reporting a
+    /// failure through the announcer -- two assertive sources for one failure, which is the thing this
+    /// project forbids outright.
+    /// </para>
+    /// </remarks>
+    private async Task<bool> FocusIfUnmoved(ElementReference element)
+    {
+        try
+        {
+            return await Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", element, FocusKeepers);
+        }
+        catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
+        {
+            return false;
+        }
+    }
+
+    /// <remarks>
+    /// R7: clear what this page set, and raise nothing new. Both calls are cancellations -- they take effect
+    /// at once and speak nothing. Without them "The library holds 1,456 films." sits in #status-announcer,
+    /// readable in browse mode, long after the films are gone, because the announcer is a scoped singleton
+    /// and MainLayout survives navigation; and a message still waiting out its settle delay would be
+    /// delivered on the page the user has just arrived at.
+    /// <para>
+    /// The fetch is deliberately NOT cancelled. See <c>OnInitializedAsync</c>.
+    /// </para>
+    /// </remarks>
+    public void Dispose()
+    {
+        disposed = true;
+
+        Announcer.Status("");
+        Announcer.Alert("");
+    }
+}

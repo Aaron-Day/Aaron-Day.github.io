@@ -21,7 +21,13 @@ namespace MovieLibrary.Web.Tests;
 /// </summary>
 public class PageTests : BunitContext
 {
-    public PageTests() => JSInterop.Mode = JSRuntimeMode.Loose;
+    // The films page has needed a CatalogService since Task 5, and NotFound needs the announcer through
+    // its layout, so both registrations come from the one helper that owns them.
+    public PageTests()
+    {
+        JSInterop.Mode = JSRuntimeMode.Loose;
+        this.AddAnnouncer();
+    }
 
     [Fact]
     public void NotFoundSetsTheDocumentTitle()

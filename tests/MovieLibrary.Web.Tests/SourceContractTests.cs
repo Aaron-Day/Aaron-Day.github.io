@@ -143,4 +143,94 @@ public class SourceContractTests
         Assert.Matches(registration, WebRoot.Read("Program.cs"));
         Assert.DoesNotMatch(registration, "// builder.Services.AddScoped<CatalogService>();");
     }
+
+    // ================================================================== live regions in page content
+
+    /// <summary>The one component allowed to declare a live region, because it owns all three of them.</summary>
+    private const string LiveRegionOwner = "Layout/MainLayout.razor";
+
+    /// <summary>
+    /// Every live-region marker a component's source declares: an alert, status or log ROLE, or an aria-live
+    /// attribute whatever its value. Returned as the text found, so a failure can quote it.
+    /// </summary>
+    /// <remarks>
+    /// A pure function over text it is handed, proven below against markup written for the purpose, because
+    /// the contract that uses it runs over an app where the correct answer is "none" everywhere but one file:
+    /// breaking the assertion inside that loop would still pass if the scan silently stopped matching.
+    /// <para>
+    /// aria-live="off" is reported too. It is not a live region, but it is not something a page should be
+    /// declaring either, and a rule that let it through would let a typo through with it.
+    /// </para>
+    /// <para>
+    /// What it cannot catch: a role or an aria-live built from a variable, a computed attribute, a splatted
+    /// dictionary, or markup that arrives from a .cs component. It turns "a reviewer has to notice" into a red
+    /// test for the ordinary spelling. It is not proof.
+    /// </para>
+    /// </remarks>
+    internal static IReadOnlyList<string> LiveRegionMarkers(string text) =>
+        LiveRegionMarker.Matches(text).Select(m => m.Value).Distinct(StringComparer.Ordinal).ToList();
+
+    // The leading boundary stops data-aria-live and the like matching. Requiring the closing quote right
+    // after the role word stops role="alertdialog" matching, which is a dialog and not a live region.
+    private static readonly Regex LiveRegionMarker = new(
+        @"(?<![\w-])(?:role\s*=\s*([""'])(?:alert|status|log)\1|aria-live\s*=\s*([""'])[^""']*\2)",
+        RegexOptions.IgnoreCase);
+
+    /// <remarks>
+    /// SC 4.1.3 Status Messages, Level AA, and rule R2. The rule R2 cited a test that did not exist: the
+    /// assertive scan above looks only for an alert role and an assertive aria-live, and LiveRegionTests
+    /// renders MainLayout with a STUB body, so a status role on the films page's visible loading paragraph
+    /// passed all 295 tests before this. That is the likeliest violation by far, because it looks helpful: it
+    /// would be a second utterance for the same words, from a region the announcer does not own, and on a
+    /// repeated message the two would race in an order nobody controls.
+    /// </remarks>
+    [Fact]
+    public void NoComponentOutsideTheLayoutDeclaresALiveRegion()
+    {
+        var files = WebRoot.Files("*.razor").ToList();
+        var failable = files.Where(f => f.Path != LiveRegionOwner).ToList();
+
+        // T1: the count is of what the rule can actually fail on, which is every component except the one
+        // carve-out. A discovery walk that stopped matching would otherwise loop over nothing and pass.
+        Assert.True(failable.Count >= 4,
+            "This rule found " + failable.Count + " components it could fail on. There are at least five "
+            + "hand-written .razor files outside the layout's own MainLayout. Fewer means WebRoot.Files "
+            + "stopped finding them, not that the app shrank.");
+
+        foreach (var (path, text) in failable)
+            Assert.True(LiveRegionMarkers(text).Count == 0,
+                path + " declares " + string.Join(", ", LiveRegionMarkers(text)) + ". The announcer in "
+                + LiveRegionOwner + " owns every live region in this app. A second one in page content is a "
+                + "second utterance of the same words from a region nothing coordinates, and the two race in "
+                + "an order nobody controls. Visible loading, count and failure text is plain text; the "
+                + "spoken copy goes through Announcer.Status or Announcer.Alert.");
+
+        // And the carve-out is not a hole. The layout owns exactly three regions and may not grow a fourth
+        // without this saying so.
+        Assert.Equal(
+            new[] { "aria-live=\"polite\"", "role=\"alert\"", "role=\"status\"" },
+            LiveRegionMarkers(files.Single(f => f.Path == LiveRegionOwner).Text)
+                .OrderBy(m => m, StringComparer.Ordinal));
+    }
+
+    [Theory]
+    [InlineData("<p role=\"status\">Loading films</p>", "role=\"status\"")]
+    [InlineData("<p role='status'>Loading films</p>", "role='status'")]
+    [InlineData("<div role=\"log\">a line</div>", "role=\"log\"")]
+    [InlineData("<div role = \"alert\">x</div>", "role = \"alert\"")]
+    [InlineData("<div aria-live=\"polite\">x</div>", "aria-live=\"polite\"")]
+    [InlineData("<div aria-live=\"assertive\">x</div>", "aria-live=\"assertive\"")]
+    [InlineData("<div aria-live=\"off\">x</div>", "aria-live=\"off\"")]
+    public void TheLiveRegionScanSeesTheMarker(string markup, string expected)
+        => Assert.Equal(new[] { expected }, LiveRegionMarkers(markup));
+
+    [Theory]
+    [InlineData("<p>Loading films</p>")]
+    [InlineData("<button type=\"button\" aria-disabled=\"true\">Try again</button>")]
+    [InlineData("<div role=\"alertdialog\">a dialog, not a live region</div>")]
+    [InlineData("<div role=\"statusbar\">not a role at all, and not a live region either</div>")]
+    [InlineData("<div data-aria-live=\"polite\">someone else's data attribute</div>")]
+    [InlineData("<div aria-atomic=\"true\">atomic without live is not a region</div>")]
+    public void TheLiveRegionScanDoesNotCryWolf(string markup)
+        => Assert.Empty(LiveRegionMarkers(markup));
 }

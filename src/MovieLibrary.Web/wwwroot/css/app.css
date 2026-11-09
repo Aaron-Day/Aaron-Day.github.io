@@ -287,3 +287,71 @@ body {
    reader, it is a test:
    StyleContractTests.TheOnlyMotionIsTheBootSpinnersAndAnythingElseNeedsAReducedMotionBlock scans
    this file with its comments stripped, so Task 6's tile hovers cannot land unguarded. */
+
+/* ===========================================================================
+   The films page's loading, empty and failed states
+   ---------------------------------------------------------------------------
+   NO NEW COLOUR TOKEN. The sentence is --txt (16.16:1 on --bg) and the
+   button's boundary is --line-strong (3.89:1 on --bg), which is the token this
+   file already reserves for a control's sole boundary. Nothing here is
+   measured afresh because nothing here is new.
+   The failure is never signalled by colour: it is a sentence of prose plus a
+   named control, so SC 1.4.1 Use of Color (Level A) has nothing to carry and
+   SC 1.4.11 Non-text Contrast (Level AA) is satisfied by the border rather
+   than by a tint.
+   =========================================================================== */
+
+/* One stable container per state, so the node a screen reader's virtual cursor
+   may be sitting on is not replaced when the state changes. It takes focus on a
+   failure, which is what puts that message outside SC 4.1.3 Status Messages
+   (Level AA) rather than relying on 4.1.3 being honoured: the criterion applies
+   only to messages that do NOT receive focus.
+   Wraps at 320px: the sentence claims its own line through its flex-basis and
+   the button drops below it. SC 1.4.10 Reflow, Level AA. */
+.catalog-state {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;      /* row-gap column-gap */
+}
+
+.catalog-state:focus { outline: none; }   /* a container, not a control; the ring would only be noise */
+
+.catalog-state p {
+    flex: 1 1 18rem;        /* forces its own line at 320px */
+    max-width: 68ch;
+    margin: 0;              /* beats reboot's p { margin-bottom: 1rem } */
+    color: var(--txt);
+    line-height: 1.5;       /* unitless, so a text-spacing override cannot clip it (SC 1.4.12) */
+}
+
+/* --touch on BOTH axes. 44x44 is SC 2.5.5 Target Size (Enhanced), Level AAA, which is the goal this
+   project's token aims at; the criterion it is actually held to is SC 2.5.8 Target Size (Minimum),
+   Level AA, which is 24x24. Do not cite 2.5.8 for the number 44.
+   A border and a transparent background, not a painted one: under forced-colors a border is re-coloured
+   to CanvasText and survives, while a background tint flattens to Canvas and the control loses its only
+   boundary. Same reasoning as the error bar's Dismiss button, which is why it looks like it. */
+.try-again {
+    flex: 0 0 auto;         /* the row must not squash it below --touch */
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: var(--touch); min-height: var(--touch);
+    padding: 0 1rem;
+    background: transparent; color: var(--txt);
+    border: 2px solid var(--line-strong);
+}
+
+/* Hover only where a pointer can hover. On a touch screen :hover sticks after the tap, so the button
+   would stay in its hover state until something else is tapped. The PRESS feedback is the
+   :root :is(a, button):active rule near the top of this file, which is (0,2,1) and outranks this block;
+   it exists because Bootstrap's reboot makes the tap highlight transparent, so a tap would otherwise
+   give no feedback at all. Declared there, once, for every control in the app. */
+@media (hover: hover) {
+    .try-again:hover { border-color: var(--accent); }
+}
+
+/* aria-disabled, never the disabled ATTRIBUTE. Disabling the element that has focus blurs it and drops
+   focus to <body>, which is the same defect the focus move on failure exists to fix, at the other end:
+   the user presses Try again, the retry starts, and their place on the page is gone. The click is
+   ignored in C# instead. The cue is not colour alone -- the sentence beside it changes to the loading
+   copy at the same moment. */
+.try-again[aria-disabled="true"] { border-color: var(--line); }
