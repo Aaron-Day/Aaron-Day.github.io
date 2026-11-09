@@ -170,11 +170,18 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         // happens to agree and on a de-DE machine would expect "1.456" and fail a correct app. The app
         // taking its culture from the browser is deliberate behaviour that MoviesGridTests covers on its
         // own; the gate pins the browser and must then speak the same language back.
+        //
+        // EVERY placeholder carries :N0, because PosterGrid formats every number it speaks through
+        // Number(v) => v.ToString("N0"). With 1,456 records none of the other three has a thousands separator,
+        // so a bare {0} agrees today - and at 60,000 records the app would say "Page 2 of 1,000" while a bare
+        // {0} expected "Page 2 of 1000". The comparison is a === inside WaitForFunctionAsync, so that would
+        // surface as a 61 second timeout (AnnouncedAsync allows the boot timeout plus ten settle delays) that
+        // says nothing about the text, against an app that was correct.
         var spoken = CultureInfo.GetCultureInfo("en-US");
 
         await session.AnnouncedAsync("status-announcer", string.Format(
             spoken,
-            "Page 2 of {0}. Showing {1} to {2} of {3:N0} titles.",
+            "Page 2 of {0:N0}. Showing {1:N0} to {2:N0} of {3:N0} titles.",
             Catalogue.Pages, Catalogue.PageSize + 1, Catalogue.PageSize * 2, Catalogue.Records));
 
         await ExpectPagerAsync(session, previousAtBound: false, nextAtBound: false);
