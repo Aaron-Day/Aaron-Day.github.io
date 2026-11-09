@@ -63,6 +63,11 @@ internal static class Gate
     public static bool InCi => Value("CI") is not null || Value("GITHUB_ACTIONS") is not null;
 
     /// <summary>Null when the gate can run; otherwise the reason, naming the command that fixes it.</summary>
+    /// <remarks>
+    /// Recomputed on every read, and that is a requirement and not an oversight: it must NOT become a cached
+    /// static. <c>GateAvailabilityTests.TheSkipConditionIsTheGateAndAnExplicitSkipStillWins</c> changes the
+    /// process environment and then reads this again, expecting the new answer.
+    /// </remarks>
     public static string? Unavailable => NoSite() ?? NoBrowser();
 
     /// <summary>

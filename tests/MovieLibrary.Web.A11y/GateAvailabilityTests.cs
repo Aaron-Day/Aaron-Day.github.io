@@ -17,6 +17,18 @@ namespace MovieLibrary.Web.A11y;
 /// process environment, and <c>BrowserGate.InitializeAsync</c> reads that same environment. One collection
 /// means the fixture is up before any of this runs and nothing can observe the write.
 /// </para>
+/// <para>
+/// <b>The price of that, recorded so nobody has to rediscover it.</b> These tests are downstream of the
+/// fixture they diagnose. If <c>BrowserGate.InitializeAsync</c> throws - <c>SiteServer.StartAsync</c> failing
+/// to bind, <c>Playwright.CreateAsync()</c> failing to start its driver - xunit reports EVERY test in the
+/// collection as Failed with the fixture's exception, <see cref="TheBrowserGateIsNotSilentlySkippedInCi"/>
+/// and <see cref="TheSkipReasonAlwaysNamesHowToMakeTheGateRun"/> included, although saying which half of the
+/// harness was missing is their whole job. The run is red either way, so what is lost is the diagnostic and
+/// not the verdict. If you are reading a wall of identical fixture failures and those two did not explain
+/// it, that is why, and the fixture's exception, repeated on each test, is the message to act on. The
+/// collections are deliberately not restructured to fix this: moving these tests out would let them report
+/// first and would also let the environment write above race the fixture's read.
+/// </para>
 /// </remarks>
 [Collection(BrowserCollection.Name)]
 public class GateAvailabilityTests(ITestOutputHelper output)
