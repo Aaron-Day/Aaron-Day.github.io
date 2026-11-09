@@ -301,15 +301,17 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
     /// </summary>
     /// <remarks>
     /// ONE record carries a poster path, not sixty, and the request it makes is answered from inside this
-    /// process with a 1x1 PNG. Sixty live requests to image.tmdb.org per scanned state, from CI on a public
-    /// repository, would make this gate red for CDN reasons rather than accessibility ones - and answering
-    /// the one locally means this project makes no external request of any kind. Do not change either half.
+    /// process with a 1x1 PNG by the route BrowserGate registers on every context. Dozens of live requests
+    /// to image.tmdb.org per scanned state, from CI on a public repository, would make this gate red for
+    /// CDN reasons rather than accessibility ones - and answering them locally means this project makes no
+    /// external request of any kind, on any path, including the A11Y_BASE_URL path where the catalogue
+    /// under test is not one this harness wrote. That route is NOT this test's to arrange any more: it used
+    /// to be a per-test call made only from here, which is exactly how the hole stayed open.
     /// </remarks>
     [BrowserFact]
     public async Task OneRealPosterGivesAxeAnImgToLookAt()
     {
         await using var session = await gate.OpenAsync();
-        await session.StubPostersAsync();
         await session.ServeCatalogueAsync(Catalogue.OnePosterAmong(Catalogue.PageSize));
 
         await session.GotoAsync("/");

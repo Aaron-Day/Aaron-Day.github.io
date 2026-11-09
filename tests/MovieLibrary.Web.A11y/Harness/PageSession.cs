@@ -126,26 +126,6 @@ public sealed class PageSession : IAsyncDisposable
     /// <summary>Stops the catalogue being intercepted, so a retry reaches the served file and succeeds.</summary>
     public Task ReleaseTheCatalogueAsync() => context.UnrouteAsync(CataloguePattern);
 
-    /// <summary>Answers every poster request from inside this process with a 1x1 PNG.</summary>
-    /// <remarks>
-    /// The fixture carries no poster path, so nothing requests a poster and this does nothing - except in the
-    /// one scan that deliberately gives a single record a path, to put a real img element in front of axe.
-    /// That scan still reaches no CDN, because the request is answered here. Keep it that way: sixty live
-    /// requests to image.tmdb.org per scanned state, from CI on a public repository, would make this gate red
-    /// for CDN reasons rather than accessibility ones.
-    /// </remarks>
-    public Task StubPostersAsync() =>
-        context.RouteAsync("https://image.tmdb.org/**", async route =>
-            await route.FulfillAsync(new RouteFulfillOptions
-            {
-                Status = 200,
-                ContentType = "image/png",
-                BodyBytes = OnePixelPng,
-            }));
-
-    private static byte[] OnePixelPng => Convert.FromBase64String(
-        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=");
-
     /// <summary>Waits for the one-sentence state paragraph to hold a sentence.</summary>
     public Task StateSentenceAsync(string sentence) =>
         Page.Locator(".catalog-state p")

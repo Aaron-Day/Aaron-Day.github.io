@@ -71,8 +71,41 @@ public sealed class BrowserGate : IAsyncLifetime
             Locale = "en-US",
         });
 
+        await StubPostersAsync(context);
+
         return new PageSession(await context.NewPageAsync(), context, BaseUrl);
     }
+
+    /// <summary>Answers every poster request from inside this process with a 1x1 PNG.</summary>
+    /// <remarks>
+    /// <b>Registered on EVERY context, which is a budget rule and not a convenience.</b> It used to be a
+    /// per-test call with one caller, and that left a hole on a path this project documents: Gate's own skip
+    /// message offers A11Y_BASE_URL as a way to scan a server already running the published site, and on
+    /// that path <c>Catalogue.WriteInto</c> never runs - this class writes the synthetic catalogue only when
+    /// it is serving the site itself. A published catalogue carrying real poster paths would therefore have
+    /// had every Ready-state scan render img elements pointing at <c>https://image.tmdb.org/t/p/w342...</c>,
+    /// and <c>loading="lazy"</c> caps that at the tiles above the fold rather than at zero: dozens of CDN
+    /// reads per scanned state across about ten scans, from CI, on a public repository. They spend none of
+    /// the owner's TMDB request budget, but a slow or flaky CDN would make an accessibility gate red for a
+    /// reason that has nothing to do with accessibility, and Harness/Catalogue.cs states that as a rule.
+    /// Registering the route here means NO code path in this project can reach the CDN, whatever catalogue
+    /// it finds.
+    /// <para>
+    /// axe's image-alt does not need the bytes to arrive, only the element, so a 1x1 PNG is enough for the
+    /// one scan that deliberately gives a record a poster path.
+    /// </para>
+    /// </remarks>
+    private static Task StubPostersAsync(IBrowserContext context) =>
+        context.RouteAsync("https://image.tmdb.org/**", async route =>
+            await route.FulfillAsync(new RouteFulfillOptions
+            {
+                Status = 200,
+                ContentType = "image/png",
+                BodyBytes = OnePixelPng,
+            }));
+
+    private static byte[] OnePixelPng => Convert.FromBase64String(
+        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=");
 
     public async Task DisposeAsync()
     {
