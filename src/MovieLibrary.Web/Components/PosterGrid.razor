@@ -79,6 +79,30 @@
     /// </summary>
     [Parameter] public int Page { get; set; } = 1;
 
+    /// <summary>
+    /// How many tiles a page holds. Validated in <see cref="OnParametersSetAsync"/>, which throws below 1.
+    /// </summary>
+    /// <remarks>
+    /// The brief said the arithmetic "cannot throw" and that is wrong twice over.
+    /// <c>(Items.Count + PageSize - 1) / PageSize</c> divides by zero at <c>PageSize == 0</c>, because the
+    /// <c>Math.Max</c> in <see cref="PageCount"/> is applied to the result and so cannot help. The worse
+    /// case is NEGATIVE: at -1 with 1,456 titles, <see cref="PageCount"/> is 1, the first shown is 1 and the
+    /// last shown is -1, so the head reads "Showing 1--1 of 1,456 titles." over a list holding no items at
+    /// all. That is the same defect class as the empty-list "Page 1 of 1" -- a page stating something
+    /// false -- reached by another route, and it is why this is a throw and not a clamp.
+    /// <para>
+    /// NOT <c>Math.Max(1, PageSize)</c>. That silently redefines the parameter: a caller asking for 0 would
+    /// get a page of one, and a caller asking for -1 a page of one, when what they wrote cannot be honoured
+    /// and the caller is the thing that needs fixing. At this component's scale it would also render all
+    /// 1,456 tiles.
+    /// </para>
+    /// <para>
+    /// A guard this component cannot make fail would be the unfalsifiable code rule T1 forbids, and an
+    /// earlier pass left it out on those grounds. That was wrong: this is a public <c>[Parameter]</c>, so
+    /// rendering the grid with <c>pageSize: 0</c> falsifies it in one line, which is what
+    /// <c>PosterGridTests.APageSizeBelowOneIsRejectedRatherThanDividingOrLying</c> does.
+    /// </para>
+    /// </remarks>
     [Parameter] public int PageSize { get; set; } = 60;
 
     /// <summary>
@@ -99,6 +123,11 @@
     /// Never 0. A naive ceiling division over an empty list yields 0 and the pager then reads "Page 1 of
     /// 0". An empty list renders no pager at all, so that text is unreachable today; this is what makes it
     /// unreachable rather than something the gate happens to hide.
+    /// <para>
+    /// The <c>Math.Max</c> is applied to the RESULT of the division and so does nothing for the division
+    /// itself. <see cref="PageSize"/> is what makes this safe, by being rejected below 1 before anything
+    /// reads this property.
+    /// </para>
     /// </summary>
     private int PageCount => Math.Max(1, (Items.Count + PageSize - 1) / PageSize);
 
@@ -151,12 +180,23 @@
     private string Announcement(int page) => $"{PageLabelFor(page)}. {RangeSentence(page, " to ")}";
 
     /// <remarks>
+    /// <para>
+    /// PageSize is validated FIRST and before anything divides by it. See the remarks on
+    /// <see cref="PageSize"/> for why this throws rather than clamping, and for the negative case that is
+    /// worse than the division by zero. It is a throw from a parameter hook, so it surfaces as a render
+    /// failure at the one place that can fix it -- the caller's markup -- rather than as a sentence on
+    /// screen that is not true.
+    /// </para>
+    /// <para>
     /// The clamp correction raises <see cref="PageChanged"/> and announces NOTHING. A deep link to page 99
     /// is not a change the user made while reading the page, and the first render must say nothing: the
     /// route name and the page title already cover arrival. Only <see cref="Go"/> speaks.
+    /// </para>
     /// </remarks>
     protected override async Task OnParametersSetAsync()
     {
+        ArgumentOutOfRangeException.ThrowIfLessThan(PageSize, 1);
+
         if (Page == CurrentPage)
         {
             correctedFrom = null;

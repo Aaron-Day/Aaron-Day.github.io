@@ -116,6 +116,32 @@ public class PosterGridTests : BunitContext
         Assert.Equal("Page 1 of " + pages, PageLabel(RenderGrid(films, pageSize: size)));
     }
 
+    /// <remarks>
+    /// The brief recorded the paging arithmetic as something that "cannot throw", and an earlier pass left
+    /// the guard out on the grounds that a guard it could not make fail is the unfalsifiable code rule T1
+    /// forbids. Both were wrong, and this test is the reason: PageSize is a public [Parameter], so one line
+    /// of markup falsifies the guard.
+    /// <para>
+    /// ZERO divides. <c>(Items.Count + PageSize - 1) / PageSize</c> throws, and the Math.Max in PageCount
+    /// is applied afterwards so it cannot help. NEGATIVE is worse, because it does not throw: at -1 with
+    /// 130 titles PageCount is 1, the first shown is 1 and the last shown is -1, so the head renders
+    /// "Showing 1 to -1 of 130 titles." over a list holding nothing. That is the empty-list "Page 1 of 1"
+    /// defect again -- a page stating something false -- reached by another route, which is why the fix is
+    /// a throw and not Math.Max(1, PageSize): clamping would answer a caller who wrote 0 with a page of
+    /// one, and at this scale a caller who wrote -1 with all 1,456 tiles.
+    /// </para>
+    /// </remarks>
+    [Theory]
+    [InlineData(0)]
+    [InlineData(-1)]
+    public void APageSizeBelowOneIsRejectedRatherThanDividingOrLying(int size)
+    {
+        var thrown = Assert.ThrowsAny<ArgumentOutOfRangeException>(
+            () => RenderGrid(130, pageSize: size));
+
+        Assert.Equal("PageSize", thrown.ParamName);
+    }
+
     [Fact]
     public void TheLastPageHoldsTheRemainderAndTheOnesBeforeItHoldAFullPage()
     {
