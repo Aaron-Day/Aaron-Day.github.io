@@ -223,15 +223,33 @@ public class SourceContractTests
         // T1: the count is of what the rule can actually fail on, which is every .razor file except the one
         // carve-out. A discovery walk that stopped matching would otherwise loop over nothing and pass.
         //
-        // SIX, counted rather than guessed: App, Layout/NavMenu, Layout/RouteAnnouncer, Pages/Movies,
-        // Pages/NotFound and _Imports. _Imports is in the count because the rule can genuinely fail on it --
-        // this is a text scan, and a role="status" typed into it would be found and reported like any other.
-        // The old floor of 4 let two components fall out of WebRoot.Files before the rule noticed, which is
-        // the T1 failure mode exactly. Tasks 6 to 8 only add components, so this floor only rises.
-        Assert.True(failable.Count >= 6,
-            "This rule found " + failable.Count + " components it could fail on. There are six hand-written "
-            + ".razor files outside the layout's own MainLayout. Fewer means WebRoot.Files stopped finding "
-            + "them, not that the app shrank -- and a rule with no subjects passes over nothing.");
+        // EIGHT, counted rather than guessed: App, Layout/NavMenu, Layout/RouteAnnouncer, Pages/Movies,
+        // Pages/NotFound, _Imports and, since Task 6, Components/PosterTile and Components/PosterGrid.
+        // _Imports is in the count because the rule can genuinely fail on it -- this is a text scan, and a
+        // status role typed into it would be found and reported like any other. The floor was 4 when there
+        // were six, which let two components fall out of WebRoot.Files before the rule noticed: the T1
+        // failure mode exactly. Tasks 7 to 9 only add components, so this floor only rises.
+        //
+        // Task 6 is the first task to put real content inside main, which is the case rule R2's gate was
+        // written for, and the gate was already here when it arrived: a count sentence and a pager are
+        // exactly the markup someone would reach for a polite region with, and they are plain text in both
+        // components. Each of the two says so in its own comment, spelled in words, because this scan is a
+        // substring match and a comment quoting a marker fails just as the attribute would.
+        Assert.True(failable.Count >= 8,
+            "This rule found " + failable.Count + " components it could fail on. There are eight "
+            + "hand-written .razor files outside the layout's own MainLayout. Fewer means WebRoot.Files "
+            + "stopped finding them, not that the app shrank -- and a rule with no subjects passes over "
+            + "nothing.");
+
+        // Named as well as counted, for the same reason the motion rule names its stylesheets: a floor can
+        // be met by the wrong files. These two are the first content inside main, so they are the subjects
+        // this gate was written for, and a path refactor that dropped them out of the walk would otherwise
+        // leave the count intact.
+        var paths = failable.Select(f => f.Path).ToList();
+
+        Assert.Contains("Components/PosterTile.razor", paths);
+        Assert.Contains("Components/PosterGrid.razor", paths);
+        Assert.Contains("Pages/Movies.razor", paths);
 
         foreach (var (path, text) in failable)
             Assert.True(LiveRegionMarkers(text).Count == 0,
