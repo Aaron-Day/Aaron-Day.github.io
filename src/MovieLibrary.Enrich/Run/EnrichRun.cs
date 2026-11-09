@@ -437,7 +437,8 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
             Review: c.Review,
             MatchedFilms: matched.Count,
             FilmsWithEmptyCast: matched.Count(m => m.Cast.Length == 0),
-            CastMembersSkipped: c.CastMembersSkipped);
+            CastMembersSkipped: c.CastMembersSkipped,
+            Bands: BandCounts.Of(c.Movies));
     }
 
     // ---- ending the run ------------------------------------------------------------------------------

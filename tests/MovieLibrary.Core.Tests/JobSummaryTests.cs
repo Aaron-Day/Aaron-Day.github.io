@@ -20,7 +20,8 @@ public class JobSummaryTests
     private static JobReport Healthy() => new(
         Films: 1457, Series: 122, TotalEpisodes: 13850, OwnedEpisodes: 9120,
         RequestsUsed: 38, MaxRequests: 40, StoppedOnBudget: false, Fixtures: false,
-        Review: ReviewQueue.Empty, MatchedFilms: 1400, FilmsWithEmptyCast: 0, CastMembersSkipped: 0);
+        Review: ReviewQueue.Empty, MatchedFilms: 1400, FilmsWithEmptyCast: 0, CastMembersSkipped: 0,
+        Bands: new BandCounts(Confident: 1300, Uncertain: 100, Unmatched: 57));   // 1,457, the Films count above
 
     /// <summary>The Actions step summary page: capped per section.</summary>
     private static string Page(JobReport r) => JobSummary.Build(r).StepSummary;
@@ -334,5 +335,48 @@ public class JobSummaryTests
 
         Assert.Contains("only console", console.ToString());
         Assert.DoesNotContain("page only", console.ToString());
+    }
+
+    /// <remarks>
+    /// The one line that says whether MATCHING went well. Nothing else on the page can: a run can spend its whole
+    /// budget, queue nothing for review and still have guessed badly, because a wrong match with a high score is
+    /// never queued. Printed unconditionally rather than under "Check these", since the healthy value is the
+    /// information -- a run whose confident count dropped by three hundred looks exactly like a healthy one if the
+    /// line only appears when something is wrong.
+    /// </remarks>
+    [Fact]
+    public void TheSummarySaysHowFarTheRunTrustedItsOwnMatches()
+    {
+        var text = Page(Healthy());
+
+        Assert.Contains("Match confidence: **1,300** confident, **100** need review, **57** not matched", text);
+    }
+
+    /// <remarks>
+    /// In the same words the site badges films with -- ConfidenceBand.BadgeFor spells them "Needs review" and
+    /// "Not matched" -- so the owner reading this page and the owner looking at the site are reading one
+    /// vocabulary. The numbers come from the same band function, which is why they cannot disagree either.
+    /// </remarks>
+    [Fact]
+    public void TheBandWordsAreTheOnesTheSiteUses()
+    {
+        var text = Page(Healthy());
+
+        Assert.Contains("need review", text);
+        Assert.Contains("not matched", text);
+        Assert.DoesNotContain("uncertain", text, StringComparison.OrdinalIgnoreCase);
+    }
+
+    /// <remarks>
+    /// A fixture run bands its synthetic films too. The line is about the catalogue that was written, not about
+    /// TMDB, so withholding it there would leave the fixture path untested on the one page that would show it.
+    /// </remarks>
+    [Fact]
+    public void TheBandLineIsPrintedForAFixtureRunAsWell()
+    {
+        var text = Page(Healthy() with { Fixtures = true, Bands = new BandCounts(0, 0, 1457) });
+
+        Assert.Contains("**0** confident", text);
+        Assert.Contains("**1,457** not matched", text);
     }
 }

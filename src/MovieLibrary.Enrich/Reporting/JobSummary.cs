@@ -70,6 +70,12 @@ public static class JobSummary
               .AppendLine();
 
         sb.AppendLine($"- Films: **{N(r.Films)}**");
+
+        // The one line that says whether MATCHING went well, which neither the request count nor the review queue can
+        // say: a run can spend its whole budget, queue nothing for review, and still have guessed badly. Same bands,
+        // same threshold and same words as the badges on the site, so the page and the site cannot disagree.
+        sb.AppendLine($"  - Match confidence: **{N(r.Bands.Confident)}** confident, **{N(r.Bands.Uncertain)}** need " +
+                      $"review, **{N(r.Bands.Unmatched)}** not matched");
         sb.AppendLine($"- Series: **{N(r.Series)}** ({N(r.TotalEpisodes)} episodes listed, {N(r.OwnedEpisodes)} owned)");
         sb.AppendLine(r.Fixtures
             ? $"- TMDB requests: **{N(r.RequestsUsed)}** (fixture run, none made)"

@@ -96,4 +96,26 @@ public class EnrichRunReportingTests
         Assert.Contains("WARNING: could not write the job summary", h.Err.ToString());
         Assert.DoesNotContain("Nothing was written", h.Err.ToString());
     }
+
+    /// <remarks>
+    /// The match-confidence line, end to end through a real run rather than through a hand-built report, and the
+    /// one thing only an end-to-end run can pin: WHICH films are banded. Banding the matched films instead of the
+    /// catalogue would compile, would keep every other test on this page green, and would silently drop every
+    /// unmatched row from the tally -- leaving the owner reading a confidence line about a subset of his library
+    /// and no way to tell. This run has one film TMDB knows and one it does not, so that mistake prints a total
+    /// of one against two films.
+    /// </remarks>
+    [Fact]
+    public async Task TheConfidenceLineCountsEveryFilmAndNotJustTheMatchedOnes()
+    {
+        using var h = Fargo();
+        h.MoviesCsv = RunLibrary.Movies(
+            RunLibrary.Fargo,
+            ("A Film TMDB Has Never Heard Of", "1:40:00", "Nobody At All", "Drama"));
+
+        await new MovieLibrary.Enrich.Run.EnrichRun(h.Options, h.Services()).RunAsync(CancellationToken.None);
+
+        Assert.Contains("- Films: **2**", h.Out.ToString());
+        Assert.Contains("Match confidence: **1** confident, **0** need review, **1** not matched", h.Out.ToString());
+    }
 }
