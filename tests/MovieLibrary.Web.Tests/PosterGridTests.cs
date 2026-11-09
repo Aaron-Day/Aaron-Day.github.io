@@ -1,5 +1,4 @@
 using AngleSharp.Dom;
-using System.Globalization;
 using Bunit;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
@@ -641,20 +640,5 @@ public class PosterGridTests : BunitContext
         clock.Advance(TimeSpan.FromHours(1));
 
         Assert.EndsWith((films + 60) + " titles.", Spoken().StatusText);
-    }
-
-    /// <summary>
-    /// Sets the culture for one test and puts it back. Only <see cref="CultureInfo.CurrentCulture"/>, never
-    /// <c>DefaultThreadCurrentCulture</c>: that one is process-wide and would reach whatever else xunit is
-    /// running in parallel. CurrentCulture flows with the execution context, which is what bUnit's
-    /// renderer dispatch rides on.
-    /// </summary>
-    private sealed class CultureScope : IDisposable
-    {
-        private readonly CultureInfo previous = CultureInfo.CurrentCulture;
-
-        public CultureScope(string name) => CultureInfo.CurrentCulture = new CultureInfo(name);
-
-        public void Dispose() => CultureInfo.CurrentCulture = previous;
     }
 }

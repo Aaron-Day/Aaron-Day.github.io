@@ -1,7 +1,6 @@
 @page "/"
 @page "/movies"
 @implements IDisposable
-@using System.Globalization
 @inject CatalogService Catalog
 @inject Announcer Announcer
 @inject IJSRuntime Js
@@ -146,6 +145,18 @@
     /// The one sentence on screen, per state. No count while Loading or Failed: a count is a claim about the
     /// library, and neither of those states knows anything about the library.
     /// </summary>
+    /// <remarks>
+    /// THE TOTAL FOLLOWS THE BROWSER'S CULTURE, and that is the ruling rather than an oversight. This call
+    /// passed CultureInfo.InvariantCulture while PosterGrid's head does not, so a de-DE visitor read "The
+    /// library holds 1,456 films." two lines above "Showing 1-60 of 1.456 titles." -- one number, two
+    /// groupings, in one block of text. The brief's M6 already decided that Blazor WebAssembly taking its
+    /// culture from the browser is correct behaviour and not a bug to stamp out, and acceptance criterion
+    /// 11 requires 1.456 under de-DE with a test behind it, so making the grid invariant would have
+    /// contradicted a shipped criterion. This was the half to change.
+    /// No existing assertion moved with it: every other page-sentence test in the suite sits at 1, 2 or 61
+    /// films, none of which has a group separator in any culture, which is exactly why the behaviour needed
+    /// MoviesGridTests.TheSentenceAndTheGridHeadGroupTheSameNumberTheSameWay rather than a silent edit.
+    /// </remarks>
     private string Sentence => films.State switch
     {
         CatalogState.Failed => CouldNotLoad,
@@ -154,7 +165,7 @@
         {
             0 => EmptyLibrary,
             1 => "The library holds 1 film.",
-            var n => $"The library holds {n.ToString("N0", CultureInfo.InvariantCulture)} films.",
+            var n => $"The library holds {n.ToString("N0")} films.",
         },
     };
 

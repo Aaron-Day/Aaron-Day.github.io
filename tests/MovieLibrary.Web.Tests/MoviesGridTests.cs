@@ -145,6 +145,35 @@ public class MoviesGridTests : BunitContext
     }
 
     /// <remarks>
+    /// ONE NUMBER, ONE GROUPING, read off the page as a visitor sees it. Movies.razor built its Ready
+    /// sentence with CultureInfo.InvariantCulture while PosterGrid's head follows the browser, so a de-DE
+    /// visitor read "The library holds 1,456 films." two lines above "Showing 1-60 of 1.456 titles." The
+    /// brief's M6 ruled that taking the culture from the browser is correct behaviour rather than a bug,
+    /// and acceptance criterion 11 requires 1.456 under de-DE with a test behind it, so the invariant half
+    /// was the half to drop.
+    /// <para>
+    /// THIS TEST IS THE POINT OF THE FIX. Every other page-sentence assertion in the suite sits at 1, 2 or
+    /// 61 films and sets no culture, so dropping the argument was test-neutral in both directions: nothing
+    /// went red, and nothing pinned the new behaviour either. 1,456 is the measured catalogue and the
+    /// smallest total in this project that has a group separator at all, and the two sentences are
+    /// asserted TOGETHER, because the defect was never in either number on its own.
+    /// </para>
+    /// </remarks>
+    [Theory]
+    [InlineData("en-US", "The library holds 1,456 films.", "Showing 1–60 of 1,456 titles.")]
+    [InlineData("de-DE", "The library holds 1.456 films.", "Showing 1–60 of 1.456 titles.")]
+    public void TheSentenceAndTheGridHeadGroupTheSameNumberTheSameWay(
+        string culture, string sentence, string head)
+    {
+        using var scope = new CultureScope(culture);
+
+        var (cut, _) = RenderWith(1456);
+
+        Assert.Equal(sentence, cut.Find(".catalog-state p").TextContent.Trim());
+        Assert.Equal(head, cut.Find("p.count").TextContent.Trim());
+    }
+
+    /// <remarks>
     /// The shipped page size, pinned where it is actually set. 60 makes 25 pages of the measured 1,456
     /// records with 16 on the last, and the grid's own default is the same number so that a caller who
     /// forgets the parameter does not get a different library.
