@@ -15,6 +15,12 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// </remarks>
 public sealed class PageSession : IAsyncDisposable
 {
+    /// <summary>
+    /// The selector every wait-for-boot in this project uses. Public so that the live guard asserting the
+    /// boot-failure shell cannot match it reads the same string this waits on. See <see cref="BootedAsync"/>.
+    /// </summary>
+    public const string BootedSelector = "#app main#main-content h1";
+
     /// <summary>The catalogue address, as CatalogService requests it, matched for route interception.</summary>
     private const string CataloguePattern = "**/data/movies.json";
 
@@ -58,11 +64,26 @@ public sealed class PageSession : IAsyncDisposable
     }
 
     /// <summary>
-    /// Waits for the app to have booted. <c>#app h1</c> is the signal because index.html's boot shell has no
-    /// heading in it: while the shell is up the selector cannot match, so this cannot pass on the shell.
+    /// The one signal that Blazor has replaced the boot shell with a real page. <c>main#main-content</c> is
+    /// MainLayout's own landmark - <c>MovieLibrary.Web.Tests.ShellTests</c> pins both the element and its id -
+    /// and the <c>h1</c> inside it is the rendered page's own heading, so this says the layout AND the page
+    /// are up.
     /// </summary>
+    /// <remarks>
+    /// <b>This used to be <c>#app h1</c>, which cannot survive the boot shell gaining a heading.</b> That
+    /// gate worked only because index.html's shell happened to have no heading in it - and giving the shell
+    /// a main landmark and an h1 is a real improvement for a reader navigating a failed boot, so the gate
+    /// rested on something the project had a reason to change. With a heading in the shell, <c>#app h1</c>
+    /// matches before WebAssembly starts: every GotoAsync returns on the parsed document,
+    /// <c>.catalog-state</c> is absent so the settle wait waits for nothing, and axe scans the un-booted
+    /// shell - which, with a landmark and a heading, may well be clean. Fifteen green scans of a page the
+    /// gate never rendered, which is precisely the false pass this project exists to rule out. So the signal
+    /// is MainLayout's own landmark, which the shell may never reproduce, and
+    /// <c>BootFailureTests.TheBootGateSelectorCannotMatchTheBootFailureShell</c> is the live guard that keeps
+    /// it that way.
+    /// </remarks>
     public Task BootedAsync() =>
-        Page.WaitForSelectorAsync("#app h1", new PageWaitForSelectorOptions { Timeout = BootTimeout });
+        Page.WaitForSelectorAsync(BootedSelector, new PageWaitForSelectorOptions { Timeout = BootTimeout });
 
     /// <summary>
     /// Holds the catalogue fetch open for ever, which is the Loading state. The handler returns without

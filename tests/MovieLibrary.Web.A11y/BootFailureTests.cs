@@ -140,6 +140,33 @@ public class BootFailureTests(BrowserGate gate, ITestOutputHelper output)
     }
 
     /// <summary>
+    /// The boot gate cannot be satisfied by the boot-failure shell. A LIVE GUARD, in the sense of rule T2,
+    /// under the one change that would quietly turn every other scan in this project green.
+    /// </summary>
+    /// <remarks>
+    /// <c>PageSession.BootedAsync</c> waits on <c>PageSession.BootedSelector</c> before anything is scanned.
+    /// If the shell can ever match it, every <c>GotoAsync</c> returns on the parsed document, the settle
+    /// waits find nothing to wait for, and axe scans an un-booted page - fifteen times, green, reporting on
+    /// states it never reached. The gate was <c>#app h1</c>, which any shell carrying a heading of its own
+    /// satisfies - and giving this shell a heading is a real improvement for a reader navigating a failed
+    /// boot, so that was a gate resting on something the project had a reason to change. The selector and
+    /// this guard are a pair and have to stay one.
+    /// </remarks>
+    [BrowserFact]
+    public async Task TheBootGateSelectorCannotMatchTheBootFailureShell()
+    {
+        await using var session = await FailedBootAsync();
+
+        output.WriteLine("boot gate selector: " + PageSession.BootedSelector);
+
+        Assert.Equal(0, await session.Page.Locator(PageSession.BootedSelector).CountAsync());
+
+        // Said again in halves, so a failure says which half moved: MainLayout's landmark is the part the
+        // shell may never reproduce, whatever else it gains.
+        Assert.Equal(0, await session.Page.Locator("#app main#main-content").CountAsync());
+    }
+
+    /// <summary>
     /// A page whose runtime script never arrived. The abort produces a resource error on the script element,
     /// which does not bubble and is one of the three failure shapes the watchdog listens for.
     /// </summary>
