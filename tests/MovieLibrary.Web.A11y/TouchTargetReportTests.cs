@@ -42,7 +42,20 @@ public class TouchTargetReportTests(BrowserGate gate, ITestOutputHelper output)
         // At 320-375px the drawer holds the only nav links there are, so a report taken with it shut would
         // leave them out entirely - and they are the controls most likely to be short.
         if (await session.Page.Locator("button.nav-toggle").IsVisibleAsync())
+        {
             await session.Page.Locator("button.nav-toggle").ClickAsync();
+
+            // AND WAIT FOR THEM TO BE IN THE LAYOUT, as DomStateTests.TheDrawerOpenAt320IsClean does.
+            // Without the wait this read the inventory straight after a click, which is a race and not a
+            // measurement: at 375px the Films link is display: none until the drawer opens, so a read that
+            // landed first would drop exactly the controls the line above says the drawer is opened for,
+            // while still clearing the >= 4 floor below on the brand link and the two pager buttons -
+            // a report covering less than it reads as covering, with nothing to say so.
+            // MEASURED: on this machine the link was in the inventory with or without the wait, so the
+            // race has never been seen to bite here. That is the worst way for one to sit in a gate, and
+            // it is the reason for the wait rather than a reason against it.
+            await session.Page.Locator("ul#nav-links a").First.WaitForAsync();
+        }
 
         var controls = await session.Page.EvaluateAsync<Control[]>(Scripts.Controls);
 

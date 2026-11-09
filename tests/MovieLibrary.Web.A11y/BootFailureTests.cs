@@ -87,7 +87,14 @@ public class BootFailureTests(BrowserGate gate, ITestOutputHelper output)
         Assert.Equal("boot-status", await session.FocusedIdAsync());
     }
 
-    /// <summary>Reload really reloads: the document is replaced, and the failure state comes back.</summary>
+    /// <summary>Reload really reloads: location.reload() ran, and the failure state comes back.</summary>
+    /// <remarks>
+    /// <b>A replaced document is not the assertion.</b> Waiting for a window mark to vanish proves a new
+    /// document arrived and nothing more - and the control is <c>&lt;a href="."&gt;</c>, so stripping the
+    /// watchdog's onclick and letting the href navigate to "." would replace the document and clear the
+    /// mark in exactly the same way. The navigation TYPE is what tells a reload from any other navigation,
+    /// and <c>location.reload()</c> is what index.html's watchdog promises, so that is what is asserted.
+    /// </remarks>
     [BrowserFact]
     public async Task ReloadReloadsTheDocument()
     {
@@ -99,11 +106,17 @@ public class BootFailureTests(BrowserGate gate, ITestOutputHelper output)
 
         await page.Locator("#blazor-error-ui .reload").ClickAsync();
 
-        // The mark cannot survive a reload, and nothing else on this page removes it. Waiting on the mark
-        // rather than on a navigation event means this cannot pass because of a navigation that was not one.
+        // The mark cannot survive a new document, and nothing else on this page removes it, so this cannot
+        // pass without a navigation. It is not enough on its own - see the remarks - which is what the
+        // navigation type below is for.
         await page.WaitForFunctionAsync("() => window.a11yReloadMark !== true");
-
         await page.Locator("#boot-status.boot-failure").WaitForAsync();
+
+        var navigation = await page.EvaluateAsync<string>(Scripts.NavigationType);
+        output.WriteLine("navigation type after Reload: " + navigation);
+
+        Assert.Equal("reload", navigation);
+
         Assert.Equal("block", await page.EvaluateAsync<string>(Scripts.DisplayOf, "blazor-error-ui"));
     }
 

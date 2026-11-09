@@ -94,7 +94,12 @@ internal sealed class SiteServer : IAsyncDisposable
             return null;   // an invalid character in the path is simply not a file here
         }
 
-        if (!candidate.StartsWith(root, StringComparison.OrdinalIgnoreCase)) return null;
+        // With the trailing separator, or "…/wwwroot-anything" satisfies a prefix test on "…/wwwroot".
+        var prefix = root.EndsWith(Path.DirectorySeparatorChar)
+            ? root
+            : root + Path.DirectorySeparatorChar;
+
+        if (!candidate.StartsWith(prefix, StringComparison.OrdinalIgnoreCase)) return null;
 
         return File.Exists(candidate) ? candidate : null;
     }

@@ -188,14 +188,35 @@ internal static class Scripts
     /// Asserted against the DOM because Playwright's own Locator.IsDisabledAsync reports an aria-disabled
     /// button as disabled, which is its actionability heuristic and not what the markup says.
     /// </summary>
+    /// <remarks>
+    /// It RESTORES focus afterwards. ExpectPagerAsync runs this immediately before every Ready-state scan,
+    /// so without the restore a probe named "stays focusable" would be the thing deciding where focus is
+    /// for the scan that follows. Harmless for axe, which reads no focus, but a measurement that quietly
+    /// changes the state it measures is not one to leave lying about.
+    /// </remarks>
     public const string TakesFocusAndIsNotDisabled = """
         label => {
           const buttons = Array.from(document.querySelectorAll("nav.pager button"));
           const el = buttons.find(b => (b.textContent || "").trim() === label);
           if (!el) return false;
           if (el.hasAttribute("disabled") || el.disabled) return false;
+          const was = document.activeElement;
           el.focus();
-          return document.activeElement === el;
+          const took = document.activeElement === el;
+          if (was instanceof HTMLElement) was.focus(); else el.blur();
+          return took;
+        }
+        """;
+
+    /// <summary>
+    /// How this document was navigated to, from its Navigation Timing entry: "reload", "navigate",
+    /// "back_forward" or "prerender". A document replaced by following a link reports "navigate"; only
+    /// location.reload(), or the browser's own reload control, reports "reload".
+    /// </summary>
+    public const string NavigationType = """
+        () => {
+          const entry = performance.getEntriesByType("navigation")[0];
+          return entry ? entry.type : "(no navigation entry)";
         }
         """;
 

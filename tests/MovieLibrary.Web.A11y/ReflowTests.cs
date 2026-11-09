@@ -8,17 +8,21 @@ namespace MovieLibrary.Web.A11y;
 /// </summary>
 /// <remarks>
 /// <para>
-/// <b>ONLY 320x256 IS NORMATIVE.</b> SC 1.4.10 Reflow, Level AA, is content at 1280x1024 zoomed to 400%,
-/// which for vertically-scrolling content is 320 CSS px wide <b>and 256 CSS px tall</b>. The height is half
-/// the criterion and is the half that gets forgotten. The other four sizes below are a HOUSE RULE - "it must
-/// work on phones and tablets" - and a failure at 768x1024 must never be reported as a conformance failure.
-/// Each case says which it is, and so does the failure message.
+/// <b>ONLY 320x256 IS NORMATIVE.</b> SC 1.4.10 Reflow, Level AA, asks for no scrolling in two dimensions
+/// at <b>320 CSS px wide for vertically scrolling content</b> and <b>256 CSS px tall for horizontally
+/// scrolling content</b> - two clauses, each naming one dimension, and the 256 is the one that gets
+/// forgotten. 320x256 is the viewport the criterion's Understanding document derives from a 1280x1024
+/// starting viewport at 400% zoom, which is why both numbers are tested together here: this app scrolls
+/// vertically, so it is the 320 that binds, and the 256 is the height that zoom leaves to it. The other
+/// four sizes below are a HOUSE RULE - "it must work on phones and tablets" - and a failure at 768x1024
+/// must never be reported as a conformance failure. Each case says which it is, and so does the failure
+/// message.
 /// </para>
 /// </remarks>
 [Collection(BrowserCollection.Name)]
 public class ReflowTests(BrowserGate gate, ITestOutputHelper output)
 {
-    /// <summary>The normative Reflow viewport: 1280x1024 at 400% zoom.</summary>
+    /// <summary>The viewport a 1280x1024 starting viewport leaves at 400% zoom. See the class remarks.</summary>
     private const int NormativeWidth = 320;
 
     private const int NormativeHeight = 256;

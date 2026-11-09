@@ -1,3 +1,4 @@
+using System.Globalization;
 using Microsoft.Playwright;
 using MovieLibrary.Web.A11y.Harness;
 using Xunit.Abstractions;
@@ -163,12 +164,18 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         await session.Page.GetByRole(AriaRole.Button, new PageGetByRoleOptions { Name = "Next" }).ClickAsync();
         await session.Page.WaitForFunctionAsync(
             "() => document.querySelector(\".pager span\")?.textContent?.startsWith(\"Page 2 \") === true");
-        // Built from the fixture's own numbers, and the context pins en-US so that the grouping separator
-        // is decided here rather than by whatever locale the runner happens to carry. The app taking its
-        // culture from the browser is deliberate behaviour that MoviesGridTests covers on its own.
-        await session.AnnouncedAsync("status-announcer",
-            $"Page 2 of {Catalogue.Pages}. Showing {Catalogue.PageSize + 1} to {Catalogue.PageSize * 2} "
-            + $"of {Catalogue.Records:N0} titles.");
+        // Built from the fixture's own numbers, and formatted in en-US ON BOTH SIDES. BrowserGate pins the
+        // context's locale to en-US, so the app groups 1,456 that way whatever machine this runs on - but
+        // an interpolated {Catalogue.Records:N0} formats in the RUNNER's culture, which on ubuntu-latest
+        // happens to agree and on a de-DE machine would expect "1.456" and fail a correct app. The app
+        // taking its culture from the browser is deliberate behaviour that MoviesGridTests covers on its
+        // own; the gate pins the browser and must then speak the same language back.
+        var spoken = CultureInfo.GetCultureInfo("en-US");
+
+        await session.AnnouncedAsync("status-announcer", string.Format(
+            spoken,
+            "Page 2 of {0}. Showing {1} to {2} of {3:N0} titles.",
+            Catalogue.Pages, Catalogue.PageSize + 1, Catalogue.PageSize * 2, Catalogue.Records));
 
         await ExpectPagerAsync(session, previousAtBound: false, nextAtBound: false);
         await session.GridAsync();
