@@ -60,8 +60,20 @@ public class RouteScanTests(BrowserGate gate, ITestOutputHelper output)
         await SettledAsync(session);
 
         var scan = await AxeScan.OfAsync(session.Page, $"booted at {address}", output);
-        scan.MustBeClean();
+
+        // Rule T1 from the applicability side, per address. Every booted page has the skip link and the
+        // nav drawer's li elements; link-in-text-block has a subject only where a link sits inside a block
+        // of prose, which in Part A is the not-found page's "Back to the library" and nothing on the films
+        // page. Measured, not assumed. Naming it per address means the day the films page gains an in-prose
+        // link this scan starts covering it, and the day the not-found page loses its link this scan says
+        // so instead of quietly covering one criterion less than it reads as covering.
+        scan.MustBeClean(InProse(address)
+            ? ["skip-link", "listitem", "link-in-text-block"]
+            : ["skip-link", "listitem"]);
     }
+
+    /// <summary>Whether this address renders a link inside a block of prose. Both go to NotFound.razor.</summary>
+    private static bool InProse(string address) => address is "/not-found" or Site.UnmatchedUrl;
 
     /// <summary>
     /// Waits for the address to have finished becoming whatever it becomes, so the scan cannot run against a

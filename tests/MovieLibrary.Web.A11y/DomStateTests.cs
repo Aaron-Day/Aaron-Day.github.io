@@ -24,6 +24,14 @@ namespace MovieLibrary.Web.A11y;
 public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
 {
     /// <summary>
+    /// The rules every state below has a subject for beyond AxeScan's own always-applicable set: the skip
+    /// link, which only a booted page has, and the nav drawer's own li elements. Rule T1 from the
+    /// applicability side - a rule that went inapplicable stops covering anything while the scan stays
+    /// green. The boot-failure shell has neither and so names neither.
+    /// </summary>
+    private static readonly string[] Booted = ["skip-link", "listitem"];
+
+    /// <summary>
     /// State 1: Loading. The only state with the loading sentence on screen and its spoken form in
     /// #status-announcer, and the only one where the state container holds a message with no control in it.
     /// </summary>
@@ -41,7 +49,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         Assert.Equal(0, await session.Page.Locator("button.try-again").CountAsync());
 
         var scan = await AxeScan.OfAsync(session.Page, "loading", output);
-        scan.MustBeClean();
+        scan.MustBeClean(Booted);
     }
 
     /// <summary>
@@ -78,7 +86,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         Assert.Equal(string.Empty, await session.Page.Locator("#alert-region").InnerTextAsync());
 
         var scan = await AxeScan.OfAsync(session.Page, "failed, focus on the state container", output);
-        scan.MustBeClean();
+        scan.MustBeClean(Booted);
     }
 
     /// <summary>
@@ -119,7 +127,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         Assert.NotEqual("0px", border);
 
         var scan = await AxeScan.OfAsync(session.Page, "failed, retry in flight", output);
-        scan.MustBeClean();
+        scan.MustBeClean(Booted);
     }
 
     /// <summary>
@@ -138,7 +146,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         Assert.Equal("Page 1 of " + Catalogue.Pages, await PageLabelAsync(session));
 
         var scan = await AxeScan.OfAsync(session.Page, "ready, page 1, 60 tiles", output);
-        scan.MustBeClean();
+        scan.MustBeClean(Booted);
     }
 
     /// <summary>
@@ -166,7 +174,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         await session.GridAsync();
 
         var scan = await AxeScan.OfAsync(session.Page, "ready, a middle page, both pager buttons live", output);
-        scan.MustBeClean();
+        scan.MustBeClean(Booted);
     }
 
     /// <summary>
@@ -200,7 +208,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
 
         var scan = await AxeScan.OfAsync(
             session.Page, $"ready, the last page, {Catalogue.OnTheLastPage} tiles", output);
-        scan.MustBeClean();
+        scan.MustBeClean(Booted);
     }
 
     /// <summary>
@@ -222,7 +230,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         await session.Page.Locator("ul#nav-links a").First.WaitForAsync();
 
         var scan = await AxeScan.OfAsync(session.Page, "drawer open at 320x812", output);
-        scan.MustBeClean();
+        scan.MustBeClean(Booted);
     }
 
     /// <summary>
@@ -252,7 +260,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         await session.AnnouncedAsync("route-announcer", "Films");
 
         var scan = await AxeScan.OfAsync(session.Page, "after a client-side navigation", output);
-        scan.MustBeClean();
+        scan.MustBeClean(Booted);
     }
 
     /// <summary>
@@ -284,7 +292,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
             await session.Page.EvaluateAsync<string>(Scripts.DisplayOf, "blazor-error-ui"));
 
         var scan = await AxeScan.OfAsync(session.Page, "error bar revealed on a booted page", output);
-        scan.MustBeClean();
+        scan.MustBeClean(Booted);
     }
 
     /// <summary>
@@ -312,7 +320,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         Assert.Equal(string.Empty, await images.First.GetAttributeAsync("alt"));
 
         var scan = await AxeScan.OfAsync(session.Page, "ready, one real poster among sixty tiles", output);
-        scan.MustBeClean();
+        scan.MustBeClean(Booted);
     }
 
     private static Task<string> PageLabelAsync(PageSession session) =>

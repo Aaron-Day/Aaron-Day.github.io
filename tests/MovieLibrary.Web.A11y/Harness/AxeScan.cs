@@ -16,8 +16,23 @@ internal sealed class AxeScan
     /// nor anything a reader could predict from a brief that talks about tags.
     /// <para>
     /// wcag22a carries no axe rule today. It costs nothing and picks up the ones that follow: WCAG 2.2
-    /// introduced two Level A criteria. Every aaa tag is left out, which is correct for a Level AA target -
-    /// including, specifically, the one that would otherwise assert 44x44 as though a criterion required it.
+    /// introduced two Level A criteria. Every aaa tag is left out, which is correct for a Level AA target:
+    /// axe-core 4.10.1 carries exactly three wcag2aaa rules - color-contrast-enhanced, which is SC 1.4.6
+    /// Contrast (Enhanced), identical-links-same-purpose and meta-refresh-no-exceptions - and
+    /// color-contrast-enhanced is the one this list is deliberately not asking for. It is NOT a 44x44 rule:
+    /// axe implements nothing at all for SC 2.5.5 Target Size (Enhanced), and a sentence here used to claim
+    /// a wcag2aaa rule that asserts 44x44, which does not exist. The 44px figure is a house goal and lives
+    /// in TouchTargetReportTests, which asserts nothing.
+    /// </para>
+    /// <para>
+    /// <b>target-size runs here only because this list is non-empty.</b> The rule ships
+    /// <c>enabled: false</c> in axe-core 4.10.1. axe's own tag matcher resolves to
+    /// <c>include.some(t =&gt; rule.tags.includes(t)) || (include.length === 0 &amp;&amp; rule.enabled !==
+    /// false)</c>: it consults <c>rule.enabled</c> SOLELY when the include list is empty, so with a tag list
+    /// present a tag match alone is sufficient. The brief's claim that the tag list enables target-size is
+    /// correct, and this is the implementation detail it rests on rather than the rule's own default. It is
+    /// also the strongest argument for <see cref="AlwaysApplicable"/> below: SC 2.5.8 is covered in this
+    /// project by one rule, switched on by that one mechanism, over a subject set axe alone decides.
     /// </para>
     /// </summary>
     private static readonly string[] Tags =
@@ -77,6 +92,44 @@ internal sealed class AxeScan
         "target-size",
     };
 
+    /// <summary>
+    /// Rule T1 reached from the applicability side: the rules that must have had a SUBJECT in every state
+    /// this project scans.
+    /// </summary>
+    /// <remarks>
+    /// <see cref="ProvedItRan"/> is a WHOLE-SCAN floor - some rule evaluated, some rule passed - and it
+    /// cannot see one named rule quietly going inapplicable. The case that matters most is target-size: it
+    /// is this project's only coverage of SC 2.5.8 Target Size (Minimum), Level AA, it matches through
+    /// axe's own widget-not-inline-matches, which stops matching if the controls change shape, and a scan
+    /// in which it matched nothing still reports clean while the project still reads as gating 2.5.8. The
+    /// same argument holds for the eight best-practice rules promoted above, and for link-in-text-block,
+    /// which is already inapplicable on "/" and "/movies".
+    /// <para>
+    /// Each of these has a subject in every state this project scans, measured one state at a time rather
+    /// than assumed. Rules only some states have - skip-link and listitem, which the boot-failure shell has
+    /// neither of, and link-in-text-block, which only the not-found page has - are named by the caller, per
+    /// state, so that each scan says what it actually covered.
+    /// </para>
+    /// <para>
+    /// axe's <c>list</c> rule is deliberately in no list here. It was measured inapplicable in all fifteen
+    /// states, and correctly so: both of this app's lists declare <c>role="list"</c> - PosterGrid says why,
+    /// and NavMenu does the same - while the rule's own matcher is <c>no-role-matches</c>. The subjects are
+    /// the <c>li</c> elements instead, through <c>listitem</c>, which the caller names per state.
+    /// </para>
+    /// </remarks>
+    private static readonly string[] AlwaysApplicable =
+    [
+        "target-size",
+        "color-contrast",
+        "region",
+        "landmark-one-main",
+        "landmark-unique",
+        "page-has-heading-one",
+        "heading-order",
+        "empty-heading",
+        "tabindex",
+    ];
+
     private readonly string state;
     private readonly AxeResult result;
     private readonly ITestOutputHelper output;
@@ -120,9 +173,14 @@ internal sealed class AxeScan
     /// was markup.
     /// </para>
     /// </remarks>
-    public void MustBeClean()
+    /// <param name="alsoApplicable">
+    /// Rule ids this state has subjects for over and above <see cref="AlwaysApplicable"/>. Every one of
+    /// them must have had a subject, so naming a rule here is a claim about this state's own markup.
+    /// </param>
+    public void MustBeClean(params string[] alsoApplicable)
     {
         ProvedItRan();
+        EveryNamedRuleHadASubject(alsoApplicable);
 
         var asserted = result.Violations.Where(IsAsserted).ToList();
         var undecided = Undecided();
@@ -152,6 +210,42 @@ internal sealed class AxeScan
     /// </summary>
     private List<AxeResultItem> Undecided() =>
         result.Incomplete.Where(i => IncompleteIsAFailure.Contains(i.Id)).ToList();
+
+    /// <summary>
+    /// Every rule in <see cref="AlwaysApplicable"/>, and every one this state was told it has, appeared in
+    /// Passes, Violations or Incomplete - which is to say axe found something to run it against.
+    /// </summary>
+    /// <remarks>
+    /// A rule that came back INAPPLICABLE contributed nothing, and the scan still reports clean. See
+    /// <see cref="AlwaysApplicable"/> for why target-size makes this more than a tidiness check.
+    /// </remarks>
+    private void EveryNamedRuleHadASubject(IEnumerable<string> alsoApplicable)
+    {
+        var applicable = Applicable();
+
+        var expected = AlwaysApplicable.Concat(alsoApplicable)
+            .Distinct(StringComparer.Ordinal)
+            .OrderBy(id => id, StringComparer.Ordinal)
+            .ToList();
+
+        var absent = expected.Where(id => !applicable.Contains(id)).ToList();
+
+        Assert.True(absent.Count == 0,
+            $"In the {state} state axe had no subject for {string.Join(", ", absent)}, so the rule(s) came "
+            + "back INAPPLICABLE and the scan reports clean while covering nothing they would have covered. "
+            + "ProvedItRan cannot see this: it is satisfied by any rule running at all. target-size in "
+            + "particular is this project's ONLY coverage of SC 2.5.8 Target Size (Minimum), Level AA, and "
+            + "it matches through axe's own widget-not-inline-matches, which stops matching when the "
+            + "controls change shape - at which point the scan stays green and the project still reads as "
+            + "gating 2.5.8. Either the markup lost the elements the rule looks at, in which case say so "
+            + "here rather than letting a green scan imply the coverage, or the state driver scanned a DOM "
+            + "that is not the one this test names.");
+    }
+
+    /// <summary>Every rule axe found a subject for, which is every array but Inapplicable.</summary>
+    private HashSet<string> Applicable() =>
+        new(result.Passes.Concat(result.Violations).Concat(result.Incomplete).Select(i => i.Id),
+            StringComparer.Ordinal);
 
     /// <summary>
     /// Rule T1, applied to a whole-page scan: a scan whose subject set was empty reports coverage it does not
@@ -196,6 +290,10 @@ internal sealed class AxeScan
               result.Violations.Where(i => !IsAsserted(i)));
         Lines("incomplete treated as failures", result.Incomplete.Where(i => IncompleteIsAFailure.Contains(i.Id)));
         Lines("other incomplete (printed only)", result.Incomplete.Where(i => !IncompleteIsAFailure.Contains(i.Id)));
+
+        output.WriteLine(
+            "applicable (axe found a subject): "
+            + string.Join(", ", Applicable().OrderBy(i => i, StringComparer.Ordinal)));
 
         output.WriteLine(
             "inapplicable (printed only): "
