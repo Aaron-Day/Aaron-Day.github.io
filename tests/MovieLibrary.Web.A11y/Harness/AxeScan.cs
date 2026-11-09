@@ -110,6 +110,15 @@ internal sealed class AxeScan
     /// There is deliberately NO baseline file. Two page types of near-static markup belong at zero, and a
     /// baseline committed before any finding exists is a place to park real defects where CI stops mentioning
     /// them. A violation that genuinely cannot be fixed is a decision for the owner, not for this file.
+    /// <para>
+    /// <b>And no exemption mechanism either, where there used to be one.</b> MustBeCleanExcept named its
+    /// rules at the call site, refused outright any rule carrying a WCAG tag, and failed when an exemption
+    /// stopped being needed - and it had exactly one caller, the boot-failure shell with no main landmark
+    /// and no h1. index.html now gives that shell both, the state scans at zero, and the exemption expired
+    /// on its own. The mechanism went with it rather than waiting for the next inconvenient state to reuse
+    /// it: this project's brief said to stop and ask rather than invent one, and the answer to the asking
+    /// was markup.
+    /// </para>
     /// </remarks>
     public void MustBeClean()
     {
@@ -143,91 +152,6 @@ internal sealed class AxeScan
     /// </summary>
     private List<AxeResultItem> Undecided() =>
         result.Incomplete.Where(i => IncompleteIsAFailure.Contains(i.Id)).ToList();
-
-    /// <summary>
-    /// The undecided half of the assertion on its own, for the exemption path, which has already dealt with
-    /// the violations. An exemption may never reach into this: see IncompleteIsAFailure for why these three
-    /// cannot be read as passes.
-    /// </summary>
-    private void MustBeDecided()
-    {
-        var undecided = Undecided();
-        if (undecided.Count == 0) return;
-
-        var message = new StringBuilder();
-        message.Append("axe could not decide ").Append(undecided.Count)
-               .Append(" result(s) in the ").Append(state)
-               .AppendLine(" state that this project treats as failures.").AppendLine();
-
-        foreach (var item in undecided) Describe(message, "INCOMPLETE", item);
-
-        Assert.Fail(message.ToString());
-    }
-
-    /// <summary>
-    /// The same assertion, less a named set of rule ids that this state is not the app and so is not held to.
-    /// </summary>
-    /// <param name="why">Why the exemption is sound. Printed, and repeated in the failure message.</param>
-    /// <param name="ruleIds">
-    /// The exempt rules. Every one of them MUST still fire, or this fails: the exemption is self-expiring, so
-    /// the day the markup changes the test says to delete it rather than quietly covering less than it reads
-    /// as covering. That is rule T2 in the shape a whole-page scan can honour.
-    /// </param>
-    /// <remarks>
-    /// This is NOT a baseline mechanism and must not be used as one. There is no file, nothing accumulates,
-    /// the exemption is per state, it names the rules in the test that uses it, and it fails when it stops
-    /// being needed. It exists for one case: a document that never became an application cannot be held to
-    /// best-practice advice about an application's document structure. A WCAG-tagged rule may never be passed
-    /// in here, and is refused below.
-    /// </remarks>
-    public void MustBeCleanExcept(string why, params string[] ruleIds)
-    {
-        ProvedItRan();
-
-        var exempt = new HashSet<string>(ruleIds, StringComparer.Ordinal);
-        output.WriteLine($"exempt in the {state} state: {string.Join(", ", ruleIds)} - {why}");
-
-        var wcagExempt = result.Violations
-            .Concat(result.Passes).Concat(result.Incomplete).Concat(result.Inapplicable)
-            .Where(i => exempt.Contains(i.Id) && i.Tags.Any(WcagTags.Contains))
-            .Select(i => i.Id)
-            .Distinct()
-            .ToList();
-
-        Assert.True(wcagExempt.Count == 0,
-            "A rule carrying a WCAG tag cannot be exempted from a scan: "
-            + string.Join(", ", wcagExempt)
-            + ". Exemptions here are only for best-practice advice that does not apply to a document which "
-            + "never became an application.");
-
-        var unexpected = result.Violations.Where(IsAsserted).Where(i => !exempt.Contains(i.Id)).ToList();
-        var stale = exempt.Where(id => result.Violations.All(v => v.Id != id)).OrderBy(id => id, StringComparer.Ordinal).ToList();
-
-        if (unexpected.Count == 0 && stale.Count == 0)
-        {
-            MustBeDecided();
-            return;
-        }
-
-        var message = new StringBuilder();
-
-        if (unexpected.Count > 0)
-        {
-            message.Append("axe found ").Append(unexpected.Count)
-                   .Append(" asserted violation(s) in the ").Append(state)
-                   .AppendLine(" state that the exemption does not cover.").AppendLine();
-
-            foreach (var item in unexpected) Describe(message, "VIOLATION", item);
-        }
-
-        if (stale.Count > 0)
-            message.Append("The exemption for ").Append(string.Join(", ", stale))
-                   .Append(" is stale: ").Append(state)
-                   .AppendLine(" no longer violates it, so delete it from the call. The exemption is written "
-                               + "to expire on its own for exactly this reason - it was: " + why);
-
-        Assert.Fail(message.ToString());
-    }
 
     /// <summary>
     /// Rule T1, applied to a whole-page scan: a scan whose subject set was empty reports coverage it does not

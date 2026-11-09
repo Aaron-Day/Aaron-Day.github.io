@@ -119,24 +119,17 @@ public class BootFailureTests(BrowserGate gate, ITestOutputHelper output)
 
         var scan = await AxeScan.OfAsync(session.Page, "boot failure, error bar visible", output);
 
-        // THE THREE EXEMPTIONS, AND WHY THIS STATE IS THE ONLY ONE THAT GETS ANY. Three of the eight
-        // best-practice rules this project promotes to hard failures are about an APPLICATION's document
-        // structure: one main landmark, one level-one heading, and every piece of content inside a landmark.
-        // The boot-failure page is not the application. Blazor never started, so MainLayout's <main>, its
-        // skip link and the page's h1 do not exist, and index.html's host document is three elements: the
-        // explanation, the error bar, and the TMDB attribution footer. None of the three rules carries a
-        // WCAG tag - MustBeCleanExcept refuses one that does - so nothing is being exempted from a
-        // conformance claim, and every one of the nine booted states still asserts all eight.
-        // Whether the boot shell SHOULD gain a <main> and an <h1> is a real question and a real
-        // improvement for someone navigating a failed boot by landmark. It is a change to Task 2's host
-        // page, not this task's, and the exemption below expires by itself the day it is made.
-        scan.MustBeCleanExcept(
-            "the boot shell is a host document that never became an application: no main landmark, no h1, "
-            + "and the one sentence it has sits outside any landmark. All three are best-practice advice "
-            + "about an application's structure and none carries a WCAG tag.",
-            "landmark-one-main",
-            "page-has-heading-one",
-            "region");
+        // NO EXEMPTION HERE, AND NO MECHANISM FOR ONE ANY MORE. This state used to violate three of the
+        // eight best-practice rules this project promotes to hard failures - landmark-one-main,
+        // page-has-heading-one and region - because Blazor never started, so MainLayout's <main>, its skip
+        // link and the page's h1 did not exist and index.html's host document was three loose elements.
+        // index.html now gives the shell a main landmark and an h1 of its own, inside #app so that Blazor's
+        // render removes them again, and this state measures 0 violations and 0 incomplete against exactly
+        // the rule set every other scan is held to. The named, self-expiring exemption that covered those
+        // three expired on its own the day that markup landed, which is what it was written to do, and
+        // AxeScan.MustBeCleanExcept went with it: a general-purpose exemption API, in a project whose brief
+        // said to stop and ask rather than invent one, should not outlive the single case it was for.
+        scan.MustBeClean();
     }
 
     /// <summary>
@@ -164,6 +157,13 @@ public class BootFailureTests(BrowserGate gate, ITestOutputHelper output)
         // Said again in halves, so a failure says which half moved: MainLayout's landmark is the part the
         // shell may never reproduce, whatever else it gains.
         Assert.Equal(0, await session.Page.Locator("#app main#main-content").CountAsync());
+
+        // And the other half of the pair, which is what makes this guard self-expiring rather than
+        // decorative: the shell really does carry a landmark and a heading of its own now, so the old
+        // "#app h1" gate WOULD match it. If these two ever go back to zero the guard above has stopped
+        // guarding anything and the selector can be simplified again - deliberately, not by accident.
+        Assert.Equal(1, await session.Page.Locator("#app main").CountAsync());
+        Assert.Equal(1, await session.Page.Locator("#app h1").CountAsync());
     }
 
     /// <summary>

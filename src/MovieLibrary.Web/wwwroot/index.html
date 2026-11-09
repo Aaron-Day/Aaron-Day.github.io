@@ -21,13 +21,31 @@
 
 <body>
     <div id="app">
-        <svg class="loading-progress" aria-hidden="true">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text" aria-hidden="true"></div>
-        <p id="boot-status" class="visually-hidden" role="status">Loading library</p>
-        <noscript>This library needs JavaScript. Turn it on and reload the page.</noscript>
+        <!-- A main landmark and a level-one heading for the one state in which NONE of the app exists: the
+             boot shell, and the boot-failure shell the watchdog below turns it into. Without them a reader
+             who lands on a failed boot has no landmark to jump to and no heading to navigate by, which is
+             the whole of what axe reported here.
+             INSIDE #app, which is what makes this safe. Blazor replaces the children of #app when it
+             renders, so both elements are gone the moment the app starts: there is never a second main
+             landmark, never a second h1, and App.razor's FocusOnNavigate Selector="#app h1" still finds
+             exactly the rendered page's own heading.
+             The id is deliberately NOT main-content. MainLayout owns that one, and the browser gate waits
+             on "#app main#main-content h1" precisely so that a shell carrying a landmark and a heading can
+             never be mistaken for a booted app - see PageSession.BootedSelector and the live guard in
+             BootFailureTests. Do not rename this to main-content.
+             Visually hidden because the boot screen is the spinner and nothing else; the heading is for the
+             accessibility tree, not for the page. The noscript rule in <head> hides the spinner, its text
+             and #boot-status, so a visitor without JavaScript still sees only the noscript sentence. -->
+        <main id="boot-main">
+            <h1 class="visually-hidden">Film and TV library</h1>
+            <svg class="loading-progress" aria-hidden="true">
+                <circle r="40%" cx="50%" cy="50%" />
+                <circle r="40%" cx="50%" cy="50%" />
+            </svg>
+            <div class="loading-progress-text" aria-hidden="true"></div>
+            <p id="boot-status" class="visually-hidden" role="status">Loading library</p>
+            <noscript>This library needs JavaScript. Turn it on and reload the page.</noscript>
+        </main>
     </div>
 
     <div id="blazor-error-ui" role="alert">
