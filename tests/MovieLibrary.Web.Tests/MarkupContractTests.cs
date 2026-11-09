@@ -175,8 +175,13 @@ public class MarkupContractTests
     /// h1-h2-h3-h2 outline it must not flag.
     /// </remarks>
     [Fact(Skip = "No route renders a second heading, so there is no adjacent heading pair in the whole app "
-                 + "to compare -- the rule would pass over an empty set. Task 6 adds the films page's "
-                 + "section headings; remove this Skip then. "
+                 + "to compare -- the rule would pass over an empty set. NO TASK IS NAMED HERE, ON PURPOSE. "
+                 + "This message used to say Task 6 would add the films page's section headings. Task 6 "
+                 + "added none: its tile wall is a list and its pager is a navigation landmark, and a "
+                 + "heading invented to turn this contract on would be markup added for a test rather than "
+                 + "for a user. Task 8's filter panel is fieldset and legend in the plan rather than "
+                 + "headings, so there is no task this can honestly be re-pointed at today. Remove the Skip "
+                 + "when a second heading arrives for a reason of its own. "
                  + "TheHeadingOrderContractIsStillSkippedForTheRightReason fails when that happens.")]
     public void HeadingLevelsNeverSkipALevel()
     {
@@ -466,5 +471,88 @@ public class MarkupContractTests
             + "longer vacuous. Remove its Skip and delete this guard. The reference(s): "
             + string.Join(" | ", failable.Select(
                 r => r.Attribute + "=\"" + r.Id + "\" on " + MarkupRules.Describe(r.Element))));
+    }
+
+    /// <remarks>
+    /// WHETHER THE CONTRACTS ABOVE ACTUALLY SEE THE FILMS PAGE, measured rather than assumed. Every rule in
+    /// this class renders the app through <c>AnnouncerTestExtensions.AddAnnouncer</c>, so whether the films
+    /// page reaches READY inside these scopes depends entirely on what that helper registers. If it ever
+    /// stops producing a catalogue, every route scope renders the FAILED state instead, no tile and no pager
+    /// appears anywhere, <c>EveryImgHasAnAltAttributeEvenIfEmpty</c> falls back to its one subject -- the
+    /// TMDB logo in index.html -- and it stays green while reading as though it covered sixty posters. That
+    /// is T1 vacuity one level up from the one T1 was written for, and no assertion in this file would say
+    /// so.
+    /// <para>
+    /// MEASURED, before and after this task. The Ready scopes did reach Ready: Task 5's CatalogOutcome
+    /// machinery works. But the stub catalogue carried no poster path on either film, so the films page
+    /// emitted no image at all and the img contracts' subject count really was 1 for the whole app. One
+    /// poster on one of the two fixture films took it to 3, and the other film keeps the placeholder branch
+    /// in the same scopes. The accessible-name and nested-widget contracts went from 25 subjects to 29: two
+    /// pager buttons in each of the two Ready scopes.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void TheImageAndControlContractsCanSeeTheFilmsPagesOwnMarkup()
+    {
+        TheRouteSetIsWhatItShouldBe();
+
+        var ready = RouteOnlyScopes().Where(s => s.Root.QuerySelector("ul.grid") is not null).ToList();
+
+        // Two, and exactly two: "/" and "/movies" are both Movies.razor. The fifth scope is the films page
+        // with a FAILED fetch and must have no grid in it at all -- if it did, the grid would be rendering
+        // over a fetch that produced nothing.
+        Assert.Equal(2, ready.Count);
+
+        foreach (var scope in ready)
+        {
+            var list = scope.Root.QuerySelector("ul.grid")!;
+            var items = list.Children.Where(c => c.LocalName == "li").ToList();
+
+            Assert.Equal("list", list.GetAttribute("role"));
+            Assert.NotEmpty(items);
+            Assert.Equal(scope.Root.QuerySelectorAll(".tile").Length, items.Count);
+
+            var pager = scope.Root.QuerySelector("nav.pager");
+            Assert.NotNull(pager);
+
+            var buttons = pager.QuerySelectorAll("button");
+            Assert.Equal(2, buttons.Length);
+
+            // The point of the whole test: these two controls are in the subject set that
+            // EveryInteractiveElementHasAnAccessibleName and NoFocusableWidgetIsNestedInsideAnother loop
+            // over. A pager the rules cannot see is a pager they do not check.
+            var interactive = MarkupRules.InteractiveElements(scope.Root);
+            Assert.All(buttons, b => Assert.Contains(b, interactive));
+        }
+
+        var posters = EveryScope()
+            .SelectMany(s => MarkupRules.Images(s.Root))
+            .Where(img => img.Closest(".tile") is not null)
+            .ToList();
+
+        // One per Ready scope, from the one fixture film that has a poster path. Exact rather than a floor:
+        // this is the number the img contracts gained, and it is the number that goes back to zero if the
+        // fixture loses its poster or the tile stops emitting an image.
+        Assert.Equal(2, posters.Count);
+
+        var images = EveryScope().Sum(s => MarkupRules.Images(s.Root).Count);
+        var controls = EveryScope().Sum(s => MarkupRules.InteractiveElements(s.Root).Count);
+
+        // Floors, with the measurement in the message, because Tasks 7 and 8 only add to both. The numbers
+        // matter in the other direction: a shortfall means a scope stopped reaching Ready, not that the site
+        // shrank, and the two img contracts are the ones that go quietly vacuous when it does.
+        Assert.True(images >= 3,
+            "The img contracts have " + images + " subjects across " + EveryScope().Count + " scopes. Three "
+            + "exist: one poster on each of the two Ready scopes, plus index.html's TMDB logo. Fewer means "
+            + "the films page is not reaching its Ready state in these scopes, or AddAnnouncer's stub "
+            + "catalogue has lost its poster path -- in either case the poster contracts are checking "
+            + "nothing while reading as covered.");
+
+        Assert.True(controls >= 29,
+            "The accessible-name and nested-widget contracts have " + controls + " subjects. Twenty-nine "
+            + "were measured when Task 6 landed: four shell controls on every route, the in-prose link on "
+            + "the two not-found addresses, Try again in the failed scope, two pager buttons in each of the "
+            + "two Ready scopes, and Reload and Dismiss on the host page. Fewer means a scope stopped "
+            + "rendering what it used to.");
     }
 }

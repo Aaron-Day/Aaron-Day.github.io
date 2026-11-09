@@ -28,10 +28,19 @@ internal static class AnnouncerTestExtensions
     /// <summary>
     /// A tiny catalogue, inline rather than read from tests/fixtures, because 320 contracts should not each
     /// read a file. PublishedShapeTests is where the real published shape is pinned.
+    /// <para>
+    /// ONE OF THE TWO HAS A POSTER PATH AND THE OTHER DOES NOT, and that asymmetry is load-bearing rather
+    /// than decorative. Every markup contract that runs through <c>MarkupContractTests</c> renders the app
+    /// from this catalogue, so with no <c>p</c> on either film the films page emits no image at all: the img
+    /// contracts' subject count stays at 1 -- index.html's TMDB logo -- and they read as covering 60
+    /// posters while covering none of them. With one poster and one without, both tile branches are in
+    /// every Ready scope. <c>TheImageAndControlContractsCanSeeTheFilmsPagesOwnMarkup</c> is what fails if
+    /// the poster is ever removed from here.
+    /// </para>
     /// </summary>
     private const string TwoFilms =
         """
-        [{"i":807,"k":"807-110","t":"Se7en","y":1995,"rt":110,"g":[],"ag":"Thriller","vote":8.4,"dir":[],"cast":[],"mc":0.95},
+        [{"i":807,"k":"807-110","t":"Se7en","y":1995,"rt":110,"p":"/se7en.jpg","g":[],"ag":"Thriller","vote":8.4,"dir":[],"cast":[],"mc":0.95},
          {"i":0,"k":"u-d2f1c6e2","t":"An Unlisted Film","rt":101,"g":[],"ag":"Documentary","vote":0,"dir":[],"cast":[],"mc":0}]
         """;
 
