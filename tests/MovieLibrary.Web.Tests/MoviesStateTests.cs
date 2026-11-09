@@ -3,6 +3,7 @@ using Bunit;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using Microsoft.Extensions.DependencyInjection;
+using MovieLibrary.Core.Models;
 using MovieLibrary.Web.Models;
 using MovieLibrary.Web.Pages;
 using MovieLibrary.Web.Services;
@@ -801,6 +802,72 @@ public class MoviesStateTests : BunitContext
         Assert.Equal("The library is empty.", Movies.EmptyLibrary);
         Assert.DoesNotContain("filter", Movies.EmptyLibrary, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("match", Movies.EmptyLibrary, StringComparison.OrdinalIgnoreCase);
+    }
+
+    // ============================================================ the catalogue stub the whole suite shares
+
+    /// <remarks>
+    /// Not about the page. <c>AnnouncerTestExtensions</c> is where every bUnit test in this suite registers
+    /// its catalogue, and it scripted movies.json alone -- so the first Task 6 or 7 component to call
+    /// <c>GetMetaAsync()</c> would have hit the stub's unscripted-path guard, had the refusal swallowed by
+    /// <c>CatalogService</c>'s broad catch, and rendered a FAILED meta (no build date, no genre names) with
+    /// every test in the suite still green. An outcome now covers both documents.
+    /// <para>
+    /// This is also what makes the meta script a failable subject rather than a decorative one, rule T1:
+    /// nothing else in this suite reads meta yet, so without this test the responder could be deleted with
+    /// nothing going red.
+    /// </para>
+    /// </remarks>
+    [Theory]
+    [InlineData(CatalogOutcome.Ready, CatalogState.Ready)]
+    [InlineData(CatalogOutcome.Failed, CatalogState.Failed)]
+    public async Task TheSharedCatalogueStubAnswersForMetaAndNotOnlyForMovies(
+        CatalogOutcome outcome, CatalogState expected)
+    {
+        this.AddAnnouncer(outcome);
+
+        var meta = await Services.GetRequiredService<CatalogService>().GetMetaAsync();
+
+        Assert.Equal(expected, meta.State);
+        Assert.Equal(CatalogMeta.TmdbAttribution, meta.Value.Attribution);   // m3, on both paths
+        if (expected == CatalogState.Ready) Assert.Equal(2, meta.Value.MovieCount);   // the same two films
+    }
+
+    /// <remarks>
+    /// The other door into the helper, and the reason it needs its own test: a test that scripts its own
+    /// movies responses -- a retry -- goes through <c>AddAnnouncerAndCatalog</c>, whose meta script
+    /// <c>AddAnnouncer</c> overwrites. Without this the default is unfalsifiable (T1): deleting it leaves the
+    /// theory above green, because that one re-scripts meta itself.
+    /// </remarks>
+    [Fact]
+    public async Task AHandScriptedCatalogueStillAnswersForMeta()
+    {
+        var (_, stub) = this.AddAnnouncerAndCatalog(AnnouncerTestExtensions.Responder(CatalogOutcome.Ready));
+
+        var meta = await Services.GetRequiredService<CatalogService>().GetMetaAsync();
+
+        Assert.Equal(CatalogState.Ready, meta.State);
+        Assert.Empty(stub.Unscripted);
+    }
+
+    /// <remarks>
+    /// The "assert none occurred" half of the stub's unscripted-path guard, pointed at the page rather than at
+    /// the service. Today the page fetches movies.json and nothing else, so this is a guard rather than a
+    /// finding: the moment Task 6 or 7 adds a second document to a render, an unscripted one shows up here
+    /// instead of arriving as a silent Failed through <c>CatalogService</c>'s broad catch.
+    /// </remarks>
+    [Theory]
+    [InlineData(CatalogOutcome.Ready)]
+    [InlineData(CatalogOutcome.Failed)]
+    [InlineData(CatalogOutcome.NeverCompletes)]
+    public void RenderingThePageAsksForNothingTheStubWasNotScriptedFor(CatalogOutcome outcome)
+    {
+        var (_, stub) = this.AddAnnouncerAndCatalog(AnnouncerTestExtensions.Responder(outcome));
+        stub.Serves(StubCatalog.Meta, AnnouncerTestExtensions.MetaResponder(outcome));
+
+        this.RenderAppAt("/movies");
+
+        Assert.Empty(stub.Unscripted);
     }
 
     // ============================================================ criterion 5: WHERE the announcements are raised

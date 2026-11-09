@@ -11,9 +11,21 @@ namespace MovieLibrary.Web.Tests;
 /// both assertions about the number of requests, never about timing.
 /// </summary>
 /// <remarks>
+/// <para>
 /// Responders are consumed in order and the LAST one repeats, so "fail once, then succeed for ever" is two
 /// entries. A path with no script at all is a test that forgot to set one up, and says so rather than 404ing:
 /// a 404 would arrive as a plain fetch failure and the test would pass for the wrong reason.
+/// </para>
+/// <para>
+/// <b>But the throw alone was not a signal, which is why <see cref="Unscripted"/> exists.</b>
+/// <c>CatalogService.Load</c> catches broadly and on purpose -- nothing may escape to
+/// <c>#blazor-error-ui</c> -- so the guard's <see cref="InvalidOperationException"/> came back to the test as
+/// an ordinary <c>Failed</c>, and a test asserting <c>Failed</c> went green for the exact reason the guard's
+/// own message says must never happen. (<c>MetaIsCachedOnItsOwnTheSameWay</c> did.) The throw stays, because
+/// it is what stops the request; every unscripted path is also RECORDED, so a test can assert that its subject
+/// was reached through a scripted response rather than through a typo. <c>CatalogServiceTests</c> sweeps every
+/// stub it builds on the way out, so no author of a test in that file has to remember.
+/// </para>
 /// </remarks>
 internal sealed class StubCatalog : HttpMessageHandler
 {
@@ -26,6 +38,7 @@ internal sealed class StubCatalog : HttpMessageHandler
     private readonly object gate = new();
     private readonly Dictionary<string, List<Func<Task<HttpResponseMessage>>>> plan = new(StringComparer.Ordinal);
     private readonly List<string> asked = new();
+    private readonly List<string> unscripted = new();
 
     public StubCatalog Serves(string path, params Func<Task<HttpResponseMessage>>[] responders)
     {
@@ -37,6 +50,19 @@ internal sealed class StubCatalog : HttpMessageHandler
     public int RequestsFor(string path)
     {
         lock (gate) return asked.Count(a => string.Equals(a, path, StringComparison.Ordinal));
+    }
+
+    /// <summary>
+    /// Every path this handler was asked for that the test never scripted, in the order they arrived.
+    /// </summary>
+    /// <remarks>
+    /// Non-empty means a stub-authoring mistake, not a finding about the service: the guard refused the
+    /// request, the service's broad catch turned the refusal into <c>Failed</c>, and any assertion about a
+    /// failure passed without the subject ever being exercised. See the class remarks.
+    /// </remarks>
+    public IReadOnlyList<string> Unscripted
+    {
+        get { lock (gate) return unscripted.ToList(); }
     }
 
     /// <summary>A client bound to this handler, at an absolute base so the relative paths resolve.</summary>
@@ -60,10 +86,16 @@ internal sealed class StubCatalog : HttpMessageHandler
             asked.Add(path);
 
             if (!plan.TryGetValue(path, out var responders) || responders.Count == 0)
+            {
+                // Recorded as well as thrown. The throw stops the request; the record is the only part of it
+                // that survives CatalogService's broad catch and can be asserted on. See the class remarks.
+                unscripted.Add(path);
+
                 throw new InvalidOperationException(
                     $"This test asked for \"{path}\", which it never scripted. Call Serves(\"{path}\", ...) "
                     + "first: leaving it unscripted would reach CatalogService as an ordinary fetch failure "
                     + "and the test would go green for a reason that has nothing to do with its subject.");
+            }
 
             responder = responders[0];
             if (responders.Count > 1) responders.RemoveAt(0);   // the last one repeats

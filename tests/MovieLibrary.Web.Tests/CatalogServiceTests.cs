@@ -16,8 +16,45 @@ namespace MovieLibrary.Web.Tests;
 /// help.
 /// </para>
 /// </summary>
-public class CatalogServiceTests
+public class CatalogServiceTests : IDisposable
 {
+    private readonly List<StubCatalog> stubs = new();
+
+    /// <summary>
+    /// A stub this class will sweep on the way out. Build every stub through here rather than with
+    /// <c>new</c>: the sweep is what makes <c>StubCatalog</c>'s unscripted-path guard mean anything.
+    /// </summary>
+    private StubCatalog Stub()
+    {
+        var stub = new StubCatalog();
+        stubs.Add(stub);
+        return stub;
+    }
+
+    /// <summary>
+    /// Fails any test in this class that asked the stub for a path it never scripted.
+    /// </summary>
+    /// <remarks>
+    /// Without this the guard inside <c>StubCatalog.SendAsync</c> is invisible: <c>CatalogService.Load</c>
+    /// catches broadly and on purpose, so the refusal came back as an ordinary <c>Failed</c> and any test
+    /// asserting a failure passed with its subject never exercised. That is not hypothetical --
+    /// <see cref="MetaIsCachedOnItsOwnTheSameWay"/> carried a movies half that went green entirely that way.
+    /// xunit builds one instance of this class per test and disposes it after, so the sweep is per test and
+    /// no author has to remember it. <see cref="AnUnscriptedPathIsRecordedRatherThanVanishingIntoABroadCatch"/>
+    /// asks for an unscripted path deliberately and so builds its stub outside the sweep.
+    /// </remarks>
+    public void Dispose()
+    {
+        foreach (var stub in stubs)
+            Assert.True(stub.Unscripted.Count == 0,
+                "This test asked the stub for " + string.Join(", ", stub.Unscripted) + ", which it never "
+                + "scripted. CatalogService catches broadly, so the refusal reached the assertions as an "
+                + "ordinary Failed result and whatever this test claims to prove, it did not prove it. Call "
+                + "Serves(path, ...) for every document the test's subject fetches.");
+
+        GC.SuppressFinalize(this);
+    }
+
     private const string ThreeFilms =
         """
         [{"i":807,"k":"807-90","t":"A Confident Film","rt":90,"g":[],"ag":"Drama","vote":7.1,"dir":[],"cast":[],"mc":0.95},
@@ -40,7 +77,7 @@ public class CatalogServiceTests
     {
         // The real case: two components rendering in the same frame. Asserted on the handler's count, because a
         // timing assertion here would pass or fail on how fast the machine is.
-        var stub = new StubCatalog().Serves(StubCatalog.Movies, StubCatalog.NeverAnswers());
+        var stub = Stub().Serves(StubCatalog.Movies, StubCatalog.NeverAnswers());
         var service = stub.Service();
 
         var first = service.GetMoviesAsync();
@@ -54,7 +91,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task ASuccessfulFetchIsServedFromCacheAndNotRequestedAgain()
     {
-        var stub = new StubCatalog().Serves(StubCatalog.Movies, StubCatalog.Json(ThreeFilms));
+        var stub = Stub().Serves(StubCatalog.Movies, StubCatalog.Json(ThreeFilms));
         var service = stub.Service();
 
         var first = await service.GetMoviesAsync();
@@ -66,23 +103,60 @@ public class CatalogServiceTests
         Assert.Equal(1, stub.RequestsFor(StubCatalog.Movies));
     }
 
+    /// <remarks>
+    /// Meta only. This test used to end by calling <c>GetMoviesAsync()</c> and asserting <c>Failed</c> -- over
+    /// a stub that scripted no movies response at all, so the request hit the stub's own "you never scripted
+    /// this" guard, <c>CatalogService.Load</c> caught the <c>InvalidOperationException</c> broadly, reported it
+    /// to a discarded <c>StringWriter</c>, and handed back <c>Failed</c>. It went green for precisely the
+    /// reason the guard's message says must never happen. Those four lines were also a verbatim copy, comment
+    /// included, of a block in <see cref="AMoviesFailureDoesNotEvictAGoodMeta"/>, which is where the
+    /// movies-against-meta interaction belongs and where it is scripted properly. The sweep in
+    /// <see cref="Dispose"/> now fails any test that repeats the mistake.
+    /// </remarks>
     [Fact]
     public async Task MetaIsCachedOnItsOwnTheSameWay()
     {
-        var stub = new StubCatalog().Serves(StubCatalog.Meta, StubCatalog.Json(MetaBody));
+        var stub = Stub().Serves(StubCatalog.Meta, StubCatalog.Json(MetaBody));
         var service = stub.Service();
 
         var first = await service.GetMetaAsync();
-        await service.GetMetaAsync();
+        var second = await service.GetMetaAsync();
 
         Assert.Equal(CatalogState.Ready, first.State);
-        Assert.Equal(3, first.Value.MovieCount);
-        // And again, because the eviction is lazy. The SECOND movies call is where the failure is actually
-        // observed, so an eviction that took the other field with it would not show up until after that one.
-        Assert.Equal(CatalogState.Failed, (await service.GetMoviesAsync()).State);
-        Assert.Equal(CatalogState.Ready, (await service.GetMetaAsync()).State);
-
+        Assert.Equal(CatalogState.Ready, second.State);
+        Assert.Equal(3, second.Value.MovieCount);
         Assert.Equal(1, stub.RequestsFor(StubCatalog.Meta));
+    }
+
+    /// <remarks>
+    /// The stub's unscripted-path guard, as a failable subject. It had none: the throw is swallowed by the
+    /// service's broad catch -- which is correct and must stay, because nothing may escape to
+    /// <c>#blazor-error-ui</c> -- so the guard could be deleted outright with nothing going red, while every
+    /// stub-authoring mistake in the suite went on arriving as an ordinary fetch failure. The record is the
+    /// part that survives the catch, and <see cref="Dispose"/> is what reads it for every other test here.
+    /// <para>
+    /// The stub is built with <c>new</c> rather than through <c>Stub()</c>, on purpose: this test asks for an
+    /// unscripted path deliberately, so the sweep must not see it.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public async Task AnUnscriptedPathIsRecordedRatherThanVanishingIntoABroadCatch()
+    {
+        var stub = new StubCatalog().Serves(StubCatalog.Meta, StubCatalog.Json(MetaBody));
+        var service = stub.Service(out var log);
+
+        var result = await service.GetMoviesAsync();
+
+        // Indistinguishable from a dropped connection, which is the whole problem.
+        Assert.Equal(CatalogState.Failed, result.State);
+        Assert.Empty(result.Value);
+
+        // And now visible.
+        Assert.Equal(new[] { StubCatalog.Movies }, stub.Unscripted);
+
+        // It is at least logged, because InvalidOperationException is not one of the service's fetch-failure
+        // types -- but only where a test passed a log sink in, and the one that had this bug did not.
+        Assert.Contains("InvalidOperationException", log.ToString(), StringComparison.Ordinal);
     }
 
     // ------------------------------------------------------------------ failures
@@ -109,7 +183,7 @@ public class CatalogServiceTests
     [InlineData("NotSupportedException")]
     public async Task AFetchFailureIsFailedWithAnEmptyButNonNullValueAndIsNotLogged(string kind)
     {
-        var stub = new StubCatalog().Serves(StubCatalog.Movies, StubCatalog.Throws(Raise(kind)));
+        var stub = Stub().Serves(StubCatalog.Movies, StubCatalog.Throws(Raise(kind)));
         var service = stub.Service(out var log);
 
         var result = await service.GetMoviesAsync();
@@ -136,7 +210,7 @@ public class CatalogServiceTests
     {
         // m3. The attribution is fixed by TMDB's terms, so it must not be able to vanish because a fetch failed,
         // and Genres and ReviewQueue have to be readable without a null check on either path.
-        var stub = new StubCatalog().Serves(StubCatalog.Meta, StubCatalog.Throws(new HttpRequestException("offline")));
+        var stub = Stub().Serves(StubCatalog.Meta, StubCatalog.Throws(new HttpRequestException("offline")));
 
         var result = await stub.Service().GetMetaAsync();
 
@@ -168,7 +242,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task ACaptivePortalIsAFetchFailureAndNotAnUnhandledException()
     {
-        var stub = new StubCatalog().Serves(StubCatalog.Movies, StubCatalog.Html());
+        var stub = Stub().Serves(StubCatalog.Movies, StubCatalog.Html());
         var service = stub.Service(out var log);
 
         var result = await service.GetMoviesAsync();
@@ -181,7 +255,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task AServerErrorIsAFetchFailureToo()
     {
-        var stub = new StubCatalog().Serves(StubCatalog.Movies, StubCatalog.Status(HttpStatusCode.InternalServerError));
+        var stub = Stub().Serves(StubCatalog.Movies, StubCatalog.Status(HttpStatusCode.InternalServerError));
 
         var result = await stub.Service().GetMoviesAsync();
 
@@ -197,7 +271,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task AnUnexpectedExceptionIsStillFailedButIsReportedAsWell()
     {
-        var stub = new StubCatalog().Serves(
+        var stub = Stub().Serves(
             StubCatalog.Movies, StubCatalog.Throws(new InvalidTimeZoneException("a real bug")));
         var service = stub.Service(out var log);
 
@@ -223,7 +297,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task ALiteralJsonNullBodyIsFailedAndNeverReady()
     {
-        var stub = new StubCatalog().Serves(StubCatalog.Movies, StubCatalog.Json("null"));
+        var stub = Stub().Serves(StubCatalog.Movies, StubCatalog.Json("null"));
         var service = stub.Service(out var log);
 
         var result = await service.GetMoviesAsync();
@@ -247,7 +321,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task A204IsFailedThroughTheParseFailureRatherThanTheNullCheck()
     {
-        var stub = new StubCatalog().Serves(StubCatalog.Movies, StubCatalog.NoContent());
+        var stub = Stub().Serves(StubCatalog.Movies, StubCatalog.NoContent());
         var service = stub.Service(out var log);
 
         var result = await service.GetMoviesAsync();
@@ -265,7 +339,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task AGenuinelyEmptyArrayIsReady()
     {
-        var stub = new StubCatalog().Serves(StubCatalog.Movies, StubCatalog.Json("[]"));
+        var stub = Stub().Serves(StubCatalog.Movies, StubCatalog.Json("[]"));
         var service = stub.Service(out var log);
 
         var result = await service.GetMoviesAsync();
@@ -288,7 +362,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task AFailureThatCompletedSynchronouslyIsStillNotCached()
     {
-        var stub = new StubCatalog().Serves(
+        var stub = Stub().Serves(
             StubCatalog.Movies,
             StubCatalog.Throws(new HttpRequestException("offline")),
             StubCatalog.Json(ThreeFilms));
@@ -311,7 +385,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task AFailureThatCompletedAsynchronouslyIsNotCachedEither()
     {
-        var stub = new StubCatalog().Serves(
+        var stub = Stub().Serves(
             StubCatalog.Movies,
             StubCatalog.ThrowsAfterYielding(new HttpRequestException("offline")),
             StubCatalog.Json(ThreeFilms));
@@ -333,7 +407,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task AMoviesFailureDoesNotEvictAGoodMeta()
     {
-        var stub = new StubCatalog()
+        var stub = Stub()
             .Serves(StubCatalog.Meta, StubCatalog.Json(MetaBody))
             .Serves(StubCatalog.Movies, StubCatalog.Throws(new HttpRequestException("offline")));
         var service = stub.Service();
@@ -353,7 +427,7 @@ public class CatalogServiceTests
     [Fact]
     public async Task ASuccessAfterARetryIsThenCachedLikeAnyOtherSuccess()
     {
-        var stub = new StubCatalog().Serves(
+        var stub = Stub().Serves(
             StubCatalog.Movies,
             StubCatalog.Throws(new HttpRequestException("offline")),
             StubCatalog.Json(ThreeFilms));
