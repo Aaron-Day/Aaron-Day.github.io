@@ -177,9 +177,14 @@ html { scroll-padding-bottom: max(6rem, var(--bar-max)); }
    at this size.
    =========================================================================== */
 
-/* Sticky-footer scaffold. Required, not cosmetic: both children of #app are
-   absolutely positioned (.loading-progress, .loading-progress-text), so #app
-   has ZERO flow height while the WASM payload downloads. Without this the
+/* Sticky-footer scaffold. Required, not cosmetic: #app has ZERO flow height
+   while the WASM payload downloads. Its one child is main#boot-main, and with
+   JavaScript on that main has no in-flow children: .loading-progress and
+   .loading-progress-text are position: absolute, the h1 and #boot-status
+   carry Bootstrap's visually-hidden class (its :not(caption) rule is
+   position: absolute !important), and the noscript sentence is not rendered.
+   So the main is zero-height, and it is #app's own flex: 1 0 auto below that
+   fills the gap and pushes the footer down regardless. Without this the
    footer paints at the top of the viewport, above the spinner, and then jumps
    to the bottom on boot - the legal notice presented as the page's primary
    content on exactly the slow connections where it is on screen longest.

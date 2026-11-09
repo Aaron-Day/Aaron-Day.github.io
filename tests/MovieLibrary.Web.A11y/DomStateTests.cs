@@ -244,8 +244,14 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
     /// State 8: after a client-side navigation, with #route-announcer holding the new page's name.
     /// </summary>
     /// <remarks>
-    /// That text sits in a div that is a child of .page and so outside every landmark, which makes this one
-    /// of only two states where axe's region rule has a subject at all - and region is on the asserted list.
+    /// What this state has that a cold load does not is text in #route-announcer when axe runs: the test
+    /// asserts the announcer is empty before it navigates. That text is NOT outside every landmark, which
+    /// this remark used to say. The div is a child of .page and not of the main, but it carries
+    /// aria-live="polite", and axe's isRegion helper counts a polite or assertive live region (as well as
+    /// role alert, log or status, and the landmarks) as a region - so the region rule finds the text already
+    /// inside one. Nor is this a state where the rule has a subject and the others do not: region is
+    /// <c>{selector: "body *"}</c> with no matcher, so it has subjects in EVERY state, which is why it is in
+    /// AxeScan.AlwaysApplicable. Both facts are read from the axe-core 4.10.2 bundle.
     /// <para>
     /// <b>This state got harder after Task 5.</b> Movies.razor answers both "/" and "/movies", so navigating
     /// between them changes no page type and the route announcer stays empty. The way in is a page-type

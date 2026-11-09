@@ -17,7 +17,7 @@ internal sealed class AxeScan
     /// <para>
     /// wcag22a carries no axe rule today. It costs nothing and picks up the ones that follow: WCAG 2.2
     /// introduced two Level A criteria. Every aaa tag is left out, which is correct for a Level AA target:
-    /// axe-core 4.10.1 carries exactly three wcag2aaa rules - color-contrast-enhanced, which is SC 1.4.6
+    /// axe-core 4.10.2 carries exactly three wcag2aaa rules - color-contrast-enhanced, which is SC 1.4.6
     /// Contrast (Enhanced), identical-links-same-purpose and meta-refresh-no-exceptions - and
     /// color-contrast-enhanced is the one this list is deliberately not asking for. It is NOT a 44x44 rule:
     /// axe implements nothing at all for SC 2.5.5 Target Size (Enhanced), and a sentence here used to claim
@@ -25,8 +25,16 @@ internal sealed class AxeScan
     /// in TouchTargetReportTests, which asserts nothing.
     /// </para>
     /// <para>
+    /// <b>Two version numbers, and every rule claim in this file is about the second.</b> The NuGet package
+    /// is Deque.AxeCore.Playwright 4.10.1, which brings Deque.AxeCore.Commons 4.10.1. The axe-core LIBRARY
+    /// bundled inside Deque.AxeCore.Commons 4.10.1 is 4.10.2: its axe.min.js opens with "axe v4.10.2" and
+    /// reports <c>axe.version = "4.10.2"</c>. Package 4.10.1 ships axe-core 4.10.2. The rule inventories,
+    /// defaults and tag memberships here were read from that bundle, so they are pinned to 4.10.2; do not
+    /// "correct" them back to 4.10.1 to agree with the .csproj.
+    /// </para>
+    /// <para>
     /// <b>target-size runs here only because this list is non-empty.</b> The rule ships
-    /// <c>enabled: false</c> in axe-core 4.10.1. axe's own tag matcher resolves to
+    /// <c>enabled: false</c> in axe-core 4.10.2. axe's own tag matcher resolves to
     /// <c>include.some(t =&gt; rule.tags.includes(t)) || (include.length === 0 &amp;&amp; rule.enabled !==
     /// false)</c>: it consults <c>rule.enabled</c> SOLELY when the include list is empty, so with a tag list
     /// present a tag match alone is sufficient. The brief's claim that the tag list enables target-size is
