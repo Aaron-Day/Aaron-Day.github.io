@@ -68,6 +68,16 @@
     /// Where the PAGE puts focus, so the helper in index.html can tell "nobody has touched it" from "the
     /// user moved it themselves". <c>&lt;body&gt;</c> and <c>&lt;html&gt;</c> are handled there.
     /// </summary>
+    /// <remarks>
+    /// The Try again button is deliberately NOT a keeper, which is what leaves a failed retry's focus where the
+    /// user put it -- <b>in every browser that focuses a button when it is clicked.</b> Safari, desktop and
+    /// iOS, does not: a mouse or touch click on a <c>&lt;button&gt;</c> leaves <c>document.activeElement</c> at
+    /// <c>&lt;body&gt;</c>, which IS a keeper, so the helper agrees to the move and a sighted Safari user loses
+    /// their place on every failed retry. VoiceOver's own double-tap does set focus, so the screen-reader case
+    /// is probably sound. Recorded rather than worked around: the behaviour is right wherever a click focuses
+    /// the button, and the alternative -- adding the button to the keepers -- would hand focus back to a control
+    /// the user may have deliberately left. One for Task 9's device list.
+    /// </remarks>
     private static readonly string[] FocusKeepers = ["#main-content", "#app h1"];
 
     private ElementReference heading;
@@ -80,7 +90,14 @@
     private bool disposed;
     private bool retrying;
     private bool loadingAnnounced;
-    private bool alertedFailure;
+
+    // True once THIS failure has been reported to a screen reader, by whichever channel did it: the focus move
+    // or the alert. It is not the same thing as movedFocusToFailure, and the difference is the whole of the
+    // ordering below. movedFocusToFailure is set only when a move actually happened, so on every later render
+    // of the same failure "no move happened on this pass" is true again -- and keying the alert off that alone
+    // would raise it one render late, which moves the double speech rather than removing it. Reset on a retry,
+    // because a second failure is a second thing the user needs telling about (criterion 8).
+    private bool failureReported;
     private bool movedFocusToFailure;
 
     // True only while a focus call is suspended at its await. A render can arrive in that window -- the
@@ -162,27 +179,39 @@
                 break;
 
             case CatalogState.Failed:
-                // R11: one alert for one failure the user can see, in the same words that are on screen.
-                // Raised here and NEVER from the click handler, so the clear that handler wrote has reached
-                // the DOM first and the announcer can anchor its settle delay to that render. Without the
-                // gap a repeated identical sentence is no DOM change at all, and the user who retries and
-                // fails again hears silence.
-                if (!alertedFailure)
-                {
-                    alertedFailure = true;
-                    Announcer.Alert(CouldNotLoad);
-                }
-
                 // Criterion 7, the first transition: once, and only if focus is still where the page put it.
-                // On a FAILED RETRY focus is already on the Try again button, which is not one of the
-                // keepers, so the helper refuses and the user keeps their place -- the guard covers that
-                // transition without a flag of its own. The flag is set only when the move actually happened,
-                // so a user who had the drawer open when the fetch failed is not denied the move for ever.
+                // THE FOCUS MOVE IS THE PRIMARY CHANNEL and it runs FIRST, because a screen reader reads the
+                // contents of a focused unnamed tabindex="-1" container and this container's whole text IS the
+                // failure sentence. A move that happens therefore already says it, in the words on screen, and
+                // R3 forbids announcing the text of whatever focus has just moved to.
+                // The flag is set only when the move actually happened, so a user who had the drawer open when
+                // the fetch failed is not denied the move for ever.
+                var movedOnThisPass = false;
                 if (!movedFocusToFailure && !movingFocus)
                 {
                     movingFocus = true;
-                    try { movedFocusToFailure = await FocusIfUnmoved(stateContainer); }
+                    try { movedOnThisPass = movedFocusToFailure = await FocusIfUnmoved(stateContainer); }
                     finally { movingFocus = false; }
+                }
+
+                // R11: one report for one failure the user can see, and THE ALERT IS THE FALLBACK -- raised
+                // only where the focus move did not happen. Raising both speaks the sentence twice: once as the
+                // contents of the container focus landed on, and again a settle delay later when the assertive
+                // region interrupts with the identical text.
+                // On a FAILED RETRY focus is usually already on the Try again button, which is not a keeper, so
+                // the helper refuses, nothing moves, and this fires -- which is how criterion 8's promise that a
+                // user who retries and fails again is not met with silence survives the reordering. "Usually" is
+                // doing work in that sentence; see the remarks on FocusKeepers.
+                // Raised here and NEVER from the click handler, so the clear that handler wrote has reached the
+                // DOM first and the announcer can anchor its settle delay to that render. Without the gap a
+                // repeated identical sentence is no DOM change at all.
+                // movingFocus is in the condition because a render can arrive while the first pass's focus call
+                // is suspended at its await: that pass has not chosen a channel yet, and this one must not
+                // choose for it. It is also the last statement in this arm, which is what R4 asks for.
+                if (!failureReported && !movingFocus)
+                {
+                    failureReported = true;
+                    if (!movedOnThisPass) Announcer.Alert(CouldNotLoad);
                 }
 
                 break;
@@ -195,7 +224,7 @@
                 if (focusHeadingAfterRetry)
                 {
                     focusHeadingAfterRetry = false;
-                    await heading.FocusAsync();
+                    await FocusOutright(heading);
                 }
 
                 if (!countAnnounced)
@@ -227,7 +256,7 @@
         Announcer.Alert("");
 
         retrying = true;
-        alertedFailure = false;
+        failureReported = false;
         movedFocusToFailure = false;
         films = new(CatalogState.Loading, films.Value);   // criterion 8: the loading copy, visibly
 
@@ -247,18 +276,34 @@
     /// The guard cannot be written in C#: there is no way to read <c>document.activeElement</c> from Blazor,
     /// and <c>ElementReference.FocusAsync()</c> focuses unconditionally. index.html defines the helper and
     /// says why the move is a conformance route rather than a workaround.
-    /// <para>
-    /// A missing or broken helper returns false rather than throwing. An escape here would reveal
-    /// <c>#blazor-error-ui</c>, which carries an assertive role of its own, on a page that is already reporting a
-    /// failure through the announcer -- two assertive sources for one failure, which is the thing this
-    /// project forbids outright.
-    /// </para>
     /// </remarks>
-    private async Task<bool> FocusIfUnmoved(ElementReference element)
+    private Task<bool> FocusIfUnmoved(ElementReference element) =>
+        TryFocus(() => Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", element, FocusKeepers).AsTask());
+
+    /// <summary>Moves focus to <paramref name="element"/> whatever holds it now.</summary>
+    /// <remarks>
+    /// The successful retry only: the button the user was standing on has gone, so focus would otherwise drop
+    /// to <c>&lt;body&gt;</c>. Nothing to ask the helper here -- the control that had focus no longer exists.
+    /// </remarks>
+    private static Task<bool> FocusOutright(ElementReference element) =>
+        TryFocus(async () => { await element.FocusAsync(); return true; });
+
+    /// <summary>Runs one focus move and says whether it happened, swallowing the ways interop can fail.</summary>
+    /// <remarks>
+    /// BOTH focus moves on this page go through here, and that is the point of extracting it.
+    /// <c>ElementReference.FocusAsync()</c> is interop exactly as the helper call is -- it invokes
+    /// <c>Blazor._internal.domWrapper.focus</c> -- so an escape from either reveals <c>#blazor-error-ui</c>,
+    /// which carries an assertive role of its own, on a page that is already reporting a failure through the
+    /// announcer or has just recovered from one: two assertive sources for one event, which is the thing this
+    /// project forbids outright. <c>if (disposed) return;</c> upstream narrows the window for the disposal race
+    /// but does not close it, which is why <see cref="ObjectDisposedException"/> is in the list rather than
+    /// being prevented.
+    /// </remarks>
+    private static async Task<bool> TryFocus(Func<Task<bool>> move)
     {
         try
         {
-            return await Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", element, FocusKeepers);
+            return await move();
         }
         catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
         {

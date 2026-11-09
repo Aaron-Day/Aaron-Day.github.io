@@ -30,6 +30,12 @@ public class MoviesStateTests : BunitContext
 {
     private const string FocusHelper = "movieLibrary.focusIfUnmoved";
 
+    /// <summary>
+    /// What <c>ElementReference.FocusAsync()</c> invokes, which is how a test can break the OTHER focus call
+    /// the page makes. bUnit's own <c>VerifyFocusAsyncInvoke()</c> watches this same identifier.
+    /// </summary>
+    private const string BuiltInFocus = "Blazor._internal.domWrapper.focus";
+
     public MoviesStateTests() => JSInterop.Mode = JSRuntimeMode.Loose;
 
     /// <summary>
@@ -252,9 +258,17 @@ public class MoviesStateTests : BunitContext
     }
 
     /// <remarks>
-    /// R11: one alert for one failure the user can see, not one per fetch. The alert region accumulates
-    /// non-empty messages raised inside one settle window, so two sentences here would be the visible symptom
-    /// of the page alerting more than once.
+    /// R11, as far as the DELIVERED text can show it: the sentence arrives whole and once, with nothing joined
+    /// on to it.
+    /// <para>
+    /// This cannot stand in for a count of how often the page alerted, and an earlier remark here claimed it
+    /// could -- it said the region accumulates duplicates, so a second alert would show up as two sentences.
+    /// It does not: <c>Announcer.Publish</c> drops an exact duplicate joining a pending message
+    /// (<c>PendingParts.Contains</c>), and the class remarks say so. A page alerting twice with the same words
+    /// is invisible here however the dispatcher schedules it, which is why the guard has
+    /// <see cref="OneFailureIsReportedOnceHoweverManyTimesThePageRenders"/> below -- a region READ IMMEDIATELY
+    /// after extra renders, where a second call shows as the empty string.
+    /// </para>
     /// </remarks>
     [Fact]
     public void OneFailureIsOneSentenceAndNotTwo()
@@ -265,6 +279,98 @@ public class MoviesStateTests : BunitContext
 
         Assert.Equal(Movies.CouldNotLoad, Spoken().AlertText);
         Assert.Single(Regex.Matches(Spoken().AlertText, Regex.Escape(Movies.CouldNotLoad)));
+    }
+
+    /// <remarks>
+    /// The falsifying test the <c>failureReported</c> guard did not have, and it is deterministic where an
+    /// assertion on the delivered text is not. Technique borrowed from
+    /// <see cref="TheLoadingAnnouncementIsRaisedOnceHoweverManyTimesThePageRenders"/>: a second
+    /// <c>Alert</c> empties the region SYNCHRONOUSLY and only refills it a settle delay later, so reading the
+    /// region immediately after extra renders is what distinguishes one call from two. If the guard is
+    /// neutralised this is the empty string. Nothing here depends on dispatcher scheduling.
+    /// </remarks>
+    [Fact]
+    public void OneFailureIsReportedOnceHoweverManyTimesThePageRenders()
+    {
+        var (cut, clock) = RenderWith(CatalogOutcome.Failed);
+        clock.Advance(Announcer.SettleDelay);
+        Assert.Equal(Movies.CouldNotLoad, Spoken().AlertText);
+
+        cut.FindComponent<Movies>().Render();
+        cut.FindComponent<Movies>().Render();
+
+        Assert.Equal(Movies.CouldNotLoad, Spoken().AlertText);
+    }
+
+    /// <remarks>
+    /// The same for the count, whose <c>countAnnounced</c> guard had no falsifying test either. A second
+    /// <c>Status</c> empties the region at once, so a repeat shows here as the empty string.
+    /// </remarks>
+    [Fact]
+    public void TheCountIsAnnouncedOnceHoweverManyTimesThePageRenders()
+    {
+        var (cut, clock) = RenderWith(CatalogOutcome.Ready);
+        clock.Advance(Announcer.SettleDelay);
+        Assert.Equal("The library holds 2 films.", Spoken().StatusText);
+
+        cut.FindComponent<Movies>().Render();
+        cut.FindComponent<Movies>().Render();
+
+        Assert.Equal("The library holds 2 films.", Spoken().StatusText);
+    }
+
+    /// <remarks>
+    /// <b>The failure is spoken once, by ONE channel.</b> The focus move is the primary one: a screen reader
+    /// reads the contents of a focused unnamed <c>tabindex="-1"</c> container, and this container's entire text
+    /// is the failure sentence -- so a move that happens has already said it. An <c>Alert</c> raised beside it
+    /// is the same words again, interrupting the first reading a settle delay later, which is the hazard R3
+    /// exists for and is total overlap here rather than partial.
+    /// <para>
+    /// Both halves in one theory, and the page is rendered TWICE in each, because the obvious implementation
+    /// of this ordering has a trap in it: the "already moved" flag is sticky, so on a second render of the same
+    /// failure "no move happened on this pass" is true again and a late alert reintroduces the double speech.
+    /// A second, separate "this failure has been reported" flag is what makes the count hold across renders.
+    /// </para>
+    /// </remarks>
+    [Theory]
+    [InlineData(true)]
+    [InlineData(false)]
+    public void AFailureSpeaksExactlyOnceByEitherChannelAndNeverByBoth(bool focusMoves)
+    {
+        FocusHelperAnswers(focusMoves);
+
+        var (cut, clock) = RenderWith(CatalogOutcome.Failed);
+        cut.FindComponent<Movies>().Render();
+        clock.Advance(Announcer.SettleDelay);
+
+        // The move happened, so the container's contents are the utterance and the assertive region stays
+        // silent. It did not, so the region is the utterance. Never both, and never one of them twice.
+        Assert.Equal(focusMoves ? "" : Movies.CouldNotLoad, Spoken().AlertText);
+
+        // And the sentence is on screen either way, which is what the focus move reads out.
+        Assert.Equal(Movies.CouldNotLoad, Sentence(cut));
+    }
+
+    /// <remarks>
+    /// Criterion 8 survives the reordering: a retry that fails again must not be met with silence. Focus is on
+    /// the Try again button by then, the button is not a keeper, the helper refuses, and the alert fires because
+    /// no move happened. (Where the browser does not focus a button on click the move happens instead and the
+    /// container is read -- still one utterance. See the remarks on Movies.FocusKeepers.)
+    /// </remarks>
+    [Fact]
+    public async Task ARetryThatFailsAgainIsSpokenRatherThanMetWithSilence()
+    {
+        FocusHelperAnswers(false);
+        var (cut, clock, _) = RenderScripted(
+            AnnouncerTestExtensions.Responder(CatalogOutcome.Failed),
+            AnnouncerTestExtensions.Responder(CatalogOutcome.Failed));
+
+        clock.Advance(Announcer.SettleDelay);
+        await cut.Find("button.try-again").ClickAsync(new MouseEventArgs());
+        clock.Advance(Announcer.SettleDelay);
+
+        Assert.Equal(Movies.CouldNotLoad, Spoken().AlertText);
+        Assert.Equal(Movies.CouldNotLoad, Sentence(cut));
     }
 
     // ============================================================ criterion 4: no live region in page content
@@ -634,6 +740,33 @@ public class MoviesStateTests : BunitContext
         Assert.Equal(Movies.CouldNotLoad, Spoken().AlertText);   // the failure is still announced
     }
 
+    /// <remarks>
+    /// The mirror of the test above, for the OTHER focus call. The successful retry moves focus with
+    /// <c>ElementReference.FocusAsync()</c>, which is interop just as much as the helper is -- it invokes
+    /// <c>Blazor._internal.domWrapper.focus</c> -- and it was the one of the two that had no guard. An escape
+    /// would reveal <c>#blazor-error-ui</c> with its own assertive role, on a page that has just RECOVERED from
+    /// a failure, so the user would be told about a failure that no longer exists. Both calls now go through
+    /// one guard, and this is the half that proves the second of them is inside it.
+    /// </remarks>
+    [Fact]
+    public async Task ABrokenFocusCallOnTheSuccessfulRetryIsSwallowedToo()
+    {
+        FocusHelperAnswers(false);
+        JSInterop.SetupVoid(BuiltInFocus, _ => true).SetException(new JSException("the element has gone"));
+
+        var (cut, clock, _) = RenderScripted(
+            AnnouncerTestExtensions.Responder(CatalogOutcome.Failed),
+            AnnouncerTestExtensions.Responder(CatalogOutcome.Ready));
+
+        await cut.Find("button.try-again").ClickAsync(new MouseEventArgs());
+
+        // The retry succeeded, the page says so, and the count is still announced: the broken focus call cost
+        // the user their place on the page and nothing else.
+        Assert.Equal("The library holds 2 films.", Sentence(cut));
+        clock.Advance(Announcer.SettleDelay);
+        Assert.Equal("The library holds 2 films.", Spoken().StatusText);
+    }
+
     // ============================================================ M11: the strings themselves
 
     /// <remarks>
@@ -780,7 +913,7 @@ public class MoviesStateTests : BunitContext
     {
         var body = MemberBody(Page(), "protected override async Task OnAfterRenderAsync(bool firstRender)");
 
-        var focus = body.IndexOf("await heading.FocusAsync()", StringComparison.Ordinal);
+        var focus = body.IndexOf("await FocusOutright(heading)", StringComparison.Ordinal);
         var count = body.IndexOf("Announcer.Status(Sentence)", StringComparison.Ordinal);
 
         Assert.True(focus >= 0 && count >= 0, "both calls have to be present for their order to mean anything");
