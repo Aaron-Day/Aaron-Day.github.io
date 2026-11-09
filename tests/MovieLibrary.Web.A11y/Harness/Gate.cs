@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using System.Security;
 using System.Text.Json;
 
 namespace MovieLibrary.Web.A11y.Harness;
@@ -137,11 +138,46 @@ internal static class Gate
     /// "some chromium directory exists" but not Playwright's own launch, which throws - from the collection
     /// fixture, which xunit then reports as every browser test FAILED. That is exactly the cry-wolf outcome
     /// this class exists to prevent, so the expected build number is checked and a mismatch SKIPS.
+    /// <para>
+    /// <b>This must never throw, because it runs at DISCOVERY.</b> xunit reads
+    /// <see cref="BrowserFactAttribute.Skip"/> while it enumerates tests, and the collection fixture reads
+    /// <see cref="Unavailable"/> again, so an exception from here is not one failed test: with a cache
+    /// directory the process may not list, all 29 tests in this project came back Failed. That is the same
+    /// cry-wolf outcome the revision check exists to prevent, reached by a different route. A cache or a
+    /// <c>browsers.json</c> that exists but cannot be read (an ACL, a path the platform will not open) is a
+    /// machine that cannot answer whether a browser is installed, and the honest answer to that is a skip
+    /// that says so. The whole body is inside the one handler below for that reason, rather than each read
+    /// guarding itself: the next disk read added here is covered without anyone having to remember.
+    /// </para>
     /// </remarks>
     private static string? NoBrowser()
     {
         if (Channel is not null) return null;
 
+        try
+        {
+            return NoCachedBrowser();
+        }
+        catch (Exception e) when (DiskCannotBeRead(e))
+        {
+            return "Whether a browser is installed could not be checked, because looking for one on the "
+                   + $"disk threw {e.GetType().Name}: {e.Message} Make that location readable "
+                   + $"(PLAYWRIGHT_BROWSERS_PATH names the cache when it is set), or set {ChannelVariable}"
+                   + "=msedge to drive the Edge already on this machine without consulting the cache at all.";
+        }
+    }
+
+    /// <summary>
+    /// The reads of the disk that mean "this machine will not let me look", as opposed to a defect in this
+    /// code. <see cref="UnauthorizedAccessException"/> and <see cref="NotSupportedException"/> derive from
+    /// <see cref="SystemException"/> and NOT from <see cref="IOException"/>, so catching IOException alone
+    /// misses the two a permissions problem actually produces.
+    /// </summary>
+    private static bool DiskCannotBeRead(Exception e) =>
+        e is IOException or UnauthorizedAccessException or NotSupportedException or SecurityException;
+
+    private static string? NoCachedBrowser()
+    {
         var cache = BrowserCache();
         var cached = cache is null
             ? Array.Empty<string?>()
@@ -203,7 +239,7 @@ internal static class Gate
                     && revision.ValueKind == JsonValueKind.String)
                     return revision.GetString();
         }
-        catch (Exception e) when (e is JsonException or IOException)
+        catch (Exception e) when (e is JsonException || DiskCannotBeRead(e))
         {
             return null;   // a file or a shape this cannot read is one it cannot check against
         }
