@@ -11,8 +11,10 @@
   <ItemGroup>
     <!-- The first Core type the browser consumes: MovieRecord, CatalogMeta and ConfidenceBand. Core carries
          ZERO package references, so this adds only its own IL to the payload and no transitive dependency.
-         MovieLibrary.Enrich is never referenced from here, because it reads TMDB_TOKEN and that code would
-         then be in the browser payload. SourceContractTests pins that, so this is the only one that belongs. -->
+         The enrich project is never referenced from here, because it reads TMDB_TOKEN and that code would
+         then be in the browser payload. SourceContractTests pins that by scanning this file for its name,
+         which is why the name is not spelled out here: that scan is a plain substring match and a comment
+         mentioning it fails just as a reference would. This is the only reference that belongs. -->
     <ProjectReference Include="..\MovieLibrary.Core\MovieLibrary.Core.csproj" />
   </ItemGroup>
 

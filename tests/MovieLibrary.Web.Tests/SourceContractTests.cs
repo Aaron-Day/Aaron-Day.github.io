@@ -127,4 +127,20 @@ public class SourceContractTests
 
         Assert.Equal(new[] { "Layout/RouteAnnouncer.razor" }, callers);
     }
+
+    [Fact]
+    public void ProgramRegistersTheCatalogServiceBecauseTheTestsRegisterTheirOwn()
+    {
+        // The same hole as the announcer's, for the same reason: every bUnit test registers its own
+        // CatalogService through AnnouncerTestExtensions.AddAnnouncer, so a missing line here would pass all
+        // 315 tests and then fail at boot with a DI error on the first page render -- the films page, which is
+        // "/" . Anchored for the same reason too: an unanchored pattern matches the line commented out, which is
+        // exactly how a registration gets lost. Proven below against the commented form.
+        // CatalogServiceTests.TheRegistrationShapeProgramUsesResolves is the other half: that this line, with
+        // the HttpClient Program.cs already registers, actually resolves.
+        const string registration = @"(?m)^[ \t]*builder\.Services\.AddScoped<CatalogService>\(\);";
+
+        Assert.Matches(registration, WebRoot.Read("Program.cs"));
+        Assert.DoesNotMatch(registration, "// builder.Services.AddScoped<CatalogService>();");
+    }
 }
