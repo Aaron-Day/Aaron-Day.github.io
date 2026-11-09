@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- The browser accessibility gate. It is in MovieLibrary.slnx so that it builds with everything else, but
+       .github/workflows/main.yml names its test projects explicitly so that THIS project - and the browser
+       binaries Microsoft.Playwright downloads - never enter the job that holds TMDB_TOKEN. It runs from
+       .github/workflows/a11y.yml, which has no secret in scope.
+       Properties match tests/MovieLibrary.Web.Tests exactly, TreatWarningsAsErrors included. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Deque.AxeCore.Playwright" Version="4.10.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="Microsoft.Playwright" Version="1.49.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <!-- The static server the browser is pointed at lives in this assembly rather than in a backgrounded
+       workflow step. A separate server process needs a readiness wait, a teardown and a port, and all three
+       are flake the gate does not need; this way the port is chosen by the OS and dies with the test run.
+       A FrameworkReference costs the payload nothing: it is not shipped and not published. -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <!-- Needed for the route list, which is read from RouteAttribute over the web assembly rather than from a
+       hand-typed table, so Tasks 6 and 8 extend the scan by adding a page and editing nothing here. -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MovieLibrary.Web\MovieLibrary.Web.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -25,6 +25,11 @@
 
   <ItemGroup>
     <InternalsVisibleTo Include="MovieLibrary.Web.Tests" />
+    <!-- The browser gate asserts the SAME string constants the pages render - Movies.CouldNotLoad,
+         Movies.LoadingVisible, Movies.LoadingSpoken - rather than its own literals, so a reworded
+         sentence cannot leave a green gate waiting on text the app no longer shows. It also reads
+         Announcer.SettleDelay to size its waits. -->
+    <InternalsVisibleTo Include="MovieLibrary.Web.A11y" />
   </ItemGroup>
 
 </Project>
