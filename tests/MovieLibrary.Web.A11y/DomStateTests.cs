@@ -144,7 +144,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         await session.GridAsync();
 
         await ExpectPagerAsync(session, previousAtBound: true, nextAtBound: false);
-        Assert.Equal("Page 1 of " + Catalogue.Pages, await PageLabelAsync(session));
+        Assert.Equal(PageLabel(1, Catalogue.Pages), await PageLabelAsync(session));
 
         var scan = await AxeScan.OfAsync(session.Page, "ready, page 1, 60 tiles", output);
         scan.MustBeClean(Booted);
@@ -214,7 +214,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
             await next.ClickAsync();
             await session.Page.WaitForFunctionAsync(
                 "label => document.querySelector(\".pager span\")?.textContent === label",
-                $"Page {page} of {Catalogue.Pages}");
+                PageLabel(page, Catalogue.Pages));
         }
 
         await session.GridAsync(Catalogue.OnTheLastPage);
@@ -344,6 +344,18 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         var scan = await AxeScan.OfAsync(session.Page, "ready, one real poster among sixty tiles", output);
         scan.MustBeClean(Booted);
     }
+
+    /// <summary>
+    /// The pager label exactly as PosterGrid speaks it, and the reason this is a helper rather than a
+    /// concatenation at each call site. PosterGrid.PageLabelFor is
+    /// <c>$"Page {Number(page)} of {Number(PageCount)}"</c> and Number is <c>ToString("N0")</c>, so BOTH
+    /// numbers carry group separators. A bare <c>"Page 1 of " + Catalogue.Pages</c> agrees only while the
+    /// page count stays under a thousand: raise Catalogue.Records to 60,000 and the app says
+    /// "Page 1 of 1,000" while the concatenation expects "Page 1 of 1000", so the test fails an app that is
+    /// correct. en-US because the browser context is pinned to it, as the announcement expectation above is.
+    /// </summary>
+    private static string PageLabel(int page, int of) =>
+        string.Format(CultureInfo.GetCultureInfo("en-US"), "Page {0:N0} of {1:N0}", page, of);
 
     private static Task<string> PageLabelAsync(PageSession session) =>
         session.Page.Locator(".pager span").InnerTextAsync();
