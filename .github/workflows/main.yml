@@ -44,8 +44,21 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
+      # The two UNIT test projects, named explicitly. A bare `dotnet test` runs the whole solution, so any
+      # project added to MovieLibrary.slnx silently joins the restore, the build and the test discovery of
+      # THIS job - the one that holds TMDB_TOKEN and contents: write. tests/MovieLibrary.Web.A11y is a browser
+      # gate: it restores Microsoft.Playwright, which downloads browser binaries on first use. That belongs
+      # nowhere near the token, and this job pins its actions to SHAs precisely because it is privileged, so it
+      # should build the least it can. The browser gate runs in .github/workflows/a11y.yml instead, on
+      # pull_request, with no secret anywhere in scope.
+      # TWO COMMANDS AND NOT ONE: `dotnet test a b` exits 1 with MSB1008 "Only one project can be specified",
+      # so the obvious one-line filter would have broken this job outright. GitHub runs `run:` under `bash -e`,
+      # so the step still fails if either project fails. The cost of the filter is that a new UNIT test project
+      # has to be added here by hand.
       - name: Test
-        run: dotnet test --nologo --verbosity normal
+        run: |
+          dotnet test tests/MovieLibrary.Core.Tests --nologo --verbosity normal
+          dotnet test tests/MovieLibrary.Web.Tests  --nologo --verbosity normal
 
       # Writes the catalogue to src/MovieLibrary.Web/wwwroot/data/ (gitignored; the publish below picks it
       # up from the working tree) and grows enrich-cache/ (committed). It exits 0 whenever a catalogue was
