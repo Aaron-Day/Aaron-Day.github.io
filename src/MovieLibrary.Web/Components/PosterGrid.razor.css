@@ -35,9 +35,23 @@
    It is not conveyed by colour alone either, and the thing that saves it is not aria-disabled -- a
    programmatic attribute does nothing for a sighted user, so it cannot answer SC 1.4.1 Use of Color. What
    answers it is the "Page 1 of 25" between the two buttons, which tells any sighted user which bound they
-   are at; and the change here is a large luminance difference (5.43:1 against the enabled 13.85:1) rather
-   than a hue difference, so 1.4.1 does not engage in the first place. */
-.pager button[aria-disabled="true"] { color: var(--dim); opacity: 1; cursor: default; }
+   are at.
+   THAT INDICATOR IS THE WHOLE ARGUMENT, and the tempting second one is not available. An earlier version
+   of this comment added that the change here is a luminance difference rather than a hue difference, "so
+   1.4.1 does not engage in the first place", and cited 5.43:1 against 13.85:1 for it. Those two numbers are
+   each colour's contrast against the button FILL, not the difference between the two states. The figure
+   that argument actually needs is --dim against --txt, and it is 2.55:1 -- below the 3:1 that technique
+   G183 asks for in precisely this "distinguished by luminance rather than hue" case. "1.4.1 does not
+   engage" was not established either: greying IS a colour change. Do not put either half back without a
+   measurement that supports it.
+   background-color is declared here as well as on the rule above, and it has to be. app.css's
+   `:root :is(a, button):active { background-color: var(--line) }` is (0,2,1) and wins over that rule's
+   plain `background`, so a greyed button flashed on press while doing nothing. No conformance issue in
+   either direction -- --dim on --line is 4.61:1, past SC 1.4.3's 4.5:1 -- so this is only about a control
+   that does nothing looking like it. */
+.pager button[aria-disabled="true"] {
+  color: var(--dim); background-color: var(--panel2); opacity: 1; cursor: default;
+}
 
 /* No transition and no animation in this file, so no prefers-reduced-motion block is needed. The motion
    rule in StyleContractTests reads this file by glob and will say so if that stops being true. */

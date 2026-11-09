@@ -520,6 +520,13 @@ public class StyleContractTests
     /// passes contrast, and --dim on --panel2 is 5.43:1, which choosing aria-disabled makes load-bearing
     /// rather than spare, because the control is still focusable and so outside SC 1.4.3's exemption for
     /// an inactive component.
+    /// <para>
+    /// background-color is pinned too, and on this rule rather than only on the enabled one. app.css's
+    /// <c>:root :is(a, button):active</c> sets a background-color at (0,2,1) and beats the plain
+    /// <c>background</c> on <c>.pager button</c>, so without a background-color here a greyed button lit up
+    /// on press while doing nothing at all. Not a conformance defect -- --dim on --line is 4.61:1, past
+    /// SC 1.4.3's 4.5:1 -- which is exactly why it needs a test rather than a reviewer noticing.
+    /// </para>
     /// </remarks>
     [Fact]
     public void TheGreyedPagerButtonIsSelectedByTheAttributeAndKeepsItsOpacity()
@@ -528,6 +535,8 @@ public class StyleContractTests
 
         Assert.Matches(@"\.pager button\[aria-disabled=""true""\]\s*\{[^}]*color\s*:\s*var\(--dim\)", css);
         Assert.Matches(@"\.pager button\[aria-disabled=""true""\]\s*\{[^}]*opacity\s*:\s*1", css);
+        Assert.Matches(
+            @"\.pager button\[aria-disabled=""true""\]\s*\{[^}]*background-color\s*:\s*var\(--panel2\)", css);
         Assert.DoesNotContain(":disabled", css);
     }
 
