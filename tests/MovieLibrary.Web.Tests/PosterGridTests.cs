@@ -485,6 +485,81 @@ public class PosterGridTests : BunitContext
         Assert.Equal(string.Empty, Spoken().StatusText);
     }
 
+    /// <summary>
+    /// A parent that unmounts the grid from inside its own <c>PageChanged</c> handler, which is the
+    /// interleaving the plain host cannot produce.
+    /// </summary>
+    /// <remarks>
+    /// The handler stops rendering the grid and then suspends on <see cref="Gate"/>. ComponentBase sees an
+    /// incomplete task, calls StateHasChanged, and the renderer processes that render while
+    /// <c>PosterGrid.Go</c> is still awaiting the callback -- so the grid is disposed, and its clear has
+    /// already run, before <c>Go</c> resumes to speak. Nothing about this is exotic: Ready flipping to
+    /// Failed, or a route away raised from the handler, both arrive the same way. It is a real
+    /// TaskCompletionSource rather than a Task.Yield so that the test owns the ordering instead of
+    /// inferring it.
+    /// </remarks>
+    private sealed class UnmountingHost : ComponentBase
+    {
+        [Parameter] public IReadOnlyList<MovieRecord> Items { get; set; } = [];
+
+        private readonly TaskCompletionSource gate = new();
+        private bool mounted = true;
+
+        public List<int> Raised { get; } = [];
+
+        protected override void BuildRenderTree(RenderTreeBuilder builder)
+        {
+            if (!mounted) return;
+
+            builder.OpenComponent<PosterGrid>(0);
+            builder.AddComponentParameter(1, nameof(PosterGrid.Items), Items);
+            builder.AddComponentParameter(2, nameof(PosterGrid.Page), 1);
+            builder.AddComponentParameter(3, nameof(PosterGrid.PageChanged),
+                EventCallback.Factory.Create<int>(this, OnPageChanged));
+            builder.CloseComponent();
+        }
+
+        /// <summary>Lets the suspended handler return, so <c>Go</c> runs its remaining statements.</summary>
+        public void LetTheHandlerFinish() => gate.TrySetResult();
+
+        private async Task OnPageChanged(int value)
+        {
+            Raised.Add(value);
+            mounted = false;
+            await gate.Task;
+        }
+    }
+
+    /// <remarks>
+    /// Rule R7 from the other side. The grid is the region's only writer and its only clearer, so a
+    /// sentence written after its own Dispose is a standing statement with nobody left to cancel it: the
+    /// region would describe a page of tiles that is not on screen, readable in browse mode for as long as
+    /// the layout lives. Go announces unconditionally after raising PageChanged, and that callback is an
+    /// await the parent can do anything across, including unmounting this component.
+    /// <para>
+    /// What this does NOT cover, deliberately: a parent that recomputes <c>Page</c> instead of adopting the
+    /// raised value, which would leave the region describing a page that never came on screen. That is a
+    /// claim about a parent, it is Task 8's to make true, and coding around a parent that does not exist
+    /// would be guessing. It is written into the report's list for Task 8's brief instead.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public async Task AParentThatUnmountsTheGridInsideItsHandlerGetsNoOrphanedAnnouncement()
+    {
+        var cut = Render<UnmountingHost>(p => p.Add(x => x.Items, Films(130)));
+
+        cut.FindAll("nav.pager button").Single(b => b.TextContent.Trim() == "Next").Click();
+
+        // The raise happened and the grid is already gone, while Go is still suspended inside the callback.
+        Assert.Equal(new[] { 2 }, cut.Instance.Raised);
+        Assert.Empty(cut.FindAll("ul.grid"));
+
+        await cut.InvokeAsync(cut.Instance.LetTheHandlerFinish);
+        clock.Advance(TimeSpan.FromHours(1));
+
+        cut.WaitForAssertion(() => Assert.Equal(string.Empty, Spoken().StatusText));
+    }
+
     // ============================================================ the numbers
 
     /// <remarks>

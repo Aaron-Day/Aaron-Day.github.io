@@ -120,6 +120,16 @@
     private int? correctedFrom;
 
     /// <summary>
+    /// Set by <see cref="Dispose"/>, read by <see cref="Go"/>. A parent may unmount this grid from inside
+    /// its own <c>PageChanged</c> handler -- the Ready state flipping to Failed, or a route away raised from
+    /// the handler -- and <c>Go</c> is suspended at an await across that whole window, so its announcement
+    /// would otherwise be written AFTER <c>Dispose</c> had already cleared the region. That is exactly the
+    /// orphaned standing statement rule R7 exists to prevent, left behind by the one caller that is
+    /// supposed to be the region's cleaner.
+    /// </summary>
+    private bool disposed;
+
+    /// <summary>
     /// Never 0. A naive ceiling division over an empty list yields 0 and the pager then reads "Page 1 of
     /// 0". An empty list renders no pager at all, so that text is unreachable today; this is what makes it
     /// unreachable rather than something the gate happens to hide.
@@ -246,6 +256,13 @@
 
         await PageChanged.InvokeAsync(target);
 
+        // The parent may have unmounted this grid while that await was suspended -- Ready flipping to
+        // Failed, or a route away raised from its handler -- in which case Dispose has already cleared the
+        // region and speaking now would put a standing statement back into it with nobody left to clear it.
+        // R7's whole point. The clear is the correct final state here: the page the sentence describes is
+        // not on screen.
+        if (disposed) return;
+
         Announcer.Status(Announcement(target));
     }
 
@@ -255,6 +272,15 @@
     /// the announcer any time the grid were unmounted while the page lived on, describing a page of tiles
     /// that is no longer rendered. An empty string is a cancellation rather than a message: it takes effect
     /// at once and speaks nothing, which is the only thing a dispose may do.
+    /// <para>
+    /// The flag is set before the clear and not after, because <see cref="Go"/> reads it: a grid unmounted
+    /// from inside the parent's own PageChanged handler would otherwise have its announcement land after
+    /// this clear and stand there uncancelled.
+    /// </para>
     /// </remarks>
-    public void Dispose() => Announcer.Status("");
+    public void Dispose()
+    {
+        disposed = true;
+        Announcer.Status("");
+    }
 }
