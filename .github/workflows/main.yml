@@ -53,8 +53,11 @@ jobs:
       # pull_request, with no secret anywhere in scope.
       # TWO COMMANDS AND NOT ONE: `dotnet test a b` exits 1 with MSB1008 "Only one project can be specified",
       # so the obvious one-line filter would have broken this job outright. GitHub runs `run:` under `bash -e`,
-      # so the step still fails if either project fails. The cost of the filter is that a new UNIT test project
-      # has to be added here by hand.
+      # so the step still fails if either project fails. The filter costs two things, not one: a new UNIT test
+      # project has to be added here by hand, and this job no longer compiles the whole solution - so a push
+      # straight to master, which runs no pull request and therefore no a11y.yml, would not catch a
+      # MovieLibrary.Web.A11y that does not build. a11y.yml's own header says why direct pushes to master
+      # should be blocked, and this is a second reason for it.
       - name: Test
         run: |
           dotnet test tests/MovieLibrary.Core.Tests --nologo --verbosity normal

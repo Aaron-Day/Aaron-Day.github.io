@@ -10,10 +10,12 @@ name: Accessibility gate
 # and the Playwright download. The catalogue under test is synthetic and is written by the test project itself.
 #
 # FOR A FAILURE HERE TO BLOCK A DEPLOY RATHER THAN ANNOTATE ONE, this job has to be a required status check on
-# master in the repository's branch protection. The workflow itself cannot arrange that: it fails the job
-# honestly - there is no continue-on-error and no soft warning anywhere below - and the deploy in main.yml
-# triggers on push, so without the required-check setting a red gate here would merely sit on the pull request.
-# That setting is the owner's to make, once, in the repository settings.
+# master in the repository's branch protection AND DIRECT PUSHES TO MASTER HAVE TO BE BLOCKED - both, not
+# either. This workflow has no push trigger, so a commit pushed straight to master never runs it: there is no
+# check to require, nothing goes red, and main.yml deploys with the gate never having run. A required check
+# alone only binds the commits that arrive through a pull request. The workflow itself cannot arrange either
+# half: it fails the job honestly - there is no continue-on-error and no soft warning anywhere below - and
+# both settings are the owner's to make, once, in the repository settings.
 on:
   pull_request:
   workflow_dispatch:
@@ -105,6 +107,18 @@ jobs:
           set -o pipefail
           dotnet test tests/MovieLibrary.Web.A11y -c Release --nologo \
             --logger "console;verbosity=detailed" 2>&1 | tee a11y.log
+
+          # A FLOOR ON HOW MUCH WAS SCANNED, which is rule T1 at the workflow level. Everything above
+          # rests on one test, GateAvailabilityTests.TheBrowserGateIsNotSilentlySkippedInCi: delete or
+          # rename it and a fully skipped run passes, this step goes green, and the summary below says
+          # "every scan skipped" in a block nobody opens. Fifteen is the number of states the project
+          # scans today; adding one means raising this, which is the point.
+          scans=$(grep -c '=== axe:' a11y.log || true)
+          echo "axe scans in this run: $scans"
+          if [ "$scans" -lt 15 ]; then
+            echo "::error title=The gate scanned less than it claims::Only $scans axe scan(s) ran; this project has 15 DOM states. A run that scanned fewer has not gated what the check mark says it gated."
+            exit 1
+          fi
 
       # The job summary, and nothing else: no issues opened, no commit comments, no annotations beyond what
       # the test runner itself emits. always() so that a failing scan is the case that gets reported.
