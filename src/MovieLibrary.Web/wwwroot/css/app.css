@@ -295,6 +295,17 @@ body {
    button's boundary is --line-strong (3.89:1 on --bg), which is the token this
    file already reserves for a control's sole boundary. Nothing here is
    measured afresh because nothing here is new.
+   --line-strong is the boundary in EVERY state of the button, the retry in
+   flight included. An earlier draft of this block dropped to --line while the
+   button carried aria-disabled, which is this file's decoration-only token at
+   1.37:1 on --bg - and with background: transparent that border is the
+   control's only boundary, so for the whole duration of a retry the button had
+   no boundary a low-vision user could find. Not recorded as an SC 1.4.11
+   failure: that criterion exempts inactive components, and an aria-disabled
+   control whose click is ignored plausibly is one. It was a violation of this
+   file's own house rule, with a real cost. The in-flight state is carried by
+   the sentence beside the button changing to the loading copy, which is where
+   it belongs.
    The failure is never signalled by colour: it is a sentence of prose plus a
    named control, so SC 1.4.1 Use of Color (Level A) has nothing to carry and
    SC 1.4.11 Non-text Contrast (Level AA) is satisfied by the border rather
@@ -315,7 +326,15 @@ body {
     gap: 0.75rem 1rem;      /* row-gap column-gap */
 }
 
-.catalog-state:focus { outline: none; }   /* a container, not a control; the ring would only be noise */
+/* NO outline suppression here, and the #main-content:focus precedent above does not extend to it. That
+   suppression is for a move the USER asked for: they activated the skip link, so they know where they are and
+   a ring round the whole of <main> would only be noise. This container is focused PROGRAMMATICALLY, by the
+   page, because the fetch failed - so the ring is the only thing telling a sighted user where their keyboard
+   now is. Chrome applies :focus-visible to a programmatic move when the preceding interaction was keyboard,
+   which is exactly the case this would have hidden. The global :root :focus-visible rule supplies it.
+   Not an SC 2.4.7 Focus Visible (Level AA) failure, and it must not be recorded as one: a tabindex="-1"
+   container is not keyboard operable, so 2.4.7 has no claim on it. It is an orientation loss, which is reason
+   enough. */
 
 .catalog-state p {
     flex: 1 1 18rem;        /* forces its own line at 320px */
@@ -352,6 +371,7 @@ body {
 /* aria-disabled, never the disabled ATTRIBUTE. Disabling the element that has focus blurs it and drops
    focus to <body>, which is the same defect the focus move on failure exists to fix, at the other end:
    the user presses Try again, the retry starts, and their place on the page is gone. The click is
-   ignored in C# instead. The cue is not colour alone -- the sentence beside it changes to the loading
-   copy at the same moment. */
-.try-again[aria-disabled="true"] { border-color: var(--line); }
+   ignored in C# instead.
+   There is deliberately no [aria-disabled="true"] rule. The in-flight state is carried by the sentence
+   beside the button changing to the loading copy, and the button keeps its --line-strong boundary
+   throughout: see the measured note in this section's header for the version that did not. */
