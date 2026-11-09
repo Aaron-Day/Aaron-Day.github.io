@@ -52,6 +52,47 @@ public class HostPageTests
         Assert.NotNull(app.QuerySelector("noscript"));
     }
 
+    /// <summary>
+    /// The boot shell is one main landmark holding the page's only heading, and it is NOT the layout's main.
+    /// </summary>
+    /// <remarks>
+    /// Nothing outside the browser gate pinned this, and the gate's tests are <c>[BrowserFact]</c>s that
+    /// skip on every machine without Playwright - while the deploy workflow no longer builds that project at
+    /// all. All three halves are load-bearing twice over. The boot-failure state's clean axe scan rests on
+    /// the landmark and the heading existing, since without them that shell has no main and no h1.
+    /// <para>
+    /// <b>The id assertion is the one that guards the gate's own signal.</b> The browser gate decides that
+    /// Blazor has replaced the shell by waiting on <c>#app main#main-content h1</c>
+    /// (<c>PageSession.BootedSelector</c>, in MovieLibrary.Web.A11y). That works only because MainLayout owns
+    /// <c>main-content</c> and the host page can never produce it: if the shell ever took that id, the
+    /// selector would match before WebAssembly started, every wait would return on the un-booted shell, and
+    /// the gate would report green scans of a page it never rendered.
+    /// </para>
+    /// <para>
+    /// The check reads the parsed document's attributes and not the file's text, because the shell's own
+    /// comment has to name <c>main-content</c> to say why it must not be used. Looking at attribute values
+    /// rather than only <c>id</c> also catches a <c>href="#main-content"</c> or an <c>aria-controls</c> that
+    /// points into a layout that does not exist yet at boot.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void TheBootShellIsOneMainLandmarkWithAHeadingAndNeverTheLayoutsId()
+    {
+        var app = Doc.GetElementById("app")!;
+
+        // Exactly one in the whole document, and inside #app: Blazor replaces #app's children on render, so
+        // being inside it is what guarantees the shell never leaves a second main behind.
+        var main = Assert.Single(Doc.QuerySelectorAll("main"));
+        Assert.Same(app, main.ParentElement);
+        Assert.Equal("boot-main", main.Id);
+
+        var heading = Assert.Single(main.QuerySelectorAll("h1"));
+        Assert.False(string.IsNullOrWhiteSpace(heading.TextContent), "An empty h1 is not a heading to navigate by.");
+
+        Assert.Null(Doc.GetElementById("main-content"));
+        Assert.DoesNotContain(Doc.All, e => e.Attributes.Any(a => a.Value.Contains("main-content", StringComparison.Ordinal)));
+    }
+
     [Fact]
     public void TheErrorBarIsAnAlertWithARealDismissButtonAndALayoutWrapper()
     {
