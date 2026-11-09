@@ -165,6 +165,15 @@
     /// Singular and plural, per rule R6. The regions are atomic, so the whole sentence is re-read, and a
     /// filter narrowing the list to one title would otherwise say "of 1 titles" in both copies.
     /// </summary>
+    /// <remarks>
+    /// ONLY THE VISIBLE SENTENCE CAN EVER BE SINGULAR, and that is worth writing down because a test
+    /// covering both forms of the spoken copy would be covering a case that cannot occur. The spoken copy
+    /// comes from <see cref="Go"/>, <c>Go</c> runs only on a page change, and a page change needs at least
+    /// <see cref="PageSize"/> + 1 titles to exist at all -- so the total <c>Go</c> reads is never 1.
+    /// The selection still belongs here rather than at the two call sites: one property feeds both copies,
+    /// which is what stops them drifting, and Task 8 filtering down to a single title makes the visible
+    /// singular real.
+    /// </remarks>
     private string Noun => Items.Count == 1 ? "title" : "titles";
 
     private int FirstShownOn(int page) => Items.Count == 0 ? 0 : (page - 1) * PageSize + 1;

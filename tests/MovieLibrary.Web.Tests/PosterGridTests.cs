@@ -609,11 +609,17 @@ public class PosterGridTests : BunitContext
         Assert.Equal(expected, Count(cut));
 
         // The same noun in the spoken copy, reached through a page that is in range so that Go runs.
+        // PLURAL UNCONDITIONALLY, and the absence of a branch here is the assertion. The spoken singular
+        // is unreachable by construction: Go runs only on a page change, and a page change needs at least
+        // PageSize + 1 titles, so the total Go reads is never 1. A `films + 60 == 1 ? ... : ...` branch
+        // stood here and was not merely dead -- it read as covering a case that cannot occur, in a test
+        // named for covering both forms. Only the visible sentence above can be singular. Noun's own
+        // remarks record why.
         var paged = RenderGrid(films + 60, page: 1);
         Button(paged, "Next").Click();
         clock.Advance(TimeSpan.FromHours(1));
 
-        Assert.EndsWith(films + 60 == 1 ? "1 title." : (films + 60) + " titles.", Spoken().StatusText);
+        Assert.EndsWith((films + 60) + " titles.", Spoken().StatusText);
     }
 
     /// <summary>

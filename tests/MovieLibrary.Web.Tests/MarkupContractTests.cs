@@ -11,13 +11,14 @@ namespace MovieLibrary.Web.Tests;
 /// Rendered through <c>App</c>, not component by component. A routable component on its own contains
 /// almost nothing -- the skip link, the drawer, the landmarks, the live regions and the real aria-controls
 /// all live in MainLayout and NavMenu -- and that is the difference between five contracts with something
-/// to check and two. index.html is scanned as well, because it holds the app's only image, the Dismiss
+/// to check and two. index.html is scanned as well, because it holds the TMDB logo, the Dismiss
 /// button, the Reload control and the static title, and until now no contract touched any of it.
 /// </para>
 /// <para>
 /// WHY A GREEN TEST HERE IS NOT AUTOMATICALLY A COVERED ONE. Even through App, several of these rules loop
-/// over element sets that are empty or nearly empty in an app with two pages: one image, twenty controls,
-/// no positive tabindex anywhere, no id reference this gate can fail on at all. A loop over an empty
+/// over element sets that are small in an app with two pages: three images and twenty-nine controls, as
+/// TheImageAndControlContractsCanSeeTheFilmsPagesOwnMarkup measures them, with
+/// no positive tabindex anywhere and no id reference this gate can fail on at all. A loop over an empty
 /// collection PASSES and reads in the output exactly like a rule that checked something, and the usual
 /// proof -- break an assertion, watch it fail, restore it -- cannot tell the difference, because the
 /// mutation passes too. So: every rule here asserts its own subject set is non-empty, and the three rules
@@ -246,11 +247,16 @@ public class MarkupContractTests
     }
 
     /// <remarks>
-    /// SC 1.1.1 Non-text Content, Level A. Asserted, on one image: the TMDB logo in index.html, which is
-    /// the app's only one today. alt="" is correct there and is what the rule accepts -- it prunes a
-    /// decorative image from the accessibility tree, which is right because the sentence beside it already
-    /// names TMDB. A MISSING alt is the defect, and the two are indistinguishable in a browser. Task 6's
-    /// posters will be the first images inside the app itself.
+    /// SC 1.1.1 Non-text Content, Level A. Asserted over three images: the TMDB logo in index.html, plus
+    /// one tile poster on each of the two Ready scopes since Task 6.
+    /// TheImageAndControlContractsCanSeeTheFilmsPagesOwnMarkup is where that number is measured and where a
+    /// shortfall is explained, and it is the test to read before trusting this one -- until Task 6 landed
+    /// the logo was the only subject here, and this remark claimed the posters as future work while the
+    /// stub catalogue carried no poster path for them to come from.
+    /// alt="" is correct on all three and is what the rule accepts -- it prunes a
+    /// decorative image from the accessibility tree, which is right because the sentence beside the logo
+    /// already names TMDB and the tile's own title is visible text beside the poster. A MISSING alt is the
+    /// defect, and the two are indistinguishable in a browser.
     /// </remarks>
     [Fact]
     public void EveryImgHasAnAltAttributeEvenIfEmpty()
@@ -271,6 +277,8 @@ public class MarkupContractTests
     /// one axis and relies on the user agent deriving the aspect ratio from the attributes, and the comment
     /// there says so. A reflow during load is worst for someone tracking a focus ring, but no criterion
     /// says that either, so the rule says house rule in its own remarks.
+    /// Same three subjects as the alt rule above, and the same place to check them:
+    /// TheImageAndControlContractsCanSeeTheFilmsPagesOwnMarkup.
     /// </remarks>
     [Fact]
     public void EveryImgHasExplicitWidthAndHeight()
@@ -287,9 +295,13 @@ public class MarkupContractTests
     }
 
     /// <remarks>
-    /// SC 4.1.2 Name, Role, Value, Level A. Asserted over twenty widgets: the skip link, the brand, the
-    /// Menu toggle and the Films link on every route, the in-prose link on the two not-found addresses,
-    /// and Reload and Dismiss on the host page. Framed as nested focusable WIDGET ROLES, which is how axe
+    /// SC 4.1.2 Name, Role, Value, Level A. Asserted over twenty-nine widgets: the skip link, the brand,
+    /// the Menu toggle and the Films link on each of the five route scopes, the in-prose link on the two
+    /// not-found addresses, Try again in the failed scope, two pager buttons in each of the two Ready
+    /// scopes, and Reload and Dismiss on the host page. The number is measured, and a shortfall explained,
+    /// in TheImageAndControlContractsCanSeeTheFilmsPagesOwnMarkup -- it read "twenty" until Task 6 added
+    /// the pager, which is how a remark starts describing coverage nobody has re-counted.
+    /// Framed as nested focusable WIDGET ROLES, which is how axe
     /// frames it and therefore how Task 4b will behave. The implicit-label pattern, summary inside details
     /// and an anchor in media fallback content are carved out by name and proven in MarkupRuleTests;
     /// composite roles are deliberately outside the rule, because a listbox or a tablist legitimately owns
@@ -309,7 +321,8 @@ public class MarkupContractTests
     }
 
     /// <remarks>
-    /// SC 4.1.2 Name, Role, Value, Level A. Asserted over the same twenty controls. Two of them have no
+    /// SC 4.1.2 Name, Role, Value, Level A. Asserted over the same twenty-nine controls, counted in
+    /// TheImageAndControlContractsCanSeeTheFilmsPagesOwnMarkup. Two of them have no
     /// visible text at all and are named the two different correct ways -- the Menu toggle by a
     /// visually-hidden span, the Dismiss button by aria-label over an aria-hidden glyph -- so this contract
     /// exercises both the text path and the label path of the name computation on real markup.
