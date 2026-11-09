@@ -87,12 +87,45 @@ public class StyleContractTests
         Assert.DoesNotContain(".visually-hidden", AppCss.Replace("visually-hidden-focusable", ""));
     }
 
+    /// <remarks>
+    /// Was NoViewportUnitSitsBelowBodyInTheLayoutCss, and read
+    /// <c>new[] { "MainLayout.razor.css", "NavMenu.razor.css" }</c> by hand -- the third of the
+    /// hand-maintained file lists, and the one whose only cross-reference was a sentence in the motion
+    /// rule's remarks that f354e3d deleted, so by the time Task 6 added two component stylesheets nothing
+    /// connected the two at all. No live defect: neither new sheet uses a viewport unit. But the rule is
+    /// about what sits below <c>body</c>, which is every scoped component sheet rather than the two that
+    /// happened to exist when it was written, so it is found by glob like the motion rule beside it.
+    /// <para>
+    /// app.css is deliberately NOT in the set. It owns --bar-max: 40dvh and the error bar's max-height
+    /// reads it, which is the measurement D2 exists to protect; a rule that banned viewport units there
+    /// would reject correct CSS, which is rule T5's failure.
+    /// </para>
+    /// <para>
+    /// T1: the only assertion is inside the loop, so the discovered set has a floor and all four sheets
+    /// are named.
+    /// </para>
+    /// </remarks>
     [Fact]
-    public void NoViewportUnitSitsBelowBodyInTheLayoutCss()
+    public void NoViewportUnitSitsBelowBodyInAnyComponentStylesheet()
     {
         // A 100dvh on .page would make #app a full viewport tall and push the attribution footer a screenful down.
-        foreach (var file in new[] { "MainLayout.razor.css", "NavMenu.razor.css" })
-            Assert.DoesNotMatch(@"\d(vh|dvh|svh|lvh)\b", WebRoot.Read("Layout", file));
+        var sheets = WebRoot.Files("*.razor.css").ToList();
+        var names = sheets.Select(s => s.Path).ToList();
+
+        Assert.True(sheets.Count >= 4,
+            "This rule found " + sheets.Count + " component stylesheets. There are four; fewer means "
+            + "WebRoot.Files stopped finding them, and a rule with no subjects passes over nothing.");
+
+        Assert.Contains("Layout/MainLayout.razor.css", names);
+        Assert.Contains("Layout/NavMenu.razor.css", names);
+        Assert.Contains("Components/PosterTile.razor.css", names);
+        Assert.Contains("Components/PosterGrid.razor.css", names);
+
+        foreach (var (path, text) in sheets)
+            Assert.True(!Regex.IsMatch(text, @"\d(vh|dvh|svh|lvh)\b"),
+                path + " sets a viewport unit below body. A 100dvh here makes #app a full viewport tall "
+                + "and pushes the attribution footer a screenful down. The one viewport measurement this "
+                + "project keeps is app.css's --bar-max, which the error bar reads.");
     }
 
     [Fact]
@@ -182,16 +215,35 @@ public class StyleContractTests
     /// obvious escape: when a later task needs one, name the exception in this test the way the motion
     /// rule below names the boot spinner.
     /// Comments are stripped first, so prose that mentions text-decoration cannot trip it.
-    /// What this cannot catch: a reset in a component's scoped .razor.css, an inline style, or a Bootstrap
-    /// utility class in markup. Those need the rendered page, which is Task 4b.
+    /// THE BAN NOW READS EVERY STYLESHEET, not just app.css. Its own remark used to say "what this cannot
+    /// catch: a reset in a component's scoped .razor.css" -- which was a blind spot nobody could reach
+    /// until Task 6 wrote the first two component sheets, and then was simply a hole. A scoped
+    /// text-decoration: none on an anchor removes the only non-colour cue that anchor has, whichever file
+    /// it is written in. The POSITIVE half stays app.css-only, because that is where the declaration
+    /// belongs: one rule for every anchor in the app, in the file this project owns.
+    /// What this still cannot catch: an inline style, or a Bootstrap utility class in markup. Those need
+    /// the rendered page, which is Task 4b.
     /// </remarks>
     [Fact]
     public void AnInProseLinkIsDistinguishedByMoreThanItsColour()
     {
-        var css = WithoutComments(AppCss);
+        Assert.Matches(@"(?m)^a\s*\{[^}]*text-decoration\s*:\s*underline", WithoutComments(AppCss));
 
-        Assert.Matches(@"(?m)^a\s*\{[^}]*text-decoration\s*:\s*underline", css);
-        Assert.DoesNotMatch(@"text-decoration\s*:\s*none", css);
+        // Stylesheets() is the glob, and its own by-name assertions live in the motion rule, so a walk
+        // that stopped matching cannot leave this one quietly looping over an empty set.
+        var sheets = Stylesheets();
+
+        Assert.True(sheets.Count >= 5,
+            "This rule found " + sheets.Count + " stylesheets. There are five: app.css and four scoped "
+            + "component sheets. Fewer means the glob stopped finding them.");
+
+        foreach (var (path, text) in sheets)
+            Assert.True(!Regex.IsMatch(WithoutComments(text), @"text-decoration\s*:\s*none"),
+                path + " resets text-decoration to none. --accent2 against --txt is 2.18:1, so an anchor "
+                + "inside running prose would then be distinguished from it by colour alone, which is "
+                + "SC 1.4.1 Use of Color and technique failure F73. A standalone control that happens to "
+                + "be an anchor is distinguished by its own box, so if a later task needs this, name the "
+                + "exception here the way the motion rule names the boot spinner.");
     }
 
     /// <remarks>
@@ -260,6 +312,12 @@ public class StyleContractTests
         // is removed, nothing committed proves the discovery still reaches the component stylesheets, and a
         // later path refactor goes green in silence. Named files, because the count alone would survive one
         // being swapped for another.
+        // All five of these can now fail, app.css included. It could not until Stylesheets() stopped
+        // prepending that literal path beside the AppCss field: the assertion restated its own input, so a
+        // comment saying it "fails loudly if app.css ever leaves the set" was describing the positive
+        // control below -- Assert.Contains(..., ".loading-progress") -- and not this line. Both hold now,
+        // and they hold different things: this one that the FILE is discovered at that path, that one that
+        // its CONTENT reached the scan.
         Assert.Contains("wwwroot/css/app.css", names);
         Assert.Contains("Components/PosterTile.razor.css", names);
         Assert.Contains("Components/PosterGrid.razor.css", names);
@@ -290,10 +348,16 @@ public class StyleContractTests
     /// WebRoot.Files walks from the solution root and excludes obj and bin, so generated bundles and the
     /// Bootstrap copy under wwwroot/lib are not in it.
     /// </summary>
+    /// <remarks>
+    /// app.css is FOUND rather than prepended, and that is the whole difference between
+    /// <c>Assert.Contains("wwwroot/css/app.css", names)</c> being a gate and being decoration. This helper
+    /// used to concatenate that literal path with the AppCss field by hand, so the assertion restated its
+    /// own input and could not fail however the file was renamed or moved. Now the glob has to find it at
+    /// that path. The pattern is the bare file name on purpose: "*.css" would pull in Bootstrap's copy
+    /// under wwwroot/lib, which this project does not write and must not be held to.
+    /// </remarks>
     private static IReadOnlyList<(string Path, string Text)> Stylesheets() =>
-        new[] { ("wwwroot/css/app.css", AppCss) }
-            .Concat(WebRoot.Files("*.razor.css"))
-            .ToList();
+        WebRoot.Files("app.css", "*.razor.css").ToList();
 
     /// <remarks>
     /// The motion rule driven against CSS written here, good and bad, because app.css contains one guard

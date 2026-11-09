@@ -40,20 +40,41 @@ public class SourceContractTests
         Assert.Contains("Selector=\"#app h1\"", WebRoot.Read("App.razor"), StringComparison.Ordinal);
     }
 
-    [Theory]
-    [InlineData("App.razor")]
-    [InlineData("Layout/MainLayout.razor")]
-    [InlineData("Layout/NavMenu.razor")]
-    [InlineData("Layout/RouteAnnouncer.razor")]
-    [InlineData("Pages/Movies.razor")]
-    [InlineData("Pages/NotFound.razor")]
-    public void NoComponentRedirectsAndNoFooterIsAddedInsideTheApp(string file)
+    /// <remarks>
+    /// Found by glob, and it used to be one <c>[InlineData]</c> per file by hand. Task 6 added two
+    /// components and neither was in that list, so nothing stopped a later component introducing a
+    /// <c>NavigateTo(</c> or a second <c>&lt;footer&gt;</c> -- the same hole the motion rule's
+    /// <c>new[] { "MainLayout.razor.css", "NavMenu.razor.css" }</c> had, closed the same way, with
+    /// <see cref="WebRoot.Files"/> as the live-region rule already uses it.
+    /// <para>
+    /// T1: a glob that stopped matching would loop over nothing and pass, so the subject count has a floor
+    /// and the two newest files are named. Every hand-written .razor is failable here -- there is no
+    /// carve-out -- so the floor is the whole set: nine today, and later tasks only add.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void NoComponentRedirectsAndNoFooterIsAddedInsideTheApp()
     {
-        var text = WebRoot.Read(file.Split('/'));
+        var files = WebRoot.Files("*.razor").ToList();
+        var paths = files.Select(f => f.Path).ToList();
 
-        Assert.DoesNotContain("RedirectTo", text, StringComparison.Ordinal);
-        Assert.DoesNotContain("NavigateTo(", text, StringComparison.Ordinal);
-        Assert.DoesNotContain("<footer", text, StringComparison.OrdinalIgnoreCase);
+        Assert.True(files.Count >= 9,
+            "This rule found " + files.Count + " components. There are nine hand-written .razor files "
+            + "under the web project. Fewer means WebRoot.Files stopped finding them, not that the app "
+            + "shrank -- and a rule with no subjects passes over nothing.");
+
+        // Named as well as counted, because a floor can be met by the wrong files. These two were missing
+        // from the hand-maintained list this replaced, which is the whole reason it was replaced.
+        Assert.Contains("Components/PosterTile.razor", paths);
+        Assert.Contains("Components/PosterGrid.razor", paths);
+
+        foreach (var (path, text) in files)
+        {
+            Assert.DoesNotContain("RedirectTo", text, StringComparison.Ordinal);
+            Assert.DoesNotContain("NavigateTo(", text, StringComparison.Ordinal);
+            Assert.True(!text.Contains("<footer", StringComparison.OrdinalIgnoreCase),
+                path + " adds a footer inside the app. index.html owns the one attribution footer.");
+        }
     }
 
     [Fact]
@@ -103,7 +124,20 @@ public class SourceContractTests
         // What this cannot catch: an assertive region built from a variable, a computed attribute, a splatted
         // dictionary, or markup that arrives from a .cs component. It turns "a reviewer has to notice" into a red
         // test for the ordinary spelling, which is the point; it is not proof.
-        foreach (var (path, text) in WebRoot.Files("*.razor"))
+        var files = WebRoot.Files("*.razor").ToList();
+
+        // T1. Every assertion in this rule is inside the loop, so a walk that stopped matching would pass
+        // over nothing -- and the *.razor half is only indirectly shadowed by
+        // NoComponentOutsideTheLayoutDeclaresALiveRegion, which has a floor of its own but a different
+        // marker set. MainLayout is named because its branch is the POSITIVE one: it asserts the one
+        // allowed role is present, so if the owner falls out of the walk the rule stops checking the only
+        // thing it can observe being right.
+        Assert.True(files.Count >= 9,
+            "This rule found " + files.Count + " components. There are nine hand-written .razor files "
+            + "under the web project; fewer means WebRoot.Files stopped finding them.");
+        Assert.Contains("Layout/MainLayout.razor", files.Select(f => f.Path));
+
+        foreach (var (path, text) in files)
         {
             var assertive = new[] { "role=\"alert\"", "role='alert'", "aria-live=\"assertive\"", "aria-live='assertive'" }
                 .Where(marker => text.Contains(marker, StringComparison.Ordinal))
@@ -124,7 +158,22 @@ public class SourceContractTests
         // What this cannot catch: a rethrow further from the Alert call than one statement, a rethrow in a
         // different method up the stack, or an exception that escapes without the word throw. The canonical
         // spelling is what it pins.
-        foreach (var (path, text) in WebRoot.Files("*.cs", "*.razor"))
+        var files = WebRoot.Files("*.cs", "*.razor").ToList();
+
+        // T1, and this one had nothing shadowing it at all: the only assertion is inside the loop, and no
+        // other contract scans the *.cs half, so a walk that stopped matching would leave the rule green
+        // over nothing. The two named files are the only two that mention Alert( today -- the service that
+        // defines it and the one page that raises it -- so they are the files the rule has to be able to
+        // see for it to mean anything.
+        Assert.True(files.Count >= 14,
+            "This rule found " + files.Count + " files. There are nine hand-written .razor and five .cs "
+            + "under the web project; fewer means WebRoot.Files stopped finding them.");
+
+        var paths = files.Select(f => f.Path).ToList();
+        Assert.Contains("Services/Announcer.cs", paths);
+        Assert.Contains("Pages/Movies.razor", paths);
+
+        foreach (var (path, text) in files)
             Assert.DoesNotMatch(@"Alert\([^;]*\);\s*throw\b", text);
     }
 
