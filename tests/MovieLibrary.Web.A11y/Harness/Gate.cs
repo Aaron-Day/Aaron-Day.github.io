@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using System.Text.Json;
 
 namespace MovieLibrary.Web.A11y.Harness;
 
@@ -31,7 +32,11 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// </remarks>
 internal static class Gate
 {
-    /// <summary>A directory holding a published <c>wwwroot</c>. The tests serve it themselves.</summary>
+    /// <summary>
+    /// A directory holding a published <c>wwwroot</c>. The tests serve it themselves. A RELATIVE value is
+    /// resolved against the repository root and not against the process working directory - see
+    /// <see cref="Absolute"/>, which exists for one reason and is not a convenience.
+    /// </summary>
     public const string SiteRootVariable = "A11Y_SITE_ROOT";
 
     /// <summary>An already-running server to point the browser at instead of serving the site here.</summary>
@@ -43,7 +48,11 @@ internal static class Gate
     /// </summary>
     public const string ChannelVariable = "A11Y_BROWSER_CHANNEL";
 
-    public static string? SiteRoot => Value(SiteRootVariable);
+    /// <summary>The file that marks the repository root. See <see cref="RepositoryRoot"/>.</summary>
+    private const string SolutionFile = "MovieLibrary.slnx";
+
+    /// <summary>Where the published site is, as an ABSOLUTE path. See <see cref="Absolute"/>.</summary>
+    public static string? SiteRoot => Absolute(Value(SiteRootVariable));
 
     public static string? BaseUrl => Value(BaseUrlVariable);
 
@@ -52,12 +61,47 @@ internal static class Gate
     /// <summary>True when this process looks like a CI run, where a silent skip is itself a defect.</summary>
     public static bool InCi => Value("CI") is not null || Value("GITHUB_ACTIONS") is not null;
 
-    /// <summary>
-    /// Null when the gate can run; otherwise the reason, naming the command that fixes it. Computed on every
-    /// read rather than cached, because the server fixture sets <see cref="BaseUrlVariable"/> for nothing and
-    /// a cached "unavailable" taken before a fixture ran would be wrong for the rest of the process.
-    /// </summary>
+    /// <summary>Null when the gate can run; otherwise the reason, naming the command that fixes it.</summary>
     public static string? Unavailable => NoSite() ?? NoBrowser();
+
+    /// <summary>
+    /// A configured path, made absolute. A relative value is resolved against the REPOSITORY ROOT rather
+    /// than against the process working directory, and that is the whole of this method's reason to exist.
+    /// </summary>
+    /// <remarks>
+    /// Under <c>dotnet test</c> the working directory is the TEST ASSEMBLY'S OUTPUT FOLDER, not the
+    /// workspace. So the obvious reading of <c>A11Y_SITE_ROOT=release/wwwroot</c> - which is the value the
+    /// skip message below hands the reader, and was the value the workflow passed - resolved to
+    /// <c>tests/MovieLibrary.Web.A11y/bin/Release/net10.0/release/wwwroot</c>. Nothing is ever published
+    /// there, so <see cref="NoSite"/> reported no site, every scan SKIPPED, and the gate scanned nothing
+    /// while reading as though it had scanned fifteen states. Resolving against the repository root makes
+    /// the documented command true and makes the value independent of how the runner chose to invoke the
+    /// test host. The workflow passes an absolute path as well, so neither half depends on the other.
+    /// <para>
+    /// The walk up to <see cref="SolutionFile"/> is the one
+    /// <c>MovieLibrary.Core.Tests.RepositoryFileTests.RepoRoot</c> already makes, for the same reason.
+    /// </para>
+    /// </remarks>
+    internal static string? Absolute(string? value)
+    {
+        if (value is null) return null;
+        if (Path.IsPathRooted(value)) return Path.GetFullPath(value);
+
+        return RepositoryRoot() is { } root
+            ? Path.GetFullPath(Path.Combine(root, value))
+            : Path.GetFullPath(value);
+    }
+
+    /// <summary>
+    /// The directory holding <see cref="SolutionFile"/>, walked up from this assembly's own location, or
+    /// null when there is none above it - a published or copied-out test assembly, for instance.
+    /// </summary>
+    internal static string? RepositoryRoot()
+    {
+        var dir = new DirectoryInfo(AppContext.BaseDirectory);
+        while (dir is not null && !File.Exists(Path.Combine(dir.FullName, SolutionFile))) dir = dir.Parent;
+        return dir?.FullName;
+    }
 
     private static string? NoSite()
     {
@@ -66,40 +110,116 @@ internal static class Gate
         if (SiteRoot is null)
             return $"No site to scan. Publish the app and point {SiteRootVariable} at it: "
                    + "`dotnet publish src/MovieLibrary.Web -c Release -o release` then "
-                   + $"{SiteRootVariable}=release/wwwroot. Or set {BaseUrlVariable} to a server already running "
-                   + "the published site at its root path.";
+                   + $"{SiteRootVariable}=release/wwwroot - a relative value is resolved against the "
+                   + $"repository root, so it means what it reads as. Or set {BaseUrlVariable} to a server "
+                   + "already running the published site at its root path.";
 
         var index = Path.Combine(SiteRoot, "index.html");
+
+        // Deliberately NOT "you forgot to publish", which is what this used to say and was the wrong
+        // half of the problem: the value can be right and its resolution wrong, so what it RESOLVED to
+        // is the part a reader cannot work out for themselves.
         return File.Exists(index)
             ? null
-            : $"{SiteRootVariable} is set to \"{SiteRoot}\", which holds no index.html. It must be a PUBLISHED "
-              + "wwwroot: `dotnet publish src/MovieLibrary.Web -c Release -o release` writes one to "
-              + "release/wwwroot.";
+            : $"{SiteRootVariable} resolved to \"{SiteRoot}\", which holds no index.html, so there is "
+              + "nothing to scan there. That path has to be a published wwwroot - the directory `dotnet "
+              + "publish src/MovieLibrary.Web -c Release -o release` writes to release/wwwroot. If the "
+              + "value itself looks right then it is the resolution that is wrong: a relative value is "
+              + "resolved against the repository root, which here is "
+              + (RepositoryRoot() ?? $"NOT FOUND - no {SolutionFile} above {AppContext.BaseDirectory}")
+              + ".";
     }
 
+    /// <summary>Why no browser can be launched, or null when one can.</summary>
+    /// <remarks>
+    /// A MISMATCHED cache is a different answer from an empty one, and it has to be, because the two used
+    /// to be the same answer and the wrong one. A cache left by a different Playwright version satisfies
+    /// "some chromium directory exists" but not Playwright's own launch, which throws - from the collection
+    /// fixture, which xunit then reports as every browser test FAILED. That is exactly the cry-wolf outcome
+    /// this class exists to prevent, so the expected build number is checked and a mismatch SKIPS.
+    /// </remarks>
     private static string? NoBrowser()
     {
         if (Channel is not null) return null;
-        if (BrowsersInstalled()) return null;
 
-        var script = Path.Combine("tests", "MovieLibrary.Web.A11y", "bin", "Release", "net10.0", "playwright.ps1");
+        var cache = BrowserCache();
+        var cached = cache is null
+            ? Array.Empty<string?>()
+            : Directory.EnumerateDirectories(cache, "chromium*").Select(Path.GetFileName).ToArray();
+        var wanted = ExpectedChromiumRevision();
+
+        if (wanted is null)
+        {
+            // No browsers.json beside the assembly, so there is nothing to compare against and calling it
+            // a mismatch would be a guess. Fall back to the loose check this used to make on its own.
+            if (cached.Length > 0) return null;
+        }
+        else if (cached.Contains($"chromium-{wanted}") || cached.Contains($"chromium_headless_shell-{wanted}"))
+        {
+            return null;
+        }
+        else if (cached.Length > 0)
+        {
+            return "The cached Chromium is not the build this Playwright wants, so launching it would throw "
+                   + "from the collection fixture and xunit would report every browser test as FAILED. "
+                   + $"Microsoft.Playwright here expects revision {wanted}; the cache at \"{cache}\" holds "
+                   + $"{string.Join(", ", cached)}. Run `pwsh {InstallScript()} install chromium --with-deps` "
+                   + $"to add the build it wants, or set {ChannelVariable}=msedge to drive the Edge already "
+                   + "on this machine and download nothing.";
+        }
+
         return "No browser. Install Chromium once with "
-               + $"`pwsh {script} install chromium --with-deps` (build the project in Release first, or the "
-               + $"script will not be there), or set {ChannelVariable}=msedge to drive the Edge already on this "
-               + "machine and download nothing.";
+               + $"`pwsh {InstallScript()} install chromium --with-deps` (build the project in Release "
+               + $"first, or the script will not be there), or set {ChannelVariable}=msedge to drive the "
+               + "Edge already on this machine and download nothing.";
+    }
+
+    private static string InstallScript() =>
+        Path.Combine("tests", "MovieLibrary.Web.A11y", "bin", "Release", "net10.0", "playwright.ps1");
+
+    /// <summary>
+    /// The Chromium build number the <c>Microsoft.Playwright</c> in this output expects, read from the
+    /// <c>browsers.json</c> its package copies beside the assembly, or null when that file is not there.
+    /// </summary>
+    private static string? ExpectedChromiumRevision()
+    {
+        var file = Path.Combine(AppContext.BaseDirectory, ".playwright", "package", "browsers.json");
+        if (!File.Exists(file)) return null;
+
+        try
+        {
+            using var document = JsonDocument.Parse(File.ReadAllText(file));
+
+            if (!document.RootElement.TryGetProperty("browsers", out var browsers)
+                || browsers.ValueKind != JsonValueKind.Array)
+                return null;
+
+            foreach (var browser in browsers.EnumerateArray())
+                if (browser.ValueKind == JsonValueKind.Object
+                    && browser.TryGetProperty("name", out var name)
+                    && name.ValueKind == JsonValueKind.String
+                    && name.GetString() == "chromium"
+                    && browser.TryGetProperty("revision", out var revision)
+                    && revision.ValueKind == JsonValueKind.String)
+                    return revision.GetString();
+        }
+        catch (Exception e) when (e is JsonException or IOException)
+        {
+            return null;   // a file or a shape this cannot read is one it cannot check against
+        }
+
+        return null;
     }
 
     /// <summary>
-    /// Whether Playwright's own browser cache holds a Chromium build. Mirrors Playwright's own lookup order:
-    /// an explicit <c>PLAYWRIGHT_BROWSERS_PATH</c>, else the per-user cache, which differs by platform.
+    /// Playwright's own browser cache directory, by Playwright's own lookup order: an explicit
+    /// <c>PLAYWRIGHT_BROWSERS_PATH</c>, else the per-user cache, which differs by platform. Null when the
+    /// directory is not there at all.
     /// </summary>
-    private static bool BrowsersInstalled()
+    private static string? BrowserCache()
     {
         var root = Value("PLAYWRIGHT_BROWSERS_PATH") ?? DefaultBrowsersPath();
-
-        return root is not null
-               && Directory.Exists(root)
-               && Directory.EnumerateDirectories(root, "chromium*").Any();
+        return root is not null && Directory.Exists(root) ? root : null;
     }
 
     private static string? DefaultBrowsersPath()

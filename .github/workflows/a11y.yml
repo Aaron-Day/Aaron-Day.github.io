@@ -90,10 +90,17 @@ jobs:
       # A11Y_SITE_ROOT is also what makes these tests RUN rather than skip: with it unset every scan reports
       # Skipped, which is what a fresh clone should get. GateAvailabilityTests then fails this job if the
       # variable is missing in CI, so a silent all-skipped green run is not possible here.
+      #
+      # THE PATH IS ABSOLUTE, AND THAT IS NOT TIDINESS. It was `release/wwwroot`, which `dotnet test`
+      # resolves against the TEST ASSEMBLY'S OUTPUT FOLDER and not the workspace, so it named
+      # tests/MovieLibrary.Web.A11y/bin/Release/net10.0/release/wwwroot - a directory nothing publishes to.
+      # Every scan skipped, the CI guard below failed, and this job went red having scanned nothing. Gate
+      # now resolves a relative value against the repository root as well, so either half would do; both are
+      # here because the workflow should say what it means and the harness should not depend on it.
       - name: Scan
         id: scan
         env:
-          A11Y_SITE_ROOT: release/wwwroot
+          A11Y_SITE_ROOT: ${{ github.workspace }}/release/wwwroot
         run: |
           set -o pipefail
           dotnet test tests/MovieLibrary.Web.A11y -c Release --nologo \
