@@ -172,6 +172,17 @@ public class PosterGridTests : BunitContext
     /// with no item boundaries, no count and no list navigation. role="list" is explicit because WebKit
     /// drops list semantics when list-style is none, and display: grid on the container is the other known
     /// trigger: this element has both. Task 2 made the same call for the drawer's own list.
+    /// <para>
+    /// BOTH NEGATIVES HERE ARE SCOPED TO THE <c>ul</c> ITSELF, which they were not. The label check read
+    /// <c>Assert.DoesNotContain("aria-label", list.OuterHtml)</c> over the whole sixty-tile subtree, so
+    /// Task 7's badge could not carry an aria-label anywhere inside the grid without failing a test named
+    /// after the list's item count. And a <c>ul.grid [role]</c> ban forbade ANY role on ANY descendant --
+    /// including the <c>role="listitem"</c> PosterGrid's own comment instructs the next implementer to add
+    /// if an <c>li</c> ever takes display: flex or display: contents, so following the component would have
+    /// turned this red for correct code. That is rule T5's shape: a rule that rejects the canonical form
+    /// gets deleted. The roles actually worth banning are the composite-widget ones, and the sibling test
+    /// below is where they live.
+    /// </para>
     /// </remarks>
     [Fact]
     public void TheTileWallIsAListWithOneItemPerTileAndTheCountComesFromTheListItself()
@@ -183,16 +194,24 @@ public class PosterGridTests : BunitContext
         Assert.Equal(60, cut.FindAll("ul.grid > li").Count);
         Assert.Equal(60, cut.FindAll("ul.grid > li > .tile").Count);
 
-        // The item count a reader announces is the list's own. Nothing here states it a second time: a
-        // label carrying "60 items" would be a number to keep in step with the markup for no benefit.
-        Assert.DoesNotContain("aria-label", list.OuterHtml);
-        Assert.Empty(cut.FindAll("ul.grid [role]"));
+        // The item count a reader announces is the list's own. Nothing states it a second time: a label
+        // carrying "60 items" would be a number to keep in step with the markup for no benefit, and it
+        // would manufacture an SC 2.5.3 subject. The list's OWN attributes, not its subtree's.
+        Assert.False(list.HasAttribute("aria-label"));
+        Assert.False(list.HasAttribute("aria-labelledby"));
     }
 
     /// <remarks>
     /// The composite-widget roles are the ones that would promise arrow-key navigation this grid does not
     /// implement. role="list" is a document-structure role and carries no keyboard contract at all, which
     /// is the distinction an earlier draft of the brief collapsed.
+    /// <para>
+    /// This is where the role ban belongs, and it is named: grid, row and gridcell, plus aria-rowcount.
+    /// The sibling test above used to ban every role on every descendant, which also banned the one role
+    /// the component's own comment tells a later implementer to add. row and gridcell are included here
+    /// because they were the half that ban did cover and this one did not -- a stray role="row" on an li
+    /// is nonsense without role="grid", but nonsense that announces itself to a reader.
+    /// </para>
     /// </remarks>
     [Fact]
     public void TheGridClaimsNoCompositeWidgetSemanticsAndNothingInItIsATabStop()
@@ -201,6 +220,8 @@ public class PosterGridTests : BunitContext
         var grid = root.QuerySelector("ul.grid")!;
 
         Assert.Null(root.QuerySelector("[role='grid']"));
+        Assert.Null(root.QuerySelector("[role='row']"));
+        Assert.Null(root.QuerySelector("[role='gridcell']"));
         Assert.Null(root.QuerySelector("[aria-rowcount]"));
         Assert.Empty(MarkupRules.InteractiveElements(grid));
         Assert.Empty(grid.QuerySelectorAll("[tabindex]"));

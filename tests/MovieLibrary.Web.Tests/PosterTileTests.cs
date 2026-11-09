@@ -117,6 +117,15 @@ public class PosterTileTests : BunitContext
     public void TheTileRendersNoAnchorAndNothingInteractive()
     {
         var root = MarkupRules.Parse(RenderTile(Film()).Markup);
+
+        // [role] IS IN THE LIST HERE, and it is defensible here in a way it was not in the grid's own list
+        // test, where the identical shape banned the role="listitem" PosterGrid's comment instructs a later
+        // implementer to add. The tile genuinely carries no role in Part A and no role is pending for it:
+        // the list semantics live on the grid's ul and li, the badge Task 7 adds is content rather than a
+        // role, and Part B adds an anchor, whose role is implicit. So this is a rule with a subject it can
+        // fail on rather than one forbidding correct future code -- but it is the same T5 shape, so if a
+        // later task does need a role in here, narrow this to the roles it is about rather than deleting
+        // the whole assertion.
         var candidates = root.QuerySelectorAll("a, button, input, select, textarea, [tabindex], [role]")
             .ToList();
 
