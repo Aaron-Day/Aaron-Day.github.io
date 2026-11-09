@@ -231,28 +231,69 @@ public class StyleContractTests
     /// Scope: transition and animation, not transform. A static rotate() is not motion and has nothing for
     /// prefers-reduced-motion to reduce; a rule that flagged it would cry wolf, which is the one thing this
     /// gate must not do. Comments are stripped before the scan, so prose about motion cannot trip it.
-    /// What this cannot catch: motion that arrives through a component's scoped .razor.css, an inline
-    /// style, or a Bootstrap class. NoViewportUnitSitsBelowBodyInTheLayoutCss covers the scoped files for
-    /// its own rule; a stylesheet-wide sweep belongs with the browser pass in Task 4b. Nor can it check
-    /// that an override actually neutralises the motion: a reduce block naming the selector for any reason
-    /// satisfies the second form, because deciding otherwise means resolving the cascade, and a scan that
-    /// guessed at that would start rejecting correct CSS -- which is the failure this rule just had.
-    /// The rule's own logic is proven below against CSS written for the purpose, because app.css declares
-    /// motion in one place and no reduced-motion block at all, so this contract alone cannot prove it.
+    /// THE SET OF FILES THIS READS IS app.css PLUS EVERY *.razor.css UNDER THE WEB PROJECT, found by glob
+    /// rather than by a hand-maintained list, so a stylesheet added in a later task is covered the day it
+    /// appears rather than the day someone remembers it. Until Task 6 the only motion in the project could
+    /// only be in app.css, because no component had a stylesheet; Task 6 added the first two and every
+    /// later task adds more, which is the hole this remark used to admit to and no longer does.
+    /// Guards are collected PER FILE, plus app.css's own: a reduce block in app.css is unscoped and does
+    /// reach a component's elements, while one component's scoped reduce block cannot guard another's
+    /// selectors, because scoped CSS rewrites each file's selectors with its own attribute. Being stricter
+    /// than the real cascade would start rejecting correct CSS, which is rule T5's failure.
+    /// What this still cannot catch: an inline style, a Bootstrap class, or a stylesheet that is neither
+    /// app.css nor a *.razor.css. Nor can it check that an override actually neutralises the motion: a
+    /// reduce block naming the selector for any reason satisfies the second form, because deciding
+    /// otherwise means resolving the cascade, and a scan that guessed at that would start rejecting
+    /// correct CSS -- which is the failure this rule once had.
+    /// The rule's own logic is proven below against CSS written for the purpose, because the project
+    /// declares motion in one place and has no reduced-motion block at all, so this contract alone cannot
+    /// prove it.
     /// </remarks>
     [Fact]
     public void TheOnlyMotionIsTheBootSpinnersAndAnythingElseNeedsAReducedMotionBlock()
     {
-        var motion = MotionDeclarations(AppCss);
-        var guarded = SelectorsRedeclaredUnderReduce(AppCss);
+        var sheets = Stylesheets();
+        var names = sheets.Select(s => s.Path).ToList();
 
-        // Positive control. Every assertion below is a loop over `motion`, so an empty `motion` would make
-        // this test green while proving nothing at all - which is the failure mode the scan exists to stop.
-        Assert.Contains(motion, m => m.Context.Contains(".loading-progress"));
+        // A PERMANENT assertion that the glob found what it is supposed to, rather than the usual
+        // break-it-and-watch-it-fail exercise, which leaves nothing behind: once the deliberate transition
+        // is removed, nothing committed proves the discovery still reaches the component stylesheets, and a
+        // later path refactor goes green in silence. Named files, because the count alone would survive one
+        // being swapped for another.
+        Assert.Contains("wwwroot/css/app.css", names);
+        Assert.Contains("Components/PosterTile.razor.css", names);
+        Assert.Contains("Components/PosterGrid.razor.css", names);
+        Assert.Contains("Layout/MainLayout.razor.css", names);
+        Assert.Contains("Layout/NavMenu.razor.css", names);
 
-        foreach (var declaration in motion)
-            Assert.True(IsGuardedAgainstReducedMotion(declaration, guarded), Unguarded(declaration));
+        var appGuards = SelectorsRedeclaredUnderReduce(AppCss);
+        var all = sheets
+            .Select(s => (s.Path,
+                          Motion: MotionDeclarations(s.Text),
+                          Guarded: SelectorsRedeclaredUnderReduce(s.Text).Concat(appGuards)
+                                       .ToHashSet(StringComparer.Ordinal)))
+            .ToList();
+
+        // Positive control. Every assertion below loops over the motion found, so a discovery walk that
+        // stopped matching would make this test green while proving nothing at all - which is the failure
+        // mode the scan exists to stop. It also fails loudly if app.css ever leaves the set.
+        Assert.Contains(all.SelectMany(s => s.Motion), m => m.Context.Contains(".loading-progress"));
+
+        foreach (var sheet in all)
+        foreach (var declaration in sheet.Motion)
+            Assert.True(IsGuardedAgainstReducedMotion(declaration, sheet.Guarded),
+                        sheet.Path + ": " + Unguarded(declaration));
     }
+
+    /// <summary>
+    /// Every stylesheet this project hand-writes: app.css plus every scoped component sheet, by glob.
+    /// WebRoot.Files walks from the solution root and excludes obj and bin, so generated bundles and the
+    /// Bootstrap copy under wwwroot/lib are not in it.
+    /// </summary>
+    private static IReadOnlyList<(string Path, string Text)> Stylesheets() =>
+        new[] { ("wwwroot/css/app.css", AppCss) }
+            .Concat(WebRoot.Files("*.razor.css"))
+            .ToList();
 
     /// <remarks>
     /// The motion rule driven against CSS written here, good and bad, because app.css contains one guard
@@ -390,8 +431,8 @@ public class StyleContractTests
         + "before the app renders. Either drop the motion or guard it, in either of the two forms this "
         + "rule accepts: move the declaration inside @media (prefers-reduced-motion: no-preference), or "
         + $"leave it where it is and redeclare `{motion.Selector}` under "
-        + "@media (prefers-reduced-motion: reduce) to turn it off there. Then say which in app.css's "
-        + "closing comment.";
+        + "@media (prefers-reduced-motion: reduce) to turn it off there. Then say which in that "
+        + "stylesheet's closing comment.";
 
     /// <summary>
     /// One declaration, the nested selectors and at-rules it sits under, and the innermost of those on its
@@ -444,4 +485,94 @@ public class StyleContractTests
 
     private static MotionDeclaration At(List<string> open, string declaration) =>
         new(string.Join(" ", open), open.Count == 0 ? "" : open[^1], declaration);
+
+    // ================================================================== the component stylesheets
+
+    private static readonly string TileCss = WebRoot.Read("Components", "PosterTile.razor.css");
+    private static readonly string GridCss = WebRoot.Read("Components", "PosterGrid.razor.css");
+
+    /// <remarks>
+    /// The clipping properties are banned by name. A two-line clamp holds roughly 30 to 35 characters at
+    /// this column width in a semibold face, and real titles go to 49 -- with no link, no title attribute
+    /// and no label on the tile, a sighted reader would have no way at all to read the rest, and the
+    /// uncertain matches are precisely the records whose titles need reading. Forcing the SC 1.4.12 Text
+    /// Spacing overrides makes it strictly worse, because fewer characters then fit on each line.
+    /// min-height is required to be in em: the box is reserving two lines of THIS text, so a px floor
+    /// stops being two lines the moment the reader changes the size. That is the em unit on its own
+    /// merits; it is not what 1.4.12 is about, since a minimum simply grows.
+    /// </remarks>
+    [Fact]
+    public void TheTileTitleWrapsRatherThanClipping()
+    {
+        var css = WithoutComments(TileCss);
+
+        Assert.DoesNotContain("line-clamp", css);
+        Assert.DoesNotContain("text-overflow", css);
+        Assert.DoesNotMatch(@"overflow\s*:\s*hidden", css);
+        Assert.Matches(@"\.tile-title\s*\{[^}]*min-height\s*:\s*[\d.]+em", css);
+        Assert.Matches(@"\.grid\s*\{[^}]*align-items\s*:\s*start", WithoutComments(GridCss));
+    }
+
+    /// <remarks>
+    /// The greyed state is selected by the attribute, never by :disabled, because the button is never
+    /// disabled -- see PosterGrid.Go for why. A :disabled rule here would be dead CSS that quietly
+    /// legitimised going back to the attribute. opacity stays at 1: the state is carried by a colour that
+    /// passes contrast, and --dim on --panel2 is 5.43:1, which choosing aria-disabled makes load-bearing
+    /// rather than spare, because the control is still focusable and so outside SC 1.4.3's exemption for
+    /// an inactive component.
+    /// </remarks>
+    [Fact]
+    public void TheGreyedPagerButtonIsSelectedByTheAttributeAndKeepsItsOpacity()
+    {
+        var css = WithoutComments(GridCss);
+
+        Assert.Matches(@"\.pager button\[aria-disabled=""true""\]\s*\{[^}]*color\s*:\s*var\(--dim\)", css);
+        Assert.Matches(@"\.pager button\[aria-disabled=""true""\]\s*\{[^}]*opacity\s*:\s*1", css);
+        Assert.DoesNotContain(":disabled", css);
+    }
+
+    /// <remarks>
+    /// The buttons read --touch rather than repeating its value, so a change to the token moves them with
+    /// it. Deliberately NOT a conformance assertion about the number: 44x44 is SC 2.5.5 Target Size
+    /// (Enhanced), Level AAA, and the criterion this project is held to is SC 2.5.8 Target Size (Minimum),
+    /// Level AA, at 24x24. The rendered size is measured in a browser; this only pins that the declaration
+    /// is there and that nobody wrote 44px twice.
+    /// </remarks>
+    [Fact]
+    public void ThePagerButtonsReadTheTouchTokenRatherThanRepeatingItsValue()
+    {
+        var css = WithoutComments(GridCss);
+
+        Assert.Matches(@"\.pager button\s*\{[^}]*min-width\s*:\s*var\(--touch\)", css);
+        Assert.Matches(@"\.pager button\s*\{[^}]*min-height\s*:\s*var\(--touch\)", css);
+        Assert.DoesNotContain("44px", css);
+        Assert.Matches(@"\.pager button\s*\{[^}]*border\s*:\s*2px solid var\(--line-strong\)", css);
+    }
+
+    /// <remarks>
+    /// Two halves, and which is which matters. SC 1.4.10 Reflow requires the content to be presentable at
+    /// 320 CSS px with no two-dimensional scrolling; it does NOT require two columns -- one column is the
+    /// canonical Reflow outcome and is fully conformant. The two-column floor is a HOUSE RULE about
+    /// density. The breakpoint also has to join cleanly to the auto-fill rule, or a third cramped column
+    /// appears on a 360px phone.
+    /// </remarks>
+    [Fact]
+    public void TheNarrowestWidthGetsTwoColumnsWhichIsAHouseRuleAndNotReflow()
+    {
+        var css = WithoutComments(GridCss);
+
+        Assert.Matches(@"\.grid\s*\{[^}]*grid-template-columns\s*:\s*repeat\(auto-fill,\s*minmax\(7rem,\s*1fr\)\)", css);
+        Assert.Matches(@"@media \(max-width:\s*22\.5rem\)\s*\{\s*\.grid\s*\{[^}]*repeat\(2,\s*1fr\)", css);
+    }
+
+    [Fact]
+    public void TheTileWallKeepsNoListBulletsAndNoDefaultListPadding()
+    {
+        // list-style: none is what makes role="list" in the markup load-bearing rather than redundant:
+        // WebKit drops list semantics from a list styled this way, and again from a grid container.
+        var css = WithoutComments(GridCss);
+
+        Assert.Matches(@"\.grid\s*\{[^}]*list-style\s*:\s*none", css);
+        Assert.Matches(@"\.grid\s*\{[^}]*padding\s*:\s*0", css);
+    }
 }
