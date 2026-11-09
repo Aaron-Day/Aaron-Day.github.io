@@ -1,3 +1,4 @@
+using MovieLibrary.Core.Matching;
 using MovieLibrary.Enrich.Reporting;
 
 namespace MovieLibrary.Core.Tests;
@@ -352,19 +353,39 @@ public class JobSummaryTests
         Assert.Contains("Match confidence: **1,300** confident, **100** need review, **57** not matched", text);
     }
 
+    /// <summary>
+    /// The words this page uses for a band, derived from the badge the SITE shows for it.
+    /// </summary>
     /// <remarks>
-    /// In the same words the site badges films with -- ConfidenceBand.BadgeFor spells them "Needs review" and
-    /// "Not matched" -- so the owner reading this page and the owner looking at the site are reading one
-    /// vocabulary. The numbers come from the same band function, which is why they cannot disagree either.
+    /// One transform, and it is grammar rather than vocabulary: the badge stands alone ("Needs review") while
+    /// this page's phrase follows a count ("**100** need review"). Everything else is the badge's own words.
+    /// <para>
+    /// Derived rather than typed out again, because two independent sets of literals cannot hold a vocabulary
+    /// together: renaming <c>BadgeFor</c>'s string left this test green while the badge on the site and the
+    /// line on this page drifted apart, which is the one thing the test claims to prevent.
+    /// </para>
+    /// </remarks>
+    private static string SummaryWordsFor(Confidence band) =>
+        ConfidenceBand.BadgeFor(band)!.ToLowerInvariant().Replace("needs ", "need ", StringComparison.Ordinal);
+
+    /// <remarks>
+    /// In the same words the site badges films with, so the owner reading this page and the owner looking at
+    /// the site are reading one vocabulary. The numbers come from the same band function, which is why they
+    /// cannot disagree either.
     /// </remarks>
     [Fact]
     public void TheBandWordsAreTheOnesTheSiteUses()
     {
         var text = Page(Healthy());
 
-        Assert.Contains("need review", text);
-        Assert.Contains("not matched", text);
-        Assert.DoesNotContain("uncertain", text, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(SummaryWordsFor(Confidence.Uncertain), text, StringComparison.Ordinal);
+        Assert.Contains(SummaryWordsFor(Confidence.Unmatched), text, StringComparison.Ordinal);
+
+        // Scoped to the one line the rule is about. Over the whole page this was a trap waiting for a film
+        // called "Uncertain Glory" or a review note using the word: the rule is that the BAND is not named
+        // with the pipeline's jargon, not that the word may never appear on the page.
+        var line = Assert.Single(text.Split('\n'), l => l.Contains("Match confidence", StringComparison.Ordinal));
+        Assert.DoesNotContain("uncertain", line, StringComparison.OrdinalIgnoreCase);
     }
 
     /// <remarks>
