@@ -114,6 +114,17 @@ jobs:
           # "every scan skipped" in a block nobody opens. Fifteen is the number of states the project
           # scans today; adding one means raising this, which is the point.
           scans=$(grep -c '=== axe:' a11y.log || true)
+
+          # NORMALISE THE COUNT BEFORE COMPARING IT. A guard whose whole purpose is to be un-bypassable
+          # cannot be left to fail open on input it did not expect, and this one could: `|| true` is there
+          # so that grep's exit 1 (no match) does not stop the step, but it also turns grep's exit 2 (the
+          # log is missing or unreadable) into an EMPTY string. `[ "" -lt 15 ]` is then not false, it is
+          # an error - it prints a complaint about an integer expression and returns 2 - and an `if`
+          # condition is exempt from set -e, so the branch is not taken and the step exits 0 having
+          # counted nothing. Today tee creates the log in this same step, so the value is always at
+          # least "0"; the guard should not depend on that. Anything that is not a plain run of digits
+          # is read as zero scans, which is the reading that fails.
+          case "$scans" in ''|*[!0-9]*) scans=0 ;; esac
           echo "axe scans in this run: $scans"
           if [ "$scans" -lt 15 ]; then
             echo "::error title=The gate scanned less than it claims::Only $scans axe scan(s) ran; this project has 15 DOM states. A run that scanned fewer has not gated what the check mark says it gated."
@@ -134,7 +145,7 @@ jobs:
             echo
             echo '```'
             sed 's/^\[xUnit.net [0-9:.]*\] *//' a11y.log \
-              | grep -E "^ *(=== axe:|tags:|violations [0-9]|asserted violations|print-only|incomplete treated|other incomplete|exempt in the)" \
+              | grep -E "^ *(=== axe:|tags:|violations [0-9]|asserted violations|print-only|incomplete treated|other incomplete)" \
               || echo "No axe output: every scan skipped."
             echo '```'
             echo
