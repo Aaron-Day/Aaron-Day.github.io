@@ -1,0 +1,122 @@
+name: Accessibility gate
+
+# PULL REQUESTS AND MANUAL DISPATCH ONLY, and deliberately no push trigger. This workflow exists so that the
+# browser gate - which restores Microsoft.Playwright and downloads a Chromium build - runs nowhere near the
+# deploy job. .github/workflows/main.yml holds secrets.TMDB_TOKEN and contents: write, and its test step names
+# its two unit test projects explicitly for that reason.
+#
+# NO SECRET IS IN SCOPE HERE AND NONE MAY BE ADDED. Nothing in this job reads TMDB_TOKEN, nothing calls TMDB,
+# nothing calls the Google Sheet, nothing pushes, and nothing reaches any network host but the package feeds
+# and the Playwright download. The catalogue under test is synthetic and is written by the test project itself.
+#
+# FOR A FAILURE HERE TO BLOCK A DEPLOY RATHER THAN ANNOTATE ONE, this job has to be a required status check on
+# master in the repository's branch protection. The workflow itself cannot arrange that: it fails the job
+# honestly - there is no continue-on-error and no soft warning anywhere below - and the deploy in main.yml
+# triggers on push, so without the required-check setting a red gate here would merely sit on the pull request.
+# That setting is the owner's to make, once, in the repository settings.
+on:
+  pull_request:
+  workflow_dispatch:
+
+# Explicit and read-only. This job publishes a site into its own workspace and nothing else; it has no
+# business writing to the repository, and saying so is cheaper than trusting the default.
+permissions:
+  contents: read
+
+# Unlike the deploy workflow, cancelling a run here throws nothing away: no request budget is spent and no
+# cache is written, so a superseded commit's run is pure cost.
+concurrency:
+  group: a11y-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      # SHA-pinned, and the comment carries the version the SHA was the tip of, exactly as main.yml does and
+      # for the same reason: a vN tag can be repointed at new code by whoever owns the action.
+      # MovieLibrary.Core.Tests.RepositoryFileTests checks every workflow in this directory, this one
+      # included, so an unpinned action fails the unit tests before it ever runs here.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
+        with:
+          dotnet-version: '10.0.x'
+
+      # Task 4a's markup contracts, which need no browser. They run first because they are seconds, they
+      # cover the DOM-level half of the same conformance claims, and a failure there makes the browser half
+      # uninterpretable.
+      - name: Test the markup contracts
+        run: dotnet test tests/MovieLibrary.Web.Tests --nologo --verbosity normal
+
+      # The artifact under test has to be the artifact that gets deployed, so the 404 copy and the .nojekyll
+      # touch are here as well as in main.yml. Without the copy, release/wwwroot differs from the deployed
+      # site in precisely the file that governs an unmatched address - and an unmatched address is one of the
+      # four the gate scans. Folded into one step so a publish that failed part-way cannot leave the next
+      # two succeeding on a partial site.
+      - name: Publish the site
+        run: |
+          dotnet publish src/MovieLibrary.Web -c Release -o release --nologo
+          cp release/wwwroot/index.html release/wwwroot/404.html
+          touch release/wwwroot/.nojekyll
+
+      # NO ENRICH RUN, AND THAT IS A CORRECTION TO THIS TASK'S BRIEF RATHER THAN AN OMISSION.
+      # The brief called for `dotnet run --project src/MovieLibrary.Enrich -- --fixtures --out
+      # release/wwwroot/data`. Both flags are real, and a --fixtures run does set Token to the empty string
+      # and makes no TMDB request. But EnrichRun.RunCoreAsync fetches the Google Sheet BEFORE it reaches the
+      # fixture branch, so that command would have had every pull request on a public repository pull the
+      # owner's live sheet - a real external dependency, and a flaky one, in a job whose whole point is that
+      # it depends on nothing. MovieLibrary.Web.A11y writes its own catalogue instead: 1,456 synthetic
+      # records, serialised through MovieRecord with CatalogWriter's own options so a change to the published
+      # shape still breaks the gate. See its Harness/Catalogue.cs.
+      #
+      # Release, and BEFORE the browser install, because the install script is in the Release output and
+      # `dotnet test -c Release` below has to find the browser it installs.
+      - name: Build the browser gate
+        run: dotnet build tests/MovieLibrary.Web.A11y -c Release --nologo
+
+      - name: Install Chromium
+        run: pwsh tests/MovieLibrary.Web.A11y/bin/Release/net10.0/playwright.ps1 install chromium --with-deps
+
+      # NOTHING SERVES THE SITE HERE, because the test assembly serves it itself: an in-process Kestrel over
+      # release/wwwroot, from the ROOT path to match <base href="/" />, with unknown paths answered by
+      # index.html's body under a real HTTP 404. That is what GitHub Pages does - it serves 404.html with a
+      # 404 rather than rewriting to a 200 - and the rendered DOM is identical either way, so the status
+      # affects no assertion; it is matched so that nothing in the harness can come to rely on a status the
+      # live site does not send. A backgrounded server process would need a readiness wait, a port and a
+      # teardown, and all three are flake a gate does not need.
+      #
+      # A11Y_SITE_ROOT is also what makes these tests RUN rather than skip: with it unset every scan reports
+      # Skipped, which is what a fresh clone should get. GateAvailabilityTests then fails this job if the
+      # variable is missing in CI, so a silent all-skipped green run is not possible here.
+      - name: Scan
+        id: scan
+        env:
+          A11Y_SITE_ROOT: release/wwwroot
+        run: |
+          set -o pipefail
+          dotnet test tests/MovieLibrary.Web.A11y -c Release --nologo \
+            --logger "console;verbosity=detailed" 2>&1 | tee a11y.log
+
+      # The job summary, and nothing else: no issues opened, no commit comments, no annotations beyond what
+      # the test runner itself emits. always() so that a failing scan is the case that gets reported.
+      - name: Report to the job summary
+        if: always()
+        run: |
+          {
+            echo "## Accessibility gate"
+            echo
+            echo "WCAG 2.2 Level AA, plus the best-practice rules this project promotes by house rule."
+            echo
+            grep -E "^(Passed|Failed)!" a11y.log || echo "The scan produced no result line."
+            echo
+            echo '```'
+            sed 's/^\[xUnit.net [0-9:.]*\] *//' a11y.log \
+              | grep -E "^ *(=== axe:|tags:|violations [0-9]|asserted violations|print-only|incomplete treated|other incomplete|exempt in the)" \
+              || echo "No axe output: every scan skipped."
+            echo '```'
+            echo
+            echo "Full per-rule detail, including every inapplicable rule and the touch-target inventory, is"
+            echo "in the Scan step's log."
+          } >> "$GITHUB_STEP_SUMMARY"
