@@ -187,6 +187,14 @@
     /// </summary>
     private int page = 1;
 
+    /// <summary>
+    /// True from the moment <see cref="AdoptAddress"/> takes a page from the address until the render that hands
+    /// that page to the grid has finished. The grid answers a page out of range with a correction, raised through
+    /// the same <c>PageChanged</c> a button press uses and inside that very render, so this is the only thing that
+    /// tells the two apart. See <see cref="OnPageChanged"/>.
+    /// </summary>
+    private bool awaitingGridCorrection;
+
     // ---- the filter. The ADDRESS is the state; these are the page's working copy of it, adopted eagerly so a
     // choice shows at once and reconciled against what the router hands back (see AdoptAddress).
 
@@ -337,6 +345,9 @@
     /// </remarks>
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        // First, before any await: this must be the render's own call, and not a continuation of an earlier one.
+        awaitingGridCorrection = false;
+
         if (disposed) return;
 
         switch (films.State)
@@ -565,6 +576,16 @@
     /// <summary>Adopts the page the grid asked for, writes it to the address, and says nothing.</summary>
     /// <remarks>
     /// <para>
+    /// A PRESS ENDS THE COUNT. A facet changed a moment ago has armed the count, and a press inside that window
+    /// puts the grid's sentence into the same region: early in the window the visitor hears the page and then a
+    /// count for something they did not just do, and in the last settle delay of it the count supersedes the page
+    /// sentence while that is still waiting, so the press is never spoken at all. The count is already on screen
+    /// in the grid's head and the press is the visitor's latest act, so the count is dropped. Not for a
+    /// CORRECTION, though: that raises this too, says nothing, and must not take with it the count of the list
+    /// that has just changed under the visitor. The grid makes its correction in the render that carries an
+    /// address's page to it, which is exactly <see cref="awaitingGridCorrection"/>.
+    /// </para>
+    /// <para>
     /// The grid announces the change itself. R7 wants whoever writes a standing statement to be whoever
     /// clears it, and the grid is what clears the region on its own dispose, so the announce belongs there
     /// too. Announcing here as well would speak the page twice -- and would speak it on the FIRST render,
@@ -579,6 +600,7 @@
     private void OnPageChanged(int value)
     {
         page = value;
+        if (!awaitingGridCorrection) Stop(announceTimer);
         syncedWith = QueryState.Canonical(filter, page);
         Address.WritePage(value);
     }
@@ -619,6 +641,7 @@
         syncedWith = signature;
         filter = fromAddress;
         page = addressPage;
+        awaitingGridCorrection = true;
 
         // A search typed against the state this replaces is dropped: it was meant for a list that is no longer
         // on screen. The filter timer needs no stopping for that -- it applies whatever the box holds when it

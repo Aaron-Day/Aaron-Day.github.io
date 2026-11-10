@@ -815,6 +815,89 @@ public class MoviesFilterTests : BunitContext
         Assert.DoesNotContain(said, s => s.Contains("Page", StringComparison.Ordinal));
     }
 
+    /// <remarks>
+    /// R-G from the OTHER direction, the order the test above does not cover. A change to the list arms the 750 ms
+    /// count; a pager press inside that window puts the grid's sentence into the same region. Early in the window
+    /// the visitor hears the page and then, a moment later, a count for something they did not just do. In the last
+    /// settle delay of it the count arrives while the page sentence is still waiting, supersedes it, and the press
+    /// is never spoken at all. The count is already on screen in the grid's head and the press is the visitor's
+    /// latest act, so the press wins: its sentence is the only thing said, at either end of the window.
+    /// Every film matches "Film", so the list changes without losing its second page. The two figures are
+    /// literals on purpose (the window is 750 ms, pinned above): 300 is early, and 700 is the last 50 ms of it,
+    /// inside the 100 ms settle delay the page sentence is still waiting out.
+    /// </remarks>
+    [Theory]
+    [InlineData(300)]
+    [InlineData(700)]
+    public async Task APagerPressInsideTheCountWindowOfATypedFilterIsTheOnlyThingSaid(int pressedAfter)
+    {
+        var open = Render(Bulk(130));
+
+        await AssertThePressIsTheOnlyThingSaid(open, pressedAfter, async () =>
+        {
+            open.Cut.Find("#q").Input("Film");
+            await Step(open, Movies.FilterDebounceMs);               // applied now: the count window opens here
+        });
+    }
+
+    /// <remarks>
+    /// The same window opened the other way, by an address followed. This is the route that proves the guard on a
+    /// correction is put away again: if it were left up after the render that carried the address's page, the
+    /// press would be treated as one more correction and the count would eat it.
+    /// </remarks>
+    [Theory]
+    [InlineData(300)]
+    [InlineData(700)]
+    public async Task APagerPressInsideTheCountWindowOfAFollowedLinkIsTheOnlyThingSaid(int pressedAfter)
+    {
+        var open = Render(Bulk(130));
+
+        await AssertThePressIsTheOnlyThingSaid(open, pressedAfter, () =>
+        {
+            open.Nav.NavigateTo("/movies?q=Film");
+            return Task.CompletedTask;
+        });
+    }
+
+    private async Task AssertThePressIsTheOnlyThingSaid(Open open, int pressedAfter, Func<Task> changeTheList)
+    {
+        Settle(open);                                                // the opening sentence is out of the way
+        var said = new List<string>();
+        Spoken().Changed += () => said.Add(Spoken().StatusText);
+
+        await changeTheList();
+        Assert.Equal("Page 1 of 3", PageLabel(open.Cut));
+
+        await Step(open, pressedAfter);
+        Next(open.Cut);
+        await Step(open, 1000);
+
+        open.Cut.WaitForAssertion(() =>
+            Assert.Equal("Page 2 of 3. Showing 61 to 120 of 130 titles.", Status(open)));
+        Assert.DoesNotContain(said, s => s.Contains("titles match", StringComparison.Ordinal));
+        Assert.Single(said, s => s.Length > 0);
+    }
+
+    /// <remarks>
+    /// The other half of the fix above, and why it cannot simply stop the count on every PageChanged: the grid
+    /// raises it to correct a page that is out of range as well as for a press, and a correction says nothing. A
+    /// link followed over a live page that narrows the list AND names a page past its end arms the count and then
+    /// has the grid correct the page in the same render. If that correction stopped the count, the visitor would
+    /// be told nothing about a list that just changed under them.
+    /// </remarks>
+    [Fact]
+    public void ALinkThatNarrowsTheListAndNamesAPagePastItsEndStillSpeaksTheCount()
+    {
+        var open = Render(Bulk(130));
+        Settle(open);
+
+        open.Nav.NavigateTo("/movies?q=Film%201&page=99");
+        Settle(open);
+
+        open.Cut.WaitForAssertion(() => Assert.Equal("31 titles match.", Status(open)));
+        Assert.Equal(31, Titles(open.Cut).Length);
+    }
+
     /// <remarks>R-L, and one number in one block of text: the same grouping as the grid's head under it.</remarks>
     [Theory]
     [InlineData("en-US", "1,456 titles match.", "Showing 1–60 of 1,456 titles.")]
