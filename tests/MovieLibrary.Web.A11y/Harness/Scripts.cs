@@ -324,4 +324,126 @@ internal static class Scripts
 
     /// <summary>Forgets the last scroll sample, so a settle wait cannot pass on a stale one.</summary>
     public const string ForgetScroll = "() => { window.a11yScroll = null; }";
+
+
+    /// <summary>
+    /// Whether the first element matching a selector can actually be reached where it is drawn: "ok", or a
+    /// sentence saying why not.
+    /// </summary>
+    /// <remarks>
+    /// A string rather than a bool, because every way this can answer "no" is a different defect and one
+    /// word loses which. "(no element matches ...)" is the case a bool would turn into a silent pass the
+    /// day a selector stops matching - a hit test against an element that is not there is exactly the
+    /// trivially-passing assertion this project keeps catching - so it is a distinct answer and not a
+    /// false. <c>display: none</c> comes back verbatim too, because at the nav breakpoint it is the
+    /// EXPECTED answer for one of the two controls.
+    /// </remarks>
+    public const string HitTestableCentre = """
+        selector => {
+          const el = document.querySelector(selector);
+          if (!el) return "(no element matches " + selector + ")";
+          const style = getComputedStyle(el);
+          if (style.display === "none") return "display: none";
+          if (style.visibility === "hidden") return "visibility: hidden";
+          const box = el.getBoundingClientRect();
+          if (box.width === 0 || box.height === 0)
+            return "a zero-sized box, " + box.width + "x" + box.height;
+          const x = box.left + box.width / 2, y = box.top + box.height / 2;
+          if (x < 0 || y < 0 || x > window.innerWidth || y > window.innerHeight)
+            return "its centre is outside the viewport, at " + Math.round(x) + "," + Math.round(y);
+          const hit = document.elementFromPoint(x, y);
+          if (hit === el || el.contains(hit)) return "ok";
+          const id = hit && hit.id ? "#" + hit.id : "";
+          const cls = hit && typeof hit.className === "string" && hit.className.trim().length > 0
+            ? "." + hit.className.trim().split(/\s+/)[0] : "";
+          return "its centre at " + Math.round(x) + "," + Math.round(y) + " hits "
+                 + (hit ? hit.tagName.toLowerCase() + id + cls : "nothing");
+        }
+        """;
+
+
+    /// <summary>
+    /// Every visible element that clips its own overflow and holds more content than fits, with the axis
+    /// and the overflow in CSS px.
+    /// </summary>
+    /// <remarks>
+    /// <b>The visually-hidden pattern is exempt, and that carve-out is the reason this needs a comment.</b>
+    /// Bootstrap's <c>.visually-hidden</c> is a 1x1 box with <c>overflow: hidden</c> and a clip rect, so
+    /// EVERY element carrying it clips content by design - the skip link, the boot shell's heading, the
+    /// Menu button's label and all three announcer regions. Without the carve-out this reports six clipped
+    /// elements on a correct page and can never go green. Rule T1 then applies to the carve-out in turn,
+    /// which is what <see cref="ClippingContainers"/> is for: the caller has to be told how many subjects
+    /// survive it rather than assume any did.
+    /// </remarks>
+    public const string ClippedContent = """
+        () => {
+          const out = [];
+          for (const el of document.querySelectorAll("body *")) {
+            if (el.closest(".visually-hidden, .visually-hidden-focusable")) continue;
+            const s = getComputedStyle(el);
+            if (s.display === "none" || s.visibility === "hidden") continue;
+            const clipsY = s.overflowY === "hidden" || s.overflowY === "clip";
+            const clipsX = s.overflowX === "hidden" || s.overflowX === "clip";
+            if (!clipsY && !clipsX) continue;
+            const overY = clipsY ? el.scrollHeight - el.clientHeight : 0;
+            const overX = clipsX ? el.scrollWidth - el.clientWidth : 0;
+            const id = el.id ? "#" + el.id : "";
+            const cls = typeof el.className === "string" && el.className.trim().length > 0
+              ? "." + el.className.trim().split(/\s+/)[0] : "";
+            const what = el.tagName.toLowerCase() + id + cls;
+            if (overY > 1) out.push(what + " clips " + overY + "px of its content vertically");
+            if (overX > 1) out.push(what + " clips " + overX + "px of its content horizontally");
+          }
+          return out;
+        }
+        """;
+
+
+    /// <summary>
+    /// Every element that clips its own overflow, the exempt pattern aside, whether or not it is
+    /// overflowing. The subject floor for <see cref="ClippedContent"/>: rule T1, a scan over an empty set
+    /// proves nothing.
+    /// </summary>
+    public const string ClippingContainers = """
+        () => {
+          const out = [];
+          for (const el of document.querySelectorAll("body *")) {
+            if (el.closest(".visually-hidden, .visually-hidden-focusable")) continue;
+            const s = getComputedStyle(el);
+            if (s.display === "none" || s.visibility === "hidden") continue;
+            const clips = ["hidden", "clip"];
+            if (!clips.includes(s.overflowY) && !clips.includes(s.overflowX)) continue;
+            const id = el.id ? "#" + el.id : "";
+            const cls = typeof el.className === "string" && el.className.trim().length > 0
+              ? "." + el.className.trim().split(/\s+/)[0] : "";
+            out.push(el.tagName.toLowerCase() + id + cls + " overflow " + s.overflowX + "/" + s.overflowY);
+          }
+          return out;
+        }
+        """;
+
+
+    /// <summary>
+    /// How an element's text is actually spaced, in a fixed order: what it is, font-size, line-height,
+    /// letter-spacing, word-spacing.
+    /// </summary>
+    /// <remarks>
+    /// Two jobs. On a plain page it is where app.css's <b>unitless</b> <c>line-height: 1.5</c> can be seen
+    /// to have survived to the computed style, which is the promise SC 1.4.12 Text Spacing (Level AA) rests
+    /// on - a unitless value computes to font-size times 1.5 and so grows with a reader's own override,
+    /// where <c>line-height: 21px</c> would not. With the overrides injected it is how a test proves the
+    /// injection TOOK, which matters more than it sounds: a style tag that silently failed to apply would
+    /// leave every assertion afterwards measuring the ordinary page and passing.
+    /// </remarks>
+    public const string TextMetrics = """
+        selector => {
+          const el = document.querySelector(selector);
+          if (!el) return ["(no element matches " + selector + ")", "", "", "", ""];
+          const s = getComputedStyle(el);
+          const cls = typeof el.className === "string" && el.className.trim().length > 0
+            ? "." + el.className.trim().split(/\s+/)[0] : "";
+          return [el.tagName.toLowerCase() + cls,
+                  s.fontSize, s.lineHeight, s.letterSpacing, s.wordSpacing];
+        }
+        """;
 }
