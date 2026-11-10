@@ -657,4 +657,22 @@ internal static class Scripts
           return claims;
         }
         """;
+
+
+    /// <summary>
+    /// Every live region in the document, each as tag#id with the attributes that make it one.
+    /// </summary>
+    /// <remarks>
+    /// Both mechanisms, because markup can use either: an explicit <c>aria-live</c>, and the four roles
+    /// that carry an implicit one - <c>status</c> and <c>timer</c> are polite, <c>alert</c> and
+    /// <c>marquee</c> assertive. A scan for <c>aria-live</c> alone would miss <c>#status-announcer</c>,
+    /// <c>#alert-region</c> and <c>#blazor-error-ui</c>, which is three of this project's four.
+    /// </remarks>
+    public const string LiveRegions = """
+        () => Array.from(document.querySelectorAll(
+                "[aria-live], [role=status], [role=alert], [role=log], [role=timer], [role=marquee]"))
+               .map(el => el.tagName.toLowerCase() + (el.id ? "#" + el.id : "")
+                          + " [" + (el.getAttribute("role") || "no role")
+                          + "/" + (el.getAttribute("aria-live") || "no aria-live") + "]")
+        """;
 }
