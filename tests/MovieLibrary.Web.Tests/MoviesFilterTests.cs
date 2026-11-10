@@ -280,12 +280,24 @@ public class MoviesFilterTests : BunitContext
     {
         var open = Render(Eight);
 
-        open.Cut.Find("#q").Input("ech");
+        open.Cut.Find("#q").Input(" ech ");                         // padded, as a trailing space often is
         Tick(open.Cut, "Match confidence", "Not matched", true);   // before the debounce has fired
 
-        // Not matched alone is Echo and Golf: the typed text is what leaves Echo.
+        // Not matched alone is Echo and Golf: the typed text is what leaves Echo, trimmed on the way.
         Assert.Equal(new[] { "Echo" }, Titles(open.Cut));
-        Assert.Equal("ech", open.Cut.Find("#q").GetAttribute("value"));
+        Assert.Equal(" ech ", open.Cut.Find("#q").GetAttribute("value"));   // the box keeps what was typed
+    }
+
+    [Fact]
+    public void ASearchIsTrimmedBeforeItIsAppliedAndBeforeItIsWritten()
+    {
+        var open = Render(Eight);
+
+        open.Cut.Find("#q").Input("  alp ");
+        open.Clock.Advance(TimeSpan.FromMilliseconds(Movies.FilterDebounceMs));
+
+        open.Cut.WaitForAssertion(() => Assert.Equal(new[] { "Alpha" }, Titles(open.Cut)));
+        Assert.EndsWith("movies?q=alp", open.Nav.Uri);
     }
 
     [Fact]
