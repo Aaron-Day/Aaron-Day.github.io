@@ -1,5 +1,6 @@
 using System.Globalization;
 using System.Text.Json;
+using MovieLibrary.Core.Matching;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Enrich.Emit;
 
@@ -52,6 +53,27 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     private static IReadOnlyList<MovieRecord> Films(IReadOnlyList<SheetRow>? rows = null)
         => FixtureGenerator.Build(rows ?? Library(), []).Item1;
 
+    /// <summary>
+    /// The films TMDB matched. Every assertion about a SYNTHETIC field is scoped to these, because an
+    /// unmatched fixture film deliberately has none of them: no year, no genre ids, no cast, no overview,
+    /// no tagline, no collection and a vote of 0, which is the shape the pipeline really publishes
+    /// (<c>tests/fixtures/movies-three-records.json</c>). The unmatched shape is not merely carved out and
+    /// then forgotten; it has its own assertions in
+    /// <see cref="AnUnmatchedFixtureFilmKeepsTheSheetsDataAndNothingTmdbWouldHaveSupplied"/>.
+    /// </summary>
+    /// <remarks>
+    /// RULE T1: this asserts the set is non-empty, because "every matched film" over an empty set is exactly
+    /// the vacuity this project keeps shipping. The count is not pinned -- it moves with the draw -- but its
+    /// being non-zero is.
+    /// </remarks>
+    private static List<MovieRecord> Matched(IReadOnlyList<SheetRow>? rows = null)
+    {
+        var matched = Films(rows).Where(m => m.I != 0).ToList();
+
+        Assert.NotEmpty(matched);
+        return matched;
+    }
+
     // ---- real data survives --------------------------------------------------------------
 
     [Fact]
@@ -76,13 +98,58 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     [Fact]
     public void SyntheticFieldsStayInTheRangesTheUiWasDesignedFor()
     {
-        Assert.All(Films(), m =>
+        // MATCHED FILMS ONLY. An unmatched film carries no year, no overview and a vote of 0 on purpose, so
+        // these ranges were never claims about it; before it was degraded they passed over it by accident.
+        Assert.All(Matched(), m =>
         {
             Assert.InRange(m.Y!.Value, 1970, 2024);
             Assert.InRange(m.Vote, 4.0, 9.9);
             Assert.Equal(Math.Round(m.Vote, 1), m.Vote);
-            if (m.I != 0) Assert.InRange(m.I, 900_000, 999_999);   // 0 is an unmatched film, by design
+            Assert.InRange(m.I, 900_000, 999_999);
             Assert.False(string.IsNullOrWhiteSpace(m.Ov));
+        });
+    }
+
+    /// <remarks>
+    /// THE PUBLISHED SHAPE OF AN UNMATCHED ROW, taken from the real one in
+    /// <c>tests/fixtures/movies-three-records.json</c> rather than invented here: <c>y</c> absent,
+    /// <c>g: []</c>, <c>cast: []</c>, no <c>ov</c>/<c>tag</c>/<c>col</c>, <c>vote: 0</c>. Everything missing
+    /// is a field TMDB supplies and TMDB supplied nothing; everything kept is the Sheet's own.
+    /// <para>
+    /// This is what the scoping above is paid for with. Before it, a fixture unmatched film had a synthetic
+    /// year, a four-person cast, an overview and a tagline four times in five, so on a fixture-built site --
+    /// the only way the owner can look at this page without a real TMDB run -- it rendered as a healthy tile
+    /// and Task 7's degraded-record branches were never visibly exercised.
+    /// </para>
+    /// <para>
+    /// <c>Own</c> is deliberately NOT asserted absent: the purchase bundle is the Sheet's field, not TMDB's,
+    /// so an unmatched film keeps whatever the Sheet says about it. The published row simply has none.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void AnUnmatchedFixtureFilmKeepsTheSheetsDataAndNothingTmdbWouldHaveSupplied()
+    {
+        var unmatched = Films().Where(m => m.I == 0).ToList();
+
+        Assert.NotEmpty(unmatched);          // RULE T1: no unmatched film, no assertion below
+        Assert.All(unmatched, m =>
+        {
+            // Gone with the match.
+            Assert.Null(m.Y);
+            Assert.Empty(m.G);
+            Assert.Empty(m.Cast);
+            Assert.Null(m.Ov);
+            Assert.Null(m.Tag);
+            Assert.Null(m.Col);
+            Assert.Equal(0d, m.Vote);
+            Assert.Equal(0d, m.Mc);
+
+            // Real, from the Sheet, and still here.
+            Assert.False(string.IsNullOrWhiteSpace(m.T));
+            Assert.False(string.IsNullOrWhiteSpace(m.Ag));
+            Assert.True(m.Rt > 0, m.T + " lost the Sheet's runtime");
+            Assert.NotEmpty(m.Dir);
+            Assert.False(string.IsNullOrWhiteSpace(m.K));
         });
     }
 
@@ -91,13 +158,60 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     [Fact]
     public void MatchConfidenceIsConfidentButNeverMistakableForAHumanOverride()
     {
-        // 1.0 means "a human confirmed this" here; the best an algorithm can score is 0.95. An unmatched
-        // film (id 0) scores 0, exactly as MoviePipeline writes it.
+        // 1.0 means "a human confirmed this on the Overrides tab" here; the best an algorithm can score is
+        // 0.95. An unmatched film (id 0) scores 0, exactly as MoviePipeline writes it. A matched film scores
+        // 0.95 unless it was drawn into the uncertain minority, whose scores are below the threshold.
         Assert.All(Films(), m =>
         {
-            Assert.Equal(m.I == 0 ? 0d : 0.95, m.Mc);
+            if (m.I == 0) Assert.Equal(0d, m.Mc);
+            else Assert.True(m.Mc == 0.95 || (m.Mc > 0 && m.Mc < MatchScorer.AcceptThreshold),
+                             m.T + " scored " + m.Mc + ", which is neither 0.95 nor inside the uncertain band");
             Assert.NotEqual(1.0, m.Mc);
         });
+    }
+
+    /// <remarks>
+    /// RULE T1 FOR THE WHOLE FIXTURE CATALOGUE. Until the uncertain draw existed, <c>Mc</c> was only ever 0
+    /// or 0.95, so <c>ConfidenceBand</c>'s Uncertain band had no member anywhere in a fixture run and the
+    /// "Needs review" badge -- the LARGER of the two degraded bands in the real catalogue -- could not appear
+    /// on a fixture-built site at all. The bands are read from <c>ConfidenceBand.Of</c> rather than
+    /// re-derived, and the boundary comes from <c>MatchScorer.AcceptThreshold</c> and is never spelled 0.75.
+    /// <para>
+    /// No band's COUNT is asserted, only that each is non-empty and a minority where it should be: the
+    /// fixture shares move with the Sheet, and the real catalogue's own 20 / 171 / 1,265 moves with the
+    /// Sheet and the TMDB cache both.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void AllThreeConfidenceBandsOccurInAFixtureCatalogueWithTheDegradedTwoAMinority()
+    {
+        var films = Films();
+        var byBand = films.GroupBy(ConfidenceBand.Of).ToDictionary(g => g.Key, g => g.ToList());
+
+        foreach (var band in Enum.GetValues<Confidence>())
+            Assert.True(byBand.ContainsKey(band), "no fixture film is in the " + band + " band");
+
+        // Each degraded band is a minority and the quiet one is the great majority: a badge on most records
+        // would train the eye to ignore the ones that matter.
+        Assert.InRange(byBand[Confidence.Unmatched].Count / (double)films.Count, 0.005, 0.05);
+        Assert.InRange(byBand[Confidence.Uncertain].Count / (double)films.Count, 0.05, 0.25);
+        Assert.True(byBand[Confidence.Confident].Count > films.Count / 2);
+
+        // An uncertain film is a REAL match on thin evidence, which is the only thing separating it from an
+        // unmatched one: ConfidenceBand.Of checks the id before the score, so a low score cannot put a film
+        // here on its own and a degraded record cannot be mistaken for this band.
+        Assert.All(byBand[Confidence.Uncertain], m =>
+        {
+            Assert.NotEqual(0, m.I);
+            Assert.InRange(m.Mc, 0.01, MatchScorer.AcceptThreshold - 0.01);
+            Assert.NotNull(m.Y);                  // it matched, so it kept every other TMDB field
+            Assert.Equal(4, m.Cast.Length);
+        });
+
+        // And the band holds a spread rather than one repeated number, so it reads as scores and not as a
+        // flag with a number painted on it.
+        Assert.True(byBand[Confidence.Uncertain].Select(m => m.Mc).Distinct().Count() >= 3,
+                    "the uncertain band should carry more than a couple of distinct scores");
     }
 
     [Fact]
@@ -241,9 +355,12 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     }
 
     [Fact]
-    public void EveryFilmHasOneOrTwoDistinctGenresAndEachOneHasAName()
+    public void EveryMatchedFilmHasOneOrTwoDistinctGenresAndEachOneHasAName()
     {
-        Assert.All(Films(), m =>
+        // An unmatched film publishes `g: []`, so "one or two" is a claim about matched films only. That the
+        // unmatched ones really are empty is asserted by
+        // AnUnmatchedFixtureFilmKeepsTheSheetsDataAndNothingTmdbWouldHaveSupplied, not assumed here.
+        Assert.All(Matched(), m =>
         {
             Assert.InRange(m.G.Length, 1, 2);
             Assert.Equal(m.G.Length, m.G.Distinct().Count());
@@ -256,7 +373,9 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     [Fact]
     public void YearVoteOverviewAndIdAreIndependentOfOneAnother()
     {
-        var films = Films();
+        // Matched films only: an unmatched one has no year, no overview and a vote of 0, so it is not a
+        // sample of these four streams at all and grouping by a null overview would make a sixth bucket.
+        var films = Matched();
 
         Assert.All(films.GroupBy(m => m.Ov), sameOverview =>
         {
@@ -315,7 +434,10 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     {
         var rows = Library(80).Select(r => r with { Genre = apple }).ToList();
 
-        Assert.All(Films(rows), m =>
+        // Matched films only. The facet agreeing with Ag is a property of the TMDB genre ids, and an
+        // unmatched film has none. This 80-row library happens to draw no unmatched film today, so leaving
+        // it unscoped would pass -- and then break confusingly the day the library's size or seed changed.
+        Assert.All(Matched(rows), m =>
         {
             Assert.Equal(expected, m.G.Take(expected.Length));
             Assert.Equal(m.G.Length, m.G.Distinct().Count());
@@ -330,7 +452,7 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     public void AnAppleGenreWithNoTmdbNameStillGetsGenresDrawnFromTheSeed(string apple)
     {
         var rows = Library(200).Select(r => r with { Genre = apple }).ToList();
-        var films = Films(rows);
+        var films = Matched(rows);         // an unmatched film draws no genre at all; see Matched
 
         Assert.All(films, m =>
         {
@@ -344,9 +466,11 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     // ---- cast ----------------------------------------------------------------------------
 
     [Fact]
-    public void EveryFilmHasFourDistinctNamedCastMembersWithNoProfileImage()
+    public void EveryMatchedFilmHasFourDistinctNamedCastMembersWithNoProfileImage()
     {
-        Assert.All(Films(), m =>
+        // An unmatched film publishes `cast: []` -- the cast row is TMDB's. The brief for Task 7 named this
+        // assertion and the genre one as the two that actively enforced the unrealistic shape.
+        Assert.All(Matched(), m =>
         {
             Assert.Equal(4, m.Cast.Length);
             Assert.Equal(4, m.Cast.Select(c => c.N).Distinct().Count());
@@ -376,7 +500,7 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     [Fact]
     public void TheCastVariesFromFilmToFilmInWhoIsBilledAndInWhichRole()
     {
-        var films = Films();
+        var films = Matched();             // Cast[0] below: an unmatched film has no cast to index into
 
         Assert.True(films.Select(m => m.Cast[0].N).Distinct().Count() >= 15, "leads should vary");
         Assert.True(films.Select(m => m.Cast[0].C).Distinct().Count() >= 15, "roles should vary");
@@ -469,16 +593,53 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         var named = meta.RootElement.GetProperty("genres").EnumerateObject().Select(p => p.Name).ToHashSet();
 
         Assert.Equal(1457, films.Count);
+        bool Matched(JsonElement f) => f.GetProperty("i").GetInt32() != 0;
+
         Assert.All(films, f =>
         {
-            Assert.Equal(4, f.GetProperty("cast").GetArrayLength());
-            Assert.True(f.GetProperty("g").GetArrayLength() >= 1);
-            Assert.Equal(f.GetProperty("i").GetInt32() == 0 ? 0d : 0.95, f.GetProperty("mc").GetDouble());
             Assert.False(string.IsNullOrEmpty(f.GetProperty("k").GetString()));
             Assert.False(f.TryGetProperty("p", out _));
             Assert.False(f.TryGetProperty("b", out _));
             Assert.All(f.GetProperty("g").EnumerateArray(), id => Assert.Contains(id.GetInt32().ToString(CultureInfo.InvariantCulture), named));
         });
+
+        // The cast row and the genre ids are TMDB's, so they are asserted of the matched films. These two
+        // lines are the ones Task 7's brief named as actively enforcing the unrealistic unmatched shape.
+        var matched = films.Where(Matched).ToList();
+        Assert.NotEmpty(matched);                                  // RULE T1
+        Assert.All(matched, f =>
+        {
+            Assert.Equal(4, f.GetProperty("cast").GetArrayLength());
+            Assert.True(f.GetProperty("g").GetArrayLength() >= 1);
+            var mc = f.GetProperty("mc").GetDouble();
+            Assert.True(mc == 0.95 || (mc > 0 && mc < MatchScorer.AcceptThreshold),
+                        f.GetProperty("t").GetString() + " scored " + mc + " in the written catalogue");
+        });
+
+        // AND THE PUBLISHED SHAPE OF AN UNMATCHED ROW, asserted on the written JSON rather than on the
+        // record, because "absent" is a property of the file: tests/fixtures/movies-three-records.json's
+        // real unmatched row has no `y`, no `ov`, no `tag` and no `col` at all, with `g: []`, `cast: []` and
+        // `vote: 0`. Reading it off the record would say "null", which is not the same claim.
+        var unmatched = films.Where(f => !Matched(f)).ToList();
+        Assert.NotEmpty(unmatched);                                // RULE T1
+        Assert.All(unmatched, f =>
+        {
+            Assert.False(f.TryGetProperty("y", out _));
+            Assert.False(f.TryGetProperty("ov", out _));
+            Assert.False(f.TryGetProperty("tag", out _));
+            Assert.False(f.TryGetProperty("col", out _));
+            Assert.Equal(0, f.GetProperty("g").GetArrayLength());
+            Assert.Equal(0, f.GetProperty("cast").GetArrayLength());
+            Assert.Equal(0d, f.GetProperty("vote").GetDouble());
+            Assert.Equal(0d, f.GetProperty("mc").GetDouble());
+
+            // The Sheet's own data survives: the title, the runtime, the Apple genre and the directors.
+            Assert.False(string.IsNullOrEmpty(f.GetProperty("t").GetString()));
+            Assert.False(string.IsNullOrEmpty(f.GetProperty("ag").GetString()));
+            Assert.True(f.GetProperty("rt").GetInt32() > 0);
+            Assert.True(f.GetProperty("dir").GetArrayLength() > 0);
+        });
+
         Assert.Contains(films, f => f.TryGetProperty("col", out _));
         Assert.Contains(films, f => !f.TryGetProperty("col", out _));
         Assert.Contains(films, f => f.TryGetProperty("tag", out _));

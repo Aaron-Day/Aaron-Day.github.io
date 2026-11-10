@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
+using MovieLibrary.Core.Matching;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Enrich.Emit;
 
@@ -47,6 +48,38 @@ public class FixtureGeneratorGoldenTests
         Assert.Equal(0, film.I);
         Assert.Equal(0d, film.Mc);
         Assert.Equal("u-d2f1c6e2", film.K);
+
+        // And nothing TMDB would have supplied, which is the shape the pipeline really publishes. Pinned here
+        // as well as in FixtureGeneratorCatalogueTests because this is the one film in the project whose
+        // unmatched-ness is a LITERAL rather than a draw over a catalogue: if the generator ever synthesised
+        // these again, this is the test that says so without depending on a 1,457-row library.
+        Assert.Null(film.Y);
+        Assert.Empty(film.G);
+        Assert.Empty(film.Cast);
+        Assert.Null(film.Ov);
+        Assert.Null(film.Tag);
+        Assert.Null(film.Col);
+        Assert.Equal(0d, film.Vote);
+
+        // The Sheet's own data is untouched: Film() gives it 1:30:00, "Comedy" and "Some Director".
+        Assert.Equal(90, film.Rt);
+        Assert.Equal("Comedy", film.Ag);
+        Assert.Equal(["Some Director"], film.Dir);
+    }
+
+    // Seed("Film 48") puts Pick(seed, SaltUncertain, 8) at 0 and Pick(seed, SaltUncertainScore, 5) at 4, so the score is
+    // AcceptThreshold - 0.05 * 5 = 0.70. Worked out in the same separate model, and the band is read back out of
+    // ConfidenceBand rather than compared with a literal threshold.
+    [Fact]
+    public void AMatchedFilmDrawnIntoTheUncertainBandScoresThisLiteralValueInEveryProcess()
+    {
+        var film = FixtureGenerator.Build([Film("Film 48")], []).Item1.Single();
+
+        Assert.Equal(0.7, film.Mc);
+        Assert.Equal(Confidence.Uncertain, ConfidenceBand.Of(film));
+        Assert.NotEqual(0, film.I);          // a real id: the only thing separating this band from Unmatched
+        Assert.NotNull(film.Y);              // it matched, so it kept every other TMDB field
+        Assert.Equal(4, film.Cast.Length);
     }
 
     [Theory]
@@ -122,11 +155,25 @@ public class FixtureGeneratorGoldenTests
         return Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(json))).ToLowerInvariant();
     }
 
-    // 336,962 characters of JSON (88 films, one of them unmatched; 61 series: numbered, extras that claim slots, bare-only, unlisted, disagreeing, padded, fully owned).
-    // Derived, not read off the generator: the previous golden (030e8dbe...f44f, 336,644 characters, K = the bare id) was reproduced
-    // byte for byte from a dump of the old output, then in Python every matched film's "K":"{id}" became "K":"{id}-{Rt}" using that
-    // film's own Rt and the hash taken again. Only those 87 substrings differ, hence +318 characters. The same in separate processes and under every culture below.
-    private const string Golden = "7c9cbfef45675349211175d7da2df5b9206a04c98d2434df2d92dda5eedef481";
+    // 336,532 characters of JSON (88 films: one unmatched and six uncertain; 61 series: numbered, extras that claim slots,
+    // bare-only, unlisted, disagreeing, padded, fully owned).
+    // Derived, NEVER read off the generator -- read it off and this test asserts only that the generator agrees with itself.
+    // Each golden has been reached by transforming a dump of the one before it:
+    //   030e8dbe...f44f, 336,644 characters, K = the bare id.
+    //   7c9cbfef...f481, 336,962 characters: that dump with every matched film's "K":"{id}" rewritten to "K":"{id}-{Rt}" from
+    //     that film's own Rt. 87 substrings, hence +318 characters.
+    //   3aaffeb4...dc55, this one: THAT dump (its SHA-256 checked against 7c9cbfef... first, so the input was proved to be the
+    //     old output) with two edits applied in Python from a model of Seed and Pick, not by calling the generator.
+    //     (a) the one film with Pick(seed, SaltUnmatched, 80) == 0 -- "Empty Kingdom 65" -- loses the seven fields TMDB would
+    //         have supplied: "Y":null, "G":[], "Vote":0, "Ov":null, "Tag":null, "Cast":[], "Col":null.
+    //     (b) the six matched films with Pick(seed, SaltUncertain, 8) == 0 get "Mc":<UncertainScore(seed)> instead of 0.95:
+    //         Film 0 and Film 5 at 0.5, Film 4 and Film 72 at 0.55, Film 48 and Film 52 at 0.7.
+    //     Only those substrings differ, hence -430 characters. The model was checked three ways before it was trusted: the
+    //     dump hashes to the old golden, its 88 titles are the model's own reconstruction of FixedFilms(), and every "Col" in
+    //     the dump is what the model's copy of the Collections rule computes -- which exercises Seed, Pick and the ordinal
+    //     sort. The generator was then run and produced this byte for byte, two independent derivations agreeing.
+    // The same in separate processes and under every culture below.
+    private const string Golden = "3aaffeb4809fa653b223dff21dda4bf3a76446b59ad1c756736f7b36d38adc55";
 
     // A golden pins only what its input reaches. A hash that .NET randomises per process, used as a sort key in a branch
     // the input never takes, would pass everything: so this fails if the input stops reaching a branch.
@@ -149,8 +196,13 @@ public class FixtureGeneratorGoldenTests
         Assert.Contains(shows, s => s.Seasons.Any(x => x.N == 0 && x.Eps.Any(IsInvented)));
         // an owned numbered episode TMDB does not list, with nothing but a title
         Assert.Contains(shows, s => s.Seasons.Any(x => x.N > 0 && x.Eps.Any(e => IsNumbered(e) && e.Air is null && e.Rt is null)));
-        // a film no TMDB search matched: id 0, keyed by its content hash instead
-        Assert.Contains(films, m => m.I == 0 && m.K.StartsWith("u-", StringComparison.Ordinal));
+        // a film no TMDB search matched: id 0, keyed by its content hash instead, and degraded with it
+        Assert.Contains(films, m => m.I == 0 && m.K.StartsWith("u-", StringComparison.Ordinal)
+                                             && m.Y is null && m.Cast.Length == 0 && m.G.Length == 0);
+        // ...and a matched film drawn into the uncertain band, which is a SEPARATE branch of Mc: without one
+        // in the input the hash would pin nothing about UncertainScore, and the branch could be changed freely.
+        Assert.Contains(films, m => ConfidenceBand.Of(m) == Confidence.Uncertain);
+        Assert.Contains(films, m => ConfidenceBand.Of(m) == Confidence.Confident);
         // a series whose rows disagree
         var signals = shows.Single(s => s.T == "Mixed Signals");
         Assert.Equal("Drama", signals.Ag);

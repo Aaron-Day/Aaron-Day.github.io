@@ -1,6 +1,7 @@
 using System.Collections.ObjectModel;
 using System.Globalization;
 using MovieLibrary.Core.Identity;
+using MovieLibrary.Core.Matching;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Parsing;
 using MovieLibrary.Core.Text;
@@ -44,10 +45,21 @@ namespace MovieLibrary.Enrich.Emit;
 /// owned or not, has an ISO air date that ascends through its season.</para>
 /// <para><b>No image path is ever produced</b> (<c>P</c>, <c>B</c>, cast <c>P</c>, episode stills): with no path the
 /// UI cannot request an image, so fixture data cannot cause a single HTTP request.</para>
-/// <para><b>Match confidence.</b> A film is <c>0.95</c>. The best an algorithmic match can score is 0.95, so
-/// <c>Mc == 1.0</c> means only "a human confirmed this on the Overrides tab", and fixtures must never claim it.
+/// <para><b>Match confidence, and the three bands.</b> A matched film is <c>0.95</c> unless it was drawn into the
+/// uncertain minority (see <see cref="IsUncertain"/>), and an unmatched one is <c>0</c>. The best an algorithmic
+/// match can score is 0.95, so <c>Mc == 1.0</c> means only "a human confirmed this on the Overrides tab", and
+/// fixtures must never claim it. All three of <c>ConfidenceBand</c>'s bands therefore occur in a fixture run: until
+/// they did, <c>Mc</c> was only ever 0 or 0.95 and the "Needs review" badge -- the LARGER of the two degraded bands
+/// in the real catalogue -- could not appear anywhere on a fixture-built site, which is the only way the owner can
+/// look at the page without a real TMDB run.
 /// A series is <c>1.0</c>: <c>TvPipeline</c> gives an exact name match 1.0, and a fixture series carries the name
 /// from the Sheet itself, so it matches exactly by construction.</para>
+/// <para><b>An unmatched film is genuinely degraded</b>, in the shape the pipeline really publishes (see
+/// <c>tests/fixtures/movies-three-records.json</c>): no year, no genre ids, no cast, no overview, no tagline, no
+/// collection and a vote of 0, with only the Sheet's own title, runtime, Apple genre, directors and bundle left.
+/// Everything absent there is a field TMDB supplies, and TMDB supplied nothing. Giving these films a synthetic year
+/// and a four-person cast made every tile on a fixture-built site look healthy, so a UI branch on a null year
+/// passed over nothing and the degraded-record branches were never visibly exercised.</para>
 /// </remarks>
 public static class FixtureGenerator
 {
@@ -123,7 +135,8 @@ public static class FixtureGenerator
                       SaltTrailingSeasons = 16, SaltUnownedSeasonSize = 17, SaltYear = 18, SaltVote = 19,
                       SaltOverview = 20, SaltId = 21, SaltFirstYear = 22, SaltSeasonComplete = 23, SaltMixedSeries = 24,
                       SaltMatchShape = 25, SaltMatchRate = 26, SaltRowMatch = 27, SaltClaimOrder = 28, SaltSlotRank = 29,
-                      SaltClaimSeasonSize = 30, SaltUnlisted = 31, SaltUnmatched = 32;
+                      SaltClaimSeasonSize = 30, SaltUnlisted = 31, SaltUnmatched = 32,
+                      SaltUncertain = 33, SaltUncertainScore = 34;
 
     // Obviously synthetic, from a few words to a sentence that must wrap, because the tagline is a laid-out field.
     private static readonly string[] Taglines =
@@ -187,6 +200,53 @@ public static class FixtureGenerator
         }
     }
 
+    // How often each degraded band is drawn, chosen to put about as many badges on a fixture-built page as the
+    // shipped one carries. The real catalogue measured 20 unmatched and 171 uncertain of 1,456 -- 1.4% and
+    // 11.8%; over the 1,457-row library the Core tests use these draws give 17 and 202, so 1.2% and 13.9%.
+    // Neither figure is asserted anywhere: both move with the Sheet, and the real one with the TMDB cache too.
+    private const int UnmatchedInEvery = 80, UncertainInEvery = 8;
+
+    /// <summary>
+    /// A film no TMDB search matched: id 0, and the Sheet's data alone. Every fixture film used to get a unique
+    /// non-zero id, which is exactly why M122 reached production: no test could express the unmatched case.
+    /// </summary>
+    /// <remarks>
+    /// Factored out because <see cref="Collections"/> asks the same question. A collection is a TMDB field, so a
+    /// film TMDB never matched cannot be in one -- and leaving it in the draw would cut a run short and leave a
+    /// collection of one, which <c>FixtureGeneratorRealismTests</c> rightly forbids.
+    /// </remarks>
+    private static bool IsUnmatched(int seed) => Pick(seed, SaltUnmatched, UnmatchedInEvery) == 0;
+
+    /// <summary>A matched film the pipeline accepted on thin evidence: a REAL id with a score below the threshold.</summary>
+    /// <remarks>
+    /// The id is what separates this band from <see cref="IsUnmatched"/>, not the score: <c>ConfidenceBand.Of</c>
+    /// checks <c>I == 0</c> first because the pipeline writes <c>Mc: 0</c> for every unmatched film even when its
+    /// best candidate scored 0.4. So an uncertain fixture film keeps its id and carries every other TMDB field;
+    /// only its score says a human should look at it.
+    /// </remarks>
+    private static bool IsUncertain(int seed) => Pick(seed, SaltUncertain, UncertainInEvery) == 0;
+
+    /// <summary>
+    /// An uncertain film's score: one of five 0.05 steps below <see cref="MatchScorer.AcceptThreshold"/>, so the
+    /// band holds a spread rather than one repeated number.
+    /// </summary>
+    /// <remarks>
+    /// Derived from <see cref="MatchScorer.AcceptThreshold"/> and NEVER spelled 0.75, for the reason
+    /// <c>ConfidenceBand</c> gives: a literal would let these fixtures' idea of "confident" drift from the
+    /// pipeline's silently, and the drift would show up as records badged wrongly rather than as a failing test.
+    /// Never 0 either -- 0 is what the pipeline writes when no match was made at all.
+    /// </remarks>
+    private static double UncertainScore(int seed)
+        => Math.Round(MatchScorer.AcceptThreshold - 0.05 * (1 + Pick(seed, SaltUncertainScore, 5)), 2);
+
+    /// <summary>Four billed names in four distinct roles, from the two prime-sized pools.</summary>
+    private static CastMember[] BuildCast(int seed)
+    {
+        var names = PickFour(CastNames, seed, SaltCastStart, SaltCastStride);
+        var roles = PickFour(CharacterNames, seed, SaltRoleStart, SaltRoleStride);
+        return [.. names.Select((name, i) => new CastMember(name, roles[i], null))];
+    }
+
     /// <summary>Four distinct entries from a prime-sized pool: start anywhere, stride by any 1..size-1.</summary>
     private static string[] PickFour(string[] pool, int seed, int startSalt, int strideSalt)
     {
@@ -230,16 +290,22 @@ public static class FixtureGenerator
     }
 
     /// <summary>
-    /// Puts roughly a quarter of the films (the same seeded pick as ever) into collections of two to five. They
-    /// are taken in ordinal title order and cut into runs, each run named "{first title} Collection" the way TMDB
-    /// names one, so a collection is a handful of neighbouring titles and the UI has other films to group. A lone
-    /// film left over at the very end gets no collection rather than a collection of one.
+    /// Puts roughly a quarter of the MATCHED films (the same seeded pick as ever) into collections of two to five.
+    /// They are taken in ordinal title order and cut into runs, each run named "{first title} Collection" the way
+    /// TMDB names one, so a collection is a handful of neighbouring titles and the UI has other films to group. A
+    /// lone film left over at the very end gets no collection rather than a collection of one.
     /// </summary>
+    /// <remarks>
+    /// Unmatched films are kept out of the draw rather than having their collection cleared afterwards. A
+    /// collection is a TMDB field and TMDB matched nothing, so they have none either way -- but clearing it after
+    /// the runs were cut would leave a run one member short, and a collection of one is the thing this method
+    /// exists to avoid.
+    /// </remarks>
     private static string?[] Collections(IReadOnlyList<SheetRow> rows)
     {
         var names = new string?[rows.Count];
         var members = Enumerable.Range(0, rows.Count)
-            .Where(i => Pick(Seed(rows[i].Title), SaltCollection, 4) == 0)
+            .Where(i => !IsUnmatched(Seed(rows[i].Title)) && Pick(Seed(rows[i].Title), SaltCollection, 4) == 0)
             .OrderBy(i => rows[i].Title, StringComparer.Ordinal)
             .ToList();
 
@@ -545,13 +611,13 @@ public static class FixtureGenerator
         {
             var row = movieRows[index];
             var seed = Seed(row.Title);
-            var names = PickFour(CastNames, seed, SaltCastStart, SaltCastStride);
-            var roles = PickFour(CharacterNames, seed, SaltRoleStart, SaltRoleStride);
 
-            // Every fixture film used to get a unique non-zero id, which is exactly why M122 reached production:
-            // no test could express the unmatched case. One in every 80 fixture films is now unmatched, so a
-            // fixture run carries roughly the same handful of id-0 records a real run does.
-            var unmatched = Pick(seed, SaltUnmatched, 80) == 0;
+            // EVERY FIELD BELOW THAT TMDB WOULD HAVE SUPPLIED IS ABSENT WHEN THE FILM IS UNMATCHED, because that
+            // is the shape the pipeline publishes. Real from the Sheet -- title, runtime, Apple genre, directors,
+            // bundle -- stays; year, genre ids, vote, overview, tagline, cast and collection go. A fixture that
+            // kept them rendered an unmatched film as a healthy tile, so a UI branch on a null year or an empty
+            // cast passed over nothing.
+            var unmatched = IsUnmatched(seed);
             var tmdbId = unmatched ? (int?)null : ClaimId(movieIds, 900_000 + Pick(seed, SaltId, 90_000));
             var minutes = RuntimeParser.FilmMinutes(row.Runtime);   // the key's cut-separator and the record's Rt: one parse
 
@@ -562,20 +628,22 @@ public static class FixtureGenerator
                        minutes,
                        TitleNormalizer.NormalizeDirectors(row.Directors))),
                 T: row.Title,
-                Y: 1970 + Pick(seed, SaltYear, 55),
+                Y: unmatched ? null : 1970 + Pick(seed, SaltYear, 55),
                 Rt: minutes,
                 P: null,                       // gradient placeholder in the UI; no path, so no request
                 B: null,
-                G: GenresFor(row.Genre, seed),
+                G: unmatched ? [] : GenresFor(row.Genre, seed),
                 Ag: row.Genre,
-                Vote: Math.Round(4.0 + Pick(seed, SaltVote, 60) / 10.0, 1),
+                Vote: unmatched ? 0d : Math.Round(4.0 + Pick(seed, SaltVote, 60) / 10.0, 1),
                 Dir: row.Directors.Split('&', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries),
-                Ov: Sentences[Pick(seed, SaltOverview, Sentences.Length)],
-                Tag: Pick(seed, SaltTaglineChance, 5) == 0 ? null : Taglines[Pick(seed, SaltTaglineText, Taglines.Length)],
-                Cast: [.. names.Select((name, i) => new CastMember(name, roles[i], null))],
-                Col: collections[index],
+                Ov: unmatched ? null : Sentences[Pick(seed, SaltOverview, Sentences.Length)],
+                Tag: unmatched || Pick(seed, SaltTaglineChance, 5) == 0
+                         ? null
+                         : Taglines[Pick(seed, SaltTaglineText, Taglines.Length)],
+                Cast: unmatched ? [] : BuildCast(seed),
+                Col: collections[index],       // already null for an unmatched film: Collections leaves it out
                 Own: string.IsNullOrWhiteSpace(row.PurchaseInfo) ? null : row.PurchaseInfo,
-                Mc: unmatched ? 0d : 0.95));
+                Mc: unmatched ? 0d : IsUncertain(seed) ? UncertainScore(seed) : 0.95));
         }
 
         var showIds = new HashSet<int>();
