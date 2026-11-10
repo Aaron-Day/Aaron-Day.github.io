@@ -210,6 +210,50 @@ public class SourceContractTests
         Assert.DoesNotMatch(registration, "// builder.Services.AddScoped<CatalogService>();");
     }
 
+    [Fact]
+    public void ProgramRegistersTheClockAndTheQueryStateBecauseTheTestsRegisterTheirOwn()
+    {
+        // The same hole as the announcer's and the catalogue's: every bUnit test registers its own clock and
+        // its own QueryState through AnnouncerTestExtensions.AddAnnouncerAndCatalog, so a missing line here would
+        // pass the whole suite and then fail at boot with a DI error on the first render of the films page --
+        // which is "/". Anchored, and proven below against the commented form.
+        const string clock = @"(?m)^[ \t]*builder\.Services\.AddSingleton\(TimeProvider\.System\);";
+        const string query = @"(?m)^[ \t]*builder\.Services\.AddScoped<QueryState>\(\);";
+
+        var program = WebRoot.Read("Program.cs");
+
+        Assert.Matches(clock, program);
+        Assert.Matches(query, program);
+        Assert.DoesNotMatch(clock, "// builder.Services.AddSingleton(TimeProvider.System);");
+        Assert.DoesNotMatch(query, "// builder.Services.AddScoped<QueryState>();");
+    }
+
+    /// <remarks>
+    /// R-E. The URL write may not live in a .razor, because NoComponentRedirectsAndNoFooterIsAddedInsideTheApp
+    /// forbids a navigation call there and has no carve-out. It lives in one service, and it is ALWAYS a
+    /// replace: without it the back button walks backwards through forty filter states instead of returning to
+    /// wherever the visitor came from. This pins both halves -- that there is exactly one caller, and that
+    /// every call it makes replaces -- as source text, because a bUnit test of the service sees the history
+    /// entry but not a second caller added somewhere else.
+    /// </remarks>
+    [Fact]
+    public void TheOnlyNavigationInTheAppIsQueryStatesAndItAlwaysReplacesTheHistoryEntry()
+    {
+        var files = WebRoot.Files("*.cs", "*.razor").ToList();
+
+        // T1: a walk that stopped matching would find no caller at all, and "exactly one" would then fail on
+        // the wrong side. The service itself is named so that the subject set is known to include it.
+        Assert.Contains("Services/QueryState.cs", files.Select(f => f.Path));
+
+        var callers = files.Where(f => f.Text.Contains("NavigateTo(", StringComparison.Ordinal)).ToList();
+
+        Assert.Equal(new[] { "Services/QueryState.cs" }, callers.Select(c => c.Path));
+
+        var calls = Regex.Matches(callers[0].Text, @"NavigateTo\([^;]*;");
+        Assert.NotEmpty(calls);
+        Assert.All(calls, call => Assert.Contains("replace: true", call.Value, StringComparison.Ordinal));
+    }
+
     // ================================================================== live regions in page content
 
     /// <summary>The one component allowed to declare a live region, because it owns all three of them.</summary>

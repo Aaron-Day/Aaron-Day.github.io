@@ -111,6 +111,11 @@ internal static class AnnouncerTestExtensions
         context.Services.AddSingleton(clock);
         context.Services.AddSingleton(new Announcer(clock));
 
+        // The SAME clock for the films page's debounce timers, registered as the abstract TimeProvider because
+        // that is what the page injects. One clock for the announcer and the page is what lets a test step the
+        // filter debounce, the announce debounce and the settle delay as one timeline instead of three.
+        context.Services.AddSingleton<TimeProvider>(clock);
+
         var stub = new StubCatalog()
             .Serves(StubCatalog.Movies, responders)
             .Serves(StubCatalog.Meta, MetaResponder(CatalogOutcome.Ready));
@@ -124,6 +129,9 @@ internal static class AnnouncerTestExtensions
         // builds it: it has to be bound to this test's stub handler.
         context.Services.AddScoped(_ => client);
         context.Services.AddScoped<CatalogService>();
+
+        // The films page writes its filter into the address through this, and Program.cs registers it the same way.
+        context.Services.AddScoped<QueryState>();
 
         return (clock, stub);
     }
