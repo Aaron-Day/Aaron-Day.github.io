@@ -225,4 +225,103 @@ internal static class Scripts
 
     /// <summary>Whether the mark survives, which is to say whether this is still the same document.</summary>
     public const string MarkSurvives = "() => window.a11yReloadMark === true";
+
+
+    /// <summary>
+    /// The focused element's own box, hit-tested at five points: its centre and its four corners.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// <b>The corners are taken ONE PIXEL INSIDE each edge.</b> A rect's right and bottom are exclusive, so
+    /// <c>elementFromPoint(box.right, box.bottom)</c> asks about the pixel AFTER the element and answers
+    /// about whatever is next to it. Probing the literal corners reports a correct layout as obscured at
+    /// two of its four corners, every time.
+    /// </para>
+    /// <para>
+    /// A probe point outside the viewport is counted separately and is NOT a blocker:
+    /// <c>elementFromPoint</c> is defined to return null there, and "scrolled out of view" is not "hidden
+    /// by author-created content". Counting it as a blocker would be the hit test crying wolf.
+    /// </para>
+    /// <para>
+    /// Which count belongs to which criterion is <c>ObscuredFocusTests</c>'s business and is written out
+    /// there: one clear point is SC 2.4.11 Focus Not Obscured (Minimum), Level AA; all five is the shape of
+    /// SC 2.4.12 (Enhanced), which is Level AAA and is reported rather than asserted.
+    /// </para>
+    /// </remarks>
+    public const string FocusObscuration = """
+        () => {
+          const out = { what: "(nothing)", exists: false, visible: false, width: 0, height: 0,
+                        points: 0, clear: 0, offscreen: 0, blockers: [] };
+          const a = document.activeElement;
+          if (!a || a === document.body || a === document.documentElement) return out;
+
+          out.exists = true;
+          const id = a.id ? "#" + a.id : "";
+          const cls = typeof a.className === "string" && a.className.trim().length > 0
+            ? "." + a.className.trim().split(/\s+/).join(".") : "";
+          out.what = a.tagName.toLowerCase() + id + cls;
+
+          const style = getComputedStyle(a);
+          const box = a.getBoundingClientRect();
+          out.width = Math.round(box.width * 10) / 10;
+          out.height = Math.round(box.height * 10) / 10;
+          out.visible = style.display !== "none" && style.visibility !== "hidden"
+                        && box.width > 0 && box.height > 0;
+          if (!out.visible) return out;
+
+          const left = box.left + 1, right = box.right - 1;
+          const top = box.top + 1, bottom = box.bottom - 1;
+          const probes = [[box.left + box.width / 2, box.top + box.height / 2],
+                          [left, top], [right, top], [left, bottom], [right, bottom]];
+
+          for (const point of probes) {
+            const x = point[0], y = point[1];
+            out.points++;
+            if (x < 0 || y < 0 || x > window.innerWidth || y > window.innerHeight) {
+              out.offscreen++;
+              continue;
+            }
+            const hit = document.elementFromPoint(x, y);
+            if (hit === a || a.contains(hit)) { out.clear++; continue; }
+            const hid = hit && hit.id ? "#" + hit.id : "";
+            const hcls = hit && typeof hit.className === "string" && hit.className.trim().length > 0
+              ? "." + hit.className.trim().split(/\s+/)[0] : "";
+            out.blockers.push((hit ? hit.tagName.toLowerCase() + hid + hcls : "(nothing)")
+                              + " at " + Math.round(x) + "," + Math.round(y));
+          }
+          return out;
+        }
+        """;
+
+
+    /// <summary>
+    /// Whether the page has stopped scrolling: true once six consecutive animation frames report the same
+    /// <c>scrollY</c>. <see cref="ForgetScroll"/> resets the sample before each wait.
+    /// </summary>
+    /// <remarks>
+    /// <b>This exists because Bootstrap's reboot sets <c>scroll-behavior: smooth</c> on the root</b>, inside
+    /// <c>@media (prefers-reduced-motion: no-preference)</c>. A browser moving focus to a control that is
+    /// off the optimal viewing region therefore ANIMATES the scroll, and a hit test taken straight after
+    /// the keypress measures a transient position rather than where the control comes to rest. That is not
+    /// a theory: measured on this project, the pager buttons read as entirely hidden under the error bar at
+    /// 320x256 when probed immediately, and entirely clear of it when probed after the scroll settled. A
+    /// gate that reported the first would be reporting a conformance failure that does not exist.
+    /// <para>
+    /// A condition and not a sleep, which is this harness's rule. The condition is "the position has
+    /// stopped changing", which is the only honest signal: the duration of a smooth scroll is the
+    /// browser's business and depends on the distance.
+    /// </para>
+    /// </remarks>
+    public const string ScrollSettled = """
+        () => {
+          const y = Math.round(window.scrollY * 100);
+          const was = window.a11yScroll;
+          window.a11yScroll = (was && was.y === y) ? { y: y, still: was.still + 1 } : { y: y, still: 0 };
+          return window.a11yScroll.still >= 6;
+        }
+        """;
+
+
+    /// <summary>Forgets the last scroll sample, so a settle wait cannot pass on a stale one.</summary>
+    public const string ForgetScroll = "() => { window.a11yScroll = null; }";
 }
