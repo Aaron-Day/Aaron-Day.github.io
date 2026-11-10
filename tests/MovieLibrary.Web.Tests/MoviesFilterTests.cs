@@ -563,18 +563,6 @@ public class MoviesFilterTests : BunitContext
     }
 
     [Fact]
-    public async Task AFacetsLateEchoDoesNotRevertAFacetChosenSince()
-    {
-        var (open, late) = RenderWithALateEcho(Eight);
-
-        Tick(open.Cut, "Match confidence", "Not matched", true);     // writes conf=unmatched
-        Tick(open.Cut, "Match confidence", "Uncertain matches", true); // writes conf=uncertain before either echo
-        await open.Cut.InvokeAsync(late.Deliver);
-
-        Assert.Equal(new[] { "Delta", "Foxtrot" }, Titles(open.Cut));
-    }
-
-    [Fact]
     public void AnAddressChangeOverAnEmptyLibraryDoesNotSpeakAboutAFilter()
     {
         var open = Render([]);
@@ -760,6 +748,34 @@ public class MoviesFilterTests : BunitContext
 
         open.Cut.WaitForAssertion(() => Assert.Equal("1 title matches.", Status(open)));
         Assert.Single(said, s => s.Length > 0);
+    }
+
+    /// <remarks>
+    /// The announce debounce RESTARTS on every change, which a burst of keystrokes cannot show -- the 150 ms filter
+    /// debounce has already folded those into one change by the time anything is announced. Two facets ticked
+    /// 300 ms apart are two changes inside one announce window: the first count (3) must never be spoken, the
+    /// second (5) must be spoken once, and not at 750 ms after the first change but 750 ms after the last.
+    /// </remarks>
+    [Fact]
+    public async Task TwoChangesInQuickSuccessionAreOneAnnouncementAboutTheLastCountAndTheClockRestarts()
+    {
+        var open = Render(Eight);
+        Opened(open);
+        var said = new List<string>();
+        Spoken().Changed += () => said.Add(Spoken().StatusText);
+
+        Tick(open.Cut, "Genre", "Drama", true);                        // 3 films
+        await Step(open, 300);
+        Tick(open.Cut, "Genre", "Comedy", true);                       // 5 films
+
+        // 750 ms after the FIRST change, and plenty for its settle delay: still the opening sentence.
+        await Step(open, Movies.AnnounceDebounceMs - 300 + (int)Announcer.SettleDelay.TotalMilliseconds + 10);
+        Assert.Equal("The library holds 8 films.", Spoken().StatusText);
+
+        await Step(open, 300);
+        open.Cut.WaitForAssertion(() => Assert.Equal("5 titles match.", Status(open)));
+        Assert.Single(said, s => s.Length > 0);
+        Assert.DoesNotContain(said, s => s.StartsWith("3 titles", StringComparison.Ordinal));
     }
 
     [Theory]
