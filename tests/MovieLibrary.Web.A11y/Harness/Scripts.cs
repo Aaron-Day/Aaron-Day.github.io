@@ -531,6 +531,53 @@ internal static class Scripts
 
 
     /// <summary>
+    /// The control selector, the rendered-and-visible filter, the describe helper and the painted-side
+    /// walk that <see cref="BorderedControls"/> and <see cref="DecorationBorderedControls"/> share,
+    /// spliced into the body of each.
+    /// </summary>
+    /// <remarks>
+    /// <b>Shared for the same reason <see cref="ClipHelpers"/> is: a bad-list and the T1 floor beneath it
+    /// must agree about their own subject set.</b> The two scripts carried copies of all four pieces, so a
+    /// change to the selector or to the visibility filter in one and not the other would have left a floor
+    /// counting controls the scan beside it no longer looked at - and both halves still answer, so that
+    /// drift is invisible from outside.
+    /// <para>
+    /// <c>Name</c> joins ALL of an element's classes where <see cref="ClipHelpers"/>'s <c>Describe</c>
+    /// takes only the first, and that difference is why there are two rather than one. A control is named
+    /// by the class a reader of the failure has to go and find in the stylesheets - <c>.try-again</c>,
+    /// <c>.nav-toggle</c>, <c>.visually-hidden-focusable</c> - while a clipping box is one line in an
+    /// inventory that can run to dozens.
+    /// </para>
+    /// </remarks>
+    private const string ControlHelpers = """
+          const Selector =
+            "a[href], button, [role=button], input:not([type=hidden]), select, textarea, summary";
+          function Rendered(el) {
+            const s = getComputedStyle(el);
+            if (s.display === "none" || s.visibility === "hidden") return null;
+            const box = el.getBoundingClientRect();
+            if (box.width === 0 || box.height === 0) return null;
+            return s;
+          }
+          function Name(el) {
+            const id = el.id ? "#" + el.id : "";
+            const cls = typeof el.className === "string" && el.className.trim().length > 0
+              ? "." + el.className.trim().split(/\s+/).join(".") : "";
+            return el.tagName.toLowerCase() + id + cls;
+          }
+          function PaintedSides(s) {
+            const sides = [];
+            for (const side of ["Top", "Right", "Bottom", "Left"]) {
+              if (s["border" + side + "Style"] === "none") continue;
+              if (parseFloat(s["border" + side + "Width"]) === 0) continue;
+              sides.push(side);
+            }
+            return sides;
+          }
+        """;
+
+
+    /// <summary>
     /// Every visible control that paints a border at all, with that border's width and resolved colour per
     /// side. One string per control, so there is nothing to deserialise.
     /// </summary>
@@ -539,30 +586,20 @@ internal static class Scripts
     /// WRONG ones: an empty bad-list reads identically whether every boundary is correct or no control has
     /// a boundary at all, and the second is the trivially-passing shape rule T1 is about. A control whose
     /// border goes away is a 1.4.11 question in its own right - <c>.try-again</c> and <c>.nav-toggle</c>
-    /// both set <c>background: transparent</c>, so for those two the border is the whole control.
+    /// both set <c>background: transparent</c>, so for those two the border is the whole control. It takes
+    /// its subject set from <see cref="ControlHelpers"/>, which is what keeps this floor and the scan it
+    /// floors talking about the same controls.
     /// </remarks>
-    public const string BorderedControls = """
-        () => {
-          const selector =
-            "a[href], button, [role=button], input:not([type=hidden]), select, textarea, summary";
+    public const string BorderedControls = "() => {\n" + ControlHelpers + "\n" + """
           const out = [];
-          for (const el of document.querySelectorAll(selector)) {
-            const s = getComputedStyle(el);
-            if (s.display === "none" || s.visibility === "hidden") continue;
-            const box = el.getBoundingClientRect();
-            if (box.width === 0 || box.height === 0) continue;
-            const sides = [];
-            for (const side of ["Top", "Right", "Bottom", "Left"]) {
-              if (s["border" + side + "Style"] === "none") continue;
-              if (parseFloat(s["border" + side + "Width"]) === 0) continue;
-              sides.push(side.toLowerCase() + " " + s["border" + side + "Width"]
-                         + " " + s["border" + side + "Color"]);
-            }
+          for (const el of document.querySelectorAll(Selector)) {
+            const s = Rendered(el);
+            if (!s) continue;
+            const sides = PaintedSides(s).map(side =>
+              side.toLowerCase() + " " + s["border" + side + "Width"]
+              + " " + s["border" + side + "Color"]);
             if (sides.length === 0) continue;
-            const id = el.id ? "#" + el.id : "";
-            const cls = typeof el.className === "string" && el.className.trim().length > 0
-              ? "." + el.className.trim().split(/\s+/).join(".") : "";
-            out.push(el.tagName.toLowerCase() + id + cls + ": " + sides.join(", "));
+            out.push(Name(el) + ": " + sides.join(", "));
           }
           return out;
         }
@@ -608,8 +645,7 @@ internal static class Scripts
     /// reaches them, while this reaches every control the page actually renders.
     /// </para>
     /// </remarks>
-    public const string DecorationBorderedControls = """
-        () => {
+    public const string DecorationBorderedControls = "() => {\n" + ControlHelpers + "\n" + """
           const probe = document.createElement("span");
           probe.style.display = "none";
           probe.style.color = "var(--line)";
@@ -618,25 +654,15 @@ internal static class Scripts
           probe.remove();
           const inherited = getComputedStyle(document.body).color;
 
-          const selector =
-            "a[href], button, [role=button], input:not([type=hidden]), select, textarea, summary";
           const out = [];
-          for (const el of document.querySelectorAll(selector)) {
-            const s = getComputedStyle(el);
-            if (s.display === "none" || s.visibility === "hidden") continue;
-            const box = el.getBoundingClientRect();
-            if (box.width === 0 || box.height === 0) continue;
-            const bad = [];
-            for (const side of ["Top", "Right", "Bottom", "Left"]) {
-              if (s["border" + side + "Style"] === "none") continue;
-              if (parseFloat(s["border" + side + "Width"]) === 0) continue;
-              if (s["border" + side + "Color"] === decoration) bad.push(side.toLowerCase());
-            }
+          for (const el of document.querySelectorAll(Selector)) {
+            const s = Rendered(el);
+            if (!s) continue;
+            const bad = PaintedSides(s)
+              .filter(side => s["border" + side + "Color"] === decoration)
+              .map(side => side.toLowerCase());
             if (bad.length === 0) continue;
-            const id = el.id ? "#" + el.id : "";
-            const cls = typeof el.className === "string" && el.className.trim().length > 0
-              ? "." + el.className.trim().split(/\s+/).join(".") : "";
-            out.push(el.tagName.toLowerCase() + id + cls
+            out.push(Name(el)
                      + " [" + (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 24) + "] "
                      + bad.join("+") + " drawn in " + decoration);
           }
