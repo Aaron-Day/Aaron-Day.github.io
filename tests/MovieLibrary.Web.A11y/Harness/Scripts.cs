@@ -446,4 +446,51 @@ internal static class Scripts
                   s.fontSize, s.lineHeight, s.letterSpacing, s.wordSpacing];
         }
         """;
+
+
+    /// <summary>
+    /// The focus ring the browser actually painted on <c>document.activeElement</c>, in a fixed order:
+    /// what it is, outline-style, outline-width, outline-color, outline-offset, box-shadow.
+    /// </summary>
+    /// <remarks>
+    /// An array in a documented order rather than an object, for the reason <see cref="ScrollReserve"/>
+    /// gives. box-shadow is read but not asserted on: it is the other common way to draw a ring, so a
+    /// failure message that printed only the outline would send a reader looking for the wrong thing.
+    /// </remarks>
+    public const string FocusRing = """
+        () => {
+          const a = document.activeElement;
+          if (!a || a === document.body || a === document.documentElement)
+            return ["(nothing is focused)", "", "", "", "", ""];
+          const id = a.id ? "#" + a.id : "";
+          const cls = typeof a.className === "string" && a.className.trim().length > 0
+            ? "." + a.className.trim().split(/\s+/).join(".") : "";
+          const s = getComputedStyle(a);
+          return [a.tagName.toLowerCase() + id + cls,
+                  s.outlineStyle, s.outlineWidth, s.outlineColor, s.outlineOffset, s.boxShadow];
+        }
+        """;
+
+
+    /// <summary>
+    /// An in-prose link's non-colour cue and the two colours it sits between, in a fixed order: what it
+    /// is, text-decoration-line, the link's own colour, the surrounding prose's colour.
+    /// </summary>
+    /// <remarks>
+    /// The two colours are read so that a failure message can say what the underline is carrying. The
+    /// measured ratio between them is 2.18:1, far below the 3:1 SC 1.4.1 Use of Color (Level A) asks for
+    /// before colour alone may distinguish a link inside running text, and that is the whole reason the
+    /// decoration rather than the colour is the thing under test.
+    /// </remarks>
+    public const string InProseLink = """
+        selector => {
+          const el = document.querySelector(selector);
+          if (!el) return ["(no element matches " + selector + ")", "", "", ""];
+          const prose = el.parentElement;
+          return [el.tagName.toLowerCase() + "[" + (el.textContent || "").trim().slice(0, 32) + "]",
+                  getComputedStyle(el).textDecorationLine,
+                  getComputedStyle(el).color,
+                  prose ? getComputedStyle(prose).color : "(no parent)"];
+        }
+        """;
 }

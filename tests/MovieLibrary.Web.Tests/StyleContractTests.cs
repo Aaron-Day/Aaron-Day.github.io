@@ -550,6 +550,77 @@ public class StyleContractTests
     private static MotionDeclaration At(List<string> open, string declaration) =>
         new(string.Join(" ", open), open.Count == 0 ? "" : open[^1], declaration);
 
+
+    /// <summary>
+    /// The ONE place a focus ring is suppressed, and the file's own statement of why there is no second.
+    /// </summary>
+    /// <remarks>
+    /// SC 2.4.7 Focus Visible, Level AA. app.css:53 declares
+    /// <c>#main-content:focus { outline: none; }</c> under the focus-ring rule at :50, and that one is
+    /// legitimate: <c>&lt;main tabindex="-1"&gt;</c> is not keyboard operable, so 2.4.7 has no claim on it,
+    /// and the move is one the USER asked for by activating the skip link - a ring round the whole of
+    /// &lt;main&gt; would only be noise. The declaration at :334 says in prose that the precedent does NOT
+    /// extend to <c>.catalog-state</c>, which IS focused programmatically and where the ring is the only
+    /// thing telling a sighted user where their keyboard went. This turns both halves into something
+    /// enforced rather than remembered: exactly one suppression, and that sentence still in the file to
+    /// point a reader at.
+    /// <para>
+    /// The scan reads EVERY hand-written stylesheet, not just app.css, because a scoped
+    /// <c>outline: none</c> in a component sheet removes the ring from that component's controls just as
+    /// effectively. Comments are stripped first, so prose about outlines cannot trip it.
+    /// </para>
+    /// <para>
+    /// What this cannot catch: an inline style, or a Bootstrap utility in the markup. Those need the
+    /// rendered page, which is <c>MovieLibrary.Web.A11y.FocusVisibleTests</c> - it walks the real tab order
+    /// with real keypresses, so <c>:focus-visible</c> applies, and reads the outline the browser painted.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void TheOnlyFocusRingSuppressionIsTheSkipTargetAndTheFileSaysWhyThereIsNoSecond()
+    {
+        var sheets = Stylesheets();
+
+        Assert.True(sheets.Count >= 5,
+            "This rule found " + sheets.Count + " stylesheets. There are five: app.css and four scoped "
+            + "component sheets. Fewer means the glob stopped finding them and a missing suppression could "
+            + "sit in one of the sheets this never read.");
+
+        var suppressions = sheets
+            .SelectMany(sheet => Declarations(WithoutComments(sheet.Text))
+                .Where(IsOutlineSuppression)
+                .Select(d => new { sheet.Path, d.Selector, d.Declaration }))
+            .ToList();
+
+        var only = Assert.Single(suppressions);
+
+        Assert.Equal("wwwroot/css/app.css", only.Path);
+        Assert.True(only.Selector == "#main-content:focus",
+            "The one permitted focus-ring suppression in this project is `#main-content:focus { outline: "
+            + "none; }` at app.css:53, which is legitimate because <main tabindex=\"-1\"> is not keyboard "
+            + "operable and SC 2.4.7 Focus Visible (Level AA) has no claim on it. This one is on `"
+            + only.Selector + "` in " + only.Path + ": `" + only.Declaration + ";`. app.css:334 already "
+            + "states why that precedent does not extend - .catalog-state is focused PROGRAMMATICALLY, by "
+            + "the page, because the fetch failed, so the ring is the only thing telling a sighted user "
+            + "where their keyboard now is. Read that comment before adding a second.");
+
+        // The failure message above points a reader at a sentence in app.css. If that sentence goes, the
+        // message is pointing at nothing, so it is pinned here rather than trusted to survive.
+        Assert.Contains("precedent above does not extend to it", AppCss);
+    }
+
+    /// <summary>
+    /// Whether a declaration turns a focus ring off. <c>outline-offset</c> is deliberately not matched: it
+    /// moves a ring, it does not remove one, and <c>outline-offset: 0</c> is a perfectly good value.
+    /// </summary>
+    /// <remarks>
+    /// Anchored at both ends, so <c>outline: 3px solid var(--accent)</c> cannot match on its first token
+    /// and <c>outline: none !important</c> cannot escape on its last. The unit group covers
+    /// <c>0</c>, <c>0px</c>, <c>0em</c> and <c>0%</c>, which all mean the same thing here.
+    /// </remarks>
+    private static bool IsOutlineSuppression(MotionDeclaration declaration) =>
+        Regex.IsMatch(declaration.Declaration,
+            @"^outline(-style|-width)?\s*:\s*(none|0[a-z%]*)(\s*!important)?$");
+
     // ================================================================== the component stylesheets
 
     private static readonly string TileCss = WebRoot.Read("Components", "PosterTile.razor.css");
