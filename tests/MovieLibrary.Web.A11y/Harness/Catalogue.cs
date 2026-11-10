@@ -54,7 +54,7 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// </para>
 /// <para>
 /// <b>What is still flat, and said so.</b> Every record is matched with <c>mc: 0.95</c>, so the confidence radios
-/// show an empty list for "Uncertain matches" and "Not matched" in a browser. Giving some records the degraded
+/// show an empty list for "Needs review" and "Not matched" in a browser. Giving some records the degraded
 /// shape would put the confidence badges into every existing scan, which is a change to what ten axe scans see
 /// and not something to do without running them.
 /// </para>

@@ -101,7 +101,7 @@ public class FacetPanelTests : BunitContext
     {
         var group = Group(Panel(), "Match confidence");
 
-        Assert.Equal(new[] { "All titles", "Uncertain matches", "Not matched" }, Labels(group));
+        Assert.Equal(new[] { "All titles", "Needs review", "Not matched" }, Labels(group));
 
         var radios = group.QuerySelectorAll("input").ToList();
         Assert.All(radios, r => Assert.Equal("radio", r.GetAttribute("type")));
@@ -110,7 +110,7 @@ public class FacetPanelTests : BunitContext
 
     [Theory]
     [InlineData(null, "All titles")]
-    [InlineData(Confidence.Uncertain, "Uncertain matches")]
+    [InlineData(Confidence.Uncertain, "Needs review")]
     [InlineData(Confidence.Unmatched, "Not matched")]
     public void ExactlyTheChosenBandIsChecked(Confidence? band, string expected)
     {
@@ -120,6 +120,26 @@ public class FacetPanelTests : BunitContext
             .Where(r => r.HasAttribute("checked")).Select(r => r.ParentElement!.TextContent.Trim());
 
         Assert.Equal(new[] { expected }, checkedLabels);
+    }
+
+    /// <remarks>
+    /// One concept, one label. The tile's badge, the build summary and this radio all name the same band, and a
+    /// visitor who reads "Needs review" on a tile and is offered "Uncertain matches" in the filter has to guess that
+    /// they are one thing; a voice-control user cannot say the word they saw. The words are
+    /// <c>ConfidenceBand.BadgeFor</c>'s, whose remarks say why "Uncertain" is not among them, and the radio for a
+    /// band must read exactly what a tile of that band is badged with.
+    /// </remarks>
+    [Theory]
+    [InlineData(Confidence.Uncertain)]
+    [InlineData(Confidence.Unmatched)]
+    public void EachBandsRadioSaysWhatTheTileBadgeForThatBandSays(Confidence band)
+    {
+        var group = Group(Panel(FilterState.Default with { Band = band }), "Match confidence");
+
+        var chosen = group.QuerySelectorAll("input")
+            .Single(r => r.HasAttribute("checked")).ParentElement!.TextContent.Trim();
+
+        Assert.Equal(ConfidenceBand.BadgeFor(band), chosen);
     }
 
     [Fact]

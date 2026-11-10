@@ -169,7 +169,7 @@ public class MoviesFilterTests : BunitContext
     }
 
     [Theory]
-    [InlineData("Uncertain matches", new[] { "Delta", "Foxtrot" })]
+    [InlineData("Needs review", new[] { "Delta", "Foxtrot" })]
     [InlineData("Not matched", new[] { "Echo", "Golf" })]
     [InlineData("All titles", new[] { "Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel" })]
     public void ChoosingAConfidenceBandShowsExactlyThatBandAtOnce(string label, string[] expected)
@@ -193,7 +193,7 @@ public class MoviesFilterTests : BunitContext
         Tick(open.Cut, "Genre", "Comedy", true);
         Assert.Equal(new[] { "Alpha", "Bravo", "Charlie", "Foxtrot", "Hotel" }, Titles(open.Cut));
 
-        Tick(open.Cut, "Match confidence", "Uncertain matches", true);
+        Tick(open.Cut, "Match confidence", "Needs review", true);
         Assert.Equal(new[] { "Foxtrot" }, Titles(open.Cut));
 
         Tick(open.Cut, "Genre", "Comedy", false);
@@ -351,7 +351,7 @@ public class MoviesFilterTests : BunitContext
         Tick(open.Cut, "Genre", "Drama", true);
         Tick(open.Cut, "Decade", "1990s", true);
         Tick(open.Cut, "Decade", "Year unknown", true);
-        Tick(open.Cut, "Match confidence", "Uncertain matches", true);
+        Tick(open.Cut, "Match confidence", "Needs review", true);
         open.Cut.Find("#sort").Change("runtime");
 
         Assert.Equal("movies?genre=18&decade=1990&decade=unknown&conf=uncertain&sort=runtime",
@@ -718,7 +718,7 @@ public class MoviesFilterTests : BunitContext
         var open = Render(Eight);
         Opened(open);
 
-        Tick(open.Cut, "Match confidence", "Uncertain matches", true);
+        Tick(open.Cut, "Match confidence", "Needs review", true);
 
         // Filtered at once, then silent until the announce debounce AND the settle delay behind it have passed...
         Assert.Equal(new[] { "Delta", "Foxtrot" }, Titles(open.Cut));
@@ -971,7 +971,7 @@ public class MoviesFilterTests : BunitContext
         var open = Render(Eight);
         Opened(open);
 
-        Tick(open.Cut, "Match confidence", "Uncertain matches", true);   // arms the 750ms announcement
+        Tick(open.Cut, "Match confidence", "Needs review", true);   // arms the 750ms announcement
         await DisposeComponentsAsync();
         Settle(open);
 
@@ -1211,7 +1211,7 @@ public class MoviesFilterTests : BunitContext
         Opened(open);
 
         open.Cut.Find("#q").Input("alp");                                   // arms the filter debounce
-        Tick(open.Cut, "Match confidence", "Uncertain matches", true);      // arms the announce debounce
+        Tick(open.Cut, "Match confidence", "Needs review", true);      // arms the announce debounce
         Assert.True(open.Clock.ArmedTimers >= 2, "the two debounces were never armed, so this proves nothing");
 
         await DisposeComponentsAsync();

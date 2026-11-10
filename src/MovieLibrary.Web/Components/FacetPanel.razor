@@ -24,15 +24,19 @@
         <input id="q" type="search" enterkeyhint="search" value="@TypedQuery" @oninput="OnQueryInput" @ref="search" />
     </div>
 
+    @* The two band words are ConfidenceBand's, the same call PosterTile makes, and are never spelled here. A tile
+       badged "Needs review" under a filter that offered "Uncertain matches" would be two names for one band, and
+       BadgeFor's remarks explain why "Uncertain" is not the name: it is jargon from a pipeline the reader does not
+       know exists. *@
     <fieldset>
         <legend>Match confidence</legend>
         <div class="options">
             <label><input type="radio" name="conf" checked="@(State.Band is null)"
                           @onchange="() => SetBand(null)" /> All titles</label>
             <label><input type="radio" name="conf" checked="@(State.Band == Confidence.Uncertain)"
-                          @onchange="() => SetBand(Confidence.Uncertain)" /> Uncertain matches</label>
+                          @onchange="() => SetBand(Confidence.Uncertain)" /> @ConfidenceBand.BadgeFor(Confidence.Uncertain)</label>
             <label><input type="radio" name="conf" checked="@(State.Band == Confidence.Unmatched)"
-                          @onchange="() => SetBand(Confidence.Unmatched)" /> Not matched</label>
+                          @onchange="() => SetBand(Confidence.Unmatched)" /> @ConfidenceBand.BadgeFor(Confidence.Unmatched)</label>
         </div>
     </fieldset>
 
