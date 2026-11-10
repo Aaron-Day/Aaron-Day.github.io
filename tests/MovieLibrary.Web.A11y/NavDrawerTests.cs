@@ -126,6 +126,18 @@ public class NavDrawerTests(BrowserGate gate, ITestOutputHelper output)
     /// while a reader at that width got it. 767 and 768 are the two adjacent CSS pixels across the
     /// boundary, which is the only pair that can distinguish <c>min-width: 48rem</c> from a value either
     /// side of it.
+    /// <para>
+    /// <b>The measurement is HIT-TESTABILITY, not <c>display: none</c>, and that is rule T5.</b> This
+    /// theory used to assert <c>drawer == "none"</c>, which bakes one implementation of a conformant
+    /// collapse into a breakpoint rule - the very coupling the sibling test sixty lines above explicitly
+    /// refuses, calling <c>visibility: hidden</c> and <c>height: 0</c> "equally correct for this
+    /// criterion". Measured: switch <c>.nav-links.collapsed</c> to <c>visibility: hidden; height: 0</c>
+    /// and SC 2.4.3 still passes while that assertion failed at 767px, on a page with nothing wrong with
+    /// it. What the brief actually asked for here is also hit-testability - "at 767 the toggle is
+    /// hit-testable and the list is not" - and <see cref="Scripts.HitTestableCentre"/> already answers it,
+    /// returning <c>display: none</c> verbatim for this case because at this breakpoint that is the
+    /// EXPECTED answer for one of the two controls.
+    /// </para>
     /// </remarks>
     [BrowserTheory]
     [InlineData(767, true)]
@@ -146,25 +158,33 @@ public class NavDrawerTests(BrowserGate gate, ITestOutputHelper output)
             + "theory may be on the same side of the breakpoint. Fix the premise before reading the "
             + "result.");
 
-        var toggle = await session.Page.EvaluateAsync<string>(Scripts.DisplayOfSelector, Toggle);
-        var drawer = await session.Page.EvaluateAsync<string>(Scripts.DisplayOfSelector, Drawer);
+        var toggle = await session.Page.EvaluateAsync<string>(Scripts.HitTestableCentre, Toggle);
+        var drawer = await session.Page.EvaluateAsync<string>(Scripts.HitTestableCentre, Drawer);
 
-        output.WriteLine($"=== {width}px: {Toggle} display {toggle}, {Drawer} display {drawer} ===");
+        output.WriteLine($"=== {width}px: {Toggle} is \"{toggle}\", {Drawer} is \"{drawer}\" ===");
+
+        // Both have to EXIST for either answer to mean anything. A hit test against a selector that
+        // stopped matching is a pass that means nothing, which is why "(no element matches ...)" is a
+        // distinct answer from the script rather than a false.
+        Assert.DoesNotContain("no element matches", toggle);
+        Assert.DoesNotContain("no element matches", drawer);
 
         var expected = asADrawer
-            ? "a Menu button with the drawer collapsed"
-            : "no Menu button and the links laid out";
+            ? "a Menu button a pointer can land on, with the link list not reachable"
+            : "no reachable Menu button and the links laid out";
 
-        var explain = $"At {width}px the nav should be {expected}, and {Toggle} computes display {toggle} "
-                      + $"while {Drawer} computes display {drawer}. HOUSE RULE: NavMenu.razor.css switches "
-                      + "at @media (min-width: 48rem), which is 768px at a 16px root - so 767 is the last "
-                      + "drawer pixel and 768 the first laid-out one. A boundary that moved would leave "
-                      + "one of the two keyboard shapes in this file untested at the width a reader "
-                      + "actually has.";
+        var explain = $"At {width}px the nav should be {expected}, and {Toggle} is \"{toggle}\" while "
+                      + $"{Drawer} is \"{drawer}\". HOUSE RULE, not a criterion: NavMenu.razor.css "
+                      + "switches at @media (min-width: 48rem), which is 768px at a 16px root - so 767 is "
+                      + "the last drawer pixel and 768 the first laid-out one. A boundary that moved would "
+                      + "leave one of the two keyboard shapes in this file untested at the width a reader "
+                      + "actually has. HOW the collapsed list is taken out of reach is deliberately not "
+                      + "asserted: display: none, visibility: hidden and a zero-height box are all "
+                      + "correct, and all of them answer something other than \"ok\" here.";
 
-        Assert.True(asADrawer == (toggle != "none"), explain);
+        Assert.True(asADrawer == (toggle == "ok"), explain);
 
-        Assert.True(asADrawer == (drawer == "none"), explain);
+        Assert.True(asADrawer == (drawer != "ok"), explain);
     }
 
     /// <summary>
