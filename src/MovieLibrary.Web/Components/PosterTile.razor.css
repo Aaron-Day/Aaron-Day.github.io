@@ -38,16 +38,43 @@
 
 /* THE CONFIDENCE BADGE. A border plus text, and never a background tint on its own: under Windows High
    Contrast a tint flattens to Canvas and takes the cue with it, while a border is re-coloured to CanvasText
-   and survives. The variants below set border-color and color ONLY, so the width and style come from here;
-   the colour in the shorthand is --line-strong rather than --line so that a badge that somehow lost its
-   variant class could not end up with the 1.37:1 edge app.css reserves for decoration.
+   and survives. The variants below set border-color and color only, so the width and style of the border
+   come from the shorthand here rather than from either variant; the colour in it is --line-strong rather
+   than --line so that a badge that somehow lost its variant class could not end up with the 1.37:1 edge
+   app.css reserves for decoration.
+
+   THIS FILE IS NOT THE WHOLE STORY FOR .badge. Bootstrap 5.3.3 defines .badge itself
+   (lib/bootstrap/dist/css/bootstrap.css, around :4831) and the class name collides on purpose -- it is the
+   component's own name. The scoped selector this file compiles to, .badge[b-e4hbk2agnu], is (0,2,0) against
+   Bootstrap's (0,1,0), so every property declared below wins: colour, background, padding, font-size,
+   font-weight, border and radius are this file's and the measured contrast is unaffected. Four properties
+   Bootstrap sets are NOT declared here and do apply -- line-height: 1, text-align: center,
+   white-space: nowrap and vertical-align: baseline. None of them hurts a one-line badge today, and
+   white-space: nowrap is arguably wanted, but they are inherited and not chosen. Bootstrap's
+   .badge:empty { display: none } is (0,2,0) too, so it ties on specificity and loses only on load order --
+   index.html loads this bundle after bootstrap. It never applies anyway: ConfidenceBand.BadgeFor returns a
+   non-empty string or null, and the component renders nothing for null. (app.css reasons about Bootstrap
+   collisions in four places; this is the same house practice, in the one file that had no such note.)
 
    Measured against --panel2, which is the badge's own background: --accent 10.22:1 and --accent2 6.35:1.
    Both clear the 4.5:1 that SC 1.4.3 Contrast (Minimum), Level AA, asks of this text, and both clear 3:1
    as borders, so SC 1.4.11 Non-text Contrast, Level AA, is satisfied without this file having to settle
    whether a badge boundary is in that criterion's scope at all -- the badge is not a user interface
-   component, and the words inside the border carry the meaning. That is the same argument app.css makes
-   for .attribution's border-top. Re-measure if either token changes.
+   component, and the words inside the border carry the meaning. The precedents for putting a border
+   outside 1.4.11's scope are app.css's token header, which says --line "FAILS SC 1.4.11, so it is for
+   decoration only", and .poster-placeholder above, which is outside it because "the title text beside it
+   carries the whole meaning". (An earlier version of this note cited .attribution's border-top instead;
+   that comment argues forced-colors survival, not scope, so the practice was right and the citation was
+   not.) Re-measure if either token changes.
+
+   font-size is .8125rem -- 13px at the default root -- and not the .75rem this started as. WCAG 2.2 sets
+   no minimum text size and .75rem in rem already honours the reader's own browser font size, so this is a
+   house rule and no criterion is cited for the number. The rule is app.css's, recorded in its
+   .attribution p comment: "Do not go below 0.8125rem". It applies to this element in particular because
+   under forced colors both variants flatten to CanvasText on Canvas and the WORDS become the only thing
+   telling the two bands apart -- see the block below. .75rem made that load-bearing cue the smallest type
+   in the app, smaller even than .tile-year's .85rem, and the size was chosen before the forced-colors
+   argument gave the words that job.
 
    margin-top reproduces .tile-body's gap by hand, because the badge is deliberately OUTSIDE that flex
    container and so inherits none of it. No align-self here for the same reason: .tile is a block
@@ -56,7 +83,7 @@
 .badge {
   display: inline-block;
   margin-top: .25rem;
-  padding: .1rem .4rem; font-size: .75rem; font-weight: 600;
+  padding: .1rem .4rem; font-size: .8125rem; font-weight: 600;
   border: 1px solid var(--line-strong); border-radius: 4px;
   background: var(--panel2); color: var(--txt);
 }

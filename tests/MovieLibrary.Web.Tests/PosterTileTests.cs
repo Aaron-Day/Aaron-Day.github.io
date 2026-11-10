@@ -52,6 +52,13 @@ public class PosterTileTests : BunitContext
         Assert.Equal(title, cut.Find(".tile-title").TextContent);
     }
 
+    /// <remarks>
+    /// "NOTHING ELSE PRETENDS TO EXIST" IS ABOUT THE ABSENT FIELDS, not about the whole tile. Since Task 7
+    /// this record also renders a "Not matched" badge, which is a real piece of information about the record
+    /// rather than a placeholder standing in for data it does not have -- so the name still holds, but it
+    /// reads looser than it did and the badge is deliberately not in the list below.
+    /// <c>DegradedRecordTests</c> owns the badge's own assertions; this test owns the three absences.
+    /// </remarks>
     [Fact]
     public void AnUnmatchedRecordStillRendersItsTitleAndNothingElsePretendsToExist()
     {

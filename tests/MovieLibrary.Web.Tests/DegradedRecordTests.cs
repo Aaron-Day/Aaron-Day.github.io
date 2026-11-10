@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text.RegularExpressions;
 using AngleSharp.Dom;
 using Bunit;
@@ -495,6 +496,44 @@ public class DegradedRecordTests : BunitContext
             Assert.True(declarations.Length > 0, "`" + rule.Selector + "` declares nothing at all");
             Assert.All(declarations, d => Assert.Matches(@"^(border-color|color)\s*:", d));
         });
+    }
+
+    /// <remarks>
+    /// THE BADGE'S WORDS ARE THE CUE THE SC 1.4.1 ARGUMENT RESTS ON, so their size is load-bearing and is
+    /// pinned here rather than left to a comment. Under forced colors both variants flatten to CanvasText
+    /// on Canvas, and the only thing left telling "Not matched" from "Needs review" is the text; at
+    /// <c>.75rem</c> that cue was the smallest type in the app, below even <c>.tile-year</c>'s
+    /// <c>.85rem</c> and below the <c>0.8125rem</c> floor <c>app.css</c> records in its
+    /// <c>.attribution p</c> comment.
+    /// <para>
+    /// NO CRITERION IS CITED FOR THE NUMBER, deliberately. WCAG 2.2 sets no minimum text size, and a
+    /// declaration in <c>rem</c> already honours the reader's own browser font size rather than only page
+    /// zoom, so <c>.75rem</c> was not a failure of anything. This is the project's own floor. The unit is
+    /// half of it: a <c>px</c> value fails this test even at the equivalent 13px, because it would stop
+    /// scaling with the reader's setting, which is the property that made the floor acceptable as a floor.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void TheBadgeTextIsNotBelowThisProjectsOwnFontSizeFloor()
+    {
+        const double floor = 0.8125;         // app.css, .attribution p: "Do not go below 0.8125rem"
+        var badge = RulesMentioning(Css(), "badge").Where(r => r.Selector == ".badge").ToList();
+
+        Assert.NotEmpty(badge);
+
+        var sizes = badge
+            .SelectMany(r => Regex.Matches(r.Body, @"font-size\s*:\s*(?<n>[0-9]*\.?[0-9]+)rem"))
+            .Select(m => double.Parse(m.Groups["n"].Value, CultureInfo.InvariantCulture))
+            .ToList();
+
+        Assert.True(sizes.Count > 0,
+            "No `.badge` rule in PosterTile.razor.css declares a font-size in rem. The badge's words are "
+            + "the cue the SC 1.4.1 Use of Color argument in that file rests on, and a px size would stop "
+            + "scaling with the reader's own browser font size.");
+        Assert.All(sizes, size => Assert.True(size >= floor,
+            "The badge is set at " + size + "rem, below this project's own " + floor + "rem floor (app.css, "
+            + ".attribution p). The badge text is the only cue distinguishing the two degraded bands under "
+            + "forced colors, so it is the last thing in the app that should be its smallest type."));
     }
 
     /// <remarks>
