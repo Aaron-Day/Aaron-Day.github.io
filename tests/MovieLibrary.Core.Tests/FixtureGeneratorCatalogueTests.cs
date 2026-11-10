@@ -191,11 +191,12 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         foreach (var band in Enum.GetValues<Confidence>())
             Assert.True(byBand.ContainsKey(band), "no fixture film is in the " + band + " band");
 
-        // Each degraded band is a minority and the quiet one is the great majority: a badge on most records
-        // would train the eye to ignore the ones that matter.
+        // Each degraded band is a minority: a badge on most records would train the eye to ignore the ones
+        // that matter. The two upper bounds are what carry that -- together they leave the confident band at
+        // least 70% of the page, so a separate "and Confident is the majority" assertion could not fail and
+        // is not written.
         Assert.InRange(byBand[Confidence.Unmatched].Count / (double)films.Count, 0.005, 0.05);
         Assert.InRange(byBand[Confidence.Uncertain].Count / (double)films.Count, 0.05, 0.25);
-        Assert.True(byBand[Confidence.Confident].Count > films.Count / 2);
 
         // An uncertain film is a REAL match on thin evidence, which is the only thing separating it from an
         // unmatched one: ConfidenceBand.Of checks the id before the score, so a low score cannot put a film
