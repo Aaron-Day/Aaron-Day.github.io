@@ -625,4 +625,36 @@ internal static class Scripts
     /// </remarks>
     public const string TileCount =
         "() => document.querySelectorAll(\"ul.grid[role=list] > li\").length";
+
+
+    /// <summary>Whether focus is on, or inside, the first element matching a selector.</summary>
+    public const string FocusIsInside = """
+        selector => {
+          const scope = document.querySelector(selector);
+          const a = document.activeElement;
+          return !!scope && !!a && (scope === a || scope.contains(a));
+        }
+        """;
+
+
+    /// <summary>
+    /// Whether any element in the document claims <c>role="dialog"</c>, <c>role="alertdialog"</c> or
+    /// <c>aria-modal</c> inside a selector's subtree, listed so a failure can name what gained it.
+    /// </summary>
+    public const string ModalClaimsInside = """
+        selector => {
+          const scope = document.querySelector(selector);
+          if (!scope) return ["(no element matches " + selector + ")"];
+          const claims = [];
+          const all = [scope].concat(Array.from(scope.querySelectorAll("*")));
+          for (const el of all) {
+            const role = el.getAttribute("role");
+            const modal = el.getAttribute("aria-modal");
+            if (role === "dialog" || role === "alertdialog" || modal !== null)
+              claims.push(el.tagName.toLowerCase() + (el.id ? "#" + el.id : "")
+                          + " [role=" + (role || "none") + " aria-modal=" + (modal || "none") + "]");
+          }
+          return claims;
+        }
+        """;
 }
