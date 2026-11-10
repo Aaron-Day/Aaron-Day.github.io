@@ -621,6 +621,161 @@ public class StyleContractTests
         Regex.IsMatch(declaration.Declaration,
             @"^outline(-style|-width)?\s*:\s*(none|0[a-z%]*)(\s*!important)?$");
 
+    /// <summary>
+    /// No control's boundary is drawn in the decoration-only token.
+    /// </summary>
+    /// <remarks>
+    /// SC 1.4.11 Non-text Contrast, Level AA - and <b>axe has no rule for it at all</b>, at any tag, so
+    /// nothing in Task 4b's scan can see this. app.css's own header states the measurement: <c>--line</c>
+    /// is 1.37:1 against <c>--bg</c> and FAILS 1.4.11, so it is for decoration only, and any border that is
+    /// a control's sole boundary uses <c>--line-strong</c> at 3.89:1. The file also records that this went
+    /// wrong once already: an earlier draft dropped the Try again button's border to <c>--line</c> while it
+    /// carried <c>aria-disabled</c>, and with <c>background: transparent</c> that border is the control's
+    /// only boundary, so for the whole of a retry the button had none a low-vision reader could find.
+    /// Task 8's search input and facet chips are where it creeps back.
+    /// <para>
+    /// <b>Two tokens that are NOT violations and must not become ones.</b> <c>.attribution</c>'s
+    /// <c>border-top</c> and <c>.poster-placeholder</c>'s <c>border</c> both use <c>--line</c> deliberately:
+    /// the first is a grouping cue on a footer, the second is a decorative box whose meaning is carried by
+    /// the title beside it, and PosterTile.razor.css argues the second out of 1.4.11's scope in writing.
+    /// Neither is a control, so neither is a subject here.
+    /// </para>
+    /// <para>
+    /// <b>The blind spot, recorded rather than hidden.</b> A text scan can only see the SELECTOR, so a
+    /// control chosen by class - <c>.try-again</c>, <c>.nav-toggle</c>, <c>#blazor-error-ui .dismiss</c> -
+    /// is invisible to it unless the rule also carries an interactive state. That is exactly the shape the
+    /// one real regression had. The gap is closed in a browser instead, by
+    /// <c>MovieLibrary.Web.A11y.ControlBoundaryTests</c>, which reads the computed border of every control
+    /// the page actually renders and so does not care how it was selected.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void NoControlsBoundaryIsDrawnInTheDecorationOnlyToken()
+    {
+        var sheets = Stylesheets();
+
+        Assert.True(sheets.Count >= 5,
+            "This rule found " + sheets.Count + " stylesheets. There are five: app.css and four scoped "
+            + "component sheets. Fewer means the glob stopped finding them.");
+
+        var borders = sheets
+            .SelectMany(sheet => Declarations(WithoutComments(sheet.Text))
+                .Where(d => IsABorderDeclaration(d.Declaration) && NamesAControl(d.Selector))
+                .Select(d => new { sheet.Path, d.Selector, d.Declaration }))
+            .ToList();
+
+        // Rule T1, by NAME and not by count: a count alone survives one subject being swapped for
+        // another, and the whole failure this project keeps finding is a rule whose subjects quietly left.
+        Assert.Contains(borders, b => b.Selector == ".pager button");
+        Assert.Contains(borders, b => b.Selector.Contains("a.active", StringComparison.Ordinal));
+        Assert.Contains(borders, b => b.Selector == ".skip-link:focus");
+
+        Assert.True(borders.Count >= 4,
+            "This rule found " + borders.Count + " border declaration(s) on a selector that names a "
+            + "control. There are at least four - .pager button, .nav-links ::deep a.active, "
+            + ".skip-link:focus and .try-again:hover - so fewer means NamesAControl stopped matching and "
+            + "the loop below passes over nothing. Found: "
+            + string.Join("; ", borders.Select(b => b.Selector + " { " + b.Declaration + " }")));
+
+        foreach (var border in borders)
+            Assert.True(!UsesTheDecorationToken(border.Declaration),
+                border.Path + ": `" + border.Selector + " { " + border.Declaration + "; }` draws a "
+                + "control's border in var(--line), which app.css measures at 1.37:1 against --bg and "
+                + "records as FAILING SC 1.4.11 Non-text Contrast (Level AA). A border that is a control's "
+                + "sole boundary uses var(--line-strong), 3.89:1, which is the token this file reserves "
+                + "for exactly that. axe has no non-text-contrast rule, so nothing else in this repository "
+                + "will catch it.");
+    }
+
+    /// <summary>Whether a declaration sets any part of a border.</summary>
+    private static bool IsABorderDeclaration(string declaration) =>
+        Regex.IsMatch(declaration, @"^border(-(top|right|bottom|left))?(-color|-width|-style)?\s*:");
+
+    /// <summary>
+    /// Whether a declaration's value reads the decoration-only token. The closing parenthesis is part of
+    /// the pattern on purpose: <c>var(--line-strong)</c> starts with the same seven characters, and a
+    /// prefix match would flag every correct boundary in the project.
+    /// </summary>
+    private static bool UsesTheDecorationToken(string declaration) =>
+        Regex.IsMatch(declaration, @"var\(\s*--line\s*\)");
+
+    /// <summary>
+    /// Whether a selector names a control, as far as reading the selector can tell. Element names,
+    /// <c>[role=button]</c>, and the interactive pseudo-classes - a rule written for a hover, a focus or a
+    /// disabled state is a rule about something a user operates, whatever it is selected by.
+    /// </summary>
+    /// <remarks>
+    /// The leading and trailing character classes stop a bare element name matching inside a longer
+    /// identifier: without them <c>.attribution</c> and <c>.nav-links</c> would both look like the element
+    /// <c>a</c>. See the class-selector blind spot in the remarks above for what this deliberately cannot
+    /// see.
+    /// </remarks>
+    private static bool NamesAControl(string selector) =>
+        Regex.IsMatch(selector,
+            @"(?:^|[\s>+~,(])(?:a|button|input|select|textarea|summary)(?:[.#:\[\s>+~,)]|$)")
+        || Regex.IsMatch(selector, @"\[role\s*=\s*[""']?button")
+        || Regex.IsMatch(selector, @":(?:hover|focus|focus-visible|active|disabled|checked)\b")
+        || selector.Contains("[aria-disabled", StringComparison.Ordinal);
+
+    /// <summary>
+    /// The three predicates above, over the forms this project actually contains. Rule T4: the rule is
+    /// mutated, not the assertion, and a pure function is unit-tested directly - and rule T5: a rule that
+    /// rejects the canonical form gets deleted, so every correct shape in the project is pinned as
+    /// accepted here before the scan above is allowed to rely on it.
+    /// </summary>
+    [Theory]
+    [InlineData("border: 2px solid var(--line-strong)", true)]
+    [InlineData("border-top: 1px solid var(--line)", true)]
+    [InlineData("border-color: var(--accent)", true)]
+    [InlineData("border-width: 2px", true)]
+    [InlineData("border-bottom: 3px solid var(--accent)", true)]
+    [InlineData("border-radius: 6px", false)]
+    [InlineData("border-top-left-radius: .375rem", false)]
+    [InlineData("background: var(--line)", false)]
+    [InlineData("outline: 3px solid var(--accent)", false)]
+    public void IsABorderDeclarationReadsThePropertyAndNotTheValue(string declaration, bool expected) =>
+        Assert.Equal(expected, IsABorderDeclaration(declaration));
+
+    /// <summary>
+    /// <c>var(--line-strong)</c> must NOT read as the decoration token: it shares its first seven
+    /// characters, and every correct control boundary in the project uses it.
+    /// </summary>
+    [Theory]
+    [InlineData("border: 2px solid var(--line)", true)]
+    [InlineData("border-top: 1px solid var( --line )", true)]
+    [InlineData("border: 2px solid var(--line-strong)", false)]
+    [InlineData("border-color: var(--line-strong)", false)]
+    [InlineData("border: 2px solid var(--accent)", false)]
+    public void UsesTheDecorationTokenDoesNotMatchTheStrongToken(string declaration, bool expected) =>
+        Assert.Equal(expected, UsesTheDecorationToken(declaration));
+
+    /// <summary>
+    /// What reading a selector can and cannot tell. The <c>false</c> rows from <c>.try-again</c> down are
+    /// the blind spot, asserted rather than hidden: those three ARE controls, this predicate cannot tell,
+    /// and <c>MovieLibrary.Web.A11y.ControlBoundaryTests</c> is what covers them. If a later task teaches
+    /// the predicate to see them, these rows are what to update.
+    /// </summary>
+    [Theory]
+    [InlineData(".pager button", true)]
+    [InlineData("a", true)]
+    [InlineData(".nav-links ::deep a.active", true)]
+    [InlineData("main p a[href=\"movies\"]", true)]
+    [InlineData(".skip-link:focus", true)]
+    [InlineData(".try-again:hover", true)]
+    [InlineData("[role=\"button\"]", true)]
+    [InlineData("input[type=\"search\"]", true)]
+    [InlineData(":root :is(a, button):active", true)]
+    [InlineData(".attribution", false)]
+    [InlineData(".poster-placeholder", false)]
+    [InlineData("#blazor-error-ui", false)]
+    [InlineData("nav", false)]
+    [InlineData(".nav-links", false)]
+    [InlineData(".try-again", false)]
+    [InlineData(".nav-toggle", false)]
+    [InlineData("#blazor-error-ui .dismiss", false)]
+    public void NamesAControlSeesElementsAndStatesButNotClasses(string selector, bool expected) =>
+        Assert.Equal(expected, NamesAControl(selector));
+
     // ================================================================== the component stylesheets
 
     private static readonly string TileCss = WebRoot.Read("Components", "PosterTile.razor.css");

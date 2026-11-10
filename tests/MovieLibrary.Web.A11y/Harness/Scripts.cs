@@ -493,4 +493,97 @@ internal static class Scripts
                   prose ? getComputedStyle(prose).color : "(no parent)"];
         }
         """;
+
+
+    /// <summary>
+    /// Every visible control that paints a border at all, with that border's width and resolved colour per
+    /// side. One string per control, so there is nothing to deserialise.
+    /// </summary>
+    /// <remarks>
+    /// This exists to put a floor under <see cref="DecorationBorderedControls"/>, which returns only the
+    /// WRONG ones: an empty bad-list reads identically whether every boundary is correct or no control has
+    /// a boundary at all, and the second is the trivially-passing shape rule T1 is about. A control whose
+    /// border goes away is a 1.4.11 question in its own right - <c>.try-again</c> and <c>.nav-toggle</c>
+    /// both set <c>background: transparent</c>, so for those two the border is the whole control.
+    /// </remarks>
+    public const string BorderedControls = """
+        () => {
+          const selector =
+            "a[href], button, [role=button], input:not([type=hidden]), select, textarea, summary";
+          const out = [];
+          for (const el of document.querySelectorAll(selector)) {
+            const s = getComputedStyle(el);
+            if (s.display === "none" || s.visibility === "hidden") continue;
+            const box = el.getBoundingClientRect();
+            if (box.width === 0 || box.height === 0) continue;
+            const sides = [];
+            for (const side of ["Top", "Right", "Bottom", "Left"]) {
+              if (s["border" + side + "Style"] === "none") continue;
+              if (parseFloat(s["border" + side + "Width"]) === 0) continue;
+              sides.push(side.toLowerCase() + " " + s["border" + side + "Width"]
+                         + " " + s["border" + side + "Color"]);
+            }
+            if (sides.length === 0) continue;
+            const id = el.id ? "#" + el.id : "";
+            const cls = typeof el.className === "string" && el.className.trim().length > 0
+              ? "." + el.className.trim().split(/\s+/).join(".") : "";
+            out.push(el.tagName.toLowerCase() + id + cls + ": " + sides.join(", "));
+          }
+          return out;
+        }
+        """;
+
+
+    /// <summary>
+    /// Every visible control whose only boundary is drawn in the DECORATION token's colour, which app.css
+    /// measures at 1.37:1 and records as failing SC 1.4.11 Non-text Contrast (Level AA).
+    /// </summary>
+    /// <remarks>
+    /// <b>The colour is read off the page rather than retyped here.</b> A hidden probe element is given
+    /// <c>color: var(--line)</c> and its computed colour is what the comparison uses, so a change to the
+    /// token moves this check with it instead of leaving a stale hex in a test. Retyping
+    /// <c>rgb(38, 43, 56)</c> would be a second copy of a measurement, which is the thing this file's
+    /// header warns about.
+    /// <para>
+    /// The control selector is the one <see cref="Controls"/> uses, so the subject set is the same set
+    /// <c>TouchTargetReportTests</c> already puts a floor under. It is the SELECTOR half that the source
+    /// scan in <c>StyleContractTests</c> cannot do: <c>.try-again</c>, <c>.nav-toggle</c> and
+    /// <c>.dismiss</c> are all buttons chosen by class, so no text scan for a control's element name
+    /// reaches them, while this reaches every control the page actually renders.
+    /// </para>
+    /// </remarks>
+    public const string DecorationBorderedControls = """
+        () => {
+          const probe = document.createElement("span");
+          probe.style.display = "none";
+          probe.style.color = "var(--line)";
+          document.body.appendChild(probe);
+          const decoration = getComputedStyle(probe).color;
+          probe.remove();
+
+          const selector =
+            "a[href], button, [role=button], input:not([type=hidden]), select, textarea, summary";
+          const out = [];
+          for (const el of document.querySelectorAll(selector)) {
+            const s = getComputedStyle(el);
+            if (s.display === "none" || s.visibility === "hidden") continue;
+            const box = el.getBoundingClientRect();
+            if (box.width === 0 || box.height === 0) continue;
+            const bad = [];
+            for (const side of ["Top", "Right", "Bottom", "Left"]) {
+              if (s["border" + side + "Style"] === "none") continue;
+              if (parseFloat(s["border" + side + "Width"]) === 0) continue;
+              if (s["border" + side + "Color"] === decoration) bad.push(side.toLowerCase());
+            }
+            if (bad.length === 0) continue;
+            const id = el.id ? "#" + el.id : "";
+            const cls = typeof el.className === "string" && el.className.trim().length > 0
+              ? "." + el.className.trim().split(/\s+/).join(".") : "";
+            out.push(el.tagName.toLowerCase() + id + cls
+                     + " [" + (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 24) + "] "
+                     + bad.join("+") + " drawn in " + decoration);
+          }
+          return out;
+        }
+        """;
 }
