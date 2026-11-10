@@ -164,8 +164,8 @@ public class MoviesFilterTests : BunitContext
         var radio = Box(open.Cut, "Match confidence").QuerySelectorAll("input").Single(r => r.HasAttribute("checked"));
         Assert.Equal("All titles", radio.ParentElement!.TextContent.Trim());
         Assert.Empty(open.Cut.FindAll("fieldset input[type=checkbox][checked]"));
-        Assert.Equal(string.Empty, open.Cut.Find("#q").GetAttribute("value") ?? string.Empty);
-        Assert.Equal("title", open.Cut.Find("#sort").GetAttribute("value") ?? "title");
+        Assert.Equal(string.Empty, open.Cut.Find("#q").GetAttribute("value"));
+        Assert.Equal("title", open.Cut.Find("#sort").GetAttribute("value"));
     }
 
     [Theory]
@@ -447,7 +447,7 @@ public class MoviesFilterTests : BunitContext
         open.Nav.NavigateTo("/movies?conf=unmatched");
 
         open.Cut.WaitForAssertion(() => Assert.Equal(new[] { "Echo", "Golf" }, Titles(open.Cut)));
-        Assert.Equal(string.Empty, open.Cut.Find("#q").GetAttribute("value") ?? string.Empty);
+        Assert.Equal(string.Empty, open.Cut.Find("#q").GetAttribute("value"));
 
         // And the half-typed text did not survive to be applied a moment later.
         open.Clock.Advance(TimeSpan.FromSeconds(5));
@@ -1153,7 +1153,7 @@ public class MoviesFilterTests : BunitContext
 
         Assert.Equal(8, Titles(open.Cut).Length);
         Assert.Equal("Foxtrot", Titles(open.Cut)[0]);   // still newest first: sort is not a filter
-        Assert.Equal(string.Empty, open.Cut.Find("#q").GetAttribute("value") ?? string.Empty);
+        Assert.Equal(string.Empty, open.Cut.Find("#q").GetAttribute("value"));
         Assert.Equal("movies?sort=year", open.Nav.ToBaseRelativePath(open.Nav.Uri));
         JSInterop.VerifyFocusAsyncInvoke();
     }
