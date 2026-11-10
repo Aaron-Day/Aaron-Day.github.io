@@ -103,6 +103,23 @@ public class TextOverrideTests(BrowserGate gate, ITestOutputHelper output)
         Assert.Equal(Pixels(overridden[1]) * 0.12, Pixels(overridden[3]), 1);
         Assert.Equal(Pixels(overridden[1]) * 0.16, Pixels(overridden[4]), 1);
 
+        // SC 1.4.12's FOURTH LEG, which nothing read. The criterion names four overrides and this test
+        // injects all four, but only letter-spacing and word-spacing were asserted to have taken -
+        // line-height is asserted in the 1.4.4 test instead, for the reason given above - so
+        // `p { margin-bottom: 2em !important }` could be defeated silently while this test still read as
+        // covering the criterion's whole override. What defeats it is an author declaration with higher
+        // specificity AND !important, which beats a reader's !important whatever the order the two arrive
+        // in: `.catalog-state p { margin-bottom: 0 !important }` is enough, and it is the shape a sheet
+        // tidying up its own paragraphs would take.
+        Assert.True(Math.Abs(Pixels(overridden[5]) - Pixels(overridden[1]) * 2) <= 0.5,
+            $"The paragraph-spacing override did not take at {width}x{height} ({why}): {overridden[0]} "
+            + $"computes margin-bottom {overridden[5]} where `p {{ margin-bottom: 2em }}` on a "
+            + $"{overridden[1]} font asks for {Pixels(overridden[1]) * 2}px. SC 1.4.12 Text Spacing, "
+            + "Level AA names four overrides - line height, letter spacing, word spacing and paragraph "
+            + "spacing - and a page may not prevent any of them. An author rule with higher specificity "
+            + "and !important beats a reader's !important however the two are ordered, so the likely "
+            + "cause is a declaration like `.catalog-state p { margin-bottom: 0 !important }`.");
+
         var widths = await session.Page.EvaluateAsync<int[]>(Scripts.DocumentWidths);
         var overflowing = await session.Page.EvaluateAsync<string[]>(Scripts.Overflowing);
 
@@ -122,7 +139,7 @@ public class TextOverrideTests(BrowserGate gate, ITestOutputHelper output)
         // Two controls that have to stay operable, named because they are the two the brief predicted would
         // break first. The nav toggle reads min-height: var(--touch), which is an ABSOLUTE 44px and so does
         // not grow with the text; the skip link is position: fixed and cannot be reflowed out of the way.
-        await AssertTheNavControlIsOperableAsync(session, width, height);
+        await AssertTheNavControlIsOperableAsync(session, width, height, "SC 1.4.12 Text Spacing");
         await AssertTheSkipLinkIsOperableAsync(session);
     }
 
@@ -178,7 +195,7 @@ public class TextOverrideTests(BrowserGate gate, ITestOutputHelper output)
             + ". SC 1.4.4 Resize Text, Level AA.");
 
         await AssertNothingIsClippedAsync(session, $"200% text at {width}x{height}", "SC 1.4.4 Resize Text");
-        await AssertTheNavControlIsOperableAsync(session, width, height);
+        await AssertTheNavControlIsOperableAsync(session, width, height, "SC 1.4.4 Resize Text");
     }
 
     /// <summary>
@@ -261,8 +278,18 @@ public class TextOverrideTests(BrowserGate gate, ITestOutputHelper output)
     /// <remarks>
     /// Both are asserted to EXIST first, by the absence of the "(no element matches ...)" answer, because a
     /// hit test against a selector that stopped matching is a pass that means nothing.
+    /// <para>
+    /// <b>There is ONE assertion on the answer, and there used to be two.</b> An
+    /// <c>Assert.Equal("ok", operable)</c> stood in front of the message below, so the message could never
+    /// be shown: at 320px with <c>.nav-toggle { display: none }</c> - the whole navigation gone - the
+    /// failure read <c>Expected: ok / Actual: display: none</c> and named neither the criterion, nor the
+    /// viewport, nor which control. Exactly the inverse of this task's other recorded trap, where a guard
+    /// placed in front of an assertion masked it: here the thing in front was not a guard at all, only a
+    /// worse copy of the same check.
+    /// </para>
     /// </remarks>
-    private async Task AssertTheNavControlIsOperableAsync(PageSession session, int width, int height)
+    private async Task AssertTheNavControlIsOperableAsync(
+        PageSession session, int width, int height, string criterion)
     {
         var toggle = await session.Page.EvaluateAsync<string>(Scripts.HitTestableCentre, "button.nav-toggle");
         var list = await session.Page.EvaluateAsync<string>(Scripts.HitTestableCentre, "ul#nav-links");
@@ -274,19 +301,29 @@ public class TextOverrideTests(BrowserGate gate, ITestOutputHelper output)
         var operable = width < 768 ? toggle : list;
         var which = width < 768 ? "The nav toggle" : "The nav link list";
 
-        Assert.Equal("ok", operable);
         Assert.True(operable == "ok",
-            which + $" is not reachable where it is drawn at {width}x{height}: {operable}. The drawer is "
-            + "the only way to the nav links below 48rem, so a toggle a pointer cannot land on is the whole "
-            + "navigation gone.");
+            which + $" is not reachable where it is drawn at {width}x{height}, with the {criterion} "
+            + $"override applied: {operable}. {criterion}, Level AA. The drawer is the only way to the "
+            + "nav links below 48rem, so a toggle a pointer cannot land on is the whole navigation gone.");
     }
-
-    /// <summary>The skip link, focused, is where a pointer can reach it.</summary>
+    /// <summary>
+    /// The skip link, focused, is where a pointer can reach it - and does not clip its own label.
+    /// </summary>
     /// <remarks>
     /// It has to be focused first: <c>.visually-hidden-focusable</c> leaves it a 1x1 box until then, and a
     /// hit test on a 1x1 box measures nothing. Focus is walked out of the document and back in for the
     /// reason <c>FocusTests</c> records - on arrival focus is already on the h1 inside main, so a forward
     /// Tab from there never reaches the link.
+    /// <para>
+    /// <b>This is also the only place in the suite where the narrowed clipping carve-out has a subject.</b>
+    /// <c>Scripts.ClipHelpers</c> exempts <c>.visually-hidden-focusable</c> only while it is
+    /// unfocused - Bootstrap's own rule is
+    /// <c>.visually-hidden-focusable:not(:focus):not(:focus-within)</c> - because focused, this link is an
+    /// ordinary full-size visible control. The exemption used to be unconditional, which made the one
+    /// control that becomes visible out of that pattern the one control that could never be reported as
+    /// clipping its own text. Focus is already here, so the scan costs one evaluate.
+    /// </para>
+    /// </remarks>
     /// </remarks>
     private async Task AssertTheSkipLinkIsOperableAsync(PageSession session)
     {
@@ -308,6 +345,20 @@ public class TextOverrideTests(BrowserGate gate, ITestOutputHelper output)
         output.WriteLine($"  skip link, focused: {hit} ({focused})");
 
         Assert.Equal("ok", hit);
+
+        // THE NARROWED CARVE-OUT'S LIVE SUBJECT, and the state nothing else in the suite reaches. With the
+        // link focused it is no longer exempt, so a clip on it is reportable for the first time - and this
+        // runs with the SC 1.4.12 override applied, which is when a fixed-size control is likeliest to cut
+        // its label off.
+        var clipped = await session.Page.EvaluateAsync<string[]>(Scripts.ClippedContent);
+
+        Assert.True(clipped.Length == 0,
+            $"{clipped.Length} element(s) clip their own content while the skip link holds focus: "
+            + string.Join("; ", clipped.Distinct().Take(6))
+            + ". SC 1.4.12 Text Spacing, Level AA: text a reader asked to space out must not be cut off. "
+            + "The skip link is the one control that leaves the visually-hidden pattern to become a "
+            + "full-size visible box, so it is the one whose own label a clip would hide - and it is "
+            + "exempt from this scan at every other moment, by design.");
     }
 
     /// <summary>A CSS px length as a number. "normal" is not a length and must never read as zero.</summary>

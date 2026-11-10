@@ -363,6 +363,39 @@ internal static class Scripts
 
 
     /// <summary>
+    /// The traversal filter and the describe helper that <see cref="ClippedContent"/> and
+    /// <see cref="ClippingContainers"/> share, spliced into the body of each.
+    /// </summary>
+    /// <remarks>
+    /// <b>They are shared because a bad-list and its T1 floor that disagree about their own subject set is
+    /// a gate measuring nothing.</b> The two scripts used to carry copies of the exemption, so narrowing it
+    /// in one and not the other would have left a floor counting elements the scan beside it no longer
+    /// looked at - and that drift is invisible from the outside, because both halves still answer.
+    /// <para>
+    /// <c>Exempt</c> is where the carve-out lives. <c>.visually-hidden</c> is a 1x1 clipped box by design
+    /// and is always exempt; <c>.visually-hidden-focusable</c> is the same box only while it is unfocused,
+    /// which is what Bootstrap's own
+    /// <c>.visually-hidden-focusable:not(:focus):not(:focus-within)</c> selector says. Focused, the skip
+    /// link is an ordinary visible control, and a control that clips its own label is what this scan is
+    /// for.
+    /// </para>
+    /// </remarks>
+    private const string ClipHelpers = """
+          function Exempt(el) {
+            if (el.closest(".visually-hidden")) return true;
+            const focusable = el.closest(".visually-hidden-focusable");
+            return !!focusable && !focusable.contains(document.activeElement);
+          }
+          function Describe(el) {
+            const id = el.id ? "#" + el.id : "";
+            const cls = typeof el.className === "string" && el.className.trim().length > 0
+              ? "." + el.className.trim().split(/\s+/)[0] : "";
+            return el.tagName.toLowerCase() + id + cls;
+          }
+        """;
+
+
+    /// <summary>
     /// Every visible element that clips its own overflow and holds more content than fits, with the axis
     /// and the overflow in CSS px.
     /// </summary>
@@ -373,13 +406,13 @@ internal static class Scripts
     /// Menu button's label and all three announcer regions. Without the carve-out this reports six clipped
     /// elements on a correct page and can never go green. Rule T1 then applies to the carve-out in turn,
     /// which is what <see cref="ClippingContainers"/> is for: the caller has to be told how many subjects
-    /// survive it rather than assume any did.
+    /// survive it rather than assume any did. The carve-out itself is in <see cref="ClipHelpers"/>, and it
+    /// no longer covers the skip link while that link is focused and visible.
     /// </remarks>
-    public const string ClippedContent = """
-        () => {
+    public const string ClippedContent = "() => {\n" + ClipHelpers + "\n" + """
           const out = [];
           for (const el of document.querySelectorAll("body *")) {
-            if (el.closest(".visually-hidden, .visually-hidden-focusable")) continue;
+            if (Exempt(el)) continue;
             const s = getComputedStyle(el);
             if (s.display === "none" || s.visibility === "hidden") continue;
             const clipsY = s.overflowY === "hidden" || s.overflowY === "clip";
@@ -387,10 +420,7 @@ internal static class Scripts
             if (!clipsY && !clipsX) continue;
             const overY = clipsY ? el.scrollHeight - el.clientHeight : 0;
             const overX = clipsX ? el.scrollWidth - el.clientWidth : 0;
-            const id = el.id ? "#" + el.id : "";
-            const cls = typeof el.className === "string" && el.className.trim().length > 0
-              ? "." + el.className.trim().split(/\s+/)[0] : "";
-            const what = el.tagName.toLowerCase() + id + cls;
+            const what = Describe(el);
             if (overY > 1) out.push(what + " clips " + overY + "px of its content vertically");
             if (overX > 1) out.push(what + " clips " + overX + "px of its content horizontally");
           }
@@ -404,28 +434,28 @@ internal static class Scripts
     /// overflowing. The subject floor for <see cref="ClippedContent"/>: rule T1, a scan over an empty set
     /// proves nothing.
     /// </summary>
-    public const string ClippingContainers = """
-        () => {
+    /// <remarks>
+    /// It takes its traversal filter and its describe helper from <see cref="ClipHelpers"/>, which is the
+    /// whole point of that constant: a floor and the scan it floors must agree about which elements they
+    /// are talking about.
+    /// </remarks>
+    public const string ClippingContainers = "() => {\n" + ClipHelpers + "\n" + """
           const out = [];
           for (const el of document.querySelectorAll("body *")) {
-            if (el.closest(".visually-hidden, .visually-hidden-focusable")) continue;
+            if (Exempt(el)) continue;
             const s = getComputedStyle(el);
             if (s.display === "none" || s.visibility === "hidden") continue;
             const clips = ["hidden", "clip"];
             if (!clips.includes(s.overflowY) && !clips.includes(s.overflowX)) continue;
-            const id = el.id ? "#" + el.id : "";
-            const cls = typeof el.className === "string" && el.className.trim().length > 0
-              ? "." + el.className.trim().split(/\s+/)[0] : "";
-            out.push(el.tagName.toLowerCase() + id + cls + " overflow " + s.overflowX + "/" + s.overflowY);
+            out.push(Describe(el) + " overflow " + s.overflowX + "/" + s.overflowY);
           }
           return out;
         }
         """;
 
-
     /// <summary>
     /// How an element's text is actually spaced, in a fixed order: what it is, font-size, line-height,
-    /// letter-spacing, word-spacing.
+    /// letter-spacing, word-spacing, margin-bottom.
     /// </summary>
     /// <remarks>
     /// Two jobs. On a plain page it is where app.css's <b>unitless</b> <c>line-height: 1.5</c> can be seen
@@ -434,16 +464,21 @@ internal static class Scripts
     /// where <c>line-height: 21px</c> would not. With the overrides injected it is how a test proves the
     /// injection TOOK, which matters more than it sounds: a style tag that silently failed to apply would
     /// leave every assertion afterwards measuring the ordinary page and passing.
+    /// <para>
+    /// <c>margin-bottom</c> is here for 1.4.12's fourth leg, <c>p { margin-bottom: 2em }</c>, which is the
+    /// one of the four that nothing read. It is last in the array so that adding it could not renumber the
+    /// four values that were already being indexed.
+    /// </para>
     /// </remarks>
     public const string TextMetrics = """
         selector => {
           const el = document.querySelector(selector);
-          if (!el) return ["(no element matches " + selector + ")", "", "", "", ""];
+          if (!el) return ["(no element matches " + selector + ")", "", "", "", "", ""];
           const s = getComputedStyle(el);
           const cls = typeof el.className === "string" && el.className.trim().length > 0
             ? "." + el.className.trim().split(/\s+/)[0] : "";
           return [el.tagName.toLowerCase() + cls,
-                  s.fontSize, s.lineHeight, s.letterSpacing, s.wordSpacing];
+                  s.fontSize, s.lineHeight, s.letterSpacing, s.wordSpacing, s.marginBottom];
         }
         """;
 
