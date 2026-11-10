@@ -64,24 +64,42 @@ public class CatalogueTests
 
     /// <remarks>
     /// The tab-order budget the catalogue's own remarks describe. ObscuredFocusTests and FocusVisibleTests walk the
-    /// tab order in at most forty presses and fail if the document has not been left by then. Eleven stops are
-    /// there whatever the catalogue holds (the skip link, the brand and the nav, the search box, the confidence
-    /// group, Year unknown, the sort, the pager's two buttons and the error bar's two), and then one more for each
-    /// decade and each genre. The 41st would turn a green gate red for a reason that has nothing to do with focus.
+    /// tab order in at most <see cref="TabWalk.Presses"/> presses and fail if the document has not been left by
+    /// then. <see cref="TabWalk.ShellStops"/> stops are there whatever the catalogue holds, and then one more for
+    /// each decade and each genre. The press that did not fit would turn a green gate red for a reason that has
+    /// nothing to do with focus. The bound is sized for the REAL library and not for this catalogue (see
+    /// <see cref="TabWalk"/>), so this one fits with room to spare and fails only when it names far more genres than
+    /// TMDB has.
     /// </remarks>
     [Fact]
     public void TheGenreCountLeavesTheTabWalkRoomToFinish()
     {
-        const int StopsWhateverTheCatalogueHolds = 11;
-        const int PressesTheWalksAllow = 40;
-
         var decades = Records.Where(r => r.Y is not null).Select(r => r.Y!.Value / 10).Distinct().Count();
-        var stops = StopsWhateverTheCatalogueHolds + decades + Meta.Genres.Count;
+        var stops = TabWalk.ShellStops + decades + Meta.Genres.Count;
 
-        Assert.True(stops < PressesTheWalksAllow,
+        Assert.True(stops < TabWalk.Presses,
             $"The panel adds {Meta.Genres.Count} genre stop(s) and {decades} decade stop(s), {stops} stops in all with "
-            + $"the error bar up, and the tab walks allow {PressesTheWalksAllow} presses including the one that "
-            + "leaves the document. Name fewer genres, or raise the walks' limit in the same change.");
+            + $"the error bar up, and the tab walks allow {TabWalk.Presses} presses including the one that "
+            + "leaves the document. Name fewer genres, or raise TabWalk.Presses in the same change.");
+    }
+
+    /// <remarks>
+    /// The other half of the budget, and the half that was missing. The test above compares this catalogue with the
+    /// bound, so it is only worth anything while the bound is not itself fitted to this catalogue: the walks were
+    /// once capped at forty, a number the gate fitted under by naming only nine genres, and the real library's panel
+    /// could not have finished them. The bound must hold the most stops any library could produce, one press more
+    /// to leave the document, and be derived from that and not typed as a figure.
+    /// </remarks>
+    [Fact]
+    public void TheWalksAreAllowedEnoughPressesForTheLargestLibraryThePageCouldBeGiven()
+    {
+        var mostStops = TabWalk.GenresInTmdb + TabWalk.DecadesOfCinema + TabWalk.ShellStops;
+        var needed = mostStops + 1;
+
+        Assert.True(TabWalk.Presses >= needed,
+            $"The walks allow {TabWalk.Presses} presses, and a library with all {TabWalk.GenresInTmdb} of TMDB's "
+            + $"genres across all {TabWalk.DecadesOfCinema} decades of film has {mostStops} stops and needs {needed}. "
+            + "A cap below that fits the gate's catalogue and fails (or silently truncates) on the real library.");
     }
 
     [Fact]

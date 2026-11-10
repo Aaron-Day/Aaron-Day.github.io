@@ -45,10 +45,12 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// 1,456 of 1,456 and passed. The records now cycle through eight genre sets (see <see cref="GenreSets"/>), and
 /// <see cref="WriteInto"/> publishes the matching <c>data/meta.json</c> beside <c>movies.json</c>, because
 /// without it the page's meta fetch fails, the genre map is empty and the fieldset is not rendered at all.
-/// <b>The number of genres is deliberately modest.</b> <c>ObscuredFocusTests</c> and <c>FocusVisibleTests</c> walk
-/// the tab order in at most forty presses and fail if the document is not left by then; the panel adds one stop
-/// per genre and per decade (eleven, and Year unknown), so with the shell, the pager and the error bar that is
-/// twenty-two stops before any genre. Nine genres is thirty-one. <c>CatalogueTests</c> pins the budget.
+/// <b>The number of genres is modest.</b> <c>ObscuredFocusTests</c> and <c>FocusVisibleTests</c> walk the tab order
+/// in at most <see cref="TabWalk.Presses"/> presses and fail if the document is not left by then; the panel adds one
+/// stop per genre and per decade (eleven, and Year unknown), so with the shell, the pager and the error bar that is
+/// twenty-two stops before any genre. Nine genres is thirty-one, inside the bound with room to spare, where the real
+/// panel has about forty. The bound is sized for the real library and not for this catalogue (see
+/// <see cref="TabWalk"/>), and <c>CatalogueTests</c> pins both that and this catalogue's fit.
 /// </para>
 /// <para>
 /// <b>What is still flat, and said so.</b> Every record is matched with <c>mc: 0.95</c>, so the confidence radios

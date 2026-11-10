@@ -169,17 +169,17 @@ public class ObscuredFocusTests(BrowserGate gate, ITestOutputHelper output)
     /// </remarks>
     private async Task<List<Stop>> WalkAsync(PageSession session, int width, int height, bool barUp)
     {
-        for (var press = 0; press < 40 && !await OutsideAsync(session); press++)
+        for (var press = 0; press < TabWalk.Presses && !await OutsideAsync(session); press++)
             await session.Page.Keyboard.PressAsync("Shift+Tab");
 
         Assert.True(await OutsideAsync(session),
-            "Forty Shift+Tab presses did not walk focus out of the document, so the forward walk would not "
+            $"{TabWalk.Presses} Shift+Tab presses did not walk focus out of the document, so the forward walk would not "
             + "have started at the first stop. Focus is at " + await session.FocusedDescriptionAsync()
             + ", which suggests a focus trap.");
 
         var stops = new List<Stop>();
 
-        for (var press = 0; press < 40; press++)
+        for (var press = 0; press < TabWalk.Presses; press++)
         {
             await session.Page.Keyboard.PressAsync("Tab");
             await SettledAsync(session);
@@ -190,7 +190,7 @@ public class ObscuredFocusTests(BrowserGate gate, ITestOutputHelper output)
             stops.Add(stop);
         }
 
-        Assert.Fail($"Forty Tab presses at {width}x{height} (bar {(barUp ? "up" : "down")}) never left the "
+        Assert.Fail($"{TabWalk.Presses} Tab presses at {width}x{height} (bar {(barUp ? "up" : "down")}) never left the "
                     + "document, so the walk never completed a cycle and these stops are only a prefix of "
                     + "it: " + string.Join(", ", stops.Select(s => s.What)));
         return stops;

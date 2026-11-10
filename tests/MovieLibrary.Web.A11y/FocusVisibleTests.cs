@@ -131,20 +131,22 @@ public class FocusVisibleTests(BrowserGate gate, ITestOutputHelper output)
 
         var state = failed ? ", catalogue failed" : barUp ? ", error bar up" : "";
 
-        for (var press = 0; press < 40; press++)
+        for (var press = 0; press < TabWalk.Presses; press++)
         {
             if (await OutsideAsync(session)) break;
             await session.Page.Keyboard.PressAsync("Shift+Tab");
         }
 
         Assert.True(await OutsideAsync(session),
-            "Forty Shift+Tab presses did not walk focus out of the document, so the forward walk would not "
+            $"{TabWalk.Presses} Shift+Tab presses did not walk focus out of the document, so the forward walk would not "
             + "have started at the first stop. Focus is at " + await session.FocusedDescriptionAsync() + ".");
 
         var seen = new List<string>();
         output.WriteLine($"=== focus rings at {address} {width}x{height}{state} ===");
 
-        for (var press = 0; press < 40; press++)
+        var leftTheDocument = false;
+
+        for (var press = 0; press < TabWalk.Presses; press++)
         {
             await session.Page.Keyboard.PressAsync("Tab");
 
@@ -152,7 +154,11 @@ public class FocusVisibleTests(BrowserGate gate, ITestOutputHelper output)
             var (what, style, thickness, colour, offset, shadow) =
                 (ring[0], ring[1], ring[2], ring[3], ring[4], ring[5]);
 
-            if (what == "(nothing is focused)") break;
+            if (what == "(nothing is focused)")
+            {
+                leftTheDocument = true;
+                break;
+            }
 
             seen.Add(what);
             output.WriteLine($"  {what}: outline {style} {thickness} {colour}, offset {offset}, "
@@ -188,6 +194,14 @@ public class FocusVisibleTests(BrowserGate gate, ITestOutputHelper output)
                 + "Bootstrap-based app; an outline of zero width; and outline: 3px solid transparent, "
                 + "which is how an author keeps an outline in the box model while taking it off the page.");
         }
+
+        // A walk that ran out of presses has checked a PREFIX of the tab order and says nothing about the rest, and
+        // until this assertion existed it read as a pass: the loop above simply ended. ObscuredFocusTests fails
+        // the same way for the same reason. The bound is TabWalk.Presses, sized for the real library.
+        Assert.True(leftTheDocument,
+            $"{TabWalk.Presses} Tab presses at {address} {width}x{height}{state} never left the document, so the "
+            + "walk never completed a cycle and only these stops were checked for a focus ring, a prefix of the "
+            + "tab order: " + string.Join(", ", seen));
 
         // THE SUBJECTS each extra state exists for, named and not counted (rule T1): a count survives one
         // subject being swapped for another, and a walk that never reached the state's own control would
