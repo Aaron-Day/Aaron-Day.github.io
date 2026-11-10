@@ -497,11 +497,11 @@ public class MarkupContractTests
     /// so.
     /// <para>
     /// MEASURED, before and after this task. The Ready scopes did reach Ready: Task 5's CatalogOutcome
-    /// machinery works. But the stub catalogue carried no poster path on either film, so the films page
+    /// machinery works. But the stub catalogue carried no poster path on any film, so the films page
     /// emitted no image at all and the img contracts' subject count really was 1 for the whole app. One
-    /// poster on one of the two fixture films took it to 3, and the other film keeps the placeholder branch
-    /// in the same scopes. The accessible-name and nested-widget contracts went from 25 subjects to 29: two
-    /// pager buttons in each of the two Ready scopes.
+    /// poster on one of the fixture films took it to 3, and the films without one keep the placeholder
+    /// branch in the same scopes. The accessible-name and nested-widget contracts went from 25 subjects to
+    /// 29: two pager buttons in each of the two Ready scopes.
     /// </para>
     /// </remarks>
     [Fact]

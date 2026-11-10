@@ -147,7 +147,7 @@ public class MoviesStateTests : BunitContext
     {
         var (cut, _) = RenderWith(CatalogOutcome.Ready);
 
-        Assert.Equal("The library holds 2 films.", Sentence(cut));
+        Assert.Equal("The library holds 3 films.", Sentence(cut));
         Assert.Empty(TryAgain(cut));
     }
 
@@ -202,11 +202,11 @@ public class MoviesStateTests : BunitContext
     {
         var (cut, clock) = RenderWith(CatalogOutcome.Ready);
 
-        Assert.Equal("The library holds 2 films.", Sentence(cut));
+        Assert.Equal("The library holds 3 films.", Sentence(cut));
 
         clock.Advance(Announcer.SettleDelay);
 
-        Assert.Equal("The library holds 2 films.", Spoken().StatusText);
+        Assert.Equal("The library holds 3 films.", Spoken().StatusText);
         Assert.DoesNotContain("Loading", Spoken().StatusText, StringComparison.Ordinal);
     }
 
@@ -312,12 +312,12 @@ public class MoviesStateTests : BunitContext
     {
         var (cut, clock) = RenderWith(CatalogOutcome.Ready);
         clock.Advance(Announcer.SettleDelay);
-        Assert.Equal("The library holds 2 films.", Spoken().StatusText);
+        Assert.Equal("The library holds 3 films.", Spoken().StatusText);
 
         cut.FindComponent<Movies>().Render();
         cut.FindComponent<Movies>().Render();
 
-        Assert.Equal("The library holds 2 films.", Spoken().StatusText);
+        Assert.Equal("The library holds 3 films.", Spoken().StatusText);
     }
 
     /// <remarks>
@@ -479,7 +479,7 @@ public class MoviesStateTests : BunitContext
 
         await cut.Find("button.try-again").ClickAsync(new MouseEventArgs());
 
-        Assert.Equal("The library holds 2 films.", Sentence(cut));
+        Assert.Equal("The library holds 3 films.", Sentence(cut));
         Assert.Empty(TryAgain(cut));
         JSInterop.VerifyFocusAsyncInvoke();
     }
@@ -529,7 +529,7 @@ public class MoviesStateTests : BunitContext
         gate.Open();
         await click;
 
-        Assert.Equal("The library holds 2 films.", Sentence(cut));
+        Assert.Equal("The library holds 3 films.", Sentence(cut));
     }
 
     /// <remarks>
@@ -631,7 +631,7 @@ public class MoviesStateTests : BunitContext
 
     /// <remarks>
     /// Criterion 11 and R7. Both calls are cancellations: they take effect at once and speak nothing.
-    /// Without them "The library holds 2 films." sits in the status region, readable in browse mode, long
+    /// Without them "The library holds 3 films." sits in the status region, readable in browse mode, long
     /// after the films are gone -- the announcer is a scoped singleton and MainLayout outlives the page.
     /// </remarks>
     [Fact]
@@ -639,7 +639,7 @@ public class MoviesStateTests : BunitContext
     {
         var (_, clock) = RenderWith(CatalogOutcome.Ready);
         clock.Advance(Announcer.SettleDelay);
-        Assert.Equal("The library holds 2 films.", Spoken().StatusText);
+        Assert.Equal("The library holds 3 films.", Spoken().StatusText);
 
         await DisposeComponentsAsync();
 
@@ -681,7 +681,7 @@ public class MoviesStateTests : BunitContext
         var again = await Services.GetRequiredService<CatalogService>().GetMoviesAsync();
 
         Assert.Equal(CatalogState.Ready, again.State);
-        Assert.Equal(2, again.Value.Count);
+        Assert.Equal(3, again.Value.Count);
         Assert.Equal(1, stub.RequestsFor(StubCatalog.Movies));   // the same task, not a second fetch
     }
 
@@ -763,9 +763,9 @@ public class MoviesStateTests : BunitContext
 
         // The retry succeeded, the page says so, and the count is still announced: the broken focus call cost
         // the user their place on the page and nothing else.
-        Assert.Equal("The library holds 2 films.", Sentence(cut));
+        Assert.Equal("The library holds 3 films.", Sentence(cut));
         clock.Advance(Announcer.SettleDelay);
-        Assert.Equal("The library holds 2 films.", Spoken().StatusText);
+        Assert.Equal("The library holds 3 films.", Spoken().StatusText);
     }
 
     // ============================================================ M11: the strings themselves
@@ -830,7 +830,7 @@ public class MoviesStateTests : BunitContext
 
         Assert.Equal(expected, meta.State);
         Assert.Equal(CatalogMeta.TmdbAttribution, meta.Value.Attribution);   // m3, on both paths
-        if (expected == CatalogState.Ready) Assert.Equal(2, meta.Value.MovieCount);   // the same two films
+        if (expected == CatalogState.Ready) Assert.Equal(3, meta.Value.MovieCount);   // the same three films
     }
 
     /// <remarks>

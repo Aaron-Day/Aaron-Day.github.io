@@ -29,26 +29,48 @@ internal static class AnnouncerTestExtensions
     /// A tiny catalogue, inline rather than read from tests/fixtures, because 320 contracts should not each
     /// read a file. PublishedShapeTests is where the real published shape is pinned.
     /// <para>
-    /// ONE OF THE TWO HAS A POSTER PATH AND THE OTHER DOES NOT, and that asymmetry is load-bearing rather
-    /// than decorative. Every markup contract that runs through <c>MarkupContractTests</c> renders the app
-    /// from this catalogue, so with no <c>p</c> on either film the films page emits no image at all: the img
-    /// contracts' subject count stays at 1 -- index.html's TMDB logo -- and they read as covering 60
-    /// posters while covering none of them. With one poster and one without, both tile branches are in
-    /// every Ready scope. <c>TheImageAndControlContractsCanSeeTheFilmsPagesOwnMarkup</c> is what fails if
-    /// the poster is ever removed from here.
+    /// ONE FILM PER CONFIDENCE BAND, and the asymmetries between them are load-bearing rather than
+    /// decorative. Every markup contract that runs through <c>MarkupContractTests</c> renders the app from
+    /// this catalogue, so a band absent from here is a branch absent from every Ready scope.
+    /// </para>
+    /// <para>
+    /// <b>The poster asymmetry.</b> Se7en carries a <c>p</c> and the other two do not. With no <c>p</c> on
+    /// any film the films page emits no image at all: the img contracts' subject count stays at 1 --
+    /// index.html's TMDB logo -- and they read as covering 60 posters while covering none of them. With one
+    /// poster and two without, both tile branches are in every Ready scope.
+    /// <c>TheImageAndControlContractsCanSeeTheFilmsPagesOwnMarkup</c> is what fails if the poster is ever
+    /// removed from here.
+    /// </para>
+    /// <para>
+    /// <b>The band asymmetry, added by Task 7 for the same reason.</b> This catalogue held a Confident film
+    /// and an Unmatched one and no Uncertain one at all, so <c>Confidence.Uncertain</c> -- the band the
+    /// "Needs review" badge is for, and the largest degraded band in the real catalogue -- had ZERO failable
+    /// subjects anywhere in the app's own markup. A badge contract over these scopes would have read as
+    /// covering the badges while covering one of the two badged bands: rule T1, one level up, and the same
+    /// argument the poster asymmetry above records. The Uncertain film carries <c>mc</c> 0.55 with a real
+    /// TMDB id, which is the shape <c>ConfidenceBand.Of</c> needs in order to tell "a poor match was
+    /// accepted" from "no match was made at all" -- the same record
+    /// <c>tests/fixtures/movies-three-records.json</c> carries, so the two fixtures agree.
+    /// </para>
+    /// <para>
+    /// <b>And the degraded shape is real.</b> The Unmatched film has no <c>y</c>, no <c>p</c> and no cast,
+    /// so <c>PosterTile</c>'s degraded-record branches are reached rather than stepped over. A fixture that
+    /// gave it a synthetic year and a four-person cast would render a tile indistinguishable from a healthy
+    /// one, which is the vacuity Task 6 recorded in <c>PosterTile.razor</c> in advance.
     /// </para>
     /// </summary>
-    private const string TwoFilms =
+    private const string OneFilmPerBand =
         """
         [{"i":807,"k":"807-110","t":"Se7en","y":1995,"rt":110,"p":"/se7en.jpg","g":[],"ag":"Thriller","vote":8.4,"dir":[],"cast":[],"mc":0.95},
+         {"i":601,"k":"601-88","t":"The Peeled Edition","y":1982,"rt":88,"g":[],"ag":"Drama","vote":6.2,"dir":[],"cast":[],"mc":0.55},
          {"i":0,"k":"u-d2f1c6e2","t":"An Unlisted Film","rt":101,"g":[],"ag":"Documentary","vote":0,"dir":[],"cast":[],"mc":0}]
         """;
 
     /// <summary>The meta document for the same tiny catalogue, so <c>movieCount</c> agrees with it.</summary>
-    private const string TwoFilmsMeta =
+    private const string OneFilmPerBandMeta =
         """
-        {"builtUtc":"2026-11-04T09:00:00Z","movieCount":2,"showCount":0,"totalEpisodeCount":0,
-         "genres":{"53":"Thriller","99":"Documentary"},
+        {"builtUtc":"2026-11-04T09:00:00Z","movieCount":3,"showCount":0,"totalEpisodeCount":0,
+         "genres":{"18":"Drama","53":"Thriller","99":"Documentary"},
          "attribution":"This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.",
          "reviewQueue":[]}
         """;
@@ -109,7 +131,7 @@ internal static class AnnouncerTestExtensions
     /// <summary>The movies.json response for an outcome.</summary>
     public static Func<Task<HttpResponseMessage>> Responder(CatalogOutcome outcome) => outcome switch
     {
-        CatalogOutcome.Ready => StubCatalog.Json(TwoFilms),
+        CatalogOutcome.Ready => StubCatalog.Json(OneFilmPerBand),
         CatalogOutcome.Failed => StubCatalog.Throws(new HttpRequestException("the stub was asked to fail")),
         CatalogOutcome.NeverCompletes => StubCatalog.NeverAnswers(),
         _ => throw new ArgumentOutOfRangeException(nameof(outcome), outcome, "no responder for this outcome"),
@@ -118,7 +140,7 @@ internal static class AnnouncerTestExtensions
     /// <summary>The meta.json response for the same outcome, so an outcome covers both documents.</summary>
     public static Func<Task<HttpResponseMessage>> MetaResponder(CatalogOutcome outcome) => outcome switch
     {
-        CatalogOutcome.Ready => StubCatalog.Json(TwoFilmsMeta),
+        CatalogOutcome.Ready => StubCatalog.Json(OneFilmPerBandMeta),
         CatalogOutcome.Failed => StubCatalog.Throws(new HttpRequestException("the stub was asked to fail")),
         CatalogOutcome.NeverCompletes => StubCatalog.NeverAnswers(),
         _ => throw new ArgumentOutOfRangeException(nameof(outcome), outcome, "no responder for this outcome"),
