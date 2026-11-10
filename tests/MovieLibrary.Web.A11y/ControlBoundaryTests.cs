@@ -32,6 +32,16 @@ namespace MovieLibrary.Web.A11y;
 /// the token moves this check with it rather than leaving a stale hex here. The hex figures in these
 /// remarks are quoted from app.css's own header, which is where the contrast ratios are recorded.
 /// </para>
+/// <para>
+/// <b>And the probe is asserted to have RESOLVED, because without that both halves of this gate fail
+/// open on a token rename.</b> Rename <c>--line</c> to <c>--edge</c> through the stylesheets and point a
+/// control's border at the renamed token: <c>color: var(--line)</c> becomes invalid at computed-value
+/// time, the inherited <c>color</c> declaration is dropped, the probe silently becomes the body text
+/// colour, and the bad-list comes back empty over a page carrying the exact 1.37:1 regression. That was
+/// measured, not reasoned about. The source half in <c>StyleContractTests</c> misses the same rename for
+/// a different reason - its predicate matches the literal string <c>var(--line)</c> - and carries a live
+/// positive witness for it.
+/// </para>
 /// </remarks>
 [Collection(BrowserCollection.Name)]
 public class ControlBoundaryTests(BrowserGate gate, ITestOutputHelper output)
@@ -108,17 +118,58 @@ public class ControlBoundaryTests(BrowserGate gate, ITestOutputHelper output)
             + "background: transparent, the border IS the control, so losing it is an SC 1.4.11 failure in "
             + "its own right rather than a broken test. Found: " + string.Join("; ", bordered));
 
-        var drawnInDecoration =
-            await session.Page.EvaluateAsync<string[]>(Scripts.DecorationBorderedControls);
+        var boundary = await session.Page.EvaluateAsync<Boundary>(Scripts.DecorationBorderedControls);
 
-        Assert.True(drawnInDecoration.Length == 0,
+        output.WriteLine($"  var(--line) resolves to {boundary.Decoration}; "
+                         + $"body text is {boundary.Inherited}");
+
+        // THE PROBE RESOLVED THE TOKEN, before a word is said about what it found - and this is the
+        // assertion that stops the whole gate failing open. MEASURED: rename --line to --edge through the
+        // stylesheets, a behaviour-preserving refactor, and point .try-again's border at the renamed token.
+        // `color: var(--line)` is then invalid at computed-value time; color is inherited, so the
+        // declaration is dropped and the probe comes back as the colour it inherits from body - the body
+        // TEXT colour, which no border here uses. The bad-list below misses every border, returns empty,
+        // and the exact 1.37:1 regression this file exists to catch reads as a clean page. The source half
+        // fails open the same way and on the same rename, which is why StyleContractTests now carries a
+        // live positive witness beside its scan.
+        //
+        // It cannot mask the regression it guards: a border dropped to var(--line) leaves the token
+        // defined, so the probe still resolves and the assertion below is the one that fires.
+        Assert.True(boundary.Decoration != boundary.Inherited,
+            $"The probe given `color: var(--line)` resolved to {boundary.Decoration}, which is the colour "
+            + "it inherits from <body> - so var(--line) did not resolve at all and this check has measured "
+            + "nothing. An unresolved custom property in an inherited property is DROPPED, not defaulted, "
+            + "so the probe silently becomes the body text colour, which no border in this project uses, "
+            + "and every comparison below misses. The likeliest cause is that the token has been renamed: "
+            + "find its new name and change it here and in StyleContractTests' witness together. Until "
+            + "then the SC 1.4.11 Non-text Contrast (Level AA) gate is not running.");
+
+        Assert.True(boundary.Bad.Length == 0,
             $"At {width}x812 with the catalogue {(failed ? "failed" : "loaded")}, "
-            + $"{drawnInDecoration.Length} rendered control(s) draw a border in var(--line): "
-            + string.Join("; ", drawnInDecoration)
+            + $"{boundary.Bad.Length} rendered control(s) draw a border in var(--line): "
+            + string.Join("; ", boundary.Bad)
             + ". app.css measures that token at 1.37:1 against --bg and records it as FAILING SC 1.4.11 "
             + "Non-text Contrast (Level AA); --line-strong is the 3.89:1 token reserved for a control's own "
             + "boundary. axe has no non-text-contrast rule, so nothing else in this repository catches it. "
             + "This has happened once already, to the Try again button, whose transparent background makes "
             + "its border the only thing there is to find.");
+    }
+
+    /// <summary>
+    /// What <see cref="Scripts.DecorationBorderedControls"/> returns: the decoration token's resolved
+    /// colour, the colour an unresolved token would silently fall back to, and the controls drawn in it.
+    /// </summary>
+    /// <remarks>
+    /// A class with settable properties rather than a record, for the reason
+    /// <c>ObscuredFocusTests.Stop</c> gives: Playwright's .NET binding constructs the type with no
+    /// arguments and fills it by property, and rejects a record outright.
+    /// </remarks>
+    public sealed class Boundary
+    {
+        public string Decoration { get; set; } = string.Empty;
+
+        public string Inherited { get; set; } = string.Empty;
+
+        public string[] Bad { get; set; } = [];
     }
 }

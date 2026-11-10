@@ -638,7 +638,9 @@ public class StyleContractTests
     /// <c>border-top</c> and <c>.poster-placeholder</c>'s <c>border</c> both use <c>--line</c> deliberately:
     /// the first is a grouping cue on a footer, the second is a decorative box whose meaning is carried by
     /// the title beside it, and PosterTile.razor.css argues the second out of 1.4.11's scope in writing.
-    /// Neither is a control, so neither is a subject here.
+    /// Neither is a control, so neither is a subject here - and <c>.attribution</c>'s has a second job
+    /// now: it is the live positive witness that keeps this scan from failing open on a token rename. See
+    /// the comment beside it in the body.
     /// </para>
     /// <para>
     /// <b>The blind spot, recorded rather than hidden.</b> A text scan can only see the SELECTOR, so a
@@ -676,6 +678,42 @@ public class StyleContractTests
             + ".skip-link:focus and .try-again:hover - so fewer means NamesAControl stopped matching and "
             + "the loop below passes over nothing. Found: "
             + string.Join("; ", borders.Select(b => b.Selector + " { " + b.Declaration + " }")));
+
+        // A LIVE POSITIVE WITNESS for the token predicate, and without it this whole scan fails open on a
+        // token rename. MEASURED: rename --line to --edge consistently through app.css and the scoped
+        // sheets - a behaviour-preserving refactor - and point .try-again's border at the renamed token.
+        // UsesTheDecorationToken then matches nothing at all, because it matches the literal string
+        // `var(--line)`; the loop below finds zero violations while the floor above is still satisfied,
+        // since that floor counts border DECLARATIONS rather than token uses. The result is a green gate
+        // over the exact 1.37:1 regression this rule exists to catch. The browser half in
+        // ControlBoundaryTests missed the same rename for its own reason and now guards against it too.
+        //
+        // .attribution's border-top is the witness because it is a real, deliberate, documented and
+        // NON-control use of the token - the footer grouping cue argued out of 1.4.11's scope in the
+        // remarks above. It cannot be satisfied by a tree in which the token has been renamed away, which
+        // is the one property a witness for this failure has to have.
+        var witness = sheets
+            .SelectMany(sheet => Declarations(WithoutComments(sheet.Text))
+                .Where(d => d.Selector == ".attribution" && IsABorderDeclaration(d.Declaration))
+                .Select(d => new { sheet.Path, d.Declaration }))
+            .ToList();
+
+        Assert.True(witness.Count == 1,
+            "This rule found " + witness.Count + " border declaration(s) on `.attribution`, not the one "
+            + "app.css carries at :234. That declaration is the live positive witness for the token "
+            + "predicate below, so without exactly one of it nothing proves the predicate still matches "
+            + "anything in this project. Found: "
+            + string.Join("; ", witness.Select(w => w.Path + ": " + w.Declaration)));
+
+        Assert.True(UsesTheDecorationToken(witness[0].Declaration),
+            witness[0].Path + ": `.attribution { " + witness[0].Declaration + "; }` is this project's "
+            + "one deliberate NON-control use of the decoration token, and UsesTheDecorationToken no "
+            + "longer reads it as using one. The predicate therefore matches nothing in the tree as the "
+            + "tree now spells it, and the loop below reports a clean pass whatever any control's border "
+            + "is set to: the SC 1.4.11 Non-text Contrast (Level AA) scan has stopped running rather "
+            + "than started passing. If --line has been renamed, update this predicate and "
+            + "MovieLibrary.Web.A11y.ControlBoundaryTests' probe in the same change - both halves of the "
+            + "gate miss a rename, and they miss it for different reasons.");
 
         foreach (var border in borders)
             Assert.True(!UsesTheDecorationToken(border.Declaration),

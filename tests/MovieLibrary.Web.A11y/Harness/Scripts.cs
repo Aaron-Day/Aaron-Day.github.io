@@ -535,8 +535,9 @@ internal static class Scripts
 
 
     /// <summary>
-    /// Every visible control whose only boundary is drawn in the DECORATION token's colour, which app.css
-    /// measures at 1.37:1 and records as failing SC 1.4.11 Non-text Contrast (Level AA).
+    /// The decoration token's own colour, the colour an unresolved token would fall back to, and every
+    /// visible control whose only boundary is drawn in that token - which app.css measures at 1.37:1 and
+    /// records as failing SC 1.4.11 Non-text Contrast (Level AA).
     /// </summary>
     /// <remarks>
     /// <b>The colour is read off the page rather than retyped here.</b> A hidden probe element is given
@@ -544,6 +545,26 @@ internal static class Scripts
     /// token moves this check with it instead of leaving a stale hex in a test. Retyping
     /// <c>rgb(38, 43, 56)</c> would be a second copy of a measurement, which is the thing this file's
     /// header warns about.
+    /// <para>
+    /// <b>And that probe is why the inherited colour comes back too: without it the whole gate FAILS OPEN
+    /// on a token rename, which was demonstrated rather than argued.</b> Rename <c>--line</c> to
+    /// <c>--edge</c> consistently through the stylesheets - a behaviour-preserving refactor - and
+    /// <c>color: var(--line)</c> becomes invalid at computed-value time. <c>color</c> is an inherited
+    /// property, so the declaration is thrown away and the probe resolves to the colour it inherits from
+    /// <c>body</c>: the body TEXT colour, which no border in this project uses. Every comparison below
+    /// then misses, the bad-list comes back empty, and a gate whose whole job is to catch
+    /// <c>.try-again</c> dropping to the decoration token reports a clean page. A probe that resolved to
+    /// the body text colour has told the caller nothing, so the caller is given both values and asserts
+    /// they differ.
+    /// </para>
+    /// <para>
+    /// The comparison is against <c>body</c>'s colour and not against the string "rgb(0, 0, 0)" or an
+    /// empty value, because an unresolved inherited property does not read as a sentinel - it reads as
+    /// whatever was inherited, which is a perfectly ordinary colour. If the decoration token were ever
+    /// retuned to exactly the body text colour this guard would cry wolf, and it should: a border drawn
+    /// in the body text colour is a different 1.4.11 question and this scan could no longer tell the two
+    /// apart.
+    /// </para>
     /// <para>
     /// The control selector is the one <see cref="Controls"/> uses, so the subject set is the same set
     /// <c>TouchTargetReportTests</c> already puts a floor under. It is the SELECTOR half that the source
@@ -560,6 +581,7 @@ internal static class Scripts
           document.body.appendChild(probe);
           const decoration = getComputedStyle(probe).color;
           probe.remove();
+          const inherited = getComputedStyle(document.body).color;
 
           const selector =
             "a[href], button, [role=button], input:not([type=hidden]), select, textarea, summary";
@@ -583,7 +605,7 @@ internal static class Scripts
                      + " [" + (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 24) + "] "
                      + bad.join("+") + " drawn in " + decoration);
           }
-          return out;
+          return { decoration: decoration, inherited: inherited, bad: out };
         }
         """;
 
