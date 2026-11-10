@@ -41,6 +41,14 @@ namespace MovieLibrary.Web.A11y;
 /// inline <c>display: block</c> the runtime writes. A full-height bar over a page that works is the
 /// combination nothing in this project had measured.
 /// </para>
+/// <para>
+/// <b>An off-viewport probe point is not a blocker, and the assertions honour that.</b>
+/// <see cref="Scripts.FocusObscuration"/> counts such a point in <c>Offscreen</c> and leaves it out of
+/// <c>Clear</c>, so a stop whose points were all off-viewport has been MEASURED NOT AT ALL rather than
+/// found obscured - and a bare <c>Clear >= 1</c> would report it as entirely hidden with an empty blocker
+/// list, which is the wrong diagnosis of a different defect. There is a separate assertion for that
+/// state, and the obscuration message says how many points were excluded.
+/// </para>
 /// </remarks>
 [Collection(BrowserCollection.Name)]
 public class ObscuredFocusTests(BrowserGate gate, ITestOutputHelper output)
@@ -101,12 +109,37 @@ public class ObscuredFocusTests(BrowserGate gate, ITestOutputHelper output)
                 + $"{stop.Width}x{stop.Height} that is not visible, so the hit test below would have passed "
                 + "over it rather than measured it.");
 
+            // THE CARVE-OUT THE SCRIPT DOCUMENTS, HONOURED. An off-viewport probe point is not a blocker:
+            // elementFromPoint is defined to return null there, and "scrolled out of view" is not "hidden
+            // by author-created content", so FocusObscuration counts those points in Offscreen and leaves
+            // them out of Clear. The assertion below reads Clear alone - so a stop whose points were ALL
+            // off-viewport would fail it with an empty blocker list under the words "is ENTIRELY hidden",
+            // which is the wrong diagnosis of a different defect. This says the right thing instead.
+            //
+            // It cannot mask the obscuration it stands in front of: a control under the bar has
+            // on-viewport points that hit the bar, so Offscreen stays below Points and the assertion below
+            // is the one that fires. Measured both ways - the scroll-padding-bottom: 0 mutation fails
+            // below, and a fixed control moved off-screen fails here.
+            Assert.True(stop.Offscreen < stop.Points,
+                $"{stop.What} had all {stop.Points} of its probe points outside the viewport when it took "
+                + $"keyboard focus at {width}x{height} with the error bar {(barUp ? "up" : "down")}, so "
+                + "nothing at all was measured about it and the obscuration assertion below would have "
+                + "called it entirely hidden with no blocker to name. A focused control that is off the "
+                + "viewport is its own defect, and it is not the one SC 2.4.11 Focus Not Obscured "
+                + "(Minimum) is about, which is author-created content drawn over the top. The browser "
+                + "scrolls focus into view and SettledAsync waits for that to finish, so the likely causes "
+                + "are a position: fixed control placed off-screen - the skip link is the one control here "
+                + $"that no scroll can rescue - or a transform moved after the scroll settled. Its box is "
+                + $"{stop.Width}x{stop.Height}.");
+
             Assert.True(stop.Clear >= 1,
                 $"{stop.What} is ENTIRELY hidden when it receives keyboard focus at {width}x{height} with "
                 + $"the error bar {(barUp ? "up" : "down")}: none of its {stop.Points} probe points resolve "
                 + "to it or to a descendant. SC 2.4.11 Focus Not Obscured (Minimum), Level AA. Blocked by "
                 + string.Join("; ", stop.Blockers)
-                + ". What is supposed to prevent this is app.css's "
+                + $". {stop.Offscreen} of those points were outside the viewport and are excluded from this "
+                + "tally rather than counted as blockers, so the blocker list can be shorter than the point "
+                + "count. What is supposed to prevent this is app.css's "
                 + "html { scroll-padding-bottom: max(6rem, var(--bar-max)) }, and it only moves a control "
                 + "the browser decides to scroll at all - so the thing to check is whether the control is "
                 + "outside the optimal viewing region, not merely whether it is under the bar.");
