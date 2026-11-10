@@ -344,16 +344,48 @@ public class DegradedRecordTests : BunitContext
     private static string WithoutCssComments(string css) =>
         Regex.Replace(css, @"/\*.*?\*/", "", RegexOptions.Singleline);
 
-    /// <summary>The declarations of the first rule with this exact selector.</summary>
-    private static string RuleBody(string css, string selector)
-    {
-        var m = Regex.Match(css, Regex.Escape(selector) + @"\s*\{(?<body>[^}]*)\}");
+    /// <summary>Every rule in the stylesheet, as (selector, declarations), in source order.</summary>
+    /// <remarks>
+    /// Innermost rules only, which is what is wanted here: the selector group forbids a brace, so a wrapper
+    /// such as <c>@media (forced-colors: active)</c> never matches as a rule of its own, and the
+    /// <c>.badge</c> rule INSIDE it comes back as an ordinary rule. Rule T6 does not bite -- the body is
+    /// taken whole, up to the closing brace, rather than walked semicolon by semicolon, so a final
+    /// declaration with no trailing semicolon is still read.
+    /// </remarks>
+    private static List<(string Selector, string Body)> Rules(string css) =>
+        [.. Regex.Matches(css, @"(?<sel>[^{}]+)\{(?<body>[^{}]*)\}")
+                 .Select(m => (Selector: Collapse(m.Groups["sel"].Value), Body: m.Groups["body"].Value))];
 
-        Assert.True(m.Success, "PosterTile.razor.css has no `" + selector + "` rule. A badge class the "
-                               + "component renders with no rule behind it still draws -- the shared "
-                               + "`.badge` rule paints it -- in the wrong colour, with nothing on screen "
-                               + "to say so.");
-        return m.Groups["body"].Value;
+    /// <summary>Whitespace runs collapsed to one space and trimmed, so two spellings of one selector match.</summary>
+    private static string Collapse(string text) => Regex.Replace(text, @"\s+", " ").Trim();
+
+    /// <summary>EVERY rule whose selector mentions this class -- not the first rule whose selector IS it.</summary>
+    /// <remarks>
+    /// WHY NOT AN EXACT MATCH ON THE FIRST RULE, which is what this file did until the review found it. That
+    /// form could not see either of two cues the SC 1.4.1 argument below explicitly names:
+    /// <c>.badge-unmatched::before { content: "! " }</c> is a different selector, so it was never examined,
+    /// and a SECOND <c>.badge-uncertain { background-image: ... }</c> is a later rule that overrides the
+    /// first, so only the first was read. Both were appended to the stylesheet and all 23 tests in this
+    /// file stayed green, as did all 77 in <c>StyleContractTests</c>. Matching every rule that mentions the
+    /// class catches a pseudo-element, a pseudo-class state, a descendant or compound selector and a
+    /// selector list; the duplicate check in the caller catches the second copy.
+    /// <para>
+    /// The class boundary is explicit on both sides, so <c>badge</c> does not match the variants' rules and
+    /// a variant does not match a longer name beginning with it.
+    /// </para>
+    /// <para>
+    /// WHAT IT STILL CANNOT SEE, stated rather than left to be discovered: this is a single-file source
+    /// scan, so a cue applied to <c>.badge-unmatched</c> from another stylesheet is invisible to it. The
+    /// scoped rules in this file carry a <c>[b-...]</c> attribute and so win every property they declare,
+    /// but a property they do NOT declare can still be set from outside -- which is the collision the
+    /// comment at the top of the badge rules records for Bootstrap.
+    /// </para>
+    /// </remarks>
+    private static List<(string Selector, string Body)> RulesMentioning(string css, string klass)
+    {
+        var mentions = new Regex(@"(?<![\w-])\." + Regex.Escape(klass) + @"(?![\w-])");
+
+        return [.. Rules(css).Where(r => mentions.IsMatch(r.Selector))];
     }
 
     /// <remarks>
@@ -396,7 +428,15 @@ public class DegradedRecordTests : BunitContext
     [Fact]
     public void TheBadgeIsABorderedBoxRatherThanATintSoForcedColorsCannotFlattenItAway()
     {
-        Assert.Matches(@"border\s*:\s*1px\s+solid\s+var\(\s*--line-strong\s*\)", RuleBody(Css(), ".badge"));
+        // The rules whose selector is exactly `.badge`, not the first of them: there are two by design, the
+        // shared one and the forced-colors override, and only the shared one can satisfy this -- the other
+        // draws its border in CanvasText, which the next test reads. So this says "some `.badge` rule draws
+        // the border in --line-strong" without depending on which order the two appear in.
+        var badge = RulesMentioning(Css(), "badge").Where(r => r.Selector == ".badge").ToList();
+
+        Assert.NotEmpty(badge);
+        Assert.Contains(badge, r =>
+            Regex.IsMatch(r.Body, @"border\s*:\s*1px\s+solid\s+var\(\s*--line-strong\s*\)"));
     }
 
     /// <remarks>
@@ -411,17 +451,50 @@ public class DegradedRecordTests : BunitContext
     /// "colour alone" -- and under forced colors that difference would survive while the colour did not,
     /// which is a cue the test for the text would never notice was missing.
     /// </para>
+    /// <para>
+    /// WHAT IT COVERS, PRECISELY, because an earlier version of this remark overstated it. It reads EVERY
+    /// rule in the file whose selector mentions the variant class and requires every declaration in each of
+    /// them to be <c>border-color</c> or <c>color</c>, and it rejects a second rule with the same selector.
+    /// So a thicker border, an icon through <c>content</c>, a background image, a pseudo-element, a
+    /// pseudo-class state and a duplicate rule that overrides the first are all caught. Until the review
+    /// found it this read only the FIRST rule whose selector was exactly the class, and two of the four cues
+    /// named above -- the <c>::before</c> and the second <c>background-image</c> rule -- landed with every
+    /// test in this file and in <c>StyleContractTests</c> green. It is still a single-file scan: see
+    /// <see cref="RulesMentioning"/> for the one thing it cannot see.
+    /// </para>
     /// </remarks>
     [Theory]
-    [InlineData(".badge-unmatched")]
-    [InlineData(".badge-uncertain")]
-    public void AVariantSetsColourAndNothingElse(string selector)
+    [InlineData("badge-unmatched")]
+    [InlineData("badge-uncertain")]
+    public void AVariantSetsColourAndNothingElse(string variant)
     {
-        var declarations = RuleBody(Css(), selector)
-            .Split(';', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
+        var rules = RulesMentioning(Css(), variant);
 
-        Assert.NotEmpty(declarations);
-        Assert.All(declarations, d => Assert.Matches(@"^(border-color|color)\s*:", d));
+        Assert.True(rules.Count > 0,
+            "PosterTile.razor.css has no rule mentioning `." + variant + "`. A badge class the component "
+            + "renders with no rule behind it still draws -- the shared `.badge` rule paints it -- in the "
+            + "wrong colour, with nothing on screen to say so.");
+
+        // ONE RULE PER SELECTOR. A second rule with the same selector wins over the first, so a reader who
+        // stopped at the first would not see it at all, and that is exactly how a background tint got past
+        // this test before. If a forced-colors override was intended it belongs on `.badge`, which already
+        // flattens both variants to CanvasText on Canvas.
+        var repeated = rules.GroupBy(r => r.Selector, StringComparer.Ordinal).Where(g => g.Count() > 1).ToList();
+
+        Assert.True(repeated.Count == 0,
+            "PosterTile.razor.css declares "
+            + string.Join(" and ", repeated.Select(g => "`" + g.Key + "` " + g.Count() + " times"))
+            + ". The later rule wins, and the SC 1.4.1 Use of Color argument in this file rests on the two "
+            + "variants differing by colour alone.");
+
+        Assert.All(rules, rule =>
+        {
+            var declarations = rule.Body
+                .Split(';', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
+
+            Assert.True(declarations.Length > 0, "`" + rule.Selector + "` declares nothing at all");
+            Assert.All(declarations, d => Assert.Matches(@"^(border-color|color)\s*:", d));
+        });
     }
 
     /// <remarks>
