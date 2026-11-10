@@ -369,6 +369,28 @@ public class FixtureGeneratorCatalogueTests : IDisposable
         });
     }
 
+    /// <remarks>
+    /// REALISM, which nothing else pinned: that the genres are SPREAD. The two tests above prove every id has a name
+    /// and that films carry one or two of them, and both pass for a fixture in which every film is Drama. The facet
+    /// is only exercisable against a catalogue that can tell its films apart -- ticking a genre must show a
+    /// different, non-empty, proper subset -- so this asserts a wide spread over the library-sized draw: most of the
+    /// nineteen genres turn up, and no single one dominates.
+    /// </remarks>
+    [Fact]
+    public void TheGenresAreSpreadWideEnoughForAFacetToTellFilmsApart()
+    {
+        var films = Matched();
+        var carriers = FixtureGenerator.Genres.Keys
+            .ToDictionary(id => id, id => films.Count(m => m.G.Contains(id)));
+
+        var used = carriers.Count(c => c.Value > 0);
+        var busiest = carriers.Values.Max() / (double)films.Count;
+
+        Assert.True(used >= 17, $"Only {used} of {carriers.Count} genres are carried by any matched film.");
+        Assert.True(busiest <= 0.30, $"One genre is carried by {busiest:P0} of the matched films, which is not a spread.");
+        Assert.All(carriers, c => Assert.True(c.Value < films.Count, $"Genre {c.Key} is on every matched film."));
+    }
+
     // Year, vote, overview and id used to be seed % 55, % 60, % 5 and % 90,000: 5 divides all four, so within any one
     // overview every film shared a year, a vote and an id residue. Each now has its own salt.
     [Fact]
