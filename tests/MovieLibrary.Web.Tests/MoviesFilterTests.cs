@@ -593,6 +593,28 @@ public class MoviesFilterTests : BunitContext
         Assert.Equal("Page 2 of 3", PageLabel(open.Cut));
     }
 
+    /// <remarks>
+    /// R-H. The grid builds its announcement from the number it raised, so a page that clamped or overrode it
+    /// would have the grid say a page the visitor is not on. Every page the grid raises is adopted as given, to the
+    /// last, and the sentence it speaks is about the page that is on screen.
+    /// </remarks>
+    [Fact]
+    public void EveryPageTheGridRaisesIsAdoptedAsGivenAndTheSentenceDescribesThePageOnScreen()
+    {
+        var open = Render(Bulk(130));
+
+        Next(open.Cut);
+        Next(open.Cut);
+
+        Assert.Equal("Page 3 of 3", PageLabel(open.Cut));
+        Assert.Equal("movies?page=3", open.Nav.ToBaseRelativePath(open.Nav.Uri));
+        Assert.Equal("Film 121", Titles(open.Cut)[0]);
+
+        Settle(open);
+        open.Cut.WaitForAssertion(() =>
+            Assert.Equal("Page 3 of 3. Showing 121 to 130 of 130 titles.", Status(open)));
+    }
+
     [Fact]
     public void APageInTheAddressIsReadOnArrival()
     {

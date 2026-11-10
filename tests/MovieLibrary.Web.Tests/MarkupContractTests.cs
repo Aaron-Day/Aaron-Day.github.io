@@ -18,13 +18,15 @@ namespace MovieLibrary.Web.Tests;
 /// WHY A GREEN TEST HERE IS NOT AUTOMATICALLY A COVERED ONE. Even through App, several of these rules loop
 /// over element sets that are small in an app with two pages: three images and twenty-nine controls, as
 /// TheImageAndControlContractsCanSeeTheFilmsPagesOwnMarkup measures them, with
-/// no positive tabindex anywhere and no id reference this gate can fail on at all. A loop over an empty
+/// no positive tabindex anywhere. (It also said "and no id reference this gate can fail on at all" until Task 8, whose
+/// filter labels are the first.) A loop over an empty
 /// collection PASSES and reads in the output exactly like a rule that checked something, and the usual
 /// proof -- break an assertion, watch it fail, restore it -- cannot tell the difference, because the
-/// mutation passes too. So: every rule here asserts its own subject set is non-empty, and the three rules
-/// whose subjects do not exist yet are marked Skip by hand with the task that will create them, each with a
-/// live guard beside it that fails the day they appear. A skipped test reads as not covered. A green one
-/// reads as covered. The logic of every rule, including the three skipped ones, is proven in
+/// mutation passes too. So: every rule here asserts its own subject set is non-empty, and the rules whose
+/// subjects do not exist yet are marked Skip by hand with the task that will create them, each with a live guard
+/// beside it that fails the day they appear. There were three; the id-reference rule went live with Task 8, which
+/// is what its guard said would happen, and two remain. A skipped test reads as not covered. A green one
+/// reads as covered. The logic of every rule, including the skipped ones, is proven in
 /// MarkupRuleTests against markup written for the purpose.
 /// </para>
 /// <para>
