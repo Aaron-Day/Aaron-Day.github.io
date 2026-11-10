@@ -586,4 +586,43 @@ internal static class Scripts
           return out;
         }
         """;
+
+
+    /// <summary>
+    /// Which orientation the page believes it is in, in a fixed order: the orientation CSS would act on,
+    /// the viewport as "WxH", and what <c>screen.orientation</c> claims.
+    /// </summary>
+    /// <remarks>
+    /// <b>The first value comes from <c>matchMedia</c>, and that is a measured decision, not a preference.</b>
+    /// <c>screen.orientation.type</c> reports <c>landscape-primary</c> in this harness even at 360x640,
+    /// because the real display behind the headless browser never rotates - so a test that trusted it would
+    /// compare two viewports it believed were both landscape and pass without ever testing a rotation. The
+    /// media query tracks the emulated viewport correctly, and it is also the thing a stylesheet would use
+    /// to hide content, which is the mechanism SC 1.3.4 Orientation is about. The third value is carried so
+    /// that the disagreement is printed in the log rather than remembered in a comment.
+    /// </remarks>
+    public const string OrientationFacts = """
+        () => {
+          const landscape = matchMedia("(orientation: landscape)").matches;
+          const portrait = matchMedia("(orientation: portrait)").matches;
+          return [
+            landscape && !portrait ? "landscape"
+              : portrait && !landscape ? "portrait"
+              : "(matchMedia says both or neither)",
+            window.innerWidth + "x" + window.innerHeight,
+            screen.orientation ? screen.orientation.type : "(no screen.orientation)"
+          ];
+        }
+        """;
+
+
+    /// <summary>How many tiles the grid holds, as a number.</summary>
+    /// <remarks>
+    /// <see cref="TileCountIs"/> is a PREDICATE taking the expected count, for
+    /// <c>WaitForFunctionAsync</c>. Evaluating it with no argument returns false, which deserialises into
+    /// an int as zero - a tile count of zero that is really a misuse. This returns the count itself, for
+    /// the places that have to compare two counts rather than wait for one.
+    /// </remarks>
+    public const string TileCount =
+        "() => document.querySelectorAll(\"ul.grid[role=list] > li\").length";
 }

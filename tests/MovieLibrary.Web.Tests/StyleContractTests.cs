@@ -776,6 +776,52 @@ public class StyleContractTests
     public void NamesAControlSeesElementsAndStatesButNotClasses(string selector, bool expected) =>
         Assert.Equal(expected, NamesAControl(selector));
 
+    /// <summary>
+    /// No media query in this project asks which way round the device is.
+    /// </summary>
+    /// <remarks>
+    /// SC 1.3.4 Orientation, Level AA - and this is the cheap half. An orientation media query is the
+    /// mechanism by which a stylesheet restricts content to one orientation, usually by hiding the page
+    /// and showing a "please rotate your device" panel in its place, and there is no legitimate use of one
+    /// in this app: every layout here is driven by the available WIDTH, which is what
+    /// <c>(min-width: 48rem)</c> and <c>(max-width: 22.5rem)</c> ask, and a width query says nothing about
+    /// which edge is up.
+    /// <para>
+    /// This is a text scan and so it cannot see an inline style, a utility class or a layout that simply
+    /// collapses. <c>MovieLibrary.Web.A11y.OrientationTests</c> rotates the viewport under a booted page
+    /// and compares what is on it, which is the half that measures the result.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void NoStylesheetChangesWhatContentExistsWithTheOrientation()
+    {
+        var queries = Stylesheets()
+            .SelectMany(sheet => Regex.Matches(WithoutComments(sheet.Text), @"@media[^{]*")
+                .Select(m => new { sheet.Path, Query = Regex.Replace(m.Value, @"\s+", " ").Trim() }))
+            .ToList();
+
+        // Rule T1, and by name rather than by count: the three queries this project has are each pinned,
+        // so one of them being deleted or rewritten shows up here instead of quietly shrinking the set the
+        // loop below walks. The exact strings also record that all three ask about the available WIDTH or
+        // the pointer, which is the point - none of them can be satisfied or unsatisfied by a rotation.
+        Assert.Contains(queries, q => q.Query == "@media (hover: hover)");
+        Assert.Contains(queries, q => q.Query == "@media (min-width: 48rem)");
+        Assert.Contains(queries, q => q.Query == "@media (max-width: 22.5rem)");
+
+        Assert.True(queries.Count >= 3,
+            $"This rule found {queries.Count} media query/queries outside comments. There are three, and "
+            + "later tasks only add. Fewer means the discovery stopped working and the loop below passes "
+            + "over nothing. Found: " + string.Join("; ", queries.Select(q => q.Path + ": " + q.Query)));
+
+        foreach (var query in queries)
+            Assert.True(!query.Query.Contains("orientation", StringComparison.OrdinalIgnoreCase),
+                query.Path + ": `" + query.Query + "` branches on the display orientation. SC 1.3.4 "
+                + "Orientation (Level AA) says content must not restrict its view and operation to a "
+                + "single display orientation, and an orientation media query is how a stylesheet does "
+                + "that. Every layout in this project is driven by the available width instead, which is "
+                + "what (min-width:) and (max-width:) ask and which says nothing about which edge is up.");
+    }
+
     // ================================================================== the component stylesheets
 
     private static readonly string TileCss = WebRoot.Read("Components", "PosterTile.razor.css");

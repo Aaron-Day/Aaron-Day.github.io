@@ -353,4 +353,67 @@ public class SourceContractTests
     [InlineData("<div aria-atomic=\"true\">atomic without live is not a region</div>")]
     public void TheLiveRegionScanDoesNotCryWolf(string markup)
         => Assert.Empty(LiveRegionMarkers(markup));
+
+    /// <summary>
+    /// Nothing in this project asks the browser to hold the screen one way up.
+    /// </summary>
+    /// <remarks>
+    /// SC 1.3.4 Orientation, Level AA. The Screen Orientation API's <c>lock()</c> is the other way to fail
+    /// it, and it fails it completely: a reader who has their device fixed in a mount, or who cannot rotate
+    /// it, is simply shut out of the page. Nothing in this app has any reason to call it - there is no
+    /// game, no video player and no canvas here - so the rule is a flat ban rather than a judgement.
+    /// <para>
+    /// <b>What is scanned, and what is deliberately not.</b> Every hand-written .razor and .cs in the web
+    /// project, plus index.html, which is where all of this app's own script lives. The vendored Bootstrap
+    /// bundles under wwwroot/lib are not scanned because they are not in the payload: index.html loads
+    /// bootstrap.min.css and blazor.webassembly.js and nothing else, so none of those six .js files ever
+    /// reaches a browser. They are clean in any case - measured, they contain one <c>orientationchange</c>
+    /// in an event-name list and no <c>screen.orientation</c> at all.
+    /// </para>
+    /// <para>
+    /// The pattern matches the property and the lock call separately so that reading the orientation is
+    /// caught as well as locking it. Reading it is not itself a failure, but there is nothing here that
+    /// should want to, and a read is how a lock arrives later.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void NothingLocksTheScreenOrientation()
+    {
+        const string pattern = @"screen\s*\.\s*orientation|orientation\s*\.\s*lock\s*\(";
+
+        var files = WebRoot.Files("*.razor", "*.cs")
+            .Append((Path: "wwwroot/index.html", Text: WebRoot.Read("wwwroot", "index.html")))
+            .ToList();
+
+        // Rule T1. A glob that stopped matching loops over nothing and passes, so the subjects are named:
+        // index.html holds the boot watchdog, which is the only hand-written script in the project and so
+        // the only place a lock could plausibly be written.
+        Assert.Contains(files, f => f.Path == "wwwroot/index.html");
+        Assert.Contains(files, f => f.Path == "Program.cs");
+        Assert.Contains(files, f => f.Path == "Pages/Movies.razor");
+
+        Assert.True(files.Count >= 15,
+            $"This rule found {files.Count} hand-written source file(s). There are fifteen - fourteen "
+            + ".razor and .cs files plus index.html - so fewer means the glob stopped finding them and the "
+            + "loop below passes over nothing.");
+
+        var hits = files
+            .Where(f => Regex.IsMatch(f.Text, pattern))
+            .Select(f => f.Path)
+            .ToList();
+
+        Assert.True(hits.Count == 0,
+            string.Join(", ", hits) + " touches the Screen Orientation API. SC 1.3.4 Orientation (Level "
+            + "AA): content must not restrict its view and operation to a single display orientation, and "
+            + "screen.orientation.lock() does exactly that - a reader whose device is in a mount, or who "
+            + "cannot rotate it, is shut out. Nothing in this app has a reason to read or lock the "
+            + "orientation.");
+
+        // Rule T4: the pattern is what gets mutated, not the assertion, so the forms it must catch are
+        // pinned here rather than left to the scan above finding none of them.
+        Assert.Matches(pattern, "await screen.orientation.lock('portrait');");
+        Assert.Matches(pattern, "screen . orientation . lock ( 'landscape' )");
+        Assert.Matches(pattern, "const o = window.screen.orientation;");
+        Assert.DoesNotMatch(pattern, "window.addEventListener('orientationchange', onRotate);");
+    }
 }
