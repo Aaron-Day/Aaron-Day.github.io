@@ -3,6 +3,8 @@
 @implements IDisposable
 @inject CatalogService Catalog
 @inject Announcer Announcer
+@inject QueryState Address
+@inject TimeProvider Time
 @inject IJSRuntime Js
 
 @* The films page. Task 6 replaces the body of the Ready state with the tile grid and KEEPS these states.
@@ -39,16 +41,41 @@
     }
 </div>
 
-@* THE GRID, AND ONLY IN THE READY STATE. Nothing else in this file is Task 6's to change: the title, the
-   heading and the one stable state container all stay exactly as Task 5 left them.
-   The page owns the page number and hands the whole list down; Task 8 replaces that with the filtered
-   list. Page size is 60, which makes 25 pages of the measured 1,456 records with 16 on the last.
-   It sits BELOW the state container, so the reading order is the heading, then the one-sentence state,
-   then the count, then the pager, then the tiles -- and the pager is above the tiles rather than below
-   them so that paging does not leave the viewport at the tail of the new page. *@
-@if (films.State == CatalogState.Ready)
+@* THE FILTERS AND THE GRID, AND ONLY IN THE READY STATE. Nothing else in this file's markup is Task 8's to
+   change: the title, the heading and the one stable state container all stay exactly as Task 5 left them.
+   The page owns the filter and the page number and hands the grid the FILTERED list.
+   It sits BELOW the state container, so the reading order is the heading, then the one-sentence state, then
+   the filters, then the count, then the pager, then the tiles -- and the pager is above the tiles rather than
+   below them so that paging does not leave the viewport at the tail of the new page.
+
+   The panel is not offered over an empty library: there is nothing to filter, and Task 5's own sentence has
+   already said so. The same condition keeps the no-match paragraph below from ever being reached by one --
+   "No titles match these filters." over a library with nothing in it would be false twice over.
+
+   PAGE SIZE IS NOT PASSED. The grid's default is 60, which makes 25 pages of the measured 1,456 records, and
+   a second copy of the number here would be one edit away from disagreeing with the first. *@
+@if (ShowFilters)
 {
-    <PosterGrid Items="films.Value" Page="page" PageChanged="OnPageChanged" />
+    <FacetPanel @ref="panel" State="Effective" TypedQuery="@typedQuery" Genres="genreOptions"
+                Decades="decadeOptions" HasUnknownYear="anyYearUnknown"
+                QueryInput="OnQueryInput" StateChanged="OnFacetChanged" />
+
+    @* Zero results is TEXT, not an empty grid. The grid's whole head -- count, pager and tiles -- is gated on
+       having titles, so filtering to nothing removes the pager from the DOM, and a pager button that held focus
+       takes it with it: the next Tab would restart from the top of the document. This paragraph is where focus
+       goes when that happens (see OnAfterRenderAsync), and tabindex="-1" is a feature dependency here: the
+       focus call does not add it and fails silently on an element that cannot take focus. *@
+    @if (shown.Count == 0)
+    {
+        <div class="no-match">
+            <p tabindex="-1" @ref="emptyMessage">@NoMatch</p>
+            <button type="button" class="clear-filters" @onclick="ClearAll">Clear all filters</button>
+        </div>
+    }
+    else
+    {
+        <PosterGrid Items="shown" Page="page" PageChanged="OnPageChanged" />
+    }
 }
 
 @code {
@@ -74,6 +101,30 @@
     /// these filters.", which would be false: no filter is involved, and nothing is being hidden.
     /// </summary>
     internal const string EmptyLibrary = "The library is empty.";
+
+    /// <summary>What the page says, seen and spoken, when the filters leave nothing. One constant for both copies.</summary>
+    internal const string NoMatch = "No titles match these filters.";
+
+    // Filter at ~150ms so the grid feels immediate; announce at ~750ms so a screen reader user hears
+    // "174 titles match." once rather than a stream of interruptions per keystroke. The gap between the two is
+    // the point: SC 4.1.3 Status Messages is the criterion a filtering UI most often fails, and the announcer
+    // restarts its own settle delay on every call, so a caller that spoke per keystroke would deliver nothing.
+    internal const int FilterDebounceMs = 150;
+    internal const int AnnounceDebounceMs = 750;
+
+    // The address is the page's state, read the router's way. Every one is a STRING so that a value the router
+    // cannot convert is junk to ignore and not an unhandled exception; QueryState does the parsing.
+    [SupplyParameterFromQuery(Name = QueryState.QueryKey)] public string? Q { get; set; }
+
+    [SupplyParameterFromQuery(Name = QueryState.ConfidenceKey)] public string? Conf { get; set; }
+
+    [SupplyParameterFromQuery(Name = QueryState.GenreKey)] public string[]? Genre { get; set; }
+
+    [SupplyParameterFromQuery(Name = QueryState.DecadeKey)] public string[]? Decade { get; set; }
+
+    [SupplyParameterFromQuery(Name = QueryState.SortKey)] public string? SortParam { get; set; }
+
+    [SupplyParameterFromQuery(Name = QueryState.PageKey)] public string? PageParam { get; set; }
 
     /// <summary>
     /// Where the PAGE puts focus, so the helper in index.html can tell "nobody has touched it" from "the
@@ -129,17 +180,69 @@
 
     /// <summary>
     /// The page of tiles on show, one-based. The PAGE owns this and not the grid: the grid raises
-    /// <c>PageChanged</c> and this adopts it. That seam is what lets Task 8 lift the number into the query
-    /// string without touching the grid, and it is also how the grid corrects a value out of range --
-    /// it renders the clamped page and raises the clamped number for this to adopt.
+    /// <c>PageChanged</c> and this adopts it, UNCHANGED (see <see cref="OnPageChanged"/>) -- the grid builds its
+    /// announcement from the number it raised, so a page that clamped or ignored it would have the grid state a
+    /// page the visitor is not on. It is also how the grid corrects a value out of range: it renders the
+    /// clamped page and raises the clamped number for this to adopt.
     /// </summary>
     private int page = 1;
+
+    // ---- the filter. The ADDRESS is the state; these are the page's working copy of it, adopted eagerly so a
+    // choice shows at once and reconciled against what the router hands back (see AdoptAddress).
+
+    /// <summary>The filter the list is showing, as the address says it. Raw: Effective is what can be displayed.</summary>
+    private FilterState filter = FilterState.Default;
+
+    /// <summary>What the search box shows. Ahead of <see cref="filter"/> by up to the filter debounce.</summary>
+    private string typedQuery = string.Empty;
+
+    /// <summary>
+    /// The canonical text of the last state this page wrote to the address or adopted from it. When the router
+    /// hands back an address with this same text it is the echo of our own navigation and is ignored; anything
+    /// else is the visitor following a link, and replaces the working copy. Comparing STATES rather than strings
+    /// of the address is what makes a normalised junk value (<c>?page=0</c>) read as the same thing it was
+    /// normalised to.
+    /// </summary>
+    private string? syncedWith;
+
+    private CatalogMeta meta = CatalogMeta.Empty;
+    private IReadOnlyList<GenreOption> genreOptions = [];
+    private IReadOnlyList<int> decadeOptions = [];
+    private bool anyYearUnknown;
+
+    /// <summary>The films that pass the filter, in order. What the grid is given.</summary>
+    private IReadOnlyList<MovieRecord> shown = [];
+
+    private FacetPanel? panel;
+    private ElementReference emptyMessage;
+
+    /// <summary>True once focus has been dealt with for THIS run of zero results; reset when there are some again.</summary>
+    private bool emptyHandled;
+
+    private ITimer? filterTimer;
+    private ITimer? announceTimer;
+
+    /// <summary>
+    /// The filter as the panel can show it. Choices the catalogue gives it no control for -- a genre the meta does
+    /// not name, a decade nobody is in -- are dropped, so a filter the visitor can neither see nor untick is not
+    /// silently narrowing the list.
+    /// </summary>
+    private FilterState Effective => filter.Within(genreOptions.Select(g => g.Id), decadeOptions, anyYearUnknown);
+
+    private bool ShowFilters => films.State == CatalogState.Ready && films.Value.Count > 0;
 
     /// <summary>
     /// The button stays while a retry is in flight. Removing it would blur the element the user is standing
     /// on and drop focus to <c>&lt;body&gt;</c>, which is the same defect as using the disabled attribute.
     /// </summary>
     private bool ShowTryAgain => films.State == CatalogState.Failed || retrying;
+
+    /// <summary>
+    /// What is said when the page first reaches Ready. The same words that are on screen -- unless the address
+    /// arrived with a filter already in it, when the library's total is not what the visitor is looking at and
+    /// the count of what they are looking at is.
+    /// </summary>
+    private string OpeningSentence => Effective.IsFiltering ? CountSentence(shown.Count) : Sentence;
 
     /// <summary>
     /// The one sentence on screen, per state. No count while Loading or Failed: a count is a claim about the
@@ -182,11 +285,52 @@
     /// </remarks>
     protected override async Task OnInitializedAsync()
     {
-        var result = await Catalog.GetMoviesAsync();
+        var result = await FetchAsync();
         if (disposed) return;
 
         films = result;
+        if (result.State == CatalogState.Ready) IndexCatalogue();
     }
+
+    /// <remarks>
+    /// Before the first await, so the state the address asks for is in place before the catalogue arrives and
+    /// the first Ready render shows the filtered list rather than the whole library for one frame.
+    /// </remarks>
+    protected override void OnInitialized() => AdoptAddress();
+
+    /// <remarks>
+    /// Runs on EVERY set of parameters, which includes the router handing the page the address it just wrote.
+    /// See <see cref="AdoptAddress"/>.
+    /// </remarks>
+    protected override void OnParametersSet() => AdoptAddress();
+
+    /// <summary>
+    /// Both documents, in parallel; the catalogue decides the outcome. The genre names are only needed when the
+    /// films are, and a meta that failed is <c>CatalogMeta.Empty</c> -- no genres, no genre fieldset, every other
+    /// facet intact -- so its state is deliberately not looked at: Task 5 owns the failure sentence and a second
+    /// one here would be a second voice for the same fetch.
+    /// </summary>
+    private async Task<CatalogResult<IReadOnlyList<MovieRecord>>> FetchAsync()
+    {
+        var moviesRequest = Catalog.GetMoviesAsync();
+        var metaRequest = Catalog.GetMetaAsync();
+
+        var result = await moviesRequest;
+        if (result.State == CatalogState.Ready) meta = (await metaRequest).Value;
+
+        return result;
+    }
+
+    /// <summary>Builds what the panel offers from the catalogue, and filters it for the first time.</summary>
+    private void IndexCatalogue()
+    {
+        genreOptions = CatalogFilter.GenreOptions(meta);
+        decadeOptions = CatalogFilter.DecadesOf(films.Value);
+        anyYearUnknown = CatalogFilter.AnyYearUnknown(films.Value);
+        Refilter();
+    }
+
+    private void Refilter() => shown = CatalogFilter.Apply(films.Value, Effective);
 
     /// <remarks>
     /// Every announcement and every focus move, after the render that carries the new state.
@@ -261,10 +405,38 @@
                     await FocusOutright(heading);
                 }
 
-                if (!countAnnounced)
+                // The opening announcement is CLAIMED before any await below, so a render that arrives while a
+                // focus call is suspended cannot make it a second time.
+                var opening = !countAnnounced;
+                countAnnounced = true;
+
+                // Zero results, once per run of them. The grid's whole head is gated on having titles, so
+                // filtering to nothing removes the pager, and a pager button that held focus takes it with it
+                // (rule R9). The move goes through the same guard the failed state uses: it happens only if
+                // focus is nowhere in particular (<body>, which is where a removed button leaves it) or where
+                // the page itself put it. A visitor typing in the search box is NOT moved: stealing focus from a
+                // field mid-word is worse than the thing it would fix, and they hear the count instead.
+                var movedToEmpty = false;
+                if (ShowFilters && shown.Count == 0)
                 {
-                    countAnnounced = true;
-                    Announcer.Status(Sentence);   // the same words that are on screen
+                    if (!emptyHandled)
+                    {
+                        emptyHandled = true;
+                        movedToEmpty = await FocusIfUnmoved(emptyMessage);
+
+                        // R3: the paragraph focus landed on is read aloud as it takes focus, so announcing
+                        // the same words as well would be two statements for one event.
+                        if (movedToEmpty) Stop(announceTimer);
+                    }
+                }
+                else
+                {
+                    emptyHandled = false;
+                }
+
+                if (opening && !movedToEmpty)
+                {
+                    Announcer.Status(OpeningSentence);
                 }
 
                 break;
@@ -294,13 +466,58 @@
         movedFocusToFailure = false;
         films = new(CatalogState.Loading, films.Value);   // criterion 8: the loading copy, visibly
 
-        var result = await Catalog.GetMoviesAsync();
+        var result = await FetchAsync();
         if (disposed) return;
 
         retrying = false;
         films = result;
+        if (result.State == CatalogState.Ready) IndexCatalogue();
         focusHeadingAfterRetry = result.State == CatalogState.Ready;
     }
+
+    // ============================================================ saying how many
+
+    /// <summary>
+    /// The count, once, after the visitor has stopped changing things. The COUNT ONLY: the grid announces its own
+    /// page changes through the same region, so a page sentence from here as well would be two statements racing
+    /// for one region and the visitor would hear one of them, unpredictably.
+    /// </summary>
+    /// <remarks>
+    /// Armed only after the opening announcement has been made, which says its own sentence.
+    /// </remarks>
+    private void ScheduleCountAnnouncement()
+    {
+        if (!countAnnounced) return;
+
+        announceTimer ??= Time.CreateTimer(
+            _ => _ = InvokeAsync(AnnounceCount), null, Timeout.InfiniteTimeSpan, Timeout.InfiniteTimeSpan);
+        announceTimer.Change(TimeSpan.FromMilliseconds(AnnounceDebounceMs), Timeout.InfiniteTimeSpan);
+    }
+
+    /// <remarks>Internal for the same reason as <see cref="ApplyTypedQuery"/>.</remarks>
+    internal void AnnounceCount()
+    {
+        // An empty library has no filter to report on, and "No titles match" over a library with nothing in it
+        // would be false: Task 5's sentence says it, once.
+        if (disposed || !ShowFilters) return;
+
+        var sentence = CountSentence(shown.Count);
+        Announcer.Status(sentence);
+    }
+
+    /// <summary>
+    /// Singular, plural and zero each have their own form: the obvious literal says "1 titles match." at one.
+    /// The number follows the BROWSER'S culture, exactly as the grid's head does -- one number, one grouping, in
+    /// one block of text -- and is never formatted invariantly.
+    /// </summary>
+    internal static string CountSentence(int count) => count switch
+    {
+        0 => NoMatch,
+        1 => "1 title matches.",
+        var n => $"{n.ToString("N0")} titles match.",
+    };
+
+    private static void Stop(ITimer? timer) => timer?.Change(Timeout.InfiniteTimeSpan, Timeout.InfiniteTimeSpan);
 
     /// <summary>
     /// Moves focus to <paramref name="element"/> unless the user has moved focus themselves, and says
@@ -345,14 +562,137 @@
         }
     }
 
-    /// <summary>Adopts the page the grid asked for, and nothing else.</summary>
+    /// <summary>Adopts the page the grid asked for, writes it to the address, and says nothing.</summary>
     /// <remarks>
+    /// <para>
     /// The grid announces the change itself. R7 wants whoever writes a standing statement to be whoever
     /// clears it, and the grid is what clears the region on its own dispose, so the announce belongs there
     /// too. Announcing here as well would speak the page twice -- and would speak it on the FIRST render,
     /// because the grid raises this for an out-of-range correction as well as for a button press.
+    /// </para>
+    /// <para>
+    /// The number is adopted EXACTLY as given -- the grid builds its announcement from it, and a page that
+    /// clamped, ignored or overrode it would have the grid state a page the visitor is not on. It is also
+    /// written to the address, so a deep link to page 99 ends with the address saying page 25.
+    /// </para>
     /// </remarks>
-    private void OnPageChanged(int value) => page = value;
+    private void OnPageChanged(int value)
+    {
+        page = value;
+        syncedWith = QueryState.Canonical(filter, page);
+        Address.WritePage(value);
+    }
+
+    // ============================================================ the filter
+
+    /// <summary>
+    /// Takes the address as the state, unless it is only the echo of a state this page wrote itself.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// The router calls this with the address for EVERY navigation, and a navigation this page started comes
+    /// back to it. Adopting that would replace the visitor's search box with the text it held a debounce
+    /// earlier. So the canonical text of what was last written is remembered and a match is ignored; a mismatch
+    /// is a link followed, or the Back button, and the address wins: the box, the filter and the page all
+    /// follow it, and any change pending in the box is dropped, because it was typed against a state that no
+    /// longer exists.
+    /// </para>
+    /// <para>
+    /// The echo can arrive LATE -- after the visitor has typed another letter, or after a second write -- and that
+    /// is the case this is built for, because Blazor WebAssembly reports a history change back to .NET by an
+    /// asynchronous call from JavaScript. It stays harmless for two reasons: the comparison is with the LAST thing
+    /// written, and the router reports the manager's CURRENT address, not the address of the write it is
+    /// answering, so a late report of an earlier write reads as the later one. DeferredNavigationManager holds
+    /// the report back in the tests to prove both.
+    /// </para>
+    /// </remarks>
+    private void AdoptAddress()
+    {
+        var fromAddress = QueryState.Read(Q, Conf, Genre, Decade, SortParam);
+        var addressPage = QueryState.ReadPage(PageParam);
+
+        var signature = QueryState.Canonical(fromAddress, addressPage);
+        if (signature == syncedWith) return;
+
+        var narrowedDifferently = Selection(fromAddress) != Selection(filter);
+
+        syncedWith = signature;
+        filter = fromAddress;
+        page = addressPage;
+
+        // A search typed against the state this replaces is dropped: it was meant for a list that is no longer
+        // on screen. The filter timer needs no stopping for that -- it applies whatever the box holds when it
+        // fires, which is now the address's own query, so it finds nothing to change.
+        typedQuery = fromAddress.Query;
+
+        if (films.State != CatalogState.Ready) return;
+
+        Refilter();
+        if (narrowedDifferently) ScheduleCountAnnouncement();
+    }
+
+    /// <summary>A keystroke in the search box: shown at once, applied after the filter debounce.</summary>
+    private void OnQueryInput(string text)
+    {
+        typedQuery = text;
+
+        filterTimer ??= Time.CreateTimer(
+            _ => _ = InvokeAsync(ApplyTypedQuery), null, Timeout.InfiniteTimeSpan, Timeout.InfiniteTimeSpan);
+        filterTimer.Change(TimeSpan.FromMilliseconds(FilterDebounceMs), Timeout.InfiniteTimeSpan);
+    }
+
+    /// <remarks>
+    /// Internal so a test can run it the way a timer that had ALREADY queued it would after the page is gone:
+    /// disposing the timer stops later firings but not one waiting on the dispatcher, and this would otherwise
+    /// write the address a second after the visitor had navigated away.
+    /// </remarks>
+    internal void ApplyTypedQuery()
+    {
+        if (disposed) return;
+
+        Apply(filter with { Query = typedQuery.Trim() });
+        StateHasChanged();
+    }
+
+    /// <summary>A facet or the sort changed. Whatever is in the search box goes with it.</summary>
+    private void OnFacetChanged(FilterState next) => Apply(next with { Query = typedQuery.Trim() });
+
+    private async Task ClearAll()
+    {
+        typedQuery = string.Empty;
+        Apply(FilterState.Default with { Sort = filter.Sort });
+
+        // The button that was pressed is removed by the very change it made, and focus on a removed element
+        // falls to the body: the next Tab would restart above the skip link. The search box is where the visitor
+        // starts again, and it is always there.
+        if (panel is not null) await panel.FocusSearchAsync();
+    }
+
+    /// <summary>
+    /// The one way a filter changes. Sort comes through here too, although it removes nothing: re-sorting while
+    /// on page 12 would otherwise show a different 60 films with no sign of why.
+    /// </summary>
+    private void Apply(FilterState next)
+    {
+        if (QueryState.Canonical(next, 1) == QueryState.Canonical(filter, 1)) return;
+
+        var narrowedDifferently = Selection(next) != Selection(filter);
+
+        filter = next;
+        page = 1;
+        syncedWith = QueryState.Canonical(filter, page);
+        Address.WriteFilters(filter);
+
+        Refilter();
+
+        // Only a change to WHICH films are shown is worth a statement. A re-sort leaves the count where it was,
+        // and the select announces its own new value; "8 titles match." after it would say nothing new.
+        if (narrowedDifferently) ScheduleCountAnnouncement();
+    }
+
+    /// <summary>The filter without its ordering: two states with the same selection show the same films.</summary>
+    private static string Selection(FilterState state) =>
+        QueryState.Canonical(state with { Sort = SortOrder.Title }, 1);
 
     /// <remarks>
     /// R7: clear what this page set, and raise nothing new. Both calls are cancellations -- they take effect
@@ -367,6 +707,11 @@
     public void Dispose()
     {
         disposed = true;
+
+        // Both debounce timers: one firing after this would write a count into a region the page has just
+        // cleared, which is the orphaned standing statement R7 exists to prevent.
+        filterTimer?.Dispose();
+        announceTimer?.Dispose();
 
         Announcer.Status("");
         Announcer.Alert("");

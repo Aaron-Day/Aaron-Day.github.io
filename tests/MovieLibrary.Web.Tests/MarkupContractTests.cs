@@ -348,8 +348,13 @@ public class MarkupContractTests
     /// Skipped, because the criterion applies to a control that has an author label AND shows visible
     /// text, and no control in the app is both. The two that carry a label show nothing: the Dismiss
     /// button's only content is an aria-hidden glyph, and the Menu toggle's is a visually-hidden span, so
-    /// both are outside 2.5.3 rather than passing it. Task 8's filter controls are the first that will be
-    /// labelled and visibly captioned at once.
+    /// both are outside 2.5.3 rather than passing it.
+    /// TASK 8 DID NOT CHANGE THAT, and the reason is worth keeping. Its filter controls are the first that are
+    /// labelled and visibly captioned at once, but they are named by a native label -- a label[for] or a
+    /// wrapping label -- and carry no aria-label or aria-labelledby, so ElementsWhoseLabelReplacesVisibleText
+    /// does not collect them. They would not be subjects if it did: the rule asks what text the CONTROL shows,
+    /// an input has none, and the caption sits in the label beside it. The skip therefore stands, and the day
+    /// a control is given an author label over visible text of its own is the day it ends.
     /// The rule is proven in MarkupRuleTests, including against both of those patterns, which a naive
     /// "visible text must appear in the label" rule reports as defects.
     /// </remarks>
@@ -357,7 +362,8 @@ public class MarkupContractTests
                  + "not apply to any element and the rule would pass over an empty set. The Dismiss "
                  + "button's content is an aria-hidden glyph and the Menu toggle's is a visually-hidden "
                  + "span, so both are outside SC 2.5.3 rather than passing it. Task 8's filter controls "
-                 + "are the first labelled and visibly captioned controls; remove this Skip then. "
+                 + "are named by native labels and show no text of their own, so they are not subjects "
+                 + "either; remove this Skip when a control gets an author label over visible text. "
                  + "TheLabelInNameContractIsStillSkippedForTheRightReason fails when that happens.")]
     public void AnAriaLabelContainsTheVisibleTextItReplaces()
     {
@@ -433,14 +439,16 @@ public class MarkupContractTests
     /// Not a criterion of its own: a dangling IDREF breaks whichever criterion the attribute was serving --
     /// 1.3.1 for a label or a description, 4.1.2 for a name -- and it breaks it silently, because an
     /// unresolved reference is an error nowhere.
-    /// Skipped, and this is the contract that earned the paragraph about exemptions in the class summary.
-    /// The app has four id references and they are all the same one: NavMenu's aria-controls="nav-links",
-    /// once per address. The toggle starts collapsed, so every first render emits aria-expanded="false" --
-    /// precisely the case axe deliberately does not fail, because the controlled element may legitimately
-    /// not be in the DOM yet. 100% of the subject set is exempt, so the rule can fail on none of it:
-    /// rename the drawer's id and the aria-controls dangles with this contract still green. It read as
-    /// covered because the count was of IdReferences, which counts the exempt ones; it is now of
+    /// LIVE SINCE TASK 8, which is what the skip said would end it. Until then the app's only id references were
+    /// NavMenu's aria-controls="nav-links", once per address, and this is the contract that earned the paragraph
+    /// about exemptions in the class summary. The toggle starts collapsed, so every first render emits
+    /// aria-expanded="false" -- precisely the case axe deliberately does not fail, because the controlled
+    /// element may legitimately not be in the DOM yet. 100% of the subject set was exempt, so the rule could
+    /// fail on none of it: rename the drawer's id and the aria-controls dangled with this contract still green.
+    /// It read as covered because the count was of IdReferences, which counts the exempt ones; it is now of
     /// MarkupRules.FailableIdReferences, which is the same predicate the rule itself filters through.
+    /// The filter panel's label[for="q"] and label[for="sort"] are the first failable references -- two on each
+    /// of the two Ready scopes -- and the subject floor below is what notices if they stop being there.
     /// The carve-out is correct and stays. Task 4b runs axe over this same markup, and a rule stricter here
     /// than there is a rule that disagrees with the other half of its own gate.
     /// Two traps, both handled and both proven in MarkupRuleTests: these attributes take space-separated
@@ -448,13 +456,7 @@ public class MarkupContractTests
     /// as one id; and an aria-expanded="true" control pointing nowhere is still a failure, without which
     /// the carve-out would amount to never checking aria-controls at all.
     /// </remarks>
-    [Fact(Skip = "The app's only id references are NavMenu's aria-controls on a control rendering "
-                 + "aria-expanded=\"false\", which axe deliberately does not fail because the controlled "
-                 + "element may legitimately not be in the DOM yet. Every subject is exempt, so the rule "
-                 + "can fail on none of them and a green run here would mean nothing. Task 8's "
-                 + "aria-labelledby and for on the filter controls are the first failable references; "
-                 + "remove this Skip then. TheIdReferenceContractIsStillSkippedForTheRightReason fails "
-                 + "when that happens.")]
+    [Fact]
     public void EveryIdReferenceResolvesToAnIdInTheSameRender()
     {
         TheRouteSetIsWhatItShouldBe();
@@ -467,23 +469,6 @@ public class MarkupContractTests
             "An attribute pointing at an id that is not in the render is silently ignored, so whatever it "
             + "was providing -- a name, a description, a relationship -- is simply absent, with nothing "
             + "anywhere reporting an error.");
-    }
-
-    [Fact]
-    public void TheIdReferenceContractIsStillSkippedForTheRightReason()
-    {
-        // The live half of the pair above. It counts only what the rule can fail on, which is the whole
-        // point of the finding behind it: the exempt references were four, and four read as coverage.
-        var failable = EveryScope()
-            .SelectMany(s => MarkupRules.FailableIdReferences(s.Root))
-            .ToList();
-
-        Assert.True(failable.Count == 0,
-            failable.Count + " id reference(s) now sit outside axe's collapsed-control carve-out, so "
-            + "EveryIdReferenceResolvesToAnIdInTheSameRender has subjects it can actually fail on and is no "
-            + "longer vacuous. Remove its Skip and delete this guard. The reference(s): "
-            + string.Join(" | ", failable.Select(
-                r => r.Attribute + "=\"" + r.Id + "\" on " + MarkupRules.Describe(r.Element))));
     }
 
     /// <remarks>
@@ -561,11 +546,25 @@ public class MarkupContractTests
             + "catalogue has lost its poster path -- in either case the poster contracts are checking "
             + "nothing while reading as covered.");
 
-        Assert.True(controls >= 29,
+        Assert.True(controls >= 51,
             "The accessible-name and nested-widget contracts have " + controls + " subjects. Twenty-nine "
             + "were measured when Task 6 landed: four shell controls on every route, the in-prose link on "
             + "the two not-found addresses, Try again in the failed scope, two pager buttons in each of the "
-            + "two Ready scopes, and Reload and Dismiss on the host page. Fewer means a scope stopped "
-            + "rendering what it used to.");
+            + "two Ready scopes, and Reload and Dismiss on the host page. Task 8 added eleven to each Ready "
+            + "scope -- the search box, three confidence radios, three genre boxes, three decade boxes "
+            + "(1990s, 1980s and Year unknown, from the shared fixture) and the sort select -- which is "
+            + "fifty-one. Fewer means a scope stopped rendering what it used to.");
+
+        // And the filter controls are NAMED in the subject set, not just counted: a floor survives one
+        // control being swapped for another, and the panel is the first thing a refactor of the films page
+        // would reshuffle.
+        foreach (var scope in ready)
+        {
+            var interactive = MarkupRules.InteractiveElements(scope.Root);
+
+            Assert.Contains(interactive, e => e.Id == "q");
+            Assert.Contains(interactive, e => e.Id == "sort");
+            Assert.Equal(3, interactive.Count(e => e.GetAttribute("name") == "conf"));
+        }
     }
 }

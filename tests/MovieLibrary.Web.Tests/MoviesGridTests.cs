@@ -14,10 +14,14 @@ public class MoviesGridTests : BunitContext
 {
     public MoviesGridTests() => JSInterop.Mode = JSRuntimeMode.Loose;
 
-    /// <summary>A published catalogue of <paramref name="count"/> films, in the real wire shape.</summary>
+    /// <summary>
+    /// A published catalogue of <paramref name="count"/> films, in the real wire shape. The titles are zero-padded
+    /// because the page sorts by title: "Film 2" sorts after "Film 19", so unpadded numbers would put the 61st film
+    /// somewhere in the middle of page one and every assertion about which film is where would be about the sort.
+    /// </summary>
     private static string Catalogue(int count) =>
         "[" + string.Join(",", Enumerable.Range(1, count).Select(i =>
-            $"{{\"i\":{i},\"k\":\"k{i}\",\"t\":\"Film {i}\",\"y\":1990,\"rt\":100,\"p\":\"/p{i}.jpg\","
+            $"{{\"i\":{i},\"k\":\"k{i}\",\"t\":\"Film {i:D4}\",\"y\":1990,\"rt\":100,\"p\":\"/p{i}.jpg\","
             + "\"g\":[],\"ag\":\"Drama\",\"vote\":0,\"dir\":[],\"cast\":[],\"mc\":1}")) + "]";
 
     private (IRenderedComponent<MovieLibrary.Web.App> Cut, ManualTimeProvider Clock) RenderWith(int films)
@@ -113,12 +117,12 @@ public class MoviesGridTests : BunitContext
     {
         var (cut, _) = RenderWith(61);
 
-        Assert.Equal("Film 1", cut.FindAll("ul.grid > li .tile-title")[0].TextContent);
+        Assert.Equal("Film 0001", cut.FindAll("ul.grid > li .tile-title")[0].TextContent);
 
         cut.FindAll("nav.pager button").Single(b => b.TextContent.Trim() == "Next").Click();
 
         Assert.Equal("Page 2 of 2", cut.Find("nav.pager span").TextContent);
-        Assert.Equal("Film 61", Assert.Single(cut.FindAll("ul.grid > li .tile-title")).TextContent);
+        Assert.Equal("Film 0061", Assert.Single(cut.FindAll("ul.grid > li .tile-title")).TextContent);
     }
 
     /// <remarks>

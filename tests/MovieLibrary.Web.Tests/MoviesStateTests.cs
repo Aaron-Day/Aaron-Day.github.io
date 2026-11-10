@@ -921,8 +921,15 @@ public class MoviesStateTests : BunitContext
     {
         var body = MemberBody(Page(), "protected override async Task OnInitializedAsync()");
 
-        Assert.Contains("await Catalog.GetMoviesAsync()", body, StringComparison.Ordinal);
+        Assert.Contains("await FetchAsync()", body, StringComparison.Ordinal);
         Assert.DoesNotContain("Announcer.", body, StringComparison.Ordinal);
+
+        // Task 8 moved the awaits into one method both the first load and the retry call, so the contract
+        // follows them there: that method is the fetch now, and it must say nothing either.
+        var fetch = MemberBody(Page(), "private async Task<CatalogResult<IReadOnlyList<MovieRecord>>> FetchAsync()");
+
+        Assert.Contains("Catalog.GetMoviesAsync()", fetch, StringComparison.Ordinal);
+        Assert.DoesNotContain("Announcer.", fetch, StringComparison.Ordinal);
     }
 
     /// <remarks>
@@ -963,11 +970,37 @@ public class MoviesStateTests : BunitContext
         var after = MemberBody(page, "protected override async Task OnAfterRenderAsync(bool firstRender)");
 
         Assert.Equal(
-            ["Announcer.Status(LoadingSpoken)", "Announcer.Alert(CouldNotLoad)", "Announcer.Status(Sentence)"],
+            ["Announcer.Status(LoadingSpoken)", "Announcer.Alert(CouldNotLoad)", "Announcer.Status(OpeningSentence)"],
             AnnouncerCalls(after));
 
-        // And they are raised nowhere else: every call in the file is in one of the three members above.
-        Assert.Equal(AnnouncerCalls(page).Count, AnnouncerCalls(after).Count + 1 + 2);
+        // Task 8 adds ONE more place that speaks: the count after a filter change. It is not a second way to
+        // skip the render, it is later than one by construction -- it runs from a timer armed by the change
+        // and fires AnnounceDebounceMs after the last of them -- and CountsAreOnlyEverRaisedFromTheTimer
+        // below pins that nothing else calls it.
+        var count = MemberBody(page, "internal void AnnounceCount()");
+        Assert.Equal(["Announcer.Status(sentence)"], AnnouncerCalls(count));
+
+        // And they are raised nowhere else: every call in the file is in one of the members above, the
+        // TryAgain cancellation, or Dispose's two.
+        Assert.Equal(AnnouncerCalls(page).Count, AnnouncerCalls(after).Count + AnnouncerCalls(count).Count + 1 + 2);
+    }
+
+    /// <remarks>
+    /// The count is the one statement this page makes from a place other than OnAfterRenderAsync, and it is
+    /// safe there only because it runs on a debounce timer: a handler that called it directly would announce
+    /// per keystroke, and the announcer restarts its settle delay on every call, so nothing would ever be
+    /// delivered. One definition, one reference, and the reference is the timer's callback.
+    /// </remarks>
+    [Fact]
+    public void CountsAreOnlyEverRaisedFromTheDebounceTimer()
+    {
+        var page = Page();
+
+        Assert.Equal(2, Regex.Matches(page, @"\bAnnounceCount\b").Count);   // its definition, and one use
+
+        var scheduler = MemberBody(page, "private void ScheduleCountAnnouncement()");
+        Assert.Contains("InvokeAsync(AnnounceCount)", scheduler, StringComparison.Ordinal);
+        Assert.Contains("Time.CreateTimer", scheduler, StringComparison.Ordinal);
     }
 
     /// <remarks>
@@ -981,7 +1014,7 @@ public class MoviesStateTests : BunitContext
         var body = MemberBody(Page(), "protected override async Task OnAfterRenderAsync(bool firstRender)");
 
         var focus = body.IndexOf("await FocusOutright(heading)", StringComparison.Ordinal);
-        var count = body.IndexOf("Announcer.Status(Sentence)", StringComparison.Ordinal);
+        var count = body.IndexOf("Announcer.Status(OpeningSentence)", StringComparison.Ordinal);
 
         Assert.True(focus >= 0 && count >= 0, "both calls have to be present for their order to mean anything");
         Assert.True(focus < count,

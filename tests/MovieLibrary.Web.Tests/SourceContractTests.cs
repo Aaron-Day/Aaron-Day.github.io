@@ -211,6 +211,22 @@ public class SourceContractTests
         Assert.DoesNotMatch(registration, "// builder.Services.AddScoped<CatalogService>();");
     }
 
+    /// <remarks>
+    /// R-K. The grid's default is 60, and the page passing PageSize="60" would be a second copy of the number that
+    /// is one edit away from disagreeing with the first. The page hands the grid exactly three things.
+    /// </remarks>
+    [Fact]
+    public void TheFilmsPagePassesTheGridItsItemsItsPageAndItsCallbackAndNothingElse()
+    {
+        var tag = Regex.Match(WebRoot.Read("Pages", "Movies.razor"), @"<PosterGrid\b[^>]*/>");
+
+        Assert.True(tag.Success, "Pages/Movies.razor no longer renders a PosterGrid, so this contract has no subject.");
+
+        var attributes = Regex.Matches(tag.Value, @"\b(?<name>[A-Z][A-Za-z]*)=""").Select(m => m.Groups["name"].Value);
+
+        Assert.Equal(new[] { "Items", "Page", "PageChanged" }, attributes.OrderBy(a => a, StringComparer.Ordinal));
+    }
+
     [Fact]
     public void ProgramRegistersTheClockAndTheQueryStateBecauseTheTestsRegisterTheirOwn()
     {

@@ -12,6 +12,15 @@ internal sealed class ManualTimeProvider : TimeProvider
     private readonly List<ManualTimer> timers = new();
     private TimeSpan now;
 
+    /// <summary>
+    /// How many timers are waiting to fire. A disposed timer is not counted, which is what lets a test say "this
+    /// component left nothing behind" without sleeping to see whether something goes off.
+    /// </summary>
+    public int ArmedTimers
+    {
+        get { lock (gate) return timers.Count(t => t.Due != TimeSpan.MaxValue); }
+    }
+
     public override long GetTimestamp() => now.Ticks;
 
     public override long TimestampFrequency => TimeSpan.TicksPerSecond;

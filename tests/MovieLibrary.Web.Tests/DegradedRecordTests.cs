@@ -596,24 +596,28 @@ public class DegradedRecordTests : BunitContext
         var tiles = root.QuerySelectorAll("ul.grid > li .tile").ToList();
 
         Assert.Equal(3, tiles.Count);
-        Assert.Equal(new string?[] { null, "Needs review", "Not matched" },
-                     tiles.Select(t => t.QuerySelector(".badge")?.TextContent.Trim()));
+
+        // Keyed by title rather than read in grid order. Since Task 8 the page sorts by title by default, so
+        // the order is Unlisted, Se7en, Peeled; what matters here is that each film carries ITS badge.
+        Assert.Equal(
+            new Dictionary<string, string?>
+            {
+                ["Se7en"] = null,
+                ["The Peeled Edition"] = "Needs review",
+                ["An Unlisted Film"] = "Not matched",
+            },
+            tiles.ToDictionary(t => t.QuerySelector(".tile-title")!.TextContent.Trim(),
+                               t => t.QuerySelector(".badge")?.TextContent.Trim()));
     }
 
     /// <remarks>
-    /// RULE T2: a green test claims coverage and a skipped one does not, so this names the missing element
-    /// and the task that will build it. The confidence facet is Task 8's, and the plan has already settled
-    /// that it defaults to "All titles"; there is no filter in the tree today, so there is nothing here to
-    /// assert a default of. Rule T3 is why this is an attribute and not a runtime skip:
-    /// <c>Assert.Skip</c> is an xunit v3 API, <c>Xunit.Sdk.SkipException</c> compiles against the shared
-    /// assert library, and the v2 engine this project runs reports a throw of it as FAILED.
-    /// <para>
-    /// <see cref="TheConfidenceFilterDefaultIsStillUnassertableForTheRightReason"/> is the live guard
-    /// beside it, so the skip expires by failing rather than by being remembered.
-    /// </para>
+    /// The default the plan settled: nothing is hidden until the visitor chooses. Written the day Task 8 built the
+    /// facet, which is what its skip said would happen; the live guard that expired the skip is deleted with it.
+    /// Asserted against the real markup of the shipped page -- the checked radio's own label -- and not against
+    /// the state the page holds, so a default that merely LOOKED right in C# but rendered nothing checked would
+    /// still fail here.
     /// </remarks>
-    [Fact(Skip = "Task 8 builds the confidence facet; there is no filter in the tree to have a default. "
-                 + "TheConfidenceFilterDefaultIsStillUnassertableForTheRightReason fails the day there is.")]
+    [Fact]
     public void TheConfidenceFilterDefaultsToAllTitles()
     {
         var root = MarkupRules.Parse(this.RenderAppAt("/movies").Markup);
@@ -624,27 +628,5 @@ public class DegradedRecordTests : BunitContext
         var chosen = group.QuerySelectorAll("input[type=radio]").Single(r => r.HasAttribute("checked"));
 
         Assert.Equal("All titles", chosen.ParentElement!.TextContent.Trim());
-    }
-
-    /// <remarks>
-    /// The live guard for the skip above. It asserts the subject set is still EMPTY, which is the only
-    /// form of skip that expires on its own: the day Task 8 renders a form control on the films page this
-    /// fails, and its message says what to do. A bare skip would simply be forgotten.
-    /// </remarks>
-    [Fact]
-    public void TheConfidenceFilterDefaultIsStillUnassertableForTheRightReason()
-    {
-        var root = MarkupRules.Parse(this.RenderAppAt("/movies").Markup);
-        var controls = root.QuerySelectorAll("input, select, textarea, fieldset, legend").ToList();
-
-        Assert.True(controls.Count == 0,
-            "The films page now renders " + controls.Count + " form control(s), so Task 8's filters have "
-            + "landed and TheConfidenceFilterDefaultsToAllTitles can be written: remove its Skip, check it "
-            + "against the real markup, and delete this guard. Found: "
-            + string.Join(" | ", controls.Select(MarkupRules.Describe)));
-
-        // And the default's own words are nowhere on the page yet, which is the specific thing the skipped
-        // test is about rather than filters in general.
-        Assert.DoesNotContain("All titles", root.TextContent, StringComparison.Ordinal);
     }
 }
