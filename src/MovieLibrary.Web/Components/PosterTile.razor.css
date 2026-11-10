@@ -36,6 +36,48 @@
 }
 .tile-year { color: var(--dim); font-size: .85rem; }
 
+/* THE CONFIDENCE BADGE. A border plus text, and never a background tint on its own: under Windows High
+   Contrast a tint flattens to Canvas and takes the cue with it, while a border is re-coloured to CanvasText
+   and survives. The variants below set border-color and color ONLY, so the width and style come from here;
+   the colour in the shorthand is --line-strong rather than --line so that a badge that somehow lost its
+   variant class could not end up with the 1.37:1 edge app.css reserves for decoration.
+
+   Measured against --panel2, which is the badge's own background: --accent 10.22:1 and --accent2 6.35:1.
+   Both clear the 4.5:1 that SC 1.4.3 Contrast (Minimum), Level AA, asks of this text, and both clear 3:1
+   as borders, so SC 1.4.11 Non-text Contrast, Level AA, is satisfied without this file having to settle
+   whether a badge boundary is in that criterion's scope at all -- the badge is not a user interface
+   component, and the words inside the border carry the meaning. That is the same argument app.css makes
+   for .attribution's border-top. Re-measure if either token changes.
+
+   margin-top reproduces .tile-body's gap by hand, because the badge is deliberately OUTSIDE that flex
+   container and so inherits none of it. No align-self here for the same reason: .tile is a block
+   container, so an align-self would be an inert declaration implying a flex parent that does not exist.
+   display: inline-block is what makes the badge shrink to its text. */
+.badge {
+  display: inline-block;
+  margin-top: .25rem;
+  padding: .1rem .4rem; font-size: .75rem; font-weight: 600;
+  border: 1px solid var(--line-strong); border-radius: 4px;
+  background: var(--panel2); color: var(--txt);
+}
+.badge-unmatched { border-color: var(--accent); color: var(--accent); }
+.badge-uncertain { border-color: var(--accent2); color: var(--accent2); }
+
+/* BOTH VARIANTS FLATTEN TO ONE APPEARANCE HERE, DELIBERATELY, and the next reader is likely to want to
+   "fix" it. Forced colors replaces the palette with the user's own, so --accent and --accent2 are gone and
+   both badges become CanvasText on Canvas: the colour distinction disappears and the only thing left
+   telling the two bands apart is the TEXT -- "Not matched" against "Needs review". That is exactly what
+   SC 1.4.1 Use of Color, Level A, requires, because 1.4.1 is about visual means and words are not one.
+   Reaching for a third colour to keep them apart would buy nothing: forced-colors mode overrides it.
+
+   This block states explicitly what forced-colors mode already does to those three properties. It is here
+   because that behaviour is the whole reason the badge is a bordered box rather than a tinted one, and a
+   declaration a reader can see cannot be stranded by a later forced-color-adjust: none or by a variant
+   that paints a background image instead of a colour. */
+@media (forced-colors: active) {
+  .badge { border: 1px solid CanvasText; color: CanvasText; background: Canvas; }
+}
+
 /* No hover rule anywhere in this file. The plan's was underlining a link, and Part A has no link. Part B
    adds it back with the anchor, inside @media (hover: hover): a bare :hover sticks after a tap on touch
    and leaves phantom highlighted tiles behind.

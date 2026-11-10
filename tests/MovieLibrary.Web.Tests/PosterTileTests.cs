@@ -155,6 +155,12 @@ public class PosterTileTests : BunitContext
         Assert.Equal(cut.Find(".tile"), body.ParentElement);
     }
 
+    /// <remarks>
+    /// A CONFIDENT film, and since Task 7 that matters: a degraded record's tile has a second child, the
+    /// confidence badge, which is content rather than a control and sits in the same outside-.tile-body
+    /// position for the same reason. <c>DegradedRecordTests.AConfidentTileRendersNoBadgeAtAll</c> reads
+    /// this shape from the other side.
+    /// </remarks>
     [Fact]
     public void TheSlotIsEmptyInPartASoTheTileHasNoControlOfItsOwn()
     {

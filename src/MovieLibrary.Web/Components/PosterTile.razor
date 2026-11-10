@@ -7,9 +7,11 @@
    in Part A.
 
    WHAT PART B DOES TO THIS FILE. Wrap .tile-body -- the poster and the text block, and nothing else -- in
-   one anchor to movies/{K}, leaving ActionSlot outside it. A button inside an anchor is invalid and
-   unusable, so the favourite control Part B puts in ActionSlot has to stay a sibling of that anchor, which
-   is why ActionSlot is already a sibling of .tile-body here rather than a descendant.
+   one anchor to movies/{K}, leaving the confidence badge and ActionSlot outside it. A button inside an
+   anchor is invalid and unusable, so the favourite control Part B puts in ActionSlot has to stay a sibling
+   of that anchor, which is why ActionSlot is already a sibling of .tile-body here rather than a
+   descendant; the badge sits beside it for a different reason, which is that text inside the anchor would
+   be read as part of the link's name.
 
    WHAT PART A GIVES UP, recorded rather than left for the next reviewer to find as a regression. The
    plan's requirement table assigned this task "a real accessible name on every tile" and "a
@@ -48,10 +50,30 @@
         }
     </div>
 
-    @* Task 7 puts the confidence badge here, where it is outside .tile-body and so outside Part B's
-       anchor. It is deliberately absent today: Task 7 owns the degraded-record branches and has to fix
-       the fixtures first, and a badge built against fixtures that give every unmatched film a synthetic
-       year and a four-person cast would pass vacuously. *@
+    @* THE CONFIDENCE BADGE, in the slot the comment above reserved for it: a sibling of .tile-body, so it
+       is outside the one anchor Part B wraps around .tile-body. That position is the requirement, not a
+       preference -- a badge inside the anchor would be swallowed into the link's name, and anything built
+       in the wrong place here is markup Part B has to move.
+
+       Plain visible text and nothing else. No label and no attribute of any kind carries it, so what a
+       reader meets after the title and the year is the same words the screen shows: "An Unlisted Film",
+       then "Not matched". Nothing announces it either -- a record's own quality is a property of the
+       record, not a change to report.
+
+       THE WORDS AND THE RULE BOTH COME FROM ConfidenceBand AND ARE NEVER RESTATED HERE.
+       MovieLibrary.Enrich's job summary counts the same bands through the same class, so the badge on
+       screen and the build summary the owner reads have to say the same thing; a second copy of either the
+       strings or the I == 0 precedence is exactly how the two drift apart. BadgeFor returns null for
+       Confident, which is why the ordinary case renders nothing at all rather than a third variant: a
+       badge on 1,265 of 1,456 records would train the eye to ignore the ones that matter. *@
+    @{
+        var band = ConfidenceBand.Of(Movie);
+    }
+    @if (ConfidenceBand.BadgeFor(band) is { } badge)
+    {
+        <span class="badge @VariantClass(band)">@badge</span>
+    }
+
     @ActionSlot
 </div>
 
@@ -63,4 +85,20 @@
     /// occupies -- a sibling of <c>.tile-body</c> -- is fixed now rather than negotiated later.
     /// </summary>
     [Parameter] public RenderFragment? ActionSlot { get; set; }
+
+    /// <summary>
+    /// The variant class for a band that carries a badge: the band's own name in lower case, so
+    /// <c>badge-unmatched</c> and <c>badge-uncertain</c>.
+    /// </summary>
+    /// <remarks>
+    /// Derived from the enum rather than written out twice, and checked in BOTH directions by
+    /// <c>DegradedRecordTests.EveryBadgeVariantTheTileRendersHasARuleAndEveryRuleHasAVariant</c>: a band
+    /// renamed in Core cannot leave a styled class nothing renders, and a renamed rule in
+    /// <c>PosterTile.razor.css</c> cannot leave a rendered class nothing styles. Either way round the
+    /// badge would still appear -- the shared <c>.badge</c> rule would draw it -- in the wrong colour and
+    /// with nothing on screen to say so, which is why neither direction is left to a reader to notice.
+    /// <c>Confidence.Confident</c> never reaches here, because <c>ConfidenceBand.BadgeFor</c> returns null
+    /// for it and the badge is not rendered at all.
+    /// </remarks>
+    private static string VariantClass(Confidence band) => "badge-" + band.ToString().ToLowerInvariant();
 }
