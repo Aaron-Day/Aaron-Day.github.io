@@ -67,6 +67,7 @@ public class SourceContractTests
         // from the hand-maintained list this replaced, which is the whole reason it was replaced.
         Assert.Contains("Components/PosterTile.razor", paths);
         Assert.Contains("Components/PosterGrid.razor", paths);
+        Assert.Contains("Components/FacetPanel.razor", paths);
 
         foreach (var (path, text) in files)
         {
@@ -342,6 +343,7 @@ public class SourceContractTests
 
         Assert.Contains("Components/PosterTile.razor", paths);
         Assert.Contains("Components/PosterGrid.razor", paths);
+        Assert.Contains("Components/FacetPanel.razor", paths);
         Assert.Contains("Pages/Movies.razor", paths);
 
         foreach (var (path, text) in failable)

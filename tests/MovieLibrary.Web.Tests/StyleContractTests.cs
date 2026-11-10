@@ -864,6 +864,7 @@ public class StyleContractTests
 
     private static readonly string TileCss = WebRoot.Read("Components", "PosterTile.razor.css");
     private static readonly string GridCss = WebRoot.Read("Components", "PosterGrid.razor.css");
+    private static readonly string FacetCss = WebRoot.Read("Components", "FacetPanel.razor.css");
 
     /// <remarks>
     /// The clipping properties are banned by name. A two-line clamp holds roughly 30 to 35 characters at
@@ -957,5 +958,74 @@ public class StyleContractTests
 
         Assert.Matches(@"\.grid\s*\{[^}]*list-style\s*:\s*none", css);
         Assert.Matches(@"\.grid\s*\{[^}]*padding\s*:\s*0", css);
+    }
+
+    // ================================================================ the facet panel's stylesheet
+
+    /// <remarks>
+    /// R-O. iOS Safari zooms the page when a field whose COMPUTED font size is under 16px takes focus, and that
+    /// zoom breaks reflow. The declaration is max(16px, 1rem) and not 1rem alone, because 1rem is 14px for a
+    /// reader who has set a smaller default. Both fields are pinned: the select zooms the same way.
+    /// </remarks>
+    [Fact]
+    public void TheSearchBoxAndTheSelectAreNeverUnderSixteenPixelsSoIosDoesNotZoomOnFocus()
+    {
+        var css = WithoutComments(FacetCss);
+
+        Assert.Matches(@"input\[type=""search""\],\s*select\s*\{[^}]*font-size\s*:\s*max\(16px,\s*1rem\)", css);
+    }
+
+    [Fact]
+    public void EveryFacetControlReadsTheTouchTokenAndDrawsItsBoundaryInTheStrongToken()
+    {
+        var css = WithoutComments(FacetCss);
+
+        // The LABEL is the tap target for a checkbox or a radio, and the field itself for the other two.
+        Assert.Matches(@"\.options label\s*\{[^}]*min-width\s*:\s*var\(--touch\)", css);
+        Assert.Matches(@"\.options label\s*\{[^}]*min-height\s*:\s*var\(--touch\)", css);
+        Assert.Matches(@"input\[type=""search""\],\s*select\s*\{[^}]*min-height\s*:\s*var\(--touch\)", css);
+        Assert.Matches(@"input\[type=""search""\],\s*select\s*\{[^}]*border\s*:\s*2px solid var\(--line-strong\)", css);
+        Assert.DoesNotContain("44px", css);
+
+        // The native box inside the label is rem, so it grows with the reader's own text size.
+        Assert.Matches(@"input\[type=""checkbox""\],\s*input\[type=""radio""\]\s*\{[^}]*width\s*:\s*1\.5rem", css);
+    }
+
+    /// <remarks>
+    /// The cross-task rule: hover styles live inside @media (hover: hover), because on a touch screen :hover
+    /// sticks after the tap and the control stays in its hover state until something else is tapped. Read over
+    /// EVERY stylesheet and not only the new one, so the next one added is held to it too. Rule T1: the scan names
+    /// the rules it must find, because a parser that stopped seeing :hover would loop over nothing and pass.
+    /// </remarks>
+    [Fact]
+    public void NoHoverRuleSitsOutsideTheHoverMediaQueryInAnyStylesheet()
+    {
+        var hovers = Stylesheets()
+            .SelectMany(sheet => Declarations(WithoutComments(sheet.Text))
+                .Where(d => d.Selector.Contains(":hover", StringComparison.Ordinal))
+                .Select(d => new { sheet.Path, d.Context, d.Selector }))
+            .ToList();
+
+        Assert.Contains(hovers, h => h.Selector == ".try-again:hover");
+        Assert.Contains(hovers, h => h.Selector == ".clear-filters:hover");
+        Assert.Contains(hovers, h => h.Path == "Components/FacetPanel.razor.css");
+
+        Assert.All(hovers, h => Assert.True(
+            h.Context.Contains("@media (hover: hover)", StringComparison.Ordinal),
+            h.Path + ": `" + h.Selector + "` is a hover rule outside @media (hover: hover). On a touch screen "
+            + ":hover sticks after the tap."));
+    }
+
+    [Fact]
+    public void ThePanelsStylesheetIsDiscoveredAndTheNoMatchStateReadsTheSameTokensAsTryAgain()
+    {
+        Assert.Contains("Components/FacetPanel.razor.css", Stylesheets().Select(s => s.Path));
+
+        var css = WithoutComments(AppCss);
+
+        Assert.Matches(@"\.clear-filters\s*\{[^}]*min-width\s*:\s*var\(--touch\)", css);
+        Assert.Matches(@"\.clear-filters\s*\{[^}]*min-height\s*:\s*var\(--touch\)", css);
+        Assert.Matches(@"\.clear-filters\s*\{[^}]*border\s*:\s*2px solid var\(--line-strong\)", css);
+        Assert.Matches(@"\.no-match p\s*\{[^}]*line-height\s*:\s*1\.5", css);
     }
 }

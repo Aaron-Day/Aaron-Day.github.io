@@ -380,3 +380,43 @@ body {
    There is deliberately no [aria-disabled="true"] rule. The in-flight state is carried by the sentence
    beside the button changing to the loading copy, and the button keeps its --line-strong boundary
    throughout: see the measured note in this section's header for the version that did not. */
+
+/* ===========================================================================
+   The films page's no-match state
+   ---------------------------------------------------------------------------
+   What the filters leave when they leave nothing: one sentence and the control that undoes them. The same
+   shape as the failed state above and for the same reasons -- the sentence claims its own line at 320px
+   (SC 1.4.10 Reflow), the button is --touch on both axes, and its boundary is --line-strong, the token this
+   file reserves for a control's sole boundary. No new colour, so nothing is measured afresh.
+   The paragraph is focused PROGRAMMATICALLY when the pager is removed under the visitor's focus, so the
+   global :root :focus-visible ring is what tells a sighted keyboard user where they are. There is no outline
+   suppression here for the reason the .catalog-state note gives: the precedent above does not extend to it.
+   =========================================================================== */
+.no-match {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;      /* row-gap column-gap */
+    margin: 1rem 0;
+}
+
+.no-match p {
+    flex: 1 1 18rem;        /* forces its own line at 320px */
+    max-width: 68ch;
+    margin: 0;              /* beats reboot's p { margin-bottom: 1rem } */
+    color: var(--txt);
+    line-height: 1.5;       /* unitless, so a text-spacing override cannot clip it (SC 1.4.12) */
+}
+
+.clear-filters {
+    flex: 0 0 auto;
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: var(--touch); min-height: var(--touch);
+    padding: 0 1rem;
+    background: transparent; color: var(--txt);
+    border: 2px solid var(--line-strong);
+}
+
+@media (hover: hover) {
+    .clear-filters:hover { border-color: var(--accent); }
+}
