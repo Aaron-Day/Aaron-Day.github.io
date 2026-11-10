@@ -154,7 +154,11 @@ public class FocusTests(BrowserGate gate, ITestOutputHelper output)
     public async Task TheSkipLinkMovesFocusIntoMainAndKeepsTheQueryString()
     {
         await using var session = await gate.OpenAsync();
-        await session.GotoAsync("/movies?q=test");
+        // A query the gate catalogue MATCHES: every title it generates contains "Fixture" (see Harness/Catalogue.cs),
+        // so the grid still holds its sixty tiles and this stays a test of the skip link. It used to be "test",
+        // which was a stand-in while nothing read the query; now that the page filters on it, a query matching
+        // nothing would render the no-match state and GridAsync would wait for tiles that never come.
+        await session.GotoAsync("/movies?q=fixture");
         await session.GridAsync();
 
         await WalkBackToTheTopAsync(session);
@@ -167,7 +171,7 @@ public class FocusTests(BrowserGate gate, ITestOutputHelper output)
         await session.Page.Keyboard.PressAsync("Enter");
 
         Assert.Equal("main-content", await session.FocusedIdAsync());
-        Assert.Equal("?q=test", await session.Page.EvaluateAsync<string>("() => location.search"));
+        Assert.Equal("?q=fixture", await session.Page.EvaluateAsync<string>("() => location.search"));
     }
 
     /// <summary>

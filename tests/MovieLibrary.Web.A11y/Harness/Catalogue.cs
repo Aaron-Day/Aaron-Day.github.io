@@ -40,6 +40,23 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// three renders of the same one.
 /// </para>
 /// <para>
+/// <b>THE GENRES ARE A REAL SPREAD, AND <c>meta.json</c> NAMES THEM.</b> Every record used to carry <c>g: [28,
+/// 18]</c> and <c>ag: "Drama"</c>, which made the genre facet unfalsifiable in a browser: ticking Drama showed
+/// 1,456 of 1,456 and passed. The records now cycle through eight genre sets (see <see cref="GenreSets"/>), and
+/// <see cref="WriteInto"/> publishes the matching <c>data/meta.json</c> beside <c>movies.json</c>, because
+/// without it the page's meta fetch fails, the genre map is empty and the fieldset is not rendered at all.
+/// <b>The number of genres is deliberately modest.</b> <c>ObscuredFocusTests</c> and <c>FocusVisibleTests</c> walk
+/// the tab order in at most forty presses and fail if the document is not left by then; the panel adds one stop
+/// per genre and per decade (eleven, and Year unknown), so with the shell, the pager and the error bar that is
+/// twenty-two stops before any genre. Nine genres is thirty-one. <c>CatalogueTests</c> pins the budget.
+/// </para>
+/// <para>
+/// <b>What is still flat, and said so.</b> Every record is matched with <c>mc: 0.95</c>, so the confidence radios
+/// show an empty list for "Uncertain matches" and "Not matched" in a browser. Giving some records the degraded
+/// shape would put the confidence badges into every existing scan, which is a change to what ten axe scans see
+/// and not something to do without running them.
+/// </para>
+/// <para>
 /// Serialised through <c>MovieRecord</c> itself, so a change to the RECORD's shape - a renamed or retyped
 /// member - breaks this harness too instead of leaving it scanning a document the app can no longer read.
 /// </para>
@@ -72,13 +89,29 @@ internal static class Catalogue
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
     };
 
-    /// <summary>Writes <c>data/movies.json</c> under a served site root, creating the folder.</summary>
+    /// <summary>
+    /// Writes <c>data/movies.json</c> and <c>data/meta.json</c> under a served site root, creating the folder.
+    /// </summary>
     public static void WriteInto(string siteRoot)
     {
         var folder = Path.Combine(siteRoot, "data");
         Directory.CreateDirectory(folder);
         File.WriteAllText(Path.Combine(folder, "movies.json"), Json(Build(Records)));
+        File.WriteAllText(Path.Combine(folder, "meta.json"), MetaJson());
     }
+
+    /// <summary>
+    /// The meta document that names the genres the records carry. Without one the page's meta fetch gets the host's
+    /// 404 body, which is HTML, so <c>CatalogService.GetMetaAsync</c> returns <c>CatalogMeta.Empty</c> and the
+    /// genre facet renders NOTHING: the gate would be scanning a panel with one of its four fieldsets missing and
+    /// reading as though it had scanned them all.
+    /// </summary>
+    public static string MetaJson() => JsonSerializer.Serialize(
+        new CatalogMeta(
+            BuiltUtc: "2026-01-01T00:00:00Z", MovieCount: Records, ShowCount: 0, TotalEpisodeCount: 0,
+            Genres: GenreNames.ToDictionary(g => g.Key.ToString(System.Globalization.CultureInfo.InvariantCulture), g => g.Value),
+            Attribution: CatalogMeta.TmdbAttribution, ReviewQueue: []),
+        Published);
 
     /// <summary>
     /// A body for one scan in which exactly ONE record carries a poster path, so axe has a real
@@ -113,8 +146,8 @@ internal static class Catalogue
                 Rt: 90 + n % 70,
                 P: null,                      // see the remarks: no path, so the tile cannot request an image
                 B: null,
-                G: [28, 18],
-                Ag: "Drama",
+                G: GenreSets[n % GenreSets.Length].Ids,
+                Ag: GenreSets[n % GenreSets.Length].Apple,
                 Vote: 5.0 + n % 50 / 10.0,
                 Dir: ["A Director"],
                 Ov: null,
@@ -126,6 +159,34 @@ internal static class Catalogue
 
         return records;
     }
+
+    /// <summary>
+    /// The genres the records carry, by TMDB id, with the names <see cref="MetaJson"/> publishes for them. Only ids a
+    /// record actually uses are named, as the real pipeline does.
+    /// </summary>
+    private static readonly SortedDictionary<int, string> GenreNames = new()
+    {
+        [18] = "Drama", [35] = "Comedy", [28] = "Action", [12] = "Adventure", [53] = "Thriller",
+        [10749] = "Romance", [99] = "Documentary", [878] = "Science Fiction", [27] = "Horror",
+    };
+
+    /// <summary>
+    /// Eight genre sets cycled over the records: single and double, common and rare, so that ticking any one genre
+    /// shows a different, non-empty, proper subset of the page. A catalogue where every record is <c>[28, 18]</c>
+    /// filters 1,456 films down to 1,456, and a facet test written against it passes over a filter that never
+    /// filtered. The first id agrees with the Apple text, as the fixture generator's does.
+    /// </summary>
+    private static readonly (int[] Ids, string Apple)[] GenreSets =
+    [
+        ([18], "Drama"),
+        ([35], "Comedy"),
+        ([28, 12], "Action & Adventure"),
+        ([18, 53], "Drama"),
+        ([35, 10749], "Comedy"),
+        ([99], "Documentary"),
+        ([878, 28], "Sci-Fi"),
+        ([27, 53], "Horror"),
+    ];
 
     private static readonly string[] Shapes =
     [
