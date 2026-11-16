@@ -489,9 +489,31 @@ public class MoviesFilterTests : BunitContext
         stub.Serves(StubCatalog.Meta, StubCatalog.Json(Meta));
 
         var cut = this.RenderAppAt(address);
-        late.Discard();
+        late.BootFinished();
 
         return (new Open(cut, clock, Services.GetRequiredService<BunitNavigationManager>(), stub), late);
+    }
+
+    /// <remarks>
+    /// The double's own contract, because every test beside it leans on it: a write moves the browser and not the
+    /// manager. Blazor WebAssembly sets <c>Uri</c> when the location change is reported, so between the write and the
+    /// report <c>Uri</c> is still the OLD address, and that is the half of the browser ordering the earlier version of
+    /// the double got wrong by moving it at once.
+    /// </remarks>
+    [Fact]
+    public async Task AWriteMovesTheBrowserAndNotTheManagersAddressUntilTheRouterIsTold()
+    {
+        var (open, late) = RenderWithALateEcho(Eight);
+
+        open.Cut.Find("#q").Input("al");
+        open.Clock.Advance(TimeSpan.FromMilliseconds(Movies.FilterDebounceMs));
+        open.Cut.WaitForAssertion(() => Assert.EndsWith("movies?q=al", late.BrowserAddress));
+
+        Assert.EndsWith("/movies", late.Uri);
+
+        await open.Cut.InvokeAsync(late.Deliver);
+
+        Assert.EndsWith("movies?q=al", late.Uri);
     }
 
     /// <remarks>
@@ -506,7 +528,7 @@ public class MoviesFilterTests : BunitContext
 
         open.Cut.Find("#q").Input("al");
         open.Clock.Advance(TimeSpan.FromMilliseconds(Movies.FilterDebounceMs));
-        open.Cut.WaitForAssertion(() => Assert.EndsWith("movies?q=al", late.Uri));
+        open.Cut.WaitForAssertion(() => Assert.EndsWith("movies?q=al", late.BrowserAddress));
 
         open.Cut.Find("#q").Input("alp");      // typed after the write...
         await open.Cut.InvokeAsync(late.Deliver);   // ...and before the router reports it
@@ -514,7 +536,7 @@ public class MoviesFilterTests : BunitContext
         Assert.Equal("alp", open.Cut.Find("#q").GetAttribute("value"));
 
         open.Clock.Advance(TimeSpan.FromMilliseconds(Movies.FilterDebounceMs));
-        open.Cut.WaitForAssertion(() => Assert.EndsWith("movies?q=alp", late.Uri));
+        open.Cut.WaitForAssertion(() => Assert.EndsWith("movies?q=alp", late.BrowserAddress));
         await open.Cut.InvokeAsync(late.Deliver);
         Assert.Equal(new[] { "Alpha" }, Titles(open.Cut));
         Assert.Equal("alp", open.Cut.Find("#q").GetAttribute("value"));
@@ -546,7 +568,7 @@ public class MoviesFilterTests : BunitContext
             Assert.Equal("Page 1 of 3", PageLabel(open.Cut));
         }
 
-        Assert.DoesNotContain("page=", late.Uri);
+        Assert.DoesNotContain("page=", late.BrowserAddress);
     }
 
     [Fact]
