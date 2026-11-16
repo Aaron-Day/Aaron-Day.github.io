@@ -362,4 +362,29 @@ public class EnrichRunMetaTests
         Assert.Contains("Cast members skipped as unreadable: **1**", h.Summary);
         Assert.DoesNotContain("no cast", h.Summary);
     }
+
+    [Fact]
+    public async Task ARealRunSaysItIsNotAFixtureRatherThanLeavingItOut()
+    {
+        using var h = Library();
+
+        await h.RunAsync();
+
+        using var doc = h.Json("meta.json");
+        // Present and false, not absent. Absent would mean both "a real run" and "written before this field
+        // existed", which is the one distinction a consumer needs to make.
+        Assert.False(doc.RootElement.GetProperty("fixtures").GetBoolean());
+    }
+
+    [Fact]
+    public async Task AFixtureRunSaysSoSoNothingMistakesInventedIdsForRealOnes()
+    {
+        using var h = Library();
+        h.Options = h.Options with { Fixtures = true, Token = "" };
+
+        await h.RunAsync();
+
+        using var doc = h.Json("meta.json");
+        Assert.True(doc.RootElement.GetProperty("fixtures").GetBoolean());
+    }
 }

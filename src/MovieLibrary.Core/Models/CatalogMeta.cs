@@ -14,10 +14,18 @@ namespace MovieLibrary.Core.Models;
 /// Only the episodes in the library. Optional so existing callers compile; left out of the JSON when null
 /// rather than written as a false zero.
 /// </param>
+/// <param name="Fixtures">
+/// This catalogue was synthesised by <c>--fixtures</c>: every record is matched, the review queue is empty and
+/// every TMDB id is invented. Published so a consumer can refuse to treat it as real -- the in-app editor must
+/// not save a human's decision keyed to an id that does not exist.
+/// <para>Written on every run, including as <c>false</c>, and NOT nullable. The writer drops nulls, so a
+/// nullable member would be absent on a real run, and "absent" would then mean both "a real run" and "written
+/// before this field existed" -- the one distinction a consumer actually needs.</para>
+/// </param>
 public sealed record CatalogMeta(
     string BuiltUtc, int MovieCount, int ShowCount, int TotalEpisodeCount,
     Dictionary<string, string> Genres, string Attribution, string[] ReviewQueue,
-    int? OwnedEpisodeCount = null)
+    int? OwnedEpisodeCount = null, bool Fixtures = false)
 {
     /// <summary>
     /// TMDB's API terms fix this sentence and forbid rewording it, so production code owns it: the writer

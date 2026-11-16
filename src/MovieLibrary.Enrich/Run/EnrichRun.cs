@@ -422,7 +422,8 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
             Genres: GenreMap.ForMeta(c.Genres),
             Attribution: CatalogMeta.TmdbAttribution,
             ReviewQueue: [],                      // deliberately empty: see the remark on this method
-            OwnedEpisodeCount: c.Shows.Sum(s => s.OwnedEpisodes));
+            OwnedEpisodeCount: c.Shows.Sum(s => s.OwnedEpisodes),
+            Fixtures: c.Fixtures);
 
         try
         {
