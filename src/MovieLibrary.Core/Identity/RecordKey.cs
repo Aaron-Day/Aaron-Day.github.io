@@ -24,7 +24,7 @@ namespace MovieLibrary.Core.Identity;
 /// sub-minute drift across a minute boundary counts. The alias keeps the TMDB match, so <c>I</c> holds, but the
 /// pipeline builds the record from the new runtime and <c>K</c> moves anyway. (2) The title or the directors are
 /// edited. That changes the identity key, misses the cache and searches again, and the key survives only if the search
-/// lands on the same id. (3) An Overrides row forces a different id. (4) The match moves for any other reason: a
+/// lands on the same id. (3) A record store entry forces a different id. (4) The match moves for any other reason: a
 /// re-match, or the cross-row conflict rule rejecting it, which makes the film unmatched and gives it the hash form. A
 /// consumer must therefore not treat <c>K</c> as permanent: an unknown <c>/movies/{k}</c> needs a not-found path, and
 /// anything saved per film should store <c>I</c> beside <c>K</c> as a fallback.</para>

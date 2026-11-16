@@ -47,7 +47,7 @@ namespace MovieLibrary.Enrich.Emit;
 /// UI cannot request an image, so fixture data cannot cause a single HTTP request.</para>
 /// <para><b>Match confidence, and the three bands.</b> A matched film is <c>0.95</c> unless it was drawn into the
 /// uncertain minority (see <see cref="IsUncertain"/>), and an unmatched one is <c>0</c>. The best an algorithmic
-/// match can score is 0.95, so <c>Mc == 1.0</c> means only "a human confirmed this on the Overrides tab", and
+/// match can score is 0.95, so <c>Mc == 1.0</c> means only "a human confirmed this in the record store", and
 /// fixtures must never claim it. All three of <c>ConfidenceBand</c>'s bands therefore occur in a fixture run: until
 /// they did, <c>Mc</c> was only ever 0 or 0.95 and the "Needs review" badge -- the LARGER of the two degraded bands
 /// in the real catalogue -- could not appear anywhere on a fixture-built site, which is the only way the owner can

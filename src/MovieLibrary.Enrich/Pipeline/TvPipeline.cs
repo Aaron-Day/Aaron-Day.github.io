@@ -211,7 +211,7 @@ public sealed class TvPipeline(
         if (string.Equals(TitleNormalizer.Normalize(found.Name).Value, sheet.Value, StringComparison.Ordinal))
             return (1d, []);
 
-        return (0.5d, [$"matched TMDB \"{found.Name}\" (id {found.Id}), which is not the same name; override it if wrong"]);
+        return (0.5d, [$"matched TMDB \"{found.Name}\" (id {found.Id}), which is not the same name; correct it in record-store.json if it is wrong"]);
     }
 
     /// <summary>
@@ -358,7 +358,7 @@ public sealed class TvPipeline(
 
         return new SeriesLookup(id, null, 1d, [tmdb.BudgetExhausted
             ? "series details unavailable, request budget spent"
-            : $"override id {id} is not a series TMDB knows"]);
+            : $"record store id {id} is not a series TMDB knows"]);
     }
 
     private async Task<T?> ReadAsync<T>(string path, CancellationToken ct) where T : class

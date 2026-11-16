@@ -107,7 +107,7 @@ public static class JobSummary
         if (queue.Count == 0) return;
 
         sb.AppendLine().AppendLine($"### Needs review ({N(queue.Count)})").AppendLine();
-        sb.AppendLine("Paste the correct TMDB id into the `Overrides` tab to fix one permanently.").AppendLine();
+        sb.AppendLine("Paste the correct TMDB id into `record-store.json` to fix one permanently.").AppendLine();
 
         if (capped)
             sb.AppendLine($"Each section below shows at most {N(MaxReviewLinesPerSection)} lines. **The complete list " +
@@ -117,7 +117,7 @@ public static class JobSummary
 
         // Order matters and is the owner's: his own failed corrections, then films, then series. It is only the
         // ORDER here - the groups themselves are named, so they cannot be exchanged by accident.
-        Section(sb, "Overrides", queue.OverrideNotes, capped);
+        Section(sb, "Record store", queue.OverrideNotes, capped);
         Section(sb, "Films", queue.Films, capped);
         Section(sb, "Series", queue.Series, capped);
     }

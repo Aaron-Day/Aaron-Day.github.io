@@ -128,13 +128,13 @@ public class JobSummaryTests
     {
         var text = Page(Healthy() with
         {
-            Review = Queue(overrides: ["Overrides row 2 matched nothing"], films: ["Heat (2:50:00) -> unmatched"])
+            Review = Queue(overrides: ["Record store entry 'Heat' matches no film"], films: ["Heat (2:50:00) -> unmatched"])
         });
 
         Assert.Contains("### Needs review (2)", text);
-        Assert.Contains("- Overrides row 2 matched nothing", text);
+        Assert.Contains("- Record store entry 'Heat' matches no film", text);
         Assert.Contains("- Heat (2:50:00) -> unmatched", text);
-        Assert.Contains("`Overrides` tab", text);
+        Assert.Contains("`record-store.json`", text);
     }
 
     [Fact]
@@ -146,10 +146,10 @@ public class JobSummaryTests
         });
 
         Assert.Contains("### Needs review (6)", text);
-        Assert.Contains("**Overrides (1)**", text);
+        Assert.Contains("**Record store (1)**", text);
         Assert.Contains("**Films (3)**", text);
         Assert.Contains("**Series (2)**", text);
-        Assert.True(text.IndexOf("**Overrides (1)**", StringComparison.Ordinal) < text.IndexOf("**Films (3)**", StringComparison.Ordinal)
+        Assert.True(text.IndexOf("**Record store (1)**", StringComparison.Ordinal) < text.IndexOf("**Films (3)**", StringComparison.Ordinal)
                     && text.IndexOf("**Films (3)**", StringComparison.Ordinal) < text.IndexOf("**Series (2)**", StringComparison.Ordinal),
             "the owner's failing corrections first, then films, then series");
     }
@@ -160,7 +160,7 @@ public class JobSummaryTests
         var text = Page(Healthy() with { Review = Queue(series: ["a series line"]) });
 
         Assert.Contains("**Series (1)**", text);
-        Assert.DoesNotContain("**Overrides", text);
+        Assert.DoesNotContain("**Record store", text);
         Assert.DoesNotContain("**Films", text);
     }
 

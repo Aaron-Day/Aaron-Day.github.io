@@ -137,7 +137,7 @@ public class EnrichRunPublishFailureTests
         Assert.Contains("Mr. Robot", err);
         Assert.Contains("Mr Robot", err);
         Assert.Contains("Shows tab", err);
-        Assert.Contains("Overrides", err);
+        Assert.Contains("record-store.json", err);
         Assert.DoesNotContain("   at ", err);                    // not a stack trace
         Assert.DoesNotContain("InvalidDataException", err);
     }

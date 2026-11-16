@@ -950,7 +950,8 @@ public class TvPipelineGapTests
         var show = Assert.Single(result.Shows);
         Assert.Equal(2996, show.I);
         Assert.Equal(0.5d, show.Mc);
-        Assert.Single(result.ReviewQueue);
+        // The note is where the owner is told how to correct a guess, so it must name the file he corrects it in.
+        Assert.Contains("correct it in record-store.json", Assert.Single(result.ReviewQueue), StringComparison.Ordinal);
     }
 
     [Fact]

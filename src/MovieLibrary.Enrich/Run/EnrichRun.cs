@@ -134,7 +134,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
                 Phase.Films => "TMDB sent a response in a shape this tool does not expect, and the run stopped on purpose rather " +
                                "than publish a catalogue with silent gaps. Nothing was written.",
                 Phase.Series or Phase.Publishing =>
-                    "Fix the title on the Shows tab or add an Overrides row, then re-run. Nothing was written.",
+                    "Fix the title on the Shows tab, or name the series in record-store.json, then re-run. Nothing was written.",
                 _ => "Nothing was written."
             });
         }
@@ -400,8 +400,8 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         // facet - one of the three approved layouts - a blank panel site-wide, deployed, with the payloads that caused
         // it cached for five months. Task 14 made the same call for a changed `credits` shape: a field that vanishes
         // stops the run rather than publishing silent gaps.
-        // A budget-stopped run is exempt, and must be. A film can be matched without its details ever loading - an
-        // Overrides row forces an id without a lookup, and a cache-index hit whose payload file is gone resolves to
+        // A budget-stopped run is exempt, and must be. A film can be matched without its details ever loading - a store
+        // entry forces an id without a lookup, and a cache-index hit whose payload file is gone resolves to
         // null - so once the budget is spent there can be matched films that contributed no genre name at all. That is
         // an ordinary budget stop, which Step C calls the normal development path, and failing it would be this guard
         // firing where its own reason does not reach. Nothing is risked by the exemption: a budget-stopped run is

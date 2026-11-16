@@ -114,7 +114,7 @@ public class MoviePipelineCrossRowTests
 
         Assert.Equal(11, Assert.Single(result.Records, r => r.T == "Star Wars: A New Hope").I);
         Assert.Equal(0, Assert.Single(result.Records, r => r.T == "Star Wars Holiday Special").I);
-        Assert.Contains("an Overrides row holds this id", Assert.Single(result.ReviewQueue), StringComparison.Ordinal);
+        Assert.Contains("a record store entry holds this id", Assert.Single(result.ReviewQueue), StringComparison.Ordinal);
     }
 
     [Fact]

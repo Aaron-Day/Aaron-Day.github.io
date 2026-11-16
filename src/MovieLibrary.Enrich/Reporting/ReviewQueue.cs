@@ -21,7 +21,7 @@ public sealed record ReviewQueue
     public static readonly ReviewQueue Empty = new() { OverrideNotes = [], Films = [], Series = [] };
 
     /// <summary>
-    /// The owner's own corrections that failed - a drifted override, an unreadable id, a missing Overrides tab. They
+    /// The owner's own corrections that failed - a record store entry that matches no row, two entries claiming one row. They
     /// come first: they are not a doubtful match, they are a mistake to fix.
     /// </summary>
     public required IReadOnlyList<string> OverrideNotes { get; init; }

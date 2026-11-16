@@ -207,8 +207,8 @@ public class ConflictingIdRuleTests
         Assert.Equal(0, films[1].Record.I);                                  // the other is not
         Assert.StartsWith("u-", films[1].Record.K, StringComparison.Ordinal);
         Assert.Equal(
-            ["Star Wars Holiday Special (2:01:00, Some Director) → rejected TMDB id 11 (\"Star Wars\"): an Overrides row holds " +
-             "this id and this row's title does not match that film, so it is now unmatched"],
+            ["Star Wars Holiday Special (2:01:00, Some Director) → rejected TMDB id 11 (\"Star Wars\"): a record store entry " +
+             "holds this id and this row's title does not match that film, so it is now unmatched"],
             notes);
     }
 

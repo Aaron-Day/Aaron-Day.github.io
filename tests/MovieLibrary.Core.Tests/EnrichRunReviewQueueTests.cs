@@ -54,7 +54,7 @@ public class EnrichRunReviewQueueTests
         var result = await h.RunAsync();
 
         Assert.Equal(0, result.ExitCode);
-        var note = Assert.Single(Section(h.Summary, "Overrides"));
+        var note = Assert.Single(Section(h.Summary, "Record store"));
         Assert.StartsWith("Overrides row 2", note);
         Assert.Contains("matches no film on the Movies tab", note);
 
@@ -73,12 +73,12 @@ public class EnrichRunReviewQueueTests
 
         await h.RunAsync();
 
-        var overrides = h.Summary.IndexOf("**Overrides (1)**", StringComparison.Ordinal);
+        var overrides = h.Summary.IndexOf("**Record store (1)**", StringComparison.Ordinal);
         var films = h.Summary.IndexOf("**Films (1)**", StringComparison.Ordinal);
         var series = h.Summary.IndexOf("**Series (1)**", StringComparison.Ordinal);
 
         Assert.True(overrides >= 0 && films > overrides && series > films,
-            "overrides, then films, then series: a failing correction is a mistake to fix, not a doubtful match");
+            "the record store, then films, then series: a failing correction is a mistake to fix, not a doubtful match");
         Assert.Contains("### Needs review (3)", h.Summary);
     }
 
@@ -95,7 +95,7 @@ public class EnrichRunReviewQueueTests
         await h.RunAsync();
 
         var log = h.Out.ToString();
-        Assert.Equal(Section(h.Summary, "Overrides"), Section(log, "Overrides"));
+        Assert.Equal(Section(h.Summary, "Record store"), Section(log, "Record store"));
         Assert.Equal(Section(h.Summary, "Films"), Section(log, "Films"));
         Assert.Equal(Section(h.Summary, "Series"), Section(log, "Series"));
         Assert.DoesNotContain("...and", log);

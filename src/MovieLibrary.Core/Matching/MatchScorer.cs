@@ -14,7 +14,7 @@ public static class MatchScorer
 {
     // Weights sum to 0.95, not 1.00: popularity is deliberately NOT part of the score.
     // It orders candidates only, so identical evidence always yields the same outcome.
-    // A score of exactly 1.0 therefore means a human override from the Overrides tab.
+    // A score of exactly 1.0 therefore means an id the owner forced in the record store.
     private const double RuntimeWeight = 0.40;
     private const double DirectorWeight = 0.30;
     private const double TitleWeight = 0.15;

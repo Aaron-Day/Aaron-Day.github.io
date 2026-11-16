@@ -16,7 +16,7 @@ namespace MovieLibrary.Enrich.Pipeline;
 /// <param name="SheetTitle">The row's title, folded: what <c>MatchScorer.TitleAgrees</c> compares a TMDB title against.</param>
 /// <param name="IdentityKey">Needed to rebuild the <c>u-</c> key if the match is withdrawn.</param>
 /// <param name="TmdbTitle">The matched film's title as TMDB gives it; null when unmatched or when its details never loaded.</param>
-/// <param name="FromOverride">The owner forced this id from the Overrides tab, so no heuristic may withdraw it.</param>
+/// <param name="FromOverride">The owner forced this id from the record store, so no heuristic may withdraw it.</param>
 /// <param name="ReviewNote">Why a human should look at this row, without the row prefix; null when no one should.</param>
 /// <param name="Position">This record's 1-based place in its store entry; 1 for a row that publishes one record. Needed to rebuild the <c>u-</c> key.</param>
 internal sealed record ResolvedFilm(
@@ -72,28 +72,28 @@ internal static class CatalogueReconciler
 
     /// <summary>
     /// Groups the films by non-zero TMDB id. In a group of more than one, a row SPEAKS for the id when its sheet title
-    /// agrees with the film's TMDB title (<see cref="MatchScorer.TitleAgrees"/>) or it came from the Overrides tab. A row
+    /// agrees with the film's TMDB title (<see cref="MatchScorer.TitleAgrees"/>) or the record store forced it. A row
     /// that does not speak for it is rebuilt as unmatched, but only when some other row does. When no row speaks for the
     /// id nothing in the evidence picks a winner, so nothing is rejected and the group gets one note. When every row
     /// speaks for it the group says nothing: the owner owns two cuts of a film, which is correct.
     /// </summary>
     /// <remarks>
-    /// <para>An Overrides row is the owner saying "this film is TMDB id X", so it is authoritative twice over. It is never
-    /// rejected itself: overrides exist precisely where the TMDB title cannot fold to the sheet's (<c>Seven</c> against
-    /// <c>Se7en</c>), so an override row would otherwise be the first to go and the owner could never correct a row. And
-    /// it speaks for the id even when its own title disagrees, so a non-override row that took the same id and does not
-    /// agree on title is rejected because the id is spoken for, even if no other row agrees. Only the override row is
-    /// exempt; its group is judged like any other.</para>
-    /// <para><b>Accepted casualty.</b> A legitimate second cut is rejected when it shares an id with an Overrides row and
-    /// its own title does not fold to TMDB's: an override on <c>Superman: The Movie</c> beside a
+    /// <para>A record store entry is the owner saying "this film is TMDB id X", so it is authoritative twice over. It is
+    /// never rejected itself: a forced id exists precisely where the TMDB title cannot fold to the sheet's (<c>Seven</c>
+    /// against <c>Se7en</c>), so a forced row would otherwise be the first to go and the owner could never correct a row.
+    /// And it speaks for the id even when its own title disagrees, so a row the store did not force that took the same id
+    /// and does not agree on title is rejected because the id is spoken for, even if no other row agrees. Only the forced
+    /// row is exempt; its group is judged like any other.</para>
+    /// <para><b>Accepted casualty.</b> A legitimate second cut is rejected when it shares an id with a store-forced row and
+    /// its own title does not fold to TMDB's: a store entry for <c>Superman: The Movie</c> beside a
     /// <c>Superman: The Movie (Special Edition)</c> row that matched the same id on runtime and director alone. The rule
-    /// cannot tell that from a wrong match, because the title is the only discriminator it has. The rejection note says an
-    /// Overrides row holds the id, and the cure is an Overrides row for the second cut as well: then both speak for the id.</para>
+    /// cannot tell that from a wrong match, because the title is the only discriminator it has. The rejection note says a
+    /// record store entry holds the id, and the cure is a store entry for the second cut as well: then both speak for it.</para>
     /// <para><b>Confidence is ignored.</b> The rule reads titles, never <c>Mc</c>, so a row accepted at 0.80 on runtime,
     /// director and year with no title agreement would be rejected beside an agreeing sibling. All three rejections on today's
     /// catalogue were 0.70 (runtime and director alone), so nothing accepted is lost now; a row that was, would be named in
     /// its rejection note.</para>
-    /// <para>The all-agree group is deliberately silent, and so is an override whose own title disagrees. Every legitimate
+    /// <para>The all-agree group is deliberately silent, and so is a store-forced row whose own title disagrees. Every legitimate
     /// two-cut pair is the first, and the second is the owner's own decision: a note for either is a permanent line the owner
     /// can do nothing about, in a review section the job summary caps.</para>
     /// </remarks>
@@ -140,7 +140,7 @@ internal static class CatalogueReconciler
                 // replaces it, and like every line this class writes it goes in Notes, not on the row (see Reconciliation).
                 var reason = titleAgrees.Count > 0
                     ? "its title does not match that film and another row's does"
-                    : "an Overrides row holds this id and this row's title does not match that film";
+                    : "a record store entry holds this id and this row's title does not match that film";
 
                 foreach (var i in rejected) result[i] = Unmatched(films[i]);
 
