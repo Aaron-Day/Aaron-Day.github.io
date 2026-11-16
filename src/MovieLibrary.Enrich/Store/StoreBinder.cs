@@ -49,16 +49,25 @@ public static class StoreBinder
         var bound = new Dictionary<string, FilmEntry>(StringComparer.Ordinal);
         if (entries.Count == 0) return bound;
 
-        var (index, sheetTitles) = IndexRows(rows);
+        var (index, sheetTitles, rowInfo) = IndexRows(rows);
         var claims = new List<Claim>();
 
         foreach (var entry in entries)
         {
             if (index.TryGetValue(entry.IdentityKey, out var hits) && hits.Count > 0)
             {
-                // Nearest offset first, so an exact hit is never reported as drift.
-                var (rowKey, offset) = hits.OrderBy(h => Math.Abs(h.Value)).ThenBy(h => h.Value).First();
-                claims.Add(new Claim(entry, rowKey, offset));
+                // The nearest row wins outright, so an exact hit is never reported as drift. But two rows at the
+                // SAME distance (109 and 111 for an entry keyed at 110) are an ambiguity the file cannot settle:
+                // picking one would land a correction on a cut the owner may not have meant, and say nothing.
+                var nearest = hits.Min(h => Math.Abs(h.Value));
+                var closest = hits.Where(h => Math.Abs(h.Value) == nearest).ToList();
+                if (closest.Count > 1)
+                {
+                    notes.Add(TieNote(entry, closest.Select(h => rowInfo[h.Key])));
+                    continue;
+                }
+
+                claims.Add(new Claim(entry, closest[0].Key, closest[0].Value));
                 continue;
             }
 
@@ -98,11 +107,13 @@ public static class StoreBinder
     /// Every row hashed at every offset. The value maps a row key to the SMALLEST offset that reached it, so a
     /// row that two offsets can reach is reported by the truer one.
     /// </summary>
-    private static (Dictionary<string, Dictionary<string, int>> Index, List<string> SheetTitles) IndexRows(
+    private static (Dictionary<string, Dictionary<string, int>> Index, List<string> SheetTitles,
+        Dictionary<string, (string Title, int Minutes)> Rows) IndexRows(
         IReadOnlyList<SheetRow> rows)
     {
         var index = new Dictionary<string, Dictionary<string, int>>(StringComparer.Ordinal);
         var titles = new List<string>();
+        var info = new Dictionary<string, (string Title, int Minutes)>(StringComparer.Ordinal);
 
         foreach (var row in rows)
         {
@@ -114,6 +125,7 @@ public static class StoreBinder
             var directors = TitleNormalizer.NormalizeDirectors(row.Directors);
             var rowKey = IdentityKey.ForFilm(title, minutes, directors);
             titles.Add(row.Title);
+            info.TryAdd(rowKey, (row.Title, minutes));
 
             foreach (var offset in RuntimeDrift.Offsets)
             {
@@ -129,7 +141,7 @@ public static class StoreBinder
             }
         }
 
-        return (index, titles);
+        return (index, titles, info);
     }
 
     private static string Name(FilmEntry entry)
@@ -141,6 +153,15 @@ public static class StoreBinder
            $"{(claim.Offset < 0 ? "shorter" : "longer")} than the sheet now has, and was matched anyway. " +
            "Apple re-encoded the film. Nothing is broken and nothing was changed: the entry goes on working. " +
            "The editor can re-key it when you next open it.";
+
+    private static string TieNote(FilmEntry entry, IEnumerable<(string Title, int Minutes)> rows)
+        => $"Record store entry {Name(entry)} is the same distance from more than one sheet row, so it was not " +
+           "applied to any of them. Two or more sheet rows are an equal distance from the runtime it was " +
+           "written against: " +
+           string.Join("; ", rows.OrderBy(r => r.Minutes).ThenBy(r => r.Title, StringComparer.Ordinal)
+               .Select(r => $"'{r.Title}' at {r.Minutes.ToString(CultureInfo.InvariantCulture)} minutes")) +
+           ". Nothing in the file says which cut you meant. Re-key the entry to the row you mean " +
+           "(--print-keys lists each row's key).";
 
     private static string TakenNote(FilmEntry loser, FilmEntry winner)
         => $"Record store entry {Name(loser)} would have matched the same row as {Name(winner)}, which names it " +

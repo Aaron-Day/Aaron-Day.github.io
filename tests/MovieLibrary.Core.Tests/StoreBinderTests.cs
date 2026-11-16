@@ -92,7 +92,7 @@ public class StoreBinderTests
             WithFilm(FilmKey("Se7en", 110, directors: "Someone Else")), [Film("Se7en", "1:50:00")], []);
 
         Assert.Empty(bound.Films);
-        Assert.Single(bound.Notes);
+        Assert.Contains("matches no film", Assert.Single(bound.Notes), StringComparison.OrdinalIgnoreCase);
     }
 
     [Fact]
@@ -268,5 +268,129 @@ public class StoreBinderTests
 
         Assert.Empty(bound.Films);
         Assert.Single(bound.Notes);
+    }
+
+    private static RecordStore Films(params FilmEntry[] entries)
+        => new() { Version = RecordStore.CurrentVersion, Series = [], Films = entries };
+
+    private static FilmEntry Entry(string key, string title, int tmdbId) => new()
+    {
+        IdentityKey = key,
+        Sheet = new SheetEcho(title, "", Fincher),
+        Records = [new RecordOverride(TmdbId: tmdbId)],
+    };
+
+    private static int Count(string text, string part)
+        => text.Split(part, StringSplitOptions.None).Length - 1;
+
+    [Fact]
+    public void AnEntryEquallyFarFromTwoRowsBindsNeitherAndNamesBothInOneNote()
+    {
+        // Rows at 109 and 111, an entry written against 110: both are one minute away. Picking either would
+        // land the correction on a cut the owner may not have meant, in silence.
+        var bound = StoreBinder.Bind(
+            Films(Entry(FilmKey("Se7en", 110), "Se7en (mine)", 807)),
+            [Film("Se7en", "1:49:00"), Film("Se7en", "1:51:00")],
+            []);
+
+        Assert.Empty(bound.Films);
+        var note = Assert.Single(bound.Notes);   // one tie note, and NOT an orphan note as well
+        Assert.Contains("'Se7en (mine)'", note, StringComparison.Ordinal);
+        Assert.Contains("equal distance", note, StringComparison.Ordinal);
+        Assert.Contains("'Se7en' at 109 minutes", note, StringComparison.Ordinal);
+        Assert.Contains("'Se7en' at 111 minutes", note, StringComparison.Ordinal);
+        Assert.Contains("Re-key", note, StringComparison.Ordinal);
+        Assert.Contains("--print-keys", note, StringComparison.Ordinal);
+        Assert.DoesNotContain("matches no film", note, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public void ATiedEntryDoesNotDisturbAnotherEntryThatNamesARowExactly()
+    {
+        var exactKey = FilmKey("Se7en", 109);
+        var bound = StoreBinder.Bind(
+            Films(Entry(FilmKey("Se7en", 110), "tied", 1), Entry(exactKey, "exact", 2)),
+            [Film("Se7en", "1:49:00"), Film("Se7en", "1:51:00")],
+            []);
+
+        Assert.Equal(2, Assert.Contains(exactKey, bound.Films).Records.Single().TmdbId);
+        Assert.Contains("'tied'", Assert.Single(bound.Notes), StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void AContestedNoteNamesTheOtherEntryAndNotItsOwnAsItsRival()
+    {
+        var bound = StoreBinder.Bind(
+            Films(Entry(FilmKey("Se7en", 109), "Se7en (one)", 1), Entry(FilmKey("Se7en", 111), "Se7en (two)", 2)),
+            [Film("Se7en", "1:50:00")],
+            []);
+
+        var one = Assert.Single(bound.Notes, n => n.StartsWith("Record store entry 'Se7en (one)'", StringComparison.Ordinal));
+        var two = Assert.Single(bound.Notes, n => n.StartsWith("Record store entry 'Se7en (two)'", StringComparison.Ordinal));
+        // Each note opens with its own name, so its own name appears exactly once and the rival's exactly once.
+        Assert.Equal(1, Count(one, "Se7en (one)"));
+        Assert.Equal(1, Count(one, "Se7en (two)"));
+        Assert.Equal(1, Count(two, "Se7en (two)"));
+        Assert.Equal(1, Count(two, "Se7en (one)"));
+    }
+
+    [Fact]
+    public void ARivalIsExcludedByIdentityNotByValueEquality()
+    {
+        // Two entries that are record-EQUAL but are two entries. The reader rejects duplicate keys, so a real
+        // file cannot do this, but the binder must not depend on that: != would hide the twin as "itself".
+        var one = Entry(FilmKey("Se7en", 109), "Twin", 1);
+        var bound = StoreBinder.Bind(Films(one, one with { }), [Film("Se7en", "1:50:00")], []);
+
+        Assert.Equal(2, bound.Notes.Count);
+        Assert.All(bound.Notes, n => Assert.Equal(2, Count(n, "'Twin'")));
+    }
+
+    [Fact]
+    public void TwoShowsWhoseNamesFoldToOneKeyDoNotCrashTheBind()
+    {
+        // "the office." folds to the same key as "The Office". ToDictionary would throw on the second.
+        Assert.Equal(SeriesKey("The Office"), SeriesKey("the office."));
+
+        var store = new RecordStore
+        {
+            Films = [],
+            Series = [new SeriesEntry
+            {
+                IdentityKey = SeriesKey("The Office"),
+                Sheet = new SheetEcho("The Office"),
+                Record = new RecordOverride(TmdbId: 2316),
+            }],
+        };
+
+        var bound = StoreBinder.Bind(store, [], [Show("The Office"), Show("the office.")]);
+
+        Assert.Empty(bound.Notes);
+        Assert.Equal(2316, Assert.Contains(SeriesKey("The Office"), bound.Series).Record.TmdbId);
+    }
+
+    [Theory]
+    [InlineData("0:01:00", 0)]
+    [InlineData("0:01:00", -1)]
+    [InlineData("0:00:30", 0)]
+    public void ARuntimeAtOrBelowZeroIsNeverHashedSoNoEntryBindsToIt(string rowRuntime, int entryMinutes)
+    {
+        var bound = StoreBinder.Bind(
+            Films(Entry(FilmKey("Se7en", entryMinutes), "Se7en", 1)), [Film("Se7en", rowRuntime)], []);
+
+        Assert.Empty(bound.Films);
+        Assert.Contains("matches no film", Assert.Single(bound.Notes), StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public void AnUnreadableRuntimeRowIsNotIndexedAtAll()
+    {
+        // Unreadable reads as 0 minutes. Without the skip, offset +1 would hash the row at 1 minute and an
+        // entry keyed at 1 minute would bind to a row that has no runtime.
+        var bound = StoreBinder.Bind(
+            Films(Entry(FilmKey("Se7en", 1), "Se7en", 1)), [Film("Se7en", "not a runtime")], []);
+
+        Assert.Empty(bound.Films);
+        Assert.Contains("matches no film", Assert.Single(bound.Notes), StringComparison.OrdinalIgnoreCase);
     }
 }

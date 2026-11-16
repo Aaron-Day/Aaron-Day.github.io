@@ -36,9 +36,37 @@ public static class RecordStoreReader
     /// <summary>The store at <paramref name="path"/>, or <see cref="RecordStore.Empty"/> when there is no file there.</summary>
     public static async Task<RecordStore> ReadFileAsync(string path, CancellationToken ct)
     {
+        // File.Exists is false for a folder, so without this a --store that names a folder would read as "no
+        // store" and every correction in the owner's file would be dropped without a word.
+        if (Directory.Exists(path))
+            throw new RecordStoreException(
+                $"'{path}' is a folder, not a file. Point the record store at the JSON file itself, " +
+                $"for example '{Path.Combine(path, DefaultFileName)}'.");
+
         if (!File.Exists(path)) return RecordStore.Empty;
 
-        return Read(await File.ReadAllTextAsync(path, ct), path);
+        string json;
+        try
+        {
+            json = await File.ReadAllTextAsync(path, ct);
+        }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+        {
+            // The file or the environment, and the owner can act on it -- unlike the fault Read's catch-all reports.
+            throw new RecordStoreException(
+                $"'{path}' exists but could not be opened: {ex.GetType().Name}: {ex.Message} Check that no other " +
+                "program (an editor, a sync client, antivirus) has it locked, that this account may read it, " +
+                "and that the path names a file.", ex);
+        }
+        catch (Exception ex) when (ex is not OperationCanceledException)
+        {
+            throw new RecordStoreException(
+                $"Unexpected internal error while opening '{path}' as a record store: " +
+                $"{ex.GetType().Name}: {ex.Message} This is a fault in the reader, not in the file's contents, " +
+                "and editing the file will not fix it.", ex);
+        }
+
+        return Read(json, path);
     }
 
     /// <param name="whatItIs">The file's path, or any name the owner would recognise. Appears in every message.</param>

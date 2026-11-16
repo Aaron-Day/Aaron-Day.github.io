@@ -8,7 +8,8 @@ namespace MovieLibrary.Enrich.Store;
 /// <remarks>
 /// <para><b>Both dictionaries are keyed by the SHEET ROW's identity key, not by the entry's.</b> That is the
 /// whole point of binding: a pipeline already computes the row's key (<c>IdentityKey.ForFilm</c> for a film,
-/// <c>IdentityKey.ForSeries</c> for a series) and can look the entry up with it, with no knowledge of drift,
+/// <c>IdentityKey.ForSeriesName</c> for a series, never
+/// <c>ForSeries(TitleNormalizer.Normalize(name))</c>, which omits the trailing-year fold <c>TvPipeline</c> applies) and can look the entry up with it, with no knowledge of drift,
 /// orphans or the store's file format.</para>
 /// <para><b>Named properties, not positional.</b> The two dictionaries have different value types so they could
 /// not be exchanged -- but <see cref="Notes"/> next to them is the shape this project has already shipped a

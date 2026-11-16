@@ -373,4 +373,46 @@ public class RecordStoreReaderTests
         Assert.DoesNotContain("\"year\"", json, StringComparison.Ordinal);
         Assert.DoesNotContain("\"appleGenre\"", json, StringComparison.Ordinal);
     }
+
+    [Fact]
+    public async Task AFolderWhereTheFileShouldBeIsRejectedAndNamedNotTreatedAsNoStore()
+    {
+        var dir = Directory.CreateTempSubdirectory("store-dir-").FullName;
+        try
+        {
+            var ex = await Assert.ThrowsAsync<RecordStoreException>(
+                () => RecordStoreReader.ReadFileAsync(dir, CancellationToken.None));
+
+            Assert.Contains(dir, ex.Message, StringComparison.Ordinal);
+            Assert.Contains("folder", ex.Message, StringComparison.Ordinal);
+            Assert.DoesNotContain("fault in the reader", ex.Message, StringComparison.Ordinal);
+        }
+        finally
+        {
+            Directory.Delete(dir);
+        }
+    }
+
+    [Fact]
+    public async Task ALockedFileIsRejectedAsTheFilesProblemNotTheReaders()
+    {
+        var path = Path.Combine(Path.GetTempPath(), "locked-store-" + Guid.NewGuid() + ".json");
+        await File.WriteAllTextAsync(path, "{}");
+        try
+        {
+            using var hold = new FileStream(path, FileMode.Open, FileAccess.ReadWrite, FileShare.None);
+
+            var ex = await Assert.ThrowsAsync<RecordStoreException>(
+                () => RecordStoreReader.ReadFileAsync(path, CancellationToken.None));
+
+            Assert.Contains(path, ex.Message, StringComparison.Ordinal);
+            Assert.Contains("locked", ex.Message, StringComparison.Ordinal);
+            Assert.DoesNotContain("fault in the reader", ex.Message, StringComparison.Ordinal);
+            Assert.IsAssignableFrom<IOException>(ex.InnerException);
+        }
+        finally
+        {
+            File.Delete(path);
+        }
+    }
 }
