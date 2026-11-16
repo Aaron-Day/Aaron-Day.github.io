@@ -368,6 +368,12 @@
                 break;
 
             case CatalogState.Failed:
+                // R7: this page armed the polite region with the loading line, so this page clears it. The
+                // failure is carried by the focus move or the alert below, and a region still saying
+                // "Loading films" beside a page that says the library could not be loaded is a stale statement.
+                // Idempotent over an already-empty region.
+                Announcer.Status("");
+
                 // Criterion 7, the first transition: once, and only if focus is still where the page put it.
                 // THE FOCUS MOVE IS THE PRIMARY CHANNEL and it runs FIRST, because a screen reader reads the
                 // contents of a focused unnamed tabindex="-1" container and this container's whole text IS the

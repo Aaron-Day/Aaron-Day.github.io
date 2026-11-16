@@ -704,7 +704,7 @@ public class MoviesStateTests : BunitContext
     [InlineData("asynchronous throw")]
     public void NoWayOfFailingLeavesThePageLoadingOrEscapesToTheErrorBar(string how)
     {
-        var (cut, _, _) = RenderScripted(how switch
+        var (cut, clock, _) = RenderScripted(how switch
         {
             "dropped connection" => StubCatalog.Throws(new HttpRequestException("the network went away")),
             "captive portal" => StubCatalog.Html(),
@@ -720,6 +720,11 @@ public class MoviesStateTests : BunitContext
 
         Assert.NotEqual(Movies.LoadingVisible, Sentence(cut));
         Assert.Single(TryAgain(cut));
+
+        // R7: whoever writes a standing statement clears it. After an asynchronous failure the polite region
+        // was armed with the loading line by the Loading render, and must not still be saying it.
+        clock.Advance(Announcer.SettleDelay);
+        Assert.Equal("", Spoken().StatusText);
     }
 
     /// <remarks>
