@@ -45,16 +45,12 @@ public class MoviePipelineRecordKeyTests
     [Fact]
     public async Task TwoCutsOfOneMatchedFilmShareAnIdButNotAKey()
     {
-        var overrides = new Dictionary<string, int>
-        {
-            [MoviePipeline.OverrideKey("The Fellowship of the Ring", 178)] = 120,
-            [MoviePipeline.OverrideKey("The Fellowship of the Ring", 228)] = 120,
-        };
+        var theatrical = Row("The Fellowship of the Ring", "2:58:00", "Peter Jackson");
+        var extended = Row("The Fellowship of the Ring", "3:48:00", "Peter Jackson");
 
         var result = await TestPipeline.ThatFailsIfSearched(tmdbId: 120).RunAsync(
-            [Row("The Fellowship of the Ring", "2:58:00", "Peter Jackson"),
-             Row("The Fellowship of the Ring", "3:48:00", "Peter Jackson")],
-            overrides, BoundStore.Empty, CancellationToken.None);
+            [theatrical, extended], new Dictionary<string, int>(),
+            TestStore.Forcing((theatrical, 120), (extended, 120)), CancellationToken.None);
 
         Assert.Equal(2, result.Records.Count);
         Assert.All(result.Records, r => Assert.Equal(120, r.I));
@@ -64,10 +60,11 @@ public class MoviePipelineRecordKeyTests
     [Fact]
     public async Task AMatchedFilmIsKeyedByItsTmdbIdAndRuntime()
     {
-        var overrides = new Dictionary<string, int> { [MoviePipeline.OverrideKey("Halloween", 91)] = 948 };
+        var halloween = Row("Halloween", "1:31:00", "John Carpenter");
 
         var result = await TestPipeline.ThatFailsIfSearched(tmdbId: 948).RunAsync(
-            [Row("Halloween", "1:31:00", "John Carpenter")], overrides, BoundStore.Empty, CancellationToken.None);
+            [halloween], new Dictionary<string, int>(),
+            TestStore.Forcing((halloween, 948)), CancellationToken.None);
 
         var record = Assert.Single(result.Records);
         Assert.Equal(948, record.I);

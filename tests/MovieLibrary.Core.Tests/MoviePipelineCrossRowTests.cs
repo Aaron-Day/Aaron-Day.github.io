@@ -90,11 +90,11 @@ public class MoviePipelineCrossRowTests
     public async Task AnOverrideRowIsNotRejectedByTheRealPipeline()
     {
         var newHope = new FakeTmdb.Film(11, "Star Wars", 121, "George Lucas", Year: 1977);
-        var overrides = new Dictionary<string, int> { [MoviePipeline.OverrideKey("Star Wars: A New Hope", 125)] = 11 };
+        var forced = Row("Star Wars: A New Hope", "2:05:00", "George Lucas");
 
         var result = await Tmdb(newHope).Pipeline.RunAsync(
-            [Row("Star Wars: A New Hope", "2:05:00", "George Lucas"), Row("Star Wars", "2:01:00", "George Lucas")],
-            overrides, BoundStore.Empty, CancellationToken.None);
+            [forced, Row("Star Wars", "2:01:00", "George Lucas")],
+            NoOverrides, TestStore.Forcing((forced, 11)), CancellationToken.None);
 
         Assert.Equal([11, 11], result.Records.Select(r => r.I));
         Assert.Equal(["11-121", "11-125"], result.Records.Select(r => r.K).Order(StringComparer.Ordinal));
@@ -106,11 +106,11 @@ public class MoviePipelineCrossRowTests
     public async Task ARowThatTookAnOverriddenIdIsRejectedByTheRealPipeline()
     {
         var starWars = new FakeTmdb.Film(11, "Star Wars", 121, "George Lucas", Year: 1977);
-        var overrides = new Dictionary<string, int> { [MoviePipeline.OverrideKey("Star Wars: A New Hope", 125)] = 11 };
+        var forced = Row("Star Wars: A New Hope", "2:05:00", "George Lucas");
 
         var result = await Tmdb(starWars).Pipeline.RunAsync(
-            [Row("Star Wars: A New Hope", "2:05:00", "George Lucas"), Row("Star Wars Holiday Special", "2:01:00", "George Lucas")],
-            overrides, BoundStore.Empty, CancellationToken.None);
+            [forced, Row("Star Wars Holiday Special", "2:01:00", "George Lucas")],
+            NoOverrides, TestStore.Forcing((forced, 11)), CancellationToken.None);
 
         Assert.Equal(11, Assert.Single(result.Records, r => r.T == "Star Wars: A New Hope").I);
         Assert.Equal(0, Assert.Single(result.Records, r => r.T == "Star Wars Holiday Special").I);

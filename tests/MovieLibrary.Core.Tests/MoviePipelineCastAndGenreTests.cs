@@ -189,8 +189,8 @@ public class MoviePipelineCastAndGenreTests
     {
         var h = TestPipeline.Create(0, OnlyAnswers("/3/movie/275", FargoWithCredits));
 
-        var result = await h.Pipeline.RunAsync([Fargo], new Dictionary<string, int> { [MoviePipeline.OverrideKey("Fargo", 98)] = 275 },
-                                               BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync(
+            [Fargo], NoOverrides, TestStore.Forcing((Fargo, 275)), CancellationToken.None);
 
         Assert.Single(h.Handler.Requests);
         var r = Assert.Single(result.Records);
@@ -235,9 +235,10 @@ public class MoviePipelineCastAndGenreTests
             ? TestPipeline.Json("""{"id":1,"title":"Aaa"}""") : TestPipeline.NotFound());
         await SeedAsync(h, new StoredMovie(TestPipeline.Now, BareFargo()));
 
+        var aaa = new SheetRow("Aaa", "1:30:00", "X", "", "Drama", "");
+
         var result = await h.Pipeline.RunAsync(
-            [new SheetRow("Aaa", "1:30:00", "X", "", "Drama", ""), Fargo],
-            new Dictionary<string, int> { [MoviePipeline.OverrideKey("Aaa", 90)] = 1 }, BoundStore.Empty, CancellationToken.None);
+            [aaa, Fargo], NoOverrides, TestStore.Forcing((aaa, 1)), CancellationToken.None);
 
         Assert.True(result.StoppedOnBudget);
         Assert.Empty(result.Records.Single(r => r.T == "Fargo").Cast);

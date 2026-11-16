@@ -176,8 +176,8 @@ public class EnrichRunMetaTests
     }
 
     /// <summary>
-    /// And it must not fire on a budget stop. A film can be matched without its details ever loading - an Overrides
-    /// row forces an id with no lookup, and a cache-index hit whose payload file is gone resolves to null - so a run
+    /// And it must not fire on a budget stop. A film can be matched without its details ever loading - a record
+    /// store entry forces an id with no lookup, and a cache-index hit whose payload file is gone resolves to null - so a run
     /// that spends its budget can hold matched films that contributed no genre name. That is an ordinary budget stop,
     /// the normal development path, and failing it would be the guard firing where its own reason does not reach.
     /// Nothing is risked: a budget-stopped run is never deployable, so no blank facet can reach the site this way.
@@ -189,7 +189,7 @@ public class EnrichRunMetaTests
         h.MoviesCsv = RunLibrary.Movies(("Alien", "1:56:00", "Ridley Scott", "Sci-Fi"),
                                         ("Brazil", "2:22:00", "Terry Gilliam", "Sci-Fi"));
         h.ShowsCsv = GoogleSheetClientTests.ShowsHeader;
-        h.OverridesCsv = RunLibrary.Overrides(("Brazil", "2:22:00", "948"));
+        h.WriteStore(RunLibrary.Store(films: [("Brazil", "2:22:00", "Terry Gilliam", 948)]));
         h.Options = h.Options with { MaxRequests = 1 };
         h.Tmdb = req => req.RequestUri!.AbsolutePath == "/3/search/movie"
             ? TestPipeline.Json(TestPipeline.EmptyResults)
@@ -216,7 +216,7 @@ public class EnrichRunMetaTests
     public async Task TheOwnersReviewNotesReachTheSummaryAndNeverThePublishedMetaFile()
     {
         using var h = Library();
-        h.OverridesCsv = RunLibrary.Overrides(("A Film That Is Not On The Sheet", "1:40:00", "550"));
+        h.WriteStore(RunLibrary.Store(films: [("A Film That Is Not On The Sheet", "1:40:00", "Nobody", 550)]));
 
         var result = await h.RunAsync();
 

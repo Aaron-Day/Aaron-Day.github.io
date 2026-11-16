@@ -26,18 +26,6 @@ public class MoviePipelineTests
     }
 
     [Fact]
-    public async Task OverrideSkipsSearchEntirely()
-    {
-        var pipeline = TestPipeline.ThatFailsIfSearched(tmdbId: 948);
-        var overrides = new Dictionary<string, int> { [MoviePipeline.OverrideKey("Halloween", 91)] = 948 };
-
-        var result = await pipeline.RunAsync(
-            [Row("Halloween", "1:31:00", "John Carpenter")], overrides, BoundStore.Empty, CancellationToken.None);
-
-        Assert.Equal(948, Assert.Single(result.Records).I);
-    }
-
-    [Fact]
     public async Task RunStopsCleanlyWhenTheBudgetIsSpent()
     {
         var pipeline = TestPipeline.WithBudget(1);

@@ -2,7 +2,6 @@ using MovieLibrary.Core.Caching;
 using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Matching;
 using MovieLibrary.Core.Models;
-using MovieLibrary.Core.Parsing;
 using MovieLibrary.Core.Store;
 using MovieLibrary.Core.Text;
 using MovieLibrary.Enrich.Store;
@@ -16,25 +15,8 @@ public class MoviePipelineStoreTests
     private static SheetRow Row(string title = "Fargo", string runtime = "1:38:00")
         => new(title, runtime, Coens, "iTunes", "Thriller", "");
 
-    private static string KeyFor(SheetRow row)
-        => IdentityKey.ForFilm(TitleNormalizer.Normalize(row.Title),
-                               RuntimeParser.FilmMinutes(row.Runtime),
-                               TitleNormalizer.NormalizeDirectors(row.Directors));
-
-    private static BoundStore Bound(params (SheetRow Row, RecordOverride[] Records)[] entries) => new()
-    {
-        Series = new Dictionary<string, SeriesEntry>(StringComparer.Ordinal),
-        Notes = [],
-        Films = entries.ToDictionary(
-            e => KeyFor(e.Row),
-            e => new FilmEntry
-            {
-                IdentityKey = KeyFor(e.Row),
-                Sheet = new SheetEcho(e.Row.Title, e.Row.Runtime, e.Row.Directors),
-                Records = e.Records,
-            },
-            StringComparer.Ordinal),
-    };
+    private static BoundStore Bound(params (SheetRow Row, RecordOverride[] Records)[] entries)
+        => TestStore.Films(entries);
 
     private static readonly IReadOnlyDictionary<string, int> NoTabOverrides =
         new Dictionary<string, int>(StringComparer.Ordinal);

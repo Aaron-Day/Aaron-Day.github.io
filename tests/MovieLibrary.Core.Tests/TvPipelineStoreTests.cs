@@ -1,4 +1,3 @@
-using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Store;
 using MovieLibrary.Enrich.Store;
@@ -13,20 +12,7 @@ public class TvPipelineStoreTests
     private static SheetRow Episode(string series)
         => new("Season 1, Episode 1: Pilot", "0:22:00", "", "iTunes", "Comedy", series);
 
-    private static BoundStore For(string series, RecordOverride record) => new()
-    {
-        Films = new Dictionary<string, FilmEntry>(StringComparer.Ordinal),
-        Notes = [],
-        Series = new Dictionary<string, SeriesEntry>(StringComparer.Ordinal)
-        {
-            [IdentityKey.ForSeriesName(series)] = new SeriesEntry
-            {
-                IdentityKey = IdentityKey.ForSeriesName(series),
-                Sheet = new SheetEcho(series),
-                Record = record,
-            },
-        },
-    };
+    private static BoundStore For(string series, RecordOverride record) => TestStore.Series((series, record));
 
     [Fact]
     public async Task AnAssertedIdIsTakenWithoutASearch()
@@ -123,18 +109,4 @@ public class TvPipelineStoreTests
         Assert.Equal("Doctor Who: Revival", show.T);
         Assert.Equal("doctor-who-2005", show.Slug);
     }
-
-    [Fact]
-    public async Task TheStoreOutranksTheOverridesTab()
-    {
-        // The tab would force 999, which TMDB (in this stub) does not know; the store's 2316 must win.
-        var tab = new Dictionary<string, int>(StringComparer.Ordinal) { [TvPipelineKey("The Office")] = 999 };
-
-        var result = await TestPipeline.TvHarnessThatFailsIfSearched(2316).RunAsync(
-            [Episode("The Office")], tab, For("The Office", new RecordOverride(TmdbId: 2316)), default);
-
-        Assert.Equal(2316, Assert.Single(result.Shows).I);
-    }
-
-    private static string TvPipelineKey(string name) => MovieLibrary.Enrich.Pipeline.TvPipeline.OverrideKey(name);
 }

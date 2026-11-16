@@ -1,5 +1,8 @@
 using System.Text.Json;
+using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Models;
+using MovieLibrary.Core.Parsing;
+using MovieLibrary.Core.Text;
 
 namespace MovieLibrary.Core.Tests;
 
@@ -20,6 +23,34 @@ internal static class RunLibrary
 
     public static string Overrides(params (string Title, string Runtime, string Id)[] rows)
         => GoogleSheetClientTests.OverridesHeader + string.Concat(rows.Select(r => OverrideCsv.Line(r.Title, r.Runtime, r.Id)));
+
+    /// <summary>
+    /// A record store as <c>record-store.json</c> holds it, for <see cref="RunHarness.WriteStore"/>. This is how a
+    /// whole-run test settles a TMDB id without a search. Each entry is keyed the way <c>StoreBinder</c> keys it, so
+    /// an entry naming a film or series the sheet does not have is orphaned here exactly as it would be in the real
+    /// file: the note, not the id, is what the run then produces.
+    /// </summary>
+    public static string Store(
+        (string Title, string Runtime, string Directors, int TmdbId)[]? films = null,
+        (string Series, int TmdbId)[]? series = null)
+        => JsonSerializer.Serialize(new
+        {
+            version = 1,
+            films = (films ?? []).Select(f => new
+            {
+                identityKey = IdentityKey.ForFilm(TitleNormalizer.Normalize(f.Title),
+                                                  RuntimeParser.FilmMinutes(f.Runtime),
+                                                  TitleNormalizer.NormalizeDirectors(f.Directors)),
+                sheet = new { title = f.Title, runtime = f.Runtime, directors = f.Directors },
+                records = new[] { new { tmdbId = f.TmdbId } },
+            }),
+            series = (series ?? []).Select(s => new
+            {
+                identityKey = IdentityKey.ForSeriesName(s.Series),
+                sheet = new { title = s.Series },
+                record = new { tmdbId = s.TmdbId },
+            }),
+        });
 
     public static readonly (string Title, string Runtime, string Directors, string Genre) Fargo =
         ("Fargo", "1:38:00", "Joel Coen & Ethan Coen", "Thriller");

@@ -242,17 +242,6 @@ public class MoviePipelineGapTests
     }
 
     [Fact]
-    public async Task AnOverrideIsRecordedAtFullConfidence()
-    {
-        var pipeline = TestPipeline.ThatFailsIfSearched(tmdbId: 948);
-
-        var result = await pipeline.RunAsync([Row("Halloween", "1:31:00", "John Carpenter")],
-            new Dictionary<string, int> { [MoviePipeline.OverrideKey("Halloween", 91)] = 948 }, BoundStore.Empty, CancellationToken.None);
-
-        Assert.Equal(1d, Assert.Single(result.Records).Mc);
-    }
-
-    [Fact]
     public async Task TwoUnmatchedRowsWithTheSameTitleBothReachTheReviewQueueOnAWarmRun()
     {
         var h = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
@@ -367,16 +356,16 @@ public class MoviePipelineGapTests
         var h = TestPipeline.Create(0, req => req.RequestUri!.AbsolutePath == "/3/movie/948"
             ? TestPipeline.Json($$"""{"id":948,"title":"Halloween","overview":"{{overview}}"}""")
             : throw new Xunit.Sdk.XunitException($"Unexpected request: {req.RequestUri}"), () => now);
-        var overrides = new Dictionary<string, int> { [MoviePipeline.OverrideKey("Halloween", 91)] = 948 };
         SheetRow[] rows = [Row("Halloween", "1:31:00", "John Carpenter")];
+        var store = TestStore.Forcing((rows[0], 948));
 
-        var first = await h.Pipeline.RunAsync(rows, overrides, BoundStore.Empty, CancellationToken.None);
+        var first = await h.Pipeline.RunAsync(rows, NoOverrides, store, CancellationToken.None);
         overview = "Newer";
         now = now.AddDays(100); // inside the 150-day window
-        var inside = await h.Pipeline.RunAsync(rows, overrides, BoundStore.Empty, CancellationToken.None);
+        var inside = await h.Pipeline.RunAsync(rows, NoOverrides, store, CancellationToken.None);
         var requestsInside = h.Handler.Requests.Count;
         now = now.AddDays(51); // 151 days after the fetch
-        var outside = await h.Pipeline.RunAsync(rows, overrides, BoundStore.Empty, CancellationToken.None);
+        var outside = await h.Pipeline.RunAsync(rows, NoOverrides, store, CancellationToken.None);
 
         Assert.Equal("Old", first.Records[0].Ov);
         Assert.Equal("Old", inside.Records[0].Ov);
@@ -530,8 +519,10 @@ public class MoviePipelineGapTests
             ? TestPipeline.Json("""{"id":1,"title":"Aaa"}""") : TestPipeline.NotFound());
         await SeedFargoWithAStalePayload(h);
 
-        var result = await h.Pipeline.RunAsync([Row("Aaa", "1:30:00", "X"), Fargo],
-            new Dictionary<string, int> { [MoviePipeline.OverrideKey("Aaa", 90)] = 1 }, BoundStore.Empty, CancellationToken.None);
+        var aaa = Row("Aaa", "1:30:00", "X");
+
+        var result = await h.Pipeline.RunAsync(
+            [aaa, Fargo], NoOverrides, TestStore.Forcing((aaa, 1)), CancellationToken.None);
 
         Assert.True(result.StoppedOnBudget);
         var fargo = result.Records.Single(r => r.T == "Fargo");

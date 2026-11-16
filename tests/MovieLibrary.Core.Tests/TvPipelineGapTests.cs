@@ -2,6 +2,7 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using MovieLibrary.Core.Caching;
 using MovieLibrary.Core.Models;
+using MovieLibrary.Core.Text;
 using MovieLibrary.Enrich.Pipeline;
 using MovieLibrary.Enrich.Store;
 
@@ -906,28 +907,28 @@ public class TvPipelineGapTests
         Assert.Equal(["3 row(s) have no series name and were skipped"], result.ReviewQueue);
     }
 
-    // ---- fix pass 2: the TV override path -----------------------------------------------------------
+    // ---- fix pass 2: a series whose id the record store forces -------------------------------------
 
     private static readonly IReadOnlyDictionary<string, int> NoOverrides = new Dictionary<string, int>();
 
     /// <summary>
     /// The Office as a search gets it wrong (the UK show, found by the Sheet name) and as a human
-    /// knows it (the US show, which no search finds, so only an override can reach it).
+    /// knows it (the US show, which no search finds, so only the record store can reach it).
     /// </summary>
     private static FakeTv OfficeBackend()
         => Tmdb(
             Show(2996, "The Office (UK)", (1, ["Downsize"])) with { SearchAs = "The Office" },
             Show(2316, "The Office", (1, ["Pilot", "Diversity Day"])) with { SearchAs = "found by id only", PosterPath = "/us.jpg" });
 
-    private static readonly Dictionary<string, int> OfficeIsTheUsOne = new() { ["the office"] = 2316 };
+    private static readonly BoundStore OfficeIsTheUsOne = TestStore.ForcingSeries(("The Office", 2316));
 
     [Fact]
-    public async Task AnOverriddenSeriesTakesItsIdWithoutSearchingAndIsFullConfidence()
+    public async Task AStoredSeriesIdIsTakenWithoutSearchingAndIsFullConfidence()
     {
         var h = Harness(OfficeBackend());
 
         var result = await h.Pipeline.RunAsync(
-            [Ep("Season 1, Episode 2: Diversity Day", "The Office")], OfficeIsTheUsOne, BoundStore.Empty, Ct);
+            [Ep("Season 1, Episode 2: Diversity Day", "The Office")], NoOverrides, OfficeIsTheUsOne, Ct);
 
         var show = Assert.Single(result.Shows);
         Assert.Equal(2316, show.I);
@@ -937,11 +938,11 @@ public class TvPipelineGapTests
         Assert.Empty(result.ReviewQueue);
         Assert.Empty(Searches(h));                // ZERO search requests
         Assert.Equal(["/3/tv/2316", "/3/tv/2316/season/1"], Paths(h));
-        Assert.Empty(h.Cache.Entries);            // an override is not an index entry
+        Assert.Empty(h.Cache.Entries);            // a forced id is not an index entry
     }
 
     [Fact]
-    public async Task WithoutTheOverrideTheSameSheetGetsTheWrongShowAsAGuess()
+    public async Task WithoutTheStoreEntryTheSameSheetGetsTheWrongShowAsAGuess()
     {
         var h = Harness(OfficeBackend());
 
@@ -955,14 +956,14 @@ public class TvPipelineGapTests
     }
 
     [Fact]
-    public async Task AnOverrideBeatsAWrongGuessAlreadyInTheCache()
+    public async Task AStoredIdBeatsAWrongGuessAlreadyInTheCache()
     {
         SheetRow[] rows = [Ep("Season 1, Episode 2: Diversity Day", "The Office")];
         var first = Harness(OfficeBackend());
         await first.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, Ct); // the guess is cached: id 2996, Mc 0.5
 
         var second = Harness(OfficeBackend(), shareCacheWith: first);
-        var result = await second.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
+        var result = await second.Pipeline.RunAsync(rows, NoOverrides, OfficeIsTheUsOne, Ct);
 
         var show = Assert.Single(result.Shows);
         Assert.Equal(2316, show.I);
@@ -972,14 +973,14 @@ public class TvPipelineGapTests
     }
 
     [Fact]
-    public async Task AnOverriddenSeriesIsServedFromTheCacheOnAWarmRun()
+    public async Task AStoreForcedSeriesIsServedFromTheCacheOnAWarmRun()
     {
         var h = Harness(OfficeBackend());
         SheetRow[] rows = [Ep("Season 1, Episode 2: Diversity Day", "The Office")];
-        var first = await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
+        var first = await h.Pipeline.RunAsync(rows, NoOverrides, OfficeIsTheUsOne, Ct);
 
         h.Handler.Requests.Clear();
-        var second = await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
+        var second = await h.Pipeline.RunAsync(rows, NoOverrides, OfficeIsTheUsOne, Ct);
 
         Assert.Empty(h.Handler.Requests);
         Assert.Equal(JsonSerializer.Serialize(first.Shows), JsonSerializer.Serialize(second.Shows));
@@ -987,13 +988,13 @@ public class TvPipelineGapTests
     }
 
     [Fact]
-    public async Task AnOverrideForOneSeriesLeavesTheOthersToTheSearch()
+    public async Task AStoreEntryForOneSeriesLeavesTheOthersToTheSearch()
     {
         var fake = OfficeBackend().Add(Show(456, "Alias", (1, ["A"])));
         var h = Harness(fake);
 
         var result = await h.Pipeline.RunAsync(
-            [Ep("A", "Alias"), Ep("Season 1, Episode 1: Pilot", "The Office")], OfficeIsTheUsOne, BoundStore.Empty, Ct);
+            [Ep("A", "Alias"), Ep("Season 1, Episode 1: Pilot", "The Office")], NoOverrides, OfficeIsTheUsOne, Ct);
 
         Assert.Equal(["Alias", "The Office"], result.Shows.Select(s => s.T));
         Assert.Equal([456, 2316], result.Shows.Select(s => s.I));
@@ -1002,67 +1003,75 @@ public class TvPipelineGapTests
         Assert.Empty(result.ReviewQueue);
     }
 
+    /// <summary>
+    /// A series name carrying a year is keyed with that year folded back in, so an entry for the 2020 twin cannot
+    /// be caught by its plain twin. The two literal key strings are asserted because getting this rule wrong makes
+    /// every year-bearing entry fail to bind SILENTLY: the series is simply searched for as if no entry existed.
+    /// </summary>
     [Fact]
-    public async Task AnOverrideKeyCarriesTheYearSoAYearSuffixedTwinIsNotCaughtByItsPlainTwin()
+    public async Task AStoredKeyCarriesTheYearSoAYearSuffixedTwinIsNotCaughtByItsPlainTwin()
     {
         var h = Harness(Tmdb(
             Show(10, "The Biggest Loser", (1, ["A"])),
             Show(20, "The Biggest Loser", (1, ["B"])) with { SearchAs = "found by id only" }));
-        Dictionary<string, int> overrides = new() { [TvPipeline.OverrideKey("The Biggest Loser (2020)")] = 20 };
+        var store = TestStore.ForcingSeries(("The Biggest Loser (2020)", 20));
 
         var result = await h.Pipeline.RunAsync(
-            [Ep("A", "The Biggest Loser"), Ep("B", "The Biggest Loser (2020)")], overrides, BoundStore.Empty, Ct);
+            [Ep("A", "The Biggest Loser"), Ep("B", "The Biggest Loser (2020)")], NoOverrides, store, Ct);
 
-        Assert.Equal("the biggest loser 2020", TvPipeline.OverrideKey("The Biggest Loser (2020)"));
-        Assert.Equal("the biggest loser", TvPipeline.OverrideKey("The Biggest Loser"));
+        Assert.Equal("the biggest loser 2020", TvPipeline.KeyOf(TitleNormalizer.Normalize("The Biggest Loser (2020)")));
+        Assert.Equal("the biggest loser", TvPipeline.KeyOf(TitleNormalizer.Normalize("The Biggest Loser")));
         Assert.Equal([10, 20], result.Shows.Select(s => s.I));
         Assert.Equal(["The Biggest Loser"], Searches(h)); // the plain twin only
     }
 
     [Fact]
-    public async Task AnOverrideIdThatTmdbDoesNotKnowIsKeptAndQueuedRatherThanSilent()
+    public async Task AStoredIdThatTmdbDoesNotKnowIsKeptAndQueuedRatherThanSilent()
     {
         var h = Harness(OfficeBackend());
-        Dictionary<string, int> typo = new() { ["the office"] = 999999 };
+        var typo = TestStore.ForcingSeries(("The Office", 999999));
 
-        var result = await h.Pipeline.RunAsync([Ep("Season 1, Episode 1: Pilot", "The Office")], typo, BoundStore.Empty, Ct);
+        var result = await h.Pipeline.RunAsync([Ep("Season 1, Episode 1: Pilot", "The Office")], NoOverrides, typo, Ct);
 
         var show = Assert.Single(result.Shows);
         Assert.Equal(999999, show.I);
         Assert.Equal(1d, show.Mc);
         Assert.Equal(1, show.OwnedEpisodes); // no details to hang on, so the owned row stands alone
-        Assert.Contains(result.ReviewQueue, l => l.Contains("The Office") && l.Contains("999999"));
+        // The note has to name where the id came from, or the owner has nowhere to go and correct it.
+        var note = Assert.Single(result.ReviewQueue, l => l.Contains("999999", StringComparison.Ordinal));
+        Assert.Contains("The Office", note, StringComparison.Ordinal);
+        Assert.Contains("record store id 999999 is not a series TMDB knows", note, StringComparison.Ordinal);
         Assert.Empty(Searches(h));
     }
 
     [Fact]
-    public async Task AStaleOverriddenSeriesIsRefetchedByIdAndStillNeverSearched()
+    public async Task AStaleStoreForcedSeriesIsRefetchedByIdAndStillNeverSearched()
     {
         SheetRow[] rows = [Ep("Season 1, Episode 1: Pilot", "The Office")];
         var h = Harness(OfficeBackend());
-        await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
+        await h.Pipeline.RunAsync(rows, NoOverrides, OfficeIsTheUsOne, Ct);
         Age(Payload(h, "series.json"), TestPipeline.Now, PastTheWindow);
 
         h.Handler.Requests.Clear();
-        await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
+        await h.Pipeline.RunAsync(rows, NoOverrides, OfficeIsTheUsOne, Ct);
 
         Assert.Equal(["/3/tv/2316"], Paths(h));
         Assert.Equal(TestPipeline.Now, StampOf(Payload(h, "series.json")));
     }
 
     [Fact]
-    public async Task AStaleOverriddenSeriesIsUsedWhenTheBudgetCannotRefetchIt()
+    public async Task AStaleStoreForcedSeriesIsUsedWhenTheBudgetCannotRefetchIt()
     {
         SheetRow[] rows = [Ep("A", "Alias"), Ep("Season 1, Episode 1: Pilot", "The Office")];
         var fake = OfficeBackend().Add(Show(456, "Alias", (1, ["A"])));
         var first = Harness(fake);
-        await first.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
+        await first.Pipeline.RunAsync(rows, NoOverrides, OfficeIsTheUsOne, Ct);
         foreach (var file in Directory.GetFiles(first.CacheDir, "series.json", SearchOption.AllDirectories))
             Age(file, TestPipeline.Now, PastTheWindow);
 
         // Alias (first in order) spends the whole budget on its re-search; The Office is then reached with none left.
         var second = Harness(fake, budget: 1, shareCacheWith: first);
-        var result = await second.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
+        var result = await second.Pipeline.RunAsync(rows, NoOverrides, OfficeIsTheUsOne, Ct);
 
         var office = result.Shows.Single(s => s.T == "The Office");
         Assert.Equal(2316, office.I);

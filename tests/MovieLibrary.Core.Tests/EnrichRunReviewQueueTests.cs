@@ -16,14 +16,16 @@ namespace MovieLibrary.Core.Tests;
 public class EnrichRunReviewQueueTests
 {
     /// <summary>
-    /// One of each kind of line: a drifted film override (the owner's own correction, which therefore matches nothing),
-    /// the unmatched film it was meant to fix, and a series TMDB answers under a different name.
+    /// One of each kind of line: a record store entry whose runtime has drifted too far to bind (the owner's own
+    /// correction, which therefore matches nothing), the unmatched film it was meant to fix, and a series TMDB
+    /// answers under a different name.
     /// </summary>
     private static RunHarness OneOfEach()
     {
         var h = new RunHarness();
         h.MoviesCsv = RunLibrary.Movies(("Heat", "2:51:00", "Michael Mann", "Crime"));   // the sheet says 171 minutes
-        h.OverridesCsv = RunLibrary.Overrides(("Heat", "2:50:00", "949"));               // the override still says 170
+        // 167 minutes, four past the binder's two-minute drift window, so the entry binds to nothing.
+        h.WriteStore(RunLibrary.Store(films: [("Heat", "2:47:00", "Michael Mann", 949)]));
         h.ShowsCsv = RunLibrary.Shows(("Season 1, Episode 1: Pilot", "Alias", "Drama"));
 
         var tv = new FakeTv { AnyQuery = new FakeShow(9, "Aliens", [new FakeSeason(1, ["Pilot"])]) };
@@ -55,8 +57,8 @@ public class EnrichRunReviewQueueTests
 
         Assert.Equal(0, result.ExitCode);
         var note = Assert.Single(Section(h.Summary, "Record store"));
-        Assert.StartsWith("Overrides row 2", note);
-        Assert.Contains("matches no film on the Movies tab", note);
+        Assert.StartsWith("Record store entry", note);
+        Assert.Contains("matches no film", note, StringComparison.OrdinalIgnoreCase);
 
         var film = Assert.Single(Section(h.Summary, "Films"));
         Assert.StartsWith("Heat (2:51:00, Michael Mann)", film);
