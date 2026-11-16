@@ -1,4 +1,5 @@
 using MovieLibrary.Core.Models;
+using MovieLibrary.Enrich.Store;
 
 namespace MovieLibrary.Core.Tests;
 
@@ -14,7 +15,7 @@ public class MoviePipelineSortTitleTests
     private static async Task<MovieRecord> Publish(string title)
     {
         var result = await TestPipeline.WithNoTmdbResults().RunAsync(
-            [Row(title)], new Dictionary<string, int>(), CancellationToken.None);
+            [Row(title)], new Dictionary<string, int>(), BoundStore.Empty, CancellationToken.None);
 
         return Assert.Single(result.Records);
     }
@@ -46,7 +47,7 @@ public class MoviePipelineSortTitleTests
     {
         // Production cannot reach this (the sheet reader trims every cell); it guards a future change.
         var result = await TestPipeline.WithNoTmdbResults().RunAsync(
-            [Row(" Zorro ")], new Dictionary<string, int>(), CancellationToken.None);
+            [Row(" Zorro ")], new Dictionary<string, int>(), BoundStore.Empty, CancellationToken.None);
 
         var record = Assert.Single(result.Records);
 

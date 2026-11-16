@@ -5,6 +5,7 @@ using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Text;
 using MovieLibrary.Enrich.Pipeline;
 using MovieLibrary.Enrich.Tmdb;
+using MovieLibrary.Enrich.Store;
 
 namespace MovieLibrary.Core.Tests;
 
@@ -66,7 +67,7 @@ public class MoviePipelineAmendment2Tests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes(Halloween)));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal("Halloween Collection", Assert.Single(result.Records).Col);
     }
@@ -81,7 +82,7 @@ public class MoviePipelineAmendment2Tests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes(extra)));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
 
         Assert.Null(Assert.Single(result.Records).Col);
     }
@@ -91,7 +92,7 @@ public class MoviePipelineAmendment2Tests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes(""", "belongs_to_collection":{"id":1,"name":"  Alien Collection "}""")));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal("Alien Collection", Assert.Single(result.Records).Col);
     }
@@ -102,7 +103,7 @@ public class MoviePipelineAmendment2Tests
         var h = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
 
         Assert.Null(Assert.Single(result.Records).Col);
     }
@@ -111,10 +112,10 @@ public class MoviePipelineAmendment2Tests
     public async Task TheCollectionIsKeptInTheStoredPayloadAndServedFromTheCache()
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes(Halloween)));
-        await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+        await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
         var before = h.Handler.Requests.Count;
 
-        var warm = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+        var warm = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
 
         var stored = await h.Cache.ReadPayloadAsync<StoredMovie>("movies/275.json", CancellationToken.None);
         Assert.Equal(("Halloween Collection", 2344),
@@ -129,7 +130,7 @@ public class MoviePipelineAmendment2Tests
         var h = TestPipeline.Create(0, OnlyAnswers("/3/movie/275", Details(Halloween + EmptyCredits)));
         await SeedStaleAsync(h);
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
 
         Assert.Single(h.Handler.Requests);
         Assert.Equal("Halloween Collection", Assert.Single(result.Records).Col);
@@ -140,7 +141,7 @@ public class MoviePipelineAmendment2Tests
     {
         var h = TestPipeline.Create(0, OnlyAnswers("/3/movie/275", Details(Halloween + EmptyCredits)));
 
-        var result = await h.Pipeline.RunAsync([Fargo], new Dictionary<string, int> { [MoviePipeline.OverrideKey("Fargo", 98)] = 275 }, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], new Dictionary<string, int> { [MoviePipeline.OverrideKey("Fargo", 98)] = 275 }, BoundStore.Empty, CancellationToken.None);
 
         Assert.Single(h.Handler.Requests);
         Assert.Equal("Halloween Collection", Assert.Single(result.Records).Col);
@@ -170,7 +171,7 @@ public class MoviePipelineAmendment2Tests
 
         var result = await h.Pipeline.RunAsync(
             [new SheetRow("Alpha", "1:30:00", "Dir A", "", "Drama", ""), new SheetRow("Bravo", "1:40:00", "Dir B", "", "Drama", "")],
-            NoOverrides, CancellationToken.None);
+            NoOverrides, BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(2, result.Records.Count);
         var bravo = result.Records.Single(r => r.T == "Bravo");
@@ -190,7 +191,7 @@ public class MoviePipelineAmendment2Tests
         }));
 
         var ex = await Assert.ThrowsAsync<InvalidDataException>(
-            () => h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None));
+            () => h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None));
 
         Assert.Contains("film 275", ex.Message);
         Assert.Null(await h.Cache.ReadPayloadAsync<StoredMovie>("movies/275.json", CancellationToken.None));
@@ -208,7 +209,7 @@ public class MoviePipelineAmendment2Tests
             CancellationToken.None);
 
         await Assert.ThrowsAsync<InvalidDataException>(
-            () => h.Pipeline.RunAsync([Fargo], NoOverrides, CancellationToken.None));
+            () => h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None));
 
         var stored = await h.Cache.ReadPayloadAsync<StoredMovie>("movies/275.json", CancellationToken.None);
         Assert.Equal(seededAt, stored!.FetchedUtc);                       // not overwritten by the failed refresh

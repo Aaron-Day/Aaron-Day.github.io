@@ -5,9 +5,11 @@ using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Matching;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Parsing;
+using MovieLibrary.Core.Store;
 using MovieLibrary.Core.Text;
 using MovieLibrary.Enrich.Caching;
 using MovieLibrary.Enrich.Reporting;
+using MovieLibrary.Enrich.Store;
 using MovieLibrary.Enrich.Tmdb;
 
 namespace MovieLibrary.Enrich.Pipeline;
@@ -112,6 +114,7 @@ public sealed class MoviePipeline(
     public async Task<MoviePipelineResult> RunAsync(
         IReadOnlyList<SheetRow> rows,
         IReadOnlyDictionary<string, int> overrides,
+        BoundStore bound,
         CancellationToken ct)
     {
         var resolved = new List<ResolvedFilm>(rows.Count);
@@ -136,79 +139,16 @@ public sealed class MoviePipeline(
             var directors = TitleNormalizer.NormalizeDirectors(row.Directors);
             var key = IdentityKey.ForFilm(title, runtime, directors);
 
-            int? tmdbId = null;
-            var confidence = 0d;
-            TmdbMovie? fresh = null;   // the chosen film's details, when this run's search already fetched them
-            IReadOnlyList<TmdbCastMember>? freshCast = null; // and its cast, when the credits gate fetched them
-            string? reviewNote = null; // why a human should look at this row, when one should
-            var fromOverride = false;  // the owner forced this id, which no later rule may withdraw
+            // One pass per record the store asks for, and exactly one when it asks for nothing. The key above
+            // is the ROW's and stays the row's: an override corrects the catalogue, not the sheet, so the cache
+            // lookup and the search are unaffected by it.
+            IReadOnlyList<RecordOverride?> wanted =
+                bound.Films.TryGetValue(key, out var entry) ? [.. entry.Records] : [null];
 
-            if (overrides.TryGetValue(OverrideKey(title, runtime), out var forced))
-            {
-                tmdbId = forced;
-                confidence = 1d;
-                fromOverride = true;
-            }
-            else if (cache.Resolve(key, title.Value, runtime, directors, now) is { } hit)
-            {
-                // On an alias hit this is the SOURCE entry, so its Key and RuntimeMinutes are not
-                // ours. Only the answer (TmdbId, Confidence) is meaningful here.
-                tmdbId = hit.TmdbId;
-                confidence = hit.Confidence;
+            foreach (var over in wanted)
+                resolved.Add(await ResolveAsync(row, title, runtime, directors, key, over, overrides, genreNames, now, ct));
 
-                // A flagged match is still waiting for a human, so it must not drop out of the queue
-                // the moment it is cached. Accepted matches start at AcceptThreshold; overrides are 1.0.
-                if (tmdbId is null) reviewNote = "unmatched";
-                else if (confidence < MatchScorer.AcceptThreshold)
-                    reviewNote = Describe(MatchOutcome.Flagged, confidence, tmdbId);
-            }
-            else if (string.IsNullOrWhiteSpace(title.Cleaned))
-            {
-                // Cleaned is empty when a title was nothing but a parenthetical; searching
-                // TMDB for an empty string burns a request and returns noise.
-                reviewNote = "unmatched";
-            }
-            else if (tmdb.BudgetExhausted)
-            {
-                reviewNote = "not searched, request budget spent";
-            }
-            else
-            {
-                var candidates = await tmdb.SearchMoviesAsync(title.Cleaned, title.YearHint, ct);
-                var enrichment = await EnrichCandidatesAsync(candidates, title, runtime, ct);
-                var match = MatchScorer.Score(title, runtime, row.Directors, enrichment.Candidates);
-
-                tmdbId = match.TmdbId;
-                confidence = match.Confidence;
-                if (tmdbId is { } matched)
-                {
-                    enrichment.Details.TryGetValue(matched, out fresh);
-                    enrichment.Cast.TryGetValue(matched, out freshCast);
-                }
-
-                // BudgetExhausted flips inside the call that hits the ceiling, so it can only be read
-                // AFTER the lookups. An exhausted client returns the same empty or half-enriched result
-                // as "TMDB has no such film". That result is still used for this run (the requests are
-                // already paid for) but must never be cached: it would suppress the film for 30 days.
-                var complete = !tmdb.BudgetExhausted;
-                if (complete)
-                    cache.Put(new CacheEntry(key, tmdbId, confidence, now,
-                                             Negative: tmdbId is null, title.Value, runtime, directors));
-
-                if (match.Outcome != MatchOutcome.Accepted)
-                    reviewNote = !complete && tmdbId is null
-                        ? "not resolved, request budget spent"
-                        : Describe(match.Outcome, confidence, tmdbId);
-            }
-
-            var (record, tmdbTitle) = await BuildRecordAsync(
-                row, title, runtime, key, tmdbId, confidence, fresh, freshCast, genreNames, now, ct);
-
-            // Kept beside the record, not on it: the cross-row rules below need the sheet row, the identity key and the
-            // title TMDB gave the film, and the published record carries none of them.
-            resolved.Add(new ResolvedFilm(record, row, title, key, tmdbTitle, fromOverride, reviewNote));
-
-            // After the record, so the count means rows FINISHED. The reporter decides which of these to print.
+            // After the records, so the count still means rows FINISHED. An expanded row is one row.
             progress?.Report(new PassProgress { Done = ++done, Total = ordered.Count });
         }
 
@@ -376,6 +316,146 @@ public sealed class MoviePipeline(
         return current;
     }
 
+    /// <summary>
+    /// One published record: the store's decision if it has one, otherwise the cache, otherwise a search.
+    /// </summary>
+    /// <param name="sheetRuntime">The row's runtime. The cache lookup and the search use THIS, never the override's.</param>
+    /// <param name="key">The row's identity key, already computed. Also the store's binding key.</param>
+    /// <param name="over">The store's record for this one output record, or null when the store says nothing.</param>
+    private async Task<ResolvedFilm> ResolveAsync(
+        SheetRow row, NormalizedTitle title, int sheetRuntime, string directors, string key,
+        RecordOverride? over, IReadOnlyDictionary<string, int> overrides,
+        SortedDictionary<int, string> genreNames, DateTimeOffset now, CancellationToken ct)
+    {
+        int? tmdbId = null;
+        var confidence = 0d;
+        TmdbMovie? fresh = null;   // the chosen film's details, when this run's search already fetched them
+        IReadOnlyList<TmdbCastMember>? freshCast = null; // and its cast, when the credits gate fetched them
+        string? reviewNote = null; // why a human should look at this row, when one should
+        var fromOverride = false;  // the owner forced this id, which no later rule may withdraw
+
+        // The record store comes FIRST, ahead of the Overrides tab. The tab is empty and Task 7 deletes it, so
+        // the order is academic today -- but it is the store that is authoritative, and an ordering that said
+        // otherwise would be a trap for whoever reads this next.
+        if (over?.TmdbId is { } asserted)
+        {
+            tmdbId = asserted;
+            confidence = 1d;
+            fromOverride = true;
+        }
+        else if (over?.Candidates is { Length: > 0 } choices)
+        {
+            // He saw these and did not choose. A search would find the same ones, so none is made: the record
+            // stays unmatched (I == 0, Mc == 0), carries the "Not matched" badge, and this line is where he
+            // comes back to finish the decision.
+            reviewNote =
+                $"record store: {choices.Length.ToString(CultureInfo.InvariantCulture)} candidate(s), none chosen: " +
+                string.Join(", ", choices.Select(c => c.ToString(CultureInfo.InvariantCulture)));
+        }
+        else if (overrides.TryGetValue(OverrideKey(title, sheetRuntime), out var forced))
+        {
+            tmdbId = forced;
+            confidence = 1d;
+            fromOverride = true;
+        }
+        else if (cache.Resolve(key, title.Value, sheetRuntime, directors, now) is { } hit)
+        {
+            // On an alias hit this is the SOURCE entry, so its Key and RuntimeMinutes are not
+            // ours. Only the answer (TmdbId, Confidence) is meaningful here.
+            tmdbId = hit.TmdbId;
+            confidence = hit.Confidence;
+
+            // A flagged match is still waiting for a human, so it must not drop out of the queue
+            // the moment it is cached. Accepted matches start at AcceptThreshold; overrides are 1.0.
+            if (tmdbId is null) reviewNote = "unmatched";
+            else if (confidence < MatchScorer.AcceptThreshold)
+                reviewNote = Describe(MatchOutcome.Flagged, confidence, tmdbId);
+        }
+        else if (string.IsNullOrWhiteSpace(title.Cleaned))
+        {
+            // Cleaned is empty when a title was nothing but a parenthetical; searching
+            // TMDB for an empty string burns a request and returns noise.
+            reviewNote = "unmatched";
+        }
+        else if (tmdb.BudgetExhausted)
+        {
+            reviewNote = "not searched, request budget spent";
+        }
+        else
+        {
+            var candidates = await tmdb.SearchMoviesAsync(title.Cleaned, title.YearHint, ct);
+            var enrichment = await EnrichCandidatesAsync(candidates, title, sheetRuntime, ct);
+            var match = MatchScorer.Score(title, sheetRuntime, row.Directors, enrichment.Candidates);
+
+            tmdbId = match.TmdbId;
+            confidence = match.Confidence;
+            if (tmdbId is { } matched)
+            {
+                enrichment.Details.TryGetValue(matched, out fresh);
+                enrichment.Cast.TryGetValue(matched, out freshCast);
+            }
+
+            // BudgetExhausted flips inside the call that hits the ceiling, so it can only be read
+            // AFTER the lookups. An exhausted client returns the same empty or half-enriched result
+            // as "TMDB has no such film". That result is still used for this run (the requests are
+            // already paid for) but must never be cached: it would suppress the film for 30 days.
+            var complete = !tmdb.BudgetExhausted;
+            if (complete)
+                cache.Put(new CacheEntry(key, tmdbId, confidence, now,
+                                         Negative: tmdbId is null, title.Value, sheetRuntime, directors));
+
+            if (match.Outcome != MatchOutcome.Accepted)
+                reviewNote = !complete && tmdbId is null
+                    ? "not resolved, request budget spent"
+                    : Describe(match.Outcome, confidence, tmdbId);
+        }
+
+        // The PUBLISHED runtime, which the store may have corrected. BuildRecordAsync sets both Rt and K from
+        // it, so an expanded row's four records get four runtimes and four distinct keys.
+        var published = over?.Runtime ?? sheetRuntime;
+
+        var (record, tmdbTitle) = await BuildRecordAsync(
+            row, title, published, key, tmdbId, confidence, fresh, freshCast, genreNames, now, ct);
+
+        // Kept beside the record, not on it: the cross-row rules need the sheet row, the identity key and the
+        // title TMDB gave the film, and the published record carries none of them.
+        return new ResolvedFilm(Apply(over, record), row, title, key, tmdbTitle, fromOverride, reviewNote);
+    }
+
+    /// <summary>
+    /// The record with the store's field overrides laid over it.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>Returns the record untouched when the store says nothing</b>, which is the overwhelming majority
+    /// and the reason this is an early return rather than a chain of <c>?? record.X</c>: a row with no entry
+    /// must come out byte-for-byte as it did before this task, including a title with a stray space in it.</para>
+    /// <para><b>Identity, key, runtime and every TMDB-derived field are absent here.</b> <c>I</c>, <c>K</c>,
+    /// <c>Rt</c> and <c>Mc</c> are set by the caller; the poster, backdrop, genres, vote, overview, tagline,
+    /// cast and collection have no override by design, because a wrong one of those means a wrong MATCH.</para>
+    /// </remarks>
+    private static MovieRecord Apply(RecordOverride? over, MovieRecord record)
+    {
+        if (over is null) return record;
+
+        var display = over.Titles?.Display?.Trim() is { Length: > 0 } chosen ? chosen : record.T;
+        var sort = over.Titles?.Sort?.Trim() is { Length: > 0 } given ? given : SortTitle.From(display);
+
+        return record with
+        {
+            T = display,
+            // Omitted when it would only repeat the display title: a consumer sorts on Srt ?? T.
+            Srt = sort == display.Trim() ? null : sort,
+            Y = over.Year ?? record.Y,
+            Dir = over.Directors is { } directors
+                ? directors.Split('&', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+                : record.Dir,
+            Ag = over.AppleGenre ?? record.Ag,
+            Own = over.PurchaseInfo ?? record.Own,
+            // Copied, not aliased: the store's dictionary is the parsed file's and must not be handed to a
+            // serializer that another record also holds a reference to.
+            Ex = over.Extra is { Count: > 0 } extra ? new Dictionary<string, string>(extra) : null,
+        };
+    }
     /// <returns>
     /// The record, and the title TMDB gives the film it matched (null when unmatched, or when its details never loaded).
     /// The record's own <c>T</c> is the sheet's title, so the TMDB one would otherwise be lost.

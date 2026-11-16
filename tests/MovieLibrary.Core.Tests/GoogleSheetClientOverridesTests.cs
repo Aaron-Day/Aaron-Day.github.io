@@ -3,6 +3,7 @@ using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Sheets;
 using MovieLibrary.Enrich.Pipeline;
 using MovieLibrary.Enrich.Sheets;
+using MovieLibrary.Enrich.Store;
 
 namespace MovieLibrary.Core.Tests;
 
@@ -208,7 +209,7 @@ public class GoogleSheetClientOverridesTests
 
         var result = await pipeline.RunAsync(
             [Film("Halloween", "1:30:47"), Film("Halloween", "1:50:18"), Film("Halloween (2018)", "1:46:07")],
-            o.Films, Ct);
+            o.Films, BoundStore.Empty, Ct);
 
         // a search would have thrown; each row has the id of ITS override
         Assert.Equal(new Dictionary<int, int> { [90] = 948, [110] = 949, [106] = 424 },
@@ -224,7 +225,7 @@ public class GoogleSheetClientOverridesTests
         var pipeline = TestPipeline.ThatFailsIfSearched(21, 22);
 
         var result = await pipeline.RunAsync(
-            [Film("Overboard (1987)", "1:52:17"), Film("Overboard (2018)", "1:52:18")], o.Films, Ct);
+            [Film("Overboard (1987)", "1:52:17"), Film("Overboard (2018)", "1:52:18")], o.Films, BoundStore.Empty, Ct);
 
         Assert.Equal(new Dictionary<string, int> { ["Overboard (1987)"] = 21, ["Overboard (2018)"] = 22 },
                      result.Records.ToDictionary(r => r.T, r => r.I));

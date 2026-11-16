@@ -3,6 +3,7 @@ using MovieLibrary.Core.Caching;
 using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Text;
+using MovieLibrary.Enrich.Store;
 
 namespace MovieLibrary.Core.Tests;
 
@@ -34,7 +35,7 @@ public class MoviePipelineAliasDirectorTests
         var h = EmptySearch();   // both rows come back unmatched, so both are negative entries
 
         await h.Pipeline.RunAsync(
-            [Row("Fargo", "1:38:00", "Joel Coen & Ethan Coen"), Row("Heat", "2:50:00", "Michael Mann")], NoOverrides, Ct);
+            [Row("Fargo", "1:38:00", "Joel Coen & Ethan Coen"), Row("Heat", "2:50:00", "Michael Mann")], NoOverrides, BoundStore.Empty, Ct);
 
         var fargo = Assert.Single(h.Cache.Entries, e => e.NormalizedTitle == "fargo");
         Assert.Equal("coen ethan joel", fargo.NormalizedDirectors);   // sorted name tokens, no ampersand
@@ -53,7 +54,7 @@ public class MoviePipelineAliasDirectorTests
             _ => TestPipeline.NotFound(),
         });
 
-        await h.Pipeline.RunAsync([Row("Fargo", "1:38:00", "Joel Coen")], NoOverrides, Ct);
+        await h.Pipeline.RunAsync([Row("Fargo", "1:38:00", "Joel Coen")], NoOverrides, BoundStore.Empty, Ct);
 
         var entry = Assert.Single(h.Cache.Entries, e => !e.Negative);
         Assert.Equal("coen joel", entry.NormalizedDirectors);
@@ -65,7 +66,7 @@ public class MoviePipelineAliasDirectorTests
         // Null means "written before directors were stored"; empty means "the sheet named none". Neither aliases.
         var h = EmptySearch();
 
-        await h.Pipeline.RunAsync([Row("Some Obscure Film", "1:35:00", "")], NoOverrides, Ct);
+        await h.Pipeline.RunAsync([Row("Some Obscure Film", "1:35:00", "")], NoOverrides, BoundStore.Empty, Ct);
 
         Assert.Equal("", Assert.Single(h.Cache.Entries).NormalizedDirectors);
     }
@@ -83,7 +84,7 @@ public class MoviePipelineAliasDirectorTests
         var pair = RealFilmPair.Named(name);
         var h = EmptySearch();
 
-        await h.Pipeline.RunAsync([pair.First, pair.Second], NoOverrides, Ct);
+        await h.Pipeline.RunAsync([pair.First, pair.Second], NoOverrides, BoundStore.Empty, Ct);
 
         Assert.Equal(searches, Searches(h));
         Assert.Equal(pair.SameFilm ? 1 : 2, searches);   // the table above agrees with the sheet's own verdict
@@ -110,7 +111,7 @@ public class MoviePipelineAliasDirectorTests
             };
         });
 
-        var result = await h.Pipeline.RunAsync([carrie.First, carrie.Second], NoOverrides, Ct);
+        var result = await h.Pipeline.RunAsync([carrie.First, carrie.Second], NoOverrides, BoundStore.Empty, Ct);
 
         Assert.Equal([7340, 127585], result.Records.Select(r => r.I));
         Assert.Equal(2, Searches(h));
@@ -129,7 +130,7 @@ public class MoviePipelineAliasDirectorTests
             IdentityKey.ForFilm(old, 92, TitleNormalizer.NormalizeDirectors(hitman.First.Directors)),
             4234, 0.95, TestPipeline.Now, Negative: false, old.Value, 92));   // the old shape: no directors
 
-        await h.Pipeline.RunAsync([hitman.Second], NoOverrides, Ct);
+        await h.Pipeline.RunAsync([hitman.Second], NoOverrides, BoundStore.Empty, Ct);
 
         Assert.Equal(1, Searches(h));   // not aliased to the entry that cannot vouch for itself
         Assert.Equal("gens xavier", Assert.Single(h.Cache.Entries, e => e.RuntimeMinutes == 94).NormalizedDirectors);
@@ -141,10 +142,10 @@ public class MoviePipelineAliasDirectorTests
         var h = EmptySearch();
         SheetRow[] rows = [Row("Alien", "1:57:00", ""), Row("Alien", "1:58:00", "")];
 
-        await h.Pipeline.RunAsync(rows, NoOverrides, Ct);
+        await h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, Ct);
         Assert.Equal(2, Searches(h));
 
-        await h.Pipeline.RunAsync(rows, NoOverrides, Ct);
+        await h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, Ct);
         Assert.Equal(2, Searches(h));   // warm: each film's own exact key, so the guard costs nothing twice
     }
 
