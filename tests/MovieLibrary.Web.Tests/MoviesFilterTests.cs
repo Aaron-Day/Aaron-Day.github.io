@@ -130,6 +130,21 @@ public class MoviesFilterTests : BunitContext
         Assert.Equal("The library is empty.", Spoken().StatusText);
     }
 
+    /// <summary>
+    /// A filtered address over a library that holds nothing: the page shows no filter, so it must not announce
+    /// one. The visible sentence and the spoken one are the same sentence.
+    /// </summary>
+    [Fact]
+    public void AnEmptyLibraryReachedByAFilteredAddressStillNeverBlamesAFilter()
+    {
+        var open = Render([], "/movies?q=x");
+
+        Assert.Equal("The library is empty.", open.Cut.Find(".catalog-state p").TextContent.Trim());
+
+        Settle(open);
+        Assert.Equal("The library is empty.", Spoken().StatusText);
+    }
+
     /// <remarks>R-C: a failed meta is an empty genre map, and the other facets still work.</remarks>
     [Fact]
     public void AFailedMetaCostsTheGenreFacetAndNothingElse()

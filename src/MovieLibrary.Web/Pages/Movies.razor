@@ -250,7 +250,7 @@
     /// arrived with a filter already in it, when the library's total is not what the visitor is looking at and
     /// the count of what they are looking at is.
     /// </summary>
-    private string OpeningSentence => Effective.IsFiltering ? CountSentence(shown.Count) : Sentence;
+    private string OpeningSentence => ShowFilters && Effective.IsFiltering ? CountSentence(shown.Count) : Sentence;
 
     /// <summary>
     /// The one sentence on screen, per state. No count while Loading or Failed: a count is a claim about the
