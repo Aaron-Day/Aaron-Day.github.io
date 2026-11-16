@@ -54,12 +54,30 @@ public class CatalogueTests
         Assert.All(Meta.Genres.Values, name => Assert.False(string.IsNullOrWhiteSpace(name)));
     }
 
+    /// <remarks>
+    /// "Agrees" is that the Apple text is the sheet's label for the genre TMDB names for the record's FIRST id: the
+    /// same words, or beginning with them ("Action &amp; Adventure" for Action), or the one abbreviation the sheet
+    /// uses (Sci-Fi for Science Fiction). It is the order that is being pinned, so a set listed the other way round
+    /// (Adventure first, labelled "Action &amp; Adventure") is a disagreement.
+    /// </remarks>
     [Fact]
     public void GenresAreSingleAndDoubleAndAnAppleGenreAgreesWithTheFirst()
     {
         Assert.Contains(Records, r => r.G.Length == 1);
         Assert.Contains(Records, r => r.G.Length == 2);
         Assert.True(Records.Select(r => r.Ag).Distinct().Count() >= 5, "the Apple genre text is as flat as it was");
+
+        var abbreviations = new Dictionary<string, string> { ["Science Fiction"] = "Sci-Fi" };
+
+        foreach (var (first, apple) in Records.Select(r => (First: r.G[0], r.Ag)).Distinct())
+        {
+            var named = Meta.Genres[first.ToString(System.Globalization.CultureInfo.InvariantCulture)];
+            var label = abbreviations.GetValueOrDefault(named, named);
+
+            Assert.True(apple is not null && apple.StartsWith(label, StringComparison.Ordinal),
+                $"A record whose first genre is {first} ({named}) carries the Apple genre \"{apple}\", which does "
+                + $"not begin with \"{label}\". The Apple text is the label for the FIRST id.");
+        }
     }
 
     /// <remarks>
