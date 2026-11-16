@@ -4,4 +4,9 @@ namespace MovieLibrary.Core.Store;
 /// The store could not be read, or says something that cannot mean anything. Always fatal: a build that
 /// carried on would publish a catalogue missing the owner's own corrections, with nothing going red.
 /// </summary>
-public sealed class RecordStoreException(string message) : Exception(message);
+public sealed class RecordStoreException : Exception
+{
+    public RecordStoreException(string message) : base(message) { }
+
+    public RecordStoreException(string message, Exception inner) : base(message, inner) { }
+}

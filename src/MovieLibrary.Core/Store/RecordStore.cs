@@ -91,7 +91,11 @@ public sealed record RecordStore
     /// <summary>A repository with no store, which is the normal state of a fresh clone.</summary>
     public static RecordStore Empty => new() { Version = CurrentVersion, Films = [], Series = [] };
 
-    public required int Version { get; init; }
-    public required IReadOnlyList<FilmEntry> Films { get; init; }
-    public required IReadOnlyList<SeriesEntry> Series { get; init; }
+    /// <summary>Not <c>required</c>: a missing version reads as 0, which the reader rejects with the fix spelled out.</summary>
+    public int Version { get; init; }
+
+    /// <summary>Not <c>required</c>: a hand-written store may leave a tab out, and that means no entries.</summary>
+    public IReadOnlyList<FilmEntry> Films { get; init; } = [];
+
+    public IReadOnlyList<SeriesEntry> Series { get; init; } = [];
 }

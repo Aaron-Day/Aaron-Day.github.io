@@ -29,6 +29,8 @@ public static class RecordStoreReader
         UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow,
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
         WriteIndented = true,
+        // Without this, `required` only demands that a property is PRESENT, and a JSON null walks through.
+        RespectNullableAnnotations = true,
     };
 
     /// <summary>The store at <paramref name="path"/>, or <see cref="RecordStore.Empty"/> when there is no file there.</summary>
@@ -41,6 +43,24 @@ public static class RecordStoreReader
 
     /// <param name="whatItIs">The file's path, or any name the owner would recognise. Appears in every message.</param>
     public static RecordStore Read(string json, string whatItIs)
+    {
+        try
+        {
+            return ReadCore(json, whatItIs);
+        }
+        catch (RecordStoreException)
+        {
+            throw;
+        }
+        catch (Exception ex)
+        {
+            // The safety net: whatever this file does to the parser, the run stops with the file named.
+            throw new RecordStoreException(
+                $"'{whatItIs}' could not be read as a record store: {ex.GetType().Name}: {ex.Message}", ex);
+        }
+    }
+
+    private static RecordStore ReadCore(string json, string whatItIs)
     {
         RecordStore? store;
         try
@@ -70,6 +90,9 @@ public static class RecordStoreReader
 
     private static void Validate(RecordStore store, string file)
     {
+        RejectNullEntries(store.Films, file, "film");
+        RejectNullEntries(store.Series, file, "series");
+
         RejectDuplicateKeys(store.Films.Select(f => (f.IdentityKey, Name(f.Sheet, f.IdentityKey))), file, "film");
         RejectDuplicateKeys(store.Series.Select(s => (s.IdentityKey, Name(s.Sheet, s.IdentityKey))), file, "series");
 
@@ -83,7 +106,15 @@ public static class RecordStoreReader
                     $"{where} has no records. An entry must carry at least one record, " +
                     "or it says nothing; delete the entry instead.");
 
-            foreach (var record in entry.Records) RequireUsableRecord(record, where);
+            for (var i = 0; i < entry.Records.Count; i++)
+            {
+                var position = (i + 1).ToString(CultureInfo.InvariantCulture);
+                if (entry.Records[i] is null)
+                    throw new RecordStoreException(
+                        $"{where}, record {position} is null. Remove it, or write the record's fields.");
+
+                RequireUsableRecord(entry.Records[i], $"{where}, record {position}");
+            }
 
             // An expanded row cannot share one Apple runtime: the key is {id}-{runtime}, and a record carrying
             // the bundle's length would publish a false runtime on its card.
@@ -128,6 +159,11 @@ public static class RecordStoreReader
 
     private static void RequireUsableRecord(RecordOverride record, string where)
     {
+        if (record == new RecordOverride())
+            throw new RecordStoreException(
+                $"{where} overrides nothing. An entry which corrects nothing should be deleted; " +
+                "otherwise give it a \"tmdbId\", \"candidates\" or another field.");
+
         if (record.TmdbId is not null && record.Candidates is not null)
             throw new RecordStoreException(
                 $"{where} sets both \"tmdbId\" and \"candidates\". They mean opposite things: an id is a decision, " +
@@ -180,6 +216,15 @@ public static class RecordStoreReader
             "to a row, so the entry would be silently ignored.");
     }
 
+    private static void RejectNullEntries<T>(IReadOnlyList<T> entries, string file, string kind)
+    {
+        for (var i = 0; i < entries.Count; i++)
+            if (entries[i] is null)
+                throw new RecordStoreException(
+                    $"In '{file}', {kind} entry {(i + 1).ToString(CultureInfo.InvariantCulture)} is null. " +
+                    "Remove it, or write the entry.");
+    }
+
     private static void RejectDuplicateKeys(IEnumerable<(string Key, string Name)> entries, string file, string kind)
     {
         var seen = new Dictionary<string, string>(StringComparer.Ordinal);
@@ -196,7 +241,10 @@ public static class RecordStoreReader
         }
     }
 
-    /// <summary>The entry as a human knows it: its sheet title, or its key when the echo was left out.</summary>
+    /// <summary>
+    /// The entry as a human knows it: its sheet title AND its key. The title alone cannot tell a remake pair
+    /// apart, and the key alone is not something a person recognises.
+    /// </summary>
     private static string Name(SheetEcho sheet, string key)
-        => string.IsNullOrWhiteSpace(sheet.Title) ? $"'{key}'" : $"'{sheet.Title}'";
+        => string.IsNullOrWhiteSpace(sheet.Title) ? $"'{key}'" : $"'{sheet.Title}' (key {key})";
 }

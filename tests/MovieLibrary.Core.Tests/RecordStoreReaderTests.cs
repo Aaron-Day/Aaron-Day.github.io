@@ -80,7 +80,6 @@ public class RecordStoreReaderTests
 
     [Theory]
     [InlineData("{ \"version\": 2, \"films\": [], \"series\": [] }", "version 2")]
-    [InlineData("{ \"films\": [], \"series\": [] }", "version")]
     [InlineData("not json at all", "could not be read")]
     public void AStoreThatIsNotThisVersionOrNotJsonIsRejected(string json, string mustSay)
         => Assert.Contains(mustSay, Rejected(json).Message, StringComparison.OrdinalIgnoreCase);
@@ -148,13 +147,174 @@ public class RecordStoreReaderTests
         Assert.Single(RecordStoreReader.Read(json, "t.json").Films);
     }
 
+    private static string Series(string record) =>
+        "{ \"version\": 1, \"films\": [], \"series\": [ { \"identityKey\": \"" + Key + "\", " +
+        "\"sheet\": { \"title\": \"A Show\" }, \"record\": " + record + " } ] }";
+
     [Fact]
-    public void ASeriesEntryMayNotCarryAFilmOnlyField()
+    public void AValidSeriesEntryIsAccepted()
+    {
+        var entry = Assert.Single(RecordStoreReader.Read(
+            Series("{ \"tmdbId\": 1399, \"titles\": { \"display\": \"GoT\" }, \"extra\": { \"Box\": \"3\" } }"),
+            "t.json").Series);
+
+        Assert.Equal(Key, entry.IdentityKey);
+        Assert.Equal(1399, entry.Record.TmdbId);
+        Assert.Equal("GoT", entry.Record.Titles!.Display);
+        Assert.Equal("3", Assert.Contains("Box", entry.Record.Extra!));
+    }
+
+    [Theory]
+    [InlineData("runtime", "60")]
+    [InlineData("year", "2008")]
+    [InlineData("directors", "\"A Director\"")]
+    [InlineData("purchaseInfo", "\"Blu-ray\"")]
+    public void ASeriesEntryMayNotCarryAFilmOnlyField(string field, string value)
+    {
+        var message = Rejected(Series("{ \"tmdbId\": 1399, \"" + field + "\": " + value + " }")).Message;
+
+        // "runtime and year" appear in the fix text of every series message, so match the "sets <field>," lead.
+        Assert.Contains("sets " + field + ",", message, StringComparison.Ordinal);
+        Assert.Contains("A Show", message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void AMissingVersionIsRejectedWithTheFixSpelledOut()
+        => Assert.Contains("Set \"version\": 1",
+                           Rejected("{ \"films\": [], \"series\": [] }").Message, StringComparison.Ordinal);
+
+    [Theory]
+    [InlineData("{ \"version\": 1, \"films\": [] }")]
+    [InlineData("{ \"version\": 1, \"series\": [] }")]
+    [InlineData("{ \"version\": 1 }")]
+    public void ATabLeftOutIsAnEmptyTabAndNotAnError(string json)
+    {
+        var store = RecordStoreReader.Read(json, "t.json");
+
+        Assert.Empty(store.Films);
+        Assert.Empty(store.Series);
+    }
+
+    [Fact]
+    public void AnOmittedTabDoesNotHideTheOneThatIsPresent()
+    {
+        var json = "{ \"version\": 1, \"films\": [ { \"identityKey\": \"" + Key + "\", \"records\": [ { \"tmdbId\": 1 } ] } ] }";
+
+        var store = RecordStoreReader.Read(json, "t.json");
+
+        Assert.Single(store.Films);
+        Assert.Empty(store.Series);
+    }
+
+    [Theory]
+    [InlineData("{ \"version\": 1, \"films\": [], \"series\": [], \"nonsense\": 1 }", "nonsense")]
+    [InlineData("{ \"version\": 1, \"series\": [], \"films\": [ { \"identityKey\": \"" + Key + "\", \"records\": [ { \"tmbdId\": 1 } ] } ] }", "tmbdId")]
+    public void AnUnknownPropertyIsRejectedBecauseATypoWouldOtherwiseBeDroppedInSilence(string json, string property)
+    {
+        var message = Rejected(json).Message;
+
+        Assert.Contains(property, message, StringComparison.Ordinal);
+        Assert.Contains("test.json", message, StringComparison.Ordinal);
+    }
+
+    [Theory]
+    [InlineData("{ \"version\": 1, \"films\": null, \"series\": [] }")]
+    [InlineData("{ \"version\": 1, \"films\": [], \"series\": null }")]
+    [InlineData("{ \"version\": 1, \"series\": [], \"films\": [ { \"identityKey\": null, \"records\": [ { \"tmdbId\": 1 } ] } ] }")]
+    [InlineData("{ \"version\": 1, \"series\": [], \"films\": [ { \"identityKey\": \"" + Key + "\", \"records\": null } ] }")]
+    [InlineData("{ \"version\": 1, \"films\": [], \"series\": [ { \"identityKey\": \"" + Key + "\", \"record\": null } ] }")]
+    [InlineData("{ \"version\": 1, \"series\": [], \"films\": [ null ] }")]
+    [InlineData("{ \"version\": 1, \"films\": [], \"series\": [ null ] }")]
+    [InlineData("null")]
+    public void AJsonNullIsARejectionThatNamesTheFileAndNeverARawException(string json)
+        => Assert.Contains("test.json", Rejected(json).Message, StringComparison.Ordinal);
+
+    [Fact]
+    public void ANullRecordNamesTheEntryAndThePosition()
+    {
+        var message = Rejected(Film("[ { \"tmdbId\": 1, \"runtime\": 84 }, null ]")).Message;
+
+        Assert.Contains("A Film", message, StringComparison.Ordinal);
+        Assert.Contains("record 2", message, StringComparison.Ordinal);
+        Assert.Contains("null", message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void AnEmptyRecordIsRejectedAndTheEntryAndPositionAreNamed()
+    {
+        var message = Rejected(Film("[ { \"tmdbId\": 1, \"runtime\": 84 }, { } ]")).Message;
+
+        Assert.Contains("overrides nothing", message, StringComparison.Ordinal);
+        Assert.Contains("should be deleted", message, StringComparison.Ordinal);
+        Assert.Contains("A Film", message, StringComparison.Ordinal);
+        Assert.Contains("record 2", message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void AMessageNamesWhichRecordOfAnEntryIsBad()
+    {
+        var message = Rejected(Film("[ { \"tmdbId\": 1, \"runtime\": 84 }, { \"tmdbId\": 2, \"runtime\": 0 } ]")).Message;
+
+        Assert.Contains("record 2", message, StringComparison.Ordinal);
+        Assert.DoesNotContain("record 1", message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void TwoRowsWithTheSameTitleAreToldApartByTheirKeys()
     {
         var json =
-            "{ \"version\": 1, \"films\": [], \"series\": [ { \"identityKey\": \"" + Key + "\", " +
-            "\"sheet\": { \"title\": \"A Show\" }, \"record\": { \"tmdbId\": 1399, \"runtime\": 60 } } ] }";
+            "{ \"version\": 1, \"series\": [], \"films\": [ " +
+            "{ \"identityKey\": \"" + Key + "\", \"sheet\": { \"title\": \"Halloween\" }, \"records\": [ { \"tmdbId\": 1 } ] }, " +
+            "{ \"identityKey\": \"" + Key + "\", \"sheet\": { \"title\": \"Halloween\" }, \"records\": [ { \"tmdbId\": 2 } ] } ] }";
 
-        Assert.Contains("series", Rejected(json).Message, StringComparison.OrdinalIgnoreCase);
+        var message = Rejected(json).Message;
+
+        Assert.Contains("Halloween", message, StringComparison.Ordinal);
+        Assert.Contains(Key, message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void WriteThenReadKeepsEveryValueAndWriteOmitsWhatIsNull()
+    {
+        var store = new RecordStore
+        {
+            Version = RecordStore.CurrentVersion,
+            Films =
+            [
+                new FilmEntry
+                {
+                    IdentityKey = Key,
+                    Sheet = new SheetEcho("A Film", "1:40:00", "A Director"),
+                    Note = "kept",
+                    Records = [new RecordOverride(TmdbId: 807, Runtime: 110, Titles: new TitleSet("Se7en"))],
+                },
+            ],
+            Series =
+            [
+                new SeriesEntry { IdentityKey = OtherKey, Record = new RecordOverride(Candidates: [1, 2]) },
+            ],
+        };
+
+        var json = RecordStoreReader.Write(store);
+        var back = RecordStoreReader.Read(json, "round.json");
+
+        var film = Assert.Single(back.Films);
+        Assert.Equal(Key, film.IdentityKey);
+        Assert.Equal("kept", film.Note);
+        Assert.Equal("1:40:00", film.Sheet.Runtime);
+        var record = Assert.Single(film.Records);
+        Assert.Equal(807, record.TmdbId);
+        Assert.Equal(110, record.Runtime);
+        Assert.Equal("Se7en", record.Titles!.Display);
+        Assert.Null(record.Titles!.Sort);
+        var series = Assert.Single(back.Series);
+        Assert.Equal(OtherKey, series.IdentityKey);
+        Assert.Equal([1, 2], series.Record.Candidates!);
+        Assert.Null(series.Record.TmdbId);
+
+        // Members left null are left out, not written as null.
+        Assert.DoesNotContain("null", json, StringComparison.Ordinal);
+        Assert.DoesNotContain("\"year\"", json, StringComparison.Ordinal);
+        Assert.DoesNotContain("\"appleGenre\"", json, StringComparison.Ordinal);
     }
 }
