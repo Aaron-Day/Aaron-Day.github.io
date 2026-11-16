@@ -89,4 +89,28 @@ public class RecordKeyTests
         Assert.NotEmpty(matched);
         Assert.All(matched, r => Assert.Equal($"{r.I}-{r.Rt}", r.K));
     }
+
+    // ---- position: what keeps two unmatched records of ONE expanded row apart --------------------------------
+
+    [Fact]
+    public void ThePositionDefaultsToOneAndLeavesTheUnmatchedKeyExactlyAsItWas()
+    {
+        Assert.Equal("u-3f9a21c8", RecordKey.ForFilm(null, 90, Key, 1));
+        Assert.Equal(RecordKey.ForFilm(null, 90, Key), RecordKey.ForFilm(null, 90, Key, 1));
+    }
+
+    [Fact]
+    public void ALaterPositionAppendsItselfToTheUnmatchedHash()
+    {
+        Assert.Equal("u-3f9a21c8-2", RecordKey.ForFilm(null, 90, Key, 2));
+        Assert.Equal("u-3f9a21c8-12", RecordKey.ForFilm(null, 90, Key, 12));
+    }
+
+    [Fact]
+    public void ThePositionNeverTouchesAMatchedKey()
+        => Assert.Equal("807-127", RecordKey.ForFilm(807, 127, Key, 3));
+
+    [Fact]
+    public void ThePositionIsOneBased()
+        => Assert.Throws<ArgumentOutOfRangeException>(() => RecordKey.ForFilm(null, 90, Key, 0));
 }

@@ -66,8 +66,10 @@ internal static partial class TestPipeline
         => Create(budget, req => IsSearch(req) ? Json(EmptyResults) : NotFound()).Pipeline;
 
     /// <param name="clock">Defaults to the frozen <see cref="Now"/>; pass a mutable one to age the cache.</param>
+    /// <param name="progress">Handed to the pipeline; null (the default) reports nowhere.</param>
     public static Harness Create(
-        int budget, Func<HttpRequestMessage, HttpResponseMessage> respond, Func<DateTimeOffset>? clock = null)
+        int budget, Func<HttpRequestMessage, HttpResponseMessage> respond, Func<DateTimeOffset>? clock = null,
+        IProgress<MovieLibrary.Enrich.Reporting.PassProgress>? progress = null)
     {
         clock ??= () => Now;
         var handler = new StubHandler(respond);
@@ -82,7 +84,7 @@ internal static partial class TestPipeline
         lock (TempDirs) TempDirs.Add(dir);
         var cache = new CacheStore(dir);
 
-        return new Harness(new MoviePipeline(tmdb, cache, clock), cache, handler, dir);
+        return new Harness(new MoviePipeline(tmdb, cache, clock, progress), cache, handler, dir);
     }
 
     public static bool IsSearch(HttpRequestMessage req) => req.RequestUri!.AbsolutePath == "/3/search/movie";

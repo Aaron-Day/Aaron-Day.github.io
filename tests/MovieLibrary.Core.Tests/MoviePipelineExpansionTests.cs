@@ -100,4 +100,66 @@ public class MoviePipelineExpansionTests
         Assert.Equal(0, film.I);
         Assert.Equal(BundleMinutes, film.Rt);
     }
+
+    // ---- unmatched records of one row: the natural intermediate state of "expand now, choose ids later" ------
+
+    private static BoundStore Of(params RecordOverride[] records) => new()
+    {
+        Series = new Dictionary<string, SeriesEntry>(StringComparer.Ordinal),
+        Notes = [],
+        Films = new Dictionary<string, FilmEntry>(StringComparer.Ordinal)
+        {
+            [Key] = new FilmEntry
+            {
+                IdentityKey = Key,
+                Sheet = new SheetEcho(Bundle.Title, Bundle.Runtime, Bundle.Directors),
+                Records = records,
+            },
+        },
+    };
+
+    private static Task<MoviePipelineResult> RunUnmatchedAsync(params RecordOverride[] records) =>
+        TestPipeline.ThatFailsIfSearched(1)
+                    .RunAsync([Bundle], NoTabOverrides, Of(records), default);
+
+    [Fact]
+    public async Task ASingleUnmatchedRowKeepsTheKeyItAlwaysHad()
+    {
+        var result = await RunUnmatchedAsync(new RecordOverride(Candidates: [1, 2], Runtime: 84));
+
+        var film = Assert.Single(result.Records);
+        Assert.Equal(RecordKey.UnmatchedPrefix + Key[..RecordKey.HashLength], film.K);   // no suffix, no runtime
+    }
+
+    [Fact]
+    public async Task TwoCandidatesOnlyRecordsOfOneRowGetDistinctKeysAndBothArePublished()
+    {
+        var result = await RunUnmatchedAsync(
+            new RecordOverride(Candidates: [1, 2], Runtime: 84, Titles: new TitleSet(Display: "First")),
+            new RecordOverride(Candidates: [3, 4], Runtime: 85, Titles: new TitleSet(Display: "Second")));
+
+        Assert.Equal(2, result.Records.Count);
+        Assert.Contains(result.Records, m => m.T == "First");
+        Assert.Contains(result.Records, m => m.T == "Second");
+        Assert.All(result.Records, m => Assert.Equal(0, m.I));
+        Assert.Equal(2, result.Records.Select(m => m.K).Distinct(StringComparer.Ordinal).Count());
+    }
+
+    [Fact]
+    public async Task TwoRecordsWithTheSameRuntimeStillGetDistinctKeysBecausePositionNotRuntimeSeparatesThem()
+    {
+        var result = await RunUnmatchedAsync(
+            new RecordOverride(Candidates: [1, 2], Runtime: 84, Titles: new TitleSet(Display: "First")),
+            new RecordOverride(Candidates: [3, 4], Runtime: 84, Titles: new TitleSet(Display: "Second")),
+            new RecordOverride(Candidates: [5, 6], Runtime: 84, Titles: new TitleSet(Display: "Third")));
+
+        // Three, not two: a scheme that suffixed the runtime onto every record after the first would still part
+        // two records, and only a third at the same runtime shows that it is the position doing the work.
+        Assert.Equal(3, result.Records.Count);
+        Assert.All(result.Records, m => Assert.Equal(84, m.Rt));
+        Assert.Equal(3, result.Records.Select(m => m.K).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(RecordKey.UnmatchedPrefix + Key[..RecordKey.HashLength], result.Records.Single(m => m.T == "First").K);
+        Assert.EndsWith("-2", result.Records.Single(m => m.T == "Second").K, StringComparison.Ordinal);
+        Assert.EndsWith("-3", result.Records.Single(m => m.T == "Third").K, StringComparison.Ordinal);
+    }
 }

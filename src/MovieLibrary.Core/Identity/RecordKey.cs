@@ -35,6 +35,11 @@ namespace MovieLibrary.Core.Identity;
 /// directors, so correcting any of them re-keys the record. That is the right trade for an unmatched film, which
 /// exists only to be fixed, and it is why the owner chose this over slugs for everything (a slug would re-key
 /// MATCHED films on a title edit, silently breaking saved favourites).</para>
+/// <para>When one sheet row publishes several records (a bundle expanded in the record store), the first unmatched
+/// record keeps that form and the n-th, for n above 1, appends <c>-n</c>: <c>u-d2f1c6e2</c>, <c>u-d2f1c6e2-2</c>. The
+/// suffix cannot collide with another row's key, because a hash is exactly <see cref="HashLength"/> characters. The
+/// position is the record's place in the store entry, so reordering or deleting an earlier unmatched record re-keys
+/// the later ones; that is the same trade as the rest of this form, which exists only to be fixed.</para>
 /// </remarks>
 public static class RecordKey
 {
@@ -48,7 +53,11 @@ public static class RecordKey
     /// <param name="tmdbId">The matched TMDB id; null, zero or negative means unmatched.</param>
     /// <param name="runtimeMinutes">The row's runtime in minutes. Separates two cuts of one TMDB film; ignored when unmatched.</param>
     /// <param name="identityKey">Output of <c>IdentityKey.ForFilm</c>; only read for an unmatched film.</param>
-    public static string ForFilm(int? tmdbId, int runtimeMinutes, string identityKey)
+    /// <param name="position">
+    /// The record's 1-based position within its record-store entry; 1 for a row that publishes one record. Only read
+    /// for an unmatched film, and only when it is not 1 (see the remarks on the unmatched form).
+    /// </param>
+    public static string ForFilm(int? tmdbId, int runtimeMinutes, string identityKey, int position = 1)
     {
         if (tmdbId is { } id and > 0)
             return $"{id.ToString(CultureInfo.InvariantCulture)}-{runtimeMinutes.ToString(CultureInfo.InvariantCulture)}";
@@ -59,6 +68,14 @@ public static class RecordKey
                 $"got '{identityKey}'. The caller should be passing IdentityKey.ForFilm's output.",
                 nameof(identityKey));
 
-        return UnmatchedPrefix + identityKey[..HashLength];
+        if (position < 1)
+            throw new ArgumentOutOfRangeException(nameof(position), position, "A record's position within its entry is 1-based.");
+
+        // The identity key is the ROW's, and every record of an expanded row shares it, so the hash alone would give
+        // two unmatched records of one row one key and the reconciler would drop one. Neither the runtime (two films
+        // in a bundle can run the same time) nor the id (there is none) separates them; the position is the only thing
+        // guaranteed unique. Position 1 adds nothing, so every row that publishes one record keeps the key it always had.
+        var hash = UnmatchedPrefix + identityKey[..HashLength];
+        return position == 1 ? hash : $"{hash}-{position.ToString(CultureInfo.InvariantCulture)}";
     }
 }

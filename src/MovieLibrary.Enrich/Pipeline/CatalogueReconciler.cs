@@ -18,9 +18,10 @@ namespace MovieLibrary.Enrich.Pipeline;
 /// <param name="TmdbTitle">The matched film's title as TMDB gives it; null when unmatched or when its details never loaded.</param>
 /// <param name="FromOverride">The owner forced this id from the Overrides tab, so no heuristic may withdraw it.</param>
 /// <param name="ReviewNote">Why a human should look at this row, without the row prefix; null when no one should.</param>
+/// <param name="Position">This record's 1-based place in its store entry; 1 for a row that publishes one record. Needed to rebuild the <c>u-</c> key.</param>
 internal sealed record ResolvedFilm(
     MovieRecord Record, SheetRow Row, NormalizedTitle SheetTitle, string IdentityKey,
-    string? TmdbTitle, bool FromOverride, string? ReviewNote)
+    string? TmdbTitle, bool FromOverride, string? ReviewNote, int Position = 1)
 {
     /// <summary>The note as the review queue shows it: <c>Title (runtime, directors) → note</c>.</summary>
     public string? ReviewLine => ReviewNote is null ? null : Line(Row, ReviewNote);
@@ -164,7 +165,7 @@ internal static class CatalogueReconciler
         Record = film.Record with
         {
             I = 0,
-            K = RecordKey.ForFilm(null, film.Record.Rt, film.IdentityKey),
+            K = RecordKey.ForFilm(null, film.Record.Rt, film.IdentityKey, film.Position),
             Y = film.SheetTitle.YearHint,
             P = null,
             B = null,

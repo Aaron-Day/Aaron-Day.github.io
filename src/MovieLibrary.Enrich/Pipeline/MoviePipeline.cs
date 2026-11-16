@@ -145,8 +145,8 @@ public sealed class MoviePipeline(
             IReadOnlyList<RecordOverride?> wanted =
                 bound.Films.TryGetValue(key, out var entry) ? [.. entry.Records] : [null];
 
-            foreach (var over in wanted)
-                resolved.Add(await ResolveAsync(row, title, runtime, directors, key, over, overrides, genreNames, now, ct));
+            for (var i = 0; i < wanted.Count; i++)
+                resolved.Add(await ResolveAsync(row, title, runtime, directors, key, wanted[i], i + 1, overrides, genreNames, now, ct));
 
             // After the records, so the count still means rows FINISHED. An expanded row is one row.
             progress?.Report(new PassProgress { Done = ++done, Total = ordered.Count });
@@ -322,9 +322,10 @@ public sealed class MoviePipeline(
     /// <param name="sheetRuntime">The row's runtime. The cache lookup and the search use THIS, never the override's.</param>
     /// <param name="key">The row's identity key, already computed. Also the store's binding key.</param>
     /// <param name="over">The store's record for this one output record, or null when the store says nothing.</param>
+    /// <param name="position">The record's 1-based place in its store entry, 1 when there is none. It keeps unmatched records of one row apart.</param>
     private async Task<ResolvedFilm> ResolveAsync(
         SheetRow row, NormalizedTitle title, int sheetRuntime, string directors, string key,
-        RecordOverride? over, IReadOnlyDictionary<string, int> overrides,
+        RecordOverride? over, int position, IReadOnlyDictionary<string, int> overrides,
         SortedDictionary<int, string> genreNames, DateTimeOffset now, CancellationToken ct)
     {
         int? tmdbId = null;
@@ -415,11 +416,11 @@ public sealed class MoviePipeline(
         var published = over?.Runtime ?? sheetRuntime;
 
         var (record, tmdbTitle) = await BuildRecordAsync(
-            row, title, published, key, tmdbId, confidence, fresh, freshCast, genreNames, now, ct);
+            row, title, published, key, position, tmdbId, confidence, fresh, freshCast, genreNames, now, ct);
 
         // Kept beside the record, not on it: the cross-row rules need the sheet row, the identity key and the
         // title TMDB gave the film, and the published record carries none of them.
-        return new ResolvedFilm(Apply(over, record), row, title, key, tmdbTitle, fromOverride, reviewNote);
+        return new ResolvedFilm(Apply(over, record), row, title, key, tmdbTitle, fromOverride, reviewNote, position);
     }
 
     /// <summary>
@@ -456,12 +457,13 @@ public sealed class MoviePipeline(
             Ex = over.Extra is { Count: > 0 } extra ? new Dictionary<string, string>(extra) : null,
         };
     }
+
     /// <returns>
     /// The record, and the title TMDB gives the film it matched (null when unmatched, or when its details never loaded).
     /// The record's own <c>T</c> is the sheet's title, so the TMDB one would otherwise be lost.
     /// </returns>
     private async Task<(MovieRecord Record, string? TmdbTitle)> BuildRecordAsync(
-        SheetRow row, NormalizedTitle title, int runtime, string identityKey,
+        SheetRow row, NormalizedTitle title, int runtime, string identityKey, int position,
         int? tmdbId, double confidence, TmdbMovie? fresh, IReadOnlyList<TmdbCastMember>? freshCast,
         SortedDictionary<int, string> genreNames, DateTimeOffset now, CancellationToken ct)
     {
@@ -476,7 +478,7 @@ public sealed class MoviePipeline(
 
         var record = new MovieRecord(
             I: tmdbId ?? 0,
-            K: RecordKey.ForFilm(tmdbId, runtime, identityKey),
+            K: RecordKey.ForFilm(tmdbId, runtime, identityKey, position),
             T: row.Title,
             Y: year,
             Rt: runtime,

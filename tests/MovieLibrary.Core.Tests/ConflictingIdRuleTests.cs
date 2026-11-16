@@ -341,4 +341,15 @@ public class ConflictingIdRuleTests
     }
 
     public static TheoryData<int> Collisions() => [.. RealCollision.All.Select(c => c.Id)];
+
+    [Fact]
+    public void ARejectedRecordKeepsItsPositionInTheKeySoSiblingsStayDistinct()
+    {
+        var impostor = Impostor() with { Position = 2 };
+
+        var (films, _) = Run(impostor, RealFilm());
+
+        Assert.EndsWith("-2", films[0].Record.K, StringComparison.Ordinal);
+        Assert.StartsWith("u-", films[0].Record.K, StringComparison.Ordinal);
+    }
 }
