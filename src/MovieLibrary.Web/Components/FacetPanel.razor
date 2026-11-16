@@ -14,6 +14,22 @@
    text and starts the timers. There is no form and no submit: with per-keystroke filtering there is nothing
    for Enter to submit, and a form whose submit does nothing is a worse control than none.
 
+   THE GENRE AND DECADE GROUPS ARE DISCLOSURES (details and summary), and the confidence radios are not. With the
+   full library the two groups were about 30 tab stops between the search box and the pager, none of them wanted by
+   a visitor who is only paging; a closed group is one stop. The summary is the group name, then the selected
+   count in parentheses when it is not zero: that is part of its accessible name and is deliberately not a live
+   region, because a disclosure's label changing is not a status message. The radios stay open because a group of
+   three is small and losing sight of the current band is worse than two extra stops. A summary is natively
+   focusable and operable, so it has no role, no tabindex and no key handler, and a test says so.
+   Each group keeps its fieldset and a visually-hidden legend inside the disclosure, so a control inside still
+   reports its group by name.
+
+   A GROUP IS OPEN ON LOAD IF AND ONLY IF IT HOLDS A SELECTION, and that is derived, never stored: the filters live
+   in the address already. Open is a LATCH. A selection arriving later (the back button restoring a filtered
+   address) opens the group, and nothing here ever closes one: unticking the last box must not close the group
+   the visitor is standing in, because focus on a control that has just been hidden falls to the body. The
+   attribute is only re-sent when the field changes, so Blazor never fights the visitor's own click on a summary.
+
    NO live region of any kind in here. The page announces the count through the announcer, once, after the
    visitor has stopped changing things; a status role on a heading or a count here would be a second utterance
    from a second source. *@
@@ -44,17 +60,20 @@
        id, not an empty fieldset with a dangling legend, and not an error. The other facets still work. *@
     @if (Genres.Count > 0)
     {
-        <fieldset>
-            <legend>Genre</legend>
-            <div class="options">
-                @foreach (var genre in Genres)
-                {
-                    var id = genre.Id;
-                    <label><input type="checkbox" checked="@State.Genres.Contains(id)"
-                                  @onchange="e => SetGenre(id, (bool)e.Value!)" /> @genre.Name</label>
-                }
-            </div>
-        </fieldset>
+        <details class="facet-group" open="@genreOpen">
+            <summary>@GroupName("Genre", State.Genres.Count)</summary>
+            <fieldset>
+                <legend class="visually-hidden">Genre</legend>
+                <div class="options">
+                    @foreach (var genre in Genres)
+                    {
+                        var id = genre.Id;
+                        <label><input type="checkbox" checked="@State.Genres.Contains(id)"
+                                      @onchange="e => SetGenre(id, (bool)e.Value!)" /> @genre.Name</label>
+                    }
+                </div>
+            </fieldset>
+        </details>
     }
 
     @* A decade is a year range and a year is not a quantity: the label comes from DecadeLabel and is never
@@ -63,22 +82,25 @@
        counting in the totals. It is offered only when some film really has no year. *@
     @if (Decades.Count > 0 || HasUnknownYear)
     {
-        <fieldset>
-            <legend>Decade</legend>
-            <div class="options">
-                @foreach (var decade in Decades)
-                {
-                    var year = decade;
-                    <label><input type="checkbox" checked="@State.Decades.Contains(year)"
-                                  @onchange="e => SetDecade(year, (bool)e.Value!)" /> @CatalogFilter.DecadeLabel(year)</label>
-                }
-                @if (HasUnknownYear)
-                {
-                    <label><input type="checkbox" checked="@State.YearUnknown"
-                                  @onchange="e => SetYearUnknown((bool)e.Value!)" /> Year unknown</label>
-                }
-            </div>
-        </fieldset>
+        <details class="facet-group" open="@decadeOpen">
+            <summary>@GroupName("Decade", State.Decades.Count + (State.YearUnknown ? 1 : 0))</summary>
+            <fieldset>
+                <legend class="visually-hidden">Decade</legend>
+                <div class="options">
+                    @foreach (var decade in Decades)
+                    {
+                        var year = decade;
+                        <label><input type="checkbox" checked="@State.Decades.Contains(year)"
+                                      @onchange="e => SetDecade(year, (bool)e.Value!)" /> @CatalogFilter.DecadeLabel(year)</label>
+                    }
+                    @if (HasUnknownYear)
+                    {
+                        <label><input type="checkbox" checked="@State.YearUnknown"
+                                      @onchange="e => SetYearUnknown((bool)e.Value!)" /> Year unknown</label>
+                    }
+                </div>
+            </fieldset>
+        </details>
     }
 
     <div class="facet-sort">
@@ -93,6 +115,16 @@
 
 @code {
     private ElementReference search;
+    private bool genreOpen;
+    private bool decadeOpen;
+
+    protected override void OnParametersSet()
+    {
+        genreOpen |= State.Genres.Count > 0;
+        decadeOpen |= State.Decades.Count > 0 || State.YearUnknown;
+    }
+
+    private static string GroupName(string name, int selected) => selected > 0 ? $"{name} ({selected})" : name;
 
     /// <summary>The filter in force: the radios, the checkboxes and the select all render from this.</summary>
     [Parameter, EditorRequired] public required FilterState State { get; set; }

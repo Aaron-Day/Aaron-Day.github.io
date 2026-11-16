@@ -20,6 +20,12 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// library can have more than <see cref="MostStopsTheRealPageCanHave"/> = 44 stops. It needs one press more than
 /// that to leave, and <see cref="SpareForNewControls"/> is room for a control someone adds to the shell later.
 /// </para>
+/// <para>
+/// The genre and decade groups are <c>details</c> disclosures that start closed, so a walk that opens none of them
+/// makes about 5 stops in the panel and not 29 to 33 (FacetPanelTests counts it). The ceiling above is left as it
+/// is on purpose: it is still the right bound for a walk that has opened every group, and lowering it would make
+/// the gate fail the day someone opens them.
+/// </para>
 /// </remarks>
 internal static class TabWalk
 {

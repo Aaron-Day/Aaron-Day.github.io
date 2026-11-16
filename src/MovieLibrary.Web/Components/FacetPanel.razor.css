@@ -55,3 +55,16 @@ select { align-self: flex-start; }
 @media (hover: hover) {
   input[type="search"]:hover, select:hover { border-color: var(--accent); }
 }
+
+/* The genre and decade disclosures. The summary keeps the browser's own marker, which forced colors repaints
+   for free, so it stays display: list-item. The block padding is what makes it --touch tall: 1.5 unitless
+   line-height at 1rem is 1.5rem of text, and the padding makes up the rest, in em so that a reader's larger
+   text only makes the row taller (SC 1.4.12 cannot clip it). The open group's controls are indented by the
+   .options rule above and need nothing here. NO MOTION: the browser opens and closes a details instantly. */
+.facet-group > summary {
+  padding-block: max(.25rem, calc((var(--touch) - 1.5rem) / 2));
+  font-weight: 600; line-height: 1.5; color: var(--txt); cursor: pointer;
+}
+
+/* Bootstrap's reboot removes the tap highlight, so a pressed summary needs its own :active. */
+.facet-group > summary:active { background-color: var(--line); }

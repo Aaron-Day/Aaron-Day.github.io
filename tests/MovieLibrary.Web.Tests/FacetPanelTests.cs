@@ -314,8 +314,9 @@ public class FacetPanelTests : BunitContext
 
         var controls = MarkupRules.InteractiveElements(root);
 
-        // T1: the panel offers a search box, three radios, three genres, four decade boxes and a select.
-        Assert.Equal(1 + 3 + 3 + 4 + 1, controls.Count);
+        // T1: the panel offers a search box, three radios, three genres, four decade boxes, a select
+        // and the two disclosure summaries, which are focusable and must be named like any other control.
+        Assert.Equal(1 + 3 + 3 + 4 + 1 + 2, controls.Count);
         Assert.Empty(MarkupRules.EveryInteractiveElementHasAnAccessibleName(root));
         Assert.Empty(MarkupRules.NoFocusableWidgetIsNestedInsideAnother(root));
         Assert.Empty(MarkupRules.EveryIdReferenceResolves(root));
@@ -351,5 +352,128 @@ public class FacetPanelTests : BunitContext
         var cut = Panel();
 
         await cut.InvokeAsync(() => cut.Instance.FocusSearchAsync());   // does not throw
+    }
+
+    // ================================================================ the keyboard cost of the panel
+
+    private static IReadOnlyList<GenreOption> TmdbGenres =>
+        Enumerable.Range(1, 19).Select(n => new GenreOption(n, "Genre " + n)).ToArray();
+
+    private static readonly int[] TenDecades = [2020, 2010, 2000, 1990, 1980, 1970, 1960, 1950, 1940, 1930];
+
+    /// <remarks>
+    /// The real library's panel: all 19 of TMDB's genres and 10 decades, nothing selected. It was 33 stops ahead
+    /// of the pager (the search box, one for the confidence radio group, 19 genres, 10 decades, Year unknown and
+    /// the sort) and is 5 now: the same three, and one summary per closed group. TabWalk.Presses (50) is derived
+    /// from the CEILING of 44 stops and is left alone, because the ceiling is still the right bound for a walk
+    /// that has opened every group; the real figure in the gate catalogue is now far under it.
+    /// </remarks>
+    [Fact]
+    public void TheRealLibrarysPanelCostsFiveTabStopsWithNothingSelected()
+    {
+        var cut = Panel(genres: TmdbGenres, decades: TenDecades);
+
+        Assert.Equal(1 + 1 + 1 + 1 + 1, TabStops.Count(Root(cut)));
+    }
+
+    [Fact]
+    public void ASelectionOpensItsGroupAndOnlyItsGroupAndTheStopsAreTheOpenGroupsControls()
+    {
+        var cut = Panel(state: FilterState.Default with { Genres = [28] }, genres: TmdbGenres, decades: TenDecades);
+
+        Assert.Equal(1 + 1 + (1 + 19) + 1 + 1, TabStops.Count(Root(cut)));
+    }
+
+    // ================================================================ the disclosure
+
+    private static IElement Details(IRenderedComponent<FacetPanel> cut, string name) =>
+        cut.FindAll("details").Single(d => d.QuerySelector(":scope > summary")!.TextContent.Trim().StartsWith(name));
+
+    [Fact]
+    public void GenreAndDecadeAreEachADetailsWithASummaryAndTheConfidenceRadiosAreNot()
+    {
+        var cut = Panel();
+
+        Assert.Equal(2, cut.FindAll("details").Count);
+        Assert.Equal(new[] { "Genre", "Decade" },
+                     cut.FindAll("details > summary").Select(s => s.TextContent.Trim()));
+        Assert.Empty(cut.FindAll("details input[type=radio]"));
+        Assert.Equal(3, cut.FindAll("input[type=radio]").Count);
+    }
+
+    /// <remarks>A summary is natively focusable and operable. Adding any of these would only be able to break it.</remarks>
+    [Fact]
+    public void ASummaryCarriesNoRoleNoTabindexAndNoHandler()
+    {
+        var cut = Panel();
+
+        Assert.NotEmpty(cut.FindAll("summary"));
+        Assert.All(cut.FindAll("summary"), s =>
+            Assert.DoesNotContain(s.Attributes, a => a.Name is "role" or "tabindex"
+                || a.Name.StartsWith("on", StringComparison.Ordinal)
+                || a.Name.StartsWith("blazor:on", StringComparison.Ordinal)));
+    }
+
+    [Theory]
+    [InlineData(0, "Genre")]
+    [InlineData(1, "Genre (1)")]
+    [InlineData(3, "Genre (3)")]
+    public void TheGenreSummaryNamesTheGroupAndAddsTheCountOnlyWhenThereIsOne(int selected, string expected)
+    {
+        var cut = Panel(state: FilterState.Default with { Genres = Genres.Take(selected).Select(g => g.Id).ToList() });
+
+        Assert.Equal(expected, Details(cut, "Genre").QuerySelector(":scope > summary")!.TextContent.Trim());
+    }
+
+    [Fact]
+    public void TheDecadeCountIncludesYearUnknownBecauseThatBoxIsInTheSameGroup()
+    {
+        var cut = Panel(state: FilterState.Default with { Decades = [1990, 2000], YearUnknown = true });
+
+        Assert.Equal("Decade (3)", Details(cut, "Decade").QuerySelector(":scope > summary")!.TextContent.Trim());
+    }
+
+    [Fact]
+    public void AGroupStartsOpenIfAndOnlyIfItHoldsASelection()
+    {
+        var none = Panel();
+        Assert.All(none.FindAll("details"), d => Assert.False(d.HasAttribute("open")));
+
+        var genre = Panel(state: FilterState.Default with { Genres = [28] });
+        Assert.True(Details(genre, "Genre").HasAttribute("open"));
+        Assert.False(Details(genre, "Decade").HasAttribute("open"));
+
+        var unknown = Panel(state: FilterState.Default with { YearUnknown = true });
+        Assert.False(Details(unknown, "Genre").HasAttribute("open"));
+        Assert.True(Details(unknown, "Decade").HasAttribute("open"));
+    }
+
+    /// <remarks>
+    /// Unticking the last box must not close the group the visitor is standing in: focus on a closed-away control
+    /// falls to the body. So open is a latch that selection sets and nothing in the panel clears.
+    /// </remarks>
+    [Fact]
+    public void ClearingTheLastSelectionDoesNotCloseTheGroupAndALateSelectionOpensIt()
+    {
+        var cut = Panel(state: FilterState.Default with { Genres = [28] });
+        cut.Render(p => p.Add(x => x.State, FilterState.Default));
+        Assert.True(Details(cut, "Genre").HasAttribute("open"));
+        Assert.False(Details(cut, "Decade").HasAttribute("open"));
+
+        cut.Render(p => p.Add(x => x.State, FilterState.Default with { Decades = [1990] }));
+        Assert.True(Details(cut, "Decade").HasAttribute("open"));
+    }
+
+    [Fact]
+    public void TheGroupStillHasItsFieldsetAndAnAccessibleLegendInsideTheDisclosure()
+    {
+        var cut = Panel();
+
+        foreach (var name in new[] { "Genre", "Decade" })
+        {
+            var legend = Details(cut, name).QuerySelector(":scope > fieldset > legend")!;
+            Assert.Equal(name, legend.TextContent.Trim());
+            Assert.Contains("visually-hidden", legend.ClassName);
+        }
     }
 }
