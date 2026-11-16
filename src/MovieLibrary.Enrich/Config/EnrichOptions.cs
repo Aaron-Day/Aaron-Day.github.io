@@ -1,5 +1,6 @@
 using System.Globalization;
 using System.Text.Json.Serialization;
+using MovieLibrary.Core.Store;
 
 namespace MovieLibrary.Enrich.Config;
 
@@ -16,16 +17,22 @@ namespace MovieLibrary.Enrich.Config;
 /// <b>A forced refresh under a budget is an error too</b>: it would replace the committed cache index with the handful
 /// of entries a budget-stopped run managed to fetch. See <see cref="Load"/>.
 /// </remarks>
+/// <param name="StoreFile">
+/// Where <c>record-store.json</c> is read from, relative to the working directory. The build runs from the
+/// repository root, so the default is the file beside the solution. An absent file is an empty store, which is
+/// the normal state of a fresh clone. A path, never a secret.
+/// </param>
 public sealed record EnrichOptions(
     string SheetId, [property: JsonIgnore] string Token, int MaxRequests,
-    string CacheRoot, string OutputRoot, bool Fixtures, bool ForceRefresh)
+    string CacheRoot, string OutputRoot, bool Fixtures, bool ForceRefresh,
+    string StoreFile = RecordStoreReader.DefaultFileName)
 {
     public const string DefaultSheetId = "1gkDwOi5-Gvm48WkYz8noYUb5i6QjfQSDLpEDYV5QlHk";
 
     public override string ToString()
         => $"EnrichOptions {{ SheetId = {SheetId}, Token = {(Token.Length == 0 ? "<none>" : "<redacted>")}, " +
            $"MaxRequests = {MaxRequests}, CacheRoot = {CacheRoot}, OutputRoot = {OutputRoot}, " +
-           $"Fixtures = {Fixtures}, ForceRefresh = {ForceRefresh} }}";
+           $"Fixtures = {Fixtures}, ForceRefresh = {ForceRefresh}, StoreFile = {StoreFile} }}";
 
     public static EnrichOptions Load(string[] args, IDictionary<string, string> env)
     {
@@ -66,7 +73,8 @@ public sealed record EnrichOptions(
             OutputRoot: Flag(args, "--out")
                         ?? (fixtures ? "dev-data" : "src/MovieLibrary.Web/wwwroot/data"),
             Fixtures: fixtures,
-            ForceRefresh: force);
+            ForceRefresh: force,
+            StoreFile: Flag(args, "--store") ?? RecordStoreReader.DefaultFileName);
     }
 
     /// <summary>

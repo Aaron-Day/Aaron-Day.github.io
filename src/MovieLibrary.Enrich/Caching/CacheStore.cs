@@ -1,5 +1,6 @@
 using System.Text.Json;
 using MovieLibrary.Core.Caching;
+using MovieLibrary.Core.Identity;
 
 namespace MovieLibrary.Enrich.Caching;
 
@@ -30,7 +31,7 @@ public sealed class CacheStore(string rootPath)
     };
 
     /// <summary>How far apart, in minutes, two runtimes of one film may be and still be a re-encode of it.</summary>
-    private const int AliasToleranceMinutes = 2;
+    private const int AliasToleranceMinutes = RuntimeDrift.ToleranceMinutes;
 
     private readonly Dictionary<string, CacheEntry> _byKey = new(StringComparer.Ordinal);
 

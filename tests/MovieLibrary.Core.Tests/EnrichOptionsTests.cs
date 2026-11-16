@@ -20,6 +20,23 @@ public class EnrichOptionsTests : IDisposable
     // ---- Load: defaults and precedence -------------------------------------------------
 
     [Fact]
+    public void TheStoreFileDefaultsBesideTheSolutionAndTheFlagMovesIt()
+    {
+        Assert.Equal("record-store.json", Load([]).StoreFile);
+        Assert.Equal("elsewhere.json", Load(["--store", "elsewhere.json"]).StoreFile);
+        Assert.Equal("elsewhere.json", Load(["--store=elsewhere.json"]).StoreFile);
+    }
+
+    [Fact]
+    public void ToStringShowsTheStorePathAndStillRedactsTheToken()
+    {
+        var text = Load(["--store", "mine.json"], ("TMDB_TOKEN", "eyJ.secret.value")).ToString();
+
+        Assert.Contains("StoreFile = mine.json", text, StringComparison.Ordinal);
+        Assert.DoesNotContain("eyJ.secret.value", text, StringComparison.Ordinal);
+    }
+
+    [Fact]
     public void DefaultsNeedNeitherArgumentsNorEnvironment()
     {
         var o = Load([]);

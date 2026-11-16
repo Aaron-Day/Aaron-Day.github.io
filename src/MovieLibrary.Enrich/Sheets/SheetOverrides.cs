@@ -63,10 +63,7 @@ public sealed record SheetOverrides(
 
     /// <summary>The runtime in whole minutes as a film's sheet row is read, or null when it is not a film runtime.</summary>
     internal static int? Minutes(string runtime)
-    {
-        try { return RuntimeParser.FilmMinutes(runtime); }
-        catch (FormatException) { return null; }
-    }
+        => RuntimeParser.TryFilmMinutes(runtime, out var minutes) ? minutes : null;
 
     private static string RuntimeText(string runtime)
         => Minutes(runtime) is { } m ? $"{runtime} ({m} min)" : runtime;

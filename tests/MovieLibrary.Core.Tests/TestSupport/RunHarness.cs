@@ -1,6 +1,7 @@
 using System.Net;
 using System.Text;
 using System.Text.Json;
+using MovieLibrary.Core.Store;
 using MovieLibrary.Core.Throttling;
 using MovieLibrary.Enrich.Config;
 using MovieLibrary.Enrich.Emit;
@@ -21,6 +22,15 @@ internal sealed class RunHarness : IDisposable
     public string Root { get; } = Path.Combine(Path.GetTempPath(), "ml-run-" + Guid.NewGuid());
     public string CacheDir => Path.Combine(Root, "cache");
     public string OutDir => Path.Combine(Root, "out");
+    /// <summary>Where this run looks for its record store. Nothing is there until <see cref="WriteStore"/> is called.</summary>
+    public string StorePath => Path.Combine(Root, RecordStoreReader.DefaultFileName);
+
+    /// <summary>
+    /// The record store this run reads. Without a call there is no file, which is an empty store and the normal
+    /// state of a repository.
+    /// </summary>
+    public void WriteStore(string json) => File.WriteAllText(StorePath, json);
+
     public string SummaryPath => Path.Combine(Root, "summary.md");
     public string GitHubOutputPath => Path.Combine(Root, "github-output.txt");
 
@@ -47,7 +57,7 @@ internal sealed class RunHarness : IDisposable
     public RunHarness()
     {
         Directory.CreateDirectory(Root);   // the Actions files live here, and in Actions they exist before the tool starts
-        Options = new EnrichOptions("sheet-id", "eyJ.stub.token", 0, CacheDir, OutDir, false, false);
+        Options = new EnrichOptions("sheet-id", "eyJ.stub.token", 0, CacheDir, OutDir, false, false, StorePath);
         SheetHandler = new StubHandler(SheetRespond);
         TmdbHandler = new StubHandler(req => Tmdb(req));
     }

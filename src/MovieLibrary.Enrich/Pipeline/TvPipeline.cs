@@ -170,10 +170,7 @@ public sealed class TvPipeline(
     /// </summary>
     public static string OverrideKey(string seriesName) => KeyOf(TitleNormalizer.Normalize(seriesName));
 
-    internal static string KeyOf(NormalizedTitle title)
-        => title.YearHint is { } year
-            ? $"{title.Value} {year.ToString(CultureInfo.InvariantCulture)}"
-            : title.Value;
+    internal static string KeyOf(NormalizedTitle title) => IdentityKey.SeriesKeyValue(title);
 
     private static void EnsureSlugsAreUsable(IEnumerable<(string Name, string Slug)> series)
     {

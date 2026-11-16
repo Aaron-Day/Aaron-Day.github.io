@@ -22,6 +22,29 @@ public static class IdentityKey
     public static string ForSeries(NormalizedTitle series)
         => Hash($"series|{series.Value}");
 
+    /// <summary>
+    /// The folded name a series is keyed and cached under: its folded title with a trailing year folded back
+    /// in, so <c>X</c> and <c>X (2020)</c> are two series and not one.
+    /// </summary>
+    /// <remarks>
+    /// <c>Normalize</c> moves a trailing year out into <c>YearHint</c>, which leaves those two names sharing
+    /// one <c>Value</c>. This puts it back. The one definition of the rule: <c>TvPipeline.KeyOf</c> delegates
+    /// here, and the record store's binder calls <see cref="ForSeriesName"/>, so a series cannot be keyed one
+    /// way by the pipeline and another by the store.
+    /// </remarks>
+    public static string SeriesKeyValue(NormalizedTitle title)
+        => title.YearHint is { } year
+            ? $"{title.Value} {year.ToString(CultureInfo.InvariantCulture)}"
+            : title.Value;
+
+    /// <summary>The identity key for a series named as the Shows tab names it.</summary>
+    public static string ForSeriesName(string seriesName)
+    {
+        var title = TitleNormalizer.Normalize(seriesName);
+
+        return ForSeries(title with { Value = SeriesKeyValue(title) });
+    }
+
     private static string Hash(string input)
         => Convert.ToHexStringLower(SHA1.HashData(Encoding.UTF8.GetBytes(input)));
 }

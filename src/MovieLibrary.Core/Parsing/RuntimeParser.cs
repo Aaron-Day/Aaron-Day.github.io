@@ -15,6 +15,24 @@ public static class RuntimeParser
     }
 
     /// <summary>
+    /// <see cref="FilmMinutes"/> without the exception, for the callers that treat an unreadable runtime as a
+    /// fact about the row rather than as an error. Keeps the try/catch in one place instead of once per caller.
+    /// </summary>
+    public static bool TryFilmMinutes(string raw, out int minutes)
+    {
+        try
+        {
+            minutes = FilmMinutes(raw);
+            return true;
+        }
+        catch (FormatException)
+        {
+            minutes = 0;
+            return false;
+        }
+    }
+
+    /// <summary>
     /// Episode runtimes arrive as h:mm:ss too, but Google Sheets coerced the
     /// original mm:ss into a duration, so "45:37" became "45:37:00" — 45 hours.
     /// Any value claiming ten or more hours is really minutes and seconds.

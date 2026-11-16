@@ -1,6 +1,8 @@
 using System.Net;
 using MovieLibrary.Core.Models;
+using MovieLibrary.Core.Parsing;
 using MovieLibrary.Core.Sheets;
+using MovieLibrary.Core.Store;
 using MovieLibrary.Core.Throttling;
 using MovieLibrary.Enrich.Caching;
 using MovieLibrary.Enrich.Config;
@@ -8,6 +10,7 @@ using MovieLibrary.Enrich.Emit;
 using MovieLibrary.Enrich.Pipeline;
 using MovieLibrary.Enrich.Reporting;
 using MovieLibrary.Enrich.Sheets;
+using MovieLibrary.Enrich.Store;
 using MovieLibrary.Enrich.Tmdb;
 
 namespace MovieLibrary.Enrich.Run;
@@ -160,6 +163,29 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
 
         RequireReadableRuntimes(movieRows);
 
+        // Read and bound BEFORE the fixture branch on purpose. A fixture run makes no TMDB call, so it is the
+        // cheapest possible way to find out that a hand-edited store is malformed, or that an entry now names a
+        // row that is no longer on the sheet. Phase 1 ships without the editor, so hand-editing is the way the
+        // store is maintained, and this is the check that makes that bearable.
+        RecordStore store;
+        try
+        {
+            store = await RecordStoreReader.ReadFileAsync(options.StoreFile, ct);
+        }
+        catch (RecordStoreException ex)
+        {
+            throw new FatalRunException($"FATAL: {ex.Message}", "Nothing was written.");
+        }
+
+        var bound = StoreBinder.Bind(store, movieRows, showRows);
+        Say($"  record store: {bound.Films.Count} film entries, {bound.Series.Count} series entries, " +
+            $"{bound.Notes.Count} note(s)");
+
+        // On a real run these reach the owner through ReviewQueue.OverrideNotes and the job summary. A fixture
+        // run publishes ReviewQueue.Empty, so they would vanish -- and a fixture run is exactly when the store
+        // is being checked.
+        if (options.Fixtures) foreach (var note in bound.Notes) Say("  " + note);
+
         if (options.Fixtures)
         {
             Say("Fixture mode: synthesising a full catalogue, no TMDB calls.");
@@ -177,7 +203,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         var overrides = (await sheets.FetchOverridesAsync(options.SheetId, ct)).WithUnmatchedNotes(movieRows, showRows);
         Say($"  {overrides.Films.Count} film overrides, {overrides.Series.Count} series overrides, {overrides.Notes.Count} notes");
 
-        return await RunAgainstTmdbAsync(movieRows, showRows, overrides, ct);
+        return await RunAgainstTmdbAsync(movieRows, showRows, overrides, bound, ct);
     }
 
     /// <summary>
@@ -186,7 +212,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
     /// </summary>
     private static void RequireReadableRuntimes(IReadOnlyList<SheetRow> movieRows)
     {
-        var bad = movieRows.Where(r => SheetOverrides.Minutes(r.Runtime) is null).ToList();
+        var bad = movieRows.Where(r => !RuntimeParser.TryFilmMinutes(r.Runtime, out _)).ToList();
         if (bad.Count == 0) return;
 
         throw new FatalRunException(
@@ -228,7 +254,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
     }
 
     private async Task<RunResult> RunAgainstTmdbAsync(
-        IReadOnlyList<SheetRow> movieRows, IReadOnlyList<SheetRow> showRows, SheetOverrides overrides, CancellationToken ct)
+        IReadOnlyList<SheetRow> movieRows, IReadOnlyList<SheetRow> showRows, SheetOverrides overrides, BoundStore bound, CancellationToken ct)
     {
         var cache = new CacheStore(options.CacheRoot);
         var loaded = false;
@@ -244,7 +270,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         var completed = false;
         try
         {
-            report = await PublishAsync(await EnrichAsync(cache, movieRows, showRows, overrides, ct), ct);
+            report = await PublishAsync(await EnrichAsync(cache, movieRows, showRows, overrides, bound, ct), ct);
             completed = true;
         }
         finally
@@ -288,14 +314,14 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
 
     private async Task<Catalogue> EnrichAsync(
         CacheStore cache, IReadOnlyList<SheetRow> movieRows, IReadOnlyList<SheetRow> showRows,
-        SheetOverrides overrides, CancellationToken ct)
+        SheetOverrides overrides, BoundStore bound, CancellationToken ct)
     {
         // Kept on the run as well as here: FailAsync reads its budget state, so a failure that follows a budget stop
         // reports the stop rather than denying it.
         var tmdb = _tmdb = new TmdbClient(
             services.TmdbHttp, options.Token, services.Limiter, new RequestBudget(options.MaxRequests), services.Now);
 
-        var (movieResult, tvResult) = await RunPipelinesAsync(tmdb, cache, movieRows, showRows, overrides, ct);
+        var (movieResult, tvResult) = await RunPipelinesAsync(tmdb, cache, movieRows, showRows, overrides, bound, ct);
 
         return new Catalogue(
             movieResult.Records,
@@ -305,7 +331,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
             // mistake to fix - under one label each, and caps each one separately.
             new ReviewQueue
             {
-                OverrideNotes = overrides.Notes,
+                OverrideNotes = [.. overrides.Notes, .. bound.Notes],
                 Films = movieResult.ReviewQueue,
                 Series = tvResult.ReviewQueue,
             },
@@ -323,7 +349,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
     /// </summary>
     private async Task<(MoviePipelineResult Movies, TvPipelineResult Shows)> RunPipelinesAsync(
         TmdbClient tmdb, CacheStore cache, IReadOnlyList<SheetRow> movieRows, IReadOnlyList<SheetRow> showRows,
-        SheetOverrides overrides, CancellationToken ct)
+        SheetOverrides overrides, BoundStore bound, CancellationToken ct)
     {
         _phase = Phase.Films;
         var movieResult = await new MoviePipeline(tmdb, cache, services.Now, Progress("films", FilmsPerProgressLine, tmdb))
