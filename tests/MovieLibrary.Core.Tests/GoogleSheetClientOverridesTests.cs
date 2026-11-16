@@ -190,7 +190,7 @@ public class GoogleSheetClientOverridesTests
         var h = TestPipeline.CreateTv(budget: 0, tmdb.Respond);
 
         var result = await h.Pipeline.RunAsync(
-            [Episode("A", "The Biggest Loser"), Episode("B", "The Biggest Loser (2020)")], o.Series, Ct);
+            [Episode("A", "The Biggest Loser"), Episode("B", "The Biggest Loser (2020)")], o.Series, BoundStore.Empty, Ct);
 
         Assert.Equal([10, 20], result.Shows.Select(s => s.I));
         // the plain twin is searched; the 2020 one is taken by id, never searched

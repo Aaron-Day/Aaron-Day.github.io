@@ -156,9 +156,9 @@ public class MoviePipelineAliasDirectorTests
         var h = TestPipeline.CreateTv(0, tv.Respond);
         SheetRow[] rows = [new("Pilot", "22:30:00", "", "The Office: The Complete Series", "Comedy", "The Office")];
 
-        await h.Pipeline.RunAsync(rows, NoOverrides, Ct);
+        await h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, Ct);
         var before = h.Handler.Requests.Count;
-        await h.Pipeline.RunAsync(rows, NoOverrides, Ct);
+        await h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, Ct);
 
         Assert.Equal("", Assert.Single(h.Cache.Entries).NormalizedDirectors);
         Assert.Equal(before, h.Handler.Requests.Count);

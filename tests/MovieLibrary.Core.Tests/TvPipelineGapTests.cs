@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 using MovieLibrary.Core.Caching;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Enrich.Pipeline;
+using MovieLibrary.Enrich.Store;
 
 namespace MovieLibrary.Core.Tests;
 
@@ -926,7 +927,7 @@ public class TvPipelineGapTests
         var h = Harness(OfficeBackend());
 
         var result = await h.Pipeline.RunAsync(
-            [Ep("Season 1, Episode 2: Diversity Day", "The Office")], OfficeIsTheUsOne, Ct);
+            [Ep("Season 1, Episode 2: Diversity Day", "The Office")], OfficeIsTheUsOne, BoundStore.Empty, Ct);
 
         var show = Assert.Single(result.Shows);
         Assert.Equal(2316, show.I);
@@ -944,7 +945,7 @@ public class TvPipelineGapTests
     {
         var h = Harness(OfficeBackend());
 
-        var result = await h.Pipeline.RunAsync([Ep("Season 1, Episode 1: Downsize", "The Office")], NoOverrides, Ct);
+        var result = await h.Pipeline.RunAsync([Ep("Season 1, Episode 1: Downsize", "The Office")], NoOverrides, BoundStore.Empty, Ct);
 
         var show = Assert.Single(result.Shows);
         Assert.Equal(2996, show.I);
@@ -957,10 +958,10 @@ public class TvPipelineGapTests
     {
         SheetRow[] rows = [Ep("Season 1, Episode 2: Diversity Day", "The Office")];
         var first = Harness(OfficeBackend());
-        await first.Pipeline.RunAsync(rows, NoOverrides, Ct); // the guess is cached: id 2996, Mc 0.5
+        await first.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, Ct); // the guess is cached: id 2996, Mc 0.5
 
         var second = Harness(OfficeBackend(), shareCacheWith: first);
-        var result = await second.Pipeline.RunAsync(rows, OfficeIsTheUsOne, Ct);
+        var result = await second.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
 
         var show = Assert.Single(result.Shows);
         Assert.Equal(2316, show.I);
@@ -974,10 +975,10 @@ public class TvPipelineGapTests
     {
         var h = Harness(OfficeBackend());
         SheetRow[] rows = [Ep("Season 1, Episode 2: Diversity Day", "The Office")];
-        var first = await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, Ct);
+        var first = await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
 
         h.Handler.Requests.Clear();
-        var second = await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, Ct);
+        var second = await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
 
         Assert.Empty(h.Handler.Requests);
         Assert.Equal(JsonSerializer.Serialize(first.Shows), JsonSerializer.Serialize(second.Shows));
@@ -991,7 +992,7 @@ public class TvPipelineGapTests
         var h = Harness(fake);
 
         var result = await h.Pipeline.RunAsync(
-            [Ep("A", "Alias"), Ep("Season 1, Episode 1: Pilot", "The Office")], OfficeIsTheUsOne, Ct);
+            [Ep("A", "Alias"), Ep("Season 1, Episode 1: Pilot", "The Office")], OfficeIsTheUsOne, BoundStore.Empty, Ct);
 
         Assert.Equal(["Alias", "The Office"], result.Shows.Select(s => s.T));
         Assert.Equal([456, 2316], result.Shows.Select(s => s.I));
@@ -1009,7 +1010,7 @@ public class TvPipelineGapTests
         Dictionary<string, int> overrides = new() { [TvPipeline.OverrideKey("The Biggest Loser (2020)")] = 20 };
 
         var result = await h.Pipeline.RunAsync(
-            [Ep("A", "The Biggest Loser"), Ep("B", "The Biggest Loser (2020)")], overrides, Ct);
+            [Ep("A", "The Biggest Loser"), Ep("B", "The Biggest Loser (2020)")], overrides, BoundStore.Empty, Ct);
 
         Assert.Equal("the biggest loser 2020", TvPipeline.OverrideKey("The Biggest Loser (2020)"));
         Assert.Equal("the biggest loser", TvPipeline.OverrideKey("The Biggest Loser"));
@@ -1023,7 +1024,7 @@ public class TvPipelineGapTests
         var h = Harness(OfficeBackend());
         Dictionary<string, int> typo = new() { ["the office"] = 999999 };
 
-        var result = await h.Pipeline.RunAsync([Ep("Season 1, Episode 1: Pilot", "The Office")], typo, Ct);
+        var result = await h.Pipeline.RunAsync([Ep("Season 1, Episode 1: Pilot", "The Office")], typo, BoundStore.Empty, Ct);
 
         var show = Assert.Single(result.Shows);
         Assert.Equal(999999, show.I);
@@ -1038,11 +1039,11 @@ public class TvPipelineGapTests
     {
         SheetRow[] rows = [Ep("Season 1, Episode 1: Pilot", "The Office")];
         var h = Harness(OfficeBackend());
-        await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, Ct);
+        await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
         Age(Payload(h, "series.json"), TestPipeline.Now, PastTheWindow);
 
         h.Handler.Requests.Clear();
-        await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, Ct);
+        await h.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
 
         Assert.Equal(["/3/tv/2316"], Paths(h));
         Assert.Equal(TestPipeline.Now, StampOf(Payload(h, "series.json")));
@@ -1054,13 +1055,13 @@ public class TvPipelineGapTests
         SheetRow[] rows = [Ep("A", "Alias"), Ep("Season 1, Episode 1: Pilot", "The Office")];
         var fake = OfficeBackend().Add(Show(456, "Alias", (1, ["A"])));
         var first = Harness(fake);
-        await first.Pipeline.RunAsync(rows, OfficeIsTheUsOne, Ct);
+        await first.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
         foreach (var file in Directory.GetFiles(first.CacheDir, "series.json", SearchOption.AllDirectories))
             Age(file, TestPipeline.Now, PastTheWindow);
 
         // Alias (first in order) spends the whole budget on its re-search; The Office is then reached with none left.
         var second = Harness(fake, budget: 1, shareCacheWith: first);
-        var result = await second.Pipeline.RunAsync(rows, OfficeIsTheUsOne, Ct);
+        var result = await second.Pipeline.RunAsync(rows, OfficeIsTheUsOne, BoundStore.Empty, Ct);
 
         var office = result.Shows.Single(s => s.T == "The Office");
         Assert.Equal(2316, office.I);

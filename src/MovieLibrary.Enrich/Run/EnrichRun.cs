@@ -357,7 +357,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
 
         _phase = Phase.Series;
         var tvResult = await new TvPipeline(tmdb, cache, services.Now, Progress("series", SeriesPerProgressLine, tmdb))
-            .RunAsync(showRows, overrides.Series, ct);
+            .RunAsync(showRows, overrides.Series, bound, ct);
 
         return (movieResult, tvResult);
     }

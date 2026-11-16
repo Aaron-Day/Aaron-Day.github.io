@@ -21,6 +21,19 @@ internal static partial class TestPipeline
             AnyQuery = new FakeShow(seriesId, "Stub series", [.. seasons.Select(s => new FakeSeason(s.Season, s.Episodes))])
         }.Respond).Pipeline;
 
+    /// <summary>
+    /// TMDB knows one series, <paramref name="seriesId"/> (one season of one episode), but any search throws, so a
+    /// pipeline that searches when it should not fails the test instead of quietly taking another path.
+    /// </summary>
+    public static TvPipeline TvHarnessThatFailsIfSearched(int seriesId)
+    {
+        var fake = new FakeTv { AnyQuery = new FakeShow(seriesId, "Stub series", [new FakeSeason(1, ["Pilot"])]) };
+
+        return CreateTv(budget: 0, req => req.RequestUri!.AbsolutePath == "/3/search/tv"
+            ? throw new Xunit.Sdk.XunitException($"Unexpected TMDB search: {req.RequestUri}")
+            : fake.Respond(req)).Pipeline;
+    }
+
     /// <summary>Every series search comes back empty. Unlimited budget.</summary>
     public static TvPipeline TvWithNoResults() => CreateTv(budget: 0, new FakeTv().Respond).Pipeline;
 

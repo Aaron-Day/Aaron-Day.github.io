@@ -4,9 +4,11 @@ using MovieLibrary.Core.Caching;
 using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Parsing;
+using MovieLibrary.Core.Store;
 using MovieLibrary.Core.Text;
 using MovieLibrary.Enrich.Caching;
 using MovieLibrary.Enrich.Reporting;
+using MovieLibrary.Enrich.Store;
 using MovieLibrary.Enrich.Tmdb;
 
 namespace MovieLibrary.Enrich.Pipeline;
@@ -97,14 +99,20 @@ public sealed class TvPipeline(
     private const string NoDirectors = "";
 
     public Task<TvPipelineResult> RunAsync(IReadOnlyList<SheetRow> rows, CancellationToken ct)
-        => RunAsync(rows, NoOverrides, ct);
+        => RunAsync(rows, NoOverrides, BoundStore.Empty, ct);
 
     /// <param name="seriesOverrides">
     /// TMDB ids a human has confirmed, keyed by <see cref="OverrideKey"/>. An overridden series is never
     /// searched, takes the id as given, and is <c>Mc</c> 1.0 with no review line.
     /// </param>
+    /// <param name="bound">
+    /// The record store, bound to these rows. An entry is looked up under the key <c>ResolveSeriesAsync</c>
+    /// computes (the series name with its year folded back in), and can assert or withhold the TMDB id and set
+    /// the display title, sort title and extras. It can never change the slug.
+    /// </param>
     public async Task<TvPipelineResult> RunAsync(
-        IReadOnlyList<SheetRow> rows, IReadOnlyDictionary<string, int> seriesOverrides, CancellationToken ct)
+        IReadOnlyList<SheetRow> rows, IReadOnlyDictionary<string, int> seriesOverrides, BoundStore bound,
+        CancellationToken ct)
     {
         var now = clock();
         var review = new List<string>();
@@ -133,7 +141,7 @@ public sealed class TvPipeline(
             ct.ThrowIfCancellationRequested();
 
             var owned = group.Select(r => EpisodeTitleParser.Parse(r.Title)).ToList();
-            var series = await ResolveSeriesAsync(name, seriesOverrides, now, ct);
+            var series = await ResolveSeriesAsync(name, seriesOverrides, bound, now, ct);
             foreach (var note in series.Notes) review.Add($"{name} → {note}");
 
             var loaded = series is { Id: { } id, Details: { } details }
@@ -145,7 +153,9 @@ public sealed class TvPipeline(
             if (placement.Unplaced > 0 && series.Details is not null && !loaded.Incomplete)
                 review.Add($"{name} → {placement.Unplaced} owned row(s) not found on TMDB's list");
 
-            shows.Add(new ShowRecord(
+            var over = bound.Series.TryGetValue(IdentityKey.ForSeriesName(name), out var entry) ? entry.Record : null;
+
+            shows.Add(Apply(over, new ShowRecord(
                 I: series.Id ?? 0,
                 T: name,
                 Slug: slug,
@@ -155,7 +165,7 @@ public sealed class TvPipeline(
                 Seasons: placement.Seasons,
                 OwnedEpisodes: placement.Seasons.Sum(s => s.Owned),
                 TotalEpisodes: placement.Seasons.Sum(s => s.Total),
-                Mc: series.Confidence));
+                Mc: series.Confidence)));
 
             // After the record, so the count means series FINISHED. The reporter decides which of these to print.
             progress?.Report(new PassProgress { Done = ++done, Total = allSeries.Count });
@@ -204,6 +214,28 @@ public sealed class TvPipeline(
         return (0.5d, [$"matched TMDB \"{found.Name}\" (id {found.Id}), which is not the same name; override it if wrong"]);
     }
 
+    /// <summary>
+    /// The show with the store's display title, sort title and extras laid over it. <b>Returns it untouched when
+    /// the store says nothing</b>: a series with no entry must publish exactly what it did before the store
+    /// existed (and deriving a sort title unconditionally would give "The Office" an <c>Srt</c> it never had).
+    /// <b>The slug is never touched</b>: it is the page URL, the <c>tv/{slug}.json</c> file name and the key a
+    /// visitor's saved state is filed under, so a store entry may relabel a series but never move it.
+    /// </summary>
+    private static ShowRecord Apply(RecordOverride? over, ShowRecord show)
+    {
+        if (over is null) return show;
+
+        var display = over.Titles?.Display?.Trim() is { Length: > 0 } chosen ? chosen : show.T;
+        var sort = over.Titles?.Sort?.Trim() is { Length: > 0 } given ? given : SortTitle.From(display);
+
+        return show with
+        {
+            T = display,
+            Srt = sort == display ? null : sort,
+            Ex = over.Extra is { Count: > 0 } extra ? new Dictionary<string, string>(extra) : null,
+        };
+    }
+
     private static string MostCommon(IEnumerable<string> values)
         => values.GroupBy(v => v, StringComparer.Ordinal)
                  .OrderByDescending(g => g.Count()).ThenBy(g => g.Key, StringComparer.Ordinal)
@@ -214,7 +246,8 @@ public sealed class TvPipeline(
     /// review notes for a human to look at.
     /// </summary>
     private async Task<SeriesLookup> ResolveSeriesAsync(
-        string name, IReadOnlyDictionary<string, int> overrides, DateTimeOffset now, CancellationToken ct)
+        string name, IReadOnlyDictionary<string, int> overrides, BoundStore bound, DateTimeOffset now,
+        CancellationToken ct)
     {
         var title = TitleNormalizer.Normalize(name);
 
@@ -222,10 +255,23 @@ public sealed class TvPipeline(
         // one cache identity. Put the year back so they stay two series.
         var keyed = title with { Value = KeyOf(title) };
 
+        var key = IdentityKey.ForSeries(keyed);
+
+        // The record store comes first, ahead of the Overrides tab: it is the authoritative one. The key is the
+        // one computed above, which folds a trailing year back in; the binder keys entries the same way.
+        if (bound.Series.TryGetValue(key, out var entry))
+        {
+            if (entry.Record.TmdbId is { } asserted) return await ResolveOverrideAsync(asserted, now, ct);
+
+            if (entry.Record.Candidates is { Length: > 0 } candidates)
+                return new SeriesLookup(null, null, 0d,
+                    [$"record store: {candidates.Length.ToString(CultureInfo.InvariantCulture)} candidate(s), " +
+                     "none chosen: " + string.Join(", ", candidates.Select(c => c.ToString(CultureInfo.InvariantCulture)))]);
+        }
+
         // A human-confirmed id beats the search and the cache alike, and is never second-guessed.
         if (overrides.TryGetValue(keyed.Value, out var forcedId)) return await ResolveOverrideAsync(forcedId, now, ct);
 
-        var key = IdentityKey.ForSeries(keyed);
         var hit = cache.Resolve(key, keyed.Value, 0, NoDirectors, now);
 
         // A fresh negative is an answer, not a miss. Searching again would spend a request every run.
