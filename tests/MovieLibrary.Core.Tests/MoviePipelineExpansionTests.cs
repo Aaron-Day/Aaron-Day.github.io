@@ -72,13 +72,19 @@ public class MoviePipelineExpansionTests
     }
 
     [Fact]
-    public async Task TheKeysAreDistinctSoTheReconcilerCollapsesNothing()
+    public async Task TheRuntimeAloneKeepsFourRecordsOfOneFilmApartSoTheReconcilerCollapsesNothing()
     {
-        var result = await RunAsync();
+        // ONE id, four runtimes. With four different ids the keys differ whatever the runtime does, so the old form of
+        // this test could only fail on an id collapse. Here the runtime is the only thing that parts them.
+        var result = await TestPipeline.ThatFailsIfSearched(13589).RunAsync([Bundle], NoTabOverrides,
+            Of(new RecordOverride(TmdbId: 13589, Runtime: 84),
+               new RecordOverride(TmdbId: 13589, Runtime: 83),
+               new RecordOverride(TmdbId: 13589, Runtime: 86),
+               new RecordOverride(TmdbId: 13589, Runtime: 85)), default);
 
-        Assert.NotEmpty(result.Records);
-        Assert.Equal(result.Records.Count,
-                     result.Records.Select(m => m.K).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(4, result.Records.Count);
+        Assert.Equal(["13589-83", "13589-84", "13589-85", "13589-86"],
+                     result.Records.Select(m => m.K).Order(StringComparer.Ordinal));
     }
 
     [Fact]

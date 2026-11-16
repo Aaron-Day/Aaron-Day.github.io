@@ -94,11 +94,33 @@ public class MoviePipelineStoreTests
         Assert.Equal("2019-03-14", Assert.Contains("Purchase Date", film.Ex!));
     }
 
+    // Genres, collection and cast need a payload that carries them; the shared stub has none, so an assertion on
+    // G, Col and Cast against it would be true of an empty record and prove nothing.
+    private static HttpResponseMessage RichFargo(HttpRequestMessage req)
+    {
+        if (TestPipeline.IsSearch(req)) throw new Xunit.Sdk.XunitException($"Unexpected TMDB search: {req.RequestUri}");
+
+        return req.RequestUri!.AbsolutePath == "/3/movie/275"
+            ? TestPipeline.Json(System.Text.Json.JsonSerializer.Serialize(new
+            {
+                id = 275, title = "Fargo", overview = "Stub overview.", tagline = "Stub tagline.", runtime = 98,
+                release_date = "1996-03-08", vote_average = 7.5, poster_path = "/poster.jpg", backdrop_path = "/backdrop.jpg",
+                genres = new[] { new { id = 80, name = "Crime" }, new { id = 53, name = "Thriller" } },
+                belongs_to_collection = new { id = 9, name = "The Fargo Collection" },
+                credits = new
+                {
+                    cast = new[] { new { name = "Frances McDormand", character = "Marge", profile_path = "/fm.jpg", order = 0 } },
+                    crew = Array.Empty<object>(),
+                },
+            }))
+            : TestPipeline.NotFound();
+    }
+
     [Fact]
     public async Task TmdbDerivedFieldsAreNotOverridableAndStillComeFromThePayload()
     {
         var row = Row();
-        var pipeline = TestPipeline.ThatFailsIfSearched(275);
+        var pipeline = TestPipeline.Create(budget: 0, RichFargo).Pipeline;
 
         var result = await pipeline.RunAsync([row], NoTabOverrides, Bound((row, [new RecordOverride(TmdbId: 275)])), default);
 
@@ -108,6 +130,9 @@ public class MoviePipelineStoreTests
         Assert.Equal("Stub overview.", film.Ov);
         Assert.Equal("Stub tagline.", film.Tag);
         Assert.Equal(7.5, film.Vote);
+        Assert.Equal([80, 53], film.G);
+        Assert.Equal("The Fargo Collection", film.Col);
+        Assert.Equal("Frances McDormand", Assert.Single(film.Cast).N);
     }
 
     [Fact]
@@ -236,5 +261,96 @@ public class MoviePipelineStoreTests
         var film = Assert.Single(result.Records);
         Assert.Equal(275, film.I);
         Assert.Equal(140, film.Rt);
+    }
+
+    // ---- the fields the store overrides must come out as the sheet's would ---------------------------------
+
+    [Fact]
+    public async Task AnOverriddenDirectorListSplitsExactlyAsTheSheetsDoes()
+    {
+        const string names = "  Joel Coen  &  Ethan Coen & Sam Raimi ";   // padding around every separator, and at both ends
+        var row = Row();
+        var sheetSide = new SheetRow("Fargo", "1:38:00", names, "iTunes", "Thriller", "");
+
+        var viaStore = await TestPipeline.ThatFailsIfSearched(275).RunAsync(
+            [row], NoTabOverrides, Bound((row, [new RecordOverride(TmdbId: 275, Directors: names)])), default);
+        var viaSheet = await TestPipeline.ThatFailsIfSearched(275).RunAsync(
+            [sheetSide], NoTabOverrides, Bound((sheetSide, [new RecordOverride(TmdbId: 275)])), default);
+
+        Assert.Equal(["Joel Coen", "Ethan Coen", "Sam Raimi"], Assert.Single(viaStore.Records).Dir);
+        Assert.Equal(Assert.Single(viaSheet.Records).Dir, Assert.Single(viaStore.Records).Dir);
+    }
+
+    [Fact]
+    public async Task TheStoresExtraIsCopiedNotHandedToTheRecord()
+    {
+        var row = Row();
+        var extra = new Dictionary<string, string> { ["Purchase Date"] = "2019-03-14" };
+
+        var result = await TestPipeline.ThatFailsIfSearched(275).RunAsync(
+            [row], NoTabOverrides, Bound((row, [new RecordOverride(TmdbId: 275, Extra: extra)])), default);
+
+        var film = Assert.Single(result.Records);
+        Assert.NotSame(extra, film.Ex);
+
+        extra["Purchase Date"] = "changed afterwards";
+        extra["Added"] = "afterwards too";
+        Assert.Equal("2019-03-14", Assert.Contains("Purchase Date", film.Ex!));
+        Assert.DoesNotContain("Added", film.Ex!);
+    }
+
+    [Fact]
+    public async Task AnEmptyExtraPublishesNoExAtAll()
+    {
+        var row = Row();
+
+        var result = await TestPipeline.ThatFailsIfSearched(275).RunAsync(
+            [row], NoTabOverrides,
+            Bound((row, [new RecordOverride(TmdbId: 275, Extra: new Dictionary<string, string>())])), default);
+
+        Assert.Null(Assert.Single(result.Records).Ex);
+    }
+
+    // ---- an expanded row is ONE row: one progress tick, one search, one cache entry ---------------------------
+
+    private sealed class Ticks : IProgress<MovieLibrary.Enrich.Reporting.PassProgress>
+    {
+        public List<MovieLibrary.Enrich.Reporting.PassProgress> Seen { get; } = [];
+        public void Report(MovieLibrary.Enrich.Reporting.PassProgress value) => Seen.Add(value);
+    }
+
+    // Field-only records: none asserts an id or lists candidates, so each goes down the ordinary cache-then-search path.
+    // Runtimes differ so the four records keep four keys and the reconciler collapses none of them.
+    private static RecordOverride[] FourFieldOnly() =>
+        [.. new[] { 140, 150, 160, 170 }.Select(r => new RecordOverride(Runtime: r))];
+
+    [Fact]
+    public async Task AnExpandedRowReportsOneTickBecauseItIsOneRow()
+    {
+        var expanded = Row();
+        var plain = Row("Heat", "2:50:00");
+        var ticks = new Ticks();
+        var harness = TestPipeline.Create(budget: 0, SearchFindsFargo, progress: ticks);
+
+        var result = await harness.Pipeline.RunAsync(
+            [expanded, plain], NoTabOverrides, Bound((expanded, FourFieldOnly())), default);
+
+        Assert.Equal(5, result.Records.Count);                    // four records and one: five records, two rows
+        Assert.Equal([1, 2], ticks.Seen.Select(t => t.Done));
+        Assert.All(ticks.Seen, t => Assert.Equal(2, t.Total));
+    }
+
+    [Fact]
+    public async Task AnExpandedRowRunsOneSearchAndWritesOneCacheEntryNotOnePerRecord()
+    {
+        var row = Row();
+        var harness = TestPipeline.Create(budget: 0, SearchFindsFargo);
+
+        var result = await harness.Pipeline.RunAsync([row], NoTabOverrides, Bound((row, FourFieldOnly())), default);
+
+        Assert.Equal(4, result.Records.Count);
+        Assert.All(result.Records, m => Assert.Equal(275, m.I));
+        Assert.Equal(1, harness.Handler.Requests.Count(TestPipeline.IsSearch));
+        Assert.Single(harness.Cache.Entries);
     }
 }
