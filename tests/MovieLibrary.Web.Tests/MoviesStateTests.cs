@@ -975,7 +975,8 @@ public class MoviesStateTests : BunitContext
         var after = MemberBody(page, "protected override async Task OnAfterRenderAsync(bool firstRender)");
 
         Assert.Equal(
-            ["Announcer.Status(LoadingSpoken)", "Announcer.Alert(CouldNotLoad)", "Announcer.Status(OpeningSentence)"],
+            ["Announcer.Status(LoadingSpoken)", "Announcer.Status(\"\")", "Announcer.Alert(CouldNotLoad)",
+             "Announcer.Status(OpeningSentence)"],   // the clear is the Failed arm's R7 duty
             AnnouncerCalls(after));
 
         // Task 8 adds ONE more place that speaks: the count after a filter change. It is not a second way to
