@@ -16,6 +16,9 @@ public class SortTitleTests
     [Theory]
     // Only ONE article comes off, and only a whole word at the start.
     [InlineData("The The", "The")]
+    // Two articles then a real word: the second must stay. A recursive or looping strip would give "Team" for either.
+    [InlineData("The A Team", "A Team")]
+    [InlineData("A The Thing", "The Thing")]
     [InlineData("Theodore Rex", "Theodore Rex")]
     [InlineData("Analyze This", "Analyze This")]
     [InlineData("Alien", "Alien")]
@@ -24,6 +27,13 @@ public class SortTitleTests
     [InlineData("2001: A Space Odyssey", "2001: A Space Odyssey")]
     [InlineData("Star Wars: A New Hope", "Star Wars: A New Hope")]
     public void NothingElseIsTouched(string display, string expected)
+        => Assert.Equal(expected, SortTitle.From(display));
+
+    [Theory]
+    // char.IsWhiteSpace, not == ' ': a tab and a non-breaking space after the article still end the word.
+    [InlineData("The\tMatrix", "Matrix")]
+    [InlineData("A\u00A0Quiet Place", "Quiet Place")]
+    public void AnyWhitespaceAfterTheArticleCountsNotJustASpace(string display, string expected)
         => Assert.Equal(expected, SortTitle.From(display));
 
     [Theory]

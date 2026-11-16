@@ -40,4 +40,16 @@ public class MoviePipelineSortTitleTests
 
         Assert.Null(record.Srt);
     }
+
+    [Fact]
+    public async Task APaddedTitleWithNoArticlePublishesNoSortTitle()
+    {
+        // Production cannot reach this (the sheet reader trims every cell); it guards a future change.
+        var result = await TestPipeline.WithNoTmdbResults().RunAsync(
+            [Row(" Zorro ")], new Dictionary<string, int>(), CancellationToken.None);
+
+        var record = Assert.Single(result.Records);
+
+        Assert.Null(record.Srt);
+    }
 }
