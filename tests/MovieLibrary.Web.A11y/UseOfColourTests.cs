@@ -9,8 +9,9 @@ namespace MovieLibrary.Web.A11y;
 /// <remarks>
 /// <para>
 /// <b>SC 1.4.1 Use of Color, Level A</b> - not AA, and the level matters because this is the only Level A
-/// criterion in this file. Technique failure F73 is its exact shape: a link distinguished from the text
-/// around it by colour alone needs 3:1 against that text, and <c>--accent2</c> (#4da3ff) against
+/// criterion in this file. The criterion itself has no numeric threshold; the 3:1 comes from technique G183,
+/// and failure F73 is the exact shape: a link distinguished from the text around it by colour alone
+/// needs 3:1 against that text to pass G183, and <c>--accent2</c> (#4da3ff) against
 /// <c>--txt</c> (#e8eaf0) is <b>2.18:1</b>. NotFound's "Back to the library" is that shape, so the
 /// underline is the only thing making it conform.
 /// </para>
@@ -73,8 +74,8 @@ public class UseOfColourTests(BrowserGate gate, ITestOutputHelper output)
         Assert.True(decoration != "none",
             $"{what} on {address} computes text-decoration-line: none, so the only thing distinguishing it "
             + $"from the prose around it is colour - and that is {colour} on {around}, which app.css "
-            + "measures at 2.18:1, far below the 3:1 SC 1.4.1 Use of Color (Level A) requires before colour "
-            + "alone may do the job. Technique failure F73. app.css declares the underline itself rather "
+            + "measures at 2.18:1, far below the 3:1 technique G183 asks for before colour "
+            + "alone may do the job (SC 1.4.1 Use of Color, Level A, sets no number itself). Failure F73. app.css declares the underline itself rather "
             + "than inheriting Bootstrap's so that a dropped stylesheet cannot take it away; an inline "
             + "style or a .text-decoration-none utility in the markup still can, and that is what this "
             + "reads the rendered page for.");

@@ -36,9 +36,9 @@ body { background: var(--bg); color: var(--txt); }
 /* 7.40:1 on --bg, 6.35:1 on --panel2. Sets `color` itself, so Bootstrap's hover rule, which only
    changes a custom property, cannot turn it dark blue.
    The underline is declared HERE rather than inherited from Bootstrap's reboot. --accent2 (#4da3ff)
-   against the surrounding --txt (#e8eaf0) is 2.18:1, far below the 3:1 that SC 1.4.1 Use of Color
-   (Level A) requires before colour alone may distinguish a link inside a block of prose - technique
-   failure F73, and NotFound's "Back to the library" is exactly that shape. Reboot underlines links
+   against the surrounding --txt (#e8eaf0) is 2.18:1, far below the 3:1 that technique G183 asks for
+   before colour alone may distinguish a link inside a block of prose (SC 1.4.1 Use of Color, Level A,
+   itself has no numeric threshold) - failure F73, and NotFound's "Back to the library" is exactly that shape. Reboot underlines links
    today, so this costs nothing visually; what it buys is that the only non-colour cue the link has is
    owned by this file, and cannot leave with a dropped stylesheet, a Bootstrap link-underline utility
    or a later reset. Never set text-decoration: none on a link inside running text. */

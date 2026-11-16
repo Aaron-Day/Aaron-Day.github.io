@@ -431,13 +431,16 @@ internal static class Scripts
 
     /// <summary>
     /// Every element that clips its own overflow, the exempt pattern aside, whether or not it is
-    /// overflowing. The subject floor for <see cref="ClippedContent"/>: rule T1, a scan over an empty set
-    /// proves nothing.
+    /// overflowing. The subjects <see cref="ClippedContent"/> looks at, listed so a failure can say what was in
+    /// play.
     /// </summary>
     /// <remarks>
+    /// <b>This is printed, not asserted, and it is not a rule T1 floor.</b> Nothing fails if it finds nothing,
+    /// and today it finds only two boxes that cannot lose text (see TextOverrideTests). The call that uses
+    /// it says so rather than claiming coverage.
     /// It takes its traversal filter and its describe helper from <see cref="ClipHelpers"/>, which is the
-    /// whole point of that constant: a floor and the scan it floors must agree about which elements they
-    /// are talking about.
+    /// whole point of that constant: this listing and the scan it describes must agree about which elements
+    /// they are talking about.
     /// </remarks>
     public const string ClippingContainers = "() => {\n" + ClipHelpers + "\n" + """
           const out = [];
@@ -513,8 +516,9 @@ internal static class Scripts
     /// </summary>
     /// <remarks>
     /// The two colours are read so that a failure message can say what the underline is carrying. The
-    /// measured ratio between them is 2.18:1, far below the 3:1 SC 1.4.1 Use of Color (Level A) asks for
-    /// before colour alone may distinguish a link inside running text, and that is the whole reason the
+    /// measured ratio between them is 2.18:1, far below the 3:1 that technique G183 asks for
+    /// (SC 1.4.1 Use of Color, Level A, has no numeric threshold of its own) before colour alone may
+    /// distinguish a link inside running text, and that is the whole reason the
     /// decoration rather than the colour is the thing under test.
     /// </remarks>
     public const string InProseLink = """
