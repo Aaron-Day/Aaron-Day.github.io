@@ -109,4 +109,32 @@ public class TvPipelineStoreTests
         Assert.Equal("the-office", show.Slug);
         Assert.Equal("Office", show.Srt);   // derived from the display title, as on the film side
     }
+
+    [Fact]
+    public async Task ADisplayTitleReachesASeriesWhoseNameCarriesAYear()
+    {
+        // The record-building lookup folds the year back in too, separately from the resolving one.
+        var result = await TestPipeline.TvHarnessThatFailsIfSearched(2316).RunAsync(
+            [Episode("Doctor Who (2005)")], NoTabOverrides,
+            For("Doctor Who (2005)", new RecordOverride(TmdbId: 2316, Titles: new TitleSet(Display: "Doctor Who: Revival"))),
+            default);
+
+        var show = Assert.Single(result.Shows);
+        Assert.Equal("Doctor Who: Revival", show.T);
+        Assert.Equal("doctor-who-2005", show.Slug);
+    }
+
+    [Fact]
+    public async Task TheStoreOutranksTheOverridesTab()
+    {
+        // The tab would force 999, which TMDB (in this stub) does not know; the store's 2316 must win.
+        var tab = new Dictionary<string, int>(StringComparer.Ordinal) { [TvPipelineKey("The Office")] = 999 };
+
+        var result = await TestPipeline.TvHarnessThatFailsIfSearched(2316).RunAsync(
+            [Episode("The Office")], tab, For("The Office", new RecordOverride(TmdbId: 2316)), default);
+
+        Assert.Equal(2316, Assert.Single(result.Shows).I);
+    }
+
+    private static string TvPipelineKey(string name) => MovieLibrary.Enrich.Pipeline.TvPipeline.OverrideKey(name);
 }
