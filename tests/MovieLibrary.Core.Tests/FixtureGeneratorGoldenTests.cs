@@ -172,8 +172,12 @@ public class FixtureGeneratorGoldenTests
     //     dump hashes to the old golden, its 88 titles are the model's own reconstruction of FixedFilms(), and every "Col" in
     //     the dump is what the model's copy of the Collections rule computes -- which exercises Seed, Pick and the ordinal
     //     sort. The generator was then run and produced this byte for byte, two independent derivations agreeing.
+    //   a0a91973...7af22, 339,535 characters: Task 2 added two trailing members to both records, and this hash is of the default-options
+    //     serialisation, which writes nulls. Derived from a dump of the generator's output: stripping the 143 appended
+    //     ",\"Srt\":null,\"Ex\":null" suffixes recovers a string that hashes to 3aaffeb4... (so the dump was proved to be the old output),
+    //     and the unstripped dump hashes to this. +3,003 characters = 143 x 21.
     // The same in separate processes and under every culture below.
-    private const string Golden = "3aaffeb4809fa653b223dff21dda4bf3a76446b59ad1c756736f7b36d38adc55";
+    private const string Golden = "a0a9197362d47ba26b5db2703bf13e518c1c5d943b027517b8804235b667af22";
 
     // A golden pins only what its input reaches. A hash that .NET randomises per process, used as a sort key in a branch
     // the input never takes, would pass everything: so this fails if the input stops reaching a branch.

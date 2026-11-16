@@ -32,12 +32,15 @@ public class PublishedShapeFixtureTests : IDisposable
 
         // Needs review: the right id with a low score, and the nullable fields left null so the writer's
         // WhenWritingNull drops them and the browser has to cope with their absence rather than with nulls.
+        // It also carries a sort title, because "The Peeled Edition" is exactly the case Srt exists for.
         new(601, "601-88", "The Peeled Edition", 1982, 88, null, null, [18], "Drama", 6.2,
-            [], null, null, [], null, null, 0.55),
+            [], null, null, [], null, null, 0.55, Srt: "Peeled Edition"),
 
         // Not matched: id 0, keyed by content hash, score 0 even though a candidate may have scored.
+        // Its Ex map is the one sample of an owner-added field in the published shape.
         new(0, "u-d2f1c6e2", "An Unlisted Film", null, 101, null, null, [], "Documentary", 0d,
-            ["A Director"], null, null, [], null, null, 0d),
+            ["A Director"], null, null, [], null, null, 0d,
+            Ex: new Dictionary<string, string> { ["Purchase Date"] = "2019-03-14" }),
     ];
 
     public const string FixtureName = "movies-three-records.json";

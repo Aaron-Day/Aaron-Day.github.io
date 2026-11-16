@@ -413,8 +413,27 @@ public sealed class MoviePipeline(
             Own: string.IsNullOrWhiteSpace(row.PurchaseInfo) ? null : row.PurchaseInfo,
             // An unmatched film is always 0, even when its best candidate scored a little: the
             // scorer reports that sub-threshold score, but no match was made.
-            Mc: tmdbId is null ? 0d : Math.Round(confidence, 4));
+            Mc: tmdbId is null ? 0d : Math.Round(confidence, 4),
+            Srt: DerivedSortTitle(row.Title));
 
         return (record, details?.Title);
+    }
+
+    /// <summary>
+    /// The sort title when it differs from the display title, and null when it would only repeat it -- which is
+    /// the great majority, so the payload grows only for the titles that need it. A consumer sorts on
+    /// <c>Srt ?? T</c>.
+    /// </summary>
+    /// <remarks>
+    /// The comparison is against the TRIMMED display title, not the raw cell. <c>SortTitle.From</c> trims, so
+    /// comparing against the raw value would write an <c>srt</c> for every row whose title carries a stray
+    /// leading or trailing space -- potentially hundreds of records gaining a field that says nothing.
+    /// </remarks>
+    private static string? DerivedSortTitle(string displayTitle)
+    {
+        var display = displayTitle.Trim();
+        var sort = SortTitle.From(display);
+
+        return sort == display ? null : sort;
     }
 }
