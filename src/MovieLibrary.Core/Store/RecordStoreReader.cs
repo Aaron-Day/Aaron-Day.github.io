@@ -54,9 +54,13 @@ public static class RecordStoreReader
         }
         catch (Exception ex)
         {
-            // The safety net: whatever this file does to the parser, the run stops with the file named.
+            // The safety net: whatever happens in here, nothing raw escapes and the run stops with the file named.
+            // Every rejection the owner can act on is a RecordStoreException thrown above, so reaching this line
+            // means the READER failed, not the file. Say so, or a CI log sends someone hunting through the JSON.
             throw new RecordStoreException(
-                $"'{whatItIs}' could not be read as a record store: {ex.GetType().Name}: {ex.Message}", ex);
+                $"Unexpected internal error while reading '{whatItIs}' as a record store: " +
+                $"{ex.GetType().Name}: {ex.Message} This is a fault in the reader, not in the file's contents, " +
+                "and editing the file will not fix it.", ex);
         }
     }
 
@@ -69,7 +73,7 @@ public static class RecordStoreReader
         }
         catch (JsonException ex)
         {
-            throw new RecordStoreException($"'{whatItIs}' could not be read as a record store: {ex.Message}");
+            throw new RecordStoreException($"'{whatItIs}' could not be read as a record store: {ex.Message}", ex);
         }
 
         if (store is null)

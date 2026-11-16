@@ -229,6 +229,62 @@ public class RecordStoreReaderTests
     public void AJsonNullIsARejectionThatNamesTheFileAndNeverARawException(string json)
         => Assert.Contains("test.json", Rejected(json).Message, StringComparison.Ordinal);
 
+    [Theory]
+    [InlineData("{ \"version\": 1, \"series\": [], \"films\": [ null ] }", "film entry 1 is null. Remove it, or write the entry.")]
+    [InlineData("{ \"version\": 1, \"series\": [], \"films\": [ { \"identityKey\": \"" + Key + "\", \"records\": [ { \"tmdbId\": 1 } ] }, null ] }", "film entry 2 is null. Remove it, or write the entry.")]
+    [InlineData("{ \"version\": 1, \"films\": [], \"series\": [ null ] }", "series entry 1 is null. Remove it, or write the entry.")]
+    public void ANullEntryIsRejectedByNameAndOneBasedPositionNotByTheSafetyNet(string json, string mustSay)
+    {
+        var message = Rejected(json).Message;
+
+        Assert.Contains("'test.json'", message, StringComparison.Ordinal);
+        Assert.Contains(mustSay, message, StringComparison.Ordinal);
+        Assert.DoesNotContain("Unexpected internal error", message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void ABodyOfJsonNullSaysSoAndIsNotTheSafetyNet()
+    {
+        var message = Rejected("null").Message;
+
+        Assert.Contains("the body was JSON null", message, StringComparison.Ordinal);
+        Assert.DoesNotContain("Unexpected internal error", message, StringComparison.Ordinal);
+    }
+
+    [Theory]
+    [InlineData("{ \"version\": 1, \"series\": [], \"films\": [ { \"identityKey\": null, \"records\": [ { \"tmdbId\": 1 } ] } ] }", "$.films[0].identityKey")]
+    [InlineData("{ \"version\": 1, \"series\": [], \"films\": [ { \"identityKey\": \"" + Key + "\", \"records\": null } ] }", "$.films[0].records")]
+    [InlineData("{ \"version\": 1, \"films\": [], \"series\": [ { \"identityKey\": \"" + Key + "\", \"record\": null } ] }", "$.series[0].record")]
+    [InlineData("{ \"version\": 1, \"films\": null, \"series\": [] }", "$.films")]
+    public void AJsonNullInARequiredPropertyNamesTheJsonPath(string json, string path)
+    {
+        var message = Rejected(json).Message;
+
+        Assert.Contains(path, message, StringComparison.Ordinal);
+        Assert.DoesNotContain("Unexpected internal error", message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void AMalformedBodyKeepsTheJsonExceptionAsItsInnerException()
+    {
+        var rejected = Rejected("{ \"version\": 1, \"films\": [ ");
+
+        var inner = Assert.IsAssignableFrom<System.Text.Json.JsonException>(rejected.InnerException);
+        Assert.NotNull(inner.LineNumber);
+    }
+
+    [Fact]
+    public void AFaultInTheReaderIsReportedAsOneAndNotAsABadFile()
+    {
+        // A null body is a coding error by the caller, not something the file can contain; it reaches the safety net.
+        var rejected = Assert.Throws<RecordStoreException>(() => RecordStoreReader.Read(null!, "record-store.json"));
+
+        Assert.Contains("'record-store.json'", rejected.Message, StringComparison.Ordinal);
+        Assert.Contains("Unexpected internal error", rejected.Message, StringComparison.Ordinal);
+        Assert.Contains("editing the file will not fix it", rejected.Message, StringComparison.Ordinal);
+        Assert.IsType<ArgumentNullException>(rejected.InnerException);
+    }
+
     [Fact]
     public void ANullRecordNamesTheEntryAndThePosition()
     {
