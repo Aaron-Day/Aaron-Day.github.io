@@ -381,6 +381,7 @@ public class FixtureGeneratorRealismTests
 
             var dates = Shows().SelectMany(s => s.Seasons).Where(s => s.N > 0).SelectMany(s => s.Eps).Where(e => e.Air is not null).Select(e => e.Air!).ToList();
 
+            Assert.NotEmpty(dates);   // T1: no dates would pass the next line over nothing, and this is the only non-Gregorian check
             Assert.All(dates, d => Assert.Matches(@"^(19|20)\d\d-\d\d-\d\d$", d));
         }
         finally { CultureInfo.CurrentCulture = before; }
@@ -877,7 +878,9 @@ public class FixtureGeneratorRealismTests
 
         Assert.True(bareOnly.Count > 20, $"only {bareOnly.Count} bare-only series claimed anything");
         Assert.All(bareOnly.SelectMany(s => s.Seasons.Where(x => x.N > 0)), x => Assert.InRange(x.Total, 1, 29));
-        Assert.All(bareOnly.Where(s => s.Seasons.Count(x => x.N > 0 && x.Owned > 0) > 1),
+        var multiSeason = bareOnly.Where(s => s.Seasons.Count(x => x.N > 0 && x.Owned > 0) > 1).ToList();
+        Assert.NotEmpty(multiSeason);   // T1: without any, the next line asserts over nothing
+        Assert.All(multiSeason,
                    s => Assert.All(s.Seasons.Where(x => x.N > 0), x => Assert.True(x.Total >= 6, $"{s.T} S{x.N} has {x.Total}")));
         // unowned episodes sit among the owned ones, not in a block at the end
         Assert.Contains(bareOnly, s => s.Seasons.Any(x => x.N > 0 && x.Owned > 0 && x.Eps.Any(e => !e.O && e.E < x.Eps.Where(o => o.O).Max(o => o.E))));
