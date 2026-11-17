@@ -28,9 +28,11 @@ public class PosterTileTests : BunitContext
             null, "Blu-ray", 0.95);
 
     /// <summary>
-    /// What a real unmatched row looks like: TMDB id 0, no poster, no year. Twenty of the 1,456 published
-    /// records are this shape, and they are the records the owner wants to be able to SEE, so a tile that
-    /// rendered them as an empty box would defeat the point of the page.
+    /// What a real unmatched row looks like: TMDB id 0, no poster, no year, and Vote 0d. THIRTY of the
+    /// 1,488 published records are this shape -- counted from the published movies.json, where every record
+    /// with no rating is also one with no id -- and they are the records the owner wants to be able to SEE,
+    /// so a tile that rendered them as an empty box, or that invented a score for them, would defeat the
+    /// point of the page.
     /// </summary>
     private static MovieRecord Unmatched() =>
         new(0, "u-d2f1c6e2", "An Unlisted Film", null, 101, null, null, [], "Documentary", 0d, [],
@@ -68,6 +70,43 @@ public class PosterTileTests : BunitContext
         Assert.Empty(cut.FindAll("img"));                      // no poster path, so no image at all
         Assert.Single(cut.FindAll("span.poster-placeholder"));
         Assert.Empty(cut.FindAll(".tile-year"));               // no year, so no empty year element
+
+        // THE RATING, which is the absence most likely to be lost. Vote is 0d on every unmatched record,
+        // so an unguarded tile prints "0.0/10" and states that a film nobody looked up scored zero -- about
+        // the 30 records of 1,488 that this page exists to surface. The runtime is asserted present in the
+        // same breath, because the guard must not take both: Rt is read from the sheet and no published
+        // film has one at or below zero.
+        Assert.Empty(cut.FindAll(".tile-rating"));
+        Assert.Equal("1h 41m", cut.Find(".tile-runtime").TextContent);
+    }
+
+    /// <summary>
+    /// A rated film shows the score WITH its scale, and a runtime in hours and minutes.
+    /// </summary>
+    /// <remarks>
+    /// "8.4/10" and not a bare "8.4": alone, the number's meaning rests on its position in the tile, which
+    /// is SC 1.3.1 Info and Relationships. It cannot be carried by title= or aria-label instead -- both are
+    /// banned on this tile, by StandingAuditTests and by the assertion below this one.
+    /// </remarks>
+    [Theory]
+    [InlineData(110, "1h 50m")]
+    [InlineData(101, "1h 41m")]
+    [InlineData(45, "45m")]       // under the hour, so no leading "0h"
+    [InlineData(120, "2h")]       // exactly on the hour, so no trailing "0m"
+    [InlineData(1353, "22h 33m")] // the longest published row, and never "1,353"
+    public void TheRuntimeReadsAsHoursAndMinutesAndIsNeverGroupFormatted(int minutes, string expected)
+    {
+        var cut = Render<PosterTile>(p => p.Add(x => x.Movie, Film() with { Rt = minutes }));
+
+        Assert.Equal(expected, cut.Find(".tile-runtime").TextContent);
+    }
+
+    [Fact]
+    public void TheRatingCarriesItsOwnScaleAsVisibleText()
+    {
+        var cut = RenderTile(Film());
+
+        Assert.Equal("8.4/10", cut.Find(".tile-rating").TextContent);
     }
 
     [Fact]

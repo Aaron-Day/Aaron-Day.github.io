@@ -36,6 +36,31 @@
 }
 .tile-year { color: var(--dim); font-size: .85rem; }
 
+/* RUNTIME AND RATING. .85rem matches .tile-year rather than going smaller: app.css's rule is "Do not go
+   below 0.8125rem", and this is secondary metadata of exactly the same weight as the year beside it, so a
+   density pass that shrinks one must shrink both or neither. --dim is 6.33:1 on --bg, past SC 1.4.3's
+   4.5:1. Not opacity and not Bootstrap's .text-muted: opacity turns axe's color-contrast into an
+   INCOMPLETE, which AxeScan counts as a failure, and .text-muted ships !important and would win.
+
+   line-height is unitless so an SC 1.4.12 Text Spacing override cannot clip it, as it is on legend.
+
+   THE GAP IS THE SEPARATOR AND THERE IS NO CHARACTER IN THE DOM. A middot between the two is read
+   inconsistently by screen readers -- silent at most punctuation levels, "dot" at others -- and putting it
+   in a ::before does not help, because generated content is exposed to the accessibility tree.
+
+   WRAPPING IS ALLOWED ON THE ROW AND FORBIDDEN INSIDE A TOKEN. At 320px the grid is two fixed columns of
+   roughly 140px (PosterGrid.razor.css), and at 200% text a nowrap ROW would push its right edge past the
+   viewport -- SC 1.4.10 Reflow, which ReflowTests checks per element and not only on the document. So the
+   row wraps between items while "1h 50m" and "8.4/10" each stay whole. No clamp, no text-overflow and no
+   overflow: hidden here for the same reason the title has none, and StyleContractTests asserts all three
+   are absent from this file. .tile-title's min-height reserves two lines; this row simply grows the tile,
+   which is why the grid sets align-items: start. */
+.tile-meta {
+  display: flex; flex-wrap: wrap; gap: 0 .5rem;
+  color: var(--dim); font-size: .85rem; line-height: 1.5;
+}
+.tile-meta > span { white-space: nowrap; }
+
 /* THE CONFIDENCE BADGE. A border plus text, and never a background tint on its own: under Windows High
    Contrast a tint flattens to Canvas and takes the cue with it, while a border is re-coloured to CanvasText
    and survives. The variants below set border-color and color only, so the width and style of the border
