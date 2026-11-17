@@ -165,7 +165,7 @@ public class ConflictingIdRuleTests
         Assert.Contains("rejected TMDB id 263115", Assert.Single(notes), StringComparison.Ordinal);   // Fellowship's all-agree group is silent
     }
 
-    // An Overrides row is the owner's decision at confidence 1.0, and exists precisely where the TMDB title cannot fold
+    // A record store id is the owner's decision at confidence 1.0, and exists precisely where the TMDB title cannot fold
     // to the sheet's (Seven is Se7en). No heuristic may undo it, or the owner could never correct a row.
     [Fact]
     public void AnOverrideRowIsNeverRejected()

@@ -33,7 +33,7 @@ public class SheetSchemaTests
     [Fact]
     public void RejectsTruncatedHeader()
         => Assert.Throws<SheetSchemaException>(
-            () => SheetSchema.Validate("Overrides", SheetSchema.Overrides, ["Title", "Runtime"]));
+            () => SheetSchema.Validate("Movies", SheetSchema.Movies, ["Title", "Runtime"]));
 
     [Fact]
     public void WrongTabMessageExplainsTheGoogleFallback()
@@ -46,63 +46,34 @@ public class SheetSchemaTests
         Assert.Contains("first sheet", ex.Message);
     }
 
-    // ---- Matches: the same rules as Validate, without an exception per miss ---------------------------
-
-    private static readonly string[][] Headers =
-    [
-        ["Title", "Runtime", "Directors", "PurchaseInfo", "Genres", ""],
-        ["Title", "Runtime", "Series", "PurchaseInfo", "Genre", ""],
-        ["Title", "Runtime", "TmdbId", "Note"],
-        ["\uFEFFTitle", "Runtime", "TmdbId", "Note"],
-        ["title", "RUNTIME", "tmdbid", "note"],
-        ["Title", "Runtime", "TmdbId", "Note", "", "stray"],
-        ["Title", "Runtime", "TmdbId"],
-        ["Title", "Runtime"],
-        ["Title", "Runtime", "Id", "Note"],
-        ["", "Runtime", "TmdbId", "Note"],
-        ["Note", "TmdbId", "Runtime", "Title"],
-        [],
-    ];
+    // ---- shapes that only the retired tab's Matches cases used to reach ------------------------------
+    // Matches went with the Overrides fetch that was its only caller. These were real Validate rules all
+    // along, asserted only through Matches agreeing with it, so they are stated against Validate here.
 
     [Fact]
-    public void MatchesAgreesWithValidateForEveryTabAndEveryHeader()
-    {
-        foreach (var expected in new[] { SheetSchema.Movies, SheetSchema.Shows, SheetSchema.Overrides })
-            foreach (var header in Headers)
-            {
-                var validates = true;
-                try { SheetSchema.Validate("tab", expected, header); }
-                catch (SheetSchemaException) { validates = false; }
-
-                Assert.Equal(validates, SheetSchema.Matches(expected, header));
-            }
-    }
+    public void AcceptsAHeaderInAnyCase()
+        => SheetSchema.Validate("Movies", SheetSchema.Movies,
+                                ["title", "RUNTIME", "directors", "purchaseinfo", "GENRES"]);
 
     [Fact]
-    public void MatchesAcceptsATrailingUnnamedColumnABomAndAnyCase()
-    {
-        Assert.True(SheetSchema.Matches(SheetSchema.Movies, Headers[0]));
-        Assert.True(SheetSchema.Matches(SheetSchema.Overrides, Headers[3]));   // BOM
-        Assert.True(SheetSchema.Matches(SheetSchema.Overrides, Headers[4]));   // case
-        Assert.True(SheetSchema.Matches(SheetSchema.Overrides, Headers[5]));   // extra columns
-    }
+    public void AcceptsStrayColumnsAfterTheExpectedOnes()
+        => SheetSchema.Validate("Shows", SheetSchema.Shows,
+                                ["Title", "Runtime", "Series", "PurchaseInfo", "Genre", "", "stray"]);
 
     [Fact]
-    public void MatchesRejectsAShortHeaderAWrongColumnAMissingFirstCellAndAReorder()
-    {
-        Assert.False(SheetSchema.Matches(SheetSchema.Overrides, Headers[6]));
-        Assert.False(SheetSchema.Matches(SheetSchema.Overrides, Headers[8]));
-        Assert.False(SheetSchema.Matches(SheetSchema.Overrides, Headers[9]));
-        Assert.False(SheetSchema.Matches(SheetSchema.Overrides, Headers[10]));
-        Assert.False(SheetSchema.Matches(SheetSchema.Overrides, Headers[11]));   // no header at all
-    }
+    public void RejectsAReorderedHeader()
+        => Assert.Throws<SheetSchemaException>(
+            () => SheetSchema.Validate("Movies", SheetSchema.Movies,
+                                       ["Genres", "PurchaseInfo", "Directors", "Runtime", "Title"]));
 
     [Fact]
-    public void MatchesTellsTheTabsApartWithoutThrowing()
-    {
-        Assert.False(SheetSchema.Matches(SheetSchema.Overrides, Headers[0]));   // Google's fallback to the Movies sheet
-        Assert.False(SheetSchema.Matches(SheetSchema.Shows, Headers[0]));
-        Assert.False(SheetSchema.Matches(SheetSchema.Movies, Headers[1]));
-        Assert.False(SheetSchema.Matches(SheetSchema.Movies, Headers[2]));
-    }
+    public void RejectsABlankFirstCell()
+        => Assert.Throws<SheetSchemaException>(
+            () => SheetSchema.Validate("Movies", SheetSchema.Movies,
+                                       ["", "Runtime", "Directors", "PurchaseInfo", "Genres"]));
+
+    [Fact]
+    public void RejectsAnEmptyHeader()
+        => Assert.Throws<SheetSchemaException>(
+            () => SheetSchema.Validate("Movies", SheetSchema.Movies, []));
 }

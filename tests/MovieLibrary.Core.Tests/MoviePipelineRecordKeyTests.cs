@@ -19,7 +19,7 @@ public class MoviePipelineRecordKeyTests
     public async Task AnUnmatchedFilmIsKeyedByThePrefixOfItsContentIdentityKey()
     {
         var result = await TestPipeline.WithNoTmdbResults().RunAsync(
-            [Row("Some Obscure Film", "1:35:00", "Nobody")], new Dictionary<string, int>(), BoundStore.Empty, CancellationToken.None);
+            [Row("Some Obscure Film", "1:35:00", "Nobody")], BoundStore.Empty, CancellationToken.None);
 
         var record = Assert.Single(result.Records);
         var identity = IdentityKey.ForFilm(TitleNormalizer.Normalize("Some Obscure Film"), 95,
@@ -34,7 +34,7 @@ public class MoviePipelineRecordKeyTests
     {
         var result = await TestPipeline.WithNoTmdbResults().RunAsync(
             [Row("Obscure One", "1:35:00", "Nobody"), Row("Obscure Two", "1:40:00", "Nobody")],
-            new Dictionary<string, int>(), BoundStore.Empty, CancellationToken.None);
+            BoundStore.Empty, CancellationToken.None);
 
         Assert.All(result.Records, r => Assert.Equal(0, r.I));
         Assert.Equal(2, result.Records.Select(r => r.K).Distinct().Count());
@@ -49,8 +49,7 @@ public class MoviePipelineRecordKeyTests
         var extended = Row("The Fellowship of the Ring", "3:48:00", "Peter Jackson");
 
         var result = await TestPipeline.ThatFailsIfSearched(tmdbId: 120).RunAsync(
-            [theatrical, extended], new Dictionary<string, int>(),
-            TestStore.Forcing((theatrical, 120), (extended, 120)), CancellationToken.None);
+            [theatrical, extended],             TestStore.Forcing((theatrical, 120), (extended, 120)), CancellationToken.None);
 
         Assert.Equal(2, result.Records.Count);
         Assert.All(result.Records, r => Assert.Equal(120, r.I));
@@ -63,8 +62,7 @@ public class MoviePipelineRecordKeyTests
         var halloween = Row("Halloween", "1:31:00", "John Carpenter");
 
         var result = await TestPipeline.ThatFailsIfSearched(tmdbId: 948).RunAsync(
-            [halloween], new Dictionary<string, int>(),
-            TestStore.Forcing((halloween, 948)), CancellationToken.None);
+            [halloween],             TestStore.Forcing((halloween, 948)), CancellationToken.None);
 
         var record = Assert.Single(result.Records);
         Assert.Equal(948, record.I);
@@ -88,14 +86,12 @@ public class MoviePipelineRecordKeyTests
             "/3/movie/1771/credits" => TestPipeline.Json("""{"crew":[{"job":"Director","name":"Joe Johnston"}]}"""),
             _ => TestPipeline.NotFound(),
         });
-        var none = new Dictionary<string, int>();
-
         var before = Assert.Single((await h.Pipeline.RunAsync(
-            [Row(title, "2:04:09", "Joe Johnston")], none, BoundStore.Empty, CancellationToken.None)).Records);
+            [Row(title, "2:04:09", "Joe Johnston")], BoundStore.Empty, CancellationToken.None)).Records);
         var searchesBefore = h.Handler.Requests.Count(TestPipeline.IsSearch);
 
         var after = Assert.Single((await h.Pipeline.RunAsync(
-            [Row(title, "2:05:15", "Joe Johnston")], none, BoundStore.Empty, CancellationToken.None)).Records);
+            [Row(title, "2:05:15", "Joe Johnston")], BoundStore.Empty, CancellationToken.None)).Records);
 
         Assert.Equal(1, searchesBefore);
         Assert.Equal(1, h.Handler.Requests.Count(TestPipeline.IsSearch));   // the alias answered: the match was kept

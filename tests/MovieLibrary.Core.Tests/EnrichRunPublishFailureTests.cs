@@ -277,7 +277,7 @@ public class EnrichRunPublishFailureTests
         Assert.Contains("CatalogMeta.TmdbAttribution", err);
         Assert.Contains("code change", err);
         Assert.DoesNotContain("Shows tab", err);                 // the slug advice
-        Assert.DoesNotContain("Overrides row", err);
+        Assert.DoesNotContain("record-store.json", err);   // nor the store half of it
         Assert.DoesNotContain("   at ", err);                    // not a stack trace
         Assert.False(h.Wrote("meta.json"));
     }

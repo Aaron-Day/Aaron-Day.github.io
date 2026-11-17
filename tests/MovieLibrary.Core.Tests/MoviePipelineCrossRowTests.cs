@@ -12,8 +12,6 @@ namespace MovieLibrary.Core.Tests;
 /// </summary>
 public class MoviePipelineCrossRowTests
 {
-    private static readonly IReadOnlyDictionary<string, int> NoOverrides = new Dictionary<string, int>();
-
     private static readonly FakeTmdb.Film TokyoDrift = new(9615, "The Fast and the Furious: Tokyo Drift", 104, "Justin Lin", Year: 2006);
 
     private static SheetRow Row(string title, string runtime, string directors, string own = "")
@@ -23,7 +21,7 @@ public class MoviePipelineCrossRowTests
     private static SheetRow TokyoDriftRow => Row("The Fast and the Furious: Tokyo Drift", "1:44:00", "Justin Lin", "Fast & Furious Bundle");
 
     private static Task<MoviePipelineResult> Run(TestPipeline.Harness h, params SheetRow[] rows)
-        => h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, CancellationToken.None);
+        => h.Pipeline.RunAsync(rows, BoundStore.Empty, CancellationToken.None);
 
     private static TestPipeline.Harness Tmdb(params FakeTmdb.Film[] films) => TestPipeline.Create(0, new FakeTmdb(films).Respond);
 
@@ -94,7 +92,7 @@ public class MoviePipelineCrossRowTests
 
         var result = await Tmdb(newHope).Pipeline.RunAsync(
             [forced, Row("Star Wars", "2:01:00", "George Lucas")],
-            NoOverrides, TestStore.Forcing((forced, 11)), CancellationToken.None);
+            TestStore.Forcing((forced, 11)), CancellationToken.None);
 
         Assert.Equal([11, 11], result.Records.Select(r => r.I));
         Assert.Equal(["11-121", "11-125"], result.Records.Select(r => r.K).Order(StringComparer.Ordinal));
@@ -110,7 +108,7 @@ public class MoviePipelineCrossRowTests
 
         var result = await Tmdb(starWars).Pipeline.RunAsync(
             [forced, Row("Star Wars Holiday Special", "2:01:00", "George Lucas")],
-            NoOverrides, TestStore.Forcing((forced, 11)), CancellationToken.None);
+            TestStore.Forcing((forced, 11)), CancellationToken.None);
 
         Assert.Equal(11, Assert.Single(result.Records, r => r.T == "Star Wars: A New Hope").I);
         Assert.Equal(0, Assert.Single(result.Records, r => r.T == "Star Wars Holiday Special").I);

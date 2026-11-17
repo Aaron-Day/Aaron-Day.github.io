@@ -191,9 +191,7 @@ public class EnrichCliTests
             if (req.RequestUri!.Host == "docs.google.com")
                 return GoogleSheetClientTests.Csv(req.RequestUri.Query.Contains("sheet=Movies", StringComparison.Ordinal)
                     ? RunLibrary.Movies(("Alien", "1:56:00", "Ridley Scott", "Sci-Fi"), ("Brazil", "2:22:00", "Terry Gilliam", "Sci-Fi"))
-                    : req.RequestUri.Query.Contains("sheet=Shows", StringComparison.Ordinal)
-                        ? GoogleSheetClientTests.ShowsHeader
-                        : GoogleSheetClientTests.OverridesHeader);
+                    : GoogleSheetClientTests.ShowsHeader);
 
             return TestPipeline.Json(TestPipeline.EmptyResults);          // TMDB knows nothing
         });

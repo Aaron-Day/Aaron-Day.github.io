@@ -21,9 +21,6 @@ internal static class RunLibrary
         => GoogleSheetClientTests.ShowsHeader + string.Concat(rows.Select(r =>
             string.Join(",", Quote(r.Episode), Quote("44:00:00"), Quote(r.Series), Quote("Season Pass"), Quote(r.Genre), Quote("")) + "\n"));
 
-    public static string Overrides(params (string Title, string Runtime, string Id)[] rows)
-        => GoogleSheetClientTests.OverridesHeader + string.Concat(rows.Select(r => OverrideCsv.Line(r.Title, r.Runtime, r.Id)));
-
     /// <summary>
     /// A record store as <c>record-store.json</c> holds it, for <see cref="RunHarness.WriteStore"/>. This is how a
     /// whole-run test settles a TMDB id without a search. Each entry is keyed the way <c>StoreBinder</c> keys it, so

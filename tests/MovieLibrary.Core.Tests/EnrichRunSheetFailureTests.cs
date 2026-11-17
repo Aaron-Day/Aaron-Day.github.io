@@ -27,7 +27,6 @@ public class EnrichRunSheetFailureTests
     [Theory]
     [InlineData("Movies")]
     [InlineData("Shows")]
-    [InlineData("Overrides")]
     public async Task ASheetThatIsNoLongerSharedIsFatalAndTheAdviceIsAboutSharing(string tab)
     {
         using var h = new RunHarness();
@@ -51,7 +50,6 @@ public class EnrichRunSheetFailureTests
     [Theory]
     [InlineData("Movies")]
     [InlineData("Shows")]
-    [InlineData("Overrides")]
     public async Task ATabWithTheWrongColumnsIsFatalAndTheAdviceIsAboutTheTabNotTheSharing(string tab)
     {
         using var h = new RunHarness();

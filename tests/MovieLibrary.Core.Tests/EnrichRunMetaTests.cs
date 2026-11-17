@@ -250,11 +250,11 @@ public class EnrichRunMetaTests
         Assert.NotEmpty(h.TmdbHandler.Requests);
         Assert.All(h.TmdbHandler.Requests, r => Assert.Equal("Bearer eyJ.stub.token", r.Headers.Authorization?.ToString()));
         Assert.All(h.SheetHandler.Requests, r => Assert.Null(r.Headers.Authorization));    // the Sheet is read anonymously
-        Assert.Equal(3, h.SheetHandler.Requests.Count);                                     // Movies, Shows, Overrides
+        Assert.Equal(2, h.SheetHandler.Requests.Count);                                     // Movies and Shows
     }
 
     [Fact]
-    public async Task EverySheetRequestNamesTheConfiguredSheetAndOneOfItsThreeTabs()
+    public async Task EverySheetRequestNamesTheConfiguredSheetAndOneOfItsTwoTabs()
     {
         using var h = Library();
         h.Options = h.Options with { SheetId = "my-sheet-id" };
@@ -263,7 +263,7 @@ public class EnrichRunMetaTests
 
         Assert.All(h.SheetHandler.Requests, r => Assert.StartsWith("/spreadsheets/d/my-sheet-id/gviz/tq", r.RequestUri!.AbsolutePath));
         var tabs = h.SheetHandler.Requests.Select(r => r.RequestUri!.Query.Split("sheet=")[1]).Order().ToList();
-        Assert.Equal(["Movies", "Overrides", "Shows"], tabs);
+        Assert.Equal(["Movies", "Shows"], tabs);
     }
 
     // ---- one clock per run ---------------------------------------------------------------------------

@@ -15,8 +15,7 @@ public class MoviePipelineTests
         var pipeline = TestPipeline.WithNoTmdbResults();
 
         var result = await pipeline.RunAsync(
-            [Row("Some Obscure Film", "1:35:00", "Nobody")], new Dictionary<string, int>(),
-            BoundStore.Empty, CancellationToken.None);
+            [Row("Some Obscure Film", "1:35:00", "Nobody")],             BoundStore.Empty, CancellationToken.None);
 
         var record = Assert.Single(result.Records);
         Assert.Equal("Some Obscure Film", record.T);
@@ -32,7 +31,7 @@ public class MoviePipelineTests
 
         var result = await pipeline.RunAsync(
             [Row("A", "1:30:00", "X"), Row("B", "1:40:00", "Y"), Row("C", "1:50:00", "Z")],
-            new Dictionary<string, int>(), BoundStore.Empty, CancellationToken.None);
+            BoundStore.Empty, CancellationToken.None);
 
         Assert.True(result.StoppedOnBudget);
         Assert.Equal(3, result.Records.Count); // all rows still emitted, unresolved ones at mc 0

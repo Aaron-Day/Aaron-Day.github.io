@@ -18,9 +18,6 @@ public class MoviePipelineExpansionTests
         IdentityKey.ForFilm(TitleNormalizer.Normalize(Bundle.Title), BundleMinutes,
                             TitleNormalizer.NormalizeDirectors(Bundle.Directors));
 
-    private static readonly IReadOnlyDictionary<string, int> NoTabOverrides =
-        new Dictionary<string, int>(StringComparer.Ordinal);
-
     private static BoundStore Four() => new()
     {
         Series = new Dictionary<string, SeriesEntry>(StringComparer.Ordinal),
@@ -45,7 +42,7 @@ public class MoviePipelineExpansionTests
 
     private static Task<MoviePipelineResult> RunAsync() =>
         TestPipeline.ThatFailsIfSearched(13589, 13590, 13591, 13592)
-                    .RunAsync([Bundle], NoTabOverrides, Four(), default);
+                    .RunAsync([Bundle], Four(), default);
 
     [Fact]
     public async Task OneRowPublishesOneRecordPerStoreRecord()
@@ -76,8 +73,7 @@ public class MoviePipelineExpansionTests
     {
         // ONE id, four runtimes. With four different ids the keys differ whatever the runtime does, so the old form of
         // this test could only fail on an id collapse. Here the runtime is the only thing that parts them.
-        var result = await TestPipeline.ThatFailsIfSearched(13589).RunAsync([Bundle], NoTabOverrides,
-            Of(new RecordOverride(TmdbId: 13589, Runtime: 84),
+        var result = await TestPipeline.ThatFailsIfSearched(13589).RunAsync([Bundle],             Of(new RecordOverride(TmdbId: 13589, Runtime: 84),
                new RecordOverride(TmdbId: 13589, Runtime: 83),
                new RecordOverride(TmdbId: 13589, Runtime: 86),
                new RecordOverride(TmdbId: 13589, Runtime: 85)), default);
@@ -100,7 +96,7 @@ public class MoviePipelineExpansionTests
     public async Task ARowWithNoStoreEntryStillPublishesExactlyOneRecord()
     {
         var result = await TestPipeline.WithNoTmdbResults()
-            .RunAsync([Bundle], NoTabOverrides, BoundStore.Empty, default);
+            .RunAsync([Bundle], BoundStore.Empty, default);
 
         var film = Assert.Single(result.Records);
         Assert.Equal(0, film.I);
@@ -126,7 +122,7 @@ public class MoviePipelineExpansionTests
 
     private static Task<MoviePipelineResult> RunUnmatchedAsync(params RecordOverride[] records) =>
         TestPipeline.ThatFailsIfSearched(1)
-                    .RunAsync([Bundle], NoTabOverrides, Of(records), default);
+                    .RunAsync([Bundle], Of(records), default);
 
     [Fact]
     public async Task ASingleUnmatchedRowKeepsTheKeyItAlwaysHad()

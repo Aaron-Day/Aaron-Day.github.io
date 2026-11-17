@@ -5,8 +5,8 @@ using MovieLibrary.Enrich.Sheets;
 namespace MovieLibrary.Core.Tests;
 
 /// <summary>
-/// The Movies and Shows half of <see cref="GoogleSheetClient"/>, and the HTTP behaviour all three tabs share.
-/// The Overrides tab has its own file: <see cref="GoogleSheetClientOverridesTests"/>.
+/// <see cref="GoogleSheetClient"/>: the Movies and Shows tabs, and the HTTP behaviour both share. The
+/// Overrides tab these tests covered as well was retired, so every fetch here is one of the two that remain.
 /// </summary>
 public class GoogleSheetClientTests
 {
@@ -14,7 +14,8 @@ public class GoogleSheetClientTests
 
     internal const string MoviesHeader = "\"Title\",\"Runtime\",\"Directors\",\"PurchaseInfo\",\"Genres\",\"\"\n";
     internal const string ShowsHeader = "\"Title\",\"Runtime\",\"Series\",\"PurchaseInfo\",\"Genre\",\"\"\n";
-    internal const string OverridesHeader = "\"Title\",\"Runtime\",\"TmdbId\",\"Note\"\n";
+    /// <summary>A header belonging to neither tab, and a column short of both: Google fell back to another sheet.</summary>
+    private const string ForeignHeader = "\"Title\",\"Runtime\",\"TmdbId\",\"Note\"\n";
 
     private const string MoviesCsv =
         MoviesHeader +
@@ -144,9 +145,11 @@ public class GoogleSheetClientTests
     }
 
     [Fact]
-    public async Task RejectsAnOverridesSheetAsMoviesOrShows()
+    public async Task RejectsAForeignSheetWithFewerColumnsThanEitherTab()
     {
-        var csv = OverridesHeader + "\"Halloween\",\"1:31:00\",\"948\",\"\"\n";
+        // Google can fall back to any sheet, not only the other tab: a four-column one takes the
+        // "fewer columns than expected" path, which a Movies-for-Shows mix-up never reaches.
+        var csv = ForeignHeader + "\"Halloween\",\"1:31:00\",\"948\",\"\"\n";
 
         await Assert.ThrowsAsync<SheetSchemaException>(() => Build(csv).FetchMoviesAsync("sheet", Ct));
         await Assert.ThrowsAsync<SheetSchemaException>(() => Build(csv).FetchShowsAsync("sheet", Ct));
@@ -163,7 +166,7 @@ public class GoogleSheetClientTests
     [Fact]
     public async Task AnEmptyBodyIsRejectedForMoviesAndShows()
     {
-        // Unlike Overrides, these two tabs are required: nothing to enrich means something is wrong.
+        // Both tabs are required: nothing to enrich means something is wrong.
         await Assert.ThrowsAsync<SheetSchemaException>(() => Build("").FetchMoviesAsync("sheet", Ct));
         await Assert.ThrowsAsync<SheetSchemaException>(() => Build("").FetchShowsAsync("sheet", Ct));
     }
@@ -201,7 +204,6 @@ public class GoogleSheetClientTests
 
         await Assert.ThrowsAnyAsync<OperationCanceledException>(() => client.FetchMoviesAsync("sheet", cts.Token));
         await Assert.ThrowsAnyAsync<OperationCanceledException>(() => client.FetchShowsAsync("sheet", cts.Token));
-        await Assert.ThrowsAnyAsync<OperationCanceledException>(() => client.FetchOverridesAsync("sheet", cts.Token));
 
         // and the same client is fine with a live token, so the failure above was the token
         Assert.Single(await client.FetchMoviesAsync("sheet", Ct));
@@ -219,17 +221,16 @@ public class GoogleSheetClientTests
     {
         "Movies" => client.FetchMoviesAsync("sheet", Ct),
         "Shows" => client.FetchShowsAsync("sheet", Ct),
-        _ => client.FetchOverridesAsync("sheet", Ct),
+        // Not a silent fallback: a tab this file no longer fetches must fail the test, not quietly test another.
+        _ => throw new Xunit.Sdk.XunitException($"No fetch for tab '{tab}'"),
     };
 
     [Theory]
     [InlineData("Movies", "text/html", HtmlPage)]
     [InlineData("Shows", "text/html", HtmlPage)]
-    [InlineData("Overrides", "text/html", HtmlPage)]
     [InlineData("Movies", "text/csv", HtmlPage)]                       // the type lies, the body does not
     [InlineData("Shows", "text/csv", "  \r\n" + HtmlPage)]            // leading whitespace
     [InlineData("Movies", "text/html", "")]                            // the type alone is enough
-    [InlineData("Overrides", "TEXT/HTML", "")]                          // and its case does not matter
     public async Task AWebPageInsteadOfCsvSaysTheSheetMayNoLongerBeShared(string tab, string mediaType, string body)
     {
         var client = BuildWithHandler(_ => Response(body, mediaType)).Client;
@@ -246,7 +247,6 @@ public class GoogleSheetClientTests
     [Theory]
     [InlineData("Movies")]
     [InlineData("Shows")]
-    [InlineData("Overrides")]
     public async Task ABomInFrontOfAWebPageDoesNotHideIt(string tab)
     {
         // BuildWithBom leaves a BOM that survives decoding (a single one is dropped before the client sees it).
@@ -258,13 +258,14 @@ public class GoogleSheetClientTests
     [Theory]
     [InlineData("Movies")]
     [InlineData("Shows")]
-    [InlineData("Overrides")]
     public async Task ACsvBodyThatMerelyMentionsMarkupIsNotAWebPage(string tab)
     {
         // Only a body that STARTS with markup is a page; a header cell is data.
         var header = tab switch
         {
-            "Movies" => MoviesHeader, "Shows" => ShowsHeader, _ => OverridesHeader,
+            "Movies" => MoviesHeader,
+            "Shows" => ShowsHeader,
+            _ => throw new Xunit.Sdk.XunitException($"No header for tab '{tab}'"),
         };
         var client = BuildWithHandler(_ => Response(header + "\"<b>Bold</b>\",\"1:30:00\",\"7\",\"x\",\"y\"\n", "text/csv")).Client;
 
@@ -277,14 +278,12 @@ public class GoogleSheetClientTests
     public async Task TheSheetIsFetchedAnonymously()
     {
         var (client, handler) = BuildWithHandler(req => Csv(
-            req.RequestUri!.Query.EndsWith("sheet=Movies") ? MoviesCsv
-            : req.RequestUri!.Query.EndsWith("sheet=Shows") ? ShowsCsv : OverridesHeader));
+            req.RequestUri!.Query.EndsWith("sheet=Movies") ? MoviesCsv : ShowsCsv));
 
         await client.FetchMoviesAsync("sheet", Ct);
         await client.FetchShowsAsync("sheet", Ct);
-        await client.FetchOverridesAsync("sheet", Ct);
 
-        Assert.Equal(3, handler.Requests.Count);
+        Assert.Equal(2, handler.Requests.Count);
         foreach (var request in handler.Requests)
         {
             Assert.Null(request.Headers.Authorization);

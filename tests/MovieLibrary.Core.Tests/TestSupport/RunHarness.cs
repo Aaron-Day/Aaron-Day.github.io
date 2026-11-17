@@ -39,9 +39,8 @@ internal sealed class RunHarness : IDisposable
 
     public string MoviesCsv { get; set; } = GoogleSheetClientTests.MoviesHeader;
     public string ShowsCsv { get; set; } = GoogleSheetClientTests.ShowsHeader;
-    public string OverridesCsv { get; set; } = GoogleSheetClientTests.OverridesHeader;
 
-    /// <summary>Answers a tab ("Movies", "Shows", "Overrides") itself, instead of the CSV properties. Null: use them.</summary>
+    /// <summary>Answers a tab ("Movies" or "Shows") itself, instead of the CSV properties. Null: use them.</summary>
     public Func<string, HttpResponseMessage?>? SheetOverride { get; set; }
 
     public Func<HttpRequestMessage, HttpResponseMessage> Tmdb { get; set; } =
@@ -74,7 +73,7 @@ internal sealed class RunHarness : IDisposable
         {
             "Movies" => MoviesCsv,
             "Shows" => ShowsCsv,
-            "Overrides" => OverridesCsv,
+            // The Overrides tab was retired in Task 7. A run that asks for it again fails here, which is the point.
             _ => throw new Xunit.Sdk.XunitException($"Unexpected sheet tab {tab}")
         });
     }

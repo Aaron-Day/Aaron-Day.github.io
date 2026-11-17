@@ -20,8 +20,6 @@ public class MoviePipelineGapTests
     private static SheetRow Row(string title, string runtime, string directors)
         => new(title, runtime, directors, "", "Sci-Fi & Fantasy", "");
 
-    private static readonly IReadOnlyDictionary<string, int> NoOverrides = new Dictionary<string, int>();
-
     private static Func<HttpRequestMessage, HttpResponseMessage> Routes(Dictionary<string, string> byPath)
         => req => byPath.TryGetValue(req.RequestUri!.AbsolutePath, out var body)
             ? TestPipeline.Json(body) : TestPipeline.NotFound();
@@ -69,7 +67,7 @@ public class MoviePipelineGapTests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         var r = Assert.Single(result.Records);
         Assert.Equal(275, r.I);
@@ -90,10 +88,10 @@ public class MoviePipelineGapTests
     public async Task ASecondRunIsServedFromTheCacheWithoutSearching()
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes));
-        await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
         var before = h.Handler.Requests.Count;
 
-        var second = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var second = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(before, h.Handler.Requests.Count); // nothing re-fetched, payload read from disk
         Assert.Equal(275, Assert.Single(second.Records).I);
@@ -109,11 +107,11 @@ public class MoviePipelineGapTests
         var h = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
         await h.Pipeline.RunAsync([Row("Ocean's Eleven (Unrated)", "1:56:00", "Steven Soderbergh")],
-            NoOverrides, BoundStore.Empty, CancellationToken.None);
+            BoundStore.Empty, CancellationToken.None);
         var before = h.Handler.Requests.Count;
 
         await h.Pipeline.RunAsync([Row("Ocean's Eleven", "1:57:00", "Steven Soderbergh")],
-            NoOverrides, BoundStore.Empty, CancellationToken.None);
+            BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(before, h.Handler.Requests.Count);
     }
@@ -125,7 +123,7 @@ public class MoviePipelineGapTests
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
 
         await h.Pipeline.RunAsync([Row("Ocean's Eleven (2001)", "1:56:00", "Steven Soderbergh")],
-            NoOverrides, BoundStore.Empty, CancellationToken.None);
+            BoundStore.Empty, CancellationToken.None);
 
         var search = Assert.Single(h.Handler.Requests);
         Assert.Equal("Ocean's Eleven", HttpUtility.ParseQueryString(search.RequestUri!.Query)["query"]);
@@ -138,7 +136,7 @@ public class MoviePipelineGapTests
         var h = TestPipeline.Create(0, Routes([]));
 
         var result = await h.Pipeline.RunAsync([Row("(2011)", "1:30:00", "X")],
-            NoOverrides, BoundStore.Empty, CancellationToken.None);
+            BoundStore.Empty, CancellationToken.None);
 
         Assert.Empty(h.Handler.Requests);
         var r = Assert.Single(result.Records);
@@ -155,7 +153,7 @@ public class MoviePipelineGapTests
         var result = await h.Pipeline.RunAsync(
             [Row("Zulu", "1:30:00", "X"), Row("Ørn", "1:31:00", "X"), Row("charlie", "1:32:00", "X"),
              Row("Alpha", "1:33:00", "X")],
-            NoOverrides, BoundStore.Empty, CancellationToken.None);
+            BoundStore.Empty, CancellationToken.None);
 
         // By folded title, ordinally: "charlie" sorts between Alpha and Zulu despite its case, and
         // "ø" sorts after "z", so the order is the same on every machine.
@@ -171,7 +169,7 @@ public class MoviePipelineGapTests
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
 
         var result = await h.Pipeline.RunAsync(
-            [Row("A", "1:30:00", "X"), Row("B", "1:40:00", "Y")], NoOverrides, BoundStore.Empty, CancellationToken.None);
+            [Row("A", "1:30:00", "X"), Row("B", "1:40:00", "Y")], BoundStore.Empty, CancellationToken.None);
 
         Assert.True(result.StoppedOnBudget);
         Assert.Equal(2, result.Records.Count);
@@ -186,7 +184,7 @@ public class MoviePipelineGapTests
         // known about any candidate, so nothing matches and nothing may be cached.
         var h = TestPipeline.Create(budget: 1, Routes(FargoRoutes));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.True(result.StoppedOnBudget);
         Assert.Empty(h.Cache.Entries);
@@ -200,7 +198,7 @@ public class MoviePipelineGapTests
         var h = TestPipeline.Create(0, Routes(FooRoutes));
 
         var result = await h.Pipeline.RunAsync([Row("Foo", "1:30:00", "Nobody")],
-            NoOverrides, BoundStore.Empty, CancellationToken.None);
+            BoundStore.Empty, CancellationToken.None);
 
         var r = Assert.Single(result.Records);
         Assert.Equal((0, 0d), (r.I, r.Mc));
@@ -222,7 +220,7 @@ public class MoviePipelineGapTests
             var h = TestPipeline.Create(0, Routes(FooRoutes));
 
             var result = await h.Pipeline.RunAsync([Row("Foo", "1:30:00", "Nobody")],
-                NoOverrides, BoundStore.Empty, CancellationToken.None);
+                BoundStore.Empty, CancellationToken.None);
 
             Assert.Contains("Unmatched at 0.15", result.ReviewQueue.Single());
         }
@@ -236,7 +234,7 @@ public class MoviePipelineGapTests
         var h = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
 
-        await h.Pipeline.RunAsync([Row("!!!", "1:30:00", "X")], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync([Row("!!!", "1:30:00", "X")], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(["!!!"], Searches(h));
     }
@@ -247,9 +245,9 @@ public class MoviePipelineGapTests
         var h = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
         SheetRow[] rows = [Row("Halloween", "1:31:00", "X"), Row("Halloween", "1:45:00", "X")];
-        await h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync(rows, BoundStore.Empty, CancellationToken.None);
 
-        var warm = await h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, CancellationToken.None); // negatives from cache
+        var warm = await h.Pipeline.RunAsync(rows, BoundStore.Empty, CancellationToken.None); // negatives from cache
 
         Assert.Equal(2, warm.ReviewQueue.Count);
     }
@@ -262,7 +260,7 @@ public class MoviePipelineGapTests
 
         await h.Pipeline.RunAsync(
             [Fargo, Row("Ocean's Eleven (Unrated)", "1:56:00", "Steven Soderbergh")],
-            NoOverrides, BoundStore.Empty, CancellationToken.None);
+            BoundStore.Empty, CancellationToken.None);
 
         var hit = h.Cache.Entries.Single(e => !e.Negative);
         Assert.Equal((275, 0.85, "fargo", 98), (hit.TmdbId, hit.Confidence, hit.NormalizedTitle, hit.RuntimeMinutes));
@@ -286,7 +284,7 @@ public class MoviePipelineGapTests
         cts.Cancel();
 
         await Assert.ThrowsAnyAsync<OperationCanceledException>(
-            () => h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, cts.Token));
+            () => h.Pipeline.RunAsync([Fargo], BoundStore.Empty, cts.Token));
 
         Assert.Empty(h.Handler.Requests);
     }
@@ -306,7 +304,7 @@ public class MoviePipelineGapTests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes));
 
-        await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(1, Paths(h).Count(p => p == "/3/movie/275"));
     }
@@ -316,7 +314,7 @@ public class MoviePipelineGapTests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes));
 
-        await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         // The decoys run 120 and 150 minutes against the sheet's 98: they cannot win on runtime.
         Assert.Equal(["/3/movie/275/credits"], Paths(h).Where(p => p.EndsWith("/credits")));
@@ -340,7 +338,7 @@ public class MoviePipelineGapTests
             ["/3/movie/8/credits"] = """{"crew":[{"job":"Director","name":"Joel Coen"}]}""",
         }));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(["/3/movie/7/credits"], Paths(h).Where(p => p.EndsWith("/credits")));
         var r = Assert.Single(result.Records);
@@ -359,13 +357,13 @@ public class MoviePipelineGapTests
         SheetRow[] rows = [Row("Halloween", "1:31:00", "John Carpenter")];
         var store = TestStore.Forcing((rows[0], 948));
 
-        var first = await h.Pipeline.RunAsync(rows, NoOverrides, store, CancellationToken.None);
+        var first = await h.Pipeline.RunAsync(rows, store, CancellationToken.None);
         overview = "Newer";
         now = now.AddDays(100); // inside the 150-day window
-        var inside = await h.Pipeline.RunAsync(rows, NoOverrides, store, CancellationToken.None);
+        var inside = await h.Pipeline.RunAsync(rows, store, CancellationToken.None);
         var requestsInside = h.Handler.Requests.Count;
         now = now.AddDays(51); // 151 days after the fetch
-        var outside = await h.Pipeline.RunAsync(rows, NoOverrides, store, CancellationToken.None);
+        var outside = await h.Pipeline.RunAsync(rows, store, CancellationToken.None);
 
         Assert.Equal("Old", first.Records[0].Ov);
         Assert.Equal("Old", inside.Records[0].Ov);
@@ -382,7 +380,7 @@ public class MoviePipelineGapTests
             : throw new Xunit.Sdk.XunitException($"Unexpected request: {req.RequestUri}"));
         await SeedFargoWithAStalePayload(h);
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         var r = Assert.Single(result.Records);
         Assert.Equal(("Fresh", "/p.jpg"), (r.Ov, r.P));
@@ -397,12 +395,12 @@ public class MoviePipelineGapTests
         var fargo = Routes(FargoRoutes);
         var h = TestPipeline.Create(0, req => req.RequestUri!.AbsolutePath == "/3/movie/275"
             ? TestPipeline.Json(FargoDetails(overview)) : fargo(req), () => now);
-        await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
         overview = "New";
         now = now.AddDays(151); // the index entry has expired, so the film is searched again
         var before = h.Handler.Requests.Count;
 
-        var second = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var second = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal("New", Assert.Single(second.Records).Ov);
         Assert.Equal(5, h.Handler.Requests.Count - before); // and the details from that search are reused
@@ -416,7 +414,7 @@ public class MoviePipelineGapTests
         // used, with the details already paid for, and nothing is cached.
         var h = TestPipeline.Create(budget: 4, Routes(FargoRoutes));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.True(result.StoppedOnBudget);
         var r = Assert.Single(result.Records);
@@ -432,9 +430,9 @@ public class MoviePipelineGapTests
         // A different director: Fargo is matched on runtime and title alone, so it is flagged at 0.55.
         SheetRow[] rows = [Row("Fargo", "1:38:00", "Somebody Else")];
 
-        var cold = await h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var cold = await h.Pipeline.RunAsync(rows, BoundStore.Empty, CancellationToken.None);
         var before = h.Handler.Requests.Count;
-        var warm = await h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var warm = await h.Pipeline.RunAsync(rows, BoundStore.Empty, CancellationToken.None);
 
         Assert.Contains("Flagged at 0.55, id 275", cold.ReviewQueue.Single());
         Assert.Equal(before, h.Handler.Requests.Count); // the warm run is served from the cache...
@@ -466,7 +464,7 @@ public class MoviePipelineGapTests
         // sends the single credits call to the decoy, and the real film (100 min) never gets a director.
         var h = TestPipeline.Create(0, Routes(PairRoutes("Fargo", "Fargo Redux")));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(["/3/movie/1/credits", "/3/movie/2/credits"], CreditsPaths(h));
         var r = Assert.Single(result.Records);
@@ -478,7 +476,7 @@ public class MoviePipelineGapTests
     {
         var h = TestPipeline.Create(0, Routes(PairRoutes("Fargo X", "Fargo Redux")));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(["/3/movie/2/credits"], CreditsPaths(h)); // the 101-minute decoy is not worth a request
         Assert.Equal((2, 0.70), (result.Records[0].I, result.Records[0].Mc));
@@ -502,7 +500,7 @@ public class MoviePipelineGapTests
             ["/3/movie/2/credits"] = """{"crew":[{"job":"Director","name":"Joel Coen"}]}""",
         }));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         // Both, and the named film first: it is enriched first now, being the one named like the sheet.
         Assert.Equal(["/3/movie/2/credits", "/3/movie/1/credits"], CreditsPaths(h));
@@ -522,7 +520,7 @@ public class MoviePipelineGapTests
         var aaa = Row("Aaa", "1:30:00", "X");
 
         var result = await h.Pipeline.RunAsync(
-            [aaa, Fargo], NoOverrides, TestStore.Forcing((aaa, 1)), CancellationToken.None);
+            [aaa, Fargo], TestStore.Forcing((aaa, 1)), CancellationToken.None);
 
         Assert.True(result.StoppedOnBudget);
         var fargo = result.Records.Single(r => r.T == "Fargo");
@@ -537,7 +535,7 @@ public class MoviePipelineGapTests
         var h = TestPipeline.Create(0, Routes(FargoRoutes));
         h.Cache.Put(new CacheEntry(FargoKey, 275, confidence, TestPipeline.Now, false, "fargo", 98));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(queued, result.ReviewQueue.Count == 1);
     }
@@ -576,7 +574,7 @@ public class MoviePipelineGapTests
         }));
 
         var result = await h.Pipeline.RunAsync(
-            [Row("Wall-E", "1:38:00", "Andrew Stanton")], NoOverrides, BoundStore.Empty, CancellationToken.None);
+            [Row("Wall-E", "1:38:00", "Andrew Stanton")], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(["/3/movie/12/credits"], Paths(h).Where(p => p.EndsWith("/credits")));
         var r = Assert.Single(result.Records);
@@ -599,7 +597,7 @@ public class MoviePipelineGapTests
             ["/3/movie/2/credits"] = """{"crew":[{"job":"Director","name":"Joel Coen"}]}""",
         }));
 
-        await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(["/3/movie/1/credits"], Paths(h).Where(p => p.EndsWith("/credits")));
     }
@@ -616,7 +614,7 @@ public class MoviePipelineGapTests
         Directory.CreateDirectory(Path.Combine(h.CacheDir, "movies"));
         await File.WriteAllTextAsync(Path.Combine(h.CacheDir, "movies", "275.json"), damaged);
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal("Fresh", Assert.Single(result.Records).Ov);
         Assert.Equal(["/3/movie/275"], Paths(h));
@@ -631,9 +629,9 @@ public class MoviePipelineGapTests
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
         SheetRow[] rows = [Row("!!!", "1:35:00", "X"), Row("???", "1:36:00", "X")];
 
-        await h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync(rows, BoundStore.Empty, CancellationToken.None);
         var cold = h.Handler.Requests.Count;
-        await h.Pipeline.RunAsync(rows, NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync(rows, BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(["!!!", "???"], Searches(h).Take(2)); // the 96-minute one is not "the same film" as the 95
         Assert.Equal(2, cold);
@@ -649,8 +647,8 @@ public class MoviePipelineGapTests
         var b = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
 
-        var first = await a.Pipeline.RunAsync(sheetOrder, NoOverrides, BoundStore.Empty, CancellationToken.None);
-        var second = await b.Pipeline.RunAsync([.. sheetOrder.Reverse()], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var first = await a.Pipeline.RunAsync(sheetOrder, BoundStore.Empty, CancellationToken.None);
+        var second = await b.Pipeline.RunAsync([.. sheetOrder.Reverse()], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal([91, 105], first.Records.Select(r => r.Rt));
         Assert.Equal([91, 105], second.Records.Select(r => r.Rt));
@@ -663,7 +661,7 @@ public class MoviePipelineGapTests
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
 
         await Assert.ThrowsAsync<FormatException>(() => h.Pipeline.RunAsync(
-            [Row("A", "1:30:00", "X"), Row("B", "not a runtime", "X")], NoOverrides, BoundStore.Empty, CancellationToken.None));
+            [Row("A", "1:30:00", "X"), Row("B", "not a runtime", "X")], BoundStore.Empty, CancellationToken.None));
 
         Assert.Empty(h.Handler.Requests); // "A" sorts first and would otherwise have been searched
     }
@@ -691,7 +689,7 @@ public class MoviePipelineGapTests
         // last) named candidate alone would leave one of them blind.
         var h = TestPipeline.Create(0, Routes(NamedRoutes((1, 80, 120, "Noah Hawley"), (2, 30, 70, "Joel Coen"))));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(["/3/movie/1/credits", "/3/movie/2/credits"], CreditsPaths(h));
         var r = Assert.Single(result.Records);
@@ -703,7 +701,7 @@ public class MoviePipelineGapTests
     {
         var h = TestPipeline.Create(0, Routes(NamedRoutes((1, 80, 120, "A"), (2, 50, 70, "B"), (3, 30, 140, "Joel Coen"))));
 
-        await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(3, CreditsPaths(h).Count());
         Assert.Equal(7, h.Handler.Requests.Count); // 1 search + 3 details + 3 credits: the same ceiling as three runtime passers
@@ -749,7 +747,7 @@ public class MoviePipelineGapTests
             (3, "Fargo Returns", 70, 130, "Someone Else"),
             (4, "Fargo", 10, 98, "Joel Coen"))));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(["/3/movie/4", "/3/movie/1", "/3/movie/2"], DetailPaths(h));
         Assert.Equal((4, 0.85), (result.Records[0].I, result.Records[0].Mc));
@@ -774,7 +772,7 @@ public class MoviePipelineGapTests
             (5, "Fa7go", 50, 98, "Joel Coen"),
             (6, "Fargo Zeta", 40, 160, "Someone Else"))));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         // The first three are the whole of what the old pass saw, and none of them agrees on anything.
         Assert.Equal(["/3/movie/1", "/3/movie/2", "/3/movie/3", "/3/movie/4", "/3/movie/5"], DetailPaths(h));
@@ -790,7 +788,7 @@ public class MoviePipelineGapTests
         var h = TestPipeline.Create(0, Routes(CandidateRoutes(
             [.. Enumerable.Range(1, 15).Select(i => (i, $"Fargo {i}", 100 - i, 120 + i, "Someone Else"))])));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(MoviePipeline.DetailCeiling, DetailPaths(h).Count());
         Assert.Equal(["/3/movie/1/credits"], CreditsPaths(h)); // the last resort, as before: the best-ranked

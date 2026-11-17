@@ -48,7 +48,7 @@ public class EnrichRunFixtureTests
     }
 
     [Fact]
-    public async Task AFixtureRunReadsTheTwoTabsAndNotTheOverridesTab()
+    public async Task AFixtureRunReadsExactlyTheTwoTabsThatAreLeft()
     {
         using var h = Fixtures();
 

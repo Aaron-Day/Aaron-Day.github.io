@@ -158,7 +158,7 @@ public class FixtureGeneratorCatalogueTests : IDisposable
     [Fact]
     public void MatchConfidenceIsConfidentButNeverMistakableForAHumanOverride()
     {
-        // 1.0 means "a human confirmed this on the Overrides tab" here; the best an algorithm can score is
+        // 1.0 means "the owner asserted this id in the record store" here; the best an algorithm can score is
         // 0.95. An unmatched film (id 0) scores 0, exactly as MoviePipeline writes it. A matched film scores
         // 0.95 unless it was drawn into the uncertain minority, whose scores are below the threshold.
         Assert.All(Films(), m =>

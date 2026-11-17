@@ -16,8 +16,6 @@ namespace MovieLibrary.Core.Tests;
 /// </summary>
 public class MoviePipelineCastAndGenreTests
 {
-    private static readonly IReadOnlyDictionary<string, int> NoOverrides = new Dictionary<string, int>();
-
     // The sheet's genre is deliberately not TMDB's: Ag must stay Apple's own string.
     private static readonly SheetRow Fargo =
         new("Fargo", "1:38:00", "Joel Coen & Ethan Coen", "Blu-ray 2019", "Sci-Fi & Fantasy", "");
@@ -77,7 +75,7 @@ public class MoviePipelineCastAndGenreTests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes()));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal([80, 53], Assert.Single(result.Records).G);
     }
@@ -87,7 +85,7 @@ public class MoviePipelineCastAndGenreTests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes()));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(
             [("Frances McDormand", "Marge Gunderson", "/fm.jpg"), ("William H. Macy", "Jerry Lundegaard", "/wm.jpg"),
@@ -100,7 +98,7 @@ public class MoviePipelineCastAndGenreTests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes()));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         var cast = Assert.Single(result.Records).Cast;
         Assert.Equal(4, cast.Length);
@@ -112,7 +110,7 @@ public class MoviePipelineCastAndGenreTests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes()));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal("Sci-Fi & Fantasy", Assert.Single(result.Records).Ag);
     }
@@ -122,7 +120,7 @@ public class MoviePipelineCastAndGenreTests
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes()));
 
-        await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         var stored = await h.Cache.ReadPayloadAsync<StoredMovie>("movies/275.json", CancellationToken.None);
         Assert.Equal(["Crime", "Thriller"], stored!.Movie!.Genres!.Select(g => g.Name));
@@ -134,10 +132,10 @@ public class MoviePipelineCastAndGenreTests
     public async Task ASecondRunServesGenresAndCastFromTheCacheWithNoRequests()
     {
         var h = TestPipeline.Create(0, Routes(FargoRoutes()));
-        var cold = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var cold = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
         var before = h.Handler.Requests.Count;
 
-        var warm = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var warm = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(before, h.Handler.Requests.Count);
         Assert.Equal(cold.Records[0].G, warm.Records[0].G);
@@ -151,7 +149,7 @@ public class MoviePipelineCastAndGenreTests
         var h = TestPipeline.Create(0, req => TestPipeline.IsSearch(req)
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         var r = Assert.Single(result.Records);
         Assert.Equal((0, 0), (r.G.Length, r.Cast.Length));
@@ -172,7 +170,7 @@ public class MoviePipelineCastAndGenreTests
         var h = TestPipeline.Create(0, OnlyAnswers("/3/movie/275", FargoWithCredits));
         await SeedAsync(h, new StoredMovie(TestPipeline.Now.AddDays(-200), BareFargo()));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         var req = Assert.Single(h.Handler.Requests);
         Assert.Equal("?append_to_response=credits", req.RequestUri!.Query);
@@ -190,7 +188,7 @@ public class MoviePipelineCastAndGenreTests
         var h = TestPipeline.Create(0, OnlyAnswers("/3/movie/275", FargoWithCredits));
 
         var result = await h.Pipeline.RunAsync(
-            [Fargo], NoOverrides, TestStore.Forcing((Fargo, 275)), CancellationToken.None);
+            [Fargo], TestStore.Forcing((Fargo, 275)), CancellationToken.None);
 
         Assert.Single(h.Handler.Requests);
         var r = Assert.Single(result.Records);
@@ -204,8 +202,8 @@ public class MoviePipelineCastAndGenreTests
         var h = TestPipeline.Create(0, OnlyAnswers("/3/movie/275/credits", FargoCredits));
         await SeedAsync(h, new StoredMovie(TestPipeline.Now, BareFargo()));   // Cast == null: never recorded
 
-        var first = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
-        var second = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var first = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
+        var second = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal(["/3/movie/275/credits"], Paths(h));        // once, not once per run
         Assert.Equal(4, first.Records[0].Cast.Length);
@@ -218,8 +216,8 @@ public class MoviePipelineCastAndGenreTests
         var h = TestPipeline.Create(0, OnlyAnswers("/3/movie/275/credits", "", HttpStatusCode.NotFound));
         await SeedAsync(h, new StoredMovie(TestPipeline.Now, BareFargo()));
 
-        await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
-        await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
+        await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Single(h.Handler.Requests);
         var stored = await h.Cache.ReadPayloadAsync<StoredMovie>("movies/275.json", CancellationToken.None);
@@ -238,7 +236,7 @@ public class MoviePipelineCastAndGenreTests
         var aaa = new SheetRow("Aaa", "1:30:00", "X", "", "Drama", "");
 
         var result = await h.Pipeline.RunAsync(
-            [aaa, Fargo], NoOverrides, TestStore.Forcing((aaa, 1)), CancellationToken.None);
+            [aaa, Fargo], TestStore.Forcing((aaa, 1)), CancellationToken.None);
 
         Assert.True(result.StoppedOnBudget);
         Assert.Empty(result.Records.Single(r => r.T == "Fargo").Cast);
@@ -265,7 +263,7 @@ public class MoviePipelineCastAndGenreTests
             ["/3/movie/2/credits"] = """{"crew":[{"job":"Director","name":"Joel Coen"}],"cast":[{"name":"Right Actor","order":0}]}""",
         }));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         var r = Assert.Single(result.Records);
         Assert.Equal(2, r.I);
@@ -288,7 +286,7 @@ public class MoviePipelineCastAndGenreTests
             ["/3/movie/999"] = """{"id":999,"title":"Fargo Rock City","runtime":120,"genres":[{"id":99,"name":"Documentary"}]}""",
         }));
 
-        var result = await h.Pipeline.RunAsync([Fargo], NoOverrides, BoundStore.Empty, CancellationToken.None);
+        var result = await h.Pipeline.RunAsync([Fargo], BoundStore.Empty, CancellationToken.None);
 
         Assert.Equal([(53, "Thriller"), (80, "Crime")], result.Genres.OrderBy(g => g.Key).Select(g => (g.Key, g.Value)));
         Assert.Equal(result.Records.SelectMany(r => r.G).Distinct().Order(), result.Genres.Keys.Order());
