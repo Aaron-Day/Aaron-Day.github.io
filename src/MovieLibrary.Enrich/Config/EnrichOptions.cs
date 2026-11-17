@@ -41,8 +41,70 @@ public sealed record EnrichOptions(
            $"Fixtures = {Fixtures}, ForceRefresh = {ForceRefresh}, StoreFile = {StoreFile}, " +
            $"PrintKeys = {PrintKeys} }}";
 
+    /// <summary>The boolean switches: <c>--flag</c> or <c>--flag=true</c>, never a following word.</summary>
+    /// <remarks>
+    /// This list and <see cref="ValueFlags"/> are the whole of what this tool accepts, and
+    /// <see cref="RequireKnownArguments"/> refuses everything else. Adding a flag means adding it here too,
+    /// or the flag parses and the argument that spells it is then rejected.
+    /// </remarks>
+    private static readonly string[] SwitchFlags = ["--fixtures", "--force-refresh", "--print-keys"];
+
+    /// <inheritdoc cref="SwitchFlags"/>
+    /// <summary>The value flags: <c>--flag value</c> or <c>--flag=value</c>.</summary>
+    private static readonly string[] ValueFlags = ["--cache", "--max-requests", "--out", "--sheet-id", "--store"];
+
+    /// <summary>
+    /// Every argument has to be one this tool knows, or the run stops before anything is read or spent.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>Why this is a budget guard and not tidiness.</b> Flags are read by name and anything else used
+    /// to be ignored, so <c>--fixture</c> for <c>--fixtures</c>, or <c>--printkeys</c> for <c>--print-keys</c>,
+    /// parsed as an ordinary live run: the real token, the default 40 requests, and the deployed data folder.
+    /// The only thing between that and the owner's paid budget was the missing-token guard, which bites
+    /// precisely when his token IS in the environment - that is, never when it matters.</para>
+    /// <para><b>It cannot break the deploy.</b> <c>.github/workflows/main.yml</c> runs
+    /// <c>dotnet run --project src/MovieLibrary.Enrich -c Release</c> with no arguments at all: <c>-c Release</c>
+    /// is a <c>dotnet run</c> option and never reaches <c>args</c>.</para>
+    /// <para><b>A known flag's value is not an argument.</b> The value flags take <c>--flag value</c> as well as
+    /// <c>--flag=value</c> (see <see cref="Flag"/>), so the separate word is consumed here exactly as
+    /// <see cref="Flag"/> consumes it - whatever it looks like, a leading hyphen included.</para>
+    /// </remarks>
+    private static void RequireKnownArguments(string[] args)
+    {
+        var unknown = new List<string>();
+
+        for (var i = 0; i < args.Length; i++)
+        {
+            // --flag=value names the flag up to the FIRST '=', the way Flag and Switch both read it.
+            var split = args[i].IndexOf('=');
+            var name = split > 0 ? args[i][..split] : args[i];
+
+            if (SwitchFlags.Contains(name, StringComparer.Ordinal)) continue;
+
+            if (ValueFlags.Contains(name, StringComparer.Ordinal))
+            {
+                if (name.Length == args[i].Length) i++;   // the separate-word form: the next argument is its value
+                continue;
+            }
+
+            unknown.Add(args[i]);
+        }
+
+        if (unknown.Count == 0) return;
+
+        throw new ArgumentException(
+            $"Unrecognised argument(s): {string.Join(", ", unknown.Select(a => $"'{a}'"))}. This tool takes " +
+            $"{string.Join(", ", SwitchFlags.Concat(ValueFlags).Order(StringComparer.Ordinal))} and nothing " +
+            "else. These used to be ignored, which made a near-miss on a flag's spelling - '--fixture' for " +
+            "'--fixtures', '--printkeys' for '--print-keys' - an ordinary live run against the TMDB budget. " +
+            "Nothing was read, spent or written.");
+    }
+
     public static EnrichOptions Load(string[] args, IDictionary<string, string> env)
     {
+        // First of all: a typo must not reach the token, the budget or the sheet.
+        RequireKnownArguments(args);
+
         var fixtures = Switch(args, "--fixtures") ?? false;
         var printKeys = Switch(args, "--print-keys") ?? false;
         var force = Switch(args, "--force-refresh")

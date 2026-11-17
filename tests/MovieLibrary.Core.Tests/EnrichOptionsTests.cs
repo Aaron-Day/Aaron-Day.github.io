@@ -293,15 +293,21 @@ public class EnrichOptionsTests : IDisposable
         }
     }
 
+    /// <summary>
+    /// The rule is unchanged - a prefix of a known flag's name is not that flag - but the consequence is.
+    /// These four used to be ignored and the defaults applied; being ignored is exactly what made a near-miss
+    /// on a flag's spelling a live run against the owner's budget, so they are refused outright now.
+    /// </summary>
     [Fact]
-    public void AFlagThatOnlyStartsWithAKnownNameIsNotThatFlag()
+    public void AFlagThatOnlyStartsWithAKnownNameIsNotThatFlagAndIsRefusedAsUnknown()
     {
-        var o = Load(["--outdated=zzz", "--cache-old=zzz", "--sheet-identity=zzz", "--max-requests-extra=9"]);
+        var ex = Assert.Throws<ArgumentException>(
+            () => Load(["--outdated=zzz", "--cache-old=zzz", "--sheet-identity=zzz", "--max-requests-extra=9"]));
 
-        Assert.Equal("src/MovieLibrary.Web/wwwroot/data", o.OutputRoot);
-        Assert.Equal("enrich-cache", o.CacheRoot);
-        Assert.Equal(EnrichOptions.DefaultSheetId, o.SheetId);
-        Assert.Equal(40, o.MaxRequests);
+        Assert.Contains("'--outdated=zzz'", ex.Message, StringComparison.Ordinal);
+        Assert.Contains("'--cache-old=zzz'", ex.Message, StringComparison.Ordinal);
+        Assert.Contains("'--sheet-identity=zzz'", ex.Message, StringComparison.Ordinal);
+        Assert.Contains("'--max-requests-extra=9'", ex.Message, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -399,13 +405,14 @@ public class EnrichOptionsTests : IDisposable
         Assert.True(Load(["--force-refresh=true", "--max-requests=0"], ("FORCE_REFRESH", "false")).ForceRefresh);
     }
 
+    /// <inheritdoc cref="AFlagThatOnlyStartsWithAKnownNameIsNotThatFlagAndIsRefusedAsUnknown"/>
     [Fact]
-    public void AFlagThatOnlyStartsWithABooleanFlagsNameIsNotThatFlag()
+    public void AFlagThatOnlyStartsWithABooleanFlagsNameIsNotThatFlagAndIsRefusedAsUnknown()
     {
-        var o = Load(["--fixtures-only=true", "--force-refreshing=true"]);
+        var ex = Assert.Throws<ArgumentException>(() => Load(["--fixtures-only=true", "--force-refreshing=true"]));
 
-        Assert.False(o.Fixtures);
-        Assert.False(o.ForceRefresh);
+        Assert.Contains("'--fixtures-only=true'", ex.Message, StringComparison.Ordinal);
+        Assert.Contains("'--force-refreshing=true'", ex.Message, StringComparison.Ordinal);
     }
 
     // ---- the token as it was pasted -----------------------------------------------------
@@ -601,4 +608,81 @@ public class EnrichOptionsTests : IDisposable
     [Fact]
     public void ToStringSaysWhetherThisIsAPrintKeysRun()
         => Assert.Contains("PrintKeys = True", Load(["--print-keys"]).ToString(), StringComparison.Ordinal);
+
+    // ---- an argument this tool does not know stops the run -----------------------------------
+
+    /// <summary>
+    /// Flags are read by name, and anything else used to be ignored. A typo therefore parsed as an ORDINARY
+    /// LIVE RUN: the real token, the default 40 requests, and the deployed data folder. The only thing
+    /// between that and the owner's paid budget was the missing-token guard, which bites precisely when his
+    /// token is set - that is, never when it would matter.
+    /// </summary>
+    [Theory]
+    [InlineData("--fixture")]            // --fixtures
+    [InlineData("--printkeys")]          // --print-keys
+    [InlineData("--print_keys")]
+    [InlineData("--print-key")]
+    [InlineData("-fixtures")]            // one hyphen
+    [InlineData("--force_refresh")]
+    [InlineData("nonsense")]
+    [InlineData("")]
+    public void AnUnrecognisedArgumentStopsTheRunRatherThanBeingIgnored(string arg)
+    {
+        var ex = Assert.Throws<ArgumentException>(() => Load([arg], ("TMDB_TOKEN", "eyJ.a.b")));
+
+        Assert.Contains($"'{arg}'", ex.Message, StringComparison.Ordinal);
+        Assert.Contains("--print-keys", ex.Message, StringComparison.Ordinal);   // and says what it does take
+        Assert.Contains("--fixtures", ex.Message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void EveryFlagThisToolSupportsIsStillAccepted()
+    {
+        // The guard's own blind spot, pinned from the other side: a flag left out of the recognised list
+        // would parse perfectly and then be refused as the argument that spells it.
+        var o = Load(["--fixtures", "--print-keys", "--force-refresh", "--max-requests", "0",
+                      "--sheet-id", "s", "--cache", "c", "--out", "o", "--store", "st.json"]);
+
+        Assert.True(o.Fixtures);
+        Assert.True(o.PrintKeys);
+        Assert.True(o.ForceRefresh);
+        Assert.Equal(0, o.MaxRequests);
+        Assert.Equal("s", o.SheetId);
+        Assert.Equal("c", o.CacheRoot);
+        Assert.Equal("o", o.OutputRoot);
+        Assert.Equal("st.json", o.StoreFile);
+    }
+
+    [Fact]
+    public void TheEqualsFormOfEveryValueFlagIsAcceptedToo()
+    {
+        var o = Load(["--max-requests=3", "--sheet-id=s", "--cache=c", "--out=o", "--store=st.json"]);
+
+        Assert.Equal(3, o.MaxRequests);
+        Assert.Equal("st.json", o.StoreFile);
+    }
+
+    /// <summary>
+    /// A value flag's separate word is its value whatever it looks like, because that is what <c>Flag</c>
+    /// does with it. A guard that read a hyphenated value as an argument of its own would refuse a perfectly
+    /// good command line - and that is the one failure mode here that costs more than the bug.
+    /// </summary>
+    [Fact]
+    public void TheValueOfAKnownFlagIsNeverReadAsAnArgumentOfItsOwn()
+    {
+        Assert.Equal("--not-a-flag", Load(["--sheet-id", "--not-a-flag"]).SheetId);
+        Assert.Equal("-5", Load(["--out", "-5"]).OutputRoot);
+    }
+
+    [Fact]
+    public void TheWorkflowsOwnCommandLineIsEmptyAndIsAccepted()
+    {
+        // .github/workflows/main.yml runs `dotnet run --project src/MovieLibrary.Enrich -c Release`:
+        // `-c Release` is a dotnet run option and never reaches args. If that ever changes, this guard is
+        // the thing that would break the deploy.
+        var o = Load([]);
+
+        Assert.Equal(40, o.MaxRequests);
+        Assert.False(o.PrintKeys);
+    }
 }
