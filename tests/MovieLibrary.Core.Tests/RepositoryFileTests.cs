@@ -1,10 +1,12 @@
+using MovieLibrary.Core.Store;
 using MovieLibrary.Enrich.Config;
 
 namespace MovieLibrary.Core.Tests;
 
 /// <summary>
 /// Hand-maintained files that nothing else in the build reads: the Actions workflows, which only GitHub ever
-/// executes, and <c>.env.example</c>, which only a person ever reads. Both describe how this tool is run, and both can
+/// executes, <c>.env.example</c>, which only a person ever reads, and <c>record-store.example.json</c>, which only
+/// a person ever edits. All of them describe how this tool is run, and all of them can
 /// go stale without a single test noticing - which is how the workflow came to float on mutable tags and the example
 /// file came to offer a setting that now exits 1.
 /// </summary>
@@ -130,6 +132,71 @@ public class RepositoryFileTests
 
         // The refusal is about the PAIR, so the force-refresh advice has to carry the budget with it.
         Assert.Contains("REQUIRES MAX_REQUESTS_PER_RUN=0", text);
+    }
+
+    /// <summary>
+    /// <c>record-store.example.json</c> is where <see cref="RecordStoreReader"/>'s parse failure sends a
+    /// hand-editor, and the only written-down copy of the store's format that is actually in the repository.
+    /// </summary>
+    /// <remarks>
+    /// <b>Why a tracked example and not the spec.</b> The message used to name
+    /// <c>docs/superpowers/specs/2026-11-16-record-store-design.md</c>, and <c>docs/</c> is gitignored
+    /// (<c>.gitignore:465</c>), so on any clone it cited a document that is not there - worse than citing
+    /// nothing. This file is committed, which is also what makes this test meaningful on a clone: the earlier
+    /// test that read the spec had to be dropped because it would pass here and fail everywhere else.
+    /// <para>
+    /// <b>Parsed through the real reader, not eyeballed.</b> The example is hand-authored and nothing in the
+    /// build loads it, so nothing else can notice it going stale into a shape the reader refuses - which is
+    /// exactly what happened to the spec's own section 5.2 example, which showed <c>tmdbId</c> and
+    /// <c>candidates</c> in one record. Anybody copying it got a rejection.
+    /// </para>
+    /// <para>
+    /// The exact counts below are the non-vacuity guard this project's <c>Assert.NotEmpty</c>-before-
+    /// <c>Assert.All</c> rule asks for, and they are stronger than it: a file that parsed into an empty store
+    /// fails on the count rather than passing over nothing.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void TheExampleRecordStoreIsInTheRepositoryAndTheReaderAcceptsIt()
+    {
+        var path = Path.Combine(RepoRoot(), RecordStoreReader.ExampleFileName);
+
+        Assert.True(File.Exists(path),
+            path + " is missing. RecordStoreReader's parse failure names it as where the format is written "
+            + "down, so a clone without it sends its reader to a file that is not there - which is the exact "
+            + "defect this file was added to fix.");
+
+        // Throws RecordStoreException on anything the reader would refuse, which is the whole point.
+        var store = RecordStoreReader.Read(File.ReadAllText(path), RecordStoreReader.ExampleFileName);
+
+        Assert.Equal(RecordStore.CurrentVersion, store.Version);
+        Assert.Equal(3, store.Films.Count);
+
+        // Named rather than merely counted, because a count can be met by three copies of one shape and the
+        // example exists to show the shapes. One entry asserting an id with its titles and extras; one
+        // offering candidates and no id; one expanding a single sheet row into three films.
+        var asserted = Assert.Single(store.Films[0].Records);
+        Assert.Equal(9000001, asserted.TmdbId);
+        Assert.Equal("The Phantom Orchard", asserted.Titles!.Display);
+        Assert.Equal("Phantom Orchard, The", asserted.Titles!.Sort);
+        Assert.Equal("2019-03-14", Assert.Contains("Purchase Date", asserted.Extra!));
+
+        var ambiguous = Assert.Single(store.Films[1].Records);
+        Assert.Null(ambiguous.TmdbId);
+        Assert.Equal([9000002, 9000003], ambiguous.Candidates!);
+
+        var expanded = store.Films[2].Records;
+        Assert.Equal(3, expanded.Count);
+        Assert.All(expanded, r => Assert.NotNull(r.Runtime));
+        Assert.Equal(3, expanded.Select(r => (r.TmdbId, r.Runtime)).Distinct().Count());
+
+        var series = Assert.Single(store.Series).Record;
+        Assert.Equal(9000007, series.TmdbId);
+        Assert.Equal("Lanterns of Brackwater (2019)", series.Titles!.Display);
+
+        // The sheet echo is the one block that makes the file readable by a human, so an example without it
+        // would be missing the part that is not about the reader at all.
+        Assert.All(store.Films, f => Assert.False(string.IsNullOrWhiteSpace(f.Sheet.Title)));
     }
 
     /// <summary>

@@ -1,0 +1,119 @@
+// record-store.example.json -- a worked example of every member of record-store.json.
+//
+// NOTHING LOADS THIS FILE. The enrich tool reads "record-store.json" at the repository root, by
+// that exact name (RecordStoreReader.DefaultFileName), or whatever --store names. This one is
+// here so that a hand-editor has a working file to read, and because the reader's parse failure
+// names it: the design spec lives under docs/, which is gitignored, so on any clone that path
+// points at nothing. RepositoryFileTests parses this file through the real reader, so it cannot
+// drift away from what the reader accepts.
+//
+// EVERY TITLE AND TMDB ID BELOW IS INVENTED. The identity keys are the genuine output of
+// IdentityKey.ForFilm and ForSeries for the invented sheet rows echoed in each "sheet" block, so
+// they are the right shape -- 40 lower-case hex characters -- and bind to no row anybody owns.
+// Get the key for one of YOUR rows with:
+//
+//     dotnet run --project src/MovieLibrary.Enrich -- --print-keys
+//
+// Comments and trailing commas are allowed, because the reader turns both on for exactly this
+// reason. An UNKNOWN property is still an error: a mistyped name is a correction that would
+// otherwise be dropped in silence. Every name is camelCase.
+{
+  // Required. A missing version reads as 0, which the reader refuses.
+  "version": 1,
+
+  // One entry per SHEET ROW on the Movies tab, addressed by that row's identity key. Two entries
+  // may not share a key: one row cannot have two sets of corrections.
+  "films": [
+
+    // 1. THE ORDINARY CASE. The match was wrong, so the entry asserts the id, and the fields the
+    //    sheet has wrong are corrected beside it.
+    {
+      "identityKey": "5932ee109796829fc7d12e46b7522361253098ee",
+
+      // An ECHO of the row as it was when this entry was written. NEVER matched on -- the
+      // identity key does that -- and here so that a human, and the job summary, can tell which
+      // row this is without reading a hash.
+      "sheet": { "title": "The Phantom Orchard", "runtime": "1:52:00", "directors": "Dana Vey" },
+
+      // Your own words. Echoed into the job summary, never parsed.
+      "note": "The search matched the remake. This row is the original.",
+
+      // One or more. One record means this row publishes one film.
+      "records": [
+        {
+          "tmdbId": 9000001,
+          "runtime": 112,
+          "year": 1973,
+          "titles": {
+            // What the card shows, replacing the sheet's title.
+            "display": "The Phantom Orchard",
+            // Where it FILES. Overrides the derived sort title, which strips one leading English
+            // article and would give "Phantom Orchard"; this asks for the comma form instead.
+            "sort": "Phantom Orchard, The"
+          },
+          // Several are separated by &, as on the sheet.
+          "directors": "Dana Vey & Ruth Okonkwo",
+          "appleGenre": "Drama",
+          "purchaseInfo": "iTunes",
+          // Your own fields, copied to the record key for key and value for value. Strings only,
+          // and a blank name is refused, because the name is what the site would show.
+          "extra": { "Purchase Date": "2019-03-14", "Shelf": "B4" }
+        }
+      ]
+    },
+
+    // 2. AMBIGUITY YOU HAVE NOT RESOLVED. Two films fit and you will not guess. The record stays
+    //    unmatched and badged, and the editor offers the same shortlist next time.
+    //    "tmdbId" and "candidates" are NEVER both in one record: an id is a decision, candidates
+    //    are the absence of one, and the reader refuses a record carrying the two.
+    {
+      "identityKey": "48c76249214eeb711b9ce2d280264a8d900352d2",
+      "sheet": { "title": "Night Bus to Nowhere", "runtime": "1:38:00", "directors": "R. Okonkwo" },
+      "note": "Two releases of this title in the same year. Decide later.",
+      "records": [
+        { "candidates": [9000002, 9000003] }
+      ]
+    },
+
+    // 3. ONE APPLE ENTRY HOLDING SEVERAL FILMS. Give the row one record per film.
+    //    Every record then NEEDS its own "runtime": the sheet has one runtime for the whole
+    //    bundle and it is not any film's, and a matched record's published key is its id and its
+    //    runtime and nothing else -- so two records sharing both would publish ONE key, the
+    //    catalogue would keep one of them, and the entry would publish fewer films than it lists.
+    //    Each also needs a "tmdbId" or "candidates": there is nothing to search for from the
+    //    bundle's own title and length, which describe none of the films in it.
+    {
+      "identityKey": "f78a27991b3220d121f2612f6f96d9fe733670b0",
+      "sheet": { "title": "Hollow Moon Triple Feature", "runtime": "4:47:00", "directors": "Various" },
+      "note": "Three films in one purchase.",
+      "records": [
+        { "tmdbId": 9000004, "runtime": 95, "year": 1968, "titles": { "display": "Hollow Moon" } },
+        { "tmdbId": 9000005, "runtime": 101, "year": 1971, "titles": { "display": "Hollow Moon Returns" } },
+        {
+          "tmdbId": 9000006,
+          "runtime": 91,
+          "year": 1974,
+          "titles": { "display": "The Last Hollow Moon", "sort": "Last Hollow Moon, The" }
+        }
+      ]
+    }
+  ],
+
+  // One entry per SERIES on the Shows tab. A series publishes exactly one record, so this member
+  // is "record" and not "records". Only "tmdbId", "candidates", "titles" and "extra" mean
+  // anything here: "runtime" and "year" are per-episode, a series has no directors or purchase
+  // info of its own, and the reader REFUSES those four rather than accepting a value it would
+  // silently drop. The key comes from the series name alone, so "sheet" needs only its title.
+  "series": [
+    {
+      "identityKey": "72413ee4d726e08aabf4e4c543331ae42ab3e6f9",
+      "sheet": { "title": "Lanterns of Brackwater" },
+      "note": "Matched the documentary of the same name.",
+      "record": {
+        "tmdbId": 9000007,
+        "titles": { "display": "Lanterns of Brackwater (2019)" },
+        "extra": { "Shelf": "D1" }
+      }
+    }
+  ]
+}

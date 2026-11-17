@@ -313,12 +313,18 @@ public class RecordStoreReaderTests
     }
 
     /// <summary>
-    /// Phase 1 ships no README, no <c>record-store.example.json</c> and no seed path (<c>Write</c> exists, but
-    /// only a test calls it), and the whole of the owner's written guidance is "paste the correct TMDB id into
-    /// record-store.json". So a parse failure is the one place a hand-editor is guaranteed to meet, and
-    /// System.Text.Json's own wording assumes he already knows the shape. The members and the spec path are
-    /// named here instead.
+    /// Phase 1 ships no README and no seed path (<c>Write</c> exists, but only a test calls it), and the whole
+    /// of the owner's written guidance is "paste the correct TMDB id into record-store.json". So a parse
+    /// failure is the one place a hand-editor is guaranteed to meet, and System.Text.Json's own wording
+    /// assumes he already knows the shape. The members and the example file are named here instead.
     /// </summary>
+    /// <remarks>
+    /// <b>It names <c>record-store.example.json</c> and no longer the design spec.</b> The spec lives under
+    /// <c>docs/</c>, which is gitignored (<c>.gitignore:465</c>), so the message cited a document that is in
+    /// the owner's working copy and in no clone at all - worse than citing nothing. The example is committed,
+    /// and <c>RepositoryFileTests.TheExampleRecordStoreIsInTheRepositoryAndTheReaderAcceptsIt</c> is the other
+    /// half of this pair: it proves the file the message names is there and parses.
+    /// </remarks>
     [Fact]
     public void AParseFailureNamesTheShapeOfTheFileAndWhereItIsWrittenDown()
     {
@@ -336,7 +342,9 @@ public class RecordStoreReaderTests
         Assert.Contains("\"purchaseInfo\"", message, StringComparison.Ordinal);
         Assert.Contains("camelCase", message, StringComparison.Ordinal);
         Assert.Contains("comments and trailing commas are allowed", message, StringComparison.Ordinal);
-        Assert.Contains("docs/superpowers/specs/2026-11-16-record-store-design.md section 5", message, StringComparison.Ordinal);
+        // The literal, not RecordStoreReader.ExampleFileName: the message is built from that constant, so
+        // asserting it against itself would pass whatever it was renamed to and however little was shipped.
+        Assert.Contains("record-store.example.json", message, StringComparison.Ordinal);
         Assert.Contains("--print-keys", message, StringComparison.Ordinal);
     }
 

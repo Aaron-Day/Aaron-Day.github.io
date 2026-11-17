@@ -23,10 +23,21 @@ public static class RecordStoreReader
     private const int KeyLength = 40;
 
     /// <summary>
-    /// Where the format is written down in full. Named in the parse failure because nothing else points a
-    /// hand-editor at it: Phase 1 ships no README, no <c>record-store.example.json</c> and no seed path.
+    /// A worked example of every member, at the repository root and TRACKED. Named in the parse failure
+    /// because nothing else points a hand-editor at the format: Phase 1 ships no README and no seed path
+    /// (<see cref="Write"/> exists, but only a test calls it).
     /// </summary>
-    private const string SpecPath = "docs/superpowers/specs/2026-11-16-record-store-design.md";
+    /// <remarks>
+    /// <b>It replaced the design spec's path, which is not in the repository.</b> The spec lives under
+    /// <c>docs/</c>, which is gitignored, so on any clone -- the owner's own, if he re-clones -- that path
+    /// named a document that is not there, which is worse than naming nothing. This file is committed.
+    /// <para>
+    /// Nothing LOADS it: the build reads <see cref="DefaultFileName"/> by that exact name, so an example
+    /// carrying invented ids cannot reach a catalogue. <c>RepositoryFileTests</c> parses it through this
+    /// reader, so it cannot drift away from what the reader accepts.
+    /// </para>
+    /// </remarks>
+    public const string ExampleFileName = "record-store.example.json";
 
     private static readonly JsonSerializerOptions Options = new(JsonSerializerDefaults.Web)
     {
@@ -108,8 +119,9 @@ public static class RecordStoreReader
         catch (JsonException ex)
         {
             // System.Text.Json's own wording is precise and assumes you know the shape. Nothing else in Phase 1
-            // writes that shape down where a hand-editor meets it: there is no README, no example file and no
-            // seed path (Write exists but only a test calls it), so this is where the shape gets named.
+            // writes that shape down where a hand-editor meets it: there is no README and no seed path (Write
+            // exists but only a test calls it), so this is where the shape gets named. The member list stands
+            // on its own without any external file, and ExampleFileName is one that is actually committed.
             throw new RecordStoreException(
                 $"'{whatItIs}' could not be read as a record store: {ex.Message} The file is " +
                 "{ \"version\": 1, \"films\": [...], \"series\": [...] }; a film entry takes \"identityKey\", " +
@@ -118,8 +130,9 @@ public static class RecordStoreReader
                 "\"year\", \"directors\", \"appleGenre\", \"purchaseInfo\" and \"extra\", all " +
                 "optional; and \"sheet\" takes " +
                 "\"title\", \"runtime\" and \"directors\". Every name is camelCase, comments and trailing " +
-                "commas are allowed, and the full format is " +
-                $"{SpecPath} section 5. Run --print-keys for a row's \"identityKey\".", ex);
+                "commas are allowed, and a worked example of all of it is " +
+                $"{ExampleFileName} at the root of this repository. " +
+                "Run --print-keys for a row's \"identityKey\".", ex);
         }
 
         if (store is null)
