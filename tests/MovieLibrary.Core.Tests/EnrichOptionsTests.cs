@@ -310,6 +310,72 @@ public class EnrichOptionsTests : IDisposable
         Assert.Contains("'--max-requests-extra=9'", ex.Message, StringComparison.Ordinal);
     }
 
+    /// <summary>
+    /// <c>--out --fixtures</c> used to pass the guard AND turn fixture mode on. The guard walks positionally
+    /// and gave the word to <c>--out</c>; <c>Switch</c> then scanned every argument by name wherever it sat
+    /// and found it anyway. So a run the owner wrote as live synthesised a catalogue, in silence --
+    /// <c>--out --force-refresh</c> is loud only because the budget refusal happens to fire on it.
+    /// </summary>
+    /// <remarks>
+    /// Refused rather than obeyed. Now that nothing reads a consumed word as a flag, the obedient reading is
+    /// an output folder literally named <c>--fixtures</c> and a live run against the budget, which is no
+    /// better than the old one. The only way to type this is a slip for <c>--out &lt;folder&gt; --fixtures</c>.
+    /// </remarks>
+    [Theory]
+    [InlineData("--out", "--fixtures")]
+    // The =-form of the taken word was the worse half: Switch read it wherever it sat, so this one turned
+    // fixture mode on just as surely while looking even less like a flag to the guard.
+    [InlineData("--out", "--fixtures=true")]
+    [InlineData("--cache", "--max-requests=9")]
+    [InlineData("--out", "--force-refresh")]
+    [InlineData("--out", "--print-keys")]
+    [InlineData("--store", "--fixtures")]
+    [InlineData("--cache", "--fixtures")]
+    [InlineData("--sheet-id", "--fixtures")]
+    [InlineData("--max-requests", "--fixtures")]
+    [InlineData("--out", "--store")]
+    public void AValueFlagGivenAnotherFlagAsItsSeparateWordIsRefused(string valueFlag, string taken)
+    {
+        var ex = Assert.Throws<ArgumentException>(() => Load([valueFlag, taken], ("TMDB_TOKEN", "eyJ.a.b")));
+
+        Assert.Contains($"'{valueFlag} {taken}'", ex.Message, StringComparison.Ordinal);
+        Assert.Contains($"{valueFlag}={taken}", ex.Message, StringComparison.Ordinal);
+        Assert.Contains("Nothing was read, spent or written.", ex.Message, StringComparison.Ordinal);
+    }
+
+    /// <summary>
+    /// The escape hatch, and the proof that the refusal above is about the SEPARATE-WORD form only: the
+    /// =-form says it on purpose, so a folder that really is called that is still reachable -- and it is a
+    /// folder name, not a fixture run.
+    /// </summary>
+    [Fact]
+    public void TheEqualsFormStillGivesAValueFlagAFlagsNameAsItsValue()
+    {
+        var o = Load(["--out=--fixtures"], ("TMDB_TOKEN", "eyJ.a.b"));
+
+        Assert.Equal("--fixtures", o.OutputRoot);
+        Assert.False(o.Fixtures);
+        Assert.False(o.PrintKeys);
+        Assert.Equal("eyJ.a.b", o.Token);        // a live run, which is what was asked for
+    }
+
+    /// <summary>
+    /// A value that merely LOOKS like a flag is still a value: a path may begin with a hyphen, and
+    /// <c>RequireKnownArguments</c>' own rule is that a value flag's separate word is its value whatever it
+    /// looks like. Only this tool's own flag names are refused, because only those have another reading.
+    /// </summary>
+    [Theory]
+    [InlineData("-weird-folder")]
+    [InlineData("--fixture")]
+    [InlineData("--printkeys")]
+    public void AValueThatOnlyLooksLikeAFlagIsStillTheValue(string value)
+    {
+        var o = Load(["--cache", value]);
+
+        Assert.Equal(value, o.CacheRoot);
+        Assert.False(o.Fixtures);
+    }
+
     [Fact]
     public void AnEmptyFlagValueFallsBackToTheEnvironmentValueNotStraightToTheDefault()
         => Assert.Equal("env-sheet", Load(["--sheet-id="], ("SHEET_ID", "env-sheet")).SheetId);

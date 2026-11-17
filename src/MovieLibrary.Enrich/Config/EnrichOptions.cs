@@ -53,6 +53,61 @@ public sealed record EnrichOptions(
     /// <summary>The value flags: <c>--flag value</c> or <c>--flag=value</c>.</summary>
     private static readonly string[] ValueFlags = ["--cache", "--max-requests", "--out", "--sheet-id", "--store"];
 
+    /// <summary>Both lists, ordered: what the refusals print, and what a separate-word value is tested against.</summary>
+    private static readonly string[] AllFlags = [.. SwitchFlags.Concat(ValueFlags).Order(StringComparer.Ordinal)];
+
+    /// <summary>One argument as this tool reads it, after <see cref="Read"/> has walked the line.</summary>
+    /// <param name="Name">The flag it names, or the argument as given when this tool does not know it.</param>
+    /// <param name="Value">What came after the first <c>=</c>, or the following word; null when nothing did.</param>
+    /// <param name="Known">False for an argument this tool does not accept.</param>
+    /// <param name="TookTheNextWord">True when <paramref name="Value"/> is the following argument.</param>
+    private readonly record struct Given(string Name, string? Value, bool Known, bool TookTheNextWord);
+
+    /// <summary>The command line walked ONCE, left to right, into the flags it names and the values they carry.</summary>
+    /// <remarks>
+    /// <para><b>Why one walk and not three readers.</b> <see cref="RequireKnownArguments"/>,
+    /// <see cref="Switch"/> and <see cref="Flag"/> each used to read <c>args</c> themselves, and only the
+    /// first two of those walked it positionally: <c>Switch</c> scanned every argument by name wherever it
+    /// sat. So <c>--out --fixtures</c> passed the guard, the word being consumed as the value of
+    /// <c>--out</c>, and then <c>Switch</c> found <c>--fixtures</c> anyway and turned a run the owner wrote
+    /// as live into a synthesised catalogue without a word. <c>--out --force-refresh</c> was loud only
+    /// because the budget refusal happens to fire on it. Reading one walk is what makes the guard's promise
+    /// - that a known flag's value is not an argument - true of every reader rather than of two of them.</para>
+    /// </remarks>
+    private static List<Given> Read(string[] args)
+    {
+        var given = new List<Given>(args.Length);
+
+        for (var i = 0; i < args.Length; i++)
+        {
+            // --flag=value names the flag up to the FIRST '='; the rest is the value, blank or not.
+            var split = args[i].IndexOf('=');
+            var name = split > 0 ? args[i][..split] : args[i];
+            var value = split > 0 ? args[i][(split + 1)..] : null;
+
+            if (SwitchFlags.Contains(name, StringComparer.Ordinal))
+            {
+                given.Add(new Given(name, value, Known: true, TookTheNextWord: false));
+                continue;
+            }
+
+            if (ValueFlags.Contains(name, StringComparer.Ordinal))
+            {
+                // The separate-word form. A value flag at the very end of the line has no value and falls
+                // back to the environment or the default, which is what Flag has always done with it.
+                var next = value is null && i + 1 < args.Length;
+                if (next) value = args[++i];
+
+                given.Add(new Given(name, value, Known: true, TookTheNextWord: next));
+                continue;
+            }
+
+            given.Add(new Given(args[i], null, Known: false, TookTheNextWord: false));
+        }
+
+        return given;
+    }
+
     /// <summary>
     /// Every argument has to be one this tool knows, or the run stops before anything is read or spent.
     /// </summary>
@@ -66,51 +121,60 @@ public sealed record EnrichOptions(
     /// <c>dotnet run --project src/MovieLibrary.Enrich -c Release</c> with no arguments at all: <c>-c Release</c>
     /// is a <c>dotnet run</c> option and never reaches <c>args</c>.</para>
     /// <para><b>A known flag's value is not an argument.</b> The value flags take <c>--flag value</c> as well as
-    /// <c>--flag=value</c> (see <see cref="Flag"/>), so the separate word is consumed here exactly as
-    /// <see cref="Flag"/> consumes it - whatever it looks like, a leading hyphen included.</para>
+    /// <c>--flag=value</c> (see <see cref="Flag"/>), so the separate word is consumed by <see cref="Read"/>,
+    /// which every reader of the line now goes through - whatever the word looks like, a leading hyphen
+    /// included. The one word refused outright is this tool's OWN flag name, below: that word has a second
+    /// reading, and the reading it does NOT have is the one anybody typing it meant.</para>
     /// </remarks>
-    private static void RequireKnownArguments(string[] args)
+    private static void RequireKnownArguments(IReadOnlyList<Given> given)
     {
-        var unknown = new List<string>();
+        var unknown = given.Where(g => !g.Known).Select(g => g.Name).ToList();
 
-        for (var i = 0; i < args.Length; i++)
+        if (unknown.Count > 0)
+            throw new ArgumentException(
+                $"Unrecognised argument(s): {string.Join(", ", unknown.Select(a => $"'{a}'"))}. This tool takes " +
+                $"{string.Join(", ", AllFlags)} and nothing " +
+                "else. These used to be ignored, which made a near-miss on a flag's spelling - '--fixture' for " +
+                "'--fixtures', '--printkeys' for '--print-keys' - an ordinary live run against the TMDB budget. " +
+                "Nothing was read, spent or written.");
+
+        // The obedient reading of `--out --fixtures` is an output folder literally called "--fixtures" and a
+        // live run against the budget; the only way anybody types it is as a slip for
+        // `--out <folder> --fixtures`. Neither reading is safe enough to pick in silence - the same rule Truth
+        // applies to a boolean's value - so it is refused. The =-form still says it on purpose, for the folder
+        // that really is called that, and a word that merely LOOKS like a flag is still a value: a path may
+        // begin with a hyphen, and only this tool's own names have the second reading.
+        foreach (var g in given)
         {
-            // --flag=value names the flag up to the FIRST '=', the way Flag and Switch both read it.
-            var split = args[i].IndexOf('=');
-            var name = split > 0 ? args[i][..split] : args[i];
+            if (!g.TookTheNextWord || g.Value is not { } value) continue;
 
-            if (SwitchFlags.Contains(name, StringComparer.Ordinal)) continue;
+            // Tested on the name, not the whole word, so `--out --fixtures=true` is caught as well: that one
+            // was the worse half of the same slip, because Switch read a =-form wherever it sat too.
+            var split = value.IndexOf('=');
+            if (!AllFlags.Contains(split > 0 ? value[..split] : value, StringComparer.Ordinal)) continue;
 
-            if (ValueFlags.Contains(name, StringComparer.Ordinal))
-            {
-                if (name.Length == args[i].Length) i++;   // the separate-word form: the next argument is its value
-                continue;
-            }
-
-            unknown.Add(args[i]);
+            throw new ArgumentException(
+                $"'{g.Name} {value}' gives {g.Name} the value '{value}', because a value flag's separate word " +
+                $"is its value whatever it looks like - so {value} is not read as a flag here and does nothing " +
+                $"at all. Write '{g.Name} <value> {value}' if you meant both, or '{g.Name}={value}' if the " +
+                $"value really is '{value}'. Nothing was read, spent or written.");
         }
-
-        if (unknown.Count == 0) return;
-
-        throw new ArgumentException(
-            $"Unrecognised argument(s): {string.Join(", ", unknown.Select(a => $"'{a}'"))}. This tool takes " +
-            $"{string.Join(", ", SwitchFlags.Concat(ValueFlags).Order(StringComparer.Ordinal))} and nothing " +
-            "else. These used to be ignored, which made a near-miss on a flag's spelling - '--fixture' for " +
-            "'--fixtures', '--printkeys' for '--print-keys' - an ordinary live run against the TMDB budget. " +
-            "Nothing was read, spent or written.");
     }
 
     public static EnrichOptions Load(string[] args, IDictionary<string, string> env)
     {
-        // First of all: a typo must not reach the token, the budget or the sheet.
-        RequireKnownArguments(args);
+        // Walked once; every reader below reads the walk and not the raw line.
+        var given = Read(args);
 
-        var fixtures = Switch(args, "--fixtures") ?? false;
-        var printKeys = Switch(args, "--print-keys") ?? false;
-        var force = Switch(args, "--force-refresh")
+        // First of all: a typo must not reach the token, the budget or the sheet.
+        RequireKnownArguments(given);
+
+        var fixtures = Switch(given, "--fixtures") ?? false;
+        var printKeys = Switch(given, "--print-keys") ?? false;
+        var force = Switch(given, "--force-refresh")
                     ?? (Get(env, "FORCE_REFRESH") is { } refresh && Truth(refresh.Trim(), "FORCE_REFRESH"));
 
-        var max = Flag(args, "--max-requests")
+        var max = Flag(given, "--max-requests")
                   ?? Get(env, "MAX_REQUESTS_PER_RUN")
                   ?? "40";
 
@@ -136,17 +200,17 @@ public sealed record EnrichOptions(
                 "--max-requests 0 to force-refresh the whole library, or drop --force-refresh.");
 
         return new EnrichOptions(
-            SheetId: Flag(args, "--sheet-id") ?? Get(env, "SHEET_ID") ?? DefaultSheetId,
+            SheetId: Flag(given, "--sheet-id") ?? Get(env, "SHEET_ID") ?? DefaultSheetId,
             // A print-keys run is held to the same rule as a fixture run: it cannot authenticate a request,
             // whatever is in the environment, because it is not allowed to make one.
             Token: fixtures || printKeys ? string.Empty : CleanToken(Get(env, "TMDB_TOKEN")),
             MaxRequests: requests,
-            CacheRoot: Flag(args, "--cache") ?? "enrich-cache",
-            OutputRoot: Flag(args, "--out")
+            CacheRoot: Flag(given, "--cache") ?? "enrich-cache",
+            OutputRoot: Flag(given, "--out")
                         ?? (fixtures ? "dev-data" : "src/MovieLibrary.Web/wwwroot/data"),
             Fixtures: fixtures,
             ForceRefresh: force,
-            StoreFile: Flag(args, "--store") ?? RecordStoreReader.DefaultFileName,
+            StoreFile: Flag(given, "--store") ?? RecordStoreReader.DefaultFileName,
             PrintKeys: printKeys);
     }
 
@@ -160,15 +224,16 @@ public sealed record EnrichOptions(
     /// <c>--flag=value</c>, so <c>--fixtures=true</c> is a natural spelling, and it used to be read as no fixture flag
     /// at all: the run read the token, spent the default 40 real requests and wrote to the deployed data folder instead
     /// of dev-data. Silently, and it is the only way a typo can spend budget.
+    /// Reading <see cref="Read"/>'s walk rather than <c>args</c> closes the opposite slip: a word that is
+    /// already another flag's value is not this flag, however it is spelled.
     /// </remarks>
-    private static bool? Switch(string[] args, string name)
+    private static bool? Switch(IReadOnlyList<Given> given, string name)
     {
-        foreach (var arg in args)
+        foreach (var g in given)
         {
-            if (arg == name) return true;
-            if (!arg.StartsWith(name + "=", StringComparison.Ordinal)) continue;
+            if (!string.Equals(g.Name, name, StringComparison.Ordinal)) continue;
 
-            return Truth(arg[(name.Length + 1)..].Trim(), name);
+            return g.Value is null ? true : Truth(g.Value.Trim(), name);
         }
 
         return null;
@@ -233,16 +298,13 @@ public sealed record EnrichOptions(
         => env.TryGetValue(key, out var value) && !string.IsNullOrWhiteSpace(value) ? value : null;
 
     /// <summary>The value of <c>--name value</c> or <c>--name=value</c>, the first of either form; empty counts as absent.</summary>
-    private static string? Flag(string[] args, string name)
+    private static string? Flag(IReadOnlyList<Given> given, string name)
     {
-        for (var i = 0; i < args.Length; i++)
+        foreach (var g in given)
         {
-            string? value;
-            if (args[i] == name) value = i + 1 < args.Length ? args[i + 1] : null;
-            else if (args[i].StartsWith(name + "=", StringComparison.Ordinal)) value = args[i][(name.Length + 1)..];
-            else continue;
+            if (!string.Equals(g.Name, name, StringComparison.Ordinal)) continue;
 
-            return string.IsNullOrWhiteSpace(value) ? null : value;
+            return string.IsNullOrWhiteSpace(g.Value) ? null : g.Value;
         }
 
         return null;
