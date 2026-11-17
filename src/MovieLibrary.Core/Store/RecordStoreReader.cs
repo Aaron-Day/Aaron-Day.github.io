@@ -166,6 +166,26 @@ public static class RecordStoreReader
                         $"{where} expands into several records, so each one needs a \"tmdbId\" or a " +
                         "\"candidates\" list. There is nothing to search for: the sheet has one title and one " +
                         "runtime for the whole Apple entry, and they describe none of the films in it.");
+
+                // RecordKey.ForFilm is {tmdbId}-{runtime} for a matched record and reads `position` only for an
+                // UNMATCHED one, so two matched records agreeing on both fields publish one key: the reconciler
+                // drops one and the entry quietly publishes fewer records than it lists. Filling in a four-film
+                // bundle by copying the first record and editing it is exactly how that slip happens. A record
+                // offering candidates is not checked, because it publishes unmatched and position parts those.
+                var repeated = entry.Records
+                    .Where(r => r.TmdbId is not null)
+                    .GroupBy(r => (r.TmdbId, r.Runtime))
+                    .FirstOrDefault(g => g.Count() > 1);
+
+                if (repeated is not null)
+                    throw new RecordStoreException(
+                        $"{where} has {repeated.Count().ToString(CultureInfo.InvariantCulture)} records with the " +
+                        $"same \"tmdbId\" ({repeated.Key.TmdbId?.ToString(CultureInfo.InvariantCulture)}) and " +
+                        $"\"runtime\" ({repeated.Key.Runtime?.ToString(CultureInfo.InvariantCulture)}). A matched " +
+                        "record's published key is its id and its runtime and nothing else, so those records would " +
+                        "publish ONE key, the catalogue would keep one of them, and the entry would publish fewer " +
+                        "films than it lists. Give each record the id and the runtime of the film it is, or delete " +
+                        "the copy.");
             }
         }
 

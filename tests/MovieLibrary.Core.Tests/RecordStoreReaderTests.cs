@@ -104,6 +104,54 @@ public class RecordStoreReaderTests
         Assert.Contains("A Film", message, StringComparison.Ordinal);
     }
 
+    /// <summary>
+    /// A copy-paste slip while filling in a bundle. <c>RecordKey.ForFilm</c> is <c>{tmdbId}-{runtime}</c> for a
+    /// matched record and reads <c>position</c> only for an unmatched one, so two records agreeing on both
+    /// fields publish one key, <c>CatalogueReconciler</c> drops one, and the entry publishes three films where
+    /// it lists four. Nothing else covers it: the expansion tests use one id at four DIFFERENT runtimes.
+    /// </summary>
+    [Fact]
+    public void TwoRecordsOfOneEntryThatWouldPublishOneKeyAreRejected()
+    {
+        var message = Rejected(Film(
+            "[ { \"tmdbId\": 11, \"runtime\": 121 }, { \"tmdbId\": 11, \"runtime\": 121 } ]")).Message;
+
+        Assert.Contains("test.json", message, StringComparison.Ordinal);
+        Assert.Contains("A Film", message, StringComparison.Ordinal);
+        Assert.Contains("2 records with the same \"tmdbId\" (11) and \"runtime\" (121)", message, StringComparison.Ordinal);
+        // The reason, not just the rule: without it the fix looks like "renumber something" rather than
+        // "one of these two films is wrong".
+        Assert.Contains("publish ONE key", message, StringComparison.Ordinal);
+        Assert.Contains("fewer films than it lists", message, StringComparison.Ordinal);
+    }
+
+    [Theory]
+    // The same id at two runtimes is the ordinary expanded bundle and must stay legal: that is how two cuts
+    // of one film, or two films TMDB has as one, are published apart.
+    [InlineData("[ { \"tmdbId\": 11, \"runtime\": 121 }, { \"tmdbId\": 11, \"runtime\": 122 } ]")]
+    // Two runtimes, two ids: nothing shared at all.
+    [InlineData("[ { \"tmdbId\": 11, \"runtime\": 121 }, { \"tmdbId\": 12, \"runtime\": 122 } ]")]
+    // Candidates publish UNMATCHED, and RecordKey.ForFilm parts unmatched records by position, so two
+    // identical candidate lists at one runtime are not the same defect and are not refused.
+    [InlineData("[ { \"candidates\": [11], \"runtime\": 121 }, { \"candidates\": [11], \"runtime\": 121 } ]")]
+    public void RecordsOfOneEntryThatWouldPublishTheirOwnKeysAreKept(string records)
+    {
+        var entry = Assert.Single(RecordStoreReader.Read(Film(records), "test.json").Films);
+
+        Assert.Equal(2, entry.Records.Count);
+    }
+
+    [Fact]
+    public void OneRecordRepeatingItsOwnIdAndRuntimeIsImpossibleSoTheRuleNeverFiresOnASingleRecord()
+    {
+        // The rule lives inside the Records.Count > 1 arm. Stated so that moving it out, where it would cost
+        // a GroupBy over every single-record entry in the file, is a visible change rather than a tidy-up.
+        var entry = Assert.Single(RecordStoreReader.Read(
+            Film("[ { \"tmdbId\": 11, \"runtime\": 121 } ]"), "test.json").Films);
+
+        Assert.Single(entry.Records);
+    }
+
     [Fact]
     public void TwoEntriesForOneRowAreRejectedRatherThanOneSilentlyWinning()
     {
