@@ -15,7 +15,7 @@ public class MoviePipelineTests
         var pipeline = TestPipeline.WithNoTmdbResults();
 
         var result = await pipeline.RunAsync(
-            [Row("Some Obscure Film", "1:35:00", "Nobody")],             BoundStore.Empty, CancellationToken.None);
+            [Row("Some Obscure Film", "1:35:00", "Nobody")], BoundStore.Empty, CancellationToken.None);
 
         var record = Assert.Single(result.Records);
         Assert.Equal("Some Obscure Film", record.T);

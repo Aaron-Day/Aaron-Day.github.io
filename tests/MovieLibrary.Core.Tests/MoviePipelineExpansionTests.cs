@@ -73,7 +73,9 @@ public class MoviePipelineExpansionTests
     {
         // ONE id, four runtimes. With four different ids the keys differ whatever the runtime does, so the old form of
         // this test could only fail on an id collapse. Here the runtime is the only thing that parts them.
-        var result = await TestPipeline.ThatFailsIfSearched(13589).RunAsync([Bundle],             Of(new RecordOverride(TmdbId: 13589, Runtime: 84),
+        var result = await TestPipeline.ThatFailsIfSearched(13589).RunAsync(
+            [Bundle],
+            Of(new RecordOverride(TmdbId: 13589, Runtime: 84),
                new RecordOverride(TmdbId: 13589, Runtime: 83),
                new RecordOverride(TmdbId: 13589, Runtime: 86),
                new RecordOverride(TmdbId: 13589, Runtime: 85)), default);

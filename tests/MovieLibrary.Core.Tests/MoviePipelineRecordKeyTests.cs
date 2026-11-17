@@ -49,7 +49,7 @@ public class MoviePipelineRecordKeyTests
         var extended = Row("The Fellowship of the Ring", "3:48:00", "Peter Jackson");
 
         var result = await TestPipeline.ThatFailsIfSearched(tmdbId: 120).RunAsync(
-            [theatrical, extended],             TestStore.Forcing((theatrical, 120), (extended, 120)), CancellationToken.None);
+            [theatrical, extended], TestStore.Forcing((theatrical, 120), (extended, 120)), CancellationToken.None);
 
         Assert.Equal(2, result.Records.Count);
         Assert.All(result.Records, r => Assert.Equal(120, r.I));
@@ -62,7 +62,7 @@ public class MoviePipelineRecordKeyTests
         var halloween = Row("Halloween", "1:31:00", "John Carpenter");
 
         var result = await TestPipeline.ThatFailsIfSearched(tmdbId: 948).RunAsync(
-            [halloween],             TestStore.Forcing((halloween, 948)), CancellationToken.None);
+            [halloween], TestStore.Forcing((halloween, 948)), CancellationToken.None);
 
         var record = Assert.Single(result.Records);
         Assert.Equal(948, record.I);

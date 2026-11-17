@@ -26,7 +26,7 @@ public class TvPipelineStoreTests
     public async Task ADisplayTitleAndExtrasAreAppliedButTheSlugStaysTheSheetsOwn()
     {
         var result = await TestPipeline.TvHarnessThatFailsIfSearched(2316).RunAsync(
-            [Episode("The Office")],             For("The Office", new RecordOverride(
+            [Episode("The Office")], For("The Office", new RecordOverride(
                 TmdbId: 2316,
                 Titles: new TitleSet(Display: "The Office (US)", Sort: "Office (US)"),
                 Extra: new Dictionary<string, string> { ["Purchase Date"] = "2020-01-02" })),
@@ -43,7 +43,7 @@ public class TvPipelineStoreTests
     public async Task CandidatesWithoutAChoiceLeaveTheSeriesUnmatchedAndNoted()
     {
         var result = await TestPipeline.TvHarnessThatFailsIfSearched(2316).RunAsync(
-            [Episode("The Office")],             For("The Office", new RecordOverride(Candidates: [2316, 4604])), default);
+            [Episode("The Office")], For("The Office", new RecordOverride(Candidates: [2316, 4604])), default);
 
         var show = Assert.Single(result.Shows);
         Assert.Equal(0, show.I);
@@ -58,7 +58,7 @@ public class TvPipelineStoreTests
         // The whole reason IdentityKey.ForSeriesName exists: Normalize moves the year out, and the key folds
         // it back in. A lookup that skipped the fold-back would bind nothing here and say nothing either.
         var result = await TestPipeline.TvHarnessThatFailsIfSearched(2316).RunAsync(
-            [Episode("Doctor Who (2005)")],             For("Doctor Who (2005)", new RecordOverride(TmdbId: 2316)), default);
+            [Episode("Doctor Who (2005)")], For("Doctor Who (2005)", new RecordOverride(TmdbId: 2316)), default);
 
         Assert.Equal(2316, Assert.Single(result.Shows).I);
     }
@@ -95,7 +95,9 @@ public class TvPipelineStoreTests
     {
         // The record-building lookup folds the year back in too, separately from the resolving one.
         var result = await TestPipeline.TvHarnessThatFailsIfSearched(2316).RunAsync(
-            [Episode("Doctor Who (2005)")],             For("Doctor Who (2005)", new RecordOverride(TmdbId: 2316, Titles: new TitleSet(Display: "Doctor Who: Revival"))),
+            [Episode("Doctor Who (2005)")],
+            For("Doctor Who (2005)",
+                new RecordOverride(TmdbId: 2316, Titles: new TitleSet(Display: "Doctor Who: Revival"))),
             default);
 
         var show = Assert.Single(result.Shows);

@@ -120,7 +120,10 @@ public class MoviePipelineStoreTests
         var row = Row();
         var pipeline = TestPipeline.ThatFailsIfSearched(275);
 
-        var result = await pipeline.RunAsync([row],             Bound((row, [new RecordOverride(TmdbId: 275, Titles: new TitleSet(Display: "The Fargo Story"))])), default);
+        var result = await pipeline.RunAsync(
+            [row],
+            Bound((row, [new RecordOverride(TmdbId: 275, Titles: new TitleSet(Display: "The Fargo Story"))])),
+            default);
 
         var film = Assert.Single(result.Records);
         Assert.Equal("The Fargo Story", film.T);
@@ -133,7 +136,8 @@ public class MoviePipelineStoreTests
         var row = Row();
         var pipeline = TestPipeline.ThatFailsIfSearched(275);
 
-        var result = await pipeline.RunAsync([row],             Bound((row, [new RecordOverride(Candidates: [275, 276])])), default);
+        var result = await pipeline.RunAsync(
+            [row], Bound((row, [new RecordOverride(Candidates: [275, 276])])), default);
 
         var film = Assert.Single(result.Records);
         Assert.Equal(0, film.I);
@@ -152,7 +156,8 @@ public class MoviePipelineStoreTests
         var row = Row();
         var harness = TestPipeline.Create(budget: 0, SearchFindsFargo);
 
-        var result = await harness.Pipeline.RunAsync([row],             Bound((row, [new RecordOverride(Titles: new TitleSet(Display: "FARGO"))])), default);
+        var result = await harness.Pipeline.RunAsync(
+            [row], Bound((row, [new RecordOverride(Titles: new TitleSet(Display: "FARGO"))])), default);
 
         var film = Assert.Single(result.Records);
         Assert.Equal(275, film.I);           // matched the ordinary way, so the search really did run
@@ -188,7 +193,7 @@ public class MoviePipelineStoreTests
             ? TestPipeline.Json(TestPipeline.EmptyResults) : TestPipeline.NotFound());
 
         var result = await harness.Pipeline.RunAsync(
-            [plain, overridden],             Bound((overridden, [new RecordOverride(Year: 1995)])), default);
+            [plain, overridden], Bound((overridden, [new RecordOverride(Year: 1995)])), default);
 
         var film = Assert.Single(result.Records, m => m.T.StartsWith("The Fargo", StringComparison.Ordinal));
         Assert.Equal("The Fargo ", film.T);
@@ -208,7 +213,8 @@ public class MoviePipelineStoreTests
             .RunAsync([row], BoundStore.Empty, default);
         var harness = TestPipeline.Create(budget: 0, SearchFindsFargo);
 
-        var result = await harness.Pipeline.RunAsync([row],             Bound((row, [new RecordOverride(Runtime: 140)])), default);
+        var result = await harness.Pipeline.RunAsync(
+            [row], Bound((row, [new RecordOverride(Runtime: 140)])), default);
 
         var film = Assert.Single(result.Records);
         Assert.Equal(140, film.Rt);                                    // published: the override's
@@ -228,7 +234,8 @@ public class MoviePipelineStoreTests
         harness.Cache.Put(new CacheEntry("seed", 275, 0.95, TestPipeline.Now, false, "fargo", 98,
                                          TitleNormalizer.NormalizeDirectors(Coens)));
 
-        var result = await harness.Pipeline.RunAsync([row],             Bound((row, [new RecordOverride(Runtime: 140)])), default);
+        var result = await harness.Pipeline.RunAsync(
+            [row], Bound((row, [new RecordOverride(Runtime: 140)])), default);
 
         Assert.DoesNotContain(harness.Handler.Requests, TestPipeline.IsSearch);
         var film = Assert.Single(result.Records);
@@ -278,7 +285,7 @@ public class MoviePipelineStoreTests
         var row = Row();
 
         var result = await TestPipeline.ThatFailsIfSearched(275).RunAsync(
-            [row],             Bound((row, [new RecordOverride(TmdbId: 275, Extra: new Dictionary<string, string>())])), default);
+            [row], Bound((row, [new RecordOverride(TmdbId: 275, Extra: new Dictionary<string, string>())])), default);
 
         Assert.Null(Assert.Single(result.Records).Ex);
     }
