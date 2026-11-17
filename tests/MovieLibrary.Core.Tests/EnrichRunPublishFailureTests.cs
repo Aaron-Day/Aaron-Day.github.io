@@ -137,7 +137,10 @@ public class EnrichRunPublishFailureTests
         Assert.Contains("Mr. Robot", err);
         Assert.Contains("Mr Robot", err);
         Assert.Contains("Shows tab", err);
-        Assert.Contains("record-store.json", err);
+        // And NOT the store: the slug comes from the Shows tab's name, TvPipeline checks it before the store is
+        // even read, and Apply never writes Slug, so no record-store.json entry can resolve a clash. The advice
+        // used to offer it, which cost a re-run that reprinted the same FATAL. Matches the attribution case below.
+        Assert.DoesNotContain("record-store.json", err);
         Assert.DoesNotContain("   at ", err);                    // not a stack trace
         Assert.DoesNotContain("InvalidDataException", err);
     }

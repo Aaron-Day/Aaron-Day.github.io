@@ -133,8 +133,15 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
                 Phase.Cache => "Delete the cache index (or restore it from git) to rebuild it at full request cost. Nothing was written.",
                 Phase.Films => "TMDB sent a response in a shape this tool does not expect, and the run stopped on purpose rather " +
                                "than publish a catalogue with silent gaps. Nothing was written.",
+                // Every InvalidDataException these two phases can raise is a slug guard: TvPipeline's two (empty or
+                // leading-hyphen slug, and two series sharing one) and CatalogWriter's two (a slug that cannot name a
+                // file, and two that collide case-insensitively). A slug is Slug.From(the Shows tab's series name) and
+                // nothing else: TvPipeline computes it and checks it BEFORE bound.Series is ever read, and Apply never
+                // writes Slug - "a store entry may relabel a series but never move it". So no entry in
+                // record-store.json can resolve one of these, and naming it here sent the owner to add an entry,
+                // re-run, and get a byte-identical FATAL with no hint why.
                 Phase.Series or Phase.Publishing =>
-                    "Fix the title on the Shows tab, or name the series in record-store.json, then re-run. Nothing was written.",
+                    "Fix the title on the Shows tab, then re-run. Nothing was written.",
                 _ => "Nothing was written."
             });
         }
