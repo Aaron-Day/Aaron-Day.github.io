@@ -1,0 +1,44 @@
+/* THE FILM PAGE'S TWO-COLUMN LAYOUT, and it lives here rather than in MainLayout.razor.css for two
+   reasons. The narrow one: StyleContractTests asserts MainLayout.razor.css contains no "sidebar" at all,
+   as a raw substring over the whole file, comments included. The real one: only this page has a second
+   column, and MainLayout's job is the header-above-main shape every route shares.
+
+   ONE COLUMN BELOW THE BREAKPOINT, which is the stacked layout this page already had, and the canonical
+   SC 1.4.10 Reflow outcome at 320px. Nothing is hidden and nothing reorders; the second column simply
+   wraps under the first.
+
+   THE BREAKPOINT IS 64rem AND MUST NOT BE 48rem. 48rem is exactly 768px, and 768x1024 is the viewport
+   ReflowTests and TextOverrideTests both measure at - so a two-column layout starting there would engage
+   precisely where those suites look, in one case with the SC 1.4.12 Text Spacing overrides applied.
+   64rem clears it with room. The three existing media queries are pinned by exact string elsewhere; this
+   is a fourth and leaves them alone.
+
+   minmax(0, 1fr) ON BOTH TRACKS, NEVER 1fr. A grid item's default min-width is auto, so the tile wall --
+   which sets its own minmax(7rem, 1fr) tracks - refuses to shrink below its content and pushes the row
+   past the viewport. min-width: 0 on the results column says the same thing a second way, which is the
+   belt-and-braces FacetPanel.razor.css already uses on its fieldsets. ReflowTests checks every element's
+   right edge against the viewport, not just the document width, so overflow inside a clipping ancestor
+   would be caught too.
+
+   align-items: start so the panel is as tall as its own content. Without it the panel stretches to the
+   height of 60 tiles and its background, if it ever gains one, would run the length of the page.
+
+   NO overflow-y AND NO INDEPENDENT SCROLLING. A scrolling column clips the focus ring of anything inside
+   it and becomes a new obscuring surface, and it would need a viewport-relative height, which
+   StyleContractTests forbids in a component stylesheet. Five tab stops and two closed disclosures do not
+   need one.
+
+   NO position: sticky either. The project's only SC 2.4.11 mitigation is a scroll-padding-bottom reserve
+   for the fixed error bar; the top-edge equivalent is scroll-padding-top, which app.css is asserted NOT
+   to contain. A sticky column or header would put a focused control underneath it with no reserve
+   available, and ObscuredFocusTests walks the real tab order and would catch it. */
+/* margin-top because FacetPanel.razor.css's .facets dropped its own `margin: 1rem 0` when it became a grid
+   item: a margin on the item would have doubled whichever of the two gaps the width happened to use. The
+   space above the whole block belongs to the block, so it is set once here. */
+.movies-layout { display: grid; gap: 1.5rem; align-items: start; margin-top: 1.5rem; }
+
+.movies-results { min-width: 0; }
+
+@media (min-width: 64rem) {
+  .movies-layout { grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); }
+}

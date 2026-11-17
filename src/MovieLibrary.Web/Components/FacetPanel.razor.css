@@ -2,13 +2,27 @@
    search box and the platform's own accessibility behaviour comes with them. Everything here is layout, size
    and the project's tokens; nothing replaces a control's appearance with a drawing of one.
 
-   NO NEW COLOUR. The text is --txt, the boundary of the two boxes that have one is --line-strong (3.89:1 on
-   --bg, the token app.css reserves for a control's sole boundary), and the check and the dot take --accent
-   through accent-color. --line is decoration only and appears nowhere in this file.
+   NO NEW COLOUR, AND NO NEW TOKEN: the panel's surface is --panel and its edge --line, both of which
+   app.css already defines. The text is --txt (15.03:1 on --panel) and --dim where it is secondary (5.89:1),
+   both past SC 1.4.3 Contrast (Minimum)'s 4.5:1. The boundary of the two boxes that have one is
+   --line-strong, 3.34:1 against the --panel2 they are filled with and 3.62:1 against the --panel around
+   them, so SC 1.4.11 Non-text Contrast's 3:1 holds on either reading. --line draws the PANEL's own edge
+   and nothing else: it is 1.28:1 on --panel and app.css records it as failing 1.4.11, which is why it is
+   never a control's boundary - a grouping cue for an edge the background change already draws is neither
+   a user interface component nor a graphic required to understand the content. Re-measure if a token
+   changes.
 
    NO MOTION: no transition and no animation, so no prefers-reduced-motion block is needed. */
 
-.facets { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0; }
+/* THE PANEL IS A SURFACE NOW, not a column of controls on the page background. margin is 0 rather than
+   the 1rem 0 it carried before Movies.razor.css made this element a grid item: .movies-layout's own gap is
+   what separates it from the results column beside it and, below the breakpoint, from the tiles under it,
+   and a margin as well would double one of the two gaps depending on the width. */
+.facets {
+  display: flex; flex-direction: column; gap: 1rem;
+  margin: 0; padding: 1rem;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+}
 
 .facet-search, .facet-sort { display: flex; flex-direction: column; gap: .25rem; }
 

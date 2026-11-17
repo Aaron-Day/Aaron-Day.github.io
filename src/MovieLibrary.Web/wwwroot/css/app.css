@@ -25,10 +25,27 @@
     --bar-max: 40dvh;   /* the cap on #blazor-error-ui's own height. Everything that has to reserve room
                            for that bar reads the cap from here, so a change to one cannot leave the
                            other behind. See html's scroll-padding-bottom. */
+    --shell: 90rem;   /* the reading width of the shell. 1440px at the default root, and a CAP rather than a
+                         width: every viewport below it is unaffected, so nothing about the 320px or 768px
+                         layouts changes. In rem so the cap scales with the reader's own font size, which is
+                         the same reason .tile-title reserves its height in em.
+                         TWO ELEMENTS READ IT AND THEY ARE NOT SIBLINGS: .content in MainLayout.razor.css and
+                         nav in NavMenu.razor.css. The header BAR is deliberately full-bleed - its background
+                         and bottom border run the width of the viewport - so the cap cannot live on <header>
+                         itself; it is the nav INSIDE the bar that is capped, which is why the number is a
+                         token here instead of a literal in each file. */
 }
 
+/* THE PLATFORM'S OWN UI FACE FIRST. system-ui resolves to Segoe UI Variable on Windows 11, SF on Apple
+   platforms and Roboto on Android, so the app reads as native text at every size instead of as 2003 web
+   Arial. Every name after it is a fallback for a platform where system-ui is unsupported or mis-maps, and
+   the generic sans-serif is last so a reader who has set their own default still gets one.
+   NO WEBFONT, and that is a decision rather than an omission: a webfont is a render-blocking request on a
+   GitHub Pages site with no server to tune it, and a FOIT or FOUT moves text after first paint. Nothing
+   here is measured for contrast - a face has no colour - but it does change the GLYPH WIDTHS the tile
+   titles wrap at, which is why .tile-title reserves two lines in em rather than px. */
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: system-ui, -apple-system, 'Segoe UI Variable Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 body { background: var(--bg); color: var(--txt); }

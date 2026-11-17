@@ -5,7 +5,29 @@
    instead.) Re-measure if a token changes. */
 .tile { position: relative; }
 .tile-body { display: flex; flex-direction: column; gap: .25rem; }
-.tile img, .poster-placeholder { width: 100%; aspect-ratio: 2 / 3; border-radius: 6px; }
+/* height: auto IS LOAD-BEARING AND NOT TIDYING, and without it every poster in the wall was stretched.
+   The markup carries width="342" height="513" to reserve the box before the TMDB response arrives, which
+   is right, but an HTML width/height attribute is a PRESENTATIONAL HINT: height="513" maps to a used
+   `height: 513px`. aspect-ratio only resolves a dimension that is auto, so with the width forced to 100%
+   of a 123px column and the height pinned at the intrinsic 513px, the box came out 123x513 - a ratio of
+   4.15:1 against the 1.5:1 the poster actually is - and object-fit's initial `fill` stretched the artwork
+   to match rather than letterboxing it. MEASURED in the browser at 1280px before the fix: imgW 123.54,
+   imgH 513, computed aspect-ratio "2 / 3" - the declaration was there and doing nothing.
+   Returning the height to auto lets aspect-ratio drive it (width x 1.5), and the attributes keep their
+   real job: they still give the intrinsic ratio the browser reserves space from, so nothing about
+   cumulative layout shift changes. Do not delete them, and do not delete this. */
+.tile img, .poster-placeholder { width: 100%; height: auto; aspect-ratio: 2 / 3; border-radius: 6px; }
+
+/* THE SAME EDGE THE PLACEHOLDER ALREADY HAD, for the same reason and with the same token. A poster whose
+   own artwork is dark - and a great many are - dissolved into --bg at its border and the wall read as
+   floating scraps rather than a grid of cards. var(--line) is 1.37:1 there and app.css records it as
+   FAILING SC 1.4.11 Non-text Contrast, which is fine here for the reason the placeholder's note gives in
+   full: the edge is neither a user interface component nor a graphic required to understand the content,
+   because the title beneath carries the whole meaning and the box has no state. Do not promote it to
+   --line-strong; everything that IS a control's only boundary already uses that token.
+   Bootstrap's reboot sets box-sizing: border-box on everything, so the border eats a pixel of the image
+   rather than widening the tile and nothing about the grid's arithmetic moves. */
+.tile img { border: 1px solid var(--line); }
 
 /* --line is 1.37:1 on --bg and fails SC 1.4.11, which is fine here and only here. The placeholder is
    outside 1.4.11 altogether because it is neither a user interface component nor a graphical object

@@ -56,26 +56,48 @@
    a second copy of the number here would be one edit away from disagreeing with the first. *@
 @if (ShowFilters)
 {
-    <FacetPanel @ref="panel" State="Effective" TypedQuery="@typedQuery" Genres="genreOptions"
-                Decades="decadeOptions" HasUnknownYear="anyYearUnknown"
-                QueryInput="OnQueryInput" StateChanged="OnFacetChanged" />
+    @* THE TWO-COLUMN WRAPPER, and both divs earn their place. The outer one is the grid; the inner one
+       exists because PosterGrid renders TWO roots (.grid-head and ul.grid), so without it auto-placement
+       would put the head in the second column and the tiles back in the first.
 
-    @* Zero results is TEXT, not an empty grid. The grid's whole head -- count, pager and tiles -- is gated on
-       having titles, so filtering to nothing removes the pager from the DOM, and a pager button that held focus
-       takes it with it: the next Tab would restart from the top of the document. This paragraph is where focus
-       goes when that happens (see OnAfterRenderAsync), and tabindex="-1" is a feature dependency here: the
-       focus call does not add it and fails silently on an element that cannot take focus. *@
-    @if (shown.Count == 0)
-    {
-        <div class="no-match">
-            <p tabindex="-1" @ref="emptyMessage">@NoMatch</p>
-            <button type="button" class="clear-filters" @onclick="ClearAll">Clear all filters</button>
+       A PLAIN DIV AND NEVER <aside>, <nav> OR <section>. FacetPanel's root is already a <search> landmark
+       and the whole-panel-is-one-landmark ruling depends on it; an <aside> inside <main> maps to
+       complementary (it degrades to generic only inside article/aside/nav/section, and main is none of
+       those), which would nest a search landmark inside a complementary one and file the filters under
+       Complementary in a landmark list. A div is invisible to assistive technology, which is the point.
+
+       DOM ORDER IS UNCHANGED AND THE PANEL RENDERS LEFT. Facets first in the DOM, painted in the first
+       column, reads the same way in either order, so SC 1.3.2 Meaningful Sequence has nothing to catch.
+       Painting the panel on the RIGHT while it stayed first in the DOM is what would engage 1.3.2 and
+       SC 2.4.3 Focus Order with it -- a sighted reader meeting results-then-filters while a keyboard
+       reader tabs filters-then-results -- so there is no order:, no row-reverse and no grid-template-areas
+       here. The reading order this file rules on above, the ClearAll focus return, and PosterGrid's
+       pager-above-tiles argument all depend on this order too. *@
+    <div class="movies-layout">
+        <FacetPanel @ref="panel" State="Effective" TypedQuery="@typedQuery" Genres="genreOptions"
+                    Decades="decadeOptions" HasUnknownYear="anyYearUnknown"
+                    QueryInput="OnQueryInput" StateChanged="OnFacetChanged" />
+
+        <div class="movies-results">
+
+        @* Zero results is TEXT, not an empty grid. The grid's whole head -- count, pager and tiles -- is gated on
+           having titles, so filtering to nothing removes the pager from the DOM, and a pager button that held focus
+           takes it with it: the next Tab would restart from the top of the document. This paragraph is where focus
+           goes when that happens (see OnAfterRenderAsync), and tabindex="-1" is a feature dependency here: the
+           focus call does not add it and fails silently on an element that cannot take focus. *@
+        @if (shown.Count == 0)
+        {
+            <div class="no-match">
+                <p tabindex="-1" @ref="emptyMessage">@NoMatch</p>
+                <button type="button" class="clear-filters" @onclick="ClearAll">Clear all filters</button>
         </div>
     }
     else
     {
         <PosterGrid Items="shown" Page="page" PageChanged="OnPageChanged" />
     }
+        </div>
+    </div>
 }
 
 @code {

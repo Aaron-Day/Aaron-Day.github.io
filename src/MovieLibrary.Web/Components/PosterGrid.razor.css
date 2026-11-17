@@ -14,7 +14,17 @@
 }
 @media (max-width: 22.5rem) { .grid { grid-template-columns: repeat(2, 1fr); gap: .5rem; } }
 
-.grid-head { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; }
+/* THE COUNT AND THE PAGER READ AS ONE TOOLBAR OVER THE WALL. space-between pushes the pager to the far
+   edge of the results column; below about 24rem the two simply wrap onto their own lines, which is the
+   SC 1.4.10 Reflow outcome and needs no query of its own.
+   The rule beneath them is var(--line), 1.37:1 on --bg and recorded in app.css as failing SC 1.4.11 Non-text
+   Contrast - correct here for the reason .poster-placeholder's edge is: a separator between a toolbar and
+   the list under it is neither a user interface component nor a graphic required to understand the content.
+   The pager buttons keep their own --line-strong boundary. */
+.grid-head {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1rem;
+  padding-bottom: .75rem; margin-bottom: 1rem; border-bottom: 1px solid var(--line);
+}
 .count { color: var(--txt); margin: 0; }
 .pager { display: flex; align-items: center; gap: .5rem; }
 
@@ -51,6 +61,15 @@
    that does nothing looking like it. */
 .pager button[aria-disabled="true"] {
   color: var(--dim); background-color: var(--panel2); opacity: 1; cursor: default;
+}
+
+/* Hover only where a pointer can hover: on a touch screen :hover sticks after the tap and the button stays
+   lit until something else is tapped. The same shape as .try-again:hover and .clear-filters:hover in
+   app.css, and the same token. A GREYED BUTTON IS EXCLUDED BY SELECTOR: it does nothing when pressed, so
+   lighting its edge under the pointer would promise a page that is not there. --accent is 11.92:1 on --bg
+   and clears SC 1.4.11's 3:1 as a boundary. */
+@media (hover: hover) {
+  .pager button:not([aria-disabled="true"]):hover { border-color: var(--accent); }
 }
 
 /* No transition and no animation in this file, so no prefers-reduced-motion block is needed. The motion
