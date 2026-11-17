@@ -17,10 +17,16 @@
 /* THE PANEL IS A SURFACE NOW, not a column of controls on the page background. margin is 0 rather than
    the 1rem 0 it carried before Movies.razor.css made this element a grid item: .movies-layout's own gap is
    what separates it from the results column beside it and, below the breakpoint, from the tiles under it,
-   and a margin as well would double one of the two gaps depending on the width. */
+   and a margin as well would double one of the two gaps depending on the width.
+   min-width: 0 because this element is a GRID ITEM, and a grid item's automatic minimum size is its
+   min-content width - which here is the bare <input>'s intrinsic ~20 characters, 32px of type at 200%
+   text. The same belt-and-braces .movies-results carries, and that this file already uses on its
+   fieldsets. Movies.razor.css's minmax(0, 1fr) is what actually fixed the SC 1.4.4 overflow the CI gate
+   caught; this is the second way of saying it, on the element that was wide rather than on the track
+   that let it be. */
 .facets {
   display: flex; flex-direction: column; gap: 1rem;
-  margin: 0; padding: 1rem;
+  margin: 0; min-width: 0; padding: 1rem;
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
 }
 

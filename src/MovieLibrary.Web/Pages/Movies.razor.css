@@ -35,7 +35,22 @@
 /* margin-top because FacetPanel.razor.css's .facets dropped its own `margin: 1rem 0` when it became a grid
    item: a margin on the item would have doubled whichever of the two gaps the width happened to use. The
    space above the whole block belongs to the block, so it is set once here. */
-.movies-layout { display: grid; gap: 1.5rem; align-items: start; margin-top: 1.5rem; }
+/* THE SINGLE COLUMN IS DECLARED, AND minmax(0, 1fr) IS NOT DECORATION ON IT. A grid with no
+   grid-template-columns gets ONE IMPLICIT `auto` track, and an auto track's floor is its items'
+   min-content width - so the track grows past the container whenever an item's min-content does. The
+   facet panel's does: the search box is a bare <input>, whose intrinsic width is its default size of
+   about 20 characters, and at 200% text that is 32px of type. MEASURED at 375x812 with
+   `html { font-size: 32px }`, which is what TextOverrideTests injects: the track, the panel, the results
+   column, the tile wall and all 60 tiles came out 439px wide inside a 311px container, document
+   scrollWidth 470 against clientWidth 375 - SC 1.4.4 Resize Text, Level AA, and the CI gate caught it.
+   `width: 100%` on the input does not save it, because a percentage is indefinite while the track is
+   being sized and the intrinsic width is what answers instead.
+   The same minmax(0, …) the two-column rule below already carries, for the same reason, now simply
+   applies at every width rather than only above the breakpoint. */
+.movies-layout {
+  display: grid; grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem; align-items: start; margin-top: 1.5rem;
+}
 
 .movies-results { min-width: 0; }
 
