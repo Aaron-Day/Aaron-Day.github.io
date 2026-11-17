@@ -23,8 +23,14 @@ public static class CatalogFilter
     /// best candidate scored.
     /// </para>
     /// <para>
-    /// <b>Sort is by the display title, culture-aware and case-insensitive, with the key as the last tiebreak</b> so
-    /// two films that differ only in the thing being sorted by never swap places between renders.
+    /// <b>Sort is by the SORT title -- <c>Srt ?? T</c> -- culture-aware and case-insensitive, with the key as the
+    /// last tiebreak</b> so two films that differ only in the thing being sorted by never swap places between
+    /// renders. See <see cref="SortTitleOf"/> for what <c>Srt</c> is and what it changes on screen.
+    /// </para>
+    /// <para>
+    /// <b>The year and runtime orders break their ties on the same key</b>, and that is the requirement rather
+    /// than consistency for its own sake: a title tiebreak IS title ordering, so a film filed under E in the
+    /// default view and under T in the year view would be the worse outcome. There is one title order here.
     /// </para>
     /// </remarks>
     public static IReadOnlyList<MovieRecord> Apply(IReadOnlyList<MovieRecord> films, FilterState state)
@@ -54,13 +60,31 @@ public static class CatalogFilter
     {
         SortOrder.Year => films
             .OrderByDescending(m => m.Y ?? int.MinValue)   // newest first, and a film with no year after them all
-            .ThenBy(m => m.T, Titles).ThenBy(m => m.K, StringComparer.Ordinal),
+            .ThenBy(SortTitleOf, Titles).ThenBy(m => m.K, StringComparer.Ordinal),
         SortOrder.Runtime => films
             .OrderByDescending(m => m.Rt)
-            .ThenBy(m => m.T, Titles).ThenBy(m => m.K, StringComparer.Ordinal),
+            .ThenBy(SortTitleOf, Titles).ThenBy(m => m.K, StringComparer.Ordinal),
         _ => films
-            .OrderBy(m => m.T, Titles).ThenBy(m => m.K, StringComparer.Ordinal),
+            .OrderBy(SortTitleOf, Titles).ThenBy(m => m.K, StringComparer.Ordinal),
     };
+
+    /// <summary>
+    /// Where a film files: its sort title when it has one, its display title when it does not. THE ONE PLACE
+    /// this app decides that, so the three orders above cannot drift into two different title orders.
+    /// </summary>
+    /// <remarks>
+    /// <c>MovieRecord.Srt</c> is null unless the title sorts somewhere its display title would not -- the
+    /// pipeline strips one leading English article, and <c>titles.sort</c> in the record store overrides what
+    /// it derived -- so <c>Srt ?? T</c> is the whole rule. Sorting on <c>Srt</c> alone would file the great
+    /// majority of the catalogue under null.
+    /// <para>
+    /// WHAT THIS CHANGES ON SCREEN, decided by the owner: a leading article stops counting.
+    /// <i>The Empire Strikes Back</i> carries <c>Srt</c> "Empire Strikes Back" and files under E, not T. The
+    /// DISPLAY title is untouched -- the tile still reads "The Empire Strikes Back" -- and search still reads
+    /// <c>T</c>, because a visitor typing "the empire" is typing what they can see.
+    /// </para>
+    /// </remarks>
+    private static string SortTitleOf(MovieRecord film) => film.Srt ?? film.T;
 
     private static readonly StringComparer Titles = StringComparer.InvariantCultureIgnoreCase;
 

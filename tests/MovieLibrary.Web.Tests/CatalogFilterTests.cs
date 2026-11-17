@@ -16,12 +16,16 @@ public class CatalogFilterTests
     private static readonly double Confident = MatchScorer.AcceptThreshold + 0.20;
     private static readonly double Uncertain = MatchScorer.AcceptThreshold - 0.20;
 
+    /// <param name="srt">
+    /// The record's sort title, and null -- as it is for every film in <see cref="Library"/> -- for the great
+    /// majority whose display title is already where they file. See <see cref="Articled"/>.
+    /// </param>
     private static MovieRecord Film(
         string title, int? year = 1990, int runtime = 100, int id = 1, double mc = -1,
-        int[]? genres = null, string[]? directors = null, string? key = null) =>
+        int[]? genres = null, string[]? directors = null, string? key = null, string? srt = null) =>
         new(I: id, K: key ?? title, T: title, Y: year, Rt: runtime, P: null, B: null,
             G: genres ?? [], Ag: "Drama", Vote: 0, Dir: directors ?? [], Ov: null, Tag: null, Cast: [],
-            Col: null, Own: null, Mc: mc < 0 ? (id == 0 ? 0 : Confident) : mc);
+            Col: null, Own: null, Mc: mc < 0 ? (id == 0 ? 0 : Confident) : mc, Srt: srt);
 
     /// <summary>
     /// Nine films that differ on every axis a facet can see: three bands, three genre ids in several
@@ -233,6 +237,60 @@ public class CatalogFilterTests
         // Delta and Theta are both 100 minutes: Delta first.
         Assert.Equal(new[] { "Zeta", "Alpha", "Gamma", "Eta", "Delta", "Theta", "Iota", "beta", "Epsilon" }, shown);
     }
+
+    // ---------------------------------------------------------------- the sort title
+
+    /// <summary>
+    /// Three films whose sort order is not their display order, and whose year and runtime are deliberately
+    /// identical so that in EVERY order the title tiebreak decides the whole list.
+    /// </summary>
+    /// <remarks>
+    /// Only the first carries an <c>Srt</c>; the other two file by their display titles, which is the
+    /// <c>?? T</c> half of the rule, and they sit either side of where <c>Srt</c> puts the first. Sorted on
+    /// the display title this reads Dune, Fargo, The Empire Strikes Back -- a different order, which is what
+    /// makes these tests able to fail.
+    /// </remarks>
+    private static readonly MovieRecord[] Articled =
+    [
+        Film("The Empire Strikes Back", srt: "Empire Strikes Back", year: 1980, runtime: 124, id: 41),
+        Film("Dune", year: 1980, runtime: 124, id: 42),
+        Film("Fargo", year: 1980, runtime: 124, id: 43),
+    ];
+
+    /// <summary>The display titles of <see cref="Articled"/> in sort-title order: D, E(mpire), F.</summary>
+    private static readonly string[] BySortTitle = ["Dune", "The Empire Strikes Back", "Fargo"];
+
+    /// <remarks>
+    /// The pipeline publishes <c>Srt</c> on every record that needs one and the record store overrides it,
+    /// and until this nothing in the web app read it: one of the corrections the store advertises was a
+    /// no-op, and the contract written on <c>MovieRecord.Srt</c> -- "a consumer sorts on <c>Srt ?? T</c>" --
+    /// was a sentence its only consumer did not honour.
+    /// </remarks>
+    [Fact]
+    public void TitleOrderIsTheSortTitleAndNotTheDisplayTitle()
+    {
+        var shown = CatalogFilter.Apply(Articled, FilterState.Default).Select(m => m.T);
+
+        Assert.Equal(BySortTitle, shown);
+    }
+
+    /// <remarks>
+    /// Both of these orders break their ties on the title, and a title tiebreak is title ordering: a film
+    /// filed under E in the default view and under T here would be worse than either rule applied alone.
+    /// Every film in <see cref="Articled"/> shares a year AND a runtime, so the tiebreak is the only thing
+    /// deciding this list -- an assertion that passed on the leading key would prove nothing.
+    /// </remarks>
+    [Theory]
+    [InlineData(SortOrder.Year)]
+    [InlineData(SortOrder.Runtime)]
+    public void TheYearAndRuntimeOrdersBreakTheirTiesOnTheSortTitleToo(SortOrder sort)
+    {
+        var shown = CatalogFilter.Apply(Articled, FilterState.Default with { Sort = sort }).Select(m => m.T);
+
+        Assert.Equal(BySortTitle, shown);
+    }
+
+    // ----------------------------------------------------------------
 
     [Fact]
     public void SortOnlyReordersAndNeverFilters()
