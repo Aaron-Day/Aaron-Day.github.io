@@ -1,162 +1,269 @@
+/* /Components/FacetPanel.razor.rz.scp.css */
+/* The facet panel. Native controls throughout, so the browser draws the checkbox, the radio, the select and the
+   search box and the platform's own accessibility behaviour comes with them. Everything here is layout, size
+   and the project's tokens; nothing replaces a control's appearance with a drawing of one.
+
+   NO NEW COLOUR. The text is --txt, the boundary of the two boxes that have one is --line-strong (3.89:1 on
+   --bg, the token app.css reserves for a control's sole boundary), and the check and the dot take --accent
+   through accent-color. --line is decoration only and appears nowhere in this file.
+
+   NO MOTION: no transition and no animation, so no prefers-reduced-motion block is needed. */
+
+.facets[b-9jfn63vvns] { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0; }
+
+.facet-search[b-9jfn63vvns], .facet-sort[b-9jfn63vvns] { display: flex; flex-direction: column; gap: .25rem; }
+
+fieldset[b-9jfn63vvns] { margin: 0; padding: 0; border: 0; min-width: 0; }
+
+/* Bootstrap's reboot floats a legend to full width at a fluid heading size, which is wrong for a group label.
+   line-height is unitless so a text-spacing override cannot clip it (SC 1.4.12). */
+legend[b-9jfn63vvns] {
+  float: none; width: auto; margin: 0 0 .25rem; padding: 0;
+  font-size: 1rem; font-weight: 600; line-height: 1.5; color: var(--txt);
+}
+
+.options[b-9jfn63vvns] { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+
+/* The LABEL is the tap target and is --touch on both axes; the box inside it is 1.5rem, which is past the
+   24x24 SC 2.5.8 Target Size (Minimum) asks of the control itself. rem rather than px so the box grows with the
+   reader's own text size. 44 is the project's house goal (SC 2.5.5, Level AAA), not the Level AA figure. */
+.options label[b-9jfn63vvns] {
+  display: inline-flex; align-items: center; gap: .5rem;
+  min-width: var(--touch); min-height: var(--touch);
+  padding-right: .5rem; line-height: 1.5; cursor: pointer;
+}
+
+input[type="checkbox"][b-9jfn63vvns], input[type="radio"][b-9jfn63vvns] {
+  flex: 0 0 auto; width: 1.5rem; height: 1.5rem; margin: 0; accent-color: var(--accent);
+}
+
+/* At least 16px COMPUTED, whatever the reader's root size: iOS Safari zooms the page when a field under 16px takes
+   focus, and that zoom breaks reflow. max() rather than 1rem alone, because 1rem is 14px for a reader who has
+   set a smaller default. The border is the control's only boundary, so it is --line-strong. */
+input[type="search"][b-9jfn63vvns], select[b-9jfn63vvns] {
+  box-sizing: border-box; max-width: 100%; min-height: var(--touch);
+  padding: 0 .75rem; border-radius: 6px;
+  font-size: max(16px, 1rem); line-height: 1.5;
+  color: var(--txt); background: var(--panel2);
+  border: 2px solid var(--line-strong);
+}
+
+input[type="search"][b-9jfn63vvns] { width: 100%; max-width: 32rem; }
+
+select[b-9jfn63vvns] { align-self: flex-start; }
+
+/* Hover only where a pointer can hover: on a touch screen :hover sticks after the tap. */
+@media (hover: hover) {
+  input[type="search"]:hover[b-9jfn63vvns], select:hover[b-9jfn63vvns] { border-color: var(--accent); }
+}
+
+/* The genre and decade disclosures. The summary keeps the browser's own marker, which forced colors repaints
+   for free, so it stays display: list-item. The block padding is what makes it --touch tall: 1.5 unitless
+   line-height at 1rem is 1.5rem of text, and the padding makes up the rest, in em so that a reader's larger
+   text only makes the row taller (SC 1.4.12 cannot clip it). The open group's controls are indented by the
+   .options rule above and need nothing here. NO MOTION: the browser opens and closes a details instantly. */
+.facet-group > summary[b-9jfn63vvns] {
+  padding-block: max(.25rem, calc((var(--touch) - 1.5rem) / 2));
+  font-weight: 600; line-height: 1.5; color: var(--txt); cursor: pointer;
+}
+
+/* Bootstrap's reboot removes the tap highlight, so a pressed summary needs its own :active. */
+.facet-group > summary:active[b-9jfn63vvns] { background-color: var(--line); }
+/* /Components/PosterGrid.razor.rz.scp.css */
+/* SC 1.4.10 Reflow requires this to be usable at 320 CSS px with no two-dimensional scrolling. It does NOT
+   require two columns -- one column is the canonical Reflow outcome and is fully conformant. The
+   two-column floor at the narrowest width is a HOUSE RULE about density, and the two halves are reported
+   separately so a later reader can tell which is which.
+   auto-fill with a rem minimum needs no media query and scales to a dense wall on a desktop. The explicit
+   two-column rule below 22.5rem stops a third cramped column appearing on a 360px phone with a narrow
+   gutter, and joins cleanly to the minmax(7rem, 1fr) rule above it.
+   align-items: start so that a tile whose title wraps to three lines does not stretch its row-mates: the
+   title is deliberately unclamped, so tiles in a row are not all the same height. */
+.grid[b-dqgkucy970] {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+  gap: .75rem; align-items: start;
+  margin: 0; padding: 0; list-style: none;   /* it is a ul; role="list" in the markup survives this */
+}
+@media (max-width: 22.5rem) { .grid[b-dqgkucy970] { grid-template-columns: repeat(2, 1fr); gap: .5rem; } }
+
+.grid-head[b-dqgkucy970] { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; }
+.count[b-dqgkucy970] { color: var(--txt); margin: 0; }
+.pager[b-dqgkucy970] { display: flex; align-items: center; gap: .5rem; }
+
+.pager button[b-dqgkucy970] {
+  min-width: var(--touch); min-height: var(--touch);
+  border: 2px solid var(--line-strong);   /* --line is 1.18:1 on this fill and would fail SC 1.4.11 */
+  background: var(--panel2); color: var(--txt);
+  border-radius: 6px;
+}
+
+/* GREYED, NOT DISABLED: the button keeps its place in the tab order so that paging to a bound cannot
+   destroy focus. See Go() for why, and for which rule that supersedes.
+   --dim on --panel2 is 5.43:1, so the text still passes SC 1.4.3 Contrast (Minimum) -- and that number is
+   LOAD-BEARING rather than belt-and-braces: choosing aria-disabled over the disabled attribute forfeits
+   1.4.3's exemption for an inactive user interface component, because this control is still focusable and
+   still receives events.
+   opacity stays at 1. The greyed state is carried by a colour that passes contrast, never by transparency.
+   It is not conveyed by colour alone either, and the thing that saves it is not aria-disabled -- a
+   programmatic attribute does nothing for a sighted user, so it cannot answer SC 1.4.1 Use of Color. What
+   answers it is the "Page 1 of 25" between the two buttons, which tells any sighted user which bound they
+   are at.
+   THAT INDICATOR IS THE WHOLE ARGUMENT, and the tempting second one is not available. An earlier version
+   of this comment added that the change here is a luminance difference rather than a hue difference, "so
+   1.4.1 does not engage in the first place", and cited 5.43:1 against 13.85:1 for it. Those two numbers are
+   each colour's contrast against the button FILL, not the difference between the two states. The figure
+   that argument actually needs is --dim against --txt, and it is 2.55:1 -- below the 3:1 that technique
+   G183 asks for in precisely this "distinguished by luminance rather than hue" case. "1.4.1 does not
+   engage" was not established either: greying IS a colour change. Do not put either half back without a
+   measurement that supports it.
+   background-color is declared here as well as on the rule above, and it has to be. app.css's
+   `:root :is(a, button):active { background-color: var(--line) }` is (0,2,1) and wins over that rule's
+   plain `background`, so a greyed button flashed on press while doing nothing. No conformance issue in
+   either direction -- --dim on --line is 4.61:1, past SC 1.4.3's 4.5:1 -- so this is only about a control
+   that does nothing looking like it. */
+.pager button[aria-disabled="true"][b-dqgkucy970] {
+  color: var(--dim); background-color: var(--panel2); opacity: 1; cursor: default;
+}
+
+/* No transition and no animation in this file, so no prefers-reduced-motion block is needed. The motion
+   rule in StyleContractTests reads this file by glob and will say so if that stops being true. */
+/* /Components/PosterTile.razor.rz.scp.css */
+/* The tile declares no background of its own, so its text sits on --bg: --txt is 16.16:1 there and --dim
+   is 6.33:1, both comfortably past SC 1.4.3's 4.5:1. (An earlier note here measured them against --panel2
+   at 13.85:1, which is the ratio for a surface this tile does not have. Giving the tile a panel background
+   to make that number true would be a visual change nobody asked for, so the measurement was corrected
+   instead.) Re-measure if a token changes. */
+.tile[b-edk0x0dgrl] { position: relative; }
+.tile-body[b-edk0x0dgrl] { display: flex; flex-direction: column; gap: .25rem; }
+.tile img[b-edk0x0dgrl], .poster-placeholder[b-edk0x0dgrl] { width: 100%; aspect-ratio: 2 / 3; border-radius: 6px; }
+
+/* --line is 1.37:1 on --bg and fails SC 1.4.11, which is fine here and only here. The placeholder is
+   outside 1.4.11 altogether because it is neither a user interface component nor a graphical object
+   required to understand the content: the title text beside it carries the whole meaning, and the box has
+   no state. (Not because it is pruned from the accessibility tree -- contrast is about visual perception,
+   so that would be the wrong reason for the right answer.) Do not promote it to --line-strong; everything
+   that IS a control's only boundary already uses that token. */
+.poster-placeholder[b-edk0x0dgrl] { background: linear-gradient(160deg, var(--panel2), var(--panel)); border: 1px solid var(--line); }
+
+/* NO LINE CLAMP, deliberately, and this is the one place a reviewer is likely to want to put one back.
+   -webkit-line-clamp: 2 with overflow: hidden holds roughly 30 to 35 characters per line at this column
+   width in a semibold face. "The Lord of the Rings: The Fellowship of the Ring" is 49 and
+   "Birdman or (The Unexpected Virtue of Ignorance)" is 46, and there is a long tail behind them. With no
+   link, no title attribute and no aria-label on the tile, a sighted user would have no way at all to read
+   the rest -- and the 171 uncertain matches, which are the whole reason this page exists before the rest
+   of the pipeline work, are exactly the records whose titles need reading. A screen reader would be fine,
+   because the full text stays in the DOM; this is a low-vision and cognitive-load defect, which is why it
+   is easy to miss. Forcing the SC 1.4.12 Text Spacing overrides makes it strictly worse, because fewer
+   characters fit per line and so more text disappears.
+
+   min-height is in em rather than px so that it scales with the text it is reserving room for: the point
+   is two lines of THIS font size, and a px floor would stop being two lines the moment the reader changes
+   it. It is a MINIMUM, so a title that wraps to three lines simply grows, which is why the grid sets
+   align-items: start -- a tall tile must not stretch its row-mates. */
+.tile-title[b-edk0x0dgrl] {
+  color: var(--txt); font-weight: 600;
+  min-height: 2.6em;
+}
+.tile-year[b-edk0x0dgrl] { color: var(--dim); font-size: .85rem; }
+
+/* THE CONFIDENCE BADGE. A border plus text, and never a background tint on its own: under Windows High
+   Contrast a tint flattens to Canvas and takes the cue with it, while a border is re-coloured to CanvasText
+   and survives. The variants below set border-color and color only, so the width and style of the border
+   come from the shorthand here rather than from either variant; the colour in it is --line-strong rather
+   than --line so that a badge that somehow lost its variant class could not end up with the 1.37:1 edge
+   app.css reserves for decoration.
+
+   THIS FILE IS NOT THE WHOLE STORY FOR .badge. Bootstrap 5.3.3 defines .badge itself
+   (lib/bootstrap/dist/css/bootstrap.css, around :4831) and the class name collides on purpose -- it is the
+   component's own name. The scoped selector this file compiles to, .badge[b-e4hbk2agnu], is (0,2,0) against
+   Bootstrap's (0,1,0), so every property declared below wins: colour, background, padding, font-size,
+   font-weight, border and radius are this file's and the measured contrast is unaffected. Four properties
+   Bootstrap sets are NOT declared here and do apply -- line-height: 1, text-align: center,
+   white-space: nowrap and vertical-align: baseline. None of them hurts a one-line badge today, and
+   white-space: nowrap is arguably wanted, but they are inherited and not chosen. Bootstrap's
+   .badge:empty { display: none } is (0,2,0) too, so it ties on specificity and loses only on load order --
+   index.html loads this bundle after bootstrap. It never applies anyway: ConfidenceBand.BadgeFor returns a
+   non-empty string or null, and the component renders nothing for null. (app.css reasons about Bootstrap
+   collisions in four places; this is the same house practice, in the one file that had no such note.)
+
+   Measured against --panel2, which is the badge's own background: --accent 10.22:1 and --accent2 6.35:1.
+   Both clear the 4.5:1 that SC 1.4.3 Contrast (Minimum), Level AA, asks of this text, and both clear 3:1
+   as borders, so SC 1.4.11 Non-text Contrast, Level AA, is satisfied without this file having to settle
+   whether a badge boundary is in that criterion's scope at all -- the badge is not a user interface
+   component, and the words inside the border carry the meaning. The precedents for putting a border
+   outside 1.4.11's scope are app.css's token header, which says --line "FAILS SC 1.4.11, so it is for
+   decoration only", and .poster-placeholder above, which is outside it because "the title text beside it
+   carries the whole meaning". (An earlier version of this note cited .attribution's border-top instead;
+   that comment argues forced-colors survival, not scope, so the practice was right and the citation was
+   not.) Re-measure if either token changes.
+
+   font-size is .8125rem -- 13px at the default root -- and not the .75rem this started as. WCAG 2.2 sets
+   no minimum text size and .75rem in rem already honours the reader's own browser font size, so this is a
+   house rule and no criterion is cited for the number. The rule is app.css's, recorded in its
+   .attribution p comment: "Do not go below 0.8125rem". It applies to this element in particular because
+   under forced colors both variants flatten to CanvasText on Canvas and the WORDS become the only thing
+   telling the two bands apart -- see the block below. .75rem made that load-bearing cue the smallest type
+   in the app, smaller even than .tile-year's .85rem, and the size was chosen before the forced-colors
+   argument gave the words that job.
+
+   margin-top reproduces .tile-body's gap by hand, because the badge is deliberately OUTSIDE that flex
+   container and so inherits none of it. No align-self here for the same reason: .tile is a block
+   container, so an align-self would be an inert declaration implying a flex parent that does not exist.
+   display: inline-block is what makes the badge shrink to its text. */
+.badge[b-edk0x0dgrl] {
+  display: inline-block;
+  margin-top: .25rem;
+  padding: .1rem .4rem; font-size: .8125rem; font-weight: 600;
+  border: 1px solid var(--line-strong); border-radius: 4px;
+  background: var(--panel2); color: var(--txt);
+}
+.badge-unmatched[b-edk0x0dgrl] { border-color: var(--accent); color: var(--accent); }
+.badge-uncertain[b-edk0x0dgrl] { border-color: var(--accent2); color: var(--accent2); }
+
+/* BOTH VARIANTS FLATTEN TO ONE APPEARANCE HERE, DELIBERATELY, and the next reader is likely to want to
+   "fix" it. Forced colors replaces the palette with the user's own, so --accent and --accent2 are gone and
+   both badges become CanvasText on Canvas: the colour distinction disappears and the only thing left
+   telling the two bands apart is the TEXT -- "Not matched" against "Needs review". That is exactly what
+   SC 1.4.1 Use of Color, Level A, requires, because 1.4.1 is about visual means and words are not one.
+   Reaching for a third colour to keep them apart would buy nothing: forced-colors mode overrides it.
+
+   This block states explicitly what forced-colors mode already does to those three properties. It is here
+   because that behaviour is the whole reason the badge is a bordered box rather than a tinted one, and a
+   declaration a reader can see cannot be stranded by a later forced-color-adjust: none or by a variant
+   that paints a background image instead of a colour. */
+@media (forced-colors: active) {
+  .badge[b-edk0x0dgrl] { border: 1px solid CanvasText; color: CanvasText; background: Canvas; }
+}
+
+/* No hover rule anywhere in this file. The plan's was underlining a link, and Part A has no link. Part B
+   adds it back with the anchor, inside @media (hover: hover): a bare :hover sticks after a tap on touch
+   and leaves phantom highlighted tiles behind.
+   No transition and no animation either, so no prefers-reduced-motion block is needed. The motion rule in
+   StyleContractTests reads this file by glob and will say so if that ever stops being true. */
 /* /Layout/MainLayout.razor.rz.scp.css */
-.page[b-vx7rf0i3ew] {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-main[b-vx7rf0i3ew] {
-    flex: 1;
-}
-
-.sidebar[b-vx7rf0i3ew] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-}
-
-.top-row[b-vx7rf0i3ew] {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-}
-
-    .top-row[b-vx7rf0i3ew]  a, .top-row[b-vx7rf0i3ew]  .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
-
-    .top-row[b-vx7rf0i3ew]  a:hover, .top-row[b-vx7rf0i3ew]  .btn-link:hover {
-        text-decoration: underline;
-    }
-
-    .top-row[b-vx7rf0i3ew]  a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-@media (max-width: 640.98px) {
-    .top-row[b-vx7rf0i3ew] {
-        justify-content: space-between;
-    }
-
-    .top-row[b-vx7rf0i3ew]  a, .top-row[b-vx7rf0i3ew]  .btn-link {
-        margin-left: 0;
-    }
-}
-
-@media (min-width: 641px) {
-    .page[b-vx7rf0i3ew] {
-        flex-direction: row;
-    }
-
-    .sidebar[b-vx7rf0i3ew] {
-        width: 250px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .top-row[b-vx7rf0i3ew] {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-
-    .top-row.auth[b-vx7rf0i3ew]  a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
-
-    .top-row[b-vx7rf0i3ew], article[b-vx7rf0i3ew] {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
-    }
-}
+.page[b-vx7rf0i3ew] { flex: 1; display: flex; flex-direction: column; }
+header[b-vx7rf0i3ew] { padding: 0 1rem; }
+main[b-vx7rf0i3ew] { flex: 1; }
+.content[b-vx7rf0i3ew] { padding: 1.1rem 1rem; }
 /* /Layout/NavMenu.razor.rz.scp.css */
-.navbar-toggler[b-wx8l9rtebe] {
-    background-color: rgba(255, 255, 255, 0.1);
+nav[b-wx8l9rtebe] { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 1rem; }
+.brand[b-wx8l9rtebe] { display: inline-flex; align-items: center; min-height: var(--touch); font-weight: 600; }
+.nav-toggle[b-wx8l9rtebe] {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: var(--touch); min-height: var(--touch);
+    background: transparent; color: var(--txt);
+    border: 2px solid var(--line-strong); border-radius: .375rem;
 }
-
-.top-row[b-wx8l9rtebe] {
-    min-height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.navbar-brand[b-wx8l9rtebe] {
-    font-size: 1.1rem;
-}
-
-.bi[b-wx8l9rtebe] {
-    display: inline-block;
-    position: relative;
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-right: 0.75rem;
-    top: -1px;
-    background-size: cover;
-}
-
-.bi-house-door-fill-nav-menu[b-wx8l9rtebe] {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-house-door-fill' viewBox='0 0 16 16'%3E%3Cpath d='M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z'/%3E%3C/svg%3E");
-}
-
-.bi-plus-square-fill-nav-menu[b-wx8l9rtebe] {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-plus-square-fill' viewBox='0 0 16 16'%3E%3Cpath d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z'/%3E%3C/svg%3E");
-}
-
-.bi-list-nested-nav-menu[b-wx8l9rtebe] {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-list-nested' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z'/%3E%3C/svg%3E");
-}
-
-.nav-item[b-wx8l9rtebe] {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
-}
-
-    .nav-item:first-of-type[b-wx8l9rtebe] {
-        padding-top: 1rem;
-    }
-
-    .nav-item:last-of-type[b-wx8l9rtebe] {
-        padding-bottom: 1rem;
-    }
-
-    .nav-item[b-wx8l9rtebe]  a {
-        color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-    }
-
-.nav-item[b-wx8l9rtebe]  a.active {
-    background-color: rgba(255,255,255,0.37);
-    color: white;
-}
-
-.nav-item[b-wx8l9rtebe]  a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
-
-@media (min-width: 641px) {
-    .navbar-toggler[b-wx8l9rtebe] {
-        display: none;
-    }
-
-    .collapse[b-wx8l9rtebe] {
-        /* Never collapse the sidebar for wide screens */
-        display: block;
-    }
-
-    .nav-scrollable[b-wx8l9rtebe] {
-        /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
-        overflow-y: auto;
-    }
+.nav-toggle-icon[b-wx8l9rtebe] { width: 1.5rem; height: 1.5rem; }
+.nav-links[b-wx8l9rtebe] { flex-basis: 100%; margin: 0; padding: 0; list-style: none; }
+.nav-links.collapsed[b-wx8l9rtebe] { display: none; }
+.nav-links[b-wx8l9rtebe]  a { display: flex; align-items: center; min-width: var(--touch); min-height: var(--touch); padding: 0 .75rem; }
+.nav-links[b-wx8l9rtebe]  a.active { border-bottom: 3px solid var(--accent); font-weight: 600; }
+/* No hover underline rule here. app.css's `a { text-decoration: underline }` underlines these links
+   unconditionally, so the @media (hover: hover) rule that used to sit at the end of this file was a
+   no-op - and worse, it was the declaration the review cited as evidence that someone had assumed
+   nav links were not underlined. Removed rather than left as a misleading signal. */
+@media (min-width: 48rem) {
+    .nav-toggle[b-wx8l9rtebe] { display: none; }
+    .nav-links[b-wx8l9rtebe], .nav-links.collapsed[b-wx8l9rtebe] { display: flex; flex-basis: auto; gap: 1rem; }
 }

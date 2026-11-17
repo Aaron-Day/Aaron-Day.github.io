@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8" />
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MovieLibrary.Web</title>
+    <title>Film and TV library</title>
+    <meta name="color-scheme" content="dark" />
     <base href="/" />
-    <link href="_framework/dotnet.4yqxvndx4a.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-VK4SDcAYOsfV8FtHVIAVPoZxMy52fDBl4RHLPjjXicg=" />
+    <link href="_framework/dotnet.mcndkw2vud.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-dqt4gF47O5NHVntgV1x3OQmzIJ4mAeIB1NsknLaqJto=" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="MovieLibrary.Web.styles.css" rel="stylesheet" />
+    <noscript>
+        <style>.loading-progress, .loading-progress-text, #boot-status { display: none; }</style>
+    </noscript>
     <script type="importmap">{
   "imports": {
     "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.w3qd1tpl0e.js",
-    "./_framework/dotnet.js": "./_framework/dotnet.4yqxvndx4a.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.mcndkw2vud.js",
     "./_framework/dotnet.native.js": "./_framework/dotnet.native.6ilbvndvcf.js",
     "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.v2rwe8u38b.js"
   },
@@ -23,8 +27,8 @@
   "integrity": {
     "./_framework/blazor.webassembly.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
     "./_framework/blazor.webassembly.w3qd1tpl0e.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
-    "./_framework/dotnet.4yqxvndx4a.js": "sha256-VK4SDcAYOsfV8FtHVIAVPoZxMy52fDBl4RHLPjjXicg=",
-    "./_framework/dotnet.js": "sha256-VK4SDcAYOsfV8FtHVIAVPoZxMy52fDBl4RHLPjjXicg=",
+    "./_framework/dotnet.js": "sha256-dqt4gF47O5NHVntgV1x3OQmzIJ4mAeIB1NsknLaqJto=",
+    "./_framework/dotnet.mcndkw2vud.js": "sha256-dqt4gF47O5NHVntgV1x3OQmzIJ4mAeIB1NsknLaqJto=",
     "./_framework/dotnet.native.6ilbvndvcf.js": "sha256-YvNi2Q+yHnXi8iT7ROza0OEWWv2tCpuTI2Ggaeura3U=",
     "./_framework/dotnet.native.js": "sha256-YvNi2Q+yHnXi8iT7ROza0OEWWv2tCpuTI2Ggaeura3U=",
     "./_framework/dotnet.runtime.js": "sha256-6SBqDbLLy460Bxd7wMZoiO97hZfLTuF+HRhWT3elS7U=",
@@ -35,17 +39,41 @@
 
 <body>
     <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
+        <!-- A main landmark and a level-one heading for the one state in which NONE of the app exists: the
+             boot shell, and the boot-failure shell the watchdog below turns it into. Without them a reader
+             who lands on a failed boot has no landmark to jump to and no heading to navigate by, which is
+             the whole of what axe reported here.
+             INSIDE #app, which is what makes this safe. Blazor replaces the children of #app when it
+             renders, so both elements are gone the moment the app starts: there is never a second main
+             landmark, never a second h1, and App.razor's FocusOnNavigate Selector="#app h1" still finds
+             exactly the rendered page's own heading.
+             The id is deliberately NOT main-content. MainLayout owns that one, and the browser gate waits
+             on "#app main#main-content h1" precisely so that a shell carrying a landmark and a heading can
+             never be mistaken for a booted app - see PageSession.BootedSelector and the live guard in
+             BootFailureTests. Do not rename this to main-content.
+             Visually hidden because the boot screen is the spinner and nothing else; the heading is for the
+             accessibility tree, not for the page. The noscript rule in <head> hides the spinner, its text
+             and #boot-status, so a visitor without JavaScript still sees only the noscript sentence. -->
+        <main id="boot-main">
+            <h1 class="visually-hidden">Film and TV library</h1>
+            <svg class="loading-progress" aria-hidden="true">
+                <circle r="40%" cx="50%" cy="50%" />
+                <circle r="40%" cx="50%" cy="50%" />
+            </svg>
+            <div class="loading-progress-text" aria-hidden="true"></div>
+            <p id="boot-status" class="visually-hidden" role="status">Loading library</p>
+            <noscript>This library needs JavaScript. Turn it on and reload the page.</noscript>
+        </main>
     </div>
 
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="." class="reload">Reload</a>
-        <span class="dismiss">🗙</span>
+    <div id="blazor-error-ui" role="alert">
+        <div class="error-ui-inner">
+            <span>Something went wrong.</span>
+            <a href="." class="reload">Reload</a>
+            <button type="button" class="dismiss" aria-label="Dismiss error">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </div>
     <!-- TMDB attribution. The sentence is fixed verbatim by TMDB's API terms and must match
          MovieLibrary.Core.Models.CatalogMeta.TmdbAttribution exactly. CatalogWriter enforces that
@@ -59,6 +87,140 @@
         <img src="tmdb-logo.svg" alt="" width="489" height="35" />
         <p>This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</p>
     </footer>
+
+    <script>
+        // Focus helper for the films page's failed state, and the one thing C# cannot do for itself.
+        //
+        // WHY A FOCUS MOVE AT ALL. The failure has to reach a screen reader user deterministically, and
+        // #alert-region cannot promise that: this project has already recorded that region as unreliable on
+        // iOS VoiceOver and TalkBack, and has not yet tested it on either. SC 4.1.3 Status Messages (Level AA)
+        // applies only to messages that do NOT receive focus, so moving focus to the failure text takes the
+        // message out of that criterion's scope instead of depending on the criterion being honoured. A second
+        // aria-live on the visible paragraph would be two utterances from two assertive sources racing, and it
+        // would not fix iOS anyway, because it is the same live-region API failing for the same reason.
+        //
+        // WHY IT IS GUARDED. The move must not steal focus from a user who has moved it themselves -- someone
+        // who opened the nav drawer while the catalogue was still downloading. There is no way to read
+        // document.activeElement from Blazor: ElementReference.FocusAsync() focuses unconditionally. So the
+        // whole decision is made here, in one call, and the return value tells the caller whether the move
+        // happened so it can leave its "already moved" flag alone if it did not.
+        //
+        // The keepers are the places the PAGE put focus: <body> (and <html>, which is what some browsers
+        // report when nothing is focused), <main>, and the h1 that FocusOnNavigate targets.
+        window.movieLibrary = window.movieLibrary || {};
+        window.movieLibrary.focusIfUnmoved = function (element, keepers) {
+            if (!element) return false;
+
+            var active = document.activeElement;
+            var unmoved = !active
+                || active === document.body
+                || active === document.documentElement
+                || (keepers || []).some(function (selector) { return active.matches(selector); });
+
+            if (!unmoved) return false;
+
+            element.focus();
+            return true;
+        };
+    </script>
+
+    <script>
+        // Boot watchdog. The Blazor runtime reveals #blazor-error-ui only for one kind of boot failure: when the
+        // app's own entry point throws, and then it leaves the loading UI standing. Two more kinds reveal nothing:
+        // the platform failing to start (a dropped connection, a file missing mid-deploy), which is an
+        // unhandled rejection, and blazor.webassembly.js itself failing to load, which rejects no promise and is
+        // only a resource error on the script element.
+        // All three end in ONE state: spinner and its text hidden, #boot-status turned into plain visible text
+        // that says what happened, and the bar visible. The bar is role="alert" and is the only announcer, so
+        // #boot-status loses its role first and is never a second live region.
+        // Gate: Blazor replaces the children of #app when it renders, so #boot-status still being in the DOM
+        // means boot never completed. No timer: a slow phone on a cold cache is not a failure.
+        // The gate is broad on purpose, so a script injected by an in-app browser can raise a false alarm. If
+        // #boot-status then disappears, Blazor booted anyway: the bar comes down again. Either way, once boot
+        // is settled every listener and observer is removed, so a healthy boot leaves nothing behind.
+        (function () {
+            var failed = false;
+            var barWatch = null;
+            var appWatch = null;
+
+            function stopTriggers() {
+                window.removeEventListener('unhandledrejection', onRejection);
+                window.removeEventListener('error', onScriptError, true);
+                if (barWatch) { barWatch.disconnect(); barWatch = null; }
+            }
+
+            function standDown() {
+                stopTriggers();
+                if (appWatch) { appWatch.disconnect(); appWatch = null; }
+            }
+
+            function onRejection() {
+                fail(true);
+            }
+
+            // A resource error does not bubble, so it is only seen in the capture phase.
+            function onScriptError(e) {
+                var t = e.target;
+                if (!t || t.tagName !== 'SCRIPT' || (t.src || '').indexOf('blazor.webassembly') < 0) return;
+                fail(true);
+            }
+
+            // The runtime reveals the bar by writing style="display: block" itself.
+            function onBarStyle() {
+                var bar = document.getElementById('blazor-error-ui');
+                if (bar && bar.style.display === 'block') fail(false);
+            }
+
+            // Boot is settled once Blazor has replaced the children of #app.
+            function onAppChange() {
+                if (document.getElementById('boot-status')) return;
+                var bar = document.getElementById('blazor-error-ui');
+                if (failed && bar) bar.style.display = 'none';
+                standDown();
+            }
+
+            function fail(reveal) {
+                if (failed) return;
+                var status = document.getElementById('boot-status');
+                if (!status) { standDown(); return; }
+                failed = true;
+                stopTriggers();
+
+                var decoration = document.querySelectorAll('#app .loading-progress, #app .loading-progress-text');
+                for (var i = 0; i < decoration.length; i++) decoration[i].style.display = 'none';
+
+                // Role first, then text: a text change in a live region is announced, and the alert says it once.
+                status.removeAttribute('role');
+                status.className = 'boot-failure';
+                status.setAttribute('tabindex', '-1');
+                status.textContent = 'The library could not start. Reload the page to try again. If that does not help, try again in a few minutes.';
+
+                var bar = document.getElementById('blazor-error-ui');
+                if (!bar) return;
+                if (reveal) bar.style.display = 'block';
+                // The runtime wires Reload and Dismiss only on its own reveal, and its Dismiss drops focus to the body.
+                var reload = bar.querySelector('.reload');
+                var dismiss = bar.querySelector('.dismiss');
+                if (reload) reload.onclick = function (e) { location.reload(); e.preventDefault(); };
+                if (dismiss) dismiss.onclick = function (e) { bar.style.display = 'none'; status.focus(); e.preventDefault(); };
+            }
+
+            window.addEventListener('unhandledrejection', onRejection);
+            window.addEventListener('error', onScriptError, true);
+            if (typeof MutationObserver === 'function') {
+                var bar = document.getElementById('blazor-error-ui');
+                var app = document.getElementById('app');
+                if (bar) {
+                    barWatch = new MutationObserver(onBarStyle);
+                    barWatch.observe(bar, { attributes: true, attributeFilter: ['style'] });
+                }
+                if (app) {
+                    appWatch = new MutationObserver(onAppChange);
+                    appWatch.observe(app, { childList: true });
+                }
+            }
+        })();
+    </script>
 
     <script src="_framework/blazor.webassembly.w3qd1tpl0e.js"></script>
 </body>
