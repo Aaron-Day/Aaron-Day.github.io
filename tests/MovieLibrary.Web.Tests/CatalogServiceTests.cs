@@ -460,4 +460,64 @@ public class CatalogServiceTests : IDisposable
 
         Assert.NotNull(scope.ServiceProvider.GetRequiredService<CatalogService>());
     }
+
+    [Fact]
+    public async Task AFilmIsFoundByItsPublishedKey()
+    {
+        var service = Stub().Serves(StubCatalog.Movies, StubCatalog.Json(ThreeFilms)).Service();
+
+        var film = await service.GetFilmAsync("601-88");
+
+        Assert.Equal(CatalogState.Ready, film.State);
+        Assert.Equal("A Film Needing Review", film.Value?.T);
+    }
+
+    /// <remarks>
+    /// The distinction the method exists for. A page that cannot tell Ready-with-nothing from Failed offers
+    /// "Try again" over a key that will never exist however many times the catalogue is fetched.
+    /// </remarks>
+    [Fact]
+    public async Task AKeyNoRecordCarriesIsReadyWithNothingInItAndIsNotAFailure()
+    {
+        var service = Stub().Serves(StubCatalog.Movies, StubCatalog.Json(ThreeFilms)).Service();
+
+        var film = await service.GetFilmAsync("no-such-key");
+
+        Assert.Equal(CatalogState.Ready, film.State);
+        Assert.Null(film.Value);
+    }
+
+    [Fact]
+    public async Task AFailedFetchIsFailedAndSaysNothingAboutWhetherTheFilmExists()
+    {
+        var service = Stub()
+            .Serves(StubCatalog.Movies, StubCatalog.Throws(new HttpRequestException("offline")))
+            .Service();
+
+        var film = await service.GetFilmAsync("601-88");
+
+        Assert.Equal(CatalogState.Failed, film.State);
+        Assert.Null(film.Value);
+    }
+
+    [Fact]
+    public async Task TheKeyIsMatchedWithoutRegardToCaseSoAMangledDeepLinkStillFindsTheFilm()
+    {
+        var service = Stub().Serves(StubCatalog.Movies, StubCatalog.Json(ThreeFilms)).Service();
+
+        Assert.Equal("An Unmatched Film", (await service.GetFilmAsync("U-ABCD1234")).Value?.T);
+    }
+
+    /// <remarks>Why a detail page is free: the grid has already paid for movies.json.</remarks>
+    [Fact]
+    public async Task TwoLookupsShareOneFetch()
+    {
+        var stub = Stub().Serves(StubCatalog.Movies, StubCatalog.Json(ThreeFilms));
+        var service = stub.Service();
+
+        await service.GetFilmAsync("807-90");
+        await service.GetFilmAsync("601-88");
+
+        Assert.Equal(1, stub.RequestsFor(StubCatalog.Movies));
+    }
 }
