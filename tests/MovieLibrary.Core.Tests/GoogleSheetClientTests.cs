@@ -231,6 +231,12 @@ public class GoogleSheetClientTests
     [InlineData("Movies", "text/csv", HtmlPage)]                       // the type lies, the body does not
     [InlineData("Shows", "text/csv", "  \r\n" + HtmlPage)]            // leading whitespace
     [InlineData("Movies", "text/html", "")]                            // the type alone is enough
+    // The ONLY non-lower-case media type in the suite, and the one thing holding IsWebPage's
+    // StringComparison.OrdinalIgnoreCase up. The body must stay empty: with anything HTML-shaped in it the
+    // first-character heuristic would throw on its own and the comparison would never be reached. Google
+    // answers an unshared sheet with TEXT/HTML and an empty body, and an Ordinal compare would parse that as
+    // CSV, find no rows, and blame a renamed tab instead.
+    [InlineData("Shows", "TEXT/HTML", "")]                             // and its case does not matter
     public async Task AWebPageInsteadOfCsvSaysTheSheetMayNoLongerBeShared(string tab, string mediaType, string body)
     {
         var client = BuildWithHandler(_ => Response(body, mediaType)).Client;
