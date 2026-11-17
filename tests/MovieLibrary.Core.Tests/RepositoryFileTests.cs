@@ -1,3 +1,5 @@
+using MovieLibrary.Enrich.Config;
+
 namespace MovieLibrary.Core.Tests;
 
 /// <summary>
@@ -128,5 +130,43 @@ public class RepositoryFileTests
 
         // The refusal is about the PAIR, so the force-refresh advice has to carry the budget with it.
         Assert.Contains("REQUIRES MAX_REQUESTS_PER_RUN=0", text);
+    }
+
+    /// <summary>
+    /// Every argument the workflows hand the enrich tool is one the tool still recognises. An unrecognised
+    /// argument used to be ignored and is now fatal, which closed a way to spend the TMDB budget by typo and
+    /// opened the one failure mode that costs more than that bug: a deploy that exits on an argument it used
+    /// to tolerate. Nothing in the build reads these files, so nothing else can catch it.
+    /// </summary>
+    /// <remarks>
+    /// <b>Only what follows a bare <c>--</c> reaches the tool.</b>
+    /// <c>dotnet run --project X -c Release</c> passes no arguments at all, because <c>-c</c> is a
+    /// <c>dotnet run</c> option. The floor is therefore on the INVOCATIONS and not on the arguments: today
+    /// every invocation passes none, and "none" is exactly what the deploy needs
+    /// <c>EnrichOptions.Load</c> to go on accepting. A run line that stopped being found fails here rather
+    /// than passing over an empty set.
+    /// </remarks>
+    [Fact]
+    public void EveryArgumentTheWorkflowsHandTheEnrichToolIsOneItStillRecognises()
+    {
+        var invocations = WorkflowFiles()
+            .SelectMany(file => File.ReadAllText(file).ReplaceLineEndings().Split(Environment.NewLine))
+            .Select(line => line.Trim())
+            .Where(line => !line.StartsWith('#')
+                           && line.Contains("dotnet run", StringComparison.Ordinal)
+                           && line.Contains("src/MovieLibrary.Enrich", StringComparison.Ordinal))
+            .ToList();
+
+        Assert.NotEmpty(invocations);
+
+        Assert.All(invocations, line =>
+        {
+            var halves = line.Split(" -- ", 2);
+            string[] args = halves.Length == 2 ? halves[1].Split(' ', StringSplitOptions.RemoveEmptyEntries) : [];
+
+            // Throws ArgumentException on an argument Load does not recognise, which is the whole point.
+            Assert.Equal(args.Contains("--fixtures"),
+                         EnrichOptions.Load(args, new Dictionary<string, string>()).Fixtures);
+        });
     }
 }
