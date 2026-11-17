@@ -85,6 +85,65 @@ public class StoreBinderTests
         Assert.Contains("delete", note, StringComparison.OrdinalIgnoreCase);
     }
 
+    // ---- the orphan note's "Closest on the sheet" half ------------------------------------------------
+    //
+    // The actionable half of the note: it names the row the entry should be re-keyed FROM. Its only tests
+    // lived on the tab side and went out with the tab, after which MaxCandidatesInANote = 0, or deleting the
+    // whole clause, left the suite green.
+
+    /// <summary>
+    /// One entry keyed at 170 minutes against rows nowhere near it, so it is orphaned and the single note is
+    /// <c>OrphanNote</c> rather than a drift, tie or contested one.
+    /// </summary>
+    private static string OrphanNoteFor(string echoTitle, params SheetRow[] rows)
+    {
+        var bound = StoreBinder.Bind(WithFilm(FilmKey(echoTitle, 170), sheetTitle: echoTitle), rows, []);
+
+        Assert.Empty(bound.Films);
+        return Assert.Single(bound.Notes);
+    }
+
+    [Fact]
+    public void AnOrphanedEntryWithNoSameTitledRowSaysSoRatherThanListingNothing()
+    {
+        var note = OrphanNoteFor("Heat", Film("Se7en", "1:50:00"));
+
+        Assert.Contains("No film on the sheet has that title.", note, StringComparison.Ordinal);
+        Assert.DoesNotContain("Closest", note, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void AnOrphanedEntryNamesTheRowsItCouldBeReKeyedFrom()
+    {
+        var note = OrphanNoteFor("Heat", Film("Heat", "1:01:00"), Film("heat", "1:02:00"));
+
+        Assert.Contains("Closest on the sheet: 'Heat'; 'heat'.", note, StringComparison.Ordinal);
+        Assert.DoesNotContain("No film on the sheet", note, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void AtMostThreeClosestRowsAreNamedAndTheRestAreCounted()
+    {
+        // Five rows whose raw titles all fold to "heat", so all five are candidates and the note has to choose.
+        var note = OrphanNoteFor("Heat",
+            Film("Heat", "1:01:00"), Film("heat", "1:02:00"), Film("HEAT", "1:03:00"),
+            Film("Heat!", "1:04:00"), Film("Heat.", "1:05:00"));
+
+        Assert.Contains("Closest on the sheet: 'Heat'; 'heat'; 'HEAT'; and 2 more.", note, StringComparison.Ordinal);
+        Assert.DoesNotContain("'Heat!'", note, StringComparison.Ordinal);
+        Assert.DoesNotContain("'Heat.'", note, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void ExactlyThreeClosestRowsAreAllNamedWithNoCounter()
+    {
+        var note = OrphanNoteFor("Heat",
+            Film("Heat", "1:01:00"), Film("heat", "1:02:00"), Film("HEAT", "1:03:00"));
+
+        Assert.Contains("Closest on the sheet: 'Heat'; 'heat'; 'HEAT'.", note, StringComparison.Ordinal);
+        Assert.DoesNotContain("more", note, StringComparison.Ordinal);
+    }
+
     [Fact]
     public void AChangedTitleOrDirectorIsOrphanedBecauseTheKeyFoldsThemIn()
     {
@@ -246,7 +305,42 @@ public class StoreBinderTests
         var bound = StoreBinder.Bind(store, [], [Show("The Office")]);
 
         Assert.Empty(bound.Series);
-        Assert.Contains("matches no series", Assert.Single(bound.Notes), StringComparison.OrdinalIgnoreCase);
+        var note = Assert.Single(bound.Notes);
+        Assert.Contains("matches no series", note, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("No series on the sheet has that name.", note, StringComparison.Ordinal);
+        Assert.DoesNotContain("Closest", note, StringComparison.Ordinal);
+    }
+
+    /// <summary>
+    /// The series note's own "Closest on the sheet" half, which is what tells the owner the name to re-key
+    /// from. <b>It has no cap</b>, unlike the film note's: <c>BindSeries</c> lists every sheet name that folds
+    /// to the entry's echo, with no <c>MaxCandidatesInANote</c> and no "and N more" counter. Four candidates
+    /// here, one past the film note's limit, so the difference is pinned rather than assumed.
+    /// </summary>
+    [Fact]
+    public void AnOrphanedSeriesEntryNamesEveryClosestNameOnTheSheetAndCountsNone()
+    {
+        var store = new RecordStore
+        {
+            Version = RecordStore.CurrentVersion,
+            Films = [],
+            Series = [new SeriesEntry
+            {
+                IdentityKey = SeriesKey("Gone"),
+                Sheet = new SheetEcho("The Office"),
+                Record = new RecordOverride(TmdbId: 1),
+            }],
+        };
+
+        // Four distinct raw names that all fold to "the office", so all four are candidates.
+        var bound = StoreBinder.Bind(store, [],
+            [Show("The Office"), Show("the office."), Show("THE OFFICE"), Show("The  Office")]);
+
+        Assert.Empty(bound.Series);
+        var note = Assert.Single(bound.Notes);
+        Assert.Contains("Closest on the sheet: 'The Office'; 'the office.'; 'THE OFFICE'; 'The  Office'.",
+                        note, StringComparison.Ordinal);
+        Assert.DoesNotContain("more", note, StringComparison.Ordinal);
     }
 
     [Fact]

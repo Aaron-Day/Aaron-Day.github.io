@@ -123,8 +123,11 @@ public class EnrichRunStoreWiringTests
         Assert.Equal(0, result.ExitCode);
         Assert.Contains("record store: 0 film entries, 0 series entries, 1 note(s)", h.Out.ToString());
         var note = Assert.Single(h.ReviewQueue(), line => line.StartsWith("Record store entry", StringComparison.Ordinal));
-        Assert.Contains("'Heat'", note, StringComparison.Ordinal);
-        Assert.Contains("matches no film", note, StringComparison.OrdinalIgnoreCase);
+        // The whole opening, not the bare "'Heat'" this was loosened to: the entry's own title AND the tab it
+        // failed against. The runtime the tab-era note carried ("'Heat' 2:51:00 (171 min)") is NOT available
+        // here -- OrphanNote names titles only -- so the candidate list stands in for it instead.
+        Assert.StartsWith("Record store entry 'Heat' matches no film on the Movies tab", note, StringComparison.Ordinal);
+        Assert.Contains("Closest on the sheet: 'Heat'.", note, StringComparison.Ordinal);
         Assert.Contains("Record store entry", h.Summary);
     }
 

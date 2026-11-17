@@ -58,7 +58,10 @@ public class EnrichRunReviewQueueTests
         Assert.Equal(0, result.ExitCode);
         var note = Assert.Single(Section(h.Summary, "Record store"));
         Assert.StartsWith("Record store entry", note);
-        Assert.Contains("matches no film", note, StringComparison.OrdinalIgnoreCase);
+        // The whole phrase, not the "matches no film" fragment this was loosened to when the note moved to the
+        // store: the fragment survives losing "on the Movies tab", which is the half that tells the owner where
+        // to look. OrphanNote still emits all of it, so the test still asks for all of it.
+        Assert.Contains("matches no film on the Movies tab", note, StringComparison.Ordinal);
 
         var film = Assert.Single(Section(h.Summary, "Films"));
         Assert.StartsWith("Heat (2:51:00, Michael Mann)", film);
