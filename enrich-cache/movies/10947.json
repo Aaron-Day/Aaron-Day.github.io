@@ -1,0 +1,62 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 10947,
+    "title": "High School Musical",
+    "overview": "A popular high school athlete and an academically gifted girl get roles in the school musical and develop a friendship that threatens East High\u0027s social order.",
+    "tagline": "Experience the laughter. The magic. The music.",
+    "runtime": 98,
+    "release_date": "2006-01-20",
+    "vote_average": 6.543,
+    "poster_path": "/1DGmWZjUJPeKGFRHGCA6VPFUBML.jpg",
+    "backdrop_path": "/2p1nyBVSEBiCTrrZeVSV9nIsqHr.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      },
+      {
+        "id": 10402,
+        "name": "Music"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87253,
+      "name": "High School Musical Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Zac Efron",
+      "character": "Troy Bolton",
+      "profile_path": "/6yL3AGhT3QBQBY6SSWIFWwdQySl.jpg"
+    },
+    {
+      "name": "Vanessa Hudgens",
+      "character": "Gabriella Montez",
+      "profile_path": "/lZQPTRoJLgfsARWdpxQid2dDzhr.jpg"
+    },
+    {
+      "name": "Ashley French",
+      "character": "Sharpay Evans",
+      "profile_path": "/ot6ib67jxvKVG1JCBl0ROPGtdeP.jpg"
+    },
+    {
+      "name": "Lucas Grabeel",
+      "character": "Ryan Evans",
+      "profile_path": "/tyhpSWU7YDKntONxqC83Ifat2w6.jpg"
+    }
+  ]
+}

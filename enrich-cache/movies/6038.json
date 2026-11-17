@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 6038,
+    "title": "Shanghai Knights",
+    "overview": "When a Chinese rebel murders Chon\u0027s estranged father and escapes to England, Chon and Roy make their way to London with revenge on their minds.",
+    "tagline": "A Royal Kick In The Arse",
+    "runtime": 115,
+    "release_date": "2003-02-06",
+    "vote_average": 6.136,
+    "poster_path": "/vVNQStMlZS9mn2AKBEpadRunHgt.jpg",
+    "backdrop_path": "/AoXqOWzD0HGZttYi0wHMvvGJZhZ.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 59567,
+      "name": "Shanghai Noon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jackie Chan",
+      "character": "Chon Wang",
+      "profile_path": "/nraZoTzwJQPHspAVsKfgl3RXKKa.jpg"
+    },
+    {
+      "name": "Owen Wilson",
+      "character": "Roy O\u0027Bannon",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    },
+    {
+      "name": "Fann Wong",
+      "character": "Chon Lin",
+      "profile_path": "/sqTtc4M6yhw5sNmZZX6xqhqAJMX.jpg"
+    },
+    {
+      "name": "Aidan Gillen",
+      "character": "Lord Nelson Rathbone",
+      "profile_path": "/fWWRgyJEGjOPcx43CaFiUCWMBLo.jpg"
+    }
+  ]
+}

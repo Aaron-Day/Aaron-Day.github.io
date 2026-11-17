@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 13804,
+    "title": "Fast \u0026 Furious",
+    "overview": "When a crime brings them back to L.A., fugitive ex-con Dom Toretto reignites his feud with agent Brian O\u0027Conner. But as they are forced to confront a shared enemy, Dom and Brian must give in to an uncertain new trust if they hope to outmaneuver him. And the two men will find the best way to get revenge: push the limits of what\u0027s possible behind the wheel.",
+    "tagline": "New model. Original parts.",
+    "runtime": 107,
+    "release_date": "2009-04-02",
+    "vote_average": 6.681,
+    "poster_path": "/lUtVoRukW7WNtUySwd8hWlByBds.jpg",
+    "backdrop_path": "/25HepicRtrzZ3MVCqhfoxGDbHjw.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 9485,
+      "name": "The Fast and the Furious Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Vin Diesel",
+      "character": "Dominic Toretto",
+      "profile_path": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Paul Walker",
+      "character": "Brian O\u0027Conner",
+      "profile_path": "/q2PLqKHYCs35HR7QybaNPH3JT96.jpg"
+    },
+    {
+      "name": "Michelle Rodriguez",
+      "character": "Letty Ortiz",
+      "profile_path": "/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
+    },
+    {
+      "name": "Jordana Brewster",
+      "character": "Mia Toretto",
+      "profile_path": "/ceL0zxeVbWfCfhoIDZIE1NYqBWb.jpg"
+    }
+  ]
+}

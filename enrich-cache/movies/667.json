@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 667,
     "title": "You Only Live Twice",
@@ -7,8 +7,8 @@
     "tagline": "...and \u0022twice\u0022 is the only way to live!",
     "runtime": 117,
     "release_date": "1967-06-13",
-    "vote_average": 6.587,
-    "poster_path": "/gIhS0VC7YzI8pj6zfS3KxsxV0dS.jpg",
+    "vote_average": 6.589,
+    "poster_path": "/fdRbvRcEXcf2rC4ghLFZzCWPSmB.jpg",
     "backdrop_path": "/cpZAXIYA0lkZMpAt7d1MmH8ojNV.jpg",
     "genres": [
       {

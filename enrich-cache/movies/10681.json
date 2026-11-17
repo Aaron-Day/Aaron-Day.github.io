@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 10681,
+    "title": "WALL\u00B7E",
+    "overview": "After hundreds of years doing what he was built for, WALL\u2022E\u2014 a robot designed to clean up the earth\u2014discovers a new purpose in life when he meets a sleek search robot named EVE. EVE comes to realize that WALL\u2022E has inadvertently stumbled upon the key to the planet\u0027s future, and races back to space to report to the humans. Meanwhile, WALL\u2022E chases EVE across the galaxy and sets into motion one of the most imaginative adventures ever brought to the big screen.",
+    "tagline": "After 700 years of doing what he was built for, he\u0027ll discover what he was meant for.",
+    "runtime": 98,
+    "release_date": "2008-06-26",
+    "vote_average": 8.129,
+    "poster_path": "/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
+    "backdrop_path": "/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Burtt",
+      "character": "WALL\u00B7E / M-O (voice)",
+      "profile_path": "/7asFDWjls2bYQSfXJf5StjXmlhI.jpg"
+    },
+    {
+      "name": "Elissa Knight",
+      "character": "EVE (voice)",
+      "profile_path": "/exRLyaNaHcgawQA0DoBxo5IvdoI.jpg"
+    },
+    {
+      "name": "Jeff Garlin",
+      "character": "Captain (voice)",
+      "profile_path": "/8shJOwynglerVVxhOKbvDYTThBd.jpg"
+    },
+    {
+      "name": "Fred Willard",
+      "character": "Shelby Forthright, BnL CEO",
+      "profile_path": "/AaHxpkee9nQfBpQeDyJLoPNtYR6.jpg"
+    }
+  ]
+}

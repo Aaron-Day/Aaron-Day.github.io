@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 574475,
+    "title": "Final Destination Bloodlines",
+    "overview": "Plagued by a violent recurring nightmare, college student Stefanie heads home to track down the one person who might be able to break the cycle and save her family from the grisly demise that inevitably awaits them all.",
+    "tagline": "Death runs in the family.",
+    "runtime": 110,
+    "release_date": "2025-05-14",
+    "vote_average": 7,
+    "poster_path": "/6WxhEvFsauuACfv8HyoVX6mZKFj.jpg",
+    "backdrop_path": "/uIpJPDNFoeX0TVml9smPrs9KUVx.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 9648,
+        "name": "Mystery"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8864,
+      "name": "Final Destination Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kaitlyn Santa Juana",
+      "character": "Stefani Reyes",
+      "profile_path": "/75Tdc3wg9mklJHy5LEj8OMjcPw8.jpg"
+    },
+    {
+      "name": "Teo Briones",
+      "character": "Charlie Reyes",
+      "profile_path": "/cyykbm4Xht2Pi7brr88FcmS1LPb.jpg"
+    },
+    {
+      "name": "Rya Kihlstedt",
+      "character": "Darlene Campbell",
+      "profile_path": "/86ysgxNPkckt8jp715X79CdopB7.jpg"
+    },
+    {
+      "name": "Richard Harmon",
+      "character": "Erik",
+      "profile_path": "/tlWgu5Kp37C7XsgJVLmYsPKiAd6.jpg"
+    }
+  ]
+}

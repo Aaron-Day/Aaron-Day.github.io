@@ -1,0 +1,58 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 34560,
+    "title": "Halloweentown High",
+    "overview": "Marnie puts her magic on the line to get several Halloweentown teenagers transferred to her high school in the mortal world. But soon, Marnie and her new friends are in trouble and out of luck when the evil Knight Of The Iron Dagger appears. He\u0027s determined to destroy all things magical, and it\u0027s up to Marnie to save her high school, the human world and her magic.",
+    "tagline": "Too ghoul for school.",
+    "runtime": 82,
+    "release_date": "2004-10-08",
+    "vote_average": 6.541,
+    "poster_path": "/dJsmptwkTWbxk1NwLAKeoYtcTuJ.jpg",
+    "backdrop_path": "/8yIBm3FmL0uADVnttvzRBSXaxJe.jpg",
+    "genres": [
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87252,
+      "name": "Halloweentown Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Kimberly J. Brown",
+      "character": "Marnie Piper",
+      "profile_path": "/neQjYdxOa6wPOt2RgC1pTxjGFh3.jpg"
+    },
+    {
+      "name": "Debbie Reynolds",
+      "character": "Aggie Cromwell",
+      "profile_path": "/9Z9DQqNztKlinANGGgD5dQODtlr.jpg"
+    },
+    {
+      "name": "Judith Hoag",
+      "character": "Gwen Piper",
+      "profile_path": "/q80JiST8vL8Uomgn86lBVoAtafk.jpg"
+    },
+    {
+      "name": "Joey Zimmerman",
+      "character": "Dylan Piper",
+      "profile_path": "/pS4QNJvQGQSDWpqU50Lq1HH22Hm.jpg"
+    }
+  ]
+}

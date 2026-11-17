@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 9437,
     "title": "Kiss the Girls",
@@ -7,7 +7,7 @@
     "tagline": "Smart girls. Pretty girls. Missing girls.",
     "runtime": 115,
     "release_date": "1997-09-29",
-    "vote_average": 6.55,
+    "vote_average": 6.549,
     "poster_path": "/a4P8PD9kvN0IZnDzsyurVs2WaJX.jpg",
     "backdrop_path": "/y319VH0gIFie6KEO5L4nHhxxQUw.jpg",
     "genres": [
@@ -33,7 +33,7 @@
     {
       "name": "Morgan Freeman",
       "character": "Det. Alex Cross",
-      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+      "profile_path": "/jPsLqiYGSofU4s6BjrxnefMfabb.jpg"
     },
     {
       "name": "Ashley Judd",

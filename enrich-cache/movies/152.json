@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 152,
     "title": "Star Trek: The Motion Picture",
@@ -7,7 +7,7 @@
     "tagline": "The human adventure is just beginning.",
     "runtime": 131,
     "release_date": "1979-12-07",
-    "vote_average": 6.481,
+    "vote_average": 6.483,
     "poster_path": "/wfiAfNwH6CMKxz4vRaW8CPTabtk.jpg",
     "backdrop_path": "/rPaOAtK6OpnHQ9r61WPM4WWNxaH.jpg",
     "genres": [

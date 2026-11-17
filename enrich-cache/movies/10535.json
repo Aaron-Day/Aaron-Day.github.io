@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 10535,
+    "title": "Spy Hard",
+    "overview": "The evil Gen. Rancor has his sights set on world domination, and only one man can stop him: Dick Steele, also known as Agent WD-40. Rancor needs to obtain a computer circuit for the missile that he is planning to fire, so Steele teams up with Veronique Ukrinsky, a KGB agent whose father designed the chip. Together they try to locate the evil mastermind\u0027s headquarters, where Veronique\u0027s father and several other hostages are being held.",
+    "tagline": "All the action. All the women. Half the intelligence.",
+    "runtime": 81,
+    "release_date": "1996-05-24",
+    "vote_average": 5.421,
+    "poster_path": "/yoegp9XEG4YCbJJKR0wvm0BGYpG.jpg",
+    "backdrop_path": "/yAzC0pV1e1BzXA5NyWsGsRggOM5.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Leslie Nielsen",
+      "character": "Dick Steele",
+      "profile_path": "/rMz3ZUmFE7lQCP51Ql7IcMHJIUZ.jpg"
+    },
+    {
+      "name": "Nicollette Sheridan",
+      "character": "Veronique Ukrinsky",
+      "profile_path": "/5jClu0aOq5hLzXa0ic3NoZBuZG4.jpg"
+    },
+    {
+      "name": "Charles Durning",
+      "character": "The Director",
+      "profile_path": "/bozKytaYVKoIbptxkMFWepK09U5.jpg"
+    },
+    {
+      "name": "Marcia Gay Harden",
+      "character": "Miss Cheevus",
+      "profile_path": "/5vxcHIHABJxqhweAsTiXVOhT4SE.jpg"
+    }
+  ]
+}

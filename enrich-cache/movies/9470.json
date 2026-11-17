@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 9470,
+    "title": "Kung Fu Hustle",
+    "overview": "It\u0027s the 1940s, and the notorious Axe Gang terrorizes Shanghai. Small-time criminals Sing and Bone hope to join, but they only manage to make lots of very dangerous enemies. Fortunately for them, kung fu masters and hidden strength can be found in unlikely places. Now they just have to take on the entire Axe Gang.",
+    "tagline": "So many gangsters\u2026 so little time.",
+    "runtime": 99,
+    "release_date": "2004-02-10",
+    "vote_average": 7.525,
+    "poster_path": "/exbyTbrvRUDKN2mcNEuVor4VFQW.jpg",
+    "backdrop_path": "/9XhZhoSnFJ3AjpfzdIiZVHLQIS4.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Stephen Chow",
+      "character": "Sing",
+      "profile_path": "/vCCyAspvQDFmOB2SJj0X7Wr2gil.jpg"
+    },
+    {
+      "name": "Yuen Qiu",
+      "character": "Landlady",
+      "profile_path": "/5S70RuTmpHXCcyZNzx1sTjamOKw.jpg"
+    },
+    {
+      "name": "Yuen Wah",
+      "character": "Landlord",
+      "profile_path": "/yMkMgs0tWlJXdTjYkiMcjvhYnRw.jpg"
+    },
+    {
+      "name": "Lam Tze-chung",
+      "character": "Sing\u0027s Sidekick",
+      "profile_path": "/4lA8TnRYSZBysNvZLMdNe1UoIK9.jpg"
+    }
+  ]
+}

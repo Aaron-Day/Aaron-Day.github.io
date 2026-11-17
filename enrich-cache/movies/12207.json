@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 12207,
+    "title": "The Legend of Drunken Master",
+    "overview": "Returning home with his father after a shopping expedition, Wong Fei-hung is unwittingly caught up in the battle between foreigners who wish to export ancient Chinese artifacts and loyalists who don\u0027t want the pieces to leave the country. Fei-hung must fight against the foreigners using his Drunken Boxing style, and overcome his father\u0027s antagonism as well.",
+    "tagline": "He\u0027s got a secret weapon with a lot of kick.",
+    "runtime": 102,
+    "release_date": "1994-02-03",
+    "vote_average": 7.47,
+    "poster_path": "/xqUBrSBtPYLvCtfqHF5sapU6Div.jpg",
+    "backdrop_path": "/zo14UuFDTVy91cBNWHplHCqHCPt.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 12203,
+      "name": "Drunken Master Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jackie Chan",
+      "character": "Wong Fei-hung",
+      "profile_path": "/nraZoTzwJQPHspAVsKfgl3RXKKa.jpg"
+    },
+    {
+      "name": "Ti Lung",
+      "character": "Wong Kei-ying",
+      "profile_path": "/dxA5qEE0c6kKxoRJXttAwSooMSv.jpg"
+    },
+    {
+      "name": "Anita Mui Yim-fong",
+      "character": "Ling",
+      "profile_path": "/2OXZK1P9SLpx2Uin50HZpvzoOu5.jpg"
+    },
+    {
+      "name": "Ram Chiang Chi-kwong",
+      "character": "Tso",
+      "profile_path": "/7ikYgSecvhDXc8tQgqFucBitfG0.jpg"
+    }
+  ]
+}

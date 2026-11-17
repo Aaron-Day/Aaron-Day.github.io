@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 1190012,
+    "title": "South Park: Joining the Panderverse",
+    "overview": "Cartman\u0027s deeply disturbing dreams portend the end of the life he knows and loves. Meanwhile, the adults in South Park are wrestling with their own life decisions, as the advent of AI is turning their world upside down.",
+    "tagline": "",
+    "runtime": 49,
+    "release_date": "2023-10-27",
+    "vote_average": 7.494,
+    "poster_path": "/18IsRVfs5MkkTcqTGlUAnka6sCh.jpg",
+    "backdrop_path": "/gIQ3AGPR6WAWzh70mulRDN8kd23.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Trey Parker",
+      "character": "Various Characters (voice)",
+      "profile_path": "/3tJe8t90lrcQzXj9cRcpW9wmj2c.jpg"
+    },
+    {
+      "name": "Matt Stone",
+      "character": "Various Characters (voice)",
+      "profile_path": "/nS3BOaF0EHd7vyATV7WBnFEvTLr.jpg"
+    },
+    {
+      "name": "April Stewart",
+      "character": "Sharon Marsh / Shelly Marsh / Liane Cartman / Alien Liane Cartman (voice)",
+      "profile_path": "/qmPAms01P6ZHp5wjQW2XkymwjCx.jpg"
+    },
+    {
+      "name": "Kimberly Brooks",
+      "character": "Kathleen Kennedy / Panderverse Mitch Murphy (voice)",
+      "profile_path": "/iPlCk1VQ8fnAtsMow6HlCZoQc0w.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 184,
+    "title": "Jackie Brown",
+    "overview": "Jackie Brown is a flight attendant who gets caught in the middle of smuggling cash into the country for her gunrunner boss. When the cops try to use Jackie to get to her boss, she hatches a plan \u2014 with help from a bail bondsman \u2014 to keep the money for herself.",
+    "tagline": "This Christmas, Santa\u0027s got a brand new bag.",
+    "runtime": 154,
+    "release_date": "1997-12-25",
+    "vote_average": 7.355,
+    "poster_path": "/rOUx7qg4KmEh1juEDwqzbDSL1Nr.jpg",
+    "backdrop_path": "/gvaeY5kz3wHrMU6xLdnybziwYXw.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Pam Grier",
+      "character": "Jackie Brown",
+      "profile_path": "/irCJf8OTSaPkThijP8PWkP1A7ls.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Ordell Robbie",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Robert De Niro",
+      "character": "Louis Gara",
+      "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+    },
+    {
+      "name": "Bridget Fonda",
+      "character": "Melanie Ralston",
+      "profile_path": "/ylGktmhDCLnaaV8owSPL8cVlsbn.jpg"
+    }
+  ]
+}

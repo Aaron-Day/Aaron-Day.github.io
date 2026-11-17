@@ -1,0 +1,50 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 10781,
+    "title": "The Texas Chainsaw Massacre: The Beginning",
+    "overview": "Chrissie and her friends set out on a road trip for a final fling before one is shipped off to Vietnam. Along the way, bikers harass the foursome and cause an accident that throws Chrissie from the vehicle. The lawman who arrives on the scene kills one of the bikers and brings Chrissie\u0027s friends to the Hewitt homestead, where young Leatherface is learning the tools of terror.",
+    "tagline": "What you know about fear... doesn\u0027t even come close.",
+    "runtime": 91,
+    "release_date": "2006-10-05",
+    "vote_average": 6.172,
+    "poster_path": "/hTBueN0Ru3R7brwtONenDyEMNYe.jpg",
+    "backdrop_path": "/bkuCWDEVAp97j7XHftziO9ROYDu.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 425175,
+      "name": "Texas Chainsaw (Reboot) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jordana Brewster",
+      "character": "Chrissie",
+      "profile_path": "/ceL0zxeVbWfCfhoIDZIE1NYqBWb.jpg"
+    },
+    {
+      "name": "Taylor Handley",
+      "character": "Dean",
+      "profile_path": "/4LHuGBcwUOL0iwjtBXNPQOsSfC9.jpg"
+    },
+    {
+      "name": "Diora Baird",
+      "character": "Bailey",
+      "profile_path": "/iOVBvwBhcHIZuLZT3S9tJQ6mbTT.jpg"
+    },
+    {
+      "name": "Matt Bomer",
+      "character": "Eric",
+      "profile_path": "/oxL27Z3XtjoABaOynKazZeg7qKM.jpg"
+    }
+  ]
+}

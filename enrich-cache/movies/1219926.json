@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 1219926,
+    "title": "South Park (Not Suitable for Children)",
+    "overview": "After it\u0027s discovered that a teacher at South Park Elementary has an OnlyFans page, Randy is compelled to take a closer look at the seedy underbelly of the world of online influencers.",
+    "tagline": "Wanna get the girls? You need Cred.",
+    "runtime": 47,
+    "release_date": "2023-12-20",
+    "vote_average": 7.5,
+    "poster_path": "/kN5H9EhUqDWBAsbnbt2XNhS7BFe.jpg",
+    "backdrop_path": "/vTPgBrqEhIIqeZOCqrdNjyXzK4c.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Trey Parker",
+      "character": "Various Characters (voice)",
+      "profile_path": "/3tJe8t90lrcQzXj9cRcpW9wmj2c.jpg"
+    },
+    {
+      "name": "Matt Stone",
+      "character": "Various Characters (voice)",
+      "profile_path": "/nS3BOaF0EHd7vyATV7WBnFEvTLr.jpg"
+    },
+    {
+      "name": "April Stewart",
+      "character": "Sharon Marsh / Liane Cartman (voice)",
+      "profile_path": "/qmPAms01P6ZHp5wjQW2XkymwjCx.jpg"
+    },
+    {
+      "name": "Kimberly Brooks",
+      "character": "Janice (voice)",
+      "profile_path": "/iPlCk1VQ8fnAtsMow6HlCZoQc0w.jpg"
+    }
+  ]
+}

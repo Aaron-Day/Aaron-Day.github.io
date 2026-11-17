@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 11377,
+    "title": "House on Haunted Hill",
+    "overview": "An amusement park mogul offers a random group of diverse people $1 million to spend the night in a decrepit former mental institution.",
+    "tagline": "Evil loves to party.",
+    "runtime": 93,
+    "release_date": "1999-10-29",
+    "vote_average": 5.634,
+    "poster_path": "/weiGTsZqBglKxkIn5xj1nEjxn81.jpg",
+    "backdrop_path": "/5QKRDCD4RKYXGF37jYPe20LILE.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 248339,
+      "name": "House on Haunted Hill Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Geoffrey Rush",
+      "character": "Stephen Price",
+      "profile_path": "/npXFjaFQzBNroCEPllGPTZ5IisA.jpg"
+    },
+    {
+      "name": "Famke Janssen",
+      "character": "Evelyn Stockard-Price",
+      "profile_path": "/uvZGwNsLqe9NyA57Qlt46IkO8Bd.jpg"
+    },
+    {
+      "name": "Ali Larter",
+      "character": "Sara Wolfe",
+      "profile_path": "/5qaQFxx8Az83ycd4LHyQ39HXaEJ.jpg"
+    },
+    {
+      "name": "Taye Diggs",
+      "character": "Eddie Baker",
+      "profile_path": "/1GVbezrPYdbmo7fJGtishxWf0aP.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 993729,
+    "title": "South Park the Streaming Wars Part 2",
+    "overview": "A drought has brought the town of South Park to the brink of disaster.",
+    "tagline": "",
+    "runtime": 52,
+    "release_date": "2022-07-13",
+    "vote_average": 7,
+    "poster_path": "/rsfc5EVzWPtGcBiNKMXxDo2xvsQ.jpg",
+    "backdrop_path": "/lILJHBKPllHrssoXQqHfchsyb8v.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 993732,
+      "name": "South Park the Streaming Wars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Trey Parker",
+      "character": "Various Characters (voice)",
+      "profile_path": "/3tJe8t90lrcQzXj9cRcpW9wmj2c.jpg"
+    },
+    {
+      "name": "Matt Stone",
+      "character": "Various Characters (voice)",
+      "profile_path": "/nS3BOaF0EHd7vyATV7WBnFEvTLr.jpg"
+    },
+    {
+      "name": "April Stewart",
+      "character": "Various Characters (voice)",
+      "profile_path": "/qmPAms01P6ZHp5wjQW2XkymwjCx.jpg"
+    },
+    {
+      "name": "Kimberly Brooks",
+      "character": "Linda Black (voice)",
+      "profile_path": "/iPlCk1VQ8fnAtsMow6HlCZoQc0w.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 822119,
+    "title": "Captain America: Brave New World",
+    "overview": "After meeting with newly elected U.S. President Thaddeus Ross, Sam finds himself in the middle of an international incident. He must discover the reason behind a nefarious global plot before the true mastermind has the entire world seeing red.",
+    "tagline": "The future favors the brave.",
+    "runtime": 119,
+    "release_date": "2025-02-12",
+    "vote_average": 5.949,
+    "poster_path": "/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg",
+    "backdrop_path": "/ce3prrjh9ZehEl5JinNqr4jIeaB.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 131295,
+      "name": "Captain America Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Anthony Mackie",
+      "character": "Sam Wilson / Captain America",
+      "profile_path": "/vecvTm7SimizluJkyIwBxeLbvRm.jpg"
+    },
+    {
+      "name": "Harrison Ford",
+      "character": "President Thaddeus Ross",
+      "profile_path": "/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg"
+    },
+    {
+      "name": "Danny Ramirez",
+      "character": "Joaquin Torres",
+      "profile_path": "/7ZvcfWA5O5ULiupbHZtGGEPwnpI.jpg"
+    },
+    {
+      "name": "Shira Haas",
+      "character": "Ruth Bat-Seraph",
+      "profile_path": "/b8HllH5dudBz3y3zGWFHJdsbPJf.jpg"
+    }
+  ]
+}

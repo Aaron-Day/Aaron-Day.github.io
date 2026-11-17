@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 2698,
     "title": "Evan Almighty",
@@ -7,7 +7,7 @@
     "tagline": "A comedy of biblical proportions.",
     "runtime": 96,
     "release_date": "2007-06-09",
-    "vote_average": 5.59,
+    "vote_average": 5.589,
     "poster_path": "/blI1ioXbgJWOJ3PbcBuSV65Ebwu.jpg",
     "backdrop_path": "/yVwCXQzSZvg9H0YBXvzPfSs6Vqx.jpg",
     "genres": [
@@ -38,7 +38,7 @@
     {
       "name": "Morgan Freeman",
       "character": "God",
-      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+      "profile_path": "/jPsLqiYGSofU4s6BjrxnefMfabb.jpg"
     },
     {
       "name": "Lauren Graham",

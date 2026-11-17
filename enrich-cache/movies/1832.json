@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 1832,
+    "title": "Dogma",
+    "overview": "An abortion clinic worker with a special heritage is called upon to save the existence of humanity from being negated by two renegade angels trying to exploit a loophole and re-enter Heaven.",
+    "tagline": "Get \u0022touched\u0022 by an angel.",
+    "runtime": 130,
+    "release_date": "1999-10-04",
+    "vote_average": 6.944,
+    "poster_path": "/oxhHl2YokTqcP44QK5tiTgjgLgk.jpg",
+    "backdrop_path": "/nljRWpjfmqh5qYxcblFoazU5eYY.jpg",
+    "genres": [
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Ben Affleck",
+      "character": "Bartleby",
+      "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+    },
+    {
+      "name": "Matt Damon",
+      "character": "Loki",
+      "profile_path": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+    },
+    {
+      "name": "Linda Fiorentino",
+      "character": "Bethany",
+      "profile_path": "/kG0O5DRNJfIgxqv9eXkCq8eeR9U.jpg"
+    },
+    {
+      "name": "Salma Hayek Pinault",
+      "character": "Serendipity",
+      "profile_path": "/3j8MpAjyopkAc8mbNiDeXyqBmcS.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 874300,
+    "title": "South Park: Post COVID: The Return of COVID",
+    "overview": "If Stan, Kyle and Cartman could just work together, they could go back in time to make sure Covid never happened. But traveling back to the past seems to be the easy answer until they meet Victor Chaos.",
+    "tagline": "What will happen next?",
+    "runtime": 62,
+    "release_date": "2021-12-16",
+    "vote_average": 7.4,
+    "poster_path": "/xD88mrJ8hsqYVqQ6kinNNGQLdg1.jpg",
+    "backdrop_path": "/kogLnm2OMn6iUBeZIkIywsrwl3H.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 913392,
+      "name": "South Park: Post COVID Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Trey Parker",
+      "character": "Various Characters (voice)",
+      "profile_path": "/3tJe8t90lrcQzXj9cRcpW9wmj2c.jpg"
+    },
+    {
+      "name": "Matt Stone",
+      "character": "Various Characters (voice)",
+      "profile_path": "/nS3BOaF0EHd7vyATV7WBnFEvTLr.jpg"
+    },
+    {
+      "name": "April Stewart",
+      "character": "Wendy Testaburger / Sharon Marsh / Shelley Marsh (voice)",
+      "profile_path": "/qmPAms01P6ZHp5wjQW2XkymwjCx.jpg"
+    },
+    {
+      "name": "Kimberly Brooks",
+      "character": "Margaret Nelson / Laura Tucker (voice)",
+      "profile_path": "/iPlCk1VQ8fnAtsMow6HlCZoQc0w.jpg"
+    }
+  ]
+}

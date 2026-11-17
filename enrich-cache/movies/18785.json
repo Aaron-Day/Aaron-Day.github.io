@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 18785,
     "title": "The Hangover",
@@ -7,7 +7,7 @@
     "tagline": "Some guys just can\u0027t handle Vegas.",
     "runtime": 100,
     "release_date": "2009-06-02",
-    "vote_average": 7.34,
+    "vote_average": 7.339,
     "poster_path": "/A0uS9rHR56FeBtpjVki16M5xxSW.jpg",
     "backdrop_path": "/iuRVt8tFiXDPGgzavhuSa3QHRxD.jpg",
     "genres": [

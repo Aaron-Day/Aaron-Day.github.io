@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 19366,
     "title": "Josie and the Pussycats",
@@ -7,9 +7,9 @@
     "tagline": "Here kitty, kitty, kitty...",
     "runtime": 98,
     "release_date": "2001-04-06",
-    "vote_average": 6.594,
+    "vote_average": 6.744,
     "poster_path": "/mHOix87RdBO3YQuyvFFZAZxpt5P.jpg",
-    "backdrop_path": "/wkQAYth62cJXsvqkYbDH8b1cqES.jpg",
+    "backdrop_path": "/1HmR1tooTRDmKj1vU9ppUEMx0uc.jpg",
     "genres": [
       {
         "id": 35,

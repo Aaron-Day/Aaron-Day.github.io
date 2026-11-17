@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 2043,
     "title": "Along Came a Spider",
@@ -7,7 +7,7 @@
     "tagline": "The game is far from over.",
     "runtime": 104,
     "release_date": "2001-04-06",
-    "vote_average": 6.352,
+    "vote_average": 6.353,
     "poster_path": "/1YtsND7vSNymylnOSzgg3DdVFMB.jpg",
     "backdrop_path": "/5C6njaciKvyZlKWUrQX7mjdl4D1.jpg",
     "genres": [
@@ -37,7 +37,7 @@
     {
       "name": "Morgan Freeman",
       "character": "Alex Cross",
-      "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg"
+      "profile_path": "/jPsLqiYGSofU4s6BjrxnefMfabb.jpg"
     },
     {
       "name": "Monica Potter",

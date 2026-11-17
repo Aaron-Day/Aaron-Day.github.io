@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 10601,
     "title": "Peter Pan",
@@ -7,7 +7,7 @@
     "tagline": "All children grow up except one.",
     "runtime": 113,
     "release_date": "2003-12-18",
-    "vote_average": 7.129,
+    "vote_average": 7.13,
     "poster_path": "/6QdU3TZZrIvXFzoHOwafZAynFjB.jpg",
     "backdrop_path": "/zyWbOvKCdA9V9P5xuUG2eiPYsUo.jpg",
     "genres": [

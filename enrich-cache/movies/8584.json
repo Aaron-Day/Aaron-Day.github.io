@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 8584,
+    "title": "Shanghai Noon",
+    "overview": "Chon Wang, a clumsy imperial guard, trails Princess Pei Pei when she\u0027s kidnapped from the Forbidden City and transported to America. Wang follows her captors to Nevada, where he teams up with an unlikely partner, outcast outlaw Roy O\u0027Bannon, and tries to spring the princess from her imprisonment.",
+    "tagline": "The old west meets the far east.",
+    "runtime": 110,
+    "release_date": "2000-05-26",
+    "vote_average": 6.423,
+    "poster_path": "/b0WwWRcDiDahkah5vZ0KjB4N9ZZ.jpg",
+    "backdrop_path": "/xuwPmDMHslcx71T7zHc9YqF2Ny3.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 37,
+        "name": "Western"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 59567,
+      "name": "Shanghai Noon Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jackie Chan",
+      "character": "Chon Wang",
+      "profile_path": "/nraZoTzwJQPHspAVsKfgl3RXKKa.jpg"
+    },
+    {
+      "name": "Owen Wilson",
+      "character": "Roy O\u0027Bannon",
+      "profile_path": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+    },
+    {
+      "name": "Lucy Liu",
+      "character": "Princess Pei Pei",
+      "profile_path": "/9nbtjqsx3De7hO2XDtrBQ7M9VCH.jpg"
+    },
+    {
+      "name": "Roger Yuan",
+      "character": "Lo Fong",
+      "profile_path": "/jHdxbT6n3ToYKw0DVFIUkva86SO.jpg"
+    }
+  ]
+}

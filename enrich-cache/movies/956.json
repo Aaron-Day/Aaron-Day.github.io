@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 956,
     "title": "Mission: Impossible III",
@@ -7,7 +7,7 @@
     "tagline": "The mission begins.",
     "runtime": 126,
     "release_date": "2006-04-25",
-    "vote_average": 6.767,
+    "vote_average": 6.768,
     "poster_path": "/vKGYCpmQyV9uHybWDzXuII8Los5.jpg",
     "backdrop_path": "/bYKeB9uUcPmvikjouEEQ86uvPw9.jpg",
     "genres": [

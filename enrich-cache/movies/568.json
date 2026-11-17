@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 568,
     "title": "Apollo 13",
@@ -7,7 +7,7 @@
     "tagline": "\u0022Houston, we have a problem.\u0022",
     "runtime": 140,
     "release_date": "1995-06-30",
-    "vote_average": 7.463,
+    "vote_average": 7.464,
     "poster_path": "/tVeKscCm2fY1xDXZk8PgnZ87h9S.jpg",
     "backdrop_path": "/n0FDJI9c0uWiZwm8wgXVjaMBn96.jpg",
     "genres": [

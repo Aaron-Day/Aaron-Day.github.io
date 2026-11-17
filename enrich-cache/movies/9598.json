@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 9598,
     "title": "Babe",
@@ -7,7 +7,7 @@
     "tagline": "A little pig goes a long way.",
     "runtime": 92,
     "release_date": "1995-07-18",
-    "vote_average": 6.298,
+    "vote_average": 6.297,
     "poster_path": "/zKuQMtnbVTz9DsOnOJmlW71v4qH.jpg",
     "backdrop_path": "/agkZziO4ZPAsVfKUrJD68lys08P.jpg",
     "genres": [

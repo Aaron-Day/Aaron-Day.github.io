@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 2062,
     "title": "Ratatouille",
@@ -7,7 +7,7 @@
     "tagline": "He\u0027s dying to become a chef.",
     "runtime": 111,
     "release_date": "2007-06-28",
-    "vote_average": 7.85,
+    "vote_average": 7.851,
     "poster_path": "/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg",
     "backdrop_path": "/zeoaHdXRDd5IoUiMVsNhwTZm78B.jpg",
     "genres": [

@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 1991,
+    "title": "Death Proof",
+    "overview": "Austin\u0027s hottest DJ, Jungle Julia, sets out into the night to unwind with her two friends Shanna and Arlene. Covertly tracking their moves is Stuntman Mike, a scarred rebel leering from behind the wheel of his muscle car, revving just feet away.",
+    "tagline": "A crash course in revenge.",
+    "runtime": 113,
+    "release_date": "2007-05-22",
+    "vote_average": 6.838,
+    "poster_path": "/vtu6H4NWnQVqEp3aanUq3hNeeot.jpg",
+    "backdrop_path": "/qbVCChwbGWDAgsCXKZxyjBrRiWx.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kurt Russell",
+      "character": "Stuntman Mike",
+      "profile_path": "/6g1d98oH4miG4k0ZiZWmF3Dt0bO.jpg"
+    },
+    {
+      "name": "Zo\u00EB Bell",
+      "character": "Zo\u00EB Bell",
+      "profile_path": "/dax6Sutw8xFGnZCo011eejImdBO.jpg"
+    },
+    {
+      "name": "Rosario Dawson",
+      "character": "Abernathy",
+      "profile_path": "/siTzOI810a0K46wv1TORXMw5N7J.jpg"
+    },
+    {
+      "name": "Vanessa Ferlito",
+      "character": "Arlene",
+      "profile_path": "/i128WKjZ3JkoJBOLw48hF4Uwu5V.jpg"
+    }
+  ]
+}

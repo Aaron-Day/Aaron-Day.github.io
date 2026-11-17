@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 9644,
+    "title": "National Lampoon\u0027s Loaded Weapon 1",
+    "overview": "An LA detective is murdered because she has microfilm with the recipe to make cocaine cookies. Two cops partner to find and stop the fiends before they can dope the nation by distributing their wares via the \u0027Wilderness Girls\u0027 cookie drive.",
+    "tagline": "Oh my God. They have guns!",
+    "runtime": 84,
+    "release_date": "1993-02-04",
+    "vote_average": 6.1,
+    "poster_path": "/moP0nyVWVisqSeH6nMewWyIPV6z.jpg",
+    "backdrop_path": "/vYq0sXktMc9zwSiAsRCYwRlayk3.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Emilio Estevez",
+      "character": "Jack Colt",
+      "profile_path": "/6TNIik0wBLo8DTvmJNDkKDqKWme.jpg"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "character": "Wes Luger",
+      "profile_path": "/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg"
+    },
+    {
+      "name": "Jon Lovitz",
+      "character": "Becker",
+      "profile_path": "/jBXSLoDEVwYkNqSVWHV9yDo8whA.jpg"
+    },
+    {
+      "name": "Tim Curry",
+      "character": "Jigsaw",
+      "profile_path": "/8ZsGg3N3OZgxshqLOtA2kl5ckOP.jpg"
+    }
+  ]
+}

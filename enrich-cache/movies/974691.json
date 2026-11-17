@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 974691,
+    "title": "South Park the Streaming Wars",
+    "overview": "Cartman locks horns with his mom in a battle of wills while an epic conflict unfolds that threatens South Park\u2019s very existence.",
+    "tagline": "",
+    "runtime": 49,
+    "release_date": "2022-06-01",
+    "vote_average": 7.13,
+    "poster_path": "/dfgZJlKYg5xm6dBl05bOKhfunXb.jpg",
+    "backdrop_path": "/zOZ3Uh76Z2dNrW4qkHYIxxTvPY5.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 993732,
+      "name": "South Park the Streaming Wars Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Trey Parker",
+      "character": "Various Characters (voice)",
+      "profile_path": "/3tJe8t90lrcQzXj9cRcpW9wmj2c.jpg"
+    },
+    {
+      "name": "Matt Stone",
+      "character": "Various Characters (voice)",
+      "profile_path": "/nS3BOaF0EHd7vyATV7WBnFEvTLr.jpg"
+    },
+    {
+      "name": "April Stewart",
+      "character": "Liane Cartman / Sharon Marsh / Shelly Marsh / Bus Driver (voice)",
+      "profile_path": "/qmPAms01P6ZHp5wjQW2XkymwjCx.jpg"
+    },
+    {
+      "name": "Kimberly Brooks",
+      "character": "Linda Black (voice)",
+      "profile_path": "/iPlCk1VQ8fnAtsMow6HlCZoQc0w.jpg"
+    }
+  ]
+}

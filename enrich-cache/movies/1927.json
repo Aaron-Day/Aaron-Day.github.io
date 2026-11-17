@@ -1,5 +1,5 @@
 {
-  "fetchedUtc": "2026-11-03T14:49:57.12991+00:00",
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
   "movie": {
     "id": 1927,
     "title": "Hulk",
@@ -7,7 +7,7 @@
     "tagline": "What if everything you were forced to keep inside was suddenly set free?",
     "runtime": 138,
     "release_date": "2003-06-19",
-    "vote_average": 5.605,
+    "vote_average": 5.603,
     "poster_path": "/UllIft2jLSBaay3zQyMV4GNdfy.jpg",
     "backdrop_path": "/8vQBXqDbb30qNpBcNYwTesSg75.jpg",
     "genres": [
@@ -35,7 +35,7 @@
     {
       "name": "Jennifer Connelly",
       "character": "Betty Ross",
-      "profile_path": "/wdmcJagSRJ65AuJ4IUCzuHAdvgy.jpg"
+      "profile_path": "/bpILtSl6z5xc6YOAiPnDBlXDYMJ.jpg"
     },
     {
       "name": "Sam Elliott",

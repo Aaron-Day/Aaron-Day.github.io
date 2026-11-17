@@ -1,0 +1,47 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 37834,
+    "title": "Knight and Day",
+    "overview": "A fugitive couple goes on a glamorous and sometimes deadly adventure where nothing and no one \u2013 even themselves \u2013 are what they seem. Amid shifting alliances and unexpected betrayals, they race across the globe, with their survival ultimately hinging on the battle of truth vs. trust.",
+    "tagline": "Every Hit Man Deserves a Second Shot!",
+    "runtime": 109,
+    "release_date": "2010-06-15",
+    "vote_average": 6.246,
+    "poster_path": "/phhp52CZZJiGYmiOTp9ZBDkGHB3.jpg",
+    "backdrop_path": "/k5mNW8qutywD3GhAuaq33qcQR2y.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Roy Miller",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Cameron Diaz",
+      "character": "June Havens",
+      "profile_path": "/tIWUyvmJayu8gtbrzCWC0L3H8kH.jpg"
+    },
+    {
+      "name": "Peter Sarsgaard",
+      "character": "Fitzgerald",
+      "profile_path": "/5UANyM4co2nwYPgSEmGeNlZRm7V.jpg"
+    },
+    {
+      "name": "Viola Davis",
+      "character": "CIA Director Isabel George",
+      "profile_path": "/xDssw6vpYNRjsybvMPRE30e0dPN.jpg"
+    }
+  ]
+}

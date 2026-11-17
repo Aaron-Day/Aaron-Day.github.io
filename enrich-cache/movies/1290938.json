@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 1290938,
+    "title": "South Park: The End of Obesity",
+    "overview": "The advent of new weight loss drugs has a huge impact on everyone in South Park. When Cartman is denied access to the life-changing medicine, the kids jump into action.",
+    "tagline": "The weight is over.",
+    "runtime": 51,
+    "release_date": "2024-05-24",
+    "vote_average": 7.388,
+    "poster_path": "/zxM1AIKBP83plf2buLR0cbGfvl2.jpg",
+    "backdrop_path": "/ksBskfGcJuqpNNeacfI4MD0ZTtD.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Trey Parker",
+      "character": "Stan Marsh / Eric Cartman (voice)",
+      "profile_path": "/3tJe8t90lrcQzXj9cRcpW9wmj2c.jpg"
+    },
+    {
+      "name": "Matt Stone",
+      "character": "Kyle Broflovski / Kenny McCormick / Butters Stotch / Gerald Broflovski (voice)",
+      "profile_path": "/nS3BOaF0EHd7vyATV7WBnFEvTLr.jpg"
+    },
+    {
+      "name": "April Stewart",
+      "character": "Wendy Testaburger / Sharon Marsh / Shelley Marsh / Liane Cartman / Alexis Testaburger (voice)",
+      "profile_path": "/qmPAms01P6ZHp5wjQW2XkymwjCx.jpg"
+    },
+    {
+      "name": "Mona Marshall",
+      "character": "Sheila Broflovski / Mrs. Tweak / Linda Stotch (voice)",
+      "profile_path": "/A2RCAt0Xmm3jLBKZogQAJX6eD9n.jpg"
+    }
+  ]
+}

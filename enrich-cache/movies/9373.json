@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 9373,
+    "title": "The Texas Chainsaw Massacre",
+    "overview": "After picking up a traumatized young hitchhiker, five friends find themselves stalked and hunted by a chainsaw-wielding killer and his family of equally psychopathic killers.",
+    "tagline": "What you know about fear... doesn\u0027t even come close.",
+    "runtime": 98,
+    "release_date": "2003-10-17",
+    "vote_average": 6.317,
+    "poster_path": "/781px1eOtfVt1RdIsL4Dt1s3x7R.jpg",
+    "backdrop_path": "/xnShZK7y4lupUmXghz75HRSooW9.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 425175,
+      "name": "Texas Chainsaw (Reboot) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jessica Biel",
+      "character": "Erin Hardesty",
+      "profile_path": "/u5DzbWKvAzS0M4ZhYqpUR9MZr2M.jpg"
+    },
+    {
+      "name": "Jonathan Tucker",
+      "character": "Morgan",
+      "profile_path": "/gR1lthok818AcmJsg87f1On6Qnf.jpg"
+    },
+    {
+      "name": "Andrew Bryniarski",
+      "character": "Thomas Hewitt (Leatherface)",
+      "profile_path": "/7WecTlVEkck19VMXTcBfSkmshYL.jpg"
+    },
+    {
+      "name": "Erica Leerhsen",
+      "character": "Pepper",
+      "profile_path": "/hZFJGXbDmoolt16m4Lj4gLSrkBs.jpg"
+    }
+  ]
+}

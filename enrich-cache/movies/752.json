@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 752,
+    "title": "V for Vendetta",
+    "overview": "In a world in which Great Britain has become a fascist state, a masked vigilante known only as \u201CV\u201D conducts guerrilla warfare against the oppressive British government. When V rescues a young woman from the secret police, he finds in her an ally with whom he can continue his fight to free the people of Britain.",
+    "tagline": "People should not be afraid of their governments. Governments should be afraid of their people.",
+    "runtime": 132,
+    "release_date": "2006-02-23",
+    "vote_average": 7.898,
+    "poster_path": "/1avD1JeaRiJX5M4ahPdZPypGoGN.jpg",
+    "backdrop_path": "/sFEYsEfzTx7hhjetlNrme8B5OUo.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Natalie Portman",
+      "character": "Evey",
+      "profile_path": "/edPU5HxncLWa1YkgRPNkSd68ONG.jpg"
+    },
+    {
+      "name": "Hugo Weaving",
+      "character": "V / William Rookwood",
+      "profile_path": "/lSC8Et0PYi5zeQb3IpPkFje7hgR.jpg"
+    },
+    {
+      "name": "Stephen Rea",
+      "character": "Finch",
+      "profile_path": "/n52WDwObYghPTfV1TZ1EOVIWUGS.jpg"
+    },
+    {
+      "name": "Stephen Fry",
+      "character": "Deitrich",
+      "profile_path": "/dH7GuUZ8QPM9RN99ak9KKOkSkdS.jpg"
+    }
+  ]
+}

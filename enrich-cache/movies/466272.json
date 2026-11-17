@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 466272,
+    "title": "Once Upon a Time in... Hollywood",
+    "overview": "Los Angeles, 1969. TV star Rick Dalton, a struggling actor specializing in westerns, and stuntman Cliff Booth, his best friend, try to survive in a constantly changing movie industry. Dalton is the neighbor of the young and promising actress and model Sharon Tate, who has just married the prestigious Polish director Roman Polanski\u2026",
+    "tagline": "In this town, it can all change\u2026 Like that.",
+    "runtime": 162,
+    "release_date": "2019-07-24",
+    "vote_average": 7.4,
+    "poster_path": "/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg",
+    "backdrop_path": "/kKTPv9LKKs5L3oO1y5FNObxAPWI.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 1458846,
+      "name": "Once Upon a Time... in Hollywood Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Leonardo DiCaprio",
+      "character": "Rick Dalton",
+      "profile_path": "/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
+    },
+    {
+      "name": "Brad Pitt",
+      "character": "Cliff Booth",
+      "profile_path": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+    },
+    {
+      "name": "Margot Robbie",
+      "character": "Sharon Tate",
+      "profile_path": "/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg"
+    },
+    {
+      "name": "Emile Hirsch",
+      "character": "Jay Sebring",
+      "profile_path": "/NQjX6KjtDDyLnvbxhrU9xQWaYJ.jpg"
+    }
+  ]
+}

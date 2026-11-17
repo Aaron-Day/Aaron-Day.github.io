@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-17T17:31:36.3827332+00:00",
+  "movie": {
+    "id": 575265,
+    "title": "Mission: Impossible - The Final Reckoning",
+    "overview": "Ethan Hunt and team continue their search for the terrifying AI known as the Entity \u2014 which has infiltrated intelligence networks all over the globe \u2014 with the world\u0027s governments and a mysterious ghost from Hunt\u0027s past on their trail. Joined by new allies and armed with the means to shut the Entity down for good, Hunt is in a race against time to prevent the world as we know it from changing forever.",
+    "tagline": "Our lives are the sum of our choices.",
+    "runtime": 170,
+    "release_date": "2025-05-17",
+    "vote_average": 7.167,
+    "poster_path": "/iKPsC9EFUafRP9SrUznI61getVP.jpg",
+    "backdrop_path": "/538U9snNc2fpnOmYXAPUh3zn31H.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87359,
+      "name": "Mission: Impossible Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Tom Cruise",
+      "character": "Ethan Hunt",
+      "profile_path": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+    },
+    {
+      "name": "Hayley Atwell",
+      "character": "Grace",
+      "profile_path": "/x57wXHexIjD2ywly9cRA4rov7cu.jpg"
+    },
+    {
+      "name": "Ving Rhames",
+      "character": "Luther Stickell",
+      "profile_path": "/tOVDvu1EQP78AwaUw6uh1wN818E.jpg"
+    },
+    {
+      "name": "Simon Pegg",
+      "character": "Benji Dunn",
+      "profile_path": "/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg"
+    }
+  ]
+}
