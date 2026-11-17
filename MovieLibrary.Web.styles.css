@@ -3,13 +3,33 @@
    search box and the platform's own accessibility behaviour comes with them. Everything here is layout, size
    and the project's tokens; nothing replaces a control's appearance with a drawing of one.
 
-   NO NEW COLOUR. The text is --txt, the boundary of the two boxes that have one is --line-strong (3.89:1 on
-   --bg, the token app.css reserves for a control's sole boundary), and the check and the dot take --accent
-   through accent-color. --line is decoration only and appears nowhere in this file.
+   NO NEW COLOUR, AND NO NEW TOKEN: the panel's surface is --panel and its edge --line, both of which
+   app.css already defines. The text is --txt (15.03:1 on --panel) and --dim where it is secondary (5.89:1),
+   both past SC 1.4.3 Contrast (Minimum)'s 4.5:1. The boundary of the two boxes that have one is
+   --line-strong, 3.34:1 against the --panel2 they are filled with and 3.62:1 against the --panel around
+   them, so SC 1.4.11 Non-text Contrast's 3:1 holds on either reading. --line draws the PANEL's own edge
+   and nothing else: it is 1.28:1 on --panel and app.css records it as failing 1.4.11, which is why it is
+   never a control's boundary - a grouping cue for an edge the background change already draws is neither
+   a user interface component nor a graphic required to understand the content. Re-measure if a token
+   changes.
 
    NO MOTION: no transition and no animation, so no prefers-reduced-motion block is needed. */
 
-.facets[b-9jfn63vvns] { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0; }
+/* THE PANEL IS A SURFACE NOW, not a column of controls on the page background. margin is 0 rather than
+   the 1rem 0 it carried before Movies.razor.css made this element a grid item: .movies-layout's own gap is
+   what separates it from the results column beside it and, below the breakpoint, from the tiles under it,
+   and a margin as well would double one of the two gaps depending on the width.
+   min-width: 0 because this element is a GRID ITEM, and a grid item's automatic minimum size is its
+   min-content width - which here is the bare <input>'s intrinsic ~20 characters, 32px of type at 200%
+   text. The same belt-and-braces .movies-results carries, and that this file already uses on its
+   fieldsets. Movies.razor.css's minmax(0, 1fr) is what actually fixed the SC 1.4.4 overflow the CI gate
+   caught; this is the second way of saying it, on the element that was wide rather than on the track
+   that let it be. */
+.facets[b-9jfn63vvns] {
+  display: flex; flex-direction: column; gap: 1rem;
+  margin: 0; min-width: 0; padding: 1rem;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+}
 
 .facet-search[b-9jfn63vvns], .facet-sort[b-9jfn63vvns] { display: flex; flex-direction: column; gap: .25rem; }
 
@@ -86,9 +106,34 @@ select[b-9jfn63vvns] { align-self: flex-start; }
 }
 @media (max-width: 22.5rem) { .grid[b-dqgkucy970] { grid-template-columns: repeat(2, 1fr); gap: .5rem; } }
 
-.grid-head[b-dqgkucy970] { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; }
+/* THE COUNT AND THE PAGER READ AS ONE TOOLBAR OVER THE WALL. space-between pushes the pager to the far
+   edge of the results column; below about 24rem the two simply wrap onto their own lines, which is the
+   SC 1.4.10 Reflow outcome and needs no query of its own.
+   The rule beneath them is var(--line), 1.37:1 on --bg and recorded in app.css as failing SC 1.4.11 Non-text
+   Contrast - correct here for the reason .poster-placeholder's edge is: a separator between a toolbar and
+   the list under it is neither a user interface component nor a graphic required to understand the content.
+   The pager buttons keep their own --line-strong boundary. */
+.grid-head[b-dqgkucy970] {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1rem;
+  padding-bottom: .75rem; margin-bottom: 1rem; border-bottom: 1px solid var(--line);
+}
 .count[b-dqgkucy970] { color: var(--txt); margin: 0; }
-.pager[b-dqgkucy970] { display: flex; align-items: center; gap: .5rem; }
+/* THE PAGER WRAPS, and it did not before. A flex row of three text items with no wrap cannot give: at 200%
+   text its buttons read "Previous" and "Next" around "Page 1 of 25" at 32px, and the row simply grows past
+   whatever is holding it. MEASURED at 375x812 with `html { font-size: 32px }`: 318px of pager inside a
+   311px column on this machine's face, and 329px on a wider one -- over its container in both, and past the
+   viewport on the runner, where TextOverrideTests.TextAtTwoHundredPercentLosesNoContent reported scrollWidth
+   398 against clientWidth 375 with exactly two elements out: this element and the last control in it.
+   SC 1.4.4 Resize Text, Level AA.
+
+   It squeaked through before only because the column it sits in starts 32px from the left edge, so the
+   overflow landed inside the viewport rather than past it. A face wider than Segoe UI Variable -- which is
+   every face the Linux runner has -- spends that margin. Wrapping removes the dependency on the face
+   instead of buying a few more pixels of it.
+
+   The three items keep their order and their --touch targets; they just take two lines when one will not
+   do, which is the same answer .grid-head above and .options in FacetPanel.razor.css already give. */
+.pager[b-dqgkucy970] { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
 
 .pager button[b-dqgkucy970] {
   min-width: var(--touch); min-height: var(--touch);
@@ -125,6 +170,15 @@ select[b-9jfn63vvns] { align-self: flex-start; }
   color: var(--dim); background-color: var(--panel2); opacity: 1; cursor: default;
 }
 
+/* Hover only where a pointer can hover: on a touch screen :hover sticks after the tap and the button stays
+   lit until something else is tapped. The same shape as .try-again:hover and .clear-filters:hover in
+   app.css, and the same token. A GREYED BUTTON IS EXCLUDED BY SELECTOR: it does nothing when pressed, so
+   lighting its edge under the pointer would promise a page that is not there. --accent is 11.92:1 on --bg
+   and clears SC 1.4.11's 3:1 as a boundary. */
+@media (hover: hover) {
+  .pager button:not([aria-disabled="true"]):hover[b-dqgkucy970] { border-color: var(--accent); }
+}
+
 /* No transition and no animation in this file, so no prefers-reduced-motion block is needed. The motion
    rule in StyleContractTests reads this file by glob and will say so if that stops being true. */
 /* /Components/PosterTile.razor.rz.scp.css */
@@ -135,7 +189,29 @@ select[b-9jfn63vvns] { align-self: flex-start; }
    instead.) Re-measure if a token changes. */
 .tile[b-edk0x0dgrl] { position: relative; }
 .tile-body[b-edk0x0dgrl] { display: flex; flex-direction: column; gap: .25rem; }
-.tile img[b-edk0x0dgrl], .poster-placeholder[b-edk0x0dgrl] { width: 100%; aspect-ratio: 2 / 3; border-radius: 6px; }
+/* height: auto IS LOAD-BEARING AND NOT TIDYING, and without it every poster in the wall was stretched.
+   The markup carries width="342" height="513" to reserve the box before the TMDB response arrives, which
+   is right, but an HTML width/height attribute is a PRESENTATIONAL HINT: height="513" maps to a used
+   `height: 513px`. aspect-ratio only resolves a dimension that is auto, so with the width forced to 100%
+   of a 123px column and the height pinned at the intrinsic 513px, the box came out 123x513 - a ratio of
+   4.15:1 against the 1.5:1 the poster actually is - and object-fit's initial `fill` stretched the artwork
+   to match rather than letterboxing it. MEASURED in the browser at 1280px before the fix: imgW 123.54,
+   imgH 513, computed aspect-ratio "2 / 3" - the declaration was there and doing nothing.
+   Returning the height to auto lets aspect-ratio drive it (width x 1.5), and the attributes keep their
+   real job: they still give the intrinsic ratio the browser reserves space from, so nothing about
+   cumulative layout shift changes. Do not delete them, and do not delete this. */
+.tile img[b-edk0x0dgrl], .poster-placeholder[b-edk0x0dgrl] { width: 100%; height: auto; aspect-ratio: 2 / 3; border-radius: 6px; }
+
+/* THE SAME EDGE THE PLACEHOLDER ALREADY HAD, for the same reason and with the same token. A poster whose
+   own artwork is dark - and a great many are - dissolved into --bg at its border and the wall read as
+   floating scraps rather than a grid of cards. var(--line) is 1.37:1 there and app.css records it as
+   FAILING SC 1.4.11 Non-text Contrast, which is fine here for the reason the placeholder's note gives in
+   full: the edge is neither a user interface component nor a graphic required to understand the content,
+   because the title beneath carries the whole meaning and the box has no state. Do not promote it to
+   --line-strong; everything that IS a control's only boundary already uses that token.
+   Bootstrap's reboot sets box-sizing: border-box on everything, so the border eats a pixel of the image
+   rather than widening the tile and nothing about the grid's arithmetic moves. */
+.tile img[b-edk0x0dgrl] { border: 1px solid var(--line); }
 
 /* --line is 1.37:1 on --bg and fails SC 1.4.11, which is fine here and only here. The placeholder is
    outside 1.4.11 altogether because it is neither a user interface component nor a graphical object
@@ -165,6 +241,31 @@ select[b-9jfn63vvns] { align-self: flex-start; }
   min-height: 2.6em;
 }
 .tile-year[b-edk0x0dgrl] { color: var(--dim); font-size: .85rem; }
+
+/* RUNTIME AND RATING. .85rem matches .tile-year rather than going smaller: app.css's rule is "Do not go
+   below 0.8125rem", and this is secondary metadata of exactly the same weight as the year beside it, so a
+   density pass that shrinks one must shrink both or neither. --dim is 6.33:1 on --bg, past SC 1.4.3's
+   4.5:1. Not opacity and not Bootstrap's .text-muted: opacity turns axe's color-contrast into an
+   INCOMPLETE, which AxeScan counts as a failure, and .text-muted ships !important and would win.
+
+   line-height is unitless so an SC 1.4.12 Text Spacing override cannot clip it, as it is on legend.
+
+   THE GAP IS THE SEPARATOR AND THERE IS NO CHARACTER IN THE DOM. A middot between the two is read
+   inconsistently by screen readers -- silent at most punctuation levels, "dot" at others -- and putting it
+   in a ::before does not help, because generated content is exposed to the accessibility tree.
+
+   WRAPPING IS ALLOWED ON THE ROW AND FORBIDDEN INSIDE A TOKEN. At 320px the grid is two fixed columns of
+   roughly 140px (PosterGrid.razor.css), and at 200% text a nowrap ROW would push its right edge past the
+   viewport -- SC 1.4.10 Reflow, which ReflowTests checks per element and not only on the document. So the
+   row wraps between items while "1h 50m" and "8.4/10" each stay whole. No clamp, no text-overflow and no
+   overflow: hidden here for the same reason the title has none, and StyleContractTests asserts all three
+   are absent from this file. .tile-title's min-height reserves two lines; this row simply grows the tile,
+   which is why the grid sets align-items: start. */
+.tile-meta[b-edk0x0dgrl] {
+  display: flex; flex-wrap: wrap; gap: 0 .5rem;
+  color: var(--dim); font-size: .85rem; line-height: 1.5;
+}
+.tile-meta > span[b-edk0x0dgrl] { white-space: nowrap; }
 
 /* THE CONFIDENCE BADGE. A border plus text, and never a background tint on its own: under Windows High
    Contrast a tint flattens to Canvas and takes the cue with it, while a border is re-coloured to CanvasText
@@ -242,12 +343,59 @@ select[b-9jfn63vvns] { align-self: flex-start; }
    StyleContractTests reads this file by glob and will say so if that ever stops being true. */
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-vx7rf0i3ew] { flex: 1; display: flex; flex-direction: column; }
-header[b-vx7rf0i3ew] { padding: 0 1rem; }
 main[b-vx7rf0i3ew] { flex: 1; }
-.content[b-vx7rf0i3ew] { padding: 1.1rem 1rem; }
+
+/* THE HEADER IS A FULL-BLEED BAR, AND THE CAP IS NOT ON IT. Without a surface of its own the nav floated on
+   the page background with nothing but its own underlines to say it was a header, which is the single
+   largest reason the shell read as an unstyled document. --panel is the token for a raised surface and --txt
+   on it is 15.03:1, --accent2 6.89:1 and --accent 11.09:1, all past SC 1.4.3 Contrast (Minimum)'s 4.5:1.
+
+   THE BOTTOM BORDER IS var(--line) AND THAT IS CORRECT HERE. --line is 1.28:1 on --panel and app.css records
+   it as FAILING SC 1.4.11 Non-text Contrast, which applies to user interface components and to graphics
+   required to understand the content. A bar's edge is neither: it is a grouping cue for a boundary the
+   background change already draws, and the nav links inside keep their own underlines and the active link
+   its 3px --accent border. The same argument app.css makes for .attribution's border-top and
+   PosterTile.razor.css makes for .poster-placeholder. <header> is not a control, so the border scan in
+   StyleContractTests does not treat it as one either.
+
+   NO position: sticky. The project's only SC 2.4.11 Focus Not Obscured mitigation is a scroll-padding-bottom
+   reserve for the fixed error bar; the top-edge equivalent is scroll-padding-top, which app.css is asserted
+   NOT to contain. A sticky bar would put a focused control underneath it with no reserve available, and
+   ObscuredFocusTests walks the real tab order and would catch it. */
+header[b-vx7rf0i3ew] { padding: 0 1rem; background: var(--panel); border-bottom: 1px solid var(--line); }
+
+/* THE NAV'S HALF OF THE CAP, and it is written here rather than in NavMenu.razor.css because
+   StyleContractTests asserts that file contains no "max-width" at all - a ban on max-width MEDIA QUERIES,
+   written as a raw substring, which a cap would trip without being the thing it guards against. ::deep is
+   what lets this sheet reach into the child component's markup; <header> carries MainLayout's own scope
+   attribute, so the rule stays confined to the shell's nav and never touches PosterGrid's nav.pager.
+   Same token as .content below, so the bar's contents line up with the page's. */
+header[b-vx7rf0i3ew]  nav { width: 100%; max-width: var(--shell); margin-inline: auto; }
+
+/* A READING WIDTH FOR THE PAGE. Without this the content ran edge to edge at every width, so on a wide
+   monitor the filter rail sat in one far corner and the tile wall stretched to the other. --shell is 90rem,
+   1440px at the default root, and is a CAP: every viewport below it is unaffected, so nothing about the
+   320px or 768px layouts changes.
+
+   width: 100% because this is a stretch item in a column flex container; without it margin-inline: auto has
+   an auto-width box to centre and does nothing. The header bar is NOT in this rule - the bar itself spans
+   the viewport and NavMenu.razor.css caps the nav inside it, from the same token.
+
+   The bottom padding is larger than the top so the tile wall does not end flush against the attribution. No
+   viewport units here, as in every stylesheet below body. */
+.content[b-vx7rf0i3ew] { width: 100%; max-width: var(--shell); margin-inline: auto; padding: 1.5rem 1rem 2.5rem; }
 /* /Layout/NavMenu.razor.rz.scp.css */
 nav[b-wx8l9rtebe] { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 1rem; }
-.brand[b-wx8l9rtebe] { display: inline-flex; align-items: center; min-height: var(--touch); font-weight: 600; }
+/* The wordmark. A little larger and a little tighter than the links beside it so the bar has a clear
+   first thing to read. It keeps app.css's unconditional link underline - every anchor in this app has one,
+   and text-decoration: none is banned in every stylesheet here - so nothing about SC 1.4.1 changes.
+   THE NAV'S READING-WIDTH CAP IS NOT IN THIS FILE. StyleContractTests bans a maximum-width breakpoint here
+   by raw substring, so even a cap that is not a media query would trip it; the rule lives in
+   MainLayout.razor.css, which reaches the nav through ::deep. */
+.brand[b-wx8l9rtebe] {
+    display: inline-flex; align-items: center; min-height: var(--touch);
+    font-size: 1.0625rem; font-weight: 600; letter-spacing: .01em;
+}
 .nav-toggle[b-wx8l9rtebe] {
     display: inline-flex; align-items: center; justify-content: center;
     min-width: var(--touch); min-height: var(--touch);
@@ -266,4 +414,64 @@ nav[b-wx8l9rtebe] { display: flex; flex-wrap: wrap; align-items: center; justify
 @media (min-width: 48rem) {
     .nav-toggle[b-wx8l9rtebe] { display: none; }
     .nav-links[b-wx8l9rtebe], .nav-links.collapsed[b-wx8l9rtebe] { display: flex; flex-basis: auto; gap: 1rem; }
+}
+/* /Pages/Movies.razor.rz.scp.css */
+/* THE FILM PAGE'S TWO-COLUMN LAYOUT, and it lives here rather than in MainLayout.razor.css for two
+   reasons. The narrow one: StyleContractTests asserts MainLayout.razor.css contains no "sidebar" at all,
+   as a raw substring over the whole file, comments included. The real one: only this page has a second
+   column, and MainLayout's job is the header-above-main shape every route shares.
+
+   ONE COLUMN BELOW THE BREAKPOINT, which is the stacked layout this page already had, and the canonical
+   SC 1.4.10 Reflow outcome at 320px. Nothing is hidden and nothing reorders; the second column simply
+   wraps under the first.
+
+   THE BREAKPOINT IS 64rem AND MUST NOT BE 48rem. 48rem is exactly 768px, and 768x1024 is the viewport
+   ReflowTests and TextOverrideTests both measure at - so a two-column layout starting there would engage
+   precisely where those suites look, in one case with the SC 1.4.12 Text Spacing overrides applied.
+   64rem clears it with room. The three existing media queries are pinned by exact string elsewhere; this
+   is a fourth and leaves them alone.
+
+   minmax(0, 1fr) ON BOTH TRACKS, NEVER 1fr. A grid item's default min-width is auto, so the tile wall --
+   which sets its own minmax(7rem, 1fr) tracks - refuses to shrink below its content and pushes the row
+   past the viewport. min-width: 0 on the results column says the same thing a second way, which is the
+   belt-and-braces FacetPanel.razor.css already uses on its fieldsets. ReflowTests checks every element's
+   right edge against the viewport, not just the document width, so overflow inside a clipping ancestor
+   would be caught too.
+
+   align-items: start so the panel is as tall as its own content. Without it the panel stretches to the
+   height of 60 tiles and its background, if it ever gains one, would run the length of the page.
+
+   NO overflow-y AND NO INDEPENDENT SCROLLING. A scrolling column clips the focus ring of anything inside
+   it and becomes a new obscuring surface, and it would need a viewport-relative height, which
+   StyleContractTests forbids in a component stylesheet. Five tab stops and two closed disclosures do not
+   need one.
+
+   NO position: sticky either. The project's only SC 2.4.11 mitigation is a scroll-padding-bottom reserve
+   for the fixed error bar; the top-edge equivalent is scroll-padding-top, which app.css is asserted NOT
+   to contain. A sticky column or header would put a focused control underneath it with no reserve
+   available, and ObscuredFocusTests walks the real tab order and would catch it. */
+/* margin-top because FacetPanel.razor.css's .facets dropped its own `margin: 1rem 0` when it became a grid
+   item: a margin on the item would have doubled whichever of the two gaps the width happened to use. The
+   space above the whole block belongs to the block, so it is set once here. */
+/* THE SINGLE COLUMN IS DECLARED, AND minmax(0, 1fr) IS NOT DECORATION ON IT. A grid with no
+   grid-template-columns gets ONE IMPLICIT `auto` track, and an auto track's floor is its items'
+   min-content width - so the track grows past the container whenever an item's min-content does. The
+   facet panel's does: the search box is a bare <input>, whose intrinsic width is its default size of
+   about 20 characters, and at 200% text that is 32px of type. MEASURED at 375x812 with
+   `html { font-size: 32px }`, which is what TextOverrideTests injects: the track, the panel, the results
+   column, the tile wall and all 60 tiles came out 439px wide inside a 311px container, document
+   scrollWidth 470 against clientWidth 375 - SC 1.4.4 Resize Text, Level AA, and the CI gate caught it.
+   `width: 100%` on the input does not save it, because a percentage is indefinite while the track is
+   being sized and the intrinsic width is what answers instead.
+   The same minmax(0, …) the two-column rule below already carries, for the same reason, now simply
+   applies at every width rather than only above the breakpoint. */
+.movies-layout[b-rz9u7hcbu9] {
+  display: grid; grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem; align-items: start; margin-top: 1.5rem;
+}
+
+.movies-results[b-rz9u7hcbu9] { min-width: 0; }
+
+@media (min-width: 64rem) {
+  .movies-layout[b-rz9u7hcbu9] { grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); }
 }
