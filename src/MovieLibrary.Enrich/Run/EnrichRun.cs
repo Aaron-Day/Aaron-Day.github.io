@@ -1,8 +1,10 @@
 using System.Net;
+using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Parsing;
 using MovieLibrary.Core.Sheets;
 using MovieLibrary.Core.Store;
+using MovieLibrary.Core.Text;
 using MovieLibrary.Core.Throttling;
 using MovieLibrary.Enrich.Caching;
 using MovieLibrary.Enrich.Config;
@@ -154,8 +156,10 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
 
     private async Task<RunResult> RunCoreAsync(CancellationToken ct)
     {
-        // Known before the Sheet is even fetched, so a missing secret costs nothing.
-        if (!options.Fixtures && string.IsNullOrWhiteSpace(options.Token))
+        // Known before the Sheet is even fetched, so a missing secret costs nothing. A fixture run and a
+        // print-keys run are let through: neither is allowed to make a request, and EnrichOptions.Load has
+        // already emptied the token for both, so neither could authenticate one if it tried.
+        if (!options.Fixtures && !options.PrintKeys && string.IsNullOrWhiteSpace(options.Token))
             throw new FatalRunException("FATAL: TMDB_TOKEN is not set.",
                 "Add it to .env locally, or as an Actions *repository* secret in CI. Codespaces secrets are a separate " +
                 "store and are not visible here. Nothing was written.");
@@ -169,6 +173,12 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         Say($"  {movieRows.Count} films, {showRows.Count} episode rows");
 
         RequireReadableRuntimes(movieRows);
+
+        // Before the store is read, because this is a diagnostic about the SHEET and has to work when the
+        // store is the thing that is broken: an unreadable record-store.json is exactly when its owner needs
+        // a key to write into it. After RequireReadableRuntimes, because a row whose runtime cell cannot be
+        // read has no identity key to print, and that guard names those rows and says how to fix them.
+        if (options.PrintKeys) return await PrintKeysAsync(movieRows, showRows);
 
         // Read and bound BEFORE the fixture branch on purpose. A fixture run makes no TMDB call, so it is the
         // cheapest possible way to find out that a hand-edited store is malformed, or that an entry now names a
@@ -253,6 +263,116 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
             "and nothing was spent. The likely causes are a renamed or moved 'Movies' tab, a change to the Sheet's " +
             "sharing, or an export that ran while the tab was empty. Open the Sheet, check the 'Movies' tab still " +
             "holds the Apple TV export, then re-run: the TMDB cache is untouched, so a good re-run costs nothing extra.");
+    }
+
+    // ---- --print-keys --------------------------------------------------------------------------------
+
+    /// <summary>Marks a listed row whose key another row on the same tab carries too.</summary>
+    private const string SharedKeyMarker = "  [shared key]";
+
+    /// <summary>
+    /// Every row's identity key, and then nothing else: no TMDB request, no record store, no catalogue, no job
+    /// summary, exit 0.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>Why it exists.</b> An entry in <c>record-store.json</c> names its row by a 40-character SHA-1
+    /// over the row's folded title, runtime and directors. Nothing else prints one, so without this, correcting
+    /// a bad match means guessing a key, running the tool, and reading the orphan note it comes back with.</para>
+    /// <para><b>The Actions outputs are still written.</b> <see cref="WriteOutputsAsync"/>'s own contract is that
+    /// every outcome writes them, so a step that finds the file without <c>deployable</c> knows the tool did not
+    /// finish. <c>deployable=false</c> is exactly true of a run that published nothing. The job summary is NOT
+    /// written: it is a report about a catalogue, and there is no catalogue.</para>
+    /// <para><b>Shared keys are called out.</b> See <see cref="SayShared"/>: a key more than one row carries is
+    /// the one key an entry cannot use to correct a single row, and printing it unmarked sends its owner to
+    /// write an entry that will not do what he means.</para>
+    /// </remarks>
+    private async Task<RunResult> PrintKeysAsync(IReadOnlyList<SheetRow> movieRows, IReadOnlyList<SheetRow> showRows)
+    {
+        Say("Identity keys for every row on the sheet. Paste one into record-store.json as \"identityKey\".");
+        Say("");
+
+        // RuntimeParser.FilmMinutes, not TryFilmMinutes: RequireReadableRuntimes has already read every one of
+        // these and stopped the run if any could not be read, so a "skip the unreadable ones" arm here would be
+        // a branch no run can take. It is the same call MoviePipeline makes when it orders its rows.
+        // Ordered as MoviePipeline orders them rather than as the export happens to be: Apple's row order is
+        // not stable between exports, and this way two rows that share a key are printed next to each other.
+        var films = movieRows
+            .Select(r => (Title: TitleNormalizer.Normalize(r.Title), Minutes: RuntimeParser.FilmMinutes(r.Runtime), Row: r))
+            .OrderBy(x => x.Title.Value, StringComparer.Ordinal)
+            .ThenBy(x => x.Minutes)
+            .Select(x => (
+                Key: IdentityKey.ForFilm(x.Title, x.Minutes, TitleNormalizer.NormalizeDirectors(x.Row.Directors)),
+                Label: $"'{x.Row.Title}' ({x.Row.Runtime}, {x.Row.Directors})"))
+            .ToList();
+
+        // Grouped as TvPipeline groups the Shows tab - trimmed, case-insensitively - because what an entry's
+        // key addresses is one of those groups and not one episode row.
+        var series = showRows
+            .Select(r => r.Series.Trim())
+            .Where(name => name.Length > 0)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .Order(StringComparer.Ordinal)
+            .Select(name => (Key: IdentityKey.ForSeriesName(name), Label: $"'{name}'"))
+            .ToList();
+
+        var sharedFilms = SharedKeys(films);
+        var sharedSeries = SharedKeys(series);
+
+        foreach (var (key, label) in films)
+            Say($"film   {key}  {label}{(sharedFilms.ContainsKey(key) ? SharedKeyMarker : "")}");
+
+        foreach (var (key, label) in series)
+            Say($"series {key}  {label}{(sharedSeries.ContainsKey(key) ? SharedKeyMarker : "")}");
+
+        SayShared(sharedFilms, "Movies tab", "row", "rows");
+        SayShared(sharedSeries, "Shows tab", "series name", "series names");
+
+        // Nothing was built, so nothing is deployable. CacheSaved is true because the cache was never loaded and
+        // so there was nothing worth saving, which is what that flag's own doc comment says it means - false
+        // would make the workflow warn that a cache had been lost.
+        var result = new RunResult(ExitCode: 0, StoppedOnBudget: false, Deployable: false, CacheSaved: true);
+        await WriteOutputsAsync(result);
+        return result;
+    }
+
+    /// <summary>The keys that more than one row carries, each with the label of every row carrying it.</summary>
+    private static Dictionary<string, List<string>> SharedKeys(IEnumerable<(string Key, string Label)> rows)
+        => rows.GroupBy(r => r.Key, StringComparer.Ordinal)
+               .Where(g => g.Count() > 1)
+               .ToDictionary(g => g.Key, g => g.Select(r => r.Label).ToList(), StringComparer.Ordinal);
+
+    /// <summary>
+    /// The keys no store entry can use to correct one row, said plainly, with every row that carries each.
+    /// Silent when there are none.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>This is the point of the flag, not a footnote to it.</b> An entry is bound by key
+    /// (<c>StoreBinder</c>) and applied by key (<c>MoviePipeline</c>, <c>TvPipeline</c> look their row's key up
+    /// in <c>BoundStore</c>), so an entry written against a key that two rows carry is applied to BOTH of them.
+    /// Printing such a key unmarked would send its owner to write an entry that cannot do what he means, and
+    /// nothing downstream would tell him: the entry binds, no note is produced, and both rows change together.
+    /// </para>
+    /// <para><b>No fix is offered because Phase 1 has none.</b> The key is a pure function of the folded title,
+    /// the runtime and the folded directors, and the file addresses a row by nothing else. The owner's own
+    /// library has such a pair - the two cuts of Blade Runner, which fold to one title, truncate to the same 117
+    /// minutes and share a director (<c>IdentityKeyRealLibraryTests</c>).</para>
+    /// </remarks>
+    private void SayShared(Dictionary<string, List<string>> shared, string tab, string noun, string plural)
+    {
+        if (shared.Count == 0) return;
+
+        Say("");
+        Say($"WARNING: {shared.Count} identity key(s) on the {tab} are carried by more than one {noun}.");
+        Say($"A record store entry names its {noun} by that key and is applied to EVERY {noun} the key names, so");
+        Say($"an entry on a shared key corrects all the {plural} listed under it and can never correct one of them");
+        Say("on its own. Nothing you can write in record-store.json separates them.");
+
+        foreach (var (key, labels) in shared.OrderBy(e => e.Key, StringComparer.Ordinal))
+        {
+            Say("");
+            Say($"  {key}  is carried by {labels.Count} {plural}:");
+            foreach (var label in labels) Say($"    {label}");
+        }
     }
 
     private async Task<RunResult> RunAgainstTmdbAsync(

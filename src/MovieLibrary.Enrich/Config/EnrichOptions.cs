@@ -22,21 +22,29 @@ namespace MovieLibrary.Enrich.Config;
 /// repository root, so the default is the file beside the solution. An absent file is an empty store, which is
 /// the normal state of a fresh clone. A path, never a secret.
 /// </param>
+/// <param name="PrintKeys">
+/// <c>--print-keys</c>: print the identity key of every row on the sheet and stop. A diagnostic about the
+/// SHEET, not a run - it makes no TMDB request, needs no token, reads no record store and publishes nothing.
+/// It exists because an entry in <c>record-store.json</c> names its row by a 40-character SHA-1 that a human
+/// cannot compute, so without it hand-editing the file means guessing a key.
+/// </param>
 public sealed record EnrichOptions(
     string SheetId, [property: JsonIgnore] string Token, int MaxRequests,
     string CacheRoot, string OutputRoot, bool Fixtures, bool ForceRefresh,
-    string StoreFile = RecordStoreReader.DefaultFileName)
+    string StoreFile = RecordStoreReader.DefaultFileName, bool PrintKeys = false)
 {
     public const string DefaultSheetId = "1gkDwOi5-Gvm48WkYz8noYUb5i6QjfQSDLpEDYV5QlHk";
 
     public override string ToString()
         => $"EnrichOptions {{ SheetId = {SheetId}, Token = {(Token.Length == 0 ? "<none>" : "<redacted>")}, " +
            $"MaxRequests = {MaxRequests}, CacheRoot = {CacheRoot}, OutputRoot = {OutputRoot}, " +
-           $"Fixtures = {Fixtures}, ForceRefresh = {ForceRefresh}, StoreFile = {StoreFile} }}";
+           $"Fixtures = {Fixtures}, ForceRefresh = {ForceRefresh}, StoreFile = {StoreFile}, " +
+           $"PrintKeys = {PrintKeys} }}";
 
     public static EnrichOptions Load(string[] args, IDictionary<string, string> env)
     {
         var fixtures = Switch(args, "--fixtures") ?? false;
+        var printKeys = Switch(args, "--print-keys") ?? false;
         var force = Switch(args, "--force-refresh")
                     ?? (Get(env, "FORCE_REFRESH") is { } refresh && Truth(refresh.Trim(), "FORCE_REFRESH"));
 
@@ -67,14 +75,17 @@ public sealed record EnrichOptions(
 
         return new EnrichOptions(
             SheetId: Flag(args, "--sheet-id") ?? Get(env, "SHEET_ID") ?? DefaultSheetId,
-            Token: fixtures ? string.Empty : CleanToken(Get(env, "TMDB_TOKEN")),
+            // A print-keys run is held to the same rule as a fixture run: it cannot authenticate a request,
+            // whatever is in the environment, because it is not allowed to make one.
+            Token: fixtures || printKeys ? string.Empty : CleanToken(Get(env, "TMDB_TOKEN")),
             MaxRequests: requests,
             CacheRoot: Flag(args, "--cache") ?? "enrich-cache",
             OutputRoot: Flag(args, "--out")
                         ?? (fixtures ? "dev-data" : "src/MovieLibrary.Web/wwwroot/data"),
             Fixtures: fixtures,
             ForceRefresh: force,
-            StoreFile: Flag(args, "--store") ?? RecordStoreReader.DefaultFileName);
+            StoreFile: Flag(args, "--store") ?? RecordStoreReader.DefaultFileName,
+            PrintKeys: printKeys);
     }
 
     /// <summary>

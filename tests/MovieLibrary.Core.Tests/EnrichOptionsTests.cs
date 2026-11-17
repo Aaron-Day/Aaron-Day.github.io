@@ -553,4 +553,52 @@ public class EnrichOptionsTests : IDisposable
 
         Assert.Equal("v", values[key.ToLowerInvariant()]);
     }
+
+    // ---- --print-keys: a diagnostic that must never be able to spend a request --------------
+
+    [Fact]
+    public void PrintKeysIsOffUnlessItIsAskedFor()
+    {
+        Assert.False(Load([]).PrintKeys);
+        Assert.False(Load(["--fixtures"]).PrintKeys);
+    }
+
+    [Theory]
+    [InlineData("--print-keys")]
+    [InlineData("--print-keys=true")]
+    [InlineData("--print-keys=TRUE")]
+    public void BothSpellingsOfPrintKeysAreAPrintKeysRun(string arg)
+    {
+        var o = Load([arg], ("TMDB_TOKEN", "eyJ.a.b"));
+
+        Assert.True(o.PrintKeys);
+        // The same rule as --fixtures: a run that is not allowed to make a request may not carry the
+        // credential for one either. A near-miss on this flag's spelling is otherwise a plausible way to
+        // spend the owner's budget while expecting to spend none.
+        Assert.Equal(string.Empty, o.Token);
+    }
+
+    [Fact]
+    public void TheEqualsFalseSpellingOfPrintKeysIsAnOrdinaryRun()
+    {
+        var o = Load(["--print-keys=false"], ("TMDB_TOKEN", "eyJ.a.b"));
+
+        Assert.False(o.PrintKeys);
+        Assert.Equal("eyJ.a.b", o.Token);
+    }
+
+    [Fact]
+    public void APrintKeysRunStillWritesNothingToTheDeployedDataFolderBecauseItWritesNothingAtAll()
+    {
+        // It is NOT --fixtures, so OutputRoot keeps its real value; EnrichRun returns before anything is
+        // written, which is where that is enforced (EnrichRunPrintKeysTests).
+        var o = Load(["--print-keys"]);
+
+        Assert.Equal("src/MovieLibrary.Web/wwwroot/data", o.OutputRoot);
+        Assert.False(o.Fixtures);
+    }
+
+    [Fact]
+    public void ToStringSaysWhetherThisIsAPrintKeysRun()
+        => Assert.Contains("PrintKeys = True", Load(["--print-keys"]).ToString(), StringComparison.Ordinal);
 }
