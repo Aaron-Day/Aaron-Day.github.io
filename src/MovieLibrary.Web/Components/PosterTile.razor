@@ -48,6 +48,43 @@
         {
             <span class="tile-year">@year</span>
         }
+
+        @* RUNTIME AND RATING, both INSIDE .tile-body and never siblings of it. PosterTileTests pins
+           ".tile > *" at one child for a confident record, and this is caption text, so the caption is
+           where it belongs.
+
+           PART B CONSEQUENCE, recorded now rather than discovered later: .tile-body becomes one anchor to
+           movies/{K}, so these two join the link's accessible name -- "Se7en 1995 1h 50m 8.4/10, link",
+           read on each of 60 tiles. That is the reason both stay terse, and the reason nothing further is
+           added here without weighing it again.
+
+           Runtime is a duration and so is never N0, exactly as a year is never N0 above. Only the grid
+           head's total is formatted.
+
+           THE RATING IS GUARDED, AND THE GUARD IS THE WHOLE POINT. Vote is 0d on every unmatched record --
+           30 of the 1,488 published -- and those are precisely the records this page exists to surface.
+           Rendering "0.0" would state as a fact that a film nobody looked up scored zero. So it is absent
+           rather than blank below zero, the same way .tile-year is absent when Y is null. A matched film
+           TMDB has not rated is the same shape and is covered by the same guard. Runtime needs no guard:
+           no published film has rt <= 0, and RuntimeParser rejects what it cannot read.
+
+           "/10" IS VISIBLE TEXT, not an attribute. A bare "8.4" leaves its meaning to position alone
+           (SC 1.3.1), and title= and aria-label are both banned on this tile by StandingAuditTests and
+           PosterTileTests. No star glyph either: a screen reader reads a star as "black star", and a
+           part-filled one puts the value in a graphic with no text equivalent (SC 1.1.1).
+
+           NO SEPARATOR CHARACTER IN THE DOM. The gap between the two is a flex gap; a middot is read
+           inconsistently, and moving it into ::before does not hide it from the accessibility tree.
+
+           NOT InvariantCulture. Movies.razor records what forcing it cost once already; a de-DE reader
+           reads "8,4". *@
+        <span class="tile-meta">
+            <span class="tile-runtime">@FormatRuntime(Movie.Rt)</span>
+            @if (Movie.Vote > 0d)
+            {
+                <span class="tile-rating">@Movie.Vote.ToString("0.0")/10</span>
+            }
+        </span>
     </div>
 
     @* THE CONFIDENCE BADGE, in the slot the comment above reserved for it: a sibling of .tile-body, so it
@@ -101,4 +138,22 @@
     /// for it and the badge is not rendered at all.
     /// </remarks>
     private static string VariantClass(Confidence band) => "badge-" + band.ToString().ToLowerInvariant();
+
+    /// <summary>
+    /// A runtime as hours and minutes: "1h 50m", "50m", and "2h" on the exact hour rather than "2h 0m".
+    /// </summary>
+    /// <remarks>
+    /// Interpolated, so never N0 -- a 1,353 minute boxed set reads "22h 33m" and never "1,353". The unit
+    /// letters are deliberate: "1h 50m" is what every library UI shows, and SC 3.1.4 Abbreviations is
+    /// Level AAA, so it conforms at the level this project is held to.
+    /// </remarks>
+    private static string FormatRuntime(int minutes)
+    {
+        var hours = minutes / 60;
+        var rest = minutes % 60;
+
+        if (hours == 0) return $"{rest}m";
+
+        return rest == 0 ? $"{hours}h" : $"{hours}h {rest}m";
+    }
 }

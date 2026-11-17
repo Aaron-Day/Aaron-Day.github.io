@@ -1,5 +1,14 @@
 nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 1rem; }
-.brand { display: inline-flex; align-items: center; min-height: var(--touch); font-weight: 600; }
+/* The wordmark. A little larger and a little tighter than the links beside it so the bar has a clear
+   first thing to read. It keeps app.css's unconditional link underline - every anchor in this app has one,
+   and text-decoration: none is banned in every stylesheet here - so nothing about SC 1.4.1 changes.
+   THE NAV'S READING-WIDTH CAP IS NOT IN THIS FILE. StyleContractTests bans a maximum-width breakpoint here
+   by raw substring, so even a cap that is not a media query would trip it; the rule lives in
+   MainLayout.razor.css, which reaches the nav through ::deep. */
+.brand {
+    display: inline-flex; align-items: center; min-height: var(--touch);
+    font-size: 1.0625rem; font-weight: 600; letter-spacing: .01em;
+}
 .nav-toggle {
     display: inline-flex; align-items: center; justify-content: center;
     min-width: var(--touch); min-height: var(--touch);

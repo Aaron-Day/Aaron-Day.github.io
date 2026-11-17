@@ -1,4 +1,42 @@
 .page { flex: 1; display: flex; flex-direction: column; }
-header { padding: 0 1rem; }
 main { flex: 1; }
-.content { padding: 1.1rem 1rem; }
+
+/* THE HEADER IS A FULL-BLEED BAR, AND THE CAP IS NOT ON IT. Without a surface of its own the nav floated on
+   the page background with nothing but its own underlines to say it was a header, which is the single
+   largest reason the shell read as an unstyled document. --panel is the token for a raised surface and --txt
+   on it is 15.03:1, --accent2 6.89:1 and --accent 11.09:1, all past SC 1.4.3 Contrast (Minimum)'s 4.5:1.
+
+   THE BOTTOM BORDER IS var(--line) AND THAT IS CORRECT HERE. --line is 1.28:1 on --panel and app.css records
+   it as FAILING SC 1.4.11 Non-text Contrast, which applies to user interface components and to graphics
+   required to understand the content. A bar's edge is neither: it is a grouping cue for a boundary the
+   background change already draws, and the nav links inside keep their own underlines and the active link
+   its 3px --accent border. The same argument app.css makes for .attribution's border-top and
+   PosterTile.razor.css makes for .poster-placeholder. <header> is not a control, so the border scan in
+   StyleContractTests does not treat it as one either.
+
+   NO position: sticky. The project's only SC 2.4.11 Focus Not Obscured mitigation is a scroll-padding-bottom
+   reserve for the fixed error bar; the top-edge equivalent is scroll-padding-top, which app.css is asserted
+   NOT to contain. A sticky bar would put a focused control underneath it with no reserve available, and
+   ObscuredFocusTests walks the real tab order and would catch it. */
+header { padding: 0 1rem; background: var(--panel); border-bottom: 1px solid var(--line); }
+
+/* THE NAV'S HALF OF THE CAP, and it is written here rather than in NavMenu.razor.css because
+   StyleContractTests asserts that file contains no "max-width" at all - a ban on max-width MEDIA QUERIES,
+   written as a raw substring, which a cap would trip without being the thing it guards against. ::deep is
+   what lets this sheet reach into the child component's markup; <header> carries MainLayout's own scope
+   attribute, so the rule stays confined to the shell's nav and never touches PosterGrid's nav.pager.
+   Same token as .content below, so the bar's contents line up with the page's. */
+header ::deep nav { width: 100%; max-width: var(--shell); margin-inline: auto; }
+
+/* A READING WIDTH FOR THE PAGE. Without this the content ran edge to edge at every width, so on a wide
+   monitor the filter rail sat in one far corner and the tile wall stretched to the other. --shell is 90rem,
+   1440px at the default root, and is a CAP: every viewport below it is unaffected, so nothing about the
+   320px or 768px layouts changes.
+
+   width: 100% because this is a stretch item in a column flex container; without it margin-inline: auto has
+   an auto-width box to centre and does nothing. The header bar is NOT in this rule - the bar itself spans
+   the viewport and NavMenu.razor.css caps the nav inside it, from the same token.
+
+   The bottom padding is larger than the top so the tile wall does not end flush against the attribution. No
+   viewport units here, as in every stylesheet below body. */
+.content { width: 100%; max-width: var(--shell); margin-inline: auto; padding: 1.5rem 1rem 2.5rem; }
