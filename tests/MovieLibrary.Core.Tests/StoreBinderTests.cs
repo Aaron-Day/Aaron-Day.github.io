@@ -1,5 +1,6 @@
 using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Models;
+using MovieLibrary.Core.Parsing;
 using MovieLibrary.Core.Store;
 using MovieLibrary.Core.Text;
 using MovieLibrary.Enrich.Store;
@@ -510,17 +511,40 @@ public class StoreBinderTests
         Assert.Equal(2316, Assert.Contains(SeriesKey("The Office"), bound.Series).Record.TmdbId);
     }
 
+    /// <summary>
+    /// A DRIFTED key at or below zero minutes is never hashed, so no entry reaches a row through one. Such a
+    /// key is some other row's OWN key: a 1-minute row hashed at offset -1 would take an entry written
+    /// against a 0-minute row, which is a different film on a different line of the sheet.
+    /// </summary>
     [Theory]
     [InlineData("0:01:00", 0)]
     [InlineData("0:01:00", -1)]
-    [InlineData("0:00:30", 0)]
-    public void ARuntimeAtOrBelowZeroIsNeverHashedSoNoEntryBindsToIt(string rowRuntime, int entryMinutes)
+    public void ADriftedRuntimeAtOrBelowZeroIsNeverHashedSoNoEntryBindsThroughIt(string rowRuntime, int entryMinutes)
     {
         var bound = StoreBinder.Bind(
             Films(Entry(FilmKey("Se7en", entryMinutes), "Se7en", 1)), [Film("Se7en", rowRuntime)], []);
 
         Assert.Empty(bound.Films);
         Assert.Contains("matches no film", Assert.Single(bound.Notes), StringComparison.OrdinalIgnoreCase);
+    }
+
+    /// <summary>
+    /// A row whose runtime truncates to 0 minutes is still a row, and its own key is the only key anything
+    /// downstream has for it: <c>MoviePipeline</c> looks its store entry up under
+    /// <c>IdentityKey.ForFilm(title, 0, directors)</c>. The offset-0 hash is that key, so it is indexed
+    /// however short the row is -- otherwise this is the one row on the sheet no entry can ever correct, and
+    /// <c>--print-keys</c> prints its key for pasting all the same.
+    /// </summary>
+    [Fact]
+    public void ARowWhoseRuntimeTruncatesToZeroBindsOnItsOwnKey()
+    {
+        var key = FilmKey("Se7en", 0);
+
+        var bound = StoreBinder.Bind(Films(Entry(key, "Se7en", 1)), [Film("Se7en", "0:00:30")], []);
+
+        Assert.Equal(0, RuntimeParser.FilmMinutes("0:00:30"));   // the premise, not an assumption
+        Assert.Equal(1, Assert.Contains(key, bound.Films).Records.Single().TmdbId);
+        Assert.Empty(bound.Notes);
     }
 
     [Fact]

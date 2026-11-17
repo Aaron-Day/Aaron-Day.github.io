@@ -1,5 +1,8 @@
 using MovieLibrary.Core.Identity;
+using MovieLibrary.Core.Models;
+using MovieLibrary.Core.Store;
 using MovieLibrary.Core.Text;
+using MovieLibrary.Enrich.Store;
 
 namespace MovieLibrary.Core.Tests;
 
@@ -169,6 +172,38 @@ public class EnrichRunPrintKeysTests
         Assert.Contains(IdentityKey.ForSeriesName("The Office"), printed, StringComparison.Ordinal);
         Assert.DoesNotContain("[shared key]", printed, StringComparison.Ordinal);
         Assert.DoesNotContain("WARNING", printed, StringComparison.Ordinal);
+    }
+
+    /// <summary>
+    /// Every key this listing prints has to be one an entry can actually be written against. A row whose
+    /// runtime truncates to 0 minutes (<c>0:00:30</c>) was the exception: the key printed for it was real --
+    /// it is the key <c>MoviePipeline</c> looks the row's entry up under -- but <c>StoreBinder.IndexRows</c>
+    /// skipped every offset whose runtime was at or below zero, offset 0 among them, so nothing could ever be
+    /// filed under it and a pasted entry came back as "matches no film on the Movies tab".
+    /// </summary>
+    [Fact]
+    public async Task TheKeyPrintedForARowWhoseRuntimeTruncatesToZeroIsOneAnEntryCanBind()
+    {
+        using var h = new RunHarness();
+        h.MoviesCsv = RunLibrary.Movies(("Blink", "0:00:30", "Hettie Macdonald", "Sci-Fi"));
+        h.Options = h.Options with { PrintKeys = true, Token = "" };
+
+        var result = await h.RunAsync();
+
+        var printed = Lines(h.Out.ToString()).Single(l => l.StartsWith("film   ", StringComparison.Ordinal));
+        var key = printed.Split("  ", StringSplitOptions.RemoveEmptyEntries)[1].Trim();
+        Assert.Equal(0, result.ExitCode);
+        Assert.Equal(FilmKey("Blink", 0, "Hettie Macdonald"), key);
+
+        // The listing's own promise, taken at its word: paste the key, and the entry binds.
+        var store = RecordStoreReader.Read(
+            "{ \"version\": 1, \"series\": [], \"films\": [ { \"identityKey\": \"" + key + "\", " +
+            "\"sheet\": { \"title\": \"Blink\" }, \"records\": [ { \"tmdbId\": 1 } ] } ] }",
+            "record-store.json");
+        var bound = StoreBinder.Bind(store, [new SheetRow("Blink", "0:00:30", "Hettie Macdonald", "", "Sci-Fi", "")], []);
+
+        Assert.Equal(1, Assert.Contains(key, bound.Films).Records.Single().TmdbId);
+        Assert.Empty(bound.Notes);
     }
 
     [Fact]

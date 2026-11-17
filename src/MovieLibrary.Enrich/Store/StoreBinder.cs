@@ -156,7 +156,14 @@ public static class StoreBinder
             foreach (var offset in RuntimeDrift.Offsets)
             {
                 var at = minutes + offset;
-                if (at <= 0) continue;   // a zero or negative runtime is not a film and never hashed as one
+
+                // Offset 0 is the row's OWN key, and that key exists whatever the runtime is: MoviePipeline
+                // looks a row's entry up under IdentityKey.ForFilm over FilmMinutes, which truncates 0:00:30
+                // to 0 minutes. Skipping it left such a row the one row on the sheet no entry could ever
+                // correct -- while --print-keys printed its key for pasting, unmarked. A DRIFTED key at or
+                // below zero is a different thing: it is some other row's own key, so a 1-minute row drifting
+                // to 0 would take an entry written against a 0-minute row. That one stays unhashed.
+                if (offset != 0 && at <= 0) continue;
 
                 var hash = offset == 0 ? rowKey : IdentityKey.ForFilm(title, at, directors);
 
