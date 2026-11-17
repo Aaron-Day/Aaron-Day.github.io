@@ -206,6 +206,43 @@ public class EnrichRunPrintKeysTests
         Assert.Empty(bound.Notes);
     }
 
+    /// <summary>
+    /// <c>TvPipeline.RunAsync</c> reports "{n} row(s) have no series name and were skipped" in the review
+    /// queue. The listing filtered the same rows out and said nothing, so a block of malformed Shows rows was
+    /// invisible in the one diagnostic built to show the owner his sheet: a short listing reads as a short
+    /// Shows tab.
+    /// </summary>
+    [Fact]
+    public async Task ShowsRowsWithNoSeriesNameAreCountedRatherThanJustDropped()
+    {
+        using var h = new RunHarness();
+        h.ShowsCsv = RunLibrary.Shows(
+            ("Season 1, Episode 1: Pilot", "The Office", "Comedy"),
+            ("Season 1, Episode 2: Diversity Day", "", "Comedy"),
+            ("Season 1, Episode 3: Health Care", "   ", "Comedy"));
+        h.Options = h.Options with { PrintKeys = true, Token = "" };
+
+        var result = await h.RunAsync();
+
+        var printed = h.Out.ToString();
+        Assert.Equal(0, result.ExitCode);
+        // The good row is listed, so the count below is about the other two and not about a failed read.
+        Assert.Contains(IdentityKey.ForSeriesName("The Office"), printed, StringComparison.Ordinal);
+        Assert.Single(Lines(printed), l => l.StartsWith("series ", StringComparison.Ordinal));
+        Assert.Contains("2 row(s) have no series name and were skipped", printed, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public async Task AShowsTabWithNoBlankRowsSaysNothingAboutSkippedOnes()
+    {
+        using var h = Library();
+
+        await h.RunAsync();
+
+        Assert.Contains(IdentityKey.ForSeriesName("The Office"), h.Out.ToString(), StringComparison.Ordinal);
+        Assert.DoesNotContain("were skipped", h.Out.ToString(), StringComparison.Ordinal);
+    }
+
     [Fact]
     public async Task TwoSeriesNamesThatFoldToOneKeyAreNamedTheSameWay()
     {

@@ -326,6 +326,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
 
         SayShared(sharedFilms, "Movies tab", "row", "rows");
         SayShared(sharedSeries, "Shows tab", "series name", "series names");
+        SaySkippedShowRows(showRows);
 
         // Nothing was built, so nothing is deployable. CacheSaved is true because the cache was never loaded and
         // so there was nothing worth saving, which is what that flag's own doc comment says it means - false
@@ -373,6 +374,28 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
             Say($"  {key}  is carried by {labels.Count} {plural}:");
             foreach (var label in labels) Say($"    {label}");
         }
+    }
+
+    /// <summary>
+    /// The Shows rows this listing has no key for, counted exactly as <c>TvPipeline.RunAsync</c> counts them.
+    /// Silent when there are none.
+    /// </summary>
+    /// <remarks>
+    /// The series projection above drops a row with a blank Series cell, because a series key is a function
+    /// of the name and such a row has no name. Saying nothing made a block of malformed rows invisible in the
+    /// one diagnostic built to show the owner his sheet: a short listing reads as a short Shows tab. A real
+    /// run tells him (<c>TvPipeline</c> puts the same count in the review queue), so a run that spends
+    /// nothing has no excuse not to.
+    /// </remarks>
+    private void SaySkippedShowRows(IReadOnlyList<SheetRow> showRows)
+    {
+        var blank = showRows.Count(r => string.IsNullOrWhiteSpace(r.Series));
+        if (blank == 0) return;
+
+        Say("");
+        Say($"NOTE: {blank} row(s) have no series name and were skipped, so this listing has no key for");
+        Say("them. A series is keyed on its name and these rows have none. A real run reports the same");
+        Say("count in the review queue.");
     }
 
     private async Task<RunResult> RunAgainstTmdbAsync(
