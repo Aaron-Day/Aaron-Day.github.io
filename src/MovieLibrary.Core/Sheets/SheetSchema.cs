@@ -10,29 +10,11 @@ public static class SheetSchema
     public static IReadOnlyList<string> Shows { get; } =
         ["Title", "Runtime", "Series", "PurchaseInfo", "Genre"];
 
-    public static IReadOnlyList<string> Overrides { get; } =
-        ["Title", "Runtime", "TmdbId", "Note"];
-
     // Trim() does not strip U+FEFF, so a BOM on the first header cell would abort every import.
     private static string Clean(string cell) => cell.Trim().TrimStart('\uFEFF').Trim();
 
     private static bool Same(string expected, string actual)
         => string.Equals(expected, Clean(actual), StringComparison.OrdinalIgnoreCase);
-
-    /// <summary>
-    /// Whether <paramref name="actualHeader"/> is this tab's own header, by exactly the rules of
-    /// <see cref="Validate"/>, without an exception per miss. For a caller that expects to be told "no": telling
-    /// a tab from the first sheet Google falls back to is a miss on a normal run, not an error.
-    /// </summary>
-    public static bool Matches(IReadOnlyList<string> expected, string[] actualHeader)
-    {
-        if (actualHeader.Length < expected.Count) return false;
-
-        for (var i = 0; i < expected.Count; i++)
-            if (!Same(expected[i], actualHeader[i])) return false;
-
-        return true;
-    }
 
     /// <summary>
     /// Expected headers must appear as a prefix of the actual row; trailing

@@ -41,10 +41,11 @@ public sealed record StoredSeason(DateTimeOffset FetchedUtc, TmdbSeason? Season)
 /// <para><b>Order.</b> Series run in name order (ordinal) so a budgeted run resumes the same way every time.
 /// Nothing depends on the order of the Sheet rows, which Apple does not keep stable: a series' name is its most
 /// common spelling in the Sheet and its genre its most common genre, ties broken ordinally.</para>
-/// <para><b>Overrides.</b> A series whose <see cref="OverrideKey"/> is in the overrides map takes that TMDB id
-/// without a search, is <c>Mc</c> 1.0 (a human confirmed it, the only way to earn that unchecked) and gets no
-/// review line. Only its details (one request, by id) and seasons are fetched. An override beats a cached
-/// guess, and is not written to the index.</para>
+/// <para><b>The record store.</b> A series with a store entry asserting a TMDB id takes that id without a
+/// search, is <c>Mc</c> 1.0 (a human confirmed it, the only way to earn that unchecked) and gets no review line.
+/// Only its details (one request, by id) and seasons are fetched. A forced id beats a cached guess, and is not
+/// written to the index. An entry may instead withhold the id and offer candidates, or set the display title,
+/// sort title and extras. It can never change the slug.</para>
 /// <para><b>Is it the right show?</b> TMDB's first search result is only a guess. The search carries the Sheet
 /// name's trailing year as <c>first_air_date_year</c>, and the result's name is folded and compared with the
 /// Sheet's. An exact match is <c>Mc</c> 1.0; any other name is 0.5 and goes to the review queue naming both
@@ -88,8 +89,6 @@ public sealed record StoredSeason(DateTimeOffset FetchedUtc, TmdbSeason? Season)
 public sealed class TvPipeline(
     TmdbClient tmdb, CacheStore cache, Func<DateTimeOffset> clock, IProgress<PassProgress>? progress = null)
 {
-    private static readonly IReadOnlyDictionary<string, int> NoOverrides = new Dictionary<string, int>();
-
     /// <summary>
     /// A series has no directors, so it is cached with none and looked up with none. <see cref="CacheStore.Resolve"/>
     /// never aliases a row that has none: a series key is a pure function of its name, so there is no second entry to
@@ -99,20 +98,15 @@ public sealed class TvPipeline(
     private const string NoDirectors = "";
 
     public Task<TvPipelineResult> RunAsync(IReadOnlyList<SheetRow> rows, CancellationToken ct)
-        => RunAsync(rows, NoOverrides, BoundStore.Empty, ct);
+        => RunAsync(rows, BoundStore.Empty, ct);
 
-    /// <param name="seriesOverrides">
-    /// TMDB ids a human has confirmed, keyed by <see cref="OverrideKey"/>. An overridden series is never
-    /// searched, takes the id as given, and is <c>Mc</c> 1.0 with no review line.
-    /// </param>
     /// <param name="bound">
     /// The record store, bound to these rows. An entry is looked up under the key <c>ResolveSeriesAsync</c>
     /// computes (the series name with its year folded back in), and can assert or withhold the TMDB id and set
     /// the display title, sort title and extras. It can never change the slug.
     /// </param>
     public async Task<TvPipelineResult> RunAsync(
-        IReadOnlyList<SheetRow> rows, IReadOnlyDictionary<string, int> seriesOverrides, BoundStore bound,
-        CancellationToken ct)
+        IReadOnlyList<SheetRow> rows, BoundStore bound, CancellationToken ct)
     {
         var now = clock();
         var review = new List<string>();
@@ -141,7 +135,7 @@ public sealed class TvPipeline(
             ct.ThrowIfCancellationRequested();
 
             var owned = group.Select(r => EpisodeTitleParser.Parse(r.Title)).ToList();
-            var series = await ResolveSeriesAsync(name, seriesOverrides, bound, now, ct);
+            var series = await ResolveSeriesAsync(name, bound, now, ct);
             foreach (var note in series.Notes) review.Add($"{name} → {note}");
 
             var loaded = series is { Id: { } id, Details: { } details }
@@ -175,11 +169,10 @@ public sealed class TvPipeline(
     }
 
     /// <summary>
-    /// The key a series is looked up under in the overrides map and in the cache: the folded name with a
-    /// trailing year folded back in, so <c>X</c> and <c>X (2020)</c> are different series.
+    /// The folded name a series is cached under and the record store binds an entry by: the folded name with a
+    /// trailing year folded back in, so <c>X</c> and <c>X (2020)</c> are different series. The one definition of
+    /// the rule lives in <see cref="IdentityKey.SeriesKeyValue"/>, which the store's binder calls too.
     /// </summary>
-    public static string OverrideKey(string seriesName) => KeyOf(TitleNormalizer.Normalize(seriesName));
-
     internal static string KeyOf(NormalizedTitle title) => IdentityKey.SeriesKeyValue(title);
 
     private static void EnsureSlugsAreUsable(IEnumerable<(string Name, string Slug)> series)
@@ -246,8 +239,7 @@ public sealed class TvPipeline(
     /// review notes for a human to look at.
     /// </summary>
     private async Task<SeriesLookup> ResolveSeriesAsync(
-        string name, IReadOnlyDictionary<string, int> overrides, BoundStore bound, DateTimeOffset now,
-        CancellationToken ct)
+        string name, BoundStore bound, DateTimeOffset now, CancellationToken ct)
     {
         var title = TitleNormalizer.Normalize(name);
 
@@ -257,8 +249,9 @@ public sealed class TvPipeline(
 
         var key = IdentityKey.ForSeries(keyed);
 
-        // The record store comes first, ahead of the Overrides tab: it is the authoritative one. The key is the
-        // one computed above, which folds a trailing year back in; the binder keys entries the same way.
+        // The record store is the only way a series' id is forced: it comes ahead of the cache and the search.
+        // The key is the one computed above, which folds a trailing year back in; the binder keys entries the same
+        // way, so an entry cannot be filed one way and looked up another.
         if (bound.Series.TryGetValue(key, out var entry))
         {
             if (entry.Record.TmdbId is { } asserted) return await ResolveOverrideAsync(asserted, now, ct);
@@ -268,9 +261,6 @@ public sealed class TvPipeline(
                     [$"record store: {candidates.Length.ToString(CultureInfo.InvariantCulture)} candidate(s), " +
                      "none chosen: " + string.Join(", ", candidates.Select(c => c.ToString(CultureInfo.InvariantCulture)))]);
         }
-
-        // A human-confirmed id beats the search and the cache alike, and is never second-guessed.
-        if (overrides.TryGetValue(keyed.Value, out var forcedId)) return await ResolveOverrideAsync(forcedId, now, ct);
 
         var hit = cache.Resolve(key, keyed.Value, 0, NoDirectors, now);
 
@@ -334,9 +324,9 @@ public sealed class TvPipeline(
     }
 
     /// <summary>
-    /// An overridden series: the id is a human's, so it is not searched for, not cached in the index and
-    /// not judged (<c>Mc</c> 1.0, no review line). Its details are still needed for the poster and the season
-    /// count, by id, on the same stamped payload as any other series.
+    /// A series whose id the record store forces: the id is a human's, so it is not searched for, not cached in
+    /// the index and not judged (<c>Mc</c> 1.0, no review line). Its details are still needed for the poster and
+    /// the season count, by id, on the same stamped payload as any other series.
     /// </summary>
     private async Task<SeriesLookup> ResolveOverrideAsync(int id, DateTimeOffset now, CancellationToken ct)
     {

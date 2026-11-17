@@ -23,7 +23,7 @@ public sealed record MoviePipelineResult(
 
 /// <summary>
 /// A film's TMDB details as stored in <c>movies/{id}.json</c>, stamped with when they were fetched so a
-/// payload ages out on its own clock. The index entry cannot stand in for it: an override has none, and a
+/// payload ages out on its own clock. The index entry cannot stand in for it: a store-forced id has none, and a
 /// payload can outlive the entry that first pointed at it. <c>Movie.Genres</c> and <see cref="Cast"/> are kept here
 /// because nothing else retains them: <c>Cast == null</c> means "never recorded" (fetched when a request can be spared),
 /// while an empty list means TMDB has none.
@@ -32,7 +32,7 @@ public sealed record StoredMovie(
     DateTimeOffset FetchedUtc, TmdbMovie? Movie, IReadOnlyList<TmdbCastMember>? Cast = null);
 
 /// <summary>
-/// Resolves every sheet row to a <see cref="MovieRecord"/>: override first, then the cache, then a TMDB
+/// Resolves every sheet row to a <see cref="MovieRecord"/>: the record store first, then the cache, then a TMDB
 /// search. Every row is emitted, matched or not. An unmatched film comes from sheet data alone with
 /// <c>I == 0</c> and <c>Mc == 0</c>; dropping it would silently under-report the library.
 /// </summary>
@@ -40,9 +40,11 @@ public sealed record StoredMovie(
 /// <para><b>Sequential.</b> <see cref="CacheStore"/> is not thread-safe and <c>Resolve</c> mutates it on an alias hit.</para>
 /// <para><b>Order.</b> Rows run in folded-title order (ordinal), not sheet order, so a budgeted run is resumed the
 /// same way every time. <see cref="MoviePipelineResult.Records"/> comes out in that order too.</para>
-/// <para><b>Overrides.</b> A film whose <see cref="OverrideKey"/> (folded title, year, runtime minutes) is in the overrides
-/// map takes that TMDB id without a search, at <c>Mc</c> 1.0. The key is not the folded title alone: films share titles
-/// (remakes, editions, re-releases), and a title-only key retargets every one of them at once.</para>
+/// <para><b>The record store.</b> A film whose row has a store entry asserting a TMDB id takes that id without a
+/// search, at <c>Mc</c> 1.0, and no later rule may withdraw it. Entries bind by the row's identity key
+/// (<see cref="IdentityKey.ForFilm"/>: folded title, runtime minutes, folded directors), which is what keeps one
+/// correction off the other cuts of a film that shares its title. An entry may also withhold the id and offer
+/// candidates, or correct published fields without touching the match at all. See <see cref="BoundStore"/>.</para>
 /// <para><b>Cost.</b> An uncached film costs one search, one details call for each of the first
 /// <see cref="DetailFloor"/> candidates in the order <c>Rank</c> puts them, and one credits call for each of those
 /// whose runtime is within tolerance plus every one named like the film (when none agrees and none is named, the
@@ -50,7 +52,7 @@ public sealed record StoredMovie(
 /// <see cref="DetailCeiling"/> candidates, which is the only way the right film is found when it is neither
 /// popular nor named exactly as the sheet names it, and costs up to about 21. The matched film's details
 /// and its credits (genres, top-billed cast) are reused for its record, not refetched: the cast comes out of the same
-/// credits response that gave the directors. A payload past its refresh window, and a film named by an override,
+/// credits response that gave the directors. A payload past its refresh window, and a film the store forces an id for,
 /// take details, genres and cast from one <c>append_to_response=credits</c> request.</para>
 /// <para><b>Budget.</b> A budget trip mid-row makes that row's lookup incomplete: an exhausted client's empty or
 /// partial answer is indistinguishable from "TMDB has no such film". The scored result is still used for this
@@ -93,27 +95,8 @@ public sealed class MoviePipeline(
     /// </summary>
     internal const int DetailCeiling = 10;
 
-    /// <summary>
-    /// The key a film is looked up under in the overrides map: its folded title with any trailing year, exactly as
-    /// <see cref="TvPipeline.OverrideKey"/> keys a series, then <c>|</c> and its runtime in whole minutes as
-    /// <see cref="RuntimeParser.FilmMinutes"/> reads it, so <c>Halloween (2018)</c> at 1:46:07 is <c>halloween 2018|106</c>.
-    /// </summary>
-    /// <remarks>
-    /// Neither the year nor the runtime is enough alone. <c>Overboard (1987)</c> and <c>Overboard (2018)</c> both run 112
-    /// minutes and only the year parts them; the two <c>Aladdin</c>s, <c>Dune</c>s and <c>Captain America</c> editions
-    /// carry no year and only the runtime does. The minutes are exact, with no tolerance window: a window of plus or minus
-    /// two would merge Captain America's 124 and 125 back into one key. The price is that a re-export which shifts a
-    /// runtime by a minute stops an override applying, which the Sheets client reports as a note.
-    /// </remarks>
-    public static string OverrideKey(string title, int runtimeMinutes)
-        => OverrideKey(TitleNormalizer.Normalize(title), runtimeMinutes);
-
-    internal static string OverrideKey(NormalizedTitle title, int runtimeMinutes)
-        => $"{TvPipeline.KeyOf(title)}|{runtimeMinutes.ToString(CultureInfo.InvariantCulture)}";
-
     public async Task<MoviePipelineResult> RunAsync(
         IReadOnlyList<SheetRow> rows,
-        IReadOnlyDictionary<string, int> overrides,
         BoundStore bound,
         CancellationToken ct)
     {
@@ -146,7 +129,7 @@ public sealed class MoviePipeline(
                 bound.Films.TryGetValue(key, out var entry) ? [.. entry.Records] : [null];
 
             for (var i = 0; i < wanted.Count; i++)
-                resolved.Add(await ResolveAsync(row, title, runtime, directors, key, wanted[i], i + 1, overrides, genreNames, now, ct));
+                resolved.Add(await ResolveAsync(row, title, runtime, directors, key, wanted[i], i + 1, genreNames, now, ct));
 
             // After the records, so the count still means rows FINISHED. An expanded row is one row.
             progress?.Report(new PassProgress { Done = ++done, Total = ordered.Count });
@@ -325,7 +308,7 @@ public sealed class MoviePipeline(
     /// <param name="position">The record's 1-based place in its store entry, 1 when there is none. It keeps unmatched records of one row apart.</param>
     private async Task<ResolvedFilm> ResolveAsync(
         SheetRow row, NormalizedTitle title, int sheetRuntime, string directors, string key,
-        RecordOverride? over, int position, IReadOnlyDictionary<string, int> overrides,
+        RecordOverride? over, int position,
         SortedDictionary<int, string> genreNames, DateTimeOffset now, CancellationToken ct)
     {
         int? tmdbId = null;
@@ -335,9 +318,8 @@ public sealed class MoviePipeline(
         string? reviewNote = null; // why a human should look at this row, when one should
         var fromOverride = false;  // the owner forced this id, which no later rule may withdraw
 
-        // The record store comes FIRST, ahead of the Overrides tab. The tab is empty and Task 7 deletes it, so
-        // the order is academic today -- but it is the store that is authoritative, and an ordering that said
-        // otherwise would be a trap for whoever reads this next.
+        // The record store is the only way an id is forced: it comes ahead of the cache and the search, and
+        // nothing later may withdraw it. The Overrides tab it replaced was retired in Task 7.
         if (over?.TmdbId is { } asserted)
         {
             tmdbId = asserted;
@@ -353,12 +335,6 @@ public sealed class MoviePipeline(
                 $"record store: {choices.Length.ToString(CultureInfo.InvariantCulture)} candidate(s), none chosen: " +
                 string.Join(", ", choices.Select(c => c.ToString(CultureInfo.InvariantCulture)));
         }
-        else if (overrides.TryGetValue(OverrideKey(title, sheetRuntime), out var forced))
-        {
-            tmdbId = forced;
-            confidence = 1d;
-            fromOverride = true;
-        }
         else if (cache.Resolve(key, title.Value, sheetRuntime, directors, now) is { } hit)
         {
             // On an alias hit this is the SOURCE entry, so its Key and RuntimeMinutes are not
@@ -367,7 +343,7 @@ public sealed class MoviePipeline(
             confidence = hit.Confidence;
 
             // A flagged match is still waiting for a human, so it must not drop out of the queue
-            // the moment it is cached. Accepted matches start at AcceptThreshold; overrides are 1.0.
+            // the moment it is cached. Accepted matches start at AcceptThreshold; a store-forced id is 1.0.
             if (tmdbId is null) reviewNote = "unmatched";
             else if (confidence < MatchScorer.AcceptThreshold)
                 reviewNote = Describe(MatchOutcome.Flagged, confidence, tmdbId);

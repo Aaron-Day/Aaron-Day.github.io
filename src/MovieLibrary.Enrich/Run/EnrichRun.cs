@@ -198,12 +198,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         // Everything below this line is a real run: the fixture branch above has already returned.
         RequireAFilmLibrary(movieRows);
 
-        // FetchOverridesAsync cannot see the sheet rows, so a second call adds a note for every override that matches
-        // none. Without it a drifted override says nothing: it simply stops applying.
-        var overrides = (await sheets.FetchOverridesAsync(options.SheetId, ct)).WithUnmatchedNotes(movieRows, showRows);
-        Say($"  {overrides.Films.Count} film overrides, {overrides.Series.Count} series overrides, {overrides.Notes.Count} notes");
-
-        return await RunAgainstTmdbAsync(movieRows, showRows, overrides, bound, ct);
+        return await RunAgainstTmdbAsync(movieRows, showRows, bound, ct);
     }
 
     /// <summary>
@@ -254,7 +249,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
     }
 
     private async Task<RunResult> RunAgainstTmdbAsync(
-        IReadOnlyList<SheetRow> movieRows, IReadOnlyList<SheetRow> showRows, SheetOverrides overrides, BoundStore bound, CancellationToken ct)
+        IReadOnlyList<SheetRow> movieRows, IReadOnlyList<SheetRow> showRows, BoundStore bound, CancellationToken ct)
     {
         var cache = new CacheStore(options.CacheRoot);
         var loaded = false;
@@ -270,7 +265,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
         var completed = false;
         try
         {
-            report = await PublishAsync(await EnrichAsync(cache, movieRows, showRows, overrides, bound, ct), ct);
+            report = await PublishAsync(await EnrichAsync(cache, movieRows, showRows, bound, ct), ct);
             completed = true;
         }
         finally
@@ -314,14 +309,14 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
 
     private async Task<Catalogue> EnrichAsync(
         CacheStore cache, IReadOnlyList<SheetRow> movieRows, IReadOnlyList<SheetRow> showRows,
-        SheetOverrides overrides, BoundStore bound, CancellationToken ct)
+        BoundStore bound, CancellationToken ct)
     {
         // Kept on the run as well as here: FailAsync reads its budget state, so a failure that follows a budget stop
         // reports the stop rather than denying it.
         var tmdb = _tmdb = new TmdbClient(
             services.TmdbHttp, options.Token, services.Limiter, new RequestBudget(options.MaxRequests), services.Now);
 
-        var (movieResult, tvResult) = await RunPipelinesAsync(tmdb, cache, movieRows, showRows, overrides, bound, ct);
+        var (movieResult, tvResult) = await RunPipelinesAsync(tmdb, cache, movieRows, showRows, bound, ct);
 
         return new Catalogue(
             movieResult.Records,
@@ -331,7 +326,7 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
             // mistake to fix - under one label each, and caps each one separately.
             new ReviewQueue
             {
-                OverrideNotes = [.. overrides.Notes, .. bound.Notes],
+                OverrideNotes = [.. bound.Notes],
                 Films = movieResult.ReviewQueue,
                 Series = tvResult.ReviewQueue,
             },
@@ -343,21 +338,21 @@ public sealed class EnrichRun(EnrichOptions options, RunServices services)
     }
 
     /// <summary>
-    /// The one place the two override maps are handed to their pipelines. <c>Films</c> and <c>Series</c> are both
-    /// <c>IReadOnlyDictionary&lt;string, int&gt;</c>, so exchanging them compiles and then applies no override at all, with
-    /// no error anywhere: a swap is a one-line fix here rather than a hunt.
+    /// The one place the bound record store is handed to its pipelines. Both take the same <see cref="BoundStore"/>,
+    /// and handing either of them <see cref="BoundStore.Empty"/> compiles and then applies nothing at all with no
+    /// error anywhere, so <c>EnrichRunStoreWiringTests</c> reads the published ids back to pin it.
     /// </summary>
     private async Task<(MoviePipelineResult Movies, TvPipelineResult Shows)> RunPipelinesAsync(
         TmdbClient tmdb, CacheStore cache, IReadOnlyList<SheetRow> movieRows, IReadOnlyList<SheetRow> showRows,
-        SheetOverrides overrides, BoundStore bound, CancellationToken ct)
+        BoundStore bound, CancellationToken ct)
     {
         _phase = Phase.Films;
         var movieResult = await new MoviePipeline(tmdb, cache, services.Now, Progress("films", FilmsPerProgressLine, tmdb))
-            .RunAsync(movieRows, overrides.Films, bound, ct);
+            .RunAsync(movieRows, bound, ct);
 
         _phase = Phase.Series;
         var tvResult = await new TvPipeline(tmdb, cache, services.Now, Progress("series", SeriesPerProgressLine, tmdb))
-            .RunAsync(showRows, overrides.Series, bound, ct);
+            .RunAsync(showRows, bound, ct);
 
         return (movieResult, tvResult);
     }
