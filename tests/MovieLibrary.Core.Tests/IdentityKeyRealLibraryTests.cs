@@ -7,9 +7,9 @@ using Film = (string Title, int Minutes, string Directors);
 namespace MovieLibrary.Core.Tests;
 
 /// <summary>
-/// <see cref="IdentityKey.ForFilm"/> against the owner's real library: the 39 groups of films whose folded
-/// titles collide - 81 films - each with the runtime and the directors his export actually has. This is the
-/// regression detector for the key that now binds every record-store entry.
+/// <see cref="IdentityKey.ForFilm"/> against the owner's real library: every colliding folded title his
+/// committed cache index CAN hold - 39 groups, 81 films - each with the runtime and the directors his export
+/// actually has. This is the regression detector for the key that now binds every record-store entry.
 /// </summary>
 /// <remarks>
 /// <para><b>What a failure here means.</b> Two rows that hash to one identity key are the quietest defect this
@@ -20,7 +20,7 @@ namespace MovieLibrary.Core.Tests;
 /// records each film's <c>normalizedTitle</c>, <c>runtimeMinutes</c> and <c>normalizedDirectors</c> beside its
 /// key, and those three are exactly what <c>ForFilm</c> hashes. Nothing was fetched and no TMDB request was
 /// spent to build this: the owner's own cache already holds it. The rows are therefore in NORMALIZED form,
-/// which <see cref="TheFixtureIsEveryCollidingFoldedTitleInTheRealLibrary"/> pins by re-running the
+/// which <see cref="TheFixtureIsEveryCollidingTitleTheCacheIndexCanHold"/> pins by re-running the
 /// normalizers over them; folding raw titles is <c>TitleNormalizerTests</c>' job, not this file's.</para>
 /// <para><b>Its one blind spot.</b> The index is itself keyed by the identity key, so it physically cannot
 /// hold a pair that already collides - and the owner's library has one. See
@@ -59,7 +59,7 @@ public class IdentityKeyRealLibraryTests
                .Order(StringComparer.Ordinal)];
 
     [Fact]
-    public void TheFixtureIsEveryCollidingFoldedTitleInTheRealLibrary()
+    public void TheFixtureIsEveryCollidingTitleTheCacheIndexCanHold()
     {
         var groups = Groups();
 
