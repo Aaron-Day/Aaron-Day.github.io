@@ -26,7 +26,22 @@
   padding-bottom: .75rem; margin-bottom: 1rem; border-bottom: 1px solid var(--line);
 }
 .count { color: var(--txt); margin: 0; }
-.pager { display: flex; align-items: center; gap: .5rem; }
+/* THE PAGER WRAPS, and it did not before. A flex row of three text items with no wrap cannot give: at 200%
+   text its buttons read "Previous" and "Next" around "Page 1 of 25" at 32px, and the row simply grows past
+   whatever is holding it. MEASURED at 375x812 with `html { font-size: 32px }`: 318px of pager inside a
+   311px column on this machine's face, and 329px on a wider one -- over its container in both, and past the
+   viewport on the runner, where TextOverrideTests.TextAtTwoHundredPercentLosesNoContent reported scrollWidth
+   398 against clientWidth 375 with exactly two elements out: this element and the last control in it.
+   SC 1.4.4 Resize Text, Level AA.
+
+   It squeaked through before only because the column it sits in starts 32px from the left edge, so the
+   overflow landed inside the viewport rather than past it. A face wider than Segoe UI Variable -- which is
+   every face the Linux runner has -- spends that margin. Wrapping removes the dependency on the face
+   instead of buying a few more pixels of it.
+
+   The three items keep their order and their --touch targets; they just take two lines when one will not
+   do, which is the same answer .grid-head above and .options in FacetPanel.razor.css already give. */
+.pager { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
 
 .pager button {
   min-width: var(--touch); min-height: var(--touch);
