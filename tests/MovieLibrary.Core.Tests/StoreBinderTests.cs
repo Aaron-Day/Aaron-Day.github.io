@@ -154,20 +154,67 @@ public class StoreBinderTests
         Assert.Contains("matches no film", Assert.Single(bound.Notes), StringComparison.OrdinalIgnoreCase);
     }
 
+    /// <summary>
+    /// The owner's own two Blade Runner rows: the theatrical cut at 1:57:10 and the Final Cut at 1:57:29. They
+    /// fold to one title, truncate to the same 117 minutes and share one director, so they carry ONE identity
+    /// key (<c>IdentityKeyRealLibraryTests</c> asserts that from the raw rows). They are two cuts he owns
+    /// separately, NOT one film listed twice, so an entry on that key correcting both of them is a thing he
+    /// has to be told about: both corrected records then take the same <c>RecordKey</c> and
+    /// <c>CatalogueReconciler</c> drops one.
+    /// </summary>
+    /// <remarks>
+    /// The binder cannot refuse the claim, and must not: nothing writable in <c>record-store.json</c>
+    /// addresses one of the two rows, so refusing would leave him with a correction he cannot express at all.
+    /// What it owes him is the note. <c>--print-keys</c> is not a substitute, because it warns when the entry
+    /// is WRITTEN and this state can arrive afterwards -- the real pair at 124 and 125 minutes of Captain
+    /// America: The First Avenger is one Apple re-encode away from it.
+    /// </remarks>
     [Fact]
-    public void TwoIdenticalRowsShareOneEntryBecauseTheyShareOneIdentityKey()
+    public void OneEntryBoundToAKeyTwoRowsCarryCorrectsBothAndSaysSo()
     {
-        // Two Blade Runner rows at the same runtime with the same director are genuinely one film listed
-        // twice; the reconciler collapses them downstream. One entry covers both, with nothing to warn about.
-        var key = FilmKey("Blade Runner", 117);
+        var key = FilmKey("Blade Runner", 117, "Ridley Scott");
 
         var bound = StoreBinder.Bind(
-            WithFilm(key, tmdbId: 78, sheetTitle: "Blade Runner"),
-            [Film("Blade Runner", "1:57:00"), Film("Blade Runner", "1:57:30")],
+            new RecordStore
+            {
+                Version = RecordStore.CurrentVersion,
+                Series = [],
+                Films = [new FilmEntry
+                {
+                    IdentityKey = key,
+                    Sheet = new SheetEcho("Blade Runner", "1:57:10", "Ridley Scott"),
+                    Records = [new RecordOverride(TmdbId: 78)],
+                }],
+            },
+            [Film("Blade Runner", "1:57:10", "Ridley Scott"),
+             Film("Blade Runner (The Final Cut)", "1:57:29", "Ridley Scott")],
             []);
 
-        Assert.Empty(bound.Notes);
+        // The premise, stated rather than assumed: both rows really do carry the one key.
+        Assert.Equal(key, FilmKey("Blade Runner (The Final Cut)", 117, "Ridley Scott"));
         Assert.Equal(78, Assert.Contains(key, bound.Films).Records.Single().TmdbId);
+
+        var note = Assert.Single(bound.Notes);
+        Assert.Contains("'Blade Runner'", note, StringComparison.Ordinal);
+        Assert.Contains("2 rows on the Movies tab carry", note, StringComparison.Ordinal);
+        Assert.Contains("applied to every one of them", note, StringComparison.Ordinal);
+        Assert.Contains("'Blade Runner' at 117 minutes", note, StringComparison.Ordinal);
+        Assert.Contains("'Blade Runner (The Final Cut)' at 117 minutes", note, StringComparison.Ordinal);
+        Assert.Contains("Nothing you can write in record-store.json separates them.", note, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void ARowWhoseKeyIsItsOwnStillBindsWithoutThatNote()
+    {
+        // The note above means nothing unless it is absent for the ordinary case. One Blade Runner row, same
+        // entry, same key: the film binds and the binder says nothing at all.
+        var key = FilmKey("Blade Runner", 117, "Ridley Scott");
+
+        var bound = StoreBinder.Bind(
+            Films(Entry(key, "Blade Runner", 78)), [Film("Blade Runner", "1:57:10", "Ridley Scott")], []);
+
+        Assert.Equal(78, Assert.Contains(key, bound.Films).Records.Single().TmdbId);
+        Assert.Empty(bound.Notes);
     }
 
     [Fact]

@@ -18,6 +18,11 @@ namespace MovieLibrary.Enrich.Store;
 /// loosely anywhere, and the <c>sheet</c> echo is read only to word a note.</para>
 /// <para><b>A row claimed by two entries binds to neither.</b> Picking one silently is how a correction lands on
 /// the wrong cut of a film. An exact claim does beat a drifted one, because that is not a tie.</para>
+/// <para><b>A key two rows carry is reported, not refused.</b> Two rows with one folded title, one truncated
+/// runtime and one director hash to ONE key, and the index then holds ONE slot for both of them -- so such a
+/// claim is indistinguishable from any other exact hit and the equidistant-tie branch never fires. The entry
+/// binds and corrects every row carrying the key. Nothing in the file can separate them, so there is nothing
+/// to refuse on the owner's behalf; what there is to do is say so (<see cref="SharedRowNote"/>).</para>
 /// <para><b>A series has no drift rule.</b> Its key is a pure function of its folded name
 /// (<see cref="IdentityKey.ForSeriesName"/>), so there is no runtime to move and nothing to tolerate.</para>
 /// </remarks>
@@ -63,7 +68,7 @@ public static class StoreBinder
                 var closest = hits.Where(h => Math.Abs(h.Value) == nearest).ToList();
                 if (closest.Count > 1)
                 {
-                    notes.Add(TieNote(entry, closest.Select(h => rowInfo[h.Key])));
+                    notes.Add(TieNote(entry, closest.Select(h => rowInfo[h.Key][0])));
                     continue;
                 }
 
@@ -100,6 +105,18 @@ public static class StoreBinder
             foreach (var claim in only) notes.Add(ContestedNote(claim, only));
         }
 
+        // Said here and nowhere else. --print-keys warns at WRITE time, but the collision can arise after an
+        // entry was written and bound exactly: Apple re-encodes one of two cuts by a minute, both rows then
+        // truncate to the same minutes, and the entry that addressed one of them now addresses both. The
+        // binder cannot see that in `hits` -- two rows sharing a key produce ONE slot, so the claim looks
+        // exact and single -- and the only other symptom is CatalogueReconciler's duplicate-key line, which
+        // names neither this file nor this entry.
+        foreach (var (rowKey, entry) in bound.OrderBy(b => b.Key, StringComparer.Ordinal))
+        {
+            var carriers = rowInfo[rowKey];
+            if (carriers.Count > 1) notes.Add(SharedRowNote(entry, carriers));
+        }
+
         return bound;
     }
 
@@ -107,13 +124,19 @@ public static class StoreBinder
     /// Every row hashed at every offset. The value maps a row key to the SMALLEST offset that reached it, so a
     /// row that two offsets can reach is reported by the truer one.
     /// </summary>
+    /// <remarks>
+    /// <c>Rows</c> holds EVERY row carrying a key, in sheet order, not just the first. The index cannot: two
+    /// rows sharing a key share one slot in it, so the number of carriers is the only record that a key is not
+    /// one row's own, and <see cref="BindFilms"/> has nothing else to warn from. Where a note needs a single
+    /// row it names the first carrier, which is what the earlier single-value map kept.
+    /// </remarks>
     private static (Dictionary<string, Dictionary<string, int>> Index, List<string> SheetTitles,
-        Dictionary<string, (string Title, int Minutes)> Rows) IndexRows(
+        Dictionary<string, List<(string Title, int Minutes)>> Rows) IndexRows(
         IReadOnlyList<SheetRow> rows)
     {
         var index = new Dictionary<string, Dictionary<string, int>>(StringComparer.Ordinal);
         var titles = new List<string>();
-        var info = new Dictionary<string, (string Title, int Minutes)>(StringComparer.Ordinal);
+        var info = new Dictionary<string, List<(string Title, int Minutes)>>(StringComparer.Ordinal);
 
         foreach (var row in rows)
         {
@@ -125,7 +148,10 @@ public static class StoreBinder
             var directors = TitleNormalizer.NormalizeDirectors(row.Directors);
             var rowKey = IdentityKey.ForFilm(title, minutes, directors);
             titles.Add(row.Title);
-            info.TryAdd(rowKey, (row.Title, minutes));
+            if (!info.TryGetValue(rowKey, out var carriers))
+                info[rowKey] = carriers = [];
+
+            carriers.Add((row.Title, minutes));
 
             foreach (var offset in RuntimeDrift.Offsets)
             {
@@ -162,6 +188,21 @@ public static class StoreBinder
                .Select(r => $"'{r.Title}' at {r.Minutes.ToString(CultureInfo.InvariantCulture)} minutes")) +
            ". Nothing in the file says which cut you meant. Re-key the entry to the row you mean " +
            "(--print-keys lists each row's key).";
+
+    /// <summary>
+    /// One entry bound to a key more than one row carries, so it corrected all of them. The three sentences
+    /// after the list are <c>EnrichRun.SayShared</c>'s, word for word on purpose: it is the same fact about
+    /// the same key, and two phrasings of it would read as two different problems.
+    /// </summary>
+    private static string SharedRowNote(FilmEntry entry, IReadOnlyList<(string Title, int Minutes)> carriers)
+        => $"Record store entry {Name(entry)} names an identity key that " +
+           $"{carriers.Count.ToString(CultureInfo.InvariantCulture)} rows on the Movies tab carry, so it was " +
+           "applied to every one of them: " +
+           string.Join("; ", carriers.OrderBy(r => r.Minutes).ThenBy(r => r.Title, StringComparer.Ordinal)
+               .Select(r => $"'{r.Title}' at {r.Minutes.ToString(CultureInfo.InvariantCulture)} minutes")) +
+           ". A record store entry names its row by that key and is applied to EVERY row the key names, so an " +
+           "entry on a shared key corrects all the rows listed under it and can never correct one of them on " +
+           "its own. Nothing you can write in record-store.json separates them.";
 
     private static string TakenNote(FilmEntry loser, FilmEntry winner)
         => $"Record store entry {Name(loser)} would have matched the same row as {Name(winner)}, which names it " +
