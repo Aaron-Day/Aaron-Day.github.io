@@ -312,6 +312,67 @@ public class RecordStoreReaderTests
         Assert.DoesNotContain("Unexpected internal error", message, StringComparison.Ordinal);
     }
 
+    /// <summary>
+    /// Phase 1 ships no README, no <c>record-store.example.json</c> and no seed path (<c>Write</c> exists, but
+    /// only a test calls it), and the whole of the owner's written guidance is "paste the correct TMDB id into
+    /// record-store.json". So a parse failure is the one place a hand-editor is guaranteed to meet, and
+    /// System.Text.Json's own wording assumes he already knows the shape. The members and the spec path are
+    /// named here instead.
+    /// </summary>
+    [Fact]
+    public void AParseFailureNamesTheShapeOfTheFileAndWhereItIsWrittenDown()
+    {
+        var message = Rejected("{ not json at all").Message;
+
+        Assert.Contains("test.json", message, StringComparison.Ordinal);
+        Assert.Contains("\"version\": 1", message, StringComparison.Ordinal);
+        Assert.Contains("\"identityKey\"", message, StringComparison.Ordinal);
+        Assert.Contains("\"records\"", message, StringComparison.Ordinal);
+        Assert.Contains("\"tmdbId\"", message, StringComparison.Ordinal);
+        Assert.Contains("\"appleGenre\"", message, StringComparison.Ordinal);
+        // The one pairing a copied example can get wrong, named where it is read rather than left to the
+        // rejection that follows (spec 5.2's own "all members" block showed both until this pass).
+        Assert.Contains("\"tmdbId\" or \"candidates\" but never both", message, StringComparison.Ordinal);
+        Assert.Contains("\"purchaseInfo\"", message, StringComparison.Ordinal);
+        Assert.Contains("camelCase", message, StringComparison.Ordinal);
+        Assert.Contains("comments and trailing commas are allowed", message, StringComparison.Ordinal);
+        Assert.Contains("docs/superpowers/specs/2026-11-16-record-store-design.md section 5", message, StringComparison.Ordinal);
+        Assert.Contains("--print-keys", message, StringComparison.Ordinal);
+    }
+
+    /// <summary>
+    /// Every member the message lists has to be one the reader actually accepts, or the guidance sends its
+    /// reader to write a file that is then refused for an unknown property. Measured, not transcribed: the
+    /// file below sets every name the message mentions and must round-trip.
+    /// </summary>
+    [Fact]
+    public void EveryMemberTheParseFailureNamesIsOneTheReaderAccepts()
+    {
+        const string json = """
+            { "version": 1,
+              "films": [ { "identityKey": "000dc50b084e2a2e3b0342fde1ea3550dfb48206",
+                           "sheet": { "title": "A Film", "runtime": "1:40:00", "directors": "A Director" },
+                           "note": "Mine.",
+                           "records": [ { "tmdbId": 11, "runtime": 84,
+                                          "titles": { "display": "A Film", "sort": "Film, A" },
+                                          "year": 1998, "directors": "A Director",
+                                          "appleGenre": "Kids & Family", "purchaseInfo": "iTunes",
+                                          "extra": { "Purchase Date": "2019-03-14" } } ] } ],
+              "series": [ { "identityKey": "ffffc50b084e2a2e3b0342fde1ea3550dfb48206",
+                            "sheet": { "title": "A Show" },
+                            "note": "Also mine.",
+                            "record": { "candidates": [1399, 1400] } } ] }
+            """;
+
+        var store = RecordStoreReader.Read(json, "test.json");
+
+        var film = Assert.Single(store.Films).Records.Single();
+        Assert.Equal("Film, A", film.Titles!.Sort);
+        Assert.Equal("Kids & Family", film.AppleGenre);
+        Assert.Equal("iTunes", film.PurchaseInfo);
+        Assert.Equal([1399, 1400], Assert.Single(store.Series).Record.Candidates!);
+    }
+
     [Fact]
     public void AMalformedBodyKeepsTheJsonExceptionAsItsInnerException()
     {

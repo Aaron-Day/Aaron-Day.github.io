@@ -22,6 +22,12 @@ public static class RecordStoreReader
     /// <summary>Characters in an identity key: <c>Convert.ToHexStringLower(SHA1.HashData(...))</c>.</summary>
     private const int KeyLength = 40;
 
+    /// <summary>
+    /// Where the format is written down in full. Named in the parse failure because nothing else points a
+    /// hand-editor at it: Phase 1 ships no README, no <c>record-store.example.json</c> and no seed path.
+    /// </summary>
+    private const string SpecPath = "docs/superpowers/specs/2026-11-16-record-store-design.md";
+
     private static readonly JsonSerializerOptions Options = new(JsonSerializerDefaults.Web)
     {
         ReadCommentHandling = JsonCommentHandling.Skip,
@@ -101,7 +107,19 @@ public static class RecordStoreReader
         }
         catch (JsonException ex)
         {
-            throw new RecordStoreException($"'{whatItIs}' could not be read as a record store: {ex.Message}", ex);
+            // System.Text.Json's own wording is precise and assumes you know the shape. Nothing else in Phase 1
+            // writes that shape down where a hand-editor meets it: there is no README, no example file and no
+            // seed path (Write exists but only a test calls it), so this is where the shape gets named.
+            throw new RecordStoreException(
+                $"'{whatItIs}' could not be read as a record store: {ex.Message} The file is " +
+                "{ \"version\": 1, \"films\": [...], \"series\": [...] }; a film entry takes \"identityKey\", " +
+                "\"sheet\", \"note\" and \"records\", a series entry the same with one \"record\"; a record " +
+                "takes \"tmdbId\" or \"candidates\" but never both, plus \"runtime\", \"titles\", " +
+                "\"year\", \"directors\", \"appleGenre\", \"purchaseInfo\" and \"extra\", all " +
+                "optional; and \"sheet\" takes " +
+                "\"title\", \"runtime\" and \"directors\". Every name is camelCase, comments and trailing " +
+                "commas are allowed, and the full format is " +
+                $"{SpecPath} section 5. Run --print-keys for a row's \"identityKey\".", ex);
         }
 
         if (store is null)
