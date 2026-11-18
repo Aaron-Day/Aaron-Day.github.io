@@ -46,13 +46,17 @@ export async function grant() {
 
     try {
         root = await window.showDirectoryPicker({ mode: "readwrite", id: "movielibrary-root" });
-        await remember(root);
-        return root.name;
     } catch {
         // AbortError when the picker is dismissed, which is an ordinary outcome rather than a failure.
         root = null;
         return null;
     }
+
+    // Remembering the handle is a convenience for next session; having it now is the point. A failed IndexedDB
+    // write must not discard a folder the owner has just chosen and granted.
+    try { await remember(root); } catch { /* the grant stands for this session; it is just not kept */ }
+
+    return root.name;
 }
 
 export async function reconfirm() {
@@ -100,10 +104,23 @@ export async function readText(name) {
     return seen.read ? seen.text : null;
 }
 
+// Best effort and silent, like discard: a stream that was never closed or aborted can leave its file locked,
+// which would make discarding the temporary file fail and can make the next save fail until the page reloads.
+async function abort(stream) {
+    try { await stream?.abort(); } catch { /* already closed, or cannot be aborted */ }
+}
+
 // Whole-file and atomic from a reader's point of view: the backup first, then a temporary file in the same
 // directory, then a rename over the target.
+//
+// The backup is a copy of the previous CONTENT as text, not of its bytes: Blob.text() decodes as UTF-8, which
+// strips a byte-order mark and replaces invalid sequences. For a JSON file this repository wrote itself that is
+// harmless, and nothing reads the .bak back programmatically, but it is a property of the backup and not a
+// byte-for-byte copy.
 export async function writeText(name, text) {
     if (!root) return false;
+
+    let open = null;
 
     try {
         const seen = await peek(name);
@@ -116,18 +133,21 @@ export async function writeText(name, text) {
 
         if (seen.read) {
             const backup = await root.getFileHandle(name + ".bak", { create: true });
-            const out = await backup.createWritable();
-            await out.write(seen.text);
-            await out.close();
+            open = await backup.createWritable();
+            await open.write(seen.text);
+            await open.close();
+            open = null;
         }
 
         const temporary = await root.getFileHandle(name + ".tmp", { create: true });
-        const writable = await temporary.createWritable();
-        await writable.write(text);
-        await writable.close();
+        open = await temporary.createWritable();
+        await open.write(text);
+        await open.close();
+        open = null;
         await temporary.move(name);
         return true;
     } catch {
+        await abort(open);
         await discard(name + ".tmp");
         return false;
     }

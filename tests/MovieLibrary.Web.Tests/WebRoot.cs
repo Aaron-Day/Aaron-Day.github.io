@@ -27,6 +27,14 @@ internal static class WebRoot
     public static string ReadSibling(string project, params string[] relativePath) =>
         File.ReadAllText(Path.Combine(new[] { Solution.Value, "src", project }.Concat(relativePath).ToArray()));
 
+    /// <summary>The full path of a file in another project under <c>src/</c>, for handing to a process.</summary>
+    public static string SiblingPath(string project, params string[] relativePath) =>
+        Path.Combine(new[] { Solution.Value, "src", project }.Concat(relativePath).ToArray());
+
+    /// <summary>The full path of a file under the repository root.</summary>
+    public static string RepoPath(params string[] relativePath) =>
+        Path.Combine(new[] { Solution.Value }.Concat(relativePath).ToArray());
+
     /// <summary>
     /// Every hand-written file under the web project matching the search patterns, as (path relative to the
     /// project, text) pairs. Build output is excluded: obj\ holds generated .cs that would match anything.

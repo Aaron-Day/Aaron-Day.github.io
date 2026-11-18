@@ -69,8 +69,8 @@ public sealed class LocalDirectory(IJSRuntime js) : IAsyncDisposable
 
         if (await ModuleAsync() is not { } m)
             throw new InvalidOperationException(
-                $"'{name}' was not written, because no folder has been granted in this browser. Choose a "
-                + "folder first, or use the download fallback.");
+                $"'{name}' was not written. Either no folder has been granted in this browser, or the editor's "
+                + "script could not be loaded. Choose a folder first, reload the page, or use the download fallback.");
 
         if (!await m.InvokeAsync<bool>("writeText", name, text))
             throw new InvalidOperationException(

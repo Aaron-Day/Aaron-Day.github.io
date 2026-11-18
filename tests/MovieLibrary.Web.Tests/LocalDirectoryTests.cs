@@ -1,4 +1,5 @@
 using Bunit;
+using Microsoft.JSInterop;
 using MovieLibrary.Web.Editor.Store;
 
 namespace MovieLibrary.Web.Tests;
@@ -47,6 +48,36 @@ public sealed class LocalDirectoryTests
         Assert.Contains("record-store.json", thrown.Message, StringComparison.Ordinal);
         Assert.Contains("is unchanged", thrown.Message, StringComparison.Ordinal);
         Assert.Contains("retry", thrown.Message, StringComparison.Ordinal);
+    }
+
+    /// <summary>
+    /// The branch bUnit cannot reach: a failed dynamic import (a 404 on the static asset, a missing _content
+    /// path) raises JSException, which becomes a null module. Under loose mode the import never fails, so this
+    /// needs a runtime that does. The write must refuse, and its message must admit both causes.
+    /// </summary>
+    [Fact]
+    public async Task AWriteWhoseScriptCouldNotBeLoadedIsAnExceptionNotASilentNoOp()
+    {
+        var directory = new LocalDirectory(new FailingImportRuntime());
+
+        var thrown = await Assert.ThrowsAsync<InvalidOperationException>(
+            () => directory.WriteTextAsync("record-store.json", "{}"));
+
+        Assert.Contains("record-store.json", thrown.Message, StringComparison.Ordinal);
+        Assert.Contains("was not written", thrown.Message, StringComparison.Ordinal);
+        Assert.Contains("no folder has been granted", thrown.Message, StringComparison.Ordinal);
+        Assert.Contains("could not be loaded", thrown.Message, StringComparison.Ordinal);
+    }
+
+    private sealed class FailingImportRuntime : IJSRuntime
+    {
+        public ValueTask<TValue> InvokeAsync<TValue>(string identifier, object?[]? args) =>
+            identifier == "import"
+                ? throw new JSException("Failed to fetch dynamically imported module")
+                : throw new NotSupportedException(identifier);
+
+        public ValueTask<TValue> InvokeAsync<TValue>(string identifier, CancellationToken cancellationToken, object?[]? args) =>
+            InvokeAsync<TValue>(identifier, args);
     }
 
     [Theory]
