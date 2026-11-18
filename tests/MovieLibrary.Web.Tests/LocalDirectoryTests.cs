@@ -28,8 +28,15 @@ public sealed class LocalDirectoryTests
         Assert.Null(await directory.ReadTextAsync("x"));
     }
 
+    /// <summary>
+    /// A refused write has to say so, and say it accurately: this sentence is read aloud and it is the only
+    /// thing telling the owner whether his corrections survived. It must not name a cause it cannot know --
+    /// writeText answers false for a lapsed permission AND for an existing file it could not read, which is
+    /// deliberately not overwritten. Under bUnit's loose mode the module is not null and its call returns
+    /// false, so this exercises the module-refused branch rather than the no-module one.
+    /// </summary>
     [Fact]
-    public async Task AWriteWithNoModuleIsRefusedRatherThanIgnored()
+    public async Task ARefusedWriteSaysTheFileIsUnchangedWithoutGuessingWhy()
     {
         using var context = Context();
         var directory = new LocalDirectory(context.JSInterop.JSRuntime);
@@ -37,7 +44,9 @@ public sealed class LocalDirectoryTests
         var thrown = await Assert.ThrowsAsync<InvalidOperationException>(
             () => directory.WriteTextAsync("record-store.json", "{}"));
 
-        Assert.Contains("no folder has been granted", thrown.Message);
+        Assert.Contains("record-store.json", thrown.Message, StringComparison.Ordinal);
+        Assert.Contains("is unchanged", thrown.Message, StringComparison.Ordinal);
+        Assert.Contains("retry", thrown.Message, StringComparison.Ordinal);
     }
 
     [Theory]

@@ -74,8 +74,9 @@ public sealed class LocalDirectory(IJSRuntime js) : IAsyncDisposable
 
         if (!await m.InvokeAsync<bool>("writeText", name, text))
             throw new InvalidOperationException(
-                $"'{name}' was not written, because no folder has been granted or its permission has lapsed. "
-                + "Choose the folder again; nothing has been changed on disk.");
+                $"'{name}' was not written and is unchanged. Either the folder's permission has lapsed, or the "
+                + "existing file could not be read -- and what cannot be copied is not overwritten, because the "
+                + "save would not be reversible. Choose the folder again, then retry.");
     }
 
     public async Task DownloadAsync(string name, string text)
