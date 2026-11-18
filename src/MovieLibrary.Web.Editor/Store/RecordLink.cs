@@ -16,9 +16,16 @@ namespace MovieLibrary.Web.Editor.Store;
 /// verbatim -- and <c>Rt</c> is the same int the key hashed. Only TMDB-derived fields come from TMDB. So the
 /// hash input is recoverable, and <see cref="TitleNormalizer.NormalizeDirectors"/> discards the separator and
 /// the order, which is what makes re-joining the split array safe.</para>
-/// <para><b>Why the other direction exists at all.</b> Once an entry sets a display title, the published title
-/// is no longer the sheet's and the computation above would hash the wrong words. An entry carries everything
-/// the PUBLISHED key is made of, so for an entry the link is computed forwards and matched on <c>K</c>.</para>
+/// <para><b>Where <see cref="IdentityKeyOf"/> stops being true.</b> A store override can replace the title, the
+/// runtime (MoviePipeline.cs:392) and the directors (:426) of the record it publishes. On an overridden record
+/// all three hash inputs may differ from the sheet's, so the recomputed key is one the pipeline never hashed.
+/// What makes the method safe is that an override is applied only when the store already holds an entry for
+/// the row's key (MoviePipeline.cs:128-129): a record with NO store entry is never overridden.
+/// <see cref="IdentityKeyOf"/> is therefore valid only on the no-entry path. A record that already has an entry
+/// must be resolved through its entry instead, computed forwards and matched on <c>K</c>
+/// (<see cref="PublishedKeyOf"/>). The pipeline-side claim is pinned by
+/// <c>AMatchedFilmPublishesTheSheetsOwnTitleRuntimeAndDirectorsSoItsIdentityKeyIsRecomputable</c> in
+/// MovieLibrary.Core.Tests.</para>
 /// <para><b>What cannot be checked.</b> A matched record's key is <c>{id}-{minutes}</c> and holds no part of the
 /// identity key, so <see cref="Agrees"/> has nothing to compare and returns null rather than a true that would
 /// mean nothing. An unmatched record's key is the key's first 8 characters, which is a real check on the 30

@@ -8,7 +8,12 @@ namespace MovieLibrary.Web.Tests;
 
 public sealed class RecordLinkTests
 {
-    /// <summary>A record shaped the way MoviePipeline shapes one: title and directors straight from the sheet.</summary>
+    /// <summary>
+    /// A record shaped the way MoviePipeline is ASSUMED to shape one: title and directors straight from the sheet.
+    /// <c>K</c> is built from the same <see cref="Key"/> helper the tests compare against, so nothing here proves the
+    /// pipeline does this; the pipeline-side claim is pinned in MovieLibrary.Core.Tests by
+    /// <c>AMatchedFilmPublishesTheSheetsOwnTitleRuntimeAndDirectorsSoItsIdentityKeyIsRecomputable</c>.
+    /// </summary>
     private static MovieRecord Published(string title, int runtime, string[] directors, int tmdbId) =>
         new(I: tmdbId,
             K: RecordKey.ForFilm(tmdbId == 0 ? null : tmdbId, runtime, Key(title, runtime, directors)),
@@ -19,12 +24,31 @@ public sealed class RecordLinkTests
         IdentityKey.ForFilm(TitleNormalizer.Normalize(title), runtime,
                             TitleNormalizer.NormalizeDirectors(string.Join(" & ", directors)));
 
+    /// <summary>
+    /// Pins the composition order of <see cref="RecordLink.IdentityKeyOf"/> (normalised title, runtime, normalised
+    /// directors joined with " &amp; ") against this file's own copy of that expression. It touches no pipeline code
+    /// and cannot fail if the pipeline changed; see the Core.Tests fact named on <see cref="Published"/> for that.
+    /// </summary>
     [Fact]
     public void ThePublishedRecordYieldsTheIdentityKeyThePipelineHashed()
     {
         var record = Published("Se7en", 110, ["David Fincher"], 807);
 
         Assert.Equal(Key("Se7en", 110, ["David Fincher"]), RecordLink.IdentityKeyOf(record));
+    }
+
+    /// <summary>
+    /// Documents a boundary, not a bug: an override can replace the published title, so on an overridden record
+    /// <see cref="RecordLink.IdentityKeyOf"/> hashes words the pipeline never hashed. It is valid only for a record
+    /// with no store entry; one that has an entry is resolved through the entry.
+    /// </summary>
+    [Fact]
+    public void IdentityKeyOfIsNotTheSheetsKeyOnceAnOverrideHasReplacedThePublishedTitle()
+    {
+        var sheetKey = Key("Seven", 126, ["David Fincher"]);
+        var overridden = Published("Se7en", 126, ["David Fincher"], 807);
+
+        Assert.NotEqual(sheetKey, RecordLink.IdentityKeyOf(overridden));
     }
 
     [Fact]
