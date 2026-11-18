@@ -118,6 +118,25 @@ public sealed class LocalDirectoryTests
         Assert.True(backup < temporary && temporary < rename, "backup, then temporary file, then rename");
     }
 
+    // The backup is only a safety net if a write that cannot make one refuses to happen. Reading the file can
+    // fail for reasons other than the file being absent, and those two answers must not collapse into one: on
+    // absence there is nothing to lose, but on a failed read the write would overwrite a file it could not copy
+    // and the save would stop being reversible. Source-order, like the test above -- the suite mocks the module
+    // and never runs this script, so a guard removed here would otherwise go unnoticed until it cost real data.
+    [Fact]
+    public void TheScriptWillNotOverwriteAFileItCouldNotBackUp()
+    {
+        var script = WebRoot.ReadSibling("MovieLibrary.Web.Editor", "wwwroot", "localDirectory.js");
+        var write = script[script.IndexOf("export async function writeText", StringComparison.Ordinal)..];
+
+        var refusal = write.IndexOf("!seen.read && !seen.missing", StringComparison.Ordinal);
+        var backup = write.IndexOf("name + \".bak\"", StringComparison.Ordinal);
+
+        Assert.True(refusal >= 0, "writeText must tell a failed read apart from an absent file");
+        Assert.True(refusal < backup, "the refusal comes before anything is written");
+        Assert.Contains("error?.name === \"NotFoundError\"", script, StringComparison.Ordinal);
+    }
+
     [Fact]
     public async Task TheDownloadFallbackGoesThroughTheModuleToo()
     {

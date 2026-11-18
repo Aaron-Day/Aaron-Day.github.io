@@ -74,16 +74,30 @@ export async function reconfirm() {
     }
 }
 
-export async function readText(name) {
-    if (!root) return null;
+// Three answers, not two, because "I could not read it" must never look like "it is not there". The first has
+// to stop a write; the second is the ordinary state of a repository that has no store yet.
+async function peek(name) {
+    if (!root) return { read: false, missing: false };
 
     try {
         const handle = await root.getFileHandle(name);
-        return await (await handle.getFile()).text();
-    } catch {
-        // NotFoundError is the normal answer for a repository that has no store yet.
-        return null;
+        return { read: true, missing: false, text: await (await handle.getFile()).text() };
+    } catch (error) {
+        return { read: false, missing: error?.name === "NotFoundError" };
     }
+}
+
+// Best effort and silent: a leftover temporary file is untidy rather than harmful, and failing to clear it
+// must not turn one failure into two.
+async function discard(name) {
+    if (!root) return;
+
+    try { await root.removeEntry(name); } catch { /* it was already not there, or cannot be removed */ }
+}
+
+export async function readText(name) {
+    const seen = await peek(name);
+    return seen.read ? seen.text : null;
 }
 
 // Whole-file and atomic from a reader's point of view: the backup first, then a temporary file in the same
@@ -92,11 +106,18 @@ export async function writeText(name, text) {
     if (!root) return false;
 
     try {
-        const previous = await readText(name);
-        if (previous !== null) {
+        const seen = await peek(name);
+
+        // A read that failed for any reason OTHER than the file being absent stops the write here. Carrying on
+        // would overwrite a file we could not copy, and an overwrite with no backup is not reversible, which is
+        // the one thing a save must never be. Absence is different: there is nothing to back up and nothing to
+        // lose.
+        if (!seen.read && !seen.missing) return false;
+
+        if (seen.read) {
             const backup = await root.getFileHandle(name + ".bak", { create: true });
             const out = await backup.createWritable();
-            await out.write(previous);
+            await out.write(seen.text);
             await out.close();
         }
 
@@ -107,6 +128,7 @@ export async function writeText(name, text) {
         await temporary.move(name);
         return true;
     } catch {
+        await discard(name + ".tmp");
         return false;
     }
 }
