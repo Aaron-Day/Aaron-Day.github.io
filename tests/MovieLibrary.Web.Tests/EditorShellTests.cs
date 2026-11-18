@@ -57,6 +57,20 @@ public sealed class EditorShellTests
         Assert.Empty(cut.FindAll("ul"));
     }
 
+    // The other half of the guard. OutsideDevelopmentThePageRendersOneSentenceAndNoEditor proves the page
+    // refuses when it is not local; without this, a Local that is always false would pass that test and the
+    // page would never open on the owner's own machine at all.
+    [Fact]
+    public void InDevelopmentThePageShowsItsOwnContentAndNotTheRefusal()
+    {
+        using var context = Context("Development");
+
+        var cut = context.Render<RecordEditor>();
+
+        Assert.DoesNotContain(RecordEditor.NotLocalSentence, cut.Markup, StringComparison.Ordinal);
+        Assert.Contains(RecordEditor.NothingYetSentence, cut.Markup, StringComparison.Ordinal);
+    }
+
     [Fact]
     public void TheHeadingIsThereInEveryEnvironmentAndIsFocusable()
     {
