@@ -184,6 +184,7 @@
     private string[] priorKeys = [];
 
     private ElementReference panel;
+    // Every assignment to this must also set focusToggle; the reason is spelled out in OnAfterRenderAsync.
     private string? focusKey;
     private bool focusToggle;
     private bool focusPanel;

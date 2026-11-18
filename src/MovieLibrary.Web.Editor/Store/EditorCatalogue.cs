@@ -43,38 +43,53 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
         if (store.Kind == StoreReading.Refused)
             return store.With(CatalogueState.Ready, [], synthetic, []);
 
-        var byPublishedKey = EntriesByPublishedKey(store.Draft);
+        var byPublishedKey = RecordsByPublishedKey(store.Draft);
         var rows = movies.Select(m => Link(m, byPublishedKey)).ToList();
 
-        // An entry that claimed no row is reported rather than dropped: a correction he already made, silently
-        // invisible, is worse than the drop. "Claimed" is asked of THIS entry, and not of whether its key exists
-        // in the catalogue: two entries can publish the same key (the identity key is not part of a matched
-        // record's key), the map keeps the first, and asking only whether the key exists would leave the second
-        // neither shown nor named. An entry with several records is placed when any one of them is bound.
-        var claimed = rows.Select(r => r.Entry).OfType<FilmEntry>().ToHashSet(ReferenceEqualityComparer.Instance);
-        var unplaceable = store.Draft.Store.Films.Where(f => !claimed.Contains(f)).ToList();
+        // A correction that claimed no row is reported rather than dropped: one he already made, silently
+        // invisible, is worse than the drop. "Claimed" is asked of the (entry, position) pair and not of whether
+        // its key exists in the catalogue: two entries can publish the same key (the identity key is not part of
+        // a matched record's key), the map keeps the first, and asking only whether the key exists would leave
+        // the second neither shown nor named. Asked of the entry as a whole it would still miss one record of a
+        // multi-record entry whose siblings bound, so the entry is reported when ANY of its records went unbound.
+        var claimed = movies
+            .Where(m => byPublishedKey.ContainsKey(m.K))
+            .Select(m => byPublishedKey[m.K])
+            .ToHashSet();
+        var unplaceable = store.Draft.Store.Films
+            .Where(f => f.Records.Count == 0
+                        || Enumerable.Range(1, f.Records.Count).Any(p => !claimed.Contains(new RecordSlot(f, p))))
+            .ToList();
 
         return store.With(CatalogueState.Ready, rows, synthetic, unplaceable);
     }
 
     /// <summary>The ONE place a record's key is decided. Entry present: through the entry. Absent: the fallback.</summary>
-    private static WorklistRow Link(MovieRecord movie, IReadOnlyDictionary<string, FilmEntry> entries)
+    private static WorklistRow Link(MovieRecord movie, IReadOnlyDictionary<string, RecordSlot> entries)
     {
         var band = ConfidenceBand.Of(movie);
-        var entry = entries.GetValueOrDefault(movie.K);
+        var entry = entries.TryGetValue(movie.K, out var slot) ? slot.Entry : null;
         var key = entry is null ? RecordLink.IdentityKeyOf(movie) : entry.IdentityKey;
 
         return new WorklistRow(movie, key, band, ConfidenceBand.BadgeFor(band), entry);
     }
 
-    private static Dictionary<string, FilmEntry> EntriesByPublishedKey(StoreDraft draft)
+    /// <summary>One record of one entry. The entry is compared by reference: two entries are two entries even when equal.</summary>
+    private readonly record struct RecordSlot(FilmEntry Entry, int Position)
     {
-        var map = new Dictionary<string, FilmEntry>(StringComparer.Ordinal);
+        public bool Equals(RecordSlot other) => ReferenceEquals(Entry, other.Entry) && Position == other.Position;
+
+        public override int GetHashCode() => HashCode.Combine(System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode(Entry), Position);
+    }
+
+    private static Dictionary<string, RecordSlot> RecordsByPublishedKey(StoreDraft draft)
+    {
+        var map = new Dictionary<string, RecordSlot>(StringComparer.Ordinal);
 
         foreach (var entry in draft.Store.Films)
             for (var position = 1; position <= entry.Records.Count; position++)
                 if (RecordLink.PublishedKeyOf(entry, position) is { } key)
-                    map.TryAdd(key, entry);
+                    map.TryAdd(key, new RecordSlot(entry, position));
 
         return map;
     }

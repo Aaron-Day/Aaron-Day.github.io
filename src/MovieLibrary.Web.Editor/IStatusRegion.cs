@@ -6,8 +6,8 @@ namespace MovieLibrary.Web.Editor;
 /// is: the web app implements this over its own announcer and there is still exactly one region.
 /// </summary>
 /// <remarks>
-/// <b>Exactly one component on the editor page may call <see cref="Status"/></b> -- the worklist, for its debounced result
-/// count. Within the region the latest message wins, and one still inside its settle delay when a newer arrives
+/// <b>Exactly one component on the editor page may call <see cref="Status"/></b> -- the worklist, for its
+/// debounced result count. Within the region the latest message wins, and one still inside its settle delay when a newer arrives
 /// is dropped unspoken, so a second caller would silence one of the two unpredictably. Everything else reports
 /// by moving focus to a stable container whose own text is the message.
 /// </remarks>

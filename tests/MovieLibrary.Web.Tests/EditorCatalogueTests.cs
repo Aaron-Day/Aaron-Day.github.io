@@ -158,6 +158,28 @@ public sealed class EditorCatalogueTests
         Assert.Equal(KeyB, Assert.Single(state.Unplaceable).IdentityKey);
     }
 
+    /// <summary>
+    /// An entry with several records is placed only when EVERY record is bound. Here the second entry's first record
+    /// publishes a key the first entry already holds, while its second record binds cleanly; counting an entry as
+    /// placed when any one record binds would leave the colliding correction neither shown nor named.
+    /// </summary>
+    [Fact]
+    public async Task AMultiRecordEntryWithOneCollidingRecordIsNamedEvenThoughItsOtherRecordBinds()
+    {
+        var multi = new FilmEntry
+        {
+            IdentityKey = KeyB,
+            Records = [new RecordOverride(TmdbId: 550, Runtime: 139), new RecordOverride(TmdbId: 807, Runtime: 127)],
+        };
+
+        var state = await Load([Film(550, "Fight Club", 139, 0.5), Film(807, "Se7en", 127, 0.5)],
+            StoreOf(EntryFor(KeyA, 550, 139), multi));
+
+        Assert.Equal(KeyB, Assert.Single(state.Unplaceable).IdentityKey);
+        Assert.Equal(KeyA, state.Rows.Single(r => r.Movie.I == 550).Entry?.IdentityKey);
+        Assert.Equal(KeyB, state.Rows.Single(r => r.Movie.I == 807).Entry?.IdentityKey);
+    }
+
     /// <summary>A prompt on load is forbidden (A52) and would be rejected without a click anyway.</summary>
     [Fact]
     public async Task LoadingAsksTheScriptForStatusAndNeverForTheReconfirmThatPrompts()
