@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MovieLibrary.Web;
+#if DEBUG
+using MovieLibrary.Web.Editor;
+#endif
 using MovieLibrary.Web.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -23,5 +26,10 @@ builder.Services.AddScoped<QueryState>();
 builder.Services.AddScoped<CatalogService>();
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+#if DEBUG
+// The local record editor's registrations. Debug only: the Release payload does not reference the project.
+builder.Services.AddRecordEditor();
+#endif
 
 await builder.Build().RunAsync();

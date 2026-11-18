@@ -1,6 +1,18 @@
-<Router AppAssembly="@typeof(App).Assembly" NotFoundPage="typeof(Pages.NotFound)">
+@using System.Reflection
+
+<Router AppAssembly="@typeof(App).Assembly" AdditionalAssemblies="@AlsoRouted" NotFoundPage="typeof(Pages.NotFound)">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
         <FocusOnNavigate RouteData="@routeData" Selector="#app h1" />
     </Found>
 </Router>
+
+@code {
+    // In Debug the record editor's assembly joins the route set; in Release the project is not referenced, so
+    // there is nothing to add. This is the only way that route can exist conditionally at all.
+#if DEBUG
+    private static readonly Assembly[] AlsoRouted = [typeof(Editor.Pages.RecordEditor).Assembly];
+#else
+    private static readonly Assembly[] AlsoRouted = [];
+#endif
+}

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Core only, and for the same reason MovieLibrary.Web takes Core only: the enrich project reads the TMDB
+         token. This project is referenced from the web app in Debug alone, so anything it drags in would be a
+         development-time dependency, but the rule does not bend for that. -->
+    <ProjectReference Include="..\MovieLibrary.Core\MovieLibrary.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.12" />
+    <!-- For IWebAssemblyHostEnvironment, which is the editor's second, runtime guard. -->
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="MovieLibrary.Web.Tests" />
+  </ItemGroup>
+
+</Project>

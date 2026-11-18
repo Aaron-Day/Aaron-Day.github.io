@@ -1,0 +1,37 @@
+@page "/editor"
+
+<PageTitle>@Heading - Film and TV library</PageTitle>
+
+<h1 tabindex="-1">@Heading</h1>
+
+@if (!Local)
+{
+    <p>@NotLocalSentence</p>
+}
+else
+{
+    <p>@NothingYetSentence</p>
+}
+
+@code {
+    // Outside every branch, and focusable, because App.razor's FocusOnNavigate selector is "#app h1" and
+    // ElementReference.FocusAsync() does not add tabindex itself -- it fails silently on an element that cannot
+    // take focus. The heading text is also the name the route announcer's table has to carry, character for
+    // character, so these two strings are one string in two files and changing one means changing both.
+    internal const string Heading = "Record editor";
+
+    internal const string NotLocalSentence =
+        "The record editor runs on your own machine only. This copy of the site was not served by the "
+        + "development server, so there is nothing here to edit.";
+
+    internal const string NothingYetSentence = "Nothing to edit yet.";
+
+    [Inject] private IWebAssemblyHostEnvironment Environment { get; set; } = default!;
+
+    // The second guard, independent of the first. The first is that MovieLibrary.Web references this project in
+    // Debug alone, so a Release payload has no editor assembly and no route to reach. This one catches the case
+    // where a Debug build is served from somewhere that is not the dev server: a standalone WebAssembly app
+    // takes its environment from the dev server's own header, and a static host sends none, so the default is
+    // Production.
+    private bool Local => Environment.IsDevelopment();
+}

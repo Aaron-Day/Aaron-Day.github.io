@@ -41,6 +41,21 @@ internal static class WebRoot
                           File.ReadAllText(f)))
             .ToList();
 
+    /// <summary>
+    /// The paths of every hand-written file under the editor project matching the patterns, reached the way
+    /// ReadSibling reaches a sibling. Build output is excluded for the same reason as in Files.
+    /// </summary>
+    public static IEnumerable<string> EditorFiles(params string[] patterns)
+    {
+        var root = Path.Combine(Solution.Value, "src", "MovieLibrary.Web.Editor");
+        return patterns
+            .SelectMany(p => Directory.EnumerateFiles(root, p, SearchOption.AllDirectories))
+            .Where(f => !Segments(f).Contains("obj") && !Segments(f).Contains("bin"))
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .OrderBy(f => f, StringComparer.OrdinalIgnoreCase)
+            .ToList();
+    }
+
     private static string[] Segments(string path) =>
         path.Split(new[] { Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar });
 }
