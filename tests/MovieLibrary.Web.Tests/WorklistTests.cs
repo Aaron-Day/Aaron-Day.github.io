@@ -17,7 +17,11 @@ public sealed class WorklistTests
     {
         public List<string> Said { get; } = [];
 
+        public List<string> Alerted { get; } = [];
+
         public void Status(string text) => Said.Add(text);
+
+        public void Alert(string text) => Alerted.Add(text);
     }
 
     /// <summary>One context with a clock the test owns and a region it can read back.</summary>
@@ -102,6 +106,72 @@ public sealed class WorklistTests
             Assert.False(toggle.HasAttribute("aria-label"));
             Assert.False(toggle.HasAttribute("aria-labelledby"));
         });
+    }
+
+    /// <summary>
+    /// Every markup test above renders with no focus target, so none of them sees the ONE row that renders from
+    /// the capturing branch. A row becomes that row only after a close, so close one, then hold every toggle to
+    /// the contract: the same attributes on both branches, which is what the shared attribute set guarantees.
+    /// </summary>
+    [Fact]
+    public async Task TheRowThatTookFocusAfterACloseKeepsEveryToggleContractOfTheOthers()
+    {
+        await using var h = new Harness();
+        var cut = h.Render(Three, open: Uncertain.Movie.K);
+
+        cut.Find("[id='row-550-139-fields'] button.worklist-close").Click();
+
+        var toggles = cut.FindAll("button.worklist-row");
+        Assert.Equal(3, toggles.Count);
+        Assert.Single(toggles, b => b.HasAttribute("blazor:elementreference"));   // the capturing branch is in the set
+
+        Assert.All(toggles, toggle =>
+        {
+            Assert.Equal("button", toggle.GetAttribute("type"));
+            Assert.Equal("false", toggle.GetAttribute("aria-expanded"));
+            Assert.False(toggle.HasAttribute("aria-label"));
+            Assert.False(toggle.HasAttribute("aria-labelledby"));
+            Assert.StartsWith("row-", toggle.GetAttribute("aria-controls"), StringComparison.Ordinal);
+        });
+        Assert.All(cut.FindAll("ul.worklist > li"), li => Assert.Equal("button", Assert.Single(TabStops.Stops(li)).LocalName));
+    }
+
+    /// <summary>
+    /// The one sequence that sets both pending moves in a single batch: a row is opened (panel focus) and, inside
+    /// that same event, the page asks for focus on another row's toggle -- which is what Task 5's save does. The
+    /// panel wins; the toggle move must be DROPPED, or the next render of any kind pulls focus out of the search
+    /// field he is typing in.
+    /// </summary>
+    [Fact]
+    public async Task APendingToggleFocusDoesNotSurviveThePanelWinning()
+    {
+        await using var h = new Harness();
+        IRenderedComponent<Worklist>? cut = null;
+        cut = h.Render(Three, opened: key => { _ = cut!.Instance.FocusRowAfterAsync(Second.Movie.K); });
+
+        int Focuses() => h.Context.JSInterop.Invocations.Count(i => i.Identifier.EndsWith("focus", StringComparison.Ordinal));
+
+        cut.FindAll("button.worklist-row")[0].Click();
+        var settled = Focuses();
+        Assert.Equal(1, settled);   // the panel, and nothing else
+
+        cut.Find("input[type=search]").Input("x");   // an unrelated render
+
+        Assert.Equal(settled, Focuses());
+    }
+
+    [Fact]
+    public async Task TheToggleNameCarriesTheBandThenTheTitleThenTheYearThenTheRuntime()
+    {
+        await using var h = new Harness();
+        var cut = h.Render([Uncertain]);
+
+        var name = NameOf(cut.Find("button.worklist-row"));
+        var order = new[] { ConfidenceBand.BadgeFor(Confidence.Uncertain)!, "Fight Club", "1995", "2h 19m" }
+            .Select(part => name.IndexOf(part, StringComparison.Ordinal)).ToList();
+
+        Assert.DoesNotContain(-1, order);
+        Assert.Equal(order.Order().ToList(), order);
     }
 
     [Fact]

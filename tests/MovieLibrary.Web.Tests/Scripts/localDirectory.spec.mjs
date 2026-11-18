@@ -60,6 +60,54 @@ function fakeDirectory(initial = {}, fail = {}) {
     return { dir, files, aborted };
 }
 
+// status() recalls the handle from IndexedDB, so the permission cases install a one-handle fake of it, and remove
+// it afterwards so the cases above keep running with no indexedDB at all.
+function withStoredHandle(handle, run) {
+    globalThis.indexedDB = {
+        open() {
+            const request = {};
+            setTimeout(() => {
+                request.result = {
+                    close() {},
+                    transaction: () => ({
+                        objectStore: () => ({
+                            get() {
+                                const get = {};
+                                setTimeout(() => { get.result = handle; get.onsuccess(); }, 0);
+                                return get;
+                            },
+                        }),
+                    }),
+                };
+                request.onsuccess();
+            }, 0);
+            return request;
+        },
+    };
+    return run().finally(() => { delete globalThis.indexedDB; });
+}
+
+// A handle whose permission answers `state`, and which FAILS the case if anything asks to be prompted.
+function permissionHandle(state, files = {}) {
+    const fake = fakeDirectory(files);
+    const prompted = [];
+    return {
+        prompted,
+        files: fake.files,
+        dir: {
+            ...fake.dir,
+            async queryPermission() { return state; },
+            async requestPermission() { prompted.push("requestPermission"); return "granted"; },
+        },
+    };
+}
+
+// Forgets the module's root: a picker that is dismissed is the one door that clears it.
+async function forgetRoot() {
+    globalThis.window = { showDirectoryPicker: async () => { throw domError("AbortError"); } };
+    expect(await module.grant(), null, "grant() with a dismissed picker");
+}
+
 let module;
 async function open(initial, fail) {
     const fake = fakeDirectory(initial, fail);
@@ -112,6 +160,39 @@ const cases = [
         expect(await module.writeText("s.json", "new"), false, "writeText result");
         expect(files.get("s.json"), "old", "target");
         expect(files.has("s.json.tmp"), false, ".tmp left behind");
+    }],
+    ["status() on a granted handle answers its name and sets the root a later read uses", async () => {
+        await forgetRoot();
+        const held = permissionHandle("granted", { "s.json": "stored text" });
+        globalThis.window = { showDirectoryPicker: async () => { throw new Error("status() must never open the picker"); } };
+        await withStoredHandle(held.dir, async () => {
+            expect(await module.status(), "fake-repo", "status()");
+            expect(await module.readText("s.json"), "stored text", "readText after status()");
+        });
+        expect(held.prompted, [], "requestPermission calls");
+    }],
+    ["status() on a handle in the prompt state answers null and never calls requestPermission", async () => {
+        await forgetRoot();
+        const held = permissionHandle("prompt", { "s.json": "stored text" });
+        await withStoredHandle(held.dir, async () => {
+            expect(await module.status(), null, "status()");
+            expect(await module.readText("s.json"), null, "readText must have no handle after a refused status()");
+        });
+        expect(held.prompted, [], "requestPermission calls");
+    }],
+    ["status() with no stored handle answers null", async () => {
+        await forgetRoot();
+        await withStoredHandle(undefined, async () => {
+            expect(await module.status(), null, "status()");
+        });
+    }],
+    ["status() answers null rather than throwing when the stored handle cannot be queried", async () => {
+        await forgetRoot();
+        const held = permissionHandle("granted");
+        held.dir.queryPermission = async () => { throw domError("InvalidStateError"); };
+        await withStoredHandle(held.dir, async () => {
+            expect(await module.status(), null, "status()");
+        });
     }],
 ];
 

@@ -44,7 +44,7 @@ public sealed class RecordEditorTests
         context.JSInterop.Mode = JSRuntimeMode.Loose;
         var module = context.JSInterop.SetupModule(LocalDirectory.ModulePath);
         module.Setup<bool>("supported").SetResult(true);
-        module.Setup<string?>("reconfirm").SetResult(folder);
+        module.Setup<string?>("status").SetResult(folder);
         module.Setup<string?>("readText", RecordStoreReader.DefaultFileName).SetResult(storeText);
 
         var source = new HeldSource();

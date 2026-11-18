@@ -37,5 +37,7 @@ internal sealed class EditorCatalogueSource(CatalogService catalogue) : ICatalog
 internal sealed class EditorStatusRegion(Announcer announcer) : IStatusRegion
 {
     public void Status(string text) => announcer.Status(text);
+
+    public void Alert(string text) => announcer.Alert(text);
 }
 #endif

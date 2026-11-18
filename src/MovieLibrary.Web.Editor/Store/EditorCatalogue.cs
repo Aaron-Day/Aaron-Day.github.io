@@ -46,14 +46,13 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
         var byPublishedKey = EntriesByPublishedKey(store.Draft);
         var rows = movies.Select(m => Link(m, byPublishedKey)).ToList();
 
-        // An entry whose key matches no record is reported rather than dropped: a correction he already made,
-        // silently invisible, is worse than the drop.
-        var published = movies.Select(m => m.K).ToHashSet(StringComparer.Ordinal);
-        var unplaceable = store.Draft.Store.Films
-            .Where(f => !Enumerable.Range(1, f.Records.Count)
-                .Select(position => RecordLink.PublishedKeyOf(f, position))
-                .Any(k => k is not null && published.Contains(k)))
-            .ToList();
+        // An entry that claimed no row is reported rather than dropped: a correction he already made, silently
+        // invisible, is worse than the drop. "Claimed" is asked of THIS entry, and not of whether its key exists
+        // in the catalogue: two entries can publish the same key (the identity key is not part of a matched
+        // record's key), the map keeps the first, and asking only whether the key exists would leave the second
+        // neither shown nor named. An entry with several records is placed when any one of them is bound.
+        var claimed = rows.Select(r => r.Entry).OfType<FilmEntry>().ToHashSet(ReferenceEqualityComparer.Instance);
+        var unplaceable = store.Draft.Store.Films.Where(f => !claimed.Contains(f)).ToList();
 
         return store.With(CatalogueState.Ready, rows, synthetic, unplaceable);
     }
@@ -82,8 +81,11 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
 
     private async Task<Reading> ReadStoreAsync()
     {
+        // Query-only on load: a picker or a prompt fires on a user gesture and never on load (A52), and
+        // requestPermission without a click rejects in Chromium, which would report no folder on every fresh
+        // load even with a grant standing. The prompt is ReconfirmAsync's, behind a button.
         var supported = await directory.SupportedAsync();
-        var folder = supported ? await directory.ReconfirmAsync() : null;
+        var folder = supported ? await directory.StatusAsync() : null;
         var text = await directory.ReadTextAsync(RecordStoreReader.DefaultFileName);
         var empty = StoreDraft.From(RecordStore.Empty);
 

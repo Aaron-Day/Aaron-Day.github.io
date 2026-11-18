@@ -25,6 +25,7 @@ public sealed class LocalDirectoryTests
 
         Assert.False(await directory.SupportedAsync());
         Assert.Null(await directory.GrantAsync());
+        Assert.Null(await directory.StatusAsync());
         Assert.Null(await directory.ReconfirmAsync());
         Assert.Null(await directory.ReadTextAsync("x"));
     }

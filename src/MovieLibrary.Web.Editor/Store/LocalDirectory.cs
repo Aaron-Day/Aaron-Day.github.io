@@ -3,7 +3,7 @@ using Microsoft.JSInterop;
 namespace MovieLibrary.Web.Editor.Store;
 
 /// <summary>
-/// The C# side of the one directory grant: a lazily imported JS module, and six operations over it.
+/// The C# side of the one directory grant: a lazily imported JS module, and seven operations over it.
 /// </summary>
 /// <remarks>
 /// <para><b>The module reference may be null and that is not an error.</b> Under bUnit's loose JS mode an
@@ -52,6 +52,11 @@ public sealed class LocalDirectory(IJSRuntime js) : IAsyncDisposable
     public async Task<string?> GrantAsync() =>
         await ModuleAsync() is { } m ? await m.InvokeAsync<string?>("grant") : null;
 
+    /// <summary>The granted folder's name if permission already stands, else null. Never prompts, so it is safe on load.</summary>
+    public async Task<string?> StatusAsync() =>
+        await ModuleAsync() is { } m ? await m.InvokeAsync<string?>("status") : null;
+
+    /// <summary>Like <see cref="StatusAsync"/> but asks the browser to renew a lapsed permission. Only from a user gesture.</summary>
     public async Task<string?> ReconfirmAsync() =>
         await ModuleAsync() is { } m ? await m.InvokeAsync<string?>("reconfirm") : null;
 

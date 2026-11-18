@@ -78,6 +78,26 @@ export async function reconfirm() {
     }
 }
 
+// Query-only twin of reconfirm(), for page load. A picker or a prompt fires on a user gesture and never on load,
+// and Chromium rejects requestPermission without transient activation, so reconfirm() on load reports "no
+// folder" on every fresh load even with a grant standing. This answers the name only when permission already
+// is "granted", sets root so a later read has a handle, and never calls requestPermission or the picker.
+export async function status() {
+    if (!supported()) return null;
+
+    try {
+        const stored = root ?? await recall();
+        if (!stored) return null;
+
+        if (await stored.queryPermission({ mode: "readwrite" }) !== "granted") return null;
+
+        root = stored;
+        return stored.name;
+    } catch {
+        return null;
+    }
+}
+
 // Three answers, not two, because "I could not read it" must never look like "it is not there". The first has
 // to stop a write; the second is the ordinary state of a repository that has no store yet.
 async function peek(name) {

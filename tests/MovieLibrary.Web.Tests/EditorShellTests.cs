@@ -35,6 +35,8 @@ public sealed class EditorShellTests
     internal sealed class SilentRegion : IStatusRegion
     {
         public void Status(string text) { }
+
+        public void Alert(string text) { }
     }
 
     private static BunitContext Context(string environment)

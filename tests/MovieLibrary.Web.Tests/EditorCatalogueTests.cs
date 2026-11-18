@@ -42,7 +42,7 @@ public sealed class EditorCatalogueTests
         var context = new BunitContext();
         var module = context.JSInterop.SetupModule(LocalDirectory.ModulePath);
         module.Setup<bool>("supported").SetResult(supported);
-        module.Setup<string?>("reconfirm").SetResult(folder);
+        module.Setup<string?>("status").SetResult(folder);
         module.Setup<string?>("readText", RecordStoreReader.DefaultFileName).SetResult(text);
         return (context, new LocalDirectory(context.JSInterop.JSRuntime));
     }
@@ -141,6 +141,35 @@ public sealed class EditorCatalogueTests
 
         Assert.Equal(KeyB, Assert.Single(state.Unplaceable).IdentityKey);
         Assert.Equal(1, state.Rows.Count(r => r.Entry is not null));
+    }
+
+    /// <summary>
+    /// Two entries with different identity keys that publish ONE key: a matched record's key is its id and runtime
+    /// and holds no part of the identity key. The map keeps the first, so the second must be NAMED, not dropped.
+    /// </summary>
+    [Fact]
+    public async Task TwoEntriesResolvingToOnePublishedKeyNameTheLoserRatherThanDroppingIt()
+    {
+        var movie = Film(550, "Fight Club", 139, 0.5);
+
+        var state = await Load([movie], StoreOf(EntryFor(KeyA, 550, 139), EntryFor(KeyB, 550, 139)));
+
+        Assert.Equal(KeyA, state.Rows.Single().Entry?.IdentityKey);
+        Assert.Equal(KeyB, Assert.Single(state.Unplaceable).IdentityKey);
+    }
+
+    /// <summary>A prompt on load is forbidden (A52) and would be rejected without a click anyway.</summary>
+    [Fact]
+    public async Task LoadingAsksTheScriptForStatusAndNeverForTheReconfirmThatPrompts()
+    {
+        var (context, directory) = Folder(text: StoreOf());
+        using (context)
+        {
+            await new EditorCatalogue(new Source(CatalogueState.Ready, []), directory).LoadAsync();
+
+            Assert.Contains(context.JSInterop.Invocations, i => i.Identifier == "status");
+            Assert.DoesNotContain(context.JSInterop.Invocations, i => i.Identifier == "reconfirm");
+        }
     }
 
     [Fact]

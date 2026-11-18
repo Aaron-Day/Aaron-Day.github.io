@@ -74,18 +74,22 @@
                focused LATER cannot simply be handed a reference then: the one row whose key is the focus target
                is rendered with the capture, and every other row without it, which also means 285 references are
                never held for the sake of one. The target is not reset after the move -- resetting would swap the
-               focused element for a fresh one and drop focus to the body. *@
+               focused element for a fresh one and drop focus to the body.
+
+               EVERYTHING ELSE ON THE BUTTON IS BUILT ONCE, in ToggleAttributes, and splatted onto both branches,
+               so the two cannot drift: a literal aria-expanded, no aria-label, type button and the one tab stop
+               are properties of that one set. A row only becomes the capturing one after a close, which is the
+               state the owner is in constantly and the one a markup test renders last. *@
+            @{ var toggle = ToggleAttributes(k, open); }
             @if (k == focusKey)
             {
-                <button type="button" class="worklist-row" aria-expanded="@(open ? "true" : "false")"
-                        aria-controls="@FieldsId(k)" @onclick="() => ToggleAsync(k)" @ref="focusSlot.Element">
+                <button @attributes="toggle" @ref="focusSlot.Element">
                     @Face(row)
                 </button>
             }
             else
             {
-                <button type="button" class="worklist-row" aria-expanded="@(open ? "true" : "false")"
-                        aria-controls="@FieldsId(k)" @onclick="() => ToggleAsync(k)">
+                <button @attributes="toggle">
                     @Face(row)
                 </button>
             }
@@ -186,6 +190,19 @@
     private bool disposed;
     private ITimer? filterTimer;
     private ITimer? announceTimer;
+
+    /// <summary>
+    /// The toggle's whole attribute set, for both render branches. The state is the literal string "true" or
+    /// "false" and is never omitted: a test helper exempts a dangling controls reference only on that literal.
+    /// </summary>
+    private Dictionary<string, object> ToggleAttributes(string key, bool open) => new()
+    {
+        ["type"] = "button",
+        ["class"] = "worklist-row",
+        ["aria-expanded"] = open ? "true" : "false",
+        ["aria-controls"] = FieldsId(key),
+        ["onclick"] = EventCallback.Factory.Create<MouseEventArgs>(this, () => ToggleAsync(key)),
+    };
 
     private static string FieldsId(string key) => $"row-{key}-fields";
 
@@ -407,9 +424,21 @@
         // receives focus is outside SC 4.1.3's scope, and the reader speaks the record's name as it arrives.
         // Only when that row is actually on screen: a key the filter hides has no region, and a reference to
         // an element that was never rendered is not one a focus call can use.
+        //
+        // The panel wins, and a toggle-focus still pending is DROPPED, not deferred. Left set, it would fire on
+        // the NEXT render of any kind -- a keystroke in the search field is enough -- and pull focus out of
+        // the field he is typing in.
+        //
+        // THE INVARIANT THIS WHOLE MECHANISM RESTS ON: every change of focusKey destroys and recreates two
+        // buttons (the old capturing row and the new one), which is harmless only because every path that
+        // changes focusKey also sets focusToggle in the same batch. The one case where the destroyed button
+        // held focus is straight after a Close, and that is always followed by a deliberate move. So any later
+        // edit that sets focusKey WITHOUT focusToggle drops focus to <body>, and the next Tab restarts above the
+        // skip link. Set them together or not at all.
         if (focusPanel && openKey is not null && Array.IndexOf(shownKeys, openKey) >= 0)
         {
             focusPanel = false;
+            focusToggle = false;
             await TryFocus(panel);
         }
         else if (focusToggle)
