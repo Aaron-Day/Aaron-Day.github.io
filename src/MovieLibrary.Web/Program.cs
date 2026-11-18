@@ -29,7 +29,9 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 #if DEBUG
 // The local record editor's registrations. Debug only: the Release payload does not reference the project.
-builder.Services.AddRecordEditor();
+// The two types are the web app's side of the two seams the editor cannot reach across: the catalogue service
+// and the announcer both live here, and this project is the one that references the editor.
+builder.Services.AddRecordEditor<EditorCatalogueSource, EditorStatusRegion>();
 #endif
 
 await builder.Build().RunAsync();

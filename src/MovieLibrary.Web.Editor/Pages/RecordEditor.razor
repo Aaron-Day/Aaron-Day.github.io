@@ -1,16 +1,31 @@
 @page "/editor"
+@implements IDisposable
+@inject EditorCatalogue Catalogue
+@inject IJSRuntime Js
 
 <PageTitle>@Heading - Film and TV library</PageTitle>
 
 <h1 tabindex="-1">@Heading</h1>
 
-@if (!Local)
+@* ONE stable container, as Movies.razor has it, and never swapped for a different node between states:
+   replacing the node would destroy the one a screen reader's virtual cursor may be sitting on. It holds one
+   sentence of prose and, where a retry applies, one button. It carries tabindex of minus one so a failure can
+   take focus, which puts the message out of SC 4.1.3's scope instead of relying on it being honoured, and it
+   is styled by the site's own stylesheet, so this page adds none. No live region of any kind in here. *@
+<div class="catalog-state" tabindex="-1" @ref="container">
+    <p>@Sentence</p>
+
+    @if (ShowTryAgain)
+    {
+        @* aria-disabled and never the disabled attribute: disabling the focused element blurs it and drops focus
+           to the body. The click still arrives and is ignored in code. *@
+        <button type="button" class="try-again" aria-disabled="@(loading ? "true" : null)" @onclick="TryAgain">Try again</button>
+    }
+</div>
+
+@if (Local && state is { Rows.Count: > 0 })
 {
-    <p>@NotLocalSentence</p>
-}
-else
-{
-    <p>@NothingYetSentence</p>
+    <Worklist Rows="state.Rows" OpenKey="@openKey" Opened="OnOpened" Closed="OnClosed" />
 }
 
 @code {
@@ -24,7 +39,23 @@ else
         "The record editor runs on your own machine only. This copy of the site was not served by the "
         + "development server, so there is nothing here to edit.";
 
-    internal const string NothingYetSentence = "Nothing to edit yet.";
+    internal const string LoadingSentence = "Loading the records…";
+
+    internal const string CatalogueFailedSentence =
+        "The published catalogue could not be loaded, so there are no records to edit. "
+        + "Check that the site has data, then try again.";
+
+    // Says that nothing was READ, and stops there. The script answers null both for "the file is not there" and
+    // for "I could not read it" and cannot tell them apart, so a stronger claim -- "there is no store yet" --
+    // would be a guess presented as fact. Saving is safe either way, because the write side refuses to
+    // overwrite a file it could not read.
+    internal const string NoStoreReadSentence =
+        "No record store was read, so no existing corrections are shown. Try again once the repository folder "
+        + "is available to this page.";
+
+    internal const string SyntheticSentence =
+        "This catalogue was generated for testing and its TMDB ids are invented, so a correction made against "
+        + "it would mean nothing. Rebuild the catalogue from the real sheet to edit.";
 
     [Inject] private IWebAssemblyHostEnvironment Environment { get; set; } = default!;
 
@@ -34,4 +65,103 @@ else
     // takes its environment from the dev server's own header, and a static host sends none, so the default is
     // Production.
     private bool Local => Environment.IsDevelopment();
+
+    private ElementReference container;
+    private EditorState? state;
+    private bool focusPending;
+    private string? openKey;
+    private bool loading;
+    private bool disposed;
+
+    /// <summary>The state's own sentence, one at a time: the most important thing the owner has to be told.</summary>
+    private string Sentence
+    {
+        get
+        {
+            if (!Local) return NotLocalSentence;
+            if (state is null) return LoadingSentence;
+            if (state.Catalogue == CatalogueState.Failed) return CatalogueFailedSentence;
+            if (state.Store == StoreReading.Refused)
+                return $"The record store could not be read, so nothing can be edited: {state.StoreProblem} "
+                       + "Fix the file by hand, then try again.";
+            if (state.Synthetic) return SyntheticSentence;
+            if (state.Unplaceable.Count > 0) return UnplaceableSentence(state);
+            if (state.Store == StoreReading.NotRead) return NoStoreReadSentence;
+
+            return $"The library holds {state.Rows.Count:N0} records.";
+        }
+    }
+
+    // A correction he made that nothing published matches is not shown in the list, and silence about it would
+    // lose it. The keys are the entries' own, so he can find them in the file.
+    private static string UnplaceableSentence(EditorState s) =>
+        (s.Unplaceable.Count == 1
+            ? "1 correction in the record store matches no published record, so it is not shown in the list: "
+            : $"{s.Unplaceable.Count:N0} corrections in the record store match no published record, so they are not shown in the list: ")
+        + string.Join(", ", s.Unplaceable.Select(f => f.IdentityKey)) + ".";
+
+    /// <summary>The button stays while a load is in flight: removing it would drop focus to the body.</summary>
+    private bool ShowTryAgain => Local && (loading || state is not null && (
+        state.Catalogue == CatalogueState.Failed || state.Store != StoreReading.Read));
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!Local) return;
+
+        loading = state is null;
+        state = await Catalogue.LoadAsync();
+        loading = false;
+        focusPending = NeedsAttention;
+    }
+
+    private async Task TryAgain()
+    {
+        if (loading) return;
+
+        loading = true;
+        state = null;
+        openKey = null;
+
+        var next = await Catalogue.LoadAsync();
+        if (disposed) return;
+
+        state = next;
+        loading = false;
+        focusPending = NeedsAttention;
+    }
+
+    /// <summary>A state the owner must be told about, as opposed to one that is simply how the library is.</summary>
+    private bool NeedsAttention => state is not null
+        && (state.Catalogue == CatalogueState.Failed || state.Store != StoreReading.Read
+            || state.Unplaceable.Count > 0 || state.Synthetic);
+
+    /// <remarks>
+    /// The focus move is how a problem is reported: a focused container's text IS the sentence, so nothing else
+    /// is raised and nothing is announced twice. It moves only if nobody has moved focus themselves -- the
+    /// helper in index.html answers that, because C# cannot read the active element -- and swallows the ways
+    /// interop can fail, since an escape would reveal the host page's error bar, an assertive source of its own.
+    /// Nothing auto-dismisses and nothing auto-retries: a message that cleared itself is a time limit on reading it.
+    /// </remarks>
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!focusPending || disposed) return;
+
+        focusPending = false;
+
+        try
+        {
+            await Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", container, FocusKeepers);
+        }
+        catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
+        {
+        }
+    }
+
+    private static readonly string[] FocusKeepers = ["#main-content", "#app h1"];
+
+    private void OnOpened(string key) => openKey = key;
+
+    private void OnClosed() => openKey = null;
+
+    public void Dispose() => disposed = true;
 }

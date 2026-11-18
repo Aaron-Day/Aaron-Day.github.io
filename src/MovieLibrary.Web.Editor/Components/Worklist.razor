@@ -1,0 +1,449 @@
+@implements IDisposable
+@inject TimeProvider Time
+@inject IStatusRegion Region
+
+@* THE WORKLIST: every published record, the ones that need a decision first, any of them reachable.
+
+   A LIST OF DISCLOSURES, NOT A TABLE AND NOT A DIALOG. Each row's one control is a button that reveals the
+   record's fields in a sibling region right after it. Focus never leaves the list, so after the 285th save he
+   is where he was; there is no trap to build; and a form inside a table cell reads as cell content. One row
+   is open at a time.
+
+   ONE TAB STOP PER COLLAPSED ROW, and the button has NO aria-label: its accessible name is its own text, which
+   reads the band, then the title, the year and the runtime. A label over visible text would be a Label in Name
+   subject (SC 2.5.3), and the words are the same words either way. The band comes FIRST in the document and
+   on screen, so he hears which band it is before the title and not after 285 of them.
+
+   THE BAND WORDS ARE CORE'S. They come from ConfidenceBand.BadgeFor and are never written out in this
+   project, in either case: a copy in lower case is how a count sentence ends up saying one thing beside a
+   badge saying another, and a band renamed in Core would leave it lying.
+
+   THE ONE POLITE REGION ON THIS PAGE IS THIS COMPONENT'S, for the debounced result count. Nothing else in the
+   editor may write to it, because within it the latest message wins. No live-region attribute and no status
+   or alert role appears anywhere in this file; the count sentence below is plain text. (Spelled in words on
+   purpose: a test scans these files for the literal markers, and a comment quoting one fails like the
+   attribute would.)
+
+   NO PAGER: he finds records by title and not by position, so the search field, the band filter and the sort
+   are the way through 285, and a pager would take the region away from the count. *@
+
+<search class="worklist-search">
+    <div class="worklist-field">
+        <label for="worklist-query">Search titles and directors</label>
+        <input id="worklist-query" type="search" enterkeyhint="search" value="@typed" @oninput="OnQueryInput" />
+    </div>
+
+    <fieldset>
+        <legend>Show</legend>
+        <div class="options">
+            <label><input type="radio" name="worklist-band" checked="@(filter.Band == WorklistBand.NeedAttention)"
+                          @onchange="() => SetBand(WorklistBand.NeedAttention)" /> Needs attention</label>
+            <label><input type="radio" name="worklist-band" checked="@(filter.Band == WorklistBand.Unmatched)"
+                          @onchange="() => SetBand(WorklistBand.Unmatched)" /> @ConfidenceBand.BadgeFor(Confidence.Unmatched)</label>
+            <label><input type="radio" name="worklist-band" checked="@(filter.Band == WorklistBand.Uncertain)"
+                          @onchange="() => SetBand(WorklistBand.Uncertain)" /> @ConfidenceBand.BadgeFor(Confidence.Uncertain)</label>
+            <label><input type="radio" name="worklist-band" checked="@(filter.Band == WorklistBand.All)"
+                          @onchange="() => SetBand(WorklistBand.All)" /> All records</label>
+        </div>
+    </fieldset>
+
+    <div class="worklist-field">
+        <label for="worklist-sort">Sort by</label>
+        <select id="worklist-sort" value="@SortToken(filter.Sort)" @onchange="OnSort">
+            <option value="@SortToken(WorklistSort.WorstFirst)">Worst match first</option>
+            <option value="@SortToken(WorklistSort.Title)">Title</option>
+        </select>
+    </div>
+</search>
+
+@* Plain text, and the sentence is COMPOSED from the band words rather than written out. *@
+<p class="worklist-counts">@CountsSentence</p>
+<p class="worklist-shown">@ShownSentence</p>
+
+<ul class="worklist" role="list">
+    @foreach (var row in shown)
+    {
+        @* @key is the PUBLISHED key, never the TMDB id: the id is 0 on every unmatched record, and a duplicate
+           key within one collection fails the render. *@
+        var k = row.Movie.K;
+        var open = k == openKey;
+
+        <li @key="k">
+            @* TWO BRANCHES, and the difference is the reference capture alone. Blazor applies a capture when the
+               element is created and does not re-apply it to an element it keeps, so a toggle that has to be
+               focused LATER cannot simply be handed a reference then: the one row whose key is the focus target
+               is rendered with the capture, and every other row without it, which also means 285 references are
+               never held for the sake of one. The target is not reset after the move -- resetting would swap the
+               focused element for a fresh one and drop focus to the body. *@
+            @if (k == focusKey)
+            {
+                <button type="button" class="worklist-row" aria-expanded="@(open ? "true" : "false")"
+                        aria-controls="@FieldsId(k)" @onclick="() => ToggleAsync(k)" @ref="focusSlot.Element">
+                    @Face(row)
+                </button>
+            }
+            else
+            {
+                <button type="button" class="worklist-row" aria-expanded="@(open ? "true" : "false")"
+                        aria-controls="@FieldsId(k)" @onclick="() => ToggleAsync(k)">
+                    @Face(row)
+                </button>
+            }
+
+            @if (open)
+            {
+                @* A plain div with no role. tabindex of minus one makes it a focus TARGET and not a stop, which
+                   is what keeps a collapsed row at one stop; aria-labelledby is the row's title, so the reader
+                   speaks the record's name as focus arrives and nothing needs announcing. *@
+                <div id="@FieldsId(k)" class="worklist-panel" tabindex="-1" aria-labelledby="@TitleId(k)" @ref="panel">
+                    @RowContent?.Invoke(row)
+                    <button type="button" class="worklist-close" @onclick="() => CloseAsync(k)">Close this record</button>
+                </div>
+            }
+        </li>
+    }
+</ul>
+
+@code {
+    // Filter at ~150 ms so the list feels immediate; announce at ~750 ms so a screen reader user hears one count
+    // and not a stream. The gap is the point: the announcer restarts its settle delay on every call, so a
+    // caller that spoke per keystroke would deliver nothing at all. The same figures the films page measured.
+    internal const int FilterDebounceMs = 150;
+    internal const int AnnounceDebounceMs = 750;
+
+    /// <summary>Every published record. The worklist filters and orders these itself.</summary>
+    [Parameter, EditorRequired] public IReadOnlyList<WorklistRow> Rows { get; set; } = [];
+
+    /// <summary>The published key of the row to show open, or null for none. The component adopts a change to it.</summary>
+    [Parameter] public string? OpenKey { get; set; }
+
+    /// <summary>A row was opened. Carries its published key.</summary>
+    [Parameter] public EventCallback<string> Opened { get; set; }
+
+    /// <summary>The open row was closed, by its own button, by Close, by another opening or by a filter change.</summary>
+    [Parameter] public EventCallback Closed { get; set; }
+
+    /// <summary>The search text or the band changed, after the debounce. Carries the whole next filter.</summary>
+    [Parameter] public EventCallback<WorklistFilter> FilterChanged { get; set; }
+
+    /// <summary>What goes inside an open row's region: the form, which is Task 5's. Empty until then.</summary>
+    [Parameter] public RenderFragment<WorklistRow>? RowContent { get; set; }
+
+
+    /// <summary>
+    /// What is inside a collapsed row's button, in the order it is read: the thumbnail (no text, so nothing for
+    /// a reader), then the band, the title, the year and the runtime. The band is FIRST, in the document and on
+    /// screen, so the order is never split by CSS.
+    /// </summary>
+    private RenderFragment<WorklistRow> Face => row =>
+        @<text>
+            @if (row.Movie.P is { Length: > 0 } poster)
+            {
+                @* alt is empty because the title is visible text in this same row. width and height are the
+                   intrinsic size of a w92 poster and reserve the box before the CDN answers. A record with no
+                   poster gets a box with no image at all: an empty src can render broken-image chrome. *@
+                <img class="worklist-thumb" src="@($"https://image.tmdb.org/t/p/w92{poster}")" alt=""
+                     width="92" height="138" loading="lazy" decoding="async" />
+            }
+            else
+            {
+                <span class="worklist-thumb" aria-hidden="true"></span>
+            }
+
+            <span class="worklist-text">
+                @if (row.Badge is { } badge)
+                {
+                    <span class="worklist-badge worklist-badge-@row.Band.ToString().ToLowerInvariant()">@badge</span>
+                }
+                <span class="worklist-title" id="@TitleId(row.Movie.K)">@row.Movie.T</span>
+                <span class="worklist-meta">
+                    @if (row.Movie.Y is { } year)
+                    {
+                        <span class="worklist-year">@year</span>
+                    }
+                    <span class="worklist-runtime">@FormatRuntime(row.Movie.Rt)</span>
+                </span>
+            </span>
+        </text>;
+
+    private sealed class RefSlot { public ElementReference Element; }
+
+    private readonly RefSlot focusSlot = new();
+
+    private WorklistFilter filter = WorklistFilter.Default;
+    private string typed = string.Empty;
+    private string? openKey;
+    private string? seenOpenParameter;
+    private IReadOnlyList<WorklistRow>? seenRows;
+    private List<WorklistRow> shown = [];
+    private string[] shownKeys = [];
+    private string[] priorKeys = [];
+
+    private ElementReference panel;
+    private string? focusKey;
+    private bool focusToggle;
+    private bool focusPanel;
+    private bool disposed;
+    private ITimer? filterTimer;
+    private ITimer? announceTimer;
+
+    private static string FieldsId(string key) => $"row-{key}-fields";
+
+    private static string TitleId(string key) => $"row-{key}-title";
+
+    protected override void OnParametersSet()
+    {
+        if (OpenKey != seenOpenParameter)
+        {
+            seenOpenParameter = OpenKey;
+            openKey = OpenKey;
+            focusPanel |= OpenKey is not null;
+        }
+
+        if (!ReferenceEquals(Rows, seenRows))
+        {
+            seenRows = Rows;
+            Refilter();
+        }
+    }
+
+    // ============================================================ what is shown
+
+    private void Refilter()
+    {
+        var query = filter.Query.Trim();
+
+        var rows = Rows.Where(r => filter.Band switch
+        {
+            WorklistBand.Unmatched => r.Band == Confidence.Unmatched,
+            WorklistBand.Uncertain => r.Band == Confidence.Uncertain,
+            WorklistBand.NeedAttention => r.Band != Confidence.Confident,
+            _ => true,
+        });
+
+        if (query.Length > 0)
+            rows = rows.Where(r =>
+                r.Movie.T.Contains(query, StringComparison.OrdinalIgnoreCase)
+                || r.Movie.Dir.Any(d => d.Contains(query, StringComparison.OrdinalIgnoreCase)));
+
+        shown = (filter.Sort == WorklistSort.Title
+            ? rows.OrderBy(r => r.Movie.Srt ?? r.Movie.T, StringComparer.OrdinalIgnoreCase)
+            : rows.OrderBy(r => r.Band).ThenBy(r => r.Movie.Mc).ThenBy(r => r.Movie.Srt ?? r.Movie.T, StringComparer.OrdinalIgnoreCase))
+            .ThenBy(r => r.Movie.K, StringComparer.Ordinal)
+            .ToList();
+
+        var keys = shown.Select(r => r.Movie.K).ToArray();
+        if (!keys.AsSpan().SequenceEqual(shownKeys))
+        {
+            priorKeys = shownKeys;
+            shownKeys = keys;
+        }
+    }
+
+    private string CountsSentence =>
+        $"{Rows.Count(r => r.Band != Confidence.Confident):N0} records need attention — "
+        + $"{Rows.Count(r => r.Band == Confidence.Unmatched):N0} {ConfidenceBand.BadgeFor(Confidence.Unmatched)}, "
+        + $"{Rows.Count(r => r.Band == Confidence.Uncertain):N0} {ConfidenceBand.BadgeFor(Confidence.Uncertain)}";
+
+    private string ShownSentence => $"Showing {shown.Count:N0} of {Rows.Count:N0} records.";
+
+    internal static string MatchSentence(int count) => count switch
+    {
+        0 => "No records match these filters.",
+        1 => "1 record matches.",
+        var n => $"{n:N0} records match.",
+    };
+
+    /// <summary>A runtime as hours and minutes, with "2h" on the exact hour. A duration, so never grouped as a number.</summary>
+    private static string FormatRuntime(int minutes)
+    {
+        var hours = minutes / 60;
+        var rest = minutes % 60;
+
+        if (hours == 0) return $"{rest}m";
+
+        return rest == 0 ? $"{hours}h" : $"{hours}h {rest}m";
+    }
+
+    private static string SortToken(WorklistSort sort) => sort == WorklistSort.Title ? "title" : "worst";
+
+    // ============================================================ opening and closing
+
+    private async Task ToggleAsync(string key)
+    {
+        if (key == openKey)
+        {
+            // Focus is already on this row's own toggle, which is the button that was pressed.
+            openKey = null;
+            await Closed.InvokeAsync();
+            return;
+        }
+
+        // Opening one row closes another, and the page is told once, as an open and not as a close then an open.
+        openKey = key;
+        focusPanel = true;
+        await Opened.InvokeAsync(key);
+    }
+
+    /// <summary>
+    /// Closes from inside the form, and puts focus on the row's own toggle: focus on a removed element falls to
+    /// the body, and the next Tab would restart above the skip link.
+    /// </summary>
+    private async Task CloseAsync(string key)
+    {
+        openKey = null;
+        focusKey = key;
+        focusToggle = true;
+        await Closed.InvokeAsync();
+    }
+
+    /// <summary>
+    /// Focuses the toggle of the row that now occupies the removed row's place, or returns false when no row is
+    /// left -- the page then focuses its own status paragraph (A51).
+    /// </summary>
+    /// <remarks>
+    /// A saved row can leave a filtered list, and focus on a removed row falls to the body. The place is found
+    /// from the order the list had BEFORE the change, which is why that order is kept: the page changes the rows
+    /// and then calls this, and by then the list has already been rebuilt. A row still showing is treated as
+    /// about to go, and the one after it is the answer, or the one before when it was last.
+    /// </remarks>
+    public Task<bool> FocusRowAfterAsync(string removedKey)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(removedKey);
+
+        var now = Array.IndexOf(shownKeys, removedKey);
+        string? target = null;
+
+        if (now >= 0)
+        {
+            target = now + 1 < shownKeys.Length ? shownKeys[now + 1] : now > 0 ? shownKeys[now - 1] : null;
+        }
+        else if (Array.IndexOf(priorKeys, removedKey) is var was and >= 0 && shownKeys.Length > 0)
+        {
+            target = shownKeys[Math.Min(was, shownKeys.Length - 1)];
+        }
+
+        if (target is null) return Task.FromResult(false);
+
+        focusKey = target;
+        focusToggle = true;
+        StateHasChanged();
+        return Task.FromResult(true);
+    }
+
+    // ============================================================ the filter
+
+    private void OnQueryInput(ChangeEventArgs e)
+    {
+        typed = e.Value as string ?? string.Empty;
+
+        filterTimer ??= Time.CreateTimer(
+            _ => _ = InvokeAsync(ApplyTypedQuery), null, Timeout.InfiniteTimeSpan, Timeout.InfiniteTimeSpan);
+        filterTimer.Change(TimeSpan.FromMilliseconds(FilterDebounceMs), Timeout.InfiniteTimeSpan);
+    }
+
+    /// <remarks>Internal so a test can run it as a timer that had ALREADY queued it would after the page is gone.</remarks>
+    internal async Task ApplyTypedQuery()
+    {
+        if (disposed) return;
+
+        await ApplyAsync(filter with { Query = typed.Trim() });
+        StateHasChanged();
+    }
+
+    private Task SetBand(WorklistBand band) => ApplyAsync(filter with { Band = band });
+
+    private async Task OnSort(ChangeEventArgs e)
+    {
+        // Sorting removes nothing, so it does not close the open row and does not need announcing: the select
+        // announces its own new value.
+        filter = filter with { Sort = e.Value as string == "title" ? WorklistSort.Title : WorklistSort.WorstFirst };
+        Refilter();
+        await FilterChanged.InvokeAsync(filter);
+    }
+
+    /// <summary>
+    /// The one way the selection changes. A change closes the open row (correction 13): the debounce can
+    /// filter that very row out and remove the form from under him. Focus needs no move, because the only route
+    /// here is the search field or a radio, and whichever it was still holds focus; nothing needs announcing
+    /// beyond the count.
+    /// </summary>
+    private async Task ApplyAsync(WorklistFilter next)
+    {
+        if (next.Query == filter.Query && next.Band == filter.Band) return;
+
+        filter = next;
+        Refilter();
+
+        var hadOpen = openKey is not null;
+        openKey = null;
+
+        ScheduleCountAnnouncement();
+        await FilterChanged.InvokeAsync(filter);
+        if (hadOpen) await Closed.InvokeAsync();
+    }
+
+    private void ScheduleCountAnnouncement()
+    {
+        announceTimer ??= Time.CreateTimer(
+            _ => _ = InvokeAsync(AnnounceCount), null, Timeout.InfiniteTimeSpan, Timeout.InfiniteTimeSpan);
+        announceTimer.Change(TimeSpan.FromMilliseconds(AnnounceDebounceMs), Timeout.InfiniteTimeSpan);
+    }
+
+    internal void AnnounceCount()
+    {
+        if (disposed) return;
+
+        Region.Status(MatchSentence(shown.Count));
+    }
+
+    // ============================================================ focus
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (disposed) return;
+
+        // Opening: the revealed region itself, once it exists. Nothing is announced, because a message that
+        // receives focus is outside SC 4.1.3's scope, and the reader speaks the record's name as it arrives.
+        // Only when that row is actually on screen: a key the filter hides has no region, and a reference to
+        // an element that was never rendered is not one a focus call can use.
+        if (focusPanel && openKey is not null && Array.IndexOf(shownKeys, openKey) >= 0)
+        {
+            focusPanel = false;
+            await TryFocus(panel);
+        }
+        else if (focusToggle)
+        {
+            focusToggle = false;
+            await TryFocus(focusSlot.Element);
+        }
+    }
+
+    /// <remarks>
+    /// Interop can fail, and an escape from here would reveal the host page's error bar, which carries an
+    /// assertive role of its own on a page that has just done what the visitor asked.
+    /// </remarks>
+    private static async Task TryFocus(ElementReference element)
+    {
+        try
+        {
+            await element.FocusAsync();
+        }
+        catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
+        {
+        }
+    }
+
+    /// <remarks>
+    /// Whoever writes a standing statement clears it. The announcer is a scoped singleton and the layout survives
+    /// navigation, so a count left in the region would still be readable on the next page. Both timers first: one
+    /// firing after this would write a count into a region that has just been cleared.
+    /// </remarks>
+    public void Dispose()
+    {
+        disposed = true;
+        filterTimer?.Dispose();
+        announceTimer?.Dispose();
+        Region.Status("");
+    }
+}

@@ -10,6 +10,18 @@ namespace MovieLibrary.Web.Editor;
 /// </summary>
 public static class EditorServices
 {
-    public static IServiceCollection AddRecordEditor(this IServiceCollection services) =>
-        services.AddScoped<LocalDirectory>();
+    /// <typeparam name="TCatalogue">The web app's implementation of <see cref="ICatalogueSource"/>.</typeparam>
+    /// <typeparam name="TStatus">The web app's implementation of <see cref="IStatusRegion"/>.</typeparam>
+    /// <remarks>
+    /// Generic, so that the two things this project cannot reach -- the catalogue service and the announcer, both
+    /// in the web app -- are demanded at compile time rather than discovered as a DI error on the first render.
+    /// </remarks>
+    public static IServiceCollection AddRecordEditor<TCatalogue, TStatus>(this IServiceCollection services)
+        where TCatalogue : class, ICatalogueSource
+        where TStatus : class, IStatusRegion =>
+        services
+            .AddScoped<LocalDirectory>()
+            .AddScoped<ICatalogueSource, TCatalogue>()
+            .AddScoped<IStatusRegion, TStatus>()
+            .AddScoped<EditorCatalogue>();
 }

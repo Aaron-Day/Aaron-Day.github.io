@@ -2,7 +2,9 @@ using Bunit;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using MovieLibrary.Web.Editor;
 using MovieLibrary.Web.Editor.Pages;
+using MovieLibrary.Web.Editor.Store;
 
 namespace MovieLibrary.Web.Tests;
 
@@ -20,11 +22,28 @@ public sealed class EditorShellTests
         public string BaseAddress => "http://localhost/";
     }
 
+    /// <summary>An empty, ready catalogue: the page has a source to ask, and nothing in it to list.</summary>
+    internal sealed class EmptySource : ICatalogueSource
+    {
+        public Task<(CatalogueState State, IReadOnlyList<MovieLibrary.Core.Models.MovieRecord> Movies)> MoviesAsync() =>
+            Task.FromResult((CatalogueState.Ready, (IReadOnlyList<MovieLibrary.Core.Models.MovieRecord>)[]));
+
+        public Task<(CatalogueState State, MovieLibrary.Core.Models.CatalogMeta? Meta)> MetaAsync() =>
+            Task.FromResult((CatalogueState.Ready, (MovieLibrary.Core.Models.CatalogMeta?)null));
+    }
+
+    internal sealed class SilentRegion : IStatusRegion
+    {
+        public void Status(string text) { }
+    }
+
     private static BunitContext Context(string environment)
     {
         var context = new BunitContext();
         context.JSInterop.Mode = JSRuntimeMode.Loose;
         context.Services.AddSingleton<IWebAssemblyHostEnvironment>(new Env(environment));
+        context.Services.AddSingleton(TimeProvider.System);
+        context.Services.AddRecordEditor<EmptySource, SilentRegion>();
         return context;
     }
 
@@ -47,9 +66,9 @@ public sealed class EditorShellTests
     }
 
     [Fact]
-    public void OutsideDevelopmentThePageRendersOneSentenceAndNoEditor()
+    public async Task OutsideDevelopmentThePageRendersOneSentenceAndNoEditor()
     {
-        using var context = Context("Production");
+        await using var context = Context("Production");
 
         var cut = context.Render<RecordEditor>();
 
@@ -61,22 +80,22 @@ public sealed class EditorShellTests
     // refuses when it is not local; without this, a Local that is always false would pass that test and the
     // page would never open on the owner's own machine at all.
     [Fact]
-    public void InDevelopmentThePageShowsItsOwnContentAndNotTheRefusal()
+    public async Task InDevelopmentThePageShowsItsOwnContentAndNotTheRefusal()
     {
-        using var context = Context("Development");
+        await using var context = Context("Development");
 
         var cut = context.Render<RecordEditor>();
 
         Assert.DoesNotContain(RecordEditor.NotLocalSentence, cut.Markup, StringComparison.Ordinal);
-        Assert.Contains(RecordEditor.NothingYetSentence, cut.Markup, StringComparison.Ordinal);
+        Assert.Equal(RecordEditor.NoStoreReadSentence, cut.Find(".catalog-state p").TextContent.Trim());
     }
 
     [Fact]
-    public void TheHeadingIsThereInEveryEnvironmentAndIsFocusable()
+    public async Task TheHeadingIsThereInEveryEnvironmentAndIsFocusable()
     {
         foreach (var environment in new[] { "Development", "Production" })
         {
-            using var context = Context(environment);
+            await using var context = Context(environment);
 
             var cut = context.Render<RecordEditor>();
             var headings = cut.FindAll("h1");
@@ -105,6 +124,15 @@ public sealed class EditorShellTests
             Assert.DoesNotContain("role=\"status\"", text, StringComparison.Ordinal);
             Assert.DoesNotContain("NavigateTo(", text, StringComparison.Ordinal);
             Assert.DoesNotContain("<footer", text, StringComparison.Ordinal);
+
+            // A12, as a test and not a shell command that proves it once: the band's words are Core's, in
+            // every file of this project, comments included. Case-insensitive on purpose: a lower-case copy
+            // slips past a case-sensitive check while the drift it exists to stop is already there -- a count
+            // sentence reading one way beside a badge reading another is two names for one band.
+            foreach (var literal in new[] { "Not matched", "Needs review" })
+            {
+                Assert.DoesNotContain(literal, text, StringComparison.OrdinalIgnoreCase);
+            }
         }
     }
 }
