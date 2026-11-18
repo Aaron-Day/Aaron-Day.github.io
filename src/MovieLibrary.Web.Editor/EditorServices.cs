@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using MovieLibrary.Web.Editor.Store;
 
 namespace MovieLibrary.Web.Editor;
 
@@ -9,5 +10,6 @@ namespace MovieLibrary.Web.Editor;
 /// </summary>
 public static class EditorServices
 {
-    public static IServiceCollection AddRecordEditor(this IServiceCollection services) => services;
+    public static IServiceCollection AddRecordEditor(this IServiceCollection services) =>
+        services.AddScoped<LocalDirectory>();
 }
