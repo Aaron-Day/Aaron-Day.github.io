@@ -21,8 +21,8 @@ namespace MovieLibrary.Web.Editor.Store;
 /// all three hash inputs may differ from the sheet's, so the recomputed key is one the pipeline never hashed.
 /// What makes the method safe is that an override is applied only when the store already holds an entry for
 /// the row's key (MoviePipeline.cs:128-129): a record with NO store entry is never overridden.
-/// <see cref="IdentityKeyOf"/> is therefore valid only on the no-entry path. A record that already has an entry
-/// must be resolved through its entry instead, computed forwards and matched on <c>K</c>
+/// <see cref="IdentityKeyOf"/> is therefore guaranteed only on the no-entry path. A record that already has
+/// an entry must be resolved through its entry instead, computed forwards and matched on <c>K</c>
 /// (<see cref="PublishedKeyOf"/>). The pipeline-side claim is pinned by
 /// <c>AMatchedFilmPublishesTheSheetsOwnTitleRuntimeAndDirectorsSoItsIdentityKeyIsRecomputable</c> in
 /// MovieLibrary.Core.Tests.</para>
