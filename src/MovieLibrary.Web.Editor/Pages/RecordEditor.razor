@@ -372,6 +372,36 @@
             ? entry.Records[position - 1]
             : null;
 
+    /// <summary>
+    /// The entry with this row's record carrying the key the PREVIOUS build published for it, or null when
+    /// there is nothing to record.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>row.Movie.K, and nothing derived.</b> row.Movie came out of movies.json, which is the previous
+    /// build's output, so its key is what WAS published. A key computed from the entry is what will be
+    /// published if the next build agrees -- and it stops agreeing the moment a save asserts an id, which is
+    /// the defect this member exists to close. EditorCatalogue.RecordsByPublishedKey prefers what is recorded
+    /// here over what it can derive, for exactly that reason.</para>
+    /// <para><b>Null for an unchanged key as well as for an impossible position.</b> Returning the entry
+    /// unchanged would make the caller re-serialise and re-validate the whole store to learn nothing, on every
+    /// save after the first.</para>
+    /// <para><b>Not folded into Place.</b> Place runs before A58's byte comparison, and this member is the one
+    /// a save would change on its own -- see the comment on Place's Build call.</para>
+    /// </remarks>
+    private static FilmEntry? Stamp(FilmEntry entry, WorklistRow row)
+    {
+        if (row.Position < 1 || row.Position > entry.Records.Count) return null;
+
+        var record = entry.Records[row.Position - 1];
+
+        if (string.Equals(record.PublishedKey, row.Movie.K, StringComparison.Ordinal)) return null;
+
+        var records = entry.Records.ToList();
+        records[row.Position - 1] = record with { PublishedKey = row.Movie.K };
+
+        return entry with { Records = records };
+    }
+
     /// <summary>The row's own runtime in minutes as the entry's echo states it, or null when it cannot say.</summary>
     /// <remarks>
     /// <para><b>Why the echo, and why a single-record entry only.</b> <see cref="EchoOf"/> writes it from the
@@ -509,6 +539,17 @@
                 return;
             }
 
+            // SOMETHING ELSE CHANGED, so this save is writing anyway and the key costs nothing it has not
+            // already spent. Recorded now, from the row's own published key, and re-validated: Stamp changes a
+            // member the reader has rules about, so the file that leaves this page is the file that was read
+            // back, never the one measured a moment earlier.
+            if (!removed && entry is not null && Stamp(entry, row) is { } stamped)
+            {
+                next = next.With(stamped);
+                entry = stamped;
+                json = next.ToValidatedJson();
+            }
+
             if (s.ApiSupported) await Folder.WriteTextAsync(name, json);
             else await Folder.DownloadAsync(name, json);
 
@@ -576,7 +617,18 @@
         if (form.OverridesNothing && (existing is null || existing.Records.Count <= 1))
             return (draft.Without(row.IdentityKey), null, true, null);
 
-        var record = form.Build(row.Movie.Rt);
+        // THE KEY ALREADY STORED, CARRIED STRAIGHT THROUGH -- not the row's, and not null. A58 compares the
+        // bytes about to be written with the bytes that were read, and the recorded key is the one member a
+        // save would change on its own, so it must not differ here for any reason of this method's making:
+        // putting the row's key in would make "pressing Save on a correction he has not touched" a write that
+        // rotates his .bak, and putting null in would do the same on every save after the first, because the
+        // stored record HAS a key by then. Preserved here, refreshed by Stamp once the comparison has already
+        // said that something else changed.
+        //
+        // Null for a record that has none, which is a version 1 entry or one written by hand: the key is then
+        // recorded on his next real correction to it, and until then the derived key binds it, which is
+        // correct for exactly as long as the entry and the published output agree.
+        var record = form.Build(row.Movie.Rt, SavedIn(existing, row.Position)?.PublishedKey);
         var records = existing?.Records.ToList() ?? [];
 
         if (records.Count == 0) records.Add(record);

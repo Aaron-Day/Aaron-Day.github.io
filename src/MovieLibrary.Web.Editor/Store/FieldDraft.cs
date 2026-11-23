@@ -578,7 +578,15 @@ public sealed class RecordDraft
     /// <c>MovieRecord.Rt</c> and is used whenever the runtime field overrides nothing, so a runtime is always
     /// present: see the remarks on this type for why that is not a convenience.
     /// </summary>
-    public RecordOverride Build(int publishedMinutes) => new(
+    /// <param name="publishedKey">
+    /// The record's own <c>MovieRecord.K</c> -- the key the PREVIOUS build published for it, straight out of
+    /// movies.json. Not a form field and never typed: it is evidence of what happened, and the whole reason
+    /// the member exists is that a key derived from the store moves when a correction asserts an id.
+    /// <para>Null only from <see cref="OverridesNothing"/>, which asks what this draft CORRECTS. The key
+    /// corrects nothing, so counting it there would make every draft look like a correction and no entry
+    /// would ever be removed.</para>
+    /// </param>
+    public RecordOverride Build(int publishedMinutes, string? publishedKey) => new(
         TmdbId: TmdbId.AsNumber,
         Candidates: Candidates.AsList,
         Runtime: Runtime.AsNumber ?? publishedMinutes,
@@ -589,6 +597,7 @@ public sealed class RecordDraft
         Directors: Directors.AsText,
         AppleGenre: AppleGenre.AsText,
         PurchaseInfo: PurchaseInfo.AsText,
+        PublishedKey: publishedKey,
         Extra: ExtraRow.Map(Extras));
 
     /// <summary>
@@ -605,7 +614,7 @@ public sealed class RecordDraft
     /// measuring against <c>Rt</c> deletes the very entry that holds it.
     /// </remarks>
     public bool OverridesNothing =>
-        (Build(1) with { Runtime = Runtime.AsNumber == uncorrectedMinutes ? null : Runtime.AsNumber })
+        (Build(1, null) with { Runtime = Runtime.AsNumber == uncorrectedMinutes ? null : Runtime.AsNumber })
         == new RecordOverride();
     private static string Spell(int value) => value.ToString(CultureInfo.InvariantCulture);
 }

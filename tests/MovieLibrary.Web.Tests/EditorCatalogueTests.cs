@@ -68,6 +68,98 @@ public sealed class EditorCatalogueTests
     private static readonly string KeyA = new('a', 40);
     private static readonly string KeyB = new('b', 40);
 
+    /// <summary>
+    /// The bundle hole, and the one case where NEITHER existing pass can help. An Apple row holding several
+    /// films gives each record its own display title, so what the build publishes carries the FILM's title --
+    /// and the recomputed identity key is therefore the film's, not the bundle row's, which is what pass 2
+    /// needs. Correct the match as well and the derived key moves off every published record too. With nothing
+    /// recorded, nothing binds: the badge goes, the row rejoins the needs-a-decision count, reopening the
+    /// record he just saved shows a blank form (A31, SC 3.3.7), and the next save files a SECOND entry under a
+    /// key no sheet row of the bundle computes -- inert, and reported as applied.
+    /// </summary>
+    [Fact]
+    public async Task ABundleRecordBindsOnTheRecordedKeyWhenNeitherTheDerivedKeyNorTheHashCanReachIt()
+    {
+        // Published with the film's own title, because a previous build applied this record's display override.
+        var published = Film(9000004, "Hollow Moon", 95, 1.0, "Various");
+
+        // The entry is the APPLE ROW's -- "Hollow Moon Triple Feature" at its own length -- so the key
+        // recomputed from the published record is not this one, and pass 2 cannot reach it.
+        Assert.NotEqual(KeyA, RecordLink.IdentityKeyOf(published), StringComparer.Ordinal);
+
+        var entry = new FilmEntry
+        {
+            IdentityKey = KeyA,
+
+            // He corrected the match, so the DERIVED key is "9000009-95" and no published record has it.
+            Records = [new RecordOverride(
+                TmdbId: 9000009, Runtime: 95, Titles: new TitleSet(Display: "Hollow Moon"),
+                PublishedKey: published.K)],
+        };
+
+        var state = await Load([published], StoreOf(entry));
+
+        var row = Assert.Single(state.Rows);
+        Assert.NotNull(row.Entry);
+        Assert.Equal(KeyA, row.IdentityKey, StringComparer.Ordinal);
+        Assert.Equal(9000009, Assert.Single(row.Entry!.Records).TmdbId);
+        Assert.True(row.Corrected);
+        Assert.Empty(state.Unplaceable);
+    }
+
+    /// <summary>
+    /// Two cuts of one film, which <c>CatalogueReconciler.RejectConflictingIds</c> keeps apart ON PURPOSE
+    /// because the owner owns both. Correct one cut's runtime to the other's and the two rows derive the SAME
+    /// key, because a matched record's key is its id and its runtime and nothing of its row. The recorded key
+    /// is what tells them apart, and it is preferred over the derived one for precisely this case.
+    /// </summary>
+    [Fact]
+    public async Task TwoCutsSharingAnIdBindToTheirOwnEntryAndNotToEachOthersDerivedKey()
+    {
+        var theatrical = Film(807, "Se7en", 127, 1.0, "David Fincher");
+        var extended = Film(807, "Se7en", 150, 1.0, "David Fincher");
+
+        // The two rows are two rows: the identity key hashes the runtime, so correcting one cannot merge them.
+        Assert.NotEqual(RecordLink.IdentityKeyOf(theatrical), RecordLink.IdentityKeyOf(extended));
+
+        var corrected = new FilmEntry
+        {
+            IdentityKey = RecordLink.IdentityKeyOf(theatrical),
+
+            // 150 is the EXTENDED row's published runtime, so this entry derives "807-150" -- the extended
+            // row's own key. Without the recorded key the extended row binds here and the theatrical one does
+            // not bind at all.
+            Records = [new RecordOverride(TmdbId: 807, Runtime: 150, PublishedKey: theatrical.K)],
+        };
+
+        var state = await Load([theatrical, extended], StoreOf(corrected));
+
+        var boundToTheatrical = state.Rows.Single(r => r.Movie.Rt == 127);
+        var boundToExtended = state.Rows.Single(r => r.Movie.Rt == 150);
+
+        Assert.NotNull(boundToTheatrical.Entry);
+        Assert.Null(boundToExtended.Entry);
+        Assert.Empty(state.Unplaceable);
+    }
+
+    /// <summary>
+    /// A version 1 entry, and every hand-written one, has no recorded key -- and must still bind, because the
+    /// derived key is correct for as long as the entry and the published output agree, which is their ordinary
+    /// state. Dropping the derived pass would strand every entry written before version 2.
+    /// </summary>
+    [Fact]
+    public async Task AnEntryWithNoRecordedKeyStillBindsOnTheDerivedOne()
+    {
+        var movie = Film(807, "Se7en", 127, 0.6, "David Fincher");
+
+        var state = await Load([movie], StoreOf(EntryFor(RecordLink.IdentityKeyOf(movie), 807, 127)));
+
+        var row = Assert.Single(state.Rows);
+        Assert.NotNull(row.Entry);
+        Assert.Null(Assert.Single(row.Entry!.Records).PublishedKey);
+        Assert.Empty(state.Unplaceable);
+    }
+
     [Fact]
     public async Task EveryPublishedRecordBecomesOneRowWithItsOwnIdentityKey()
     {

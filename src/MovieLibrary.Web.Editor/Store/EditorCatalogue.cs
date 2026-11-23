@@ -236,14 +236,39 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
             : null;
     }
 
+    /// <summary>
+    /// Which store record each published key belongs to. TWO keys per record, and the order between them is
+    /// the whole point.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>The RECORDED key first.</b> <c>RecordOverride.PublishedKey</c> is what the previous build
+    /// actually published for that record, written by the save from the row's own <c>K</c>. It does not move.
+    /// The DERIVED key is computed forwards from what the entry says now, and a matched record's key is
+    /// <c>{id}-{minutes}</c> with no part of its row in it -- so the derived key changes the moment an entry
+    /// asserts an id, and two rows that legitimately share an id at different runtimes can be made to derive
+    /// each other's key by a runtime correction. Where the two disagree, the evidence wins.</para>
+    /// <para><b>Both, not one.</b> The recorded key matches in the window between a save and the next build.
+    /// The derived key matches after that build, when the entry and the published output finally agree -- and
+    /// it is the only key a hand-written entry has, and the only key a version 1 file has at all. Dropping
+    /// either re-opens the hole: the recorded key alone misses every second edit, the derived key alone is
+    /// the defect.</para>
+    /// <para><b><see cref="Dictionary{TKey, TValue}.TryAdd"/> and two passes, not one loop.</b> A record's
+    /// recorded key can equal a DIFFERENT record's derived key; first-write-wins across two ordered passes is
+    /// what makes "recorded beats derived" true of the map as a whole rather than only within one record.</para>
+    /// </remarks>
     private static Dictionary<string, RecordSlot> RecordsByPublishedKey(StoreDraft draft)
     {
         var map = new Dictionary<string, RecordSlot>(StringComparer.Ordinal);
 
         foreach (var entry in draft.Store.Films)
             for (var position = 1; position <= entry.Records.Count; position++)
-                if (RecordLink.PublishedKeyOf(entry, position) is { } key)
-                    map.TryAdd(key, new RecordSlot(entry, position));
+                if (entry.Records[position - 1].PublishedKey is { Length: > 0 } recorded)
+                    map.TryAdd(recorded, new RecordSlot(entry, position));
+
+        foreach (var entry in draft.Store.Films)
+            for (var position = 1; position <= entry.Records.Count; position++)
+                if (RecordLink.PublishedKeyOf(entry, position) is { } derived)
+                    map.TryAdd(derived, new RecordSlot(entry, position));
 
         return map;
     }
