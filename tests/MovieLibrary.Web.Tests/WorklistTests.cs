@@ -300,7 +300,7 @@ public sealed class WorklistTests
     }
 
     [Fact]
-    public async Task TheRevealedRegionIsAPlainDivThatTakesFocusAndIsNamedByTheTitle()
+    public async Task TheRevealedRegionIsANamedGroupThatTakesFocus()
     {
         await using var h = new Harness();
         var cut = h.Render(Three, open: Uncertain.Movie.K);
@@ -308,7 +308,13 @@ public sealed class WorklistTests
         var panel = cut.Find("[id='row-550-139-fields']");
 
         Assert.Equal("div", panel.LocalName);
-        Assert.False(panel.HasAttribute("role"));
+
+        // NOT a bare generic, and the distinction is the whole point: ARIA prohibits aria-labelledby on role
+        // generic, so the name asserted below would be computed and then dropped, and the confirmation A24
+        // moves focus here to give -- "you opened the record you meant to", on a 285-row list -- would never
+        // be spoken. "group" names without being a landmark, and it is outside MarkupRules.LeafWidgetRoles,
+        // so the panel is still neither a leaf widget nor a nested-widget outer element.
+        Assert.Equal("group", panel.GetAttribute("role"));
         Assert.Equal("-1", panel.GetAttribute("tabindex"));
         var named = cut.Find($"[id='{panel.GetAttribute("aria-labelledby")}']");
         Assert.Equal("Fight Club", named.TextContent.Trim());

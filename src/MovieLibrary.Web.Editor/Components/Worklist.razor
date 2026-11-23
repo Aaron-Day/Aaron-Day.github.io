@@ -96,10 +96,15 @@
 
             @if (open)
             {
-                @* A plain div with no role. tabindex of minus one makes it a focus TARGET and not a stop, which
-                   is what keeps a collapsed row at one stop; aria-labelledby is the row's title, so the reader
-                   speaks the record's name as focus arrives and nothing needs announcing. *@
-                <div id="@FieldsId(k)" class="worklist-panel" tabindex="-1" aria-labelledby="@TitleId(k)" @ref="panel">
+                @* A GROUP, not a landmark and not a dialog, and the role is load-bearing rather than decoration:
+                   a bare div is role generic, ARIA PROHIBITS aria-labelledby on generic, and the name is
+                   therefore computed and then dropped -- so the record's title would never be spoken on arrival,
+                   which is the one thing A24 moves focus here to provide. "group" is the only naming-capable
+                   container role that is not a landmark; a landmark would put one per open row into the landmark
+                   list, which the stylesheet refuses on the same ground. tabindex of minus one makes it a focus
+                   TARGET and not a stop, which is what keeps a collapsed row at one stop; the name is the row's
+                   title, so the reader speaks the record's name as focus arrives and nothing needs announcing. *@
+                <div id="@FieldsId(k)" class="worklist-panel" role="group" tabindex="-1" aria-labelledby="@TitleId(k)" @ref="panel">
                     @RowContent?.Invoke(row)
                     <button type="button" class="worklist-close" @onclick="() => CloseAsync(k)">Close this record</button>
                 </div>
