@@ -63,13 +63,41 @@
         "The published catalogue could not be loaded, so there are no records to edit. "
         + "Check that the site has data, then try again.";
 
-    // Says that nothing was READ, and stops there. The script answers null both for "the file is not there" and
-    // for "I could not read it" and cannot tell them apart, so a stronger claim -- "there is no store yet" --
-    // would be a guess presented as fact. Saving is safe either way, because the write side refuses to
-    // overwrite a file it could not read.
-    internal const string NoStoreReadSentence =
-        "No record store was read, so no existing corrections are shown. Try again once the repository folder "
-        + "is available to this page.";
+    // THREE ARMS, and the reason is that the one sentence this replaced named a precondition that no control in
+    // reach could satisfy. It said "try again once the repository folder is available to this page" beside a
+    // Try again button that provably cannot make it available: a stored handle is not a stored grant
+    // (localDirectory.js), so status() answers null until permission has been re-granted this session, readText
+    // then has no root, and pressing Try again re-runs exactly those calls and lands in exactly this state. The
+    // one control on offer was a loop, and this is the state EVERY session starts in, not a fresh-clone edge
+    // case. The control that CAN grant the folder is inside a record's own form, so the instruction has to send
+    // him there and back. SC 3.3.2, Level A.
+    //
+    // All three arms say nothing was READ and stop there: the script answers null both for "the file is not
+    // there" and for "I could not read it" and cannot tell them apart, so a stronger claim -- "there is no
+    // store yet" -- would be a guess presented as fact. Saving is safe either way, because the write side
+    // refuses to overwrite a file it could not read.
+    //
+    // THE QUOTED BUTTON NAME LIVES IN TWO FILES. It is RecordForm's folder button, A53's exact name. Move them
+    // together, the way Heading is kept in step with the route announcer.
+    internal const string NoStoreReadNoFolderSentence =
+        "No record store was read, so no existing corrections are shown. No repository folder has been granted "
+        + "to this page yet, and the store cannot be read without one: open any record below, press \"Choose "
+        + "the folder to save corrections to\", then come back here and press Try again.";
+
+    // The same state once a folder HAS been granted, where the retry can now actually succeed, so the retry is
+    // the whole instruction.
+    internal static string NoStoreReadWithFolder(string folder) =>
+        $"No record store was read, so no existing corrections are shown. {folder} is available to this page, "
+        + $"so either it holds no {RecordStoreReader.DefaultFileName} yet or the file could not be read. Press "
+        + "Try again to read it.";
+
+    // No folder API, so root can never be set, no store can ever be read here, and an instruction to grant a
+    // folder would be unfollowable -- M9's rule for A53's sentence, applied to this one. The save mechanism is
+    // deliberately not repeated: the form's own grant paragraph states it, and two copies of one fact are two
+    // things to keep in step.
+    internal const string NoStoreReadNoApiSentence =
+        "No record store was read, so no existing corrections are shown. This browser cannot open a folder, so "
+        + "no record store can be read here and corrections saved earlier will not appear.";
 
     internal const string SyntheticSentence =
         "This catalogue was generated for testing and its TMDB ids are invented, so a correction made against "
@@ -197,7 +225,10 @@
                        + "Fix the file by hand, then try again.";
             if (state.Synthetic) return SyntheticSentence;
             if (state.Unplaceable.Count > 0) return UnplaceableSentence(state);
-            if (state.Store == StoreReading.NotRead) return NoStoreReadSentence;
+            if (state.Store == StoreReading.NotRead)
+                return !state.ApiSupported ? NoStoreReadNoApiSentence
+                    : state.FolderName is { } granted ? NoStoreReadWithFolder(granted)
+                    : NoStoreReadNoFolderSentence;
 
             return $"The library holds {state.Rows.Count:N0} records.";
         }
@@ -212,8 +243,18 @@
         + string.Join(", ", s.Unplaceable.Select(f => f.IdentityKey)) + ".";
 
     /// <summary>The button stays while a load is in flight: removing it would drop focus to the body.</summary>
+    /// <remarks>
+    /// NOT RENDERED FOR NotRead WITHOUT THE FOLDER API, which is the one state where pressing it can never
+    /// change anything: root is only ever set by the picker or by a granted handle, both of which need the API,
+    /// so the read fails identically every time. M9 made this ruling for A53's sentence -- an instruction that
+    /// cannot be followed is worse than none -- and a control that cannot act is the same defect with a target.
+    /// Refused is unaffected: reaching it requires a successful read, which requires a root, which requires the
+    /// API, so splitting "not Read" into these two arms loses no reachable state.
+    /// </remarks>
     private bool ShowTryAgain => Local && (loading || state is not null && (
-        state.Catalogue == CatalogueState.Failed || state.Store != StoreReading.Read));
+        state.Catalogue == CatalogueState.Failed
+        || state.Store == StoreReading.Refused
+        || (state.Store == StoreReading.NotRead && state.ApiSupported)));
 
     protected override async Task OnInitializedAsync()
     {
@@ -246,7 +287,27 @@
         state = next;
         loading = false;
         focusPending = NeedsAttention;
+
+        // THE COMPLEMENT, and it was the gap: focusIfUnmoved does move from the body, so the attention case is
+        // covered -- but a retry that SUCCEEDS schedules no move at all, ShowTryAgain goes false, and the button
+        // he was standing on is removed under him. Focus lands on the body and the next Tab restarts above the
+        // skip link. Movies.razor has a dedicated path for exactly this; this page copied the unmoved half of
+        // that pattern and not this half (A45).
+        retryLanded = !NeedsAttention;
     }
+
+    /// <summary>
+    /// The successful retry only: the control that had focus no longer exists, so there is nothing to ask the
+    /// unmoved helper and the move is made outright -- which is Movies.razor's FocusOutright and its stated
+    /// reason. Mutually exclusive with <see cref="focusPending"/> by construction, so nothing is focused twice.
+    /// </summary>
+    /// <remarks>
+    /// THE CONTAINER AND NOT THE HEADING. This page has no polite region of its own to state an outcome with
+    /// (A48, C1), so the container's own new text IS the statement. C2's objection to focusing .catalog-state
+    /// was about a save outcome raised from row n, where focus would travel; the retry was pressed inside this
+    /// container, so it does not.
+    /// </remarks>
+    private bool retryLanded;
 
     /// <summary>A state the owner must be told about, as opposed to one that is simply how the library is.</summary>
     private bool NeedsAttention => state is not null
@@ -275,6 +336,19 @@
             try
             {
                 await Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", container, FocusKeepers);
+            }
+            catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
+            {
+            }
+        }
+
+        if (retryLanded)
+        {
+            retryLanded = false;
+
+            try
+            {
+                await container.FocusAsync();
             }
             catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
             {

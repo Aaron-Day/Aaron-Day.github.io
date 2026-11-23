@@ -226,6 +226,30 @@ public sealed class FieldDraft
     /// <summary>m4's format instruction doubles as the error: the format he needs is the same either way.</summary>
     internal const string ListShape = "Separate ids with commas, for example 807, 808.";
 
+    /// <summary>
+    /// What ticking this field's override DOES, said BEFORE the press. The two override boxes in the Match
+    /// fieldset share their first word, sit one above the other and mean opposite things, and the radio chooser
+    /// that makes the exclusion structural renders only once candidates are ALREADY saved -- so on a record's
+    /// first correction this sentence is the only thing that tells them apart. SC 3.3.2, Level A.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>Its own id, not one of the two that exist.</b> Not the state sentence, which stops saying this
+    /// the moment the box is ticked -- <see cref="Describe"/> switches to "Overridden to candidates ..." -- so
+    /// the warning would vanish exactly when he is about to save; and it is ids[0] with one job (A27, M5). Not
+    /// <see cref="ListShape"/> either, because that doubles as this field's ERROR, and a consequence delivered
+    /// as an error is the wrong shape (A42).</para>
+    /// <para><b>"publish this record with no TMDB match" is deliberately the clause the outcome sentence uses
+    /// too</b> (RecordEditor.Written, n5), so what he reads before the press and what he reads after the save
+    /// are the same words and one is recognisable as the other's confirmation. It names "Override TMDB id"
+    /// verbatim rather than positionally, and carries neither band literal (M13).</para>
+    /// <para><b>Found by use, not by review.</b> The owner ticked this box meaning the one above it, on his
+    /// first real correction, in about ninety seconds. Everything that followed was a valid save.</para>
+    /// </remarks>
+    internal const string DecidesNoMatch =
+        "Ticking this box keeps a shortlist and decides nothing: the next build will publish this record with "
+        + "no TMDB match, and will not search for one. To decide the match instead, leave this box clear and "
+        + "enter the id under \"Override TMDB id\".";
+
     // NumberStyles.Integer allows surrounding space and a leading sign and nothing else, which is what is
     // wanted: " 550 " is 550 because ids get pasted out of a browser's address bar, while "1.5", "12a" and "-"
     // are refused, and "-5" parses so that the reader's own positivity rule can be the message instead of a

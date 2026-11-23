@@ -112,6 +112,50 @@ public sealed class RecordFormTests
         Assert.Empty(cut.FindAll("h1, h2, h3, h4, h5, h6"));
     }
 
+    /// <summary>
+    /// The candidates field says what ticking it DECIDES, and the input is actually described by it.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>The ASSOCIATION is the assertion, not the string.</b> n5's lesson on this very page was that
+    /// every test asserted a sentence's text and none asked whether it was true of anything -- so this one
+    /// checks that the candidates input's own aria-describedby names the paragraph, that the paragraph is the
+    /// constant, and that the TMDB id input is NOT described by it. A paragraph on the page that no input
+    /// points at is a sentence nobody is told.</para>
+    /// <para><b>And that it survives the tick</b>, which is the whole reason it is not in the state sentence:
+    /// the state sentence stops saying it at exactly the moment the owner is about to save.</para>
+    /// </remarks>
+    [Fact]
+    public async Task TheCandidatesFieldSaysWhatItDecidesAndSaysItAfterTheBoxIsTicked()
+    {
+        await using var h = new Harness();
+        var cut = h.Render(Draft());
+
+        var decides = Assert.Single(cut.FindAll($"[id='{Id("candidates-decides")}']"));
+        Assert.Equal(FieldDraft.DecidesNoMatch, decides.TextContent.Trim(), StringComparer.Ordinal);
+
+        // The input is described BY it. This is the half a text-only assertion cannot see.
+        var described = cut.Find($"[id='{Id("candidates")}']").GetAttribute("aria-describedby") ?? "";
+        Assert.Contains(Id("candidates-decides"), described.Split(' '), StringComparer.Ordinal);
+
+        // Not on the field that behaves as expected: a mirror paragraph there is noise on nine fields.
+        Assert.DoesNotContain(
+            Id("candidates-decides"),
+            (cut.Find($"[id='{Id("tmdb-id")}']").GetAttribute("aria-describedby") ?? "").Split(' '),
+            StringComparer.Ordinal);
+
+        // It names the other control by its rendered label, so no reader has to resolve "the box above".
+        Assert.Contains("\"Override TMDB id\"", FieldDraft.DecidesNoMatch, StringComparison.Ordinal);
+
+        // STILL THERE ONCE TICKED. The state sentence is not, which is why this needed an id of its own.
+        cut.Find($"[id='{Id("candidates-override")}']").Change(true);
+
+        Assert.Equal(FieldDraft.DecidesNoMatch,
+                     cut.Find($"[id='{Id("candidates-decides")}']").TextContent.Trim(), StringComparer.Ordinal);
+        Assert.Contains(Id("candidates-decides"),
+                        (cut.Find($"[id='{Id("candidates")}']").GetAttribute("aria-describedby") ?? "").Split(' '),
+                        StringComparer.Ordinal);
+    }
+
     [Fact]
     public async Task EveryFieldCarriesItsStateSentenceThroughDescribedBy()
     {
