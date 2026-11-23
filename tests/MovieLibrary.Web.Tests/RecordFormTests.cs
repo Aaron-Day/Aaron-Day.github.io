@@ -262,12 +262,17 @@ public sealed class RecordFormTests
     public async Task EachExtraRowIsItsOwnGroupAndItsRemoveButtonNamesItsField()
     {
         await using var h = new Harness();
-        var draft = Draft();
+
+        // WITH A SHORTLIST SAVED, so the chooser's radios are inside the duplicate-name check below. Without
+        // one the chooser does not render at all and the check was asked of a form that had no radios in it.
+        var draft = Draft(new RecordOverride(Candidates: [807, 808], Runtime: 139));
         draft.AddExtra();
         draft.AddExtra();
         draft.AddExtra();
         draft.Extras[2].Name = "collection";
         var cut = h.Render(draft);
+
+        Assert.Equal(3, cut.FindAll("fieldset.record-chooser input[type=radio]").Count);
 
         // Both halves of A29, not either/or: the legend names the group and is NOT part of an input's
         // accessible name, so without unique label text twelve inputs are all called "Field name".

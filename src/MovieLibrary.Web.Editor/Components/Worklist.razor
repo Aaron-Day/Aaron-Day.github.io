@@ -410,6 +410,13 @@
         // the NEXT render of any kind -- a keystroke in the search field is enough -- and pull focus out of
         // the field he is typing in.
         //
+        // AS THE COMPONENT STANDS, THAT CLEAR IS UNREACHABLE, and it is kept on purpose. focusToggle is set in
+        // one place, CloseAsync, which sets openKey to null in the same batch, so the branch below cannot be
+        // the one taken while it is pending; focusPanel is set by ToggleAsync and by OnParametersSet, neither
+        // of which can run between CloseAsync and its render. It is one new caller away from reachable -- any
+        // path that opens a row while a close is pending -- and the line is what makes that caller safe rather
+        // than a focus move into the row he just left. Do not delete it without re-reading the invariant below.
+        //
         // THE INVARIANT THIS WHOLE MECHANISM RESTS ON: every change of focusKey destroys and recreates two
         // buttons (the old capturing row and the new one), which is harmless only because every path that
         // changes focusKey also sets focusToggle in the same batch. The one case where the destroyed button

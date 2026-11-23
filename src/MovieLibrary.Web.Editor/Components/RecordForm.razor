@@ -88,8 +88,14 @@
                             <p id="@IdFor(slug, "format")" class="record-field-format">@FieldDraft.ListShape</p>
                         }
 
-                        @* Immediately after its input, and in the described-by list only while it exists: an
-                           always-rendered empty paragraph is a resolve target with no text. *@
+                        @* A40 asks for the error immediately after its input, and A27's state sentence sits
+                           between the two. That is unavoidable and deliberate: the state sentence is this
+                           field's permanent description and the error is a visitor, so putting the error
+                           first would move the one element that is always there. What A40 is for is met --
+                           the error is inside this field's own container and is reached from the input's own
+                           described-by list, and a reader hears which state the field is in before what is
+                           wrong with the value. In the list only while it exists, because an always-rendered
+                           empty paragraph is a resolve target with no text. *@
                         @if (Draft.ShowProblem(field))
                         {
                             <p id="@IdFor(slug, "error")" class="record-field-error">@Draft.ProblemFor(field)</p>

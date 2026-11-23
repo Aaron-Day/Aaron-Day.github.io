@@ -61,6 +61,8 @@ public sealed class EditorSaveTests
 
         public Region Region { get; } = new();
 
+        public ManualTimeProvider Clock { get; } = new();
+
         public BunitJSModuleInterop Module { get; }
 
         public JSRuntimeInvocationHandler<bool> Writes { get; }
@@ -81,7 +83,10 @@ public sealed class EditorSaveTests
                 .AddSingleton<IWebAssemblyHostEnvironment>(new Env())
                 .AddSingleton<ICatalogueSource>(new Source(movies ?? [Fight], fixtures))
                 .AddSingleton<IStatusRegion>(Region)
-                .AddSingleton(TimeProvider.System)
+                // The project's own clock, not the wall clock: nothing here arms the worklist's 150 ms filter
+                // or its 750 ms announcement, and a test that later touched the search field would be timing
+                // dependent the day it did.
+                .AddSingleton<TimeProvider>(Clock)
                 .AddScoped(_ => new LocalDirectory(runtime ?? Context.JSInterop.JSRuntime))
                 .AddScoped<EditorCatalogue>();
         }
@@ -143,6 +148,18 @@ public sealed class EditorSaveTests
         Assert.Equal([RecordStoreReader.DefaultFileName], page.Names);
         var film = Assert.Single(Parse(Assert.Single(page.Written)).Films);
         Assert.Equal(807, Assert.Single(film.Records).TmdbId);
+
+        // THE SUCCESS SENTENCE, pinned. A58's reversibility and M8's three states are said BEFORE the press,
+        // in the paragraph the Save control is described by, where TheBackupPromiseIsOnlyMadeWhenAStoreWasRead
+        // asserts them; this sentence makes no backup claim of its own, because the claim is true in only two
+        // of those three states and a sentence repeating it per save would be wrong in the third. What it owes
+        // him is the file, the folder and what the next build will do with what it holds.
+        var said = Outcome(cut);
+        Assert.StartsWith("Saved.", said, StringComparison.Ordinal);
+        Assert.Contains(RecordStoreReader.DefaultFileName, said, StringComparison.Ordinal);
+        Assert.Contains("MovieLibrary", said, StringComparison.Ordinal);
+        Assert.Contains("the next build will apply it", said, StringComparison.Ordinal);
+        Assert.DoesNotContain(".bak", said, StringComparison.Ordinal);
     }
 
     /// <summary>
@@ -285,7 +302,16 @@ public sealed class EditorSaveTests
         Assert.Empty(page.Written);
         var moved = Assert.Single(page.Focuses.Skip(before));
         Assert.Equal(year, ((ElementReference)moved.Arguments[0]!).Id);
-        Assert.Empty(cut.FindAll(".record-error-summary"));
+
+        // A43 has no summary at the top, so the only error on the page is the one in the field's own
+        // container, reached through that input's own description. Asserted structurally: a class name nothing
+        // renders cannot fail, so it proved nothing about the requirement it was standing in for.
+        var errorId = $"row-{FightKey}-year-error";
+        var field = cut.Find($"[id='row-{FightKey}-year']");
+        var error = Assert.Single(cut.FindAll("p.record-field-error"));
+        Assert.Equal(errorId, error.Id);
+        Assert.Contains(errorId, field.GetAttribute("aria-describedby")!, StringComparison.Ordinal);
+        Assert.Same(field.ParentElement, error.ParentElement);
     }
 
     [Fact]
@@ -307,8 +333,15 @@ public sealed class EditorSaveTests
 
         Assert.Equal(1, page.Downloads);
         Assert.Empty(page.Written);
+
+        // The sentence claims only what is true of this route: a file handed to the browser, nothing written
+        // where the next build reads, and the one thing he has to do about it. No backup claim -- that is
+        // stated before the press, in the paragraph the Save control is described by, and asserted there.
         Assert.Contains("downloads", Outcome(cut), StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("Nothing was written to the repository folder", Outcome(cut), StringComparison.Ordinal);
+        Assert.Contains("move the downloaded file into the repository", Outcome(cut), StringComparison.Ordinal);
         Assert.DoesNotContain(".bak", Outcome(cut), StringComparison.Ordinal);
+        Assert.DoesNotContain("Saved", Outcome(cut), StringComparison.Ordinal);
     }
 
     /// <summary>
@@ -887,5 +920,26 @@ public sealed class EditorSaveTests
         Assert.NotNull(cut.Find($"[id='row-{FightKey}-candidate-807']"));
         Assert.NotNull(cut.Find($"[id='row-{FightKey}-candidate-808']"));
         Assert.NotNull(cut.Find($"[id='row-{FightKey}-candidate-undecided']").GetAttribute("checked"));
+    }
+
+    /// <summary>
+    /// Try again re-reads the file, which is the one instruction the refused-store and no-store sentences give
+    /// him, so the form must show what was just read: a draft built against the previous read would pre-fill
+    /// the old file's values over the new file's entry, including the values he has just fixed by hand.
+    /// </summary>
+    [Fact]
+    public async Task AnExplicitReReadDoesNotLeaveThePreFillsOfTheFileBefore()
+    {
+        await using var page = new Page(store: null);
+        var cut = page.Open();
+
+        Tick(cut, "tmdb-id");
+        Fill(cut, "tmdb-id", "807");
+
+        cut.Find("button.try-again").Click();
+        Page.Toggle(cut, FightKey).Click();
+
+        Assert.Equal("", cut.Find($"[id='row-{FightKey}-tmdb-id']").GetAttribute("value"));
+        Assert.Null(cut.Find($"[id='row-{FightKey}-tmdb-id-override']").GetAttribute("checked"));
     }
 }

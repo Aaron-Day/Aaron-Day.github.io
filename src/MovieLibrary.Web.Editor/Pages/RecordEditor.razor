@@ -180,6 +180,13 @@
         state = null;
         openKey = null;
 
+        // An explicit re-read is a deliberate ask for what the FILE says, so the drafts go with it: a draft is
+        // pre-filled from the entry it was built against, and keeping one across a re-read would show the
+        // previous file's values over the new file's entry -- including after he fixed that file by hand, which
+        // is the one instruction the refused-store sentence gives him. Unsaved typing in a row is lost, which
+        // is the cost of asking; the row is closed by the same press, so nothing on screen changes under him.
+        drafts.Clear();
+
         var next = await Catalogue.LoadAsync();
         if (disposed) return;
 
@@ -466,7 +473,14 @@
         return (draft.With(entry), entry, false);
     }
 
-    /// <summary>The sheet's own three columns, in the sheet's own h:mm:ss, so the reader can re-derive the key.</summary>
+    /// <summary>The sheet's three columns as a human reads them, for finding this entry in the file by eye.</summary>
+    /// <remarks>
+    /// <b>The seconds are not recoverable and this is not the sheet's own text.</b> MovieRecord.Rt is whole
+    /// minutes, because RuntimeParser.FilmMinutes truncates, so the sheet's 2:06:53 is published as 126 and
+    /// written back here as the canonical 2:06:00. SheetEcho is documented as never consumed for matching and
+    /// nothing parses it after M3: the runtime the next build re-derives the key from is the record's own,
+    /// which every save writes. The title and the directors ARE exact -- the pipeline publishes the sheet's own.
+    /// </remarks>
     private static SheetEcho EchoOf(MovieRecord movie) => new(
         movie.T,
         string.Create(CultureInfo.InvariantCulture, $"{movie.Rt / 60}:{movie.Rt % 60:00}:00"),
