@@ -1,0 +1,102 @@
+/* The record form. Native controls throughout, laid out with the project's tokens and nothing new: the panel
+   around it is --panel, the controls sit on --panel2, and no text sits on a tint, an image or anything
+   see-through, so the contrast scan never has to guess what is behind it. --txt is 15.03:1 on --panel and
+   --dim 5.89:1; the controls' only boundary is --line-strong, 3.34:1 on --panel2 and 3.62:1 on --panel, past
+   the 3:1 a control's edge needs. --line is 1.37:1 and app.css records it as failing that, so it is never a
+   control's edge here. Re-measure if a token changes.
+
+   THIS SHEET IS SCOPED, SO IT INHERITS NOTHING. Worklist.razor.css's legend, fieldset, radio and input rules
+   do not reach this component at all, and without them Bootstrap's reboot floats every legend to full width
+   at a fluid heading size that does not track the reader's own font size. They are copied here with their
+   reasons rather than referenced, because a scoped sheet cannot reference another.
+
+   AN UNSET FIELD IS NEVER SHOWN BY FADING IT. opacity turns the contrast scan INCOMPLETE, which is
+   configured as a hard failure in this project, and the framework's muted class ships !important and would
+   win. The state is carried by the SENTENCE under the field, in --dim, which is a measured token on an opaque
+   measured surface.
+
+   AN ERROR IS CARRIED BY ITS PROSE AND NOT BY A COLOUR. The message is --txt at weight 600: a tint would be
+   information conveyed by colour, and no token is measured for an error colour on --panel, so there is
+   nothing here to measure wrongly.
+
+   REFLOW: one column from the start. No label-and-input track that could size itself from its content, and
+   min-width is zero on everything that could otherwise be sized by what is inside it, so at 1280px with the
+   text at 200% nothing scrolls sideways and nothing overflows.
+
+   SIZES COME FROM THE TOKEN. Every standalone control gets --touch on both axes, read from the token and
+   never written as a pixel figure, and a checkbox or radio LABEL carries it too, because the label is the
+   target. Nothing is packed closer than its own box. */
+
+fieldset { margin: 0 0 1rem; padding: 0; border: 0; min-width: 0; }
+
+/* Bootstrap's reboot floats a legend to full width at a fluid size. line-height is unitless so a
+   text-spacing override cannot clip it. */
+legend { float: none; width: auto; margin: 0 0 .5rem; padding: 0;
+  font-size: 1rem; font-weight: 600; line-height: 1.5; color: var(--txt); }
+
+.record-form { display: flex; flex-direction: column; min-width: 0; }
+
+/* ONE COLUMN, always: the checkbox, the caption, the input and its sentences stack. */
+.record-field { display: flex; flex-direction: column; gap: .25rem; min-width: 0; margin: 0 0 1rem; }
+
+/* The LABEL is the target and carries the token; the box inside it is 1.5rem, past the 24x24 floor. */
+.record-toggle, .record-options label { display: inline-flex; align-items: center; gap: .5rem;
+  min-width: var(--touch); min-height: var(--touch); padding-right: .5rem; line-height: 1.5; cursor: pointer; }
+
+input[type="radio"], input[type="checkbox"] { flex: 0 0 auto; width: 1.5rem; height: 1.5rem; margin: 0;
+  accent-color: var(--accent); }
+
+.record-options { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+
+/* At least 16px COMPUTED, whatever the reader's root size: iOS Safari zooms the page when a field under 16px
+   takes focus, and that zoom breaks reflow. max() rather than 1rem alone, because 1rem is 14px for a reader
+   who has set a smaller default. The border is the control's only boundary, so it is --line-strong. */
+input[type="text"] { box-sizing: border-box; width: 100%; max-width: 32rem; min-width: 0;
+  min-height: var(--touch); padding: 0 .75rem; border-radius: 6px;
+  font-size: max(16px, 1rem); line-height: 1.5;
+  color: var(--txt); background: var(--panel2); border: 2px solid var(--line-strong); }
+
+/* A27's third part. --dim, measured, on the opaque surface this form sits on -- never a fade. */
+.record-field-state, .record-field-format { margin: 0; max-width: 68ch; color: var(--dim); line-height: 1.5; }
+
+.record-field-error { margin: 0; max-width: 68ch; color: var(--txt); font-weight: 600; line-height: 1.5; }
+
+/* The nested groups: the chooser and one per extras row. The edge is a grouping cue for a box the indent
+   already draws, which is neither a control nor a graphic needed to understand the content, so --line is
+   right here and is the only place it is used. */
+.record-chooser, .record-extra { margin: 0 0 1rem; padding: .75rem; min-width: 0;
+  border: 1px solid var(--line); border-radius: 8px; }
+
+.record-chooser > legend, .record-extra > legend { margin: 0 0 .5rem; padding: 0 .25rem; }
+
+/* Where nothing can be corrected: the sentences as prose, at full contrast, with the field's own name in
+   front of each. Nothing here is a control, so nothing here is a target. */
+.record-locked, .record-told { margin: 0 0 .5rem; max-width: 68ch; color: var(--txt); line-height: 1.5; }
+.record-told-name { font-weight: 600; }
+
+.record-save-area { display: flex; flex-direction: column; gap: .5rem; min-width: 0; margin: 0 0 .5rem; }
+
+.record-grant, .record-backup { margin: 0; max-width: 68ch; color: var(--txt); line-height: 1.5; }
+
+/* A border and a transparent background, not a painted one: under forced colors a border is re-coloured to
+   CanvasText and survives, while a background tint flattens to Canvas and the control loses its only edge.
+   There is deliberately NO rule for the unavailable state: the boundary stays --line-strong in every state,
+   because an aria-disabled control that is still focusable is outside the inactive-component exemption and
+   --line would be its only edge at 1.37:1. This project has shipped that defect once already. */
+.record-save, .record-folder, .record-add, .record-remove {
+  align-self: flex-start; display: inline-flex; align-items: center; justify-content: center;
+  min-width: var(--touch); min-height: var(--touch); padding: 0 1rem;
+  font: inherit; line-height: 1.5; color: var(--txt); background: transparent;
+  border: 2px solid var(--line-strong); border-radius: 6px; cursor: pointer; }
+
+/* The one container every save outcome is reported through, success and failure alike. It takes focus, so it
+   keeps the global focus ring: a programmatic move is the case where the ring is the only thing telling a
+   sighted keyboard user where focus went, and this project permits exactly one ring suppression elsewhere. */
+.record-state { margin: 0; max-width: 68ch; color: var(--txt); line-height: 1.5; }
+
+/* Hover only where a pointer can hover: on a touch screen the hover state sticks after the tap. */
+@media (hover: hover) {
+  .record-save:hover, .record-folder:hover, .record-add:hover, .record-remove:hover, input[type="text"]:hover { border-color: var(--accent); }
+}
+
+/* NO MOTION: no transition and no animation, so no reduced-motion block is needed. */

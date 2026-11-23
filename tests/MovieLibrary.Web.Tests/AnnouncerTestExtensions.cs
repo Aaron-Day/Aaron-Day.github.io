@@ -1,5 +1,10 @@
 using Bunit;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+#if DEBUG
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using MovieLibrary.Web.Editor;
+#endif
 using MovieLibrary.Web.Services;
 
 namespace MovieLibrary.Web.Tests;
@@ -133,8 +138,26 @@ internal static class AnnouncerTestExtensions
         // The films page writes its filter into the address through this, and Program.cs registers it the same way.
         context.Services.AddScoped<QueryState>();
 
+#if DEBUG
+        // The editor's registrations, the one call Program.cs makes under the same condition. Debug only,
+        // because in Release the web project does not reference the editor, "/editor" is not routed and
+        // nothing renders it. The environment is here as well because the page injects it and bUnit has no
+        // WebAssembly host: Development, so the page shows its own content rather than the refusal. It is
+        // TryAdd, so a test that wants Production registers its own first.
+        context.Services.AddRecordEditor<EditorCatalogueSource, EditorStatusRegion>();
+        context.Services.TryAddSingleton<IWebAssemblyHostEnvironment>(new DevelopmentHost());
+#endif
+
         return (clock, stub);
     }
+
+#if DEBUG
+    private sealed class DevelopmentHost : IWebAssemblyHostEnvironment
+    {
+        public string Environment => "Development";
+        public string BaseAddress => "http://localhost/";
+    }
+#endif
 
     /// <summary>The movies.json response for an outcome.</summary>
     public static Func<Task<HttpResponseMessage>> Responder(CatalogOutcome outcome) => outcome switch

@@ -477,3 +477,13 @@ dev-data/
 .env
 *.local.json
 appsettings.Local.json
+
+# The editor's pre-overwrite backup of the record store. The store itself IS committed -- it carries the
+# corrections the build applies -- but the .bak is a stale copy of it by definition, and a stale copy of the
+# corrections on master is a thing that can be mistaken for the live one.
+record-store.json.bak
+
+# Hand-written notes mapping a sheet title to the TMDB id it should have matched. Nothing reads this: the
+# Overrides tab it fed was retired in Task 7 and record-store.json replaced it. Kept on disk as the source
+# material for new store entries, out of git because it is working notes, not input.
+film-overrides.tsv

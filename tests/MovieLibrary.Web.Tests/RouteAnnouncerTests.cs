@@ -201,6 +201,31 @@ public class RouteAnnouncerTests : BunitContext
         cut.WaitForAssertion(() => Assert.Equal("Films", RouteText(cut)));
     }
 
+#if DEBUG
+    /// <summary>
+    /// The announcer's "editor" entry is typed by hand in RouteAnnouncer, whose name table is private, so the
+    /// equality with the page's heading is asserted the way every other name here is: by arriving at the
+    /// route and reading what the region says. Debug only, because in Release the web project does not
+    /// reference the editor, "/editor" is not routed and the announcer has no entry for it -- the test not
+    /// compiling is the correct outcome there.
+    /// </summary>
+    [Fact]
+    public async Task TheEditorIsAnnouncedByTheNameOfItsHeadingCharacterForCharacter()
+    {
+        var cut = RenderAt("/zzz");
+
+        nav.NavigateTo("/editor");
+        Settle();
+
+        cut.WaitForAssertion(() => Assert.Equal(MovieLibrary.Web.Editor.Pages.RecordEditor.Heading, RouteText(cut)));
+        Assert.Equal("Record editor", RouteText(cut));
+
+        // The editor's LocalDirectory is async-disposable only, and this class is disposed synchronously by
+        // xunit, which the container refuses. Disposed here, asynchronously, so the refusal never arises.
+        await DisposeAsync();
+    }
+#endif
+
     [Fact]
     public async Task TheRouteAnnouncerStopsListeningWhenTheLayoutGoes()
     {

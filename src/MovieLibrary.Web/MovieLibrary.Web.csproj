@@ -18,6 +18,14 @@
     <ProjectReference Include="..\MovieLibrary.Core\MovieLibrary.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <!-- The local record editor, in Debug alone. The deploy runs `dotnet publish -c Release`, so this reference
+         does not exist in a published payload: the editor's assembly is not downloaded, its route is not in the
+         route set, and there is nothing to reach. A `#if DEBUG` around the page's own @page directive could not
+         do this, because @page is processed by the Razor generator before the C# preprocessor runs. -->
+    <ProjectReference Include="..\MovieLibrary.Web.Editor\MovieLibrary.Web.Editor.csproj" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.12" PrivateAssets="all" />

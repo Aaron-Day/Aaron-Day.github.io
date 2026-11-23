@@ -3,6 +3,7 @@ using System.Web;
 using MovieLibrary.Core.Caching;
 using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Models;
+using MovieLibrary.Core.Parsing;
 using MovieLibrary.Core.Text;
 using MovieLibrary.Enrich.Pipeline;
 using MovieLibrary.Enrich.Tmdb;
@@ -82,6 +83,49 @@ public class MoviePipelineGapTests
         Assert.Equal(0.85, r.Mc); // runtime 0.40 + director 0.30 + title 0.15
         Assert.Equal(h.Handler.Requests.Count, result.RequestsUsed);
         Assert.Empty(result.ReviewQueue);
+    }
+
+    // The claim the in-browser record editor rests on. It recomputes a film's identity key from the PUBLISHED
+    // record, which only works because a matched film still publishes the sheet's own title, runtime and
+    // directors, never TMDB's. Every field TMDB supplies here differs visibly from the sheet's.
+    [Fact]
+    public async Task AMatchedFilmPublishesTheSheetsOwnTitleRuntimeAndDirectorsSoItsIdentityKeyIsRecomputable()
+    {
+        var sheet = new SheetRow("Seven (1995)", "1:50:00", "David Fincher & Andrew Kevin Walker", "", "Thriller", "");
+        var routes = new Dictionary<string, string>
+        {
+            ["/3/search/movie"] = """{"results":[{"id":807,"title":"Se7en","release_date":"1995-09-22","popularity":50}]}""",
+            ["/3/movie/807"] = """
+                {"id":807,"title":"Se7en","overview":"Two detectives.","runtime":111,"release_date":"1995-09-22",
+                 "vote_average":8.4}
+                """,
+            ["/3/movie/807/credits"] = """{"crew":[{"job":"Director","name":"David Fincher"}]}""",
+        };
+        var h = TestPipeline.Create(0, Routes(routes));
+
+        var result = await h.Pipeline.RunAsync([sheet], BoundStore.Empty, CancellationToken.None);
+
+        var r = Assert.Single(result.Records);
+        Assert.Equal(807, r.I);
+        Assert.NotEqual(0d, r.Mc);
+
+        // TMDB's title ("Se7en"), runtime (111) and credited directors (one name) all differ from the sheet's,
+        // and none of them is published. This is what makes the identity key recomputable in the browser.
+        Assert.Equal("Seven (1995)", r.T);
+        Assert.Equal(110, r.Rt);
+        Assert.Equal(["David Fincher", "Andrew Kevin Walker"], r.Dir);
+
+        // The key the pipeline hashed for the row (MoviePipeline.RunAsync), from the sheet's values.
+        var expected = IdentityKey.ForFilm(
+            TitleNormalizer.Normalize(sheet.Title),
+            RuntimeParser.FilmMinutes(sheet.Runtime),
+            TitleNormalizer.NormalizeDirectors(sheet.Directors));
+        // The key RecordLink.IdentityKeyOf recomputes from the published record alone, restated here so this
+        // project takes no reference on the editor.
+        var actual = IdentityKey.ForFilm(
+            TitleNormalizer.Normalize(r.T), r.Rt, TitleNormalizer.NormalizeDirectors(string.Join(" & ", r.Dir)));
+
+        Assert.Equal(expected, actual);
     }
 
     [Fact]

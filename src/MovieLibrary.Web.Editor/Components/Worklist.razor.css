@@ -1,0 +1,111 @@
+/* The worklist. Native controls throughout, laid out with the project's tokens and nothing new: the list sits
+   on --bg, the controls on --panel2, and no text sits on a gradient, an image or anything translucent, so
+   axe's colour-contrast never has to guess what is behind it (SC 1.4.3). --txt is 16.16:1 on --bg and --dim
+   6.33:1; --accent 11.92:1 and --accent2 7.40:1, and 10.22:1 and 6.35:1 on --panel2 where the badges sit.
+   Re-measure if a token changes.
+
+   SIZES COME FROM THE TOKEN. This project cites SC 2.5.8 Target Size (Minimum), 24x24, as the floor and gives
+   every standalone control --touch as its own goal; the stylesheet never writes the pixel figure itself. The
+   collapsed row IS the target: one button wraps the whole summary, so it is trivially far past 24x24 and no
+   two targets sit closer than their own box.
+
+   NOTHING THE OWNER HAS TO READ IS CUT OFF. A title wraps instead, and height is reserved in em so that a
+   reader's larger text only makes a row taller (SC 1.4.4, SC 1.4.12). The uncertain records are precisely the
+   ones whose titles need reading. White-space is held on the runtime token ONLY: on a title it pushes the row
+   past the viewport at 200% text, which PosterGrid.razor.css records as a measured bug.
+
+   REFLOW (SC 1.4.10): the layout is one column from the start, minmax and min-width are zero where an item
+   could otherwise size the track from its content, and nothing here is wider than its container. */
+
+.worklist-search { display: flex; flex-direction: column; gap: 1rem; margin: 0 0 1rem; min-width: 0; padding: 1rem;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+
+.worklist-field { display: flex; flex-direction: column; gap: .25rem; }
+
+fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+
+/* Bootstrap's reboot floats a legend to full width at a fluid heading size. line-height is unitless so a
+   text-spacing override cannot clip it (SC 1.4.12). */
+legend { float: none; width: auto; margin: 0 0 .25rem; padding: 0;
+  font-size: 1rem; font-weight: 600; line-height: 1.5; color: var(--txt); }
+
+.options { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+
+/* The LABEL is the target and carries the token; the box inside it is 1.5rem, past the 24x24 the criterion asks. */
+.options label { display: inline-flex; align-items: center; gap: .5rem;
+  min-width: var(--touch); min-height: var(--touch); padding-right: .5rem; line-height: 1.5; cursor: pointer; }
+
+input[type="radio"] { flex: 0 0 auto; width: 1.5rem; height: 1.5rem; margin: 0; accent-color: var(--accent); }
+
+/* At least 16px computed, whatever the reader's root size, so iOS never zooms a focused field. The border is
+   the control's only boundary, so it is --line-strong (3.34:1 on --panel2). */
+input[type="search"], select { box-sizing: border-box; max-width: 100%; min-height: var(--touch);
+  padding: 0 .75rem; border-radius: 6px; font-size: max(16px, 1rem); line-height: 1.5;
+  color: var(--txt); background: var(--panel2); border: 2px solid var(--line-strong); }
+
+input[type="search"] { width: 100%; max-width: 32rem; }
+
+select { align-self: flex-start; }
+
+.worklist-counts, .worklist-shown { margin: 0 0 .5rem; color: var(--txt); line-height: 1.5; }
+.worklist-shown { color: var(--dim); }
+
+.worklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+.worklist > li { min-width: 0; }
+
+/* THE COLLAPSED ROW: one button wrapping the whole summary. Its accessible name is its own text, so there is
+   no aria-label to fall out of step with what is on screen (SC 2.5.3). The boundary is --line-strong, the
+   token every control's only edge uses; --line is 1.37:1 and is for decoration alone. */
+.worklist-row { display: flex; align-items: flex-start; gap: .75rem; width: 100%; min-width: 0;
+  min-height: var(--touch); margin: 0; padding: .5rem .75rem; text-align: left;
+  font: inherit; line-height: 1.5; color: var(--txt); background: var(--panel2);
+  border: 2px solid var(--line-strong); border-radius: 8px; cursor: pointer; }
+
+.worklist-row[aria-expanded="true"] { border-color: var(--accent); }
+
+/* HEIGHT IS AUTO AND IS LOAD-BEARING. The markup carries integer width and height so the box is reserved
+   before the poster arrives, but an HTML height attribute is a presentational hint that maps to a used
+   height in pixels, and aspect-ratio only resolves an axis that is auto. Forcing both axes shipped a wall of
+   stretched posters once; the measurement is recorded in PosterTile.razor.css. Do not delete this note or
+   put a height here. */
+.worklist-thumb { flex: 0 0 auto; width: 3.5rem; height: auto; aspect-ratio: 2 / 3;
+  border-radius: 4px; border: 1px solid var(--line); background: var(--panel); }
+
+.worklist-text { display: flex; flex-direction: column; gap: .25rem; min-width: 0; flex: 1 1 auto; }
+
+/* The title wraps. min-height reserves two lines in em, and a longer title simply grows the row. */
+.worklist-title { font-weight: 600; min-height: 2.6em; overflow-wrap: anywhere; }
+
+.worklist-meta { display: flex; flex-wrap: wrap; gap: 0 .75rem; color: var(--dim); font-size: .85rem; line-height: 1.5; }
+.worklist-runtime { white-space: nowrap; }
+
+/* THE BADGE: a border plus words and never a tint alone. Under forced colors both variants flatten to
+   CanvasText on Canvas and the words become the only cue, which is what SC 1.4.1 asks. Opaque --panel behind. */
+.worklist-badge { align-self: flex-start; padding: .1rem .4rem; font-size: .8125rem; font-weight: 600; line-height: 1.5;
+  border: 1px solid var(--line-strong); border-radius: 4px; background: var(--panel); color: var(--txt); }
+.worklist-badge-unmatched { border-color: var(--accent); color: var(--accent); }
+.worklist-badge-uncertain { border-color: var(--accent2); color: var(--accent2); }
+/* The third word, for a record whose store entry now asserts an id. --txt is 15.03:1 on the --panel behind
+   it, and the border is --line-strong, so the box is told apart from the two band badges by its WORDS and by
+   an edge, never by a tint alone. */
+.worklist-badge-corrected { border-color: var(--line-strong); color: var(--txt); }
+
+/* The revealed region. A plain block: it carries no landmark role, because one landmark per open row would
+   make a list of them. Focus lands on it when it opens, so it keeps the global focus ring. */
+.worklist-panel { margin: .5rem 0 0; padding: 1rem; min-width: 0;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+
+.worklist-close { min-width: var(--touch); min-height: var(--touch); margin-top: 1rem; padding: 0 1rem;
+  font: inherit; color: var(--txt); background: transparent;
+  border: 2px solid var(--line-strong); border-radius: 6px; cursor: pointer; }
+
+@media (forced-colors: active) {
+  .worklist-badge { border: 1px solid CanvasText; color: CanvasText; background: Canvas; }
+}
+
+/* Hover only where a pointer can hover: on a touch screen :hover sticks after the tap. */
+@media (hover: hover) {
+  .worklist-row:hover, .worklist-close:hover, input[type="search"]:hover, select:hover { border-color: var(--accent); }
+}
+
+/* NO MOTION: no transition and no animation, so no prefers-reduced-motion block is needed. */
