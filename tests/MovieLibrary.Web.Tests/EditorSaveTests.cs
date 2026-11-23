@@ -689,4 +689,203 @@ public sealed class EditorSaveTests
             Assert.Equal(held.Note, film.Note);
         }
     }
+
+    /// <summary>A correction already in the file, bound to the published record by the key it will publish.</summary>
+    private static FilmEntry Standing() => new()
+    {
+        IdentityKey = RecordLink.IdentityKeyOf(Fight),
+        Sheet = new SheetEcho("Fight Club", "2:19:00", "David Fincher"),
+        Note = "Checked against the disc.",
+        Records = [new RecordOverride(TmdbId: 550, Runtime: 139)],
+    };
+
+    /// <summary>
+    /// A58, for the case the empty-store test cannot reach. StoreDraft.With allocates a new draft, a new list
+    /// and a new entry every time, so a reference check calls an unchanged store a change: identical JSON is
+    /// written, the script copies the current file to .bak, and the one step back becomes the state he was
+    /// already in -- his previous save can no longer be undone. The comparison is on the bytes.
+    /// </summary>
+    [Fact]
+    public async Task PressingSaveOnACorrectionHeHasNotTouchedWritesNothingRatherThanRotatingTheBackup()
+    {
+        await using var page = new Page(StoreOf(Standing()));
+        page.Writes.SetResult(true);
+        var cut = page.Open();
+
+        // Pre-filled, so this really is the state the file is in and not an empty form over a full store.
+        Assert.Equal("550", cut.Find($"[id='row-{FightKey}-tmdb-id']").GetAttribute("value"));
+
+        Press(cut);
+
+        Assert.Empty(page.Written);
+        Assert.Equal(RecordEditor.NothingToSaveSentence, Outcome(cut));
+        Assert.Contains("already says exactly", Outcome(cut), StringComparison.Ordinal);
+        Assert.DoesNotContain(".bak", Outcome(cut), StringComparison.Ordinal);
+    }
+
+    /// <summary>
+    /// A47 and the announcer's own API note: delivered text never expires, and the region is a scoped singleton
+    /// behind a layout that survives navigation. The clear is raised in the HANDLER and the next statement from
+    /// the render, because a repeated identical sentence written over itself reaches the DOM as no change at
+    /// all -- so without the clear the same failure twice is spoken once, and the second press says nothing.
+    /// </summary>
+    [Fact]
+    public async Task TheSameFailureTwiceIsSaidTwiceBecauseTheRetryClearsTheFirst()
+    {
+        await using var page = new Page();
+        page.Writes.SetResult(false);
+        page.Context.JSInterop
+            .SetupVoid("Blazor._internal.domWrapper.focus", _ => true)
+            .SetException(new JSException("the element has gone"));
+        var cut = page.Open();
+
+        Tick(cut, "tmdb-id");
+        Fill(cut, "tmdb-id", "807");
+        Press(cut);
+        Press(cut);
+
+        Assert.Contains("was not written and is unchanged", page.Region.Alerted[0], StringComparison.Ordinal);
+        Assert.Equal("", page.Region.Alerted[1]);
+        Assert.Contains("was not written and is unchanged", page.Region.Alerted[2], StringComparison.Ordinal);
+        Assert.Empty(page.Region.Said);
+    }
+
+    /// <summary>
+    /// The other half of A47. Worklist clears its own polite statement on dispose and this page cleared
+    /// nothing, so a handled save failure was readable in browse mode on the Films page for the rest of the
+    /// session -- and a retry that succeeded left it standing beside the success.
+    /// </summary>
+    [Fact]
+    public async Task AFailureNobodyClearedDoesNotOutliveThePage()
+    {
+        var page = new Page();
+        page.Writes.SetResult(false);
+        page.Context.JSInterop
+            .SetupVoid("Blazor._internal.domWrapper.focus", _ => true)
+            .SetException(new JSException("the element has gone"));
+        var cut = page.Open();
+
+        Tick(cut, "tmdb-id");
+        Fill(cut, "tmdb-id", "807");
+        Press(cut);
+
+        Assert.Contains("was not written", Assert.Single(page.Region.Alerted), StringComparison.Ordinal);
+
+        await page.DisposeAsync();
+
+        Assert.Equal("", page.Region.Alerted[^1]);
+    }
+
+    /// <summary>
+    /// A45 and A57. The prompt did not end -- it never opened -- so there is no arrival on the folder button to
+    /// state the failure, and the grant paragraph beside it still says what it said before. Routed through the
+    /// save's own reporting path instead: the outcome container takes focus, and the assertive channel speaks
+    /// only where that move did not happen. The message is the script's own; one of mine would be a guess.
+    /// </summary>
+    [Fact]
+    public async Task AGrantTheScriptCouldNotEvenAskForIsReportedWhereTheSaveReports()
+    {
+        await using var page = new Page(store: null, folder: null);
+        page.Module.Setup<string?>("grant").SetException(new JSException("the picker is gone"));
+        var cut = page.Open();
+
+        var state = cut.Find("p.record-state").GetAttribute("blazor:elementreference");
+        var before = page.Focuses.Count;
+
+        cut.Find("button.record-folder").Click();
+
+        Assert.Contains("the picker is gone", Outcome(cut), StringComparison.Ordinal);
+        Assert.Equal(state, ((ElementReference)Assert.Single(page.Focuses.Skip(before)).Arguments[0]!).Id);
+        Assert.Equal("true", cut.Find("button.record-save").GetAttribute("aria-disabled"));
+    }
+
+    /// <summary>
+    /// A31 and SC 3.3.7, across a reload. EditorCatalogue keys entries on the key the NEXT build will publish,
+    /// and the moment a correction asserts or changes a TMDB id that key stops matching movies.json -- which is
+    /// the previous build's output and does not move. So the lookup missed, the badge went, the row went back
+    /// into the count, and reopening the saved record showed a blank form: exactly the records the requirement
+    /// was written about. The row's own identity key is the way back, and the hit is its own proof.
+    /// </summary>
+    [Fact]
+    public async Task ACorrectedRecordKeepsItsBadgeAndItsPreFillAcrossAFreshLoad()
+    {
+        var corrected = new FilmEntry
+        {
+            IdentityKey = RecordLink.IdentityKeyOf(Fight),
+            Sheet = new SheetEcho("Fight Club", "2:19:00", "David Fincher"),
+            Records = [new RecordOverride(TmdbId: 807, Runtime: 139)],
+        };
+
+        await using var page = new Page(StoreOf(corrected), movies: [Fight, Seven]);
+        var cut = page.Open();
+
+        Assert.Equal(
+            Worklist.CorrectedBadge,
+            Page.Toggle(cut, FightKey).QuerySelector(".worklist-badge")!.TextContent);
+        Assert.StartsWith("1 record", cut.Find("p.worklist-counts").TextContent, StringComparison.Ordinal);
+
+        // Pre-filled from what was saved, and never re-asked for.
+        Assert.Equal("807", cut.Find($"[id='row-{FightKey}-tmdb-id']").GetAttribute("value"));
+        Assert.NotNull(cut.Find($"[id='row-{FightKey}-tmdb-id-override']").GetAttribute("checked"));
+
+        // And the correction is not named as matching no published record, because it matches this one.
+        Assert.DoesNotContain(
+            corrected.IdentityKey, cut.Find("div.catalog-state").TextContent, StringComparison.Ordinal);
+    }
+
+    /// <summary>
+    /// The worse half of the same miss. A bundle entry's identity key hashed the Apple row -- its title and its
+    /// one runtime -- so nothing recomputes it from a per-film published record, and the row fell back to a key
+    /// of its own: the save then wrote a SECOND entry, under a key the pipeline will never compute for that
+    /// sheet row, while the first kept the stale record, and the outcome promised the next build would apply it.
+    /// </summary>
+    [Fact]
+    public async Task ASaveAgainstAMultiRecordEntryWhoseIdChangedDoesNotCreateASecondEntry()
+    {
+        var moved = Expanded() with
+        {
+            Records = [new RecordOverride(TmdbId: 550, Runtime: 139), new RecordOverride(TmdbId: 808, Runtime: 127)],
+        };
+
+        await using var page = new Page(StoreOf(moved), movies: [Fight, Seven]);
+        page.Writes.SetResult(true);
+        var cut = page.Open(SevenKey);
+
+        // The SECOND record of the entry, not the first: a position the row recovered without its published key.
+        Assert.Equal("808", cut.Find($"[id='row-{SevenKey}-tmdb-id']").GetAttribute("value"));
+
+        Fill(cut, "tmdb-id", "809", key: SevenKey);
+        Press(cut);
+
+        var film = Assert.Single(Parse(Assert.Single(page.Written)).Films);
+        Assert.Equal(moved.IdentityKey, film.IdentityKey);
+        Assert.Equal(2, film.Records.Count);
+        Assert.Equal(new RecordOverride(TmdbId: 550, Runtime: 139), film.Records[0]);
+        Assert.Equal(809, film.Records[1].TmdbId);
+        Assert.Equal(moved.Note, film.Note);
+    }
+
+    /// <summary>
+    /// m10's neighbour, and the shortlist half of A31: candidates he entered and saved were offered back as
+    /// radios only after a reload, because the chooser's list was captured once when the draft was built. After
+    /// a save the draft is rebuilt from the record that was written, so the row shows what the file says.
+    /// </summary>
+    [Fact]
+    public async Task CandidatesHeJustSavedAreOfferedAsValuesWithoutWaitingForAReload()
+    {
+        await using var page = new Page();
+        page.Writes.SetResult(true);
+        var cut = page.Open();
+
+        Assert.Empty(cut.FindAll("fieldset.record-chooser"));
+
+        Tick(cut, "candidates");
+        Fill(cut, "candidates", "807, 808");
+        Press(cut);
+
+        Assert.Single(cut.FindAll("fieldset.record-chooser"));
+        Assert.NotNull(cut.Find($"[id='row-{FightKey}-candidate-807']"));
+        Assert.NotNull(cut.Find($"[id='row-{FightKey}-candidate-808']"));
+        Assert.NotNull(cut.Find($"[id='row-{FightKey}-candidate-undecided']").GetAttribute("checked"));
+    }
 }

@@ -1,3 +1,5 @@
+using System.Globalization;
+using MovieLibrary.Core.Identity;
 using MovieLibrary.Core.Matching;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Core.Store;
@@ -43,8 +45,8 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
         if (store.Kind == StoreReading.Refused)
             return store.With(CatalogueState.Ready, [], synthetic, []);
 
-        var byPublishedKey = RecordsByPublishedKey(store.Draft);
-        var rows = movies.Select(m => Link(m, byPublishedKey)).ToList();
+        var bound = Bind(store.Draft, movies);
+        var rows = movies.Select(m => Link(m, bound)).ToList();
 
         // A correction that claimed no row is reported rather than dropped: one he already made, silently
         // invisible, is worse than the drop. "Claimed" is asked of the (entry, position) pair and not of whether
@@ -52,10 +54,7 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
         // a matched record's key), the map keeps the first, and asking only whether the key exists would leave
         // the second neither shown nor named. Asked of the entry as a whole it would still miss one record of a
         // multi-record entry whose siblings bound, so the entry is reported when ANY of its records went unbound.
-        var claimed = movies
-            .Where(m => byPublishedKey.ContainsKey(m.K))
-            .Select(m => byPublishedKey[m.K])
-            .ToHashSet();
+        var claimed = bound.Values.ToHashSet();
         var unplaceable = store.Draft.Store.Films
             .Where(f => f.Records.Count == 0
                         || Enumerable.Range(1, f.Records.Count).Any(p => !claimed.Contains(new RecordSlot(f, p))))
@@ -66,13 +65,14 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
 
     /// <summary>The ONE place a record's key is decided. Entry present: through the entry. Absent: the fallback.</summary>
     /// <remarks>
-    /// The POSITION comes from the same lookup and is no extra work: the map already holds it, and the save
-    /// needs it to replace one record of an entry rather than the entry wholesale. A row with no entry takes 1.
+    /// The POSITION comes from the same lookup and is no extra work: <see cref="Bind"/> already holds it, and
+    /// the save needs it to replace one record of an entry rather than the entry wholesale. A row with no entry
+    /// takes 1.
     /// </remarks>
-    private static WorklistRow Link(MovieRecord movie, IReadOnlyDictionary<string, RecordSlot> entries)
+    private static WorklistRow Link(MovieRecord movie, IReadOnlyDictionary<string, RecordSlot> bound)
     {
         var band = ConfidenceBand.Of(movie);
-        var found = entries.TryGetValue(movie.K, out var slot);
+        var found = bound.TryGetValue(movie.K, out var slot);
         var entry = found ? slot.Entry : null;
         var key = entry is null ? RecordLink.IdentityKeyOf(movie) : entry.IdentityKey;
         var position = found ? slot.Position : 1;
@@ -97,6 +97,149 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
         public bool Equals(RecordSlot other) => ReferenceEquals(Entry, other.Entry) && Position == other.Position;
 
         public override int GetHashCode() => HashCode.Combine(System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode(Entry), Position);
+    }
+
+    /// <summary>
+    /// Which store record each published record belongs to, keyed on the published key. Three ways in, each
+    /// with its own proof, and a record that none of them can place stays unbound and is NAMED (Unplaceable).
+    /// </summary>
+    /// <remarks>
+    /// <para><b>Why the published key alone is not enough.</b> It is the key the NEXT build will publish, and
+    /// movies.json is the PREVIOUS build's output, which does not move. So the moment a correction asserts or
+    /// changes a TMDB id -- the whole point of this editor -- the two disagree and the lookup misses: the badge
+    /// goes, the row returns to the needs-a-decision count, and reopening the record he saved shows a blank
+    /// form (A31, SC 3.3.7). Worse, the save then writes a SECOND entry under a key of the row's own.</para>
+    /// <para><b>Pass 2, an unmatched record: a real check.</b> Its key is <c>u-</c>, the first eight characters
+    /// of its ROW's identity key, and its position inside its entry. The identity key is the SHEET row's, so no
+    /// override can move it -- this is the one fallback <see cref="RecordLink"/> grants outright, and it covers
+    /// every record the pipeline matched to nothing.</para>
+    /// <para><b>Pass 2, a matched record: the hit is the proof.</b> Its key carries no part of its row, so
+    /// <see cref="RecordLink.Agrees"/> has nothing to compare. What is left is the recomputed identity key --
+    /// guaranteed only for a record with no entry, because an override can replace the title, runtime and
+    /// directors it hashed. So it is used as a LOOKUP and never as a key to write under: a hit means the
+    /// published fields hash to that entry's own sheet row, which is the same row by definition, and a miss
+    /// leaves the record exactly where it was. The entry must have one free slot; two and it says nothing
+    /// about which record this is.</para>
+    /// <para><b>Pass 3, a bundle.</b> A multi-record entry's identity key hashed the Apple row -- its title and
+    /// its one runtime -- and its records publish per-film runtimes, so nothing recomputes it and pass 2 cannot
+    /// help. The tie that survives an id change is the record's own runtime: the pipeline publishes
+    /// <c>over?.Runtime ?? sheetRuntime</c>, and the reader makes a runtime compulsory on every record of an
+    /// expanded entry. Paired one-to-one and only where it is unambiguous in both directions; anything else
+    /// stays unbound, because binding the wrong slot writes a correction over another film.</para>
+    /// </remarks>
+    private static Dictionary<string, RecordSlot> Bind(StoreDraft draft, IReadOnlyList<MovieRecord> movies)
+    {
+        var bound = new Dictionary<string, RecordSlot>(StringComparer.Ordinal);
+        var taken = new HashSet<RecordSlot>();
+
+        void Take(MovieRecord movie, RecordSlot slot)
+        {
+            bound[movie.K] = slot;
+            taken.Add(slot);
+        }
+
+        var byPublishedKey = RecordsByPublishedKey(draft);
+
+        foreach (var movie in movies)
+            if (byPublishedKey.TryGetValue(movie.K, out var slot) && !taken.Contains(slot))
+                Take(movie, slot);
+
+        var byHash = new Dictionary<string, FilmEntry>(StringComparer.Ordinal);
+        var byIdentityKey = new Dictionary<string, FilmEntry>(StringComparer.Ordinal);
+
+        foreach (var entry in draft.Store.Films)
+        {
+            byIdentityKey.TryAdd(entry.IdentityKey, entry);
+
+            // A key the reader accepted is 40 hex characters. One that reached a draft another way may not be.
+            if (entry.IdentityKey.Length >= RecordKey.HashLength)
+                byHash.TryAdd(entry.IdentityKey[..RecordKey.HashLength], entry);
+        }
+
+        foreach (var movie in movies)
+            if (!bound.ContainsKey(movie.K) && Rehomed(movie, byHash, byIdentityKey, taken) is { } slot)
+                Take(movie, slot);
+
+        var orphans = draft.Store.Films
+            .Where(f => f.Records.Count > 1)
+            .SelectMany(f => Enumerable.Range(1, f.Records.Count).Select(p => new RecordSlot(f, p)))
+            .Where(s => !taken.Contains(s))
+            .ToList();
+
+        if (orphans.Count == 0) return bound;
+
+        var loose = movies.Where(m => !bound.ContainsKey(m.K)).ToList();
+
+        foreach (var slot in orphans)
+        {
+            var fits = loose.Where(m => !bound.ContainsKey(m.K) && Fits(Record(slot), m)).ToList();
+
+            // One slot, one record, in both directions. A published record that two leftover slots both fit
+            // says nothing about which of them it is, so it binds to neither and both are named instead.
+            if (fits.Count == 1 && orphans.Count(o => Fits(Record(o), fits[0])) == 1) Take(fits[0], slot);
+        }
+
+        return bound;
+    }
+
+    private static RecordOverride Record(RecordSlot slot) => slot.Entry.Records[slot.Position - 1];
+
+    /// <summary>The slot a record whose published key has moved belongs to, or null when nothing proves one.</summary>
+    private static RecordSlot? Rehomed(
+        MovieRecord movie, IReadOnlyDictionary<string, FilmEntry> byHash,
+        IReadOnlyDictionary<string, FilmEntry> byIdentityKey, HashSet<RecordSlot> taken)
+    {
+        if (Unmatched(movie.K) is { } form)
+            return byHash.TryGetValue(form.Hash, out var hashed)
+                   && RecordLink.Agrees(movie, hashed.IdentityKey) == true
+                   && form.Position <= hashed.Records.Count
+                   && !taken.Contains(new RecordSlot(hashed, form.Position))
+                ? new RecordSlot(hashed, form.Position)
+                : null;
+
+        if (!byIdentityKey.TryGetValue(RecordLink.IdentityKeyOf(movie), out var entry)) return null;
+
+        var free = Enumerable.Range(1, entry.Records.Count)
+            .Select(p => new RecordSlot(entry, p))
+            .Where(s => !taken.Contains(s))
+            .ToList();
+
+        return free.Count == 1 ? free[0] : null;
+    }
+
+    /// <summary>
+    /// Whether one store record is the one a published record came from, as far as the two of them can say.
+    /// </summary>
+    /// <remarks>
+    /// The runtime is the tie, because the editor writes it on every record and the pipeline publishes it
+    /// (<c>over?.Runtime ?? sheetRuntime</c>). The display title is a veto and not a second tie: an expanded
+    /// entry's records carry their own titles -- the Apple row's describes none of its films -- but a record
+    /// that states none contradicts nothing.
+    /// </remarks>
+    private static bool Fits(RecordOverride record, MovieRecord movie) =>
+        record.Runtime == movie.Rt
+        && (record.Titles?.Display is null
+            || string.Equals(record.Titles.Display, movie.T, StringComparison.Ordinal));
+
+    /// <summary>The hash and the position an unmatched key carries, or null for a matched key.</summary>
+    private static (string Hash, int Position)? Unmatched(string key)
+    {
+        if (!key.StartsWith(RecordKey.UnmatchedPrefix, StringComparison.Ordinal)) return null;
+
+        var rest = key[RecordKey.UnmatchedPrefix.Length..];
+        if (rest.Length < RecordKey.HashLength) return null;
+
+        var hash = rest[..RecordKey.HashLength];
+        var suffix = rest[RecordKey.HashLength..];
+
+        if (suffix.Length == 0) return (hash, 1);
+
+        // RecordKey.ForFilm appends "-n" for the n-th record of one entry, and only for n above 1.
+        return suffix[0] == '-'
+               && int.TryParse(suffix[1..], NumberStyles.None, CultureInfo.InvariantCulture, out var position)
+               && position > 1
+            ? (hash, position)
+            : null;
     }
 
     private static Dictionary<string, RecordSlot> RecordsByPublishedKey(StoreDraft draft)

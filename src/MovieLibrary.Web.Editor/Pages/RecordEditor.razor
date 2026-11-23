@@ -76,10 +76,13 @@
 
     // The store is sparse by design: an entry that corrects nothing is a line in a committed file that says
     // nothing, and the reader refuses one. Said rather than written, because the script copies the current file
-    // to .bak on every write, so a save of identical bytes spends the one step back he has and returns nothing.
+    // to .bak on every write, so a save of identical bytes spends the one step back he has and returns nothing,
+    // leaving the backup a copy of the state he is already in. It covers both ways of arriving here -- a record
+    // with no corrections at all, and a correction he opened and did not change -- so it claims only that the
+    // file already agrees. No .bak promise: under StoreReading.NotRead there may be none to point at (M8).
     internal const string NothingToSaveSentence =
-        "This record has no corrections and the record store holds none for it, so nothing was written and the "
-        + "previous version is still one step back.";
+        "Nothing was written, because the record store already says exactly what this save would have written. "
+        + "The version before your last save is untouched.";
 
     // A54's named failure mode: a prompt he dismissed that says nothing leaves the page looking unchanged.
     internal const string NoFolderChosenSentence =
@@ -252,7 +255,12 @@
             reportPending = false;
 
             var moved = form is { } onReport && await onReport.FocusOutcomeAsync();
-            if (!moved && outcome.Length > 0) Region.Alert(outcome);
+
+            if (!moved && outcome.Length > 0)
+            {
+                Region.Alert(outcome);
+                alerted = true;
+            }
         }
     }
 
@@ -281,21 +289,67 @@
     {
         if (drafts.TryGetValue(row.Movie.K, out var held)) return held;
 
-        // The record being corrected is the one at this row's POSITION and never the entry's first: one Apple
-        // row can publish four films, and pre-filling from the wrong record shows him somebody else's values.
-        var saved = row.Entry is { } entry && row.Position >= 1 && row.Position <= entry.Records.Count
-            ? entry.Records[row.Position - 1]
-            : null;
-
-        var made = RecordDraft.For(row.Movie, saved);
+        var made = RecordDraft.For(row.Movie, SavedIn(row.Entry, row.Position));
         drafts[row.Movie.K] = made;
         return made;
     }
 
+    /// <summary>
+    /// The record this row is corrected by, which is the one at the row's POSITION and never the entry's
+    /// first: one Apple row can publish four films, and pre-filling from the wrong record shows him somebody
+    /// else's values.
+    /// </summary>
+    private static RecordOverride? SavedIn(FilmEntry? entry, int position) =>
+        entry is not null && position >= 1 && position <= entry.Records.Count
+            ? entry.Records[position - 1]
+            : null;
+
+    /// <summary>
+    /// Rebuilds the open row's draft from the record that was just written, so the form shows what the FILE
+    /// says rather than what was typed at it.
+    /// </summary>
+    /// <remarks>
+    /// A31's shortlist half needs this: the candidate chooser offers <c>RecordDraft.Offered</c>, which is read
+    /// from the saved record when the draft is built, so candidates he entered and saved were offered back as
+    /// values only after a reload -- until then the ids he had just saved were text he would have to retype,
+    /// which is the one thing SC 3.3.7 asks nobody to do. It is also the honest answer for every other field:
+    /// what the save wrote is what the row now holds, trimmed and parsed as the file has it.
+    /// </remarks>
+    private void Reseat(WorklistRow row, FilmEntry? entry) =>
+        drafts[row.Movie.K] = RecordDraft.For(row.Movie, SavedIn(entry, row.Position));
+
     private void Report(string text)
     {
+        ClearAlert();
         outcome = text;
         reportPending = true;
+    }
+
+    /// <summary>
+    /// Whether a sentence of this page's is standing in the assertive region, so that it can be taken down.
+    /// </summary>
+    /// <remarks>
+    /// A47. Delivered text never expires: the region is a scoped singleton behind a layout that survives
+    /// navigation, so a handled save failure stays readable in browse mode for the rest of the session -- on
+    /// the Films page, beside a successful retry, and after this page has gone. Worklist clears its own polite
+    /// statement on dispose and Movies.razor clears both of its own; this is the same obligation.
+    /// </remarks>
+    private bool alerted;
+
+    /// <remarks>
+    /// A cancellation and not a message: it takes effect at once and speaks nothing. Raised from the HANDLER
+    /// that writes the new outcome and never beside the next statement in OnAfterRenderAsync -- on a pass that
+    /// flushes both mutations in one frame the clear would be observed with the region already empty, and a
+    /// repeated identical sentence would reach the DOM as no change at all. That is why the same failure twice
+    /// is otherwise spoken once. Tracked rather than cleared blindly, so a page with nothing standing never
+    /// writes to a region it does not own anything in.
+    /// </remarks>
+    private void ClearAlert()
+    {
+        if (!alerted) return;
+
+        alerted = false;
+        Region.Alert("");
     }
 
     /// <remarks>
@@ -332,18 +386,21 @@
         {
             var (next, entry, removed) = Place(s.Draft, row, draft);
 
-            // Nothing changed, so nothing is written: the script copies the current file to .bak on every
-            // write, and a save of identical bytes would spend A58's one step back and give nothing for it.
-            if (ReferenceEquals(next, s.Draft))
-            {
-                Report(NothingToSaveSentence);
-                return;
-            }
-
             // THE CHECK BEFORE THE SAVE, and it throws before anything leaves the page: the file is read back
             // through the same reader the next build will use.
             var json = next.ToValidatedJson();
             var name = RecordStoreReader.DefaultFileName;
+
+            // Nothing changed, so nothing is written: the script copies the current file to .bak on every
+            // write, and a save of identical bytes would spend A58's one step back and give nothing for it.
+            // ON THE BYTES, NOT THE REFERENCE: StoreDraft.With allocates a new draft, Place a new list and a
+            // new entry, so a reference check is false for a record he opened and did not change -- which is
+            // the ordinary way to reach this, and the way that costs him the save before it.
+            if (string.Equals(json, RecordStoreReader.Write(s.Draft.Store), StringComparison.Ordinal))
+            {
+                Report(NothingToSaveSentence);
+                return;
+            }
 
             if (s.ApiSupported) await Folder.WriteTextAsync(name, json);
             else await Folder.DownloadAsync(name, json);
@@ -351,6 +408,7 @@
             if (disposed) return;
 
             state = Rebadge(s, next, row, entry);
+            Reseat(row, entry);
             Report(s.ApiSupported ? Written(name, s.FolderName ?? "the chosen folder", removed) : Downloaded(name));
         }
         catch (RecordStoreException ex)
@@ -452,14 +510,26 @@
                 state = s with { FolderName = chosen };
                 outcome = "";
             }
+
+            // A54, and only on the arms where the prompt actually ended: the button's own description IS the
+            // granted state, so the arrival states it and states it once.
+            grantPending = true;
         }
         catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
         {
-            outcome = ex.Message;
+            // The prompt did not end -- it never opened. So there is nothing for an arrival on the folder
+            // button to say: its description is the grant paragraph, which still says exactly what it said
+            // before the press. Reported the way a save failure is reported instead -- focus to the outcome
+            // container, whose text IS the sentence, and the assertive channel only where that move did not
+            // happen -- because a failure that is visible and spoken by nothing is the silent class A57
+            // forbids. The message is the script's own: a sentence of mine would be guessing which it was.
+            Report(ex.Message);
         }
-
-        grantPending = true;
     }
 
-    public void Dispose() => disposed = true;
+    public void Dispose()
+    {
+        disposed = true;
+        ClearAlert();
+    }
 }

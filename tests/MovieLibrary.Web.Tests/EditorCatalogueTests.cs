@@ -266,4 +266,62 @@ public sealed class EditorCatalogueTests
             Assert.Equal(StoreReading.Read, state.Store);
         }
     }
+
+    /// <summary>
+    /// The 30 records the pipeline matched to nothing are the ones this editor exists for, and the first thing
+    /// a correction does is give one an id -- which moves the key the entry will publish and leaves the
+    /// published catalogue, the previous build's output, where it was. The hash in an unmatched key is the
+    /// first eight characters of its ROW's identity key, which no override can move, so it is the way back.
+    /// </summary>
+    [Fact]
+    public async Task AnUnmatchedRecordWhoseCorrectionNowAssertsAnIdIsStillBoundToItsEntry()
+    {
+        var movie = Film(0, "Lost Reel", 90, 0, "A. Nobody");
+        var key = RecordLink.IdentityKeyOf(movie);
+
+        var state = await Load([movie], StoreOf(EntryFor(key, 807, 90)));
+
+        Assert.Equal(key, state.Rows.Single().IdentityKey);
+        Assert.Equal(key, state.Rows.Single().Entry?.IdentityKey);
+        Assert.True(state.Rows.Single().Corrected);
+        Assert.Empty(state.Unplaceable);
+    }
+
+    /// <summary>
+    /// And the check is a check. An entry whose key shares nothing with the published key's hash is not this
+    /// row's, so it stays unbound and is named: a fallback that bound it anyway would pre-fill the form with
+    /// another film's correction and save over it.
+    /// </summary>
+    [Fact]
+    public async Task AnUnmatchedRecordIsNotBoundToAnEntryWhoseHashDisagrees()
+    {
+        var state = await Load([Film(0, "Lost Reel", 90, 0, "A. Nobody")], StoreOf(EntryFor(KeyB, 807, 90)));
+
+        Assert.Null(state.Rows.Single().Entry);
+        Assert.Equal(KeyB, Assert.Single(state.Unplaceable).IdentityKey);
+    }
+
+    /// <summary>
+    /// A bundle's leftover record is paired with a published record on the runtime it states, because nothing
+    /// recomputes an Apple row's identity key from a per-film record. Two published records that fit it equally
+    /// well say nothing about which it is, so it binds to neither and is named instead.
+    /// </summary>
+    [Fact]
+    public async Task ABundlesLeftoverRecordIsNotGuessedAtWhenTwoPublishedRecordsFitItEqually()
+    {
+        var bundle = new FilmEntry
+        {
+            IdentityKey = KeyB,
+            Records = [new RecordOverride(TmdbId: 550, Runtime: 139), new RecordOverride(TmdbId: 807, Runtime: 139)],
+        };
+
+        var state = await Load(
+            [Film(550, "Fight Club", 139, 0.5), Film(998, "A", 139, 0.5), Film(999, "B", 139, 0.5)],
+            StoreOf(bundle));
+
+        Assert.Equal(KeyB, state.Rows.Single(r => r.Movie.I == 550).Entry?.IdentityKey);
+        Assert.Null(state.Rows.Single(r => r.Movie.I == 998).Entry);
+        Assert.Null(state.Rows.Single(r => r.Movie.I == 999).Entry);
+        Assert.Equal(KeyB, Assert.Single(state.Unplaceable).IdentityKey);
+    }
 }
