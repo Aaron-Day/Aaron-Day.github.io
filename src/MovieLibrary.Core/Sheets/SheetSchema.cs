@@ -17,15 +17,16 @@ public static class SheetSchema
         => string.Equals(expected, Clean(actual), StringComparison.OrdinalIgnoreCase);
 
     /// <summary>
-    /// Expected headers must appear as a prefix of the actual row; trailing
-    /// unnamed columns are tolerated because the real export has one.
+    /// Expected headers must appear as a prefix of the actual row. ANY trailing column is
+    /// tolerated, named or not; the real export happens to carry one that is unnamed.
     /// </summary>
     public static void Validate(string tabName, IReadOnlyList<string> expected, string[] actualHeader)
     {
         if (actualHeader.Length < expected.Count)
             throw new SheetSchemaException(
                 $"Tab '{tabName}' returned {actualHeader.Length} columns, expected at least " +
-                $"{expected.Count}: [{string.Join(", ", expected)}].");
+                $"{expected.Count}: [{string.Join(", ", expected)}]. Google silently returns the " +
+                $"first sheet when a tab name is unknown — check the tab is still named '{tabName}'.");
 
         for (var i = 0; i < expected.Count; i++)
         {

@@ -76,4 +76,16 @@ public class SheetSchemaTests
     public void RejectsAnEmptyHeader()
         => Assert.Throws<SheetSchemaException>(
             () => SheetSchema.Validate("Movies", SheetSchema.Movies, []));
+
+    [Fact]
+    public void TheTooFewColumnsMessageCarriesTheRenamedTabHintToo()
+    {
+        var ex = Assert.Throws<SheetSchemaException>(
+            () => SheetSchema.Validate("Movies", SheetSchema.Movies, ["Title", "Runtime"]));
+
+        // The header-mismatch path has always said this. A tab name Google cannot find returns the
+        // WRONG sheet, and a wrong sheet is as likely to be too narrow as to be misnamed -- this is
+        // the path that fires in the first case, so it needs the same hint.
+        Assert.Contains("still named 'Movies'", ex.Message, StringComparison.Ordinal);
+    }
 }

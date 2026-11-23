@@ -46,7 +46,8 @@ public class MatchScorerTests
     [Fact]
     public void WeakAgreementIsFlaggedNotAccepted()
     {
-        // Title matches, nothing else does.
+        // Title and runtime agree, the director does not, and "Dune" carries no year to agree
+        // on: 0.15 + 0.40 = 0.55, which is Flagged and not Accepted.
         var r = Score("Dune", 137, "Denis Villeneuve", C(841, "Dune", 1984, 137, "David Lynch"));
         Assert.Equal(MatchOutcome.Flagged, r.Outcome);
         Assert.InRange(r.Confidence, 0.45, 0.7499);

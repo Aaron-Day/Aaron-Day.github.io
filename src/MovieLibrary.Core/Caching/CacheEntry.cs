@@ -1,6 +1,12 @@
 namespace MovieLibrary.Core.Caching;
 
 /// <summary>One cached answer: which TMDB film or series a sheet row resolved to, or that it resolved to none.</summary>
+/// <param name="NormalizedTitle">
+/// The row's title as <c>NormalizedTitle.Value</c> -- the FOLDED form, which is also what the identity key
+/// hashes. Never <c>Cleaned</c>: Cleaned is the readable search string and still carries case, accents and
+/// punctuation, so storing it here would fail an alias comparison between two spellings of one title and
+/// would not agree with the key the entry is filed under. A cache alias compares this string for equality.
+/// </param>
 /// <param name="NormalizedDirectors">
 /// The row's directors exactly as <c>TitleNormalizer.NormalizeDirectors</c> returns them, which is also what the
 /// identity key hashes: lower-cased, accents and punctuation folded away, "and" dropped, name tokens de-duplicated

@@ -68,6 +68,13 @@ public static class RuntimeParser
         if (parts.Length == 3)
             return (Num(parts[0], raw), Num(parts[1], raw), Num(parts[2], raw));
 
+        // A two-part value is legible mm:ss, not gibberish. For a FILM that is corrupt data rather
+        // than an unreadable string, and saying so points at the row instead of at this parser.
+        if (parts.Length == 2)
+            throw new FormatException(
+                $"Film runtimes must be h:mm:ss; got the two-part '{raw}'. A film row carrying a " +
+                "mm:ss runtime is corrupt - check that row on the Movies tab.");
+
         throw new FormatException($"Unparseable runtime: '{raw}'");
     }
 
