@@ -117,11 +117,41 @@
         $"{name} was handed to the browser's downloads. Nothing was written to the repository folder, so move "
         + "the downloaded file into the repository by hand before the next build.";
 
-    /// <summary>What the folder route can claim. The removal reads differently, because the record is gone.</summary>
-    internal static string Written(string name, string folder, bool removed) => removed
-        ? $"Saved. The correction was removed from {name} in {folder}, and the next build will publish this "
-          + "record as the sheet has it."
-        : $"Saved. {name} in {folder} holds this correction, and the next build will apply it.";
+    /// <summary>What the folder route can claim, which is three different things.</summary>
+    /// <param name="saved">
+    /// The record the file now holds at this row's position, or null for a removal. The same expression
+    /// <c>Reseat</c> rebuilds the draft from, so the sentence and the form answer from one fact.
+    /// </param>
+    internal static string Written(string name, string folder, bool removed, RecordOverride? saved)
+    {
+        if (removed)
+            return $"Saved. The correction was removed from {name} in {folder}, and the next build will "
+                   + "publish this record as the sheet has it.";
+
+        // THE DISTINCTION THIS SENTENCE USED TO MISS, which EditorCatalogue.IsCorrected states one file away
+        // and the worklist badge has always obeyed. Candidates are ids he SAW and did not choose between, so
+        // MoviePipeline asserts no id for them AND makes no search, because a search returns the same ones --
+        // and that arm comes BEFORE the cache, so a record matched today publishes with no id at all after
+        // this save. "The next build will apply it" was false for the one save that leaves the decision open,
+        // and the owner repeated it back as his account of what he had just done.
+        //
+        // KEYED ON THE CANDIDATES AND NOT ON A MISSING ID. A record correcting only a runtime or a title
+        // asserts no id either, and the build applies those, so the id is the wrong question. Candidates may
+        // sit beside those corrections, which is why this claims nothing beyond the match.
+        if (saved?.Candidates is { Length: > 0 } ids)
+            return $"Saved. {name} in {folder} now holds {Spell(ids)} under \"Override candidate ids\" and "
+                   + "no TMDB id, so this save decides no match: the next build will publish this record "
+                   + "with no TMDB match, and it will not search for one, because a search would only find "
+                   + "the ids you have already seen. The row keeps the badge it has and still needs a "
+                   + "decision -- choose one of the \"Candidate TMDB ids\" options and save again, or enter "
+                   + "the id under \"Override TMDB id\" instead.";
+
+        return $"Saved. {name} in {folder} holds this correction, and the next build will apply it.";
+    }
+
+    /// <summary>Ids as the file spells them: invariant, so a grouping separator never reaches the sentence.</summary>
+    private static string Spell(int[] ids) =>
+        string.Join(", ", ids.Select(id => id.ToString(CultureInfo.InvariantCulture)));
 
     [Inject] private IWebAssemblyHostEnvironment Environment { get; set; } = default!;
 
@@ -486,7 +516,9 @@
 
             state = Rebadge(s, next, row, entry);
             Reseat(row, entry);
-            Report(s.ApiSupported ? Written(name, s.FolderName ?? "the chosen folder", removed) : Downloaded(name));
+            Report(s.ApiSupported
+                ? Written(name, s.FolderName ?? "the chosen folder", removed, SavedIn(entry, row.Position))
+                : Downloaded(name));
         }
         catch (RecordStoreException ex)
         {

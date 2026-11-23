@@ -564,6 +564,39 @@ public sealed class EditorSaveTests
     }
 
     /// <summary>
+    /// The sentence half of C5, and the defect the owner found on his first real save: he ticked the
+    /// candidates box instead of the id box, the save reported "the next build will apply it", and he
+    /// repeated that back as his account of what he had done. A candidates-only save applies NOTHING -- the
+    /// pipeline asserts no id for it and makes no search, and that arm comes before the cache, so a record
+    /// matched today publishes with no id at all afterwards.
+    /// <para>
+    /// Keyed on the candidates and never on a missing id: a runtime-only or title-only correction asserts no
+    /// id either and the build DOES apply those, so the id is the wrong question. That is also why
+    /// AnIdCorrectionOnABundleRecordNothingCanBindIsFiledWhereTheNextBuildWillNotLook still reads the
+    /// unchanged sentence -- it asserts an id.
+    /// </para>
+    /// </summary>
+    [Fact]
+    public async Task ASaveThatRecordsCandidatesOnlyDoesNotPromiseTheNextBuildWillApplyIt()
+    {
+        await using var page = new Page(movies: [Fight, Seven]);
+        page.Writes.SetResult(true);
+        var cut = page.Open();
+
+        Tick(cut, "candidates");
+        Fill(cut, "candidates", "807, 808");
+        Press(cut);
+
+        var said = Outcome(cut);
+
+        Assert.StartsWith("Saved.", said, StringComparison.Ordinal);
+        Assert.DoesNotContain("the next build will apply it", said, StringComparison.Ordinal);
+        Assert.Contains("807, 808", said, StringComparison.Ordinal);
+        Assert.Contains("Override candidate ids", said, StringComparison.Ordinal);
+        Assert.Contains("will not search", said, StringComparison.Ordinal);
+    }
+
+    /// <summary>
     /// M11. The worklist closes the open row on every debounced query change, so a draft held inside the form
     /// would be destroyed 150 ms after one character reached the search box. It also discharges A31's
     /// "pre-fill, never re-ask" for the unsaved case.
