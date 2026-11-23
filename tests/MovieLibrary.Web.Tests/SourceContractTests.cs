@@ -88,6 +88,40 @@ public class SourceContractTests
         Assert.DoesNotContain("MovieLibrary.Enrich", WebRoot.Read("MovieLibrary.Web.csproj"), StringComparison.Ordinal);
     }
 
+    /// <summary>
+    /// The one guard on the plan's central requirement: no editor assembly in a published payload. The deploy
+    /// runs <c>dotnet publish -c Release</c>, so a reference that sits in a Debug-conditioned ItemGroup is not in
+    /// it, and one moved into an unconditioned group would ship the editor, its route and its folder-writing
+    /// script to every visitor with every test still green. Read as XML rather than matched as text, because
+    /// the csproj's own comments discuss the reference and a substring scan would count them.
+    /// </summary>
+    [Fact]
+    public void TheEditorProjectIsReferencedOnceAndOnlyInsideADebugConditionedItemGroup()
+    {
+        var project = System.Xml.Linq.XDocument.Parse(WebRoot.Read("MovieLibrary.Web.csproj"));
+        var references = project.Descendants("ProjectReference").ToList();
+
+        // T1: the walk has to be seeing the project's references at all. Core and the editor are the two.
+        Assert.True(references.Count >= 2,
+            "This rule found " + references.Count + " ProjectReference element(s) in MovieLibrary.Web.csproj. "
+            + "There are two, Core and the editor. Fewer means the file was not read the way this thinks it "
+            + "was, and a rule that finds no reference to the editor would pass over nothing.");
+
+        var editor = references
+            .Where(r => ((string?)r.Attribute("Include") ?? "").Contains("MovieLibrary.Web.Editor", StringComparison.Ordinal))
+            .ToList();
+
+        Assert.True(editor.Count == 1,
+            "MovieLibrary.Web.csproj references the editor project " + editor.Count + " time(s). It must be "
+            + "exactly once, inside the Debug-only ItemGroup: a second reference elsewhere is one the "
+            + "condition below does not govern.");
+
+        var group = editor[0].Parent!;
+
+        Assert.Equal("ItemGroup", group.Name.LocalName);
+        Assert.Equal("'$(Configuration)' == 'Debug'", (string?)group.Attribute("Condition"));
+    }
+
     [Fact]
     public void TheCoreProjectCarriesNoReferencesOfItsOwn()
     {

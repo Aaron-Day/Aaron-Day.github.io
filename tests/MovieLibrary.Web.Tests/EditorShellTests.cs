@@ -61,9 +61,12 @@ public sealed class EditorShellTests
     [Fact]
     public void TheRouteSetTheSiteServesDoesNotGrow()
     {
-        // The whole point of the separate assembly: AppUnderTest.RouteTemplates() reads typeof(Movies).Assembly,
-        // so this page is invisible to it. If this fails, the editor has been compiled into MovieLibrary.Web and
-        // the four-address contract is about to assert something false about the published site.
+        // AppUnderTest.RouteTemplates() reads typeof(Movies).Assembly, so this page is invisible to it by
+        // construction. If this fails, a route has appeared in the MovieLibrary.Web assembly itself, and the
+        // four-address contract is about to assert something about a different set of addresses than the one
+        // it was written for. That is not the same claim as the editor having been compiled into the web
+        // assembly: a route added for any other reason fails here too. The claim that no editor assembly
+        // reaches a published payload is pinned by EditorContractTests, over the web project's csproj.
         Assert.DoesNotContain("/editor", AppUnderTest.RouteTemplates());
     }
 
