@@ -84,6 +84,20 @@
         "Nothing was written, because the record store already says exactly what this save would have written. "
         + "The version before your last save is untouched.";
 
+    /// <summary>The same outcome where no store was READ, which can claim very much less (m2).</summary>
+    /// <remarks>
+    /// The comparison that reaches here is against the draft that was read, and under
+    /// <see cref="StoreReading.NotRead"/> that was an EMPTY store rather than the file: the script answers null
+    /// both for a file that is not there and for one it could not read, and cannot tell them apart across the
+    /// interop boundary. So the sentence above would be making the stronger claim
+    /// <see cref="NoStoreReadSentence"/> deliberately refuses to make, about a file this page has not seen, and
+    /// its second half would promise a previous version that on a fresh clone does not exist. What is certain is
+    /// what is said: this save would have written nothing, and nothing here knows what the file holds.
+    /// </remarks>
+    internal const string NothingToSaveUnreadSentence =
+        "Nothing was written, because this record has no corrections to write and no record store was read to "
+        + "compare it against. Try again once the repository folder is available to this page.";
+
     // A54's named failure mode: a prompt he dismissed that says nothing leaves the page looking unchanged.
     internal const string NoFolderChosenSentence =
         "No folder was chosen, so nothing can be saved yet. Press the folder button again and choose the "
@@ -274,16 +288,24 @@
     private static readonly string[] FocusKeepers = ["#main-content", "#app h1"];
 
     // The report belongs to the save it came from, so it does not survive the row. The DRAFT does (M11).
+    //
+    // AND THE REGION IS CLEARED WITH IT (m7). Emptying `outcome` takes the sentence off the SCREEN; a sentence
+    // raised assertively is not on the screen at all, it is standing in a region that outlives the row, this
+    // page and the navigation, so a failure left there was readable in browse mode with nothing on screen to
+    // match it. ClearAlert only writes where this page has something standing, so a row opened and closed
+    // without a save touches nothing.
     private void OnOpened(string key)
     {
         openKey = key;
         outcome = "";
+        ClearAlert();
     }
 
     private void OnClosed()
     {
         openKey = null;
         outcome = "";
+        ClearAlert();
 
         // A component reference is assigned on the render that creates the component and is NOT cleared when
         // the component goes, so a stale form would take a focus move meant for the next one -- onto an
@@ -413,7 +435,9 @@
             // the ordinary way to reach this, and the way that costs him the save before it.
             if (string.Equals(json, RecordStoreReader.Write(s.Draft.Store), StringComparison.Ordinal))
             {
-                Report(NothingToSaveSentence);
+                // What this may claim depends on whether a store was read at all: the comparison above is
+                // against what was READ, which under NotRead is an empty store and not the file (m2).
+                Report(s.Store == StoreReading.Read ? NothingToSaveSentence : NothingToSaveUnreadSentence);
                 return;
             }
 
@@ -515,9 +539,14 @@
     /// <remarks>
     /// <b>The seconds are not recoverable and this is not the sheet's own text.</b> MovieRecord.Rt is whole
     /// minutes, because RuntimeParser.FilmMinutes truncates, so the sheet's 2:06:53 is published as 126 and
-    /// written back here as the canonical 2:06:00. SheetEcho is documented as never consumed for matching and
-    /// nothing parses it after M3: the runtime the next build re-derives the key from is the record's own,
-    /// which every save writes. The title and the directors ARE exact -- the pipeline publishes the sheet's own.
+    /// written back here as the canonical 2:06:00.
+    /// <para><b>And it is parsed, which an earlier version of this remark denied.</b> SheetEcho is documented
+    /// as never consumed for MATCHING -- the identity key does that -- but RecordLink.PublishedKeyOf reads
+    /// entry.Sheet.Runtime through RuntimeParser.TryFilmMinutes whenever a record states no runtime of its own,
+    /// which is legal in a hand-written single-record entry and is the path pass 1 depends on for one. What
+    /// holds of an entry THIS editor writes is narrower, and is why the canonical form costs nothing: every
+    /// record it writes carries its own runtime (M3), so that fallback is never reached for one of ours. The
+    /// title and the directors ARE exact -- the pipeline publishes the sheet's own.</para>
     /// </remarks>
     private static SheetEcho EchoOf(MovieRecord movie) => new(
         movie.T,

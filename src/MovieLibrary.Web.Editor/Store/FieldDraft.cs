@@ -390,7 +390,22 @@ public sealed class RecordDraft
                 Extras.Add(new ExtraRow(nextId++) { Name = pair.Key, Value = pair.Value });
 
         Fields = [TmdbId, Candidates, DisplayTitle, SortTitle, Year, Runtime, Directors, AppleGenre, PurchaseInfo];
+
+        publishedMinutes = movie.Rt;
     }
+
+    /// <summary>
+    /// The published minutes of the record this draft was built FOR, which is the runtime the save writes
+    /// whether or not the box is ticked.
+    /// </summary>
+    /// <remarks>
+    /// Held so that <see cref="OverridesNothing"/> can judge a TYPED runtime the same way the pre-fill above
+    /// judges a SAVED one. The two read the same value and disagreeing about it was a defect: the box opened
+    /// clear for a saved 139 while a typed 139 kept an entry alive that corrects nothing.
+    /// <c>Build</c> takes the same number as a parameter, because it is also what a caller who is not the page
+    /// has to supply; the page passes <c>row.Movie.Rt</c>, which is where both of them come from.
+    /// </remarks>
+    private readonly int publishedMinutes;
 
     /// <summary>A draft of <paramref name="movie"/>, pre-filled from <paramref name="saved"/> when there is one.</summary>
     public static RecordDraft For(MovieRecord movie, RecordOverride? saved = null)
@@ -565,9 +580,19 @@ public sealed class RecordDraft
     /// <summary>
     /// Whether this draft corrects nothing, which is the page's cue to remove the entry rather than write one
     /// that says nothing. The reader's own test, with the runtime the save writes for him taken back out and
-    /// the runtime he typed left in (M3): a runtime-only override is a correction the reader keeps.
+    /// the runtime he CHOSE left in (M3): a runtime-only override is a correction the reader keeps.
     /// </summary>
-    public bool OverridesNothing => (Build(1) with { Runtime = Runtime.AsNumber }) == new RecordOverride();
+    /// <remarks>
+    /// "Chose" and not "typed", which is m1's correction. The runtime the save supplies is the record's own
+    /// published minutes, so a typed value equal to those minutes is the same value and says the same nothing
+    /// -- and <see cref="For"/> already refuses to tick the box for it when it comes back out of the file. The
+    /// two halves judge one value and must judge it alike: trusting the tick here committed an entry whose
+    /// whole content was the runtime the next build would have used anyway, reported as a correction, and the
+    /// box then opened clear so that a second Save deleted it.
+    /// </remarks>
+    public bool OverridesNothing =>
+        (Build(1) with { Runtime = Runtime.AsNumber == publishedMinutes ? null : Runtime.AsNumber })
+        == new RecordOverride();
 
     private static string Spell(int value) => value.ToString(CultureInfo.InvariantCulture);
 }

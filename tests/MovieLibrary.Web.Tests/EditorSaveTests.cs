@@ -758,12 +758,21 @@ public sealed class EditorSaveTests
 
     /// <summary>
     /// A47 and the announcer's own API note: delivered text never expires, and the region is a scoped singleton
-    /// behind a layout that survives navigation. The clear is raised in the HANDLER and the next statement from
-    /// the render, because a repeated identical sentence written over itself reaches the DOM as no change at
-    /// all -- so without the clear the same failure twice is spoken once, and the second press says nothing.
+    /// behind a layout that survives navigation, so whoever puts a statement up takes it down when it stops
+    /// being true -- which the first failure does the moment he presses Save again.
     /// </summary>
+    /// <remarks>
+    /// <b>The mechanism this summary used to give was wrong, and it is written down because it is the kind of
+    /// claim that gets copied.</b> It said that without the clear the same failure twice would be spoken once,
+    /// because an identical sentence written over itself reaches the DOM as no change at all. Announcer.Publish
+    /// empties the region before EVERY delivery and MainLayout re-arms the settle delay on the render that
+    /// carries that clear, so a repeat goes text -> empty -> text and is announced either way. The clear is
+    /// still right, and this is still a pin on it: the page owes A47 the take-down, and raising it from the
+    /// HANDLER rather than beside the next statement in OnAfterRenderAsync is what keeps the two as separate
+    /// observable mutations instead of one frame's worth.
+    /// </remarks>
     [Fact]
-    public async Task TheSameFailureTwiceIsSaidTwiceBecauseTheRetryClearsTheFirst()
+    public async Task TheRetryTakesDownTheFailureItReplacesAndRaisesItAgain()
     {
         await using var page = new Page();
         page.Writes.SetResult(false);
@@ -1003,5 +1012,77 @@ public sealed class EditorSaveTests
         Assert.Contains(bundle.IdentityKey, said, StringComparison.Ordinal);
         Assert.Contains(RecordStoreReader.DefaultFileName, said, StringComparison.Ordinal);
         Assert.DoesNotContain("Saved", said, StringComparison.Ordinal);
+    }
+
+    /// <summary>
+    /// m2. Under StoreReading.NotRead the comparison this save makes is against an EMPTY in-memory store and
+    /// not against the file: the script answers null both for a file that is not there and for one it could
+    /// not read, and cannot tell them apart. So "the record store already says exactly what this save would
+    /// have written" is the stronger claim this page's own no-store sentence refuses to make, and "the version
+    /// before your last save is untouched" asserts a version that may not exist at all.
+    /// </summary>
+    [Fact]
+    public async Task NothingToSaveClaimsNothingAboutAFileNobodyRead()
+    {
+        await using (var fresh = new Page(store: null))
+        {
+            fresh.Writes.SetResult(true);
+            var cut = fresh.Open();
+
+            Press(cut);
+
+            Assert.Empty(fresh.Written);
+            var said = Outcome(cut);
+            Assert.Equal(RecordEditor.NothingToSaveUnreadSentence, said);
+            Assert.DoesNotContain("already says", said, StringComparison.Ordinal);
+            Assert.DoesNotContain("previous version", said, StringComparison.Ordinal);
+            Assert.DoesNotContain(".bak", said, StringComparison.Ordinal);
+            Assert.Contains("no record store was read", said, StringComparison.Ordinal);
+        }
+
+        // And the stronger sentence still belongs to the one state that earns it.
+        await using (var read = new Page(StoreOf()))
+        {
+            read.Writes.SetResult(true);
+            var cut = read.Open();
+
+            Press(cut);
+
+            Assert.Equal(RecordEditor.NothingToSaveSentence, Outcome(cut));
+        }
+    }
+
+    /// <summary>
+    /// m7, and the third half of A47. Closing the row takes the outcome off the SCREEN, which is why the page
+    /// clears it there -- but a sentence raised assertively is not on the screen at all: it stands in a region
+    /// that outlives the row, the page and the navigation, so closing the row left "the file was not written"
+    /// readable in browse mode with nothing on screen to match it. Whoever puts a statement up takes it down.
+    /// </summary>
+    [Fact]
+    public async Task ClosingTheRowTakesDownTheSentenceThisPageRaisedAssertively()
+    {
+        await using var page = new Page();
+        page.Writes.SetResult(false);
+        page.Context.JSInterop
+            .SetupVoid("Blazor._internal.domWrapper.focus", _ => true)
+            .SetException(new JSException("the element has gone"));
+        var cut = page.Open();
+
+        Tick(cut, "tmdb-id");
+        Fill(cut, "tmdb-id", "807");
+        Press(cut);
+
+        Assert.Contains("was not written", Assert.Single(page.Region.Alerted), StringComparison.Ordinal);
+
+        cut.Find("button.worklist-close").Click();
+
+        Assert.Equal("", page.Region.Alerted[^1]);
+
+        // And nothing is written to a region this page now holds nothing in: reopening the row has no standing
+        // statement to take down.
+        var raised = page.Region.Alerted.Count;
+        Page.Toggle(cut, FightKey).Click();
+
+        Assert.Equal(raised, page.Region.Alerted.Count);
     }
 }

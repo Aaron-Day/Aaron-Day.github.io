@@ -382,4 +382,36 @@ public sealed class FieldDraftTests
         Assert.False(chosen.OverridesNothing);
         Assert.Equal(119, chosen.Build(139).Runtime);
     }
+
+    /// <summary>
+    /// m1. The two halves of the M3 fix have to agree about one value, and they did not. The pre-fill
+    /// distrusts a saved runtime equal to the record's own published minutes -- it is the one every save writes
+    /// for him -- while the judgment trusted the tick. So ticking Override runtime and typing the minutes the
+    /// record already publishes committed an entry whose whole content is the runtime the next build would
+    /// have used anyway: a line in a committed file that says nothing, reported as a correction. The asymmetry
+    /// showed itself one press later, because reopening the row showed the box clear again and a second Save
+    /// then deleted the entry.
+    /// </summary>
+    [Fact]
+    public void ATypedRuntimeEqualToThePublishedMinutesIsJudgedTheWayThePreFillJudgesIt()
+    {
+        var draft = RecordDraft.For(Film(runtime: 139));
+
+        draft.Runtime.Overridden = true;
+        draft.Runtime.Typed = "139";
+
+        // The value is still WRITTEN -- it has to be, or the record becomes unplaceable -- and it is still a
+        // legal thing to have typed. What it is not is a correction.
+        Assert.Equal(139, draft.Build(139).Runtime);
+        Assert.Null(draft.ProblemFor(draft.Runtime));
+        Assert.True(draft.OverridesNothing);
+
+        // The same value, saved and read back by the pre-fill: the half that was already right, held against
+        // the half that was not.
+        Assert.False(RecordDraft.For(Film(runtime: 139), draft.Build(139)).Runtime.Overridden);
+
+        // A minute either way is his, which is the direction the two tests above pin.
+        draft.Runtime.Typed = "138";
+        Assert.False(draft.OverridesNothing);
+    }
 }

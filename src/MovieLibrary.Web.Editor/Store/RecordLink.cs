@@ -44,6 +44,11 @@ public static class RecordLink
     }
 
     /// <returns>True or false when the record's own key carries the hash; null when it cannot say.</returns>
+    /// <remarks>
+    /// The general answer, for a caller holding one record and one key. <c>EditorCatalogue</c> asks the same
+    /// question by KEYING its lookup on those eight characters, so a hit there already is this answer and a
+    /// call beside it could only ever have returned true.
+    /// </remarks>
     public static bool? Agrees(MovieRecord movie, string identityKey)
     {
         ArgumentNullException.ThrowIfNull(movie);

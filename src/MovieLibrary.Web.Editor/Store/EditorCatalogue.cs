@@ -112,7 +112,11 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
     /// <para><b>Pass 2, an unmatched record: a real check.</b> Its key is <c>u-</c>, the first eight characters
     /// of its ROW's identity key, and its position inside its entry. The identity key is the SHEET row's, so no
     /// override can move it -- this is the one fallback <see cref="RecordLink"/> grants outright, and it covers
-    /// every record the pipeline matched to nothing.</para>
+    /// every record the pipeline matched to nothing. <b>The lookup is the whole check</b>: <c>byHash</c> is
+    /// keyed on each entry's own <c>IdentityKey[..RecordKey.HashLength]</c> and asked for exactly the eight
+    /// characters the published key carries, so a hit has already compared them. A second
+    /// <see cref="RecordLink.Agrees"/> beside it could not return anything but true, and a condition no test
+    /// can turn false is a condition no test can protect, so it is not there (m5).</para>
     /// <para><b>Pass 2, a matched record: the hit is the proof.</b> Its key carries no part of its row, so
     /// <see cref="RecordLink.Agrees"/> has nothing to compare. What is left is the recomputed identity key --
     /// guaranteed only for a record with no entry, because an override can replace the title, runtime and
@@ -236,7 +240,6 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
     {
         if (Unmatched(movie.K) is { } form)
             return byHash.TryGetValue(form.Hash, out var hashed)
-                   && RecordLink.Agrees(movie, hashed.IdentityKey) == true
                    && form.Position <= hashed.Records.Count
                    && !taken.Contains(new RecordSlot(hashed, form.Position))
                 ? new RecordSlot(hashed, form.Position)
