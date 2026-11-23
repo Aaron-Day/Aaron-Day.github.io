@@ -138,11 +138,24 @@ public static class RecordStoreReader
         if (store is null)
             throw new RecordStoreException($"'{whatItIs}' could not be read as a record store: the body was JSON null.");
 
-        if (store.Version != RecordStore.CurrentVersion)
+        // A RANGE, and not an equality. Version 2 added RecordOverride.PublishedKey and nothing else, so a
+        // version 1 file is a version 2 file with that member omitted everywhere -- which the member's own
+        // contract already allows. Rejecting it would mean hand-migrating a file whose content needs no change.
+        // The range is still CLOSED at the top: a file from a NEWER build may use members this one would have to
+        // drop, and UnmappedMemberHandling.Disallow has already refused it by then with a worse message, so the
+        // version is checked first to say what actually happened.
+        if (store.Version < RecordStore.OldestReadableVersion || store.Version > RecordStore.CurrentVersion)
             throw new RecordStoreException(
                 $"'{whatItIs}' declares version {store.Version.ToString(CultureInfo.InvariantCulture)}, and this " +
-                $"build reads version {RecordStore.CurrentVersion.ToString(CultureInfo.InvariantCulture)}. " +
-                "A missing version reads as 0. Set \"version\": 1.");
+                $"build reads versions {RecordStore.OldestReadableVersion.ToString(CultureInfo.InvariantCulture)} " +
+                $"to {RecordStore.CurrentVersion.ToString(CultureInfo.InvariantCulture)}. " +
+                $"A missing version reads as 0. Set \"version\": {RecordStore.CurrentVersion.ToString(CultureInfo.InvariantCulture)}.");
+
+        // UPGRADED ON READ, so one number is true of every store past this point. Everything downstream --
+        // StoreDraft.From, which refuses any other version, and the writer, which round-trips what it is given --
+        // then sees CurrentVersion and nothing has to care which file it came from. The upgrade is the version
+        // number alone; no entry is touched.
+        store = store with { Version = RecordStore.CurrentVersion };
 
         Validate(store, whatItIs);
         return store;

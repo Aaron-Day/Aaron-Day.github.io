@@ -1,3 +1,4 @@
+using System.Globalization;
 using MovieLibrary.Core.Store;
 using MovieLibrary.Enrich.Config;
 
@@ -166,9 +167,19 @@ public class RepositoryFileTests
             + "down, so a clone without it sends its reader to a file that is not there - which is the exact "
             + "defect this file was added to fix.");
 
-        // Throws RecordStoreException on anything the reader would refuse, which is the whole point.
-        var store = RecordStoreReader.Read(File.ReadAllText(path), RecordStoreReader.ExampleFileName);
+        var text = File.ReadAllText(path);
 
+        // Throws RecordStoreException on anything the reader would refuse, which is the whole point.
+        var store = RecordStoreReader.Read(text, RecordStoreReader.ExampleFileName);
+
+        // ASSERTED AGAINST THE FILE'S OWN TEXT, and not against store.Version. The reader UPGRADES an older
+        // version in place, so the parsed value is CurrentVersion whatever the file says -- an assertion on it
+        // is one no edit to this file can fail, and this example's job is to show the CURRENT shape to someone
+        // writing an entry by hand. It said "version": 1 for the whole of version 2's existence until this
+        // assertion was written.
+        Assert.Contains(
+            "\"version\": " + RecordStore.CurrentVersion.ToString(CultureInfo.InvariantCulture), text,
+            StringComparison.Ordinal);
         Assert.Equal(RecordStore.CurrentVersion, store.Version);
         Assert.Equal(3, store.Films.Count);
 
@@ -181,6 +192,10 @@ public class RepositoryFileTests
         Assert.Equal("Phantom Orchard, The", asserted.Titles!.Sort);
         Assert.Equal("2019-03-14", Assert.Contains("Purchase Date", asserted.Extra!));
 
+        // The example documents publishedKey on the ordinary case and on the bundle, which is where it matters
+        // most. Named here so that dropping it from the file fails rather than passing quietly.
+        Assert.Equal("9000001-112", asserted.PublishedKey);
+
         var ambiguous = Assert.Single(store.Films[1].Records);
         Assert.Null(ambiguous.TmdbId);
         Assert.Equal([9000002, 9000003], ambiguous.Candidates!);
@@ -189,6 +204,7 @@ public class RepositoryFileTests
         Assert.Equal(3, expanded.Count);
         Assert.All(expanded, r => Assert.NotNull(r.Runtime));
         Assert.Equal(3, expanded.Select(r => (r.TmdbId, r.Runtime)).Distinct().Count());
+        Assert.Equal("9000004-95", expanded[0].PublishedKey);
 
         var series = Assert.Single(store.Series).Record;
         Assert.Equal(9000007, series.TmdbId);

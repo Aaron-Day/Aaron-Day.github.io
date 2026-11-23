@@ -79,10 +79,45 @@ public class RecordStoreReaderTests
     }
 
     [Theory]
-    [InlineData("{ \"version\": 2, \"films\": [], \"series\": [] }", "version 2")]
+    [InlineData("{ \"version\": 3, \"films\": [], \"series\": [] }", "version 3")]
     [InlineData("not json at all", "could not be read")]
-    public void AStoreThatIsNotThisVersionOrNotJsonIsRejected(string json, string mustSay)
+    public void AStoreThatIsNotAReadableVersionOrNotJsonIsRejected(string json, string mustSay)
         => Assert.Contains(mustSay, Rejected(json).Message, StringComparison.OrdinalIgnoreCase);
+
+    /// <summary>
+    /// Version 1 added nothing this build cannot read: it is version 2 with <c>publishedKey</c> omitted
+    /// everywhere, which that member's own contract already allows. So it is READ, and upgraded in place --
+    /// and the upgrade is asserted, because <c>StoreDraft.From</c> refuses any version but the current one, so
+    /// a store that loaded but kept its old number would load and then be unusable by the editor.
+    /// </summary>
+    [Fact]
+    public void AVersion1StoreIsReadAndUpgradedToTheCurrentVersion()
+    {
+        var store = RecordStoreReader.Read(
+            "{ \"version\": 1, \"films\": [ { \"identityKey\": \"" + Key
+            + "\", \"records\": [ { \"tmdbId\": 807 } ] } ], \"series\": [] }", "old.json");
+
+        Assert.Equal(RecordStore.CurrentVersion, store.Version);
+        Assert.Null(Assert.Single(Assert.Single(store.Films).Records).PublishedKey);
+    }
+
+    /// <summary>
+    /// The member version 2 exists for. Round-tripped rather than merely read, because the editor rewrites the
+    /// whole file on every save: a key that reads but does not write back is a key that is lost on the next
+    /// correction, which is the exact failure the member was added to prevent.
+    /// </summary>
+    [Fact]
+    public void APublishedKeyIsReadAndSurvivesARoundTrip()
+    {
+        var store = RecordStoreReader.Read(
+            Film("[ { \"tmdbId\": 807, \"publishedKey\": \"u-01c8f4d6-1\" } ]"), "t.json");
+
+        Assert.Equal("u-01c8f4d6-1", Assert.Single(Assert.Single(store.Films).Records).PublishedKey);
+
+        var again = RecordStoreReader.Read(RecordStoreReader.Write(store), "again.json");
+
+        Assert.Equal("u-01c8f4d6-1", Assert.Single(Assert.Single(again.Films).Records).PublishedKey);
+    }
 
     [Theory]
     [InlineData("[]", "at least one record")]
@@ -228,7 +263,7 @@ public class RecordStoreReaderTests
 
     [Fact]
     public void AMissingVersionIsRejectedWithTheFixSpelledOut()
-        => Assert.Contains("Set \"version\": 1",
+        => Assert.Contains("Set \"version\": 2",
                            Rejected("{ \"films\": [], \"series\": [] }").Message, StringComparison.Ordinal);
 
     [Theory]
