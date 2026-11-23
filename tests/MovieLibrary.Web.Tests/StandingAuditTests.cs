@@ -45,11 +45,22 @@ public class StandingAuditTests
 
     private static IReadOnlyList<(string Path, string Text)> Subjects()
     {
-        var files = WebRoot.Files("*.razor", "index.html")
-            .Where(f => !f.Path.StartsWith("wwwroot/lib/", StringComparison.Ordinal)).ToList();
+        // The editor is "exempt from nothing", so the walk covers both projects: FilesWithEditor, not Files.
+        var files = WebRoot.FilesWithEditor("*.razor", "index.html")
+            .Where(f => !f.Path.StartsWith("wwwroot/lib/", StringComparison.Ordinal)
+                        && !f.Path.StartsWith(WebRoot.EditorPrefix + "wwwroot/lib/", StringComparison.Ordinal))
+            .ToList();
 
         // The glob has to have found the real files. A count alone survives one being swapped for another.
         var names = files.Select(f => f.Path).ToList();
+        Assert.True(files.Count >= 15,
+            "The standing accessibility rules found " + files.Count + " files to scan. Fifteen were counted: "
+            + "ten .razor files and index.html in the web project, four .razor files in the editor. Fewer "
+            + "means WebRoot.FilesWithEditor stopped finding them, and a rule with no subjects passes over "
+            + "nothing.");
+        Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", names);
+        Assert.Contains(WebRoot.EditorPrefix + "Components/RecordForm.razor", names);
+        Assert.Contains(WebRoot.EditorPrefix + "Components/Worklist.razor", names);
         Assert.Contains("Components/FacetPanel.razor", names);
         Assert.Contains("Components/PosterTile.razor", names);
         Assert.Contains("Components/PosterGrid.razor", names);
