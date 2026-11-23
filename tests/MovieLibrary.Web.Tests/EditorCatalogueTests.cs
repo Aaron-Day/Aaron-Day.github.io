@@ -302,12 +302,13 @@ public sealed class EditorCatalogueTests
     }
 
     /// <summary>
-    /// A bundle's leftover record is paired with a published record on the runtime it states, because nothing
-    /// recomputes an Apple row's identity key from a per-film record. Two published records that fit it equally
-    /// well say nothing about which it is, so it binds to neither and is named instead.
+    /// A bundle's leftover record is NAMED and never paired with a published record on the runtime it states.
+    /// Nothing recomputes an Apple row's identity key from a per-film record, so pass 2 cannot help here and
+    /// there is no third pass to try: the entry is reported instead, which is the answer that cannot write one
+    /// film's correction onto another.
     /// </summary>
     [Fact]
-    public async Task ABundlesLeftoverRecordIsNotGuessedAtWhenTwoPublishedRecordsFitItEqually()
+    public async Task ABundlesLeftoverRecordIsNamedRatherThanPairedOnTheRuntimeItStates()
     {
         var bundle = new FilmEntry
         {
@@ -326,13 +327,13 @@ public sealed class EditorCatalogueTests
     }
 
     /// <summary>
-    /// Pass 3's pool is ONE Apple row's own published records, and this construction is why. The owner
-    /// corrected the first film's runtime from 139 to 119 and has not rebuilt: pass 1 misses that record
-    /// because a matched published key is {id}-{runtime} and ANY runtime edit moves it, and pass 2 misses
-    /// because the bundle's identity key hashed the Apple row and not the film. Tied on the runtime alone over
-    /// the whole catalogue, the one published record left at 119 minutes was another film entirely -- so it
-    /// took this slot, wore the Corrected badge, pre-filled id 550, and a save on it would have written over
-    /// the bundle's real correction and reported a success. Nothing said so, because the slot was claimed.
+    /// A published record of another row never takes a bundle's slot. The owner corrected the first
+    /// film's runtime from 139 to 119 and has not rebuilt: pass 1 misses that record because a matched
+    /// published key is {id}-{runtime} and any runtime edit moves it, and pass 2 misses because the
+    /// bundle's identity key hashed the Apple row and not the film. Tied on the runtime alone, the one
+    /// published record left at 119 minutes was another film entirely -- so it took this slot, wore the
+    /// Corrected badge, pre-filled id 550, and a save on it would have written over the bundle's real
+    /// correction and reported a success. Nothing said so, because the slot was claimed.
     /// </summary>
     [Fact]
     public async Task APublishedRecordOfAnotherRowIsNeverBoundToABundleSlotThatMerelySharesItsRuntime()
@@ -363,15 +364,21 @@ public sealed class EditorCatalogueTests
     }
 
     /// <summary>
-    /// And the narrowed pool still binds the case pass 3 exists for. The owner gave the first film of this
-    /// bundle a new id and has not rebuilt, so its published key moved and the runtime it states is all that is
-    /// left to tie it; a stranger published at the same runtime makes that tie ambiguous over the whole
-    /// catalogue, which is the ordinary case and not the exotic one -- a runtime no other record in the library
-    /// shares is rare. Narrowed to the records the Apple row itself published, named by the sibling pass 1
-    /// placed, the tie is unique again and the correction is found.
+    /// The pass this construction used to drive, pinned by its own absence. The owner gave the first film of
+    /// this bundle a new id and has not rebuilt, so the key that record publishes has moved and the runtime it
+    /// states is all that is left to tie it to a published film. A pass that paired them -- even from a pool
+    /// narrowed to the Apple row's own films, which this fixture satisfies -- cannot be right in the class
+    /// where it answers at all: while the runtime holds, the record's OWN film is in that pool and fits too,
+    /// so either it binds or the one-to-one test fails; and once the runtime moves, the own film is excluded by
+    /// the tie itself and every candidate left is by construction not the film the record came from. So the
+    /// slot stays unbound, the entry is named, and this test goes red if a pass like it is reintroduced.
     /// </summary>
+    /// <remarks>
+    /// The price, stated where it is paid: this record cannot be re-opened or re-saved against its entry until
+    /// the next build re-aligns the published keys. See EditorCatalogue.Bind's remarks for the whole argument.
+    /// </remarks>
     [Fact]
-    public async Task ABundleSlotWhoseIdMovedIsBoundThroughASiblingEvenWhenAStrangerSharesItsRuntime()
+    public async Task ABundleSlotWhoseIdMovedIsLeftUnboundRatherThanTiedToASiblingsRuntime()
     {
         const string row = "Fight Club / Se7en";
         var bundle = new FilmEntry
@@ -386,11 +393,15 @@ public sealed class EditorCatalogueTests
             StoreOf(bundle));
 
         var moved = state.Rows.Single(r => r.Movie.I == 901);
-        Assert.Equal(KeyB, moved.Entry?.IdentityKey);
-        Assert.Equal(1, moved.Position);
-        Assert.True(moved.Corrected);
+        Assert.Null(moved.Entry);
+        Assert.False(moved.Corrected);
 
+        // The sibling whose published key did not move is still bound by pass 1, and the stranger that merely
+        // shares the corrected runtime is bound by nothing -- which it never was, in either design.
+        Assert.Equal(KeyB, state.Rows.Single(r => r.Movie.I == 807).Entry?.IdentityKey);
         Assert.Null(state.Rows.Single(r => r.Movie.I == 9552).Entry);
-        Assert.Empty(state.Unplaceable);
+
+        // And the correction nobody could place is NAMED rather than silently absent.
+        Assert.Equal(KeyB, Assert.Single(state.Unplaceable).IdentityKey);
     }
 }

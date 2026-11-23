@@ -876,21 +876,31 @@ public sealed class EditorSaveTests
     }
 
     /// <summary>
-    /// The worse half of the same miss. A bundle entry's identity key hashed the Apple row -- its title and its
-    /// one runtime -- so nothing recomputes it from a per-film published record, and the row fell back to a key
-    /// of its own: the save then wrote a SECOND entry, under a key the pipeline will never compute for that
-    /// sheet row, while the first kept the stale record, and the outcome promised the next build would apply it.
+    /// What retiring the bundle pass costs on the SAVE side, pinned rather than left to be found. The entry's
+    /// second record states its own display title and its own runtime, which is the shape
+    /// record-store.example.json documents for a bundle, so the published film recomputes a key of its own and
+    /// not the Apple row's: pass 1 misses because the owner's id correction moved the key that record
+    /// publishes, pass 2 cannot recompute an Apple row's key from a per-film record, and nothing else tries.
+    /// The row is therefore unbound, no entry is filed under the key it computes for itself -- so Place's guard
+    /// does not fire -- and the correction is written as a NEW entry under that key, which is not the sheet
+    /// row's. The next build will not look there.
     /// </summary>
+    /// <remarks>
+    /// <b>Nothing is destroyed, which is the half worth keeping</b>: the bundle entry, its note, its sibling
+    /// and its stale record all survive untouched. What is lost is the new correction, and the page says the
+    /// next build will apply it -- the dishonest half, asserted here so that it cannot be shipped unnoticed
+    /// twice. The cure is not another heuristic over published fields: it is the store carrying the key each
+    /// record was last published under, which makes pass 1 exact and this row bound. That is a file-format
+    /// addition (an optional member on RecordOverride, which RecordStore.CurrentVersion exists to allow) and
+    /// the first Phase 2b item; until it lands, this test is the record of the hole.
+    /// </remarks>
     [Fact]
-    public async Task ASaveAgainstAMultiRecordEntryWhoseIdChangedDoesNotCreateASecondEntry()
+    public async Task AnIdCorrectionOnABundleRecordNothingCanBindIsFiledWhereTheNextBuildWillNotLook()
     {
         // THE SHAPE record-store.example.json DOCUMENTS FOR A BUNDLE: every record states its own display
         // title, because the Apple row's title describes none of the films in it, and the pipeline publishes
-        // that title in place of the row's. Before the pass-3 pool was narrowed this fixture gave the two
-        // records no titles at all while the two published records carried different ones -- a pairing the
-        // pipeline cannot produce, since a record that overrides no title publishes row.Title like its
-        // siblings. What the test is about is unchanged: the second record's id has moved since the build, so
-        // its published key no longer finds it.
+        // that title in place of the row's. The second record's id has moved since the build, so its published
+        // key no longer finds it.
         var moved = Expanded() with
         {
             Records =
@@ -904,19 +914,27 @@ public sealed class EditorSaveTests
         page.Writes.SetResult(true);
         var cut = page.Open(SevenKey);
 
-        // The SECOND record of the entry, not the first: a position the row recovered without its published key.
-        Assert.Equal("808", cut.Find($"[id='row-{SevenKey}-tmdb-id']").GetAttribute("value"));
+        // Unbound: there is nothing to pre-fill from, so the form opens as if this were a first correction.
+        Assert.Equal("", cut.Find($"[id='row-{SevenKey}-tmdb-id']").GetAttribute("value"));
 
+        Tick(cut, "tmdb-id", key: SevenKey);
         Fill(cut, "tmdb-id", "809", key: SevenKey);
         Press(cut);
 
-        var film = Assert.Single(Parse(Assert.Single(page.Written)).Films);
-        Assert.Equal(moved.IdentityKey, film.IdentityKey);
-        Assert.Equal(2, film.Records.Count);
-        Assert.Equal(moved.Records[0], film.Records[0]);
-        Assert.Equal(809, film.Records[1].TmdbId);
-        Assert.Equal("Se7en", film.Records[1].Titles?.Display);
-        Assert.Equal(moved.Note, film.Note);
+        var written = Parse(Assert.Single(page.Written));
+        Assert.Equal(2, written.Films.Count);
+
+        // The bundle is untouched, note and sibling and stale record alike.
+        var bundle = written.Films.Single(f => f.IdentityKey == moved.IdentityKey);
+        Assert.Equal(moved.Records, bundle.Records);
+        Assert.Equal(moved.Note, bundle.Note);
+        Assert.Equal(moved.Sheet, bundle.Sheet);
+
+        // And the correction is filed under the row's own recomputed key, which no sheet row of this bundle
+        // computes -- so it is inert at the next build, and the owner is told the opposite.
+        var filed = written.Films.Single(f => f.IdentityKey == RecordLink.IdentityKeyOf(Seven));
+        Assert.Equal(809, Assert.Single(filed.Records).TmdbId);
+        Assert.Contains("the next build will apply it", Outcome(cut), StringComparison.Ordinal);
     }
 
     /// <summary>
