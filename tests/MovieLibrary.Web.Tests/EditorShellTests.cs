@@ -16,12 +16,6 @@ namespace MovieLibrary.Web.Tests;
 /// </summary>
 public sealed class EditorShellTests
 {
-    private sealed class Env(string environment) : IWebAssemblyHostEnvironment
-    {
-        public string Environment { get; } = environment;
-        public string BaseAddress => "http://localhost/";
-    }
-
     /// <summary>An empty, ready catalogue: the page has a source to ask, and nothing in it to list.</summary>
     internal sealed class EmptySource : ICatalogueSource
     {
@@ -43,7 +37,7 @@ public sealed class EditorShellTests
     {
         var context = new BunitContext();
         context.JSInterop.Mode = JSRuntimeMode.Loose;
-        context.Services.AddSingleton<IWebAssemblyHostEnvironment>(new Env(environment));
+        context.Services.AddSingleton<IWebAssemblyHostEnvironment>(EditorPage.Environment(environment));
         context.Services.AddSingleton(TimeProvider.System);
         context.Services.AddRecordEditor<EmptySource, SilentRegion>();
         return context;

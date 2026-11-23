@@ -16,12 +16,6 @@ namespace MovieLibrary.Web.Tests;
 /// </summary>
 public sealed class RecordEditorTests
 {
-    private sealed class Env : IWebAssemblyHostEnvironment
-    {
-        public string Environment => "Development";
-        public string BaseAddress => "http://localhost/";
-    }
-
     /// <summary>A source whose first answer can be held, so the page can be read in the middle of a load.</summary>
     private sealed class HeldSource : ICatalogueSource
     {
@@ -41,20 +35,12 @@ public sealed class RecordEditorTests
     private static (BunitContext Context, HeldSource Source) Page(string? storeText, string? folder = "MovieLibrary")
     {
         var context = new BunitContext();
-        context.JSInterop.Mode = JSRuntimeMode.Loose;
-        var module = context.JSInterop.SetupModule(LocalDirectory.ModulePath);
-        module.Setup<bool>("supported").SetResult(true);
-        module.Setup<string?>("status").SetResult(folder);
-        module.Setup<string?>("readText", RecordStoreReader.DefaultFileName).SetResult(storeText);
+        EditorPage.ScriptFolder(context, folder: folder, storeText: storeText);
 
+        // The real clock, deliberately: these tests let the worklist's timers run.
         var source = new HeldSource();
-        context.Services
-            .AddSingleton<IWebAssemblyHostEnvironment>(new Env())
-            .AddSingleton<ICatalogueSource>(source)
-            .AddSingleton<IStatusRegion>(new EditorShellTests.SilentRegion())
-            .AddSingleton(TimeProvider.System)
-            .AddScoped<LocalDirectory>()
-            .AddScoped<EditorCatalogue>();
+        EditorPage.Register(
+            context, EditorPage.Environment(), source, new EditorShellTests.SilentRegion(), TimeProvider.System);
         return (context, source);
     }
 
@@ -77,7 +63,7 @@ public sealed class RecordEditorTests
         source.Hold = new TaskCompletionSource();
         source.State = CatalogueState.Failed;
 
-        var cut = context.Render<RecordEditor>();
+        var cut = EditorPage.Render(context);
         Assert.Equal(RecordEditor.LoadingSentence, cut.Find(".catalog-state p").TextContent.Trim());
 
         source.Hold.SetResult();
@@ -107,7 +93,7 @@ public sealed class RecordEditorTests
         await using var _ = context;
         source.State = CatalogueState.Failed;
 
-        var cut = context.Render<RecordEditor>();
+        var cut = EditorPage.Render(context);
         cut.WaitForState(() => cut.FindAll("button.try-again").Count == 1);
 
         Assert.Empty(cut.FindAll("ul.worklist"));
@@ -121,7 +107,7 @@ public sealed class RecordEditorTests
         await using var _ = context;
         source.Movies = [Uncertain];
 
-        var cut = context.Render<RecordEditor>();
+        var cut = EditorPage.Render(context);
         cut.WaitForState(() => cut.FindAll("ul.worklist").Count == 1);
 
         var sentence = cut.Find(".catalog-state p").TextContent;
@@ -142,7 +128,7 @@ public sealed class RecordEditorTests
         source.Movies = [Uncertain];
         var expected = Assert.Throws<RecordStoreException>(() => RecordStoreReader.Read("{ not json", RecordStoreReader.DefaultFileName));
 
-        var cut = context.Render<RecordEditor>();
+        var cut = EditorPage.Render(context);
         cut.WaitForState(() => cut.Find(".catalog-state p").TextContent.Contains(expected.Message));
 
         Assert.Empty(cut.FindAll("ul.worklist"));
@@ -157,7 +143,7 @@ public sealed class RecordEditorTests
         await using var _ = context;
         source.Movies = [Uncertain];
 
-        var cut = context.Render<RecordEditor>();
+        var cut = EditorPage.Render(context);
         cut.WaitForState(() => cut.FindAll("ul.worklist").Count == 1);
 
         var sentence = cut.Find(".catalog-state p").TextContent;
@@ -172,7 +158,7 @@ public sealed class RecordEditorTests
         await using var _ = context;
         source.Movies = [Uncertain];
 
-        var cut = context.Render<RecordEditor>();
+        var cut = EditorPage.Render(context);
         cut.WaitForState(() => cut.FindAll("ul.worklist").Count == 1);
 
         var container = cut.Find(".catalog-state");

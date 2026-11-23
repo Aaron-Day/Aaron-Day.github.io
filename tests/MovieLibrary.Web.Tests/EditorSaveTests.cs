@@ -21,12 +21,6 @@ namespace MovieLibrary.Web.Tests;
 /// </summary>
 public sealed class EditorSaveTests
 {
-    private sealed class Env : IWebAssemblyHostEnvironment
-    {
-        public string Environment => "Development";
-        public string BaseAddress => "http://localhost/";
-    }
-
     private sealed class Source(IReadOnlyList<MovieRecord> movies, bool fixtures) : ICatalogueSource
     {
         public Task<(CatalogueState State, IReadOnlyList<MovieRecord> Movies)> MoviesAsync() =>
@@ -71,29 +65,21 @@ public sealed class EditorSaveTests
             string? store = null, bool supported = true, string? folder = "MovieLibrary",
             IReadOnlyList<MovieRecord>? movies = null, bool fixtures = false, IJSRuntime? runtime = null)
         {
-            Context.JSInterop.Mode = JSRuntimeMode.Loose;
-            Module = Context.JSInterop.SetupModule(LocalDirectory.ModulePath);
-            Module.Setup<bool>("supported").SetResult(supported);
-            Module.Setup<string?>("status").SetResult(folder);
-            Module.Setup<string?>("readText", RecordStoreReader.DefaultFileName).SetResult(store);
+            Module = EditorPage.ScriptFolder(Context, supported, folder, store);
             Module.SetupVoid("download", _ => true).SetVoidResult();
             Writes = Module.Setup<bool>("writeText", _ => true);
 
-            Context.Services
-                .AddSingleton<IWebAssemblyHostEnvironment>(new Env())
-                .AddSingleton<ICatalogueSource>(new Source(movies ?? [Fight], fixtures))
-                .AddSingleton<IStatusRegion>(Region)
-                // The project's own clock, not the wall clock: nothing here arms the worklist's 150 ms filter
-                // or its 750 ms announcement, and a test that later touched the search field would be timing
-                // dependent the day it did.
-                .AddSingleton<TimeProvider>(Clock)
-                .AddScoped(_ => new LocalDirectory(runtime ?? Context.JSInterop.JSRuntime))
-                .AddScoped<EditorCatalogue>();
+            // The project's own clock, not the wall clock: nothing here arms the worklist's 150 ms filter
+            // or its 750 ms announcement, and a test that later touched the search field would be timing
+            // dependent the day it did.
+            EditorPage.Register(
+                Context, EditorPage.Environment(), new Source(movies ?? [Fight], fixtures), Region, Clock,
+                runtime ?? Context.JSInterop.JSRuntime);
         }
 
         public IRenderedComponent<RecordEditor> Open(string key = FightKey)
         {
-            var cut = Context.Render<RecordEditor>();
+            var cut = EditorPage.Render(Context);
             cut.WaitForState(() => cut.FindAll("ul.worklist").Count == 1);
             Toggle(cut, key).Click();
             return cut;

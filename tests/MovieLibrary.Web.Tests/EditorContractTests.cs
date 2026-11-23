@@ -1,4 +1,3 @@
-#if DEBUG
 using AngleSharp.Dom;
 using Bunit;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -28,12 +27,6 @@ namespace MovieLibrary.Web.Tests;
 public sealed class EditorContractTests
 {
     private sealed record Scope(string Where, IElement Root);
-
-    private sealed class Host(string environment) : IWebAssemblyHostEnvironment
-    {
-        public string Environment { get; } = environment;
-        public string BaseAddress => "http://localhost/";
-    }
 
     private sealed class Source : ICatalogueSource
     {
@@ -66,22 +59,14 @@ public sealed class EditorContractTests
 
         try
         {
-            context.JSInterop.Mode = JSRuntimeMode.Loose;
-            var module = context.JSInterop.SetupModule(LocalDirectory.ModulePath);
-            module.Setup<bool>("supported").SetResult(true);
-            module.Setup<string?>("status").SetResult(folder);
-            module.Setup<string?>("readText", RecordStoreReader.DefaultFileName)
-                .SetResult(RecordStoreReader.Write(RecordStore.Empty));
+            EditorPage.ScriptFolder(context, folder: folder, storeText: RecordStoreReader.Write(RecordStore.Empty));
 
-            context.Services
-                .AddSingleton<IWebAssemblyHostEnvironment>(new Host(environment))
-                .AddSingleton<ICatalogueSource>(source ?? new Source())
-                .AddSingleton<IStatusRegion>(new EditorShellTests.SilentRegion())
-                .AddSingleton<TimeProvider>(new ManualTimeProvider())
-                .AddScoped<LocalDirectory>()
-                .AddScoped<EditorCatalogue>();
+            // A manual clock: nothing here may let the worklist's debounce timers fire mid-render.
+            EditorPage.Register(
+                context, EditorPage.Environment(environment), source ?? new Source(),
+                new EditorShellTests.SilentRegion(), new ManualTimeProvider());
 
-            var cut = context.Render<RecordEditor>();
+            var cut = EditorPage.Render(context);
             if (waitFor.Length > 0) cut.WaitForState(() => cut.FindAll(waitFor).Count > 0);
 
             if (open != Open.No)
@@ -276,4 +261,3 @@ public sealed class EditorContractTests
             + "was providing is simply absent.");
     }
 }
-#endif
