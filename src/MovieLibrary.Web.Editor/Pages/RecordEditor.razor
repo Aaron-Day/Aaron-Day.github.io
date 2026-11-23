@@ -1,6 +1,10 @@
 @page "/editor"
 @implements IDisposable
+@using System.Globalization
+@using MovieLibrary.Core.Store
 @inject EditorCatalogue Catalogue
+@inject LocalDirectory Folder
+@inject IStatusRegion Region
 @inject IJSRuntime Js
 
 <PageTitle>@Heading - Film and TV library</PageTitle>
@@ -23,9 +27,22 @@
     }
 </div>
 
-@if (Local && state is { Rows.Count: > 0 })
+@if (Local && state is { Rows.Count: > 0 } ready)
 {
-    <Worklist Rows="state.Rows" OpenKey="@openKey" Opened="OnOpened" Closed="OnClosed" />
+    <Worklist Rows="ready.Rows" OpenKey="@openKey" Opened="OnOpened" Closed="OnClosed">
+        @* THE PAGE OWNS THE DRAFT AND THE SAVE, and the form owns only what is on screen. The worklist closes
+           the open row on every debounced query change, so a draft held inside the form would be destroyed
+           150 ms after one character reached the search box; and the grant, the file and the store draft are
+           one page's state, not one row's. The form is keyed on the row so two rows never share one instance:
+           a reference capture is applied on the render that creates an element, and a shared instance would
+           carry the previous row's captures into this one. *@
+        <RowContent Context="row">
+            <RecordForm @ref="form" @key="row.Movie.K" Row="row" Draft="DraftFor(row)"
+                        Editable="ready.Editable" ApiSupported="ready.ApiSupported"
+                        FolderName="@ready.FolderName" Store="ready.Store" Saving="saving"
+                        Outcome="@outcome" Save="SaveAsync" ChooseFolder="GrantAsync" />
+        </RowContent>
+    </Worklist>
 }
 
 @code {
@@ -57,6 +74,29 @@
         "This catalogue was generated for testing and its TMDB ids are invented, so a correction made against "
         + "it would mean nothing. Rebuild the catalogue from the real sheet to edit.";
 
+    // The store is sparse by design: an entry that corrects nothing is a line in a committed file that says
+    // nothing, and the reader refuses one. Said rather than written, because the script copies the current file
+    // to .bak on every write, so a save of identical bytes spends the one step back he has and returns nothing.
+    internal const string NothingToSaveSentence =
+        "This record has no corrections and the record store holds none for it, so nothing was written and the "
+        + "previous version is still one step back.";
+
+    // A54's named failure mode: a prompt he dismissed that says nothing leaves the page looking unchanged.
+    internal const string NoFolderChosenSentence =
+        "No folder was chosen, so nothing can be saved yet. Press the folder button again and choose the "
+        + "folder this repository is checked out in.";
+
+    /// <summary>What the download route can claim, which is less than the folder route: it is a different file.</summary>
+    internal static string Downloaded(string name) =>
+        $"{name} was handed to the browser's downloads. Nothing was written to the repository folder, so move "
+        + "the downloaded file into the repository by hand before the next build.";
+
+    /// <summary>What the folder route can claim. The removal reads differently, because the record is gone.</summary>
+    internal static string Written(string name, string folder, bool removed) => removed
+        ? $"Saved. The correction was removed from {name} in {folder}, and the next build will publish this "
+          + "record as the sheet has it."
+        : $"Saved. {name} in {folder} holds this correction, and the next build will apply it.";
+
     [Inject] private IWebAssemblyHostEnvironment Environment { get; set; } = default!;
 
     // The second guard, independent of the first. The first is that MovieLibrary.Web references this project in
@@ -72,6 +112,21 @@
     private string? openKey;
     private bool loading;
     private bool disposed;
+
+    /// <summary>
+    /// M11. One draft per published key, held by the PAGE and outliving the row: Worklist.ApplyAsync closes the
+    /// open row on every debounced query change, so one character in the search box would otherwise destroy
+    /// what he had typed 150 ms later. Reopening a row restores it, which is also A31's "pre-fill, never
+    /// re-ask" for the unsaved case.
+    /// </summary>
+    private readonly Dictionary<string, RecordDraft> drafts = new(StringComparer.Ordinal);
+
+    private RecordForm? form;
+    private bool saving;
+    private string outcome = "";
+    private bool reportPending;
+    private bool problemPending;
+    private bool grantPending;
 
     /// <summary>The state's own sentence, one at a time: the most important thing the owner has to be told.</summary>
     private string Sentence
@@ -142,26 +197,269 @@
     /// interop can fail, since an escape would reveal the host page's error bar, an assertive source of its own.
     /// Nothing auto-dismisses and nothing auto-retries: a message that cleared itself is a time limit on reading it.
     /// </remarks>
+    /// <remarks>
+    /// <para><b>Every report in here is raised from a render and never from the handler that caused it</b>
+    /// (A50), so the text the handler wrote has reached the DOM before anything points a user at it.</para>
+    /// </remarks>
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (!focusPending || disposed) return;
+        if (disposed) return;
 
-        focusPending = false;
-
-        try
+        if (focusPending)
         {
-            await Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", container, FocusKeepers);
+            focusPending = false;
+
+            try
+            {
+                await Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", container, FocusKeepers);
+            }
+            catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
+            {
+            }
         }
-        catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
+
+        if (disposed) return;
+
+        // A43: the first field that is wrong takes focus and its own error is read as its description. No
+        // summary at the top: for a ten-field form inside row 200 of 285 that forces a second journey down.
+        if (problemPending)
         {
+            problemPending = false;
+            if (form is { } onProblem) await onProblem.FocusFirstProblemAsync();
+        }
+
+        if (disposed) return;
+
+        // A54. Back to the button that opened the prompt, whichever way it ended. Nothing is announced: that
+        // button's description IS the granted state, so the arrival states it and states it once.
+        if (grantPending)
+        {
+            grantPending = false;
+            if (form is { } onGrant) await onGrant.FocusFolderAsync();
+        }
+
+        if (disposed) return;
+
+        // A45, A48 and A49. The focus move IS the report, success and failure alike, and it lands on the
+        // FORM's own container: the load-state container above renders above the worklist, so focusing that
+        // from row 200 would throw him to the top of the page, and the one polite region on this page belongs
+        // to the worklist, where the debounced count would overwrite whatever was put in it. The assertive
+        // fallback is raised ONLY where the move did not happen -- raising both speaks one sentence twice,
+        // once as the contents of what focus landed on and again when the region interrupts with the same
+        // words. Focus moves are interop and interop can fail, which is the only reason that branch exists.
+        if (reportPending)
+        {
+            reportPending = false;
+
+            var moved = form is { } onReport && await onReport.FocusOutcomeAsync();
+            if (!moved && outcome.Length > 0) Region.Alert(outcome);
         }
     }
 
     private static readonly string[] FocusKeepers = ["#main-content", "#app h1"];
 
-    private void OnOpened(string key) => openKey = key;
+    // The report belongs to the save it came from, so it does not survive the row. The DRAFT does (M11).
+    private void OnOpened(string key)
+    {
+        openKey = key;
+        outcome = "";
+    }
 
-    private void OnClosed() => openKey = null;
+    private void OnClosed()
+    {
+        openKey = null;
+        outcome = "";
+
+        // A component reference is assigned on the render that creates the component and is NOT cleared when
+        // the component goes, so a stale form would take a focus move meant for the next one -- onto an
+        // element that is no longer in the document, which drops focus to the body.
+        form = null;
+    }
+
+    /// <summary>One draft per published key, made on first sight of the row and kept afterwards (M11).</summary>
+    private RecordDraft DraftFor(WorklistRow row)
+    {
+        if (drafts.TryGetValue(row.Movie.K, out var held)) return held;
+
+        // The record being corrected is the one at this row's POSITION and never the entry's first: one Apple
+        // row can publish four films, and pre-filling from the wrong record shows him somebody else's values.
+        var saved = row.Entry is { } entry && row.Position >= 1 && row.Position <= entry.Records.Count
+            ? entry.Records[row.Position - 1]
+            : null;
+
+        var made = RecordDraft.For(row.Movie, saved);
+        drafts[row.Movie.K] = made;
+        return made;
+    }
+
+    private void Report(string text)
+    {
+        outcome = text;
+        reportPending = true;
+    }
+
+    /// <remarks>
+    /// <para><b>The exception arms are two facts, not one</b> (M10). A <see cref="RecordStoreException"/> is a
+    /// store the NEXT BUILD would reject, caught before anything is written and reported in the reader's own
+    /// words with one framing clause in front: ToValidatedJson passes "the record store about to be saved" as
+    /// the thing being read, so the message would otherwise be spoken starting mid-sentence. The others are a
+    /// write that did not happen, and their message is LocalDirectory's own -- there are three causes behind
+    /// it (no folder granted in this browser, a lapsed permission, an existing file that could not be copied
+    /// and therefore deliberately not overwritten) and a sentence of mine would have to guess which.</para>
+    /// <para>Anything uncaught reaches the host page's error bar, which carries an assertive role of its own:
+    /// two spoken statements for one event.</para>
+    /// </remarks>
+    private async Task SaveAsync()
+    {
+        if (saving || state is not { } s || !s.Editable || openKey is not { } key) return;
+
+        var row = s.Rows.FirstOrDefault(r => string.Equals(r.Movie.K, key, StringComparison.Ordinal));
+        if (row is null) return;
+
+        var draft = DraftFor(row);
+
+        // Reported from the render, with the focus move, and never written over the file.
+        if (draft.AnyProblem)
+        {
+            problemPending = true;
+            return;
+        }
+
+        saving = true;
+        outcome = "";
+
+        try
+        {
+            var (next, entry, removed) = Place(s.Draft, row, draft);
+
+            // Nothing changed, so nothing is written: the script copies the current file to .bak on every
+            // write, and a save of identical bytes would spend A58's one step back and give nothing for it.
+            if (ReferenceEquals(next, s.Draft))
+            {
+                Report(NothingToSaveSentence);
+                return;
+            }
+
+            // THE CHECK BEFORE THE SAVE, and it throws before anything leaves the page: the file is read back
+            // through the same reader the next build will use.
+            var json = next.ToValidatedJson();
+            var name = RecordStoreReader.DefaultFileName;
+
+            if (s.ApiSupported) await Folder.WriteTextAsync(name, json);
+            else await Folder.DownloadAsync(name, json);
+
+            if (disposed) return;
+
+            state = Rebadge(s, next, row, entry);
+            Report(s.ApiSupported ? Written(name, s.FolderName ?? "the chosen folder", removed) : Downloaded(name));
+        }
+        catch (RecordStoreException ex)
+        {
+            Report($"Nothing was saved. {ex.Message}");
+        }
+        catch (Exception ex) when (ex is InvalidOperationException or JSException
+                                      or TaskCanceledException or ObjectDisposedException)
+        {
+            Report(ex.Message);
+        }
+        finally
+        {
+            saving = false;
+        }
+    }
+
+    /// <summary>
+    /// Puts the form's record where it belongs: AT THE ROW'S POSITION, inside the entry that is already there.
+    /// </summary>
+    /// <remarks>
+    /// An entry's Records is a list and its Note is the owner's own words, so an entry built from the row and
+    /// the form alone writes one record where there were four: three siblings silently deleted, the note
+    /// nulled, and a file that still validates and publishes one film where four were (C6).
+    /// </remarks>
+    private static (StoreDraft Next, FilmEntry? Entry, bool Removed) Place(
+        StoreDraft draft, WorklistRow row, RecordDraft form)
+    {
+        var existing = draft.Film(row.IdentityKey);
+
+        // A record that overrides nothing goes, rather than being written as a line that says nothing -- and
+        // the judgment ignores the runtime, which is written on every record whether or not it was corrected
+        // (M3), so a record that is only a runtime is still a record that corrects nothing.
+        // ONLY where the entry holds that one record. An entry with siblings cannot lose one without
+        // renumbering the others -- an unmatched record's published key carries its position -- so there the
+        // runtime-only record is placed and the reader refuses it in its own words, which is the honest
+        // answer: a correction that cannot be represented is reported and not guessed at.
+        if (form.OverridesNothing && (existing is null || existing.Records.Count <= 1))
+            return (draft.Without(row.IdentityKey), null, true);
+
+        var record = form.Build(row.Movie.Rt);
+        var records = existing?.Records.ToList() ?? [];
+
+        if (records.Count == 0) records.Add(record);
+        else if (row.Position >= 1 && row.Position <= records.Count) records[row.Position - 1] = record;
+        else records.Add(record);
+
+        // The echo is written for a NEW entry only. An existing entry's echo and note are the file's own, and
+        // the echo is what a human reads to find the entry: rewriting it from the published record would
+        // quietly replace a hand-corrected title with the one the sheet still has.
+        var entry = existing is null
+            ? new FilmEntry { IdentityKey = row.IdentityKey, Sheet = EchoOf(row.Movie), Records = records }
+            : existing with { Records = records };
+
+        return (draft.With(entry), entry, false);
+    }
+
+    /// <summary>The sheet's own three columns, in the sheet's own h:mm:ss, so the reader can re-derive the key.</summary>
+    private static SheetEcho EchoOf(MovieRecord movie) => new(
+        movie.T,
+        string.Create(CultureInfo.InvariantCulture, $"{movie.Rt / 60}:{movie.Rt % 60:00}:00"),
+        string.Join(" & ", movie.Dir));
+
+    /// <summary>
+    /// C5. The saved row is re-badged IN PLACE and does not leave the filtered list: a row that vanished on
+    /// save would move 284 others under a hand already reaching for the next one, and the open panel's focus
+    /// would have nowhere to go. The band is untouched, because the band is what the PUBLISHED record says and
+    /// nothing published changes until the next build; what changes is the editor's own knowledge of it.
+    /// </summary>
+    private static EditorState Rebadge(EditorState s, StoreDraft next, WorklistRow row, FilmEntry? entry) =>
+        s with
+        {
+            Draft = next,
+            Rows = s.Rows
+                .Select(r => ReferenceEquals(r, row)
+                    ? r with { Entry = entry, Corrected = EditorCatalogue.IsCorrected(entry, r.Position) }
+                    : r)
+                .ToList(),
+        };
+
+    /// <remarks>
+    /// A52: the prompt is a button activation and never a load, a focus or a change event. The grant's own
+    /// answer is what updates the folder, and the store is deliberately NOT re-read here: the page already
+    /// carries a Try again control for that, and re-reading would also overwrite what he has typed into the
+    /// open form with what the file says.
+    /// </remarks>
+    private async Task GrantAsync()
+    {
+        if (saving || state is not { } s || !s.ApiSupported) return;
+
+        try
+        {
+            var chosen = await Folder.GrantAsync();
+            if (disposed) return;
+
+            if (chosen is null) outcome = NoFolderChosenSentence;
+            else
+            {
+                state = s with { FolderName = chosen };
+                outcome = "";
+            }
+        }
+        catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
+        {
+            outcome = ex.Message;
+        }
+
+        grantPending = true;
+    }
 
     public void Dispose() => disposed = true;
 }

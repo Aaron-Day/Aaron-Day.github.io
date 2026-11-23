@@ -112,6 +112,14 @@
     // Filter at ~150 ms so the list feels immediate; announce at ~750 ms so a screen reader user hears one count
     // and not a stream. The gap is the point: the announcer restarts its settle delay on every call, so a
     // caller that spoke per keystroke would deliver nothing at all. The same figures the films page measured.
+    /// <summary>
+    /// The third badge word, which is the editor's own and not one of Core's band words: a record whose store
+    /// entry asserts an id has been decided, and nothing in Core has a word for "decided, waiting for the next
+    /// build" -- BadgeFor returns null for the confident band. See WorklistRow.Corrected for why the band
+    /// itself cannot change until the catalogue is rebuilt.
+    /// </summary>
+    internal const string CorrectedBadge = "Corrected";
+
     internal const int FilterDebounceMs = 150;
     internal const int AnnounceDebounceMs = 750;
 
@@ -155,7 +163,11 @@
             }
 
             <span class="worklist-text">
-                @if (row.Badge is { } badge)
+                @if (row.Corrected)
+                {
+                    <span class="worklist-badge worklist-badge-corrected">@CorrectedBadge</span>
+                }
+                else if (row.Badge is { } badge)
                 {
                     <span class="worklist-badge worklist-badge-@row.Band.ToString().ToLowerInvariant()">@badge</span>
                 }
@@ -181,7 +193,6 @@
     private IReadOnlyList<WorklistRow>? seenRows;
     private List<WorklistRow> shown = [];
     private string[] shownKeys = [];
-    private string[] priorKeys = [];
 
     private ElementReference panel;
     // Every assignment to this must also set focusToggle; the reason is spelled out in OnAfterRenderAsync.
@@ -250,18 +261,21 @@
             .ThenBy(r => r.Movie.K, StringComparer.Ordinal)
             .ToList();
 
-        var keys = shown.Select(r => r.Movie.K).ToArray();
-        if (!keys.AsSpan().SequenceEqual(shownKeys))
-        {
-            priorKeys = shownKeys;
-            shownKeys = keys;
-        }
+        shownKeys = shown.Select(r => r.Movie.K).ToArray();
     }
 
+    /// <summary>
+    /// A corrected row is one fewer thing to do, and the sentence has to say so in the same render as the
+    /// badge: the regions are visually hidden, so nothing spoken is ever a substitute for showing it. The row
+    /// itself does NOT leave the filtered list -- the filter is still by band -- because in place keeps focus
+    /// where he put it and needs no second announcement to explain where the row went.
+    /// </summary>
+    private int Attention(Func<WorklistRow, bool> which) => Rows.Count(r => !r.Corrected && which(r));
+
     private string CountsSentence =>
-        $"{Rows.Count(r => r.Band != Confidence.Confident):N0} records need attention — "
-        + $"{Rows.Count(r => r.Band == Confidence.Unmatched):N0} {ConfidenceBand.BadgeFor(Confidence.Unmatched)}, "
-        + $"{Rows.Count(r => r.Band == Confidence.Uncertain):N0} {ConfidenceBand.BadgeFor(Confidence.Uncertain)}";
+        $"{Attention(r => r.Band != Confidence.Confident):N0} records need attention — "
+        + $"{Attention(r => r.Band == Confidence.Unmatched):N0} {ConfidenceBand.BadgeFor(Confidence.Unmatched)}, "
+        + $"{Attention(r => r.Band == Confidence.Uncertain):N0} {ConfidenceBand.BadgeFor(Confidence.Uncertain)}";
 
     private string ShownSentence => $"Showing {shown.Count:N0} of {Rows.Count:N0} records.";
 
@@ -313,40 +327,6 @@
         focusKey = key;
         focusToggle = true;
         await Closed.InvokeAsync();
-    }
-
-    /// <summary>
-    /// Focuses the toggle of the row that now occupies the removed row's place, or returns false when no row is
-    /// left -- the page then focuses its own status paragraph (A51).
-    /// </summary>
-    /// <remarks>
-    /// A saved row can leave a filtered list, and focus on a removed row falls to the body. The place is found
-    /// from the order the list had BEFORE the change, which is why that order is kept: the page changes the rows
-    /// and then calls this, and by then the list has already been rebuilt. A row still showing is treated as
-    /// about to go, and the one after it is the answer, or the one before when it was last.
-    /// </remarks>
-    public Task<bool> FocusRowAfterAsync(string removedKey)
-    {
-        ArgumentException.ThrowIfNullOrWhiteSpace(removedKey);
-
-        var now = Array.IndexOf(shownKeys, removedKey);
-        string? target = null;
-
-        if (now >= 0)
-        {
-            target = now + 1 < shownKeys.Length ? shownKeys[now + 1] : now > 0 ? shownKeys[now - 1] : null;
-        }
-        else if (Array.IndexOf(priorKeys, removedKey) is var was and >= 0 && shownKeys.Length > 0)
-        {
-            target = shownKeys[Math.Min(was, shownKeys.Length - 1)];
-        }
-
-        if (target is null) return Task.FromResult(false);
-
-        focusKey = target;
-        focusToggle = true;
-        StateHasChanged();
-        return Task.FromResult(true);
     }
 
     // ============================================================ the filter

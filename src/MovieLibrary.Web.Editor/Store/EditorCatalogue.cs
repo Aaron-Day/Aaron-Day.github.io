@@ -65,14 +65,31 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
     }
 
     /// <summary>The ONE place a record's key is decided. Entry present: through the entry. Absent: the fallback.</summary>
+    /// <remarks>
+    /// The POSITION comes from the same lookup and is no extra work: the map already holds it, and the save
+    /// needs it to replace one record of an entry rather than the entry wholesale. A row with no entry takes 1.
+    /// </remarks>
     private static WorklistRow Link(MovieRecord movie, IReadOnlyDictionary<string, RecordSlot> entries)
     {
         var band = ConfidenceBand.Of(movie);
-        var entry = entries.TryGetValue(movie.K, out var slot) ? slot.Entry : null;
+        var found = entries.TryGetValue(movie.K, out var slot);
+        var entry = found ? slot.Entry : null;
         var key = entry is null ? RecordLink.IdentityKeyOf(movie) : entry.IdentityKey;
+        var position = found ? slot.Position : 1;
 
-        return new WorklistRow(movie, key, band, ConfidenceBand.BadgeFor(band), entry);
+        return new WorklistRow(
+            movie, key, band, ConfidenceBand.BadgeFor(band), entry, position, IsCorrected(entry, position));
     }
+
+    /// <summary>
+    /// Whether the entry's record at <paramref name="position"/> asserts an id, which is what re-badges a row.
+    /// An entry that records candidates only keeps the row's original badge: it is the explicitly undecided
+    /// state and it genuinely still needs a decision.
+    /// </summary>
+    public static bool IsCorrected(FilmEntry? entry, int position) =>
+        entry is not null
+        && position >= 1 && position <= entry.Records.Count
+        && entry.Records[position - 1].TmdbId is not null;
 
     /// <summary>One record of one entry. The entry is compared by reference: two entries are two entries even when equal.</summary>
     private readonly record struct RecordSlot(FilmEntry Entry, int Position)

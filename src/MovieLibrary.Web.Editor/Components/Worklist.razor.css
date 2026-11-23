@@ -85,6 +85,10 @@ select { align-self: flex-start; }
   border: 1px solid var(--line-strong); border-radius: 4px; background: var(--panel); color: var(--txt); }
 .worklist-badge-unmatched { border-color: var(--accent); color: var(--accent); }
 .worklist-badge-uncertain { border-color: var(--accent2); color: var(--accent2); }
+/* The third word, for a record whose store entry now asserts an id. --txt is 15.03:1 on the --panel behind
+   it, and the border is --line-strong, so the box is told apart from the two band badges by its WORDS and by
+   an edge, never by a tint alone. */
+.worklist-badge-corrected { border-color: var(--line-strong); color: var(--txt); }
 
 /* The revealed region. A plain block: it carries no landmark role, because one landmark per open row would
    make a list of them. Focus lands on it when it opens, so it keeps the global focus ring. */

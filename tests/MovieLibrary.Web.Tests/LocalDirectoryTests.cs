@@ -70,7 +70,13 @@ public sealed class LocalDirectoryTests
         Assert.Contains("could not be loaded", thrown.Message, StringComparison.Ordinal);
     }
 
-    private sealed class FailingImportRuntime : IJSRuntime
+    /// <summary>
+    /// A runtime whose dynamic import fails, which bUnit's loose mode cannot produce: in loose mode the
+    /// import succeeds and hands back a module whose every call returns default, so "no module" and "the
+    /// module reported failure" are indistinguishable there. Internal, because the page's save tests need the
+    /// same branch and a second copy of it is a second thing to keep in step.
+    /// </summary>
+    internal sealed class FailingImportRuntime : IJSRuntime
     {
         public ValueTask<TValue> InvokeAsync<TValue>(string identifier, object?[]? args) =>
             identifier == "import"

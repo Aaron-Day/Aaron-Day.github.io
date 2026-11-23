@@ -1,0 +1,500 @@
+@* THE FORM INSIDE THE OPEN ROW: nine typed fields, the owner's own extra rows, and the save.
+
+   NO form ELEMENT, no EditForm, no validation summary. A bare form with no submit handler turns Enter in any
+   text field into a native GET submit, which reloads the whole WebAssembly app and loses every unsaved edit.
+   A validation summary is an error summary at the top of the form, which this project's rules forbid outright
+   for a ten-field form inside a list row: it forces a second journey back down. Every button therefore carries
+   an explicit type of button, because the HTML default is submit, and every error is reached only through the
+   input's own aria-describedby. FacetPanel.razor is the house precedent.
+
+   THE OVERRIDE TRIPLE is the hardest thing on this page: a checkbox, the input, and a sentence saying which
+   state the field is in. With CSS off the three states are still told apart, because the sentence says which
+   one it is in words. Never a placeholder showing the pipeline's value (a placeholder is not a value, has no
+   contrast guarantee, and vanishes on the first keystroke), and never a fade or a muted class: opacity turns
+   the contrast scan INCOMPLETE, which is a build break here, and the muted class ships !important.
+   THE UNSET SENTENCE NAMES THE RESOLVED VALUE, because the directors, the Apple genre and the purchase
+   information appear nowhere else on this screen -- the row's own toggle reads the band, the title, the year
+   and the runtime and nothing more.
+
+   THE RUNTIME IS WRITTEN WHETHER THE BOX IS TICKED OR NOT, and its unchecked sentence says so rather than
+   claiming the pipeline decides. RecordLink.PublishedKeyOf falls back to the sheet echo's runtime and
+   RuntimeParser.FilmMinutes throws on a bare minute count, so a record saved without one becomes unplaceable:
+   the correction would be in the file and bound to nothing. The same fact is why the form's "overrides
+   nothing" judgment ignores the runtime.
+
+   NOTHING IS MADE INERT. An input that cannot be edited would be readonly and never disabled or merely
+   aria-disabled -- disabled drops focus if the element has it, and aria-disabled on a text input does not stop
+   typing, so it would lie. But readonly has no effect on a checkbox, so a read-only version of THIS form
+   cannot be built at all: where nothing is editable the panel renders no inputs and no Save control, the
+   sentences stay as prose, and one sentence says why. There is nothing to make inert and no fake affordance.
+
+   NO KEY HANDLER, and no Escape to close. The disclosure pattern was chosen precisely so there is no
+   keyboard-trap obligation to discharge, and an Escape that threw away unsaved edits would be a new silent
+   loss. Closing is the row's own Close control, which already returns focus to the row's toggle.
+
+   THE OUTCOME CONTAINER IS THE SAME ELEMENT IN EVERY STATE and is the form's own, not the page's. Every save
+   outcome, success and failure alike, is reported by moving focus to it: the worklist owns the page's one
+   polite region for its debounced count, and the page's load-state container renders ABOVE the worklist, so
+   focusing that from row 200 of 285 would throw focus to the top of the page. No live-region attribute and no
+   status or alert role appears anywhere in this file; a focused container's own text is the statement. *@
+
+<div class="record-form">
+    @if (!Editable)
+    {
+        <p class="record-locked">@NotEditableSentence</p>
+
+        @foreach (var field in Draft.Fields)
+        {
+            <p class="record-told"><span class="record-told-name">@field.Label</span> @field.Describe()</p>
+        }
+    }
+    else
+    {
+        @foreach (var group in Groups)
+        {
+            <fieldset>
+                <legend>@group.Legend</legend>
+
+                @foreach (var (slug, field) in group.Fields)
+                {
+                    <div class="record-field">
+                        @* A wrapping label needs no for attribute, and the checkbox's words are not the
+                           input's: two controls sharing one accessible name is not navigable. *@
+                        <label class="record-toggle">
+                            <input type="checkbox" id="@IdFor(slug, "override")" checked="@field.Overridden"
+                                   @onchange="e => Toggle(field, e)" />
+                            @field.OverrideLabel
+                        </label>
+
+                        <label for="@IdFor(slug)">@field.Label</label>
+                        @* Integer fields are text with a numeric input mode and never type=number: spinner
+                           arrows are well under the target-size floor and adjacent, the scroll wheel changes
+                           the value silently, and the role is announced as "spin button" for what is a plain
+                           id. Nothing carries pattern, min, max, step, maxlength or required either -- each
+                           turns on native constraint validation, whose bubble is a second error channel with
+                           no aria-describedby link. The validation is in C#. *@
+                        <input id="@IdFor(slug)" type="text" value="@field.Typed"
+                               inputmode="@(field.Shape == FieldShape.Integer ? "numeric" : null)"
+                               aria-invalid="@(Draft.ShowProblem(field) ? "true" : null)"
+                               aria-describedby="@DescribedBy(slug, field)"
+                               @oninput="e => Type(field, e)" @onblur="() => Leave(field)"
+                               @ref="Slot(IdFor(slug)).Element" />
+
+                        <p id="@IdFor(slug, "state")" class="record-field-state">@field.Describe()</p>
+
+                        @if (field.Shape == FieldShape.Candidates)
+                        {
+                            @* The format BEFORE the attempt, in a third described-by id. *@
+                            <p id="@IdFor(slug, "format")" class="record-field-format">@FieldDraft.ListShape</p>
+                        }
+
+                        @* Immediately after its input, and in the described-by list only while it exists: an
+                           always-rendered empty paragraph is a resolve target with no text. *@
+                        @if (Draft.ShowProblem(field))
+                        {
+                            <p id="@IdFor(slug, "error")" class="record-field-error">@Draft.ProblemFor(field)</p>
+                        }
+                    </div>
+                }
+
+                @if (group.Chooser && Draft.Offered.Count > 0)
+                {
+                    @* THE SHORTLIST IS A RADIO GROUP AND NOT A ROW OF BUTTONS. Choosing a candidate may not
+                       move focus, so with buttons focus would stay where it was while the id field and both
+                       state sentences changed with nothing to announce them, and this page's one polite
+                       region belongs to the worklist. A radio's checked state is the announcement, natively.
+                       It also makes the id/candidates exclusion structural rather than a rule to remember,
+                       and it keeps the undecided shortlist, which is the whole point of offering it. *@
+                    <fieldset class="record-chooser">
+                        <legend>Candidate TMDB ids</legend>
+                        <div class="record-options">
+                            @foreach (var offered in Draft.Offered)
+                            {
+                                var candidate = offered;
+                                <label>
+                                    <input type="radio" id="@IdFor("candidate", Spell(candidate))"
+                                           name="@IdFor("candidate")" checked="@Draft.Chose(candidate)"
+                                           @onchange="() => Draft.Choose(candidate)" />
+                                    Use @Spell(candidate)
+                                </label>
+                            }
+                            <label>
+                                <input type="radio" id="@IdFor("candidate-undecided")" name="@IdFor("candidate")"
+                                       checked="@Draft.Undecided" @onchange="() => Draft.Choose(null)" />
+                                Keep all of these as candidates — undecided
+                            </label>
+                        </div>
+                    </fieldset>
+                }
+            </fieldset>
+        }
+
+        @* EACH ROW IS ITS OWN GROUP AND ITS OWN LABELS, both halves and not either. A legend names the group
+           and is not part of an input's accessible name, so a legend alone leaves twelve inputs all called
+           "Field name". The key is the row's synthetic id: the loop index shifts on a remove and the typed
+           name changes on every keystroke, and either makes Blazor destroy the input he is typing in. *@
+        <fieldset>
+            <legend>Extra fields</legend>
+
+            @for (var i = 0; i < Draft.Extras.Count; i++)
+            {
+                var position = Spell(i + 1);
+                var row = Draft.Extras[i];
+                var nameId = IdFor($"extra-{position}-name");
+                var valueId = IdFor($"extra-{position}-value");
+                var errorId = IdFor($"extra-{position}-error");
+
+                <fieldset class="record-extra" @key="row.Id">
+                    <legend>Extra field @position</legend>
+
+                    <div class="record-field">
+                        <label for="@nameId">Field @position name</label>
+                        <input id="@nameId" type="text" value="@row.Name" autocomplete="off"
+                               aria-invalid="@(Draft.ShowProblem(row) ? "true" : null)"
+                               aria-describedby="@(Draft.ShowProblem(row) ? errorId : null)"
+                               @oninput="e => Name(row, e)" @onblur="() => Leave(row)"
+                               @ref="Slot(ExtraSlot(row)).Element" />
+
+                        @if (Draft.ShowProblem(row))
+                        {
+                            <p id="@errorId" class="record-field-error">@Draft.ProblemFor(row)</p>
+                        }
+                    </div>
+
+                    <div class="record-field">
+                        <label for="@valueId">Field @position value</label>
+                        <input id="@valueId" type="text" value="@row.Value" autocomplete="off"
+                               @oninput="e => Value(row, e)" />
+                    </div>
+
+                    @* The position comes first, so the name is stable while he types the key and still unique
+                       when two rows hold the same text, and the name CONTAINS the visible word verbatim. *@
+                    <button type="button" class="record-remove" aria-label="@RemoveName(position, row)"
+                            @onclick="() => Remove(row)">Remove</button>
+                </fieldset>
+            }
+
+            <button type="button" class="record-add" @ref="addButton" @onclick="Add">Add a field</button>
+        </fieldset>
+
+        @* WHICH MECHANISM WILL BE USED IS SAID IN TEXT BEFORE HE PRESSES ANYTHING, and when the mechanism
+           differs the control's NAME differs: one name for two behaviours tells him one thing and gives him
+           another. The folder button stays in the DOM once a folder is granted, because the refusal message
+           ends "Choose the folder again, then retry" and hiding the control points that instruction at
+           nothing; it is not rendered at all where there is no folder API to ask, because then it is an
+           instruction he cannot follow for a control that would do nothing. *@
+        <div class="record-save-area">
+            @if (ApiSupported)
+            {
+                @* A54: focus comes back here whichever way the prompt ended, and the granted state is this
+                   button's own description -- so the arrival speaks "Saving to: MovieLibrary" or "No folder
+                   chosen yet", with no live region and nothing announced twice. *@
+                <button type="button" class="record-folder" aria-describedby="@IdFor("grant")"
+                        @onclick="ChooseFolder" @ref="folderButton">
+                    Choose the folder to save corrections to
+                </button>
+            }
+
+            <p id="@IdFor("grant")" class="record-grant">@GrantSentence</p>
+            <p id="@IdFor("backup")" class="record-backup">@BackupSentence</p>
+
+            @* aria-disabled from a string and never the disabled attribute: disabling the focused element
+               blurs it and drops focus to the body. The click still arrives and is ignored in code, with no
+               report and no focus move, because the control has already said it is unavailable and its
+               description already says why. It keeps its boundary in that state: with a transparent
+               background the border is the control's only edge. *@
+            <button type="button" class="record-save" aria-disabled="@(Available ? null : "true")"
+                    aria-describedby="@SaveDescribedBy" @onclick="SaveClick">@SaveName</button>
+        </div>
+    }
+
+    @* ONE STABLE CONTAINER, never swapped for a different node: replacing it would destroy the node a screen
+       reader's virtual cursor may be sitting on. It is rendered in every state, including the one with no
+       controls at all, and it is the only thing any save outcome is reported through. *@
+    <p class="record-state" tabindex="-1" @ref="outcome">@Outcome</p>
+</div>
+
+@code {
+    /// <summary>
+    /// Why nothing can be changed, where nothing can be. It names the page's own container rather than
+    /// repeating its sentence: that sentence is a load state, it is already on screen above the list, and two
+    /// copies of one reason are two things to keep in step.
+    /// </summary>
+    internal const string NotEditableSentence =
+        "This record cannot be corrected, for the reason given at the top of the page. The values below are "
+        + "what the site shows.";
+
+    /// <summary>Said before he presses anything, and the reason the control's name differs too.</summary>
+    internal const string DownloadMechanismSentence =
+        "This browser cannot write to a folder. Save will download the file to your Downloads folder instead.";
+
+    /// <summary>A53. Deliberately NOT rendered where there is no folder API: it would be unfollowable.</summary>
+    internal const string NoFolderSentence = "No folder chosen yet. Choose a folder before saving.";
+
+    /// <summary>A58, in the one state where the file can keep the promise: the previous version, never the original.</summary>
+    internal const string BackupPromise =
+        "Each save copies the current record-store.json to record-store.json.bak first, so the previous "
+        + "version is one step back.";
+
+    /// <summary>
+    /// M8. The script writes the backup only when the existing file was READ, so a fresh clone's first save
+    /// creates the file with no backup at all, and promising one here would be a promise the file cannot keep.
+    /// </summary>
+    internal const string NoBackupYetSentence =
+        "No record store was read, so this save may be creating record-store.json for the first time and "
+        + "there is no previous version to keep.";
+
+    /// <summary>
+    /// The download route makes no backup claim at all. What stands in its place is the checked half: the
+    /// store is read back through the reader the next build uses before anything leaves the page.
+    /// </summary>
+    internal const string DownloadNoBackupSentence =
+        "Nothing is written to the repository folder on this route, so there is no previous version to keep. "
+        + "What stands in its place is the check before the save: the file is read back through the same "
+        + "reader the next build will use.";
+
+    internal const string SaveToFolderName = "Save to folder";
+
+    internal const string DownloadName = "Download corrections file";
+
+    /// <summary>The row this form corrects. Its published key scopes every id in here.</summary>
+    [Parameter, EditorRequired] public required WorklistRow Row { get; set; }
+
+    /// <summary>
+    /// The draft being edited, which the PAGE owns. The worklist closes the open row on every debounced query
+    /// change, so a draft held here would be destroyed 150 ms after one character reached the search box.
+    /// </summary>
+    [Parameter, EditorRequired] public required RecordDraft Draft { get; set; }
+
+    /// <summary>Whether a correction may be made at all. False renders no inputs and no Save control.</summary>
+    [Parameter] public bool Editable { get; set; } = true;
+
+    /// <summary>Whether this browser can write to a folder. False is the download route.</summary>
+    [Parameter] public bool ApiSupported { get; set; }
+
+    /// <summary>The granted folder's name, or null when none has been granted in this browser.</summary>
+    [Parameter] public string? FolderName { get; set; }
+
+    /// <summary>What reading the store produced, which decides whether a backup can be promised.</summary>
+    [Parameter] public StoreReading Store { get; set; }
+
+    /// <summary>Whether a save is in flight. The control says so and the click is ignored.</summary>
+    [Parameter] public bool Saving { get; set; }
+
+    /// <summary>The one sentence in the outcome container. Empty renders an empty container, not no container.</summary>
+    [Parameter] public string Outcome { get; set; } = "";
+
+    /// <summary>Save was pressed and the control was available. The page does the writing.</summary>
+    [Parameter] public EventCallback Save { get; set; }
+
+    /// <summary>The folder button was pressed. The page asks the browser, because the grant is the page's.</summary>
+    [Parameter] public EventCallback ChooseFolder { get; set; }
+
+    private sealed record Group(string Legend, (string Slug, FieldDraft Field)[] Fields, bool Chooser = false);
+
+    /// <summary>
+    /// The five named groups, in render order. The count is deliberately not fixed: each extras row is a
+    /// fieldset of its own and the chooser adds another, so what is asserted is that every group has a legend.
+    /// </summary>
+    private Group[] Groups =>
+    [
+        new("Match", [("tmdb-id", Draft.TmdbId), ("candidates", Draft.Candidates)], Chooser: true),
+        new("Titles", [("display-title", Draft.DisplayTitle), ("sort-title", Draft.SortTitle)]),
+        new("Facts", [("year", Draft.Year), ("runtime", Draft.Runtime), ("directors", Draft.Directors)]),
+        new("Source", [("apple-genre", Draft.AppleGenre), ("purchase-info", Draft.PurchaseInfo)]),
+    ];
+
+    private sealed class RefSlot { public ElementReference Element; }
+
+    private readonly Dictionary<string, RefSlot> slots = new(StringComparer.Ordinal);
+
+    private ElementReference outcome;
+    private ElementReference addButton;
+    private ElementReference folderButton;
+    private string? pendingFocus;
+    private bool focusAdd;
+
+    /// <summary>
+    /// EVERY ID IS ROW-SCOPED, matching the worklist's own row-{k}-fields. One row is open at a time today,
+    /// but a global id breaks the moment two renders overlap, and a matched record's key begins with a digit,
+    /// which is why the prefix is a letter: an id starting with a digit is not a valid bare CSS selector.
+    /// </summary>
+    private string IdFor(string slug) => $"row-{Row.Movie.K}-{slug}";
+
+    private string IdFor(string slug, string part) => $"row-{Row.Movie.K}-{slug}-{part}";
+
+    /// <summary>
+    /// Built conditionally, because every id in the list has to resolve in the same render: the state
+    /// sentence always, the format instruction where the field takes one, the error only while it exists.
+    /// </summary>
+    private string DescribedBy(string slug, FieldDraft field)
+    {
+        var ids = IdFor(slug, "state");
+
+        if (field.Shape == FieldShape.Candidates) ids += " " + IdFor(slug, "format");
+        if (Draft.ShowProblem(field)) ids += " " + IdFor(slug, "error");
+
+        return ids;
+    }
+
+    private string SaveDescribedBy => $"{IdFor("grant")} {IdFor("backup")}";
+
+    /// <summary>A53 and A56: what will happen, in visible text, and part of the Save control's description.</summary>
+    private string GrantSentence => !ApiSupported
+        ? DownloadMechanismSentence
+        : FolderName is { } folder ? $"Saving to: {folder}" : NoFolderSentence;
+
+    private string BackupSentence => !ApiSupported
+        ? DownloadNoBackupSentence
+        : Store == StoreReading.Read ? BackupPromise : NoBackupYetSentence;
+
+    private string SaveName => ApiSupported ? SaveToFolderName : DownloadName;
+
+    /// <summary>
+    /// Whether Save does anything. Unavailable before a folder is granted and while a write is in flight: the
+    /// script copies the CURRENT file to the backup on every write, so a second press would make the second
+    /// save's backup the first save's output and "one step back" would silently become a state he never had.
+    /// </summary>
+    private bool Available => Editable && !Saving && (!ApiSupported || FolderName is not null);
+
+    /// <summary>
+    /// A row's reference slot is keyed on its SYNTHETIC id and never on its position. A reference capture is
+    /// applied only on the render that creates the element, so a slot keyed on the position would still hold
+    /// the reference of the element that USED to be at that position -- and after a remove the focus move
+    /// would go to an element that is no longer in the document, which drops focus to the body: the exact
+    /// failure A30 exists to prevent, arrived at by obeying it.
+    /// </summary>
+    private static string ExtraSlot(ExtraRow row) => $"extra-row-{Spell(row.Id)}";
+
+    private RefSlot Slot(string id)
+    {
+        if (!slots.TryGetValue(id, out var slot)) slots[id] = slot = new RefSlot();
+
+        return slot;
+    }
+
+    private static string Spell(int value) => value.ToString(System.Globalization.CultureInfo.InvariantCulture);
+
+    private static string RemoveName(string position, ExtraRow row) =>
+        row.Name.Trim() is { Length: > 0 } name
+            ? $"Remove field {position}, \"{name}\""
+            : $"Remove field {position}";
+
+    // ============================================================ the edits
+
+    private static void Toggle(FieldDraft field, ChangeEventArgs e) => field.Overridden = e.Value is true;
+
+    private static void Type(FieldDraft field, ChangeEventArgs e) => field.Typed = e.Value as string ?? "";
+
+    private static void Name(ExtraRow row, ChangeEventArgs e) => row.Name = e.Value as string ?? "";
+
+    private static void Value(ExtraRow row, ChangeEventArgs e) => row.Value = e.Value as string ?? "";
+
+    // Errors appear when a field is LEFT, and on Save, and never per keystroke: an invalid flag flipping on
+    // every character re-announces the field as he types, and a freshly ticked override would announce an
+    // error he has not made yet. Marking a field on blur neither saves nor moves focus, so nothing here is a
+    // change of context.
+    private static void Leave(FieldDraft field) => field.Left = true;
+
+    private static void Leave(ExtraRow row) => row.Left = true;
+
+    /// <summary>
+    /// Focus moves into the new row, or the add is invisible: it appears below the control he pressed with
+    /// nothing to tell him so. Its own label is then read as focus arrives, which IS the statement -- nothing
+    /// further is said, or one action would be stated twice.
+    /// </summary>
+    private void Add() => pendingFocus = ExtraSlot(Draft.AddExtra());
+
+    /// <summary>
+    /// The pressed control is destroyed by the action it performs, so focus goes to the next row's name, or
+    /// to the Add button when the removed row was the last one. Focus on a removed element falls to the body,
+    /// and the next Tab restarts above the skip link.
+    /// </summary>
+    private void Remove(ExtraRow row)
+    {
+        if (!Draft.Extras.Contains(row)) return;
+
+        var next = Draft.RemoveExtra(row);
+        pendingFocus = next is null ? null : ExtraSlot(next);
+        focusAdd = next is null;
+    }
+
+    private async Task SaveClick()
+    {
+        // The control already says it is unavailable and its description already says why, so the ignored
+        // click produces no report and no focus move.
+        if (!Available) return;
+
+        // "Save has been pressed" is a fact about this control, so it is recorded here: it is what turns the
+        // errors on for fields he never visited.
+        Draft.SaveAttempted = true;
+        await Save.InvokeAsync();
+    }
+
+    // ============================================================ focus
+
+    /// <remarks>
+    /// After the render that carries the new state and never from the handler: a target that does not exist
+    /// yet cannot be focused, and the element the add created is only there once the batch has been applied.
+    /// </remarks>
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (focusAdd)
+        {
+            focusAdd = false;
+            await TryFocus(addButton);
+            return;
+        }
+
+        if (pendingFocus is { } id)
+        {
+            pendingFocus = null;
+            await TryFocus(Slot(id).Element);
+        }
+    }
+
+    /// <summary>Moves focus to the outcome container, whose own text is the report. True if the move happened.</summary>
+    public Task<bool> FocusOutcomeAsync() => TryFocus(outcome);
+
+    /// <summary>
+    /// A54. Back to the control that opened the directory prompt, whichever way it ended. The outcome is not
+    /// announced from here: this button's description IS the granted state, so the arrival states it.
+    /// </summary>
+    public Task<bool> FocusFolderAsync() => TryFocus(folderButton);
+
+    /// <summary>
+    /// Moves focus to the first field that is wrong, in render order, whose error is then read as its
+    /// description. No summary at the top: for a ten-field form inside a list row that forces a second
+    /// journey back down.
+    /// </summary>
+    public async Task<bool> FocusFirstProblemAsync()
+    {
+        foreach (var (slug, field) in Groups.SelectMany(g => g.Fields))
+            if (Draft.ProblemFor(field) is not null)
+                return await TryFocus(Slot(IdFor(slug)).Element);
+
+        foreach (var row in Draft.Extras)
+            if (Draft.ProblemFor(row) is not null)
+                return await TryFocus(Slot(ExtraSlot(row)).Element);
+
+        return false;
+    }
+
+    /// <remarks>
+    /// Interop can fail, and an escape from here would reveal the host page's error bar, which carries an
+    /// assertive role of its own: two spoken statements for one event. The answer says whether the move
+    /// happened, because the assertive fallback is raised only where it did not.
+    /// </remarks>
+    private static async Task<bool> TryFocus(ElementReference element)
+    {
+        try
+        {
+            await element.FocusAsync();
+            return true;
+        }
+        catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
+        {
+            return false;
+        }
+    }
+}

@@ -136,30 +136,6 @@ public sealed class WorklistTests
         Assert.All(cut.FindAll("ul.worklist > li"), li => Assert.Equal("button", Assert.Single(TabStops.Stops(li)).LocalName));
     }
 
-    /// <summary>
-    /// The one sequence that sets both pending moves in a single batch: a row is opened (panel focus) and, inside
-    /// that same event, the page asks for focus on another row's toggle -- which is what Task 5's save does. The
-    /// panel wins; the toggle move must be DROPPED, or the next render of any kind pulls focus out of the search
-    /// field he is typing in.
-    /// </summary>
-    [Fact]
-    public async Task APendingToggleFocusDoesNotSurviveThePanelWinning()
-    {
-        await using var h = new Harness();
-        IRenderedComponent<Worklist>? cut = null;
-        cut = h.Render(Three, opened: key => { _ = cut!.Instance.FocusRowAfterAsync(Second.Movie.K); });
-
-        int Focuses() => h.Context.JSInterop.Invocations.Count(i => i.Identifier.EndsWith("focus", StringComparison.Ordinal));
-
-        cut.FindAll("button.worklist-row")[0].Click();
-        var settled = Focuses();
-        Assert.Equal(1, settled);   // the panel, and nothing else
-
-        cut.Find("input[type=search]").Input("x");   // an unrelated render
-
-        Assert.Equal(settled, Focuses());
-    }
-
     [Fact]
     public async Task TheToggleNameCarriesTheBandThenTheTitleThenTheYearThenTheRuntime()
     {
@@ -472,48 +448,6 @@ public sealed class WorklistTests
         cut.Find("select").Change("title");
 
         Assert.Equal(["Fight Club", "Lost Reel", "Se7en"], Titles());
-    }
-
-    [Fact]
-    public async Task AFilteredRowThatLeavesHandsFocusToTheRowThatTookItsPlace()
-    {
-        await using var h = new Harness();
-        var cut = h.Render(Three);   // order: Lost Reel, Fight Club, Se7en
-
-        var removed = Uncertain.Movie.K;
-        cut.Render(p => p.Add(w => w.Rows, [Unmatched, Second]));
-        var moved = await cut.InvokeAsync(() => cut.Instance.FocusRowAfterAsync(removed));
-
-        Assert.True(moved);
-        var focus = h.Context.JSInterop.Invocations.Last(i => i.Identifier.EndsWith("focus", StringComparison.Ordinal));
-        var target = (ElementReference)focus.Arguments[0]!;
-        var toggle = cut.FindAll("button.worklist-row").Single(b => b.TextContent.Contains("Se7en", StringComparison.Ordinal));
-        Assert.Equal(toggle.GetAttribute("blazor:elementreference"), target.Id);
-    }
-
-    [Fact]
-    public async Task WhenTheLastRowGoesFocusFallsBackToThePageAndTheAnswerIsFalse()
-    {
-        await using var h = new Harness();
-        var cut = h.Render([Uncertain]);
-
-        cut.Render(p => p.Add(w => w.Rows, []));
-
-        Assert.False(await cut.InvokeAsync(() => cut.Instance.FocusRowAfterAsync(Uncertain.Movie.K)));
-    }
-
-    [Fact]
-    public async Task WhenTheRemovedRowWasLastFocusGoesToTheOneBeforeIt()
-    {
-        await using var h = new Harness();
-        var cut = h.Render(Three);   // Lost Reel, Fight Club, Se7en
-
-        cut.Render(p => p.Add(w => w.Rows, [Unmatched, Uncertain]));
-
-        Assert.True(await cut.InvokeAsync(() => cut.Instance.FocusRowAfterAsync(Second.Movie.K)));
-        var focus = h.Context.JSInterop.Invocations.Last(i => i.Identifier.EndsWith("focus", StringComparison.Ordinal));
-        var toggle = cut.FindAll("button.worklist-row").Single(b => b.TextContent.Contains("Fight Club", StringComparison.Ordinal));
-        Assert.Equal(toggle.GetAttribute("blazor:elementreference"), ((ElementReference)focus.Arguments[0]!).Id);
     }
 
     // ------------------------------------------------------------------ the stylesheet, read from the file

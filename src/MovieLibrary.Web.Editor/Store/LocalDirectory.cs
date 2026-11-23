@@ -84,12 +84,28 @@ public sealed class LocalDirectory(IJSRuntime js) : IAsyncDisposable
                 + "save would not be reversible. Choose the folder again, then retry.");
     }
 
+    /// <summary>
+    /// The fallback save, for a browser with no folder API. Refuses rather than no-ops, exactly as
+    /// <see cref="WriteTextAsync"/> does.
+    /// </summary>
+    /// <remarks>
+    /// <b>This is the one save route a browser without the API has.</b> SupportedAsync answers false both for
+    /// a module that reported the API missing AND for an import that failed, so on a failed import the owner
+    /// is offered the download control, presses it, and -- with no else here -- nothing happens, nothing is
+    /// reported and nothing is announced, on the only way he had left to keep his corrections. The throw is
+    /// reachable only from a save click and never from a render, so a page rendered with no module at all
+    /// still renders.
+    /// </remarks>
     public async Task DownloadAsync(string name, string text)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(name);
         ArgumentNullException.ThrowIfNull(text);
 
-        if (await ModuleAsync() is { } m) await m.InvokeVoidAsync("download", name, text);
+        if (await ModuleAsync() is not { } m)
+            throw new InvalidOperationException(
+                $"'{name}' was not downloaded. The editor's script could not be loaded. Reload the page.");
+
+        await m.InvokeVoidAsync("download", name, text);
     }
 
     public async ValueTask DisposeAsync()
