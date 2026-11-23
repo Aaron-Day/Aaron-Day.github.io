@@ -414,4 +414,31 @@ public sealed class FieldDraftTests
         draft.Runtime.Typed = "138";
         Assert.False(draft.OverridesNothing);
     }
+
+    /// <summary>
+    /// I4, at the layer that decides it. One build after a runtime-only correction the catalogue PUBLISHES
+    /// that runtime -- MoviePipeline writes <c>over?.Runtime ?? sheetRuntime</c> into <c>Rt</c> -- so the
+    /// record's own published minutes are no longer an account of the row's own. Judged against them, the
+    /// correction read as the value every save supplies: the box opened clear, the record was judged to
+    /// override nothing, and the page removed the entry that held it. The row's minutes come from the entry's
+    /// echo instead, and BOTH halves read that one value.
+    /// </summary>
+    [Fact]
+    public void ASavedRuntimeIsJudgedAgainstTheRowsOwnMinutesAndNotTheOnesTheBuildNowPublishes()
+    {
+        // The post-build state: the catalogue publishes 119, the echo beside the entry still says 139.
+        var draft = RecordDraft.For(Film(runtime: 119), new RecordOverride(Runtime: 119), rowMinutes: 139);
+
+        Assert.True(draft.Runtime.Overridden);
+        Assert.Equal("119", draft.Runtime.Typed);
+        Assert.False(draft.OverridesNothing);
+
+        // And the record is still written with a runtime, so nothing becomes unplaceable by surviving.
+        Assert.Equal(119, draft.Build(119).Runtime);
+
+        // The two halves judge one value, as m1 requires: the row's own 139 corrects nothing, typed or saved.
+        draft.Runtime.Typed = "139";
+        Assert.True(draft.OverridesNothing);
+        Assert.False(RecordDraft.For(Film(runtime: 119), draft.Build(119), rowMinutes: 139).Runtime.Overridden);
+    }
 }

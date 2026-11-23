@@ -1055,7 +1055,8 @@ public sealed class EditorSaveTests
             Assert.DoesNotContain("already says", said, StringComparison.Ordinal);
             Assert.DoesNotContain("previous version", said, StringComparison.Ordinal);
             Assert.DoesNotContain(".bak", said, StringComparison.Ordinal);
-            Assert.Contains("no record store was read", said, StringComparison.Ordinal);
+            Assert.Contains("not the file, which was not read", said, StringComparison.Ordinal);
+            Assert.DoesNotContain("no corrections", said, StringComparison.OrdinalIgnoreCase);
         }
 
         // And the stronger sentence still belongs to the one state that earns it.
@@ -1102,5 +1103,138 @@ public sealed class EditorSaveTests
         Page.Toggle(cut, FightKey).Click();
 
         Assert.Equal(raised, page.Region.Alerted.Count);
+    }
+
+    /// <summary>
+    /// The guard in Place must stay the FIRST thing the method does, and nothing in the suite failed when it
+    /// was moved below the removal arm. This is the construction that makes the ordering load-bearing: one
+    /// single-record entry, the row whose published key still finds it bound by pass 1, and a SECOND published
+    /// record of a row that hashes to the same identity key -- the same film bought twice, the second copy
+    /// published unmatched because the last build's conflict rule rejected it for an id it did not speak for.
+    /// That row carries the entry's key and position 1, pass 2 finds no free slot, and its form opens blank.
+    /// With the guard below the removal arm a bare Save on it reaches draft.Without(key) and DELETES the
+    /// entry outright, note and all, reporting a removal success.
+    /// </summary>
+    [Fact]
+    public async Task ABareSaveOnARowNothingBoundIsRefusedRatherThanRemovingTheEntryUnderItsKey()
+    {
+        var rejected = EditorCatalogueTests.Film(0, "Fight Club", 139, 0, "David Fincher");
+        var key = RecordLink.IdentityKeyOf(Fight);
+
+        // The construction: both rows compute the same key for themselves, and only one of them publishes the
+        // key the entry's single record will publish.
+        Assert.Equal(key, RecordLink.IdentityKeyOf(rejected));
+
+        var held = new FilmEntry
+        {
+            IdentityKey = key,
+            Sheet = new SheetEcho("Fight Club", "2:19:00", "David Fincher"),
+            Note = "The second copy is the extended cut.",
+            Records = [new RecordOverride(TmdbId: 550, Runtime: 139)],
+        };
+
+        await using var page = new Page(StoreOf(held), movies: [Fight, rejected]);
+        page.Writes.SetResult(true);
+        var cut = page.Open(rejected.K);
+
+        // Bound to nothing, so there is nothing to pre-fill and nothing this save can place.
+        Assert.Equal("", cut.Find($"[id='row-{rejected.K}-tmdb-id']").GetAttribute("value"));
+
+        Press(cut);
+
+        Assert.Empty(page.Written);
+        Assert.Equal(RecordEditor.NotRepresentableSentence(key, expanded: false), Outcome(cut));
+
+        // And the correction it would have deleted is still there, which the other row still shows.
+        cut.Find("button.worklist-close").Click();
+        Page.Toggle(cut, FightKey).Click();
+        Assert.Equal("550", cut.Find($"[id='row-{FightKey}-tmdb-id']").GetAttribute("value"));
+    }
+
+    /// <summary>
+    /// I2. The unread sentence was false in a state a fresh clone reaches in two presses. Nothing in a
+    /// successful save changes EditorState.Store -- Rebadge returns the draft and the rows -- so after one
+    /// successful write on a clone whose store file does not exist yet, a second press still reports the
+    /// unread outcome: "this record has no corrections to write" (they are in the draft the comparison was
+    /// made against) and "no record store was read to compare it against ... try again once the repository
+    /// folder is available to this page" (the folder plainly works, a write to it has just succeeded).
+    /// </summary>
+    [Fact]
+    public async Task TheUnreadNothingToSaveSentenceDoesNotDenyTheCorrectionsOrTheFolderThatJustWorked()
+    {
+        await using var page = new Page(store: null);
+        page.Writes.SetResult(true);
+        var cut = page.Open();
+
+        Tick(cut, "tmdb-id");
+        Fill(cut, "tmdb-id", "807");
+        Press(cut);
+
+        Assert.StartsWith("Saved.", Outcome(cut), StringComparison.Ordinal);
+
+        Press(cut);
+
+        var said = Outcome(cut);
+        Assert.Single(page.Written);
+        Assert.Equal(RecordEditor.NothingToSaveUnreadSentence, said);
+
+        // What it may not claim: that there is nothing to write, that the folder is unavailable, or anything
+        // at all about a previous version of a file this page has not read.
+        Assert.DoesNotContain("no corrections", said, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("repository folder is available", said, StringComparison.Ordinal);
+        Assert.DoesNotContain("previous version", said, StringComparison.Ordinal);
+        Assert.DoesNotContain(".bak", said, StringComparison.Ordinal);
+
+        // What it says instead: what the comparison was actually against.
+        Assert.Contains("this page", said, StringComparison.Ordinal);
+        Assert.NotEqual(RecordEditor.NothingToSaveSentence, said);
+    }
+
+    /// <summary>
+    /// I4. A runtime-only correction, one build later. MoviePipeline publishes over?.Runtime ?? sheetRuntime
+    /// and Apply never touches Rt, so after a build the catalogue's own Rt IS the owner's corrected runtime --
+    /// and both halves of the M3 judgment then read his correction as the value the save supplies for him: the
+    /// box opens clear, the record is judged to override nothing, and a bare Save DELETES the entry and says
+    /// the next build will publish the record as the sheet has it. The discriminator is the entry's own echo,
+    /// which EchoOf wrote once from the then-published minutes and which Place never rewrites.
+    /// </summary>
+    [Fact]
+    public async Task ARuntimeOnlyCorrectionSurvivesABareSaveAfterTheBuildHasPublishedIt()
+    {
+        // The row as the NEXT build publishes it: 119 minutes, which is the correction itself.
+        var rebuilt = EditorCatalogueTests.Film(550, "Fight Club", 119, 0.5, "David Fincher");
+        var held = new FilmEntry
+        {
+            // Hashed when the row published 139, which is what the echo beside it still says.
+            IdentityKey = RecordLink.IdentityKeyOf(Fight),
+            Sheet = new SheetEcho("Fight Club", "2:19:00", "David Fincher"),
+            Note = "The disc runs shorter than the Apple entry.",
+            Records = [new RecordOverride(TmdbId: 550, Runtime: 119)],
+        };
+
+        await using var page = new Page(StoreOf(held), movies: [rebuilt]);
+        page.Writes.SetResult(true);
+        var cut = page.Open(rebuilt.K);
+
+        // Reopening shows the correction he made, not a clear box (A31).
+        Assert.Equal("119", cut.Find($"[id='row-{rebuilt.K}-runtime']").GetAttribute("value"));
+        Assert.NotNull(cut.Find($"[id='row-{rebuilt.K}-runtime-override']").GetAttribute("checked"));
+
+        Press(cut);
+
+        // Nothing to write, because the file already says it -- and emphatically not a removal.
+        Assert.Empty(page.Written);
+        Assert.Equal(RecordEditor.NothingToSaveSentence, Outcome(cut));
+
+        // The step shorter: unticking the id must not take the runtime with it.
+        Tick(cut, "tmdb-id", on: false, key: rebuilt.K);
+        Fill(cut, "tmdb-id", "", key: rebuilt.K);
+        Press(cut);
+
+        var film = Assert.Single(Parse(Assert.Single(page.Written)).Films);
+        var record = Assert.Single(film.Records);
+        Assert.Null(record.TmdbId);
+        Assert.Equal(119, record.Runtime);
+        Assert.Equal(held.Note, film.Note);
     }
 }

@@ -307,16 +307,19 @@ public sealed class ExtraRow(int id)
 /// bare minute count, so a record saved without a runtime becomes unplaceable. The reader's own test for an
 /// empty record is <c>record == new RecordOverride()</c> (RecordStoreReader.cs:245), and an always-written
 /// runtime means no record can ever equal that -- hence <see cref="OverridesNothing"/> compares the built record
-/// with the runtime the SAVE supplied taken back out and the one he TYPED left in. It is
-/// <see cref="FieldDraft.AsNumber"/> that tells the two apart: null exactly when the box is empty. Nulling the
+/// with the runtime the SAVE supplied taken back out and the one he CHOSE left in. What the save supplies is
+/// the ROW's own minutes (<see cref="uncorrectedMinutes"/>), which after a build is no longer the same thing as
+/// what the catalogue publishes. It is <see cref="FieldDraft.AsNumber"/> that tells a typed runtime from an
+/// empty box: null exactly when the box is empty. Nulling the
 /// runtime unconditionally would read a runtime-only correction as no correction at all -- and the entry that
 /// already held one would be deleted, with the page calling it a success.</para>
 /// </remarks>
 public sealed class RecordDraft
 {
-    private RecordDraft(MovieRecord movie, RecordOverride? saved)
+    private RecordDraft(MovieRecord movie, RecordOverride? saved, int? rowMinutes)
     {
         var titles = saved?.Titles;
+        var uncorrected = rowMinutes ?? movie.Rt;
 
         TmdbId = FieldDraft.Integer(
             "TMDB id",
@@ -347,17 +350,18 @@ public sealed class RecordDraft
         // record's own published runtime is written either way, and a sentence saying otherwise would be a lie
         // about the file. See the remarks above for why it has to be written.
         //
-        // AND THE PRE-FILL TICKS THE BOX ONLY FOR A RUNTIME HE CHOSE. Every record the editor writes carries a
-        // runtime, so a saved runtime EQUAL to the record's own published minutes is the one the save supplied
-        // and says nothing: ticking the box for it would show an override he never made, and -- because
-        // OverridesNothing keeps a typed runtime -- would keep an entry alive that corrects nothing. A saved
-        // runtime that DIFFERS is a correction, and it is pre-filled so that reopening shows what was saved.
-        // The field writes movie.Rt back either way, so nothing is dropped by leaving the box clear.
+        // AND THE PRE-FILL TICKS THE BOX ONLY FOR A RUNTIME HE CHOSE, judged against the ROW's own minutes and
+        // never against what the catalogue publishes now (n3). Every record the editor writes carries a
+        // runtime, so a saved runtime equal to the row's own is the one the save supplied and says nothing:
+        // ticking the box for it would show an override he never made. But one build later the catalogue
+        // PUBLISHES his correction -- MoviePipeline writes over?.Runtime ?? sheetRuntime into Rt and Apply
+        // never touches it -- so judging against movie.Rt read his own correction back as the save's own
+        // value, left the box clear, and let a bare Save delete the entry. See uncorrectedMinutes.
         Runtime = FieldDraft.Integer(
             "runtime",
             $"Not overridden — saved as {Spell(movie.Rt)} minutes so this record can still be found after the "
             + "next build.",
-            IntegerRule.Runtime, saved?.Runtime == movie.Rt ? null : saved?.Runtime,
+            IntegerRule.Runtime, saved?.Runtime == uncorrected ? null : saved?.Runtime,
             unit: " minutes", label: "Runtime in minutes");
 
         Directors = FieldDraft.Text(
@@ -391,28 +395,38 @@ public sealed class RecordDraft
 
         Fields = [TmdbId, Candidates, DisplayTitle, SortTitle, Year, Runtime, Directors, AppleGenre, PurchaseInfo];
 
-        publishedMinutes = movie.Rt;
+        uncorrectedMinutes = uncorrected;
     }
 
     /// <summary>
-    /// The published minutes of the record this draft was built FOR, which is the runtime the save writes
-    /// whether or not the box is ticked.
+    /// The runtime this record has with NO correction in it: the row's own minutes, taken from the entry's
+    /// sheet echo where there is one and from the published record otherwise. A runtime equal to this says
+    /// nothing, whether it was typed or read back out of the file.
     /// </summary>
     /// <remarks>
-    /// Held so that <see cref="OverridesNothing"/> can judge a TYPED runtime the same way the pre-fill above
-    /// judges a SAVED one. The two read the same value and disagreeing about it was a defect: the box opened
-    /// clear for a saved 139 while a typed 139 kept an entry alive that corrects nothing.
-    /// <c>Build</c> takes the same number as a parameter, because it is also what a caller who is not the page
-    /// has to supply; the page passes <c>row.Movie.Rt</c>, which is where both of them come from.
+    /// Both halves read this one value -- the pre-fill above and <see cref="OverridesNothing"/> -- and them
+    /// disagreeing about it has been a defect twice. First the box opened clear for a saved 139 while a typed
+    /// 139 kept alive an entry that corrects nothing (m1). Then, one build after a runtime-only correction,
+    /// <c>MovieRecord.Rt</c> WAS that correction, so both halves read it as the value the save supplies: the
+    /// box opened clear, the record was judged to override nothing, and a bare Save deleted the entry and
+    /// called it a success. The entry's echo is what tells them apart -- <c>Place</c> writes it once from the
+    /// then-published minutes and never rewrites an existing entry's, and for a hand-written entry it is the
+    /// sheet's own text. <c>Build</c> still takes the published minutes as a parameter, because that is the
+    /// runtime a save WRITES; this is the runtime it is judged against.
     /// </remarks>
-    private readonly int publishedMinutes;
+    private readonly int uncorrectedMinutes;
 
     /// <summary>A draft of <paramref name="movie"/>, pre-filled from <paramref name="saved"/> when there is one.</summary>
-    public static RecordDraft For(MovieRecord movie, RecordOverride? saved = null)
+    /// <param name="rowMinutes">
+    /// The row's own runtime in minutes, where something other than the published record still knows it:
+    /// the entry's sheet echo. Null takes <c>movie.Rt</c>, which is right for a row with no entry and
+    /// wrong for one whose correction a build has since published -- see <see cref="uncorrectedMinutes"/>.
+    /// </param>
+    public static RecordDraft For(MovieRecord movie, RecordOverride? saved = null, int? rowMinutes = null)
     {
         ArgumentNullException.ThrowIfNull(movie);
 
-        return new RecordDraft(movie, saved);
+        return new RecordDraft(movie, saved, rowMinutes);
     }
 
     private int nextId;
@@ -583,16 +597,15 @@ public sealed class RecordDraft
     /// the runtime he CHOSE left in (M3): a runtime-only override is a correction the reader keeps.
     /// </summary>
     /// <remarks>
-    /// "Chose" and not "typed", which is m1's correction. The runtime the save supplies is the record's own
-    /// published minutes, so a typed value equal to those minutes is the same value and says the same nothing
-    /// -- and <see cref="For"/> already refuses to tick the box for it when it comes back out of the file. The
-    /// two halves judge one value and must judge it alike: trusting the tick here committed an entry whose
-    /// whole content was the runtime the next build would have used anyway, reported as a correction, and the
-    /// box then opened clear so that a second Save deleted it.
+    /// "Chose" and not "typed", which is m1's correction. The runtime the save supplies is the row's own
+    /// minutes, so a value equal to those says the same nothing however it got into the box -- and
+    /// <see cref="For"/> refuses to tick the box for it when it comes back out of the file. The two halves
+    /// judge one value and must judge it alike, and that value is <see cref="uncorrectedMinutes"/> and not
+    /// what the catalogue publishes today: a build publishes a runtime correction into <c>Rt</c>, after which
+    /// measuring against <c>Rt</c> deletes the very entry that holds it.
     /// </remarks>
     public bool OverridesNothing =>
-        (Build(1) with { Runtime = Runtime.AsNumber == publishedMinutes ? null : Runtime.AsNumber })
+        (Build(1) with { Runtime = Runtime.AsNumber == uncorrectedMinutes ? null : Runtime.AsNumber })
         == new RecordOverride();
-
     private static string Spell(int value) => value.ToString(CultureInfo.InvariantCulture);
 }

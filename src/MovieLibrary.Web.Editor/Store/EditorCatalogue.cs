@@ -114,11 +114,11 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
     /// override can move it -- this is the one fallback <see cref="RecordLink"/> grants outright, and it covers
     /// every record the pipeline matched to nothing. <b>The lookup is the whole check</b>: <c>byHash</c> is
     /// keyed on each entry's own <c>IdentityKey[..RecordKey.HashLength]</c> and asked for exactly the eight
-    /// characters the published key carries, so a hit has already compared them. A second
-    /// <see cref="RecordLink.Agrees"/> beside it could not return anything but true, and a condition no test
-    /// can turn false is a condition no test can protect, so it is not there (m5).</para>
+    /// characters the published key carries, so a hit has already compared them. A second comparison beside it
+    /// could not return anything but true, and a condition no test can turn false is a condition no test can
+    /// protect, so there is none: the public helper that offered one has been deleted (m5, M5).</para>
     /// <para><b>Pass 2, a matched record: the hit is the proof.</b> Its key carries no part of its row, so
-    /// <see cref="RecordLink.Agrees"/> has nothing to compare. What is left is the recomputed identity key --
+    /// nothing it publishes can be compared with the entry's key. What is left is the recomputed identity key --
     /// guaranteed only for a record with no entry, because an override can replace the title, runtime and
     /// directors it hashed. So it is used as a LOOKUP and never as a key to write under: a hit means the
     /// published fields hash to that entry's own sheet row, which is the same row by definition, and a miss
@@ -178,6 +178,10 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
             byIdentityKey.TryAdd(entry.IdentityKey, entry);
 
             // A key the reader accepted is 40 hex characters. One that reached a draft another way may not be.
+            //
+            // AND THIS LOOKUP IS THE CHECK, on the 30 records that have a hash to check with: it is keyed on
+            // the entry's own first eight characters and asked for exactly the eight the published key
+            // carries, so a hit has already compared them and nothing beside it has anything left to compare.
             if (entry.IdentityKey.Length >= RecordKey.HashLength)
                 byHash.TryAdd(entry.IdentityKey[..RecordKey.HashLength], entry);
         }

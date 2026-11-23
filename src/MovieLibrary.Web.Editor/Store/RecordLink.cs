@@ -26,10 +26,13 @@ namespace MovieLibrary.Web.Editor.Store;
 /// (<see cref="PublishedKeyOf"/>). The pipeline-side claim is pinned by
 /// <c>AMatchedFilmPublishesTheSheetsOwnTitleRuntimeAndDirectorsSoItsIdentityKeyIsRecomputable</c> in
 /// MovieLibrary.Core.Tests.</para>
-/// <para><b>What cannot be checked.</b> A matched record's key is <c>{id}-{minutes}</c> and holds no part of the
-/// identity key, so <see cref="Agrees"/> has nothing to compare and returns null rather than a true that would
-/// mean nothing. An unmatched record's key is the key's first 8 characters, which is a real check on the 30
-/// records that have one.</para>
+/// <para><b>What cannot be checked, and where the check that CAN be made lives.</b> A matched record's key is
+/// <c>{id}-{minutes}</c> and holds no part of the identity key, so nothing the record publishes can be
+/// compared with an entry's key at all. An unmatched record's key carries that key's first 8 characters,
+/// which is a real check -- and <c>EditorCatalogue.Bind</c> makes it by KEYING its lookup on exactly those
+/// characters, so a hit has already compared them. A helper beside that lookup could only ever answer true,
+/// and a condition no test can turn false is a condition no test can protect: there was one here, public and
+/// uncalled, and it is gone (M5).</para>
 /// </remarks>
 public static class RecordLink
 {
@@ -41,24 +44,6 @@ public static class RecordLink
             TitleNormalizer.Normalize(movie.T),
             movie.Rt,
             TitleNormalizer.NormalizeDirectors(string.Join(" & ", movie.Dir)));
-    }
-
-    /// <returns>True or false when the record's own key carries the hash; null when it cannot say.</returns>
-    /// <remarks>
-    /// The general answer, for a caller holding one record and one key. <c>EditorCatalogue</c> asks the same
-    /// question by KEYING its lookup on those eight characters, so a hit there already is this answer and a
-    /// call beside it could only ever have returned true.
-    /// </remarks>
-    public static bool? Agrees(MovieRecord movie, string identityKey)
-    {
-        ArgumentNullException.ThrowIfNull(movie);
-        ArgumentException.ThrowIfNullOrWhiteSpace(identityKey);
-
-        if (!movie.K.StartsWith(RecordKey.UnmatchedPrefix, StringComparison.Ordinal)) return null;
-        if (identityKey.Length < RecordKey.HashLength) return false;
-
-        var published = movie.K[RecordKey.UnmatchedPrefix.Length..].Split('-')[0];
-        return string.Equals(published, identityKey[..RecordKey.HashLength], StringComparison.Ordinal);
     }
 
     /// <returns>The key the entry's record at <paramref name="position"/> publishes, or null when no runtime is knowable.</returns>

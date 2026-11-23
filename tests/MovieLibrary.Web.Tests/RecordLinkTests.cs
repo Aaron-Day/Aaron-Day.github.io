@@ -63,31 +63,6 @@ public sealed class RecordLinkTests
     }
 
     [Fact]
-    public void AnUnmatchedRecordsOwnKeyAgreesWithTheComputedOne()
-    {
-        var record = Published("Obscure Film", 95, ["Nobody Known"], 0);
-
-        Assert.StartsWith(RecordKey.UnmatchedPrefix, record.K, StringComparison.Ordinal);
-        Assert.True(RecordLink.Agrees(record, RecordLink.IdentityKeyOf(record)));
-    }
-
-    [Fact]
-    public void AnUnmatchedRecordDisagreesWithAKeyThatIsNotItsOwn()
-    {
-        var record = Published("Obscure Film", 95, ["Nobody Known"], 0);
-
-        Assert.False(RecordLink.Agrees(record, new string('a', 40)));
-    }
-
-    [Fact]
-    public void AgreementIsUnknowableForAMatchedRecordAndSaysSoRatherThanGuessing()
-    {
-        var record = Published("Se7en", 110, ["David Fincher"], 807);
-
-        Assert.Null(RecordLink.Agrees(record, RecordLink.IdentityKeyOf(record)));
-    }
-
-    [Fact]
     public void AStoreEntrysPublishedKeyIsFoundFromTheEntryAlone()
     {
         var entry = new FilmEntry

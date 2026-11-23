@@ -1,6 +1,7 @@
 @page "/editor"
 @implements IDisposable
 @using System.Globalization
+@using MovieLibrary.Core.Parsing
 @using MovieLibrary.Core.Store
 @inject EditorCatalogue Catalogue
 @inject LocalDirectory Folder
@@ -84,19 +85,27 @@
         "Nothing was written, because the record store already says exactly what this save would have written. "
         + "The version before your last save is untouched.";
 
-    /// <summary>The same outcome where no store was READ, which can claim very much less (m2).</summary>
+    /// <summary>The same outcome where no store file was READ, which can claim very much less (m2).</summary>
     /// <remarks>
-    /// The comparison that reaches here is against the draft that was read, and under
-    /// <see cref="StoreReading.NotRead"/> that was an EMPTY store rather than the file: the script answers null
-    /// both for a file that is not there and for one it could not read, and cannot tell them apart across the
-    /// interop boundary. So the sentence above would be making the stronger claim
-    /// <see cref="NoStoreReadSentence"/> deliberately refuses to make, about a file this page has not seen, and
-    /// its second half would promise a previous version that on a fresh clone does not exist. What is certain is
-    /// what is said: this save would have written nothing, and nothing here knows what the file holds.
+    /// <para>What this save compared itself against is the draft THIS PAGE holds. Under
+    /// <see cref="StoreReading.Read"/> that draft came from the file, so <see cref="NothingToSaveSentence"/>
+    /// may speak about the file; under <see cref="StoreReading.NotRead"/> it began as an EMPTY store -- the
+    /// script answers null both for a file that is not there and for one it could not read, and cannot tell
+    /// them apart across the interop boundary -- so nothing here knows what the file holds, and the sentence
+    /// above would be making the claim <see cref="NoStoreReadSentence"/> deliberately refuses to make, about a
+    /// previous version that on a fresh clone does not exist.</para>
+    /// <para><b>And it may not deny the corrections or the folder either, which is what it used to do.</b>
+    /// Nothing in a successful save changes <see cref="EditorState.Store"/> -- <c>Rebadge</c> returns the draft
+    /// and the rows -- so a clone whose store file does not exist yet reaches this sentence on the second press
+    /// of a save that has just succeeded: the corrections it said were absent are in the draft it compared
+    /// itself against, and the folder it told him to wait for had just taken a write. What is certain is what
+    /// is said: this save would have produced the store this page is already holding, and that draft, not the
+    /// file, is what it was measured against.</para>
     /// </remarks>
     internal const string NothingToSaveUnreadSentence =
-        "Nothing was written, because this record has no corrections to write and no record store was read to "
-        + "compare it against. Try again once the repository folder is available to this page.";
+        "Nothing was written, because this save would have produced exactly the record store this page is "
+        + "already holding. That is what it was compared against: this page's own draft, not the file, which "
+        + "was not read.";
 
     // A54's named failure mode: a prompt he dismissed that says nothing leaves the page looking unchanged.
     internal const string NoFolderChosenSentence =
@@ -318,7 +327,7 @@
     {
         if (drafts.TryGetValue(row.Movie.K, out var held)) return held;
 
-        var made = RecordDraft.For(row.Movie, SavedIn(row.Entry, row.Position));
+        var made = RecordDraft.For(row.Movie, SavedIn(row.Entry, row.Position), EchoedMinutes(row.Entry));
         drafts[row.Movie.K] = made;
         return made;
     }
@@ -333,6 +342,26 @@
             ? entry.Records[position - 1]
             : null;
 
+    /// <summary>The row's own runtime in minutes as the entry's echo states it, or null when it cannot say.</summary>
+    /// <remarks>
+    /// <para><b>Why the echo, and why a single-record entry only.</b> <see cref="EchoOf"/> writes it from the
+    /// minutes the row published when the entry was created, and <see cref="Place"/> never rewrites an
+    /// existing entry's, so it still states the ROW's own runtime one build after a correction moved what the
+    /// catalogue publishes -- which is exactly when <c>movie.Rt</c> stops being able to tell a correction from
+    /// the value every save supplies. For an entry of SEVERAL records the echo is the Apple row's one runtime
+    /// and describes none of its films, so it says nothing about any one record and is not used: the published
+    /// minutes are the right reference there, and an entry with siblings is never one the removal arm can
+    /// delete anyway.</para>
+    /// <para>That the echo is PARSED is not new -- m3 conceded it, because RecordLink.PublishedKeyOf reads it
+    /// for a record stating no runtime of its own -- and this is not matching either. It decides whether a
+    /// runtime in the form is a correction, and an echo that will not parse falls back to the published
+    /// minutes, which is where this page started.</para>
+    /// </remarks>
+    private static int? EchoedMinutes(FilmEntry? entry) =>
+        entry is { Records.Count: 1 } && RuntimeParser.TryFilmMinutes(entry.Sheet.Runtime, out var minutes)
+            ? minutes
+            : null;
+
     /// <summary>
     /// Rebuilds the open row's draft from the record that was just written, so the form shows what the FILE
     /// says rather than what was typed at it.
@@ -345,7 +374,7 @@
     /// what the save wrote is what the row now holds, trimmed and parsed as the file has it.
     /// </remarks>
     private void Reseat(WorklistRow row, FilmEntry? entry) =>
-        drafts[row.Movie.K] = RecordDraft.For(row.Movie, SavedIn(entry, row.Position));
+        drafts[row.Movie.K] = RecordDraft.For(row.Movie, SavedIn(entry, row.Position), EchoedMinutes(entry));
 
     private void Report(string text)
     {
@@ -366,12 +395,21 @@
     private bool alerted;
 
     /// <remarks>
-    /// A cancellation and not a message: it takes effect at once and speaks nothing. Raised from the HANDLER
-    /// that writes the new outcome and never beside the next statement in OnAfterRenderAsync -- on a pass that
-    /// flushes both mutations in one frame the clear would be observed with the region already empty, and a
-    /// repeated identical sentence would reach the DOM as no change at all. That is why the same failure twice
-    /// is otherwise spoken once. Tracked rather than cleared blindly, so a page with nothing standing never
-    /// writes to a region it does not own anything in.
+    /// A cancellation and not a message: it takes effect at once and speaks nothing. It is owed because
+    /// DELIVERED TEXT NEVER EXPIRES -- the region's own API note is explicit about it: the region is a scoped
+    /// singleton behind a layout that survives navigation, so whoever puts a statement up takes it down when
+    /// it stops being true. Tracked rather than cleared blindly, so a page with nothing standing never writes
+    /// to a region it does not own anything in.
+    /// <para><b>The mechanism an earlier version of this remark gave was wrong, and it is corrected rather
+    /// than deleted, because it is the kind of claim that gets copied.</b> It said that a repeated identical
+    /// sentence would reach the DOM as no change at all, and that this is why the same failure twice would
+    /// otherwise be spoken once. It would not be: the region empties itself inside its own lock before EVERY
+    /// delivery, and the layout re-arms the settle delay on the render that carries that clear, so a repeat
+    /// goes text, empty, text either way. Raising the clear from the HANDLER that writes the new outcome,
+    /// rather than beside the next statement in OnAfterRenderAsync, is still right -- it keeps the take-down
+    /// and the statement that replaces it two observable mutations instead of one frame's worth, and a second
+    /// assertive sentence raised while the first is still pending JOINS it rather than replacing it, so the
+    /// take-down has to land before the next one is raised.</para>
     /// </remarks>
     private void ClearAlert()
     {
@@ -487,12 +525,18 @@
         // one is already filed under its key, no position is provable and the correction is not
         // representable: it is REPORTED and nothing is written, the same answer the runtime-only-into-a-bundle
         // case gets -- in the reader's own words there, in ours here, because no reader is reached.
+        //
+        // AND IT IS THE FIRST THING THIS METHOD DOES, which is load-bearing and now has a test of its own
+        // (ABareSaveOnARowNothingBoundIsRefusedRatherThanRemovingTheEntryUnderItsKey). Below the removal arm
+        // it is unreachable for the save that needs it most: a bare Save on an unbound row's blank form
+        // overrides nothing, so the arm would reach draft.Without and delete the entry under that key
+        // outright, note and all, and report a removal success.
         if (row.Entry is null && existing is not null)
-            return (draft, null, false, NotRepresentableSentence(row.IdentityKey));
+            return (draft, null, false, NotRepresentableSentence(row.IdentityKey, existing.Records.Count > 1));
 
         // A record that overrides nothing goes, rather than being written as a line that says nothing -- and
         // the judgment ignores the runtime THE SAVE writes, which goes on every record whether or not it was
-        // corrected (M3). A runtime he typed himself is a correction like any other and keeps the entry.
+        // corrected (M3). A runtime he chose himself is a correction like any other and keeps the entry.
         // ONLY where the entry holds that one record. An entry with siblings cannot lose one without
         // renumbering the others -- an unmatched record's published key carries its position -- so there the
         // runtime-only record is placed and the reader refuses it in its own words, which is the honest
@@ -522,18 +566,26 @@
     /// what the owner can do about it, because there is nothing this page can do about it.
     /// </summary>
     /// <remarks>
-    /// Two ways in, one answer. The entry covers several films of one sheet row and nothing published says
-    /// which of its records this film is; or every record of it is already claimed by another row. Either way a
-    /// position would have to be guessed, and a guessed position writes a correction over another film. Giving
-    /// those records runtimes that differ is what lets the next load tell them apart, and a rebuild re-aligns
-    /// the published keys so the first pass finds them outright.
+    /// Two ways in, and they need different advice, which one sentence used to give both of them wrongly.
+    /// <paramref name="expanded"/> tells them apart. An entry of several records covers several films of one
+    /// sheet row and nothing published says which of them this film is: runtimes that differ are what lets the
+    /// next load tell those records apart, and a rebuild re-aligns the published keys so the first pass finds
+    /// them outright. An entry of ONE record has already had that record claimed by another published row, so
+    /// there is nothing to tell apart inside it and a rebuild leaves the same two rows computing the same key
+    /// -- the advice there is to make the two rows differ. Either way a position would have to be guessed, and
+    /// a guessed position writes a correction over another film.
     /// </remarks>
-    internal static string NotRepresentableSentence(string identityKey) =>
+    internal static string NotRepresentableSentence(string identityKey, bool expanded) =>
         $"Nothing was written. The record store already holds the entry {identityKey}, which is the key this "
         + "record computes for itself, and nothing in the published catalogue says which of that entry's "
         + "records this one is -- so saving here would write over a correction that belongs to another film. "
-        + $"Open {RecordStoreReader.DefaultFileName} and give that entry's records runtimes that tell them "
-        + "apart, or rebuild the catalogue so this correction can be found again.";
+        + (expanded
+            ? $"Open {RecordStoreReader.DefaultFileName} and give that entry's records runtimes that tell them "
+              + "apart, or rebuild the catalogue so this correction can be found again."
+            : "That entry holds one record and another published record already holds it: as far as the "
+              + "sheet's title, runtime and directors can tell, this is the same film twice, so a rebuild "
+              + "makes the same collision again. Give the two rows something that tells them apart -- the "
+              + "edition in the title, or the runtime each copy really has -- and rebuild.");
 
     /// <summary>The sheet's three columns as a human reads them, for finding this entry in the file by eye.</summary>
     /// <remarks>
@@ -547,6 +599,9 @@
     /// holds of an entry THIS editor writes is narrower, and is why the canonical form costs nothing: every
     /// record it writes carries its own runtime (M3), so that fallback is never reached for one of ours. The
     /// title and the directors ARE exact -- the pipeline publishes the sheet's own.</para>
+    /// <para>And <see cref="EchoedMinutes"/> reads these minutes back, which is the one account of the row's
+    /// own runtime that survives a build publishing a correction to it. Whatever is written here is what that
+    /// judgment will measure against, so the canonical form is not decoration.</para>
     /// </remarks>
     private static SheetEcho EchoOf(MovieRecord movie) => new(
         movie.T,
