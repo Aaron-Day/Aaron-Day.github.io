@@ -483,10 +483,10 @@ public class SourceContractTests
     /// <para>
     /// <b>What is scanned, and what is deliberately not.</b> Every hand-written .razor and .cs in the web
     /// project, plus index.html, which is where all of this app's own script lives. The vendored Bootstrap
-    /// bundles under wwwroot/lib are not scanned because they are not in the payload: index.html loads
-    /// bootstrap.min.css and blazor.webassembly.js and nothing else, so none of those six .js files ever
-    /// reaches a browser. They are clean in any case - measured, they contain one <c>orientationchange</c>
-    /// in an event-name list and no <c>screen.orientation</c> at all.
+    /// files under wwwroot/lib are not scanned because index.html loads bootstrap.min.css and
+    /// blazor.webassembly.js and nothing else. The six Bootstrap .js bundles this remark used to measure are
+    /// no longer vendored at all: they were deleted along with every other file under lib/ that nothing
+    /// loads, and <see cref="NothingIsVendoredThatIndexHtmlDoesNotLoad"/> now keeps them out.
     /// </para>
     /// <para>
     /// The pattern matches the property and the lock call separately so that reading the orientation is
@@ -534,5 +534,52 @@ public class SourceContractTests
         Assert.Matches(pattern, "screen . orientation . lock ( 'landscape' )");
         Assert.Matches(pattern, "const o = window.screen.orientation;");
         Assert.DoesNotMatch(pattern, "window.addEventListener('orientationchange', onRotate);");
+    }
+
+    /// <summary>
+    /// Nothing is vendored under <c>wwwroot/lib</c> that <c>index.html</c> does not load.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>Why this is a contract and not a tidy-up.</b> <c>dotnet publish</c> copies the whole of
+    /// wwwroot into <c>release/wwwroot</c>, and the deploy step pushes that folder to gh-pages verbatim -- so
+    /// a file under lib/ is DEPLOYED whether or not a browser ever asks for it. This repository carried 8.5 MB
+    /// of Bootstrap, of which one 232 KB stylesheet is loaded: every grid, reboot, utilities and RTL variant,
+    /// six JavaScript bundles the page has never referenced, and a source map for each. All of it published,
+    /// none of it fetched.</para>
+    /// <para><b>A source map is allowed beside the file it maps.</b> bootstrap.min.css ends with a
+    /// <c>sourceMappingURL</c> comment, so dropping its map would 404 in anyone's devtools, and editing a
+    /// vendored minified file to remove the comment is worse than keeping the map.</para>
+    /// <para><b>Why it is phrased against index.html and not a file list.</b> A list would have to be edited
+    /// in step with the page and would rot the moment a library was swapped; asking the page what it loads
+    /// cannot. Adding a library therefore needs no change here -- referencing it is enough -- while dropping
+    /// a reference and leaving the files behind fails.</para>
+    /// </remarks>
+    [Fact]
+    public void NothingIsVendoredThatIndexHtmlDoesNotLoad()
+    {
+        var lib = WebRoot.SiblingPath("MovieLibrary.Web", "wwwroot", "lib");
+        var page = WebRoot.Read("wwwroot", "index.html");
+
+        var vendored = Directory.EnumerateFiles(lib, "*", SearchOption.AllDirectories)
+            .Select(f => Path.GetRelativePath(lib, f).Replace(Path.DirectorySeparatorChar, '/'))
+            .OrderBy(f => f, StringComparer.Ordinal)
+            .ToList();
+
+        // Rule T1. An empty lib/ would loop over nothing and pass, and "we vendor nothing" is a different
+        // claim from "we vendor only what we load": the one file the page does load is named.
+        Assert.Contains("bootstrap/dist/css/bootstrap.min.css", vendored, StringComparer.Ordinal);
+        Assert.Contains("lib/bootstrap/dist/css/bootstrap.min.css", page, StringComparison.Ordinal);
+
+        var unused = vendored
+            .Where(f => !page.Contains("lib/" + f, StringComparison.Ordinal))
+            .Where(f => !(f.EndsWith(".map", StringComparison.Ordinal)
+                          && page.Contains("lib/" + f[..^4], StringComparison.Ordinal)))
+            .ToList();
+
+        Assert.True(unused.Count == 0,
+            $"{unused.Count} vendored file(s) under wwwroot/lib are not loaded by index.html and not a source "
+            + "map of a file that is. dotnet publish copies all of wwwroot and the deploy pushes it to "
+            + "gh-pages, so each of these is deployed and never fetched. Delete them, or reference them: "
+            + string.Join(", ", unused));
     }
 }
