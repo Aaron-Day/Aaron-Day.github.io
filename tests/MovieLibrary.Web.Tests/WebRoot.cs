@@ -55,7 +55,7 @@ internal static class WebRoot
     /// </summary>
     public static IEnumerable<string> EditorFiles(params string[] patterns)
     {
-        var root = Path.Combine(Solution.Value, "src", "MovieLibrary.Web.Editor");
+        var root = EditorRoot.Value;
         return patterns
             .SelectMany(p => Directory.EnumerateFiles(root, p, SearchOption.AllDirectories))
             .Where(f => !Segments(f).Contains("obj") && !Segments(f).Contains("bin"))
@@ -63,6 +63,8 @@ internal static class WebRoot
             .OrderBy(f => f, StringComparer.OrdinalIgnoreCase)
             .ToList();
     }
+
+    private static readonly Lazy<string> EditorRoot = new(() => Path.Combine(Solution.Value, "src", "MovieLibrary.Web.Editor"));
 
     /// <summary>The prefix an editor file's path carries in <see cref="FilesWithEditor"/>, so a failure names its project.</summary>
     public const string EditorPrefix = "MovieLibrary.Web.Editor/";
@@ -76,7 +78,7 @@ internal static class WebRoot
     public static IEnumerable<(string Path, string Text)> FilesWithEditor(params string[] patterns) =>
         Files(patterns)
             .Concat(EditorFiles(patterns).Select(f =>
-                (EditorPrefix + Path.GetRelativePath(Path.Combine(Solution.Value, "src", "MovieLibrary.Web.Editor"), f)
+                (EditorPrefix + Path.GetRelativePath(EditorRoot.Value, f)
                                     .Replace(Path.DirectorySeparatorChar, '/'),
                  File.ReadAllText(f))))
             .ToList();

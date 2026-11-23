@@ -49,7 +49,8 @@ public class SourceContractTests
     /// <para>
     /// T1: a glob that stopped matching would loop over nothing and pass, so the subject count has a floor
     /// and the two newest files are named. Every hand-written .razor is failable here -- there is no
-    /// carve-out -- so the floor is the whole set: nine today, and later tasks only add.
+    /// carve-out -- so the floor is the whole set: fourteen today (ten in the web project, four in the editor), and later
+    /// tasks only add.
     /// </para>
     /// </remarks>
     [Fact]
@@ -69,8 +70,8 @@ public class SourceContractTests
         Assert.Contains("Components/PosterTile.razor", paths);
         Assert.Contains("Components/PosterGrid.razor", paths);
         Assert.Contains("Components/FacetPanel.razor", paths);
-        Assert.Contains("MovieLibrary.Web.Editor/Pages/RecordEditor.razor", paths);
-        Assert.Contains("MovieLibrary.Web.Editor/Components/RecordForm.razor", paths);
+        Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);
+        Assert.Contains(WebRoot.EditorPrefix + "Components/RecordForm.razor", paths);
 
         foreach (var (path, text) in files)
         {
@@ -175,7 +176,7 @@ public class SourceContractTests
             + "(ten in the web project, four in the editor); fewer means WebRoot.FilesWithEditor stopped "
             + "finding them.");
         Assert.Contains("Layout/MainLayout.razor", files.Select(f => f.Path));
-        Assert.Contains("MovieLibrary.Web.Editor/Pages/RecordEditor.razor", files.Select(f => f.Path));
+        Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", files.Select(f => f.Path));
 
         foreach (var (path, text) in files)
         {
@@ -213,8 +214,8 @@ public class SourceContractTests
         var paths = files.Select(f => f.Path).ToList();
         Assert.Contains("Services/Announcer.cs", paths);
         Assert.Contains("Pages/Movies.razor", paths);
-        Assert.Contains("MovieLibrary.Web.Editor/Pages/RecordEditor.razor", paths);
-        Assert.Contains("MovieLibrary.Web.Editor/Store/EditorState.cs", paths);
+        Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);
+        Assert.Contains(WebRoot.EditorPrefix + "Store/EditorState.cs", paths);
 
         foreach (var (path, text) in files)
             Assert.DoesNotMatch(@"Alert\([^;]*\);\s*throw\b", text);
@@ -301,8 +302,17 @@ public class SourceContractTests
         var files = WebRoot.FilesWithEditor("*.cs", "*.razor").ToList();
 
         // T1: a walk that stopped matching would find no caller at all, and "exactly one" would then fail on
-        // the wrong side. The service itself is named so that the subject set is known to include it.
+        // the wrong side. The service itself is named so that the subject set is known to include it, and
+        // so is an editor file, because the walk was widened to the editor and a floor of its own says so.
+        // Counted: 14 .razor files plus the .cs files of both projects. The floor is the measured
+        // total.
         Assert.Contains("Services/QueryState.cs", files.Select(f => f.Path));
+        Assert.Contains(WebRoot.EditorPrefix + "Store/EditorState.cs", files.Select(f => f.Path));
+        Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", files.Select(f => f.Path));
+        Assert.True(files.Count >= 33,
+            "This rule walked " + files.Count + " source files for a NavigateTo( caller. thirty-three were counted "
+            + "across the web and editor projects. Fewer means WebRoot.FilesWithEditor stopped finding "
+            + "files, and a caller added in the missing ones would never be seen.");
 
         var callers = files.Where(f => f.Text.Contains("NavigateTo(", StringComparison.Ordinal)).ToList();
 
@@ -375,8 +385,10 @@ public class SourceContractTests
         // T1: the count is of what the rule can actually fail on, which is every .razor file except the one
         // carve-out. A discovery walk that stopped matching would otherwise loop over nothing and pass.
         //
-        // EIGHT, counted rather than guessed: App, Layout/NavMenu, Layout/RouteAnnouncer, Pages/Movies,
-        // Pages/NotFound, _Imports and, since Task 6, Components/PosterTile and Components/PosterGrid.
+        // THIRTEEN, counted rather than guessed. Nine in the web project: App, Layout/NavMenu,
+        // Layout/RouteAnnouncer, Pages/Movies, Pages/NotFound, _Imports, Components/PosterTile,
+        // Components/PosterGrid and Components/FacetPanel. Four in the editor: Pages/RecordEditor,
+        // Components/RecordForm, Components/Worklist and _Imports.
         // _Imports is in the count because the rule can genuinely fail on it -- this is a text scan, and a
         // status role typed into it would be found and reported like any other. The floor was 4 when there
         // were six, which let two components fall out of WebRoot.Files before the rule noticed: the T1
@@ -403,8 +415,8 @@ public class SourceContractTests
         Assert.Contains("Components/PosterGrid.razor", paths);
         Assert.Contains("Components/FacetPanel.razor", paths);
         Assert.Contains("Pages/Movies.razor", paths);
-        Assert.Contains("MovieLibrary.Web.Editor/Pages/RecordEditor.razor", paths);
-        Assert.Contains("MovieLibrary.Web.Editor/Components/RecordForm.razor", paths);
+        Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);
+        Assert.Contains(WebRoot.EditorPrefix + "Components/RecordForm.razor", paths);
 
         foreach (var (path, text) in failable)
             Assert.True(LiveRegionMarkers(text).Count == 0,
@@ -497,9 +509,9 @@ public class SourceContractTests
         Assert.Contains(files, f => f.Path == "wwwroot/index.html");
         Assert.Contains(files, f => f.Path == "Program.cs");
         Assert.Contains(files, f => f.Path == "Pages/Movies.razor");
-        Assert.Contains(files, f => f.Path == "MovieLibrary.Web.Editor/Store/LocalDirectory.cs");
+        Assert.Contains(files, f => f.Path == WebRoot.EditorPrefix + "Store/LocalDirectory.cs");
 
-        Assert.True(files.Count >= 34,
+        Assert.True(files.Count >= 33,
             $"This rule found {files.Count} hand-written source file(s). There are thirty-four - "
             + "thirty-three .razor and .cs files across the web and editor projects, plus index.html - so "
             + "fewer means the glob stopped finding them and the loop below passes over nothing.");

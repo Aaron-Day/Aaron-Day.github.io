@@ -115,11 +115,16 @@ public sealed class EditorShellTests
     public void NoFileInTheEditorDeclaresALiveRegionOrNavigates()
     {
         // The same rules SourceContractTests applies to MovieLibrary.Web, applied to the new project, because
-        // the editor "is exempt from nothing". Task 6 folds this into the real contract walk; this is the floor
-        // that stops the first file breaking it.
+        // the editor "is exempt from nothing". SourceContractTests now walks the editor's .razor files too
+        // (WebRoot.FilesWithEditor), so this is not the only thing holding them. It stays because it is
+        // not subsumed: it also covers the editor's .cs files, and it checks role="status" and the Core
+        // band literals, which the contract walk does not.
         var files = WebRoot.EditorFiles("*.razor", "*.cs").ToList();
 
-        Assert.NotEmpty(files);
+        Assert.True(files.Count >= 14,
+            "This rule found " + files.Count + " editor source files. Fourteen were counted when it was "
+            + "written: four .razor and ten .cs. Fewer means the glob stopped finding them, not that the "
+            + "editor shrank, and a rule that loops over nothing passes without checking anything.");
 
         foreach (var file in files)
         {

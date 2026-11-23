@@ -101,8 +101,8 @@ public class StyleContractTests
     /// would reject correct CSS, which is rule T5's failure.
     /// </para>
     /// <para>
-    /// T1: the only assertion is inside the loop, so the discovered set has a floor and all four sheets
-    /// are named.
+    /// T1: the only assertion is inside the loop, so the discovered set has a floor and six of the eight
+    /// sheets are named (the four web sheets that carry layout or tiles, and both editor sheets).
     /// </para>
     /// </remarks>
     [Fact]
@@ -121,8 +121,8 @@ public class StyleContractTests
         Assert.Contains("Layout/NavMenu.razor.css", names);
         Assert.Contains("Components/PosterTile.razor.css", names);
         Assert.Contains("Components/PosterGrid.razor.css", names);
-        Assert.Contains("MovieLibrary.Web.Editor/Components/RecordForm.razor.css", names);
-        Assert.Contains("MovieLibrary.Web.Editor/Components/Worklist.razor.css", names);
+        Assert.Contains(WebRoot.EditorPrefix + "Components/RecordForm.razor.css", names);
+        Assert.Contains(WebRoot.EditorPrefix + "Components/Worklist.razor.css", names);
 
         foreach (var (path, text) in sheets)
             Assert.True(!Regex.IsMatch(text, @"\d(vh|dvh|svh|lvh)\b"),
@@ -326,8 +326,8 @@ public class StyleContractTests
         Assert.Contains("Components/PosterGrid.razor.css", names);
         Assert.Contains("Layout/MainLayout.razor.css", names);
         Assert.Contains("Layout/NavMenu.razor.css", names);
-        Assert.Contains("MovieLibrary.Web.Editor/Components/RecordForm.razor.css", names);
-        Assert.Contains("MovieLibrary.Web.Editor/Components/Worklist.razor.css", names);
+        Assert.Contains(WebRoot.EditorPrefix + "Components/RecordForm.razor.css", names);
+        Assert.Contains(WebRoot.EditorPrefix + "Components/Worklist.razor.css", names);
 
         var appGuards = SelectorsRedeclaredUnderReduce(AppCss);
         var all = sheets
@@ -845,15 +845,20 @@ public class StyleContractTests
 
         // Rule T1, and by name rather than by count: the three queries this project has are each pinned,
         // so one of them being deleted or rewritten shows up here instead of quietly shrinking the set the
-        // loop below walks. The exact strings also record that all three ask about the available WIDTH or
-        // the pointer, which is the point - none of them can be satisfied or unsatisfied by a rotation.
+        // loop below walks. The exact strings also record what each one asks about: the available WIDTH
+        // (min-width, max-width), the POINTER (hover: hover) or the colour MODE (forced-colors: active).
+        // None of those is satisfied or unsatisfied by a rotation, which is the point; the rule below is
+        // about the one query that would be, and it is correct on all of them.
         Assert.Contains(queries, q => q.Query == "@media (hover: hover)");
+        Assert.Contains(queries, q => q.Query == "@media (forced-colors: active)");
         Assert.Contains(queries, q => q.Query == "@media (min-width: 48rem)");
         Assert.Contains(queries, q => q.Query == "@media (max-width: 22.5rem)");
+        Assert.Contains(queries, q => q.Path.StartsWith(WebRoot.EditorPrefix, StringComparison.Ordinal));
 
-        Assert.True(queries.Count >= 3,
-            $"This rule found {queries.Count} media query/queries outside comments. There are three, and "
-            + "later tasks only add. Fewer means the discovery stopped working and the loop below passes "
+        Assert.True(queries.Count >= 11,
+            $"This rule found {queries.Count} media queries outside comments. There are eleven across "
+            + "app.css and the component sheets of both projects (three of them in the editor), and later "
+            + "tasks only add. Fewer means the discovery stopped working and the loop below passes "
             + "over nothing. Found: " + string.Join("; ", queries.Select(q => q.Path + ": " + q.Query)));
 
         foreach (var query in queries)
