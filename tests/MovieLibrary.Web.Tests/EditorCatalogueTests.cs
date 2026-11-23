@@ -324,4 +324,73 @@ public sealed class EditorCatalogueTests
         Assert.Null(state.Rows.Single(r => r.Movie.I == 999).Entry);
         Assert.Equal(KeyB, Assert.Single(state.Unplaceable).IdentityKey);
     }
+
+    /// <summary>
+    /// Pass 3's pool is ONE Apple row's own published records, and this construction is why. The owner
+    /// corrected the first film's runtime from 139 to 119 and has not rebuilt: pass 1 misses that record
+    /// because a matched published key is {id}-{runtime} and ANY runtime edit moves it, and pass 2 misses
+    /// because the bundle's identity key hashed the Apple row and not the film. Tied on the runtime alone over
+    /// the whole catalogue, the one published record left at 119 minutes was another film entirely -- so it
+    /// took this slot, wore the Corrected badge, pre-filled id 550, and a save on it would have written over
+    /// the bundle's real correction and reported a success. Nothing said so, because the slot was claimed.
+    /// </summary>
+    [Fact]
+    public async Task APublishedRecordOfAnotherRowIsNeverBoundToABundleSlotThatMerelySharesItsRuntime()
+    {
+        const string row = "Fight Club / Se7en";
+        var bundle = new FilmEntry
+        {
+            IdentityKey = KeyB,
+            Records = [new RecordOverride(TmdbId: 550, Runtime: 119), new RecordOverride(TmdbId: 807, Runtime: 127)],
+        };
+
+        var state = await Load(
+            [Film(550, row, 139, 0.5, "David Fincher"), Film(807, row, 127, 0.5, "David Fincher"),
+             Film(9552, "The Exorcist", 119, 0.5, "William Friedkin")],
+            StoreOf(bundle));
+
+        var stranger = state.Rows.Single(r => r.Movie.I == 9552);
+        Assert.Null(stranger.Entry);
+        Assert.False(stranger.Corrected);
+
+        // The construction, pinned: the sibling whose published key did not move IS bound, and the slot whose
+        // runtime the owner corrected is the one left over.
+        Assert.Equal(KeyB, state.Rows.Single(r => r.Movie.I == 807).Entry?.IdentityKey);
+        Assert.Null(state.Rows.Single(r => r.Movie.I == 550).Entry);
+
+        // And the correction nobody could place is NAMED, rather than claimed by a film it never came from.
+        Assert.Equal(KeyB, Assert.Single(state.Unplaceable).IdentityKey);
+    }
+
+    /// <summary>
+    /// And the narrowed pool still binds the case pass 3 exists for. The owner gave the first film of this
+    /// bundle a new id and has not rebuilt, so its published key moved and the runtime it states is all that is
+    /// left to tie it; a stranger published at the same runtime makes that tie ambiguous over the whole
+    /// catalogue, which is the ordinary case and not the exotic one -- a runtime no other record in the library
+    /// shares is rare. Narrowed to the records the Apple row itself published, named by the sibling pass 1
+    /// placed, the tie is unique again and the correction is found.
+    /// </summary>
+    [Fact]
+    public async Task ABundleSlotWhoseIdMovedIsBoundThroughASiblingEvenWhenAStrangerSharesItsRuntime()
+    {
+        const string row = "Fight Club / Se7en";
+        var bundle = new FilmEntry
+        {
+            IdentityKey = KeyB,
+            Records = [new RecordOverride(TmdbId: 550, Runtime: 139), new RecordOverride(TmdbId: 807, Runtime: 127)],
+        };
+
+        var state = await Load(
+            [Film(901, row, 139, 0.5, "David Fincher"), Film(807, row, 127, 0.5, "David Fincher"),
+             Film(9552, "The Exorcist", 139, 0.5, "William Friedkin")],
+            StoreOf(bundle));
+
+        var moved = state.Rows.Single(r => r.Movie.I == 901);
+        Assert.Equal(KeyB, moved.Entry?.IdentityKey);
+        Assert.Equal(1, moved.Position);
+        Assert.True(moved.Corrected);
+
+        Assert.Null(state.Rows.Single(r => r.Movie.I == 9552).Entry);
+        Assert.Empty(state.Unplaceable);
+    }
 }

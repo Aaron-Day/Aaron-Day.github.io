@@ -391,7 +391,15 @@
 
         try
         {
-            var (next, entry, removed) = Place(s.Draft, row, draft);
+            var (next, entry, removed, problem) = Place(s.Draft, row, draft);
+
+            // A correction that cannot be represented: reported and nothing written. Place's own remarks say
+            // why the binder abstaining upstream is not enough to make this safe.
+            if (problem is not null)
+            {
+                Report(problem);
+                return;
+            }
 
             // THE CHECK BEFORE THE SAVE, and it throws before anything leaves the page: the file is read back
             // through the same reader the next build will use.
@@ -441,10 +449,22 @@
     /// the form alone writes one record where there were four: three siblings silently deleted, the note
     /// nulled, and a file that still validates and publishes one film where four were (C6).
     /// </remarks>
-    private static (StoreDraft Next, FilmEntry? Entry, bool Removed) Place(
+    private static (StoreDraft Next, FilmEntry? Entry, bool Removed, string? Problem) Place(
         StoreDraft draft, WorklistRow row, RecordDraft form)
     {
         var existing = draft.Film(row.IdentityKey);
+
+        // ABSTAINING UPSTREAM DOES NOT MAKE THIS SAVE SAFE, which is why the guard is here and not in the
+        // binder. A row nothing could bind still carries a key -- the one it recomputes for ITSELF -- and
+        // position 1, and a bundle record whose runtime is the Apple row's own publishes a record that
+        // recomputes the ENTRY's own key. So both rows of such a bundle arrive here carrying that key at
+        // position 1, under a blank form with no badge, and the first save replaced Records[0] of an entry it
+        // was never bound to and promised the next build would apply it. Where the row carries no entry and
+        // one is already filed under its key, no position is provable and the correction is not
+        // representable: it is REPORTED and nothing is written, the same answer the runtime-only-into-a-bundle
+        // case gets -- in the reader's own words there, in ours here, because no reader is reached.
+        if (row.Entry is null && existing is not null)
+            return (draft, null, false, NotRepresentableSentence(row.IdentityKey));
 
         // A record that overrides nothing goes, rather than being written as a line that says nothing -- and
         // the judgment ignores the runtime THE SAVE writes, which goes on every record whether or not it was
@@ -454,7 +474,7 @@
         // runtime-only record is placed and the reader refuses it in its own words, which is the honest
         // answer: a correction that cannot be represented is reported and not guessed at.
         if (form.OverridesNothing && (existing is null || existing.Records.Count <= 1))
-            return (draft.Without(row.IdentityKey), null, true);
+            return (draft.Without(row.IdentityKey), null, true, null);
 
         var record = form.Build(row.Movie.Rt);
         var records = existing?.Records.ToList() ?? [];
@@ -470,8 +490,26 @@
             ? new FilmEntry { IdentityKey = row.IdentityKey, Sheet = EchoOf(row.Movie), Records = records }
             : existing with { Records = records };
 
-        return (draft.With(entry), entry, false);
+        return (draft.With(entry), entry, false, null);
     }
+
+    /// <summary>
+    /// What a save is told when the row's own key already belongs to an entry nothing bound this row to. Says
+    /// what the owner can do about it, because there is nothing this page can do about it.
+    /// </summary>
+    /// <remarks>
+    /// Two ways in, one answer. The entry covers several films of one sheet row and nothing published says
+    /// which of its records this film is; or every record of it is already claimed by another row. Either way a
+    /// position would have to be guessed, and a guessed position writes a correction over another film. Giving
+    /// those records runtimes that differ is what lets the next load tell them apart, and a rebuild re-aligns
+    /// the published keys so the first pass finds them outright.
+    /// </remarks>
+    internal static string NotRepresentableSentence(string identityKey) =>
+        $"Nothing was written. The record store already holds the entry {identityKey}, which is the key this "
+        + "record computes for itself, and nothing in the published catalogue says which of that entry's "
+        + "records this one is -- so saving here would write over a correction that belongs to another film. "
+        + $"Open {RecordStoreReader.DefaultFileName} and give that entry's records runtimes that tell them "
+        + "apart, or rebuild the catalogue so this correction can be found again.";
 
     /// <summary>The sheet's three columns as a human reads them, for finding this entry in the file by eye.</summary>
     /// <remarks>

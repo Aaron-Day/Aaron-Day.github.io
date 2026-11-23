@@ -875,9 +875,20 @@ public sealed class EditorSaveTests
     [Fact]
     public async Task ASaveAgainstAMultiRecordEntryWhoseIdChangedDoesNotCreateASecondEntry()
     {
+        // THE SHAPE record-store.example.json DOCUMENTS FOR A BUNDLE: every record states its own display
+        // title, because the Apple row's title describes none of the films in it, and the pipeline publishes
+        // that title in place of the row's. Before the pass-3 pool was narrowed this fixture gave the two
+        // records no titles at all while the two published records carried different ones -- a pairing the
+        // pipeline cannot produce, since a record that overrides no title publishes row.Title like its
+        // siblings. What the test is about is unchanged: the second record's id has moved since the build, so
+        // its published key no longer finds it.
         var moved = Expanded() with
         {
-            Records = [new RecordOverride(TmdbId: 550, Runtime: 139), new RecordOverride(TmdbId: 808, Runtime: 127)],
+            Records =
+            [
+                new RecordOverride(TmdbId: 550, Runtime: 139, Titles: new TitleSet("Fight Club", null)),
+                new RecordOverride(TmdbId: 808, Runtime: 127, Titles: new TitleSet("Se7en", null)),
+            ],
         };
 
         await using var page = new Page(StoreOf(moved), movies: [Fight, Seven]);
@@ -893,8 +904,9 @@ public sealed class EditorSaveTests
         var film = Assert.Single(Parse(Assert.Single(page.Written)).Films);
         Assert.Equal(moved.IdentityKey, film.IdentityKey);
         Assert.Equal(2, film.Records.Count);
-        Assert.Equal(new RecordOverride(TmdbId: 550, Runtime: 139), film.Records[0]);
+        Assert.Equal(moved.Records[0], film.Records[0]);
         Assert.Equal(809, film.Records[1].TmdbId);
+        Assert.Equal("Se7en", film.Records[1].Titles?.Display);
         Assert.Equal(moved.Note, film.Note);
     }
 
@@ -941,5 +953,55 @@ public sealed class EditorSaveTests
 
         Assert.Equal("", cut.Find($"[id='row-{FightKey}-tmdb-id']").GetAttribute("value"));
         Assert.Null(cut.Find($"[id='row-{FightKey}-tmdb-id-override']").GetAttribute("checked"));
+    }
+
+    /// <summary>
+    /// Abstaining upstream does not make the save safe, and this is the write hazard on its own. The bundle's
+    /// two records both carry the Apple row's own runtime and both of their ids have moved since the build, so
+    /// pass 1 misses both, pass 2 abstains because two slots are free, and pass 3 abstains because each record
+    /// fits both films. Both rows are then unbound -- a blank form and no badge -- and an unbound row still
+    /// carries a key and a position: the key it recomputes for ITSELF, which for a record published at the
+    /// row's own runtime is the entry's own key, and position 1. So a save on either row replaced
+    /// Records[0] of a bundle it was never bound to, and the page promised the next build would apply it.
+    /// </summary>
+    [Fact]
+    public async Task ASaveOnARowNothingBoundToTheEntryUnderItsKeyWritesNothingAndSaysWhat()
+    {
+        const string row = "Fight Club / Se7en";
+        var first = EditorCatalogueTests.Film(701, row, 139, 0.5, "David Fincher");
+        var second = EditorCatalogueTests.Film(702, row, 139, 0.5, "David Fincher");
+
+        var bundle = new FilmEntry
+        {
+            IdentityKey = RecordLink.IdentityKeyOf(first),
+            Sheet = new SheetEcho(row, "2:19:00", "David Fincher"),
+            Note = "Bundle: the sheet row holds both films.",
+            Records = [new RecordOverride(TmdbId: 901, Runtime: 139), new RecordOverride(TmdbId: 902, Runtime: 139)],
+        };
+
+        // The construction: BOTH published records recompute the entry's own key, because the runtime each
+        // record asserts is the Apple row's own and the pipeline publishes the row's title and directors.
+        Assert.Equal(bundle.IdentityKey, RecordLink.IdentityKeyOf(second));
+
+        await using var page = new Page(StoreOf(bundle), movies: [first, second]);
+        page.Writes.SetResult(true);
+        var cut = page.Open(first.K);
+
+        // Unbound, so there is nothing to pre-fill from and no badge: exactly the state in which the old save
+        // looked like a first correction of a fresh row.
+        Assert.Equal("", cut.Find($"[id='row-{first.K}-tmdb-id']").GetAttribute("value"));
+
+        Tick(cut, "tmdb-id", key: first.K);
+        Fill(cut, "tmdb-id", "550", key: first.K);
+        Press(cut);
+
+        Assert.Empty(page.Written);
+
+        // Named, and with something he can do about it: a correction that cannot be represented is reported,
+        // never guessed at.
+        var said = Outcome(cut);
+        Assert.Contains(bundle.IdentityKey, said, StringComparison.Ordinal);
+        Assert.Contains(RecordStoreReader.DefaultFileName, said, StringComparison.Ordinal);
+        Assert.DoesNotContain("Saved", said, StringComparison.Ordinal);
     }
 }

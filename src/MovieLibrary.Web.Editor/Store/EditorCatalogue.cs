@@ -126,16 +126,39 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
     /// <c>over?.Runtime ?? sheetRuntime</c>, and the reader makes a runtime compulsory on every record of an
     /// expanded entry. Paired one-to-one and only where it is unambiguous in both directions; anything else
     /// stays unbound, because binding the wrong slot writes a correction over another film.</para>
+    /// <para><b>And the pool is one Apple row's own published records, never the catalogue.</b> One integer
+    /// cannot carry a catalogue-wide tie, in either direction. Few records in a real library have a runtime no
+    /// other record shares, so over the whole catalogue the one-to-one test almost always fails and the pass
+    /// does nothing at all; and the runtime is also one of only the two fields that MOVE a matched published
+    /// key, so the moment the owner corrects a runtime -- a first-class action of this very editor -- pass 1
+    /// misses that record and the tie points at whatever else happens to run that long. That is how a film
+    /// from another row took a bundle's slot, wore the Corrected badge, pre-filled the bundle's id and had a
+    /// save written into the bundle's record, with Unplaceable saying nothing because the slot was claimed.
+    /// So the pool for one entry's free slots is the published records that can have come from the same sheet
+    /// row as a slot of that entry pass 1 or pass 2 already placed (<see cref="CouldShareTheRow"/>), and where
+    /// no slot of it is placed the entry abstains. Within one Apple row the per-film runtimes are nearly
+    /// always distinct, which is the denominator that matters. The sheet ECHO is deliberately not used
+    /// instead: it is documented as never consumed for matching, and a placed sibling's published fields need
+    /// no such exception.</para>
+    /// <para><b>Abstaining is not the same as being safe to save, and that guard is not here.</b> An unbound
+    /// row still carries the key it recomputes for itself and position 1, so the save side has to refuse a
+    /// correction whose position nothing proved -- see Place in RecordEditor.razor.</para>
     /// </remarks>
     private static Dictionary<string, RecordSlot> Bind(StoreDraft draft, IReadOnlyList<MovieRecord> movies)
     {
         var bound = new Dictionary<string, RecordSlot>(StringComparer.Ordinal);
         var taken = new HashSet<RecordSlot>();
 
+        // The other direction, which pass 3 needs: WHICH published record a slot was placed from. A placed
+        // sibling's published title and directors are the only account of the sheet row that does not depend
+        // on the echo, and pass 3's pool is built from them.
+        var placed = new Dictionary<RecordSlot, MovieRecord>();
+
         void Take(MovieRecord movie, RecordSlot slot)
         {
             bound[movie.K] = slot;
             taken.Add(slot);
+            placed[slot] = movie;
         }
 
         var byPublishedKey = RecordsByPublishedKey(draft);
@@ -160,24 +183,46 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
             if (!bound.ContainsKey(movie.K) && Rehomed(movie, byHash, byIdentityKey, taken) is { } slot)
                 Take(movie, slot);
 
-        var orphans = draft.Store.Films
+        // One list per multi-record entry that still has a free slot, holding ALL of its slots: pass 3 reads
+        // the placed ones to find out whose sheet row the free ones belong to.
+        var bundles = draft.Store.Films
             .Where(f => f.Records.Count > 1)
-            .SelectMany(f => Enumerable.Range(1, f.Records.Count).Select(p => new RecordSlot(f, p)))
-            .Where(s => !taken.Contains(s))
+            .Select(f => Enumerable.Range(1, f.Records.Count).Select(p => new RecordSlot(f, p)).ToList())
+            .Where(slots => slots.Any(s => !taken.Contains(s)))
             .ToList();
 
-        if (orphans.Count == 0) return bound;
+        if (bundles.Count == 0) return bound;
 
         var loose = movies.Where(m => !bound.ContainsKey(m.K)).ToList();
 
-        foreach (var slot in orphans)
-        {
-            var fits = loose.Where(m => !bound.ContainsKey(m.K) && Fits(Record(slot), m)).ToList();
+        // Every (slot, published record) pairing the narrowed pool allows at all, built in one pass and only
+        // then filtered, so no slot's outcome depends on the order the entries happen to come in.
+        var pairs = new List<(RecordSlot Slot, MovieRecord Movie)>();
 
-            // One slot, one record, in both directions. A published record that two leftover slots both fit
-            // says nothing about which of them it is, so it binds to neither and both are named instead.
-            if (fits.Count == 1 && orphans.Count(o => Fits(Record(o), fits[0])) == 1) Take(fits[0], slot);
+        foreach (var slots in bundles)
+        {
+            // WHOSE SHEET ROW THIS IS, said by a slot of this very entry that pass 1 or pass 2 already placed.
+            // No placed slot means nothing names the row, so nothing is guessed: the entry's free slots stay
+            // unbound and the entry is named by Unplaceable instead.
+            var siblings = slots.Where(placed.ContainsKey).Select(s => placed[s]).ToList();
+            if (siblings.Count == 0) continue;
+
+            foreach (var slot in slots.Where(s => !taken.Contains(s)))
+            {
+                var record = Record(slot);
+
+                pairs.AddRange(loose
+                    .Where(m => CouldShareTheRow(siblings, record, m) && Fits(record, m))
+                    .Select(m => (slot, m)));
+            }
         }
+
+        // One slot, one record, in both directions. A published record that two leftover slots both fit says
+        // nothing about which of them it is, so it binds to neither and both are named instead.
+        foreach (var (slot, movie) in pairs)
+            if (pairs.Count(p => p.Slot.Equals(slot)) == 1
+                && pairs.Count(p => string.Equals(p.Movie.K, movie.K, StringComparison.Ordinal)) == 1)
+                Take(movie, slot);
 
         return bound;
     }
@@ -215,11 +260,42 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
     /// (<c>over?.Runtime ?? sheetRuntime</c>). The display title is a veto and not a second tie: an expanded
     /// entry's records carry their own titles -- the Apple row's describes none of its films -- but a record
     /// that states none contradicts nothing.
+    /// <para><b>This is the tie WITHIN one Apple row and never across the catalogue.</b> It is asked only of
+    /// the pool <see cref="CouldShareTheRow"/> allows, which is why one integer is enough: two films of one
+    /// purchase nearly always run different lengths, while two records of the whole library very often do
+    /// not -- and the runtime is a field this editor can itself move, which breaks the tie exactly where it
+    /// would otherwise be needed.</para>
     /// </remarks>
     private static bool Fits(RecordOverride record, MovieRecord movie) =>
         record.Runtime == movie.Rt
         && (record.Titles?.Display is null
             || string.Equals(record.Titles.Display, movie.T, StringComparison.Ordinal));
+
+    /// <summary>
+    /// Whether <paramref name="candidate"/> can have come from the same sheet row as the records already
+    /// placed in one entry, which is the only pool pass 3 is allowed to draw from.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>The directors are the row's.</b> MoviePipeline publishes
+    /// <c>Dir: row.Directors.Split('&amp;', ...)</c> on every record of the row, so a placed sibling's
+    /// directors ARE the row's. A record whose entry overrides Directors publishes different ones and is
+    /// excluded here, which loses a binding and can never make a wrong one -- the direction to fail in.</para>
+    /// <para><b>The title is the row's only where the record does not replace it.</b> The pipeline publishes
+    /// <c>T: row.Title</c>, and its Apply replaces that with the record's own <c>Titles.Display</c> wherever
+    /// the record states one -- which record-store.example.json's own three-film bundle does for every record,
+    /// because the Apple row's title describes none of the films in it. So a candidate is in the pool when it
+    /// publishes a placed sibling's title (neither of them replaced it) or the title THIS record states (this
+    /// one did). <see cref="Fits"/> then asks that second equality again as its veto; here it is what lets the
+    /// record into the pool at all.</para>
+    /// <para><b>Both halves are required.</b> On their own the directors would admit another film by the same
+    /// director that happens to run as long, and the title would admit another cut of the same film; together
+    /// with <see cref="Fits"/>'s runtime they are three fields where the pass once had one.</para>
+    /// </remarks>
+    private static bool CouldShareTheRow(
+        IReadOnlyList<MovieRecord> placed, RecordOverride record, MovieRecord candidate) =>
+        placed.Any(p => p.Dir.SequenceEqual(candidate.Dir, StringComparer.Ordinal))
+        && (placed.Any(p => string.Equals(p.T, candidate.T, StringComparison.Ordinal))
+            || string.Equals(record.Titles?.Display, candidate.T, StringComparison.Ordinal));
 
     /// <summary>The hash and the position an unmatched key carries, or null for a matched key.</summary>
     private static (string Hash, int Position)? Unmatched(string key)
