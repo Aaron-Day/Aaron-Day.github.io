@@ -307,7 +307,10 @@ public sealed class ExtraRow(int id)
 /// bare minute count, so a record saved without a runtime becomes unplaceable. The reader's own test for an
 /// empty record is <c>record == new RecordOverride()</c> (RecordStoreReader.cs:245), and an always-written
 /// runtime means no record can ever equal that -- hence <see cref="OverridesNothing"/> compares the built record
-/// with its runtime put back to null, which is the reader's test and nothing like it.</para>
+/// with the runtime the SAVE supplied taken back out and the one he TYPED left in. It is
+/// <see cref="FieldDraft.AsNumber"/> that tells the two apart: null exactly when the box is empty. Nulling the
+/// runtime unconditionally would read a runtime-only correction as no correction at all -- and the entry that
+/// already held one would be deleted, with the page calling it a success.</para>
 /// </remarks>
 public sealed class RecordDraft
 {
@@ -343,11 +346,19 @@ public sealed class RecordDraft
         // M3's exact sentence, because the unchecked state does NOT mean "the pipeline decides" here: the
         // record's own published runtime is written either way, and a sentence saying otherwise would be a lie
         // about the file. See the remarks above for why it has to be written.
+        //
+        // AND THE PRE-FILL TICKS THE BOX ONLY FOR A RUNTIME HE CHOSE. Every record the editor writes carries a
+        // runtime, so a saved runtime EQUAL to the record's own published minutes is the one the save supplied
+        // and says nothing: ticking the box for it would show an override he never made, and -- because
+        // OverridesNothing keeps a typed runtime -- would keep an entry alive that corrects nothing. A saved
+        // runtime that DIFFERS is a correction, and it is pre-filled so that reopening shows what was saved.
+        // The field writes movie.Rt back either way, so nothing is dropped by leaving the box clear.
         Runtime = FieldDraft.Integer(
             "runtime",
             $"Not overridden — saved as {Spell(movie.Rt)} minutes so this record can still be found after the "
             + "next build.",
-            IntegerRule.Runtime, saved?.Runtime, unit: " minutes", label: "Runtime in minutes");
+            IntegerRule.Runtime, saved?.Runtime == movie.Rt ? null : saved?.Runtime,
+            unit: " minutes", label: "Runtime in minutes");
 
         Directors = FieldDraft.Text(
             "directors",
@@ -553,9 +564,10 @@ public sealed class RecordDraft
 
     /// <summary>
     /// Whether this draft corrects nothing, which is the page's cue to remove the entry rather than write one
-    /// that says nothing. The reader's own test, with the always-written runtime put back (M3).
+    /// that says nothing. The reader's own test, with the runtime the save writes for him taken back out and
+    /// the runtime he typed left in (M3): a runtime-only override is a correction the reader keeps.
     /// </summary>
-    public bool OverridesNothing => (Build(1) with { Runtime = null }) == new RecordOverride();
+    public bool OverridesNothing => (Build(1) with { Runtime = Runtime.AsNumber }) == new RecordOverride();
 
     private static string Spell(int value) => value.ToString(CultureInfo.InvariantCulture);
 }

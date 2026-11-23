@@ -314,4 +314,72 @@ public sealed class FieldDraftTests
         Assert.True(draft.Undecided);
         Assert.Equal([807, 808], draft.Build(139).Candidates!);
     }
+
+    /// <summary>
+    /// A runtime he typed himself is a correction like any other, and the reader keeps it: a record whose only
+    /// override is a runtime is one <c>RecordStoreReader.RequireUsableRecord</c> accepts and
+    /// <c>MoviePipeline.ResolveAsync</c> reads, for the card's runtime AND for the published key.
+    /// </summary>
+    /// <remarks>
+    /// M3 asks for the runtime the save writes AUTOMATICALLY to be ignored, and that is the direction the
+    /// first test here pins. Nulling the runtime unconditionally also ignores the one he typed, so a save
+    /// whose only correction is the runtime reads as correcting nothing: with no existing entry the page tells
+    /// him he made no correction, and with one it DELETES the entry and calls that a success.
+    /// </remarks>
+    [Fact]
+    public void ARuntimeHeTypedIsACorrectionAndNotNothing()
+    {
+        var draft = RecordDraft.For(Film(runtime: 126));
+
+        // M3's own direction, kept: the runtime the save writes for him is not a correction.
+        Assert.True(draft.OverridesNothing);
+        Assert.Equal(126, draft.Build(126).Runtime);
+
+        draft.Runtime.Overridden = true;
+        draft.Runtime.Typed = "119";
+
+        Assert.False(draft.OverridesNothing);
+        Assert.Equal(119, draft.Build(126).Runtime);
+        Assert.Null(draft.ProblemFor(draft.Runtime));
+
+        // The reader's own answer, asserted rather than assumed: the record it would keep is the record the
+        // form just judged empty.
+        var entry = new FilmEntry { IdentityKey = Key, Records = [draft.Build(126)] };
+        var json = StoreDraft.From(RecordStore.Empty with { Films = [entry] }).ToValidatedJson();
+        var back = RecordStoreReader.Read(json, "the store this test just wrote");
+
+        Assert.Equal(119, Assert.Single(Assert.Single(back.Films).Records).Runtime);
+    }
+
+    /// <summary>
+    /// The other side of the same fact, and the reason the judgment can trust the field at all: a saved runtime
+    /// equal to the record's own published minutes is the one the SAVE wrote, so the box opens clear and the
+    /// entry it sits in is still an entry that corrects nothing.
+    /// </summary>
+    [Fact]
+    public void ASavedRuntimeThatIsOnlyWhatTheSaveWritesIsNotShownAsAnOverride()
+    {
+        var passed = RecordDraft.For(Film(runtime: 139), new RecordOverride(TmdbId: 550, Runtime: 139));
+
+        Assert.False(passed.Runtime.Overridden);
+        Assert.Equal(string.Empty, passed.Runtime.Typed);
+
+        // Clearing the one real correction empties the record, so the page removes the entry rather than
+        // leaving a line in a committed file that says only what the next build would have said anyway.
+        passed.TmdbId.Overridden = false;
+        passed.TmdbId.Typed = string.Empty;
+        Assert.True(passed.OverridesNothing);
+        Assert.Equal(139, passed.Build(139).Runtime);
+
+        // A runtime that differs IS his, so reopening shows it (A31) and it keeps the entry alive on its own.
+        var chosen = RecordDraft.For(Film(runtime: 139), new RecordOverride(TmdbId: 550, Runtime: 119));
+
+        Assert.True(chosen.Runtime.Overridden);
+        Assert.Equal("119", chosen.Runtime.Typed);
+
+        chosen.TmdbId.Overridden = false;
+        chosen.TmdbId.Typed = string.Empty;
+        Assert.False(chosen.OverridesNothing);
+        Assert.Equal(119, chosen.Build(139).Runtime);
+    }
 }

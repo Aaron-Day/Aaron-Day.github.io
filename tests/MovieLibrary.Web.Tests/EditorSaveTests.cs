@@ -630,4 +630,63 @@ public sealed class EditorSaveTests
         Assert.NotEmpty(cut.FindAll("button.record-folder"));
         Assert.Equal(button, ((ElementReference)page.Focuses[^1].Arguments[0]!).Id);
     }
+
+    /// <summary>A record the pipeline matched to nothing, whose published key is the hash of its row's key.</summary>
+    private static MovieRecord Unplaced => EditorCatalogueTests.Film(0, "Fight Club", 139, 0.1, "David Fincher");
+
+    /// <summary>
+    /// A runtime he typed is a correction, and a save that judges it "no correction at all" either tells him
+    /// he made none or deletes the one the file already held -- and calls the deletion a success.
+    /// </summary>
+    /// <remarks>
+    /// A runtime-only override is first class: RecordStoreReader.RequireUsableRecord accepts it, and
+    /// MoviePipeline.ResolveAsync reads over?.Runtime for the card's runtime AND for the published key. The
+    /// runtime the save writes for him is the one M3 excludes from the judgment; this one he typed.
+    /// </remarks>
+    [Fact]
+    public async Task ARuntimeTheOwnerTypedIsWrittenAndNeverReadAsNoCorrectionAtAll()
+    {
+        await using (var fresh = new Page())
+        {
+            fresh.Writes.SetResult(true);
+            var cut = fresh.Open();
+
+            Tick(cut, "runtime");
+            Fill(cut, "runtime", "119");
+            Press(cut);
+
+            var film = Assert.Single(Parse(Assert.Single(fresh.Written)).Films);
+            Assert.Equal(119, Assert.Single(film.Records).Runtime);
+            Assert.NotEqual(RecordEditor.NothingToSaveSentence, Outcome(cut));
+        }
+
+        // The worse half: an entry the file already holds, whose one correction is a runtime of its own -- 119
+        // against the 139 the catalogue publishes. Judged empty, it is REMOVED, so the runtime he is typing now
+        // and the one he saved last week go together, and the page calls it a success.
+        var held = new FilmEntry
+        {
+            IdentityKey = RecordLink.IdentityKeyOf(Unplaced),
+            Sheet = new SheetEcho("Fight Club", "2:19:00", "David Fincher"),
+            Note = "The disc runs shorter than the Apple entry.",
+            Records = [new RecordOverride(Runtime: 119)],
+        };
+
+        await using (var holding = new Page(StoreOf(held), movies: [Unplaced]))
+        {
+            holding.Writes.SetResult(true);
+            var cut = holding.Open(Unplaced.K);
+
+            // Reopening shows what was saved (A31), and only because 119 is not what the save would have
+            // written for him: the box is ticked for a runtime he chose and clear for one he did not.
+            Assert.Equal("119", cut.Find($"[id='row-{Unplaced.K}-runtime']").GetAttribute("value"));
+            Assert.NotNull(cut.Find($"[id='row-{Unplaced.K}-runtime-override']").GetAttribute("checked"));
+
+            Fill(cut, "runtime", "120", key: Unplaced.K);
+            Press(cut);
+
+            var film = Assert.Single(Parse(Assert.Single(holding.Written)).Films);
+            Assert.Equal(120, Assert.Single(film.Records).Runtime);
+            Assert.Equal(held.Note, film.Note);
+        }
+    }
 }

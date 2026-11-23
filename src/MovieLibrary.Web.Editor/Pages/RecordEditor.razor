@@ -382,8 +382,8 @@
         var existing = draft.Film(row.IdentityKey);
 
         // A record that overrides nothing goes, rather than being written as a line that says nothing -- and
-        // the judgment ignores the runtime, which is written on every record whether or not it was corrected
-        // (M3), so a record that is only a runtime is still a record that corrects nothing.
+        // the judgment ignores the runtime THE SAVE writes, which goes on every record whether or not it was
+        // corrected (M3). A runtime he typed himself is a correction like any other and keeps the entry.
         // ONLY where the entry holds that one record. An entry with siblings cannot lose one without
         // renumbering the others -- an unmatched record's published key carries its position -- so there the
         // runtime-only record is placed and the reader refuses it in its own words, which is the honest
