@@ -109,17 +109,20 @@ public class StyleContractTests
     public void NoViewportUnitSitsBelowBodyInAnyComponentStylesheet()
     {
         // A 100dvh on .page would make #app a full viewport tall and push the attribution footer a screenful down.
-        var sheets = WebRoot.Files("*.razor.css").ToList();
+        var sheets = WebRoot.FilesWithEditor("*.razor.css").ToList();
         var names = sheets.Select(s => s.Path).ToList();
 
-        Assert.True(sheets.Count >= 4,
-            "This rule found " + sheets.Count + " component stylesheets. There are four; fewer means "
-            + "WebRoot.Files stopped finding them, and a rule with no subjects passes over nothing.");
+        Assert.True(sheets.Count >= 8,
+            "This rule found " + sheets.Count + " component stylesheets. There are eight: six in the web "
+            + "project and two in the editor. Fewer means WebRoot.FilesWithEditor stopped finding them, "
+            + "and a rule with no subjects passes over nothing.");
 
         Assert.Contains("Layout/MainLayout.razor.css", names);
         Assert.Contains("Layout/NavMenu.razor.css", names);
         Assert.Contains("Components/PosterTile.razor.css", names);
         Assert.Contains("Components/PosterGrid.razor.css", names);
+        Assert.Contains("MovieLibrary.Web.Editor/Components/RecordForm.razor.css", names);
+        Assert.Contains("MovieLibrary.Web.Editor/Components/Worklist.razor.css", names);
 
         foreach (var (path, text) in sheets)
             Assert.True(!Regex.IsMatch(text, @"\d(vh|dvh|svh|lvh)\b"),
@@ -233,9 +236,9 @@ public class StyleContractTests
         // that stopped matching cannot leave this one quietly looping over an empty set.
         var sheets = Stylesheets();
 
-        Assert.True(sheets.Count >= 5,
-            "This rule found " + sheets.Count + " stylesheets. There are five: app.css and four scoped "
-            + "component sheets. Fewer means the glob stopped finding them.");
+        Assert.True(sheets.Count >= 9,
+            "This rule found " + sheets.Count + " stylesheets. There are nine: app.css, six scoped "
+            + "component sheets in the web project and two in the editor. Fewer means the glob stopped finding them.");
 
         foreach (var (path, text) in sheets)
             Assert.True(!Regex.IsMatch(WithoutComments(text), @"text-decoration\s*:\s*none"),
@@ -323,6 +326,8 @@ public class StyleContractTests
         Assert.Contains("Components/PosterGrid.razor.css", names);
         Assert.Contains("Layout/MainLayout.razor.css", names);
         Assert.Contains("Layout/NavMenu.razor.css", names);
+        Assert.Contains("MovieLibrary.Web.Editor/Components/RecordForm.razor.css", names);
+        Assert.Contains("MovieLibrary.Web.Editor/Components/Worklist.razor.css", names);
 
         var appGuards = SelectorsRedeclaredUnderReduce(AppCss);
         var all = sheets
@@ -357,7 +362,7 @@ public class StyleContractTests
     /// under wwwroot/lib, which this project does not write and must not be held to.
     /// </remarks>
     private static IReadOnlyList<(string Path, string Text)> Stylesheets() =>
-        WebRoot.Files("app.css", "*.razor.css").ToList();
+        WebRoot.FilesWithEditor("app.css", "*.razor.css").ToList();
 
     /// <remarks>
     /// The motion rule driven against CSS written here, good and bad, because app.css contains one guard
@@ -580,9 +585,9 @@ public class StyleContractTests
     {
         var sheets = Stylesheets();
 
-        Assert.True(sheets.Count >= 5,
-            "This rule found " + sheets.Count + " stylesheets. There are five: app.css and four scoped "
-            + "component sheets. Fewer means the glob stopped finding them and a missing suppression could "
+        Assert.True(sheets.Count >= 9,
+            "This rule found " + sheets.Count + " stylesheets. There are nine: app.css, six scoped "
+            + "component sheets in the web project and two in the editor. Fewer means the glob stopped finding them and a missing suppression could "
             + "sit in one of the sheets this never read.");
 
         var suppressions = sheets
@@ -656,9 +661,9 @@ public class StyleContractTests
     {
         var sheets = Stylesheets();
 
-        Assert.True(sheets.Count >= 5,
-            "This rule found " + sheets.Count + " stylesheets. There are five: app.css and four scoped "
-            + "component sheets. Fewer means the glob stopped finding them.");
+        Assert.True(sheets.Count >= 9,
+            "This rule found " + sheets.Count + " stylesheets. There are nine: app.css, six scoped "
+            + "component sheets in the web project and two in the editor. Fewer means the glob stopped finding them.");
 
         var borders = sheets
             .SelectMany(sheet => Declarations(WithoutComments(sheet.Text))

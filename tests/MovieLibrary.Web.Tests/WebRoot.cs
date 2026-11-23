@@ -64,6 +64,23 @@ internal static class WebRoot
             .ToList();
     }
 
+    /// <summary>The prefix an editor file's path carries in <see cref="FilesWithEditor"/>, so a failure names its project.</summary>
+    public const string EditorPrefix = "MovieLibrary.Web.Editor/";
+
+    /// <summary>
+    /// <see cref="Files"/> plus the same patterns under the editor project, in the same (path, text) shape.
+    /// Web paths stay relative to the web project and editor paths carry <see cref="EditorPrefix"/>, so a
+    /// failing rule says which project to open. EditorFiles is a different shape on purpose (bare absolute
+    /// paths, for the tests that open the files themselves) and keeps its callers.
+    /// </summary>
+    public static IEnumerable<(string Path, string Text)> FilesWithEditor(params string[] patterns) =>
+        Files(patterns)
+            .Concat(EditorFiles(patterns).Select(f =>
+                (EditorPrefix + Path.GetRelativePath(Path.Combine(Solution.Value, "src", "MovieLibrary.Web.Editor"), f)
+                                    .Replace(Path.DirectorySeparatorChar, '/'),
+                 File.ReadAllText(f))))
+            .ToList();
+
     private static string[] Segments(string path) =>
         path.Split(new[] { Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar });
 }
