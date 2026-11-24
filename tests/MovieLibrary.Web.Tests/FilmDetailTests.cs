@@ -431,6 +431,34 @@ public class FilmDetailTests : BunitContext
     }
 
     /// <remarks>
+    /// THE SCORE IS THE SAME STRING IN EVERY CULTURE, and this is the test the deploy needed and did not
+    /// have. The page used <c>Mc.ToString("P0")</c>, which asks the culture for its per-cent pattern, and the
+    /// patterns differ by a space: en-US gives "95%", the INVARIANT culture and French and German give
+    /// "95 %". A machine with no LANG set runs under the invariant culture, which is what a GitHub Actions
+    /// runner is, so three tests that pinned the string a Windows box renders passed here and failed the
+    /// deploy. The fix writes the sign itself and leaves the NUMBER to the culture, where digits and any
+    /// grouping belong.
+    /// <para>
+    /// The empty name is the invariant culture, and it is the case that actually broke: the others are here
+    /// because a reader whose browser is French is a real reader, and this site is lang="en" throughout, so a
+    /// French space before the sign would be one French convention among English words.
+    /// </para>
+    /// </remarks>
+    [Theory]
+    [InlineData("")]
+    [InlineData("en-US")]
+    [InlineData("fr-FR")]
+    [InlineData("de-DE")]
+    public void TheMatchScoreReadsTheSameWhateverCultureTheBrowserIsIn(string culture)
+    {
+        using var scope = new CultureScope(culture);
+
+        var (cut, _) = RenderFilm();
+
+        Assert.Equal("Matched, 95%", Facts(cut, 0).Single(f => f.Term == "Match").Value);
+    }
+
+    /// <remarks>
     /// The owner's own fields are a CONTRACT: a key added by hand to the record store survives every build
     /// in between with no code change, and nothing in this project interprets the contents. So this asserts
     /// only the things the page decides -- the order, and which rows exist.

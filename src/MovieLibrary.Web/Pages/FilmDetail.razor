@@ -383,8 +383,17 @@
     /// make "no Match row" mean both "matched well" and "a field this page forgot".
     /// <para>
     /// An unmatched record's score is 0 and means nothing -- the pipeline writes 0 whatever the best
-    /// candidate scored -- so it is not shown. The percentage is formatted in the browser's culture, as
-    /// every other number on this site is.
+    /// candidate scored -- so it is not shown.
+    /// </para>
+    /// <para>
+    /// <b>The per-cent sign is written here and NOT by the "P0" format, which is not portable.</b> "P0" asks
+    /// the culture for its per-cent pattern, and the two patterns differ by a space: en-US gives "95%" while
+    /// the INVARIANT culture - and French, and German - give "95 %". A machine with no LANG set runs under
+    /// the invariant culture, which is what a GitHub Actions runner does, so the page rendered "Matched, 95 %"
+    /// there and "Matched, 95%" on a developer's Windows box. Three tests pinned the string they saw locally
+    /// and failed the deploy. The number is still formatted by the culture, because digits and any grouping
+    /// are the culture's business; the sign is the site's, and this site is lang="en" throughout, so a French
+    /// space in front of it would be one French convention among English words.
     /// </para>
     /// </remarks>
     private static string MatchSentence(MovieRecord f)
@@ -393,7 +402,7 @@
 
         if (band == Confidence.Unmatched) return ConfidenceBand.BadgeFor(band)!;
 
-        var score = f.Mc.ToString("P0");
+        var score = Math.Round(f.Mc * 100).ToString("0", CultureInfo.CurrentCulture) + "%";
 
         return band == Confidence.Confident ? "Matched, " + score : ConfidenceBand.BadgeFor(band) + ", " + score;
     }
