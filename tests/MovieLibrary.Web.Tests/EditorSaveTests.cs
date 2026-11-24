@@ -564,6 +564,58 @@ public sealed class EditorSaveTests
     }
 
     /// <summary>
+    /// Every write records the key the PREVIOUS build published for this record, taken from the row's own
+    /// <c>MovieRecord.K</c>. It is the one member of a correction that is evidence rather than a decision, and
+    /// it is what lets the binding find this record again once this very save has moved the key it derives.
+    /// </summary>
+    [Fact]
+    public async Task ASaveRecordsTheKeyTheBuildPublishedForTheRecord()
+    {
+        await using var page = new Page(movies: [Fight, Seven]);
+        page.Writes.SetResult(true);
+        var cut = page.Open();
+        Tick(cut, "tmdb-id");
+        Fill(cut, "tmdb-id", "807");
+        Press(cut);
+
+        var written = Assert.Single(page.Written);
+
+        // The row's published key, and NOT "807-139", which is what this save makes the record derive.
+        Assert.Contains("\"publishedKey\": \"" + FightKey + "\"", written, StringComparison.Ordinal);
+        Assert.DoesNotContain("\"publishedKey\": \"807-139\"", written, StringComparison.Ordinal);
+    }
+
+    /// <summary>
+    /// The recorded key is REFRESHED on a later write, so it keeps naming what the build most recently
+    /// published rather than the key that was current when the entry was first written.
+    /// </summary>
+    [Fact]
+    public async Task ASecondSaveRefreshesTheRecordedKeyToWhatIsPublishedNow()
+    {
+        // The entry's recorded key is stale: it names a key no published record has any more.
+        var entry = new FilmEntry
+        {
+            IdentityKey = RecordLink.IdentityKeyOf(Fight),
+            Records = [new RecordOverride(TmdbId: 550, Runtime: 139, PublishedKey: "550-999")],
+        };
+
+        await using var page = new Page(RecordStoreReader.Write(RecordStore.Empty with { Films = [entry] }),
+                                        movies: [Fight, Seven]);
+        page.Writes.SetResult(true);
+        var cut = page.Open();
+
+        // A real change, so this save writes and the refresh costs nothing it has not already spent.
+        Tick(cut, "year");
+        Fill(cut, "year", "1999");
+        Press(cut);
+
+        var written = Assert.Single(page.Written);
+
+        Assert.Contains("\"publishedKey\": \"" + FightKey + "\"", written, StringComparison.Ordinal);
+        Assert.DoesNotContain("550-999", written, StringComparison.Ordinal);
+    }
+
+    /// <summary>
     /// The sentence half of C5, and the defect the owner found on his first real save: he ticked the
     /// candidates box instead of the id box, the save reported "the next build will apply it", and he
     /// repeated that back as his account of what he had done. A candidates-only save applies NOTHING -- the

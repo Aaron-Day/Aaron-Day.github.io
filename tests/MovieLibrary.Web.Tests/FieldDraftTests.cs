@@ -44,7 +44,7 @@ public sealed class FieldDraftTests
 
         // The entry simply omits the member, which is what keeps the store sparse: about 1,456 films are
         // expected to need no entry at all.
-        var record = draft.Build(139);
+        var record = draft.Build(139, null);
         Assert.Null(record.TmdbId);
         Assert.Null(record.Titles);
         Assert.Null(record.Extra);
@@ -59,7 +59,7 @@ public sealed class FieldDraftTests
 
         Assert.Equal(string.Empty, draft.AppleGenre.AsText);
         Assert.NotNull(draft.AppleGenre.AsText);
-        Assert.Equal(string.Empty, draft.Build(139).AppleGenre);
+        Assert.Equal(string.Empty, draft.Build(139, null).AppleGenre);
         Assert.False(draft.OverridesNothing);
         Assert.Null(draft.ProblemFor(draft.AppleGenre));
     }
@@ -130,7 +130,7 @@ public sealed class FieldDraftTests
         Assert.Equal(
             "Not overridden — saved as 139 minutes so this record can still be found after the next build.",
             draft.Runtime.Describe());
-        Assert.Equal(139, draft.Build(139).Runtime);
+        Assert.Equal(139, draft.Build(139, null).Runtime);
     }
 
     [Fact]
@@ -162,7 +162,7 @@ public sealed class FieldDraftTests
 
         Assert.Null(draft.ProblemFor(draft.TmdbId));
         Assert.Equal(550, draft.TmdbId.AsNumber);
-        Assert.Equal(550, draft.Build(139).TmdbId);
+        Assert.Equal(550, draft.Build(139, null).TmdbId);
     }
 
     [Fact]
@@ -213,7 +213,7 @@ public sealed class FieldDraftTests
 
         Assert.Null(draft.ProblemFor(draft.Candidates));
         Assert.Equal([807, 808], draft.Candidates.AsList!);
-        Assert.Equal([807, 808], draft.Build(139).Candidates!);
+        Assert.Equal([807, 808], draft.Build(139, null).Candidates!);
 
         draft.Candidates.Typed = "807, 807";
         Assert.Equal(
@@ -238,7 +238,7 @@ public sealed class FieldDraftTests
         // in or press Remove would be an error he did not make.
         Assert.True(row.Empty);
         Assert.Null(draft.ProblemFor(row));
-        Assert.Null(draft.Build(139).Extra);
+        Assert.Null(draft.Build(139, null).Extra);
 
         row.Value = "1996";
         Assert.Equal(
@@ -249,7 +249,7 @@ public sealed class FieldDraftTests
 
         row.Name = "first release";
         Assert.Null(draft.ProblemFor(row));
-        Assert.Equal(new Dictionary<string, string> { ["first release"] = "1996" }, draft.Build(139).Extra);
+        Assert.Equal(new Dictionary<string, string> { ["first release"] = "1996" }, draft.Build(139, null).Extra);
     }
 
     [Fact]
@@ -312,7 +312,7 @@ public sealed class FieldDraftTests
         draft.Choose(null);
         Assert.False(draft.AnyProblem);
         Assert.True(draft.Undecided);
-        Assert.Equal([807, 808], draft.Build(139).Candidates!);
+        Assert.Equal([807, 808], draft.Build(139, null).Candidates!);
     }
 
     /// <summary>
@@ -333,18 +333,18 @@ public sealed class FieldDraftTests
 
         // M3's own direction, kept: the runtime the save writes for him is not a correction.
         Assert.True(draft.OverridesNothing);
-        Assert.Equal(126, draft.Build(126).Runtime);
+        Assert.Equal(126, draft.Build(126, null).Runtime);
 
         draft.Runtime.Overridden = true;
         draft.Runtime.Typed = "119";
 
         Assert.False(draft.OverridesNothing);
-        Assert.Equal(119, draft.Build(126).Runtime);
+        Assert.Equal(119, draft.Build(126, null).Runtime);
         Assert.Null(draft.ProblemFor(draft.Runtime));
 
         // The reader's own answer, asserted rather than assumed: the record it would keep is the record the
         // form just judged empty.
-        var entry = new FilmEntry { IdentityKey = Key, Records = [draft.Build(126)] };
+        var entry = new FilmEntry { IdentityKey = Key, Records = [draft.Build(126, null)] };
         var json = StoreDraft.From(RecordStore.Empty with { Films = [entry] }).ToValidatedJson();
         var back = RecordStoreReader.Read(json, "the store this test just wrote");
 
@@ -369,7 +369,7 @@ public sealed class FieldDraftTests
         passed.TmdbId.Overridden = false;
         passed.TmdbId.Typed = string.Empty;
         Assert.True(passed.OverridesNothing);
-        Assert.Equal(139, passed.Build(139).Runtime);
+        Assert.Equal(139, passed.Build(139, null).Runtime);
 
         // A runtime that differs IS his, so reopening shows it (A31) and it keeps the entry alive on its own.
         var chosen = RecordDraft.For(Film(runtime: 139), new RecordOverride(TmdbId: 550, Runtime: 119));
@@ -380,7 +380,7 @@ public sealed class FieldDraftTests
         chosen.TmdbId.Overridden = false;
         chosen.TmdbId.Typed = string.Empty;
         Assert.False(chosen.OverridesNothing);
-        Assert.Equal(119, chosen.Build(139).Runtime);
+        Assert.Equal(119, chosen.Build(139, null).Runtime);
     }
 
     /// <summary>
@@ -402,13 +402,13 @@ public sealed class FieldDraftTests
 
         // The value is still WRITTEN -- it has to be, or the record becomes unplaceable -- and it is still a
         // legal thing to have typed. What it is not is a correction.
-        Assert.Equal(139, draft.Build(139).Runtime);
+        Assert.Equal(139, draft.Build(139, null).Runtime);
         Assert.Null(draft.ProblemFor(draft.Runtime));
         Assert.True(draft.OverridesNothing);
 
         // The same value, saved and read back by the pre-fill: the half that was already right, held against
         // the half that was not.
-        Assert.False(RecordDraft.For(Film(runtime: 139), draft.Build(139)).Runtime.Overridden);
+        Assert.False(RecordDraft.For(Film(runtime: 139), draft.Build(139, null)).Runtime.Overridden);
 
         // A minute either way is his, which is the direction the two tests above pin.
         draft.Runtime.Typed = "138";
@@ -434,11 +434,11 @@ public sealed class FieldDraftTests
         Assert.False(draft.OverridesNothing);
 
         // And the record is still written with a runtime, so nothing becomes unplaceable by surviving.
-        Assert.Equal(119, draft.Build(119).Runtime);
+        Assert.Equal(119, draft.Build(119, null).Runtime);
 
         // The two halves judge one value, as m1 requires: the row's own 139 corrects nothing, typed or saved.
         draft.Runtime.Typed = "139";
         Assert.True(draft.OverridesNothing);
-        Assert.False(RecordDraft.For(Film(runtime: 119), draft.Build(119), rowMinutes: 139).Runtime.Overridden);
+        Assert.False(RecordDraft.For(Film(runtime: 119), draft.Build(119, null), rowMinutes: 139).Runtime.Overridden);
     }
 }

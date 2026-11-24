@@ -74,7 +74,8 @@ public sealed class RecordEditorTests
         source.Movies = [Uncertain];
         cut.Find("button.try-again").Click();
         cut.WaitForState(() => cut.FindAll("ul.worklist").Count == 1);
-        Assert.Equal(RecordEditor.NoStoreReadSentence, cut.Find(".catalog-state p").TextContent.Trim());
+        Assert.Equal(RecordEditor.NoStoreReadWithFolder("MovieLibrary"),
+                     cut.Find(".catalog-state p").TextContent.Trim());
 
         var focuses = context.JSInterop.Invocations
             .Where(i => i.Identifier == "movieLibrary.focusIfUnmoved")
@@ -100,6 +101,87 @@ public sealed class RecordEditorTests
         Assert.Empty(cut.FindAll("search"));
     }
 
+    /// <summary>
+    /// The arm that fixes the defect: no folder granted, so the page names the control that CAN grant one and
+    /// says to come back. Every session starts here -- a stored handle is not a stored grant, so status()
+    /// answers null until permission is re-granted -- and the sentence this replaced told the owner to "try
+    /// again once the repository folder is available" beside a button that could never make it so.
+    /// </summary>
+    [Fact]
+    public async Task WithNoFolderGrantedThePageNamesTheControlThatCanGrantOneInsteadOfTheRetry()
+    {
+        var (context, source) = Page(storeText: null, folder: null);
+        await using var _ = context;
+        source.Movies = [Uncertain];
+
+        var cut = EditorPage.Render(context);
+        cut.WaitForState(() => cut.FindAll("ul.worklist").Count == 1);
+
+        var sentence = cut.Find(".catalog-state p").TextContent.Trim();
+
+        Assert.Equal(RecordEditor.NoStoreReadNoFolderSentence, sentence, StringComparer.Ordinal);
+
+        // IT NAMES THE FORM'S OWN BUTTON, verbatim, and the name is read off that button rather than retyped:
+        // the string lives in two files and this is what notices them drifting apart.
+        cut.Find("button.worklist-row").Click();
+        var granter = cut.Find("button.record-folder");
+        Assert.Contains(granter.TextContent.Trim(), sentence, StringComparison.Ordinal);
+
+        // The retry still renders -- the API is there, so a grant can still happen -- but it is no longer the
+        // whole instruction.
+        Assert.Single(cut.FindAll("button.try-again"));
+    }
+
+    /// <summary>
+    /// A retry that SUCCEEDS removes the button the owner was standing on, and must therefore move focus
+    /// outright. Nothing scheduled the unmoved helper on this path, so without the move focus lands on the body
+    /// and the next Tab restarts above the skip link.
+    /// </summary>
+    /// <remarks>
+    /// This branch was unreachable until the store could read on a retry, which is why it shipped unproven:
+    /// NeedsAttention is true for every Store other than Read, so every other retry takes the other path.
+    /// </remarks>
+    [Fact]
+    public async Task ARetryThatSucceedsMovesFocusOutrightBecauseTheButtonItWasOnIsGone()
+    {
+        var entry = new FilmEntry
+        {
+            IdentityKey = RecordLink.IdentityKeyOf(Uncertain),
+            Records = [new RecordOverride(TmdbId: 807, Runtime: Uncertain.Rt)],
+        };
+
+        var (context, source) = Page(
+            storeText: RecordStoreReader.Write(RecordStore.Empty with { Films = [entry] }));
+        await using var _ = context;
+        context.JSInterop.SetupVoid("Blazor._internal.domWrapper.focus", _ => true).SetVoidResult();
+
+        // Fail first, so there is a retry to press at all.
+        source.State = CatalogueState.Failed;
+        var cut = EditorPage.Render(context);
+        cut.WaitForState(() => cut.Find(".catalog-state p").TextContent.Contains("could not be loaded"));
+
+        source.State = CatalogueState.Ready;
+        source.Movies = [Uncertain];
+        cut.Find("button.try-again").Click();
+        cut.WaitForState(() => cut.FindAll("ul.worklist").Count == 1);
+
+        // Landed healthy: the store read, so the retry is gone and nothing needs attention.
+        Assert.Equal($"The library holds 1 records.", cut.Find(".catalog-state p").TextContent.Trim());
+        Assert.Empty(cut.FindAll("button.try-again"));
+
+        // THE LAST focus call, and not merely some call: focusIfUnmoved legitimately ran on the FIRST render,
+        // where the catalogue had failed and the retry button was still there to stand on. What this asserts is
+        // that the RETRY's move was the outright one -- the control that had focus no longer exists, so there is
+        // nothing to ask the unmoved helper about.
+        var focusCalls = context.JSInterop.Invocations
+            .Select(i => i.Identifier)
+            .Where(id => id is "Blazor._internal.domWrapper.focus" or "movieLibrary.focusIfUnmoved")
+            .ToList();
+
+        Assert.Equal("Blazor._internal.domWrapper.focus", focusCalls[^1], StringComparer.Ordinal);
+        Assert.Equal("movieLibrary.focusIfUnmoved", focusCalls[0], StringComparer.Ordinal);
+    }
+
     [Fact]
     public async Task WhenNoStoreWasReadItSaysSoOffersTheRetryAndMakesNoStrongerClaim()
     {
@@ -111,7 +193,11 @@ public sealed class RecordEditorTests
         cut.WaitForState(() => cut.FindAll("ul.worklist").Count == 1);
 
         var sentence = cut.Find(".catalog-state p").TextContent;
-        Assert.Equal(RecordEditor.NoStoreReadSentence, sentence.Trim());
+
+        // THE FOLDER-GRANTED ARM: this harness answers "MovieLibrary" to status, so the retry can actually
+        // succeed and the retry is the whole instruction. The no-folder arm names the form's own grant button
+        // instead, because there the retry is a loop.
+        Assert.Equal(RecordEditor.NoStoreReadWithFolder("MovieLibrary"), sentence.Trim());
         Assert.Single(cut.FindAll("button.try-again"));
 
         // The script answers null for "absent" and for "unreadable" alike, so the page may say what was not

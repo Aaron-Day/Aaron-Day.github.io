@@ -19,9 +19,10 @@ public class IdentityKeyTests
                         Film("American Pie (Unrated)", 95, "Paul Weitz"));
 
     [Fact]
-    public void CollidingTitlesStayDistinctByRuntime()
+    public void TwoFilmsSharingATitleStayDistinct()
     {
-        // The library's two Aladdins differ by 38 minutes.
+        // The library's two Aladdins differ by 38 minutes AND by director, so this says only that
+        // they stay apart. RuntimeAloneChangesTheKey is the test that isolates runtime.
         Assert.NotEqual(Film("Aladdin", 129, "Guy Ritchie"),
                         Film("Aladdin", 91, "Ron Clements & John Musker"));
     }

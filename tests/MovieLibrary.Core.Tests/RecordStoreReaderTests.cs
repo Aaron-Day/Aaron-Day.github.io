@@ -1,3 +1,4 @@
+using System.Globalization;
 using MovieLibrary.Core.Store;
 
 namespace MovieLibrary.Core.Tests;
@@ -79,10 +80,45 @@ public class RecordStoreReaderTests
     }
 
     [Theory]
-    [InlineData("{ \"version\": 2, \"films\": [], \"series\": [] }", "version 2")]
+    [InlineData("{ \"version\": 3, \"films\": [], \"series\": [] }", "version 3")]
     [InlineData("not json at all", "could not be read")]
-    public void AStoreThatIsNotThisVersionOrNotJsonIsRejected(string json, string mustSay)
+    public void AStoreThatIsNotAReadableVersionOrNotJsonIsRejected(string json, string mustSay)
         => Assert.Contains(mustSay, Rejected(json).Message, StringComparison.OrdinalIgnoreCase);
+
+    /// <summary>
+    /// Version 1 added nothing this build cannot read: it is version 2 with <c>publishedKey</c> omitted
+    /// everywhere, which that member's own contract already allows. So it is READ, and upgraded in place --
+    /// and the upgrade is asserted, because <c>StoreDraft.From</c> refuses any version but the current one, so
+    /// a store that loaded but kept its old number would load and then be unusable by the editor.
+    /// </summary>
+    [Fact]
+    public void AVersion1StoreIsReadAndUpgradedToTheCurrentVersion()
+    {
+        var store = RecordStoreReader.Read(
+            "{ \"version\": 1, \"films\": [ { \"identityKey\": \"" + Key
+            + "\", \"records\": [ { \"tmdbId\": 807 } ] } ], \"series\": [] }", "old.json");
+
+        Assert.Equal(RecordStore.CurrentVersion, store.Version);
+        Assert.Null(Assert.Single(Assert.Single(store.Films).Records).PublishedKey);
+    }
+
+    /// <summary>
+    /// The member version 2 exists for. Round-tripped rather than merely read, because the editor rewrites the
+    /// whole file on every save: a key that reads but does not write back is a key that is lost on the next
+    /// correction, which is the exact failure the member was added to prevent.
+    /// </summary>
+    [Fact]
+    public void APublishedKeyIsReadAndSurvivesARoundTrip()
+    {
+        var store = RecordStoreReader.Read(
+            Film("[ { \"tmdbId\": 807, \"publishedKey\": \"u-01c8f4d6-1\" } ]"), "t.json");
+
+        Assert.Equal("u-01c8f4d6-1", Assert.Single(Assert.Single(store.Films).Records).PublishedKey);
+
+        var again = RecordStoreReader.Read(RecordStoreReader.Write(store), "again.json");
+
+        Assert.Equal("u-01c8f4d6-1", Assert.Single(Assert.Single(again.Films).Records).PublishedKey);
+    }
 
     [Theory]
     [InlineData("[]", "at least one record")]
@@ -228,7 +264,7 @@ public class RecordStoreReaderTests
 
     [Fact]
     public void AMissingVersionIsRejectedWithTheFixSpelledOut()
-        => Assert.Contains("Set \"version\": 1",
+        => Assert.Contains("Set \"version\": 2",
                            Rejected("{ \"films\": [], \"series\": [] }").Message, StringComparison.Ordinal);
 
     [Theory]
@@ -331,7 +367,10 @@ public class RecordStoreReaderTests
         var message = Rejected("{ not json at all").Message;
 
         Assert.Contains("test.json", message, StringComparison.Ordinal);
-        Assert.Contains("\"version\": 1", message, StringComparison.Ordinal);
+        // Read from the constant, so the next version bump fails here instead of leaving a hand-editor
+        // reading last version's shape -- which is exactly what this pass had to fix.
+        Assert.Contains("\"version\": " + RecordStore.CurrentVersion.ToString(CultureInfo.InvariantCulture),
+                        message, StringComparison.Ordinal);
         Assert.Contains("\"identityKey\"", message, StringComparison.Ordinal);
         Assert.Contains("\"records\"", message, StringComparison.Ordinal);
         Assert.Contains("\"tmdbId\"", message, StringComparison.Ordinal);
@@ -340,6 +379,8 @@ public class RecordStoreReaderTests
         // rejection that follows (spec 5.2's own "all members" block showed both until this pass).
         Assert.Contains("\"tmdbId\" or \"candidates\" but never both", message, StringComparison.Ordinal);
         Assert.Contains("\"purchaseInfo\"", message, StringComparison.Ordinal);
+        // Version 2's own member. It is the one a hand-editor should NOT write, so the message says so.
+        Assert.Contains("\"publishedKey\"", message, StringComparison.Ordinal);
         Assert.Contains("camelCase", message, StringComparison.Ordinal);
         Assert.Contains("comments and trailing commas are allowed", message, StringComparison.Ordinal);
         // The literal, not RecordStoreReader.ExampleFileName: the message is built from that constant, so
@@ -365,6 +406,7 @@ public class RecordStoreReaderTests
                                           "titles": { "display": "A Film", "sort": "Film, A" },
                                           "year": 1998, "directors": "A Director",
                                           "appleGenre": "Kids & Family", "purchaseInfo": "iTunes",
+                                          "publishedKey": "11-84",
                                           "extra": { "Purchase Date": "2019-03-14" } } ] } ],
               "series": [ { "identityKey": "ffffc50b084e2a2e3b0342fde1ea3550dfb48206",
                             "sheet": { "title": "A Show" },
@@ -378,6 +420,9 @@ public class RecordStoreReaderTests
         Assert.Equal("Film, A", film.Titles!.Sort);
         Assert.Equal("Kids & Family", film.AppleGenre);
         Assert.Equal("iTunes", film.PurchaseInfo);
+        // Version 2's own member, and the reason this test exists: the message started naming it before the
+        // file below set it, so the guard stopped covering the one member the version was added for.
+        Assert.Equal("11-84", film.PublishedKey);
         Assert.Equal([1399, 1400], Assert.Single(store.Series).Record.Candidates!);
     }
 

@@ -70,4 +70,8 @@ public class CsvParserTests
     public void PreservesCrLfInsideAQuotedField()
         => Assert.Equal("line one\r\nline two",
                         CsvParser.Parse("\"line one\r\nline two\",\"x\"\n")[0][0]);
+
+    [Fact]
+    public void RefusesANullInputByContractAndNotByDereference()
+        => Assert.Throws<ArgumentNullException>(() => CsvParser.Parse(null!));
 }

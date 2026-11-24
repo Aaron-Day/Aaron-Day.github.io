@@ -18,8 +18,10 @@
 // reason. An UNKNOWN property is still an error: a mistyped name is a correction that would
 // otherwise be dropped in silence. Every name is camelCase.
 {
-  // Required. A missing version reads as 0, which the reader refuses.
-  "version": 1,
+  // Required. A missing version reads as 0, which the reader refuses. Version 1 is still read --
+  // it is this shape with "publishedKey" omitted everywhere -- and is upgraded to 2 on load, so a
+  // file saved by the editor comes back as 2 whatever it went in as.
+  "version": 2,
 
   // One entry per SHEET ROW on the Movies tab, addressed by that row's identity key. Two entries
   // may not share a key: one row cannot have two sets of corrections.
@@ -57,7 +59,17 @@
           "purchaseInfo": "iTunes",
           // Your own fields, copied to the record key for key and value for value. Strings only,
           // and a blank name is refused, because the name is what the site would show.
-          "extra": { "Purchase Date": "2019-03-14", "Shelf": "B4" }
+          "extra": { "Purchase Date": "2019-03-14", "Shelf": "B4" },
+          // Written by the EDITOR, from the key this record had in the last movies.json it read.
+          // Leave it out when writing an entry by hand: it is evidence of what a build published,
+          // and a value you invent is worse than none. The editor fills it on the next save.
+          //
+          // It exists because a matched record's key is its id and its runtime and nothing of its
+          // row, so a key computed from this entry MOVES the moment the entry asserts an id -- and
+          // two rows that legitimately share an id at different runtimes can be made to compute
+          // each other's key by a runtime correction. This records what was, so the binding has
+          // something that does not move.
+          "publishedKey": "9000001-112"
         }
       ]
     },
@@ -87,7 +99,12 @@
       "sheet": { "title": "Hollow Moon Triple Feature", "runtime": "4:47:00", "directors": "Various" },
       "note": "Three films in one purchase.",
       "records": [
-        { "tmdbId": 9000004, "runtime": 95, "year": 1968, "titles": { "display": "Hollow Moon" } },
+        // "publishedKey" matters MOST here. A bundle record that states its own display title
+        // publishes a film whose recomputed identity key is the FILM's and not this Apple row's, so
+        // with nothing recorded, nothing binds it and a correction can be filed under a key no sheet
+        // row of this bundle computes: inert, and reported as applied.
+        { "tmdbId": 9000004, "runtime": 95, "year": 1968, "titles": { "display": "Hollow Moon" },
+          "publishedKey": "9000004-95" },
         { "tmdbId": 9000005, "runtime": 101, "year": 1971, "titles": { "display": "Hollow Moon Returns" } },
         {
           "tmdbId": 9000006,

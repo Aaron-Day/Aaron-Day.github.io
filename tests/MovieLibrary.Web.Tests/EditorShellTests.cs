@@ -86,7 +86,13 @@ public sealed class EditorShellTests
         var cut = context.Render<RecordEditor>();
 
         Assert.DoesNotContain(RecordEditor.NotLocalSentence, cut.Markup, StringComparison.Ordinal);
-        Assert.Equal(RecordEditor.NoStoreReadSentence, cut.Find(".catalog-state p").TextContent.Trim());
+        // THE API-ABSENT ARM. bUnit's loose JS answers default for "supported", so this scope is a browser with
+        // no folder picker -- where no store can ever be read and an instruction to grant a folder would be
+        // unfollowable (M9). The other two arms are exercised in RecordEditorTests, whose harness answers true.
+        Assert.Equal(RecordEditor.NoStoreReadNoApiSentence, cut.Find(".catalog-state p").TextContent.Trim());
+
+        // And no retry, because pressing it could never change this state: root needs the API.
+        Assert.Empty(cut.FindAll("button.try-again"));
     }
 
     [Fact]

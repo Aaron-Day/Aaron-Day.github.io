@@ -61,4 +61,15 @@ public class RuntimeParserTests
     [InlineData("1:2:3:4")]
     public void EpisodeMinutesRejectsUnparseableInput(string raw)
         => Assert.Throws<FormatException>(() => RuntimeParser.EpisodeMinutes(raw));
+
+    [Fact]
+    public void AFilmRuntimeWrittenAsMinutesAndSecondsSaysWhatAFilmNeeds()
+    {
+        var ex = Assert.Throws<FormatException>(() => RuntimeParser.FilmMinutes("23:04"));
+
+        // "Unparseable" was wrong about a value that parses perfectly well. The complaint is that a
+        // FILM is not mm:ss, which points at the row rather than at this parser.
+        Assert.Contains("h:mm:ss", ex.Message, StringComparison.Ordinal);
+        Assert.Contains("23:04", ex.Message, StringComparison.Ordinal);
+    }
 }

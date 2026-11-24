@@ -226,6 +226,30 @@ public sealed class FieldDraft
     /// <summary>m4's format instruction doubles as the error: the format he needs is the same either way.</summary>
     internal const string ListShape = "Separate ids with commas, for example 807, 808.";
 
+    /// <summary>
+    /// What ticking this field's override DOES, said BEFORE the press. The two override boxes in the Match
+    /// fieldset share their first word, sit one above the other and mean opposite things, and the radio chooser
+    /// that makes the exclusion structural renders only once candidates are ALREADY saved -- so on a record's
+    /// first correction this sentence is the only thing that tells them apart. SC 3.3.2, Level A.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>Its own id, not one of the two that exist.</b> Not the state sentence, which stops saying this
+    /// the moment the box is ticked -- <see cref="Describe"/> switches to "Overridden to candidates ..." -- so
+    /// the warning would vanish exactly when he is about to save; and it is ids[0] with one job (A27, M5). Not
+    /// <see cref="ListShape"/> either, because that doubles as this field's ERROR, and a consequence delivered
+    /// as an error is the wrong shape (A42).</para>
+    /// <para><b>"publish this record with no TMDB match" is deliberately the clause the outcome sentence uses
+    /// too</b> (RecordEditor.Written, n5), so what he reads before the press and what he reads after the save
+    /// are the same words and one is recognisable as the other's confirmation. It names "Override TMDB id"
+    /// verbatim rather than positionally, and carries neither band literal (M13).</para>
+    /// <para><b>Found by use, not by review.</b> The owner ticked this box meaning the one above it, on his
+    /// first real correction, in about ninety seconds. Everything that followed was a valid save.</para>
+    /// </remarks>
+    internal const string DecidesNoMatch =
+        "Ticking this box keeps a shortlist and decides nothing: the next build will publish this record with "
+        + "no TMDB match, and will not search for one. To decide the match instead, leave this box clear and "
+        + "enter the id under \"Override TMDB id\".";
+
     // NumberStyles.Integer allows surrounding space and a leading sign and nothing else, which is what is
     // wanted: " 550 " is 550 because ids get pasted out of a browser's address bar, while "1.5", "12a" and "-"
     // are refused, and "-5" parses so that the reader's own positivity rule can be the message instead of a
@@ -578,7 +602,15 @@ public sealed class RecordDraft
     /// <c>MovieRecord.Rt</c> and is used whenever the runtime field overrides nothing, so a runtime is always
     /// present: see the remarks on this type for why that is not a convenience.
     /// </summary>
-    public RecordOverride Build(int publishedMinutes) => new(
+    /// <param name="publishedKey">
+    /// The record's own <c>MovieRecord.K</c> -- the key the PREVIOUS build published for it, straight out of
+    /// movies.json. Not a form field and never typed: it is evidence of what happened, and the whole reason
+    /// the member exists is that a key derived from the store moves when a correction asserts an id.
+    /// <para>Null only from <see cref="OverridesNothing"/>, which asks what this draft CORRECTS. The key
+    /// corrects nothing, so counting it there would make every draft look like a correction and no entry
+    /// would ever be removed.</para>
+    /// </param>
+    public RecordOverride Build(int publishedMinutes, string? publishedKey) => new(
         TmdbId: TmdbId.AsNumber,
         Candidates: Candidates.AsList,
         Runtime: Runtime.AsNumber ?? publishedMinutes,
@@ -589,6 +621,7 @@ public sealed class RecordDraft
         Directors: Directors.AsText,
         AppleGenre: AppleGenre.AsText,
         PurchaseInfo: PurchaseInfo.AsText,
+        PublishedKey: publishedKey,
         Extra: ExtraRow.Map(Extras));
 
     /// <summary>
@@ -605,7 +638,7 @@ public sealed class RecordDraft
     /// measuring against <c>Rt</c> deletes the very entry that holds it.
     /// </remarks>
     public bool OverridesNothing =>
-        (Build(1) with { Runtime = Runtime.AsNumber == uncorrectedMinutes ? null : Runtime.AsNumber })
+        (Build(1, null) with { Runtime = Runtime.AsNumber == uncorrectedMinutes ? null : Runtime.AsNumber })
         == new RecordOverride();
     private static string Spell(int value) => value.ToString(CultureInfo.InvariantCulture);
 }

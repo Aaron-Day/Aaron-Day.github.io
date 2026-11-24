@@ -84,6 +84,14 @@
 
                         @if (field.Shape == FieldShape.Candidates)
                         {
+                            @* WHAT THIS BOX DECIDES, BEFORE THE PRESS, in a fourth described-by id. It has its
+                               own id on purpose: the state sentence stops saying this the moment the box is
+                               ticked, which is when it matters most, and ListShape below doubles as this
+                               field's own error and must not grow a paragraph. It comes BEFORE the format,
+                               because the format prevents a mistake this field catches and this prevents the
+                               one it cannot -- ticking the wrong box is a fully valid save. *@
+                            <p id="@IdFor(slug, "decides")" class="record-field-format">@FieldDraft.DecidesNoMatch</p>
+
                             @* The format BEFORE the attempt, in a third described-by id. *@
                             <p id="@IdFor(slug, "format")" class="record-field-format">@FieldDraft.ListShape</p>
                         }
@@ -337,7 +345,10 @@
     {
         var ids = IdFor(slug, "state");
 
-        if (field.Shape == FieldShape.Candidates) ids += " " + IdFor(slug, "format");
+        // Both of the candidates field's permanent paragraphs, in reading order: what the box decides, then the
+        // format. ids[0] stays the state sentence (A27, M5) and the error is appended after these by the caller.
+        if (field.Shape == FieldShape.Candidates)
+            ids += " " + IdFor(slug, "decides") + " " + IdFor(slug, "format");
         if (Draft.ShowProblem(field)) ids += " " + IdFor(slug, "error");
 
         return ids;

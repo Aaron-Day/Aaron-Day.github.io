@@ -261,6 +261,10 @@ public sealed class TmdbClient(
             {
                 using var req = CreateRequest(path);
                 using var res = await http.SendAsync(req, ct);
+                // Read BEFORE the success check deliberately. The bad-body tests send Retry-After
+                // on a response the parse then rejects, so the retry waits their stubbed delay
+                // instead of the real backoff. Moving this below the check reads as a tidy-up and
+                // makes those tests take 15 seconds.
                 retryAfter = res.Headers.RetryAfter?.Delta;
 
                 if (res.IsSuccessStatusCode)

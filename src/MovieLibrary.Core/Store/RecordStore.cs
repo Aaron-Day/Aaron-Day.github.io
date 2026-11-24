@@ -31,6 +31,20 @@ public sealed record SheetEcho(string Title = "", string Runtime = "", string Di
 /// the same shortlist next time. This is how ambiguity is surfaced instead of guessed.
 /// </param>
 /// <param name="Runtime">Minutes. Required on every record of an entry that holds more than one.</param>
+/// <param name="PublishedKey">
+/// The key the PREVIOUS build published for this record, as the editor read it out of <c>movies.json</c> when
+/// it bound this record and saved. Written by the editor, never by the build, and never computed forwards: it
+/// is evidence of what happened, which is exactly what the key the editor derives from the store is not.
+/// <para><b>Why a derived key is not enough.</b> A matched record publishes <c>{id}-{minutes}</c>, which holds
+/// no part of its sheet row, so a key computed from what the store says NOW moves the instant a correction
+/// asserts an id -- and two rows that legitimately share an id at different runtimes (two cuts of one film,
+/// which <c>CatalogueReconciler.RejectConflictingIds</c> keeps apart on purpose) can be made to compute each
+/// other's key by correcting a runtime. The binding then takes the stranger.</para>
+/// <para><b>Null means "not recorded yet", not "no key".</b> A version 1 file predates this member and a
+/// hand-written entry may omit it, so the binding keeps its derived-key pass as well. The stored key matches
+/// in the window before the next build runs; the derived key matches after it, when store and published output
+/// finally agree. Dropping either one re-opens the hole.</para>
+/// </param>
 public sealed record RecordOverride(
     int? TmdbId = null,
     int[]? Candidates = null,
@@ -40,6 +54,7 @@ public sealed record RecordOverride(
     string? Directors = null,
     string? AppleGenre = null,
     string? PurchaseInfo = null,
+    string? PublishedKey = null,
     Dictionary<string, string>? Extra = null);
 
 /// <summary>One sheet row on the Movies tab, and the one or more records it should publish.</summary>
@@ -86,7 +101,15 @@ public sealed record SeriesEntry
 /// </remarks>
 public sealed record RecordStore
 {
-    public const int CurrentVersion = 1;
+    /// <summary>What a save writes. A store read at an older version is upgraded to this on load.</summary>
+    public const int CurrentVersion = 2;
+
+    /// <summary>
+    /// The oldest version this build still reads. Version 1 has no <see cref="RecordOverride.PublishedKey"/>
+    /// anywhere, which is indistinguishable from version 2 with the member omitted -- so the upgrade is nothing
+    /// but the version number, and the reader does it rather than asking anyone to migrate a file by hand.
+    /// </summary>
+    public const int OldestReadableVersion = 1;
 
     /// <summary>A repository with no store, which is the normal state of a fresh clone.</summary>
     public static RecordStore Empty => new() { Version = CurrentVersion, Films = [], Series = [] };
