@@ -1,6 +1,7 @@
 using Bunit;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Web.Components;
+using MovieLibrary.Web.Models;
 
 namespace MovieLibrary.Web.Tests;
 
@@ -39,7 +40,7 @@ public class PosterTileTests : BunitContext
             null, null, [], null, null, 0d);
 
     private IRenderedComponent<PosterTile> RenderTile(MovieRecord film) =>
-        Render<PosterTile>(p => p.Add(x => x.Movie, film));
+        Render<PosterTile>(p => p.Add(x => x.Tile, TileView.ForFilm(film)));
 
     [Theory]
     [InlineData("Se7en")]
@@ -96,7 +97,7 @@ public class PosterTileTests : BunitContext
     [InlineData(1353, "22h 33m")] // the longest published row, and never "1,353"
     public void TheRuntimeReadsAsHoursAndMinutesAndIsNeverGroupFormatted(int minutes, string expected)
     {
-        var cut = Render<PosterTile>(p => p.Add(x => x.Movie, Film() with { Rt = minutes }));
+        var cut = Render<PosterTile>(p => p.Add(x => x.Tile, TileView.ForFilm(Film() with { Rt = minutes })));
 
         Assert.Equal(expected, cut.Find(".tile-runtime").TextContent);
     }
@@ -242,7 +243,7 @@ public class PosterTileTests : BunitContext
     public void ActionSlotContentIsASiblingOfTheTextBlockAndNeverInsideIt()
     {
         var cut = Render<PosterTile>(p => p
-            .Add(x => x.Movie, Film())
+            .Add(x => x.Tile, TileView.ForFilm(Film()))
             .Add(x => x.ActionSlot, "<button type=\"button\" id=\"fav\">Favourite</button>"));
 
         var slotted = cut.Find("#fav");

@@ -5,6 +5,7 @@ using Bunit;
 using MovieLibrary.Core.Matching;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Web.Components;
+using MovieLibrary.Web.Models;
 
 namespace MovieLibrary.Web.Tests;
 
@@ -84,7 +85,7 @@ public class DegradedRecordTests : BunitContext
     };
 
     private IRenderedComponent<PosterTile> RenderTile(MovieRecord film) =>
-        Render<PosterTile>(p => p.Add(x => x.Movie, film));
+        Render<PosterTile>(p => p.Add(x => x.Tile, TileView.ForFilm(film)));
 
     /// <summary>The rendered tile, parsed, as the <c>.tile</c> element itself rather than a document body
     /// around it, so that "inside the tile" is a question this file can actually ask.</summary>
@@ -325,22 +326,35 @@ public class DegradedRecordTests : BunitContext
     [Fact]
     public void TheComponentConsumesConfidenceBandRatherThanRestatingItsWordsOrItsRule()
     {
-        var code = WithoutComments(WebRoot.Read("Components", "PosterTile.razor"));
+        var tile = WithoutComments(WebRoot.Read("Components", "PosterTile.razor"));
+        var mapping = WithoutComments(WebRoot.Read("Models", "TileView.cs"));
 
-        Assert.Contains("ConfidenceBand.Of(Movie)", code, StringComparison.Ordinal);
-        Assert.Contains("ConfidenceBand.BadgeFor(", code, StringComparison.Ordinal);
+        // Rule T4, once per file: a comment-stripper that stopped matching, or either file renamed, would
+        // make every DoesNotContain below pass over an empty string.
+        Assert.Contains("ConfidenceBand.BadgeFor(", tile, StringComparison.Ordinal);
+        Assert.Contains("ConfidenceBand.Of(film)", mapping, StringComparison.Ordinal);
 
-        // The words are Core's. "Uncertain match" was rejected before this task and must not come back
-        // through the component either.
-        Assert.DoesNotContain("Not matched", code, StringComparison.Ordinal);
-        Assert.DoesNotContain("Needs review", code, StringComparison.Ordinal);
-        Assert.DoesNotContain("Uncertain match", code, StringComparison.Ordinal);
+        // THE BAND IS DECIDED IN THE MAPPING AND NOWHERE ELSE, which is new since the tile stopped knowing
+        // what a film is. The component is handed a band and renders it; a ConfidenceBand.Of in the
+        // component would be a second answer to the same question, and the two would part company the
+        // first time a series needed its own.
+        Assert.DoesNotContain("ConfidenceBand.Of", tile, StringComparison.Ordinal);
 
-        // And so is the rule. The threshold is never spelled here, and neither field ConfidenceBand.Of
-        // reads is touched: a tile that looked at Mc or I itself would be the second copy of the rule.
-        Assert.DoesNotContain("0.75", code, StringComparison.Ordinal);
-        Assert.DoesNotContain("AcceptThreshold", code, StringComparison.Ordinal);
-        Assert.DoesNotMatch(@"\bMovie\.(I|Mc)\b", code);
+        foreach (var code in new[] { tile, mapping })
+        {
+            // The words are Core's. "Uncertain match" was rejected before this task and must not come
+            // back through either file.
+            Assert.DoesNotContain("Not matched", code, StringComparison.Ordinal);
+            Assert.DoesNotContain("Needs review", code, StringComparison.Ordinal);
+            Assert.DoesNotContain("Uncertain match", code, StringComparison.Ordinal);
+
+            // And so is the rule. The threshold is never spelled in either file, and neither field
+            // ConfidenceBand.Of reads is touched outside the call itself: code that looked at Mc or I
+            // would be the second copy of the rule wherever it sat.
+            Assert.DoesNotContain("0.75", code, StringComparison.Ordinal);
+            Assert.DoesNotContain("AcceptThreshold", code, StringComparison.Ordinal);
+            Assert.DoesNotMatch(@"\b(Movie|film|Tile)\.(I|Mc)\b", code);
+        }
     }
 
     /// <summary>Razor and XML-doc comments removed, so a scan reads code and not prose about it.</summary>

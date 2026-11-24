@@ -1,5 +1,11 @@
-@* One film, as a poster and visible text. Rendered inside PosterGrid's list item; it is not itself the
-   <li>, so this component stays renderable on its own and the list semantics stay with the grid.
+@* One title -- a film or a series -- as a poster and visible text. Rendered inside PosterGrid's list item;
+   it is not itself the <li>, so this component stays renderable on its own and the list semantics stay
+   with the grid.
+
+   IT KNOWS NOTHING ABOUT FILMS, and that is deliberate. Everything it draws arrives as a TileView, whose
+   remarks record why one component serves both walls rather than a second component with a second copy of
+   PosterTile.razor.css. The subject-specific judgement -- which facts to show, and which to leave out
+   rather than show as zero -- lives in the mapping, not here.
 
    ONE ANCHOR, AND ITS BOUNDARY IS THE DESIGN. .tile-body -- the poster and the text block, and nothing
    else -- is the link. The confidence badge and ActionSlot are SIBLINGS of it, and each for its own
@@ -18,27 +24,25 @@
     @* ONE ANCHOR AROUND .tile-body AND NOTHING ELSE, exactly where the comment above reserved it. Its
        accessible name is everything inside it, in DOM order: "Se7en 1995 1h 50m 8.4/10" -- the poster is
        alt="" and contributes nothing, which is why it can be decorative here. That name is read on each of
-       60 tiles, and it is the reason the runtime and the rating stay terse and the reason nothing further
-       goes inside this element without weighing it again.
+       60 tiles, and it is the reason the facts in the caption stay terse.
 
        NO aria-label AND NO title. The visible text IS the name; a label would let the two diverge and both
        attributes are banned on this tile by StandingAuditTests and PosterTileTests. No aria-current either:
        a tile is not a navigation item.
 
-       href IS RELATIVE, as NotFound.razor's is, so it resolves against <base href="/"> and the one deploy
-       that is not at a domain root keeps working. Blazor turns the activation into client-side routing
-       either way; GitHub Pages serves 404.html -- a copy of index.html -- for a cold deep link, so the
-       address survives a reload too. *@
-    <a class="tile-body" href="movies/@Movie.K">
+       href comes from the mapping and is RELATIVE there, for the reason TileView records. Blazor turns the
+       activation into client-side routing; GitHub Pages serves 404.html -- a copy of index.html -- for a
+       cold deep link, so the address survives a reload too. *@
+    <a class="tile-body" href="@Tile.Href">
         @* alt="" because the title is visible text in this same tile: a description here would be the
-           title announced twice. Never an img whose src is Movie.P with an empty-string fallback -- an
-           empty src can render broken-image chrome and some browsers expose the URL as text, so the
+           title announced twice. Never an img whose src is the poster path with an empty-string fallback --
+           an empty src can render broken-image chrome and some browsers expose the URL as text, so the
            no-poster case is a CSS box with no img in it at all.
 
            width and height are the intrinsic size of a w342 poster. They reserve the box before the TMDB
            CDN answers, which matters most under magnification, and EveryImgHasExplicitWidthAndHeight
            requires them rather than preferring them. *@
-        @if (Movie.P is { Length: > 0 } poster)
+        @if (Tile.Poster is { Length: > 0 } poster)
         {
             <img src="@($"https://image.tmdb.org/t/p/w342{poster}")" alt=""
                  width="342" height="513" loading="lazy" decoding="async" />
@@ -50,47 +54,30 @@
 
         @* Truncation is CSS only, and there is none of it: the full title is in the DOM and on the screen.
            Cutting the string in C# would destroy the accessible name permanently. *@
-        <span class="tile-title">@Movie.T</span>
+        <span class="tile-title">@Tile.Title</span>
 
-        @* A year, so never formatted with N0: 1,995 would be wrong. Only the grid head's total is formatted. *@
-        @if (Movie.Y is { } year)
+        @* A year, so never formatted with N0: 1,995 would be wrong. Only the grid head's total is formatted.
+           A series shows the year it STARTED here, which is the same kind of fact in the same position. *@
+        @if (Tile.Year is { } year)
         {
             <span class="tile-year">@year</span>
         }
 
-        @* RUNTIME AND RATING, both INSIDE .tile-body and never siblings of it. PosterTileTests pins
+        @* THE CAPTION FACTS, all INSIDE .tile-body and never siblings of it. PosterTileTests pins
            ".tile > *" at one child for a confident record, and this is caption text, so the caption is
-           where it belongs.
+           where it belongs. Each fact carries its own class so the caption can be read back by name;
+           none of them is styled individually -- .tile-meta > span dresses them all.
 
-           .tile-body IS the anchor, so these two are part of the link's accessible name -- "Se7en 1995
-           1h 50m 8.4/10, link", read on each of 60 tiles. That is the reason both stay terse, and the
-           reason nothing further is added here without weighing it again.
-
-           Runtime is a duration and so is never N0, exactly as a year is never N0 above. Only the grid
-           head's total is formatted.
-
-           THE RATING IS GUARDED, AND THE GUARD IS THE WHOLE POINT. Vote is 0d on every unmatched record --
-           30 of the 1,488 published -- and those are precisely the records this page exists to surface.
-           Rendering "0.0" would state as a fact that a film nobody looked up scored zero. So it is absent
-           rather than blank below zero, the same way .tile-year is absent when Y is null. A matched film
-           TMDB has not rated is the same shape and is covered by the same guard. Runtime needs no guard:
-           no published film has rt <= 0, and RuntimeParser rejects what it cannot read.
-
-           "/10" IS VISIBLE TEXT, not an attribute. A bare "8.4" leaves its meaning to position alone
-           (SC 1.3.1), and title= and aria-label are both banned on this tile by StandingAuditTests and
-           PosterTileTests. No star glyph either: a screen reader reads a star as "black star", and a
-           part-filled one puts the value in a graphic with no text equivalent (SC 1.1.1).
-
-           NO SEPARATOR CHARACTER IN THE DOM. The gap between the two is a flex gap; a middot is read
+           NO SEPARATOR CHARACTER IN THE DOM. The gap between facts is a flex gap; a middot is read
            inconsistently, and moving it into ::before does not hide it from the accessibility tree.
 
-           NOT InvariantCulture. Movies.razor records what forcing it cost once already; a de-DE reader
-           reads "8,4". *@
+           AN EMPTY CAPTION renders an empty .tile-meta, and that is correct rather than untidy: the
+           element has no border, no background and no min-height, so it occupies nothing, and a guard
+           here would be a second rule about absence sitting on top of the mapping's. *@
         <span class="tile-meta">
-            <span class="tile-runtime">@FilmText.Runtime(Movie.Rt)</span>
-            @if (Movie.Vote > 0d)
+            @foreach (var fact in Tile.Meta)
             {
-                <span class="tile-rating">@FilmText.Rating(Movie.Vote)</span>
+                <span class="@fact.Class">@fact.Text</span>
             }
         </span>
     </a>
@@ -110,19 +97,19 @@
        strings or the I == 0 precedence is exactly how the two drift apart. BadgeFor returns null for
        Confident, which is why the ordinary case renders nothing at all rather than a third variant: a
        badge on 1,265 of 1,456 records would train the eye to ignore the ones that matter. *@
-    @{
-        var band = ConfidenceBand.Of(Movie);
-    }
-    @if (ConfidenceBand.BadgeFor(band) is { } badge)
+    @if (ConfidenceBand.BadgeFor(Tile.Band) is { } badge)
     {
-        <span class="badge @VariantClass(band)">@badge</span>
+        <span class="badge @VariantClass(Tile.Band)">@badge</span>
     }
 
     @ActionSlot
 </div>
 
 @code {
-    [Parameter, EditorRequired] public required MovieRecord Movie { get; set; }
+    /// <summary>
+    /// What to draw. See <see cref="TileView"/> for why the subject-specific decisions are not here.
+    /// </summary>
+    [Parameter, EditorRequired] public required TileView Tile { get; set; }
 
     /// <summary>
     /// Part B's favourite or watched control. Empty in Part A, and kept as a parameter so that the slot it
@@ -145,5 +132,4 @@
     /// for it and the badge is not rendered at all.
     /// </remarks>
     private static string VariantClass(Confidence band) => "badge-" + band.ToString().ToLowerInvariant();
-
 }

@@ -100,7 +100,7 @@
            says in one place what identifies a film, which is K and never I. *@
         <PosterGrid TItem="MovieRecord" Items="shown" KeyOf="PublishedKey"
                     Page="page" PageChanged="OnPageChanged" Context="film">
-            <PosterTile Movie="film" />
+            <PosterTile Tile="TileView.ForFilm(film)" />
         </PosterGrid>
     }
         </div>

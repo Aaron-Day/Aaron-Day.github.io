@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Web.Components;
+using MovieLibrary.Web.Models;
 
 namespace MovieLibrary.Web.Tests;
 
@@ -25,7 +26,7 @@ internal static class FilmGrid
     public static readonly RenderFragment<MovieRecord> Tile = film => builder =>
     {
         builder.OpenComponent<PosterTile>(0);
-        builder.AddComponentParameter(1, nameof(PosterTile.Movie), film);
+        builder.AddComponentParameter(1, nameof(PosterTile.Tile), TileView.ForFilm(film));
         builder.CloseComponent();
     };
 
