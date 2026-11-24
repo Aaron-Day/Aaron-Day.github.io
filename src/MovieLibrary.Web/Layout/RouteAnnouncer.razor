@@ -39,6 +39,7 @@
     private static string? PageNameFor(string path) => path.ToLowerInvariant() switch
     {
         "" or "movies" => "Films",
+        "tv" => "TV",
         var p when p.StartsWith("movies/", StringComparison.Ordinal) => null,
 #if DEBUG
         // The local record editor. Debug only, because Release does not serve this address at all and

@@ -1,4 +1,5 @@
 using System.Text.Json;
+using MovieLibrary.Core.Matching;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Web.A11y.Harness;
 
@@ -174,6 +175,93 @@ public class CatalogueTests
             Assert.False(string.IsNullOrWhiteSpace(p.Key));
             Assert.False(string.IsNullOrWhiteSpace(p.Value));
         });
+    }
+
+    // ================================================================================ the series fixture
+
+    private static readonly ShowSummary[] Shows =
+        JsonSerializer.Deserialize<ShowSummary[]>(Catalogue.ShowsJson(), Read)!;
+
+    [Fact]
+    public void TheSeriesIndexHasTheMeasuredNumberOfSeries()
+    {
+        Assert.Equal(Catalogue.Series, Shows.Length);
+        Assert.True(Shows.Length > Catalogue.PageSize,
+            $"{Shows.Length} series fit on one page of {Catalogue.PageSize}, so the pager on /tv would "
+            + "never be scanned with a Next to press.");
+    }
+
+    /// <remarks>
+    /// The same argument as the genre spread above, one page over: a badge branch exercised over records
+    /// that all carry one band renders one variant and passes anyway. Both degraded bands have to be
+    /// present AND the confident majority with them, because the ordinary tile -- the one with no badge at
+    /// all -- is the one a wall is mostly made of.
+    /// </remarks>
+    [Fact]
+    public void EveryConfidenceBandIsCarriedBySomeSeriesAndNotByAll()
+    {
+        foreach (var band in Enum.GetValues<Confidence>())
+        {
+            var carrying = Shows.Count(s => ConfidenceBand.Of(s) == band);
+
+            Assert.InRange(carrying, 1, Shows.Length - 1);
+        }
+    }
+
+    /// <remarks>
+    /// 7 of the real 122 series matched TMDB and carry no episode list, and their tile shows a title, a
+    /// year and nothing else -- no season count, no episode count. Without one here the guard in
+    /// <c>TileView.ForShow</c> that leaves both counts out would have no subject in any browser scan, and
+    /// a change that printed "0 seasons" instead would go green.
+    /// </remarks>
+    [Fact]
+    public void SomeSeriesHasNoEpisodeListAtAllAndMostDo()
+    {
+        Assert.Contains(Shows, s => s.SeasonCount == 0 && s.TotalEpisodes == 0);
+        Assert.True(Shows.Count(s => s.TotalEpisodes > 0) >= Shows.Length - 1);
+    }
+
+    [Fact]
+    public void SeriesAreCompleteAndPartialAndSomeHaveNoFirstYear()
+    {
+        Assert.Contains(Shows, s => s.TotalEpisodes > 0 && s.OwnedEpisodes == s.TotalEpisodes);
+        Assert.Contains(Shows, s => s.OwnedEpisodes < s.TotalEpisodes);
+        Assert.Contains(Shows, s => s.FirstYear is null);
+        Assert.Contains(Shows, s => s.FirstYear is not null);
+
+        // Never more owned than exist: the text says "45 of 984" and the reverse would be nonsense on screen.
+        Assert.All(Shows, s => Assert.InRange(s.OwnedEpisodes, 0, s.TotalEpisodes));
+    }
+
+    [Fact]
+    public void EverySeriesHasATitleAndADistinctSlug()
+    {
+        Assert.All(Shows, s => Assert.False(string.IsNullOrWhiteSpace(s.T)));
+        Assert.Equal(Shows.Length, Shows.Select(s => s.Slug).Distinct(StringComparer.Ordinal).Count());
+    }
+
+    [Fact]
+    public void NoSeriesCarriesAPosterPathSoNoTileOnTheSeriesListRequestsAnImage()
+    {
+        Assert.All(Shows, s => Assert.Null(s.P));
+    }
+
+    [Fact]
+    public void WriteIntoPublishesTheSeriesIndexBesideTheMovies()
+    {
+        var root = Path.Combine(Path.GetTempPath(), "ml-gate-" + Guid.NewGuid());
+        try
+        {
+            Catalogue.WriteInto(root);
+
+            Assert.Equal(Catalogue.Series,
+                         JsonSerializer.Deserialize<ShowSummary[]>(
+                             File.ReadAllText(Path.Combine(root, "data", "shows.json")), Read)!.Length);
+        }
+        finally
+        {
+            if (Directory.Exists(root)) Directory.Delete(root, recursive: true);
+        }
     }
 
     [Fact]

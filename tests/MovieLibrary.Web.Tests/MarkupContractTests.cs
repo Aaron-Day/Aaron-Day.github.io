@@ -120,15 +120,15 @@ public class MarkupContractTests
         // walk that stopped matching -- and behind the exact-array comparison its message was unreachable,
         // because any shortfall failed the equality a line earlier. The equality still follows, and still
         // pins identity and order rather than merely the number.
-        Assert.True(addresses.Count >= 5,
-            "The contracts discovered " + addresses.Count + " addresses. Five exist: \"/\" and \"/movies\" "
+        Assert.True(addresses.Count >= 6,
+            "The contracts discovered " + addresses.Count + " addresses. Six exist: \"/\" and \"/movies\" "
             + "(both Movies.razor), \"/movies/1\" (FilmDetail.razor, whose route parameter AddressOf fills "
-            + "with \"1\"), \"/not-found\", and an unmatched URL, which reaches NotFound by the router's "
-            + "NotFoundPage path rather than by its route. Fewer than five means the reflection walk in "
-            + "AppUnderTest stopped finding routes, not that the site shrank.");
+            + "with \"1\"), \"/not-found\", \"/tv\" (Tv.razor), and an unmatched URL, which reaches "
+            + "NotFound by the router's NotFoundPage path rather than by its route. Fewer than six means "
+            + "the reflection walk in AppUnderTest stopped finding routes, not that the site shrank.");
 
         Assert.Equal(
-            new[] { "/", "/movies", "/movies/1", "/not-found", AppUnderTest.UnmatchedUrl },
+            new[] { "/", "/movies", "/movies/1", "/not-found", "/tv", AppUnderTest.UnmatchedUrl },
             addresses);
     }
 

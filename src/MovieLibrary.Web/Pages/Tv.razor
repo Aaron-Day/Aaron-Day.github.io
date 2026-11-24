@@ -1,0 +1,288 @@
+@page "/tv"
+@implements IDisposable
+@inject CatalogService Catalog
+@inject Announcer Announcer
+@inject IJSRuntime Js
+
+@* The series list. The same wall as the films page, over shows.json rather than movies.json, and with no
+   facet panel: 122 series is three pages, and a filter over them would be a second copy of Movies.razor's
+   query state for a list a reader can take in by scrolling.
+
+   The PageTitle and the h1 are in the first render and outside every state branch: FocusOnNavigate fires
+   once after the first render and never retries, and shows.json arrives long after that. *@
+<PageTitle>TV - Film and TV library</PageTitle>
+
+@* "TV" and not "TV series" or "Television": SC 2.4.6 wants a heading that describes the content, and
+   SC 2.4.4 and SC 3.2.4 want the nav link that leads here to say the same thing. NavMenu holds the link's
+   word and MarkupContractTests pins the two against each other, so the pair cannot drift.
+
+   tabindex="-1" is not for FocusOnNavigate, which adds it itself. It is for ElementReference.FocusAsync(),
+   which does NOT add it and on an element that cannot take focus fails silently -- no exception, no moved
+   focus, no failing test. The successful-retry transition below depends on this attribute, so it is a
+   feature dependency here and not a conformance claim. *@
+<h1 tabindex="-1" @ref="heading">TV</h1>
+
+@* ONE stable container, not three sibling branches that swap nodes: replacing the node would destroy the
+   node a screen reader's virtual cursor may be sitting on. The paragraph is the same element in every
+   state and only its text changes; the button is the only thing that comes and goes.
+
+   No live region of any kind in here: no alert role, no status role, no log role, and no live-region
+   attribute. (Spelled in words on purpose: SourceContractTests scans these files for the literal markers,
+   and a comment quoting one fails exactly as the attribute would.) The announcer is the only speaking
+   channel, and the deterministic channel for the failure is the focus move, not a region. SC 4.1.3 Status
+   Messages, Level AA, applies only to messages that do NOT receive focus. *@
+<div class="show-state" tabindex="-1" @ref="stateContainer">
+    <p>@Sentence</p>
+
+    @if (ShowTryAgain)
+    {
+        @* aria-disabled, never the disabled ATTRIBUTE: disabling the focused element blurs it and drops
+           focus to <body>. The click still arrives and is ignored in TryAgain instead. *@
+        <button type="button" class="try-again" aria-disabled="@(retrying ? "true" : null)" @onclick="TryAgain">Try again</button>
+    }
+</div>
+
+@* THE WALL, AND ONLY IN THE READY STATE. It sits BELOW the state container, so the reading order is the
+   heading, then the one-sentence state, then the count, then the pager, then the tiles.
+
+   NO SORT HERE. The build writes shows.json in the order the owner's sheet puts the series in, and a page
+   that re-sorted would disagree with the file for no reason a reader could see. The films page does the
+   same with movies.json.
+
+   PAGE SIZE IS NOT PASSED. The grid's default is 60, which makes three pages of the measured 122 series,
+   and a second copy of the number here would be one edit away from disagreeing with the first.
+
+   A METHOD GROUP AND NOT A LAMBDA for KeyOf, for the reason Movies.razor records: a lambda would put a >
+   inside an attribute value, and SourceContractTests reads this tag with a regex that stops at the first
+   one. It also says in one place what identifies a series, which is the slug the build wrote. *@
+@if (HasSeries)
+{
+    <PosterGrid TItem="ShowSummary" Items="shows.Value" KeyOf="PublishedSlug"
+                Page="page" PageChanged="OnPageChanged" Context="show">
+        <PosterTile Tile="TileView.ForShow(show)" />
+    </PosterGrid>
+}
+
+@code {
+    /// <summary>
+    /// The failure sentence. ONE constant for the visible paragraph and for the <c>Alert</c>, so the seen
+    /// and the spoken copies cannot drift apart. Internal so a test can assert they are the same string
+    /// rather than two literals that happen to match today.
+    /// </summary>
+    internal const string CouldNotLoad =
+        "The TV library could not be loaded. Check your connection and try again.";
+
+    /// <summary>The visible loading copy, with the ellipsis CHARACTER rather than three full stops.</summary>
+    internal const string LoadingVisible = "Loading series…";
+
+    /// <summary>
+    /// The spoken loading copy, without the ellipsis: a screen reader either reads the character aloud or
+    /// swallows it, and neither is what the sentence means.
+    /// </summary>
+    internal const string LoadingSpoken = "Loading series";
+
+    /// <summary>The empty-library sentence.</summary>
+    internal const string EmptyLibrary = "The library holds no series.";
+
+    private ElementReference heading;
+    private ElementReference stateContainer;
+
+    private CatalogResult<IReadOnlyList<ShowSummary>> shows = new(CatalogState.Loading, []);
+
+    private bool disposed;
+    private bool retrying;
+    private bool loadingAnnounced;
+    private bool failureReported;
+    private bool movedFocusToFailure;
+    private bool movingFocus;
+    private bool focusHeadingAfterRetry;
+
+    private int page = 1;
+
+    /// <summary>The slug the build wrote, which is also the only string <c>GetShowAsync</c> will accept.</summary>
+    private static string PublishedSlug(ShowSummary show) => show.Slug;
+
+    private bool HasSeries => shows.State == CatalogState.Ready && shows.Value.Count > 0;
+
+    /// <remarks>Shown while the fetch is in flight too, so a retry that is still running keeps its button.</remarks>
+    private bool ShowTryAgain => shows.State == CatalogState.Failed || retrying;
+
+    /// <remarks>
+    /// "series" is its own plural, so unlike the films page this has no singular form to get wrong -- and
+    /// the count is culture-formatted for the same reason that one's is.
+    /// </remarks>
+    private string Sentence => shows.State switch
+    {
+        CatalogState.Failed => CouldNotLoad,
+        CatalogState.Loading => LoadingVisible,
+        _ => shows.Value.Count switch
+        {
+            0 => EmptyLibrary,
+            var n => $"The library holds {n.ToString("N0")} series.",
+        },
+    };
+
+    /// <remarks>
+    /// Nothing is announced here. A message raised before the first render starts its settle timer while
+    /// the clearing render is still queued, so the real gap becomes "delay minus handler time" and
+    /// collapses on exactly the slow devices the gap exists for. Everything this page says it says from
+    /// <see cref="OnAfterRenderAsync"/>.
+    /// <para>
+    /// The fetch is awaited and never cancelled, here or on dispose. The task is shared and cached by the
+    /// service, so cancelling it would turn one reader's navigation away into a Failed result for the next
+    /// visit to this page.
+    /// </para>
+    /// </remarks>
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Catalog.GetShowsAsync();
+        if (disposed) return;
+
+        shows = result;
+    }
+
+    /// <remarks>
+    /// <b>NOTHING IS ANNOUNCED ON A SUCCESSFUL LOAD, and that is a decision rather than an omission.</b>
+    /// RouteAnnouncer already says "TV" on arrival and the count is visible text in the container above, so
+    /// a status message would be a second utterance for an arrival the reader has already been told about.
+    /// The films page speaks its count because a FILTER changes it under the reader without any other
+    /// signal; there is no filter here, so the only things worth speaking are the three below.
+    /// </remarks>
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (disposed) return;
+
+        switch (shows.State)
+        {
+            case CatalogState.Loading:
+                // Only because the page is STILL loading after a render, and at most once a visit. On a
+                // return visit the catalogue is cached, the task is already complete, ComponentBase
+                // produces no intermediate render and the page is Ready on the first render -- so this
+                // never runs, and nothing is ever said about a page that had already loaded.
+                if (!loadingAnnounced)
+                {
+                    loadingAnnounced = true;
+                    Announcer.Status(LoadingSpoken);
+                }
+
+                break;
+
+            case CatalogState.Failed:
+                // This page armed the polite region with the loading line, so this page clears it. The
+                // failure is carried by the focus move or the alert below, and a region still saying
+                // "Loading series" beside a page that says the library could not be loaded is a stale
+                // statement. Idempotent over an already-empty region.
+                Announcer.Status("");
+
+                // THE FOCUS MOVE IS THE PRIMARY CHANNEL and it runs FIRST, because a screen reader reads
+                // the contents of a focused unnamed tabindex="-1" container and this container's whole text
+                // IS the failure sentence. A move that happens therefore already says it, in the words on
+                // screen, and announcing the text of whatever focus has just moved to is forbidden.
+                // The flag is set only when the move actually happened, so a reader who had the drawer open
+                // when the fetch failed is not denied the move for ever.
+                var movedOnThisPass = false;
+                if (!movedFocusToFailure && !movingFocus)
+                {
+                    movingFocus = true;
+                    try { movedOnThisPass = movedFocusToFailure = await PageFocus.IfUnmoved(Js, stateContainer); }
+                    finally { movingFocus = false; }
+                }
+
+                // One report for one failure the reader can see, and THE ALERT IS THE FALLBACK -- raised
+                // only where the focus move did not happen. Raising both speaks the sentence twice: once as
+                // the contents of the container focus landed on, and again a settle delay later when the
+                // assertive region interrupts with the identical text.
+                // On a FAILED RETRY focus is usually already on the Try again button, which is not a
+                // keeper, so the helper refuses, nothing moves, and this fires -- which is how a reader who
+                // retries and fails again is not met with silence.
+                // movingFocus is in the condition because a render can arrive while the first pass's focus
+                // call is suspended at its await: that pass has not chosen a channel yet, and this one must
+                // not choose for it.
+                if (!failureReported && !movingFocus)
+                {
+                    failureReported = true;
+                    if (!movedOnThisPass) Announcer.Alert(CouldNotLoad);
+                }
+
+                break;
+
+            case CatalogState.Ready:
+                // The successful retry, and the only focus move on a working page. The button the reader
+                // was standing on has gone with the failed state, so focus would otherwise drop to <body>.
+                // Landing on the h1 announces "TV, heading level 1", which is how the reader learns the
+                // retry worked without a second assertive message saying so.
+                if (focusHeadingAfterRetry)
+                {
+                    focusHeadingAfterRetry = false;
+                    await PageFocus.Outright(heading);
+                }
+
+                break;
+        }
+    }
+
+    /// <remarks>
+    /// <c>GetShowsAsync</c> drops a failed task of its own accord, so a second call really does fetch
+    /// again rather than handing back the cached failure.
+    /// </remarks>
+    private async Task TryAgain()
+    {
+        // The button carries aria-disabled rather than the disabled attribute, so the click still arrives
+        // while a retry is in flight and has to be ignored here.
+        if (retrying) return;
+
+        // The failure has ended as far as the reader is concerned. A cancellation, not a message -- it
+        // takes effect at once and speaks nothing. The next Alert is raised from OnAfterRenderAsync and
+        // never in this handler: on a device slow enough to flush both mutations in one frame the second
+        // call would see the region already empty, mark the clear observed, and the repeated identical
+        // sentence would reach the DOM as no change at all.
+        Announcer.Alert("");
+
+        retrying = true;
+        failureReported = false;
+        movedFocusToFailure = false;
+        shows = new(CatalogState.Loading, shows.Value);   // the loading copy, visibly
+
+        var result = await Catalog.GetShowsAsync();
+        if (disposed) return;
+
+        retrying = false;
+        shows = result;
+        focusHeadingAfterRetry = result.State == CatalogState.Ready;
+    }
+
+    /// <summary>Adopts the page the grid asked for, and says nothing.</summary>
+    /// <remarks>
+    /// The grid announces the change itself: whoever writes a standing statement is whoever clears it, and
+    /// the grid is what clears the region on its own dispose. Announcing here as well would speak the page
+    /// twice -- and would speak it on the FIRST render, because the grid raises this for an out-of-range
+    /// correction as well as for a button press.
+    /// <para>
+    /// The number is adopted EXACTLY as given. The grid builds its announcement from it, and a page that
+    /// clamped, ignored or overrode it would have the grid state a page the reader is not on. Unlike the
+    /// films page it is NOT written to the address: there is no query state on this route yet, so a deep
+    /// link to a page of series is a thing this page cannot offer and does not pretend to.
+    /// </para>
+    /// </remarks>
+    private void OnPageChanged(int value) => page = value;
+
+    /// <remarks>
+    /// Clear what this page set, and raise nothing new. A cancellation -- it takes effect at once and
+    /// speaks nothing. Without it "Loading series" sits in #status-announcer, readable in browse mode, long
+    /// after the reader has left, because the announcer is a scoped singleton and MainLayout survives
+    /// navigation.
+    /// <para>
+    /// #route-announcer is NOT cleared here, and that is deliberate rather than an omission. RouteAnnouncer
+    /// is its only caller -- SourceContractTests pins that -- and it writes the region empty on the way in
+    /// to this page and the next page's name on the way out. A clear from here would land after that write
+    /// on any navigation where this component is disposed last, and the latest-wins rule would drop the
+    /// name of the page the reader just arrived at.
+    /// </para>
+    /// </remarks>
+    public void Dispose()
+    {
+        disposed = true;
+        Announcer.Status("");
+        Announcer.Alert("");
+    }
+}

@@ -28,11 +28,16 @@
     // NavLink can only match a single href and "/" and "/movies" are the same page. Part B adds a link by
     // adding an entry here, and a second address for an existing page by adding to its Paths. Matching is
     // case-insensitive, like the router: "/Movies" is the Films page too.
-    private sealed record NavItem(string Label, string Href, string[] Paths);
+    internal sealed record NavItem(string Label, string Href, string[] Paths);
 
-    private static readonly NavItem[] Items =
+    // INTERNAL, so that MarkupContractTests can read the labels and pin each against the h1 of the page it
+    // leads to. SC 2.4.4 Link Purpose and SC 3.2.4 Consistent Identification both want those two to say the
+    // same word, and the two were literals in two files with nothing holding them together: "TV" here and
+    // "Television" there would have been a green build.
+    internal static readonly NavItem[] Items =
     {
         new("Films", "movies", new[] { "", "movies" }),
+        new("TV", "tv", new[] { "tv" }),
     };
 
     private bool collapsed = true;

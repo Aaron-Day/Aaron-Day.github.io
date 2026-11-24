@@ -109,7 +109,83 @@ internal static class Catalogue
         Directory.CreateDirectory(folder);
         File.WriteAllText(Path.Combine(folder, "movies.json"), Json(Build(Records)));
         File.WriteAllText(Path.Combine(folder, "meta.json"), MetaJson());
+        File.WriteAllText(Path.Combine(folder, "shows.json"), ShowsJson());
     }
+
+    /// <summary>The measured number of series in the live library, so the series list pages as it really does.</summary>
+    public const int Series = 122;
+
+    /// <summary>
+    /// The series index the <c>/tv</c> scan reads.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// <b>WITHOUT THIS FILE THE SCAN WOULD HAVE BEEN GREEN AND MEANINGLESS.</b> An unstubbed
+    /// <c>shows.json</c> gets the host's 404 body, which is HTML, so the page renders its FAILED state: a
+    /// heading, one sentence and a Try again button. axe would have found nothing wrong with it, the gate
+    /// would have gone green, and no tile, no badge and no pager on that route would ever have been
+    /// scanned. The same hole <c>meta.json</c> was added to close, one page over.
+    /// </para>
+    /// <para>
+    /// <see cref="Series"/> of them, because 122 is what the library holds and three pages is what the
+    /// pager has to cope with. The shapes are spread deliberately, and the spread is what stops a facet of
+    /// the tile from being scanned over records that cannot tell each other apart:
+    /// </para>
+    /// <list type="bullet">
+    /// <item>every confidence band, so both badge variants and the unbadged majority are rendered;</item>
+    /// <item>one series matched with NO episode list at all -- <c>SeasonCount</c> and
+    /// <c>TotalEpisodes</c> both 0, which is 7 of the real 122 -- so the tile that shows a title, a year
+    /// and nothing else is in the scan;</item>
+    /// <item>a complete series, where owned equals total, and partial ones either side of it;</item>
+    /// <item>a series with no first year, so the absent-year branch is rendered.</item>
+    /// </list>
+    /// <para>
+    /// NO POSTER PATHS, for the reason the films fixture gives: a path makes the tile request an image.
+    /// The <c>&lt;img&gt;</c> branch is scanned on <c>/movies</c>, which has a furnished record for it;
+    /// here every tile takes the placeholder branch, which is the one the films scan barely sees.
+    /// </para>
+    /// </remarks>
+    public static string ShowsJson() => JsonSerializer.Serialize(BuildShows(Series), Published);
+
+    private static ShowSummary[] BuildShows(int count)
+    {
+        var shows = new ShowSummary[count];
+
+        for (var n = 0; n < count; n++)
+        {
+            // 0 is the matched series with no episode list; every other one has seasons and episodes.
+            var seasons = n == 0 ? 0 : 1 + n % 9;
+            var total = n == 0 ? 0 : seasons * (6 + n % 18);
+            var owned = n % 7 == 0 ? total : total - 1 - n % 5;
+
+            shows[n] = new ShowSummary(
+                I: n % 11 == 0 ? 0 : n + 1,       // unmatched where the id is 0, which is what the band reads
+                T: SeriesTitleFor(n),
+                Slug: $"series-{n + 1}",
+                P: null,                          // see the remarks: no path, so the tile cannot request an image
+                FirstYear: n % 19 == 0 ? null : 1951 + n % 73,
+                Ag: GenreSets[n % GenreSets.Length].Apple,
+                SeasonCount: seasons,
+                OwnedEpisodes: Math.Max(0, owned),
+                TotalEpisodes: total,
+                Mc: n % 5 == 0 ? 0.55 : 0.95);    // below the threshold where the band is Uncertain
+        }
+
+        return shows;
+    }
+
+    /// <summary>
+    /// A series title, long enough and varied enough to be worth laying out, and never a real one.
+    /// </summary>
+    private static string SeriesTitleFor(int n) => (n % 6) switch
+    {
+        0 => $"A Series With A Deliberately Long Name, Part {n + 1}",
+        1 => $"Fixture {n + 1}",
+        2 => $"The Fixture Chronicles {n + 1}",
+        3 => $"Fixture: The Next Fixture {n + 1}",
+        4 => $"Fixture {n + 1}: Return Of The Fixture",
+        _ => $"Series {n + 1}",
+    };
 
     /// <summary>
     /// The meta document that names the genres the records carry. Without one the page's meta fetch gets the host's
@@ -119,7 +195,8 @@ internal static class Catalogue
     /// </summary>
     public static string MetaJson() => JsonSerializer.Serialize(
         new CatalogMeta(
-            BuiltUtc: "2026-01-01T00:00:00Z", MovieCount: Records, ShowCount: 0, TotalEpisodeCount: 0,
+            BuiltUtc: "2026-01-01T00:00:00Z", MovieCount: Records, ShowCount: Series,
+            TotalEpisodeCount: BuildShows(Series).Sum(s => s.TotalEpisodes),
             Genres: GenreNames.ToDictionary(g => g.Key.ToString(System.Globalization.CultureInfo.InvariantCulture), g => g.Value),
             Attribution: CatalogMeta.TmdbAttribution, ReviewQueue: []),
         Published);

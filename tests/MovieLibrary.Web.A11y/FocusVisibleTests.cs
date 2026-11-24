@@ -117,8 +117,8 @@ public class FocusVisibleTests(BrowserGate gate, ITestOutputHelper output)
 
         if (failed)
             await session.StateSentenceAsync(PageSession.CouldNotLoad);
-        else if (await session.Page.Locator(".catalog-state").CountAsync() > 0)
-            await session.GridAsync();
+        else if (await session.Page.Locator(".catalog-state, .show-state").CountAsync() > 0)
+            await session.GridAsync();   // both tile walls page at Catalogue.PageSize
 
         // The bar is revealed with the same inline display: block the Blazor runtime writes.
         // ObscuredFocusTests' remarks set out why that is a simulation and why it is the honest one

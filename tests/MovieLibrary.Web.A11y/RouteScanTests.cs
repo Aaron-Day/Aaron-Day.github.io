@@ -83,22 +83,36 @@ public class RouteScanTests(BrowserGate gate, ITestOutputHelper output)
 
     /// <summary>
     /// Waits for the address to have finished becoming whatever it becomes, so the scan cannot run against a
-    /// page in transition. On the films page that means the grid, on a film page the Details list; everywhere
-    /// else the heading is the end of it.
+    /// page in transition. On the films page and the series list that means a full page of tiles, on a film
+    /// page the Details list; everywhere else the heading is the end of it.
     /// </summary>
     /// <remarks>
-    /// <b>The film page is asked about FIRST, and the order is the whole point.</b> Both pages render a state
-    /// container with a state paragraph in it, and the two class names - <c>.catalog-state</c> and
-    /// <c>.film-state</c> - exist only so that this can tell them apart; they share every styling rule in
-    /// app.css. A film page reaching the <c>.catalog-state</c> arm would wait for a tile grid that is never
-    /// coming and fail the gate on a timeout, and one reaching neither arm would be scanned mid-fetch, with
-    /// the heading reading "Loading film" and none of the page rendered.
+    /// <b>The film page is asked about FIRST, and the order is the whole point.</b> All three pages render a
+    /// state container with a state paragraph in it, and the three class names - <c>.catalog-state</c>,
+    /// <c>.film-state</c> and <c>.show-state</c> - exist only so that this can tell them apart; they share
+    /// every styling rule in app.css. A film page reaching a tile-grid arm would wait for a grid that is
+    /// never coming and fail the gate on a timeout, and a page reaching NO arm would be scanned mid-fetch,
+    /// with the heading reading "Loading series" and none of the page rendered: a green scan over a page
+    /// that was not there, which is the failure this method exists to prevent and the one nothing else
+    /// would report.
+    /// <para>
+    /// The series list waits on the same tile count as the films page. Both page at
+    /// <see cref="Catalogue.PageSize"/> and the gate's catalogue carries more than that of each, so a full
+    /// page is the settled state on either route; <c>CatalogueTests</c> pins both fixtures above that
+    /// number, so this cannot start waiting for tiles that will never arrive.
+    /// </para>
     /// </remarks>
     private static async Task SettledAsync(PageSession session)
     {
         if (await session.Page.Locator(".film-state").CountAsync() > 0)
         {
             await session.FilmAsync();
+            return;
+        }
+
+        if (await session.Page.Locator(".show-state").CountAsync() > 0)
+        {
+            await session.GridAsync();
             return;
         }
 

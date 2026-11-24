@@ -20,13 +20,52 @@ public class NavMenuTests : BunitContext
     }
 
     [Fact]
-    public void RendersExactlyOneNavLink()
+    public void RendersOneLinkPerNavItem()
     {
         var cut = Render<NavMenu>();
 
-        // Part A ships one real route. A link to a route that does not exist is a dead link, so there is no TV link.
-        var link = Assert.Single(cut.FindAll("#nav-links a"));
-        Assert.Equal("Films", link.TextContent.Trim());
+        // Both routes exist now. A link to a route that does not exist would be a dead link, which is why
+        // this stood at one for as long as /tv did not answer -- and why it is read off NavMenu.Items
+        // rather than typed again: the labels are pinned against each page's own h1 elsewhere, so a label
+        // changed in one place and not the other fails there instead of silently passing here.
+        var links = cut.FindAll("#nav-links a");
+
+        Assert.Equal(new[] { "Films", "TV" }, links.Select(a => a.TextContent.Trim()));
+        Assert.Equal(new[] { "movies", "tv" }, links.Select(a => a.GetAttribute("href")));
+    }
+
+    /// <summary>
+    /// Every nav link says the same word as the heading of the page it leads to.
+    /// </summary>
+    /// <remarks>
+    /// SC 2.4.4 Link Purpose (In Context) and SC 3.2.4 Consistent Identification both want these two to
+    /// agree, and before this they were literals in separate files with nothing holding them together:
+    /// "TV" in the drawer and "Television" on the page would have been a green build, and a reader who
+    /// followed the link would have had no confirmation they had arrived anywhere in particular.
+    /// <para>
+    /// The LABEL and the H1, not the label and the route announcer's name -- the announcement is already
+    /// pinned to the h1 by <c>RouteAnnouncerTests</c>, so going through it would make this test pass on a
+    /// page whose heading had changed with the announcement. Each item's FIRST path is used, which is the
+    /// address its href resolves to.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void EveryNavLinkSaysWhatTheHeadingOfItsPageSays()
+    {
+        Assert.NotEmpty(NavMenu.Items);
+
+        foreach (var item in NavMenu.Items)
+        {
+            // A context per item: the app is rendered at a different address each time round, and bUnit
+            // seals its service provider on the first resolve.
+            using var page = new BunitContext();
+            page.JSInterop.Mode = JSRuntimeMode.Loose;
+            page.AddAnnouncer();
+
+            var heading = page.RenderAppAt("/" + item.Href).Find("h1").TextContent.Trim();
+
+            Assert.Equal(item.Label, heading);
+        }
     }
 
     [Fact]
