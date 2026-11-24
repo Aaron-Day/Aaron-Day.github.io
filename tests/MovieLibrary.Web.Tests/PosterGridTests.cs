@@ -213,7 +213,7 @@ public class PosterGridTests : BunitContext
     /// </para>
     /// </remarks>
     [Fact]
-    public void TheGridClaimsNoCompositeWidgetSemanticsAndNothingInItIsATabStop()
+    public void TheGridClaimsNoCompositeWidgetSemanticsAndEveryStopInItIsOneTileSLink()
     {
         var root = MarkupRules.Parse(RenderGrid(130).Markup);
         var grid = root.QuerySelector("ul.grid")!;
@@ -222,7 +222,21 @@ public class PosterGridTests : BunitContext
         Assert.Null(root.QuerySelector("[role='row']"));
         Assert.Null(root.QuerySelector("[role='gridcell']"));
         Assert.Null(root.QuerySelector("[aria-rowcount]"));
-        Assert.Empty(MarkupRules.InteractiveElements(grid));
+
+        // ONE STOP PER TILE AND NOT ONE MORE. The grid is sixty tab stops now, which is the cost of making
+        // the wall reachable at all; what this holds is that the cost is exactly sixty. The assertion used
+        // to be Assert.Empty, from when nothing in here was focusable, and the shape it was really guarding
+        // is this: a second control per tile would make the wall a hundred and twenty stops, and a reader
+        // would Tab twice per film to get past it.
+        var stops = MarkupRules.InteractiveElements(grid);
+
+        Assert.Equal(60, stops.Count);
+        Assert.All(stops, s => Assert.Equal("a", s.LocalName));
+        Assert.Equal(60, grid.QuerySelectorAll("li > .tile > a.tile-body").Length);
+
+        // No EXPLICIT tabindex anywhere, positive or negative. The anchors are in the tab order because
+        // they are anchors with an href, which is the order the DOM gives them; a tabindex would be this
+        // component asserting an order of its own against a wall whose paint order CSS controls.
         Assert.Empty(grid.QuerySelectorAll("[tabindex]"));
     }
 

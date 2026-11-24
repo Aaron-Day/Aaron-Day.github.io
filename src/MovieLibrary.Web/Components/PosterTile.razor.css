@@ -4,7 +4,36 @@
    to make that number true would be a visual change nobody asked for, so the measurement was corrected
    instead.) Re-measure if a token changes. */
 .tile { position: relative; }
-.tile-body { display: flex; flex-direction: column; gap: .25rem; }
+/* THE TILE IS A LINK NOW, and three declarations make an anchor look like a card rather than like a
+   sentence.
+
+   text-decoration: none IS THE NAMED EXCEPTION app.css's blanket ban anticipated, and
+   StyleContractTests.AnInProseLinkIsDistinguishedByMoreThanItsColour names .tile-body by hand. The ban
+   exists for SC 1.4.1 Use of Color: --accent2 against --txt is 2.18:1, so an anchor inside running prose
+   distinguished only by its colour fails technique F73. This anchor is not inside running prose and is not
+   distinguished by colour at all -- it is a 123px-wide card with artwork in it, its own box is the cue, and
+   its text is --txt and --dim exactly as the surrounding page's is. Sixty underlined titles in a grid would
+   read as sixty broken links. The hover rule below adds the underline back where a pointer can ask for it.
+
+   color: inherit for the same reason: app.css paints every anchor --accent2, which would turn the whole
+   wall blue and take .tile-title's 16.16:1 on --bg down to --accent2's 7.04:1. Still past SC 1.4.3, but it
+   would make the title the loudest thing on a page whose subject is the artwork.
+
+   display: flex comes from the div this replaced, and an anchor is display: inline by default, so without
+   it the card collapses to a line of text. */
+.tile-body {
+  display: flex; flex-direction: column; gap: .25rem;
+  text-decoration: none; color: inherit;
+}
+
+/* THE UNDERLINE RETURNS ON HOVER, INSIDE @media (hover: hover). A bare :hover sticks after a tap on touch
+   and leaves phantom highlighted tiles behind the reader's finger. Only the TITLE is underlined: underlining
+   the year and the runtime too would say they are each a link.
+   No transition, so no prefers-reduced-motion block is needed -- the motion rule in StyleContractTests reads
+   this file by glob and says so if that stops being true. */
+@media (hover: hover) {
+  .tile-body:hover .tile-title { text-decoration: underline; }
+}
 /* height: auto IS LOAD-BEARING AND NOT TIDYING, and without it every poster in the wall was stretched.
    The markup carries width="342" height="513" to reserve the box before the TMDB response arrives, which
    is right, but an HTML width/height attribute is a PRESENTATIONAL HINT: height="513" maps to a used
@@ -152,8 +181,12 @@
   .badge { border: 1px solid CanvasText; color: CanvasText; background: Canvas; }
 }
 
-/* No hover rule anywhere in this file. The plan's was underlining a link, and Part A has no link. Part B
-   adds it back with the anchor, inside @media (hover: hover): a bare :hover sticks after a tap on touch
-   and leaves phantom highlighted tiles behind.
-   No transition and no animation either, so no prefers-reduced-motion block is needed. The motion rule in
-   StyleContractTests reads this file by glob and will say so if that ever stops being true. */
+/* The one hover rule is at the top, beside the anchor it belongs to. No transition and no animation
+   anywhere in this file, so no prefers-reduced-motion block is needed. The motion rule in
+   StyleContractTests reads this file by glob and will say so if that ever stops being true.
+
+   NO FOCUS RULE EITHER, and that is not an omission: app.css's `:root :focus-visible` paints one ring for
+   every control in the app, and a second ring declared here would be one more place to keep in step with
+   the token palette. What the tile DOES have to survive is the ring being drawn two pixels outside a card
+   that sits in a grid -- outline-offset: 2px -- which is why nothing in this file clips with
+   overflow: hidden. StyleContractTests asserts that absence for the title's sake and it serves the ring too. */

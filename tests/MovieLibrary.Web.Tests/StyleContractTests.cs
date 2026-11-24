@@ -211,12 +211,15 @@ public class StyleContractTests
     /// 2.18:1. Nothing looked wrong because Bootstrap's reboot underlines links - which is the problem,
     /// not the defence, because it puts the link's only non-colour cue in a file this project does not own
     /// and would lose to a dropped stylesheet or a link-underline utility. Declaring it here makes it ours.
-    /// The second half bans text-decoration: none anywhere in this file, which is stricter than 1.4.1
-    /// needs - a standalone control that happens to be an anchor is distinguished by its own box, not by
-    /// colour inside running text. It is written this way because the only rule here that could plausibly
-    /// want it is one that also lands on the in-prose link, and a blanket ban is a cheap guard with an
-    /// obvious escape: when a later task needs one, name the exception in this test the way the motion
-    /// rule below names the boot spinner.
+    /// The second half bans text-decoration: none everywhere EXCEPT at selectors this test names, which
+    /// is stricter than 1.4.1 needs - a standalone control that happens to be an anchor is distinguished by
+    /// its own box, not by colour inside running text. It is written this way because the only rule that
+    /// could plausibly want the reset is one that also lands on the in-prose link.
+    /// THE ESCAPE IS NOW USED, which is what the old wording promised would happen. The poster tile became
+    /// an anchor, sixty underlined titles in a grid read as sixty broken links, and so .tile-body is named
+    /// in the allowed list below -- one SELECTOR and not one file, so another rule in the same sheet
+    /// resetting the decoration still fails. The allowance has a live guard of its own: the day .tile-body
+    /// stops resetting, Assert.Contains fails and the dead exception has to go.
     /// Comments are stripped first, so prose that mentions text-decoration cannot trip it.
     /// THE BAN NOW READS EVERY STYLESHEET, not just app.css. Its own remark used to say "what this cannot
     /// catch: a reset in a component's scoped .razor.css" -- which was a blind spot nobody could reach
@@ -236,17 +239,55 @@ public class StyleContractTests
         // that stopped matching cannot leave this one quietly looping over an empty set.
         var sheets = Stylesheets();
 
-        Assert.True(sheets.Count >= 9,
-            "This rule found " + sheets.Count + " stylesheets. There are nine: app.css, six scoped "
-            + "component sheets in the web project and two in the editor. Fewer means the glob stopped finding them.");
+        Assert.True(sheets.Count >= 10,
+            "This rule found " + sheets.Count + " stylesheets. There are ten: app.css, seven scoped "
+            + "component and page sheets in the web project and two in the editor. Fewer means the glob stopped finding them.");
 
-        foreach (var (path, text) in sheets)
-            Assert.True(!Regex.IsMatch(WithoutComments(text), @"text-decoration\s*:\s*none"),
-                path + " resets text-decoration to none. --accent2 against --txt is 2.18:1, so an anchor "
-                + "inside running prose would then be distinguished from it by colour alone, which is "
-                + "SC 1.4.1 Use of Color and technique failure F73. A standalone control that happens to "
-                + "be an anchor is distinguished by its own box, so if a later task needs this, name the "
-                + "exception here the way the motion rule names the boot spinner.");
+        // THE ONE NAMED EXCEPTION, which is the escape the ban's own note promised. A poster tile IS an
+        // anchor and must NOT be underlined: sixty underlined titles in a grid read as sixty broken links,
+        // and the tile is not distinguished by colour in the first place -- it is a card with artwork in it,
+        // its own box is the cue, and PosterTile.razor.css keeps its text at --txt and --dim rather than
+        // taking app.css's --accent2. So F73 has no subject there. The exception is to the SELECTOR and not
+        // to the file: another rule in the tile's sheet resetting text-decoration still fails, because the
+        // exception is matched against the declaration's own selector.
+        //
+        // It is also why the positive half above stays app.css-only: one rule for every anchor in the app,
+        // in the file this project owns, and one named opt-out for the one anchor that is a card.
+        var allowed = new[] { ".tile-body" };
+        var exceptions = sheets
+            .SelectMany(s => Resets(s.Text).Select(selector => (s.Path, Selector: selector)))
+            .ToList();
+
+        // T1: the carve-out has to have something in it, or the day .tile-body stops resetting its
+        // decoration this list goes empty and the allowance sits here meaning nothing.
+        Assert.Contains(exceptions, e => e.Selector == ".tile-body");
+
+        foreach (var (path, selector) in exceptions)
+            Assert.True(allowed.Contains(selector, StringComparer.Ordinal),
+                path + " resets text-decoration to none on \"" + selector + "\". --accent2 against --txt "
+                + "is 2.18:1, so an anchor inside running prose would then be distinguished from it by "
+                + "colour alone, which is SC 1.4.1 Use of Color and technique failure F73. A standalone "
+                + "control that happens to be an anchor is distinguished by its own box, so if this one is "
+                + "meant, add its selector to the allowed list above and say in the sheet why its own box "
+                + "is the cue -- as .tile-body does.");
+    }
+
+    /// <summary>
+    /// Every selector in a stylesheet that resets <c>text-decoration</c> to none, so the ban above can name
+    /// its exceptions one selector at a time rather than one file at a time.
+    /// </summary>
+    /// <remarks>
+    /// Comments are stripped first, so prose that mentions the declaration cannot trip it. The selector is
+    /// taken as the text between the previous <c>}</c>, <c>{</c> or start of file and the brace that opens
+    /// the block, trimmed -- which is enough for this project's flat sheets and would need a real parser
+    /// for nesting. A selector list keeps its commas, so an exception has to be named exactly as written.
+    /// </remarks>
+    private static IReadOnlyList<string> Resets(string css)
+    {
+        var text = WithoutComments(css);
+
+        return [.. Regex.Matches(text, @"([^{}]*)\{[^{}]*text-decoration\s*:\s*none")
+            .Select(m => Regex.Replace(m.Groups[1].Value, @"\s+", " ").Trim())];
     }
 
     /// <remarks>
@@ -585,9 +626,9 @@ public class StyleContractTests
     {
         var sheets = Stylesheets();
 
-        Assert.True(sheets.Count >= 9,
-            "This rule found " + sheets.Count + " stylesheets. There are nine: app.css, six scoped "
-            + "component sheets in the web project and two in the editor. Fewer means the glob stopped finding them and a missing suppression could "
+        Assert.True(sheets.Count >= 10,
+            "This rule found " + sheets.Count + " stylesheets. There are ten: app.css, seven scoped "
+            + "component and page sheets in the web project and two in the editor. Fewer means the glob stopped finding them and a missing suppression could "
             + "sit in one of the sheets this never read.");
 
         var suppressions = sheets
@@ -661,9 +702,9 @@ public class StyleContractTests
     {
         var sheets = Stylesheets();
 
-        Assert.True(sheets.Count >= 9,
-            "This rule found " + sheets.Count + " stylesheets. There are nine: app.css, six scoped "
-            + "component sheets in the web project and two in the editor. Fewer means the glob stopped finding them.");
+        Assert.True(sheets.Count >= 10,
+            "This rule found " + sheets.Count + " stylesheets. There are ten: app.css, seven scoped "
+            + "component and page sheets in the web project and two in the editor. Fewer means the glob stopped finding them.");
 
         var borders = sheets
             .SelectMany(sheet => Declarations(WithoutComments(sheet.Text))

@@ -1,26 +1,35 @@
 @* One film, as a poster and visible text. Rendered inside PosterGrid's list item; it is not itself the
    <li>, so this component stays renderable on its own and the list semantics stay with the grid.
 
-   NO ANCHOR AND NO INTERACTIVE ELEMENT IN PART A. There is no /movies/{key} route and RouteAnnouncer's
-   table maps only "" and "movies", so a link here would land every one of 1,456 tiles on the not-found
-   page, which announces "Page not found". The plan's cross-task section decided this: tiles are not links
-   in Part A.
+   ONE ANCHOR, AND ITS BOUNDARY IS THE DESIGN. .tile-body -- the poster and the text block, and nothing
+   else -- is the link. The confidence badge and ActionSlot are SIBLINGS of it, and each for its own
+   reason: a <button> inside an <a> is invalid and unusable, so the favourite control that goes in
+   ActionSlot could never be a descendant; and the badge's words would be swallowed into the link's
+   accessible name, so "Se7en 1995 1h 50m 8.4/10" would become "Se7en 1995 1h 50m 8.4/10 Needs review" on
+   every degraded tile. Part A built both slots in this position in advance so that this task moved no
+   markup, and PosterTileTests reads the boundary from the other side.
 
-   WHAT PART B DOES TO THIS FILE. Wrap .tile-body -- the poster and the text block, and nothing else -- in
-   one anchor to movies/{K}, leaving the confidence badge and ActionSlot outside it. A button inside an
-   anchor is invalid and unusable, so the favourite control Part B puts in ActionSlot has to stay a sibling
-   of that anchor, which is why ActionSlot is already a sibling of .tile-body here rather than a
-   descendant; the badge sits beside it for a different reason, which is that text inside the anchor would
-   be read as part of the link's name.
-
-   WHAT PART A GIVES UP, recorded rather than left for the next reviewer to find as a regression. The
-   plan's requirement table assigned this task "a real accessible name on every tile" and "a
-   keyboard-operable grid". With no anchor the tile is not a named widget at all, so the first becomes
-   meaningful only in Part B; its Part A substitute is the list-item boundary the grid gives each tile. The
-   second is reduced to a keyboard-operable PAGER, because nothing inside the grid is focusable. *@
+   WHAT THE ANCHOR SETTLED, recorded because Part A recorded its absence. The plan's requirement table
+   asked for "a real accessible name on every tile" and "a keyboard-operable grid". With no anchor the tile
+   was not a named widget at all and its only boundary was the grid's list item; with one, every tile is a
+   named link and the whole wall is reachable by keyboard rather than just the pager. *@
 
 <div class="tile">
-    <div class="tile-body">
+    @* ONE ANCHOR AROUND .tile-body AND NOTHING ELSE, exactly where the comment above reserved it. Its
+       accessible name is everything inside it, in DOM order: "Se7en 1995 1h 50m 8.4/10" -- the poster is
+       alt="" and contributes nothing, which is why it can be decorative here. That name is read on each of
+       60 tiles, and it is the reason the runtime and the rating stay terse and the reason nothing further
+       goes inside this element without weighing it again.
+
+       NO aria-label AND NO title. The visible text IS the name; a label would let the two diverge and both
+       attributes are banned on this tile by StandingAuditTests and PosterTileTests. No aria-current either:
+       a tile is not a navigation item.
+
+       href IS RELATIVE, as NotFound.razor's is, so it resolves against <base href="/"> and the one deploy
+       that is not at a domain root keeps working. Blazor turns the activation into client-side routing
+       either way; GitHub Pages serves 404.html -- a copy of index.html -- for a cold deep link, so the
+       address survives a reload too. *@
+    <a class="tile-body" href="movies/@Movie.K">
         @* alt="" because the title is visible text in this same tile: a description here would be the
            title announced twice. Never an img whose src is Movie.P with an empty-string fallback -- an
            empty src can render broken-image chrome and some browsers expose the URL as text, so the
@@ -53,10 +62,9 @@
            ".tile > *" at one child for a confident record, and this is caption text, so the caption is
            where it belongs.
 
-           PART B CONSEQUENCE, recorded now rather than discovered later: .tile-body becomes one anchor to
-           movies/{K}, so these two join the link's accessible name -- "Se7en 1995 1h 50m 8.4/10, link",
-           read on each of 60 tiles. That is the reason both stay terse, and the reason nothing further is
-           added here without weighing it again.
+           .tile-body IS the anchor, so these two are part of the link's accessible name -- "Se7en 1995
+           1h 50m 8.4/10, link", read on each of 60 tiles. That is the reason both stay terse, and the
+           reason nothing further is added here without weighing it again.
 
            Runtime is a duration and so is never N0, exactly as a year is never N0 above. Only the grid
            head's total is formatted.
@@ -85,12 +93,11 @@
                 <span class="tile-rating">@FilmText.Rating(Movie.Vote)</span>
             }
         </span>
-    </div>
+    </a>
 
     @* THE CONFIDENCE BADGE, in the slot the comment above reserved for it: a sibling of .tile-body, so it
-       is outside the one anchor Part B wraps around .tile-body. That position is the requirement, not a
-       preference -- a badge inside the anchor would be swallowed into the link's name, and anything built
-       in the wrong place here is markup Part B has to move.
+       is outside the anchor. That position is the requirement, not a preference -- a badge inside the
+       anchor would be swallowed into the link's name.
 
        Plain visible text and nothing else. No label and no attribute of any kind carries it, so what a
        reader meets after the title and the year is the same words the screen shows: "An Unlisted Film",

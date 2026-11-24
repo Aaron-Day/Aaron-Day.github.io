@@ -14,17 +14,16 @@ namespace MovieLibrary.Web.Tests;
 /// first-class state here rather than an edge case, and the fixtures below are built to be genuinely
 /// degraded rather than healthy records with a low score written on them.
 /// <para>
-/// <b>What this file deliberately does NOT assert, and why.</b> The plan's task text asked for
-/// <c>AnUnmatchedTileIsStillALink</c> and for the badge text to sit "inside the link". Neither is
-/// satisfiable and satisfying either would break the app: there is no <c>/movies/{key}</c> route in Part A
-/// and <c>RouteAnnouncer</c>'s table maps only "" and "movies", so an anchor here would land all 1,456
-/// tiles on the not-found page. <c>PosterTile.razor</c> records that decision in capitals, and
-/// <c>PosterTileTests.TheTileRendersNoAnchorAndNothingInteractive</c> pins it. The worry behind the
-/// instruction -- "a tile that is sometimes a link and sometimes inert is worse than a thin detail page" --
-/// does not arise, because NO tile is a link in Part A and the treatment is already uniform. The valuable
-/// assertion is the inverse one, so it is written instead:
-/// <see cref="TheDegradedBranchesAddNoAnchorNoInteractiveElementAndNoLabel"/> makes this task unable to be
-/// the one that re-breaks that decision.
+/// <b>HALF OF WHAT THE PLAN ASKED FOR IS NOW TRUE AND THE OTHER HALF STILL MUST NOT BE.</b> The plan's
+/// task text asked for <c>AnUnmatchedTileIsStillALink</c> and for the badge text to sit "inside the link".
+/// The first is satisfied: <c>/movies/{Key}</c> exists, every tile is an anchor to it whatever its band, and
+/// <see cref="AnUnmatchedTileIsStillALink"/> is written below. The second must never be done -- text inside
+/// the anchor joins the link's accessible name, so every degraded tile would announce as "Se7en 1995 1h 50m
+/// 8.4/10 Needs review, link" -- which is what
+/// <see cref="TheBadgeIsASiblingOfTheTextBlockAndNeverInsideIt"/> and
+/// <see cref="TheDegradedBranchesAddNoSecondLinkNoOtherInteractiveElementAndNoLabel"/> hold between them.
+/// The worry behind the instruction -- "a tile that is sometimes a link and sometimes inert is worse than a
+/// thin detail page" -- does not arise: every tile is a link, and the treatment is uniform.
 /// </para>
 /// <para>
 /// It also asserts no record COUNTS. "The 17 unmatched films", the 20 of Task 1b and the 1,265-of-1,456
@@ -228,25 +227,54 @@ public class DegradedRecordTests : BunitContext
                                    .Select(e => e.TextContent.Trim()));
     }
 
+    // ================================================================ every band is still a link
+
+    /// <remarks>
+    /// THE ASSERTION THE PLAN ASKED FOR, now that there is a route to point it at, and it is about the
+    /// UNIFORMITY rather than about the anchor: a wall where the well-matched films are links and the
+    /// 30 unmatched ones are inert would make the records the owner most needs to open the only ones they
+    /// cannot. An unmatched record's key carries no TMDB id -- it is the identity key's first eight
+    /// characters plus the row's position, "u-d2f1c6e2" here -- so the href is built from <c>K</c> and never
+    /// from <c>I</c>, which is 0 on every one of them and would send all 30 to the same address.
+    /// <para>
+    /// The address is asserted per band rather than once, because the key is the one field whose shape
+    /// genuinely differs between them.
+    /// </para>
+    /// </remarks>
+    [Theory]
+    [InlineData(Confidence.Unmatched, "movies/u-d2f1c6e2")]
+    [InlineData(Confidence.Uncertain, "movies/601-88")]
+    [InlineData(Confidence.Confident, "movies/807-110")]
+    public void AnUnmatchedTileIsStillALink(Confidence band, string href)
+    {
+        var anchor = Tile(For(band)).QuerySelector("a.tile-body");
+
+        Assert.NotNull(anchor);
+        Assert.Equal(href, anchor.GetAttribute("href"));
+    }
+
     // ================================================================ what no band may introduce
 
     /// <remarks>
-    /// THE INVERSE OF THE ASSERTION THE PLAN ASKED FOR, and the valuable one: this task cannot be the one
-    /// that re-breaks the no-anchor decision. <c>PosterTileTests.TheTileRendersNoAnchorAndNothingInteractive</c>
-    /// renders one confident film; the badge is a branch it never reaches, so the branches this task adds
-    /// get their own pass over all three bands. <c>[role]</c> is in the list for the reason that test gives:
-    /// the tile genuinely carries no role in Part A, the badge is content rather than a role, and Part B's
-    /// anchor has an implicit one.
+    /// WHAT A BAND MAY NOT ADD. Every tile has exactly ONE target, whatever its band:
+    /// <c>PosterTileTests.TheTileRendersExactlyOneLinkAndNothingElseInteractive</c> renders one confident
+    /// film, and the badge is a branch it never reaches, so the branches this task adds get their own pass
+    /// over all three bands. A badge that became a link of its own -- to a review queue, say -- would put a
+    /// second stop in every degraded tile and a second name for the same film, and it is the obvious thing
+    /// for a later task to reach for. <c>[role]</c> is in the list for the reason that test gives: the
+    /// anchor's role is implicit and the badge is content rather than a role.
     /// </remarks>
     [Fact]
-    public void TheDegradedBranchesAddNoAnchorNoInteractiveElementAndNoLabel()
+    public void TheDegradedBranchesAddNoSecondLinkNoOtherInteractiveElementAndNoLabel()
     {
         foreach (var band in Enum.GetValues<Confidence>())
         {
             var tile = Tile(For(band));
+            var anchor = Assert.Single(tile.QuerySelectorAll("a"));
 
-            Assert.Empty(tile.QuerySelectorAll("a, button, input, select, textarea, [tabindex], [role]"));
-            Assert.Empty(MarkupRules.InteractiveElements(tile));
+            Assert.Equal("a", anchor.LocalName);
+            Assert.Empty(tile.QuerySelectorAll("button, input, select, textarea, [tabindex], [role]"));
+            Assert.Equal(new[] { anchor }, MarkupRules.InteractiveElements(tile));
 
             // No label either: the badge's words are on screen, and an aria-label would let the visible
             // text and the announced text diverge. No title attribute, which is the same defect with a

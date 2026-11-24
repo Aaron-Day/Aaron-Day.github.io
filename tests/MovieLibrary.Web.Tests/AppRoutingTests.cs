@@ -23,9 +23,16 @@ public class AppRoutingTests : BunitContext
         return Render<App>();
     }
 
+    // HAND-WRITTEN AND NOT REFLECTIVE, which is the one thing to resist changing here. The route set is
+    // discovered in MarkupContractTests, and discovering it twice would mean a page added to the app
+    // silently joined this theory with no one choosing an address for it -- a parameterised route has no
+    // single address, and "/movies/807-110" against the stub catalogue and "/movies/1" against nothing are
+    // two different renders this test wants to be explicit about. Both are here for that reason.
     [Theory]
     [InlineData("/")]
     [InlineData("/movies")]
+    [InlineData(AnnouncerTestExtensions.FilmAddress)]
+    [InlineData("/movies/no-such-key")]
     [InlineData("/zzz")]
     public void EveryRouteRendersOneBannerOneNavOneMainAndNoFooter(string path)
     {

@@ -1,0 +1,633 @@
+@page "/movies/{Key}"
+@using System.Globalization
+@implements IDisposable
+@inject CatalogService Catalog
+@inject Announcer Announcer
+@inject IJSRuntime Js
+
+@* One film, everything the catalogue holds about it.
+
+   THE PAGE TITLE AND THE h1 ARE IN THE FIRST RENDER AND OUTSIDE EVERY STATE BRANCH, for the reason
+   Movies.razor records: App.razor's FocusOnNavigate fires once after the first render and never retries, and
+   the browser gate's own boot signal is "#app main#main-content h1". A heading that appeared only once the
+   film arrived would cost the focus move AND every A11y test its wait.
+
+   No live region of any kind in here: no alert role, no status role, no log role, and no live-region
+   attribute. (Spelled in words, because SourceContractTests matches these files for the literal markers and a
+   comment quoting one fails exactly as the attribute would.) The announcer in MainLayout owns every region. *@
+<PageTitle>@Heading - Film and TV library</PageTitle>
+
+@* tabindex="-1" for ElementReference.FocusAsync(), which -- unlike FocusOnNavigate's helper -- does not add
+   the attribute and fails silently without it. Not a conformance claim; a feature dependency. *@
+<h1 tabindex="-1" @ref="heading">@Heading</h1>
+
+@* ONE STABLE CONTAINER IN EVERY STATE, never sibling branches that swap nodes: replacing the node would
+   destroy the one a screen reader's virtual cursor may be sitting on while the film loads.
+
+   The paragraph has something true to say in all four states, which is why it can stay. Three of them are a
+   sentence; the fourth is the film's own byline -- year, runtime, rating -- which is what a detail page puts
+   under its title anyway. So this is not an empty element kept alive for the sake of a rule.
+
+   .film-state AND NOT .catalog-state. The browser gate keys its settle wait off the films page's container
+   ("if .catalog-state is present, wait for the tile grid"), so reusing that class would have every scan of
+   this page wait for a grid that never comes. RouteScanTests.SettledAsync knows both names. *@
+<div class="film-state" tabindex="-1" @ref="stateContainer">
+    @if (film is { } byline)
+    {
+        @* The same two strings the tile renders, from the same helper, and the gap between them is a flex
+           gap with NO separator character in the DOM -- a middot is read inconsistently and ::before
+           content is exposed to the accessibility tree all the same. The rating is guarded exactly as the
+           tile's is: Vote is 0d on every unmatched record, and "0.0/10" would state as a fact that a film
+           nobody looked up scored zero. *@
+        <p class="film-byline">
+            @if (byline.Y is { } year)
+            {
+                <span>@year</span>
+            }
+            <span>@FilmText.Runtime(byline.Rt)</span>
+            @if (byline.Vote > 0d)
+            {
+                <span>@FilmText.Rating(byline.Vote)</span>
+            }
+        </p>
+    }
+    else
+    {
+        <p>@Sentence</p>
+    }
+
+    @if (films.State == CatalogState.Failed || retrying)
+    {
+        @* aria-disabled, never the disabled ATTRIBUTE: disabling the focused element blurs it and drops
+           focus to <body>. The click still arrives and is ignored in TryAgain instead. *@
+        <button type="button" class="try-again" aria-disabled="@(retrying ? "true" : null)" @onclick="TryAgain">Try again</button>
+    }
+</div>
+
+@if (film is { } f)
+{
+    @* THE ARTWORK, AND BOTH IMAGES ARE DECORATIVE. alt="" on each: the title is the h1 immediately above,
+       so a description here would be the film named twice, and a backdrop is set dressing with no
+       information in it at all. A MISSING alt would be the defect and is indistinguishable in a browser,
+       which is why MarkupContractTests requires the attribute rather than preferring it.
+
+       NO <img> AT ALL WHEN THERE IS NO PATH, and the test is `is { Length: > 0 }` rather than a null check:
+       a published record can carry p: "" , and an empty src renders broken-image chrome in some browsers
+       and is exposed as text by others. The poster falls back to the same placeholder box the tile uses; an
+       absent backdrop renders nothing, because a placeholder for set dressing is set dressing for set
+       dressing.
+
+       width and height are the intrinsic sizes of the w1280 and w342 renditions. They reserve the box
+       before the TMDB CDN answers, which matters most under magnification. The stylesheet returns the
+       height to auto for the reason PosterTile.razor.css records at length: an HTML height attribute is a
+       presentational hint that pins the used height, and aspect-ratio only resolves a dimension that is
+       auto, so without it the artwork is stretched rather than scaled.
+
+       NO TEXT OVER EITHER IMAGE. Text on artwork has no contrast ratio that can be measured or promised --
+       every film's backdrop is a different picture -- so SC 1.4.3 cannot be satisfied by inspection. The
+       title, the byline and the tagline are all in the flow above and beside it. *@
+    @if (f.B is { Length: > 0 } backdrop)
+    {
+        <img class="film-backdrop" src="@($"https://image.tmdb.org/t/p/w1280{backdrop}")" alt=""
+             width="1280" height="720" decoding="async" />
+    }
+
+    <div class="film-art">
+        @if (f.P is { Length: > 0 } poster)
+        {
+            <img class="film-poster" src="@($"https://image.tmdb.org/t/p/w342{poster}")" alt=""
+                 width="342" height="513" decoding="async" />
+        }
+        else
+        {
+            <span class="film-poster-placeholder" aria-hidden="true"></span>
+        }
+
+        <div class="film-blurb">
+            @* THE TAGLINE IS NOT A HEADING AND NOT AN ITALIC DECORATION. It is a sentence the studio wrote,
+               so it is a paragraph; <em> would claim a stress emphasis the words do not have, and a heading
+               would put marketing copy into the outline a reader navigates by. *@
+            @if (f.Tag is { Length: > 0 } tagline)
+            {
+                <p class="film-tagline">@tagline</p>
+            }
+
+            @* PLAIN div AND h2, NEVER <section>. A section with an accessible name becomes a region
+               landmark, and four of them on one page would file Overview, Cast, Details and Additional
+               information in a landmark list beside Banner, Navigation and Main -- which is what a landmark
+               list is for, and these are not that. Unnamed, a section maps to generic and buys nothing at
+               all. The h2 is what a reader navigates by. *@
+            @if (f.Ov is { Length: > 0 } overview)
+            {
+                <div class="film-section">
+                    <h2>Overview</h2>
+                    <p>@overview</p>
+                </div>
+            }
+        </div>
+    </div>
+    @* THE CAST, AS A LIST, BECAUSE IT IS ONE. role="list" is declared by hand for the reason PosterGrid
+       records: a list whose markers CSS removes is stripped of its list semantics by Safari and VoiceOver,
+       and the role puts them back. Every photo is alt="" -- the person's name is the text beside it.
+
+       "as" IS A REAL TEXT NODE AND NOT A SEPARATOR. "Brad Pitt as Mills" reads as a sentence; "Brad Pitt --
+       Mills" reads as "Brad Pitt" then, depending on the reader's punctuation level, either nothing or
+       "dash". No truncation either, in C# or in CSS: a character name cut short cannot be recovered, and
+       there is no link, label or title attribute here that could carry the rest.
+
+       A character this record has no name for renders the person alone rather than "Brad Pitt as". The
+       pipeline writes string.Empty for a missing character, so the test is on Length and not on null. *@
+    @if (f.Cast is { Length: > 0 } cast)
+    {
+        <div class="film-section">
+            <h2>Cast</h2>
+
+            <ul class="film-cast" role="list">
+                @foreach (var member in cast)
+                {
+                    <li>
+                        @if (member.P is { Length: > 0 } portrait)
+                        {
+                            <img src="@($"https://image.tmdb.org/t/p/w185{portrait}")" alt=""
+                                 width="185" height="278" loading="lazy" decoding="async" />
+                        }
+                        else
+                        {
+                            <span class="film-portrait-placeholder" aria-hidden="true"></span>
+                        }
+
+                        <span class="film-cast-name">@member.N</span>
+                        @if (member.C is { Length: > 0 } character)
+                        {
+                            <span class="film-cast-role">as @character</span>
+                        }
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+
+    @* THE FACTS, AS A DESCRIPTION LIST, WITH EACH PAIR WRAPPED IN A div. The wrapper is valid HTML (the
+       spec allows one div per group inside a dl) and is what lets the pair be a grid cell without
+       display: contents, which Chrome and Safari both used to drop from the accessibility tree.
+
+       EVERY ROW IS GUARDED, and none of them is padded with a placeholder. "Unknown" in a dd is the page
+       stating that the library knows the answer is unknown, when what is true is that the catalogue has no
+       field for it; an absent row says exactly that and says it shorter.
+
+       THE MATCH QUALITY IS TEXT HERE AND NOT THE TILE'S BADGE, deliberately. The badge exists because a
+       wall of sixty posters has no room for a label, and its rules are scoped to PosterTile.razor.css --
+       a second copy of them here is the drift this project keeps extracting helpers to avoid. On a page
+       with room for a description list, the band's own words in a dd beside the score say more than a
+       bordered box does, and they come from ConfidenceBand so the page, the tile and the build summary
+       cannot disagree. *@
+    <div class="film-section">
+        <h2>Details</h2>
+
+        <dl class="film-facts">
+            @if (f.Dir is { Length: > 0 })
+            {
+                <div>
+                    <dt>@(f.Dir.Length == 1 ? "Director" : "Directors")</dt>
+                    <dd>@string.Join(", ", f.Dir)</dd>
+                </div>
+            }
+
+            @if (GenreNames(f) is { Length: > 0 } genres)
+            {
+                <div>
+                    <dt>Genres</dt>
+                    <dd>@genres</dd>
+                </div>
+            }
+
+            @if (f.Ag is { Length: > 0 } appleGenre)
+            {
+                <div>
+                    <dt>Category in the library</dt>
+                    <dd>@appleGenre</dd>
+                </div>
+            }
+
+            @if (f.Col is { Length: > 0 } collection)
+            {
+                <div>
+                    <dt>Collection</dt>
+                    <dd>@collection</dd>
+                </div>
+            }
+
+            @if (f.Own is { Length: > 0 } purchase)
+            {
+                <div>
+                    <dt>How it was bought</dt>
+                    <dd>@purchase</dd>
+                </div>
+            }
+
+            <div>
+                <dt>Match</dt>
+                <dd>@MatchSentence(f)</dd>
+            </div>
+        </dl>
+    </div>
+
+    @* THE OWNER'S OWN FIELDS. MovieRecord.Ex is a contract: a key added by hand to the record store
+       survives every build in between with no code change, and nothing in this project interprets the
+       contents. So this renders whatever is there and reasons about none of it.
+
+       ORDERED BY StringComparer.Ordinal AND NOT BY THE DICTIONARY'S ORDER. Dictionary<,> enumerates in an
+       order no documentation promises, and a page whose rows moved between two loads of the same film would
+       be SC 3.2.3 Consistent Navigation's problem in miniature -- a reader who learned where a row was
+       would find it somewhere else. Ordinal and not culture-aware, so the order cannot depend on the
+       browser's locale.
+
+       A BLANK KEY OR A BLANK VALUE IS SKIPPED. A dt with no text is a term a reader is told exists and
+       cannot read, and a dd with no text is the same from the other side; both are the shape that passes
+       every automated check and says nothing. @key is on the wrapper so Blazor diffs these rows by their
+       own identity rather than by position: without it, removing one row re-labels every row after it for
+       one frame. *@
+    @if (ExtraFields(f) is { Count: > 0 } extra)
+    {
+        <div class="film-section">
+            <h2>Additional information</h2>
+
+            <dl class="film-facts">
+                @foreach (var (name, value) in extra)
+                {
+                    <div @key="name">
+                        <dt>@name</dt>
+                        <dd>@value</dd>
+                    </div>
+                }
+            </dl>
+        </div>
+    }
+}
+
+@code {
+    /// <summary>
+    /// The failure sentence. ONE constant for the visible paragraph and for the <c>Alert</c>, so the seen
+    /// and the spoken copies cannot drift. Internal so a test can assert they are the same string rather
+    /// than two literals that happen to match today.
+    /// </summary>
+    internal const string CouldNotLoad =
+        "This film could not be loaded. Check your connection and try again.";
+
+    /// <summary>
+    /// What a key with no film behind it says, and it says the ADDRESS is wrong rather than the library.
+    /// A deep link to a film the owner has since removed, or a key mistyped in a bookmark, is not a fetch
+    /// that failed, so it offers no Try again: no number of retries will resolve it.
+    /// </summary>
+    internal const string NoSuchFilm = "No film in the library has this address.";
+
+    /// <summary>The visible loading copy, with the ellipsis CHARACTER rather than three full stops.</summary>
+    internal const string LoadingVisible = "Loading film…";
+
+    /// <summary>
+    /// The heading in each state, and each one is a claim the page can stand behind. "Film not found" is
+    /// about this address; "Film unavailable" is about the fetch and deliberately does not say the film
+    /// does not exist, because a failed fetch knows nothing at all about that.
+    /// </summary>
+    internal const string NotFoundHeading = "Film not found";
+
+    internal const string UnavailableHeading = "Film unavailable";
+
+    /// <summary>
+    /// The published key, from the route. A string, so a key the router cannot convert is junk to look up
+    /// and not an unhandled exception -- there is nothing to parse here anyway.
+    /// </summary>
+    [Parameter] public string? Key { get; set; }
+
+    private ElementReference heading;
+    private ElementReference stateContainer;
+
+    // Loading with a NULL value, which is the one place a null value is legitimate: CatalogService.GetFilmAsync
+    // returns Ready with null for "the catalogue loaded and holds no film with that key", and this page's whole
+    // not-found branch rests on telling that apart from Failed. An empty value still never means a failure.
+    private CatalogResult<MovieRecord?> films = new(CatalogState.Loading, null);
+
+    private CatalogMeta meta = CatalogMeta.Empty;
+
+    /// <summary>The film, or null in every state that does not have one. Ready-with-null is not-found.</summary>
+    private MovieRecord? film => films.State == CatalogState.Ready ? films.Value : null;
+
+    // The key the current state was fetched for. The router REUSES this component when one film's address is
+    // replaced by another's, so without this the page would show the first film for ever; comparing keys rather
+    // than counting renders is what makes OnParametersSetAsync idempotent over the renders Blazor makes for its
+    // own reasons.
+    private string? loadedKey;
+
+    private bool disposed;
+    private bool retrying;
+
+    // True once a render has committed while the fetch was still in flight, which is the whole condition on
+    // saying the film's name aloud. See the Ready arm.
+    private bool wasLoading;
+
+    // True once THIS arrival has been reported, by whichever channel did it: the status announcement or the
+    // focus move after a successful retry. Reset when the key changes, because a second film is a second
+    // thing the reader needs telling about.
+    private bool named;
+
+    private bool failureReported;
+    private bool movedFocusToFailure;
+    private bool movingFocus;
+    private bool focusHeadingAfterRetry;
+
+    /// <summary>
+    /// The heading, per state. It is also the page title and, in the two Ready states, the name the page
+    /// announces -- one string for all three, so the tab, the outline and the announcement cannot disagree.
+    /// </summary>
+    private string Heading => films.State switch
+    {
+        CatalogState.Failed => UnavailableHeading,
+        CatalogState.Loading => LoadingVisible,
+        _ => films.Value?.T ?? NotFoundHeading,
+    };
+
+    /// <summary>
+    /// The one sentence in the state container, for the three states with no film in them. In the fourth the
+    /// container holds the film's byline instead and this is never read.
+    /// </summary>
+    private string Sentence => films.State switch
+    {
+        CatalogState.Failed => CouldNotLoad,
+        CatalogState.Loading => LoadingVisible,
+        _ => NoSuchFilm,
+    };
+
+    /// <summary>
+    /// The genre names this film carries, comma-separated, from <c>meta.json</c>'s map. An id the meta does
+    /// not name is DROPPED rather than rendered as a number: "28" tells a reader nothing, and a half-deployed
+    /// meta is exactly when it would happen.
+    /// </summary>
+    private string GenreNames(MovieRecord f) => string.Join(", ", f.G
+        .Select(id => meta.Genres.GetValueOrDefault(id.ToString(CultureInfo.InvariantCulture)))
+        .Where(name => name is { Length: > 0 }));
+
+    /// <summary>
+    /// What the match was, in the band's own words and with the score beside them. The words come from
+    /// <c>ConfidenceBand</c> and are never retyped here, so the page, the tile and the build summary the
+    /// owner reads cannot drift apart.
+    /// </summary>
+    /// <remarks>
+    /// The Confident case says so in words rather than returning null as <c>BadgeFor</c> does. A badge on
+    /// 1,265 of 1,456 tiles would train the eye to ignore the ones that matter, which is why the tile shows
+    /// nothing; one row in a description list on one film's page has no such cost, and leaving it out would
+    /// make "no Match row" mean both "matched well" and "a field this page forgot".
+    /// <para>
+    /// An unmatched record's score is 0 and means nothing -- the pipeline writes 0 whatever the best
+    /// candidate scored -- so it is not shown. The percentage is formatted in the browser's culture, as
+    /// every other number on this site is.
+    /// </para>
+    /// </remarks>
+    private static string MatchSentence(MovieRecord f)
+    {
+        var band = ConfidenceBand.Of(f);
+
+        if (band == Confidence.Unmatched) return ConfidenceBand.BadgeFor(band)!;
+
+        var score = f.Mc.ToString("P0");
+
+        return band == Confidence.Confident ? "Matched, " + score : ConfidenceBand.BadgeFor(band) + ", " + score;
+    }
+
+    /// <summary>
+    /// The owner's own fields, in a stable order, with blank names and blank values dropped. See the markup
+    /// for why the order is Ordinal and why a blank row is absent rather than padded.
+    /// </summary>
+    private static List<KeyValuePair<string, string>> ExtraFields(MovieRecord f) => f.Ex is null
+        ? []
+        : [.. f.Ex
+            .Where(p => p.Key is { Length: > 0 } && p.Value is { Length: > 0 })
+            .OrderBy(p => p.Key, StringComparer.Ordinal)];
+
+    /// <remarks>
+    /// EVERY arrival comes through here and not through <c>OnInitializedAsync</c>, because the router reuses
+    /// this component when one film's address replaces another's: with the fetch in OnInitialized the second
+    /// film would never be looked up. Guarded on the key so that the renders Blazor makes for its own reasons
+    /// cost no work.
+    /// <para>
+    /// Nothing is announced here. Rule R4: a message raised before the first render starts its settle timer
+    /// while the clearing render is still queued, so the real gap collapses on exactly the slow devices the
+    /// gap exists for. Everything this page says it says from <see cref="OnAfterRenderAsync"/>. The clear
+    /// below is a cancellation, which takes effect at once and speaks nothing.
+    /// </para>
+    /// </remarks>
+    protected override async Task OnParametersSetAsync()
+    {
+        if (string.Equals(loadedKey, Key, StringComparison.Ordinal)) return;
+
+        loadedKey = Key;
+        films = new(CatalogState.Loading, null);
+        wasLoading = false;
+        named = false;
+        failureReported = false;
+        movedFocusToFailure = false;
+        Announcer.Status("");
+
+        var result = await FetchAsync();
+        if (disposed) return;
+
+        films = result;
+    }
+
+    /// <summary>
+    /// The film and the genre names, in parallel; the film decides the outcome. A meta that failed is
+    /// <c>CatalogMeta.Empty</c> -- no genre names, every other row intact -- so its state is deliberately
+    /// not looked at: this page owns one failure sentence and a second voice for the same fetch would be two.
+    /// </summary>
+    /// <remarks>
+    /// The fetch is awaited and never cancelled. The task is shared and cached by the service, so cancelling
+    /// it would turn one navigation away into a Failed result for the next page that wanted the catalogue.
+    /// </remarks>
+    private async Task<CatalogResult<MovieRecord?>> FetchAsync()
+    {
+        var filmRequest = Catalog.GetFilmAsync(Key ?? string.Empty);
+        var metaRequest = Catalog.GetMetaAsync();
+
+        var result = await filmRequest;
+        if (result.State == CatalogState.Ready) meta = (await metaRequest).Value;
+
+        return result;
+    }
+
+    /// <remarks>
+    /// Every announcement and every focus move, after the render that carries the new state.
+    /// </remarks>
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (disposed) return;
+
+        switch (films.State)
+        {
+            case CatalogState.Loading:
+                // Nothing is said. The heading itself reads "Loading film", and FocusOnNavigate has just put
+                // focus on it, so a screen reader has already spoken those words -- rule R3 forbids announcing
+                // the text of whatever focus has just moved to. The flag is what the Ready arm needs.
+                wasLoading = true;
+                break;
+
+            case CatalogState.Failed:
+                // THE FOCUS MOVE IS THE PRIMARY CHANNEL and it runs FIRST, because a screen reader reads the
+                // contents of a focused unnamed tabindex="-1" container and this container's whole text IS the
+                // failure sentence. A move that happens therefore already says it, in the words on screen.
+                // The flag is set only when the move actually happened, so a reader who had the nav drawer open
+                // when the fetch failed is not denied the move for ever.
+                var movedOnThisPass = false;
+                if (!movedFocusToFailure && !movingFocus)
+                {
+                    movingFocus = true;
+                    try { movedOnThisPass = movedFocusToFailure = await FocusIfUnmoved(stateContainer); }
+                    finally { movingFocus = false; }
+                }
+
+                // R11: one report for one failure the reader can see, and THE ALERT IS THE FALLBACK -- raised
+                // only where the focus move did not happen. Raising both speaks the sentence twice: once as the
+                // contents of the container focus landed on, and again a settle delay later when the assertive
+                // region interrupts with identical text. On a FAILED RETRY focus is usually already on the Try
+                // again button, which is not a keeper, so the helper refuses, nothing moves, and this fires --
+                // which is how a reader who retries and fails again is not met with silence. "Usually" is doing
+                // work in that sentence; see the remarks on PageFocus.Keepers.
+                // movingFocus is in the condition because a render can arrive while the first pass's focus call
+                // is suspended at its await: that pass has not chosen a channel yet and this one must not
+                // choose for it.
+                if (!failureReported && !movingFocus)
+                {
+                    failureReported = true;
+                    if (!movedOnThisPass) Announcer.Alert(CouldNotLoad);
+                }
+
+                break;
+
+            case CatalogState.Ready:
+                // A SUCCESSFUL RETRY, and the focus move is the channel. The Try again button the reader was
+                // standing on has gone, so focus would otherwise drop to <body>; landing on the heading, which
+                // now holds the film's name, says the name as it lands. Nothing is announced after it, for the
+                // R3 reason the Loading arm gives.
+                if (focusHeadingAfterRetry)
+                {
+                    focusHeadingAfterRetry = false;
+                    named = true;
+                    await FocusOutright(heading);
+                }
+
+                // THE NAME, ONCE, AND ONLY WHERE THE READER HAS NOT ALREADY HEARD IT. wasLoading is the whole
+                // guard and it is not a micro-optimisation: when the catalogue is already in memory -- which is
+                // every arrival from a tile on the films page, the common case -- this page is Ready on its
+                // FIRST render, so FocusOnNavigate lands on a heading that already holds the film's name and a
+                // reader hears it from the focus move. Announcing as well would be the same words twice for one
+                // event. On a cold deep link the heading said "Loading film" when focus landed, nothing has
+                // said the film's name since, and this is the only channel that will.
+                // Status and not Alert: an arrival is not a failure, and the polite region never interrupts.
+                if (!named && wasLoading)
+                {
+                    named = true;
+                    Announcer.Status(Heading);
+                }
+
+                break;
+        }
+    }
+
+    /// <remarks>
+    /// Nothing auto-retries and nothing auto-dismisses. The failed text is a state, not a toast: a message
+    /// that cleared itself would be a content-set time limit on reading it, SC 2.2.1 Timing Adjustable,
+    /// Level A, and an auto-retry with a visible countdown would engage the same criterion.
+    /// <para>
+    /// There is no Try again in the not-found state, and that is the point of telling it from a failure: the
+    /// address is wrong, so a retry is a button that cannot help.
+    /// </para>
+    /// </remarks>
+    private async Task TryAgain()
+    {
+        // The button carries aria-disabled rather than the disabled attribute, so the click still arrives
+        // while a retry is in flight and has to be ignored here.
+        if (retrying) return;
+
+        // R5: the failure has ended as far as the reader is concerned. A cancellation, not a message -- it
+        // takes effect at once and speaks nothing. The next Alert is raised from OnAfterRenderAsync and never
+        // in this handler: on a device slow enough to flush both mutations in one frame the second call would
+        // see the region already empty, mark the clear observed, and the repeated identical sentence would
+        // reach the DOM as no change at all.
+        Announcer.Alert("");
+
+        retrying = true;
+        failureReported = false;
+        movedFocusToFailure = false;
+        films = new(CatalogState.Loading, null);   // the loading copy, visibly
+
+        var result = await FetchAsync();
+        if (disposed) return;
+
+        retrying = false;
+        films = result;
+
+        // Only a film earns the focus move: it is the heading's new text that reports the success, and
+        // "Film not found" is this address being wrong rather than the retry working.
+        focusHeadingAfterRetry = result is { State: CatalogState.Ready, Value: not null };
+    }
+
+    /// <summary>
+    /// Moves focus to <paramref name="element"/> unless the reader has moved focus themselves, and says
+    /// whether it happened.
+    /// </summary>
+    /// <remarks>
+    /// The guard cannot be written in C#: there is no way to read <c>document.activeElement</c> from Blazor,
+    /// and <c>ElementReference.FocusAsync()</c> focuses unconditionally. index.html defines the helper and
+    /// says why the move is a conformance route rather than a workaround.
+    /// </remarks>
+    private Task<bool> FocusIfUnmoved(ElementReference element) =>
+        TryFocus(() => Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", element, PageFocus.Keepers).AsTask());
+
+    /// <summary>Moves focus to <paramref name="element"/> whatever holds it now.</summary>
+    /// <remarks>
+    /// The successful retry only: the button the reader was standing on has gone, so focus would otherwise
+    /// drop to <c>&lt;body&gt;</c>. Nothing to ask the helper here -- the control that had focus no longer
+    /// exists.
+    /// </remarks>
+    private static Task<bool> FocusOutright(ElementReference element) =>
+        TryFocus(async () => { await element.FocusAsync(); return true; });
+
+    /// <summary>Runs one focus move and says whether it happened, swallowing the ways interop can fail.</summary>
+    /// <remarks>
+    /// <c>ElementReference.FocusAsync()</c> is interop exactly as the helper call is -- it invokes
+    /// <c>Blazor._internal.domWrapper.focus</c> -- so an escape from either reveals <c>#blazor-error-ui</c>,
+    /// which carries an assertive role of its own, on a page that is already reporting a failure through the
+    /// announcer or has just recovered from one: two assertive sources for one event, which is the thing this
+    /// project forbids outright.
+    /// </remarks>
+    private static async Task<bool> TryFocus(Func<Task<bool>> move)
+    {
+        try
+        {
+            return await move();
+        }
+        catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
+        {
+            return false;
+        }
+    }
+
+    /// <remarks>
+    /// R7: clear what this page set, and raise nothing new. Both calls are cancellations -- they take effect
+    /// at once and speak nothing. Without them a film's name sits in #status-announcer, readable in browse
+    /// mode, long after the reader has left the film, because the announcer is a scoped singleton and
+    /// MainLayout survives navigation.
+    /// <para>
+    /// #route-announcer is NOT cleared here, and that is deliberate rather than an omission. RouteAnnouncer
+    /// is its only caller -- SourceContractTests pins that -- and it writes the region empty on the way in to
+    /// this page and the next page's name on the way out. A clear from here would land after that write on
+    /// any navigation where this component is disposed last, and the latest-wins rule would drop the name of
+    /// the page the reader just arrived at.
+    /// </para>
+    /// </remarks>
+    public void Dispose()
+    {
+        disposed = true;
+
+        Announcer.Status("");
+        Announcer.Alert("");
+    }
+}

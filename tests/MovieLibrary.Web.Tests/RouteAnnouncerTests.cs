@@ -157,8 +157,78 @@ public class RouteAnnouncerTests : BunitContext
         nav.NavigateTo(path);
         Settle();
 
+        // A ROUTE WHOSE NAME IS NOT IN ITS ADDRESS. A film's page is named by the film, which lives in the
+        // catalogue: the key says "807-110" and the heading says "Se7en", so there is nothing to read off
+        // the path. PageNameFor returns null for it and the handler writes the region EMPTY -- never a
+        // guess, and never the previous page's name left standing over a film that is still loading.
+        //
+        // THIS IS NOT A HOLE IN THIS CONTRACT, which is the thing to check before accepting the branch. The
+        // null arm is reached only by an explicit "movies/" prefix, so a page added with no entry still
+        // falls through to "Page not found" and still fails the assertion below. What the branch gives up is
+        // this test's cover for the detail page's OWN announcement, and that is covered instead by
+        // FilmDetailTests, which drives the cached and the uncached arrival separately -- the two differ in
+        // whether a reader has already heard the name from the focus move, and a reflective walk cannot
+        // choose which of them it gets.
+        if (template.Contains('{', StringComparison.Ordinal))
+        {
+            cut.WaitForAssertion(() => Assert.Equal(string.Empty, RouteText(cut)));
+            cut.WaitForAssertion(() => Assert.Equal(string.Empty, announcer.RouteText));
+            return;
+        }
+
         var heading = cut.Find("main h1").TextContent.Trim();
         cut.WaitForAssertion(() => Assert.Equal(heading, RouteText(cut)));
+    }
+
+    /// <remarks>
+    /// The positive control for the branch above, and the reason the branch is not just "skip the hard
+    /// one": arriving on a film page must CLEAR the name of the page the reader came from. Without the
+    /// clear, #route-announcer would still read "Films" while a film page was loading -- stale in browse
+    /// mode, and the one state where a reader is most likely to go looking for where they are.
+    /// </remarks>
+    [Fact]
+    public void ArrivingOnAFilmClearsThePreviousPagesNameRatherThanLeavingItStanding()
+    {
+        var cut = RenderAt("/zzz");
+
+        nav.NavigateTo("/movies");
+        Settle();
+        cut.WaitForAssertion(() => Assert.Equal("Films", RouteText(cut)));
+
+        nav.NavigateTo(AnnouncerTestExtensions.FilmAddress);
+        Settle();
+        cut.WaitForAssertion(() => Assert.Equal(string.Empty, RouteText(cut)));
+
+        // And leaving one puts the next page's name back, so the clear is not a region this page breaks on
+        // its way through.
+        nav.NavigateTo("/movies");
+        Settle();
+        cut.WaitForAssertion(() => Assert.Equal("Films", RouteText(cut)));
+    }
+
+    /// <remarks>
+    /// One film's address replaced by another's is a page change the announcer must still notice, even
+    /// though both are the same route template and both clear the region. It is the same shape as the two
+    /// addresses of the films page, from the other side: if PagePath ever stopped including the key, this
+    /// would be a filter change and the second film would be announced as nothing at all -- which is also
+    /// what would happen if the detail page itself stopped resetting on a new key.
+    /// </remarks>
+    [Fact]
+    public void MovingFromOneFilmToAnotherIsAPageChangeAndNotAFilterChange()
+    {
+        var cut = RenderAt("/movies");
+
+        nav.NavigateTo(AnnouncerTestExtensions.FilmAddress);
+        Settle();
+        cut.WaitForAssertion(() => Assert.Equal(string.Empty, RouteText(cut)));
+
+        nav.NavigateTo("/movies/601-88");
+        Settle();
+
+        // The heading is the proof the navigation was taken as a page change at all: the component is
+        // REUSED across these two addresses, so a page that ignored the new key would still say "Se7en".
+        cut.WaitForAssertion(() => Assert.Equal("The Peeled Edition", cut.Find("main h1").TextContent.Trim()));
+        Assert.Equal(string.Empty, RouteText(cut));
     }
 
     [Fact]

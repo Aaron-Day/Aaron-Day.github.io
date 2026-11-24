@@ -25,9 +25,21 @@
     // The page name for each path that serves a page. Typed by hand, and pinned two ways: a test walks every @page
     // route and requires the announcement to equal that page's h1, so a new route without an entry fails the build
     // rather than being announced as "Page not found" on a page that exists. The names match the h1 and the nav.
-    private static string PageNameFor(string path) => path.ToLowerInvariant() switch
+    //
+    // NULL IS A THIRD OUTCOME AND NOT A MISSING ENTRY. A film's page is named by the film, which is in the
+    // catalogue and not in the address, so there is no name to read off the path at all: the key says "807-110"
+    // and the heading says "Se7en". Null therefore means "this page names itself", and the handler below writes
+    // the region EMPTY rather than guessing -- a cancellation, which takes effect at once and speaks nothing,
+    // and which is what keeps the previous page's name from standing over a film that is still loading.
+    // The page then says its own name through the POLITE region, and only where a reader has not already heard
+    // it from the focus move; FilmDetail.razor's Ready arm sets out that condition in full. Route stays
+    // single-caller, which SourceContractTests pins.
+    // A page added with no entry still falls to "Page not found" and still fails the route contract, so this
+    // is not a hole in it: the prefix is matched explicitly and nothing else reaches the null arm.
+    private static string? PageNameFor(string path) => path.ToLowerInvariant() switch
     {
         "" or "movies" => "Films",
+        var p when p.StartsWith("movies/", StringComparison.Ordinal) => null,
 #if DEBUG
         // The local record editor. Debug only, because Release does not serve this address at all and
         // announcing a name for an address the router answers with its not-found page would be a lie. The
@@ -49,7 +61,7 @@
         if (string.Equals(path, lastPath, StringComparison.OrdinalIgnoreCase)) return;   // a filter changed, not the page
 
         lastPath = path;
-        Announcer.Route(PageNameFor(path));
+        Announcer.Route(PageNameFor(path) ?? string.Empty);
     }
 
     public void Dispose() => Navigation.LocationChanged -= OnLocationChanged;
