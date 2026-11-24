@@ -188,7 +188,36 @@ select[b-9jfn63vvns] { align-self: flex-start; }
    to make that number true would be a visual change nobody asked for, so the measurement was corrected
    instead.) Re-measure if a token changes. */
 .tile[b-edk0x0dgrl] { position: relative; }
-.tile-body[b-edk0x0dgrl] { display: flex; flex-direction: column; gap: .25rem; }
+/* THE TILE IS A LINK NOW, and three declarations make an anchor look like a card rather than like a
+   sentence.
+
+   text-decoration: none IS THE NAMED EXCEPTION app.css's blanket ban anticipated, and
+   StyleContractTests.AnInProseLinkIsDistinguishedByMoreThanItsColour names .tile-body by hand. The ban
+   exists for SC 1.4.1 Use of Color: --accent2 against --txt is 2.18:1, so an anchor inside running prose
+   distinguished only by its colour fails technique F73. This anchor is not inside running prose and is not
+   distinguished by colour at all -- it is a 123px-wide card with artwork in it, its own box is the cue, and
+   its text is --txt and --dim exactly as the surrounding page's is. Sixty underlined titles in a grid would
+   read as sixty broken links. The hover rule below adds the underline back where a pointer can ask for it.
+
+   color: inherit for the same reason: app.css paints every anchor --accent2, which would turn the whole
+   wall blue and take .tile-title's 16.16:1 on --bg down to --accent2's 7.04:1. Still past SC 1.4.3, but it
+   would make the title the loudest thing on a page whose subject is the artwork.
+
+   display: flex comes from the div this replaced, and an anchor is display: inline by default, so without
+   it the card collapses to a line of text. */
+.tile-body[b-edk0x0dgrl] {
+  display: flex; flex-direction: column; gap: .25rem;
+  text-decoration: none; color: inherit;
+}
+
+/* THE UNDERLINE RETURNS ON HOVER, INSIDE @media (hover: hover). A bare :hover sticks after a tap on touch
+   and leaves phantom highlighted tiles behind the reader's finger. Only the TITLE is underlined: underlining
+   the year and the runtime too would say they are each a link.
+   No transition, so no prefers-reduced-motion block is needed -- the motion rule in StyleContractTests reads
+   this file by glob and says so if that stops being true. */
+@media (hover: hover) {
+  .tile-body:hover .tile-title[b-edk0x0dgrl] { text-decoration: underline; }
+}
 /* height: auto IS LOAD-BEARING AND NOT TIDYING, and without it every poster in the wall was stretched.
    The markup carries width="342" height="513" to reserve the box before the TMDB response arrives, which
    is right, but an HTML width/height attribute is a PRESENTATIONAL HINT: height="513" maps to a used
@@ -336,11 +365,15 @@ select[b-9jfn63vvns] { align-self: flex-start; }
   .badge[b-edk0x0dgrl] { border: 1px solid CanvasText; color: CanvasText; background: Canvas; }
 }
 
-/* No hover rule anywhere in this file. The plan's was underlining a link, and Part A has no link. Part B
-   adds it back with the anchor, inside @media (hover: hover): a bare :hover sticks after a tap on touch
-   and leaves phantom highlighted tiles behind.
-   No transition and no animation either, so no prefers-reduced-motion block is needed. The motion rule in
-   StyleContractTests reads this file by glob and will say so if that ever stops being true. */
+/* The one hover rule is at the top, beside the anchor it belongs to. No transition and no animation
+   anywhere in this file, so no prefers-reduced-motion block is needed. The motion rule in
+   StyleContractTests reads this file by glob and will say so if that ever stops being true.
+
+   NO FOCUS RULE EITHER, and that is not an omission: app.css's `:root :focus-visible` paints one ring for
+   every control in the app, and a second ring declared here would be one more place to keep in step with
+   the token palette. What the tile DOES have to survive is the ring being drawn two pixels outside a card
+   that sits in a grid -- outline-offset: 2px -- which is why nothing in this file clips with
+   overflow: hidden. StyleContractTests asserts that absence for the title's sake and it serves the ring too. */
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-vx7rf0i3ew] { flex: 1; display: flex; flex-direction: column; }
 main[b-vx7rf0i3ew] { flex: 1; }
@@ -415,6 +448,132 @@ nav[b-wx8l9rtebe] { display: flex; flex-wrap: wrap; align-items: center; justify
     .nav-toggle[b-wx8l9rtebe] { display: none; }
     .nav-links[b-wx8l9rtebe], .nav-links.collapsed[b-wx8l9rtebe] { display: flex; flex-basis: auto; gap: 1rem; }
 }
+/* /Pages/FilmDetail.razor.rz.scp.css */
+/* The detail page declares no background of its own, so its text sits on --bg, where PosterTile.razor.css
+   records the measurements this file relies on: --txt is 16.16:1 and --dim is 6.33:1, both past SC 1.4.3's
+   4.5:1. Re-measure if a token changes.
+
+   THE STATE CONTAINER AND THE Try again BUTTON ARE NOT HERE. app.css styles .catalog-state and .film-state
+   through one rule, because they are one thing in two pages: a stable flex row holding a sentence and
+   sometimes a control, which takes focus on a failure. A second copy of that rule -- and of the four
+   paragraphs of reasoning above it about the focus ring, the reflow and the forced-colors border -- is the
+   drift this project keeps collapsing rather than creating. The class names differ only so the browser gate
+   can tell which page it is looking at. */
+
+/* THE BYLINE. A flex row, so the gap IS the separator and there is no character in the DOM: a middot is
+   read inconsistently by screen readers and ::before content is exposed to the accessibility tree all the
+   same. It wraps between items and never inside one, so at 320px and 200% text "1h 50m" stays whole and
+   the row grows downwards instead of pushing past the viewport -- SC 1.4.10 Reflow, Level AA.
+   (0,2,0) against app.css's `.film-state p` at (0,1,1), so these win on specificity rather than on load
+   order, which is what lets the byline be a flex row inside a container whose paragraph rule sets a
+   flex-basis for a block of prose. */
+.film-byline[b-mzt8387tcu] {
+  display: flex; flex-wrap: wrap; gap: 0 .75rem;
+  color: var(--dim); line-height: 1.5;
+}
+.film-byline > span[b-mzt8387tcu] { white-space: nowrap; }
+
+/* THE BACKDROP. height: auto is load-bearing for the reason PosterTile.razor.css sets out at length: the
+   markup's height="720" is a presentational hint that pins the used height, and aspect-ratio only resolves
+   a dimension that is auto, so without this the artwork is stretched rather than scaled. The attributes
+   stay, because they are what the browser reserves space from before the CDN answers.
+   A max-height, so a 16:9 image on a wide screen does not push the title and the overview below the fold on
+   a page whose subject is the text. */
+.film-backdrop[b-mzt8387tcu] {
+  display: block; width: 100%; height: auto; max-height: 20rem;
+  object-fit: cover; object-position: center 20%;
+  border-radius: 8px; border: 1px solid var(--line);
+  margin: 1rem 0;
+}
+
+/* ONE COLUMN AT PHONE WIDTH AND TWO FROM 48rem, in that order, so the base layout is the narrow one and the
+   media query adds rather than undoes. The poster is a fixed track at the wider size and full-bleed below
+   it; align-items: start keeps a short poster from stretching beside a long overview. */
+.film-art[b-mzt8387tcu] { display: grid; gap: 1.5rem; align-items: start; }
+
+@media (min-width: 48rem) {
+  .film-art[b-mzt8387tcu] { grid-template-columns: 14rem minmax(0, 1fr); }
+}
+
+.film-poster[b-mzt8387tcu], .film-poster-placeholder[b-mzt8387tcu] {
+  width: 100%; max-width: 14rem; height: auto; aspect-ratio: 2 / 3;
+  border-radius: 6px; border: 1px solid var(--line);
+}
+
+/* --line is 1.37:1 on --bg and app.css records it as FAILING SC 1.4.11, which is correct here and for the
+   reason PosterTile.razor.css gives for the same box: the placeholder is neither a user interface component
+   nor a graphical object required to understand the content, because the title and every fact about the
+   film are text on this page. Do not promote it to --line-strong; everything that IS a control's only
+   boundary already uses that token. */
+.film-poster-placeholder[b-mzt8387tcu], .film-portrait-placeholder[b-mzt8387tcu] {
+  background: linear-gradient(160deg, var(--panel2), var(--panel));
+}
+
+/* THE TAGLINE IS NOT ITALIC. An <em> would have claimed a stress emphasis the words do not have (the markup
+   says so), and italicising a paragraph in CSS instead would be the same claim made where a reader using a
+   screen reader cannot hear it at all. It is simply quieter and a little larger than the overview. */
+.film-tagline[b-mzt8387tcu] { color: var(--dim); font-size: 1.1rem; line-height: 1.5; margin: 0 0 1rem; }
+
+.film-section[b-mzt8387tcu] { margin: 1.5rem 0 0; }
+.film-section h2[b-mzt8387tcu] { font-size: 1.25rem; font-weight: 600; margin: 0 0 .5rem; }
+
+/* 68ch, as app.css's state paragraph uses. A line much longer than that is the SC 1.4.8 Visual Presentation
+   complaint (Level AAA, 80 characters) and is a plain readability loss below that level too. */
+.film-section p[b-mzt8387tcu] { max-width: 68ch; line-height: 1.5; margin: 0; }
+
+/* THE CAST. list-style: none is what the markup's role="list" exists to repair -- Safari with VoiceOver
+   strips list semantics from a list whose markers are removed -- and PosterGrid.razor.css makes the same
+   pair for the same reason. auto-fill with a minmax track means the number of columns follows the width
+   with no media query and no breakpoint to keep in step with the grid of tiles.
+   NO max-height and NO overflow here: a scrolling cast list would hide names behind a gesture, and a full
+   cast is the thing this page was asked for. */
+.film-cast[b-mzt8387tcu] {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+}
+
+.film-cast li[b-mzt8387tcu] { display: flex; flex-direction: column; gap: .25rem; }
+
+/* 2:3 as the poster is, because TMDB's profile renditions are that ratio, and height: auto for the reason
+   the backdrop's note gives. */
+.film-cast img[b-mzt8387tcu], .film-portrait-placeholder[b-mzt8387tcu] {
+  width: 100%; height: auto; aspect-ratio: 2 / 3;
+  border-radius: 6px; border: 1px solid var(--line);
+}
+
+.film-cast-name[b-mzt8387tcu] { color: var(--txt); font-weight: 600; }
+
+/* .9rem and not lower: app.css's rule is "Do not go below 0.8125rem", and a character name is content
+   rather than a caption. --dim is 6.33:1 on --bg. Not opacity and not Bootstrap's .text-muted: opacity
+   turns axe's color-contrast check into an INCOMPLETE, which AxeScan counts as a failure, and .text-muted
+   ships !important and would win. */
+.film-cast-role[b-mzt8387tcu] { color: var(--dim); font-size: .9rem; line-height: 1.5; }
+
+/* THE FACT LISTS. Each pair is wrapped in a div, which is valid inside a dl and is what lets the pair be a
+   grid row WITHOUT display: contents -- Chrome and Safari both used to drop a display: contents element
+   from the accessibility tree, taking the dt/dd relationship with it.
+   minmax(0, auto) on the term column, never a fixed width: a long term must be able to wrap rather than
+   overflow, and 0 is the floor that lets it. overflow-wrap: anywhere on the value, because the owner's own
+   fields can hold an unbroken string -- an order number, a URL -- that has no space in it to break at, and
+   at 320px that is the difference between a wrapped line and a horizontal scrollbar on the document
+   (SC 1.4.10 Reflow, Level AA). */
+.film-facts[b-mzt8387tcu] { display: grid; gap: .5rem 0; margin: 0; }
+.film-facts > div[b-mzt8387tcu] { display: grid; gap: 0 1rem; grid-template-columns: minmax(0, auto) minmax(0, 1fr); }
+.film-facts dt[b-mzt8387tcu] { color: var(--dim); font-weight: 400; overflow-wrap: anywhere; }
+.film-facts dd[b-mzt8387tcu] { color: var(--txt); margin: 0; overflow-wrap: anywhere; }
+
+/* One column below 30rem, where two columns leave a long term nothing to wrap into. The term then reads
+   above its value, which is the order a screen reader walks a dl in anyway. */
+@media (max-width: 30rem) {
+  .film-facts > div[b-mzt8387tcu] { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* No transition, animation or transform anywhere in this file, so no prefers-reduced-motion block is
+   needed. The motion rule in StyleContractTests reads this file by glob and will say so if that stops
+   being true.
+   No focus rule either: app.css's `:root :focus-visible` paints one ring for every control in the app, and
+   nothing on this page is a control except the Try again button app.css already styles. */
 /* /Pages/Movies.razor.rz.scp.css */
 /* THE FILM PAGE'S TWO-COLUMN LAYOUT, and it lives here rather than in MainLayout.razor.css for two
    reasons. The narrow one: StyleContractTests asserts MainLayout.razor.css contains no "sidebar" at all,

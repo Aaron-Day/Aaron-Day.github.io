@@ -341,7 +341,14 @@ body {
    only to messages that do NOT receive focus.
    Wraps at 320px: the sentence claims its own line through its flex-basis and
    the button drops below it. SC 1.4.10 Reflow, Level AA. */
-.catalog-state {
+/* BOTH STATE CONTAINERS, through one rule. .catalog-state is the films page's and .film-state is the
+   detail page's, and they are one thing in two pages: a stable flex row holding a sentence and sometimes a
+   Try again control, focused programmatically on a failure. The class names differ only so the browser
+   gate can tell which page it is looking at -- RouteScanTests keys its settle wait off them -- and a
+   second copy of this rule and the reasoning around it is the drift this project keeps collapsing. The
+   detail page's byline paragraph overrides the paragraph rule below from its own scoped sheet, which wins
+   on specificity rather than on load order. */
+.catalog-state, .film-state {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -358,7 +365,7 @@ body {
    container is not keyboard operable, so 2.4.7 has no claim on it. It is an orientation loss, which is reason
    enough. */
 
-.catalog-state p {
+.catalog-state p, .film-state p {
     flex: 1 1 18rem;        /* forces its own line at 320px */
     max-width: 68ch;
     margin: 0;              /* beats reboot's p { margin-bottom: 1rem } */
