@@ -406,6 +406,7 @@ public class RecordStoreReaderTests
                                           "titles": { "display": "A Film", "sort": "Film, A" },
                                           "year": 1998, "directors": "A Director",
                                           "appleGenre": "Kids & Family", "purchaseInfo": "iTunes",
+                                          "publishedKey": "11-84",
                                           "extra": { "Purchase Date": "2019-03-14" } } ] } ],
               "series": [ { "identityKey": "ffffc50b084e2a2e3b0342fde1ea3550dfb48206",
                             "sheet": { "title": "A Show" },
@@ -419,6 +420,9 @@ public class RecordStoreReaderTests
         Assert.Equal("Film, A", film.Titles!.Sort);
         Assert.Equal("Kids & Family", film.AppleGenre);
         Assert.Equal("iTunes", film.PurchaseInfo);
+        // Version 2's own member, and the reason this test exists: the message started naming it before the
+        // file below set it, so the guard stopped covering the one member the version was added for.
+        Assert.Equal("11-84", film.PublishedKey);
         Assert.Equal([1399, 1400], Assert.Single(store.Series).Record.Candidates!);
     }
 

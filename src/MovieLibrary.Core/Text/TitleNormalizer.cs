@@ -28,6 +28,31 @@ public static class TitleNormalizer
     private static readonly Regex TrailingBracket = new(
         @"\s*(?:\((?<inner>[^()]*)\)|\[(?<inner>[^\[\]]*)\])\s*$", RegexOptions.Compiled);
 
+    /// <summary>
+    /// The folded, cleaned and year-stripped forms of a sheet title. A year is recognised ONLY inside a
+    /// trailing bracket: a bare trailing year is part of the title and stays in both forms.
+    /// </summary>
+    /// <remarks>
+    /// <b>Do not turn a bare trailing year into a YearHint without reading this.</b> Six cached keys end in a
+    /// bare year today: two series, where <c>IdentityKey.SeriesKeyValue</c> folds the year back in on purpose,
+    /// and four films where it is incidental -- "blade runner 2049", "wonder woman 1984", "wes craven presents
+    /// dracula 2000" and "1917". <c>ForFilm</c> hashes <c>Value</c>, so stripping the year moves all four film
+    /// keys, and the cost is not the re-spent request. It is three silent wrongs:
+    /// <list type="bullet">
+    /// <item><b>"1917" folds to NOTHING.</b> Its moved key misses the cache, and the blank-<c>Cleaned</c> arm
+    /// in <c>MoviePipeline</c> sits after that cache lookup, so no search happens at all: the film publishes
+    /// permanently unmatched, with no poster and no metadata, and spends no request to say so.</item>
+    /// <item><b>The other three re-search under a TRUNCATED title</b>, and two land on a different film:
+    /// "blade runner" is id 78, which this library already owns twice, and "wonder woman" is id 297762. A
+    /// re-query that returns the wrong id at high confidence is a wrong catalogue entry, not a missing one --
+    /// the failure nobody checks for.</item>
+    /// <item><b>An empty Value brings the identity-key collision one row closer.</b> It still needs a second
+    /// empty-Value row at the same runtime and directors, so what guards that collision becomes thin rather
+    /// than absent.</item>
+    /// </list>
+    /// <para>The year rules, the lone-surrogate throw in <c>Fold</c> and that collision are therefore ONE
+    /// question and have to be decided together, never one at a time.</para>
+    /// </remarks>
     public static NormalizedTitle Normalize(string raw)
     {
         var text = raw?.Trim() ?? string.Empty;

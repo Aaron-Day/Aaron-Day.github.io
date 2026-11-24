@@ -262,10 +262,20 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
     /// asserts an id, and two rows that legitimately share an id at different runtimes can be made to derive
     /// each other's key by a runtime correction. Where the two disagree, the evidence wins.</para>
     /// <para><b>Both, not one.</b> The recorded key matches in the window between a save and the next build.
-    /// The derived key matches after that build, when the entry and the published output finally agree -- and
+    /// The derived key matches after that build, when the entry and the published output finally agree AND no
+    /// recorded key still claims that record -- which is the open case below -- and
     /// it is the only key a hand-written entry has, and the only key a version 1 file has at all. Dropping
     /// either re-opens the hole: the recorded key alone misses every second edit, the derived key alone is
     /// the defect.</para>
+    /// <para><b>A recorded key wins whether or not it is still current, and that is a KNOWN OPEN case.</b>
+    /// Nothing here tests a recorded key for staleness, so after a build a stale one can take a published
+    /// record from another entry whose derived key IS the current one. It needs a coincidence -- two sibling
+    /// cuts both corrected, with one's new (id, runtime) equal to the other's old one -- and it is left open
+    /// because the alternative is worse: a staleness test would have to judge a recorded key wrong using the
+    /// very catalogue it is binding, which is exactly the reasoning that produced the ordering defect below.
+    /// It is also not silent. The losing slot goes UNCLAIMED, so <c>Unplaceable</c> names its entry and the
+    /// page moves focus to it, whereas the defect this pass fixed left the slot taken by the wrong row, and
+    /// a taken slot is something Unplaceable cannot report.</para>
     /// <para><b>Two maps, because the CONSUMER has to order them.</b> A record's recorded key can equal a
     /// DIFFERENT record's derived key, and one slot can carry both of its own keys at once. Holding both kinds
     /// in a single map hid the second case: <see cref="Bind"/>'s one loop over the published catalogue bound
