@@ -148,22 +148,6 @@
 
     [SupplyParameterFromQuery(Name = QueryState.PageKey)] public string? PageParam { get; set; }
 
-    /// <summary>
-    /// Where the PAGE puts focus, so the helper in index.html can tell "nobody has touched it" from "the
-    /// user moved it themselves". <c>&lt;body&gt;</c> and <c>&lt;html&gt;</c> are handled there.
-    /// </summary>
-    /// <remarks>
-    /// The Try again button is deliberately NOT a keeper, which is what leaves a failed retry's focus where the
-    /// user put it -- <b>in every browser that focuses a button when it is clicked.</b> Safari, desktop and
-    /// iOS, does not: a mouse or touch click on a <c>&lt;button&gt;</c> leaves <c>document.activeElement</c> at
-    /// <c>&lt;body&gt;</c>, which IS a keeper, so the helper agrees to the move and a sighted Safari user loses
-    /// their place on every failed retry. VoiceOver's own double-tap does set focus, so the screen-reader case
-    /// is probably sound. Recorded rather than worked around: the behaviour is right wherever a click focuses
-    /// the button, and the alternative -- adding the button to the keepers -- would hand focus back to a control
-    /// the user may have deliberately left. One for Task 9's device list.
-    /// </remarks>
-    private static readonly string[] FocusKeepers = ["#main-content", "#app h1"];
-
     private ElementReference heading;
     private ElementReference stateContainer;
 
@@ -418,7 +402,7 @@
                 // On a FAILED RETRY focus is usually already on the Try again button, which is not a keeper, so
                 // the helper refuses, nothing moves, and this fires -- which is how criterion 8's promise that a
                 // user who retries and fails again is not met with silence survives the reordering. "Usually" is
-                // doing work in that sentence; see the remarks on FocusKeepers.
+                // doing work in that sentence; see the remarks on PageFocus.Keepers.
                 // Raised here and NEVER from the click handler, so the clear that handler wrote has reached the
                 // DOM first and the announcer can anchor its settle delay to that render. Without the gap a
                 // repeated identical sentence is no DOM change at all.
@@ -568,7 +552,7 @@
     /// says why the move is a conformance route rather than a workaround.
     /// </remarks>
     private Task<bool> FocusIfUnmoved(ElementReference element) =>
-        TryFocus(() => Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", element, FocusKeepers).AsTask());
+        TryFocus(() => Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", element, PageFocus.Keepers).AsTask());
 
     /// <summary>Moves focus to <paramref name="element"/> whatever holds it now.</summary>
     /// <remarks>

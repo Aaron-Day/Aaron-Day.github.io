@@ -8,10 +8,11 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// </summary>
 /// <remarks>
 /// <para>
-/// Reflection over <c>RouteAttribute</c> yields three templates today - <c>/</c>, <c>/movies</c> and
-/// <c>/not-found</c>, all three real reachable URLs - and <see cref="UnmatchedUrl"/> adds the router's own
-/// not-found path, which reaches the same page by a different render path. Four addresses over two page types.
-/// Tasks 6 and 8 extend every route scan in this project by adding a page, with no edit here.
+/// Reflection over <c>RouteAttribute</c> yields four templates today - <c>/</c>, <c>/movies</c>,
+/// <c>/movies/{Key}</c> and <c>/not-found</c>, all four real reachable URLs - and <see cref="UnmatchedUrl"/>
+/// adds the router's own not-found path, which reaches the not-found page by a different render path. Five
+/// addresses over three page types. Adding a page extends every route scan in this project with no edit here,
+/// as long as any route parameter it carries is one <see cref="Filled"/> knows how to fill.
 /// </para>
 /// <para>
 /// <b>This is not <c>MovieLibrary.Web.Tests.AppUnderTest</c> and cannot be.</b> That helper is internal to the
@@ -35,15 +36,29 @@ internal static class Site
             .ToList();
 
     /// <summary>
-    /// Every address worth scanning: one per route template, plus the unmatched URL. A route parameter becomes
-    /// "1"; there are none in Part A, and Part B's <c>movies/{key}</c> would need a real key, so when one
-    /// appears this list is where it gets dealt with rather than silently scanning <c>/movies/1</c>.
+    /// Every address worth scanning: one per route template, with any route parameter filled in, plus the
+    /// unmatched URL.
     /// </summary>
+    /// <remarks>
+    /// <b>This used to DROP every parameterised template</b> (<c>.Where(t =&gt; !t.Contains('{'))</c>), which
+    /// was right while there were none and became a silent hole the day <c>/movies/{Key}</c> shipped: the film
+    /// page would have been absent from every scan in this project, and no test here would have gone red to
+    /// say so. A dropped address cannot be noticed; a wrong one can, so the parameter is filled instead and
+    /// <c>RouteScanTests.TheScanHasRealAddressesToScan</c> fails on any template this cannot fill.
+    /// </remarks>
     public static IReadOnlyList<string> Addresses() =>
         RouteTemplates()
-            .Where(t => !t.Contains('{', StringComparison.Ordinal))
+            .Select(Filled)
             .Append(UnmatchedUrl)
             .ToList();
+
+    /// <summary>
+    /// Fills a route parameter with a value the page can actually answer. A key the gate's own catalogue
+    /// carries, not a typed one: <c>/movies/1</c> reaches the film page's "no such film" state, which is a
+    /// state worth scanning somewhere (DomStateTests scans it) but not the one an arrival scan should land on.
+    /// </summary>
+    private static string Filled(string template) =>
+        template.Replace("{Key}", Catalogue.FirstKey, StringComparison.Ordinal);
 
     public static IEnumerable<object[]> AddressData() => Addresses().Select(a => new object[] { a });
 }

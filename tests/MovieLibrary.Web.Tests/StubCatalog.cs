@@ -113,6 +113,36 @@ internal sealed class StubCatalog : HttpMessageHandler
             Content = new StringContent(body, Encoding.UTF8, "application/json"),
         });
 
+    /// <summary>
+    /// A 200 with a JSON body, served after yielding, so the fetch chain is genuinely ASYNCHRONOUS as it is
+    /// in a browser on a cold load.
+    /// </summary>
+    /// <remarks>
+    /// <b>The difference from <see cref="Json"/> is observable and is the whole reason this exists.</b> A
+    /// completed task means <c>ComponentBase</c> never renders between a page's first lifecycle call and its
+    /// result, so a page whose behaviour depends on having rendered while it was still loading -- the detail
+    /// page announces the film's name only then, because otherwise the focus move already read it -- takes
+    /// the warm path and the cold branch is never reached.
+    /// <para>
+    /// <b>Prefer this to <c>Gate</c> where the test does not need to observe the middle of the fetch.</b> A
+    /// Gate leaves the page's post-render work racing the test's own clock: the test waits for the render
+    /// that carries the new state, which can commit before <c>OnAfterRenderAsync</c> has armed its
+    /// announcement, and the clock is then advanced over an empty region. That shape failed intermittently
+    /// here before it was replaced by this one, and it failed on whichever of two identical tests ran
+    /// second. The yield is awaited by the renderer, so by the time a render call returns the page has
+    /// loaded AND said what it says.
+    /// </para>
+    /// </remarks>
+    public static Func<Task<HttpResponseMessage>> JsonAfterYielding(string body) => async () =>
+    {
+        await Task.Yield();
+
+        return new HttpResponseMessage(HttpStatusCode.OK)
+        {
+            Content = new StringContent(body, Encoding.UTF8, "application/json"),
+        };
+    };
+
     /// <summary>A 200 whose body is not JSON at all: a captive portal's sign-in page, which is the real case.</summary>
     public static Func<Task<HttpResponseMessage>> Html() => () => Task.FromResult(
         new HttpResponseMessage(HttpStatusCode.OK)

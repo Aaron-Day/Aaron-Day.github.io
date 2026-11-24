@@ -93,12 +93,13 @@ public class CatalogueTests
     public void TheGenreCountLeavesTheTabWalkRoomToFinish()
     {
         var decades = Records.Where(r => r.Y is not null).Select(r => r.Y!.Value / 10).Distinct().Count();
-        var stops = TabWalk.ShellStops + decades + Meta.Genres.Count;
+        var stops = TabWalk.ShellStops + decades + Meta.Genres.Count + TabWalk.TilesOnAFullPage;
 
         Assert.True(stops < TabWalk.Presses,
-            $"The panel adds {Meta.Genres.Count} genre stop(s) and {decades} decade stop(s), {stops} stops in all with "
-            + $"the error bar up, and the tab walks allow {TabWalk.Presses} presses including the one that "
-            + "leaves the document. Name fewer genres, or raise TabWalk.Presses in the same change.");
+            $"The panel adds {Meta.Genres.Count} genre stop(s) and {decades} decade stop(s), a full page adds "
+            + $"{TabWalk.TilesOnAFullPage} tile links, {stops} stops in all with the error bar up, and the tab "
+            + $"walks allow {TabWalk.Presses} presses including the one that leaves the document. Name fewer "
+            + "genres, or raise TabWalk.Presses in the same change.");
     }
 
     /// <remarks>
@@ -111,13 +112,22 @@ public class CatalogueTests
     [Fact]
     public void TheWalksAreAllowedEnoughPressesForTheLargestLibraryThePageCouldBeGiven()
     {
-        var mostStops = TabWalk.GenresInTmdb + TabWalk.DecadesOfCinema + TabWalk.ShellStops;
+        var mostStops = TabWalk.GenresInTmdb + TabWalk.DecadesOfCinema + TabWalk.ShellStops
+                        + TabWalk.TilesOnAFullPage;
         var needed = mostStops + 1;
 
         Assert.True(TabWalk.Presses >= needed,
             $"The walks allow {TabWalk.Presses} presses, and a library with all {TabWalk.GenresInTmdb} of TMDB's "
-            + $"genres across all {TabWalk.DecadesOfCinema} decades of film has {mostStops} stops and needs {needed}. "
-            + "A cap below that fits the gate's catalogue and fails (or silently truncates) on the real library.");
+            + $"genres across all {TabWalk.DecadesOfCinema} decades of film, showing {TabWalk.TilesOnAFullPage} "
+            + $"tile links on a full page, has {mostStops} stops and needs {needed}. A cap below that fits the "
+            + "gate's catalogue and fails (or silently truncates) on the real library.");
+
+        // The tiles are the term that was missing, and the one most easily left out again: a grid of links is
+        // a tab stop per film, where a grid of plain tiles was nought. Said separately so that dropping it
+        // from the sum above cannot be mistaken for a tidy-up.
+        Assert.True(TabWalk.TilesOnAFullPage >= Catalogue.PageSize,
+            $"A full page shows {Catalogue.PageSize} tiles and the bound counts {TabWalk.TilesOnAFullPage} of "
+            + "them as stops. Each tile is a link to its film, so the walk meets every one of them.");
     }
 
     [Fact]
@@ -125,6 +135,45 @@ public class CatalogueTests
     {
         Assert.True(Records.Select(r => r.Y).Where(y => y is not null).Select(y => y!.Value / 10).Distinct().Count() >= 5);
         Assert.Contains(Records, r => r.Y is null);
+    }
+
+    /// <remarks>
+    /// <b>The subject floor for every film page scan in this project.</b> Site.Addresses lands on
+    /// <c>Catalogue.FirstKey</c>, and if that record carried the bare shape the loop builds -- no backdrop, no
+    /// tagline, no overview, no cast, no collection, no extra fields -- the scan would render a heading, a
+    /// byline and one definition list, and would read as covering a page most of which was never there. Rule
+    /// T1: the thing that quietly empties is what has to be asserted.
+    /// </remarks>
+    [Fact]
+    public void TheRecordTheFilmPageScanLandsOnHasSomethingInEveryPartOfThePage()
+    {
+        var subject = Assert.Single(Records, r => r.K == Catalogue.FirstKey);
+
+        Assert.False(string.IsNullOrWhiteSpace(subject.B), "no backdrop, so the page's one wide img is absent");
+        Assert.False(string.IsNullOrWhiteSpace(subject.Tag), "no tagline");
+        Assert.False(string.IsNullOrWhiteSpace(subject.Ov), "no overview, so the Overview section is absent");
+        Assert.False(string.IsNullOrWhiteSpace(subject.Col), "no collection row in the Details list");
+        Assert.False(string.IsNullOrWhiteSpace(subject.Own), "no purchase row in the Details list");
+        Assert.NotEmpty(subject.Dir);
+        Assert.NotEmpty(subject.G);
+
+        // The cast list, and the three branches a browser can tell apart: a portrait, the placeholder that
+        // stands in for a missing one, and a name with no character to put after it.
+        Assert.True(subject.Cast.Length >= 3, $"{subject.Cast.Length} cast member(s); three branches need three");
+        Assert.Contains(subject.Cast, m => !string.IsNullOrWhiteSpace(m.P));
+        Assert.Contains(subject.Cast, m => m.P is null);
+        Assert.Contains(subject.Cast, m => string.IsNullOrEmpty(m.C));
+        Assert.All(subject.Cast, m => Assert.False(string.IsNullOrWhiteSpace(m.N), "a cast member with no name"));
+
+        // The second definition list exists only for a record with extra fields, and it is the owner's own
+        // columns: the part of the page no code here interprets and no other record can stand in for.
+        Assert.NotNull(subject.Ex);
+        Assert.NotEmpty(subject.Ex);
+        Assert.All(subject.Ex, p =>
+        {
+            Assert.False(string.IsNullOrWhiteSpace(p.Key));
+            Assert.False(string.IsNullOrWhiteSpace(p.Value));
+        });
     }
 
     [Fact]

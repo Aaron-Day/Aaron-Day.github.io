@@ -171,9 +171,9 @@ public class SourceContractTests
         // marker set. MainLayout is named because its branch is the POSITIVE one: it asserts the one
         // allowed role is present, so if the owner falls out of the walk the rule stops checking the only
         // thing it can observe being right.
-        Assert.True(files.Count >= 14,
-            "This rule found " + files.Count + " components. There are fourteen hand-written .razor files "
-            + "(ten in the web project, four in the editor); fewer means WebRoot.FilesWithEditor stopped "
+        Assert.True(files.Count >= 15,
+            "This rule found " + files.Count + " components. There are fifteen hand-written .razor files "
+            + "(eleven in the web project, four in the editor); fewer means WebRoot.FilesWithEditor stopped "
             + "finding them.");
         Assert.Contains("Layout/MainLayout.razor", files.Select(f => f.Path));
         Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", files.Select(f => f.Path));
@@ -204,16 +204,17 @@ public class SourceContractTests
         // T1, and this one had nothing shadowing it at all: the only assertion is inside the loop, and no
         // other contract scans the *.cs half, so a walk that stopped matching would leave the rule green
         // over nothing. The two named files are the only two that mention Alert( today -- the service that
-        // defines it and the one page that raises it -- so they are the files the rule has to be able to
+        // defines it and the two pages that raise it -- so they are the files the rule has to be able to
         // see for it to mean anything.
-        Assert.True(files.Count >= 33,
-            "This rule found " + files.Count + " files. There are thirty-three hand-written .razor and .cs "
-            + "files: nineteen in the web project and fourteen in the editor project. Fewer means "
+        Assert.True(files.Count >= 36,
+            "This rule found " + files.Count + " files. There are thirty-six hand-written .razor and .cs "
+            + "files: twenty-two in the web project and fourteen in the editor project. Fewer means "
             + "WebRoot.FilesWithEditor stopped finding them.");
 
         var paths = files.Select(f => f.Path).ToList();
         Assert.Contains("Services/Announcer.cs", paths);
         Assert.Contains("Pages/Movies.razor", paths);
+        Assert.Contains("Pages/FilmDetail.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Store/EditorState.cs", paths);
 
@@ -385,10 +386,10 @@ public class SourceContractTests
         // T1: the count is of what the rule can actually fail on, which is every .razor file except the one
         // carve-out. A discovery walk that stopped matching would otherwise loop over nothing and pass.
         //
-        // THIRTEEN, counted rather than guessed. Nine in the web project: App, Layout/NavMenu,
-        // Layout/RouteAnnouncer, Pages/Movies, Pages/NotFound, _Imports, Components/PosterTile,
-        // Components/PosterGrid and Components/FacetPanel. Four in the editor: Pages/RecordEditor,
-        // Components/RecordForm, Components/Worklist and _Imports.
+        // FOURTEEN, counted rather than guessed. Ten in the web project: App, Layout/NavMenu,
+        // Layout/RouteAnnouncer, Pages/Movies, Pages/FilmDetail, Pages/NotFound, _Imports,
+        // Components/PosterTile, Components/PosterGrid and Components/FacetPanel. Four in the editor:
+        // Pages/RecordEditor, Components/RecordForm, Components/Worklist and _Imports.
         // _Imports is in the count because the rule can genuinely fail on it -- this is a text scan, and a
         // status role typed into it would be found and reported like any other. The floor was 4 when there
         // were six, which let two components fall out of WebRoot.Files before the rule noticed: the T1
@@ -399,9 +400,9 @@ public class SourceContractTests
         // exactly the markup someone would reach for a polite region with, and they are plain text in both
         // components. Each of the two says so in its own comment, spelled in words, because this scan is a
         // substring match and a comment quoting a marker fails just as the attribute would.
-        Assert.True(failable.Count >= 13,
-            "This rule found " + failable.Count + " components it could fail on. There are thirteen "
-            + "hand-written .razor files outside the layout's own MainLayout: nine in the web project and "
+        Assert.True(failable.Count >= 14,
+            "This rule found " + failable.Count + " components it could fail on. There are fourteen "
+            + "hand-written .razor files outside the layout's own MainLayout: ten in the web project and "
             + "four in the editor. Fewer means WebRoot.FilesWithEditor stopped finding them, not that the "
             + "app shrank -- and a rule with no subjects passes over nothing.");
 
@@ -415,6 +416,7 @@ public class SourceContractTests
         Assert.Contains("Components/PosterGrid.razor", paths);
         Assert.Contains("Components/FacetPanel.razor", paths);
         Assert.Contains("Pages/Movies.razor", paths);
+        Assert.Contains("Pages/FilmDetail.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Components/RecordForm.razor", paths);
 

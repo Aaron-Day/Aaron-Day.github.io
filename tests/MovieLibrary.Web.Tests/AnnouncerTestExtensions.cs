@@ -63,10 +63,39 @@ internal static class AnnouncerTestExtensions
     /// gave it a synthetic year and a four-person cast would render a tile indistinguishable from a healthy
     /// one, which is the vacuity Task 6 recorded in <c>PosterTile.razor</c> in advance.
     /// </para>
+    /// <para>
+    /// <b>THE DETAIL FIELDS, AND EVERY ASYMMETRY IN THEM IS A BRANCH.</b> Se7en alone carries <c>b</c>,
+    /// <c>ov</c>, <c>tag</c>, <c>col</c>, <c>own</c>, a real <c>dir</c>, a genre id the meta names, a cast and
+    /// <c>ex</c>, because <c>MarkupContractTests</c> renders one scope at <see cref="FilmAddress"/> and a
+    /// field absent from here is a branch absent from it. The other two films keep the detail page's
+    /// everything-missing shape, which is what the <c>/movies/1</c> scope's not-found state does NOT cover.
+    /// <list type="bullet">
+    /// <item>The cast has three members on purpose: one with a photo AND a character, one with a character
+    /// and no photo (the portrait placeholder), and one whose character is the empty string the pipeline
+    /// writes for a missing one (the page renders the person alone, never "An Extra as").</item>
+    /// <item><c>ex</c> carries four entries of which only two render: <c>Disc</c> has an empty VALUE and the
+    /// fourth has an empty KEY. Both are the shape that passes every automated check and says nothing, so
+    /// both have to be in front of the rule that drops them. <c>Shelf</c> and <c>Case</c> are also out of
+    /// Ordinal order here, which is what makes the page's sort failable.</item>
+    /// </list>
+    /// </para>
     /// </summary>
+    /// <summary>
+    /// The published key of the one film in this catalogue that carries EVERY field a detail page can render,
+    /// so that nothing retypes it. <c>MarkupContractTests</c> renders a scope at <see cref="FilmAddress"/>.
+    /// </summary>
+    public const string FilmKey = "807-110";
+
+    /// <summary>The detail page's address for <see cref="FilmKey"/>.</summary>
+    public const string FilmAddress = "/movies/" + FilmKey;
+
     private const string OneFilmPerBand =
         """
-        [{"i":807,"k":"807-110","t":"Se7en","y":1995,"rt":110,"p":"/se7en.jpg","g":[],"ag":"Thriller","vote":8.4,"dir":[],"cast":[],"mc":0.95},
+        [{"i":807,"k":"807-110","t":"Se7en","y":1995,"rt":110,"p":"/se7en.jpg","b":"/se7en-wide.jpg","g":[53],"ag":"Thriller","vote":8.4,
+          "dir":["David Fincher"],"ov":"Two detectives hunt a killer who uses the seven deadly sins as his motives.",
+          "tag":"Seven deadly sins. Seven ways to die.","col":"The Se7en Collection","own":"New Line 3-Film Collection",
+          "cast":[{"n":"Brad Pitt","c":"Mills","p":"/pitt.jpg"},{"n":"Morgan Freeman","c":"Somerset"},{"n":"An Extra","c":""}],
+          "ex":{"Shelf":"B3","Disc":"","":"orphaned","Case":"keep case"},"mc":0.95},
          {"i":601,"k":"601-88","t":"The Peeled Edition","y":1982,"rt":88,"g":[],"ag":"Drama","vote":6.2,"dir":[],"cast":[],"mc":0.55},
          {"i":0,"k":"u-d2f1c6e2","t":"An Unlisted Film","rt":101,"g":[],"ag":"Documentary","vote":0,"dir":[],"cast":[],"mc":0}]
         """;
@@ -164,6 +193,20 @@ internal static class AnnouncerTestExtensions
     {
         CatalogOutcome.Ready => StubCatalog.Json(OneFilmPerBand),
         CatalogOutcome.Failed => StubCatalog.Throws(new HttpRequestException("the stub was asked to fail")),
+        CatalogOutcome.NeverCompletes => StubCatalog.NeverAnswers(),
+        _ => throw new ArgumentOutOfRangeException(nameof(outcome), outcome, "no responder for this outcome"),
+    };
+
+    /// <summary>
+    /// The movies.json response for an outcome, served after yielding so the page renders at least once
+    /// while the fetch is still in flight. See <c>StubCatalog.JsonAfterYielding</c> for why that difference
+    /// is observable; the Failed and NeverCompletes arms are the same ones, because Failed already has an
+    /// asynchronous spelling and NeverCompletes never answers at all.
+    /// </summary>
+    public static Func<Task<HttpResponseMessage>> ColdResponder(CatalogOutcome outcome) => outcome switch
+    {
+        CatalogOutcome.Ready => StubCatalog.JsonAfterYielding(OneFilmPerBand),
+        CatalogOutcome.Failed => StubCatalog.ThrowsAfterYielding(new HttpRequestException("the stub was asked to fail")),
         CatalogOutcome.NeverCompletes => StubCatalog.NeverAnswers(),
         _ => throw new ArgumentOutOfRangeException(nameof(outcome), outcome, "no responder for this outcome"),
     };

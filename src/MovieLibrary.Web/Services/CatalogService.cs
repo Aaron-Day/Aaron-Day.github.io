@@ -57,6 +57,37 @@ public sealed class CatalogService(HttpClient http)
     }
 
     /// <summary>
+    /// One film by its published key, from the same cached catalogue the grid reads, so a detail page costs
+    /// no request of its own once the library is in memory.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// <b>Ready with a null value means "the catalogue loaded and holds no film with that key".</b> It is the
+    /// one place in this service where a null value carries meaning, and it is not the thing
+    /// <see cref="CatalogResult{T}"/> forbids: an empty value still never stands for a FAILURE. Failed says
+    /// nothing at all about whether the film exists, and a caller that could not tell the two apart would
+    /// offer a retry over an address no number of fetches will ever resolve.
+    /// </para>
+    /// <para>
+    /// A linear scan, not an index. 1,488 records is a fraction of a millisecond and happens once per
+    /// navigation; a dictionary built beside the cached task would have to be invalidated with it, and the
+    /// eviction rule above is already the subtlest thing in this file.
+    /// </para>
+    /// <para>
+    /// <b>OrdinalIgnoreCase.</b> A key is digits, a hyphen and lower-case hex, so case cannot collide two
+    /// records, and a deep link whose case was mangled in transit should find the film rather than a 404.
+    /// </para>
+    /// </remarks>
+    public async Task<CatalogResult<MovieRecord?>> GetFilmAsync(string key)
+    {
+        ArgumentNullException.ThrowIfNull(key);
+
+        var all = await GetMoviesAsync();
+
+        return new(all.State, all.Value.FirstOrDefault(f => string.Equals(f.K, key, StringComparison.OrdinalIgnoreCase)));
+    }
+
+    /// <summary>
     /// Whether a cached task has already settled on a failure, which is the only thing worth re-fetching. A task
     /// still in flight is left alone however it will end: concurrent callers must share one request, and
     /// evicting a pending task would issue a second.

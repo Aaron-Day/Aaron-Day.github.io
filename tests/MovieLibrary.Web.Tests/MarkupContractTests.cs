@@ -61,10 +61,20 @@ public class MarkupContractTests
     /// not react to each other's navigation, and the markup is re-parsed into a standalone document so
     /// nothing here outlives the context it came from.
     /// <para>
-    /// There is a fifth scope: the films page with a FAILED catalogue fetch. Since Task 5 the app's markup
+    /// There is a sixth scope: the films page with a FAILED catalogue fetch. Since Task 5 the app's markup
     /// depends on a fetch outcome, and the Try again button exists in no other render -- so without this
     /// scope every rule below would be checking a control that only ever appears in the one state nothing
     /// looks at. The loading state adds no element these rules can fail on, so it has no scope of its own.
+    /// </para>
+    /// <para>
+    /// AND A SEVENTH, WHICH IS THE WHOLE OF THE DETAIL PAGE'S COVERAGE HERE. The discovered address for
+    /// <c>/movies/{Key}</c> is <c>AddressOf</c>'s <c>/movies/1</c>, and "1" is not a key in
+    /// <c>AnnouncerTestExtensions</c>'s catalogue -- so that scope renders the NOT-FOUND state, which has no
+    /// image, no description list and no heading below the first in it. Left at that, every rule below would
+    /// have read as covering the detail page while covering the one state that has almost no markup. This
+    /// scope renders the page at a real key, on the one fixture film that carries a backdrop, a poster, an
+    /// overview, a tagline, a cast with and without photos, a collection, a purchase note and the owner's own
+    /// extra fields. Both states are therefore in front of every rule, which is the point.
     /// </para>
     /// </summary>
     private static readonly Lazy<IReadOnlyList<Scope>> RouteScopes = new(() =>
@@ -72,6 +82,9 @@ public class MarkupContractTests
             .Select(address => Rendered(address, CatalogOutcome.Ready, "the app at " + address))
             .Append(Rendered("/movies", CatalogOutcome.Failed,
                              "the app at /movies with a failed catalogue fetch"))
+            .Append(Rendered(AnnouncerTestExtensions.FilmAddress, CatalogOutcome.Ready,
+                             "the app at " + AnnouncerTestExtensions.FilmAddress + ", on a film that "
+                             + "carries every field a detail page can render"))
             .ToList());
 
     private static Scope Rendered(string address, CatalogOutcome catalog, string where)
@@ -107,14 +120,15 @@ public class MarkupContractTests
         // walk that stopped matching -- and behind the exact-array comparison its message was unreachable,
         // because any shortfall failed the equality a line earlier. The equality still follows, and still
         // pins identity and order rather than merely the number.
-        Assert.True(addresses.Count >= 4,
-            "The contracts discovered " + addresses.Count + " addresses. Four exist: \"/\" and \"/movies\" "
-            + "(both Movies.razor), \"/not-found\", and an unmatched URL, which reaches NotFound by the "
-            + "router's NotFoundPage path rather than by its route. Fewer than four means the reflection "
-            + "walk in AppUnderTest stopped finding routes, not that the site shrank.");
+        Assert.True(addresses.Count >= 5,
+            "The contracts discovered " + addresses.Count + " addresses. Five exist: \"/\" and \"/movies\" "
+            + "(both Movies.razor), \"/movies/1\" (FilmDetail.razor, whose route parameter AddressOf fills "
+            + "with \"1\"), \"/not-found\", and an unmatched URL, which reaches NotFound by the router's "
+            + "NotFoundPage path rather than by its route. Fewer than five means the reflection walk in "
+            + "AppUnderTest stopped finding routes, not that the site shrank.");
 
         Assert.Equal(
-            new[] { "/", "/movies", "/not-found", AppUnderTest.UnmatchedUrl },
+            new[] { "/", "/movies", "/movies/1", "/not-found", AppUnderTest.UnmatchedUrl },
             addresses);
     }
 
@@ -149,9 +163,10 @@ public class MarkupContractTests
     public void TheContractsRunOverEveryAddressTheSiteServes()
     {
         TheRouteSetIsWhatItShouldBe();
-        // The addresses, plus the films page's failed state, plus the host page.
-        Assert.Equal(AppUnderTest.Addresses().Count + 1, RouteOnlyScopes().Count);
-        Assert.Equal(AppUnderTest.Addresses().Count + 2, EveryScope().Count);
+        // The addresses, plus the films page's failed state and a detail page with a real film in it, plus
+        // the host page.
+        Assert.Equal(AppUnderTest.Addresses().Count + 2, RouteOnlyScopes().Count);
+        Assert.Equal(AppUnderTest.Addresses().Count + 3, EveryScope().Count);
     }
 
     /// <remarks>
@@ -171,21 +186,22 @@ public class MarkupContractTests
     }
 
     /// <remarks>
-    /// SC 1.3.1 Info and Relationships, Level A. Skipped, and this is the clearest example in the suite of
-    /// why the distinction matters: every route renders exactly ONE heading today, so there is not a single
-    /// adjacent pair of headings anywhere in the app for the rule to compare. It would pass. It would mean
-    /// nothing. The rule's logic is proven in MarkupRuleTests, against a skipped level and against the
-    /// h1-h2-h3-h2 outline it must not flag.
+    /// SC 1.3.1 Info and Relationships, Level A. <b>LIVE SINCE THE DETAIL PAGE, AND IT WAS SKIPPED FOR
+    /// FOUR TASKS BEFORE THAT.</b> Every route rendered exactly one heading, so there was not a single
+    /// adjacent pair of headings anywhere in the app for the rule to compare: it would have passed, and it
+    /// would have meant nothing. The Skip said in words that it must come off when a second heading
+    /// arrived for a reason of its own, and <c>TheHeadingOrderContractIsStillSkippedForTheRightReason</c>
+    /// is the guard that failed the day one did -- the detail page's Overview, Cast, Details and Additional
+    /// information, which are a reader's outline of a page with four blocks in it and not markup invented
+    /// to turn a test on. That guard is gone now; this is its replacement, and <c>Subjects</c> below is
+    /// what keeps the rule from going quietly vacuous again if the headings ever leave.
+    /// <para>
+    /// The rule's logic is also proven in MarkupRuleTests, against a skipped level and against the
+    /// h1-h2-h3-h2 outline it must not flag, which is what made it safe to turn on here with no doubt about
+    /// whether a green result meant the outline was right or the rule was broken.
+    /// </para>
     /// </remarks>
-    [Fact(Skip = "No route renders a second heading, so there is no adjacent heading pair in the whole app "
-                 + "to compare -- the rule would pass over an empty set. NO TASK IS NAMED HERE, ON PURPOSE. "
-                 + "This message used to say Task 6 would add the films page's section headings. Task 6 "
-                 + "added none: its tile wall is a list and its pager is a navigation landmark, and a "
-                 + "heading invented to turn this contract on would be markup added for a test rather than "
-                 + "for a user. Task 8's filter panel is fieldset and legend in the plan rather than "
-                 + "headings, so there is no task this can honestly be re-pointed at today. Remove the Skip "
-                 + "when a second heading arrives for a reason of its own. "
-                 + "TheHeadingOrderContractIsStillSkippedForTheRightReason fails when that happens.")]
+    [Fact]
     public void HeadingLevelsNeverSkipALevel()
     {
         TheRouteSetIsWhatItShouldBe();
@@ -198,16 +214,24 @@ public class MarkupContractTests
             + "exists which does not, so the outline they build of the page is wrong.");
     }
 
+    /// <remarks>
+    /// The subject count, named and exact, which is the half <c>Subjects</c> cannot give: it only says
+    /// "more than none". Three pairs, all of them on the detail page with a film in it -- h1 to Overview,
+    /// Overview to Cast, Cast to Details, Details to Additional information is four -- so the number is
+    /// what the one scope with every section in it produces, and a section lost from that fixture takes it
+    /// down rather than leaving the rule looking just as green with less to check.
+    /// </remarks>
     [Fact]
-    public void TheHeadingOrderContractIsStillSkippedForTheRightReason()
+    public void TheHeadingOrderContractHasTheSubjectsTheDetailPageGaveIt()
     {
-        // The live half of the pair above. The moment any page gains a second heading this fails and says
-        // to un-skip the contract, which is the part a bare Skip cannot do for itself.
         var pairs = EveryScope().Sum(s => MarkupRules.AdjacentHeadingPairs(s.Root).Count);
 
-        Assert.True(pairs == 0,
-            "There are now " + pairs + " adjacent heading pairs in the app, so HeadingLevelsNeverSkipALevel "
-            + "has subjects and is no longer vacuous. Remove the Skip from it and delete this guard.");
+        Assert.True(pairs >= 4,
+            "There are " + pairs + " adjacent heading pairs in the app. Four exist, all in the scope that "
+            + "renders a film with every field: h1 to Overview, Overview to Cast, Cast to Details, and "
+            + "Details to Additional information. Fewer means AnnouncerTestExtensions's fixture film has "
+            + "lost a field and HeadingLevelsNeverSkipALevel is checking a shorter outline than it reads as "
+            + "checking.");
     }
 
     /// <remarks>

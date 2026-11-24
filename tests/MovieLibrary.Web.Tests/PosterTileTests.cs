@@ -160,23 +160,76 @@ public class PosterTileTests : BunitContext
     /// which is also why nothing in the grid is a tab stop.
     /// </remarks>
     [Fact]
-    public void TheTileRendersNoAnchorAndNothingInteractive()
+    public void TheTileRendersExactlyOneLinkAndNothingElseInteractive()
     {
         var root = MarkupRules.Parse(RenderTile(Film()).Markup);
 
-        // [role] IS IN THE LIST HERE, and it is defensible here in a way it was not in the grid's own list
-        // test, where the identical shape banned the role="listitem" PosterGrid's comment instructs a later
-        // implementer to add. The tile genuinely carries no role in Part A and no role is pending for it:
-        // the list semantics live on the grid's ul and li, the badge Task 7 adds is content rather than a
-        // role, and Part B adds an anchor, whose role is implicit. So this is a rule with a subject it can
-        // fail on rather than one forbidding correct future code -- but it is the same T5 shape, so if a
-        // later task does need a role in here, narrow this to the roles it is about rather than deleting
-        // the whole assertion.
-        var candidates = root.QuerySelectorAll("a, button, input, select, textarea, [tabindex], [role]")
-            .ToList();
+        // ONE anchor, and it is the whole of the tile's interactivity. The ban was on every anchor while
+        // there was no /movies/{key} route to point one at; narrowed rather than deleted, as its own note
+        // asked for, because what the rule is really about is that a tile is ONE target and not several.
+        // Two anchors in a card -- a poster link and a title link, which is the usual way this goes wrong --
+        // double the tab stops in the wall and read as two links to the same film.
+        var anchor = Assert.Single(root.QuerySelectorAll("a"));
 
-        Assert.Empty(candidates);
-        Assert.Empty(MarkupRules.InteractiveElements(root));
+        Assert.Equal("movies/807-110", anchor.GetAttribute("href"));
+        Assert.Equal(new[] { anchor }, MarkupRules.InteractiveElements(root));
+
+        // NOTHING ELSE, and [role] stays in the list: the anchor's role is implicit and nothing in here
+        // declares one. The list semantics live on the grid's ul and li, and the badge is content rather
+        // than a role. If a later task does need a role in here, narrow this to the roles it is about
+        // rather than deleting the assertion.
+        Assert.Empty(root.QuerySelectorAll("button, input, select, textarea, [tabindex], [role]"));
+    }
+
+    /// <remarks>
+    /// WHAT THE LINK IS NAMED BY, and in what order, because that is the string read on each of sixty
+    /// tiles. A field moved out of the anchor, a field added to it, or the order of two of them swapped
+    /// changes what a reader hears, and nothing else in the suite would catch it: the structural tests
+    /// above ask where elements are and the text tests ask what each one says, and neither asks what the
+    /// link as a whole announces. The poster is alt="" and contributes nothing.
+    /// <para>
+    /// <b>The PARTS are pinned, not one joined string, and that is a real limit rather than a style
+    /// choice.</b> Razor emits these spans with no text between them at all, so <c>TextContent</c> is
+    /// "Se7en19951h 50m8.4/10" -- the spaces a reader hears come from the accessible NAME algorithm, which
+    /// separates each element child's contribution, and there is no accessibility tree here to compute it.
+    /// Asserting a joined string would therefore be asserting a space this DOM does not contain. What this
+    /// does hold is the content and the order, which is everything the algorithm is given.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void TheLinkIsNamedByTheFilmsOwnVisibleText()
+    {
+        var anchor = RenderTile(Film()).Find("a.tile-body");
+
+        // Document order, which is what QuerySelectorAll returns and what the name algorithm walks.
+        Assert.Equal(
+            new[] { "Se7en", "1995", "1h 50m", "8.4/10" },
+            anchor.QuerySelectorAll(".tile-title, .tile-year, .tile-runtime, .tile-rating")
+                  .Select(e => e.TextContent.Trim()));
+    }
+
+    /// <remarks>
+    /// A degraded record has fewer parts, and the name must still be the film: no year, no rating, and the
+    /// badge OUTSIDE the anchor, which is what
+    /// <c>DegradedRecordTests.TheBadgeIsASiblingOfTheTextBlockAndNeverInsideIt</c> pins from the other
+    /// side. "An Unlisted Film, 1h 41m" and never "An Unlisted Film, 1h 41m, Not matched" -- thirty of the
+    /// published records are this shape and they are the ones the owner most wants to open.
+    /// </remarks>
+    [Fact]
+    public void AnUnmatchedFilmsLinkIsNamedByWhatTheRecordActuallyHas()
+    {
+        var cut = RenderTile(Unmatched());
+        var anchor = cut.Find("a.tile-body");
+
+        Assert.Equal(
+            new[] { "An Unlisted Film", "1h 41m" },
+            anchor.QuerySelectorAll(".tile-title, .tile-year, .tile-runtime, .tile-rating")
+                  .Select(e => e.TextContent.Trim()));
+
+        // The badge exists and is NOT in the name. Without this the assertion above would also pass over a
+        // tile that had stopped rendering a badge at all, which is a different defect wearing the same green.
+        Assert.Equal("Not matched", cut.Find(".badge").TextContent.Trim());
+        Assert.Empty(anchor.QuerySelectorAll(".badge"));
     }
 
     /// <remarks>

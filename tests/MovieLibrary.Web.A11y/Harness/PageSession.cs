@@ -53,6 +53,14 @@ public sealed class PageSession : IAsyncDisposable
 
     public static string LoadingSpoken => Movies.LoadingSpoken;
 
+    /// <summary>The film page's own sentences. Different strings from the films page's, and deliberately so:
+    /// the gate tells the two pages apart by the words on screen as well as by the container's class.</summary>
+    public static string FilmCouldNotLoad => FilmDetail.CouldNotLoad;
+
+    public static string FilmLoadingVisible => FilmDetail.LoadingVisible;
+
+    public static string NoSuchFilm => FilmDetail.NoSuchFilm;
+
     public string UrlFor(string address) => baseUrl + "/" + address.TrimStart('/');
 
     /// <summary>Loads an address and waits for Blazor to have replaced the boot shell with a real page.</summary>
@@ -131,6 +139,20 @@ public sealed class PageSession : IAsyncDisposable
         Page.Locator(".catalog-state p")
             .Filter(new LocatorFilterOptions { HasTextString = sentence })
             .WaitForAsync(new LocatorWaitForOptions { Timeout = BootTimeout });
+
+    /// <summary>Waits for the one-sentence state paragraph on the FILM page to hold a sentence.</summary>
+    public Task FilmSentenceAsync(string sentence) =>
+        Page.Locator(".film-state p")
+            .Filter(new LocatorFilterOptions { HasTextString = sentence })
+            .WaitForAsync(new LocatorWaitForOptions { Timeout = BootTimeout });
+
+    /// <summary>
+    /// Waits for the film page to have a film on it. <c>dl.film-facts</c> is the Details list, which the Ready
+    /// branch always renders and neither of the other two branches can, so it is the one signal that separates
+    /// a loaded film from a film still loading and from an address no record answers.
+    /// </summary>
+    public Task FilmAsync() =>
+        Page.Locator("dl.film-facts").First.WaitForAsync(new LocatorWaitForOptions { Timeout = BootTimeout });
 
     /// <summary>Waits for the grid to hold a given number of tiles.</summary>
     public Task GridAsync(int tiles = Catalogue.PageSize) =>
