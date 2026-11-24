@@ -514,12 +514,10 @@ nav[b-wx8l9rtebe] { display: flex; flex-wrap: wrap; align-items: center; justify
    screen reader cannot hear it at all. It is simply quieter and a little larger than the overview. */
 .film-tagline[b-mzt8387tcu] { color: var(--dim); font-size: 1.1rem; line-height: 1.5; margin: 0 0 1rem; }
 
-.film-section[b-mzt8387tcu] { margin: 1.5rem 0 0; }
-.film-section h2[b-mzt8387tcu] { font-size: 1.25rem; font-weight: 600; margin: 0 0 .5rem; }
-
-/* 68ch, as app.css's state paragraph uses. A line much longer than that is the SC 1.4.8 Visual Presentation
-   complaint (Level AAA, 80 characters) and is a plain readability loss below that level too. */
-.film-section p[b-mzt8387tcu] { max-width: 68ch; line-height: 1.5; margin: 0; }
+/* .page-section and .facts USED TO BE HERE, under names that said "film". They moved to app.css the day a
+   series page rendered the same sections and the same definition list: a scoped sheet styles its own
+   component's markup and nothing else, so a second page using these class names would have rendered them
+   unstyled -- silently, since nothing in a stylesheet fails. See app.css for the rules themselves. */
 
 /* THE CAST. list-style: none is what the markup's role="list" exists to repair -- Safari with VoiceOver
    strips list semantics from a list whose markers are removed -- and PosterGrid.razor.css makes the same
@@ -550,23 +548,11 @@ nav[b-wx8l9rtebe] { display: flex; flex-wrap: wrap; align-items: center; justify
    ships !important and would win. */
 .film-cast-role[b-mzt8387tcu] { color: var(--dim); font-size: .9rem; line-height: 1.5; }
 
-/* THE FACT LISTS. Each pair is wrapped in a div, which is valid inside a dl and is what lets the pair be a
-   grid row WITHOUT display: contents -- Chrome and Safari both used to drop a display: contents element
-   from the accessibility tree, taking the dt/dd relationship with it.
-   minmax(0, auto) on the term column, never a fixed width: a long term must be able to wrap rather than
-   overflow, and 0 is the floor that lets it. overflow-wrap: anywhere on the value, because the owner's own
-   fields can hold an unbroken string -- an order number, a URL -- that has no space in it to break at, and
-   at 320px that is the difference between a wrapped line and a horizontal scrollbar on the document
-   (SC 1.4.10 Reflow, Level AA). */
-.film-facts[b-mzt8387tcu] { display: grid; gap: .5rem 0; margin: 0; }
-.film-facts > div[b-mzt8387tcu] { display: grid; gap: 0 1rem; grid-template-columns: minmax(0, auto) minmax(0, 1fr); }
-.film-facts dt[b-mzt8387tcu] { color: var(--dim); font-weight: 400; overflow-wrap: anywhere; }
-.film-facts dd[b-mzt8387tcu] { color: var(--txt); margin: 0; overflow-wrap: anywhere; }
 
 /* One column below 30rem, where two columns leave a long term nothing to wrap into. The term then reads
    above its value, which is the order a screen reader walks a dl in anyway. */
 @media (max-width: 30rem) {
-  .film-facts > div[b-mzt8387tcu] { grid-template-columns: minmax(0, 1fr); }
+  .facts > div[b-mzt8387tcu] { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* No transition, animation or transform anywhere in this file, so no prefers-reduced-motion block is
@@ -634,3 +620,89 @@ nav[b-wx8l9rtebe] { display: flex; flex-wrap: wrap; align-items: center; justify
 @media (min-width: 64rem) {
   .movies-layout[b-rz9u7hcbu9] { grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); }
 }
+/* /Pages/ShowDetail.razor.rz.scp.css */
+/* THE SERIES BYLINE, the same shape as the film page's: a wrapping flex row whose gap IS the separator.
+   No middot and no slash anywhere in the DOM -- a middot is read inconsistently by screen readers, and
+   moving it into ::before does not hide it from the accessibility tree. nowrap on each part so "207 of 233
+   episodes" breaks between parts rather than through one. */
+.show-byline[b-24uezls7k1] {
+  display: flex; flex-wrap: wrap; gap: .25rem 1rem;
+  color: var(--dim); margin: 0; line-height: 1.5;
+}
+
+.show-byline > span[b-24uezls7k1] { white-space: nowrap; }
+
+/* THE MATCH, in ConfidenceBand's own words, and it is the one part of the byline that is not grey.
+   --txt is 16.16:1 on --bg. It carries no colour of its own beyond that: the words say what they mean, so
+   nothing here is conveyed by colour (SC 1.4.1) and there is nothing to repair in forced-colors mode. */
+.show-match[b-24uezls7k1] { color: var(--txt); font-weight: 600; }
+
+/* The poster is decorative and sized by its own attributes; this only caps it so it cannot grow past the
+   column on a wide screen, and rounds it as the tiles are rounded. */
+.show-poster[b-24uezls7k1] {
+  width: 100%; max-width: 13rem; height: auto;
+  border-radius: 8px; margin: 1rem 0 0; display: block;
+}
+
+.no-episodes[b-24uezls7k1] { color: var(--dim); }
+
+/* A SEASON. The browser's own disclosure, so the open state, the keyboard operation and the announcement
+   all come from the platform and no ARIA is needed to describe them.
+   The border is --line-strong (3.89:1 on --bg) and not --line: the box IS the control's boundary, and
+   --line is 1.37:1, which fails SC 1.4.11 Non-text Contrast for anything a reader has to find. */
+.season[b-24uezls7k1] {
+  border: 1px solid var(--line-strong); border-radius: 8px;
+  margin: .5rem 0 0; background: var(--panel2);
+}
+
+/* THE SUMMARY IS THE CONTROL, so it carries the target size this project gives every control: --touch is
+   44px and SC 2.5.5 Target Size is Level AAA, met here rather than the AA minimum of 24px.
+   padding rather than a fixed height, so the name can wrap to two lines at 320px or at 200% text and the
+   box grows with it instead of clipping it (SC 1.4.4, SC 1.4.10).
+   cursor: pointer because it is a control; the focus ring comes from app.css's :root :focus-visible, which
+   is why there is no outline rule here to get wrong. */
+.season > summary[b-24uezls7k1] {
+  display: flex; align-items: center; gap: .5rem;
+  min-height: var(--touch); padding: .5rem .75rem;
+  color: var(--txt); font-weight: 600; cursor: pointer;
+}
+
+/* Hover only where a pointer can hover: on a touch screen :hover sticks after the tap and the control
+   stays lit until something else is tapped. The same shape, and the same token, as the pager's. */
+@media (hover: hover) {
+  .season > summary:hover[b-24uezls7k1] { color: var(--accent); }
+}
+
+/* THE EPISODES. list-style: none is what the markup's role="list" exists to repair -- Safari with
+   VoiceOver strips list semantics from a list whose markers are removed -- and PosterGrid.razor.css and
+   the film page's cast list both make the same pair for the same reason. */
+.episode-list[b-24uezls7k1] {
+  list-style: none; margin: 0; padding: 0 .75rem .75rem;
+  display: grid; gap: .25rem;
+}
+
+/* A ROW, and nothing in it is focusable: there can be 559 of them on one page, and a tab stop apiece would
+   make the keyboard route past this page longer than the page itself.
+   The number column is minmax(0, auto) and never a fixed width, so a three-figure episode number widens
+   the column instead of overflowing it; the title takes the rest and wraps. "Missing" is the last column
+   and claims only the width of its own words. */
+.episode-list li[b-24uezls7k1] {
+  display: grid; gap: 0 .75rem; align-items: baseline;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr) minmax(0, auto);
+  line-height: 1.5;
+}
+
+/* tabular-nums so the numbers line up down the column without a fixed width to clip them. */
+.episode-number[b-24uezls7k1] { color: var(--dim); font-variant-numeric: tabular-nums; }
+
+.episode-title[b-24uezls7k1] { color: var(--txt); overflow-wrap: anywhere; }
+
+/* MISSING IS WORDS, AND THE WORDS ARE THE WHOLE MARK. --dim is 6.33:1 on --bg, past SC 1.4.3's 4.5:1, and
+   nothing here is carried by colour alone (SC 1.4.1) or by a glyph with no text equivalent (SC 1.1.1):
+   remove every colour from this page and the row still says "Missing".
+   No forced-colors block for the same reason -- there is no colour to repair, and the text survives any
+   palette the system imposes. */
+.episode-missing[b-24uezls7k1] { color: var(--dim); font-size: .9rem; white-space: nowrap; }
+
+/* No transition and no animation in this file, so no prefers-reduced-motion block is needed. The motion
+   rule in StyleContractTests reads this file by glob and will say so if that stops being true. */
