@@ -8,10 +8,10 @@ namespace MovieLibrary.Web.A11y;
 /// </summary>
 /// <remarks>
 /// <para>
-/// Four addresses over two page types: the route templates read from RouteAttribute - "/", "/movies" and
-/// "/not-found", all three real reachable URLs - plus "/zzz", which matches no route and so reaches the
-/// not-found page by the router's own NotFoundPage path rather than by its route. Tasks 6 and 8 extend this
-/// scan by adding a page; nothing here needs editing for that.
+/// Five addresses over three page types: the route templates read from RouteAttribute - "/", "/movies",
+/// "/movies/{Key}" with a key the gate's own catalogue carries, and "/not-found" - plus "/zzz", which matches
+/// no route and so reaches the not-found page by the router's own NotFoundPage path rather than by its route.
+/// Adding a page extends this scan; nothing here needs editing for that.
 /// </para>
 /// <para>
 /// <b>A static-HTML scanner would be useless for all of this.</b> Anything that fetches index.html without
@@ -34,15 +34,21 @@ public class RouteScanTests(BrowserGate gate, ITestOutputHelper output)
         var addresses = Site.Addresses();
         output.WriteLine("addresses: " + string.Join(" ", addresses));
 
-        Assert.True(addresses.Count >= 4,
-            "The route scan found " + addresses.Count + " address(es). Part A serves at least four: \"/\" and "
-            + "\"/movies\" (both the films page), \"/not-found\", and an unmatched address. Fewer means the "
-            + "reflection over RouteAttribute stopped finding pages, and every scan below would pass "
+        Assert.True(addresses.Count >= 5,
+            "The route scan found " + addresses.Count + " address(es). The site serves at least five: \"/\" and "
+            + "\"/movies\" (both the films page), one film, \"/not-found\", and an unmatched address. Fewer "
+            + "means the reflection over RouteAttribute stopped finding pages, and every scan below would pass "
             + "vacuously.");
 
         Assert.Contains("/", addresses);
         Assert.Contains("/not-found", addresses);
         Assert.Contains(Site.UnmatchedUrl, addresses);
+        Assert.Contains("/movies/" + Catalogue.FirstKey, addresses);
+
+        // An address Site could not fill is the hole this guard exists for: a template with an unfilled
+        // parameter in it is not a URL, the page answers it with its not-found branch, and the scan stays
+        // green over a page that renders almost nothing. Loud here, rather than silent in ten scans.
+        Assert.DoesNotContain(addresses, a => a.Contains('{', StringComparison.Ordinal));
     }
 
     [BrowserTheory]
@@ -77,10 +83,25 @@ public class RouteScanTests(BrowserGate gate, ITestOutputHelper output)
 
     /// <summary>
     /// Waits for the address to have finished becoming whatever it becomes, so the scan cannot run against a
-    /// page in transition. On the films page that means the grid; everywhere else the heading is the end of it.
+    /// page in transition. On the films page that means the grid, on a film page the Details list; everywhere
+    /// else the heading is the end of it.
     /// </summary>
+    /// <remarks>
+    /// <b>The film page is asked about FIRST, and the order is the whole point.</b> Both pages render a state
+    /// container with a state paragraph in it, and the two class names - <c>.catalog-state</c> and
+    /// <c>.film-state</c> - exist only so that this can tell them apart; they share every styling rule in
+    /// app.css. A film page reaching the <c>.catalog-state</c> arm would wait for a tile grid that is never
+    /// coming and fail the gate on a timeout, and one reaching neither arm would be scanned mid-fetch, with
+    /// the heading reading "Loading film" and none of the page rendered.
+    /// </remarks>
     private static async Task SettledAsync(PageSession session)
     {
+        if (await session.Page.Locator(".film-state").CountAsync() > 0)
+        {
+            await session.FilmAsync();
+            return;
+        }
+
         if (await session.Page.Locator(".catalog-state").CountAsync() > 0) await session.GridAsync();
     }
 }

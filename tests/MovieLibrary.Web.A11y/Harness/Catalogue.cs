@@ -48,8 +48,9 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// <b>The number of genres is modest.</b> <c>ObscuredFocusTests</c> and <c>FocusVisibleTests</c> walk the tab order
 /// in at most <see cref="TabWalk.Presses"/> presses and fail if the document is not left by then; the panel adds one
 /// stop per genre and per decade (eleven, and Year unknown), so with the shell, the pager and the error bar that is
-/// twenty-two stops before any genre. Nine genres is thirty-one, inside the bound with room to spare, where the real
-/// panel has about forty. The bound is sized for the real library and not for this catalogue (see
+/// twenty-two stops before any genre, and a full page of tiles adds <see cref="TabWalk.TilesOnAFullPage"/> = 60
+/// links on top of all of it. Nine genres is ninety-one, inside the bound with room to spare, where the real panel
+/// has about forty. The bound is sized for the real library and not for this catalogue (see
 /// <see cref="TabWalk"/>), and <c>CatalogueTests</c> pins both that and this catalogue's fit.
 /// </para>
 /// <para>
@@ -83,6 +84,14 @@ internal static class Catalogue
     public static int Pages => (Records + PageSize - 1) / PageSize;
 
     public static int OnTheLastPage => Records - (Pages - 1) * PageSize;
+
+    /// <summary>
+    /// The key of the record a film page scan lands on. Read from the catalogue rather than typed, so a change
+    /// to the key format cannot leave <c>Site.Addresses</c> pointed at an address the page answers with "No
+    /// film in the library has this address." -- a scan that would still be green, on a page showing nothing.
+    /// It is record 0, which <see cref="Build"/> furnishes for exactly this purpose.
+    /// </summary>
+    public static string FirstKey => Build(1)[0].K;
 
     private static readonly JsonSerializerOptions Published = new()
     {
@@ -158,6 +167,36 @@ internal static class Catalogue
                 Col: null,
                 Own: null,
                 Mc: 0.95);
+
+        // ONE RECORD IS FURNISHED, AND IT IS THE ONE THE FILM PAGE'S SCAN LANDS ON (see FirstKey). Left as
+        // the loop builds them, every record omits every optional part of the film page: no backdrop, no
+        // tagline, no overview, no cast, no collection, no purchase line and no extra fields. A scan of
+        // /movies/<key> would then see a heading, a byline and one definition list, and would read as
+        // covering a page most of which it never rendered -- the applicability hole rule T1 is about.
+        // These are the members NO TILE READS, so furnishing them changes nothing in any other scan: a tile
+        // shows the title, the year, the runtime, the rating and the badge. P stays null here, because a
+        // poster path on a record on page 1 WOULD change every Ready scan, and that is OnePosterAmong's job
+        // and the budget rule in the remarks above. The backdrop and the portrait are requests this
+        // process answers itself -- BrowserGate routes image.tmdb.org on every context it opens.
+        records[0] = records[0] with
+        {
+            B = "/one-synthetic-backdrop.jpg",
+            Tag = "A fixture tagline, which is the one line of prose above the overview.",
+            Ov = "A fixture overview. It is several sentences long because the real ones are, and because a "
+                 + "paragraph that wraps over four or five lines at 320 pixels is what the reflow and the "
+                 + "text-override scans need to see on this page. Nothing here is matched against.",
+            Cast =
+            [
+                // Three members, which is three branches: a portrait, the placeholder that stands in for a
+                // missing one, and a billed name with no character to put after it.
+                new CastMember("First Billed", "The Detective", "/one-synthetic-portrait.jpg"),
+                new CastMember("Second Billed", "The Rookie", null),
+                new CastMember("Third Billed", "", null),
+            ],
+            Col = "The Fixture Collection",
+            Own = "Bought 2019",
+            Ex = new Dictionary<string, string> { ["Shelf"] = "B3", ["Case"] = "keep case" },
+        };
 
         return records;
     }

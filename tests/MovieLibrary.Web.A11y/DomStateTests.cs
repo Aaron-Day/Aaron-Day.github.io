@@ -11,8 +11,10 @@ namespace MovieLibrary.Web.A11y;
 /// <remarks>
 /// <para>
 /// A plain load with the drawer closed, the live regions empty and the error bar display: none is ONE state.
-/// Tasks 5 and 6 gave the films page three of its own and filled the third with sixty tiles and a pager, so
-/// there are now nine states worth scanning, and each entry below says what it is the only place to catch.
+/// Tasks 5 and 6 gave the films page three of its own and filled the third with sixty tiles and a pager, and the
+/// film page brings three more - loading, failed, and an address no record answers - so there are now twelve
+/// states worth scanning, and each entry below says what it is the only place to catch. A film that LOADED is
+/// not among them: that one is an arrival state and RouteScanTests scans it at /movies/{key}.
 /// </para>
 /// <para>
 /// <b>Every scan here runs with no poster path on any record.</b> See Catalogue for why that is a budget rule
@@ -344,6 +346,91 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         var scan = await AxeScan.OfAsync(session.Page, "ready, one real poster among sixty tiles", output);
         scan.MustBeClean(Booted);
     }
+
+    // ======================================================== the film page's own states
+
+    /// <summary>
+    /// State 10: a film still loading. The only film-page state with the loading sentence on screen, and the
+    /// only place a browser can check that the page says NOTHING while it loads.
+    /// </summary>
+    /// <remarks>
+    /// The silence is the contract, not an omission. FocusOnNavigate has just put focus on the h1, which in
+    /// this state reads "Loading film…", so a reader has already heard those words; publishing them to
+    /// #status-announcer as well would be the same sentence twice for one event. The films page announces its
+    /// own loading state because its heading says "Films" and not "Loading films", which is why these two
+    /// pages differ here and why both are worth a scan.
+    /// </remarks>
+    [BrowserFact]
+    public async Task AFilmStillLoadingIsCleanAndSaysNothing()
+    {
+        await using var session = await gate.OpenAsync();
+        await session.HangTheCatalogueAsync();
+
+        await session.Page.GotoAsync(session.UrlFor(FilmAddress));
+        await session.BootedAsync();
+        await session.FilmSentenceAsync(PageSession.FilmLoadingVisible);
+
+        Assert.Equal(0, await session.Page.Locator("button.try-again").CountAsync());
+        Assert.Equal(string.Empty, await session.Page.Locator("#status-announcer").InnerTextAsync());
+
+        var scan = await AxeScan.OfAsync(session.Page, "a film loading", output);
+        scan.MustBeClean(Booted);
+    }
+
+    /// <summary>
+    /// State 11: a film that could not be loaded. The film page's Try again button, and its failure focus
+    /// move onto its own state container - a different element with a different class from the films page's,
+    /// so neither scan covers the other.
+    /// </summary>
+    [BrowserFact]
+    public async Task AFilmThatFailedIsCleanAndHoldsFocusWithoutAlsoAlerting()
+    {
+        await using var session = await gate.OpenAsync();
+        await session.FailTheCatalogueAsync();
+
+        await session.Page.GotoAsync(session.UrlFor(FilmAddress));
+        await session.BootedAsync();
+        await session.FilmSentenceAsync(PageSession.FilmCouldNotLoad);
+        await session.Page.Locator("button.try-again").WaitForAsync();
+
+        var focused = await session.Page.EvaluateAsync<bool>(
+            "() => document.activeElement === document.querySelector(\"div.film-state\")");
+
+        Assert.True(focused,
+            "The failure did not leave focus on div.film-state[tabindex=-1]. It holds " +
+            await session.FocusedDescriptionAsync() + ". The focus move is the PRIMARY failure channel and the "
+            + "alert is only the fallback, so losing the move means the failure is reported by the less "
+            + "reliable route.");
+
+        // Mutually exclusive, exactly as on the films page: the move happened, so nothing is alerted.
+        Assert.Equal(string.Empty, await session.Page.Locator("#alert-region").InnerTextAsync());
+
+        var scan = await AxeScan.OfAsync(session.Page, "a film that failed, focus on the state container", output);
+        scan.MustBeClean(Booted);
+    }
+
+    /// <summary>
+    /// State 12: an address with a key no record carries. The catalogue loaded and the page is not broken -
+    /// there is simply no such film - so there is no Try again button and no failure: a different state from
+    /// State 11 and the one a stale bookmark or a hand-typed URL reaches.
+    /// </summary>
+    [BrowserFact]
+    public async Task AnAddressNoFilmAnswersIsClean()
+    {
+        await using var session = await gate.OpenAsync();
+
+        await session.GotoAsync("/movies/no-such-key");
+        await session.FilmSentenceAsync(PageSession.NoSuchFilm);
+
+        Assert.Equal(0, await session.Page.Locator("button.try-again").CountAsync());
+        Assert.Equal(0, await session.Page.Locator("dl.film-facts").CountAsync());
+
+        var scan = await AxeScan.OfAsync(session.Page, "an address no film answers", output);
+        scan.MustBeClean(Booted);
+    }
+
+    /// <summary>The film page address these states use: the one record Catalogue furnishes for it.</summary>
+    private static string FilmAddress => "/movies/" + Catalogue.FirstKey;
 
     /// <summary>
     /// The pager label exactly as PosterGrid speaks it, and the reason this is a helper rather than a
