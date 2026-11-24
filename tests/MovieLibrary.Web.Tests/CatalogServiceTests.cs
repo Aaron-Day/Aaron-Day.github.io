@@ -70,6 +70,203 @@ public class CatalogServiceTests : IDisposable
          "reviewQueue":[]}
         """;
 
+    private const string TwoShows =
+        """
+        [{"i":1973,"t":"A Series","slug":"a-series","firstYear":2001,"ag":"Drama",
+          "seasonCount":2,"ownedEpisodes":11,"totalEpisodes":24,"mc":1},
+         {"i":1400,"t":"Another Series","slug":"another-series","firstYear":1989,"ag":"Comedy",
+          "seasonCount":1,"ownedEpisodes":6,"totalEpisodes":6,"mc":0.9}]
+        """;
+
+    /// <summary>A series with no seasons at all: the shape an unmatched series has, and valid JSON.</summary>
+    private const string AnotherSeries =
+        """
+        {"i":1400,"t":"Another Series","slug":"another-series","ag":"Comedy","ownedEpisodes":6,
+         "totalEpisodes":6,"mc":0.9,"seasons":[]}
+        """;
+
+    private const string OneSeries =
+        """
+        {"i":1973,"t":"A Series","slug":"a-series","firstYear":2001,"ag":"Drama","ownedEpisodes":11,
+         "totalEpisodes":24,"mc":1,
+         "seasons":[{"n":1,"owned":5,"total":12,"eps":[{"e":1,"t":"Pilot","o":true},{"e":2,"t":"Gone","o":false}]},
+                    {"n":2,"owned":6,"total":12,"eps":[{"e":1,"t":"Back","o":true}]}]}
+        """;
+
+
+    // ------------------------------------------------------------------ the series index, and one series
+
+    [Fact]
+    public async Task TheSeriesIndexIsFetchedOnceAndHeldLikeTheOthers()
+    {
+        var stub = Stub().Serves(StubCatalog.Shows, StubCatalog.Json(TwoShows));
+        var service = stub.Service();
+
+        var first = await service.GetShowsAsync();
+        var second = await service.GetShowsAsync();
+
+        Assert.Equal(CatalogState.Ready, first.State);
+        Assert.Equal(2, second.Value.Count);
+        Assert.Equal("a-series", second.Value[0].Slug);
+        Assert.Equal(2, second.Value[0].SeasonCount);
+        Assert.Equal(1, stub.RequestsFor(StubCatalog.Shows));
+    }
+
+    /// <remarks>
+    /// The point of the split: opening one series downloads that series and nothing else. The live library is
+    /// about 5 MB of series records behind a 23 KB index, so a page that fetched them all to show one would be
+    /// the whole library on a phone to read one show's episode list.
+    /// </remarks>
+    [Fact]
+    public async Task OneSeriesComesFromItsOwnFileAndIsHeldPerSlug()
+    {
+        var stub = Stub()
+            .Serves(StubCatalog.Shows, StubCatalog.Json(TwoShows))
+            .Serves(StubCatalog.Series("a-series"), StubCatalog.Json(OneSeries));
+        var service = stub.Service();
+
+        var first = await service.GetShowAsync("a-series");
+        var second = await service.GetShowAsync("a-series");
+
+        Assert.Equal(CatalogState.Ready, first.State);
+        Assert.Equal("A Series", second.Value!.T);
+        Assert.Equal(2, second.Value.Seasons.Length);
+        Assert.Equal("Pilot", second.Value.Seasons[0].Eps[0].T);
+        Assert.False(second.Value.Seasons[0].Eps[1].O);
+        Assert.Equal(1, stub.RequestsFor(StubCatalog.Series("a-series")));
+
+        // The OTHER series was never asked for, which is the whole claim. The sweep in Dispose would fail this
+        // test if it had been, because nothing scripted it.
+        Assert.Equal(1, stub.RequestsFor(StubCatalog.Shows));
+    }
+
+    /// <remarks>
+    /// <b>Ready with a null value, and NO request.</b> A slug the index does not carry is an address no series
+    /// answers, which a page reports in words; it is not a failure, and offering Try again over it would be a
+    /// button that cannot help. The request count is the other half: the index already knows every series
+    /// there is, so asking the host would be a round trip whose answer is a 404 either way.
+    /// </remarks>
+    [Fact]
+    public async Task ASlugTheIndexDoesNotCarryIsNoSeriesAndCostsNoRequest()
+    {
+        var stub = Stub().Serves(StubCatalog.Shows, StubCatalog.Json(TwoShows));
+        var service = stub.Service();
+
+        var result = await service.GetShowAsync("no-such-series");
+
+        Assert.Equal(CatalogState.Ready, result.State);
+        Assert.Null(result.Value);
+    }
+
+    /// <remarks>
+    /// THE PATH IS BUILT FROM THE INDEX AND NEVER FROM THE URL. A slug arrives from the address bar, where
+    /// anything can be typed, and on a static host a request that climbs out of data/tv/ is a request for some
+    /// other published file. None of these reaches the network at all: the lookup fails first, so there is no
+    /// path to escape from. The sweep in Dispose is what proves the second half -- any request these made
+    /// would be unscripted and would fail this test.
+    /// </remarks>
+    [Theory]
+    [InlineData("../../index")]
+    [InlineData("..%2f..%2findex")]
+    [InlineData("a-series/../../secrets")]
+    [InlineData("")]
+    public async Task ASlugThatTriesToClimbOutOfTheFolderNeverBecomesARequest(string slug)
+    {
+        var stub = Stub().Serves(StubCatalog.Shows, StubCatalog.Json(TwoShows));
+        var service = stub.Service();
+
+        var result = await service.GetShowAsync(slug);
+
+        Assert.Equal(CatalogState.Ready, result.State);
+        Assert.Null(result.Value);
+    }
+
+
+    /// <remarks>
+    /// Ordinal, where the film key is OrdinalIgnoreCase. A key is digits and lower-case hex, so case cannot
+    /// collide two records; a slug is a title folded to words, so matching loosely could hand a reader a
+    /// DIFFERENT series rather than its not-found page.
+    /// </remarks>
+    [Fact]
+    public async Task ASlugInTheWrongCaseIsNotTheSameSeries()
+    {
+        var stub = Stub().Serves(StubCatalog.Shows, StubCatalog.Json(TwoShows));
+        var service = stub.Service();
+
+        Assert.Null((await service.GetShowAsync("A-Series")).Value);
+    }
+
+    /// <remarks>
+    /// An index that did not load says nothing about whether the series exists, so this must NOT come back as
+    /// "no such series": that sentence over a network failure is the page telling the reader their bookmark is
+    /// wrong when the truth is that the site could not be read.
+    /// </remarks>
+    [Fact]
+    public async Task AFailedIndexIsAFailureAndNotAMissingSeries()
+    {
+        var stub = Stub().Serves(StubCatalog.Shows,
+            StubCatalog.Throws(new HttpRequestException("offline")));
+        var service = stub.Service();
+
+        var result = await service.GetShowAsync("a-series");
+
+        Assert.Equal(CatalogState.Failed, result.State);
+        Assert.Null(result.Value);
+    }
+
+    /// <remarks>
+    /// The other side of it: the index CARRIES this series, so its file not being there is a half-deployed
+    /// site rather than a wrong address, and Failed is what makes Try again the right offer.
+    /// </remarks>
+    [Fact]
+    public async Task AKnownSeriesWhoseFileIsMissingIsAFailureAndNotAMissingSeries()
+    {
+        var stub = Stub()
+            .Serves(StubCatalog.Shows, StubCatalog.Json(TwoShows))
+            .Serves(StubCatalog.Series("a-series"), StubCatalog.Status(HttpStatusCode.NotFound));
+        var service = stub.Service();
+
+        var result = await service.GetShowAsync("a-series");
+
+        Assert.Equal(CatalogState.Failed, result.State);
+    }
+
+    [Fact]
+    public async Task AFailedSeriesIsNotCachedSoTryAgainCanHelp()
+    {
+        var stub = Stub()
+            .Serves(StubCatalog.Shows, StubCatalog.Json(TwoShows))
+            .Serves(StubCatalog.Series("a-series"),
+                StubCatalog.Throws(new HttpRequestException("offline")),
+                StubCatalog.Json(OneSeries));
+        var service = stub.Service();
+
+        Assert.Equal(CatalogState.Failed, (await service.GetShowAsync("a-series")).State);
+
+        var second = await service.GetShowAsync("a-series");
+
+        Assert.Equal(CatalogState.Ready, second.State);
+        Assert.Equal("A Series", second.Value!.T);
+        Assert.Equal(2, stub.RequestsFor(StubCatalog.Series("a-series")));
+    }
+
+    [Fact]
+    public async Task TwoSeriesAreHeldApartAndEachCostsOneRequest()
+    {
+        var stub = Stub()
+            .Serves(StubCatalog.Shows, StubCatalog.Json(TwoShows))
+            .Serves(StubCatalog.Series("a-series"), StubCatalog.Json(OneSeries))
+            .Serves(StubCatalog.Series("another-series"), StubCatalog.Json(AnotherSeries));
+        var service = stub.Service();
+
+        Assert.Equal("A Series", (await service.GetShowAsync("a-series")).Value!.T);
+        Assert.Equal("Another Series", (await service.GetShowAsync("another-series")).Value!.T);
+        Assert.Equal("A Series", (await service.GetShowAsync("a-series")).Value!.T);
+
+        Assert.Equal(1, stub.RequestsFor(StubCatalog.Series("a-series")));
+        Assert.Equal(1, stub.RequestsFor(StubCatalog.Series("another-series")));
+    }
+
     // ------------------------------------------------------------------ one fetch, held for the session
 
     [Fact]

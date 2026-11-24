@@ -34,6 +34,10 @@ internal sealed class StubCatalog : HttpMessageHandler
 
     public const string Movies = "data/movies.json";
     public const string Meta = "data/meta.json";
+    public const string Shows = "data/shows.json";
+
+    /// <summary>The path one series' own file is published at. Spelled here so no test builds it by hand.</summary>
+    public static string Series(string slug) => "data/tv/" + slug + ".json";
 
     private readonly object gate = new();
     private readonly Dictionary<string, List<Func<Task<HttpResponseMessage>>>> plan = new(StringComparer.Ordinal);

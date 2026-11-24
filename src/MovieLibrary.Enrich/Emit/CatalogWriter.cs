@@ -48,11 +48,6 @@ public sealed class CatalogWriter(string outputRoot)
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
     };
 
-    /// <summary>Grid-level projection; episodes are deliberately absent.</summary>
-    private sealed record ShowIndexEntry(
-        int I, string T, string Slug, string? P, int? FirstYear, string Ag,
-        int SeasonCount, int OwnedEpisodes, int TotalEpisodes, double Mc);
-
     /// <summary>
     /// Writes movies.json, shows.json, tv/{slug}.json and meta.json under the output root.
     /// </summary>
@@ -112,7 +107,9 @@ public sealed class CatalogWriter(string outputRoot)
 
             await StageAsync("movies.json", movies, staged, ct);
 
-            var index = shows.Select(s => new ShowIndexEntry(
+            // ShowSummary and not a projection private to this file: the web app reads these rows, so the
+            // shape is a contract between two projects and belongs in Core where both can see it.
+            var index = shows.Select(s => new ShowSummary(
                 s.I, s.T, s.Slug, s.P, s.FirstYear, s.Ag,
                 NumberedSeasons(s), s.OwnedEpisodes, s.TotalEpisodes, s.Mc)).ToList();
 

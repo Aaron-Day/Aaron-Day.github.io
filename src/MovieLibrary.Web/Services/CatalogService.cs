@@ -43,11 +43,36 @@ public sealed class CatalogService(HttpClient http)
 
     private Task<CatalogResult<IReadOnlyList<MovieRecord>>>? movies;
     private Task<CatalogResult<CatalogMeta>>? meta;
+    private Task<CatalogResult<IReadOnlyList<ShowSummary>>>? shows;
+
+    /// <summary>
+    /// One cached task per series the reader has opened, keyed by the slug the INDEX spells.
+    /// </summary>
+    /// <remarks>
+    /// Unbounded on purpose: the live library has 122 series, so a reader who opened every one of them would
+    /// hold about 5 MB, and that is the worst case rather than a leak that grows with time. An eviction policy
+    /// would be a second cache rule beside the subtle one this file already has.
+    /// </remarks>
+    private readonly Dictionary<string, Task<CatalogResult<ShowRecord?>>> series =
+        new(StringComparer.Ordinal);
 
     public Task<CatalogResult<IReadOnlyList<MovieRecord>>> GetMoviesAsync()
     {
         if (HasFailed(movies)) movies = null;
         return movies ??= Load<IReadOnlyList<MovieRecord>>("data/movies.json", []);
+    }
+
+    /// <summary>
+    /// The series index: every show the library holds, with no episodes in any of them.
+    /// </summary>
+    /// <remarks>
+    /// About 23 KB against the 5 MB the full series records come to, which is the whole reason the build
+    /// writes a projection. See <see cref="ShowSummary"/>.
+    /// </remarks>
+    public Task<CatalogResult<IReadOnlyList<ShowSummary>>> GetShowsAsync()
+    {
+        if (HasFailed(shows)) shows = null;
+        return shows ??= Load<IReadOnlyList<ShowSummary>>("data/shows.json", []);
     }
 
     public Task<CatalogResult<CatalogMeta>> GetMetaAsync()
@@ -85,6 +110,52 @@ public sealed class CatalogService(HttpClient http)
         var all = await GetMoviesAsync();
 
         return new(all.State, all.Value.FirstOrDefault(f => string.Equals(f.K, key, StringComparison.OrdinalIgnoreCase)));
+    }
+
+    /// <summary>
+    /// One series and all its episodes, by the slug in its address.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// <b>THE INDEX DECIDES WHETHER A SHOW EXISTS, AND THE INDEX SPELLS THE PATH.</b> The slug arrives from
+    /// the URL bar, where anything can be typed, and it would otherwise be interpolated straight into a
+    /// request path: "../../" and a percent-encoded separator are the obvious shapes, and on a static host a
+    /// request that climbs out of <c>data/tv/</c> is a request for some other published file. So the slug is
+    /// LOOKED UP in the index first and the path is built from <see cref="ShowSummary.Slug"/> -- a string the
+    /// build wrote and <c>CatalogWriter.EnsureSlugsAreUsable</c> vouched for -- rather than from the one the
+    /// caller passed. A slug the index does not carry never becomes a request at all.
+    /// </para>
+    /// <para>
+    /// <b>Ready with a null value means "no series has this address",</b> exactly as
+    /// <see cref="GetFilmAsync"/> does, and for the same reason: a page that could not tell that from a
+    /// failure would offer a retry over an address no number of fetches will ever resolve. A 404 on a slug
+    /// the index DOES carry is a different thing -- a half-deployed site -- and stays Failed, where a retry
+    /// is the right offer.
+    /// </para>
+    /// <para>
+    /// Ordinal, and not OrdinalIgnoreCase as the film key is. A key is digits and lower-case hex, where case
+    /// cannot collide two records; a slug is a title folded to words, so "The-Office" and "the-office" could
+    /// be two different series, and matching them loosely would hand a reader the wrong show rather than its
+    /// not-found page.
+    /// </para>
+    /// </remarks>
+    public async Task<CatalogResult<ShowRecord?>> GetShowAsync(string slug)
+    {
+        ArgumentNullException.ThrowIfNull(slug);
+
+        var index = await GetShowsAsync();
+
+        if (index.State != CatalogState.Ready) return new(index.State, null);
+
+        if (index.Value.FirstOrDefault(s => string.Equals(s.Slug, slug, StringComparison.Ordinal)) is not { } known)
+            return new(CatalogState.Ready, null);
+
+        if (series.TryGetValue(known.Slug, out var cached) && HasFailed(cached)) series.Remove(known.Slug);
+
+        if (!series.TryGetValue(known.Slug, out var task))
+            series[known.Slug] = task = Load<ShowRecord?>("data/tv/" + known.Slug + ".json", null);
+
+        return await task;
     }
 
     /// <summary>
