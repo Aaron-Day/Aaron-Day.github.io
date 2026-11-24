@@ -1,4 +1,4 @@
-using AngleSharp.Dom;
+﻿using AngleSharp.Dom;
 using Bunit;
 using Microsoft.AspNetCore.Components.Web;
 
@@ -85,6 +85,9 @@ public class MarkupContractTests
             .Append(Rendered(AnnouncerTestExtensions.FilmAddress, CatalogOutcome.Ready,
                              "the app at " + AnnouncerTestExtensions.FilmAddress + ", on a film that "
                              + "carries every field a detail page can render"))
+            .Append(Rendered(AnnouncerTestExtensions.ShowAddress, CatalogOutcome.Ready,
+                             "the app at " + AnnouncerTestExtensions.ShowAddress + ", on a series that "
+                             + "carries every field a series page can render"))
             .ToList());
 
     private static Scope Rendered(string address, CatalogOutcome catalog, string where)
@@ -120,15 +123,17 @@ public class MarkupContractTests
         // walk that stopped matching -- and behind the exact-array comparison its message was unreachable,
         // because any shortfall failed the equality a line earlier. The equality still follows, and still
         // pins identity and order rather than merely the number.
-        Assert.True(addresses.Count >= 6,
-            "The contracts discovered " + addresses.Count + " addresses. Six exist: \"/\" and \"/movies\" "
-            + "(both Movies.razor), \"/movies/1\" (FilmDetail.razor, whose route parameter AddressOf fills "
-            + "with \"1\"), \"/not-found\", \"/tv\" (Tv.razor), and an unmatched URL, which reaches "
-            + "NotFound by the router's NotFoundPage path rather than by its route. Fewer than six means "
-            + "the reflection walk in AppUnderTest stopped finding routes, not that the site shrank.");
+        Assert.True(addresses.Count >= 7,
+            "The contracts discovered " + addresses.Count + " addresses. Seven exist: \"/\" and "
+            + "\"/movies\" (both Movies.razor), \"/movies/1\" (FilmDetail.razor), \"/not-found\", "
+            + "\"/tv\" (Tv.razor), \"/tv/1\" (ShowDetail.razor), and an unmatched URL, which reaches "
+            + "NotFound by the router's NotFoundPage path rather than by its route. AddressOf fills both "
+            + "route parameters with \"1\", so the two detail pages are scanned in their not-found state "
+            + "here -- their loaded states are covered by their own test files. Fewer than seven means the "
+            + "reflection walk in AppUnderTest stopped finding routes, not that the site shrank.");
 
         Assert.Equal(
-            new[] { "/", "/movies", "/movies/1", "/not-found", "/tv", AppUnderTest.UnmatchedUrl },
+            new[] { "/", "/movies", "/movies/1", "/not-found", "/tv", "/tv/1", AppUnderTest.UnmatchedUrl },
             addresses);
     }
 
@@ -163,10 +168,10 @@ public class MarkupContractTests
     public void TheContractsRunOverEveryAddressTheSiteServes()
     {
         TheRouteSetIsWhatItShouldBe();
-        // The addresses, plus the films page's failed state and a detail page with a real film in it, plus
-        // the host page.
-        Assert.Equal(AppUnderTest.Addresses().Count + 2, RouteOnlyScopes().Count);
-        Assert.Equal(AppUnderTest.Addresses().Count + 3, EveryScope().Count);
+        // The addresses, plus the films page's failed state, a film page with a real film in it and a
+        // series page with a real series in it, plus the host page.
+        Assert.Equal(AppUnderTest.Addresses().Count + 3, RouteOnlyScopes().Count);
+        Assert.Equal(AppUnderTest.Addresses().Count + 4, EveryScope().Count);
     }
 
     /// <remarks>
@@ -522,10 +527,15 @@ public class MarkupContractTests
 
         var ready = RouteOnlyScopes().Where(s => s.Root.QuerySelector("ul.grid") is not null).ToList();
 
-        // Two, and exactly two: "/" and "/movies" are both Movies.razor. The fifth scope is the films page
-        // with a FAILED fetch and must have no grid in it at all -- if it did, the grid would be rendering
-        // over a fetch that produced nothing.
-        Assert.Equal(2, ready.Count);
+        // Three, and exactly three: "/" and "/movies" are both Movies.razor, and "/tv" is the series wall.
+        // The failed scope is the films page with a FAILED fetch and must have no grid in it at all -- if it
+        // did, the grid would be rendering over a fetch that produced nothing.
+        //
+        // IT WAS TWO, AND THAT IS WHAT THIS NUMBER IS FOR. AddAnnouncer scripted movies.json and meta.json
+        // and nothing else, so the series wall in this scope set rendered its FAILED state -- a heading, a
+        // sentence and a Try again button, which every rule in this file is perfectly happy with -- and the
+        // tile, badge and pager contracts read as covering two pages while covering one.
+        Assert.Equal(3, ready.Count);
 
         foreach (var scope in ready)
         {
@@ -554,10 +564,12 @@ public class MarkupContractTests
             .Where(img => img.Closest(".tile") is not null)
             .ToList();
 
-        // One per Ready scope, from the one fixture film that has a poster path. Exact rather than a floor:
-        // this is the number the img contracts gained, and it is the number that goes back to zero if the
-        // fixture loses its poster or the tile stops emitting an image.
-        Assert.Equal(2, posters.Count);
+        // One per grid scope: the one fixture film with a poster path on the two films scopes, and the one
+        // fixture series with one on the series wall. Exact rather than a floor: this is the number the img
+        // contracts gained, and it is the number that goes back to zero if either fixture loses its poster
+        // or the tile stops emitting an image. The series PAGE's own poster is not counted -- it is not
+        // inside a .tile -- and the images floor below is what covers it.
+        Assert.Equal(3, posters.Count);
 
         var images = EveryScope().Sum(s => MarkupRules.Images(s.Root).Count);
         var controls = EveryScope().Sum(s => MarkupRules.InteractiveElements(s.Root).Count);
@@ -565,26 +577,37 @@ public class MarkupContractTests
         // Floors, with the measurement in the message, because Tasks 7 and 8 only add to both. The numbers
         // matter in the other direction: a shortfall means a scope stopped reaching Ready, not that the site
         // shrank, and the two img contracts are the ones that go quietly vacuous when it does.
-        Assert.True(images >= 3,
-            "The img contracts have " + images + " subjects across " + EveryScope().Count + " scopes. Three "
-            + "exist: one poster on each of the two Ready scopes, plus index.html's TMDB logo. Fewer means "
-            + "the films page is not reaching its Ready state in these scopes, or AddAnnouncer's stub "
-            + "catalogue has lost its poster path -- in either case the poster contracts are checking "
-            + "nothing while reading as covered.");
+        Assert.True(images >= 8,
+            "The img contracts have " + images + " subjects across " + EveryScope().Count + " scopes. Eight "
+            + "exist: a tile poster on each of the three grid scopes, the film page's poster, backdrop and "
+            + "one cast photo, the series page's poster, and index.html's TMDB logo. Fewer means a page is "
+            + "not reaching its Ready state in these scopes, or a stub fixture has lost its poster path -- "
+            + "in either case the poster contracts are checking nothing while reading as covered.");
 
-        Assert.True(controls >= 51,
-            "The accessible-name and nested-widget contracts have " + controls + " subjects. Twenty-nine "
-            + "were measured when Task 6 landed: four shell controls on every route, the in-prose link on "
-            + "the two not-found addresses, Try again in the failed scope, two pager buttons in each of the "
-            + "two Ready scopes, and Reload and Dismiss on the host page. Task 8 added eleven to each Ready "
-            + "scope -- the search box, three confidence radios, three genre boxes, three decade boxes "
-            + "(1990s, 1980s and Year unknown, from the shared fixture) and the sort select -- which is "
-            + "fifty-one. Fewer means a scope stopped rendering what it used to.");
+        // MEASURED on 2026-11-24, per scope, rather than reasoned from the pages: 23 on each of the two
+        // films scopes, 11 on the series wall, 8 on the series page (5 shell controls and the three
+        // seasons' own <summary> disclosures), 6 on each of the three scopes with a Try again or an
+        // in-prose link, 5 on each of the two not-found scopes and on the film page, and 2 on the host
+        // page. A FLOOR and not an equality, because every later task adds controls; the number matters in
+        // the other direction, where a shortfall means a scope stopped reaching the state it used to
+        // render and the contracts above went quiet about it.
+        Assert.True(controls >= 100,
+            "The accessible-name and nested-widget contracts have " + controls + " subjects across "
+            + EveryScope().Count + " scopes, against the 100 measured on 2026-11-24. Fewer means a scope "
+            + "stopped rendering what it used to -- most likely a page that is no longer reaching its "
+            + "Ready state in these scopes.");
 
         // And the filter controls are NAMED in the subject set, not just counted: a floor survives one
         // control being swapped for another, and the panel is the first thing a refactor of the films page
         // would reshuffle.
-        foreach (var scope in ready)
+        //
+        // THE FILMS SCOPES ONLY, found by the films page's own state container. The series wall has a grid
+        // and a pager and no facet panel at all -- filtering series is a later task -- so running these
+        // three over every grid scope would fail on a page that is behaving correctly.
+        var filtered = ready.Where(s => s.Root.QuerySelector(".catalog-state") is not null).ToList();
+        Assert.Equal(2, filtered.Count);
+
+        foreach (var scope in filtered)
         {
             var interactive = MarkupRules.InteractiveElements(scope.Root);
 

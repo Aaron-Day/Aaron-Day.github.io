@@ -117,7 +117,7 @@ public class FocusVisibleTests(BrowserGate gate, ITestOutputHelper output)
 
         if (failed)
             await session.StateSentenceAsync(PageSession.CouldNotLoad);
-        else if (await session.Page.Locator(".catalog-state, .show-state").CountAsync() > 0)
+        else if (await session.Page.Locator(".catalog-state, .tv-state").CountAsync() > 0)
             await session.GridAsync();   // both tile walls page at Catalogue.PageSize
 
         // The bar is revealed with the same inline display: block the Blazor runtime writes.

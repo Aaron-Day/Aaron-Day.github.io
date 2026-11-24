@@ -103,7 +103,7 @@ internal static class AnnouncerTestExtensions
     /// <summary>The meta document for the same tiny catalogue, so <c>movieCount</c> agrees with it.</summary>
     private const string OneFilmPerBandMeta =
         """
-        {"builtUtc":"2026-11-04T09:00:00Z","movieCount":3,"showCount":0,"totalEpisodeCount":0,
+        {"builtUtc":"2026-11-04T09:00:00Z","movieCount":3,"showCount":4,"totalEpisodeCount":17,
          "genres":{"18":"Drama","53":"Thriller","99":"Documentary"},
          "attribution":"This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.",
          "reviewQueue":[]}
@@ -129,6 +129,15 @@ internal static class AnnouncerTestExtensions
         var (clock, stub) = context.AddAnnouncerAndCatalog(Responder(catalog));
 
         stub.Serves(StubCatalog.Meta, MetaResponder(catalog));
+        stub.Serves(StubCatalog.Shows, ShowsResponder(catalog));
+
+        // The series' own files mirror the outcome too, so there is no state in which the index fails and a
+        // series file is quietly healthy.
+        foreach (var (slug, _) in SeriesFiles)
+        {
+            stub.Serves(StubCatalog.Series(slug), SeriesResponder(slug, catalog));
+        }
+
         return clock;
     }
 
@@ -153,6 +162,17 @@ internal static class AnnouncerTestExtensions
         var stub = new StubCatalog()
             .Serves(StubCatalog.Movies, responders)
             .Serves(StubCatalog.Meta, MetaResponder(CatalogOutcome.Ready));
+
+        // THE SERIES DOCUMENTS ARE SCRIPTED HERE AND NOT ONLY IN AddAnnouncer, for the reason the remark on
+        // that method gives about meta: an unscripted path is swallowed by CatalogService's broad catch and
+        // arrives as an ordinary Failed, so a test rendering /tv without them would have scanned a heading,
+        // a sentence and a Try again button -- no tile, no badge, no pager -- and gone green.
+        stub.Serves(StubCatalog.Shows, ShowsResponder(CatalogOutcome.Ready));
+        foreach (var (slug, json) in SeriesFiles)
+        {
+            stub.Serves(StubCatalog.Series(slug), StubCatalog.Json(json));
+        }
+
         var client = stub.Client();
 
         // Both, because Program.cs registers both and a later component may inject the client directly. And
@@ -188,6 +208,139 @@ internal static class AnnouncerTestExtensions
     }
 #endif
 
+    /// <summary>
+    /// The slug of the series that carries EVERY branch the series page renders, so nothing retypes it.
+    /// </summary>
+    public const string ShowSlug = "the-bureau";
+
+    /// <summary>The series page's address for <see cref="ShowSlug"/>.</summary>
+    public const string ShowAddress = "/tv/" + ShowSlug;
+
+    /// <summary>
+    /// A series whose match scored BELOW the accept threshold with a real TMDB id behind it, which is the
+    /// one shape that makes <c>ShowDetail.Trusted</c> false while an episode list is still on screen.
+    /// </summary>
+    public const string UncertainShowSlug = "a-doubtful-series";
+
+    /// <summary>A series that matched nothing: no year, no poster, nothing but the unplaced bucket.</summary>
+    public const string UnmatchedShowSlug = "an-unlisted-series";
+
+    /// <summary>A series that arrives with no seasons at all, which is the series page's fourth state.</summary>
+    public const string BareShowSlug = "a-bare-series";
+
+    /// <summary>
+    /// The series index, and every asymmetry in it is a branch -- the same argument
+    /// <see cref="OneFilmPerBand"/> records for the films.
+    /// <list type="bullet">
+    /// <item><b>One row per confidence band</b>, because <c>ConfidenceBand.Of(ShowSummary)</c> decides the
+    /// tile's badge and a band absent from here is a badge absent from every Ready scope. The uncertain row
+    /// carries a real id with <c>mc</c> 0.55; the unmatched row carries id 0.</item>
+    /// <item><b>One poster between four rows</b>, so both of <c>PosterTile</c>'s art branches are reached
+    /// on the series wall as well as on the films wall.</item>
+    /// <item><b>The unmatched row has no <c>firstYear</c></b>, which is the degraded shape the real library
+    /// has: it is also one of the rows whose <c>seasonCount</c> is 0 while it still owns episodes, because
+    /// everything it owns sits in the unplaced bucket.</item>
+    /// <item><b><see cref="BareShowSlug"/> owns nothing at all.</b> No series in the owner's library is in
+    /// that state today, and it is here because the PAGE has a branch for it.</item>
+    /// </list>
+    /// </summary>
+    private const string FourSeries =
+        """
+        [{"i":2309,"t":"The Bureau","slug":"the-bureau","p":"/bureau.jpg","firstYear":2015,"ag":"Drama",
+          "seasonCount":2,"ownedEpisodes":7,"totalEpisodes":9,"mc":0.95},
+         {"i":444,"t":"A Doubtful Series","slug":"a-doubtful-series","firstYear":1998,"ag":"Comedy",
+          "seasonCount":2,"ownedEpisodes":2,"totalEpisodes":5,"mc":0.55},
+         {"i":0,"t":"An Unlisted Series","slug":"an-unlisted-series","ag":"Home recordings",
+          "seasonCount":0,"ownedEpisodes":3,"totalEpisodes":3,"mc":0},
+         {"i":881,"t":"A Bare Series","slug":"a-bare-series","firstYear":2001,"ag":"Drama",
+          "seasonCount":0,"ownedEpisodes":0,"totalEpisodes":0,"mc":0.9}]
+        """;
+
+    /// <summary>
+    /// <see cref="ShowSlug"/>'s own file: three seasons, and each one is a branch of the page.
+    /// <list type="bullet">
+    /// <item><b>Season 0 is the UNPLACED bucket</b> -- not the specials -- so it proves both that the page
+    /// calls it "Season unknown" and that <c>Ordered</c> sorts it after the numbered seasons although the
+    /// build writes it first. Its episodes are numbered from 1, as <c>TvPipeline</c> numbers them, so no
+    /// two rows in one season share a <c>@key</c>.</item>
+    /// <item><b>Season 1 is incomplete and season 2 is whole</b>, so the "Missing" mark has a row to sit on
+    /// and a row to be absent from.</item>
+    /// <item><b>One episode carries every optional field and the rest carry none</b>, which is the shape a
+    /// row has to survive: the page prints the number and the title and nothing else, so an episode with an
+    /// air date, a runtime, a still and an overview may not render any of them.</item>
+    /// <item><b><c>ex</c> is the owner's own columns</b>, which is the "Additional information" section.</item>
+    /// </list>
+    /// </summary>
+    private const string TheBureau =
+        """
+        {"i":2309,"t":"The Bureau","slug":"the-bureau","p":"/bureau.jpg","firstYear":2015,"ag":"Drama",
+         "ownedEpisodes":7,"totalEpisodes":9,"mc":0.95,"ex":{"Shelf":"C1"},
+         "seasons":[
+           {"n":0,"owned":2,"total":2,"eps":[
+             {"e":1,"t":"A Row That Matched Nothing","o":true},
+             {"e":2,"t":"Another Stray Row","o":true}]},
+           {"n":1,"owned":3,"total":4,"eps":[
+             {"e":1,"t":"Pilot","o":true,"air":"2015-04-27","rt":52,"s":"/pilot.jpg","ov":"An agent comes home."},
+             {"e":2,"t":"The Second","o":true},
+             {"e":3,"t":"The Missing One","o":false},
+             {"e":4,"t":"The Fourth","o":true}]},
+           {"n":2,"owned":2,"total":2,"eps":[
+             {"e":1,"t":"Return","o":true},
+             {"e":2,"t":"Cover","o":true}]}]}
+        """;
+
+    /// <summary>
+    /// <see cref="UncertainShowSlug"/>'s own file. Season 1 holds owned and unowned episodes TOGETHER, which
+    /// is what makes the untrusted page's filter failable; season 2 holds nothing the owner has, so the page
+    /// renders a season whose list is empty rather than hiding the season.
+    /// </summary>
+    private const string ADoubtfulSeries =
+        """
+        {"i":444,"t":"A Doubtful Series","slug":"a-doubtful-series","firstYear":1998,"ag":"Comedy",
+         "ownedEpisodes":2,"totalEpisodes":5,"mc":0.55,
+         "seasons":[
+           {"n":1,"owned":2,"total":3,"eps":[
+             {"e":1,"t":"Owned One","o":true},
+             {"e":2,"t":"Never Had This","o":false},
+             {"e":3,"t":"Owned Two","o":true}]},
+           {"n":2,"owned":0,"total":2,"eps":[
+             {"e":1,"t":"None Of It","o":false},
+             {"e":2,"t":"Nor This","o":false}]}]}
+        """;
+
+    /// <summary>
+    /// <see cref="UnmatchedShowSlug"/>'s own file: the unplaced bucket and nothing else, which is the shape
+    /// the 7 series in the owner's library with no numbered season actually have.
+    /// </summary>
+    private const string AnUnlistedSeries =
+        """
+        {"i":0,"t":"An Unlisted Series","slug":"an-unlisted-series","ag":"Home recordings",
+         "ownedEpisodes":3,"totalEpisodes":3,"mc":0,
+         "seasons":[
+           {"n":0,"owned":3,"total":3,"eps":[
+             {"e":1,"t":"Tape 1","o":true},
+             {"e":2,"t":"Tape 2","o":true},
+             {"e":3,"t":"Tape 3","o":true}]}]}
+        """;
+
+    /// <summary>
+    /// <see cref="BareShowSlug"/>'s own file: a series that matched and carries no episode list at all.
+    /// </summary>
+    private const string ABareSeries =
+        """
+        {"i":881,"t":"A Bare Series","slug":"a-bare-series","firstYear":2001,"ag":"Drama",
+         "ownedEpisodes":0,"totalEpisodes":0,"mc":0.9,"seasons":[]}
+        """;
+
+    /// <summary>Every series file this fixture publishes, keyed by the slug the index spells.</summary>
+    private static readonly (string Slug, string Json)[] SeriesFiles =
+    [
+        (ShowSlug, TheBureau),
+        (UncertainShowSlug, ADoubtfulSeries),
+        (UnmatchedShowSlug, AnUnlistedSeries),
+        (BareShowSlug, ABareSeries),
+    ];
+
     /// <summary>The movies.json response for an outcome.</summary>
     public static Func<Task<HttpResponseMessage>> Responder(CatalogOutcome outcome) => outcome switch
     {
@@ -207,6 +360,24 @@ internal static class AnnouncerTestExtensions
     {
         CatalogOutcome.Ready => StubCatalog.JsonAfterYielding(OneFilmPerBand),
         CatalogOutcome.Failed => StubCatalog.ThrowsAfterYielding(new HttpRequestException("the stub was asked to fail")),
+        CatalogOutcome.NeverCompletes => StubCatalog.NeverAnswers(),
+        _ => throw new ArgumentOutOfRangeException(nameof(outcome), outcome, "no responder for this outcome"),
+    };
+
+    /// <summary>The shows.json response for an outcome.</summary>
+    public static Func<Task<HttpResponseMessage>> ShowsResponder(CatalogOutcome outcome) => outcome switch
+    {
+        CatalogOutcome.Ready => StubCatalog.Json(FourSeries),
+        CatalogOutcome.Failed => StubCatalog.Throws(new HttpRequestException("the stub was asked to fail")),
+        CatalogOutcome.NeverCompletes => StubCatalog.NeverAnswers(),
+        _ => throw new ArgumentOutOfRangeException(nameof(outcome), outcome, "no responder for this outcome"),
+    };
+
+    /// <summary>One series file's response for an outcome.</summary>
+    public static Func<Task<HttpResponseMessage>> SeriesResponder(string slug, CatalogOutcome outcome) => outcome switch
+    {
+        CatalogOutcome.Ready => StubCatalog.Json(SeriesFiles.First(f => f.Slug == slug).Json),
+        CatalogOutcome.Failed => StubCatalog.Throws(new HttpRequestException("the stub was asked to fail")),
         CatalogOutcome.NeverCompletes => StubCatalog.NeverAnswers(),
         _ => throw new ArgumentOutOfRangeException(nameof(outcome), outcome, "no responder for this outcome"),
     };

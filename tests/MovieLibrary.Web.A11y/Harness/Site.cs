@@ -8,11 +8,12 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// </summary>
 /// <remarks>
 /// <para>
-/// Reflection over <c>RouteAttribute</c> yields four templates today - <c>/</c>, <c>/movies</c>,
-/// <c>/movies/{Key}</c> and <c>/not-found</c>, all four real reachable URLs - and <see cref="UnmatchedUrl"/>
-/// adds the router's own not-found path, which reaches the not-found page by a different render path. Five
-/// addresses over three page types. Adding a page extends every route scan in this project with no edit here,
-/// as long as any route parameter it carries is one <see cref="Filled"/> knows how to fill.
+/// Reflection over <c>RouteAttribute</c> yields six templates today - <c>/</c>, <c>/movies</c>,
+/// <c>/movies/{Key}</c>, <c>/not-found</c>, <c>/tv</c> and <c>/tv/{Slug}</c>, all six real reachable URLs -
+/// and <see cref="UnmatchedUrl"/> adds the router's own not-found path, which reaches the not-found page by
+/// a different render path. Seven addresses over five page types. Adding a page extends every route scan in
+/// this project with no edit here, as long as any route parameter it carries is one <see cref="Filled"/>
+/// knows how to fill.
 /// </para>
 /// <para>
 /// <b>This is not <c>MovieLibrary.Web.Tests.AppUnderTest</c> and cannot be.</b> That helper is internal to the
@@ -53,12 +54,15 @@ internal static class Site
             .ToList();
 
     /// <summary>
-    /// Fills a route parameter with a value the page can actually answer. A key the gate's own catalogue
-    /// carries, not a typed one: <c>/movies/1</c> reaches the film page's "no such film" state, which is a
-    /// state worth scanning somewhere (DomStateTests scans it) but not the one an arrival scan should land on.
+    /// Fills a route parameter with a value the page can actually answer. A key and a slug the gate's own
+    /// catalogue carries, not typed ones: <c>/movies/1</c> reaches the film page's "no such film" state and
+    /// <c>/tv/1</c> the series page's, which are states worth scanning somewhere (DomStateTests scans them)
+    /// but not the ones an arrival scan should land on. The slug's record is one of the three
+    /// <see cref="Catalogue.PublishedShows"/> publishes, and it is the furnished one.
     /// </summary>
     private static string Filled(string template) =>
-        template.Replace("{Key}", Catalogue.FirstKey, StringComparison.Ordinal);
+        template.Replace("{Key}", Catalogue.FirstKey, StringComparison.Ordinal)
+                .Replace("{Slug}", Catalogue.FirstSlug, StringComparison.Ordinal);
 
     public static IEnumerable<object[]> AddressData() => Addresses().Select(a => new object[] { a });
 }

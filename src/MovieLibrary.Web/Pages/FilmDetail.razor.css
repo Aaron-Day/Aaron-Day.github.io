@@ -63,12 +63,10 @@
    screen reader cannot hear it at all. It is simply quieter and a little larger than the overview. */
 .film-tagline { color: var(--dim); font-size: 1.1rem; line-height: 1.5; margin: 0 0 1rem; }
 
-.film-section { margin: 1.5rem 0 0; }
-.film-section h2 { font-size: 1.25rem; font-weight: 600; margin: 0 0 .5rem; }
-
-/* 68ch, as app.css's state paragraph uses. A line much longer than that is the SC 1.4.8 Visual Presentation
-   complaint (Level AAA, 80 characters) and is a plain readability loss below that level too. */
-.film-section p { max-width: 68ch; line-height: 1.5; margin: 0; }
+/* .page-section and .facts USED TO BE HERE, under names that said "film". They moved to app.css the day a
+   series page rendered the same sections and the same definition list: a scoped sheet styles its own
+   component's markup and nothing else, so a second page using these class names would have rendered them
+   unstyled -- silently, since nothing in a stylesheet fails. See app.css for the rules themselves. */
 
 /* THE CAST. list-style: none is what the markup's role="list" exists to repair -- Safari with VoiceOver
    strips list semantics from a list whose markers are removed -- and PosterGrid.razor.css makes the same
@@ -99,23 +97,11 @@
    ships !important and would win. */
 .film-cast-role { color: var(--dim); font-size: .9rem; line-height: 1.5; }
 
-/* THE FACT LISTS. Each pair is wrapped in a div, which is valid inside a dl and is what lets the pair be a
-   grid row WITHOUT display: contents -- Chrome and Safari both used to drop a display: contents element
-   from the accessibility tree, taking the dt/dd relationship with it.
-   minmax(0, auto) on the term column, never a fixed width: a long term must be able to wrap rather than
-   overflow, and 0 is the floor that lets it. overflow-wrap: anywhere on the value, because the owner's own
-   fields can hold an unbroken string -- an order number, a URL -- that has no space in it to break at, and
-   at 320px that is the difference between a wrapped line and a horizontal scrollbar on the document
-   (SC 1.4.10 Reflow, Level AA). */
-.film-facts { display: grid; gap: .5rem 0; margin: 0; }
-.film-facts > div { display: grid; gap: 0 1rem; grid-template-columns: minmax(0, auto) minmax(0, 1fr); }
-.film-facts dt { color: var(--dim); font-weight: 400; overflow-wrap: anywhere; }
-.film-facts dd { color: var(--txt); margin: 0; overflow-wrap: anywhere; }
 
 /* One column below 30rem, where two columns leave a long term nothing to wrap into. The term then reads
    above its value, which is the order a screen reader walks a dl in anyway. */
 @media (max-width: 30rem) {
-  .film-facts > div { grid-template-columns: minmax(0, 1fr); }
+  .facts > div { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* No transition, animation or transform anywhere in this file, so no prefers-reduced-motion block is

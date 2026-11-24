@@ -147,12 +147,17 @@ public sealed class PageSession : IAsyncDisposable
             .WaitForAsync(new LocatorWaitForOptions { Timeout = BootTimeout });
 
     /// <summary>
-    /// Waits for the film page to have a film on it. <c>dl.film-facts</c> is the Details list, which the Ready
-    /// branch always renders and neither of the other two branches can, so it is the one signal that separates
-    /// a loaded film from a film still loading and from an address no record answers.
+    /// Waits for a DETAIL page -- a film or a series -- to have its subject on it.
     /// </summary>
-    public Task FilmAsync() =>
-        Page.Locator("dl.film-facts").First.WaitForAsync(new LocatorWaitForOptions { Timeout = BootTimeout });
+    /// <remarks>
+    /// <c>dl.facts</c> is the Details list, which the Ready branch of either page always renders and which
+    /// none of their other branches can, so it is the one signal that separates a loaded subject from one
+    /// still loading and from an address no record answers. On the series page it is rendered in EVERY
+    /// Ready branch, including the series that matched with no episode list, where there are no seasons to
+    /// wait for and waiting on them would hang the gate on a page that is perfectly fine.
+    /// </remarks>
+    public Task SubjectAsync() =>
+        Page.Locator("dl.facts").First.WaitForAsync(new LocatorWaitForOptions { Timeout = BootTimeout });
 
     /// <summary>Waits for the grid to hold a given number of tiles.</summary>
     public Task GridAsync(int tiles = Catalogue.PageSize) =>

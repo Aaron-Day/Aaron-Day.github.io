@@ -1,0 +1,481 @@
+@page "/tv/{Slug}"
+@implements IDisposable
+@inject CatalogService Catalog
+@inject Announcer Announcer
+@inject IJSRuntime Js
+
+@* One series: its seasons, and every episode in each of them.
+
+   THE HEADINGS ARE THE FILM PAGE'S HEADINGS, in the same words at the same levels -- "Details" and
+   "Additional information" say the same thing about a series as about a film, and a reader who has learned
+   one page has learned this one. SC 3.2.3 Consistent Navigation and SC 3.2.4 Consistent Identification.
+   "Seasons" is the only heading here that has no counterpart, because a film has no seasons. *@
+<PageTitle>@Heading - Film and TV library</PageTitle>
+
+@* tabindex="-1" for ElementReference.FocusAsync(), which -- unlike FocusOnNavigate's helper -- does not add
+   the attribute and fails silently without it. Not a conformance claim; a feature dependency. *@
+<h1 tabindex="-1" @ref="heading">@Heading</h1>
+
+@* ONE STABLE CONTAINER IN EVERY STATE, never sibling branches that swap nodes: replacing the node would
+   destroy the one a screen reader's virtual cursor may be sitting on while the series loads.
+
+   .show-state AND NOT .tv-state. The browser gate keys its settle wait off the class name -- the series
+   LIST's arm waits for a full page of tiles -- so reusing that class would have every scan of this page
+   wait for a grid that never comes and fail on a timeout. RouteScanTests.SettledAsync knows all four
+   names and the film page's container records the same trap one page over. *@
+<div class="show-state" tabindex="-1" @ref="stateContainer">
+    @if (show is { } byline)
+    {
+        @* The series' own byline, from the same helpers the tile uses, and the gap between the parts is a
+           flex gap with NO separator character in the DOM -- a middot is read inconsistently and ::before
+           content is exposed to the accessibility tree all the same.
+
+           THE LAST SPAN IS THE MATCH, IN ConfidenceBand'S OWN WORDS and never restated here, exactly as
+           the tile's badge is. It is the reason the counts beside it are the shorter form, so a reader
+           who is told the totals are missing is told why in the same breath and in the same place. The
+           confident case renders nothing at all: BadgeFor returns null for it. *@
+        <p class="show-byline">
+            @if (byline.FirstYear is { } year)
+            {
+                <span>@year</span>
+            }
+            @if (byline.NumberedSeasons() is > 0 and var seasons)
+            {
+                <span>@ShowText.Seasons(seasons)</span>
+            }
+            @if (byline.OwnedEpisodes > 0 || byline.TotalEpisodes > 0)
+            {
+                <span>@(Trusted ? ShowText.Episodes(byline.OwnedEpisodes, byline.TotalEpisodes)
+                                : ShowText.Owned(byline.OwnedEpisodes))</span>
+            }
+            @if (ConfidenceBand.BadgeFor(Band) is { } match)
+            {
+                <span class="show-match">@match</span>
+            }
+        </p>
+    }
+    else
+    {
+        <p>@Sentence</p>
+    }
+
+    @if (series.State == CatalogState.Failed || retrying)
+    {
+        @* aria-disabled, never the disabled ATTRIBUTE: disabling the focused element blurs it and drops
+           focus to <body>. The click still arrives and is ignored in TryAgain instead. *@
+        <button type="button" class="try-again" aria-disabled="@(retrying ? "true" : null)" @onclick="TryAgain">Try again</button>
+    }
+</div>
+
+@if (show is { } s)
+{
+    @* THE POSTER IS DECORATIVE. alt="": the title is the h1 immediately above, so a description here
+       would be the series named twice. width and height are the intrinsic size of a w342 poster, so the
+       box is reserved before the TMDB CDN answers -- which matters most under magnification. *@
+    @if (s.P is { Length: > 0 } poster)
+    {
+        <img class="show-poster" src="@($"https://image.tmdb.org/t/p/w342{poster}")" alt=""
+             width="342" height="513" loading="lazy" decoding="async" />
+    }
+
+    @if (s.Seasons.Length > 0)
+    {
+        <div class="page-section">
+            <h2>Seasons</h2>
+
+        @* ONE <details> PER SEASON, COLLAPSED, and the browser supplies the whole widget: a disclosure
+           with correct expanded state, keyboard operation and announcement, with no ARIA and no script.
+           A hand-built accordion would need a button, aria-expanded, aria-controls and a key handler, and
+           every one of those is a chance to get it wrong -- for a control the platform already has.
+
+           NO HEADING PER SEASON, and that is a trade made with eyes open. An h3 round each summary would
+           put the seasons in the rotor's heading list, which is how a screen-reader reader skims a long
+           page; what it would cost is a heading whose content is hidden when the disclosure is closed,
+           which reads as an empty section to anyone navigating by heading. The <details> elements are
+           siblings in one place under one "Seasons" heading, so the structure is still announced -- as a
+           list of disclosures rather than as sub-sections.
+
+           NOT open BY DEFAULT: 24 seasons of Family Guy is 494 rows, and a page that long buries the
+           Details list under it and makes "go to the end" the only way to reach anything. *@
+            @foreach (var season in Ordered(s))
+            {
+            <details class="season">
+                @* THE COUNTS ARE IN THE NAME, from one helper, so the control a reader meets collapsed
+                   says which season it is and how much of it is here. "Season 3" alone would make every
+                   season sound alike and give no reason to open one. *@
+                <summary>@ShowText.Season(season.N, season.Owned, season.Total, Trusted)</summary>
+
+                @* role="list" DECLARED BY HAND because the stylesheet removes the markers, and Safari
+                   drops the list semantics from a ul whose list-style is none. Without it the episodes
+                   are announced as loose text and the count is never read.
+
+                   @key on the episode NUMBER, which is unique within a season and stable across a
+                   re-render. *@
+                <ul class="episode-list" role="list">
+                    @foreach (var episode in Episodes(season))
+                    {
+                        @* NOTHING IN A ROW IS FOCUSABLE and nothing in it is a control. There are up to
+                           559 of them on one page, and a tab stop apiece would make the keyboard route
+                           past this page longer than the page itself. A row is content.
+
+                           "Missing" IS VISIBLE TEXT AT THE END OF THE ROW, never a colour, an icon or an
+                           attribute. At the end because the number and the title are what a reader is
+                           scanning for and the mark is the qualifier on them; as text because SC 1.4.1
+                           Use of Color forbids carrying it by colour alone and SC 1.1.1 forbids leaving
+                           it to a glyph. It is absent entirely where the match is not trusted -- see
+                           Episodes, which then lists nothing to mark. *@
+                        <li @key="episode.E">
+                            <span class="episode-number">@episode.E</span>
+                            <span class="episode-title">@episode.T</span>
+                            @if (Trusted && !episode.O)
+                            {
+                                <span class="episode-missing">Missing</span>
+                            }
+                        </li>
+                    }
+                </ul>
+            </details>
+            }
+        </div>
+    }
+    else
+    {
+        @* THE FOURTH STATE. No series in the owner's library is in it today -- all 122 carry at least one
+           episode, and the 7 with no NUMBERED season still have every episode they own in the unplaced
+           bucket, which is a season record and lands in the branch above. This is here for the series that
+           arrives with nothing: without it the page would render a heading, a byline and the Details list
+           with a silent gap where the seasons belong, and nothing would say whether the episodes were
+           missing or still loading. No "Seasons" heading is rendered either -- a heading over nothing is a
+           section that is not there. *@
+        <div class="page-section">
+            <p class="no-episodes">@NoEpisodeList</p>
+        </div>
+    }
+
+    @* THE SAME WRAPPER, HEADING AND LIST CLASS AS THE FILM PAGE, so the two pages' sections are laid out
+       and styled by one rule in app.css. The rows differ because the facts differ; the shape does not. *@
+    <div class="page-section">
+        <h2>Details</h2>
+
+        <dl class="facts">
+            @if (s.Ag is { Length: > 0 } genre)
+            {
+                @* The owner's OWN genre text from the sheet, not a TMDB genre id. A series index carries
+                   no genre list, and this is the word he filed it under. *@
+                <div>
+                    <dt>Genre</dt>
+                    <dd>@genre</dd>
+                </div>
+            }
+
+            @if (s.FirstYear is { } first)
+            {
+                <div>
+                    <dt>First aired</dt>
+                    <dd>@first</dd>
+                </div>
+            }
+
+            @if (s.NumberedSeasons() is > 0 and var seasons)
+            {
+                <div>
+                    <dt>Seasons</dt>
+                    <dd>@ShowText.Seasons(seasons)</dd>
+                </div>
+            }
+
+            @if (s.OwnedEpisodes > 0 || s.TotalEpisodes > 0)
+            {
+                <div>
+                    <dt>Episodes</dt>
+                    <dd>@(Trusted ? ShowText.Episodes(s.OwnedEpisodes, s.TotalEpisodes)
+                                  : ShowText.Owned(s.OwnedEpisodes))</dd>
+                </div>
+            }
+        </dl>
+    </div>
+
+    @* The owner's own columns from the record store: the part of the page no code here interprets. Keyed
+       by name, because the order is his and a re-render must not shuffle it. *@
+    @if (s.Ex is { Count: > 0 } extra)
+    {
+        <div class="page-section">
+            <h2>Additional information</h2>
+
+            <dl class="facts">
+                @foreach (var (name, value) in extra)
+                {
+                    <div @key="name">
+                        <dt>@name</dt>
+                        <dd>@value</dd>
+                    </div>
+                }
+            </dl>
+        </div>
+    }
+}
+
+@code {
+    /// <summary>
+    /// The failure sentence. ONE constant for the visible paragraph and for the <c>Alert</c>, so the seen
+    /// and the spoken copies cannot drift apart.
+    /// </summary>
+    internal const string CouldNotLoad =
+        "This series could not be loaded. Check your connection and try again.";
+
+    /// <summary>
+    /// What a slug with no series behind it says, and it says the ADDRESS is wrong rather than the library.
+    /// A deep link to a series the owner has since removed, or a slug mistyped in a bookmark, is not a
+    /// fetch that failed, so it offers no Try again: no number of retries will resolve it.
+    /// </summary>
+    internal const string NoSuchShow = "No series in the library has this address.";
+
+    /// <summary>The visible loading copy, with the ellipsis CHARACTER rather than three full stops.</summary>
+    internal const string LoadingVisible = "Loading series…";
+
+    /// <summary>
+    /// The spoken loading copy, without the ellipsis: a screen reader either reads the character aloud or
+    /// swallows it, and neither is what the sentence means.
+    /// </summary>
+    internal const string LoadingSpoken = "Loading series";
+
+    /// <summary>
+    /// The sentence where the seasons would be, for a series that matched but carries no episode list.
+    /// </summary>
+    internal const string NoEpisodeList = "No episode list for this series.";
+
+    /// <summary>
+    /// The heading in each state, and each one is a claim the page can stand behind. "Series not found" is
+    /// about this address; "Series unavailable" is about the fetch and deliberately does not say the series
+    /// does not exist, because a failed fetch knows nothing at all about that.
+    /// </summary>
+    internal const string NotFoundHeading = "Series not found";
+
+    internal const string UnavailableHeading = "Series unavailable";
+
+    /// <summary>
+    /// The slug, from the route. A string, so a slug the catalogue does not carry is junk to look up and
+    /// not an unhandled exception. <c>CatalogService.GetShowAsync</c> never builds a request from it --
+    /// it matches it against the index first and asks for the file by the slug the BUILD wrote -- so a
+    /// slug with a path in it cannot become a request for something else.
+    /// </summary>
+    [Parameter] public string? Slug { get; set; }
+
+    private ElementReference heading;
+    private ElementReference stateContainer;
+
+    private CatalogResult<ShowRecord?> series = new(CatalogState.Loading, null);
+
+    private bool disposed;
+    private bool retrying;
+    private bool loadingAnnounced;
+    private bool failureReported;
+    private bool movedFocusToFailure;
+    private bool movingFocus;
+    private bool focusHeadingAfterRetry;
+    private string? fetched;
+
+    private ShowRecord? show => series.State == CatalogState.Ready ? series.Value : null;
+
+    private Confidence Band => show is { } s ? ConfidenceBand.Of(s) : Confidence.Confident;
+
+    /// <summary>
+    /// Whether this page may state TMDB's totals as facts about the owner's library.
+    /// </summary>
+    /// <remarks>
+    /// <b>The one condition behind every difference on this page, in one place.</b> Below the accept
+    /// threshold -- or with no match at all -- the episode list may belong to a different series, so a
+    /// denominator would state a gap in the owner's library on the authority of a match nobody trusts, and
+    /// a "Missing" mark would name an episode he never had as one he is missing. Where it is false this
+    /// page shows the episodes he HAS and says so in the byline, in <c>ConfidenceBand</c>'s own words.
+    /// <para>
+    /// The series LIST keeps its denominator in both cases, which is the owner's own decision: a wall of
+    /// tiles is for finding gaps, and a row that quietly dropped its total would hide the one series most
+    /// worth looking at. It is only here, where the episodes themselves are on screen, that the untrusted
+    /// half is dropped.
+    /// </para>
+    /// </remarks>
+    private bool Trusted => Band == Confidence.Confident;
+
+    /// <summary>
+    /// The episodes to list for a season: all of them where the match is trusted, and only the owned ones
+    /// where it is not.
+    /// </summary>
+    /// <remarks>
+    /// Dropping the "Missing" mark alone would be worse than either option: the rows would still be there
+    /// with nothing to tell an owned episode from one the owner has never had. So the untrusted case lists
+    /// what he has and the byline says why there is no more.
+    /// </remarks>
+    private IEnumerable<EpisodeRecord> Episodes(SeasonRecord season)
+        => Trusted ? season.Eps : season.Eps.Where(e => e.O);
+
+    /// <summary>
+    /// The seasons in reading order: numbered ones first, and the unplaced bucket after them.
+    /// </summary>
+    /// <remarks>
+    /// The build writes season 0 first, and a reader opening a series should meet season 1 at the top
+    /// rather than 29 episodes nothing could place. The order is changed HERE and never in CSS, so the DOM
+    /// order and the visual order stay the same thing -- a CSS reordering would put a keyboard reader
+    /// through the disclosures in one order and a sighted reader in another (SC 1.3.2 Meaningful Sequence,
+    /// SC 2.4.3 Focus Order).
+    /// </remarks>
+    private static IEnumerable<SeasonRecord> Ordered(ShowRecord s)
+        => s.Seasons.OrderBy(x => x.N == 0).ThenBy(x => x.N);
+
+    private string Heading => series.State switch
+    {
+        CatalogState.Failed => UnavailableHeading,
+        CatalogState.Loading => LoadingVisible,
+        _ => series.Value?.T ?? NotFoundHeading,
+    };
+
+    /// <summary>
+    /// The one sentence in the state container, for the three states with no series in them. In the fourth
+    /// the container holds the series' byline instead and this is never read.
+    /// </summary>
+    private string Sentence => series.State switch
+    {
+        CatalogState.Failed => CouldNotLoad,
+        CatalogState.Loading => LoadingVisible,
+        _ => NoSuchShow,
+    };
+
+    /// <remarks>
+    /// <b>OnParametersSetAsync AND NOT OnInitializedAsync.</b> Blazor reuses this component when the router
+    /// moves from one series to another -- the route is the same template -- so initialisation would run
+    /// once and the second series would render the first one's episodes under its own title. The guard is
+    /// the slug actually fetched, so a re-render that changes nothing re-fetches nothing.
+    /// <para>
+    /// Nothing is announced here. A message raised before the first render starts its settle timer while
+    /// the clearing render is still queued, so the real gap becomes "delay minus handler time" and
+    /// collapses on exactly the slow devices the gap exists for.
+    /// </para>
+    /// </remarks>
+    protected override async Task OnParametersSetAsync()
+    {
+        if (string.Equals(fetched, Slug, StringComparison.Ordinal)) return;
+
+        fetched = Slug;
+
+        // The states a new series starts in, so a second arrival cannot inherit the first one's.
+        series = new(CatalogState.Loading, null);
+        loadingAnnounced = false;
+        failureReported = false;
+        movedFocusToFailure = false;
+
+        var result = await Catalog.GetShowAsync(Slug ?? string.Empty);
+        if (disposed || !string.Equals(fetched, Slug, StringComparison.Ordinal)) return;
+
+        series = result;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (disposed) return;
+
+        switch (series.State)
+        {
+            case CatalogState.Loading:
+                // Only because the page is STILL loading after a render, and at most once per series.
+                if (!loadingAnnounced)
+                {
+                    loadingAnnounced = true;
+                    Announcer.Status(LoadingSpoken);
+                }
+
+                break;
+
+            case CatalogState.Failed:
+                // This page armed the polite region with the loading line, so this page clears it. A
+                // region still saying "Loading series" beside a page that says the series could not be
+                // loaded is a stale statement. Idempotent over an already-empty region.
+                Announcer.Status("");
+
+                // THE FOCUS MOVE IS THE PRIMARY CHANNEL and it runs FIRST, because a screen reader reads
+                // the contents of a focused unnamed tabindex="-1" container and this container's whole
+                // text IS the failure sentence. A move that happens therefore already says it, in the
+                // words on screen, and announcing the text of what focus has just moved to is forbidden.
+                var movedOnThisPass = false;
+                if (!movedFocusToFailure && !movingFocus)
+                {
+                    movingFocus = true;
+                    try { movedOnThisPass = movedFocusToFailure = await PageFocus.IfUnmoved(Js, stateContainer); }
+                    finally { movingFocus = false; }
+                }
+
+                // THE ALERT IS THE FALLBACK, raised only where the focus move did not happen. Raising both
+                // speaks the sentence twice: once as the contents of the container focus landed on, and
+                // again a settle delay later when the assertive region interrupts with the identical text.
+                if (!failureReported && !movingFocus)
+                {
+                    failureReported = true;
+                    if (!movedOnThisPass) Announcer.Alert(CouldNotLoad);
+                }
+
+                break;
+
+            case CatalogState.Ready:
+                // The successful retry, and the only focus move on a working page. The button the reader
+                // was standing on has gone with the failed state, so focus would otherwise drop to <body>.
+                // Landing on the h1 announces the series' own name, which is how the reader learns the
+                // retry worked without a second assertive message saying so.
+                if (focusHeadingAfterRetry)
+                {
+                    focusHeadingAfterRetry = false;
+                    await PageFocus.Outright(heading);
+                }
+
+                // The polite region may still hold "Loading series" from this page's own loading state,
+                // and the series is here now. Cleared rather than replaced with the title: the h1 says it,
+                // and a page that announced its own heading would say it twice to anyone arriving by the
+                // route announcer.
+                Announcer.Status("");
+
+                break;
+        }
+    }
+
+    private async Task TryAgain()
+    {
+        // The button carries aria-disabled rather than the disabled attribute, so the click still arrives
+        // while a retry is in flight and has to be ignored here.
+        if (retrying) return;
+
+        // The failure has ended as far as the reader is concerned. A cancellation, not a message -- it
+        // takes effect at once and speaks nothing. The next Alert is raised from OnAfterRenderAsync and
+        // never in this handler: on a device slow enough to flush both mutations in one frame the second
+        // call would see the region already empty, mark the clear observed, and the repeated identical
+        // sentence would reach the DOM as no change at all.
+        Announcer.Alert("");
+
+        retrying = true;
+        failureReported = false;
+        movedFocusToFailure = false;
+        series = new(CatalogState.Loading, series.Value);
+
+        var result = await Catalog.GetShowAsync(Slug ?? string.Empty);
+        if (disposed) return;
+
+        retrying = false;
+        series = result;
+        focusHeadingAfterRetry = result.State == CatalogState.Ready;
+    }
+
+    /// <remarks>
+    /// Clear what this page set, and raise nothing new. Both calls are cancellations -- they take effect at
+    /// once and speak nothing. Without them a series' name sits in #status-announcer, readable in browse
+    /// mode, long after the reader has left it, because the announcer is a scoped singleton and MainLayout
+    /// survives navigation.
+    /// <para>
+    /// #route-announcer is NOT cleared here, and that is deliberate rather than an omission. RouteAnnouncer
+    /// is its only caller -- SourceContractTests pins that -- and it writes the region empty on the way in
+    /// to this page and the next page's name on the way out.
+    /// </para>
+    /// </remarks>
+    public void Dispose()
+    {
+        disposed = true;
+        Announcer.Status("");
+        Announcer.Alert("");
+    }
+}

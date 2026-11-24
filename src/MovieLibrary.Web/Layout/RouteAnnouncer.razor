@@ -41,6 +41,12 @@
         "" or "movies" => "Films",
         "tv" => "TV",
         var p when p.StartsWith("movies/", StringComparison.Ordinal) => null,
+
+        // A SERIES NAMES ITSELF, for the same reason a film does: the series is in the catalogue and not
+        // in the address, so the path says "charmed-original" and the heading says "Charmed (Original)".
+        // Null writes the region EMPTY rather than guessing, which is what keeps the previous page's name
+        // from standing over a series that is still loading.
+        var p when p.StartsWith("tv/", StringComparison.Ordinal) => null,
 #if DEBUG
         // The local record editor. Debug only, because Release does not serve this address at all and
         // announcing a name for an address the router answers with its not-found page would be a lie. The

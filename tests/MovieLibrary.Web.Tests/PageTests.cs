@@ -100,6 +100,8 @@ public class PageTests : BunitContext
             .Select(r => r.Template)
             .OrderBy(t => t, StringComparer.Ordinal);
 
-        Assert.Equal(new[] { "/", "/movies", "/movies/{Key}", "/not-found", "/tv" }, templates);
+        Assert.Equal(
+            new[] { "/", "/movies", "/movies/{Key}", "/not-found", "/tv", "/tv/{Slug}" },
+            templates);
     }
 }

@@ -87,11 +87,13 @@ public class RouteScanTests(BrowserGate gate, ITestOutputHelper output)
     /// page the Details list; everywhere else the heading is the end of it.
     /// </summary>
     /// <remarks>
-    /// <b>The film page is asked about FIRST, and the order is the whole point.</b> All three pages render a
-    /// state container with a state paragraph in it, and the three class names - <c>.catalog-state</c>,
-    /// <c>.film-state</c> and <c>.show-state</c> - exist only so that this can tell them apart; they share
-    /// every styling rule in app.css. A film page reaching a tile-grid arm would wait for a grid that is
-    /// never coming and fail the gate on a timeout, and a page reaching NO arm would be scanned mid-fetch,
+    /// <b>The pages WITHOUT a tile wall are asked about FIRST, and the order is the whole point.</b> All
+    /// four pages render a state container with a state paragraph in it, and the four class names -
+    /// <c>.catalog-state</c> for the films list, <c>.film-state</c> for one film, <c>.tv-state</c> for the
+    /// series list and <c>.show-state</c> for one series - exist only so that this can tell them apart;
+    /// they share every styling rule in app.css. A detail page reaching a tile-grid arm would wait for a
+    /// grid that is never coming and fail the gate on a timeout, and a page reaching NO arm would be
+    /// scanned mid-fetch,
     /// with the heading reading "Loading series" and none of the page rendered: a green scan over a page
     /// that was not there, which is the failure this method exists to prevent and the one nothing else
     /// would report.
@@ -106,11 +108,17 @@ public class RouteScanTests(BrowserGate gate, ITestOutputHelper output)
     {
         if (await session.Page.Locator(".film-state").CountAsync() > 0)
         {
-            await session.FilmAsync();
+            await session.SubjectAsync();
             return;
         }
 
         if (await session.Page.Locator(".show-state").CountAsync() > 0)
+        {
+            await session.SubjectAsync();
+            return;
+        }
+
+        if (await session.Page.Locator(".tv-state").CountAsync() > 0)
         {
             await session.GridAsync();
             return;

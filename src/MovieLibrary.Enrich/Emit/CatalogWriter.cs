@@ -111,7 +111,7 @@ public sealed class CatalogWriter(string outputRoot)
             // shape is a contract between two projects and belongs in Core where both can see it.
             var index = shows.Select(s => new ShowSummary(
                 s.I, s.T, s.Slug, s.P, s.FirstYear, s.Ag,
-                NumberedSeasons(s), s.OwnedEpisodes, s.TotalEpisodes, s.Mc)).ToList();
+                s.NumberedSeasons(), s.OwnedEpisodes, s.TotalEpisodes, s.Mc)).ToList();
 
             await StageAsync("shows.json", index, staged, ct);
 
@@ -210,12 +210,6 @@ public sealed class CatalogWriter(string outputRoot)
                     "data/tv file. Nothing was written.");
         }
     }
-
-    /// <summary>
-    /// Season 0 is TvPipeline's "unplaced episodes" bucket (owned rows that matched nothing, or every row of
-    /// an unmatched series), not a season. Counting it would show "6 seasons" for a five-season show.
-    /// </summary>
-    private static int NumberedSeasons(ShowRecord show) => show.Seasons.Count(season => season.N > 0);
 
     private async Task StageAsync<T>(
         string relativePath, T payload, List<(string Temp, string Final)> staged, CancellationToken ct)

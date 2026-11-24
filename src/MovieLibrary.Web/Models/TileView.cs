@@ -78,12 +78,18 @@ public sealed record TileView(
     /// <summary>A series' tile, from the index row rather than its full record.</summary>
     /// <remarks>
     /// <para>
-    /// <b>BOTH FACTS ARE GUARDED, and the guard is this mapping's whole job.</b> 7 of the 122 series in the
-    /// live library matched TMDB but carry no episode list, so <c>SeasonCount</c> and <c>TotalEpisodes</c>
-    /// are both 0 on them. "0 seasons" and "0 of 0 episodes" would state as facts that a series nobody
-    /// could look up has no episodes, which is the same lie <see cref="ForFilm"/> refuses to tell with
-    /// "0.0/10". A fact nobody measured is ABSENT, so those tiles show a title, a year and a badge -- and
-    /// the badge is the thing that explains the gap.
+    /// <b>BOTH FACTS ARE GUARDED, and the season guard has a subject today.</b> 7 of the 122 series in the
+    /// live library have no NUMBERED season at all -- every episode the owner has sits in the build's
+    /// unplaced bucket, which is season 0 and is not a season -- so <c>SeasonCount</c> is 0 on them while
+    /// their episode counts are not. "0 seasons" would state as a fact that a series the owner holds 21
+    /// episodes of has none. A fact nobody measured is ABSENT, so those tiles show a title, a year, an
+    /// episode count and a badge.
+    /// </para>
+    /// <para>
+    /// The EPISODE guard has no subject today -- every one of the 122 carries at least one -- and it stays
+    /// anyway, because "0 of 0 episodes" is the same lie one field over and the first series to arrive
+    /// empty should not be the thing that discovers it. The counts were measured on 2026-11-24 and move
+    /// with the sheet; nothing here asserts them.
     /// </para>
     /// <para>
     /// The year is the year the series STARTED, which is what <c>FirstYear</c> holds and what every library

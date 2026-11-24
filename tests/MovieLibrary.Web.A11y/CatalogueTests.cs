@@ -209,10 +209,10 @@ public class CatalogueTests
     }
 
     /// <remarks>
-    /// 7 of the real 122 series matched TMDB and carry no episode list, and their tile shows a title, a
-    /// year and nothing else -- no season count, no episode count. Without one here the guard in
-    /// <c>TileView.ForShow</c> that leaves both counts out would have no subject in any browser scan, and
-    /// a change that printed "0 seasons" instead would go green.
+    /// A series with nothing in it shows a title, a year and no counts at all. None of the owner's 122 is
+    /// in that state today -- the 7 with no NUMBERED season still carry every episode they own in the
+    /// unplaced bucket -- so this fixture is the ONLY subject the guard in <c>TileView.ForShow</c> has
+    /// anywhere, and without it a change that printed "0 seasons" would go green in every scan.
     /// </remarks>
     [Fact]
     public void SomeSeriesHasNoEpisodeListAtAllAndMostDo()
@@ -257,6 +257,128 @@ public class CatalogueTests
             Assert.Equal(Catalogue.Series,
                          JsonSerializer.Deserialize<ShowSummary[]>(
                              File.ReadAllText(Path.Combine(root, "data", "shows.json")), Read)!.Length);
+        }
+        finally
+        {
+            if (Directory.Exists(root)) Directory.Delete(root, recursive: true);
+        }
+    }
+
+    private static ShowRecord Show(int n) =>
+        JsonSerializer.Deserialize<ShowRecord>(Catalogue.ShowJson(n), Read)!;
+
+    /// <remarks>
+    /// <b>The subject floor for every series page scan in this project.</b> Site.Addresses lands on
+    /// <c>Catalogue.FirstSlug</c>, and if that record carried the bare shape the loop builds -- no
+    /// seasons, no episodes, nothing owned and nothing missing, no extra fields -- the scan would render a
+    /// heading, a byline and one definition list and would read as covering a page most of which was never
+    /// there. It also has to be PART-OWNED: a complete series renders no "Missing" row at all, and the
+    /// mark is the one thing on this page that exists to be read rather than looked at.
+    /// </remarks>
+    [Fact]
+    public void TheSeriesTheShowPageScanLandsOnHasSomethingInEveryPartOfThePage()
+    {
+        var subject = Show(0);
+
+        Assert.Equal(Catalogue.FirstSlug, subject.Slug);
+        Assert.Equal(Confidence.Confident, ConfidenceBand.Of(subject));
+        Assert.False(string.IsNullOrWhiteSpace(subject.T));
+        Assert.False(string.IsNullOrWhiteSpace(subject.Ag), "no genre row in the Details list");
+        Assert.NotNull(subject.FirstYear);
+
+        // Several seasons, so the page renders more than one disclosure and the gate walks past a closed
+        // one to reach the next.
+        Assert.True(subject.Seasons.Length >= 2, $"{subject.Seasons.Length} season(s); the page needs two");
+
+        // AND AN UNPLACED BUCKET BESIDE THEM: season 0 is not a season, so it is in the records and out of
+        // the count, and the page labels it "Season unknown" and sorts it last. With no bucket here that
+        // label ships unscanned and NumberedSeasons has nothing to exclude.
+        Assert.Contains(subject.Seasons, s => s.N == 0);
+        Assert.Equal(subject.Seasons.Length - 1, subject.NumberedSeasons());
+        Assert.All(subject.Seasons.Where(s => s.N == 0),
+                   s => Assert.All(s.Eps, e => Assert.True(e.O, "an unplaced episode the owner does not own")));
+
+        // Part-owned, and the gap is INSIDE a season rather than a whole season absent: a row marked
+        // Missing beside rows that are not is what the mark has to be legible against.
+        Assert.Contains(subject.Seasons, s => s.Eps.Any(e => e.O) && s.Eps.Any(e => !e.O));
+        Assert.InRange(subject.OwnedEpisodes, 1, subject.TotalEpisodes - 1);
+
+        // The owner's own columns, which is the part of the page no code here interprets.
+        Assert.NotNull(subject.Ex);
+        Assert.NotEmpty(subject.Ex);
+
+        Assert.All(subject.Seasons, season =>
+        {
+            Assert.Equal(season.Total, season.Eps.Length);
+            Assert.Equal(season.Owned, season.Eps.Count(e => e.O));
+            Assert.All(season.Eps, e => Assert.False(string.IsNullOrWhiteSpace(e.T), "an episode with no title"));
+
+            // Episode numbers are unique within a season, which is what @key on the row relies on.
+            Assert.Equal(season.Eps.Length, season.Eps.Select(e => e.E).Distinct().Count());
+        });
+
+        // The numbered seasons run from 1 upwards with no gap, so a missing season cannot be mistaken for
+        // one the owner simply has none of.
+        Assert.Equal(Enumerable.Range(1, subject.NumberedSeasons()),
+                     subject.Seasons.Where(s => s.N > 0).Select(s => s.N));
+    }
+
+    /// <remarks>
+    /// The other two published records exist to be the shapes the furnished one is not, and a scan that
+    /// landed on either expecting the first would be scanning a page that is not there.
+    /// </remarks>
+    [Fact]
+    public void ThePublishedSeriesCoverTheThreeShapesTheSeriesPageRenders()
+    {
+        Assert.Equal(3, Catalogue.PublishedShows.Length);
+
+        var shapes = Catalogue.PublishedShows.Select(Show).ToList();
+
+        Assert.Contains(shapes, s => ConfidenceBand.Of(s) == Confidence.Confident && s.Seasons.Length > 0);
+        Assert.Contains(shapes, s => s.Seasons.Length == 0);                      // no episode list at all
+        Assert.Contains(shapes, s => ConfidenceBand.Of(s) != Confidence.Confident);
+
+        // Each one's record agrees with its row in the index, which is what the page's byline and its
+        // Details list are built from on one side and its tile on the other.
+        foreach (var n in Catalogue.PublishedShows)
+        {
+            var record = Show(n);
+            var row = JsonSerializer.Deserialize<ShowSummary[]>(Catalogue.ShowsJson(), Read)![n];
+
+            Assert.Equal(row.Slug, record.Slug);
+            Assert.Equal(row.T, record.T);
+            Assert.Equal(row.I, record.I);
+            Assert.Equal(row.Mc, record.Mc);
+            // NumberedSeasons and not Seasons.Length, which is the whole point of the bucket: the index
+            // row counts seasons and the record carries one entry that is not one.
+            Assert.Equal(row.SeasonCount, record.NumberedSeasons());
+            Assert.Equal(row.OwnedEpisodes, record.OwnedEpisodes);
+            Assert.Equal(row.TotalEpisodes, record.TotalEpisodes);
+            Assert.Equal(row.OwnedEpisodes, record.Seasons.Sum(s => s.Owned));
+            Assert.Equal(row.TotalEpisodes, record.Seasons.Sum(s => s.Total));
+        }
+    }
+
+    [Fact]
+    public void WriteIntoPublishesEverySeriesRecordTheScanCanReach()
+    {
+        var root = Path.Combine(Path.GetTempPath(), "ml-gate-" + Guid.NewGuid());
+        try
+        {
+            Catalogue.WriteInto(root);
+
+            foreach (var n in Catalogue.PublishedShows)
+            {
+                var path = Path.Combine(root, "data", "tv", $"series-{n + 1}.json");
+
+                Assert.True(File.Exists(path), path + " was not written, so that scan gets the host's 404 "
+                            + "body and the page renders its not-found state instead of a series.");
+            }
+
+            Assert.Equal(Catalogue.FirstSlug,
+                         JsonSerializer.Deserialize<ShowRecord>(
+                             File.ReadAllText(Path.Combine(root, "data", "tv", Catalogue.FirstSlug + ".json")),
+                             Read)!.Slug);
         }
         finally
         {

@@ -100,7 +100,7 @@ public class FilmDetailTests : BunitContext
 
     /// <summary>A dl's pairs as term-and-value, in document order.</summary>
     private static List<(string Term, string Value)> Facts(IRenderedComponent<MovieLibrary.Web.App> cut, int which) =>
-        [.. cut.FindAll("dl.film-facts")[which].QuerySelectorAll("div")
+        [.. cut.FindAll("dl.facts")[which].QuerySelectorAll("div")
             .Select(row => (row.QuerySelector("dt")!.TextContent.Trim(),
                             row.QuerySelector("dd")!.TextContent.Trim()))];
 
@@ -260,7 +260,7 @@ public class FilmDetailTests : BunitContext
 
         Assert.Equal(
             new[] { "Overview", "Cast", "Details", "Additional information" },
-            cut.FindAll(".film-section h2").Select(h => h.TextContent.Trim()));
+            cut.FindAll(".page-section h2").Select(h => h.TextContent.Trim()));
 
         Assert.Empty(cut.FindAll("main section"));
         Assert.Empty(cut.FindAll("main h3"));
@@ -276,7 +276,7 @@ public class FilmDetailTests : BunitContext
     {
         var (cut, _) = RenderFilm("/movies/601-88");
 
-        Assert.Equal(new[] { "Details" }, cut.FindAll(".film-section h2").Select(h => h.TextContent.Trim()));
+        Assert.Equal(new[] { "Details" }, cut.FindAll(".page-section h2").Select(h => h.TextContent.Trim()));
     }
 
     [Fact]
@@ -287,7 +287,7 @@ public class FilmDetailTests : BunitContext
         Assert.Equal("Seven deadly sins. Seven ways to die.", cut.Find("p.film-tagline").TextContent.Trim());
         Assert.Equal(
             "Two detectives hunt a killer who uses the seven deadly sins as his motives.",
-            cut.Find(".film-section p").TextContent.Trim());
+            cut.Find(".page-section p").TextContent.Trim());
 
         // Not emphasis, not a heading, not a blockquote: a studio's sentence is a sentence. <em> would claim
         // a stress the words do not have, and a reader hears that claim.
@@ -487,7 +487,7 @@ public class FilmDetailTests : BunitContext
     {
         var (cut, _) = RenderFilm("/movies/601-88");
 
-        Assert.Single(cut.FindAll("dl.film-facts"));
+        Assert.Single(cut.FindAll("dl.facts"));
         Assert.DoesNotContain("Additional information",
                               cut.Find("main").TextContent, StringComparison.Ordinal);
     }

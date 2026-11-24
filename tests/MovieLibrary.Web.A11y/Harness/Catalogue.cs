@@ -110,7 +110,127 @@ internal static class Catalogue
         File.WriteAllText(Path.Combine(folder, "movies.json"), Json(Build(Records)));
         File.WriteAllText(Path.Combine(folder, "meta.json"), MetaJson());
         File.WriteAllText(Path.Combine(folder, "shows.json"), ShowsJson());
+
+        var tv = Path.Combine(folder, "tv");
+        Directory.CreateDirectory(tv);
+        foreach (var n in PublishedShows)
+            File.WriteAllText(Path.Combine(tv, $"series-{n + 1}.json"), ShowJson(n));
     }
+
+    /// <summary>
+    /// The series whose full records are published, by index into the series list.
+    /// </summary>
+    /// <remarks>
+    /// <b>Not all 122, and that is deliberate.</b> A tile links to every series, but only the addresses
+    /// <see cref="Site.Addresses"/> yields are navigated to, and 122 files of episodes would be several
+    /// megabytes written before every browser run for three of them to be opened. These three are the
+    /// three shapes the series page has to render: the furnished one the arrival scan lands on, one with
+    /// no episode list at all, and one whose match is below the accept threshold -- the case where the
+    /// page drops the denominators and the Missing marks entirely.
+    /// <para>
+    /// A series with no file behind it reaches the page's "no series in the library has this address"
+    /// state, which is a real state worth scanning and is what any OTHER slug now produces.
+    /// </para>
+    /// </remarks>
+    public static readonly int[] PublishedShows = [0, 1, 5];
+
+    /// <summary>One series' full record, episodes and all, as <c>tv/{slug}.json</c> carries it.</summary>
+    public static string ShowJson(int n) => JsonSerializer.Serialize(BuildShow(n), Published);
+
+    private static ShowRecord BuildShow(int n)
+    {
+        var summary = BuildShows(n + 1)[n];
+        var (seasons, total, owned, unplaced) = ShapeOf(n);
+
+        return new ShowRecord(
+            I: summary.I,
+            T: summary.T,
+            Slug: summary.Slug,
+            P: null,                     // no path, so the page cannot request an image
+            FirstYear: summary.FirstYear,
+            Ag: summary.Ag,
+            Seasons: BuildSeasons(seasons, total, owned, unplaced),
+            OwnedEpisodes: owned,
+            TotalEpisodes: total,
+            Mc: summary.Mc,
+            Srt: null,
+
+            // The owner's own columns, so the "Additional information" list is rendered and scanned. Only
+            // on the furnished one: the other two exist to be thin.
+            Ex: n == 0
+                ? new Dictionary<string, string> { ["Shelf"] = "Blu-ray, box 3", ["Note"] = "Ripped 2019" }
+                : null);
+    }
+
+    /// <summary>
+    /// Splits a series' episodes evenly across its seasons, and its owned ones from the front.
+    /// </summary>
+    /// <remarks>
+    /// From the FRONT, because that is what a part-owned series looks like: the owner has the early
+    /// seasons and is missing the late ones. Spreading the gaps evenly would hide the case where a whole
+    /// season is absent, which is the one a reader is looking for.
+    /// </remarks>
+    private static SeasonRecord[] BuildSeasons(int seasons, int total, int owned, int unplaced)
+    {
+        if (seasons == 0) return [];
+
+        // Season 0 FIRST, because that is the order the build writes it in and the page's job is to move
+        // it to the end. A fixture that handed the page the order it wanted would never test that.
+        var result = new SeasonRecord[seasons + (unplaced > 0 ? 1 : 0)];
+        var offset = 0;
+
+        if (unplaced > 0)
+        {
+            var bucket = new EpisodeRecord[unplaced];
+            for (var e = 0; e < unplaced; e++)
+                // NUMBERED FROM 1, as TvPipeline numbers them: it orders the unplaced rows by name and
+                // gives them i + 1. All-zero numbers would be a fixture that disagreed with the shipped
+                // data about the one thing the row's @key depends on.
+                bucket[e] = new EpisodeRecord(e + 1, EpisodeTitleFor(9, e), true, null, 22 + e, null, null);
+
+            // Every episode in it is OWNED: it exists because the owner has them, so there is nothing in
+            // it to mark Missing and owned equals total by construction.
+            result[0] = new SeasonRecord(0, unplaced, unplaced, bucket);
+            offset = 1;
+        }
+
+        total -= unplaced;
+        owned -= unplaced;
+
+        var each = total / seasons;
+        var left = owned;
+
+        for (var s = 0; s < seasons; s++)
+        {
+            var inSeason = s == seasons - 1 ? total - each * (seasons - 1) : each;
+            var ownedHere = Math.Clamp(left, 0, inSeason);
+            left -= ownedHere;
+
+            var episodes = new EpisodeRecord[inSeason];
+            for (var e = 0; e < inSeason; e++)
+                episodes[e] = new EpisodeRecord(
+                    E: e + 1,
+                    T: EpisodeTitleFor(s, e),
+                    O: e < ownedHere,
+                    Air: $"{1998 + s:0000}-0{1 + e % 9}-1{e % 10}",
+                    Rt: 22 + e % 20,
+                    S: null,
+                    Ov: null);
+
+            result[s + offset] = new SeasonRecord(s + 1, ownedHere, inSeason, episodes);
+        }
+
+        return result;
+    }
+
+    /// <summary>An episode title, varied in length so a row has something to wrap, and never a real one.</summary>
+    private static string EpisodeTitleFor(int season, int episode) => ((season + episode) % 4) switch
+    {
+        0 => $"The Episode With A Deliberately Long Name, Part {episode + 1}",
+        1 => $"Episode {episode + 1}",
+        2 => $"A Fixture Episode {episode + 1}",
+        _ => $"Fixture {season + 1}.{episode + 1}",
+    };
 
     /// <summary>The measured number of series in the live library, so the series list pages as it really does.</summary>
     public const int Series = 122;
@@ -133,9 +253,9 @@ internal static class Catalogue
     /// </para>
     /// <list type="bullet">
     /// <item>every confidence band, so both badge variants and the unbadged majority are rendered;</item>
-    /// <item>one series matched with NO episode list at all -- <c>SeasonCount</c> and
-    /// <c>TotalEpisodes</c> both 0, which is 7 of the real 122 -- so the tile that shows a title, a year
-    /// and nothing else is in the scan;</item>
+    /// <item>one series with NO episode list at all -- <c>SeasonCount</c> and <c>TotalEpisodes</c> both 0
+    /// -- so the tile that shows a title, a year and nothing else is in the scan. No series in the owner's
+    /// library is in that state today, and the branch exists for the one that arrives in it;</item>
     /// <item>a complete series, where owned equals total, and partial ones either side of it;</item>
     /// <item>a series with no first year, so the absent-year branch is rendered.</item>
     /// </list>
@@ -147,31 +267,65 @@ internal static class Catalogue
     /// </remarks>
     public static string ShowsJson() => JsonSerializer.Serialize(BuildShows(Series), Published);
 
+    /// <summary>The slug the series page's scan lands on. Index 0, which is the furnished one.</summary>
+    /// <remarks>
+    /// <b>The subject floor for every series page scan in this project</b>, and the reason index 0 is a
+    /// special case below rather than whatever the loop would have produced. Left to the formula it was
+    /// both UNMATCHED and empty of episodes -- <c>n % 11 == 0</c> and the no-episode-list case at once --
+    /// so the arrival scan would have landed on a heading, a byline and one sentence, and would have read
+    /// as covering a page it never rendered. Rule T1: the thing that quietly empties is what has to be
+    /// asserted, and <c>CatalogueTests</c> asserts it.
+    /// </remarks>
+    public static string FirstSlug => BuildShows(1)[0].Slug;
+
     private static ShowSummary[] BuildShows(int count)
     {
         var shows = new ShowSummary[count];
 
         for (var n = 0; n < count; n++)
         {
-            // 0 is the matched series with no episode list; every other one has seasons and episodes.
-            var seasons = n == 0 ? 0 : 1 + n % 9;
-            var total = n == 0 ? 0 : seasons * (6 + n % 18);
-            var owned = n % 7 == 0 ? total : total - 1 - n % 5;
+            var (seasons, total, owned, _) = ShapeOf(n);
 
             shows[n] = new ShowSummary(
-                I: n % 11 == 0 ? 0 : n + 1,       // unmatched where the id is 0, which is what the band reads
+                I: n == 0 ? 1 : n % 11 == 0 ? 0 : n + 1,   // unmatched where the id is 0, which the band reads
                 T: SeriesTitleFor(n),
                 Slug: $"series-{n + 1}",
                 P: null,                          // see the remarks: no path, so the tile cannot request an image
-                FirstYear: n % 19 == 0 ? null : 1951 + n % 73,
+                FirstYear: n == 0 ? 1998 : n % 19 == 0 ? null : 1951 + n % 73,
                 Ag: GenreSets[n % GenreSets.Length].Apple,
                 SeasonCount: seasons,
-                OwnedEpisodes: Math.Max(0, owned),
+                OwnedEpisodes: owned,
                 TotalEpisodes: total,
-                Mc: n % 5 == 0 ? 0.55 : 0.95);    // below the threshold where the band is Uncertain
+                Mc: n == 0 ? 0.95 : n % 5 == 0 ? 0.55 : 0.95);   // 0.55 is below the threshold: Uncertain
         }
 
         return shows;
+    }
+
+    /// <summary>
+    /// How many seasons and episodes a series has, and how many of them the owner holds.
+    /// </summary>
+    /// <remarks>
+    /// Index 0 is the furnished series the scan lands on, so it is confident, has several seasons and is
+    /// PART-OWNED -- a complete one would render no "Missing" row at all and the mark would go unscanned.
+    /// Index 1 is the matched series with no episode list, which is 7 of the real 122. Index 2 is complete.
+    /// Everything after that is spread by the formula.
+    /// </remarks>
+    private static (int Seasons, int Total, int Owned, int Unplaced) ShapeOf(int n)
+    {
+        // The furnished one carries an UNPLACED bucket as well -- season 0, which is not a season but the
+        // build's home for owned episodes it could not place, and which the page labels "Season unknown".
+        // The owner's copy of 24 has 29 of them. Without one here the label would ship unscanned, and
+        // SeasonCount excluding the bucket while the episode counts include it would have no subject at
+        // all: every assertion about the difference would be comparing 4 with 4.
+        if (n == 0) return (4, 48, 41, 5);
+        if (n == 1) return (0, 0, 0, 0);   // nothing at all: the page's fourth state
+        if (n == 2) return (1, 12, 12, 0);   // complete, so no Missing row anywhere in it
+
+        var seasons = 1 + n % 9;
+        var total = seasons * (6 + n % 18);
+
+        return (seasons, total, n % 7 == 0 ? total : Math.Max(0, total - 1 - n % 5), 0);
     }
 
     /// <summary>

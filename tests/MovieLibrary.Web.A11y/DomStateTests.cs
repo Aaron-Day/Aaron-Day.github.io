@@ -423,7 +423,7 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         await session.FilmSentenceAsync(PageSession.NoSuchFilm);
 
         Assert.Equal(0, await session.Page.Locator("button.try-again").CountAsync());
-        Assert.Equal(0, await session.Page.Locator("dl.film-facts").CountAsync());
+        Assert.Equal(0, await session.Page.Locator("dl.facts").CountAsync());
 
         var scan = await AxeScan.OfAsync(session.Page, "an address no film answers", output);
         scan.MustBeClean(Booted);
