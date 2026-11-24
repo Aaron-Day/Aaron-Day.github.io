@@ -17,8 +17,9 @@ internal static class ShowText
     /// <remarks>
     /// <para>
     /// Numbered seasons only, which is <see cref="Core.Models.ShowSummary.SeasonCount"/>'s own definition:
-    /// season 0 is the specials, TMDB carries them for most series, and no reader thinks of them as a
-    /// season. "9 seasons" therefore means nine numbered ones however many specials sit beside them.
+    /// season 0 here is NOT the specials but <c>TvPipeline</c>'s bucket for episodes it could not place, and
+    /// counting it would show "6 seasons" for a five-season show. "9 seasons" therefore means nine numbered
+    /// ones however many unplaced episodes sit beside them, and <see cref="Unplaced"/> is what names those.
     /// </para>
     /// <para>
     /// A COUNT, so culture-formatted -- unlike a season NUMBER, which is an identifier and must never take
