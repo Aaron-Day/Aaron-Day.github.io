@@ -79,10 +79,10 @@
            NOT InvariantCulture. Movies.razor records what forcing it cost once already; a de-DE reader
            reads "8,4". *@
         <span class="tile-meta">
-            <span class="tile-runtime">@FormatRuntime(Movie.Rt)</span>
+            <span class="tile-runtime">@FilmText.Runtime(Movie.Rt)</span>
             @if (Movie.Vote > 0d)
             {
-                <span class="tile-rating">@Movie.Vote.ToString("0.0")/10</span>
+                <span class="tile-rating">@FilmText.Rating(Movie.Vote)</span>
             }
         </span>
     </div>
@@ -139,21 +139,4 @@
     /// </remarks>
     private static string VariantClass(Confidence band) => "badge-" + band.ToString().ToLowerInvariant();
 
-    /// <summary>
-    /// A runtime as hours and minutes: "1h 50m", "50m", and "2h" on the exact hour rather than "2h 0m".
-    /// </summary>
-    /// <remarks>
-    /// Interpolated, so never N0 -- a 1,353 minute boxed set reads "22h 33m" and never "1,353". The unit
-    /// letters are deliberate: "1h 50m" is what every library UI shows, and SC 3.1.4 Abbreviations is
-    /// Level AAA, so it conforms at the level this project is held to.
-    /// </remarks>
-    private static string FormatRuntime(int minutes)
-    {
-        var hours = minutes / 60;
-        var rest = minutes % 60;
-
-        if (hours == 0) return $"{rest}m";
-
-        return rest == 0 ? $"{hours}h" : $"{hours}h {rest}m";
-    }
 }
