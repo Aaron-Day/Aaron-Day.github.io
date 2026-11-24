@@ -67,12 +67,13 @@ public class PosterGridTests : BunitContext
 
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
-            builder.OpenComponent<PosterGrid>(0);
-            builder.AddComponentParameter(1, nameof(PosterGrid.Items), Items);
-            builder.AddComponentParameter(2, nameof(PosterGrid.Page), page);
-            builder.AddComponentParameter(3, nameof(PosterGrid.PageSize), PageSize);
-            builder.AddComponentParameter(4, nameof(PosterGrid.PageChanged),
+            builder.OpenComponent<PosterGrid<MovieRecord>>(0);
+            builder.AddComponentParameter(1, nameof(PosterGrid<MovieRecord>.Items), Items);
+            builder.AddComponentParameter(2, nameof(PosterGrid<MovieRecord>.Page), page);
+            builder.AddComponentParameter(3, nameof(PosterGrid<MovieRecord>.PageSize), PageSize);
+            builder.AddComponentParameter(4, nameof(PosterGrid<MovieRecord>.PageChanged),
                 EventCallback.Factory.Create<int>(this, OnPageChanged));
+            builder.AddFilmTile(5);
             builder.CloseComponent();
         }
 
@@ -312,7 +313,7 @@ public class PosterGridTests : BunitContext
         // The parent refuses to converge, so the only thing that could change Page is the grid itself.
         var cut = RenderGrid(130, page: 99, adopt: false);
 
-        Assert.Equal(99, cut.FindComponent<PosterGrid>().Instance.Page);
+        Assert.Equal(99, cut.FindComponent<PosterGrid<MovieRecord>>().Instance.Page);
         Assert.Equal("Page 3 of 3", PageLabel(cut));
     }
 
@@ -545,11 +546,12 @@ public class PosterGridTests : BunitContext
         {
             if (!mounted) return;
 
-            builder.OpenComponent<PosterGrid>(0);
-            builder.AddComponentParameter(1, nameof(PosterGrid.Items), Items);
-            builder.AddComponentParameter(2, nameof(PosterGrid.Page), 1);
-            builder.AddComponentParameter(3, nameof(PosterGrid.PageChanged),
+            builder.OpenComponent<PosterGrid<MovieRecord>>(0);
+            builder.AddComponentParameter(1, nameof(PosterGrid<MovieRecord>.Items), Items);
+            builder.AddComponentParameter(2, nameof(PosterGrid<MovieRecord>.Page), 1);
+            builder.AddComponentParameter(3, nameof(PosterGrid<MovieRecord>.PageChanged),
                 EventCallback.Factory.Create<int>(this, OnPageChanged));
+            builder.AddFilmTile(4);
             builder.CloseComponent();
         }
 

@@ -94,7 +94,14 @@
     }
     else
     {
-        <PosterGrid Items="shown" Page="page" PageChanged="OnPageChanged" />
+        @* A METHOD GROUP AND NOT A LAMBDA for KeyOf. "film => film.K" would put a > inside an attribute
+           value, and SourceContractTests reads this tag with a regex that stops at the first > -- so the
+           contract would see half the tag and report attributes the page does not pass. A named method also
+           says in one place what identifies a film, which is K and never I. *@
+        <PosterGrid TItem="MovieRecord" Items="shown" KeyOf="PublishedKey"
+                    Page="page" PageChanged="OnPageChanged" Context="film">
+            <PosterTile Movie="film" />
+        </PosterGrid>
     }
         </div>
     </div>
@@ -110,6 +117,16 @@
         "The film library could not be loaded. Check your connection and try again.";
 
     /// <summary>The visible loading copy, with the ellipsis CHARACTER rather than three full stops.</summary>
+    /// <summary>
+    /// What identifies one film to the grid's <c>@key</c>: the published key, never the TMDB id.
+    /// </summary>
+    /// <remarks>
+    /// <c>I</c> is 0 for every unmatched film, and a duplicate key within one collection fails the render.
+    /// <c>K</c>'s distinctness across the whole catalogue is pinned by the enrich pipeline's own tests, on
+    /// the published json's <c>k</c> field, which is the artifact the browser actually reads.
+    /// </remarks>
+    private static string PublishedKey(MovieRecord film) => film.K;
+
     internal const string LoadingVisible = "Loading films…";
 
     /// <summary>

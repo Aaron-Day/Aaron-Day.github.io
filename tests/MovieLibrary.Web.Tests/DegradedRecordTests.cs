@@ -602,7 +602,10 @@ public class DegradedRecordTests : BunitContext
     public void TheGridShowsEveryTitleBeforeAnyFilterIsApplied()
     {
         var films = Enum.GetValues<Confidence>().Select(For).ToList();
-        var cut = Render<PosterGrid>(p => p.Add(x => x.Items, films));
+        var cut = Render<PosterGrid<MovieRecord>>(p => p
+            .Add(x => x.Items, (IReadOnlyList<MovieRecord>)films)
+            .Add(x => x.KeyOf, FilmGrid.Key)
+            .Add(x => x.ChildContent, FilmGrid.Tile));
 
         Assert.Equal(films.Count, cut.FindAll("ul.grid > li").Count);
         Assert.Equal(films.Select(f => f.T),

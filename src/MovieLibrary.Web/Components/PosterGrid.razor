@@ -1,3 +1,4 @@
+@typeparam TItem
 @implements IDisposable
 @inject Announcer Announcer
 
@@ -57,7 +58,7 @@
            reads. Hence no defensive de-duplication pass here. *@
         @foreach (var m in Items.Skip((CurrentPage - 1) * PageSize).Take(PageSize))
         {
-            <li @key="m.K"><PosterTile Movie="m" /></li>
+            <li @key="KeyOf(m)">@ChildContent(m)</li>
         }
     </ul>
 }
@@ -69,8 +70,36 @@
     /// </summary>
     private const string EnDash = "–";
 
-    /// <summary>The whole list this grid pages through. Task 8 replaces it with the filtered list.</summary>
-    [Parameter, EditorRequired] public required IReadOnlyList<MovieRecord> Items { get; set; }
+    /// <summary>The whole list this grid pages through.</summary>
+    [Parameter, EditorRequired] public required IReadOnlyList<TItem> Items { get; set; }
+
+    /// <summary>
+    /// One tile, drawn by the caller.
+    /// </summary>
+    /// <remarks>
+    /// <b>Generic because a second grid would be a second copy of everything below this line</b> -- the
+    /// clamp, the announcement, the two bound buttons that are never really disabled, and the stale-callback
+    /// guard. The series list needs all of it and none of it is about films, so the type went out rather
+    /// than the logic being written twice. What stayed concrete is everything a READER meets: the landmark,
+    /// role="list", the sentence and its noun, which must be the same on both pages by SC 3.2.4.
+    /// <para>
+    /// The noun is still "title", and still not a parameter. A series is a title as much as a film is, so
+    /// both pages say "1,456 titles" and "122 titles" in the same words, and a parameter would be an
+    /// invitation for one page to start saying something else.
+    /// </para>
+    /// </remarks>
+    [Parameter, EditorRequired] public required RenderFragment<TItem> ChildContent { get; set; }
+
+    /// <summary>
+    /// What distinguishes one item from another, for <c>@key</c>.
+    /// </summary>
+    /// <remarks>
+    /// A delegate rather than an interface the records would implement: MovieRecord and ShowRecord are
+    /// Core's serialisation shapes, read straight out of the published JSON, and giving them an interface so
+    /// that a web component can page them would be the UI reaching back into the data contract. A duplicate
+    /// key within one collection fails the render, so this must be distinct across <see cref="Items"/>.
+    /// </remarks>
+    [Parameter, EditorRequired] public required Func<TItem, string> KeyOf { get; set; }
 
     /// <summary>
     /// The page the parent wants shown, one-based. This component never writes to it: a component that

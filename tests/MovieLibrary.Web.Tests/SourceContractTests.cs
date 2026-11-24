@@ -256,19 +256,29 @@ public class SourceContractTests
     }
 
     /// <remarks>
-    /// R-K. The grid's default is 60, and the page passing PageSize="60" would be a second copy of the number that
-    /// is one edit away from disagreeing with the first. The page hands the grid exactly three things.
+    /// <b>R-K, and PageSize is still the whole point of it.</b> The grid's default is 60, and the page
+    /// passing PageSize="60" would be a second copy of the number that is one edit away from disagreeing
+    /// with the first. The list is pinned exactly rather than as "does not contain PageSize", so a parameter
+    /// added here has to be justified in this comment rather than appearing quietly.
+    /// <para>
+    /// It used to read "exactly three things" and match a SELF-CLOSING tag. The grid became generic when the
+    /// series list needed the same pager, the same clamp and the same announcement, so the page now also
+    /// names the type, the key and the tile -- and the tag has children, which is why the pattern no longer
+    /// ends at "/&gt;". Three more attributes is what NOT having a second copy of 200 lines of paging logic
+    /// costs, and the page still never says how big a page is.
+    /// </para>
     /// </remarks>
     [Fact]
-    public void TheFilmsPagePassesTheGridItsItemsItsPageAndItsCallbackAndNothingElse()
+    public void TheFilmsPageHandsTheGridItsListItsPageItsCallbackAndATileAndNeverAPageSize()
     {
-        var tag = Regex.Match(WebRoot.Read("Pages", "Movies.razor"), @"<PosterGrid\b[^>]*/>");
+        var tag = Regex.Match(WebRoot.Read("Pages", "Movies.razor"), @"<PosterGrid\b[^>]*>");
 
         Assert.True(tag.Success, "Pages/Movies.razor no longer renders a PosterGrid, so this contract has no subject.");
 
         var attributes = Regex.Matches(tag.Value, @"\b(?<name>[A-Z][A-Za-z]*)=""").Select(m => m.Groups["name"].Value);
 
-        Assert.Equal(new[] { "Items", "Page", "PageChanged" }, attributes.OrderBy(a => a, StringComparer.Ordinal));
+        Assert.Equal(new[] { "Context", "Items", "KeyOf", "Page", "PageChanged", "TItem" },
+                     attributes.OrderBy(a => a, StringComparer.Ordinal));
     }
 
     [Fact]
