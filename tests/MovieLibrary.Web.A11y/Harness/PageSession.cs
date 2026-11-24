@@ -22,7 +22,24 @@ public sealed class PageSession : IAsyncDisposable
     public const string BootedSelector = "#app main#main-content h1";
 
     /// <summary>The catalogue address, as CatalogService requests it, matched for route interception.</summary>
-    private const string CataloguePattern = "**/data/movies.json";
+    public const string CataloguePattern = "**/data/movies.json";
+
+    /// <summary>
+    /// The series index, and every series' own file: what a scan of the SERIES pages' loading and failure
+    /// states has to intercept.
+    /// </summary>
+    /// <remarks>
+    /// <b>These are why the methods below take a pattern.</b> They were hard-wired to
+    /// <see cref="CataloguePattern"/>, which is movies.json alone -- so there was no way to put the series
+    /// list or a series' own page into its loading or failed state from here, and neither state was ever
+    /// scanned in a browser although both render a container, a sentence and a Try again button of their
+    /// own. A pattern that covered every data file instead would have been worse: the films page's own
+    /// failure scans assert the exact number of catalogue requests, and a wildcard would have counted the
+    /// series documents into them.
+    /// </remarks>
+    public const string ShowsPattern = "**/data/shows.json";
+
+    public const string SeriesPattern = "**/data/tv/*.json";
 
     /// <summary>
     /// Long enough for a cold WebAssembly boot on a loaded CI runner, short enough that a genuinely stuck
@@ -61,6 +78,19 @@ public sealed class PageSession : IAsyncDisposable
 
     public static string NoSuchFilm => FilmDetail.NoSuchFilm;
 
+    /// <summary>The SERIES LIST's own sentences: a third set of strings for the same reason the film page
+    /// has a second, and the series PAGE below has a fourth.</summary>
+    public static string TvCouldNotLoad => Tv.CouldNotLoad;
+
+    public static string TvLoadingVisible => Tv.LoadingVisible;
+
+    /// <summary>The SERIES page's own sentences.</summary>
+    public static string ShowCouldNotLoad => ShowDetail.CouldNotLoad;
+
+    public static string ShowLoadingVisible => ShowDetail.LoadingVisible;
+
+    public static string NoSuchShow => ShowDetail.NoSuchShow;
+
     public string UrlFor(string address) => baseUrl + "/" + address.TrimStart('/');
 
     /// <summary>Loads an address and waits for Blazor to have replaced the boot shell with a real page.</summary>
@@ -97,12 +127,12 @@ public sealed class PageSession : IAsyncDisposable
     /// Holds the catalogue fetch open for ever, which is the Loading state. The handler returns without
     /// resolving the route, so the request stays in flight exactly as a stalled download does.
     /// </summary>
-    public Task HangTheCatalogueAsync() =>
-        context.RouteAsync(CataloguePattern, _ => Interlocked.Increment(ref catalogueCalls));
+    public Task HangTheCatalogueAsync(string pattern = CataloguePattern) =>
+        context.RouteAsync(pattern, _ => Interlocked.Increment(ref catalogueCalls));
 
     /// <summary>Fails the catalogue fetch, which is the Failed state.</summary>
-    public Task FailTheCatalogueAsync() =>
-        context.RouteAsync(CataloguePattern, async route =>
+    public Task FailTheCatalogueAsync(string pattern = CataloguePattern) =>
+        context.RouteAsync(pattern, async route =>
         {
             Interlocked.Increment(ref catalogueCalls);
             await route.AbortAsync("connectionfailed");
@@ -135,14 +165,24 @@ public sealed class PageSession : IAsyncDisposable
     public Task ReleaseTheCatalogueAsync() => context.UnrouteAsync(CataloguePattern);
 
     /// <summary>Waits for the one-sentence state paragraph to hold a sentence.</summary>
-    public Task StateSentenceAsync(string sentence) =>
-        Page.Locator(".catalog-state p")
-            .Filter(new LocatorFilterOptions { HasTextString = sentence })
-            .WaitForAsync(new LocatorWaitForOptions { Timeout = BootTimeout });
+    public Task StateSentenceAsync(string sentence) => SentenceAsync(".catalog-state p", sentence);
 
     /// <summary>Waits for the one-sentence state paragraph on the FILM page to hold a sentence.</summary>
-    public Task FilmSentenceAsync(string sentence) =>
-        Page.Locator(".film-state p")
+    public Task FilmSentenceAsync(string sentence) => SentenceAsync(".film-state p", sentence);
+
+    /// <summary>Waits for the one-sentence state paragraph on the SERIES page to hold a sentence.</summary>
+    public Task ShowSentenceAsync(string sentence) => SentenceAsync(".show-state p", sentence);
+
+    /// <summary>Waits for the one-sentence state paragraph on the SERIES LIST to hold a sentence.</summary>
+    public Task TvSentenceAsync(string sentence) => SentenceAsync(".tv-state p", sentence);
+
+    /// <summary>
+    /// One wait, parameterised by the container, because the three above differ in nothing else. The third
+    /// page is what moved it: each page has a state container of its own so the gate can tell which page it
+    /// is looking at, and three copies of one Playwright wait is how that design turns into drift.
+    /// </summary>
+    private Task SentenceAsync(string selector, string sentence) =>
+        Page.Locator(selector)
             .Filter(new LocatorFilterOptions { HasTextString = sentence })
             .WaitForAsync(new LocatorWaitForOptions { Timeout = BootTimeout });
 

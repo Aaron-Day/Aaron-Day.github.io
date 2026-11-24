@@ -429,8 +429,103 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         scan.MustBeClean(Booted);
     }
 
+    /// <summary>
+    /// State 13: the series LIST with its index fetch failed. A different container, a different sentence
+    /// and a different Try again from the films page's, and until the harness could intercept shows.json
+    /// there was no way to reach this state in a browser at all.
+    /// </summary>
+    [BrowserFact]
+    public async Task TheSeriesListThatFailedIsClean()
+    {
+        await using var session = await gate.OpenAsync();
+        await session.FailTheCatalogueAsync(PageSession.ShowsPattern);
+
+        await session.GotoAsync("/tv");
+        await session.TvSentenceAsync(PageSession.TvCouldNotLoad);
+        await session.Page.Locator("button.try-again").WaitForAsync();
+
+        Assert.Equal(0, await session.Page.Locator("ul.grid").CountAsync());
+
+        var scan = await AxeScan.OfAsync(session.Page, "the series list that failed", output);
+        scan.MustBeClean(Booted);
+    }
+
+    /// <summary>
+    /// State 14: a series still loading. Silent, exactly as a film still loading is and for the same
+    /// reason: the h1 reads "Loading series" and FocusOnNavigate has just put focus on it, so publishing
+    /// the same words to #status-announcer would be one event said twice.
+    /// </summary>
+    [BrowserFact]
+    public async Task ASeriesStillLoadingIsCleanAndSaysNothing()
+    {
+        await using var session = await gate.OpenAsync();
+        await session.HangTheCatalogueAsync(PageSession.SeriesPattern);
+
+        await session.Page.GotoAsync(session.UrlFor(ShowAddress));
+        await session.BootedAsync();
+        await session.ShowSentenceAsync(PageSession.ShowLoadingVisible);
+
+        Assert.Equal(0, await session.Page.Locator("button.try-again").CountAsync());
+        Assert.Equal(0, await session.Page.Locator("details.season").CountAsync());
+
+        var scan = await AxeScan.OfAsync(session.Page, "a series loading", output);
+        scan.MustBeClean(Booted);
+    }
+
+    /// <summary>
+    /// State 15: a series that could not be loaded, with focus left on its own state container - a fourth
+    /// element with a fourth class, so none of the three scans above covers it.
+    /// </summary>
+    [BrowserFact]
+    public async Task ASeriesThatFailedIsCleanAndHoldsFocusWithoutAlsoAlerting()
+    {
+        await using var session = await gate.OpenAsync();
+        await session.FailTheCatalogueAsync(PageSession.SeriesPattern);
+
+        await session.Page.GotoAsync(session.UrlFor(ShowAddress));
+        await session.BootedAsync();
+        await session.ShowSentenceAsync(PageSession.ShowCouldNotLoad);
+        await session.Page.Locator("button.try-again").WaitForAsync();
+
+        var focused = await session.Page.EvaluateAsync<bool>(
+            "() => document.activeElement === document.querySelector(\"div.show-state\")");
+
+        Assert.True(focused,
+            "The failure did not leave focus on div.show-state[tabindex=-1]. It holds " +
+            await session.FocusedDescriptionAsync() + ". The focus move is the PRIMARY failure channel and "
+            + "the alert is only the fallback, so losing the move means the failure is reported by the less "
+            + "reliable route.");
+
+        Assert.Equal(string.Empty, await session.Page.Locator("#alert-region").InnerTextAsync());
+
+        var scan = await AxeScan.OfAsync(session.Page, "a series that failed, focus on the state container", output);
+        scan.MustBeClean(Booted);
+    }
+
+    /// <summary>
+    /// State 16: an address with a slug no series carries. The index loaded and there is simply no such
+    /// series, so there is no Try again - the same distinction the film page makes, and the state a stale
+    /// bookmark reaches after the owner removes a series from the sheet.
+    /// </summary>
+    [BrowserFact]
+    public async Task AnAddressNoSeriesAnswersIsClean()
+    {
+        await using var session = await gate.OpenAsync();
+
+        await session.GotoAsync("/tv/no-such-slug");
+        await session.ShowSentenceAsync(PageSession.NoSuchShow);
+
+        Assert.Equal(0, await session.Page.Locator("button.try-again").CountAsync());
+        Assert.Equal(0, await session.Page.Locator("dl.facts").CountAsync());
+
+        var scan = await AxeScan.OfAsync(session.Page, "an address no series answers", output);
+        scan.MustBeClean(Booted);
+    }
+
     /// <summary>The film page address these states use: the one record Catalogue furnishes for it.</summary>
     private static string FilmAddress => "/movies/" + Catalogue.FirstKey;
+
+    private static string ShowAddress => Site.ShowUrl;
 
     /// <summary>
     /// The pager label exactly as PosterGrid speaks it, and the reason this is a helper rather than a
