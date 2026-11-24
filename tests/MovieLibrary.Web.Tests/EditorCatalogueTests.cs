@@ -112,6 +112,9 @@ public sealed class EditorCatalogueTests
     /// because the owner owns both. Correct one cut's runtime to the other's and the two rows derive the SAME
     /// key, because a matched record's key is its id and its runtime and nothing of its row. The recorded key
     /// is what tells them apart, and it is preferred over the derived one for precisely this case.
+    /// <para>Asserted in BOTH catalogue orders. The preference has to hold because the binding consumes
+    /// recorded keys before derived ones, not because the row owning the correction happened to be
+    /// enumerated first -- which is the only reason this test passed when it was written.</para>
     /// </summary>
     [Fact]
     public async Task TwoCutsSharingAnIdBindToTheirOwnEntryAndNotToEachOthersDerivedKey()
@@ -132,14 +135,26 @@ public sealed class EditorCatalogueTests
             Records = [new RecordOverride(TmdbId: 807, Runtime: 150, PublishedKey: theatrical.K)],
         };
 
-        var state = await Load([theatrical, extended], StoreOf(corrected));
+        // The published catalogue is ordered by title then runtime, so which cut comes first is not this
+        // test's choice to make. Both orders, therefore: with one map holding both kinds of key, the
+        // [extended, theatrical] pass bound the correction to the extended row and nothing failed.
+        foreach (var (first, second, order) in new[]
+                 {
+                     (theatrical, extended, "theatrical first"),
+                     (extended, theatrical, "extended first"),
+                 })
+        {
+            var state = await Load([first, second], StoreOf(corrected));
 
-        var boundToTheatrical = state.Rows.Single(r => r.Movie.Rt == 127);
-        var boundToExtended = state.Rows.Single(r => r.Movie.Rt == 150);
+            var boundToTheatrical = state.Rows.Single(r => r.Movie.Rt == 127);
+            var boundToExtended = state.Rows.Single(r => r.Movie.Rt == 150);
 
-        Assert.NotNull(boundToTheatrical.Entry);
-        Assert.Null(boundToExtended.Entry);
-        Assert.Empty(state.Unplaceable);
+            Assert.True(boundToTheatrical.Entry is not null,
+                        order + ": the theatrical row owns this correction and must hold it");
+            Assert.True(boundToExtended.Entry is null,
+                        order + ": the extended row must not hold another row's correction");
+            Assert.Empty(state.Unplaceable);
+        }
     }
 
     /// <summary>

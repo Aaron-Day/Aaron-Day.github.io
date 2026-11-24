@@ -1,3 +1,4 @@
+using System.Globalization;
 using MovieLibrary.Core.Store;
 
 namespace MovieLibrary.Core.Tests;
@@ -366,7 +367,10 @@ public class RecordStoreReaderTests
         var message = Rejected("{ not json at all").Message;
 
         Assert.Contains("test.json", message, StringComparison.Ordinal);
-        Assert.Contains("\"version\": 1", message, StringComparison.Ordinal);
+        // Read from the constant, so the next version bump fails here instead of leaving a hand-editor
+        // reading last version's shape -- which is exactly what this pass had to fix.
+        Assert.Contains("\"version\": " + RecordStore.CurrentVersion.ToString(CultureInfo.InvariantCulture),
+                        message, StringComparison.Ordinal);
         Assert.Contains("\"identityKey\"", message, StringComparison.Ordinal);
         Assert.Contains("\"records\"", message, StringComparison.Ordinal);
         Assert.Contains("\"tmdbId\"", message, StringComparison.Ordinal);
@@ -375,6 +379,8 @@ public class RecordStoreReaderTests
         // rejection that follows (spec 5.2's own "all members" block showed both until this pass).
         Assert.Contains("\"tmdbId\" or \"candidates\" but never both", message, StringComparison.Ordinal);
         Assert.Contains("\"purchaseInfo\"", message, StringComparison.Ordinal);
+        // Version 2's own member. It is the one a hand-editor should NOT write, so the message says so.
+        Assert.Contains("\"publishedKey\"", message, StringComparison.Ordinal);
         Assert.Contains("camelCase", message, StringComparison.Ordinal);
         Assert.Contains("comments and trailing commas are allowed", message, StringComparison.Ordinal);
         // The literal, not RecordStoreReader.ExampleFileName: the message is built from that constant, so

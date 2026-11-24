@@ -124,10 +124,11 @@ public static class RecordStoreReader
             // on its own without any external file, and ExampleFileName is one that is actually committed.
             throw new RecordStoreException(
                 $"'{whatItIs}' could not be read as a record store: {ex.Message} The file is " +
-                "{ \"version\": 1, \"films\": [...], \"series\": [...] }; a film entry takes \"identityKey\", " +
+                "{ \"version\": 2, \"films\": [...], \"series\": [...] }; a film entry takes \"identityKey\", " +
                 "\"sheet\", \"note\" and \"records\", a series entry the same with one \"record\"; a record " +
                 "takes \"tmdbId\" or \"candidates\" but never both, plus \"runtime\", \"titles\", " +
-                "\"year\", \"directors\", \"appleGenre\", \"purchaseInfo\" and \"extra\", all " +
+                "\"year\", \"directors\", \"appleGenre\", \"purchaseInfo\", \"extra\" and " +
+                "\"publishedKey\" (which the editor writes and a hand-editor leaves out), all " +
                 "optional; and \"sheet\" takes " +
                 "\"title\", \"runtime\" and \"directors\". Every name is camelCase, comments and trailing " +
                 "commas are allowed, and a worked example of all of it is " +

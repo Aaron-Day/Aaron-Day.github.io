@@ -564,19 +564,6 @@ public sealed class EditorSaveTests
     }
 
     /// <summary>
-    /// The sentence half of C5, and the defect the owner found on his first real save: he ticked the
-    /// candidates box instead of the id box, the save reported "the next build will apply it", and he
-    /// repeated that back as his account of what he had done. A candidates-only save applies NOTHING -- the
-    /// pipeline asserts no id for it and makes no search, and that arm comes before the cache, so a record
-    /// matched today publishes with no id at all afterwards.
-    /// <para>
-    /// Keyed on the candidates and never on a missing id: a runtime-only or title-only correction asserts no
-    /// id either and the build DOES apply those, so the id is the wrong question. That is also why
-    /// AnIdCorrectionOnABundleRecordNothingCanBindIsFiledWhereTheNextBuildWillNotLook still reads the
-    /// unchanged sentence -- it asserts an id.
-    /// </para>
-    /// </summary>
-    /// <summary>
     /// Every write records the key the PREVIOUS build published for this record, taken from the row's own
     /// <c>MovieRecord.K</c>. It is the one member of a correction that is evidence rather than a decision, and
     /// it is what lets the binding find this record again once this very save has moved the key it derives.
@@ -628,6 +615,19 @@ public sealed class EditorSaveTests
         Assert.DoesNotContain("550-999", written, StringComparison.Ordinal);
     }
 
+    /// <summary>
+    /// The sentence half of C5, and the defect the owner found on his first real save: he ticked the
+    /// candidates box instead of the id box, the save reported "the next build will apply it", and he
+    /// repeated that back as his account of what he had done. A candidates-only save applies NOTHING -- the
+    /// pipeline asserts no id for it and makes no search, and that arm comes before the cache, so a record
+    /// matched today publishes with no id at all afterwards.
+    /// <para>
+    /// Keyed on the candidates and never on a missing id: a runtime-only or title-only correction asserts no
+    /// id either and the build DOES apply those, so the id is the wrong question. That is also why
+    /// AnIdCorrectionOnABundleRecordNothingCanBindIsFiledWhereTheNextBuildWillNotLook still reads the
+    /// unchanged sentence -- it asserts an id.
+    /// </para>
+    /// </summary>
     [Fact]
     public async Task ASaveThatRecordsCandidatesOnlyDoesNotPromiseTheNextBuildWillApplyIt()
     {

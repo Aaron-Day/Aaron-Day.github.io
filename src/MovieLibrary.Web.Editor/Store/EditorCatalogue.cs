@@ -164,10 +164,24 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
             taken.Add(slot);
         }
 
-        var byPublishedKey = RecordsByPublishedKey(draft);
+        var (byRecordedKey, byDerivedKey) = RecordsByPublishedKey(draft);
 
+        // EVERY recorded claim is consumed before ANY derived one, across the whole catalogue. One slot can
+        // carry both of its keys at once -- correcting a runtime to a sibling cut's makes this entry derive
+        // that sibling's published key -- and while both kinds sat in one map, this single loop bound
+        // whichever of a slot's two keys it happened to meet first. That made the CATALOGUE's order the
+        // arbiter: it is ordered by title then runtime, which has nothing to say about which row owns a
+        // correction, so the sibling listed first took it and the row that owned it got a blank form.
         foreach (var movie in movies)
-            if (byPublishedKey.TryGetValue(movie.K, out var slot) && !taken.Contains(slot))
+            if (byRecordedKey.TryGetValue(movie.K, out var slot) && !taken.Contains(slot))
+                Take(movie, slot);
+
+        // Only now the derived keys, and only onto slots nothing recorded has claimed. This is the pass that
+        // binds a hand-written entry, a version 1 entry, and any entry whose correction the last build has
+        // already applied -- the ordinary state, where entry and published output agree.
+        foreach (var movie in movies)
+            if (!bound.ContainsKey(movie.K)
+                && byDerivedKey.TryGetValue(movie.K, out var slot) && !taken.Contains(slot))
                 Take(movie, slot);
 
         var byHash = new Dictionary<string, FilmEntry>(StringComparer.Ordinal);
@@ -252,25 +266,32 @@ public sealed class EditorCatalogue(ICatalogueSource catalogue, LocalDirectory d
     /// it is the only key a hand-written entry has, and the only key a version 1 file has at all. Dropping
     /// either re-opens the hole: the recorded key alone misses every second edit, the derived key alone is
     /// the defect.</para>
-    /// <para><b><see cref="Dictionary{TKey, TValue}.TryAdd"/> and two passes, not one loop.</b> A record's
-    /// recorded key can equal a DIFFERENT record's derived key; first-write-wins across two ordered passes is
-    /// what makes "recorded beats derived" true of the map as a whole rather than only within one record.</para>
+    /// <para><b>Two maps, because the CONSUMER has to order them.</b> A record's recorded key can equal a
+    /// DIFFERENT record's derived key, and one slot can carry both of its own keys at once. Holding both kinds
+    /// in a single map hid the second case: <see cref="Bind"/>'s one loop over the published catalogue bound
+    /// whichever of a slot's two keys it met first, so the catalogue's own order decided it. Two maps let Bind
+    /// consume every recorded claim before any derived one, which is what makes "recorded beats derived" a
+    /// property of the binding rather than an accident of enumeration.
+    /// <see cref="Dictionary{TKey, TValue}.TryAdd"/> still settles a collision WITHIN one map, first-write-wins
+    /// in store order.</para>
     /// </remarks>
-    private static Dictionary<string, RecordSlot> RecordsByPublishedKey(StoreDraft draft)
+    private static (Dictionary<string, RecordSlot> Recorded, Dictionary<string, RecordSlot> Derived)
+        RecordsByPublishedKey(StoreDraft draft)
     {
-        var map = new Dictionary<string, RecordSlot>(StringComparer.Ordinal);
+        var recorded = new Dictionary<string, RecordSlot>(StringComparer.Ordinal);
+        var derived = new Dictionary<string, RecordSlot>(StringComparer.Ordinal);
 
         foreach (var entry in draft.Store.Films)
             for (var position = 1; position <= entry.Records.Count; position++)
-                if (entry.Records[position - 1].PublishedKey is { Length: > 0 } recorded)
-                    map.TryAdd(recorded, new RecordSlot(entry, position));
+                if (entry.Records[position - 1].PublishedKey is { Length: > 0 } key)
+                    recorded.TryAdd(key, new RecordSlot(entry, position));
 
         foreach (var entry in draft.Store.Films)
             for (var position = 1; position <= entry.Records.Count; position++)
-                if (RecordLink.PublishedKeyOf(entry, position) is { } derived)
-                    map.TryAdd(derived, new RecordSlot(entry, position));
+                if (RecordLink.PublishedKeyOf(entry, position) is { } key)
+                    derived.TryAdd(key, new RecordSlot(entry, position));
 
-        return map;
+        return (recorded, derived);
     }
 
     private async Task<Reading> ReadStoreAsync()
