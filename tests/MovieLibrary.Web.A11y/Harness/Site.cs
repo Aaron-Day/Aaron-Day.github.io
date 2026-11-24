@@ -64,5 +64,12 @@ internal static class Site
         template.Replace("{Key}", Catalogue.FirstKey, StringComparison.Ordinal)
                 .Replace("{Slug}", Catalogue.FirstSlug, StringComparison.Ordinal);
 
+    /// <summary>
+    /// The series page's own address, for a scan that wants THAT page rather than every address. Through
+    /// <see cref="Filled"/> and not spelled again, so the gate cannot end up scanning one series here and a
+    /// different one in the arrival scan.
+    /// </summary>
+    public static string ShowUrl => Filled("/tv/{Slug}");
+
     public static IEnumerable<object[]> AddressData() => Addresses().Select(a => new object[] { a });
 }

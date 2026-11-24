@@ -99,6 +99,15 @@ public class FocusVisibleTests(BrowserGate gate, ITestOutputHelper output)
         { "/", 1280, 1024, false, false },
         { Site.UnmatchedUrl, 320, 812, false, false },
         { Site.UnmatchedUrl, 1280, 1024, false, false },
+
+        // A SERIES' OWN PAGE, for one control type that exists nowhere else on the site: the browser's
+        // <details> disclosure, one per season. Every other keyboard stop in the app is a link, a button,
+        // an input or a select, and "/" carries all four -- but a <summary> is none of them, it is the only
+        // control here the app does not style itself, and a focus ring the user agent paints is exactly the
+        // kind that a reset or a theme token can quietly remove. Both widths, because the ring is painted
+        // over a control whose width is the page's.
+        { Site.ShowUrl, 320, 812, false, false },
+        { Site.ShowUrl, 1280, 1024, false, false },
         { "/", 1280, 1024, true, false },
         { "/", 1280, 1024, false, true },
     };
@@ -119,6 +128,8 @@ public class FocusVisibleTests(BrowserGate gate, ITestOutputHelper output)
             await session.StateSentenceAsync(PageSession.CouldNotLoad);
         else if (await session.Page.Locator(".catalog-state, .tv-state").CountAsync() > 0)
             await session.GridAsync();   // both tile walls page at Catalogue.PageSize
+        else if (await session.Page.Locator(".film-state, .show-state").CountAsync() > 0)
+            await session.SubjectAsync();   // a record page: wait for the subject, never for a grid
 
         // The bar is revealed with the same inline display: block the Blazor runtime writes.
         // ObscuredFocusTests' remarks set out why that is a simulation and why it is the honest one
@@ -217,6 +228,13 @@ public class FocusVisibleTests(BrowserGate gate, ITestOutputHelper output)
             Assert.Contains(seen, s => s.Contains(".reload", StringComparison.Ordinal));
             Assert.Contains(seen, s => s.Contains(".dismiss", StringComparison.Ordinal));
         }
+
+        // And the control the series page is in this table FOR. A walk that reached the shell and stopped
+        // would clear the floor below while saying nothing about the one stop in this app whose ring the
+        // user agent paints rather than app.css. ShowDetailTests counts the three disclosures in the
+        // markup, so their absence here is a broken walk and not a page without seasons.
+        if (address == Site.ShowUrl)
+            Assert.Contains(seen, s => s.Contains("summary", StringComparison.OrdinalIgnoreCase));
 
         // Rule T1. Four stops is the floor on every one of these cases: the skip link, the brand link, one
         // nav control, and then at least one more - the pager's two buttons on the films page, the
