@@ -217,10 +217,15 @@
                 </div>
             }
 
+            @* "Bought as part of" AND NOT "How it was bought", which this said first. MovieRecord.Own is
+               the Apple library's bundle column, and in the live catalogue every one of its 721 distinct
+               values is the name of a set -- "Paramount Pictures 50-Movie Collection", "The James Bond
+               Collection" -- and never a price, a date or a shop. A label that promises how and answers
+               with what reads as a field that went wrong. *@
             @if (f.Own is { Length: > 0 } purchase)
             {
                 <div>
-                    <dt>How it was bought</dt>
+                    <dt>Bought as part of</dt>
                     <dd>@purchase</dd>
                 </div>
             }

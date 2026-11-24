@@ -93,7 +93,7 @@ internal static class AnnouncerTestExtensions
         """
         [{"i":807,"k":"807-110","t":"Se7en","y":1995,"rt":110,"p":"/se7en.jpg","b":"/se7en-wide.jpg","g":[53],"ag":"Thriller","vote":8.4,
           "dir":["David Fincher"],"ov":"Two detectives hunt a killer who uses the seven deadly sins as his motives.",
-          "tag":"Seven deadly sins. Seven ways to die.","col":"The Se7en Collection","own":"Bought 2019",
+          "tag":"Seven deadly sins. Seven ways to die.","col":"The Se7en Collection","own":"New Line 3-Film Collection",
           "cast":[{"n":"Brad Pitt","c":"Mills","p":"/pitt.jpg"},{"n":"Morgan Freeman","c":"Somerset"},{"n":"An Extra","c":""}],
           "ex":{"Shelf":"B3","Disc":"","":"orphaned","Case":"keep case"},"mc":0.95},
          {"i":601,"k":"601-88","t":"The Peeled Edition","y":1982,"rt":88,"g":[],"ag":"Drama","vote":6.2,"dir":[],"cast":[],"mc":0.55},

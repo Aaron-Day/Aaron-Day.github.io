@@ -194,7 +194,7 @@ internal static class Catalogue
                 new CastMember("Third Billed", "", null),
             ],
             Col = "The Fixture Collection",
-            Own = "Bought 2019",
+            Own = "The Fixture 3-Film Collection",
             Ex = new Dictionary<string, string> { ["Shelf"] = "B3", ["Case"] = "keep case" },
         };
 

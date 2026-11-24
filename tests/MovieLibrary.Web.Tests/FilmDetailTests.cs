@@ -394,7 +394,7 @@ public class FilmDetailTests : BunitContext
              ("Genres", "Thriller"),
              ("Category in the library", "Thriller"),
              ("Collection", "The Se7en Collection"),
-             ("How it was bought", "Bought 2019"),
+             ("Bought as part of", "New Line 3-Film Collection"),
              ("Match", "Matched, 95%")],
             Facts(cut, 0));
     }
