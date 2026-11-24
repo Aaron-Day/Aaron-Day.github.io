@@ -583,46 +583,15 @@
         focusHeadingAfterRetry = result is { State: CatalogState.Ready, Value: not null };
     }
 
-    /// <summary>
-    /// Moves focus to <paramref name="element"/> unless the reader has moved focus themselves, and says
-    /// whether it happened.
-    /// </summary>
     /// <remarks>
-    /// The guard cannot be written in C#: there is no way to read <c>document.activeElement</c> from Blazor,
-    /// and <c>ElementReference.FocusAsync()</c> focuses unconditionally. index.html defines the helper and
-    /// says why the move is a conformance route rather than a workaround.
+    /// Both moves go through <see cref="PageFocus"/>, which is where the three copies of them ended up
+    /// after the series list needed a fourth. These two wrappers stay so that the call sites above read as
+    /// they did and so that this page still names the two moves it is allowed to make.
     /// </remarks>
-    private Task<bool> FocusIfUnmoved(ElementReference element) =>
-        TryFocus(() => Js.InvokeAsync<bool>("movieLibrary.focusIfUnmoved", element, PageFocus.Keepers).AsTask());
+    private Task<bool> FocusIfUnmoved(ElementReference element) => PageFocus.IfUnmoved(Js, element);
 
-    /// <summary>Moves focus to <paramref name="element"/> whatever holds it now.</summary>
-    /// <remarks>
-    /// The successful retry only: the button the reader was standing on has gone, so focus would otherwise
-    /// drop to <c>&lt;body&gt;</c>. Nothing to ask the helper here -- the control that had focus no longer
-    /// exists.
-    /// </remarks>
-    private static Task<bool> FocusOutright(ElementReference element) =>
-        TryFocus(async () => { await element.FocusAsync(); return true; });
-
-    /// <summary>Runs one focus move and says whether it happened, swallowing the ways interop can fail.</summary>
-    /// <remarks>
-    /// <c>ElementReference.FocusAsync()</c> is interop exactly as the helper call is -- it invokes
-    /// <c>Blazor._internal.domWrapper.focus</c> -- so an escape from either reveals <c>#blazor-error-ui</c>,
-    /// which carries an assertive role of its own, on a page that is already reporting a failure through the
-    /// announcer or has just recovered from one: two assertive sources for one event, which is the thing this
-    /// project forbids outright.
-    /// </remarks>
-    private static async Task<bool> TryFocus(Func<Task<bool>> move)
-    {
-        try
-        {
-            return await move();
-        }
-        catch (Exception ex) when (ex is JSException or TaskCanceledException or ObjectDisposedException)
-        {
-            return false;
-        }
-    }
+    /// <inheritdoc cref="PageFocus.Outright" />
+    private static Task<bool> FocusOutright(ElementReference element) => PageFocus.Outright(element);
 
     /// <remarks>
     /// R7: clear what this page set, and raise nothing new. Both calls are cancellations -- they take effect

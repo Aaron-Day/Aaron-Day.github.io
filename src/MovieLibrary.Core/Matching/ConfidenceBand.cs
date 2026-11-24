@@ -49,9 +49,24 @@ public static class ConfidenceBand
     /// as records badged wrongly rather than as a failing test.
     /// </para>
     /// </remarks>
-    public static Confidence Of(MovieRecord m)
-        => m.I == 0 ? Confidence.Unmatched
-         : m.Mc >= MatchScorer.AcceptThreshold ? Confidence.Confident
+    public static Confidence Of(MovieRecord m) => Of(m.I, m.Mc);
+
+    /// <summary>The band a series falls in, from the index row a grid is given.</summary>
+    /// <remarks>
+    /// A series carries the same two fields with the same meanings, so it gets the same answer from the
+    /// same code rather than a second copy of the precedence below. The alternative -- a web-side helper
+    /// that read <c>I</c> and <c>Mc</c> itself -- is the drift this class exists to prevent, and it would
+    /// have drifted silently: both halves would still badge SOMETHING.
+    /// </remarks>
+    public static Confidence Of(ShowSummary s) => Of(s.I, s.Mc);
+
+    /// <summary>The band a series falls in, from its full record.</summary>
+    public static Confidence Of(ShowRecord s) => Of(s.I, s.Mc);
+
+    /// <summary>The rule itself, over the two fields every record shape carries.</summary>
+    private static Confidence Of(int id, double score)
+        => id == 0 ? Confidence.Unmatched
+         : score >= MatchScorer.AcceptThreshold ? Confidence.Confident
          : Confidence.Uncertain;
 
     /// <summary>The short label for a band, or null where the band carries no badge at all.</summary>

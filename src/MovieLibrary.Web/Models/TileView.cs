@@ -74,4 +74,38 @@ public sealed record TileView(
 
         return new("movies/" + film.K, film.P, film.T, film.Y, [.. facts], ConfidenceBand.Of(film));
     }
+
+    /// <summary>A series' tile, from the index row rather than its full record.</summary>
+    /// <remarks>
+    /// <para>
+    /// <b>BOTH FACTS ARE GUARDED, and the guard is this mapping's whole job.</b> 7 of the 122 series in the
+    /// live library matched TMDB but carry no episode list, so <c>SeasonCount</c> and <c>TotalEpisodes</c>
+    /// are both 0 on them. "0 seasons" and "0 of 0 episodes" would state as facts that a series nobody
+    /// could look up has no episodes, which is the same lie <see cref="ForFilm"/> refuses to tell with
+    /// "0.0/10". A fact nobody measured is ABSENT, so those tiles show a title, a year and a badge -- and
+    /// the badge is the thing that explains the gap.
+    /// </para>
+    /// <para>
+    /// The year is the year the series STARTED, which is what <c>FirstYear</c> holds and what every library
+    /// shows beside a series title. A range would need the last air date, which the index does not carry.
+    /// </para>
+    /// <para>
+    /// <c>href</c> is built from the SLUG the build wrote, which is also the only string
+    /// <c>CatalogService.GetShowAsync</c> will accept, so a title that somehow carried a path in it cannot
+    /// become a request for something else.
+    /// </para>
+    /// </remarks>
+    public static TileView ForShow(ShowSummary show)
+    {
+        ArgumentNullException.ThrowIfNull(show);
+
+        var facts = new List<TileFact>(2);
+
+        if (show.SeasonCount > 0) facts.Add(new("tile-seasons", ShowText.Seasons(show.SeasonCount)));
+
+        if (show.TotalEpisodes > 0)
+            facts.Add(new("tile-episodes", ShowText.Episodes(show.OwnedEpisodes, show.TotalEpisodes)));
+
+        return new("tv/" + show.Slug, show.P, show.T, show.FirstYear, [.. facts], ConfidenceBand.Of(show));
+    }
 }
