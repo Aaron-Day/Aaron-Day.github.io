@@ -15,6 +15,16 @@ internal static class Scripts
     public const string TileCountIs =
         "n => document.querySelectorAll(\"ul.grid[role=list] > li\").length === n";
 
+    /// <summary>Whether the rating group's CHECKED option is the one whose label reads this.</summary>
+    /// <remarks>
+    /// Found through the checked input's own wrapping label rather than by index or by value, because the
+    /// label's text is what a reader is told and the value attribute is not. It also survives the group
+    /// being reordered, which "the ninth input" would not.
+    /// </remarks>
+    public const string RatingChosenIs =
+        "want => { const c = document.querySelector(\"fieldset.rating input[type=radio]:checked\"); "
+        + "const l = c && c.closest(\"label\"); return !!l && l.textContent.trim() === want; }";
+
     /// <summary>Whether a region, by id, holds exactly this text.</summary>
     public const string RegionHolds =
         "a => { const el = document.getElementById(a[0]); return !!el && el.textContent === a[1]; }";
@@ -527,8 +537,13 @@ internal static class Scripts
           const id = a.id ? "#" + a.id : "";
           const cls = typeof a.className === "string" && a.className.trim().length > 0
             ? "." + a.className.trim().split(/\s+/).join(".") : "";
+          // The NAME attribute is in the description because a grouped radio carries nothing else: the
+          // rating group's twelve inputs have no id and no class of their own - their wrapping label is
+          // what names them - so without this they all describe as a bare "input" and a walk could not
+          // say which group it had reached.
+          const nm = a.getAttribute("name") ? "[name=" + a.getAttribute("name") + "]" : "";
           const s = getComputedStyle(a);
-          return [a.tagName.toLowerCase() + id + cls,
+          return [a.tagName.toLowerCase() + id + cls + nm,
                   s.outlineStyle, s.outlineWidth, s.outlineColor, s.outlineOffset, s.boxShadow];
         }
         """;

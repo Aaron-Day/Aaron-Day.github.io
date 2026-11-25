@@ -234,7 +234,19 @@ public class FocusVisibleTests(BrowserGate gate, ITestOutputHelper output)
         // user agent paints rather than app.css. ShowDetailTests counts the three disclosures in the
         // markup, so their absence here is a broken walk and not a page without seasons.
         if (address == Site.ShowUrl)
+        {
             Assert.Contains(seen, s => s.Contains("summary", StringComparison.OrdinalIgnoreCase));
+
+            // AND THE TWO MARKS IN THE RECORD PAGE'S OWN SECTION. The rating group is the only radio group
+            // in the app, and a radio's ring is painted by the user agent over a control the user agent
+            // also DRAWS -- the case app.css's own :focus-visible rule is least likely to be reaching, and
+            // the one a reset is most likely to flatten. The group is one stop because its twelve inputs
+            // share a name, so this is also the walk's own check that the grouping survived: ungrouped,
+            // twelve descriptions would appear here instead of one. RecordPageMarksTests counts both
+            // controls in the markup, so an absence here is a broken walk and not a page without marks.
+            Assert.Contains(seen, s => s.Contains("[name=your-rating]", StringComparison.Ordinal));
+            Assert.Contains(seen, s => s.Contains("tile-fav", StringComparison.Ordinal));
+        }
 
         // AND THE FAVOURITE CONTROL ON THE WALL, which is the one control in this app a reader meets sixty
         // copies of -- so it is also the one whose focus ring being invisible would be invisible sixty times.

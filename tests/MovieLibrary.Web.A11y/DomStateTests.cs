@@ -1,6 +1,7 @@
 using System.Globalization;
 using Microsoft.Playwright;
 using MovieLibrary.Web.A11y.Harness;
+using MovieLibrary.Web.Models;
 using Xunit.Abstractions;
 
 namespace MovieLibrary.Web.A11y;
@@ -522,7 +523,6 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         scan.MustBeClean(Booted);
     }
 
-    /// <summary>The film page address these states use: the one record Catalogue furnishes for it.</summary>
     /// <summary>
     /// State 17: a wall with a favourite MARKED. The one state in the app that renders
     /// <c>aria-pressed="true"</c>, and the only one where a control's own appearance carries meaning.
@@ -571,6 +571,79 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
         scan.MustBeClean(Booted);
     }
 
+    /// <summary>
+    /// State 18: a record page with both marks made - the star pressed and a SCORE chosen. The only state
+    /// in the app that renders a radio group, and the only one with a checked radio in it.
+    /// </summary>
+    /// <remarks>
+    /// <b>A grouped radio set is a thing axe can only judge in a browser.</b> The twelve inputs share one
+    /// name attribute, which is what makes them one group and one tab stop; lose the shared name and they
+    /// are twelve ungrouped radios, each its own stop, each announced without the group's legend. The DOM
+    /// assertions below check the grouping and the legend directly because axe reports none of that: a page
+    /// of ungrouped, individually-labelled radios is axe-clean and unusable with a screen reader.
+    /// <para>
+    /// The labels are WRAPPING, with no id and no for attribute, which is the house pattern the facet panel
+    /// set - so each input's accessible name comes from its own label's text and nothing in the group
+    /// depends on ids being unique across a page that also carries a cast list and a facts table. Choosing
+    /// by ROLE and NAME here is the assertion for that: GetByRole finds nothing if the name does not
+    /// resolve, however correct the markup looks.
+    /// </para>
+    /// <para>
+    /// Both marks are made in one state on purpose. They sit in one section, so a scan with only one of
+    /// them made would miss the combination - a pressed button beside a checked radio, both carrying their
+    /// own boundary against the same panel - and target-size and contrast are exactly the rules that fail
+    /// on a combination rather than on either control alone.
+    /// </para>
+    /// </remarks>
+    [BrowserFact]
+    public async Task ARecordPageWithBothMarksMadeIsClean()
+    {
+        await using var session = await gate.OpenAsync();
+
+        await session.GotoAsync(FilmAddress);
+        await session.SubjectAsync();
+
+        var group = session.Page.Locator("fieldset.rating");
+        var options = group.Locator("input[type=radio]");
+
+        // Floors first: the scan below would be clean over a record page with no marks section at all, and
+        // the group assertions would pass vacuously over a group that rendered no options.
+        Assert.Equal(1, await group.CountAsync());
+        Assert.Equal(TitlePreference.MaxRating - TitlePreference.MinRating + 2, await options.CountAsync());
+        Assert.NotEqual(string.Empty, (await group.Locator("legend").InnerTextAsync()).Trim());
+
+        // ONE GROUP: every option shares the one name. This is the stop count, and TabWalk's bound for a
+        // record page is derived on the assumption that it holds.
+        var names = await options.EvaluateAllAsync<string[]>("els => els.map(e => e.name)");
+        Assert.Single(names.Distinct(StringComparer.Ordinal));
+
+        // Not rated is checked before anything is chosen: a group with nothing checked has no way back to
+        // "no score", and the first option is the state every title starts in.
+        Assert.True(await options.First.IsCheckedAsync(),
+            "No option is checked on an unrated film, so the group has no way back to \"no score\".");
+
+        var seven = session.Page.GetByRole(
+            AriaRole.Radio, new PageGetByRoleOptions { Name = "7", Exact = true });
+
+        await seven.CheckAsync();
+
+        // Waited for in the DOM rather than trusted from the click: the choice runs through the store and
+        // the group re-renders from the SAVED score, so this is the assertion that the write came back.
+        await session.Page.WaitForFunctionAsync(Scripts.RatingChosenIs, "7");
+
+        var star = session.Page.Locator("button.tile-fav");
+        Assert.Equal(1, await star.CountAsync());
+        Assert.Equal("false", await star.GetAttributeAsync("aria-pressed"));
+
+        await star.ClickAsync();
+        await session.Page.WaitForFunctionAsync(
+            "() => document.querySelector(\"button.tile-fav\")?.getAttribute(\"aria-pressed\") === \"true\"");
+
+        var scan = await AxeScan.OfAsync(session.Page, "a record page with both marks made", output);
+        scan.MustBeClean(Booted);
+    }
+
+    /// <summary>The film page address these states use: the one record Catalogue furnishes for it.</summary>
     private static string FilmAddress => "/movies/" + Catalogue.FirstKey;
 
     private static string ShowAddress => Site.ShowUrl;
