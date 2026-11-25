@@ -49,7 +49,7 @@ public class SourceContractTests
     /// <para>
     /// T1: a glob that stopped matching would loop over nothing and pass, so the subject count has a floor
     /// and the newest files are named. Every hand-written .razor is failable here -- there is no
-    /// carve-out -- so the floor is the whole set: nineteen today (fifteen in the web project, four in the
+    /// carve-out -- so the floor is the whole set: twenty today (sixteen in the web project, four in the
     /// editor), and later tasks only add.
     /// </para>
     /// </remarks>
@@ -59,9 +59,9 @@ public class SourceContractTests
         var files = WebRoot.FilesWithEditor("*.razor").ToList();
         var paths = files.Select(f => f.Path).ToList();
 
-        Assert.True(files.Count >= 19,
-            "This rule found " + files.Count + " components. There are nineteen hand-written .razor files: "
-            + "fifteen under the web project and four under the editor project. Fewer means "
+        Assert.True(files.Count >= 20,
+            "This rule found " + files.Count + " components. There are twenty hand-written .razor files: "
+            + "sixteen under the web project and four under the editor project. Fewer means "
             + "WebRoot.FilesWithEditor stopped finding them, not that the app shrank -- and a rule with no "
             + "subjects passes over nothing.");
 
@@ -74,6 +74,7 @@ public class SourceContractTests
         Assert.Contains("Components/FacetPanel.razor", paths);
         Assert.Contains("Components/FavouriteButton.razor", paths);
         Assert.Contains("Components/RatingChoice.razor", paths);
+        Assert.Contains("Components/ListChoices.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Components/RecordForm.razor", paths);
 
@@ -116,7 +117,8 @@ public class SourceContractTests
     [Fact]
     public void TheTileAndTheMarkControlsTakeNoAnnouncerAndSpeakNothing()
     {
-        string[] subjects = ["PosterTile.razor", "FavouriteButton.razor", "RatingChoice.razor"];
+        string[] subjects =
+            ["PosterTile.razor", "FavouriteButton.razor", "RatingChoice.razor", "ListChoices.razor"];
 
         foreach (var file in subjects)
         {
@@ -475,11 +477,11 @@ public class SourceContractTests
         // T1: the count is of what the rule can actually fail on, which is every .razor file except the one
         // carve-out. A discovery walk that stopped matching would otherwise loop over nothing and pass.
         //
-        // EIGHTEEN, counted rather than guessed. Fourteen in the web project: App, Layout/NavMenu,
+        // NINETEEN, counted rather than guessed. Fifteen in the web project: App, Layout/NavMenu,
         // Layout/RouteAnnouncer, Pages/Movies, Pages/FilmDetail, Pages/Tv, Pages/ShowDetail,
         // Pages/NotFound, _Imports, Components/PosterTile, Components/PosterGrid, Components/FacetPanel,
-        // Components/FavouriteButton and Components/RatingChoice. Four in the editor: Pages/RecordEditor,
-        // Components/RecordForm, Components/Worklist and _Imports.
+        // Components/FavouriteButton, Components/RatingChoice and Components/ListChoices. Four in the
+        // editor: Pages/RecordEditor, Components/RecordForm, Components/Worklist and _Imports.
         // _Imports is in the count because the rule can genuinely fail on it -- this is a text scan, and a
         // status role typed into it would be found and reported like any other. The floor was 4 when there
         // were six, which let two components fall out of WebRoot.Files before the rule noticed: the T1
@@ -490,9 +492,9 @@ public class SourceContractTests
         // exactly the markup someone would reach for a polite region with, and they are plain text in both
         // components. Each of the two says so in its own comment, spelled in words, because this scan is a
         // substring match and a comment quoting a marker fails just as the attribute would.
-        Assert.True(failable.Count >= 18,
-            "This rule found " + failable.Count + " components it could fail on. There are eighteen "
-            + "hand-written .razor files outside the layout's own MainLayout: fourteen in the web project "
+        Assert.True(failable.Count >= 19,
+            "This rule found " + failable.Count + " components it could fail on. There are nineteen "
+            + "hand-written .razor files outside the layout's own MainLayout: fifteen in the web project "
             + "and four in the editor. Fewer means WebRoot.FilesWithEditor stopped finding them, not that "
             + "the app shrank -- and a rule with no subjects passes over nothing.");
 
@@ -507,6 +509,7 @@ public class SourceContractTests
         Assert.Contains("Components/FacetPanel.razor", paths);
         Assert.Contains("Components/FavouriteButton.razor", paths);
         Assert.Contains("Components/RatingChoice.razor", paths);
+        Assert.Contains("Components/ListChoices.razor", paths);
         Assert.Contains("Pages/Movies.razor", paths);
         Assert.Contains("Pages/FilmDetail.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);

@@ -585,7 +585,7 @@ public class MarkupContractTests
             + "in either case the poster contracts are checking nothing while reading as covered.");
 
         // MEASURED on 2026-11-24, per scope, rather than reasoned from the pages: 26 on each of the two
-        // films scopes, 21 on the series page, 18 on the film page, 15 on the series wall, 6 on each of
+        // films scopes, 22 on the series page, 19 on the film page, 15 on the series wall, 6 on each of
         // the three scopes with a Try again or an in-prose link, 5 on each of the two scopes whose record
         // is missing, and 2 on the host page. A FLOOR and not an equality, because every later task adds
         // controls; the number matters in the other direction, where a shortfall means a scope stopped
@@ -597,17 +597,21 @@ public class MarkupContractTests
         // 11 to 15 on the series wall, whose fixture holds four series -- and the total went from 100 to
         // 110. Then the record pages: a Your library section with one favourite button and a twelve-option
         // rating group is thirteen more controls on each, so the film page went 5 to 18 and the series
-        // page 8 to 21, and the total 110 to 136. The two scopes still on 5 are the ones whose record is
-        // not in the stub catalogue: they render the missing-record state and no marks at all.
+        // page 8 to 21, and the total 110 to 136. Then the LISTS section on those same two pages, which
+        // in these scopes holds no group at all: the fixture document has no lists in it, so what renders
+        // is the sentence saying where lists are made, and its link is the one control it adds -- 19 and
+        // 22, and the total 138. A scope with lists in it would count one checkbox per list instead, so
+        // this floor is measured on the page a FIRST visit sees. The two scopes still on 5 are the ones
+        // whose record is not in the stub catalogue: they render the missing-record state and no marks.
         //
         // A control on a tile is the first subject these contracts have had sixty copies of in the real
         // library, which is why the name rule above matters more than the count: sixty controls that
         // passed by sharing one name would be this floor met and the page unusable. The rating group is
         // the mirror image -- twelve radios that SHARE one name on purpose, each named by its own label --
         // and the accessible-name contract is what keeps those labels from going missing.
-        Assert.True(controls >= 136,
+        Assert.True(controls >= 138,
             "The accessible-name and nested-widget contracts have " + controls + " subjects across "
-            + EveryScope().Count + " scopes, against the 136 measured on 2026-11-24. Fewer means a scope "
+            + EveryScope().Count + " scopes, against the 138 measured on 2026-11-24. Fewer means a scope "
             + "stopped rendering what it used to -- most likely a page that is no longer reaching its "
             + "Ready state in these scopes, a wall that has stopped putting a favourite control on each "
             + "of its tiles, or a record page that has lost its Your library section.");

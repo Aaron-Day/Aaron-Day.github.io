@@ -1,0 +1,36 @@
+/* The membership group, laid out like the rating group one file over and for the same reasons: no
+   fieldset frame, the legend left where the browser puts it, wrapping options, and each option a 44px
+   target on both axes whose label wraps its own input.
+
+   ONE DIFFERENCE, AND IT IS THE REASON THIS IS NOT THE SAME RULE SET. A list's name is the owner's words
+   and can be long, so an option here is as wide as its name needs and is allowed to break across lines
+   inside its own box -- where a rating option is one or two digits and is sized by the touch token alone.
+   A nowrap rule copied over from there would push a list called "Films to watch with the children"
+   sideways past the viewport, which is the horizontal scroll StyleContractTests and the browser gate both
+   watch for. */
+.lists { border: 0; padding: 0; margin: 0; min-inline-size: 0; }
+
+.lists legend { padding: 0; }
+
+.lists-options { display: flex; flex-wrap: wrap; gap: .25rem .5rem; }
+
+.lists-options label {
+  display: inline-flex; align-items: center; gap: .5rem;
+  min-height: var(--touch);
+  padding: .25rem .5rem;
+  border: 2px solid var(--line-strong); border-radius: 6px;
+  cursor: pointer;
+}
+
+/* The input keeps a target of its own inside the label: a 13px checkbox is the thing a reader aims at
+   when the label's text is two lines tall, and the label being 44px does not help the box itself. */
+.lists-options input { inline-size: 1.15rem; block-size: 1.15rem; flex: none; }
+
+/* The sentence that stands in for the group when the owner has no lists. Prose, so it takes the page's
+   own measure rather than the group's layout. */
+.lists-none { margin: 0; max-width: 60ch; }
+
+/* NO :checked RULE AND NO COLOUR CUE, for the reason RatingChoice.razor.css gives at length: the checkbox
+   itself is the state, the platform paints it, and a tint would be a second indicator for a fact the
+   control already carries. No transition and no animation, so no prefers-reduced-motion block -- the
+   motion rule in StyleContractTests reads this file by glob and will say so if that changes. */

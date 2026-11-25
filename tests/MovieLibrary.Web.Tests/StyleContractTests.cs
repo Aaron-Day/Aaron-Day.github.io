@@ -112,10 +112,10 @@ public class StyleContractTests
         var sheets = WebRoot.FilesWithEditor("*.razor.css").ToList();
         var names = sheets.Select(s => s.Path).ToList();
 
-        Assert.True(sheets.Count >= 8,
-            "This rule found " + sheets.Count + " component stylesheets. There are eight: six in the web "
-            + "project and two in the editor. Fewer means WebRoot.FilesWithEditor stopped finding them, "
-            + "and a rule with no subjects passes over nothing.");
+        Assert.True(sheets.Count >= 13,
+            "This rule found " + sheets.Count + " component stylesheets. There are thirteen: eleven in the "
+            + "web project and two in the editor. Fewer means WebRoot.FilesWithEditor stopped finding "
+            + "them, and a rule with no subjects passes over nothing.");
 
         Assert.Contains("Layout/MainLayout.razor.css", names);
         Assert.Contains("Layout/NavMenu.razor.css", names);
@@ -239,8 +239,8 @@ public class StyleContractTests
         // that stopped matching cannot leave this one quietly looping over an empty set.
         var sheets = Stylesheets();
 
-        Assert.True(sheets.Count >= 10,
-            "This rule found " + sheets.Count + " stylesheets. There are ten: app.css, seven scoped "
+        Assert.True(sheets.Count >= 14,
+            "This rule found " + sheets.Count + " stylesheets. There are fourteen: app.css, eleven scoped "
             + "component and page sheets in the web project and two in the editor. Fewer means the glob stopped finding them.");
 
         // THE ONE NAMED EXCEPTION, which is the escape the ban's own note promised. A poster tile IS an
@@ -626,8 +626,8 @@ public class StyleContractTests
     {
         var sheets = Stylesheets();
 
-        Assert.True(sheets.Count >= 10,
-            "This rule found " + sheets.Count + " stylesheets. There are ten: app.css, seven scoped "
+        Assert.True(sheets.Count >= 14,
+            "This rule found " + sheets.Count + " stylesheets. There are fourteen: app.css, eleven scoped "
             + "component and page sheets in the web project and two in the editor. Fewer means the glob stopped finding them and a missing suppression could "
             + "sit in one of the sheets this never read.");
 
@@ -702,8 +702,8 @@ public class StyleContractTests
     {
         var sheets = Stylesheets();
 
-        Assert.True(sheets.Count >= 10,
-            "This rule found " + sheets.Count + " stylesheets. There are ten: app.css, seven scoped "
+        Assert.True(sheets.Count >= 14,
+            "This rule found " + sheets.Count + " stylesheets. There are fourteen: app.css, eleven scoped "
             + "component and page sheets in the web project and two in the editor. Fewer means the glob stopped finding them.");
 
         var borders = sheets

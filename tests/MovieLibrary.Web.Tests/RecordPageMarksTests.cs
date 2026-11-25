@@ -23,9 +23,21 @@ public class RecordPageMarksTests : BunitContext
 
     private FakePreferenceStorage Storage => Services.GetRequiredService<FakePreferenceStorage>();
 
-    private (IRenderedComponent<MovieLibrary.Web.App> Cut, ManualTimeProvider Clock) At(string address)
+    /// <summary>Two lists the owner made in some earlier visit, as the JSON that visit would have left.</summary>
+    private const string TwoLists =
+        "{\"v\":1,\"lists\":[{\"id\":\"l1\",\"name\":\"Christmas\"},{\"id\":\"l2\",\"name\":\"Rainy Sunday\"}]}";
+
+    /// <param name="document">
+    /// What this browser already holds, seeded BEFORE the first render: the page reads it in
+    /// OnParametersSetAsync, so a document set afterwards would arrive too late to be on the page.
+    /// </param>
+    private (IRenderedComponent<MovieLibrary.Web.App> Cut, ManualTimeProvider Clock) At(
+        string address, string? document = null)
     {
         var clock = this.AddAnnouncer();
+
+        if (document is not null) Storage.Json = document;
+
         return (this.RenderAppAt(address), clock);
     }
 
@@ -158,5 +170,90 @@ public class RecordPageMarksTests : BunitContext
         Assert.Equal("false", cut.Find("button.tile-fav").GetAttribute("aria-pressed"));
         Assert.Equal("Favourite, The Peeled Edition, 1982", cut.Find("button.tile-fav").TextContent.Trim());
         Assert.True(Store.IsFavourite(TitleKind.Film, AnnouncerTestExtensions.FilmKey));   // still starred
+    }
+
+    // ============================================================ the lists
+
+    /// <remarks>
+    /// <b>A SECOND section, under its own heading, and second in the order.</b> Membership is not a third
+    /// control about this one title: a list is a set that exists across the whole library and is edited on
+    /// a page of its own, so it gets a heading a reader can navigate to. Second rather than first because
+    /// the star and the score are about the record in front of him and the lists are about everything else.
+    /// </remarks>
+    [Theory]
+    [InlineData(AnnouncerTestExtensions.FilmAddress)]
+    [InlineData(AnnouncerTestExtensions.ShowAddress)]
+    public void EveryRecordPageOffersItsListsUnderASecondHeading(string address)
+    {
+        var (cut, _) = At(address, TwoLists);
+
+        Assert.Equal("Lists", cut.FindAll(".page-section h2")[1].TextContent.Trim());
+
+        var section = cut.FindAll(".page-section")[1];
+
+        Assert.Equal(
+            "Lists this title is in", section.QuerySelector("fieldset legend")!.TextContent.Trim());
+        Assert.Equal(
+            ["Christmas", "Rainy Sunday"],
+            section.QuerySelectorAll("label").Select(l => l.TextContent.Trim()));
+    }
+
+    /// <remarks>
+    /// With no lists the section is still there and still has its heading, because a reader who has never
+    /// made a list is the reader who most needs to be told where lists are made. What it holds instead is a
+    /// sentence with a link to that page -- never an empty group, which is a tab stop that leads nowhere.
+    /// </remarks>
+    [Theory]
+    [InlineData(AnnouncerTestExtensions.FilmAddress)]
+    [InlineData(AnnouncerTestExtensions.ShowAddress)]
+    public void WithNoListsTheSectionIsStillThereAndPointsAtThePageWhereListsAreMade(string address)
+    {
+        var (cut, _) = At(address);
+        var section = cut.FindAll(".page-section")[1];
+
+        Assert.Equal("Lists", section.QuerySelector("h2")!.TextContent.Trim());
+        Assert.Empty(section.QuerySelectorAll("fieldset"));
+        Assert.Equal("lists", section.QuerySelector("p a")!.GetAttribute("href"));
+    }
+
+    /// <remarks>
+    /// Filed under the record's own key -- the published key for a film, the slug for a series -- and under
+    /// the LIST'S ID rather than its name, so that renaming a list does not rewrite every title in it.
+    /// </remarks>
+    [Theory]
+    [InlineData(AnnouncerTestExtensions.FilmAddress, TitleKind.Film)]
+    [InlineData(AnnouncerTestExtensions.ShowAddress, TitleKind.Series)]
+    public async Task AMembershipTickedOnARecordPageIsSavedForThatRecord(string address, TitleKind kind)
+    {
+        var (cut, _) = At(address, TwoLists);
+
+        var key = kind == TitleKind.Film
+            ? AnnouncerTestExtensions.FilmKey
+            : AnnouncerTestExtensions.ShowSlug;
+
+        await cut.FindAll("fieldset input[type=checkbox]")[1].ChangeAsync(new ChangeEventArgs { Value = true });
+
+        Assert.True(Store.IsInList(kind, key, "l2"));
+        Assert.False(Store.IsInList(kind, key, "l1"));
+        Assert.Contains("\"l2\"", Store.Export(), StringComparison.Ordinal);
+    }
+
+    /// <remarks>
+    /// The third control reporting the one cause, and the same guard: the alert region accumulates, so a
+    /// page that spoke per control would say the same sentence three times for one full browser.
+    /// </remarks>
+    [Fact]
+    public async Task ARefusedMembershipSaysSoInBothChannelsAndOnlyOnce()
+    {
+        var (cut, clock) = At(AnnouncerTestExtensions.FilmAddress, TwoLists);
+        Storage.Refuse = true;
+
+        await cut.Find("button.tile-fav").ClickAsync();
+        await cut.FindAll("fieldset input[type=checkbox]")[0].ChangeAsync(new ChangeEventArgs { Value = true });
+        clock.Advance(Announcer.SettleDelay);
+
+        Assert.False(cut.FindAll("fieldset input[type=checkbox]")[0].HasAttribute("checked"));
+        Assert.Equal(FavouriteButton.CouldNotSave, cut.Find("#alert-region").TextContent);
+        Assert.Single(cut.FindAll(".film-state p"), p => p.TextContent.Trim() == FavouriteButton.CouldNotSave);
     }
 }

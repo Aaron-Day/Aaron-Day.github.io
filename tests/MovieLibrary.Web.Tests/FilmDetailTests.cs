@@ -98,6 +98,16 @@ public class FilmDetailTests : BunitContext
     private static IReadOnlyList<AngleSharp.Dom.IElement> TryAgain(IRenderedComponent<MovieLibrary.Web.App> cut) =>
         cut.FindAll("button.try-again");
 
+    /// <summary>The one page section whose h2 reads this, so a test can assert on what is INSIDE it.</summary>
+    /// <remarks>
+    /// Single and not First: two sections under one heading is itself a defect, and a test that quietly
+    /// took the first of them would hide it.
+    /// </remarks>
+    private static AngleSharp.Dom.IElement Section(
+        IRenderedComponent<MovieLibrary.Web.App> cut, string heading) =>
+        cut.FindAll(".page-section")
+            .Single(s => s.QuerySelector("h2")?.TextContent.Trim() == heading);
+
     /// <summary>A dl's pairs as term-and-value, in document order.</summary>
     private static List<(string Term, string Value)> Facts(IRenderedComponent<MovieLibrary.Web.App> cut, int which) =>
         [.. cut.FindAll("dl.facts")[which].QuerySelectorAll("div")
@@ -253,10 +263,11 @@ public class FilmDetailTests : BunitContext
     /// generic and buys nothing. <c>MarkupContractTests.HeadingLevelsNeverSkipALevel</c> is live because of
     /// these, and <c>TheHeadingOrderContractHasTheSubjectsTheDetailPageGaveIt</c> counts them.
     /// <para>
-    /// <b>"Your library" IS FIRST, and the order is asserted rather than the set.</b> It holds the only
-    /// two controls on the page that answer the owner -- his star and his score -- where everything below
-    /// is TMDB's words about the film, so it is what he opens the page for. An exact list in order is also
-    /// the only form of this assertion that would have noticed the section being added at all.
+    /// <b>"Your library" IS FIRST AND "Lists" IS SECOND, and the order is asserted rather than the set.</b>
+    /// Between them they hold every control on the page that answers the owner -- his star, his score and
+    /// which of his lists this film is in -- where everything below is TMDB's words about the film, so they
+    /// are what he opens the page for. An exact list in order is also the only form of this assertion that
+    /// would have noticed either section being added at all.
     /// </para>
     /// </remarks>
     [Fact]
@@ -265,7 +276,7 @@ public class FilmDetailTests : BunitContext
         var (cut, _) = RenderFilm();
 
         Assert.Equal(
-            new[] { "Your library", "Overview", "Cast", "Details", "Additional information" },
+            new[] { "Your library", "Lists", "Overview", "Cast", "Details", "Additional information" },
             cut.FindAll(".page-section h2").Select(h => h.TextContent.Trim()));
 
         Assert.Empty(cut.FindAll("main section"));
@@ -274,10 +285,11 @@ public class FilmDetailTests : BunitContext
 
     /// <remarks>
     /// A section with nothing to put in it is ABSENT and not an empty heading. A heading over nothing tells
-    /// someone navigating by heading that content exists which does not. TWO sections always appear: Your
+    /// someone navigating by heading that content exists which does not. THREE sections always appear: Your
     /// library, whose controls exist for every record the owner holds -- an unmatched one most of all, since
-    /// his own mark is then the only judgement on the page -- and Details, because every record has a match
-    /// to report. Overview, Cast and Additional information are the ones this film has nothing for.
+    /// his own mark is then the only judgement on the page -- Lists, which has a sentence to show when he
+    /// has no lists and so is never empty, and Details, because every record has a match to report.
+    /// Overview, Cast and Additional information are the ones this film has nothing for.
     /// </remarks>
     [Fact]
     public void ASectionWithNothingInItIsNotRenderedAtAll()
@@ -285,7 +297,7 @@ public class FilmDetailTests : BunitContext
         var (cut, _) = RenderFilm("/movies/601-88");
 
         Assert.Equal(
-            new[] { "Your library", "Details" },
+            new[] { "Your library", "Lists", "Details" },
             cut.FindAll(".page-section h2").Select(h => h.TextContent.Trim()));
     }
 
@@ -295,9 +307,14 @@ public class FilmDetailTests : BunitContext
         var (cut, _) = RenderFilm();
 
         Assert.Equal("Seven deadly sins. Seven ways to die.", cut.Find("p.film-tagline").TextContent.Trim());
+
+        // FOUND THROUGH ITS OWN HEADING and not as the first paragraph in a section. It was
+        // cut.Find(".page-section p") until the Lists section arrived above Overview with a sentence of its
+        // own in it, at which point the first match was that sentence and this test failed on a page that
+        // was correct. A section's paragraph belongs to the section its heading names.
         Assert.Equal(
             "Two detectives hunt a killer who uses the seven deadly sins as his motives.",
-            cut.Find(".page-section p").TextContent.Trim());
+            Section(cut, "Overview").QuerySelector("p")!.TextContent.Trim());
 
         // Not emphasis, not a heading, not a blockquote: a studio's sentence is a sentence. <em> would claim
         // a stress the words do not have, and a reader hears that claim.

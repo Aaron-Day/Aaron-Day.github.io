@@ -1,0 +1,106 @@
+@inject PreferenceStore Preferences
+
+@* WHICH OF THE OWNER'S LISTS A TITLE IS IN, as a checkbox each, and the shape is the house pattern the
+   facet panel set: a fieldset with a legend, and a WRAPPING label per control -- the input inside its own
+   label, no id and no for attribute. A record page already renders a cast list and a facts table, so ids
+   generated per list would be the one thing on it that has to stay unique across markup nobody is looking
+   at while editing lists.
+
+   CHECKBOXES AND NOT A MULTI-SELECT. A title can be in several lists at once, and <select multiple> is the
+   control everybody mishandles: on a touch screen it is a scroll inside a scroll, with a keyboard it needs
+   Ctrl-click or Ctrl-arrow to add a second choice without dropping the first, and a reader who does not
+   know that silently replaces what was there. Checkboxes cost one tab stop each, which is the price.
+
+   THE LEGEND SAYS WHAT THE SET IS FOR, because a screen reader reads it with each option: "Lists this
+   title is in, Christmas, checkbox, not checked". It is visually hidden only because the page's own h2
+   above it says Lists in the same words, and two visible labels for one group is the repetition that
+   makes a page longer to read without saying anything new.
+
+   WITH NO LISTS THERE IS NO GROUP AT ALL. An empty fieldset is a control that cannot be used, and a
+   reader who tabbed to it would get a group with nothing in it; the sentence takes its place and says
+   where lists are made. A LINK and not an instruction, since the page it names is one click away.
+
+   IT ANNOUNCES NOTHING: a checkbox reports its own new state. A browser that refuses to SAVE is a fact
+   about the device rather than the title, so it goes to the page through Refused.
+   SourceContractTests.TheTileAndTheMarkControlsTakeNoAnnouncer pins the silence. *@
+@if (Preferences.Lists.Count == 0)
+{
+    <p class="lists-none">
+        You have no lists in this browser yet. <a href="lists">Make one on the Lists page</a>.
+    </p>
+}
+else
+{
+    <fieldset class="lists">
+        <legend class="visually-hidden">Lists this title is in</legend>
+
+        <div class="lists-options">
+            @foreach (var list in Preferences.Lists)
+            {
+                var id = list.Id;
+                <label>
+                    <input type="checkbox" checked="@member.Contains(id)"
+                           @onchange="e => ToggleAsync(id, e.Value is true)" /> @list.Name
+                </label>
+            }
+        </div>
+    </fieldset>
+}
+
+@code {
+    /// <summary>
+    /// The ids this title is in, as the group is drawing them. A SET and not a lookup through the store on
+    /// every render: with twenty lists the markup above would otherwise ask the store twenty questions per
+    /// paint, and the optimistic edit below has to be able to put one id back without re-reading anything.
+    /// </summary>
+    private readonly HashSet<string> member = new(StringComparer.Ordinal);
+
+    /// <summary>Which half of the document this title is filed under.</summary>
+    [Parameter, EditorRequired] public required TitleKind Kind { get; set; }
+
+    /// <summary>The published key: <c>K</c> for a film, the slug for a series. Never the TMDB id.</summary>
+    [Parameter, EditorRequired] public required string Key { get; set; }
+
+    /// <summary>The record's TMDB id, saved beside the key so a re-keyed record can be found again.</summary>
+    [Parameter] public int TmdbId { get; set; }
+
+    /// <summary>
+    /// Called when the browser refused to save. The page renders <see cref="FavouriteButton.CouldNotSave"/>;
+    /// the group has already put itself back to the memberships the browser actually holds.
+    /// </summary>
+    [Parameter] public EventCallback Refused { get; set; }
+
+    /// <summary>
+    /// Re-read on every parameter set rather than once, for the reason
+    /// <c>FavouriteButton.OnParametersSet</c> gives: a record page that routes from one title to another
+    /// keeps its component instances, so memberships read once would be the previous title's.
+    /// </summary>
+    protected override void OnParametersSet()
+    {
+        member.Clear();
+
+        foreach (var id in Preferences.For(Kind, Key).ListIds) member.Add(id);
+    }
+
+    /// <summary>
+    /// Adds or removes one membership, drawing it before the write and putting it back if the browser
+    /// refuses -- the same order <c>FavouriteButton</c> argues for.
+    /// </summary>
+    private async Task ToggleAsync(string listId, bool wanted)
+    {
+        if (wanted) member.Add(listId);
+        else member.Remove(listId);
+
+        try
+        {
+            await Preferences.SetMembershipAsync(Kind, Key, TmdbId, listId, wanted);
+        }
+        catch (PreferenceStorageException)
+        {
+            if (wanted) member.Remove(listId);
+            else member.Add(listId);
+
+            await Refused.InvokeAsync();
+        }
+    }
+}

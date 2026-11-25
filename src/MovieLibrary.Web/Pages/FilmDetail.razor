@@ -141,6 +141,18 @@
                               Refused="OnStorageRefused" />
             </div>
 
+            @* AND THE LISTS, as their own section with its own heading. NOT a third control inside Your
+               library: that section is two controls about this one film, where membership is about the
+               owner's lists -- a set that exists across the whole library and is edited on a page of its
+               own. A reader who wants "which of my lists is this in" reads one heading to find it, and a
+               reader who has no lists reads a sentence saying where lists are made instead of tabbing
+               through a group that cannot be used. *@
+            <div class="page-section">
+                <h2>Lists</h2>
+
+                <ListChoices Kind="TitleKind.Film" Key="@f.K" TmdbId="f.I" Refused="OnStorageRefused" />
+            </div>
+
             @* PLAIN div AND h2, NEVER <section>. A section with an accessible name becomes a region
                landmark, and four of them on one page would file Overview, Cast, Details and Additional
                information in a landmark list beside Banner, Navigation and Main -- which is what a landmark

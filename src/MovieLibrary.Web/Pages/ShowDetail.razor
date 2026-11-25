@@ -98,6 +98,16 @@
         <RatingChoice Kind="TitleKind.Series" Key="@Slug" TmdbId="s.I" Refused="OnStorageRefused" />
     </div>
 
+    @* AND THE LISTS, as their own section, for the reason the film page's own copy of this gives: Your
+       library is about this one series, where membership is about a set of lists that exists across the
+       whole library and is edited on a page of its own. ABOVE the seasons with it, so both answers to
+       "what have I said about this" come before the build's reading of the sheet. *@
+    <div class="page-section">
+        <h2>Lists</h2>
+
+        <ListChoices Kind="TitleKind.Series" Key="@Slug" TmdbId="s.I" Refused="OnStorageRefused" />
+    </div>
+
     @if (s.Seasons.Length > 0)
     {
         <div class="page-section">
