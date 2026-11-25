@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 734586,
+    "title": "Joker: Put on a Happy Face",
+    "overview": "Featuring interviews with filmmakers and industry legends, discover the origins and evolution of The Joker, and learn why The Clown Prince of Crime is universally hailed as the greatest comic-book supervillain of all time.",
+    "tagline": "",
+    "runtime": 36,
+    "release_date": "2020-08-18",
+    "vote_average": 7.9,
+    "poster_path": "/am5Sst8LFmU0bhPrzU3km4RRy3J.jpg",
+    "backdrop_path": "/2sqEIKxlpYwoX5L84Zxbu6QRyv1.jpg",
+    "genres": [
+      {
+        "id": 99,
+        "name": "Documentary"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Kevin Conroy",
+      "character": "Narrator (voice)",
+      "profile_path": "/zvWhAwO2l8Kb5IJTwTbKzURypg7.jpg"
+    },
+    {
+      "name": "Neal Adams",
+      "character": "Self",
+      "profile_path": "/8tnfmCt3UhGUIIx8jldMvsMWtEs.jpg"
+    },
+    {
+      "name": "Will Arnett",
+      "character": "Self",
+      "profile_path": "/cXupYqk2ERP13XBkw816skYdVDO.jpg"
+    },
+    {
+      "name": "David Ayer",
+      "character": "Self",
+      "profile_path": "/7JmWK2wg2StEc9eYjY96s7OJgb7.jpg"
+    }
+  ]
+}

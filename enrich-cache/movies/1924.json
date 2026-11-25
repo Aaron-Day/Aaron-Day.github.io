@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 1924,
+    "title": "Superman",
+    "overview": "Mild-mannered Clark Kent works as a reporter at the Daily Planet alongside his crush, Lois Lane. Clark must summon his superhero alter-ego when the nefarious Lex Luthor launches a plan to take over the world.",
+    "tagline": "You\u0027ll believe a man can fly.",
+    "runtime": 144,
+    "release_date": "1978-12-14",
+    "vote_average": 7.165,
+    "poster_path": "/d7px1FQxW4tngdACVRsCSaZq0Xl.jpg",
+    "backdrop_path": "/5PfHGXosySGs0l1JfeREspy3v6G.jpg",
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 8537,
+      "name": "Superman Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Christopher Reeve",
+      "character": "Superman / Clark Kent",
+      "profile_path": "/vAGrPf3ajy6OVE3FhgABynZfybP.jpg"
+    },
+    {
+      "name": "Margot Kidder",
+      "character": "Lois Lane",
+      "profile_path": "/uJI4BwpmD9fX8D8jBdn2jT5rpvo.jpg"
+    },
+    {
+      "name": "Gene Hackman",
+      "character": "Lex Luthor",
+      "profile_path": "/zDlv9vXjnRsvwNI0bARG0uOt5CJ.jpg"
+    },
+    {
+      "name": "Marlon Brando",
+      "character": "Jor-El",
+      "profile_path": "/yIvLpf9U9NfAvC7fuAgOQ8tu51T.jpg"
+    }
+  ]
+}

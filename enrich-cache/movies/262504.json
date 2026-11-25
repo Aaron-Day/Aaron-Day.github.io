@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 262504,
+    "title": "Allegiant",
+    "overview": "Beatrice Prior and Tobias Eaton venture into the world outside of the fence and are taken into protective custody by a mysterious agency known as the Bureau of Genetic Welfare.",
+    "tagline": "The truth lies beyond the wall.",
+    "runtime": 120,
+    "release_date": "2016-03-09",
+    "vote_average": 6.1,
+    "poster_path": "/faq9JlF8znUGQ5p3En1W61Fi5p0.jpg",
+    "backdrop_path": "/qSP072apfe2EEcd5Qg9vGYy2OLw.jpg",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 283579,
+      "name": "Divergent Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Shailene Woodley",
+      "character": "Beatrice \u0027Tris\u0027 Prior",
+      "profile_path": "/gL2NvHKW9wAH3qkZuJ76ULUiArB.jpg"
+    },
+    {
+      "name": "Theo James",
+      "character": "Tobias \u0027Four\u0027 Eaton",
+      "profile_path": "/g4yeW1EgIpyht0fy1stv7EXUmPC.jpg"
+    },
+    {
+      "name": "Miles Teller",
+      "character": "Peter Hayes",
+      "profile_path": "/kDf3sW3USjEBDQ3Ua7lbwOfwty6.jpg"
+    },
+    {
+      "name": "Zo\u00EB Kravitz",
+      "character": "Christina",
+      "profile_path": "/n0mhAgmY6eJQmA7kaugsTZEJgHo.jpg"
+    }
+  ]
+}

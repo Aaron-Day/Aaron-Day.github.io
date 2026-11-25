@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 76170,
+    "title": "The Wolverine",
+    "overview": "Wolverine faces his ultimate nemesis - and tests of his physical, emotional, and mortal limits - in a life-changing voyage to modern-day Japan.",
+    "tagline": "When he\u0027s most vulnerable, he\u0027s most dangerous.",
+    "runtime": 126,
+    "release_date": "2013-07-24",
+    "vote_average": 6.435,
+    "poster_path": "/t2wVAcoRlKvEIVSbiYDb8d0QqqS.jpg",
+    "backdrop_path": "/bEAQfLTykGg232kJogBlxRYaRqU.jpg",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 453993,
+      "name": "The Wolverine Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Hugh Jackman",
+      "character": "Logan",
+      "profile_path": "/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Tao Okamoto",
+      "character": "Mariko",
+      "profile_path": "/ztnb6OVslOSaTILOvGVpUOCY88W.jpg"
+    },
+    {
+      "name": "Rila Fukushima",
+      "character": "Yukio",
+      "profile_path": "/raklPPc6AZcDnNrjmJu60FHxI2F.jpg"
+    },
+    {
+      "name": "Will Yun Lee",
+      "character": "Harada",
+      "profile_path": "/zR29E2BHrp6PF7bxD6bVq0nDZXm.jpg"
+    }
+  ]
+}

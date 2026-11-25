@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 10579,
+    "title": "Dracula III: Legacy",
+    "overview": "Dracula leads vampire hunters Father Uffizi and Luke back to Eastern Europe, and a country plagued by civil war.",
+    "tagline": "You can\u0027t fight it. You can\u0027t kill it.",
+    "runtime": 86,
+    "release_date": "2005-07-12",
+    "vote_average": 4.9,
+    "poster_path": "/fhUsnommsQryWd9eBsgniy9jRGW.jpg",
+    "backdrop_path": "/1efaWFGd9o2tSF0VOTR3x8uZOmE.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 115822,
+      "name": "Dracula (Wes Craven) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Scott Lee",
+      "character": "Father Uffizi",
+      "profile_path": "/7jObZCM3diuPV0WlKkzOd4uE2CJ.jpg"
+    },
+    {
+      "name": "Jason London",
+      "character": "Luke",
+      "profile_path": "/bFkC2ZRcurTQzbjBuuMljFCKfEv.jpg"
+    },
+    {
+      "name": "Alexandra Wescourt",
+      "character": "Julia Hughes",
+      "profile_path": null
+    },
+    {
+      "name": "Rutger Hauer",
+      "character": "Dracula",
+      "profile_path": "/xyag0LbjocTwx2Ht7B3RofvCNMT.jpg"
+    }
+  ]
+}

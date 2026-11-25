@@ -1,0 +1,43 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 19158,
+    "title": "Graveyard Shift",
+    "overview": "John Hall is a drifter who wanders into a small town in Maine. He needs a job and decides to seek employment at the community\u0027s top business: a large textile mill. He is hired to work the \u0022graveyard shift\u0022 -- from around midnight to dawn -- and, along with a few others, he is charged with cleaning out the basement. This task strikes the workers as simple enough, but then, as they proceed deeper underground, they encounter an unspeakable monstrosity intent on devouring them all.",
+    "tagline": "Stephen King took you to the edge with The Shining and Pet Sematary. This time... he pushes you over.",
+    "runtime": 89,
+    "release_date": "1990-10-26",
+    "vote_average": 5.365,
+    "poster_path": "/vITvLxFsDbbg6TMgpYWWscMOf0G.jpg",
+    "backdrop_path": "/d69Mloif5hP7Ajl0YbJjREyrfXC.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "David Andrews",
+      "character": "John Hall",
+      "profile_path": "/s5jEvhtGrYptw3Mmv7bejvcAKLv.jpg"
+    },
+    {
+      "name": "Kelly Wolf",
+      "character": "Jane Wisconsky",
+      "profile_path": "/21YVw5lcEpLV8GGAHFYzWkSedRB.jpg"
+    },
+    {
+      "name": "Stephen Macht",
+      "character": "Warwick",
+      "profile_path": "/6FTqfNoPKfnRhD2HkH3MqPpH5eA.jpg"
+    },
+    {
+      "name": "Andrew Divoff",
+      "character": "Danson",
+      "profile_path": "/7jdGolskoipA8HRJHjLdCLzc7Zs.jpg"
+    }
+  ]
+}

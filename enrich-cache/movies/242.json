@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 242,
+    "title": "The Godfather Part III",
+    "overview": "In the midst of trying to legitimize his business dealings in 1979 New York and Italy, aging mafia don, Michael Corleone seeks forgiveness for his sins while taking a young protege under his wing.",
+    "tagline": "All the power on earth can\u0027t change destiny.",
+    "runtime": 162,
+    "release_date": "1990-12-25",
+    "vote_average": 7.413,
+    "poster_path": "/lm3pQ2QoQ16pextRsmnUbG2onES.jpg",
+    "backdrop_path": "/zNnjHLDtV8Ti3aworltaeaLMov4.jpg",
+    "genres": [
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 230,
+      "name": "The Godfather Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Al Pacino",
+      "character": "Michael Corleone",
+      "profile_path": "/m8HAAjq1T75JypKk0v1FFQn4ysZ.jpg"
+    },
+    {
+      "name": "Diane Keaton",
+      "character": "Kay Adams",
+      "profile_path": "/A8B3BsFgbmw2WEmJuQX38qeU9eR.jpg"
+    },
+    {
+      "name": "Talia Shire",
+      "character": "Connie Corleone Rizzi",
+      "profile_path": "/oktJmlLeyYKBCWPNjHskDwAfjct.jpg"
+    },
+    {
+      "name": "Andy Garcia",
+      "character": "Vincent Mancini",
+      "profile_path": "/9EivXoBlczZcFBet96WOoFbDsfF.jpg"
+    }
+  ]
+}

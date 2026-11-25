@@ -1,0 +1,55 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 360920,
+    "title": "The Grinch",
+    "overview": "The Grinch hatches a scheme to ruin Christmas when the residents of Whoville plan their annual holiday celebration. But a certain little who might change things.",
+    "tagline": "It was the heist before Christmas.",
+    "runtime": 85,
+    "release_date": "2018-11-08",
+    "vote_average": 6.868,
+    "poster_path": "/Al7DMUp8bqUN4JwXVNxfJYyv5cH.jpg",
+    "backdrop_path": "/5lWIYxYEqWi8j3ZloxXntw3ImBo.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Benedict Cumberbatch",
+      "character": "The Grinch (voice)",
+      "profile_path": "/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg"
+    },
+    {
+      "name": "Rashida Jones",
+      "character": "Donna Who (voice)",
+      "profile_path": "/cgWGm9eYCretBWeljPVtpRV7n6V.jpg"
+    },
+    {
+      "name": "Kenan Thompson",
+      "character": "Bricklebaum (voice)",
+      "profile_path": "/vHPhDGc1om91TzoIQ4zMscpNmxF.jpg"
+    },
+    {
+      "name": "Cameron Seely",
+      "character": "Cindy-Lou Who (voice)",
+      "profile_path": "/btT8UCFUlhDR1NE4bFc2kj9gYWF.jpg"
+    }
+  ]
+}

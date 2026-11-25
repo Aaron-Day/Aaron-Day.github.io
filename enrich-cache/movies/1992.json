@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 1992,
+    "title": "Planet Terror",
+    "overview": "Two doctors find their graveyard shift inundated with townspeople ravaged by sores. Among the wounded is Cherry Darling, a dancer whose leg was ripped from her body. As the invalids quickly become enraged aggressors, Cherry and her ex-boyfriend El Wray lead a team of accidental warriors into the night.",
+    "tagline": "Humanity\u0027s last hope\u2026 rests on a high power machine gun!",
+    "runtime": 105,
+    "release_date": "2007-04-06",
+    "vote_average": 6.694,
+    "poster_path": "/30ANoUgvqQZ9tgCnM6OyJZUveaf.jpg",
+    "backdrop_path": "/iZBUOcku0xv9MMfiEMXiDqErPXl.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Rose McGowan",
+      "character": "Cherry Darling",
+      "profile_path": "/cWggkWqhs5IIuSHxjoRuxlze1C9.jpg"
+    },
+    {
+      "name": "Freddy Rodr\u00EDguez",
+      "character": "Wray",
+      "profile_path": "/syCMZjteDnmWQa26NqOaVaRdYmj.jpg"
+    },
+    {
+      "name": "Marley Shelton",
+      "character": "Dr. Dakota Block",
+      "profile_path": "/6fqY7QzZI5yoCCJZpvX0MceL6kZ.jpg"
+    },
+    {
+      "name": "Josh Brolin",
+      "character": "Dr. William Block",
+      "profile_path": "/7QpneI3HoZCCDVPyWx3p3t7yeo7.jpg"
+    }
+  ]
+}

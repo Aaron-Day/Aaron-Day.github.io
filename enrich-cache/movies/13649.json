@@ -1,0 +1,54 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 13649,
+    "title": "High School Musical 2",
+    "overview": "The East High Wildcats are gearing up for big fun as they land the coolest summer jobs imaginable. Troy, Gabriella, Chad, and Taylor have scored sweet gigs at the Lava Springs Country Club owned by Sharpay and Ryan\u0027s family. Sharpay\u0027s first rule of business: Get Troy. As Troy experiences a life of privilege he\u0027s never known, will he give up the Wildcats and Gabriella to rise to the top?",
+    "tagline": "Are you ready for the start of something new?",
+    "runtime": 111,
+    "release_date": "2007-08-17",
+    "vote_average": 6.501,
+    "poster_path": "/kqImEYXsDIlzPpu0KxyTXIx7smW.jpg",
+    "backdrop_path": "/aS7M839gMmcokvUwNM3DFqOLqzu.jpg",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 10770,
+        "name": "TV Movie"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 87253,
+      "name": "High School Musical Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Zac Efron",
+      "character": "Troy Bolton",
+      "profile_path": "/6yL3AGhT3QBQBY6SSWIFWwdQySl.jpg"
+    },
+    {
+      "name": "Vanessa Hudgens",
+      "character": "Gabriella Montez",
+      "profile_path": "/lZQPTRoJLgfsARWdpxQid2dDzhr.jpg"
+    },
+    {
+      "name": "Ashley French",
+      "character": "Sharpay Evans",
+      "profile_path": "/ot6ib67jxvKVG1JCBl0ROPGtdeP.jpg"
+    },
+    {
+      "name": "Lucas Grabeel",
+      "character": "Ryan Evans",
+      "profile_path": "/tyhpSWU7YDKntONxqC83Ifat2w6.jpg"
+    }
+  ]
+}

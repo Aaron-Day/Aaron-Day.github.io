@@ -1,0 +1,51 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 13377,
+    "title": "How the Grinch Stole Christmas!",
+    "overview": "Bitter and hateful, the Grinch is irritated at the thought of a nearby village having a happy time celebrating Christmas. Disguised as Santa Claus, with his dog made to look like a reindeer, he decides to raid the village to steal all the Christmas things.",
+    "tagline": "You\u0027re a mean one, Mr. Grinch.",
+    "runtime": 25,
+    "release_date": "1966-12-18",
+    "vote_average": 7.522,
+    "poster_path": "/7ir0iRuPK9OEuH569cp0nF5CJce.jpg",
+    "backdrop_path": "/1Q5b34cge5nClCpamxf3HkU18W1.jpg",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "belongs_to_collection": null
+  },
+  "cast": [
+    {
+      "name": "Boris Karloff",
+      "character": "Narrator / The Grinch (voice)",
+      "profile_path": "/fVi0QkiziavXB8HnWk5NzRcnCO1.jpg"
+    },
+    {
+      "name": "June Foray",
+      "character": "Cindy Lou Who (voice) (uncredited)",
+      "profile_path": "/6s5sWcOPGtVdbMFtZwkWadArj2I.jpg"
+    },
+    {
+      "name": "Dal McKennon",
+      "character": "Max (voice) (uncredited)",
+      "profile_path": "/7ke4WPwpxVsSsYfoibCKEmrI56V.jpg"
+    },
+    {
+      "name": "Thurl Ravenscroft",
+      "character": "Singer of You\u0027re A Mean One Mr. Grinch (voice) (uncredited)",
+      "profile_path": "/tBl2JShEjchNutGVpuet8aUd6e.jpg"
+    }
+  ]
+}

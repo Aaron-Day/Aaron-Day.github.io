@@ -1,0 +1,46 @@
+{
+  "fetchedUtc": "2026-11-25T03:35:44.7547177+00:00",
+  "movie": {
+    "id": 10578,
+    "title": "Dracula II: Ascension",
+    "overview": "A group of medical students discover the body of the infamous count. Soon, they find themselves in the middle of a bizarre and dangerous conflict when a shadowy figure offers them $30 million for the body so that he may harvest his blood.",
+    "tagline": "The terrifying sequel to Dracula 2000.",
+    "runtime": 84,
+    "release_date": "2003-06-07",
+    "vote_average": 5.6,
+    "poster_path": "/xt7DZ3Ww4itOJJzVjNxAZIdAMrB.jpg",
+    "backdrop_path": "/8FToZ1Q1BeURy1asr7Z9HOMXRcM.jpg",
+    "genres": [
+      {
+        "id": 27,
+        "name": "Horror"
+      }
+    ],
+    "belongs_to_collection": {
+      "id": 115822,
+      "name": "Dracula (Wes Craven) Collection"
+    }
+  },
+  "cast": [
+    {
+      "name": "Jason Scott Lee",
+      "character": "Father Uffizi",
+      "profile_path": "/7jObZCM3diuPV0WlKkzOd4uE2CJ.jpg"
+    },
+    {
+      "name": "Jason London",
+      "character": "Luke",
+      "profile_path": "/bFkC2ZRcurTQzbjBuuMljFCKfEv.jpg"
+    },
+    {
+      "name": "Craig Sheffer",
+      "character": "Professor Lowell",
+      "profile_path": "/w8wAAyXDifuxZDgvuL8U0fuLsLG.jpg"
+    },
+    {
+      "name": "Roy Scheider",
+      "character": "Cardinal Siqueros",
+      "profile_path": "/yyZ0DwUz3qAelJIUGVoOktGgMIh.jpg"
+    }
+  ]
+}
