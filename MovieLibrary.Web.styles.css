@@ -89,6 +89,98 @@ select[b-9jfn63vvns] { align-self: flex-start; }
 
 /* Bootstrap's reboot removes the tap highlight, so a pressed summary needs its own :active. */
 .facet-group > summary:active[b-9jfn63vvns] { background-color: var(--line); }
+/* /Components/FavouriteButton.razor.rz.scp.css */
+/* The star. Scoped to this component, so the three rules below cannot reach the badge beside them or any
+   other button in the app -- which is the reason this control is its own component rather than markup
+   inside PosterTile.razor.
+
+   IN FLOW, AND NEVER position: absolute OVER THE POSTER. That was the first design and it is the one
+   thing here that would have failed the gate rather than merely read badly: sixty absolutely positioned
+   44x44 targets overlap the tiles beneath them, axe reports target-size as INCOMPLETE rather than as a
+   pass, and AxeScan.IncompleteIsAFailure treats an incomplete check as a failure. A control in flow also
+   cannot cover the artwork it belongs to, and it reflows with the tile at 320px (SC 1.4.10).
+
+   margin-top: .25rem REPRODUCES .tile-body's gap BY HAND, exactly as .badge does and for the same reason:
+   .tile is a block container, not the flex container the gap belongs to, so nothing is inherited here.
+   Both are inline-level, so on a tile that carries a badge the two sit on one line where the column is
+   wide enough and wrap where it is not. Neither is allowed to shrink below --touch. */
+.tile-fav[b-jhi4sr8su4] {
+  display: inline-flex; align-items: center; justify-content: center;
+  flex: 0 0 auto;
+  min-width: var(--touch); min-height: var(--touch);
+  margin-top: .25rem; padding: 0;
+  border: 2px solid var(--line-strong); border-radius: 6px;
+  background: transparent; color: var(--txt);
+  cursor: pointer;
+}
+
+/* THE PRESSED STATE IS A SHAPE AND NOT A COLOUR, and that is SC 1.4.1 Use of Color, Level A: the hollow
+   star and the solid star are different shapes, so nothing about this control depends on a reader telling
+   two colours apart. The two states are ONE <path> with fill and stroke swapped -- the geometry is shared
+   by construction, which is why the markup carries no second path and no conditional icon.
+
+   --txt on --bg is 16.16:1 as a graphic and far past the 3:1 SC 1.4.11 Non-text Contrast asks of a
+   control's own state indicator; the 2px boundary is --line-strong, 3.89:1, which is the token app.css
+   reserves for exactly this -- a border that is a control's sole boundary. The panel tint on hover is
+   .badge's own background token, already measured against --txt.
+   NO TRANSITION AND NO ANIMATION, so no prefers-reduced-motion block: StyleContractTests reads this file
+   by glob and will say so if that stops being true. */
+.tile-fav-star[b-jhi4sr8su4] { fill: none; stroke: currentColor; stroke-width: 1.6; }
+.tile-fav[aria-pressed="true"] .tile-fav-star[b-jhi4sr8su4] { fill: currentColor; stroke: none; }
+
+/* Inside @media (hover: hover) because a bare :hover sticks after a tap and leaves a phantom highlighted
+   control behind the reader's finger -- the same ruling .tile-body's underline is under. */
+@media (hover: hover) {
+  .tile-fav:hover[b-jhi4sr8su4] { background: var(--panel2); }
+}
+
+/* FORCED COLORS KEEPS BOTH CUES, and it needs saying because the palette above is gone in that mode.
+   --line-strong and --txt are replaced by the user's own colours, so the border and the star survive as
+   CanvasText; the shape difference survives untouched, because fill and stroke are geometry rather than
+   palette. The pressed state additionally takes the system's own Highlight pair, which is the documented
+   way to say "selected" in that mode and is the one place this file reaches for a colour cue at all --
+   as a second cue on top of the shape, never instead of it. */
+@media (forced-colors: active) {
+  .tile-fav[b-jhi4sr8su4] { border-color: CanvasText; color: CanvasText; background: Canvas; }
+  .tile-fav[aria-pressed="true"][b-jhi4sr8su4] { background: Highlight; color: HighlightText; }
+}
+/* /Components/ListChoices.razor.rz.scp.css */
+/* The membership group, laid out like the rating group one file over and for the same reasons: no
+   fieldset frame, the legend left where the browser puts it, wrapping options, and each option a 44px
+   target on both axes whose label wraps its own input.
+
+   ONE DIFFERENCE, AND IT IS THE REASON THIS IS NOT THE SAME RULE SET. A list's name is the owner's words
+   and can be long, so an option here is as wide as its name needs and is allowed to break across lines
+   inside its own box -- where a rating option is one or two digits and is sized by the touch token alone.
+   A nowrap rule copied over from there would push a list called "Films to watch with the children"
+   sideways past the viewport, which is the horizontal scroll StyleContractTests and the browser gate both
+   watch for. */
+.lists[b-cueco2bpcb] { border: 0; padding: 0; margin: 0; min-inline-size: 0; }
+
+.lists legend[b-cueco2bpcb] { padding: 0; }
+
+.lists-options[b-cueco2bpcb] { display: flex; flex-wrap: wrap; gap: .25rem .5rem; }
+
+.lists-options label[b-cueco2bpcb] {
+  display: inline-flex; align-items: center; gap: .5rem;
+  min-height: var(--touch);
+  padding: .25rem .5rem;
+  border: 2px solid var(--line-strong); border-radius: 6px;
+  cursor: pointer;
+}
+
+/* The input keeps a target of its own inside the label: a 13px checkbox is the thing a reader aims at
+   when the label's text is two lines tall, and the label being 44px does not help the box itself. */
+.lists-options input[b-cueco2bpcb] { inline-size: 1.15rem; block-size: 1.15rem; flex: none; }
+
+/* The sentence that stands in for the group when the owner has no lists. Prose, so it takes the page's
+   own measure rather than the group's layout. */
+.lists-none[b-cueco2bpcb] { margin: 0; max-width: 60ch; }
+
+/* NO :checked RULE AND NO COLOUR CUE, for the reason RatingChoice.razor.css gives at length: the checkbox
+   itself is the state, the platform paints it, and a tint would be a second indicator for a fact the
+   control already carries. No transition and no animation, so no prefers-reduced-motion block -- the
+   motion rule in StyleContractTests reads this file by glob and will say so if that changes. */
 /* /Components/PosterGrid.razor.rz.scp.css */
 /* SC 1.4.10 Reflow requires this to be usable at 320 CSS px with no two-dimensional scrolling. It does NOT
    require two columns -- one column is the canonical Reflow outcome and is fully conformant. The
@@ -374,6 +466,41 @@ select[b-9jfn63vvns] { align-self: flex-start; }
    the token palette. What the tile DOES have to survive is the ring being drawn two pixels outside a card
    that sits in a grid -- outline-offset: 2px -- which is why nothing in this file clips with
    overflow: hidden. StyleContractTests asserts that absence for the title's sake and it serves the ring too. */
+/* /Components/RatingChoice.razor.rz.scp.css */
+/* The group, and its layout is the one thing here that is a visual decision rather than a rule.
+
+   NO fieldset BORDER AND NO PADDING: the browser's default fieldset is a 2px groove box with its own
+   inset, which would draw a frame nothing else on these pages has. The legend is left where the browser
+   puts it, in the box's top edge, because moving a legend out of its fieldset is how a group loses its
+   accessible name in some screen readers.
+
+   WRAP, AND EACH OPTION KEEPS --touch ON BOTH AXES. Twelve options at 44px do not fit 320px in one line,
+   so they wrap into rows; a flex row that squashed them would take a correct 44x44 target down to
+   whatever was left (SC 2.5.8 asks 24x24, and this project's own token asks 44). The label IS the target:
+   it wraps its own input, which is also why no id and no for= appear here -- the same pattern the facet
+   panel's checkboxes use. */
+.rating[b-1i71361t6q] { border: 0; padding: 0; margin: 0; min-inline-size: 0; }
+
+.rating legend[b-1i71361t6q] { padding: 0; font-weight: 600; }
+
+.rating-options[b-1i71361t6q] { display: flex; flex-wrap: wrap; gap: .25rem .5rem; margin-top: .5rem; }
+
+.rating-options label[b-1i71361t6q] {
+  display: inline-flex; align-items: center; justify-content: center; gap: .35rem;
+  min-width: var(--touch); min-height: var(--touch);
+  padding: 0 .4rem;
+  border: 2px solid var(--line-strong); border-radius: 6px;
+  cursor: pointer;
+}
+
+/* The one option whose words are longer than a digit, so it is allowed its own width. */
+.rating-clear[b-1i71361t6q] { white-space: nowrap; }
+
+/* NO :checked RULE AND NO COLOUR CUE. The radio itself is the state, drawn by the browser in the user's
+   own accent colour, and it survives forced colors because the platform paints it. A tinted label behind
+   it would be a second indicator in a colour this file would then have to measure, for a fact the control
+   already carries -- and under forced-colors mode the tint would be replaced anyway. No transition and no
+   animation either, so no prefers-reduced-motion block: StyleContractTests reads this file by glob. */
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-vx7rf0i3ew] { flex: 1; display: flex; flex-direction: column; }
 main[b-vx7rf0i3ew] { flex: 1; }
