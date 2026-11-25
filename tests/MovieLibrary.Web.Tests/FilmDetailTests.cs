@@ -252,6 +252,12 @@ public class FilmDetailTests : BunitContext
     /// and Main in a landmark list, which is not what a landmark list is for. Unnamed, a section maps to
     /// generic and buys nothing. <c>MarkupContractTests.HeadingLevelsNeverSkipALevel</c> is live because of
     /// these, and <c>TheHeadingOrderContractHasTheSubjectsTheDetailPageGaveIt</c> counts them.
+    /// <para>
+    /// <b>"Your library" IS FIRST, and the order is asserted rather than the set.</b> It holds the only
+    /// two controls on the page that answer the owner -- his star and his score -- where everything below
+    /// is TMDB's words about the film, so it is what he opens the page for. An exact list in order is also
+    /// the only form of this assertion that would have noticed the section being added at all.
+    /// </para>
     /// </remarks>
     [Fact]
     public void TheSectionsAreHeadingsAtOneLevelAndNotLandmarks()
@@ -259,7 +265,7 @@ public class FilmDetailTests : BunitContext
         var (cut, _) = RenderFilm();
 
         Assert.Equal(
-            new[] { "Overview", "Cast", "Details", "Additional information" },
+            new[] { "Your library", "Overview", "Cast", "Details", "Additional information" },
             cut.FindAll(".page-section h2").Select(h => h.TextContent.Trim()));
 
         Assert.Empty(cut.FindAll("main section"));
@@ -268,15 +274,19 @@ public class FilmDetailTests : BunitContext
 
     /// <remarks>
     /// A section with nothing to put in it is ABSENT and not an empty heading. A heading over nothing tells
-    /// someone navigating by heading that content exists which does not, and the Details section is the one
-    /// that always appears because every record has a match to report.
+    /// someone navigating by heading that content exists which does not. TWO sections always appear: Your
+    /// library, whose controls exist for every record the owner holds -- an unmatched one most of all, since
+    /// his own mark is then the only judgement on the page -- and Details, because every record has a match
+    /// to report. Overview, Cast and Additional information are the ones this film has nothing for.
     /// </remarks>
     [Fact]
     public void ASectionWithNothingInItIsNotRenderedAtAll()
     {
         var (cut, _) = RenderFilm("/movies/601-88");
 
-        Assert.Equal(new[] { "Details" }, cut.FindAll(".page-section h2").Select(h => h.TextContent.Trim()));
+        Assert.Equal(
+            new[] { "Your library", "Details" },
+            cut.FindAll(".page-section h2").Select(h => h.TextContent.Trim()));
     }
 
     [Fact]

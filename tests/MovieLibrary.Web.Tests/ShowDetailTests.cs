@@ -201,7 +201,7 @@ public class ShowDetailTests : BunitContext
 
         Assert.Equal(ShowDetail.NoEpisodeList, cut.Find(".no-episodes").TextContent);
         Assert.Empty(Seasons(cut));
-        Assert.Equal(["Details"], Text(cut, "h2"));
+        Assert.Equal(["Your library", "Details"], Text(cut, "h2"));
         Assert.Equal(["Genre", "First aired"], Text(cut, ".facts dt"));
     }
 
@@ -236,10 +236,11 @@ public class ShowDetailTests : BunitContext
     }
 
     /// <remarks>
-    /// SC 3.2.3 Consistent Navigation and SC 3.2.4 Consistent Identification: "Details" and "Additional
-    /// information" say the same thing about a series as about a film, at the same level, so a reader who
-    /// has learned one page has learned the other. "Seasons" is the only heading with no counterpart,
-    /// because a film has no seasons.
+    /// SC 3.2.3 Consistent Navigation and SC 3.2.4 Consistent Identification: "Your library", "Details" and
+    /// "Additional information" say the same thing about a series as about a film, at the same level and in
+    /// the same order, so a reader who has learned one page has learned the other. "Seasons" is the only
+    /// heading with no counterpart, because a film has no seasons -- and "Your library" is first on both,
+    /// which is the half of this that the owner notices.
     /// </remarks>
     [Fact]
     public void TheHeadingsAreTheFilmPagesHeadingsAtTheSameLevel()
@@ -253,7 +254,8 @@ public class ShowDetailTests : BunitContext
         var filmHeadings = film.RenderAppAt(AnnouncerTestExtensions.FilmAddress)
             .FindAll("h2").Select(h => h.TextContent.Trim()).ToList();
 
-        Assert.Equal(["Seasons", "Details", "Additional information"], Text(series, "h2"));
+        Assert.Equal(["Your library", "Seasons", "Details", "Additional information"], Text(series, "h2"));
+        Assert.Contains("Your library", filmHeadings);
         Assert.Contains("Details", filmHeadings);
         Assert.Contains("Additional information", filmHeadings);
 

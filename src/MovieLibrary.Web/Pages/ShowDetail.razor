@@ -3,6 +3,7 @@
 @inject CatalogService Catalog
 @inject Announcer Announcer
 @inject IJSRuntime Js
+@inject PreferenceStore Preferences
 
 @* One series: its seasons, and every episode in each of them.
 
@@ -59,6 +60,11 @@
         <p>@Sentence</p>
     }
 
+    @if (storageRefused)
+    {
+        <p>@FavouriteButton.CouldNotSave</p>
+    }
+
     @if (series.State == CatalogState.Failed || retrying)
     {
         @* aria-disabled, never the disabled ATTRIBUTE: disabling the focused element blurs it and drops
@@ -77,6 +83,20 @@
         <img class="show-poster" src="@($"https://image.tmdb.org/t/p/w342{poster}")" alt=""
              width="342" height="513" loading="lazy" decoding="async" />
     }
+
+    @* THE OWNER'S OWN MARKS, ABOVE THE SEASONS, for the reason the film page's own copy of this gives:
+       the seasons are the build's reading of his sheet and these two controls are the only things on the
+       page that answer him. The same components the tiles and the film page carry, so the control a
+       reader learned on one wall is the control they meet on either kind of record (SC 3.2.4). A series
+       is keyed by the SLUG the build wrote, which is also what routed this page. *@
+    <div class="page-section">
+        <h2>Your library</h2>
+
+        <FavouriteButton Kind="TitleKind.Series" Key="@Slug" TmdbId="s.I" Title="@s.T"
+                         Year="s.FirstYear" Refused="OnStorageRefused" />
+
+        <RatingChoice Kind="TitleKind.Series" Key="@Slug" TmdbId="s.I" Refused="OnStorageRefused" />
+    </div>
 
     @if (s.Seasons.Length > 0)
     {
@@ -268,6 +288,12 @@
 
     private bool disposed;
     private bool retrying;
+
+    /// <summary>
+    /// True once this browser has refused to save a change. Never goes back to false: the cause is the
+    /// device rather than the press. See <see cref="OnStorageRefused"/>.
+    /// </summary>
+    private bool storageRefused;
     private bool loadingAnnounced;
     private bool failureReported;
     private bool movedFocusToFailure;
@@ -351,9 +377,18 @@
     /// collapses on exactly the slow devices the gap exists for.
     /// </para>
     /// </remarks>
+    /// <remarks>
+    /// BEFORE THE FIRST RENDER, so the star and the score are right on the first paint. The films page's
+    /// own <c>OnInitialized</c> carries the argument in full.
+    /// </remarks>
+    protected override void OnInitialized() => Preferences.LoadNow();
+
     protected override async Task OnParametersSetAsync()
     {
         if (string.Equals(fetched, Slug, StringComparison.Ordinal)) return;
+
+        // The fallback for a host where LoadNow could not read synchronously. A no-op when it did.
+        await Preferences.LoadAsync();
 
         fetched = Slug;
 
@@ -433,6 +468,18 @@
 
                 break;
         }
+    }
+
+    /// <summary>
+    /// A mark could not be saved. Says so once, in both channels, and never takes it back. The films
+    /// page's own handler carries the reasoning in full.
+    /// </summary>
+    private void OnStorageRefused()
+    {
+        if (storageRefused) return;
+
+        storageRefused = true;
+        Announcer.Alert(FavouriteButton.CouldNotSave);
     }
 
     private async Task TryAgain()

@@ -4,6 +4,7 @@
 @inject CatalogService Catalog
 @inject Announcer Announcer
 @inject IJSRuntime Js
+@inject PreferenceStore Preferences
 
 @* One film, everything the catalogue holds about it.
 
@@ -31,6 +32,10 @@
    .film-state AND NOT .catalog-state. The browser gate keys its settle wait off the films page's container
    ("if .catalog-state is present, wait for the tile grid"), so reusing that class would have every scan of
    this page wait for a grid that never comes. RouteScanTests.SettledAsync knows both names. *@
+@* The sentence a refused save puts here is the SAME constant the walls use, for the same reason: the
+   cause is this device, not this film, and a reader who meets one sentence on the wall should meet the
+   same words on the page. Still plain text and still no live region of any kind in this container; the
+   spoken copy goes through Announcer.Alert from OnStorageRefused. *@
 <div class="film-state" tabindex="-1" @ref="stateContainer">
     @if (film is { } byline)
     {
@@ -54,6 +59,11 @@
     else
     {
         <p>@Sentence</p>
+    }
+
+    @if (storageRefused)
+    {
+        <p>@FavouriteButton.CouldNotSave</p>
     }
 
     @if (films.State == CatalogState.Failed || retrying)
@@ -111,6 +121,25 @@
             {
                 <p class="film-tagline">@tagline</p>
             }
+
+            @* THE OWNER'S OWN MARKS, FIRST AMONG THE SECTIONS, because this is what he opens the page for:
+               the overview and the cast are TMDB's words and do not change, and these two controls are the
+               only things on the page that answer him. A plain div and an h2, never <section>, for the
+               reason the next comment gives in full.
+
+               THE SAME FavouriteButton THE TILES CARRY, with the same name ("Favourite, Se7en, 1995") even
+               though the page is already about one film. A second component would be a second set of rules
+               to keep in step; the same one means the control a reader learned on the wall is the control
+               they meet here, which is what SC 3.2.4 Consistent Identification asks. *@
+            <div class="page-section">
+                <h2>Your library</h2>
+
+                <FavouriteButton Kind="TitleKind.Film" Key="@f.K" TmdbId="f.I" Title="@f.T" Year="f.Y"
+                                 Refused="OnStorageRefused" />
+
+                <RatingChoice Kind="TitleKind.Film" Key="@f.K" TmdbId="f.I"
+                              Refused="OnStorageRefused" />
+            </div>
 
             @* PLAIN div AND h2, NEVER <section>. A section with an accessible name becomes a region
                landmark, and four of them on one page would file Overview, Cast, Details and Additional
@@ -326,6 +355,12 @@
     private bool disposed;
     private bool retrying;
 
+    /// <summary>
+    /// True once this browser has refused to save a change. Never goes back to false: the cause is the
+    /// device rather than the press. See <see cref="OnStorageRefused"/>.
+    /// </summary>
+    private bool storageRefused;
+
     // True once a render has committed while the fetch was still in flight, which is the whole condition on
     // saying the film's name aloud. See the Ready arm.
     private bool wasLoading;
@@ -429,9 +464,20 @@
     /// below is a cancellation, which takes effect at once and speaks nothing.
     /// </para>
     /// </remarks>
+    /// <remarks>
+    /// BEFORE THE FIRST RENDER, so the star and the score are right on the first paint rather than
+    /// changing state after it with nothing the reader did behind it. The films page's own
+    /// <c>OnInitialized</c> carries the argument in full.
+    /// </remarks>
+    protected override void OnInitialized() => Preferences.LoadNow();
+
     protected override async Task OnParametersSetAsync()
     {
         if (string.Equals(loadedKey, Key, StringComparison.Ordinal)) return;
+
+        // The fallback for a host where LoadNow could not read synchronously. A no-op when it did, and it
+        // is awaited before the fetch below, so it is in place well before the first Ready render.
+        await Preferences.LoadAsync();
 
         loadedKey = Key;
         films = new(CatalogState.Loading, null);
@@ -554,6 +600,18 @@
     /// address is wrong, so a retry is a button that cannot help.
     /// </para>
     /// </remarks>
+    /// <summary>
+    /// A mark could not be saved. Says so once, in both channels, and never takes it back. The films
+    /// page's own handler carries the reasoning in full.
+    /// </summary>
+    private void OnStorageRefused()
+    {
+        if (storageRefused) return;
+
+        storageRefused = true;
+        Announcer.Alert(FavouriteButton.CouldNotSave);
+    }
+
     private async Task TryAgain()
     {
         // The button carries aria-disabled rather than the disabled attribute, so the click still arrives

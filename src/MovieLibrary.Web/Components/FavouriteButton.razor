@@ -40,7 +40,7 @@
    IT ANNOUNCES NOTHING. Pressing it changes one title's own state, the state is on the control the reader
    just pressed, and aria-pressed is how a screen reader reports that -- an announcement would be the same
    fact a second time from a region racing the route announcer. This component takes NO Announcer and
-   SourceContractTests.TheTileAndItsControlTakeNoAnnouncer pins that. The one thing it cannot say for
+   SourceContractTests.TheTileAndTheMarkControlsTakeNoAnnouncer pins that. The one thing it cannot say for
    itself is a browser REFUSING to save, which is not about this title at all, so that goes to the page
    through Refused -- see CouldNotSave. *@
 <button type="button" class="tile-fav" aria-pressed="@(marked ? "true" : "false")" @onclick="ToggleAsync">

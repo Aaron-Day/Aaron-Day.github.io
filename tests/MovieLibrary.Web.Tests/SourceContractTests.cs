@@ -49,7 +49,7 @@ public class SourceContractTests
     /// <para>
     /// T1: a glob that stopped matching would loop over nothing and pass, so the subject count has a floor
     /// and the newest files are named. Every hand-written .razor is failable here -- there is no
-    /// carve-out -- so the floor is the whole set: eighteen today (fourteen in the web project, four in the
+    /// carve-out -- so the floor is the whole set: nineteen today (fifteen in the web project, four in the
     /// editor), and later tasks only add.
     /// </para>
     /// </remarks>
@@ -59,9 +59,9 @@ public class SourceContractTests
         var files = WebRoot.FilesWithEditor("*.razor").ToList();
         var paths = files.Select(f => f.Path).ToList();
 
-        Assert.True(files.Count >= 18,
-            "This rule found " + files.Count + " components. There are eighteen hand-written .razor files: "
-            + "fourteen under the web project and four under the editor project. Fewer means "
+        Assert.True(files.Count >= 19,
+            "This rule found " + files.Count + " components. There are nineteen hand-written .razor files: "
+            + "fifteen under the web project and four under the editor project. Fewer means "
             + "WebRoot.FilesWithEditor stopped finding them, not that the app shrank -- and a rule with no "
             + "subjects passes over nothing.");
 
@@ -73,6 +73,7 @@ public class SourceContractTests
         Assert.Contains("Components/PosterGrid.razor", paths);
         Assert.Contains("Components/FacetPanel.razor", paths);
         Assert.Contains("Components/FavouriteButton.razor", paths);
+        Assert.Contains("Components/RatingChoice.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Components/RecordForm.razor", paths);
 
@@ -86,7 +87,7 @@ public class SourceContractTests
     }
 
     /// <summary>
-    /// Neither the tile nor the control on it takes the announcer, and neither one speaks.
+    /// Neither the tile nor either control that marks a title takes the announcer, and none of them speaks.
     /// </summary>
     /// <remarks>
     /// <b>SIXTY OF THEM ARE ON ONE PAGE, and that is the whole argument.</b> The announcer is latest-wins
@@ -101,15 +102,21 @@ public class SourceContractTests
     /// this rule protects: the easy "fix" for a silent refusal is an Announcer injected into the control.
     /// </para>
     /// <para>
+    /// The RATING control is in the subject set for the same reason even though only one of it is ever on a
+    /// page. Its twelve radios are one group, and a radio reports its own new state when it is chosen, so
+    /// an utterance per choice would again be the fact a second time -- and a record page has a heading, a
+    /// route announcement and a refusal sentence already competing for the same region.
+    /// </para>
+    /// <para>
     /// Matched as an injection and as a CALL rather than as a substring, because both files argue this in
     /// their own comments and name the type while doing so -- a substring scan would fail on the
     /// reasoning instead of on the code.
     /// </para>
     /// </remarks>
     [Fact]
-    public void TheTileAndItsControlTakeNoAnnouncerAndSpeakNothing()
+    public void TheTileAndTheMarkControlsTakeNoAnnouncerAndSpeakNothing()
     {
-        string[] subjects = ["PosterTile.razor", "FavouriteButton.razor"];
+        string[] subjects = ["PosterTile.razor", "FavouriteButton.razor", "RatingChoice.razor"];
 
         foreach (var file in subjects)
         {
@@ -468,11 +475,11 @@ public class SourceContractTests
         // T1: the count is of what the rule can actually fail on, which is every .razor file except the one
         // carve-out. A discovery walk that stopped matching would otherwise loop over nothing and pass.
         //
-        // SEVENTEEN, counted rather than guessed. Thirteen in the web project: App, Layout/NavMenu,
+        // EIGHTEEN, counted rather than guessed. Fourteen in the web project: App, Layout/NavMenu,
         // Layout/RouteAnnouncer, Pages/Movies, Pages/FilmDetail, Pages/Tv, Pages/ShowDetail,
-        // Pages/NotFound, _Imports, Components/PosterTile, Components/PosterGrid, Components/FacetPanel
-        // and Components/FavouriteButton. Four in the editor: Pages/RecordEditor, Components/RecordForm,
-        // Components/Worklist and _Imports.
+        // Pages/NotFound, _Imports, Components/PosterTile, Components/PosterGrid, Components/FacetPanel,
+        // Components/FavouriteButton and Components/RatingChoice. Four in the editor: Pages/RecordEditor,
+        // Components/RecordForm, Components/Worklist and _Imports.
         // _Imports is in the count because the rule can genuinely fail on it -- this is a text scan, and a
         // status role typed into it would be found and reported like any other. The floor was 4 when there
         // were six, which let two components fall out of WebRoot.Files before the rule noticed: the T1
@@ -483,9 +490,9 @@ public class SourceContractTests
         // exactly the markup someone would reach for a polite region with, and they are plain text in both
         // components. Each of the two says so in its own comment, spelled in words, because this scan is a
         // substring match and a comment quoting a marker fails just as the attribute would.
-        Assert.True(failable.Count >= 17,
-            "This rule found " + failable.Count + " components it could fail on. There are seventeen "
-            + "hand-written .razor files outside the layout's own MainLayout: thirteen in the web project "
+        Assert.True(failable.Count >= 18,
+            "This rule found " + failable.Count + " components it could fail on. There are eighteen "
+            + "hand-written .razor files outside the layout's own MainLayout: fourteen in the web project "
             + "and four in the editor. Fewer means WebRoot.FilesWithEditor stopped finding them, not that "
             + "the app shrank -- and a rule with no subjects passes over nothing.");
 
@@ -499,6 +506,7 @@ public class SourceContractTests
         Assert.Contains("Components/PosterGrid.razor", paths);
         Assert.Contains("Components/FacetPanel.razor", paths);
         Assert.Contains("Components/FavouriteButton.razor", paths);
+        Assert.Contains("Components/RatingChoice.razor", paths);
         Assert.Contains("Pages/Movies.razor", paths);
         Assert.Contains("Pages/FilmDetail.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);

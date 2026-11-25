@@ -1,0 +1,105 @@
+@inject PreferenceStore Preferences
+
+@* THE OWNER'S OWN SCORE, as twelve radios in a fieldset, and every part of that is a refusal of
+   something easier.
+
+   NOT type="range". A slider has no visible value of its own, its keyboard step is a browser decision,
+   and on a touch screen a 1-in-11 target is a drag a reader has to land precisely -- SC 2.5.7 Dragging
+   Movements asks for a single-pointer alternative, and the alternative IS this. NOT type="number"
+   either: a spinner accepts "7.5" and "-3" and "banana", so the control would need validation, an error
+   message and a live region to announce it, all to collect one of eleven values.
+
+   A RADIO GROUP IS ONE TAB STOP. That is why the name attribute below is load-bearing rather than
+   decoration: radios without a shared name are not a group, so each of the twelve would take focus on
+   its own and this one control would add twelve stops to the page's tab order. Grouped, Tab reaches the
+   group and the arrow keys move within it, which is what a reader who knows radios expects.
+
+   "NOT RATED" IS A REAL OPTION AND IT COMES FIRST. Without it there is no way back: a reader who scored
+   something by accident could change the score but never clear it, and a group where every option is
+   taken is a group with no way out (the owner would have to delete site data). First because it is the
+   state every title starts in, so the group reads from "nothing" upwards, and because the arrow keys
+   wrap -- so it is one key from 10.
+
+   THE LEGEND CARRIES THE SCALE AND THE OPTIONS CARRY ONLY THE NUMBER. A screen reader reads the legend
+   with each option, so "Your rating out of 10" plus "7" is "Your rating out of 10, 7" -- said once per
+   move -- where a label of "7 out of 10" would make it "Your rating out of 10, 7 out of 10". The legend
+   is VISIBLE, unlike the facet panel's, because this group is not inside a disclosure whose summary
+   already names it.
+
+   INTEGERS ONLY, 0 to 10, which is TMDB's own scale and so the same units as the score on the tile. Half
+   points would double the group and invite a comparison the owner never asked for.
+
+   IT ANNOUNCES NOTHING: the control's own checked state is the report, and a region would say it twice.
+   A browser that refuses to SAVE is a different matter and goes to the page through Refused.
+   SourceContractTests.TheTileAndTheMarkControlsTakeNoAnnouncer pins the silence. *@
+<fieldset class="rating">
+    <legend>Your rating out of 10</legend>
+
+    <div class="rating-options">
+        <label class="rating-clear">
+            <input type="radio" name="your-rating" checked="@(score is null)"
+                   @onchange="() => ChooseAsync(null)" /> Not rated
+        </label>
+
+        @for (var value = TitlePreference.MinRating; value <= TitlePreference.MaxRating; value++)
+        {
+            var choice = value;
+            <label>
+                <input type="radio" name="your-rating" checked="@(score == choice)"
+                       @onchange="() => ChooseAsync(choice)" /> @choice
+            </label>
+        }
+    </div>
+</fieldset>
+
+@code {
+    /// <summary>What the group is drawing, which is the saved score until a choice changes it.</summary>
+    private int? score;
+
+    /// <summary>Which half of the document this title is filed under.</summary>
+    [Parameter, EditorRequired] public required TitleKind Kind { get; set; }
+
+    /// <summary>The published key: <c>K</c> for a film, the slug for a series. Never the TMDB id.</summary>
+    [Parameter, EditorRequired] public required string Key { get; set; }
+
+    /// <summary>The record's TMDB id, saved beside the key so a re-keyed record can be found again.</summary>
+    [Parameter] public int TmdbId { get; set; }
+
+    /// <summary>
+    /// Called when the browser refused to save. The page renders <see cref="FavouriteButton.CouldNotSave"/>;
+    /// the group has already put itself back to the score the browser actually holds.
+    /// </summary>
+    [Parameter] public EventCallback Refused { get; set; }
+
+    /// <summary>
+    /// Reads the saved score on every parameter set rather than once, for the reason
+    /// <c>FavouriteButton.OnParametersSet</c> gives: a record page that routes from one title to another
+    /// keeps its component instances, and a score read once would show the previous title's.
+    /// </summary>
+    protected override void OnParametersSet() => score = Preferences.RatingOf(Kind, Key);
+
+    /// <summary>
+    /// Records the score, drawing it before the write for the reason <c>FavouriteButton</c> records, and
+    /// putting it back if the browser refuses.
+    /// </summary>
+    /// <remarks>
+    /// Null is "Not rated" and it CLEARS the score rather than storing a zero. Zero is a real score here --
+    /// the owner may think a film is worth nothing -- so the two cannot share a representation, and
+    /// <c>PreferenceStoreTests.ZeroIsAScoreAndNotAnAbsence</c> pins that from the store's side.
+    /// </remarks>
+    private async Task ChooseAsync(int? chosen)
+    {
+        var was = score;
+        score = chosen;
+
+        try
+        {
+            await Preferences.SetRatingAsync(Kind, Key, TmdbId, chosen);
+        }
+        catch (PreferenceStorageException)
+        {
+            score = was;
+            await Refused.InvokeAsync();
+        }
+    }
+}
