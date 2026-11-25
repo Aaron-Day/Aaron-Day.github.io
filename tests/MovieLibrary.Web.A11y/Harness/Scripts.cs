@@ -228,7 +228,8 @@ internal static class Scripts
 
 
     /// <summary>
-    /// The focused element's own box, hit-tested at five points: its centre and its four corners.
+    /// The focused element's own box, hit-tested at its centre, its four corners, and the centre of
+    /// whatever part of it is on the viewport.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -244,8 +245,23 @@ internal static class Scripts
     /// </para>
     /// <para>
     /// Which count belongs to which criterion is <c>ObscuredFocusTests</c>'s business and is written out
-    /// there: one clear point is SC 2.4.11 Focus Not Obscured (Minimum), Level AA; all five is the shape of
-    /// SC 2.4.12 (Enhanced), which is Level AAA and is reported rather than asserted.
+    /// there: one clear point is SC 2.4.11 Focus Not Obscured (Minimum), Level AA; all of them is the shape
+    /// of SC 2.4.12 (Enhanced), which is Level AAA and is reported rather than asserted.
+    /// </para>
+    /// <para>
+    /// <b>THE CLIPPED CENTRE IS THE SIXTH POINT, AND IT EXISTS BECAUSE FIVE WERE NOT ENOUGH FOR A CONTROL
+    /// TALLER THAN THE SPACE THE BAR LEAVES CLEAR.</b> A tile's body link is 359px tall; at 320x256 with
+    /// the bar up the clear region is about 153px, so once the browser has scrolled the row to put a
+    /// control at its foot in view, that link spans the whole clear region and beyond it in BOTH
+    /// directions -- three of its five points are then above the viewport and the other two sit exactly on
+    /// the bar's top edge, while a third of the element is plainly on screen between them. Five points
+    /// reported that as ENTIRELY HIDDEN, which is the wrong answer to SC 2.4.11's actual question: the
+    /// criterion asks whether the component is entirely hidden, and this one is not. The sixth point is
+    /// the centre of the element's box CLIPPED to the viewport, which is the only probe that can land in a
+    /// visible middle. It cannot excuse a real failure: a control genuinely under the bar has its clipped
+    /// centre inside the bar as well, so that point is blocked like the others. For a box wholly inside
+    /// the viewport it duplicates the plain centre, which costs one hit test and keeps the five-point
+    /// geometry unchanged.
     /// </para>
     /// </remarks>
     public const string FocusObscuration = """
@@ -273,6 +289,14 @@ internal static class Scripts
           const top = box.top + 1, bottom = box.bottom - 1;
           const probes = [[box.left + box.width / 2, box.top + box.height / 2],
                           [left, top], [right, top], [left, bottom], [right, bottom]];
+
+          // The centre of the part of the box that is ON the viewport. See the remarks: without it a
+          // control taller than the clear region reads as entirely hidden while a third of it is on
+          // screen. Added only when that part has area, so an element scrolled wholly out of view keeps
+          // five points and is diagnosed as off-viewport rather than as obscured.
+          const cx0 = Math.max(left, 1), cx1 = Math.min(right, window.innerWidth - 1);
+          const cy0 = Math.max(top, 1), cy1 = Math.min(bottom, window.innerHeight - 1);
+          if (cx1 > cx0 && cy1 > cy0) probes.push([(cx0 + cx1) / 2, (cy0 + cy1) / 2]);
 
           for (const point of probes) {
             const x = point[0], y = point[1];

@@ -27,6 +27,12 @@ builder.Services.AddScoped<CatalogService>();
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
+// The owner's own state -- stars, his scores, his lists -- and the browser storage behind it. One instance for
+// the session for the same reason the catalogue has one: it holds the document in memory, every page reads from
+// it synchronously, and a second instance would answer from a copy that is already stale.
+builder.Services.AddScoped<IPreferenceStorage, LocalPreferenceStorage>();
+builder.Services.AddScoped<PreferenceStore>();
+
 #if DEBUG
 // The local record editor's registrations. Debug only: the Release payload does not reference the project.
 // The two types are the web app's side of the two seams the editor cannot reach across: the catalogue service

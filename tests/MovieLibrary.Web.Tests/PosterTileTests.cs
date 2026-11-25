@@ -1,3 +1,4 @@
+using MovieLibrary.Web.Services;
 using Bunit;
 using MovieLibrary.Core.Models;
 using MovieLibrary.Web.Components;
@@ -41,6 +42,29 @@ public class PosterTileTests : BunitContext
 
     private IRenderedComponent<PosterTile> RenderTile(MovieRecord film) =>
         Render<PosterTile>(p => p.Add(x => x.Tile, TileView.ForFilm(film)));
+
+    /// <summary>
+    /// The tile as the WALLS render it: the same component with the favourite control in its slot.
+    /// </summary>
+    /// <remarks>
+    /// <b>The rules below that say "nothing here carries X" have to be read over this one as well.</b> They
+    /// were written when the slot was empty, so each of them would have gone on passing over a tile that no
+    /// longer exists anywhere in the app -- which is the quietest way a contract can expire. The real
+    /// component and not a stand-in button: the point is what the walls actually put in the slot.
+    /// </remarks>
+    private IRenderedComponent<PosterTile> RenderStarredTile(MovieRecord film)
+    {
+        this.AddPreferences();
+
+        return Render<PosterTile>(p => p
+            .Add(x => x.Tile, TileView.ForFilm(film))
+            .Add<FavouriteButton>(x => x.ActionSlot, star => star
+                .Add(c => c.Kind, TitleKind.Film)
+                .Add(c => c.Key, film.K)
+                .Add(c => c.TmdbId, film.I)
+                .Add(c => c.Title, film.T)
+                .Add(c => c.Year, film.Y)));
+    }
 
     [Theory]
     [InlineData("Se7en")]
@@ -256,18 +280,26 @@ public class PosterTileTests : BunitContext
     }
 
     /// <remarks>
-    /// A CONFIDENT film, and since Task 7 that matters: a degraded record's tile has a second child, the
-    /// confidence badge, which is content rather than a control and sits in the same outside-.tile-body
-    /// position for the same reason. <c>DegradedRecordTests.AConfidentTileRendersNoBadgeAtAll</c> reads
-    /// this shape from the other side.
+    /// <b>THIS REPLACED A RULE THAT HAD EXPIRED.</b> It used to assert that the slot was empty and that the
+    /// tile had no control of its own, which was true of Part A and is now true of nothing the app renders:
+    /// both walls fill the slot. A test asserting the old shape would have gone on passing for ever,
+    /// because it rendered the tile WITHOUT a slot -- so the assertion is inverted rather than deleted, and
+    /// it is read over the tile the walls really draw.
+    /// <para>
+    /// A CONFIDENT film, so the badge is absent and the count is exact: the body and the control, and the
+    /// control OUTSIDE the body because .tile-body is the anchor -- a button inside an anchor is invalid
+    /// markup and unusable with a keyboard. <c>DegradedRecordTests.AConfidentTileRendersNoBadgeAtAll</c>
+    /// reads the badge's absence from the other side.
+    /// </para>
     /// </remarks>
     [Fact]
-    public void TheSlotIsEmptyInPartASoTheTileHasNoControlOfItsOwn()
+    public void TheTileNowCarriesOneControlOfItsOwnAndItIsOutsideTheLink()
     {
-        var cut = RenderTile(Film());
+        var cut = RenderStarredTile(Film());
 
-        Assert.Single(cut.FindAll(".tile > *"));                 // .tile-body and nothing beside it
-        Assert.Equal("tile-body", cut.Find(".tile > *").ClassName);
+        Assert.Equal(["tile-body", "tile-fav"], cut.FindAll(".tile > *").Select(e => e.ClassName));
+        Assert.Empty(cut.Find("a.tile-body").QuerySelectorAll("button"));
+        Assert.Equal("Favourite, Se7en, 1995", cut.Find("button.tile-fav").TextContent.Trim());
     }
 
     /// <remarks>
@@ -283,6 +315,21 @@ public class PosterTileTests : BunitContext
     }
 
     /// <remarks>
+    /// The same rule over the tile the walls render, and this is where it earns its keep: an aria-label was
+    /// the obvious way to name a star, and a tile whose body is unlabelled while the control on it carries
+    /// an author label is exactly the half-measure this would have missed. The control's name is real text
+    /// in a visually-hidden span instead.
+    /// </remarks>
+    [Fact]
+    public void TheTileWithItsControlCarriesNoAuthorLabelAndNoTitleAttributeEither()
+    {
+        var root = MarkupRules.Parse(RenderStarredTile(Film()).Markup);
+
+        Assert.Empty(root.QuerySelectorAll("[aria-label], [aria-labelledby], [title]"));
+        Assert.NotNull(root.QuerySelector("button.tile-fav"));   // T1: the subject is really there
+    }
+
+    /// <remarks>
     /// C1 again, from the other side: the tile must not create an id reference the app has to resolve.
     /// EveryIdReferenceResolvesToAnIdInTheSameRender is skipped precisely because the app has no failable
     /// reference, and 1,456 tiles each carrying one would be a poor way to end that.
@@ -294,5 +341,22 @@ public class PosterTileTests : BunitContext
 
         Assert.Empty(MarkupRules.IdReferences(root));
         Assert.Empty(root.QuerySelectorAll("[id]"));
+    }
+
+    /// <remarks>
+    /// And over the tile with its control, for the reason the label rule above gives: an
+    /// aria-describedby to a line of help text, or an id to hang a label off, are the two shapes a control
+    /// invites. Sixty tiles each carrying an id reference is also how
+    /// <c>EveryIdReferenceResolvesToAnIdInTheSameRender</c> would stop being skipped for want of a subject
+    /// and start being a real risk.
+    /// </remarks>
+    [Fact]
+    public void TheTileWithItsControlCreatesNoIdReferenceAndNoIdAtAll()
+    {
+        var root = MarkupRules.Parse(RenderStarredTile(Film()).Markup);
+
+        Assert.Empty(MarkupRules.IdReferences(root));
+        Assert.Empty(root.QuerySelectorAll("[id]"));
+        Assert.NotNull(root.QuerySelector("button.tile-fav"));   // T1: the subject is really there
     }
 }

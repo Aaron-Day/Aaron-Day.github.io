@@ -3,6 +3,7 @@
 @inject CatalogService Catalog
 @inject Announcer Announcer
 @inject IJSRuntime Js
+@inject PreferenceStore Preferences
 
 @* The series list. The same wall as the films page, over shows.json rather than movies.json, and with no
    facet panel: 122 series is three pages, and a filter over them would be a second copy of Movies.razor's
@@ -34,6 +35,14 @@
 <div class="tv-state" tabindex="-1" @ref="stateContainer">
     <p>@Sentence</p>
 
+    @* The same sentence in the same place as the films page's, for the same reason and from the same
+       constant: a browser refusing to keep a favourite is a fact about this device, not about one series.
+       See Movies.razor and FavouriteButton.CouldNotSave. *@
+    @if (storageRefused)
+    {
+        <p>@FavouriteButton.CouldNotSave</p>
+    }
+
     @if (ShowTryAgain)
     {
         @* aria-disabled, never the disabled ATTRIBUTE: disabling the focused element blurs it and drops
@@ -59,7 +68,16 @@
 {
     <PosterGrid TItem="ShowSummary" Items="shows.Value" KeyOf="PublishedSlug"
                 Page="page" PageChanged="OnPageChanged" Context="show">
-        <PosterTile Tile="TileView.ForShow(show)" />
+        @* The star, in the slot PosterTile has had since Task 7, and the same component the films wall
+           uses -- which is what makes the control identical on both walls (SC 3.2.4 Consistent
+           Identification) rather than merely similar. A series is keyed by its SLUG, which is what the
+           build wrote and what the show page reads. *@
+        <PosterTile Tile="TileView.ForShow(show)">
+            <ActionSlot>
+                <FavouriteButton Kind="TitleKind.Series" Key="@show.Slug" TmdbId="show.I"
+                                 Title="@show.T" Year="show.FirstYear" Refused="OnStorageRefused" />
+            </ActionSlot>
+        </PosterTile>
     </PosterGrid>
 }
 
@@ -92,6 +110,12 @@
     private bool disposed;
     private bool retrying;
     private bool loadingAnnounced;
+
+    /// <summary>
+    /// True once this browser has refused to save a change. Never goes back to false: the cause is the
+    /// device rather than the press. See <c>Movies.OnStorageRefused</c>.
+    /// </summary>
+    private bool storageRefused;
     private bool failureReported;
     private bool movedFocusToFailure;
     private bool movingFocus;
@@ -133,8 +157,17 @@
     /// visit to this page.
     /// </para>
     /// </remarks>
+    /// <remarks>
+    /// BEFORE THE FIRST RENDER, so the wall's stars are right on its first paint rather than flipping
+    /// after it. The films page's own <c>OnInitialized</c> carries the argument in full.
+    /// </remarks>
+    protected override void OnInitialized() => Preferences.LoadNow();
+
     protected override async Task OnInitializedAsync()
     {
+        // The fallback for a host where LoadNow could not read synchronously. A no-op when it did.
+        await Preferences.LoadAsync();
+
         var result = await Catalog.GetShowsAsync();
         if (disposed) return;
 
@@ -265,6 +298,18 @@
     /// </para>
     /// </remarks>
     private void OnPageChanged(int value) => page = value;
+
+    /// <summary>
+    /// A tile's star could not be saved. Says so once, in both channels, and never takes it back. The
+    /// films page's own handler carries the reasoning.
+    /// </summary>
+    private void OnStorageRefused()
+    {
+        if (storageRefused) return;
+
+        storageRefused = true;
+        Announcer.Alert(FavouriteButton.CouldNotSave);
+    }
 
     /// <remarks>
     /// Clear what this page set, and raise nothing new. A cancellation -- it takes effect at once and

@@ -187,6 +187,15 @@ internal static class AnnouncerTestExtensions
         // The films page writes its filter into the address through this, and Program.cs registers it the same way.
         context.Services.AddScoped<QueryState>();
 
+        // THE OWNER'S SAVED STATE, and it is registered for every test rather than only for the ones that
+        // press a star: both walls inject the store now, so a page rendered without one fails at DI with a
+        // message about a service it does not use for the thing the test was about. The fake is registered
+        // as itself AND as the interface, so a test can reach the same instance the store writes through --
+        // Services.GetRequiredService<FakePreferenceStorage>() -- and read Writes or set Refuse on it.
+        // Empty and not in-process by default: nothing is starred, and the pages take their LoadAsync
+        // fallback, which is the path bUnit's runtime really has.
+        context.AddPreferences();
+
 #if DEBUG
         // The editor's registrations, the one call Program.cs makes under the same condition. Debug only,
         // because in Release the web project does not reference the editor, "/editor" is not routed and

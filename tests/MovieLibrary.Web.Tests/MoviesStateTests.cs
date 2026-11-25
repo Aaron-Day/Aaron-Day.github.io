@@ -986,9 +986,22 @@ public class MoviesStateTests : BunitContext
         var count = MemberBody(page, "internal void AnnounceCount()");
         Assert.Equal(["Announcer.Status(sentence)"], AnnouncerCalls(count));
 
+        // THE STAR'S REFUSAL IS THE ONE SENTENCE RAISED FROM A HANDLER, and it is allowed there for a
+        // reason the retry's is not. What this contract is really protecting is the clear-then-speak pair:
+        // Alert("") followed in the same synchronous handler by Alert(sentence) would mark the clear
+        // observed before any render committed, and a repeated identical sentence is then no DOM change at
+        // all -- the reader hears silence. This handler raises no clear and speaks ONCE EVER, guarded by a
+        // field that never goes back to false, so there is no second identical utterance for a settle
+        // window to swallow. It cannot wait for a render either: nothing re-renders on a storage refusal
+        // except the paragraph this same press puts on screen, which lands in the very next render pass.
+        var refused = MemberBody(page, "private void OnStorageRefused()");
+        Assert.Equal(["Announcer.Alert(FavouriteButton.CouldNotSave)"], AnnouncerCalls(refused));
+
         // And they are raised nowhere else: every call in the file is in one of the members above, the
         // TryAgain cancellation, or Dispose's two.
-        Assert.Equal(AnnouncerCalls(page).Count, AnnouncerCalls(after).Count + AnnouncerCalls(count).Count + 1 + 2);
+        Assert.Equal(
+            AnnouncerCalls(page).Count,
+            AnnouncerCalls(after).Count + AnnouncerCalls(count).Count + AnnouncerCalls(refused).Count + 1 + 2);
     }
 
     /// <remarks>

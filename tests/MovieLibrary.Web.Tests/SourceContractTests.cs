@@ -48,9 +48,9 @@ public class SourceContractTests
     /// <see cref="WebRoot.Files"/> as the live-region rule already uses it.
     /// <para>
     /// T1: a glob that stopped matching would loop over nothing and pass, so the subject count has a floor
-    /// and the two newest files are named. Every hand-written .razor is failable here -- there is no
-    /// carve-out -- so the floor is the whole set: fourteen today (ten in the web project, four in the editor), and later
-    /// tasks only add.
+    /// and the newest files are named. Every hand-written .razor is failable here -- there is no
+    /// carve-out -- so the floor is the whole set: eighteen today (fourteen in the web project, four in the
+    /// editor), and later tasks only add.
     /// </para>
     /// </remarks>
     [Fact]
@@ -59,17 +59,20 @@ public class SourceContractTests
         var files = WebRoot.FilesWithEditor("*.razor").ToList();
         var paths = files.Select(f => f.Path).ToList();
 
-        Assert.True(files.Count >= 14,
-            "This rule found " + files.Count + " components. There are fourteen hand-written .razor files: "
-            + "ten under the web project and four under the editor project. Fewer means "
+        Assert.True(files.Count >= 18,
+            "This rule found " + files.Count + " components. There are eighteen hand-written .razor files: "
+            + "fourteen under the web project and four under the editor project. Fewer means "
             + "WebRoot.FilesWithEditor stopped finding them, not that the app shrank -- and a rule with no "
             + "subjects passes over nothing.");
 
-        // Named as well as counted, because a floor can be met by the wrong files. These two were missing
-        // from the hand-maintained list this replaced, which is the whole reason it was replaced.
+        // Named as well as counted, because a floor can be met by the wrong files. Three of these were
+        // missing from the hand-maintained list this replaced, which is the whole reason it was replaced;
+        // the favourite control is the newest, and it is the first component in the app that WRITES
+        // anything, so a navigation call appearing in it is the live risk rather than a theoretical one.
         Assert.Contains("Components/PosterTile.razor", paths);
         Assert.Contains("Components/PosterGrid.razor", paths);
         Assert.Contains("Components/FacetPanel.razor", paths);
+        Assert.Contains("Components/FavouriteButton.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Components/RecordForm.razor", paths);
 
@@ -79,6 +82,44 @@ public class SourceContractTests
             Assert.DoesNotContain("NavigateTo(", text, StringComparison.Ordinal);
             Assert.True(!text.Contains("<footer", StringComparison.OrdinalIgnoreCase),
                 path + " adds a footer inside the app. index.html owns the one attribution footer.");
+        }
+    }
+
+    /// <summary>
+    /// Neither the tile nor the control on it takes the announcer, and neither one speaks.
+    /// </summary>
+    /// <remarks>
+    /// <b>SIXTY OF THEM ARE ON ONE PAGE, and that is the whole argument.</b> The announcer is latest-wins
+    /// per region, so a tile that announced anything would be sixty owners of one region: press three stars
+    /// quickly and two of the three utterances are dropped in an order nothing controls. A press needs no
+    /// announcement in any case -- <c>aria-pressed</c> on the control the reader just activated is how a
+    /// screen reader reports exactly this, and an utterance would be the same fact a second time.
+    /// <para>
+    /// The one thing the control cannot say for itself is a browser REFUSING to save, which is a fact about
+    /// the device rather than about the title, so it is raised to the page through an <c>EventCallback</c>
+    /// and the PAGE speaks -- once, from a member <c>MoviesStateTests</c> pins by name. That is the seam
+    /// this rule protects: the easy "fix" for a silent refusal is an Announcer injected into the control.
+    /// </para>
+    /// <para>
+    /// Matched as an injection and as a CALL rather than as a substring, because both files argue this in
+    /// their own comments and name the type while doing so -- a substring scan would fail on the
+    /// reasoning instead of on the code.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void TheTileAndItsControlTakeNoAnnouncerAndSpeakNothing()
+    {
+        string[] subjects = ["PosterTile.razor", "FavouriteButton.razor"];
+
+        foreach (var file in subjects)
+        {
+            var text = WebRoot.Read("Components", file);
+
+            // T1: the file was really read. An empty string would pass both assertions below.
+            Assert.Contains("@", text, StringComparison.Ordinal);
+
+            Assert.DoesNotContain("@inject Announcer", text, StringComparison.Ordinal);
+            Assert.Empty(Regex.Matches(text, @"Announcer\.(?:Status|Alert|Route)\("));
         }
     }
 
@@ -255,6 +296,37 @@ public class SourceContractTests
         Assert.DoesNotMatch(registration, "// builder.Services.AddScoped<CatalogService>();");
     }
 
+    /// <summary>
+    /// And the owner's saved state, which is the same hole one service along.
+    /// </summary>
+    /// <remarks>
+    /// <b>Both lines, because the store is useless without the storage behind it.</b> Every bUnit test
+    /// registers its own pair through <c>PreferenceTestExtensions.AddPreferences</c>, so losing either line
+    /// here passes the whole suite and then fails at boot with a DI error on the first page render -- and
+    /// that page is "/", every visit, because both walls inject the store for their tiles' stars.
+    /// <para>
+    /// The INTERFACE is named in the pattern rather than just the concrete class: a registration of
+    /// <c>LocalPreferenceStorage</c> as itself would resolve nothing, since the store asks for
+    /// <c>IPreferenceStorage</c>. Anchored, and proven against the commented-out form, for the reason the
+    /// catalogue's own rule gives -- commenting a line out is exactly how a registration gets lost.
+    /// </para>
+    /// </remarks>
+    [Fact]
+    public void ProgramRegistersTheOwnersSavedStateBecauseTheTestsRegisterTheirOwn()
+    {
+        const string storage =
+            @"(?m)^[ 	]*builder\.Services\.AddScoped<IPreferenceStorage, LocalPreferenceStorage>\(\);";
+        const string store = @"(?m)^[ 	]*builder\.Services\.AddScoped<PreferenceStore>\(\);";
+
+        var program = WebRoot.Read("Program.cs");
+
+        Assert.Matches(storage, program);
+        Assert.Matches(store, program);
+
+        Assert.DoesNotMatch(storage, "// builder.Services.AddScoped<IPreferenceStorage, LocalPreferenceStorage>();");
+        Assert.DoesNotMatch(store, "// builder.Services.AddScoped<PreferenceStore>();");
+    }
+
     /// <remarks>
     /// <b>R-K, and PageSize is still the whole point of it.</b> The grid's default is 60, and the page
     /// passing PageSize="60" would be a second copy of the number that is one edit away from disagreeing
@@ -396,10 +468,11 @@ public class SourceContractTests
         // T1: the count is of what the rule can actually fail on, which is every .razor file except the one
         // carve-out. A discovery walk that stopped matching would otherwise loop over nothing and pass.
         //
-        // FOURTEEN, counted rather than guessed. Ten in the web project: App, Layout/NavMenu,
-        // Layout/RouteAnnouncer, Pages/Movies, Pages/FilmDetail, Pages/NotFound, _Imports,
-        // Components/PosterTile, Components/PosterGrid and Components/FacetPanel. Four in the editor:
-        // Pages/RecordEditor, Components/RecordForm, Components/Worklist and _Imports.
+        // SEVENTEEN, counted rather than guessed. Thirteen in the web project: App, Layout/NavMenu,
+        // Layout/RouteAnnouncer, Pages/Movies, Pages/FilmDetail, Pages/Tv, Pages/ShowDetail,
+        // Pages/NotFound, _Imports, Components/PosterTile, Components/PosterGrid, Components/FacetPanel
+        // and Components/FavouriteButton. Four in the editor: Pages/RecordEditor, Components/RecordForm,
+        // Components/Worklist and _Imports.
         // _Imports is in the count because the rule can genuinely fail on it -- this is a text scan, and a
         // status role typed into it would be found and reported like any other. The floor was 4 when there
         // were six, which let two components fall out of WebRoot.Files before the rule noticed: the T1
@@ -410,11 +483,11 @@ public class SourceContractTests
         // exactly the markup someone would reach for a polite region with, and they are plain text in both
         // components. Each of the two says so in its own comment, spelled in words, because this scan is a
         // substring match and a comment quoting a marker fails just as the attribute would.
-        Assert.True(failable.Count >= 14,
-            "This rule found " + failable.Count + " components it could fail on. There are fourteen "
-            + "hand-written .razor files outside the layout's own MainLayout: ten in the web project and "
-            + "four in the editor. Fewer means WebRoot.FilesWithEditor stopped finding them, not that the "
-            + "app shrank -- and a rule with no subjects passes over nothing.");
+        Assert.True(failable.Count >= 17,
+            "This rule found " + failable.Count + " components it could fail on. There are seventeen "
+            + "hand-written .razor files outside the layout's own MainLayout: thirteen in the web project "
+            + "and four in the editor. Fewer means WebRoot.FilesWithEditor stopped finding them, not that "
+            + "the app shrank -- and a rule with no subjects passes over nothing.");
 
         // Named as well as counted, for the same reason the motion rule names its stylesheets: a floor can
         // be met by the wrong files. These two are the first content inside main, so they are the subjects
@@ -425,6 +498,7 @@ public class SourceContractTests
         Assert.Contains("Components/PosterTile.razor", paths);
         Assert.Contains("Components/PosterGrid.razor", paths);
         Assert.Contains("Components/FacetPanel.razor", paths);
+        Assert.Contains("Components/FavouriteButton.razor", paths);
         Assert.Contains("Pages/Movies.razor", paths);
         Assert.Contains("Pages/FilmDetail.razor", paths);
         Assert.Contains(WebRoot.EditorPrefix + "Pages/RecordEditor.razor", paths);

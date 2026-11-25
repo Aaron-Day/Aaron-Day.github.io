@@ -18,10 +18,10 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// unknown-year film, which is why the headroom below is computed from the CEILING and not from that measurement:
 /// TMDB names 19 movie genres in all, and the whole of cinema is 14 decades (the 1890s to the 2020s), so the shell
 /// and the panel together cannot exceed 44 stops. <b>On top of that come the tiles</b> - each one a link to its
-/// film since the film page shipped - which is <see cref="TilesOnAFullPage"/> = 60 more and the largest term in
-/// the sum, so no library can have more than <see cref="MostStopsTheRealPageCanHave"/> = 104 stops. It needs one
-/// press more than that to leave, and <see cref="SpareForNewControls"/> is room for a control someone adds to the
-/// shell later.
+/// film since the film page shipped, and each one a favourite button as well since the star shipped - which is
+/// <see cref="StopsFromAFullPageOfTiles"/> = 120 more and by far the largest term in the sum, so no library can
+/// have more than <see cref="MostStopsTheRealPageCanHave"/> = 164 stops. It needs one press more than that to
+/// leave, and <see cref="SpareForNewControls"/> is room for a control someone adds to the shell later.
 /// </para>
 /// <para>
 /// The genre and decade groups are <c>details</c> disclosures that start closed, so a walk that opens none of them
@@ -49,22 +49,36 @@ internal static class TabWalk
     public const int SpareForNewControls = 5;
 
     /// <summary>
-    /// The tiles on a full page, each of which is now a link to that film and so a tab stop of its own.
+    /// The tab stops ONE TILE contributes: the anchor around its body, and the favourite button beside it.
+    /// </summary>
+    /// <remarks>
+    /// <b>Multiplied by the page size below, which is why it is a named constant and not a 2 in a sum.</b> A
+    /// third control on a tile - a watched mark, a rating - is sixty more stops, and the only honest way for
+    /// the next person to add one is to change this number in the same commit. The star is IN FLOW after the
+    /// body and not painted over the poster, so it really is a stop of its own in the grid's own order rather
+    /// than an overlay the walk might skip.
+    /// </remarks>
+    public const int ControlsPerTile = 2;
+
+    /// <summary>
+    /// The tab stops a full page of tiles contributes: every tile's link and every tile's star.
     /// </summary>
     /// <remarks>
     /// <b>This is the largest single term in the bound, and leaving it out was the defect.</b> Until the film
     /// page shipped a tile held no interactive element at all, and <c>PosterGridTests</c> pinned that: the
-    /// grid was sixty list items and nought stops. Each tile now carries one anchor around its body, so a full
-    /// page of them is sixty stops BEFORE the shell and the panel, and a walk capped at the old 50 would have
+    /// grid was sixty list items and nought stops. Each tile then gained one anchor around its body, so a full
+    /// page of them was sixty stops BEFORE the shell and the panel, and a walk capped at the old 50 would have
     /// run out of presses in the middle of the grid - on every forward walk, at every viewport, in two test
-    /// classes - and failed as though the page had a focus trap in it. The page size is not configurable from
-    /// the page, so one page is the most a walk can meet.
+    /// classes - and failed as though the page had a focus trap in it. The favourite control DOUBLED it, which
+    /// is the same defect one task later: 120 stops in the grid alone, and a bound left at 105 would have gone
+    /// red on the first push in exactly the shape of a focus trap. The page size is not configurable from the
+    /// page, so one page is the most a walk can meet.
     /// </remarks>
-    public const int TilesOnAFullPage = Catalogue.PageSize;
+    public const int StopsFromAFullPageOfTiles = Catalogue.PageSize * ControlsPerTile;
 
     /// <summary>The most tab stops any library the page could be given can produce.</summary>
     public const int MostStopsTheRealPageCanHave =
-        ShellStops + GenresInTmdb + DecadesOfCinema + TilesOnAFullPage;
+        ShellStops + GenresInTmdb + DecadesOfCinema + StopsFromAFullPageOfTiles;
 
     /// <summary>
     /// The presses a walk may make. A walk over N stops needs N + 1 of them, the last being the one that leaves the

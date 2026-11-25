@@ -236,6 +236,17 @@ public class FocusVisibleTests(BrowserGate gate, ITestOutputHelper output)
         if (address == Site.ShowUrl)
             Assert.Contains(seen, s => s.Contains("summary", StringComparison.OrdinalIgnoreCase));
 
+        // AND THE FAVOURITE CONTROL ON THE WALL, which is the one control in this app a reader meets sixty
+        // copies of -- so it is also the one whose focus ring being invisible would be invisible sixty times.
+        // It is reached only because it is IN FLOW after each tile's link: an absolutely positioned star over
+        // the poster would still be a stop, but it would also be an overlapping 44x44 target, which is how
+        // axe reports target-size as incomplete and AxeScan.IncompleteIsAFailure turns that into a failure.
+        // The failed arm renders no grid at all, so it is excluded rather than left to fail for the wrong
+        // reason. CatalogueTests counts the tiles in the gate's own fixture, so an absence here is a broken
+        // walk and not a wall without tiles.
+        if (address == "/" && !failed)
+            Assert.Contains(seen, s => s.Contains("tile-fav", StringComparison.Ordinal));
+
         // Rule T1. Four stops is the floor on every one of these cases: the skip link, the brand link, one
         // nav control, and then at least one more - the pager's two buttons on the films page, the
         // in-prose link on the not-found page, Try again on the failed one. A walk that stopped early

@@ -94,13 +94,14 @@ public class CatalogueTests
     public void TheGenreCountLeavesTheTabWalkRoomToFinish()
     {
         var decades = Records.Where(r => r.Y is not null).Select(r => r.Y!.Value / 10).Distinct().Count();
-        var stops = TabWalk.ShellStops + decades + Meta.Genres.Count + TabWalk.TilesOnAFullPage;
+        var stops = TabWalk.ShellStops + decades + Meta.Genres.Count + TabWalk.StopsFromAFullPageOfTiles;
 
         Assert.True(stops < TabWalk.Presses,
             $"The panel adds {Meta.Genres.Count} genre stop(s) and {decades} decade stop(s), a full page adds "
-            + $"{TabWalk.TilesOnAFullPage} tile links, {stops} stops in all with the error bar up, and the tab "
-            + $"walks allow {TabWalk.Presses} presses including the one that leaves the document. Name fewer "
-            + "genres, or raise TabWalk.Presses in the same change.");
+            + $"{TabWalk.StopsFromAFullPageOfTiles} stops of its own ({TabWalk.ControlsPerTile} per tile), "
+            + $"{stops} stops in all with the error bar up, and the tab walks allow {TabWalk.Presses} presses "
+            + "including the one that leaves the document. Name fewer genres, or raise TabWalk.Presses in the "
+            + "same change.");
     }
 
     /// <remarks>
@@ -114,21 +115,25 @@ public class CatalogueTests
     public void TheWalksAreAllowedEnoughPressesForTheLargestLibraryThePageCouldBeGiven()
     {
         var mostStops = TabWalk.GenresInTmdb + TabWalk.DecadesOfCinema + TabWalk.ShellStops
-                        + TabWalk.TilesOnAFullPage;
+                        + TabWalk.StopsFromAFullPageOfTiles;
         var needed = mostStops + 1;
 
         Assert.True(TabWalk.Presses >= needed,
             $"The walks allow {TabWalk.Presses} presses, and a library with all {TabWalk.GenresInTmdb} of TMDB's "
-            + $"genres across all {TabWalk.DecadesOfCinema} decades of film, showing {TabWalk.TilesOnAFullPage} "
-            + $"tile links on a full page, has {mostStops} stops and needs {needed}. A cap below that fits the "
-            + "gate's catalogue and fails (or silently truncates) on the real library.");
+            + $"genres across all {TabWalk.DecadesOfCinema} decades of film, showing a full page of "
+            + $"{Catalogue.PageSize} tiles at {TabWalk.ControlsPerTile} stops each, has {mostStops} stops and "
+            + $"needs {needed}. A cap below that fits the gate's catalogue and fails (or silently truncates) on "
+            + "the real library.");
 
-        // The tiles are the term that was missing, and the one most easily left out again: a grid of links is
-        // a tab stop per film, where a grid of plain tiles was nought. Said separately so that dropping it
-        // from the sum above cannot be mistaken for a tidy-up.
-        Assert.True(TabWalk.TilesOnAFullPage >= Catalogue.PageSize,
-            $"A full page shows {Catalogue.PageSize} tiles and the bound counts {TabWalk.TilesOnAFullPage} of "
-            + "them as stops. Each tile is a link to its film, so the walk meets every one of them.");
+        // THE GRID'S OWN TERM, AND IT IS A PRODUCT RATHER THAN A COUNT OF TILES. It was the term missing from
+        // the sum when a tile first became a link, and the shape of the defect repeated the day the tile gained
+        // a second control: sixty tiles is no longer sixty stops. Said separately from the sum above so that
+        // dropping either factor cannot be mistaken for a tidy-up, and read against the page size and the
+        // per-tile count so that raising one without the other fails here rather than in the middle of a walk.
+        Assert.True(TabWalk.StopsFromAFullPageOfTiles >= Catalogue.PageSize * TabWalk.ControlsPerTile,
+            $"A full page shows {Catalogue.PageSize} tiles carrying {TabWalk.ControlsPerTile} controls each -- "
+            + "the link around the body and the favourite button beside it -- and the bound counts "
+            + $"{TabWalk.StopsFromAFullPageOfTiles} stops for the grid. The walk meets every one of them.");
     }
 
     [Fact]

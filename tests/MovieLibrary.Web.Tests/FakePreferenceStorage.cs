@@ -26,6 +26,17 @@ internal sealed class FakePreferenceStorage : IPreferenceStorage
     /// <summary>When true, every write fails the way a full or blocked localStorage does.</summary>
     public bool Refuse { get; set; }
 
+    /// <summary>When true, ReadNow answers; false is the renderer that cannot read synchronously.</summary>
+    public bool InProcess { get; set; }
+
+    public string? ReadNow()
+    {
+        if (!InProcess) return null;
+
+        Reads++;
+        return Json;
+    }
+
     public Task<string?> ReadAsync()
     {
         Reads++;

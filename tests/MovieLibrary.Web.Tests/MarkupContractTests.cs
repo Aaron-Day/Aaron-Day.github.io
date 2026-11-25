@@ -584,18 +584,27 @@ public class MarkupContractTests
             + "not reaching its Ready state in these scopes, or a stub fixture has lost its poster path -- "
             + "in either case the poster contracts are checking nothing while reading as covered.");
 
-        // MEASURED on 2026-11-24, per scope, rather than reasoned from the pages: 23 on each of the two
-        // films scopes, 11 on the series wall, 8 on the series page (5 shell controls and the three
+        // MEASURED on 2026-11-24, per scope, rather than reasoned from the pages: 26 on each of the two
+        // films scopes, 15 on the series wall, 8 on the series page (5 shell controls and the three
         // seasons' own <summary> disclosures), 6 on each of the three scopes with a Try again or an
         // in-prose link, 5 on each of the two not-found scopes and on the film page, and 2 on the host
         // page. A FLOOR and not an equality, because every later task adds controls; the number matters in
         // the other direction, where a shortfall means a scope stopped reaching the state it used to
         // render and the contracts above went quiet about it.
-        Assert.True(controls >= 100,
+        //
+        // THE FAVOURITE CONTROL MOVED THIS NUMBER AND IT IS THE REASON THE BREAKDOWN IS WRITTEN OUT. Each
+        // tile now carries a button of its own, so the grid scopes grew by exactly one per tile: 23 to 26
+        // on the two films scopes, whose fixture holds three films, and 11 to 15 on the series wall, whose
+        // fixture holds four series. The total went from 100 to 110. A control on a tile is the first
+        // subject these contracts have had sixty copies of in the real library, which is why the name rule
+        // above matters more than the count: sixty controls that passed by sharing one name would be this
+        // floor met and the page unusable.
+        Assert.True(controls >= 110,
             "The accessible-name and nested-widget contracts have " + controls + " subjects across "
-            + EveryScope().Count + " scopes, against the 100 measured on 2026-11-24. Fewer means a scope "
+            + EveryScope().Count + " scopes, against the 110 measured on 2026-11-24. Fewer means a scope "
             + "stopped rendering what it used to -- most likely a page that is no longer reaching its "
-            + "Ready state in these scopes.");
+            + "Ready state in these scopes, or a wall that has stopped putting a favourite control on "
+            + "each of its tiles.");
 
         // And the filter controls are NAMED in the subject set, not just counted: a floor survives one
         // control being swapped for another, and the panel is the first thing a refactor of the films page

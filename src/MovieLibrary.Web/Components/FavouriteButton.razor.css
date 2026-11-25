@@ -1,0 +1,54 @@
+/* The star. Scoped to this component, so the three rules below cannot reach the badge beside them or any
+   other button in the app -- which is the reason this control is its own component rather than markup
+   inside PosterTile.razor.
+
+   IN FLOW, AND NEVER position: absolute OVER THE POSTER. That was the first design and it is the one
+   thing here that would have failed the gate rather than merely read badly: sixty absolutely positioned
+   44x44 targets overlap the tiles beneath them, axe reports target-size as INCOMPLETE rather than as a
+   pass, and AxeScan.IncompleteIsAFailure treats an incomplete check as a failure. A control in flow also
+   cannot cover the artwork it belongs to, and it reflows with the tile at 320px (SC 1.4.10).
+
+   margin-top: .25rem REPRODUCES .tile-body's gap BY HAND, exactly as .badge does and for the same reason:
+   .tile is a block container, not the flex container the gap belongs to, so nothing is inherited here.
+   Both are inline-level, so on a tile that carries a badge the two sit on one line where the column is
+   wide enough and wrap where it is not. Neither is allowed to shrink below --touch. */
+.tile-fav {
+  display: inline-flex; align-items: center; justify-content: center;
+  flex: 0 0 auto;
+  min-width: var(--touch); min-height: var(--touch);
+  margin-top: .25rem; padding: 0;
+  border: 2px solid var(--line-strong); border-radius: 6px;
+  background: transparent; color: var(--txt);
+  cursor: pointer;
+}
+
+/* THE PRESSED STATE IS A SHAPE AND NOT A COLOUR, and that is SC 1.4.1 Use of Color, Level A: the hollow
+   star and the solid star are different shapes, so nothing about this control depends on a reader telling
+   two colours apart. The two states are ONE <path> with fill and stroke swapped -- the geometry is shared
+   by construction, which is why the markup carries no second path and no conditional icon.
+
+   --txt on --bg is 16.16:1 as a graphic and far past the 3:1 SC 1.4.11 Non-text Contrast asks of a
+   control's own state indicator; the 2px boundary is --line-strong, 3.89:1, which is the token app.css
+   reserves for exactly this -- a border that is a control's sole boundary. The panel tint on hover is
+   .badge's own background token, already measured against --txt.
+   NO TRANSITION AND NO ANIMATION, so no prefers-reduced-motion block: StyleContractTests reads this file
+   by glob and will say so if that stops being true. */
+.tile-fav-star { fill: none; stroke: currentColor; stroke-width: 1.6; }
+.tile-fav[aria-pressed="true"] .tile-fav-star { fill: currentColor; stroke: none; }
+
+/* Inside @media (hover: hover) because a bare :hover sticks after a tap and leaves a phantom highlighted
+   control behind the reader's finger -- the same ruling .tile-body's underline is under. */
+@media (hover: hover) {
+  .tile-fav:hover { background: var(--panel2); }
+}
+
+/* FORCED COLORS KEEPS BOTH CUES, and it needs saying because the palette above is gone in that mode.
+   --line-strong and --txt are replaced by the user's own colours, so the border and the star survive as
+   CanvasText; the shape difference survives untouched, because fill and stroke are geometry rather than
+   palette. The pressed state additionally takes the system's own Highlight pair, which is the documented
+   way to say "selected" in that mode and is the one place this file reaches for a colour cue at all --
+   as a second cue on top of the shape, never instead of it. */
+@media (forced-colors: active) {
+  .tile-fav { border-color: CanvasText; color: CanvasText; background: Canvas; }
+  .tile-fav[aria-pressed="true"] { background: Highlight; color: HighlightText; }
+}

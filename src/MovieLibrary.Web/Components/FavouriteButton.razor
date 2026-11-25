@@ -1,0 +1,151 @@
+@using System.Globalization
+@inject PreferenceStore Preferences
+
+@* THE ONLY CONTROL A TILE CARRIES, and nearly every line of it is a constraint rather than a taste.
+
+   A <button type="button"> WITH aria-pressed, and not any of the three things it looks like. Not a
+   checkbox: a checkbox is for a value submitted with a form, there is no form here, and the control's
+   effect is immediate. Not a link: it navigates nowhere. Not a <a role="button">: a real button already
+   answers Enter and Space, takes focus in the right order and needs no key handling of its own.
+
+   aria-pressed IS WRITTEN AS A STRING AND NEVER AS A bool. Blazor renders a bool-valued attribute by
+   PRESENCE -- true emits `aria-pressed`, false emits NOTHING AT ALL -- and an absent aria-pressed makes
+   this an ordinary button that reads "Favourite, Se7en, 1995, button" with no state in it. The unstarred
+   state is the one that matters and it is the one that would vanish, so the ternary below is load-bearing
+   and FavouriteButtonTests reads both values out of the DOM.
+
+   THE NAME NEVER CHANGES WITH THE STATE. It is "Favourite, Se7en, 1995" whether the film is starred or
+   not, because aria-pressed is what says which -- a name that flipped to "Unfavourite" would say the
+   state twice, in two different ways, and SC 4.1.2 Name, Role, Value is satisfied by the name plus the
+   state and not by the name alone. It is also what makes the control findable by voice ("click
+   Favourite") in both states, which SC 2.5.3 Label in Name is about.
+
+   THE TITLE AND THE YEAR ARE IN THE NAME, which is why this takes them as parameters rather than reading
+   "Favourite" alone. Sixty of these sit on one page; a wall of sixty controls all named "Favourite" is
+   SC 4.1.2 met to the letter and useless in a screen reader's controls list, where the name is all there
+   is to choose by. Commas rather than an em dash: a comma is a pause in every screen reader, an em dash
+   is read aloud as "em dash" by some and swallowed by others.
+
+   NO aria-label, NO title ATTRIBUTE AND NO id. All three are forbidden here by rules that predate this
+   control -- PosterTileTests.TheTileCarriesNoAuthorLabelAndNoTitleAttribute and
+   TheTileCreatesNoIdReferenceAndNoIdAtAll, and MarkupRules' id-reference contract -- and all three were
+   the obvious way to name a star. The visually-hidden span IS the accessible name, it is real text, and
+   it cannot drift out of step with an attribute nobody can see.
+
+   THE ICON IS aria-hidden AND focusable="false". Hiding it is what stops the name being read twice;
+   focusable="false" is for Internet Explorer's old SVG focus behaviour and costs nothing to keep. One
+   <path> and not two: the filled and the hollow star are the SAME geometry with fill and stroke swapped,
+   which the stylesheet does, so there is no way for the two states to drift into different shapes.
+
+   IT ANNOUNCES NOTHING. Pressing it changes one title's own state, the state is on the control the reader
+   just pressed, and aria-pressed is how a screen reader reports that -- an announcement would be the same
+   fact a second time from a region racing the route announcer. This component takes NO Announcer and
+   SourceContractTests.TheTileAndItsControlTakeNoAnnouncer pins that. The one thing it cannot say for
+   itself is a browser REFUSING to save, which is not about this title at all, so that goes to the page
+   through Refused -- see CouldNotSave. *@
+<button type="button" class="tile-fav" aria-pressed="@(marked ? "true" : "false")" @onclick="ToggleAsync">
+    <svg class="tile-fav-star" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="22" height="22">
+        <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+    </svg>
+    <span class="visually-hidden">@Name</span>
+</button>
+
+@code {
+    /// <summary>
+    /// What the page says when the browser refuses to keep the change.
+    /// </summary>
+    /// <remarks>
+    /// <b>The sentence lives here and the page renders it,</b> because this control is the thing that
+    /// learns the write failed and the page is the only thing with a place to say so. It names the storage
+    /// as per-browser in the same breath: a reader who has just been told a change was not saved needs to
+    /// know that nothing on a server was lost either, and this app has no server to lose it on. Every
+    /// other control that writes the same document -- the rating radios, the list checkboxes -- reports
+    /// through this same constant, so a reader meets one sentence for one cause rather than three
+    /// paraphrases of it.
+    /// </remarks>
+    internal const string CouldNotSave =
+        "This browser would not save the change. Your favourites and ratings are stored in this browser "
+        + "only, and it is full or has storage turned off.";
+
+    /// <summary>What the control is drawing, which is the saved state until a press changes it.</summary>
+    private bool marked;
+
+    /// <summary>Which half of the document this title is filed under.</summary>
+    [Parameter, EditorRequired] public required TitleKind Kind { get; set; }
+
+    /// <summary>
+    /// The published key: <c>K</c> for a film, the slug for a series. Never the TMDB id.
+    /// </summary>
+    /// <remarks>
+    /// <c>I</c> is 0 on every unmatched record, so an id-keyed document would file all thirty of them
+    /// under one entry and star them together. See <c>RecordKey</c> for why the key is not permanent and
+    /// why <see cref="TmdbId"/> is saved beside it.
+    /// </remarks>
+    [Parameter, EditorRequired] public required string Key { get; set; }
+
+    /// <summary>
+    /// The record's TMDB id, saved beside the key so a re-keyed record can be found again. 0 for an
+    /// unmatched record, and 0 is written as 0 -- see <c>PreferenceStore.RecoverMovedKeysAsync</c>.
+    /// </summary>
+    [Parameter] public int TmdbId { get; set; }
+
+    /// <summary>The title, for the control's name. The visible title on the tile says the same words.</summary>
+    [Parameter, EditorRequired] public required string Title { get; set; }
+
+    /// <summary>The year, for the control's name; absent where the record has none.</summary>
+    [Parameter] public int? Year { get; set; }
+
+    /// <summary>
+    /// Called when the browser refused to save. The page renders <see cref="CouldNotSave"/>; this control
+    /// has already put itself back to the state the browser actually holds.
+    /// </summary>
+    [Parameter] public EventCallback Refused { get; set; }
+
+    /// <summary>
+    /// The accessible name, and the year is NEVER grouped: 1995, not 1,995. A year is an identifier and
+    /// <c>ShowTextTests</c> rules on the same point for a season number. InvariantCulture because this is
+    /// four digits with no separator in any culture, so there is nothing for a culture to decide.
+    /// </summary>
+    internal string Name => Year is { } year
+        ? string.Create(CultureInfo.InvariantCulture, $"Favourite, {Title}, {year}")
+        : "Favourite, " + Title;
+
+    /// <summary>
+    /// Reads the saved state on every parameter set rather than once.
+    /// </summary>
+    /// <remarks>
+    /// <b>Because the tile is recycled.</b> <c>PosterGrid</c> keys its items, so paging or filtering hands
+    /// THIS component instance a different film, and a state read only in <c>OnInitialized</c> would leave
+    /// the previous film's star on the new film's tile. The store is in memory and the read is a dictionary
+    /// lookup, so doing it per parameter set costs nothing. It cannot undo an optimistic press either: the
+    /// store's own document is already changed by then, and a refused write puts it back (see
+    /// <c>PreferenceStore.EditAsync</c>).
+    /// </remarks>
+    protected override void OnParametersSet() => marked = Preferences.IsFavourite(Kind, Key);
+
+    /// <summary>
+    /// Stars or unstars the title, drawing the new state before the write rather than after it.
+    /// </summary>
+    /// <remarks>
+    /// <b>Optimistic, and the revert is the half that matters.</b> Waiting for localStorage to answer would
+    /// leave the press with no visible effect for a frame on the one platform where the write is slow, so
+    /// the star changes first. A browser that then refuses -- a full quota, site data blocked -- would
+    /// otherwise leave a star on screen for something nothing remembers, which is the silent loss this
+    /// whole path exists to avoid: the state goes back and the page says why.
+    /// </remarks>
+    private async Task ToggleAsync()
+    {
+        var next = !marked;
+        marked = next;
+
+        try
+        {
+            await Preferences.SetFavouriteAsync(Kind, Key, TmdbId, next);
+        }
+        catch (PreferenceStorageException)
+        {
+            marked = !next;
+            await Refused.InvokeAsync();
+        }
+    }
+}

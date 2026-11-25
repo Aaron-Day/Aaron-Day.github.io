@@ -48,7 +48,8 @@ namespace MovieLibrary.Web.A11y.Harness;
 /// <b>The number of genres is modest.</b> <c>ObscuredFocusTests</c> and <c>FocusVisibleTests</c> walk the tab order
 /// in at most <see cref="TabWalk.Presses"/> presses and fail if the document is not left by then; the panel adds one
 /// stop per genre and per decade (eleven, and Year unknown), so with the shell, the pager and the error bar that is
-/// twenty-two stops before any genre, and a full page of tiles adds <see cref="TabWalk.TilesOnAFullPage"/> = 60
+/// twenty-two stops before any genre, and a full page of tiles adds
+/// <see cref="TabWalk.StopsFromAFullPageOfTiles"/> = 120
 /// links on top of all of it. Nine genres is ninety-one, inside the bound with room to spare, where the real panel
 /// has about forty. The bound is sized for the real library and not for this catalogue (see
 /// <see cref="TabWalk"/>), and <c>CatalogueTests</c> pins both that and this catalogue's fit.

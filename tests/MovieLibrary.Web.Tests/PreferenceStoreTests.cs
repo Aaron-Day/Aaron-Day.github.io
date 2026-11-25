@@ -274,6 +274,94 @@ public class PreferenceStoreTests
             () => store.SetFavouriteAsync(TitleKind.Film, Film, FilmId, true));
     }
 
+    /// <remarks>
+    /// <b>AND THE DOCUMENT GOES BACK TO WHAT THE BROWSER ACTUALLY HOLDS.</b> The edit is applied in memory
+    /// before the write is awaited -- that is what makes a query answer without awaiting anything -- so a
+    /// refused write leaves the store claiming a change nothing remembers. The control that pressed it
+    /// un-presses itself, and that revert would be a lie the moment anything read the store again: a tile
+    /// re-rendered by paging, the same title's record page, or the next write that SUCCEEDS, which would
+    /// persist the change the browser refused. Both directions are read, because a rollback that only
+    /// restored existing entries would leave a brand-new one behind.
+    /// </remarks>
+    [Fact]
+    public async Task ARefusedWriteLeavesTheDocumentAsTheBrowserHasIt()
+    {
+        var (store, storage) = await LoadedAsync();
+
+        await store.SetRatingAsync(TitleKind.Film, Film, FilmId, 7);
+        storage.Refuse = true;
+
+        // A new entry, refused: the map must not keep it.
+        await Assert.ThrowsAsync<PreferenceStorageException>(
+            () => store.SetFavouriteAsync(TitleKind.Series, Series, 0, true));
+
+        Assert.False(store.IsFavourite(TitleKind.Series, Series));
+
+        // An existing entry, refused: the map must hold what it held before, not the edit and not nothing.
+        await Assert.ThrowsAsync<PreferenceStorageException>(
+            () => store.SetRatingAsync(TitleKind.Film, Film, FilmId, 2));
+
+        Assert.Equal(7, store.RatingOf(TitleKind.Film, Film));
+
+        // And the entry is not DROPPED by a refused edit that would have emptied it.
+        await Assert.ThrowsAsync<PreferenceStorageException>(
+            () => store.SetRatingAsync(TitleKind.Film, Film, FilmId, null));
+
+        Assert.Equal(7, store.RatingOf(TitleKind.Film, Film));
+    }
+
+    /// <remarks>
+    /// Sixty toggles on a wall may not flip after the first paint, which is what the synchronous read is
+    /// for: a document that arrives late is sixty controls changing state with nothing the owner did behind
+    /// it.
+    /// </remarks>
+    [Fact]
+    public void AnInProcessRuntimeReadsTheDocumentWithoutAwaiting()
+    {
+        var storage = new FakePreferenceStorage("{\"v\":1,\"films\":{\"807-110\":{\"i\":807,\"fav\":true}}}")
+        {
+            InProcess = true,
+        };
+        var store = new PreferenceStore(storage);
+
+        Assert.True(store.LoadNow());
+        Assert.True(store.IsFavourite(TitleKind.Film, Film));
+    }
+
+    /// <remarks>
+    /// False is "ask asynchronously", never "nothing saved". A caller that read it as the second would show
+    /// every title unstarred for ever in exactly the hosts the fallback exists for.
+    /// </remarks>
+    [Fact]
+    public async Task ARuntimeThatCannotReadSynchronouslyStillGetsTheDocumentOneFrameLater()
+    {
+        var storage = new FakePreferenceStorage("{\"v\":1,\"films\":{\"807-110\":{\"i\":807,\"fav\":true}}}");
+        var store = new PreferenceStore(storage);
+
+        Assert.False(store.LoadNow());
+        Assert.False(store.Loaded);
+        Assert.False(store.IsFavourite(TitleKind.Film, Film));
+
+        await store.LoadAsync();
+
+        Assert.True(store.IsFavourite(TitleKind.Film, Film));
+    }
+
+    [Fact]
+    public async Task ASynchronousReadCountsAsLoadedSoTheFallbackDoesNotReadTwice()
+    {
+        var storage = new FakePreferenceStorage("{\"v\":1,\"films\":{},\"series\":{},\"lists\":[]}")
+        {
+            InProcess = true,
+        };
+        var store = new PreferenceStore(storage);
+
+        Assert.True(store.LoadNow());
+        await store.LoadAsync();
+
+        Assert.Equal(1, storage.Reads);
+    }
+
     // ============================================================ what another device wrote
 
     /// <remarks>

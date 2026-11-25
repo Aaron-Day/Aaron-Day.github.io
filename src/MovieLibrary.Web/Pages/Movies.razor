@@ -6,6 +6,7 @@
 @inject QueryState Address
 @inject TimeProvider Time
 @inject IJSRuntime Js
+@inject PreferenceStore Preferences
 
 @* The films page. Task 6 replaces the body of the Ready state with the tile grid and KEEPS these states.
 
@@ -32,6 +33,17 @@
    a region. SC 4.1.3 Status Messages, Level AA, applies only to messages that do NOT receive focus. *@
 <div class="catalog-state" tabindex="-1" @ref="stateContainer">
     <p>@Sentence</p>
+
+    @* THE ONE THING A TILE'S STAR CANNOT SAY FOR ITSELF, in the page's own state container because that is
+       where this page says what has happened to it. A browser refusing to keep a favourite is not a fact
+       about one film -- it is a fact about this device -- so it belongs beside the library's own sentence
+       and not sixty times over in the grid. The star has already put itself back by the time this renders.
+       Still plain text and still no live region: the spoken copy goes through Announcer.Alert, from
+       OnStorageRefused, which is the same pair of channels the load failure above uses. *@
+    @if (storageRefused)
+    {
+        <p>@FavouriteButton.CouldNotSave</p>
+    }
 
     @if (ShowTryAgain)
     {
@@ -100,7 +112,17 @@
            says in one place what identifies a film, which is K and never I. *@
         <PosterGrid TItem="MovieRecord" Items="shown" KeyOf="PublishedKey"
                     Page="page" PageChanged="OnPageChanged" Context="film">
-            <PosterTile Tile="TileView.ForFilm(film)" />
+            @* THE STAR IS PASSED IN RATHER THAN BUILT BY THE TILE, and the slot it goes in has been
+               waiting for it since Task 7. PosterTile knows nothing about favourites, takes no store and
+               takes no announcer; it renders what it is handed. The identity the control needs is the
+               film's published KEY and its TMDB id beside it -- never the id alone, which is 0 on every
+               unmatched film and would file all of them under one entry. *@
+            <PosterTile Tile="TileView.ForFilm(film)">
+                <ActionSlot>
+                    <FavouriteButton Kind="TitleKind.Film" Key="@film.K" TmdbId="film.I"
+                                     Title="@film.T" Year="film.Y" Refused="OnStorageRefused" />
+                </ActionSlot>
+            </PosterTile>
         </PosterGrid>
     }
         </div>
@@ -175,6 +197,12 @@
     private bool disposed;
     private bool retrying;
     private bool loadingAnnounced;
+
+    /// <summary>
+    /// True once this browser has refused to save a change. It never goes back to false, deliberately: the
+    /// cause is the device rather than the press, so the sentence stays until the page is left.
+    /// </summary>
+    private bool storageRefused;
 
     // True once THIS failure has been reported to a screen reader, by whichever channel did it: the focus move
     // or the alert. It is not the same thing as movedFocusToFailure, and the difference is the whole of the
@@ -316,6 +344,10 @@
     /// </remarks>
     protected override async Task OnInitializedAsync()
     {
+        // The fallback for a host where LoadNow could not read. A no-op when it did: LoadAsync reads once.
+        // Before the fetch is awaited, so it is still in place well before the first Ready render.
+        await Preferences.LoadAsync();
+
         var result = await FetchAsync();
         if (disposed) return;
 
@@ -327,7 +359,18 @@
     /// Before the first await, so the state the address asks for is in place before the catalogue arrives and
     /// the first Ready render shows the filtered list rather than the whole library for one frame.
     /// </remarks>
-    protected override void OnInitialized() => AdoptAddress();
+    protected override void OnInitialized()
+    {
+        // BEFORE THE FIRST RENDER, and that is the whole point of LoadNow. The stars are read straight out
+        // of localStorage with no await, so the first paint of the wall has them right. An awaited read
+        // would land after it and sixty aria-pressed values would flip with nobody having pressed
+        // anything -- a change of state, announced by nothing, that the reader did not cause. False means
+        // this host cannot read synchronously (bUnit's runtime cannot), not that the browser holds
+        // nothing, so OnInitializedAsync covers that case one frame later.
+        Preferences.LoadNow();
+
+        AdoptAddress();
+    }
 
     /// <remarks>
     /// Runs on EVERY set of parameters, which includes the router handing the page the address it just wrote.
@@ -674,6 +717,30 @@
     }
 
     /// <summary>A facet or the sort changed. Whatever is in the search box goes with it.</summary>
+    /// <summary>
+    /// A tile's star could not be saved. Says so once, in both channels, and never takes it back.
+    /// </summary>
+    /// <remarks>
+    /// ONCE, however many stars are pressed after it. <c>Announcer.Alert</c> accumulates, so a reader who
+    /// pressed five stars on a device with storage turned off would hear the same sentence five times, and
+    /// the fifth says nothing the first did not. The cause is the DEVICE: it does not clear on the next
+    /// press, and a sentence that came and went would be a status message this page has deliberately not
+    /// got a live region for.
+    /// <para>
+    /// The alert channel and not the status one, for the reason <c>CouldNotLoad</c> uses it: this is a
+    /// failure the reader has to know about to avoid losing work, and it is the consequence of something
+    /// they just did. Nothing moves focus -- the reader's focus is on the star they pressed, which is
+    /// where they want it, and SC 4.1.3 Status Messages is satisfied by the region the announcer owns.
+    /// </para>
+    /// </remarks>
+    private void OnStorageRefused()
+    {
+        if (storageRefused) return;
+
+        storageRefused = true;
+        Announcer.Alert(FavouriteButton.CouldNotSave);
+    }
+
     private void OnFacetChanged(FilterState next) => Apply(next with { Query = typedQuery.Trim() });
 
     private async Task ClearAll()

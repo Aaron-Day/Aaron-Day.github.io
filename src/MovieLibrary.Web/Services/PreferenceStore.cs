@@ -86,8 +86,16 @@ public enum ImportMode
 /// newer, and a file that remembers every title the owner ever touched is both larger and a worse record of
 /// what he meant than one holding only what he said.
 /// </para>
+/// <para>
+/// <b>PUBLIC, and only because a component injects it.</b> <c>@inject</c> generates a public property on
+/// the generated component class, so an internal service type is CS0053 Inconsistent accessibility -- not a
+/// warning this project could waive -- and the Razor SDK offers no way to make the component internal
+/// instead. <c>TileFact</c> carries the same note for the same reason, one layer out. The interface and the
+/// exception follow: a public class cannot take an internal constructor parameter (CS0051) and cannot throw
+/// a type a caller is unable to name.
+/// </para>
 /// </remarks>
-internal sealed class PreferenceStore(IPreferenceStorage storage)
+public sealed class PreferenceStore(IPreferenceStorage storage)
 {
     /// <summary>
     /// How the document is written, and it is NOT the web defaults.
@@ -126,6 +134,28 @@ internal sealed class PreferenceStore(IPreferenceStorage storage)
 
         loaded = true;
         document = Parse(await storage.ReadAsync()) ?? new PreferenceDocument();
+    }
+
+    /// <summary>
+    /// Reads what this browser holds WITHOUT awaiting, and says whether it managed to. Call it from
+    /// <c>OnInitialized</c>, before the first await, and fall back to <see cref="LoadAsync"/>.
+    /// </summary>
+    /// <remarks>
+    /// <see cref="IPreferenceStorage.ReadNow"/> carries the argument for why this exists at all: sixty
+    /// toggles may not flip after the first paint. False means this runtime cannot read synchronously, not
+    /// that the browser holds nothing -- so a caller that treated false as "nothing saved" would show every
+    /// title unstarred for ever in exactly the hosts where the fallback was supposed to cover it.
+    /// </remarks>
+    public bool LoadNow()
+    {
+        if (loaded) return true;
+
+        if (storage.ReadNow() is not { } json) return false;
+
+        loaded = true;
+        document = Parse(json) ?? new PreferenceDocument();
+
+        return true;
     }
 
     /// <summary>What the owner has saved about one title, which is an empty entry where he has saved nothing.</summary>
@@ -189,17 +219,34 @@ internal sealed class PreferenceStore(IPreferenceStorage storage)
     /// it holds the id the catalogue USED to think was right. 0 is written as 0: an unmatched record has no
     /// id, and pretending otherwise would hand the recovery walk a value it could match the wrong film on.
     /// </remarks>
-    private Task EditAsync(TitleKind kind, string key, int tmdbId, Func<TitlePreference, TitlePreference> edit)
+    private async Task EditAsync(
+        TitleKind kind, string key, int tmdbId, Func<TitlePreference, TitlePreference> edit)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(key);
 
         var map = Map(kind);
+        TitlePreference? before = map.TryGetValue(key, out var found) ? found : null;
         var edited = edit(For(kind, key)) with { TmdbId = tmdbId };
 
         if (edited.IsEmpty) map.Remove(key);
         else map[key] = edited;
 
-        return SaveAsync();
+        try
+        {
+            await SaveAsync();
+        }
+        catch (PreferenceStorageException)
+        {
+            // PUT THE DOCUMENT BACK. The caller reverts what is on screen -- FavouriteButton un-presses
+            // itself -- and a document that kept the change would make that revert a lie the moment
+            // anything read the store again: a tile re-rendered by paging, the same title's record page,
+            // or the next SUCCESSFUL write, which would persist the change the browser refused. The entry
+            // is restored exactly as it was, including its absence.
+            if (before is null) map.Remove(key);
+            else map[key] = before;
+
+            throw;
+        }
     }
 
     /// <summary>

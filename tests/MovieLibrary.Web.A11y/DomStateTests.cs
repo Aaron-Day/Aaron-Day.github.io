@@ -523,6 +523,54 @@ public class DomStateTests(BrowserGate gate, ITestOutputHelper output)
     }
 
     /// <summary>The film page address these states use: the one record Catalogue furnishes for it.</summary>
+    /// <summary>
+    /// State 17: a wall with a favourite MARKED. The one state in the app that renders
+    /// <c>aria-pressed="true"</c>, and the only one where a control's own appearance carries meaning.
+    /// </summary>
+    /// <remarks>
+    /// <b>Three things are only checkable here and none of them is axe's job alone.</b> First, the pressed
+    /// value is a STRING in the DOM: a bool-valued attribute would be present-and-empty when true and
+    /// ABSENT when false, and ARIA reads both of those as undefined -- the same house rule the pager's
+    /// aria-disabled is under, two screens up. Second, sixty of these sit on one page, so the scan is over
+    /// a full grid rather than one tile: target-size, name uniqueness and nested-interactive all fail at
+    /// scale or not at all, and a star absolutely positioned over its poster would overlap the tile beneath
+    /// and make axe report target-size as INCOMPLETE, which <c>AxeScan.IncompleteIsAFailure</c> treats as a
+    /// failure. Third, the press is a real click in a real browser, so the whole write path runs: the store
+    /// edits its document, localStorage takes it, and a page that threw on the way would leave
+    /// #blazor-error-ui revealed -- which the scan would then see.
+    /// <para>
+    /// Nothing is announced and nothing is asserted about the announcer, deliberately: aria-pressed on the
+    /// control the reader just activated IS the report, and a region would say the same fact twice.
+    /// </para>
+    /// </remarks>
+    [BrowserFact]
+    public async Task AWallWithAFavouriteMarkedIsClean()
+    {
+        await using var session = await gate.OpenAsync();
+        await session.GotoAsync("/");
+        await session.GridAsync();
+
+        var stars = session.Page.Locator("button.tile-fav");
+
+        // A floor first: the scan below would be clean over a wall with no stars on it at all.
+        Assert.Equal(Catalogue.PageSize, await stars.CountAsync());
+
+        var first = stars.First;
+        Assert.Equal("false", await first.GetAttributeAsync("aria-pressed"));
+
+        await first.ClickAsync();
+        await session.Page.WaitForFunctionAsync(
+            "() => document.querySelector(\"button.tile-fav\")?.getAttribute(\"aria-pressed\") === \"true\"");
+
+        // The name does not move with the state, which is what makes the control findable by voice in both
+        // states (SC 2.5.3) and what stops the state being said twice in two different ways.
+        var named = await first.InnerTextAsync();
+        Assert.StartsWith("Favourite, ", named.Trim(), StringComparison.Ordinal);
+
+        var scan = await AxeScan.OfAsync(session.Page, "ready, one favourite marked", output);
+        scan.MustBeClean(Booted);
+    }
+
     private static string FilmAddress => "/movies/" + Catalogue.FirstKey;
 
     private static string ShowAddress => Site.ShowUrl;
